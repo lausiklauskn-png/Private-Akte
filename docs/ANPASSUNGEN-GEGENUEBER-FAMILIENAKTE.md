@@ -33,6 +33,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A17 | „Dokumente für eine Auslandsreise“ zeigte alle Unterlagen mit „nicht alle Wörter passen“; „was brauche ich …“ fand die Waschmaschine. | 0.4.1: im Rückfall zählen Füllwörter und Bereichswörter („Dokumente“, „Brief“) nicht mehr einzeln. | Ein Bereichswort allein („Dokumente“) trifft dort jede Unterlage – gewollt, aber bei einem Rückfall auf Teil-Treffer beachten. |
 | A18 | Fotos von Belegen sollen über ihren Inhalt gefunden werden, ohne Umweg über Workflow PDF; keine Texterkennung über einen KI-Dienst. | 0.4.3: beim Ablegen wird der Text gelesen (PDF-Textebene, sonst Tesseract auf dem Gerät) und als Auszug gespeichert. | Der Klon kann den Textauszug nur beim Ablegen setzen, nicht nachträglich – für „erst ablegen, dann im Hintergrund lesen“ (Plan Bilder) fehlt dort eine Funktion. |
 | A19 | Es war nicht zu sehen, ob die Suche den Inhalt der Unterlagen überhaupt gelesen hat. | 0.4.3: unter den Treffern „Inhalt gelesen bei x von y Unterlagen“. | Prüfen, ob die Bedeutungssuche dort sagt, wie viele Unterlagen nur mit ihren Angaben zählen. |
+| A20 | Die Suche findet ein vielseitiges Heft, aber nicht die Stelle darin. | 0.4.6: unter dem Treffer der Ausschnitt mit der Seite. Leser mit markierter Stelle folgt. | Dort zeigt die Bedeutungssuche die Unterlage, nicht die Stelle – prüfen. |
 
 ## B. Vereinfachungen der Hülle
 

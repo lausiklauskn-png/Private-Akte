@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.5)
+## Stand (17.11.2026, Vorschau 0.4.6)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,15 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.6 Fundstelle am Treffer (Klaus 17.11.: „So will ich es haben“, Schritt 1 von 2):** am Tablet bestätigt (0.4.4): „Essig auf
+  Marmor“ findet das Bonusheft als „im Text gefunden“, Inhalt gelesen bei 3 von 3, 50 Abschnitte in wenigen Minuten gerechnet.
+  Neu: unter dem Treffer steht der Ausschnitt, in dem es gefunden wurde, mit der Seite („Seite 4 · … Kein Essig auf Marmor …“) –
+  bei Wort-Treffern im Inhalt die Stelle, an der die Wörter am engsten stehen (`engsteStelle`, `ausschnitt` in `src/tresor.ts`),
+  bei „dem Sinn nach“ die Mitte des nächsten Abschnitts (ungefähr; ein Abschnitt hat 1600 Zeichen). Die Seite wird über die
+  Textebene je Seite gesucht (`seitenVon`, `seiteFinden`; nur PDFs mit Textebene, sonst keine Seitenzahl). An Klaus' Heft hier
+  geprüft (gestellter Rechner). **Schritt 2, noch nicht gebaut:** PDF-Leser in der Akte – Tipp öffnet die Seite, Wörter markiert,
+  Suchfeld mit weiter/zurück. Klaus' Gedanke für Scans: den erkannten Text über das Original legen und ein-/ausblenden (wie im
+  Familienbüro); Tesseract liefert die Lage der Zeilen, im Klon gibt es das Seitenbild mit Kästen (`lib/pdf-kaesten.ts`).
 - **0.4.5 (Klaus gab sein Heft `Bonus_3_Fuenfzig_Hausrezepte.pdf` zum Nachsehen; die Datei liegt nicht im Repo):** an der Datei liegt
   es nicht – Textebene, 48 Seiten, 36.000 Zeichen in 0,3 s gelesen, 26 Abschnitte; mit gestelltem Rechner findet „Essig auf Marmor“
   das Heft als „im Text gefunden“. Klaus' Bild mit 0.4.4 (21:44): „Bedeutung wird gerechnet: Abschnitt 29 von 50“ – die PDFs werden am Tablet gelesen, die

@@ -63,6 +63,12 @@ export async function textLesen(datei: File): Promise<{ text: string; art: "text
     const text = sauber(erkannt.join("\n\n")); return { text, art: text ? "erkannt" : "" };
   } finally { await pdf.destroy(); }
 }
+/** Text der Textebene je Seite (höchstens 60 Seiten), für das Finden der Seite einer Fundstelle. */
+export async function pdfSeitenText(datei: File) {
+  const lib = await loadPdfJs(), pdf = await lib.getDocument({ data: new Uint8Array(await datei.arrayBuffer()) }).promise as Pdf;
+  try { const aus: string[] = []; for (let n = 1; n <= Math.min(pdf.numPages, TEXT_SEITEN); n++) aus.push((await (await pdf.getPage(n)).getTextContent()).items.map((i) => i.str || "").join(" ")); return aus; }
+  finally { await pdf.destroy(); }
+}
 // Für schon abgelegte Fotos und Scans ohne gespeicherten Text: einmal erkennen und im Browser merken (eigene kleine Datenbank,
 // Schlüssel Name und Größe der Datei), damit die Suche nicht bei jedem Start neu liest.
 function merkDb() { return new Promise<IDBDatabase>((ja, nein) => { const r = indexedDB.open("PrivateAkteText1", 1); r.onupgradeneeded = () => r.result.createObjectStore("text"); r.onsuccess = () => ja(r.result); r.onerror = () => nein(r.error); }); }
