@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -127,6 +127,7 @@ const mails = [
 const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
 const s = { tipps:true, ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
+const sprech = { sitzung:null, an:false };
 
 /* ---------- Helfer ---------- */
 let toastZeit;
@@ -176,14 +177,15 @@ const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a h
 
 /* ---------- Ansichten ---------- */
 function sucheFeld(){
-  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button class="knopf" type="submit">Finden</button></form>`;
+  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form>`;
 }
 function treffer(){
-  const t = suche(s.frage);
-  if (!t.length) return `<div class="abschnitt"><div class="liste"><p class="leer">Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.</p></div></div>`;
+  const t = suche(s.frage), ids = T() && echt.liste ? T().suchen(s.frage, echt.liste) : [], e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
+  if (!t.length && !e.length) return `<div class="abschnitt"><div class="liste"><p class="leer">Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.</p></div></div>`;
   const b = new Set(t.map(d=>d.bereich)).size;
-  return `<div class="abschnitt"><h2>${t.length} ${t.length===1?'Unterlage':'Unterlagen'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span></h2>
-   <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>`;
+  return `${e.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length} ${e.length===1?'Treffer':'Treffer'} · echt</span></h2><div class="liste">${e.map(echtZeile).join('')}</div></div>` : ''}
+   ${t.length ? `<div class="abschnitt"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span></h2>
+   <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}`;
 }
 const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
@@ -518,14 +520,15 @@ function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().sli
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
-  if (s.ansicht === 'start' && !s.frage) mainZeigen();
+  if (s.ansicht === 'start' && !sprech.an) mainZeigen();
 }
+const echtZeile = d => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 m-ok">echt</span>${ic('weiter')}</button>`;
 function echtAbschnitt(){
   const l = echt.liste;
   const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
     : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
     : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
-    : l.map(d => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 m-ok">echt</span>${ic('weiter')}</button>`).join('');
+    : l.map(echtZeile).join('');
   return `<div class="abschnitt" id="echt" data-bereit="${l === null ? 0 : 1}"><h2>Deine Unterlagen <span>echt · auf diesem Gerät gespeichert</span></h2><div class="liste">${innen}</div></div>`;
 }
 function fEchtNeu(datei){
@@ -687,3 +690,19 @@ document.addEventListener('input', ev => { if (ev.target.matches('textarea.feld'
 document.addEventListener('pointerdown', tippWeg);
 addEventListener('scroll', tippWeg, true);
 document.addEventListener('change', ev => { if (ev.target.matches('[data-tippwahl]')) { s.tipps = ev.target.checked; toast(s.tipps ? 'Tooltips sind an.' : 'Tooltips sind aus.'); } });
+
+/* ---------- Suchfeld: X löscht die Eingabe, Mikrofon spricht sie ein (Diktat der Familienakte über tresor.js) ---------- */
+const suchFeld = () => document.querySelector('.suche input[name=q]');
+function sprechEnde(suchen){ if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; const k = document.querySelector('[data-a=suche-mikro]'); if (k) k.classList.remove('an');
+  const f = suchFeld(); if (suchen && f && f.value.trim()) { s.frage = f.value.trim(); s.wahl.clear(); zeigen(); } }
+A['suche-leer'] = () => { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeigen(); const f = suchFeld(); if (f) f.focus(); };
+A['suche-mikro'] = e => {
+  if (sprech.an) { sprechEnde(true); return; }
+  if (!sprech.sitzung) sprech.sitzung = T().diktat.sitzung({
+    text: t => { const f = suchFeld(); if (f) { f.value = t; const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !t; } },
+    zustand: an => { const k = document.querySelector('[data-a=suche-mikro]'); if (k) k.classList.toggle('an', an); if (!an && sprech.an && !sprech.sitzung.active) sprech.an = false; },
+    hinweis: (t, fehler) => { if (t && (fehler || /bitte tippen/.test(t))) { sprech.an = false; toast(t); } }
+  });
+  sprech.an = true; sprech.sitzung.start(suchFeld() ? suchFeld().value : '', false);
+};
+document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; } });
