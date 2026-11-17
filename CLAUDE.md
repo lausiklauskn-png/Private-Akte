@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.4)
+## Stand (17.11.2026, Vorschau 0.3.5)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.5 Backup-Ordner heißt „Privatakte_Backup_<Datum>_<Uhrzeit>“ (Klaus 17.11.: von der Familienakte unterscheidbar; Ortszeit):**
+  `src/tresor.ts` legt diesen Ordner am gewählten Ort an und lässt den Klon hineinschreiben – darin liegt unverändert
+  „Familienakte_Vollsicherung_…“, damit die Familienakte dasselbe Backup lesen kann (dort den Ordner „Privatakte_Backup_…“ wählen).
+  Einlesen: Backup-Ordner selbst oder der Ordner darüber (jüngstes „Privatakte_Backup_…“); ältere Backups ohne den äußeren Ordner
+  gehen weiter. Das Notfallblatt heißt nach dem äußeren Ordner. Am Tablet bestätigt (0.3.4): Importieren/Exportieren klappt.
 - **0.3.4 Importieren / Exportieren wie im Rezeptbuch (Klaus 17.11.; ersetzt die Wörter von 0.3.3 und den Schild-Knopf):**
   Klaus: „Datei hineinlegen“ unter „Was möchtest du finden?“ irritiert (hineinlegen ist nicht finden, und wohin?), „Tresor
   exportieren“ sagt nicht, dass es ein Backup ist. Jetzt oben rechts zwei Strich-Knöpfe: **Importieren** (grüner Pfeil nach unten;
@@ -75,6 +80,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - Probe: `python3 -m http.server 8765` im Repo-Ordner, dann `node tests/probe.cjs` (Ordner `p/` am Aufrufort anlegen).
 
 ## Feste Regeln
+
+- **`ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` mit jedem Schritt ergänzen** (Klaus 17.11.): was beim Ausprobieren auffällt und was hier
+  anders gemacht wird als in der Familienakte – Vorlage für deren spätere Überarbeitung. Klaus geht die App Schritt für Schritt durch.
 
 - **Klone nie von Hand ändern.** Verbesserungen entstehen im Quell-Repo und kommen nur über
   `node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]` herein. Beim Hinzufügen `git add -f klone/` nehmen
