@@ -4,8 +4,12 @@ Eine App für alle Unterlagen: in der Mitte die Akte, an den Ästen die Programm
 
 Web-App: https://lausiklauskn-png.github.io/Private-Akte/
 
-**Stand: Vorschau 0.2.0 (17.11.2026).** Echt ist der Abschnitt „Deine Unterlagen“ auf der Startseite: Dateien werden mit dem
-unveränderten Tresor der Familienakte (`klone/familienakte`) im Speicher des Browsers abgelegt und bleiben nach dem Neuladen da.
+**Stand: Vorschau 0.3.0 (17.11.2026).** Echt sind zwei Dinge, beide mit dem unveränderten Tresor der Familienakte (`klone/familienakte`):
+
+- **„Deine Unterlagen“** auf der Startseite: Dateien liegen im Speicher des Browsers und bleiben nach dem Neuladen da.
+- **Tresor exportieren / importieren** (Schild-Knopf): ein mit Passwort verschlüsselter Ordner mit Datum an einem frei gewählten Ort
+  (Gerät, SD-Karte, Stick) und von dort wieder herein. Es ist die Vollsicherung der Familienakte – eine Familienakte kann sie einlesen.
+
 Alles andere ist Beispiel – erfundene Daten, kein echtes Programm wird geöffnet, keine KI, kein Postfach, kein Kalender-Konto.
 
 ## Was die Vorschau zeigt

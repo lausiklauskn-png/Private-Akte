@@ -8,26 +8,50 @@ const { chromium } = require('playwright');
     const p = await b.newPage({ viewport:{width:w,height:h} });
     p.on('console', m => { if (m.type()==='error') fehler.push(name+' console: '+m.text()); });
     p.on('pageerror', e => fehler.push(name+' fehler: '+e.message));
+    await p.addInitScript(name => { window.showDirectoryPicker = async () => (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name, {create:true}); }, name);
     await p.goto('http://localhost:8765/'); await p.waitForSelector('.werk');
     const breit = async wo => soll(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name+' quer scrollbar bei '+wo);
     const klick = async sel => { await p.locator(sel).first().click(); };
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.2.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.3.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-neu]').disabled); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
     await p.waitForSelector('[data-form=echt]'); await breit('echt hineinlegen'); await p.fill('[data-form=echt] [name=titel]', `Probe-Unterlage ${name}`);
-    await p.selectOption('[data-form=echt] [name=bereich]', 'Haus & Wohnung'); await p.fill('[data-form=echt] [name=datum]', '2026-11-03'); await klick('[data-form=echt] button[type=submit]');
+    soll((await p.locator('#echt-bereiche option').count())===18, 'die 18 festen Bereiche der Familienakte zur Auswahl'); await p.fill('[data-form=echt] [name=bereich]', '  haus &  wohnung '); await p.fill('[data-form=echt] [name=datum]', '2026-11-03'); await klick('[data-form=echt] button[type=submit]');
     await p.waitForSelector('#echt [data-a=echt-auf]'); soll((await p.locator('#echt [data-a=echt-auf]').count())===1, 'eine echte Unterlage in der Liste');
     soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`) && (await p.locator('#echt').innerText()).includes('Haus & Wohnung · 03.11.2026'), 'Titel, Bereich und Datum in der Zeile');
     await p.screenshot({path:`p/${name}-1b-echt.png`});
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
-    await p.waitForSelector('[data-form=echt]'); await p.selectOption('[data-form=echt] [name=bereich]', 'Archiv'); await klick('[data-form=echt] button[type=submit]');
+    await p.waitForSelector('[data-form=echt]'); await p.fill('[data-form=echt] [name=bereich]', 'Archiv'); await klick('[data-form=echt] button[type=submit]');
     await p.waitForFunction(() => document.getElementById('toast').textContent.includes('Dublette')); soll(true, 'dieselbe Datei zweimal: der Tresor meldet die Dublette'); await klick('[data-a=zu]');
     await p.reload(); await p.waitForSelector('#echt [data-a=echt-auf]'); soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`), 'nach dem Neuladen noch da');
     const inhalt = await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; return (await t.datei(d.id)).text(); }); soll(inhalt === `Erfundene Probe-Unterlage ${name}`, 'die Datei kommt unverändert aus dem Tresor');
+    // Eigener Bereich: frei eingetippt, entsteht mit der Unterlage, steht danach zur Auswahl; andere Schreibweise = derselbe Bereich
+    await p.setInputFiles('#echt-datei', {name:`Boot ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundener Liegeplatz ${name}`)});
+    await p.waitForSelector('[data-form=echt]'); await p.fill('[data-form=echt] [name=bereich]', 'Motorboot'); await klick('[data-form=echt] button[type=submit]');
+    await p.waitForFunction(() => document.querySelectorAll('#echt [data-a=echt-auf]').length===2); soll((await p.locator('#echt').innerText()).includes('Motorboot'), 'eigener Bereich an der Unterlage');
+    soll(await p.evaluate(() => echtBereiche().includes('Motorboot') && echtBereich(' motorBOOT ')==='Motorboot' && echtBereich('Segelboot')==='Segelboot'), 'eigener Bereich steht zur Auswahl, andere Schreibweise ergibt denselben');
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.herausnehmen((await t.liste()).find(d => d.category==='Motorboot').id); }); await p.reload(); await p.waitForSelector('#echt [data-a=echt-auf]');
+    // Tresor exportieren (verschlüsselter Ordner am gewählten Ort), Speicher des Browsers leeren, wieder importieren
+    const sicherungAuf = async () => { if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=sicherung]' : '.kopfknoepfe [data-a=sicherung]'); };
+    await sicherungAuf(); soll((await text()).includes('1 Unterlage'), 'Sicherung zählt die echte Unterlage'); await klick('[data-a=sich-export]');
+    await p.fill('[name=p1]','kurz'); await p.fill('[name=p2]','kurz'); await p.evaluate(() => document.querySelector('[data-form=export]').noValidate = true); await klick('[data-form=export] button[type=submit]');
+    await p.waitForFunction(() => document.getElementById('toast').textContent.includes('mindestens 10')); soll(true, 'zu kurzes Passwort wird abgewiesen');
+    await p.fill('[name=p1]','Erfundenes-Probe-Passwort-1'); await p.fill('[name=p2]','Erfundenes-Probe-Passwort-1'); await klick('[data-form=export] button[type=submit]');
+    await p.waitForSelector('#notfall', {timeout:60000}); soll((await p.locator('#notfall').innerText()).replace(/[^0-9A-Z]/g,'').length===52, 'Notfallschlüssel mit 52 Zeichen'); await breit('exportiert'); await p.screenshot({path:`p/${name}-1c-export.png`});
+    const exp = await p.evaluate(async name => { const z = await (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name); const o = []; for await (const [n, h] of z.entries()) { o.push(n); if (h.kind==='directory') for await (const [m] of h.entries()) o.push(n+'/'+m); } return o; }, name);
+    soll(exp.some(n => /^Familienakte_Vollsicherung_.*\/Vollsicherung_Verschluesselt\.json$/.test(n)) && !exp.some(n => /Register\.json$/.test(n)), 'Ordner mit Datum am gewählten Ort, Register nur verschlüsselt');
+    const [blatt] = await Promise.all([p.waitForEvent('download'), klick('[data-a=sich-blatt]')]); soll(/^Notfallblatt_.*\.txt$/.test(blatt.suggestedFilename()), 'Notfallblatt als Datei'); await klick('.fenster .reihe [data-a=zu]');
+    await p.evaluate(async () => { const w = await navigator.storage.getDirectory(); for await (const [n] of w.entries()) if (!n.startsWith('probe-ziel-')) await w.removeEntry(n, {recursive:true}); localStorage.clear(); });
+    await p.reload(); await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-neu]').disabled); soll((await text()).includes('Noch nichts hineingelegt'), 'Speicher des Browsers geleert: Tresor leer');
+    await sicherungAuf(); await klick('[data-a=sich-import]'); await p.waitForSelector('[data-form=import]'); soll((await text()).includes('Familienakte_Vollsicherung_'), 'Import nennt die gefundene Sicherung');
+    await p.fill('[name=passwort]','Falsches-Passwort-123'); await klick('[data-form=import] button[type=submit]'); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('passt nicht'), null, {timeout:60000}); soll(true, 'falsches Passwort wird abgewiesen');
+    await p.fill('[name=passwort]','Erfundenes-Probe-Passwort-1'); await klick('[data-form=import] button[type=submit]'); await p.waitForSelector('#echt [data-a=echt-auf]', {timeout:60000});
+    soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`), 'nach dem Import wieder da');
+    const zurueck = await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; return (await t.datei(d.id)).text(); }); soll(zurueck === `Erfundene Probe-Unterlage ${name}`, 'die Datei kommt unverändert aus dem Export zurück');
     await klick('#echt [data-a=echt-auf]'); soll((await text()).includes('im Tresor auf diesem Gerät'), 'Fenster der echten Unterlage'); await breit('echt offen'); await klick('[data-a=echt-raus]');
     await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-auf]')); soll((await text()).includes('Noch nichts hineingelegt'), 'herausgenommen: Liste wieder leer');
     if (name==='handy') { soll(await p.locator('[data-a=mehr]').isVisible(), 'Mehr-Knopf'); soll(!(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible()), 'Drucken hinter Mehr');
@@ -62,7 +86,7 @@ const { chromium } = require('playwright');
     // Mail
     await klick('.schild[data-id=mail]'); await klick('[data-a=mail-ki]'); soll((await text()).includes('⟦STELLE-1⟧'),'Mail an KI'); await klick('[data-a=zu]');
     // Suche + Mappe
-    await klick('.nav [data-zu=start]'); await klick('.chip[data-a=frage]'); await p.locator('.haken').first().check(); await klick('[data-a=mappe]'); soll((await text()).includes('Zur Akte'),'Mappe'); await klick('[data-a=zu]');
+    await klick('.nav [data-zu=start]'); soll((await p.locator('.chip, .unter').count())===0 && (await p.locator('h1.titel').isVisible())===(name==='pc'), 'Start ohne Beispiele und Erklärsatz, Überschrift nur am PC'); await p.fill('.suche input','Nebenkostenabrechnung'); await p.keyboard.press('Enter'); await p.locator('.haken').first().check(); await klick('[data-a=mappe]'); soll((await text()).includes('Zur Akte'),'Mappe'); await klick('[data-a=zu]');
     // Farbe der Akte kräftig
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=farbe]' : '.kopfknoepfe [data-a=farbe]'); await klick('[data-farbe=kraeftig]'); await klick('.nav [data-zu=start]'); await p.screenshot({path:`p/${name}-13-kraeftig.png`});
     // Drucken-Fenster, Hilfe, Fuß
