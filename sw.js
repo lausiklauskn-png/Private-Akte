@@ -1,6 +1,6 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
-const VERSION = '0.4.2';
+const VERSION = '0.4.3';
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
@@ -38,7 +38,8 @@ self.addEventListener('fetch', event => {
     try {
       /* no-cache: beim Server nachfragen statt den Zwischenspeicher des Browsers zu nehmen (Pages hält ihn 10 Minuten). */
       const frisch = await fetch(request.mode === 'navigate' ? request.url : request, {cache:'no-cache'});
-      if (frisch.ok && DATEIEN.includes(key)) cache.put(key, frisch.clone());
+      /* Die Texterkennung (rund 5,5 MB) kommt beim ersten Gebrauch in den Vorrat, nicht schon beim Installieren. */
+      if (frisch.ok && (DATEIEN.includes(key) || key.includes('/vendor/tesseract/'))) cache.put(key, frisch.clone());
       return frisch;
     } catch (fehler) {
       const da = await cache.match(key);

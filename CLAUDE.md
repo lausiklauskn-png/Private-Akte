@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.2)
+## Stand (17.11.2026, Vorschau 0.4.3)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,20 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.3 Text beim Ablegen lesen, Texterkennung für Fotos und Scans (Klaus 17.11.: „Das machen wir“):** `src/text-lesen.ts` –
+  PDF: Textebene (bis 60 Seiten); fehlt sie, die ersten 5 Seiten als Bild; Foto (PNG/JPG/WebP): Texterkennung. Tesseract mit
+  deutschem Sprachpaket unverändert aus dem Klon (`klone/familienakte/public/apps/workflow-pdf/vendor/tesseract`, Einstellungen wie
+  `app/wfpdf-kern.ts`; dessen Lader hängt an den Pfaden der Familienakte, darum eigener kleiner Lader). Der Text geht als
+  `textAuszug` in `saveLocalDocument` des Klons (höchstens 20.000 Zeichen) – damit findet die **Wortsuche** den Inhalt auch ohne
+  Bedeutungssuche. Gelesen wird **vor** dem Ablegen (Knopf zeigt „Text wird gelesen …“), weil der Klon keinen Weg hat, den Auszug
+  nachträglich zu setzen; klappt das Lesen nicht, wird trotzdem abgelegt. **Schon Abgelegtes:** bekommt keinen Auszug; mit
+  eingeschalteter Bedeutungssuche liest `readMeaningCorpus` Fotos und Scans einmal über die Texterkennung (gemerkt in der
+  Browser-Datenbank `PrivateAkteText1`, Schlüssel Name und Größe) und PDFs über die Textebene. Unter den Treffern steht
+  „Inhalt gelesen bei x von y Unterlagen“ (`bedeutung.gelesen()`), damit zu sehen ist, ob gelesen wurde. Der Worker legt die
+  Texterkennung (rund 5,5 MB) erst beim Gebrauch in den Vorrat. **Offen:** Klaus am Tablet: „Essig auf Marmor“ fand das Bonusheft
+  nicht – unklar, ob dort schon 0.4.2 lief; die Sitzung erreicht Pages nicht und konnte nicht nachsehen, ob `klone/…/pdfjs` dort
+  ausgeliefert wird. Später (Klaus): Kamera oben über Workflow PDF. Probe: Foto mit gedrucktem Text wird erkannt und über die
+  Wortsuche gefunden (208 grün); echte Belegfotos und Dauer am Tablet ungeprüft.
 - **0.4.2 PDFs werden gelesen (Klaus 17.11. am Tablet: Wörter aus dem Inhalt der Bonushefte fanden nichts):** `src/pdf-ersatz.ts`
   lädt jetzt die PDF-Bibliothek des Klons (`klone/familienakte/public/vendor/pdfjs`, auch im Offline-Vorrat) statt abzubrechen; das
   Lesen selbst ist `readMeaningCorpus` des Klons (Textebene, höchstens 60 Seiten; Scans ohne Textebene liefern nichts, OCR nicht
