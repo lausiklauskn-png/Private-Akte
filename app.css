@@ -237,3 +237,6 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .suchknopf:hover{background:var(--fl);color:var(--akz)}.suchknopf[hidden]{display:none}.suchknopf .icon{width:18px;height:18px}
 .suchknopf.an{background:#c0262d;color:#fff;animation:puls 1.2s infinite}
 @keyframes puls{50%{box-shadow:0 0 0 6px rgba(192,38,45,.18)}}
+.bedzeile{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:8px;padding:9px 12px;border-radius:12px;background:var(--tealsoft);border:1px solid color-mix(in srgb,var(--teal) 25%,transparent);font-size:13px;color:var(--ink)}
+.bedzeile span{flex:1 1 220px;min-width:0}.bedzeile progress{flex:1 1 140px;height:8px;accent-color:var(--teal)}
+.bedzeile.still{background:none;border:0;padding:4px 2px;color:var(--muted)}.bedzeile.fehler{background:var(--ambersoft);border-color:color-mix(in srgb,var(--amber) 30%,transparent)}

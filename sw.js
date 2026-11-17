@@ -1,11 +1,11 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
-const VERSION = '0.3.6';
+const VERSION = '0.3.7';
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
 const DATEIEN = [
-  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
+  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'native/familienakte-meaning-worker.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
   'icons/favicon-32.png', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png',
   'bilder/baum.jpg', 'bilder/zur-akte.mp4', 'bilder/logo-basic-rund.png', 'bilder/logo-pro-rund.png'
 ].map(pfad => new URL(pfad, ROOT).href);

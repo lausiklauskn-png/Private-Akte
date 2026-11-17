@@ -1,11 +1,15 @@
 // Brücke zwischen der Hülle (app.js) und dem unveränderten Tresor der Familienakte (klone/familienakte).
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
 import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, LIMITS,
-  sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
+  getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText } from "../klone/familienakte/lib/family-search.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
+import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
+import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
+import { buildMeaningIndex, searchMeaningIndex, type MeaningDocument } from "../klone/familienakte/app/private-meaning-index.ts";
+import { readMeaningCorpus } from "../klone/familienakte/app/private-meaning-corpus.ts";
 import { createDictationSession, speechConstructor, microphoneBlockedReason } from "../klone/familienakte/lib/browser-dictation.ts";
 
 const tresor = {
@@ -80,5 +84,41 @@ const diktat = {
   sitzung: (r: { text: (t: string) => void; zustand: (an: boolean) => void; hinweis: (t: string, fehler: boolean) => void }) =>
     createDictationSession({ constructor: () => speechConstructor(window as never), online: () => navigator.onLine, onText: r.text, onState: r.zustand, onHint: r.hinweis }),
 };
-const alles = { ...tresor, sicherung, suchen, diktat };
+// Bedeutungssuche: Lader, Rechen-Worker, Index und Korpus der Familienakte, unverändert. Kleinste Stufe (multilingual-e5-small).
+// Das Modell wird nur auf ausdrücklichen Wunsch geladen (Klaus 17.11.: einmal, beim ersten „Finden“) und liegt dann im
+// Speicher des Browsers; gerechnet wird auf dem Gerät. PDFs zählen vorerst nur mit Titel, Bereich und Notiz (src/pdf-ersatz.ts).
+const STUFE = "klein" as const;
+// Die Pins nennen für die kleine Stufe keine Dateigrößen; für den Ladebalken: Bibliothek rund 20 MB + Modell rund 119 MB.
+const GESCHAETZT = 139_000_000;
+const MODELL = { id: MEANING_MODELS[STUFE].id, revision: MEANING_MODELS[STUFE].revision, dim: MEANING_MODELS[STUFE].dim };
+let eingehaengt = false, laufzeit: MeaningRuntime | null = null;
+let korpus: { stand: string; scope: string; documents: MeaningDocument[] } | null = null;
+const einhaengen = () => { if (!eingehaengt) { browserModelleEinhaengen(browserModelle as never); eingehaengt = true; } };
+const rechnen = (text: string, model: typeof MODELL) => (laufzeit ||= new MeaningRuntime()).embed(text, model);
+/** Liest die Unterlagen und rechnet, was neu ist (schon Gerechnetes bleibt). `stand` = Kennung der Liste, damit nach neuem Ablegen neu gelesen wird. */
+async function indexBauen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) {
+  const handle = await browserVault(), scope = (await getVaultSummary(handle)).vaultId;
+  const gelesen = await readMeaningCorpus(handle, () => {});
+  await buildMeaningIndex({ scope, model: MODELL, read: async () => gelesen.documents, currentScope: () => scope, embed: rechnen, progress: fortschritt });
+  korpus = { stand, scope, documents: gelesen.documents };
+  return korpus;
+}
+const bedeutung = {
+  moeglich: () => browserModelleMoeglich(),
+  /** Liegt das Modell geprüft auf dem Gerät? Dazu der Stand eines laufenden Ladens in Bytes. */
+  async zustand() {
+    einhaengen(); const m = (await browserModelle.getState()).models[STUFE];
+    return { geladen: m.installed, laeuft: m.running, fertig: m.done, gesamt: Math.max(m.total, GESCHAETZT), fehler: m.error, quelle: m.source };
+  },
+  async laden() { einhaengen(); await browserModelle.install({ stage: STUFE }); },
+  async abbrechen() { einhaengen(); await browserModelle.cancel({ stage: STUFE }); },
+  async lesen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) { einhaengen(); await indexBauen(stand, fortschritt); },
+  /** Treffer dem Sinn nach: Kennungen der Unterlagen mit ihrer Nähe zur Frage (0 bis 1), beste zuerst. */
+  async suchen(frage: string, stand: string) {
+    einhaengen(); const k = korpus && korpus.stand === stand ? korpus : await indexBauen(stand);
+    const r = await searchMeaningIndex({ scope: k.scope, documents: k.documents, query: frage.slice(0, 500), currentScope: () => k.scope, embed: rechnen });
+    return r.hits.filter((h) => h.id.startsWith("d:")).map((h) => ({ id: h.id.slice(2), naehe: h.score }));
+  },
+};
+const alles = { ...tresor, sicherung, suchen, diktat, bedeutung };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

@@ -23,6 +23,8 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 
 | A8 | Suche: nur eine Suchleiste, mit Mikrofon und X; kein eigener Knopf für die Bedeutungssuche – sie soll verdeckt hinter „Finden“ arbeiten, und wenn sie keinen Zusammenhang findet, greifen die Wörter. | 0.3.6: X und Mikrofon im Suchfeld, „Finden“ sucht mit der Wortsuche der Familienakte in den echten Unterlagen. Bedeutungssuche folgt als zweiter Schritt hinter demselben Knopf. | Dort ist die Bedeutungssuche ein eigener Bereich mit eigenen Schaltern; prüfen, ob sie hinter der einen Suche verschwinden kann. |
 | A9 | Gesucht wird hier nur in Titel, Dateiname, Bereich und Notiz, nicht im Inhalt – beim Ablegen wird noch kein Text gelesen. | Noch nicht angepasst (kommt mit dem Eingang aus dem Klon). | – |
+| A10 | Bedeutungssuche: nach „Finden“ einmal fragen „Ja / Nein“ mit Ladebalken; bei Nein verschwindet die Frage und kommt beim nächsten „Finden“ wieder, damit man merkt, woran es liegen kann, wenn nichts gefunden wird. Später über Einstellungen wieder einschaltbar. | 0.3.7 so gebaut. Mit echtem Modell noch nie gelaufen. | Dort ist die Bedeutungssuche laut Notizen in der Web-App ebenfalls nie mit echtem Modell gelaufen – am Gerät prüfen. Die Pins nennen für die kleine Stufe keine Dateigrößen (Ladebalken). |
+| A11 | Zurück (Android, Browser, Maustaste) schloss die App. Es soll mehrmals zurückgehen, ohne dass sie schließt. | 0.3.7: Zurück geht einen Schritt in der App zurück; am Anfang bleibt sie offen, erst das zweite Zurück verlässt sie. | Prüfen, wie sich die PWA der Familienakte beim Zurück verhält. |
 
 ## B. Vereinfachungen der Hülle
 
