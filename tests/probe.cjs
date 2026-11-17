@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.3.9 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -43,11 +43,26 @@ const { chromium } = require('playwright');
     await klick('[data-a=bed-nein]'); soll((await p.locator('#bed-frage').count())===0, 'Nein blendet die Frage aus'); await p.keyboard.press('Enter'); await p.locator('.suche input').press('Enter'); await p.waitForSelector('#bed-frage'); soll(true, 'beim nächsten Finden ist die Frage wieder da');
     await p.route(/family-projekt\.de|huggingface\.co|jsdelivr\.net|unpkg\.com/, r => r.abort()); await klick('[data-a=bed-ja]'); await p.waitForSelector('.bedzeile.fehler', {timeout:30000}); soll((await text()).includes('Das Laden hat nicht geklappt'), 'ohne Netz: Laden meldet den Fehler, Wortsuche bleibt'); soll((await p.locator('#echt-treffer .zeile').count())>=1, 'Treffer der Wörter bleiben stehen'); await klick('[data-a=bed-nein]');
     // Treffer dem Sinn nach (Modell gestellt): stehen hinter den Wort-Treffern, mit eigener Marke
-    await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; t.bedeutung.suchen = async () => [{id:d.id, naehe:0.9}]; bed.geladen = true; });
-    await p.fill('.suche input','Zettel vom Arzt'); await p.keyboard.press('Enter'); await p.waitForSelector('#sinn-treffer .m-arbeit'); soll((await p.locator('#sinn-treffer').innerText()).includes('dem Sinn nach · 9,0') && (await p.locator('#bed-frage').count())===0, 'Treffer dem Sinn nach als eigener Abschnitt mit Nähe, keine Frage mehr');
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; window.__echtSuchen = t.bedeutung.suchen; t.bedeutung.suchen = async () => [{id:d.id, naehe:0.42, roh:0.88, wort:false}]; bed.geladen = true; });
+    await p.fill('.suche input','Zettel vom Arzt'); await p.keyboard.press('Enter'); await p.waitForSelector('#sinn-treffer .m-arbeit'); soll((await p.locator('#sinn-treffer').innerText()).includes('dem Sinn nach · 0,42') && (await p.locator('#bed-frage').count())===0, 'Treffer dem Sinn nach als eigener Abschnitt mit Nähe, keine Frage mehr');
     await p.fill('.suche input','Gehaltsabrechnung September'); await p.keyboard.press('Enter'); await p.waitForSelector('#beispiel-treffer'); soll((await p.locator('#beispiel-treffer').innerText()).includes('Gehaltsabrechnung Oktober 2026') && (await p.locator('#beispiel-treffer').innerText()).includes('nicht alle Wörter passen'), 'ein Wort passt nicht: der Rest wird trotzdem gefunden'); soll(await p.evaluate(() => { const b = document.querySelector('#beispiel-treffer'), s = document.querySelector('#sinn-treffer'); return !s || (b.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING) > 0; }), 'Wort-Treffer stehen über „dem Sinn nach“');
     await p.fill('.suche input','Probe Kaktus'); await p.keyboard.press('Enter'); await p.waitForSelector('#echt-treffer'); soll((await p.locator('#echt-treffer').innerText()).includes('nicht alle Wörter passen'), 'echte Unterlagen: ein Wort passt nicht, der Rest wird gefunden'); await p.screenshot({path:`p/${name}-1e-sinn.png`});
-    await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; }); await klick('[data-a=suche-leer]');
+    // Der echte Suchweg mit gestelltem Rechner (das Sprachmodell kann die Probe nicht laden): Sage Modul 04 verschmilzt Wörter und
+    // Bedeutung, der Mittelwert wird abgezogen. Der Rechner ahmt den hohen Boden nach: jeder Text bekommt denselben großen Anteil
+    // und einen kleinen, der von seinen Wörtern abhängt.
+    const sinnProbe = await p.evaluate(async () => {
+      const t = window.PrivateAkteTresor; t.bedeutung.suchen = window.__echtSuchen;
+      const vek = text => { const v = new Float32Array(384).fill(0.9 / Math.sqrt(384)); for (const w of text.toLowerCase().replace(/^(query|passage): /, '').split(/[^a-zäöüß0-9]+/).filter(x => x.length > 2)) { let h = 7; for (const c of w) h = (h * 31 + c.charCodeAt(0)) % 384; v[h] += 0.15; } const n = Math.hypot(...v); return v.map(x => x / n); };
+      t.bedeutung.zurProbe(async text => vek(text));
+      for (const [name, inhalt] of [['Rezept Apfelkuchen.txt','Apfelkuchen backen mit Zimt und Butter'],['Mietvertrag Wohnung.txt','Mietvertrag Wohnung Kaution Nebenkosten'],['Impfpass Kopie.txt','Impfung Tetanus Arzt Praxis']]) await t.ablegen(new File([inhalt], name, {type:'text/plain'}), {bereich:'Sonstiges', datum:null, titel:null, notiz:null});
+      const liste = await t.liste(), h = await t.bedeutung.suchen('Kaution Wohnung', 'probe-stand'), kuchen = liste.find(d => d.originalName.startsWith('Rezept')), miete = liste.find(d => d.originalName.startsWith('Mietvertrag'));
+      const aus = { n:h.length, erster:h[0] && h[0].id === miete.id, wort:h[0] && h[0].wort, nah:h[0] && h[0].naehe, fremd:(h.find(x => x.id === kuchen.id) || {}).naehe, roh:(h.find(x => x.id === kuchen.id) || {}).roh };
+      t.bedeutung.zurProbe(null); for (const d of liste) if (/^(Rezept|Mietvertrag|Impfpass)/.test(d.originalName)) await t.herausnehmen(d.id);
+      return aus;
+    });
+    soll(sinnProbe.erster && sinnProbe.wort, 'Sage-Rangliste: die Unterlage mit den Wörtern der Frage steht vorn'); soll(sinnProbe.nah > 0.3 && sinnProbe.fremd < sinnProbe.nah / 2 && sinnProbe.roh > 0.8, 'zentrierte Nähe trennt: passend klar vorn, fremd höchstens halb so nah – obwohl der rohe Wert beim Fremden über 0,8 liegt (' + JSON.stringify(sinnProbe) + ')');
+    await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; echtLaden(); }); await klick('[data-a=suche-leer]'); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1');
+
     // Zurück: schließt erst das Fenster, dann die Ansicht; die Seite bleibt dieselbe
     await klick('.nav [data-zu=baum]'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('.fenster'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('.fenster')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
     await p.goBack(); await p.waitForSelector('#echt'); soll(p.url()==='http://localhost:8765/' && (await p.locator('.baumbild').count())===0, 'Zurück geht vom Baum zum Start');

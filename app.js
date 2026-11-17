@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.9', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -197,17 +197,20 @@ function sucheFeld(){
 }
 function treffer(){
   const t = suche(s.frage), es = echtSuche(s.frage), ids = es.ids, e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
-  // Dem Sinn nach: nur was die Wörter nicht schon gefunden haben, als eigener Abschnitt ganz unten (Klaus 17.11.: was die Wörter
-  // treffen, steht oben). Schwelle nach dem ersten Gerätetest angehoben (0,80 ließ alles durch); die Nähe steht als Zahl dabei,
-  // bis die Schwelle an echten Unterlagen eingestellt ist.
-  const roh = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => h.naehe >= 0.84 && h.naehe >= bed.treffer[0].naehe - 0.04 && !ids.includes(h.id)).slice(0, 5) : [];
+  // Dem Sinn nach (eigener Abschnitt ganz unten, was die Wörter treffen steht oben): die Rangliste kommt verschmolzen aus Wörtern und
+  // Bedeutung (Sage-Protokol). Gezeigt wird, was die Wortsuche oben nicht schon hat – mit der zentrierten Nähe: Fremdes liegt dort
+  // um 0, darum zählt erst, was klar darüber liegt (Sage maß bei Fremdem höchstens +0,04) und mindestens halb so nah ist wie das Beste;
+  // beide Grenzen sind geschätzt, die Zahl steht an der Zeile. Ist der Bestand für einen Mittelwert zu
+  // klein, gibt es keine Nähe; dann die ersten drei der Rangliste, ohne Zahl.
+  const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id)) : [];
+  const roh = rang.some(h => h.naehe !== null) ? (n => n.filter(h => h.naehe >= 0.1 && h.naehe >= n[0].naehe / 2).slice(0, 5))(rang.filter(h => h.naehe !== null).sort((a, b) => b.naehe - a.naehe)) : rang.slice(0, 3);
   const sinn = roh.map(h => ({d:echt.liste.find(d => d.id === h.id), h})).filter(x => x.d);
   if (!t.length && !e.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
   const b = new Set(t.map(d=>d.bereich)).size, teil = '<span>nicht alle Wörter passen</span>';
   return `${e.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length} Treffer</span>${es.teil ? teil : ''}</h2><div class="liste">${e.map(d => echtZeile(d)).join('')}</div></div>` : ''}
    ${t.length ? `<div class="abschnitt" id="beispiel-treffer"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span>${t.teil ? teil : ''}</h2>
    <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}
-   ${sinn.length ? `<div class="abschnitt" id="sinn-treffer"><h2>Passt vielleicht dem Sinn nach <span>deine Unterlagen · ohne das Wort</span></h2><div class="liste">${sinn.map(x => echtZeile(x.d, 'dem Sinn nach · ' + (x.h.naehe * 10).toFixed(1).replace('.', ','))).join('')}</div></div>` : ''}`;
+   ${sinn.length ? `<div class="abschnitt" id="sinn-treffer"><h2>Passt vielleicht dem Sinn nach <span>deine Unterlagen · die Zahl ist die Nähe zur Frage, 0 heißt fremd</span></h2><div class="liste">${sinn.map(x => echtZeile(x.d, x.h.naehe === null ? 'dem Sinn nach' : 'dem Sinn nach · ' + x.h.naehe.toFixed(2).replace('.', ','))).join('')}</div></div>` : ''}`;
 }
 const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);

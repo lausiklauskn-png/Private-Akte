@@ -3,6 +3,7 @@
 // und hält Stand und Prüfsumme jeder Datei in klone/<name>.herkunft.json fest. Nichts wird abgeschrieben oder ausgewählt.
 //
 //   node tools/klon-nachziehen.mjs <name> --quelle <pfad-zum-quell-repo> [--stand <ref>]   Klon anlegen oder nachziehen
+//   node tools/klon-nachziehen.mjs <name> --quelle <pfad> --nur <datei,datei>                 nur einzelne Dateien (Baustein, keine App)
 //   node tools/klon-nachziehen.mjs --pruefen [<name>]                                       Klone gegen ihre Pins prüfen
 //
 // Die Klone nie von Hand ändern. Eine Verbesserung entsteht in der Quell-App und kommt über dieses Werkzeug herein.
@@ -55,7 +56,10 @@ if (args.includes("--pruefen")) {
   process.exit(namen.map(pruefen).every(Boolean) ? 0 : 1);
 }
 
-const name = args.find((a) => !a.startsWith("--") && a !== wert("--quelle") && a !== wert("--stand"));
+const name = args.find((a) => !a.startsWith("--") && a !== wert("--quelle") && a !== wert("--stand") && a !== wert("--nur"));
+// --nur a,b: Ausnahme für Quellen, die keine App sind (Sage-Protokol: ein Baustein aus einem großen Repo). Dann kommen nur die
+// genannten Dateien herein, unverändert und mit Pin; die Herkunft hält fest, dass es eine Auswahl ist.
+const nur = (wert("--nur") || "").split(",").map((p) => p.trim()).filter(Boolean);
 const quelle = wert("--quelle");
 if (!name || !/^[a-z0-9-]+$/.test(name) || !quelle) { console.error("Aufruf: node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]"); process.exit(2); }
 const repo = resolve(quelle);
@@ -66,13 +70,13 @@ const ziel = join(KLONE, name);
 rmSync(ziel, { recursive: true, force: true });
 mkdirSync(ziel, { recursive: true });
 // git archive liefert genau die Dateien des Commits – ohne Arbeitsstände, ohne node_modules, ohne .git.
-execFileSync("sh", ["-c", `git -C "${repo}" archive --format=tar ${commit} | tar -x -C "${ziel}"`], { stdio: "inherit" });
+execFileSync("sh", ["-c", `git -C "${repo}" archive --format=tar ${commit} ${nur.map((p) => `"${p}"`).join(" ")} | tar -x -C "${ziel}"`], { stdio: "inherit" });
 const liste = dateienIn(ziel);
-const erwartet = git(repo, "ls-tree", "-r", "--name-only", "-z", commit).split("\0").filter(Boolean).length;
+const erwartet = git(repo, "ls-tree", "-r", "--name-only", "-z", commit, ...(nur.length ? ["--", ...nur] : [])).split("\0").filter(Boolean).length;
 if (liste.length !== erwartet) { console.error(`🔴 ${liste.length} Dateien übernommen, der Commit hat ${erwartet}. Abbruch.`); process.exit(1); }
 const dateien = {}; let bytes = 0;
 for (const rel of liste) { const d = inhalt(join(ziel, rel)); dateien[rel] = sha(d); bytes += d.length; }
 const oben = {};
 for (const rel of liste) { const k = rel.includes("/") ? rel.split("/")[0] + "/" : "(Dateien oben)"; oben[k] = (oben[k] || 0) + 1; }
-writeFileSync(join(KLONE, `${name}.herkunft.json`), JSON.stringify({ name, quelle: adresse, commit, standVom: datum, anzahl: liste.length, bytes, ordner: oben, dateien }, null, 1) + "\n");
+writeFileSync(join(KLONE, `${name}.herkunft.json`), JSON.stringify({ name, quelle: adresse, commit, standVom: datum, ...(nur.length ? { auswahl: nur } : {}), anzahl: liste.length, bytes, ordner: oben, dateien }, null, 1) + "\n");
 console.log(`🟢 ${name}: ${liste.length} Dateien (${(bytes / 1048576).toFixed(0)} MB) aus ${adresse} @ ${commit.slice(0, 7)} übernommen.`);

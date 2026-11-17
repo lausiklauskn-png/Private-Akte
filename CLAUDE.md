@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.9)
+## Stand (17.11.2026, Vorschau 0.4.0)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,18 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.0 Suche nach Sage-Protokol umgestellt (Klaus 17.11.: „Mache das“):** `klone/sage-protokol/src/modules/04_match.js` @ `4e62f90`
+  (MIT, mit `LICENSE`; Baustein statt App, darum `klon-nachziehen.mjs … --nur datei,datei` – Pin und `--pruefen` wie bei den anderen
+  Klonen). In `src/tresor.ts` (`bedeutung`): Lesen und Teilen in Abschnitte weiter über den Klon der Familienakte (`readMeaningCorpus`,
+  `meaningSections`), Rechnen über deren Rechen-Worker; **nicht mehr benutzt:** deren `buildMeaningIndex`/`searchMeaningIndex`.
+  Gerechnete Abschnitte liegen in der eigenen Browser-Datenbank `PrivateAkteSuche1` (Schlüssel = Fingerabdruck aus Modell-Stand und
+  Text; nur Vektoren, kein Text). Finden: Sage `queryLocal(…, {hybrid:true})` (BM25 + Vektor, Reciprocal Rank Fusion; die Frage holt
+  Sage über `window.SbkimEmbedding.embedQuery`, das hier der Rechner der Familienakte bedient), dazu der **zentrierte Cosinus** mit
+  dem Mittelwert des eigenen Bestands (ab drei Abschnitten). Anzeige: Wort-Treffer oben wie bisher; „Passt vielleicht dem Sinn nach“
+  zeigt die zentrierte Nähe als Zahl (0 = fremd), gezeigt ab 0,1 und mindestens halb so nah wie das Beste, höchstens fünf – beide
+  Grenzen geschätzt. Die Schwelle von 0.3.9 auf dem rohen Wert ist weg. **Nicht gebaut:** mehrere Formulierungen (`queryLocalMulti`,
+  braucht eine Synonym-Karte), KI-Richter. **Geprüft** nur mit gestelltem Rechner, der den hohen Boden nachahmt (Probe: passende
+  Unterlage vorn, Fremdes höchstens halb so nah bei rohem Wert über 0,8); mit dem echten Modell am Gerät ungeprüft.
 - **Bedeutungssuche verbessern – Befund aus Sage-Protokol (Klaus 17.11.: „prüf nach, ob wir den Kern übernehmen können“; nur gelesen,
   nichts gebaut):** Sage hat genau das am Tablet Gesehene gemessen und gelöst. Quellen dort: `docs/LEHRE-EMBEDDING-MATCH-KALIBRIERUNG.md`
   (zuerst lesen), `docs/components/04_match.md` (Bau 04.C/F/G/H), `docs/components/22_such_widget.md` (Abschnitt Vorfilter),
@@ -133,6 +145,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - Probe: `python3 -m http.server 8765` im Repo-Ordner, dann `node tests/probe.cjs` (Ordner `p/` am Aufrufort anlegen).
 
 ## Feste Regeln
+
+- **Bedeutungssuche – Merkregel für alle Apps (Klaus 17.11.: „merkt euch das“):** vor jedem Bau an einer Bedeutungssuche
+  `docs/LEHRE-EMBEDDING-MATCH-KALIBRIERUNG.md` im Repo Sage-Protokol lesen. Der rohe Cosinus von multilingual-e5-small liegt auch bei
+  fremden deutschen Texten um 0,82 – er ist eine Rangfolge, kein Urteil; **nie eine feste Schwelle auf den rohen Wert setzen.**
+  Stattdessen der Baustein aus Sage (`src/modules/04_match.js`, als Klon mit Pin): Wörter und Bedeutung verschmelzen (BM25 + Vektor,
+  RRF), Mittelwert des eigenen Bestands abziehen (zentrierter Cosinus), Abschnitte einzeln vergleichen statt mitteln. Dieselbe Regel
+  steht in der `CLAUDE.md` der Familienakte.
 
 - **`docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` still mitführen** (Klaus 17.11.): eine Arbeitsdatei im Hintergrund wie diese hier. Bei jedem
   Schritt von selbst ergänzen, was beim Ausprobieren auffällt und was hier anders gemacht wird als in der Familienakte – ohne Klaus

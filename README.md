@@ -4,7 +4,7 @@ Eine App für alle Unterlagen: in der Mitte die Akte, an den Ästen die Programm
 
 Web-App: https://lausiklauskn-png.github.io/Private-Akte/
 
-**Stand: Vorschau 0.3.9 (17.11.2026).** Echt sind zwei Dinge, beide mit dem unveränderten Tresor der Familienakte (`klone/familienakte`):
+**Stand: Vorschau 0.4.0 (17.11.2026).** Echt sind zwei Dinge, beide mit dem unveränderten Tresor der Familienakte (`klone/familienakte`):
 
 - **„Deine Unterlagen“** auf der Startseite: Dateien liegen im Speicher des Browsers und bleiben nach dem Neuladen da.
 - **Tresor exportieren / importieren** (Schild-Knopf): ein mit Passwort verschlüsselter Ordner mit Datum an einem frei gewählten Ort
