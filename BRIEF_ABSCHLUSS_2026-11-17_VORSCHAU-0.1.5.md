@@ -1,4 +1,4 @@
-# Abschlussbrief – Private Akte, Vorschau 0.1.4 (17.11.2026)
+# Abschlussbrief – Private Akte, Vorschau 0.1.5 (17.11.2026)
 
 Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Version 3 „Private Act“).
 
@@ -103,6 +103,17 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
   hat, ist dasselbe wie hier. **Weiterarbeiten auf dem Stand von PR #3**, nicht auf PR #2.
 - Klaus macht in der anderen Sitzung weiter.
 
+## Nachtrag 0.1.5 und Zusammenführen (Klaus 17.11., spät)
+
+- **Klaus: Claude entscheidet ab jetzt, wann zusammengeführt wird** – was am sinnvollsten ist und am wenigsten
+  kostet, aber so, dass Klaus früh prüfen kann, ob der Weg stimmt. Gilt für dieses Repo. Regel daraus: kleine,
+  geprüfte Stücke gleich auf `main`, damit die Vorschau-PWA immer den neuesten Stand zeigt und jede Sitzung von
+  `main` startet; nichts Halbfertiges, Probe vorher grün.
+- **Umbenennung in „Tools“ ist gemacht** (0.1.5): Baum, Eingang „Aus den Tools“, Fenstertitel, Hilfe, README;
+  Kasten 3 heißt „Tools · die Werkzeugstätten im Bild“. Der Bildtext des Baums beschreibt weiter das Bild (Städte).
+  Im Code heißen die Namen weiter `STAEDTE`/`fStadt`. Die „erste Aufgabe“ im vorigen Abschnitt ist damit erledigt.
+- PR #3 auf `main` zusammengeführt (enthält PR #2). Probe 92 Prüfungen, keine Fehler.
+
 ## Noch zu entscheiden
 
 - Einstellungen: wo (unter „Baum“?), und was hinein kommt (Tooltips, Tresor einrichten).
@@ -125,12 +136,12 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.4.md und README.md auf dem Zweig
-ccr-500c05b9-21sx0s (PR #3, Vorschau 0.1.4 – enthält PR #2 vollständig; hole diesen Stand in deinen Zweig).
-Erste Aufgabe: die Programme heißen „Tools“ – überall in der App, in der Hilfe und im README „Stadt/Städte“
-ersetzen; „Werkzeugstätte“ bleibt nur als Erklärung beim Baumbild. Fassung erhöhen (FASSUNG in app.js,
-VERSION in sw.js, ?v= zweimal in index.html), mit tests/probe.cjs in Handy- und PC-Breite prüfen.
-Danach mit mir den Bau besprechen: Reihenfolge aus dem Abschnitt „Vorgabe für den Bau“ (dieselbe Mechanik
-wie die Familienakte, damit ein Abgleich möglich bleibt), Web-App oder gleich Android, Einstellungen
-(Tooltips, Tresor einrichten). Datenschutzerklärung zum Schluss. Zusammenführen nur auf mein Wort.
+Lies im Repo Private-Akte auf main zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md und README.md
+(Vorschau 0.1.5; PR #2 und #3 sind darin aufgegangen – von main starten, nicht von einem alten Zweig).
+Besprich mit mir den Bau: Reihenfolge aus dem Abschnitt „Vorgabe für den Bau“ (dieselbe Mechanik wie die
+Familienakte, damit ein Abgleich möglich bleibt), Web-App oder gleich Android, Einstellungen (Tooltips,
+Tresor einrichten). Gleiche vorher PR #1 (Gerüst, Klon-Werkzeug) damit ab. Datenschutzerklärung zum Schluss.
+Du entscheidest, wann zusammengeführt wird: kleine geprüfte Stücke gleich auf main (Probe tests/probe.cjs
+in Handy- und PC-Breite grün, Fassung erhöht: FASSUNG in app.js, VERSION in sw.js, ?v= zweimal in index.html),
+damit ich in der Vorschau-PWA früh sehe, ob der Weg stimmt.
 ```

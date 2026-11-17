@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -208,7 +208,7 @@ function vEingang(){
   return `<h1 class="titel">Eingang</h1><p class="unter">Geprüft wird nur, was wirklich neu ist.</p>
   <div class="abschnitt"><h2>Neu <span>Vorschlag bestätigen, ändern oder gleich weiterarbeiten</span></h2><div class="liste">${n.length ? n.map(e => `<div class="zeile" style="flex-wrap:wrap"><span class="art ${e.art}">${e.art}</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>aus: ${esc(e.quelle)}</small></span>
     <span class="unten">${bereichWahl(e.vorschlag, `data-vorschlag="${e.id}"`)}<button class="knopf gruen klein" data-a="bestaetigen" data-id="${e.id}">Stimmt</button><button class="knopf hell klein" data-a="mit" data-neu="${e.id}">Bearbeiten mit</button></span></div>`).join('') : '<p class="leer">Nichts zu prüfen.</p>'}</div></div>
-  <div class="abschnitt"><h2>Aus den Städten <span>schon abgelegt, nur zur Kenntnis</span></h2><div class="liste">${z.length ? z.map(e => `<button class="zeile" data-a="doc" data-id="${e.doc}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">✓</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>${esc(e.text)}</small></span>${ic('weiter')}</button>`).join('') : `<p class="leer">Noch nichts zurückgekommen. Öffne eine Unterlage und tippe auf „Bearbeiten mit“.</p>`}</div></div>${fuss()}`;
+  <div class="abschnitt"><h2>Aus den Tools <span>schon abgelegt, nur zur Kenntnis</span></h2><div class="liste">${z.length ? z.map(e => `<button class="zeile" data-a="doc" data-id="${e.doc}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">✓</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>${esc(e.text)}</small></span>${ic('weiter')}</button>`).join('') : `<p class="leer">Noch nichts zurückgekommen. Öffne eine Unterlage und tippe auf „Bearbeiten mit“.</p>`}</div></div>${fuss()}`;
 }
 /* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
 function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? termine.length : docs.filter(d => d.bei===id).length; }
@@ -229,7 +229,7 @@ function woLiegtWas(){
     ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
     <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
    <i class="wopfeil beide" aria-hidden="true"></i>
-   <div class="wokasten"><h3>3 · Werkzeugstätte <small>hat keinen eigenen Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Ein Werkzeug holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
+   <div class="wokasten"><h3>3 · Tools <small>die Werkzeugstätten im Bild · kein eigener Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Ein Werkzeug holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
   </div>
   <div class="wo unten">
    <button class="wokasten klein" data-a="sicherung"><h3>Sicherung</h3><p>Eine Kopie des ganzen Tresors an einem zweiten Ort. Ein Speicher heißt: eine Sicherung reicht.</p></button>
@@ -240,7 +240,7 @@ function woLiegtWas(){
 function vBaum(){
   const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video>` : '';
   s.reisen = 0;
-  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Städte – jede Stadt ist ein Programm. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
+  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Tools. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
   <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
    <svg class="wege" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 84 C9 90 5 93 0 95" fill="none" stroke="#ffe7ad" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/></svg>
    <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
@@ -278,7 +278,7 @@ function fMit(e){
   const was = e.dataset.neu ? eingang.neu.find(x => x.id == e.dataset.neu) : docs.find(x => x.id == e.dataset.doc);
   const wo = e.dataset.neu ? `data-neu="${was.id}"` : `data-doc="${was.id}"`;
   fenster(`${fk('Bearbeiten mit', esc(was.titel))}
-   <p class="unter" style="margin-bottom:10px">${e.dataset.neu ? 'Die Sache gilt als in der Akte angekommen (mit dem gewählten Bereich).' : 'Das Original bleibt in der Akte.'} Bearbeitet wird eine Kopie in der Stadt.</p>
+   <p class="unter" style="margin-bottom:10px">${e.dataset.neu ? 'Die Sache gilt als in der Akte angekommen (mit dem gewählten Bereich).' : 'Das Original bleibt in der Akte.'} Bearbeitet wird eine Kopie im Tool.</p>
    <div class="liste">${MIT.map(([id,i,t,u,f]) => `<button class="zeile" data-a="mit-wahl" data-womit="${id}" ${wo}><span class="tupfer eckig" style="--a:${f[0]};--b:${f[1]}">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small>${u}</small></span>${ic('weiter')}</button>`).join('')}</div>`);
 }
 function ablegenAusEingang(id){
@@ -319,7 +319,7 @@ function fStadt(wid, ids=[], teilId){
   s.offen = wid;
   const inhalt = ({buero, geld:portemonnaie, sort:sortierer, mail:post, kal:kalender})[wid]();
   const astnav = `<div class="astnav" aria-label="Zwischen den Programmen wechseln"><button data-a="geh" data-zu="start">‹ Akte</button><button data-a="geh" data-zu="baum">Baum</button>${STAEDTE.map(x => `<button data-a="stadt" data-id="${x.id}" ${x.id===wid?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>`;
-  fenster(fk(esc(w.name), `Stadt in der Privaten Akte · ${esc(w.tut)}`, `<button class="rund farbknopf" data-a="farbe" data-ort="${wid}" aria-label="Farbpalette für ${esc(w.name)}" title="Farbpalette"></button>`) + astnav + `<div id="astinhalt">${inhalt}</div>`, 'ast', farbStil(wid));
+  fenster(fk(esc(w.name), `Tool in der Privaten Akte · ${esc(w.tut)}`, `<button class="rund farbknopf" data-a="farbe" data-ort="${wid}" aria-label="Farbpalette für ${esc(w.name)}" title="Farbpalette"></button>`) + astnav + `<div id="astinhalt">${inhalt}</div>`, 'ast', farbStil(wid));
   navZeigen(); mainZeigen();
 }
 const stadtNeu = () => { if (s.offen) fStadt(s.offen); };
@@ -423,9 +423,9 @@ const A = {
  hilfe: () => { menueZu(); fenster(`${fk('So funktioniert die Private Akte')}<ul style="padding-left:18px;margin:0;display:grid;gap:8px">
    <li><b>Hereinbringen:</b> die Leiste oben – Bon fotografieren, PDF scannen, Dateien hineingeben, Notiz, Kalender.</li>
    <li><b>Finden:</b> die Suche oder die sechs Bereiche.</li>
-   <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst die Stadt; bearbeitet wird eine Kopie.</li>
+   <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst das Tool; bearbeitet wird eine Kopie.</li>
    <li><b>Zur Akte:</b> das Ergebnis liegt als neue Fassung am alten Platz. Das Original bleibt.</li>
-   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Städte. Darunter „Wo liegt was?“: ein Tresor für alles.</li>
+   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Tools. Darunter „Wo liegt was?“: ein Tresor für alles.</li>
    <li><b>Farbpalette:</b> der bunte runde Knopf. Jedes Programm merkt sich seine eigene Farbe.</li></ul>
    <div class="logos"><figure><img src="./bilder/logo-basic-rund.png" alt="Zeichen der Basic-Fassung auf Weiß">Basic<br>diese Web-App</figure><figure><img src="./bilder/logo-pro-rund.png" alt="Zeichen der Pro-Fassung mit buntem Rand">Pro<br>bunter Rand</figure></div>
    <label class="schalter"><input type="checkbox" data-tippwahl ${s.tipps?'checked':''}> Tooltips an den Knöpfen anzeigen</label>
