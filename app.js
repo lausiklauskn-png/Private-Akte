@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.8', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.9', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -136,10 +136,24 @@ let toastZeit;
 function toast(t){ $('toast').textContent = t; clearTimeout(toastZeit); toastZeit = setTimeout(() => $('toast').textContent = '', 5200); }
 const ort = d => `${bereich(d.bereich).name} / ${d.vorgang}`;
 const SYN = {unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
+const suchWoerter = frage => frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
+/* Beispiele: erst alle Wörter; findet das nichts, zählt, wer die meisten Wörter trifft (Klaus 17.11.: „Gehaltsabrechnung September“
+   soll wenigstens die Gehaltsabrechnung finden). Rückgabe: Treffer und ob nur ein Teil der Wörter passte. */
 function suche(frage){
-  const w = frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
-  if (!w.length) return [];
-  return docs.filter(d => { const heu = (d.titel+' '+ort(d)+' '+d.text+' '+d.art).toLowerCase(); return w.every(x => heu.includes(x)); });
+  const w = suchWoerter(frage); if (!w.length) return [];
+  const heu = d => (d.titel+' '+ort(d)+' '+d.text+' '+d.art).toLowerCase(), alle = docs.filter(d => w.every(x => heu(d).includes(x)));
+  if (alle.length || w.length < 2) return alle;
+  const teil = docs.map(d => ({d, n:w.filter(x => heu(d).includes(x)).length})).filter(t => t.n), best = Math.max(0, ...teil.map(t => t.n));
+  const aus = teil.filter(t => t.n === best).map(t => t.d); aus.teil = true; return aus;
+}
+/* Echte Unterlagen: die Wortsuche des Klons verlangt alle Wörter. Findet sie nichts, wird Wort für Wort gesucht. */
+function echtSuche(frage){
+  if (!T() || !echt.liste) return {ids:[], teil:false};
+  const alle = T().suchen(frage, echt.liste); if (alle.length) return {ids:alle, teil:false};
+  const w = frage.split(/\s+/).filter(x => x.length > 2); if (w.length < 2) return {ids:[], teil:false};
+  const zahl = new Map(); for (const wort of w) for (const id of T().suchen(wort, echt.liste)) zahl.set(id, (zahl.get(id) || 0) + 1);
+  const best = Math.max(0, ...zahl.values());
+  return {ids:[...zahl].filter(([, n]) => n === best).map(([id]) => id), teil:zahl.size > 0};
 }
 function neuesDoc(a){ const d = {id:++nr,datum:datum(HEUTE),fassung:1,bei:null,teil:null,...a}; docs.push(d); return d; }
 function docZeile(d, {haken=false}={}){
@@ -182,14 +196,18 @@ function sucheFeld(){
   return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form>`;
 }
 function treffer(){
-  const t = suche(s.frage), ids = T() && echt.liste ? T().suchen(s.frage, echt.liste) : [], e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
-  // Dem Sinn nach: nur was die Wörter nicht schon gefunden haben. Schwelle geschätzt (e5 liegt auch bei Fremdem hoch), am Gerät nachstellen.
-  const sinn = bed.zu === s.frage && echt.liste ? bed.treffer.filter((h, n) => h.naehe >= 0.8 && h.naehe >= bed.treffer[0].naehe - 0.05 && !ids.includes(h.id)).slice(0, 10).map(h => echt.liste.find(d => d.id === h.id)).filter(Boolean) : [];
+  const t = suche(s.frage), es = echtSuche(s.frage), ids = es.ids, e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
+  // Dem Sinn nach: nur was die Wörter nicht schon gefunden haben, als eigener Abschnitt ganz unten (Klaus 17.11.: was die Wörter
+  // treffen, steht oben). Schwelle nach dem ersten Gerätetest angehoben (0,80 ließ alles durch); die Nähe steht als Zahl dabei,
+  // bis die Schwelle an echten Unterlagen eingestellt ist.
+  const roh = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => h.naehe >= 0.84 && h.naehe >= bed.treffer[0].naehe - 0.04 && !ids.includes(h.id)).slice(0, 5) : [];
+  const sinn = roh.map(h => ({d:echt.liste.find(d => d.id === h.id), h})).filter(x => x.d);
   if (!t.length && !e.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
-  const b = new Set(t.map(d=>d.bereich)).size, n = e.length + sinn.length;
-  return `${n ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${n} Treffer${sinn.length ? ` · ${sinn.length} dem Sinn nach` : ''}</span></h2><div class="liste">${e.map(d => echtZeile(d)).join('')}${sinn.map(d => echtZeile(d, 'dem Sinn nach')).join('')}</div></div>` : ''}
-   ${t.length ? `<div class="abschnitt"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span></h2>
-   <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}`;
+  const b = new Set(t.map(d=>d.bereich)).size, teil = '<span>nicht alle Wörter passen</span>';
+  return `${e.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length} Treffer</span>${es.teil ? teil : ''}</h2><div class="liste">${e.map(d => echtZeile(d)).join('')}</div></div>` : ''}
+   ${t.length ? `<div class="abschnitt" id="beispiel-treffer"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span>${t.teil ? teil : ''}</h2>
+   <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}
+   ${sinn.length ? `<div class="abschnitt" id="sinn-treffer"><h2>Passt vielleicht dem Sinn nach <span>deine Unterlagen · ohne das Wort</span></h2><div class="liste">${sinn.map(x => echtZeile(x.d, 'dem Sinn nach · ' + (x.h.naehe * 10).toFixed(1).replace('.', ','))).join('')}</div></div>` : ''}`;
 }
 const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
@@ -498,7 +516,7 @@ document.addEventListener('change', ev => {
 });
 document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
-  if (f.dataset.form === 'suche') { s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
+  if (f.dataset.form === 'suche') { if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
   if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
   if (f.dataset.form === 'notiz') {
     const d = neuesDoc({titel:f.titel.value.trim(),art:'NOTIZ',bereich:f.bereich.value,vorgang:f.vorgang.value.trim()||'Notizen',herkunft:'Notiz, von Hand zugeordnet',text:f.text.value.trim()});
@@ -657,7 +675,8 @@ document.addEventListener('submit', async ev => {
     } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
   }
 });
-function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
+/* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
+function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden(); bedPruefen();
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
@@ -783,3 +802,4 @@ addEventListener('popstate', () => {
   else { s.ansicht = 'start'; zeigen(); scrollTo(0,0); }
 });
 new MutationObserver(() => queueMicrotask(zurAbgleich)).observe(document.body, {childList:true, subtree:true});
+document.addEventListener('visibilitychange', () => { if (document.hidden && sprech.an) sprechEnde(false); });
