@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -135,7 +135,7 @@ const bed = { geladen:null, frage:false, phase:'', fertig:0, gesamt:0, fehler:''
 let toastZeit;
 function toast(t){ $('toast').textContent = t; clearTimeout(toastZeit); toastZeit = setTimeout(() => $('toast').textContent = '', 5200); }
 const ort = d => `${bereich(d.bereich).name} / ${d.vorgang}`;
-const SYN = {unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
+const SYN = {was:'',wie:'',wo:'',und:'',für:'',fürs:'',ein:'',eine:'',einen:'',dokumente:'',unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
 const suchWoerter = frage => frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
 /* Beispiele: erst alle Wörter; findet das nichts, zählt, wer die meisten Wörter trifft (Klaus 17.11.: „Gehaltsabrechnung September“
    soll wenigstens die Gehaltsabrechnung finden). Rückgabe: Treffer und ob nur ein Teil der Wörter passte. */
@@ -150,7 +150,7 @@ function suche(frage){
 function echtSuche(frage){
   if (!T() || !echt.liste) return {ids:[], teil:false};
   const alle = T().suchen(frage, echt.liste); if (alle.length) return {ids:alle, teil:false};
-  const w = frage.split(/\s+/).filter(x => x.length > 2); if (w.length < 2) return {ids:[], teil:false};
+  const w = T().teilWoerter(frage); if (w.length < 2) return {ids:[], teil:false};
   const zahl = new Map(); for (const wort of w) for (const id of T().suchen(wort, echt.liste)) zahl.set(id, (zahl.get(id) || 0) + 1);
   const best = Math.max(0, ...zahl.values());
   return {ids:[...zahl].filter(([, n]) => n === best).map(([id]) => id), teil:zahl.size > 0};
@@ -199,11 +199,11 @@ function treffer(){
   const t = suche(s.frage), es = echtSuche(s.frage), ids = es.ids, e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
   // Dem Sinn nach (eigener Abschnitt ganz unten, was die Wörter treffen steht oben): die Rangliste kommt verschmolzen aus Wörtern und
   // Bedeutung (Sage-Protokol). Gezeigt wird, was die Wortsuche oben nicht schon hat – mit der zentrierten Nähe: Fremdes liegt dort
-  // um 0, darum zählt erst, was klar darüber liegt (Sage maß bei Fremdem höchstens +0,04) und mindestens halb so nah ist wie das Beste;
-  // beide Grenzen sind geschätzt, die Zahl steht an der Zeile. Ist der Bestand für einen Mittelwert zu
+  // um 0, darum zählt erst, was klar darüber liegt und mindestens halb so nah ist wie das Beste. Untere Grenze 0,2: am Tablet
+  // (0.4.0, drei Unterlagen) kam Fremdes auf 0,11 und 0,16. Die zweite Grenze ist weiter geschätzt, die Zahl steht an der Zeile. Ist der Bestand für einen Mittelwert zu
   // klein, gibt es keine Nähe; dann die ersten drei der Rangliste, ohne Zahl.
   const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id)) : [];
-  const roh = rang.some(h => h.naehe !== null) ? (n => n.filter(h => h.naehe >= 0.1 && h.naehe >= n[0].naehe / 2).slice(0, 5))(rang.filter(h => h.naehe !== null).sort((a, b) => b.naehe - a.naehe)) : rang.slice(0, 3);
+  const roh = rang.some(h => h.naehe !== null) ? (n => n.filter(h => h.naehe >= 0.2 && h.naehe >= n[0].naehe / 2).slice(0, 5))(rang.filter(h => h.naehe !== null).sort((a, b) => b.naehe - a.naehe)) : rang.slice(0, 3);
   const sinn = roh.map(h => ({d:echt.liste.find(d => d.id === h.id), h})).filter(x => x.d);
   if (!t.length && !e.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
   const b = new Set(t.map(d=>d.bereich)).size, teil = '<span>nicht alle Wörter passen</span>';
