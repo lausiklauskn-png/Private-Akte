@@ -18,7 +18,16 @@ function ocrWorker() {
   return ocr;
 }
 const sauber = (text: string) => text.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
-async function erkennen(c: HTMLCanvasElement) { const r = await (await ocrWorker()).recognize(c); c.width = c.height = 0; return sauber(r.data.text || ""); }
+// Die Texterkennung darf die Suche nie aufhalten: nach 90 Sekunden je Bild gilt sie als gescheitert (Klaus 17.11.: am Tablet stand
+// die Suche minutenlang; ob es die Texterkennung war, ist nicht gesichert).
+const OCR_GRENZE_MS = 90000;
+async function erkennen(c: HTMLCanvasElement) {
+  let uhr = 0;
+  try {
+    const r = await Promise.race([ocrWorker().then((w) => w.recognize(c)), new Promise<never>((_, nein) => { uhr = window.setTimeout(() => nein(new Error("OCR_ZU_LANGE")), OCR_GRENZE_MS); })]);
+    return sauber(r.data.text || "");
+  } catch (fehler) { ocr = null; throw fehler; } finally { window.clearTimeout(uhr); c.width = c.height = 0; }
+}
 const KANTE = 2400, OCR_SEITEN = 60, TEXT_SEITEN = 60;
 // Was gerade geschieht, für die Anzeige (die Texterkennung braucht je Seite einige Sekunden).
 let lage = "";
@@ -57,12 +66,14 @@ export async function textLesen(datei: File): Promise<{ text: string; art: "text
 // Für schon abgelegte Fotos und Scans ohne gespeicherten Text: einmal erkennen und im Browser merken (eigene kleine Datenbank,
 // Schlüssel Name und Größe der Datei), damit die Suche nicht bei jedem Start neu liest.
 function merkDb() { return new Promise<IDBDatabase>((ja, nein) => { const r = indexedDB.open("PrivateAkteText1", 1); r.onupgradeneeded = () => r.result.createObjectStore("text"); r.onsuccess = () => ja(r.result); r.onerror = () => nein(r.error); }); }
+const gescheitert = new Set<string>();   // in dieser Sitzung nicht noch einmal versuchen
 export async function textGemerkt(datei: File) {
-  const key = `${datei.name}:${datei.size}`, db = await merkDb();
+  const key = `${datei.name}:${datei.size}`; if (gescheitert.has(key)) return "";
+  const db = await merkDb();
   try {
     const da = await new Promise<unknown>((ja, nein) => { const r = db.transaction("text").objectStore("text").get(key); r.onsuccess = () => ja(r.result); r.onerror = () => nein(r.error); });
     if (typeof da === "string") return da;
-    const { text } = await textLesen(datei);
+    let text = ""; try { text = (await textLesen(datei)).text; } catch { gescheitert.add(key); return ""; }
     await new Promise<void>((ja, nein) => { const t = db.transaction("text", "readwrite"); t.objectStore("text").put(text, key); t.oncomplete = () => ja(); t.onerror = () => nein(t.error); });
     return text;
   } finally { db.close(); }

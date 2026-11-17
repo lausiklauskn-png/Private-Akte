@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.4)
+## Stand (17.11.2026, Vorschau 0.4.5)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.5 (Klaus gab sein Heft `Bonus_3_Fuenfzig_Hausrezepte.pdf` zum Nachsehen; die Datei liegt nicht im Repo):** an der Datei liegt
+  es nicht – Textebene, 48 Seiten, 36.000 Zeichen in 0,3 s gelesen, 26 Abschnitte; mit gestelltem Rechner findet „Essig auf Marmor“
+  das Heft als „im Text gefunden“. Klaus' Bild mit 0.4.4 (21:44): „Bedeutung wird gerechnet: Abschnitt 29 von 50“ – die PDFs werden am Tablet gelesen, die
+  Wartezeit ist das Rechnen der Abschnitte (einmalig, danach gemerkt); wie lange 50 Abschnitte dauern, ist nicht gemessen. Vorsorge: die Texterkennung gilt nach 90 s je Bild als
+  gescheitert und hält die Suche nicht mehr auf (in der Sitzung nicht erneut versucht).
 - **0.4.4 (Klaus 17.11.: seine PDFs haben nicht unbedingt eine Textebene; am Tablet stand lange nur „läuft noch …“):** Scan-PDFs
   werden ganz erkannt (bis 60 Seiten statt 5). Solange gelesen oder gerechnet wird, steht dabei, was geschieht
   („Texterkennung: <Datei>, Seite 3 von 30“, „Bedeutung wird gerechnet: Abschnitt 12 von 80“; `bedeutung.lage()`, alle 0,7 s
