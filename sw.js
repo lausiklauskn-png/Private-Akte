@@ -1,6 +1,6 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
-const VERSION = '0.3.1';
+const VERSION = '0.3.2';
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
@@ -36,7 +36,8 @@ self.addEventListener('fetch', event => {
     const cache = await caches.open(CACHE), key = schluessel(request);
     if (request.headers.has('range')) { const da = await cache.match(key); return da ? ausschnitt(request, da) : fetch(request); }
     try {
-      const frisch = await fetch(request);
+      /* no-cache: beim Server nachfragen statt den Zwischenspeicher des Browsers zu nehmen (Pages hält ihn 10 Minuten). */
+      const frisch = await fetch(request.mode === 'navigate' ? request.url : request, {cache:'no-cache'});
       if (frisch.ok && DATEIEN.includes(key)) cache.put(key, frisch.clone());
       return frisch;
     } catch (fehler) {

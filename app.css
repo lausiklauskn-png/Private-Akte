@@ -231,3 +231,4 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .reihe{margin-top:8px}
 .titel.nurpc{display:none}
 @media(min-width:1000px){.titel.nurpc{display:block}}
+.fassung{cursor:pointer}.fassung.neu{background:#087f7a;color:#fff;border-color:#087f7a;font-weight:700}

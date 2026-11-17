@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -643,7 +643,20 @@ document.addEventListener('submit', async ev => {
 function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden();
-if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
+/* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
+   Übernimmt ein neuer Worker, zeigt die Fassungsmarke „neu“; neu geladen wird erst auf Tipp, damit keine Eingabe verloren geht. */
+let swReg = null;
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  const hatte = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register('./sw.js', {updateViaCache:'none'}).then(r => { swReg = r; r.update().catch(() => {}); }).catch(() => {});
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (hatte) { const f = $('fassung'); f.classList.add('neu'); f.textContent = 'Neue Fassung · antippen'; } });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden && swReg) swReg.update().catch(() => {}); });
+}
+A['neu-laden'] = async () => {
+  toast('Sehe nach einer neuen Fassung …');
+  try { if (swReg) await swReg.update(); await fetch('./index.html', {cache:'reload'}); } catch (e) {}
+  location.reload();
+};
 
 /* ---------- Tooltips: Maus oder Stift über einem Knopf, ohne Klick; abschaltbar in der Hilfe ---------- */
 let tippZeit;
