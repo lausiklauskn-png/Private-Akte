@@ -6,6 +6,7 @@ import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../kl
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
 import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen, pdfSeitenText } from "./text-lesen.ts";
+import { loadPdfJs } from "./pdf-ersatz.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -27,6 +28,13 @@ const tresor = {
   /** Liest den Text einer Datei vor dem Ablegen: Textebene des PDF, sonst Texterkennung (Fotos, Scans). Auf dem Gerät. */
   textLesen: (datei: File) => textLesen(datei),
   textLesbar: (datei: File) => istBild(datei) || istPdf(datei),
+  /** Für den Leser: das geöffnete PDF (pdf.js des Klons) und der Text je Seite (klein geschrieben; null = kein PDF). */
+  async pdf(id: string) {
+    const datei = await readLocalDocumentFile(await browserVault(), id); if (!istPdf(datei)) return null;
+    return (await loadPdfJs()).getDocument({ data: new Uint8Array(await datei.arrayBuffer()) }).promise;
+  },
+  seitenText: (id: string) => seitenVon(id),
+  inhaltsWoerter: (frage: string) => teilWoerter(frage),
   async datei(id: string) { return readLocalDocumentFile(await browserVault(), id); },
   async herausnehmen(id: string) { return dokumenteAussortieren(await browserVault(), [id]); },
 };

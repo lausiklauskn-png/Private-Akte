@@ -244,3 +244,13 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .lesestand{margin:10px 2px 0;font-size:12.5px;color:var(--grau,#667);}
 
 .zeile small.stelle{white-space:normal;overflow:visible;margin-top:4px;color:var(--text,#223);font-size:12.5px;line-height:1.35}
+
+.fenster.leser{max-width:920px;max-height:96svh}
+.lesersuche{margin-bottom:8px}
+.leserleiste{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:13px}
+.leserleiste .knopf{padding:6px 12px;min-height:0}
+.leserleiste .luecke{flex:1}
+.leserblatt{position:relative;margin-top:8px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.leserblatt canvas{display:block}
+.lesermarken{position:absolute;inset:0;pointer-events:none}
+.lesermarken i{position:absolute;background:#ffe45c;opacity:.5;border-radius:2px;mix-blend-mode:multiply}

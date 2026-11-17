@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.6)
+## Stand (17.11.2026, Vorschau 0.4.7)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.7 Leser in der Akte (Schritt 2; Klaus 17.11.):** Tipp auf einen Treffer mit Seitenzahl öffnet das PDF im Fenster auf
+  dieser Seite (`fLeser` in `app.js`, pdf.js des Klons über `T().pdf`), die Inhaltswörter der Frage gelb markiert (Lage aus der
+  Textebene, Breite nach Zeichenzahl geschätzt). Suchfeld für Wörter in dieser Unterlage, „‹ Fund“/„Fund ›“ springt zwischen den
+  Seiten mit Fundstellen (Seiten mit allen Wörtern, sonst mit einem), Blättern mit ‹ ›. In der Karte einer PDF-Unterlage:
+  „Lesen und darin suchen“, daneben weiter „Im Browser öffnen“. **Grenzen:** nur PDFs; ohne Textebene (Scan) wird nur
+  geblättert, nichts markiert („nur mit Textebene“) – Klaus' Gedanke, den erkannten Text über das Bild zu legen, ist nicht gebaut;
+  kein Zoom, eine Seite zur Zeit. An Klaus' Heft hier gesehen (Seite 4, „Essig“/„Marmor“ markiert); am Tablet ungeprüft.
 - **0.4.6 Fundstelle am Treffer (Klaus 17.11.: „So will ich es haben“, Schritt 1 von 2):** am Tablet bestätigt (0.4.4): „Essig auf
   Marmor“ findet das Bonusheft als „im Text gefunden“, Inhalt gelesen bei 3 von 3, 50 Abschnitte in wenigen Minuten gerechnet.
   Neu: unter dem Treffer steht der Ausschnitt, in dem es gefunden wurde, mit der Seite („Seite 4 · … Kein Essig auf Marmor …“) –

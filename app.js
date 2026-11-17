@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -555,7 +555,7 @@ async function echtLaden(){
 }
 /* Fundstelle am Treffer (Klaus 17.11.): der Satz, in dem es gefunden wurde, mit der Seite. */
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
-const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
+const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
 function echtAbschnitt(){
   const l = echt.liste;
   const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
@@ -581,9 +581,65 @@ function fEcht(id){
   const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
   fenster(`${fk(esc(echtTitel(d)), esc(d.category))}
    <dl class="angaben"><dt>Datei</dt><dd>${esc(d.originalName)} · ${echtGroesse(d.sizeBytes)}</dd>${d.documentDate ? `<dt>Datum</dt><dd>${echtDatum(d.documentDate)}</dd>` : ''}<dt>Abgelegt</dt><dd>${echtDatum(d.addedAt)}</dd><dt>Liegt</dt><dd>in der Akte auf diesem Gerät</dd></dl>
-   <button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>
+   ${/\.pdf$/i.test(d.originalName) ? `<button class="knopf voll" data-a="leser" data-id="${esc(d.id)}">Lesen und darin suchen</button><div class="reihe"><button class="knopf hell" data-a="echt-oeffnen" data-id="${esc(d.id)}">Im Browser öffnen</button></div>` : `<button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>`}
    <div class="reihe"><button class="knopf hell" data-a="echt-raus" data-id="${esc(d.id)}">Aus der Akte nehmen</button></div>`);
 }
+/* ---------- Leser (Klaus 17.11.): das PDF in der Akte lesen, auf der Seite der Fundstelle, Wörter markiert, darin suchen ---------- */
+const les = { id:null, pdf:null, seite:1, seiten:0, woerter:[], text:null, fund:[], lauf:0, auftrag:null };
+const lesWoerter = q => (T().inhaltsWoerter(q).length ? T().inhaltsWoerter(q) : q.split(/\s+/).filter(Boolean)).map(w => w.toLowerCase());
+/* Fundseiten: Seiten, auf denen alle Wörter stehen; gibt es keine, die mit irgendeinem der Wörter. */
+function lesFundRechnen(){ const seiten = wie => les.text.map((s, i) => les.woerter[wie](w => s.includes(w)) ? i + 1 : 0).filter(Boolean); les.fund = les.text && les.woerter.length ? (seiten('every').length ? seiten('every') : seiten('some')) : []; }
+function lesLeiste(){
+  const o = $('leser-ort'); if (o) o.textContent = `Seite ${les.seite} von ${les.seiten}`;
+  const f = $('leser-fund'); if (f) f.textContent = !les.woerter.length ? '' : !les.text ? 'nur mit Textebene' : les.fund.length ? `auf ${les.fund.length} ${les.fund.length === 1 ? 'Seite' : 'Seiten'} gefunden${les.fund.includes(les.seite) ? ' · ' + (les.fund.indexOf(les.seite) + 1) + '. davon' : ''}` : 'nicht gefunden';
+  document.querySelectorAll('[data-a=leser-fund-vor],[data-a=leser-fund-zurueck]').forEach(k => k.disabled = !les.fund.length);
+}
+async function lesZeigen(){
+  const blatt = $('leser-blatt'); if (!blatt || !les.pdf) return; const lauf = ++les.lauf; lesLeiste();
+  try {
+    if (les.auftrag) { try { les.auftrag.cancel(); } catch (e) {} }
+    const seite = await les.pdf.getPage(les.seite); if (lauf !== les.lauf) return;
+    const breit = Math.max(280, blatt.clientWidth), grund = seite.getViewport({scale:1}), mass = breit / grund.width, punkt = Math.min(2, window.devicePixelRatio || 1);
+    const sicht = seite.getViewport({scale:mass * punkt}), c = document.createElement('canvas'); c.width = Math.round(sicht.width); c.height = Math.round(sicht.height); c.style.width = '100%';
+    les.auftrag = seite.render({canvasContext:c.getContext('2d'), viewport:sicht}); await les.auftrag.promise; if (lauf !== les.lauf) return;
+    // Marken: jedes Textstück der Seite, in dem ein Wort steht – der Teil des Stücks, den das Wort einnimmt (nach Zeichenzahl geschätzt)
+    const marken = [], inhalt = les.woerter.length ? await seite.getTextContent() : {items:[]};
+    for (const st of inhalt.items) { const str = (st.str || '').toLowerCase(); if (!str) continue;
+      for (const w of les.woerter) for (let i = str.indexOf(w); i >= 0; i = str.indexOf(w, i + w.length)) {
+        const m = window.pdfjsLib.Util.transform(sicht.transform, st.transform), hoch = Math.hypot(m[2], m[3]), lang = st.width * mass * punkt;
+        marken.push(`<i style="left:${(m[4] + lang * i / str.length) / c.width * 100}%;top:${(m[5] - hoch) / c.height * 100}%;width:${lang * w.length / str.length / c.width * 100}%;height:${hoch * 1.15 / c.height * 100}%"></i>`); } }
+    if (lauf !== les.lauf) return;
+    blatt.innerHTML = ''; blatt.append(c); blatt.insertAdjacentHTML('beforeend', `<div class="lesermarken" data-zahl="${marken.length}">${marken.join('')}</div>`);
+    const erste = blatt.querySelector('.lesermarken i'); if (erste) erste.scrollIntoView({block:'center'}); else blatt.scrollIntoView({block:'start'});
+  } catch (err) { if (lauf === les.lauf && !(err && err.name === 'RenderingCancelledException')) blatt.innerHTML = '<p class="leer">Die Seite lässt sich nicht anzeigen.</p>'; }
+}
+async function fLeser(id, seite, frage){
+  const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
+  Object.assign(les, {id, pdf:null, seite:Math.max(1, +seite || 1), seiten:0, woerter:frage ? lesWoerter(frage) : [], text:null, fund:[]});
+  fenster(`${fk(esc(echtTitel(d)), esc(d.category))}
+   <form class="suche lesersuche" data-form="leser">${ic('lupe')}<input name="q" value="${esc(frage || '')}" placeholder="Wort in dieser Unterlage suchen" aria-label="In dieser Unterlage suchen" autocomplete="off"><button class="knopf" type="submit">Suchen</button></form>
+   <div class="leserleiste"><button class="knopf hell" data-a="leser-zurueck" aria-label="Seite zurück">‹</button><span id="leser-ort">Seite …</span><button class="knopf hell" data-a="leser-vor" aria-label="Seite weiter">›</button>
+    <span class="luecke"></span><button class="knopf hell" data-a="leser-fund-zurueck" aria-label="Vorige Fundstelle" disabled>‹ Fund</button><button class="knopf hell" data-a="leser-fund-vor" aria-label="Nächste Fundstelle" disabled>Fund ›</button></div>
+   <p class="lesestand" id="leser-fund"></p>
+   <div class="leserblatt" id="leser-blatt"><p class="leer">Die Unterlage wird geöffnet …</p></div>`, 'leser');
+  try {
+    const pdf = await T().pdf(id); if (les.id !== id) return;
+    if (!pdf) { $('leser-blatt').innerHTML = '<p class="leer">Lesen geht hier nur bei PDFs.</p>'; return; }
+    les.pdf = pdf; les.seiten = pdf.numPages; les.seite = Math.min(les.seite, les.seiten);
+    try { const tx = await T().seitenText(id); les.text = tx && tx.some(s => s.length > 20) ? tx : null; } catch (e) { les.text = null; }
+    lesFundRechnen(); await lesZeigen();
+  } catch (err) { if ($('leser-blatt')) $('leser-blatt').innerHTML = `<p class="leer">${esc(fehlerText(err))}</p>`; }
+}
+const lesGeh = n => { if (!les.pdf) return; const z = Math.min(les.seiten, Math.max(1, n)); if (z !== les.seite) { les.seite = z; lesZeigen(); } };
+document.addEventListener('submit', ev => { const f = ev.target; if (f.dataset.form !== 'leser') return; ev.preventDefault();
+  les.woerter = f.q.value.trim() ? lesWoerter(f.q.value.trim()) : []; lesFundRechnen();
+  if (les.fund.length && !les.fund.includes(les.seite)) les.seite = les.fund.find(n => n > les.seite) || les.fund[0]; lesZeigen(); });
+Object.assign(A, {
+ leser: e => fLeser(e.dataset.id, e.dataset.seite, e.dataset.seite ? s.frage : ''),
+ 'leser-vor': () => lesGeh(les.seite + 1), 'leser-zurueck': () => lesGeh(les.seite - 1),
+ 'leser-fund-vor': () => { if (les.fund.length) lesGeh(les.fund.find(n => n > les.seite) || les.fund[0]); },
+ 'leser-fund-zurueck': () => { if (les.fund.length) lesGeh([...les.fund].reverse().find(n => n < les.seite) || les.fund[les.fund.length - 1]); },
+});
 Object.assign(A, {
  'echt-neu': () => { zu(); $('echt-datei').click(); },
  'echt-auf': e => fEcht(e.dataset.id),
