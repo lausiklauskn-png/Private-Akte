@@ -5,6 +5,7 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
+import { textLesen, textGemerkt, istBild, istPdf } from "./text-lesen.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -19,9 +20,13 @@ const tresor = {
   speicherArt: () => browserStorageKind(),
   /** Was in der Akte liegt; Herausgenommenes (im Klon „aussortiert“) wird nicht gezeigt. */
   async liste() { return (await listLocalDocuments(await browserVault())).filter((d) => !d.aussortiert); },
-  async ablegen(datei: File, angaben: { bereich: string; datum: string | null; titel: string | null; notiz: string | null }) {
-    return saveLocalDocument(await browserVault(), datei, { category: angaben.bereich, documentDate: angaben.datum, notes: angaben.notiz, titel: angaben.titel });
+  /** `text` = der beim Ablegen gelesene Inhalt; der Klon speichert ihn als Textauszug an der Unterlage (höchstens 20.000 Zeichen). */
+  async ablegen(datei: File, angaben: { bereich: string; datum: string | null; titel: string | null; notiz: string | null; text?: string | null }) {
+    return saveLocalDocument(await browserVault(), datei, { category: angaben.bereich, documentDate: angaben.datum, notes: angaben.notiz, titel: angaben.titel, textAuszug: angaben.text || null });
   },
+  /** Liest den Text einer Datei vor dem Ablegen: Textebene des PDF, sonst Texterkennung (Fotos, Scans). Auf dem Gerät. */
+  textLesen: (datei: File) => textLesen(datei),
+  textLesbar: (datei: File) => istBild(datei) || istPdf(datei),
   async datei(id: string) { return readLocalDocumentFile(await browserVault(), id); },
   async herausnehmen(id: string) { return dokumenteAussortieren(await browserVault(), [id]); },
 };
@@ -110,7 +115,7 @@ type Abschnitt = { label: string; text: string; passageVec: Float32Array; id: st
 type SageTreffer = { label: string; score: number; bm25: number; fused: number };
 const sage = () => (window as unknown as { SbkimMatch: { queryLocal: (text: string, k: number, o: { corpus: Abschnitt[]; hybrid: boolean }) => Promise<SageTreffer[]> } }).SbkimMatch;
 let eingehaengt = false, laufzeit: MeaningRuntime | null = null, ersatz: Rechner | null = null;
-let korpus: { stand: string; abschnitte: Abschnitt[]; mitte: Float32Array | null } | null = null;
+let korpus: { stand: string; abschnitte: Abschnitt[]; mitte: Float32Array | null; unterlagen: number; ohneInhalt: number } | null = null;
 const einhaengen = () => { if (!eingehaengt) { browserModelleEinhaengen(browserModelle as never); eingehaengt = true; } };
 const rechnen: Rechner = (text) => ersatz ? ersatz(text) : (laufzeit ||= new MeaningRuntime()).embed(text, MODELL);
 // Sage Modul 04 holt den Vektor der Frage über window.SbkimEmbedding.embedQuery; hier liefert ihn der Rechner der Familienakte
@@ -139,14 +144,14 @@ function zentriert(a: Float32Array, b: Float32Array, mitte: Float32Array) {
 }
 /** Liest die Unterlagen, teilt sie in Abschnitte und rechnet, was noch nicht gerechnet ist. `stand` = Kennung der Liste. */
 async function korpusBauen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) {
-  const gelesen = await readMeaningCorpus(await browserVault(), () => {});
+  const gelesen = await readMeaningCorpus(await browserVault(), () => {}, { ocr: textGemerkt });
   const teile: Array<{ id: string; text: string; n: number }> = [];
   for (const d of gelesen.documents) if (d.id.startsWith("d:")) meaningSections(d.text).texts.forEach((text, n) => teile.push({ id: d.id.slice(2), text, n }));
   const abschnitte: Abschnitt[] = [];
   for (const t of teile) { abschnitte.push({ label: `${t.id}#${t.n}`, id: t.id, text: t.text, passageVec: await vektorZu(t.text) }); fortschritt?.(abschnitte.length, teile.length); }
   let mitte: Float32Array | null = null;
   if (abschnitte.length >= 3) { mitte = new Float32Array(MODELL.dim); for (const a of abschnitte) for (let i = 0; i < mitte.length; i++) mitte[i] += a.passageVec[i] / abschnitte.length; }
-  korpus = { stand, abschnitte, mitte };
+  korpus = { stand, abschnitte, mitte, unterlagen: gelesen.documents.filter((d) => d.id.startsWith("d:")).length, ohneInhalt: gelesen.metadataOnly };
   return korpus;
 }
 const bedeutung = {
@@ -179,6 +184,8 @@ const bedeutung = {
     }
     return [...je.values()];
   },
+  /** Was zuletzt gelesen wurde: Zahl der Unterlagen, wie viele davon ohne lesbaren Inhalt (nur Titel, Bereich, Notiz), Abschnitte. */
+  gelesen: () => korpus ? { unterlagen: korpus.unterlagen, ohneInhalt: korpus.ohneInhalt, abschnitte: korpus.abschnitte.length } : null,
   /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
   zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
 };
