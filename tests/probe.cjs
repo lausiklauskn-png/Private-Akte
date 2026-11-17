@@ -13,10 +13,10 @@ const { chromium } = require('playwright');
     const klick = async sel => { await p.locator(sel).first().click(); };
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
-    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe');
-    soll((await text()).includes('0.1.0 · Basic'), 'Fassung beim Namen');
+    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
+    soll((await text()).includes('0.1.1 · Basic'), 'Fassung beim Namen');
     if (name==='handy') { soll(await p.locator('[data-a=mehr]').isVisible(), 'Mehr-Knopf'); soll(!(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible()), 'Drucken hinter Mehr');
-      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); await klick('[data-a=sammelknopf]'); soll((await p.locator('.nav .ablegen').count())===0,'Sammelknopf aus'); await klick('[data-a=mehr]'); await klick('[data-a=sammelknopf]'); soll((await p.locator('.nav .ablegen').count())===1,'Sammelknopf an'); }
+      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue button').count())===4,'vier Einträge hinter Mehr'); await p.keyboard.press('Escape'); }
     else soll(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible(), 'Drucken sichtbar am PC');
     // Bon
     await klick('.werk[data-a=bon-start]'); soll((await text()).includes('An BookLedgerPro geben'), 'Portemonnaie mit BookLedger'); await p.screenshot({path:`p/${name}-3-geld.png`});

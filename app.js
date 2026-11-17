@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -124,7 +124,7 @@ const mails = [
 ];
 const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
-const s = { ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, sammelknopf:true, offen:null, teil:'start', scan:false, zuDoc:null };
+const s = { ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
 
 /* ---------- Helfer ---------- */
 let toastZeit;
@@ -159,18 +159,16 @@ const WERK = [
  ['kalender','kalender','Kalender','kal','Termine und Fristen']
 ];
 const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
-const MEHR = [['drucken','drucker','Drucken'],['landkarte','karte','Landkarte'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
+const MEHR = [['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · Basic`;
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" title="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}"><i>${ic(i)}</i>${t}</button>`).join('');
   $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" title="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
-    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Landkarte, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
+    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
 function navZeigen(){
-  const NAV = [['start','Start'],['akten','Akten'],...(s.sammelknopf?[['ablegen','Ablegen']]:[]),['eingang','Eingang'],['baum','Baum']];
-  $('nav').innerHTML = NAV.map(([id,t]) => id === 'ablegen'
-    ? `<button class="ablegen" data-a="ablegen">${ic('plus')}<span>Ablegen</span></button>`
-    : `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
+  const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
+  $('nav').innerHTML = NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
 }
 const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a href="./rechtliches.html#impressum">Impressum</a><a href="./rechtliches.html#datenschutz">Datenschutz</a><a href="./rechtliches.html#haftung">Haftungsausschluss</a><a href="./rechtliches.html#lizenz">Lizenz</a></footer>`;
 
@@ -368,7 +366,7 @@ function kalender(){
 function menue(html, klasse=''){ $('menueort').innerHTML = `<div class="menue ${klasse}" data-a="menue-aussen"><div role="menu">${html}</div></div>`; }
 function fMehr(){
   menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join('')
-   + `<hr><h3>Zum Entscheiden</h3><button role="menuitemcheckbox" aria-checked="${s.sammelknopf}" data-a="sammelknopf"><span class="tupfer" style="--a:#19a59d;--b:#087f7a">${ic('plus')}</span>Sammelknopf „Ablegen“ ${s.sammelknopf?'ausblenden':'zeigen'}</button>`);
+);
 }
 function fFarbe(wo){
   const aktuell = farbwahl[wo] || 'auto', name = wo === 'akte' ? 'die Akte' : stadt(wo).name;
@@ -385,17 +383,6 @@ function drucken(d){
   zu(); menueZu(); setTimeout(() => window.print(), 50);
 }
 addEventListener('afterprint', () => document.body.classList.remove('druck-einzel'));
-function fAblegen(){
-  const z = (a, i, t, u) => `<button class="zeile" data-a="${a}"><span class="art">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small>${u}</small></span>${ic('weiter')}</button>`;
-  fenster(`${fk('Ablegen','Was möchtest du hineinlegen?')}<div class="liste">
-   ${z('bon-start','kamera','Bon fotografieren','ins Portemonnaie, der Bon liegt in der Akte')}
-   ${z('scan','scan','PDF scannen','Foto zu PDF, öffnet Workflow PDF')}
-   ${z('foto','kamera','Foto: Unterlage','ein Bild direkt in den Eingang')}
-   ${z('datei','datei','Eine Datei','vom Gerät, mit Vorschlag in den Eingang')}
-   ${z('viele','ordner','Dateien hineingeben','viele Dateien oder Ordner, öffnet den Datei-Organizer')}
-   ${z('notiz','notiz','Notiz','schreiben oder sprechen, von Hand zuordnen')}
-  </div><p class="hinweis">Dieselben Wege wie in der Leiste oben, an einer Stelle gesammelt.</p>`);
-}
 function neuInEingang(titel, art, vorschlag, vorgang, quelle){
   eingang.neu.unshift({id:++nr,titel,art,vorschlag,vorgang,quelle,text:'Neu hereingekommen (Beispiel).'});
   zu(); s.ansicht = 'eingang'; zeigen(); toast('Liegt im Eingang. Der Vorschlag wartet auf dein „Stimmt“.');
@@ -410,10 +397,8 @@ const A = {
  doc: e => fDoc(e.dataset.id),
  zu, 'zu-aussen': (e, ev) => { if (ev.target === e) zu(); }, 'menue-aussen': (e, ev) => { if (ev.target === e) menueZu(); },
  mehr: fMehr,
- landkarte: e => A.geh({dataset:{zu:'baum'}}),
  farbe: e => fFarbe(e.dataset.ort || 'akte'),
  'farbe-wahl': e => { const wo = e.dataset.ort; farbwahl[wo] = e.dataset.farbe; menueZu(); if (wo === 'akte') farbeAkte(); else fStadt(wo); },
- sammelknopf: () => { s.sammelknopf = !s.sammelknopf; menueZu(); navZeigen(); toast(s.sammelknopf ? 'Der Sammelknopf „Ablegen“ ist wieder da.' : 'Ohne Sammelknopf: Hereingebracht wird über die Leiste oben.'); },
  drucken: () => { menueZu(); fDrucken(); },
  'druck-seite': () => drucken(null),
  'druck-doc': e => drucken(docs.find(d => d.id == e.dataset.id)),
@@ -422,15 +407,12 @@ const A = {
    <li><b>Finden:</b> die Suche oder die sechs Bereiche.</li>
    <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst die Stadt; bearbeitet wird eine Kopie.</li>
    <li><b>Zur Akte:</b> das Ergebnis liegt als neue Fassung am alten Platz. Das Original bleibt.</li>
-   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Städte.</li>
+   <li><b>Der Baum:</b> das Bild mit den Schildern – in der Mitte die Akte, an den Ästen die Städte.</li>
    <li><b>Farbpalette:</b> der bunte runde Knopf. Jedes Programm merkt sich seine eigene Farbe.</li></ul>
    <div class="logos"><figure><img src="./bilder/logo-basic-rund.png" alt="Zeichen der Basic-Fassung auf Weiß">Basic<br>diese Web-App</figure><figure><img src="./bilder/logo-pro-rund.png" alt="Zeichen der Pro-Fassung mit buntem Rand">Pro<br>bunter Rand</figure></div>
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
  sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
- ablegen: fAblegen,
- foto: () => neuInEingang('Foto vom '+datum(HEUTE),'JPG','ich','Sonstiges','Foto'),
- datei: () => neuInEingang('Schreiben der Versicherung','PDF','kauf','Auto','Datei'),
  viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
  'sort-mehr': () => { organizer = [...organizer, ...ORGANIZER_NEU().map(o => ({...o, titel:o.titel+' (neu)'}))]; stadtNeu(); toast('Vier Dateien hineingegeben (Beispiel). Der Helfer hat geraten.'); },
  notiz: () => { menueZu(); fNotiz(); },
