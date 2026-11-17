@@ -1,6 +1,10 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
+<<<<<<< HEAD
 const VERSION = '0.4.2';
+=======
+const VERSION = '0.4.1';
+>>>>>>> origin/main
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
