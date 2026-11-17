@@ -1,0 +1,20 @@
+@bon
+LINDEN-APOTHEKE MUSTERAU
+Marktstr. 2
+
+Kasse 2  Bon 4711
+
+Zuzahlung Rezept            5,00 B
+Zuzahlung Rezept            5,84 B
+Hoergeraetebatterien        6,95 B
+Rheumasalbe                 7,25 B
+------------------------------------
+SUMME EUR                    25,04
+Gegeben BAR                  30,00
+Rueckgeld                     4,96
+
+A 7%  Netto 0,00  MwSt 0,00
+B 19% Netto 21,04  MwSt 4,00
+
+12.03.2025  09:41
+Vielen Dank fuer Ihren Einkauf

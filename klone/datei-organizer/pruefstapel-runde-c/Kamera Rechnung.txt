@@ -1,0 +1,32 @@
+FotoTechnik Beispiel-Krause
+Fachgeschäft für Foto und Video · Lange Straße 8 · 45600 Beispielland
+
+Frau Katrin Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Rechnungsnummer: FTK-25-0310
+Kundennummer: 8812
+Datum: 06.03.2025
+
+Rechnung
+
+Sehr geehrte Frau Rebmann,
+
+vielen Dank für Ihren Einkauf und viel Erfolg mit Ihrem neuen Gewerbe! Wir berechnen:
+
+Artikel                                        Menge  Preis
+Systemkamera Beispiel Z7 Gehäuse                1      1.649,00
+Objektiv 24-70 mm 2,8                           1        899,00
+Speicherkarte 128 GB                            2         59,80
+Ersatzakku                                      1         69,00
+Netto                                                   2.244,37
+USt 19 %                                                  426,43
+Gesamt                                                  2.670,80
+
+Zahlbar bis zum 20.03.2025 ohne Abzug. Auf Kamera und Objektiv geben wir 2 Jahre Garantie, der Hersteller verlängert nach Registrierung auf 3 Jahre. Seriennummern: Z7-118023, OBJ-559201.
+
+Mit freundlichen Grüßen
+
+
+FotoTechnik Beispiel-Krause GmbH · HRB 812 · IBAN DE00 0000 0000 0000 0000 00

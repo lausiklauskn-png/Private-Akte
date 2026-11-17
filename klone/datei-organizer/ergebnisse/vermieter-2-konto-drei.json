@@ -1,0 +1,193 @@
+{
+ "ordner": "pruefstapel-vermieter-2/belege",
+ "belege": 50,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent"
+  },
+  {
+   "name": "Dritter (fremde KI)",
+   "modell": "Codex (GPT-6)"
+  }
+ ],
+ "paare": [
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Zweiter (Claude-Agent)",
+   "gleich": 38,
+   "n": 50
+  },
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 35,
+   "n": 50
+  },
+  {
+   "a": "Zweiter (Claude-Agent)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 45,
+   "n": 50
+  }
+ ],
+ "fleissKappa": 0.7585027168444353,
+ "einstimmig": 35,
+ "mehrheit": 48,
+ "strittig": [
+  {
+   "datei": "gartenpflege_fruehjahr.txt",
+   "stimmen": [
+    "4250",
+    "4260",
+    "4980"
+   ]
+  },
+  {
+   "datei": "IMG_20261028_1712.txt",
+   "stimmen": [
+    "4250",
+    "4260",
+    "4980"
+   ]
+  }
+ ],
+ "ersterGegenMehrheit": {
+  "ok": 38,
+  "n": 48
+ },
+ "konto": {
+  "sollErster": {
+   "alt": {
+    "ok": 21,
+    "n": 50,
+    "spanne": [
+     0.2937479723456693,
+     0.5576680331222217
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 23,
+    "n": 50,
+    "spanne": [
+     0.3296943460178263,
+     0.5960136567161192
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 23,
+    "n": 50,
+    "spanne": [
+     0.3296943460178263,
+     0.5960136567161192
+    ]
+   }
+  },
+  "sollMehrheit": {
+   "alt": {
+    "ok": 22,
+    "n": 48,
+    "spanne": [
+     0.3257502185455351,
+     0.5970916690505266
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 24,
+    "n": 48,
+    "spanne": [
+     0.36389098932037767,
+     0.6361090106796223
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 24,
+    "n": 48,
+    "spanne": [
+     0.36389098932037767,
+     0.6361090106796223
+    ]
+   }
+  },
+  "sollEinstimmig": {
+   "alt": {
+    "ok": 19,
+    "n": 35,
+    "spanne": [
+     0.38189451340137515,
+     0.6953422636623914
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 21,
+    "n": 35,
+    "spanne": [
+     0.43572419581519467,
+     0.7444949506669274
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 21,
+    "n": 35,
+    "spanne": [
+     0.43572419581519467,
+     0.7444949506669274
+    ]
+   }
+  }
+ },
+ "richtung": {
+  "sollMehrheit": {
+   "alt": {
+    "ok": 41,
+    "n": 50,
+    "spanne": [
+     0.6920368054529739,
+     0.902299172675462
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 41,
+    "n": 50,
+    "spanne": [
+     0.6920368054529739,
+     0.902299172675462
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 41,
+    "n": 50,
+    "spanne": [
+     0.6920368054529739,
+     0.902299172675462
+    ]
+   }
+  }
+ },
+ "mcnemar": {
+  "Konto, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 2,
+   "p": 0.5
+  },
+  "Konto, Mehrheit, mit Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 2,
+   "p": 0.5
+  },
+  "Richtung, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 0,
+   "p": 1
+  },
+  "Richtung, Mehrheit, mit Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 0,
+   "p": 1
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+  "fassung": "0.4.4",
+  "datum": "2026-11-14",
+  "freigabe": "Klaus 14.11.2026: „Ja, ich gebe alles frei, was du benötigst als Freigabe.“",
+  "inhalt": "Absender aus Scans/Fotos besser (Kern 079dd6d, nachgewiesen 29,5 → 49,0 % am neuen Stapel, #30), neues 3D-App-Symbol (#31), aria-label am Ordner-Feld auch in Windows (#20)",
+  "android": {
+    "commit": "98cb38742fcd77937507a0a70561e388df8f1141",
+    "lauf": 43641660355,
+    "datei": "Datei-Organizer-Pro-0.4.4.apk",
+    "versionCode": 44,
+    "groesse": 10364105,
+    "sha256": "2973222141c9796ad751e03dcc3a83e3baa037f7f9a79d2304277fdc928d7593",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.4",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.4.apk",
+    "geprueft": "Emulator (API 35): Erstinstallation, Testordner (104 Dateien) eingelesen, überinstalliert, Stand erhalten, kein Debug-Zugang; Release-Download bytegleich; Feed unterschrieben und gegen den Schlüssel der App geprüft; Download vom Update-Server von außen per SHA-256 (im Lauf)"
+  },
+  "windows": {
+    "commit": "98cb38742fcd77937507a0a70561e388df8f1141",
+    "lauf": 43642094461,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.4-x64-setup.exe",
+    "groesse": 25165106,
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.4-x64-setup.exe",
+    "geprueft": "Auslieferungsbau installiert, gestartet, entfernt; SHA256SUMS geprüft; Feed unterschrieben und gegen den Schlüssel der App geprüft; Download vom Update-Server von außen per SHA-256 (im Lauf)",
+    "hinweis": "Installer unsigniert (wie 0.4.3)"
+  },
+  "basic": {
+    "commit": "98cb38742fcd77937507a0a70561e388df8f1141",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "pages-build-deployment auf dem Merge-Stand gestartet; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_geprueft": "kein echtes Gerät, kein echter Windows-PC; Update-Server aus der Sitzung nicht abrufbar (Proxy 403)"
+}

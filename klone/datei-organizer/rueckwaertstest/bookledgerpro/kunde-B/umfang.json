@@ -1,0 +1,7 @@
+{"bausteine":[
+{"katalog":"rechnung","name":"Angebote erstellen und per Knopf in Rechnung umwandeln, mit Kundenstamm, Ausgabe als PDF","groesse":"mittel","deckt":["B-20","B-30","B-31","B-37"],"faktoren":["druck"]},
+{"katalog":"scan","name":"Beleg mit Android-Handykamera aufnehmen, zuschneiden und als PDF ablegen","groesse":"mittel","deckt":["B-32"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Beleg-Erkennung: aus dem Foto Betrag, Datum, Aussteller lesen und Konto/Art vorschlagen","groesse":"gross","deckt":["B-21","B-33"],"faktoren":["ki","offline"]},
+{"katalog":"rechnung","name":"Buchhaltung: Einnahmen/Ausgaben-Übersicht übers Jahr, EÜR- und Umsatzsteuer-Vorbereitung","groesse":"gross","deckt":["B-22","B-23","B-34","B-35","B-36"],"faktoren":["druck"]},
+{"katalog":"neu","name":"Lokale, verschlüsselte Datenhaltung auf dem Gerät, ohne Cloud-Konto (Kundendaten bleiben beim Nutzer)","groesse":"mittel","deckt":["B-24"],"faktoren":["offline"]}
+]}

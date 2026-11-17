@@ -1,0 +1,26 @@
+Bloomdesk Software Inc.
+500 Mission Row, Suite 12, Wilmington, DE 19800, USA
+
+Bill to:
+Blumenwerkstatt Harkort
+Inh. Mareike Harkort
+Kirchgasse 7
+37299 Weidenrode
+Germany
+
+INVOICE BD-2026-118207
+Invoice date: Mar 2, 2026
+Service period: Mar 2, 2026 – Apr 1, 2026
+Customer tax ID: DE000000000
+
+Description                               Qty      Amount
+Bloomdesk Order Manager – Pro plan, mont    1       29,00
+Extra user seat                             1        9,00
+
+Subtotal EUR 38,00
+VAT 0 % (reverse charge) EUR 0,00
+Total due EUR 38,00
+
+No VAT charged. Customer to self-assess VAT under the reverse-charge mechanism.
+
+Charged to card ending 0000 on Mar 2, 2026.

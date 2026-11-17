@@ -1,0 +1,20 @@
+BEISPIEL-MARKT MUSTERBACH   Einkaufsstr. 2
+
+Spülmittel                  1,15 A
+Klopapier 10er              4,49 A
+Kaffee gemahlen 500g        5,99 B
+Haferflocken                0,89 B
+Nudeln 3x                   2,67 B
+Bier 20x0,5 Kiste          16,99 A
+Pfand                       3,10 A
+Chips                       1,79 B
+-----------------------------
+SUMME                      37,07
+Bar                        40,00
+Zurück                      2,93
+Bon 5102  Kasse 3  06.06.2026 19:31
+
+[Kuli-Notiz drauf:]
+Bier = Can + Felix
+Rest durch 3 -> je 5,66
+Jana zahlt mir zurück! F.

@@ -1,0 +1,828 @@
+{
+ "haushalte": [
+  {
+   "id": "hh-kieselmayr",
+   "titel": "Familie mit Schulkindern",
+   "name": "Familie Kieselmayr",
+   "anschrift": "Lindenhang 12, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Kieselmayr",
+     "anrede": "Herr",
+     "rolle": "Vater, Industriemechaniker",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kieselmayr",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Bürokraft",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Lukas",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, 4. Klasse",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Mia",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Tochter, 7. Klasse",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Ben",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, Kindergarten",
+     "geburtsjahr": 2021
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TK 412",
+    "BSP-SK 86"
+   ]
+  },
+  {
+   "id": "hh-hollerbusch",
+   "titel": "Alleinerziehende",
+   "name": "Haushalt Hollerbusch",
+   "anschrift": "Am Kirchgraben 3a, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Nadine",
+     "name": "Hollerbusch",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verkäuferin",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Emil",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Sohn, 2. Klasse",
+     "geburtsjahr": 2018
+    },
+    {
+     "vorname": "Lina",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Tochter, Krippe",
+     "geburtsjahr": 2024
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-NH 19"
+   ]
+  },
+  {
+   "id": "hh-wiesnegger",
+   "titel": "Rentnerpaar mit Pflegebedarf",
+   "name": "Ehepaar Wiesnegger",
+   "anschrift": "Obere Dorfstraße 27, 99998 Musterbach-Kleeweiler",
+   "personen": [
+    {
+     "vorname": "Herbert",
+     "name": "Wiesnegger",
+     "anrede": "Herr",
+     "rolle": "Rentner, pflegebedürftig",
+     "geburtsjahr": 1945
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Wiesnegger",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, pflegt ihren Mann",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Monika",
+     "name": "Brandlechner-Beispiel",
+     "anrede": "Frau",
+     "rolle": "Tochter, Betreuerin (wohnt auswärts)",
+     "geburtsjahr": 1972
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HW 45"
+   ]
+  },
+  {
+   "id": "hh-lindenbrecht",
+   "titel": "Junges Paar beim Hausbau",
+   "name": "Paar Lindenbrecht / Fohlmann",
+   "anschrift": "Neubaugebiet Sonnenacker, Bauplatz 7, 99997 Musterbach-Hinterbühl (bis Juni: Bahnhofstraße 8, 99999 Musterbach)",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Lindenbrecht",
+     "anrede": "Herr",
+     "rolle": "Bauherr, Elektroniker",
+     "geburtsjahr": 1996
+    },
+    {
+     "vorname": "Lea",
+     "name": "Fohlmann",
+     "anrede": "Frau",
+     "rolle": "Bauherrin, Erzieherin",
+     "geburtsjahr": 1997
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JL 96"
+   ]
+  },
+  {
+   "id": "hh-tannreiter",
+   "titel": "Selbstständige mit Laden",
+   "name": "Familie Tannreiter (Laden „Tannreiters Beispiel-Hofladen“)",
+   "anschrift": "Marktplatz 5, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Petra",
+     "name": "Tannreiter",
+     "anrede": "Frau",
+     "rolle": "Inhaberin Hofladen",
+     "geburtsjahr": 1978
+    },
+    {
+     "vorname": "Klaus-Dieter",
+     "name": "Tannreiter",
+     "anrede": "Herr",
+     "rolle": "Ehemann, Landwirt im Nebenerwerb",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sophie",
+     "name": "Tannreiter",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Abschlussjahr",
+     "geburtsjahr": 2008
+    },
+    {
+     "vorname": "Rosa",
+     "name": "Grünzwieler",
+     "anrede": "Frau",
+     "rolle": "Aushilfe im Laden (Minijob, eigener Haushalt im Dorf)",
+     "geburtsjahr": 1959
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-PT 78",
+    "BSP-LT 300"
+   ]
+  },
+  {
+   "id": "hh-wg-hagedorner",
+   "titel": "Student mit Nebenjob in WG",
+   "name": "WG Hagedorner / Möllbach / Kranewitt",
+   "anschrift": "Bahnhofstraße 21, 2. OG, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Felix",
+     "name": "Hagedorner",
+     "anrede": "Herr",
+     "rolle": "Student (Fernstudium), Nebenjob Werkstatt",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Jana",
+     "name": "Möllbach",
+     "anrede": "Frau",
+     "rolle": "Mitbewohnerin, Auszubildende Pflege",
+     "geburtsjahr": 2004
+    },
+    {
+     "vorname": "Can",
+     "name": "Kranewitt",
+     "anrede": "Herr",
+     "rolle": "Mitbewohner, Student",
+     "geburtsjahr": 2002
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "hh-kieselmayr",
+   "titel": "Familie mit Schulkindern",
+   "name": "Familie Kieselmayr",
+   "anschrift": "Lindenhang 12, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Kieselmayr",
+     "anrede": "Herr",
+     "rolle": "Vater, Industriemechaniker",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kieselmayr",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Bürokraft",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Lukas",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, 4. Klasse",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Mia",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Tochter, 7. Klasse",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Ben",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, Kindergarten",
+     "geburtsjahr": 2021
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TK 412",
+    "BSP-SK 86"
+   ]
+  },
+  {
+   "id": "hh-hollerbusch",
+   "titel": "Alleinerziehende",
+   "name": "Haushalt Hollerbusch",
+   "anschrift": "Am Kirchgraben 3a, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Nadine",
+     "name": "Hollerbusch",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verkäuferin",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Emil",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Sohn, 2. Klasse",
+     "geburtsjahr": 2018
+    },
+    {
+     "vorname": "Lina",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Tochter, Krippe",
+     "geburtsjahr": 2024
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-NH 19"
+   ]
+  },
+  {
+   "id": "hh-wiesnegger",
+   "titel": "Rentnerpaar mit Pflegebedarf",
+   "name": "Ehepaar Wiesnegger",
+   "anschrift": "Obere Dorfstraße 27, 99998 Musterbach-Kleeweiler",
+   "personen": [
+    {
+     "vorname": "Herbert",
+     "name": "Wiesnegger",
+     "anrede": "Herr",
+     "rolle": "Rentner, pflegebedürftig",
+     "geburtsjahr": 1945
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Wiesnegger",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, pflegt ihren Mann",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Monika",
+     "name": "Brandlechner-Beispiel",
+     "anrede": "Frau",
+     "rolle": "Tochter, Betreuerin (wohnt auswärts)",
+     "geburtsjahr": 1972
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HW 45"
+   ]
+  },
+  {
+   "id": "hh-lindenbrecht",
+   "titel": "Junges Paar beim Hausbau",
+   "name": "Paar Lindenbrecht / Fohlmann",
+   "anschrift": "Neubaugebiet Sonnenacker, Bauplatz 7, 99997 Musterbach-Hinterbühl (bis Juni: Bahnhofstraße 8, 99999 Musterbach)",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Lindenbrecht",
+     "anrede": "Herr",
+     "rolle": "Bauherr, Elektroniker",
+     "geburtsjahr": 1996
+    },
+    {
+     "vorname": "Lea",
+     "name": "Fohlmann",
+     "anrede": "Frau",
+     "rolle": "Bauherrin, Erzieherin",
+     "geburtsjahr": 1997
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JL 96"
+   ]
+  },
+  {
+   "id": "hh-tannreiter",
+   "titel": "Selbstständige mit Laden",
+   "name": "Familie Tannreiter (Laden „Tannreiters Beispiel-Hofladen“)",
+   "anschrift": "Marktplatz 5, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Petra",
+     "name": "Tannreiter",
+     "anrede": "Frau",
+     "rolle": "Inhaberin Hofladen",
+     "geburtsjahr": 1978
+    },
+    {
+     "vorname": "Klaus-Dieter",
+     "name": "Tannreiter",
+     "anrede": "Herr",
+     "rolle": "Ehemann, Landwirt im Nebenerwerb",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sophie",
+     "name": "Tannreiter",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Abschlussjahr",
+     "geburtsjahr": 2008
+    },
+    {
+     "vorname": "Rosa",
+     "name": "Grünzwieler",
+     "anrede": "Frau",
+     "rolle": "Aushilfe im Laden (Minijob, eigener Haushalt im Dorf)",
+     "geburtsjahr": 1959
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-PT 78",
+    "BSP-LT 300"
+   ]
+  },
+  {
+   "id": "hh-wg-hagedorner",
+   "titel": "Student mit Nebenjob in WG",
+   "name": "WG Hagedorner / Möllbach / Kranewitt",
+   "anschrift": "Bahnhofstraße 21, 2. OG, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Felix",
+     "name": "Hagedorner",
+     "anrede": "Herr",
+     "rolle": "Student (Fernstudium), Nebenjob Werkstatt",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Jana",
+     "name": "Möllbach",
+     "anrede": "Frau",
+     "rolle": "Mitbewohnerin, Auszubildende Pflege",
+     "geburtsjahr": 2004
+    },
+    {
+     "vorname": "Can",
+     "name": "Kranewitt",
+     "anrede": "Herr",
+     "rolle": "Mitbewohner, Student",
+     "geburtsjahr": 2002
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "hh-kieselmayr",
+   "titel": "Familie mit Schulkindern",
+   "name": "Familie Kieselmayr",
+   "anschrift": "Lindenhang 12, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Kieselmayr",
+     "anrede": "Herr",
+     "rolle": "Vater, Industriemechaniker",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kieselmayr",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Bürokraft",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Lukas",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, 4. Klasse",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Mia",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Tochter, 7. Klasse",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Ben",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, Kindergarten",
+     "geburtsjahr": 2021
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TK 412",
+    "BSP-SK 86"
+   ]
+  },
+  {
+   "id": "hh-hollerbusch",
+   "titel": "Alleinerziehende",
+   "name": "Haushalt Hollerbusch",
+   "anschrift": "Am Kirchgraben 3a, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Nadine",
+     "name": "Hollerbusch",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verkäuferin",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Emil",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Sohn, 2. Klasse",
+     "geburtsjahr": 2018
+    },
+    {
+     "vorname": "Lina",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Tochter, Krippe",
+     "geburtsjahr": 2024
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-NH 19"
+   ]
+  },
+  {
+   "id": "hh-wiesnegger",
+   "titel": "Rentnerpaar mit Pflegebedarf",
+   "name": "Ehepaar Wiesnegger",
+   "anschrift": "Obere Dorfstraße 27, 99998 Musterbach-Kleeweiler",
+   "personen": [
+    {
+     "vorname": "Herbert",
+     "name": "Wiesnegger",
+     "anrede": "Herr",
+     "rolle": "Rentner, pflegebedürftig",
+     "geburtsjahr": 1945
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Wiesnegger",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, pflegt ihren Mann",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Monika",
+     "name": "Brandlechner-Beispiel",
+     "anrede": "Frau",
+     "rolle": "Tochter, Betreuerin (wohnt auswärts)",
+     "geburtsjahr": 1972
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HW 45"
+   ]
+  },
+  {
+   "id": "hh-lindenbrecht",
+   "titel": "Junges Paar beim Hausbau",
+   "name": "Paar Lindenbrecht / Fohlmann",
+   "anschrift": "Neubaugebiet Sonnenacker, Bauplatz 7, 99997 Musterbach-Hinterbühl (bis Juni: Bahnhofstraße 8, 99999 Musterbach)",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Lindenbrecht",
+     "anrede": "Herr",
+     "rolle": "Bauherr, Elektroniker",
+     "geburtsjahr": 1996
+    },
+    {
+     "vorname": "Lea",
+     "name": "Fohlmann",
+     "anrede": "Frau",
+     "rolle": "Bauherrin, Erzieherin",
+     "geburtsjahr": 1997
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JL 96"
+   ]
+  },
+  {
+   "id": "hh-tannreiter",
+   "titel": "Selbstständige mit Laden",
+   "name": "Familie Tannreiter (Laden „Tannreiters Beispiel-Hofladen“)",
+   "anschrift": "Marktplatz 5, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Petra",
+     "name": "Tannreiter",
+     "anrede": "Frau",
+     "rolle": "Inhaberin Hofladen",
+     "geburtsjahr": 1978
+    },
+    {
+     "vorname": "Klaus-Dieter",
+     "name": "Tannreiter",
+     "anrede": "Herr",
+     "rolle": "Ehemann, Landwirt im Nebenerwerb",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sophie",
+     "name": "Tannreiter",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Abschlussjahr",
+     "geburtsjahr": 2008
+    },
+    {
+     "vorname": "Rosa",
+     "name": "Grünzwieler",
+     "anrede": "Frau",
+     "rolle": "Aushilfe im Laden (Minijob, eigener Haushalt im Dorf)",
+     "geburtsjahr": 1959
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-PT 78",
+    "BSP-LT 300"
+   ]
+  },
+  {
+   "id": "hh-wg-hagedorner",
+   "titel": "Student mit Nebenjob in WG",
+   "name": "WG Hagedorner / Möllbach / Kranewitt",
+   "anschrift": "Bahnhofstraße 21, 2. OG, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Felix",
+     "name": "Hagedorner",
+     "anrede": "Herr",
+     "rolle": "Student (Fernstudium), Nebenjob Werkstatt",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Jana",
+     "name": "Möllbach",
+     "anrede": "Frau",
+     "rolle": "Mitbewohnerin, Auszubildende Pflege",
+     "geburtsjahr": 2004
+    },
+    {
+     "vorname": "Can",
+     "name": "Kranewitt",
+     "anrede": "Herr",
+     "rolle": "Mitbewohner, Student",
+     "geburtsjahr": 2002
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "hh-kieselmayr",
+   "titel": "Familie mit Schulkindern",
+   "name": "Familie Kieselmayr",
+   "anschrift": "Lindenhang 12, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Kieselmayr",
+     "anrede": "Herr",
+     "rolle": "Vater, Industriemechaniker",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kieselmayr",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Bürokraft",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Lukas",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, 4. Klasse",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Mia",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Tochter, 7. Klasse",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Ben",
+     "name": "Kieselmayr",
+     "anrede": "Kind",
+     "rolle": "Sohn, Kindergarten",
+     "geburtsjahr": 2021
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TK 412",
+    "BSP-SK 86"
+   ]
+  },
+  {
+   "id": "hh-hollerbusch",
+   "titel": "Alleinerziehende",
+   "name": "Haushalt Hollerbusch",
+   "anschrift": "Am Kirchgraben 3a, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Nadine",
+     "name": "Hollerbusch",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verkäuferin",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Emil",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Sohn, 2. Klasse",
+     "geburtsjahr": 2018
+    },
+    {
+     "vorname": "Lina",
+     "name": "Hollerbusch",
+     "anrede": "Kind",
+     "rolle": "Tochter, Krippe",
+     "geburtsjahr": 2024
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-NH 19"
+   ]
+  },
+  {
+   "id": "hh-wiesnegger",
+   "titel": "Rentnerpaar mit Pflegebedarf",
+   "name": "Ehepaar Wiesnegger",
+   "anschrift": "Obere Dorfstraße 27, 99998 Musterbach-Kleeweiler",
+   "personen": [
+    {
+     "vorname": "Herbert",
+     "name": "Wiesnegger",
+     "anrede": "Herr",
+     "rolle": "Rentner, pflegebedürftig",
+     "geburtsjahr": 1945
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Wiesnegger",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, pflegt ihren Mann",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Monika",
+     "name": "Brandlechner-Beispiel",
+     "anrede": "Frau",
+     "rolle": "Tochter, Betreuerin (wohnt auswärts)",
+     "geburtsjahr": 1972
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HW 45"
+   ]
+  },
+  {
+   "id": "hh-lindenbrecht",
+   "titel": "Junges Paar beim Hausbau",
+   "name": "Paar Lindenbrecht / Fohlmann",
+   "anschrift": "Neubaugebiet Sonnenacker, Bauplatz 7, 99997 Musterbach-Hinterbühl (bis Juni: Bahnhofstraße 8, 99999 Musterbach)",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Lindenbrecht",
+     "anrede": "Herr",
+     "rolle": "Bauherr, Elektroniker",
+     "geburtsjahr": 1996
+    },
+    {
+     "vorname": "Lea",
+     "name": "Fohlmann",
+     "anrede": "Frau",
+     "rolle": "Bauherrin, Erzieherin",
+     "geburtsjahr": 1997
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JL 96"
+   ]
+  },
+  {
+   "id": "hh-tannreiter",
+   "titel": "Selbstständige mit Laden",
+   "name": "Familie Tannreiter (Laden „Tannreiters Beispiel-Hofladen“)",
+   "anschrift": "Marktplatz 5, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Petra",
+     "name": "Tannreiter",
+     "anrede": "Frau",
+     "rolle": "Inhaberin Hofladen",
+     "geburtsjahr": 1978
+    },
+    {
+     "vorname": "Klaus-Dieter",
+     "name": "Tannreiter",
+     "anrede": "Herr",
+     "rolle": "Ehemann, Landwirt im Nebenerwerb",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sophie",
+     "name": "Tannreiter",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Abschlussjahr",
+     "geburtsjahr": 2008
+    },
+    {
+     "vorname": "Rosa",
+     "name": "Grünzwieler",
+     "anrede": "Frau",
+     "rolle": "Aushilfe im Laden (Minijob, eigener Haushalt im Dorf)",
+     "geburtsjahr": 1959
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-PT 78",
+    "BSP-LT 300"
+   ]
+  },
+  {
+   "id": "hh-wg-hagedorner",
+   "titel": "Student mit Nebenjob in WG",
+   "name": "WG Hagedorner / Möllbach / Kranewitt",
+   "anschrift": "Bahnhofstraße 21, 2. OG, 99999 Musterbach",
+   "personen": [
+    {
+     "vorname": "Felix",
+     "name": "Hagedorner",
+     "anrede": "Herr",
+     "rolle": "Student (Fernstudium), Nebenjob Werkstatt",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Jana",
+     "name": "Möllbach",
+     "anrede": "Frau",
+     "rolle": "Mitbewohnerin, Auszubildende Pflege",
+     "geburtsjahr": 2004
+    },
+    {
+     "vorname": "Can",
+     "name": "Kranewitt",
+     "anrede": "Herr",
+     "rolle": "Mitbewohner, Student",
+     "geburtsjahr": 2002
+    }
+   ],
+   "fahrzeuge": []
+  }
+ ]
+}

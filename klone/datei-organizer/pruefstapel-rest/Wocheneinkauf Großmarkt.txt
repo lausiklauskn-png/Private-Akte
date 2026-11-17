@@ -1,0 +1,161 @@
+BEISPIEL-MARKT
+Leipziger Ring 10, 04999 Musterstadt
+Tel. 0000 000000  USt-IdNr. DE000000000
+
+Rotwein trocken               4,99 B
+  4 x 2,79
+Weintrauben                  11,16 A
+Mineralwasser 6x1,5l          2,94 B
+  Pfand                       1,50 B
+  2 x 2,49
+Kuechenrolle 4er              4,98 B
+  4 x 0,95
+Babybrei Karotte              3,80 A
+Batterien AA 8er              4,99 B
+  4 x 1,99
+Salami Scheiben               7,96 A
+  3 x 1,49
+Schwamm 10er                  4,47 B
+  2 x 2,79
+Weintrauben                   5,58 A
+Gluehbirne LED                3,49 B
+  2 x 1,49
+Toastbrot                     2,98 A
+Haehnchenbrust                6,49 A
+  2 x 2,19
+Vollkornbrot 750g             4,38 A
+Lachsfilet TK                 4,49 A
+Kochschinken                  1,79 A
+  2 x 9,99
+Windeln Gr,5                 19,98 B
+Gummibaerchen                 0,99 A
+  2 x 0,89
+Joghurt Natur 500g            1,78 A
+Schwamm 10er                  1,49 B
+  Rabatt 20%                 -0,30 B
+Penne 500g                    0,99 A
+Vollmilch 3,5% 1l             1,09 A
+Spinat TK                     1,29 A
+  3 x 4,99
+Batterien AA 8er             14,97 B
+  2 x 0,69
+Senf mittelscharf             1,38 A
+  2 x 2,79
+Nussnougatcreme               5,58 A
+  4 x 0,99
+H-Milch 1,5%                  3,96 A
+Pommes TK                     2,19 A
+Eisbergsalat                  1,19 A
+  4 x 0,95
+Zahnpasta                     3,80 B
+Frischhaltefolie              1,29 B
+  4 x 1,29
+Servietten                    5,16 B
+  Rabatt 20%                 -1,03 B
+  2 x 0,99
+Penne 500g                    1,98 A
+  3 x 1,29
+Tee Pfefferminz               3,87 A
+  4 x 1,79
+Muellbeutel 35l               7,16 B
+  2 x 1,49
+Kekse Butter                  2,98 A
+Lachsfilet TK                 4,49 A
+  2 x 1,39
+Gurken Glas                   2,78 A
+Haehnchenbrust                6,49 A
+  3 x 1,19
+Erbsen TK                     3,57 A
+  2 x 2,49
+Fischstaebchen                4,98 A
+Waschmittel 20WL              5,49 B
+Spuelmaschinentabs            4,99 B
+  2 x 0,99
+Penne 500g                    1,98 A
+Spaghetti 500g                0,99 A
+Aepfel lose                   2,47 A
+Broetchen 6er                 1,59 A
+  3 x 0,99
+H-Milch 1,5%                  2,97 A
+  2 x 3,49
+Gluehbirne LED                6,98 B
+  Rabatt 20%                 -1,40 B
+  3 x 0,59
+Tomatenmark                   1,77 A
+  Rabatt 20%                 -0,35 A
+Penne 500g                    0,99 A
+Butter 250g                   2,29 A
+Paprika rot                   0,79 A
+  4 x 0,99
+Penne 500g                    3,96 A
+Gouda jung Scheiben           1,89 A
+  2 x 0,89
+Essig Kraeuter                1,78 A
+Lachsfilet TK                 4,49 A
+  2 x 1,79
+Reis Langkorn 1kg             3,58 A
+  2 x 3,99
+Honig 500g                    7,98 A
+Spaghetti 500g                0,99 A
+Zitronen Netz                 1,49 A
+Babybrei Karotte              0,95 A
+  4 x 1,39
+Mayonnaise                    5,56 A
+Zahnpasta                     0,95 B
+  Rabatt 20%                 -0,19 B
+Gouda jung Scheiben           1,89 A
+  2 x 1,39
+Gurken Glas                   2,78 A
+  2 x 0,69
+Salatgurke                    1,38 A
+  4 x 0,99
+H-Milch 1,5%                  3,96 A
+  2 x 0,99
+Gummibaerchen                 1,98 A
+Orangen 2kg                   2,99 A
+Haehnchenbrust                6,49 A
+  2 x 1,89
+Gouda jung Scheiben           3,78 A
+  3 x 2,47
+Aepfel lose                   7,41 A
+Schokolade Vollmilch          1,19 A
+Batterien AA 8er              4,99 B
+Gummibaerchen                 0,99 A
+Essig Kraeuter                0,89 A
+  2 x 2,49
+Kakao Pulver                  4,98 A
+  2 x 0,99
+Gummibaerchen                 1,98 A
+  3 x 0,69
+Salatgurke                    2,07 A
+  3 x 1,79
+Marmelade Erdbeer             5,37 A
+  4 x 2,49
+Eis Vanille 1l                9,96 A
+Zwiebeln 1kg                  1,29 A
+  3 x 1,39
+Gurken Glas                   4,17 A
+  3 x 0,79
+Kidneybohnen                  2,37 A
+Salatgurke                    0,69 A
+  3 x 1,69
+Bruehe Instant                5,07 A
+Bier Kasten 20x0,5           14,99 B
+  Pfand                       3,10 B
+Kekse Butter                  1,49 A
+--------------------------------------
+Zwischensumme                 338,72
+Pfand gesamt                    4,60
+Leergut Pfandbon               -4,75 B
+Coupon Treuepunkte             -2,00 A
+======================================
+SUMME EUR                     336,57
+Kartenzahlung girocard        336,57
+
+Steuer   Netto     MwSt     Brutto
+A  7%    207,05    14,49    221,54
+B 19%     96,66    18,37    115,03
+Posten: 88
+
+23.11.2024  09:47  Kasse 04  Bed. 112  Bon 2582
+Vielen Dank fuer Ihren Einkauf!

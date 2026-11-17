@@ -1,0 +1,34 @@
+# Rentenversicherung Beispiel-Land
+Rentenversicherung Beispiel-Land · Rentenplatz 1 · 30000 Beispielhannover
+
+Frau Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Versicherungsnummer: 00 000000 I 000
+Datum: 20.06.2025
+
+# Rentenanpassung zum 1. Juli 2025
+
+Sehr geehrte Frau Vogelsang,
+
+|Position|bisher|ab 01.07.2025|
+|Altersrente|791,40 €|820,61 €|
+|KV-Beitrag|-64,50 €|-66,88 €|
+|PV-Beitrag|-28,89 €|-29,95 €|
+|Zahlbetrag|698,01 €|723,78 €|
+
+@seite
+Hinweise zu Ihrem Schreiben vom 20.06.2025
+
+@spalten 3
+## Besteuerung
+Die Rentenerhöhung ist voll steuerpflichtig.
+
+## Mitteilungspflichten
+Teilen Sie uns Umzug, Änderung der Bankverbindung oder Bezug weiterer Renten mit.
+
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats Widerspruch erhoben werden.
+
+@ende

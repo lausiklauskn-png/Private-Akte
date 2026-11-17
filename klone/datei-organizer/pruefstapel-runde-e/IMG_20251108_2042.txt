@@ -1,0 +1,22 @@
+BÄCKEREI BEISPIELKORN
+Lindenplatz 2, 34567 Beispielstadt
+Tel. 00000 000000
+UST-ID DE000000000
+
+6 Brötchen
+  6 x 0,45        2,70 B
+Bauernbrot 1 kg                  4,20 B
+Butterbrezel
+  2 x 1,60        3,20 B
+Kaffee to go                     2,80 A
+------------------------------------
+SUMME EUR                    12,90
+Bar gegeben                   12,90
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   2,35   0,45   2,80
+B 7 %   9,44   0,66   10,10
+
+08.11.2025 07:42  Bon 2040  Kasse 4
+TSE-Signatur 3072581624
+Vielen Dank für Ihren Einkauf!

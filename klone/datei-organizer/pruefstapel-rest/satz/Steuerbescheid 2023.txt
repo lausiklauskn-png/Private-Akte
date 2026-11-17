@@ -1,0 +1,32 @@
+# Finanzamt Beispielhausen
+Finanzamt Beispielhausen · Postfach 12 · 84999 Beispielhausen
+
+Herrn und Frau
+Martin und Sabine Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Steuernummer: 141/203/44107
+Datum: 22.07.2024
+
+# Bescheid für 2023 über Einkommensteuer und Solidaritätszuschlag
+
+Festsetzung
+
+Die Einkommensteuer wird auf 9.874,00 EUR festgesetzt. Bereits gezahlt: 11.102,00 EUR.
+
+Erstattung: 1.228,00 EUR. Der Betrag wird auf Ihr Konto DE00 0000 0000 0000 0000 00 überwiesen.
+
+@seite
+Erläuterungen
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Finanzamt Beispielhausen, Postfach 12, 84999 Beispielhausen, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+## Kinderfreibeträge
+Für Ihre Kinder wurde die Günstigerprüfung durchgeführt; das Kindergeld war günstiger.
+
+@ende

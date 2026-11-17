@@ -1,0 +1,92 @@
+Raiffeisen- und Bürgerbank Sellenbrück eG                          KONTOAUSZUG
+Marktstraße 3 · 31999 Sellenbrück                   Nr. 12/2026 · Blatt 1 von 1
+BIC GENODEF0SLB
+
+Kontoinhaberin: Hannelore Wiebusch, Lindenhofweg 14, 31999 Sellenbrück
+IBAN: DE00 3499 9000 0001 2345 67    Kontoart: Giro Klassik    Währung: EUR
+Auszugszeitraum: 01.12.2026 bis 30.12.2026    erstellt am 30.12.2026
+==============================================================================
+Bu-Tag Wert   Vorgang / Verwendungszweck                            Umsatz EUR
+------------------------------------------------------------------------------
+              alter Kontostand (Auszug 11/2026)                    22.374,31 H
+
+01.12. 01.12. DAUERAUFTRAG                                             98,18 S
+              Hauswartservice Brinkmeier
+              Hausmeister Lindenhofweg 14
+              lt. Monatsrechnung Vormonat
+01.12. 01.12. GUTSCHRIFT                                              865,00 H
+              Brandtner Markus u. Sabine
+              MIETE LINDENHOFWEG 14 1.OG LINKS
+              DAUERAUFTRAG
+01.12. 01.12. GUTSCHRIFT                                              212,00 H
+              Kreiskasse Wendelsburg
+              WG 4417/26 AYDEMIR WOHNGELD 12/26
+02.12. 02.12. GUTSCHRIFT                                              493,00 H
+              Aydemir Selin u. Emre
+              Miete Dezember DG Rest
+04.12. 04.12. GUTSCHRIFT                                              875,00 H
+              Petrovic Dragan
+              Miete + NK Lindenhofweg 14 1.OG re
+07.12. 07.12. SEPA-LASTSCHRIFT                                        295,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 ERDGAS ABSCHLAG 12/2026
+              MANDAT SW-2044170-01
+07.12. 07.12. SEPA-LASTSCHRIFT                                         35,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 ALLGEMEINSTROM ABSCHLAG
+              12/2026 MANDAT SW-2044170-02
+08.12. 08.12. SEPA-UEBERWEISUNG                                        71,40 S
+              Hauswartservice Brinkmeier
+              R 26-171 Laub Sonderleistung
+10.12. 10.12. SEPA-LASTSCHRIFT                                        376,50 S
+              Finanzamt Wendelsburg
+              STNR 000/123/40077 EST-VZ IV/2026
+10.12. 10.12. SEPA-LASTSCHRIFT                                         44,95 S
+              Telvia Kommunikation GmbH
+              KD 77004129 RG 7700441205 11/2026
+              TELVIA ZUHAUSE 50
+11.12. 11.12. SEPA-LASTSCHRIFT                                         23,80 S
+              Druckhaus Wendelsburg GmbH u. Co. KG
+              ANZEIGE 26-K-88104
+              KLEINANZEIGE 21.11.2026
+14.12. 14.12. SEPA-UEBERWEISUNG                                       100,00 S
+              Thomas Wiebusch
+              Weihnachten fuer Jonas und Marie
+              je 50 - pssst
+15.12. 15.12. SEPA-LASTSCHRIFT                                         58,00 S
+              Nordlicht Energie GmbH
+              NL-4417-2026 ABSCHLAG 12/2026
+              V-88204417 MANDAT NL-4417-2026-M1
+15.12. 15.12. SEPA-LASTSCHRIFT                                        105,43 S
+              Gebaeudedienste Ahlers u. Kramp GbR
+              AK-26-1426 DEZEMBER 2026
+              VERTRAG AK-V-2025-039 MANDAT AK-039
+18.12. 18.12. BARGELDAUSZAHLUNG                                       600,00 S
+              GA RAIBA SELLENBRUECK MARKTSTR 3
+              18.12. 10.11 KARTE 1
+30.12. 30.12. SEPA-LASTSCHRIFT                                        438,00 S
+              Landeshypo Mittelland AG
+              DARLEHEN 600 0441 7790 RATE 12/2026
+              ZINS UND TILGUNG
+30.12. 30.12. GUTSCHRIFT                                            1.177,18 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 12.26
+              ALTERSRENTE
+30.12. 30.12. GUTSCHRIFT                                              719,69 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 12.26
+              WITWENRENTE
+30.12. 30.12. GUTSCHRIFT                                              347,00 H
+              Mittelland Pflegekasse
+              M000481726 PV-26-0441726
+              PFLEGEGELD PG2 01/27
+30.12. 30.12. ENTGELTABSCHLUSS                                         20,40 S
+              Raiffeisen- und Buergerbank Sellenbrueck eG
+              ABSCHLUSS PER 30.12.2026
+              KONTOFUEHRUNG 17,70 BUCHUNGSPOSTEN 2,70
+
+              neuer Kontostand vom 30.12.2026                      24.796,52 H
+==============================================================================
+Summe Belastungen: 2.266,66 S   Summe Gutschriften: 4.688,87 H   Posten: 20
+Eingeräumte Kontoüberziehung: 2.000,00 EUR · Sollzinssatz 11,25 % p. a.
+Bitte prüfen Sie den Auszug. Einwendungen sind unverzüglich zu erheben.

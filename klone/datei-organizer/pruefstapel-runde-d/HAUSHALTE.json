@@ -1,0 +1,119 @@
+{
+ "haushalte": [
+  {
+   "id": "d-familie",
+   "titel": "Familie mit zwei Kindern, Schichtdienst",
+   "name": "Familie Brandtner (Beispiel)",
+   "anschrift": "Beispielweg 12, 00000 Musterstadt",
+   "personen": [
+    {
+     "vorname": "Jens",
+     "name": "Brandtner",
+     "anrede": "Herr",
+     "rolle": "Vater, Schichtdienst"
+    },
+    {
+     "vorname": "Silke",
+     "name": "Brandtner",
+     "anrede": "Frau",
+     "rolle": "Mutter, Schichtdienst"
+    },
+    {
+     "vorname": "Lea",
+     "name": "Brandtner",
+     "anrede": "Kind",
+     "rolle": "Tochter, 14"
+    },
+    {
+     "vorname": "Tim",
+     "name": "Brandtner",
+     "anrede": "Kind",
+     "rolle": "Sohn, 9"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-FB 4412"
+   ]
+  },
+  {
+   "id": "d-single",
+   "titel": "Lagerarbeiter mit Motorrad und Kleingarten",
+   "name": "Dirk Lohmeyer (Beispiel)",
+   "anschrift": "Beispielgasse 3, 00000 Testdorf",
+   "personen": [
+    {
+     "vorname": "Dirk",
+     "name": "Lohmeyer",
+     "anrede": "Herr",
+     "rolle": "Lagerarbeiter"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 77"
+   ]
+  },
+  {
+   "id": "d-rentner",
+   "titel": "Rentnerehepaar, Eigentumswohnung",
+   "name": "Helga und Walter Winkelmann (Beispiel)",
+   "anschrift": "Beispielallee 8, 00000 Probenheim",
+   "personen": [
+    {
+     "vorname": "Walter",
+     "name": "Winkelmann",
+     "anrede": "Herr",
+     "rolle": "Rentner, Diabetes"
+    },
+    {
+     "vorname": "Helga",
+     "name": "Winkelmann",
+     "anrede": "Frau",
+     "rolle": "Rentnerin"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "d-studis",
+   "titel": "Zwei Studierende in einer Wohnung",
+   "name": "Jana Kowalke / Emre Yilmazer (Beispiel)",
+   "anschrift": "Beispielstraße 5, 00000 Unistadt",
+   "personen": [
+    {
+     "vorname": "Jana",
+     "name": "Kowalke",
+     "anrede": "Frau",
+     "rolle": "Studentin, BAföG"
+    },
+    {
+     "vorname": "Emre",
+     "name": "Yilmazer",
+     "anrede": "Herr",
+     "rolle": "Student, Werkstudent"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "d-gruender",
+   "titel": "Gründerin Onlineshop mit Lebenspartner",
+   "name": "Nora Feldmann / Paul Sander (Beispiel)",
+   "anschrift": "Beispielring 21, 00000 Gründerstadt",
+   "personen": [
+    {
+     "vorname": "Nora",
+     "name": "Feldmann",
+     "anrede": "Frau",
+     "rolle": "Gründerin, Kleinunternehmerin"
+    },
+    {
+     "vorname": "Paul",
+     "name": "Sander",
+     "anrede": "Herr",
+     "rolle": "Lebenspartner"
+    }
+   ],
+   "fahrzeuge": []
+  }
+ ]
+}

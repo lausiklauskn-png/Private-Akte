@@ -1,0 +1,39 @@
+# Handwerkskammer Beispiel-Region
+Handwerkskammer Beispiel-Region · Meisterplatz 1 · 56000 Beispielkoblenz
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Betriebsnummer: HWK 0000 8812
+Datum: 09.03.2026
+
+# Merkblatt für Ausbildungsbetriebe – Ausbildungsbeginn 2026
+
+Sehr geehrte Frau Hartwig,
+
+Sie haben Interesse an der Ausbildung im Friseurhandwerk angemeldet. Nachfolgend die wichtigsten Pflichten und Fristen für einen Ausbildungsbeginn am 01.08.2026.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 09.03.2026
+
+@spalten 3
+## Vertrag
+Der Ausbildungsvertrag ist vor Beginn bei der Kammer zur Eintragung einzureichen.
+
+## Vergütung
+Mindestvergütung im ersten Jahr laut Tarif bzw. gesetzlicher Untergrenze.
+
+## Berufsschule
+Melden Sie den Auszubildenden bei der Berufsschule an.
+
+## Jugendarbeitsschutz
+Bei Minderjährigen ist eine Erstuntersuchung vorzulegen.
+
+## Zuschüsse
+Prüfen Sie Förderprogramme für kleine Betriebe.
+
+## Ansprechpartner
+Ausbildungsberatung montags bis donnerstags.
+
+@ende

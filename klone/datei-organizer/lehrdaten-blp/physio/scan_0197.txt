@@ -1,0 +1,9 @@
+Volksbank Wehrstedt eG                      Kontoauszug 7/2026  Blatt 3
+Geschäftsgirokonto   Physiotherapie & Massagepraxis Lindenhof
+
+Buchungstag  Wert        Text                                        Betrag EUR
+01.07.2026   01.07.2026  SEPA-BASISLASTSCHRIFT                          184,30 -
+                         TECHNIK-SCHUTZ VERSICHERUNG AG
+                         Elektronikversicherung Praxisgeraete
+                         VS-Nr. EL-200771-P  Beitrag 07/26-06/27
+                         Mandat M000417  Gl.-ID DE00ZZZ00000000000

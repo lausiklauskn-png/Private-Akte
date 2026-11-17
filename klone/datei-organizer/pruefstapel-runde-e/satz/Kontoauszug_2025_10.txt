@@ -1,0 +1,42 @@
+# Beispiel Sparkasse Musterhausen
+Sparkassenstraße 2 · 45678 Musterhausen
+
+Kontoauszug
+Girokonto Tobias Reuter
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 8/2025 · Blatt 1 von 1 · Zeitraum 01.10.2025 – 31.10.2025
+
+Herrn Tobias Reuter
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Alter Kontostand vom 01.10.2025: 214,66 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|02.10.|02.10.|Mietanteil an Aylin Demir|-390,00|
+|02.10.|02.10.|Kartenzahlung Discount Probe|-15,19|
+|03.10.|03.10.|Bargeldauszahlung Geldautomat|-118,23|
+|05.10.|05.10.|Beispielflix Abo|-4,99|
+|06.10.|06.10.|Kartenzahlung Bäckerei Beispielkorn|-6,78|
+|08.10.|08.10.|Bargeldauszahlung Geldautomat|-135,12|
+|09.10.|09.10.|Bargeldauszahlung Geldautomat|-59,60|
+|10.10.|10.10.|Kartenzahlung Bäckerei Beispielkorn|-3,16|
+|12.10.|12.10.|Mensa-Karte Aufladung|-40,00|
+|12.10.|12.10.|Lastschrift Beispiel-Markt Filiale 0412|-78,89|
+|13.10.|13.10.|Bargeldauszahlung Geldautomat|-106,70|
+|13.10.|13.10.|Kartenzahlung Discount Probe|-41,03|
+|15.10.|15.10.|Beispiel BKK Beitrag KVdS|-137,00|
+|15.10.|15.10.|Kartenzahlung Frischkauf Exempel|-105,09|
+|18.10.|18.10.|Bargeldauszahlung Geldautomat|-70,91|
+|19.10.|19.10.|Lastschrift Muster Drogerie|-22,72|
+|20.10.|20.10.|Hilfskraft Universität Beispielstadt|+318,00|
+|20.10.|20.10.|Kartenzahlung Discount Probe|-61,22|
+|24.10.|24.10.|Bargeldauszahlung Geldautomat|-66,68|
+|27.10.|27.10.|Kartenzahlung Discount Probe|-12,01|
+|30.10.|30.10.|BAföG 10/2025 Studierendenwerk Beispielstadt|+812,00|
+
+Neuer Kontostand vom 31.10.2025: -130,66 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Sparkasse Musterhausen · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

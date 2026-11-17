@@ -1,0 +1,18 @@
+Getränke Fehling GmbH
+Fachgroßhandel für Gastronomie
+Brauereiweg 6 – 34999 Wesenrode
+Rechnung / Lieferschein 260112-07        Datum 12.01.2026
+Kunde 1047  Hartwigs Grillstube
+
+Anz  Artikel                          E-Preis    Summe
+10   Ki Cola 24x0,33 MW                 13,90   139,00
+ 6   Ki Orangenlimo 24x0,33 MW          12,90    77,40
+ 8   Ki Mineralwasser 12x0,7            5,40    43,20
+ 4   Ki Pils 20x0,5                     13,20    52,80
+ 3   Ki Apfelschorle 24x0,33            12,40    37,20
+     Pfand lt. Leergutkonto ausgeglichen
+
+Warenwert netto                                349,60
+MwSt 19 %                                       66,42
+Rechnungsbetrag                                416,02
+Abbuchung per SEPA-Lastschrift in 7 Tagen

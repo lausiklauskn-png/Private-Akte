@@ -1,0 +1,113 @@
+{
+ "app": "Nebenkosten-Prüfer (Vermieterseite)",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Fertige Betriebskostenabrechnung vor dem Versand unabhängig gegenprüfen, um Widersprüche und verlorene Nachzahlungen zu vermeiden",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Nutzer: kleine Hausverwaltungen (500–3.000 Einheiten) und private Vermieter, die selbst abrechnen",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Liest die fertige Abrechnung als PDF, unabhängig davon, mit welchem Programm sie erstellt wurde",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M04",
+   "text": "Prüft je Position die Umlagefähigkeit (z. B. Verwaltung, Porto, Bankgebühren, Reparatur nicht umlagefähig)",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Prüft, ob die Anteile der Verteilerschlüssel zusammen 100 % ergeben und Summen stimmen",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M06",
+   "text": "Prüft Abrechnungszeitraum (12 Monate) und Versandfrist (12 Monate nach Ende)",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Prüft Heizkosten-Verbrauchsanteil 50–70 % und Leerstand",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Vergleicht mit dem Vorjahr und meldet auffällige Sprünge",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Ergebnis als Ampelliste mit Fundstelle (Seite/Zeile) und Begründung",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Umlagevereinbarung aus dem Mietvertrag je Einheit hinterlegbar; geht vor der allgemeinen Regel",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Belege können zugeordnet werden (Betrag gegen Beleg)",
+   "gewicht": "beiwerk",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M12",
+   "text": "Prüfung läuft auf dem Gerät; Mieternamen gehen nie an eine KI",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M13",
+   "text": "Belege und Abrechnungen bleiben beim Nutzer (eigener Ordner)",
+   "gewicht": "wichtig",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M14",
+   "text": "PC/Browser oder Windows",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M15",
+   "text": "Korrigiert die Abrechnung nicht und erzeugt keine eigene Abrechnung",
+   "gewicht": "kern",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M16",
+   "text": "Keine Rechtsberatung; im Zweifel „bitte prüfen“ statt Grün",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Versendet nichts automatisch, kein Mieterportal, keine Buchhaltung",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M18",
+   "text": "Preis für Verwaltungen je Einheit und Jahr, für Kleinvermieter Jahrespauschale",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

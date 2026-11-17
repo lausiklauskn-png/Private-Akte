@@ -1,0 +1,13 @@
+Verdienstabrechnunq 07/2026            Blatt 1
+Fa. Elektro Brandhuber
+
+Lechner Tobias, Pers.Nr. 002, Eintritt 01.09.2019
+
+Lohnart  Text                   Std     Satz      Betrag
+1000     Stundenlohn           161,0   20,00     3.220,00
+1420     Urlaubsentgelt         16,0   20,00       320,00
+1600     Urlaubsgeld tarifl.                       450,00
+         BRUTTOLOHN                              3.990,00
+         gesetzl. Abzuege                       -1.512,30
+         NETTOLOHN                               2.477,70
+ueberwiesen 31.07.2026

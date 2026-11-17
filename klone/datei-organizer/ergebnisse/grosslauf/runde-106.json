@@ -1,0 +1,566 @@
+{
+ "ordner": "laeufe/runde-106",
+ "dateien": 694,
+ "organizer": {
+  "schriftstueck": {
+   "n": 664,
+   "ok": 594,
+   "falschSicher": 23,
+   "offen": 47
+  },
+  "kategorie": {
+   "n": 664,
+   "ok": 609,
+   "falschSicher": 19,
+   "offen": 36
+  },
+  "absender": {
+   "n": 646,
+   "ok": 632,
+   "falschSicher": 7,
+   "offen": 7
+  },
+  "person": {
+   "n": 578,
+   "ok": 577,
+   "falschSicher": 1,
+   "offen": 0
+  },
+  "frist": {
+   "n": 216,
+   "ok": 208,
+   "falschSicher": 0,
+   "offen": 8
+  },
+  "betrag": {
+   "n": 57,
+   "ok": 49,
+   "falschSicher": 4,
+   "offen": 4
+  }
+ },
+ "familienakte": {
+  "kat": {
+   "n": 654,
+   "ok": 340
+  },
+  "abs": {
+   "n": 646,
+   "ok": 518
+  },
+  "pruef": 664
+ },
+ "bookledgerpro": {
+  "betrag": {
+   "n": 57,
+   "ok": 49
+  },
+  "datum": {
+   "n": 57,
+   "ok": 51
+  }
+ },
+ "offenDateien": 272,
+ "jeHaushalt": {
+  "familie-petersen": {
+   "n": 91,
+   "ok": 88
+  },
+  "alleinerziehend-brodersen": {
+   "n": 60,
+   "ok": 56
+  },
+  "einzelperson-clausen": {
+   "n": 57,
+   "ok": 55
+  },
+  "arbeitslos-lorenzen": {
+   "n": 55,
+   "ok": 53
+  },
+  "professorin-asmussen": {
+   "n": 52,
+   "ok": 49
+  },
+  "selbststaendig-thomsen": {
+   "n": 60,
+   "ok": 56
+  },
+  "rentner-jessen": {
+   "n": 56,
+   "ok": 51
+  },
+  "entwickler-fleetmann": {
+   "n": 74,
+   "ok": 64
+  },
+  "boutique-hafenrose": {
+   "n": 89,
+   "ok": 69
+  },
+  "studentin-ketelsen": {
+   "n": 60,
+   "ok": 58
+  }
+ },
+ "nutzer": {
+  "profil": "kein Lernen",
+  "antworten": 0,
+  "falscheAntworten": 0
+ },
+ "gehalt": {
+  "zeitraum": {
+   "n": 58,
+   "ok": 58
+  },
+  "brutto": {
+   "n": 58,
+   "ok": 56
+  },
+  "netto": {
+   "n": 58,
+   "ok": 58
+  },
+  "auszahlung": {
+   "n": 58,
+   "ok": 58
+  },
+  "lohnsteuer": {
+   "n": 58,
+   "ok": 57
+  },
+  "steuerklasse": {
+   "n": 58,
+   "ok": 55
+  },
+  "steuerId": {
+   "n": 58,
+   "ok": 58
+  },
+  "svNummer": {
+   "n": 58,
+   "ok": 58
+  },
+  "krankenkasse": {
+   "n": 58,
+   "ok": 58
+  }
+ },
+ "jeHaushaltFeld": {
+  "familie-petersen": {
+   "schriftstueck": {
+    "n": 92,
+    "ok": 82,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 91,
+    "ok": 88,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 90,
+    "ok": 89,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 80,
+    "ok": 80,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 29,
+    "ok": 28,
+    "falschSicher": 0
+   },
+   "offen": 43,
+   "dateien": 92,
+   "betrag": {
+    "n": 9,
+    "ok": 7,
+    "falschSicher": 0
+   }
+  },
+  "alleinerziehend-brodersen": {
+   "schriftstueck": {
+    "n": 61,
+    "ok": 55,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 60,
+    "ok": 56,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 59,
+    "ok": 59,
+    "falschSicher": 0
+   },
+   "person": {
+    "n": 55,
+    "ok": 54,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 14,
+    "ok": 13,
+    "falschSicher": 0
+   },
+   "offen": 25,
+   "dateien": 61,
+   "betrag": {
+    "n": 3,
+    "ok": 2,
+    "falschSicher": 1
+   }
+  },
+  "einzelperson-clausen": {
+   "schriftstueck": {
+    "n": 58,
+    "ok": 54,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 57,
+    "ok": 55,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 56,
+    "ok": 55,
+    "falschSicher": 0
+   },
+   "person": {
+    "n": 50,
+    "ok": 50,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 16,
+    "ok": 15,
+    "falschSicher": 0
+   },
+   "offen": 22,
+   "dateien": 58,
+   "betrag": {
+    "n": 5,
+    "ok": 5,
+    "falschSicher": 0
+   }
+  },
+  "arbeitslos-lorenzen": {
+   "schriftstueck": {
+    "n": 56,
+    "ok": 48,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 55,
+    "ok": 53,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 54,
+    "ok": 53,
+    "falschSicher": 0
+   },
+   "person": {
+    "n": 49,
+    "ok": 49,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 25,
+    "ok": 24,
+    "falschSicher": 0
+   },
+   "offen": 18,
+   "dateien": 56,
+   "betrag": {
+    "n": 4,
+    "ok": 3,
+    "falschSicher": 0
+   }
+  },
+  "professorin-asmussen": {
+   "schriftstueck": {
+    "n": 53,
+    "ok": 47,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 52,
+    "ok": 49,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 52,
+    "ok": 51,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 46,
+    "ok": 46,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 19,
+    "ok": 19,
+    "falschSicher": 0
+   },
+   "offen": 18,
+   "dateien": 53,
+   "betrag": {
+    "n": 5,
+    "ok": 5,
+    "falschSicher": 0
+   }
+  },
+  "selbststaendig-thomsen": {
+   "schriftstueck": {
+    "n": 61,
+    "ok": 54,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 60,
+    "ok": 56,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 59,
+    "ok": 57,
+    "falschSicher": 2
+   },
+   "person": {
+    "n": 51,
+    "ok": 51,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 24,
+    "ok": 23,
+    "falschSicher": 0
+   },
+   "offen": 19,
+   "dateien": 61,
+   "betrag": {
+    "n": 6,
+    "ok": 5,
+    "falschSicher": 0
+   }
+  },
+  "rentner-jessen": {
+   "schriftstueck": {
+    "n": 57,
+    "ok": 50,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 56,
+    "ok": 51,
+    "falschSicher": 3
+   },
+   "absender": {
+    "n": 56,
+    "ok": 55,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 48,
+    "ok": 48,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 20,
+    "ok": 20,
+    "falschSicher": 0
+   },
+   "offen": 19,
+   "dateien": 57,
+   "betrag": {
+    "n": 6,
+    "ok": 5,
+    "falschSicher": 1
+   }
+  },
+  "entwickler-fleetmann": {
+   "schriftstueck": {
+    "n": 75,
+    "ok": 68,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 74,
+    "ok": 64,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 73,
+    "ok": 73,
+    "falschSicher": 0
+   },
+   "person": {
+    "n": 69,
+    "ok": 69,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 23,
+    "ok": 22,
+    "falschSicher": 0
+   },
+   "offen": 38,
+   "dateien": 75,
+   "betrag": {
+    "n": 4,
+    "ok": 2,
+    "falschSicher": 2
+   }
+  },
+  "boutique-hafenrose": {
+   "schriftstueck": {
+    "n": 90,
+    "ok": 81,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 89,
+    "ok": 69,
+    "falschSicher": 6
+   },
+   "absender": {
+    "n": 88,
+    "ok": 87,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 76,
+    "ok": 76,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 29,
+    "ok": 28,
+    "falschSicher": 0
+   },
+   "offen": 43,
+   "dateien": 90,
+   "betrag": {
+    "n": 10,
+    "ok": 10,
+    "falschSicher": 0
+   }
+  },
+  "studentin-ketelsen": {
+   "schriftstueck": {
+    "n": 61,
+    "ok": 55,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 60,
+    "ok": 58,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 59,
+    "ok": 53,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 54,
+    "ok": 54,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 17,
+    "ok": 16,
+    "falschSicher": 0
+   },
+   "offen": 27,
+   "dateien": 61,
+   "betrag": {
+    "n": 5,
+    "ok": 5,
+    "falschSicher": 0
+   }
+  }
+ },
+ "jeArt": {
+  "Rechnung": {
+   "n": 208,
+   "ok": 178
+  },
+  "Abrechnung": {
+   "n": 89,
+   "ok": 87
+  },
+  "Kontoauszug": {
+   "n": 15,
+   "ok": 15
+  },
+  "Vertrag": {
+   "n": 53,
+   "ok": 51
+  },
+  "Mahnung": {
+   "n": 9,
+   "ok": 2
+  },
+  "Befund": {
+   "n": 15,
+   "ok": 15
+  },
+  "Termin": {
+   "n": 31,
+   "ok": 31
+  },
+  "Brief": {
+   "n": 49,
+   "ok": 43
+  },
+  "Bescheid": {
+   "n": 56,
+   "ok": 56
+  },
+  "Bescheinigung": {
+   "n": 40,
+   "ok": 40
+  },
+  "Kassenbon": {
+   "n": 57,
+   "ok": 49
+  },
+  "Angebot/Werbung": {
+   "n": 11,
+   "ok": 11
+  },
+  "Aufforderung": {
+   "n": 18,
+   "ok": 18
+  },
+  "Kündigung": {
+   "n": 3,
+   "ok": 3
+  }
+ },
+ "doppelt": {
+  "n": 20,
+  "ok": 20,
+  "falsch": 0
+ },
+ "leer": {
+  "n": 10,
+  "ok": 10
+ },
+ "anhang": {
+  "n": 10,
+  "ok": 10
+ },
+ "blpKonto": {
+  "n": 21,
+  "blp": 5
+ }
+}

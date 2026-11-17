@@ -1,0 +1,11 @@
+Bahn-Onlineticket                                   Auftragsnummer K0L4M7
+Buchung vom 01.09.2026 – Rechnung für Geschäftskunden
+
+Reisender: Kowalczyk, Dennis
+Firma: Kfz-Technik Brandhorst (Arbeitgeber, Rechnungsempfänger)
+
+Hinfahrt  14.09.2026  Göttenau Hbf → Stuttberg Hbf  ICE, 2. Kl., Sparpreis     49,90
+Rückfahrt 16.09.2026  Stuttberg Hbf → Göttenau Hbf  ICE, 2. Kl., Flexpreis     96,40
+Sitzplatzreservierung 2x                                                        10,40
+Summe                                                                          156,70 EUR
+darin enthalten 7 % MwSt: 10,25 EUR     Zahlung: Firmenkreditkarte

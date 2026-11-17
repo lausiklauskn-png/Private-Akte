@@ -1,0 +1,17 @@
+Stadtwerke Beispielhafen – Abschlagsplan
+Vertragskonto 400 091 552 · Petersens Kram & Kaffee, Fischmarkt 7
+
+Gültig ab August 2026
+
+Fälligkeit      Betrag
+15.08.2026      378,00 €
+15.09.2026      378,00 €
+15.10.2026      378,00 €
+15.11.2026      378,00 €
+15.12.2026      378,00 €
+15.01.2027      378,00 €
+...  monatlich bis zur nächsten Jahresabrechnung (Juni 2027)
+
+Grundlage: Verbrauch 12.835 kWh, Preise Stand 01.07.2026.
+Sie können den Abschlag im Kundenportal anpassen, wenn sich Ihr Verbrauch ändert.
+Tipp: Mit einem SEPA-Lastschriftmandat müssen Sie an keinen Termin mehr denken.

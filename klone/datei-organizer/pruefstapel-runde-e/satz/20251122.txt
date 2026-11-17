@@ -1,0 +1,30 @@
+# Zahnarztpraxis Beispiel Lächeln
+Zahnarztpraxis Beispiel Lächeln · Am Markt 3 · 45678 Musterhausen
+
+Frau Aylin Demir
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Rechnungsnummer: ZB-25-11-182
+Datum: 22.11.2025
+
+# Rechnung professionelle Zahnreinigung
+
+Sehr geehrte Frau Demir,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|GOZ 1040 Professionelle Zahnreinigung, Zähne|28|3,62 €|101,36 €|
+|2|GOZ 2130 Politur Füllung|2|9,18 €|18,36 €|
+|3|Fluoridierung|1|9,06 €|9,06 €|
+
+Rechnungsbetrag: 128,78 €
+Heilbehandlung, umsatzsteuerfrei.
+
+Bitte überweisen Sie den Betrag von 128,78 € bis zum 22.12.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Zahnarztpraxis Beispiel Lächeln
+@fuss Zahnarztpraxis Beispiel Lächeln · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

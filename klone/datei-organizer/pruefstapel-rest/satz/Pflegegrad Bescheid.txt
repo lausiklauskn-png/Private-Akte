@@ -1,0 +1,33 @@
+# AOK Beispielland – Pflegekasse
+Pflegekasse · Gesundheitsplatz 1 · 37999 Musterau
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versichertennummer: P000000000
+Datum: 24.04.2025
+
+# Bescheid über Leistungen der Pflegeversicherung
+
+Sehr geehrter Herr Pfannschmidt,
+
+nach dem Gutachten des Medizinischen Dienstes vom 08.04.2025 liegt bei Ihnen Pflegegrad 2 vor (Gesamtpunkte 37,5).
+
+Ab 01.03.2025 erhalten Sie Pflegegeld von monatlich 347,00 EUR. Zusätzlich steht Ihnen der Entlastungsbetrag von 131,00 EUR monatlich zu.
+
+Mit freundlichen Grüßen
+@unterschrift
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei der AOK Beispielland – Pflegekasse, Gesundheitsplatz 1, 37999 Musterau, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+## Beratungseinsatz
+Bei Bezug von Pflegegeld ist halbjährlich ein Beratungsbesuch durch einen Pflegedienst nachzuweisen.
+
+@ende

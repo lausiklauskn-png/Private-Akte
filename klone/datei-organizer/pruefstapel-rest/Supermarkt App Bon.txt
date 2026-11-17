@@ -1,0 +1,17 @@
+BEISPIEL SUPERMARKT APP
+
+Dein digitaler Kassenbon
+Beispiel Supermarkt, Hafenweg 30
+Datum: 16.01.2026 18:22
+Bon-Nr.: 88120-04-1177
+
+Artikel   Menge   Betrag
+Rinderhack 500 g   1   6,49 EUR
+Tomaten Rispe   1   2,49 EUR
+Basmati Reis   1   2,29 EUR
+Hafermilch   2   3,58 EUR
+Rotwein Rioja   1   6,99 EUR
+
+Summe: 21,84 EUR
+Bezahlt mit: Kreditkarte **** 0000
+Gespart mit der App: 0,66 EUR

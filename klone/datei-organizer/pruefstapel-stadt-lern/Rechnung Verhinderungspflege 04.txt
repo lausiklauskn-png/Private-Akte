@@ -1,0 +1,8 @@
+Pflegedienst Leuchtfeuer Beispiel - Rechnung
+Rechnungsnummer 2026-0412    Datum 06.04.2026    Kundennummer PL-017
+Leistungsempfänger: Heinrich Brakmann; Antragstellerin: Gerda Brakmann
+
+Verhinderungspflege 02.-04.04.2026 (Pflegerin verhindert)
+ 3 Tage à 4 Stunden = 12 Std. x 38,00 EUR              456,00 EUR
+Zahlungsziel 20.04.2026 (Erstattung bei der Pflegekasse beantragen, Leistungsnachweis anbei)
+IBAN DE00 0000 0000 0000 0000 00

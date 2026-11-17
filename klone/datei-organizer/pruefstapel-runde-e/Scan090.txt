@@ -1,0 +1,31 @@
+Kfz-Werkstatt Beispiel Schrauber
+Kfz-Werkstatt Beispiel Schrauber · Werkstattweg 3 · 56789 Probedorf
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Kilometerstand: 164.802 km
+Datum: 10.10.2025
+
+Rechnung Nr. 4471 – Transporter BSP-NH 215
+
+Sehr geehrte Frau Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Bremsscheiben vorn, Paar   1   142,00 €   142,00 €
+2   Bremsbeläge vorn   1   64,00 €   64,00 €
+3   Arbeitszeit AW   14   9,50 €   133,00 €
+4   Bremsenreiniger, Kleinteile   1   8,40 €   8,40 €
+
+Nettobetrag: 347,40 €
+zzgl. 19 % MwSt.: 66,01 €
+Rechnungsbetrag: 413,41 €
+
+Bitte überweisen Sie den Betrag von 413,41 € bis zum 31.10.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Kfz-Werkstatt Beispiel Schrauber
+Kfz-Werkstatt Beispiel Schrauber · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

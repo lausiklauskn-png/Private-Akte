@@ -1,0 +1,23 @@
+GLASFASER BEISPIELNETZ GMBH
+Kabelring 3 | 00134 Beispielstadt-Nord | Hotline 0000-777 01
+
+Jonas Wendebach
+Hafenkante 3a
+00102 Beispielstadt-Nord
+
+Anschluss-ID: GF-330217
+Rechnungsnummer: GFR-26-05-110394
+Rechnungsdatum: 02.05.2026
+Leistungszeitraum: 01.05.2026 – 31.05.2026
+
+Produkt                                   Netto       Brutto
+Glasfaser 300 (Internet + Telefon)        33,60       39,99
+Leihgerät Router Beispielbox 7             4,19        4,99
+Verbindungen Festnetz (Flatrate)           0,00        0,00
+                                Summe    37,79       44,98
+
+Abbuchung am 08.05.2026 per SEPA-Lastschrift
+Gläubiger-ID DE00ZZZ00000000000, Mandat GF-330217-1
+
+Ihre Mindestvertragslaufzeit endet am 31.08.2026. Danach ist Ihr Vertrag
+monatlich kündbar.

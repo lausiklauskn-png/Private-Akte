@@ -1,0 +1,25 @@
+Familienkasse Beispielregion U
+Kindergeldinummer 000FK000000
+ll EEE
+Familienkasse Beispielregion
+Entgelt bezahlt KERBERS E
+Frau Sabine Kieselmayr DEC784241 Bet
+sg
+Lindenhang 12 re
+99999 Musterbach ee
+Januar 2026
+en Information zum Kindergeld ab 1. Januar 2026
+Sehr geehrte Frau Kieselmayr,
+zum 1. Januar 2026 hat sich die Höhe des Kindergeldes geändert. Sie erhalten
+die angepassten Beträge automatisch, ein Antrag ist nicht erforderlich.
+Für folgende Kinder wird Kindergeld gezahlt:
+Mia Kieselmayr
+Lukas Kieselmayr
+Ben Kieselmayr
+Die Zahlung erfolgt weiterhin auf Ihr bekanntes Konto. Den Zahltag erkennen
+Sie an der letzten Ziffer Ihrer Kindergeldnummer (Zahlungstermine im Internet
+= der Familienkasse).
+= Bitte denken Sie daran: Ein Umzug, eine neue Bankverbindung oder ein Kind,
+= das nicht mehr bei Ihnen lebt, muss uns mitgeteilt werden.
+= Dieses Schreiben ist eine Information und kein Bescheid.
+Ihre Familienkasse Beispielregion

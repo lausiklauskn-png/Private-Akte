@@ -1,0 +1,3 @@
+[Nova Beispiel Neobank App] Willkommen, Nadine!
+Dein Konto (Kunden-ID NB-00000000) ist eröffnet, Karte kommt in 5 Tagen.
+IBAN DE00 0000 0000 0000 0000 00, Verfüger: Nadine Kramer, Markus Feldhaus

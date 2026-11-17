@@ -1,0 +1,12 @@
+paketwelt-geschaeftskunden.example
+Gelbe Paketlogistik AG – Geschäftskundenportal
+
+Rechnung Versandmarken   Nr. 26-PM-0044170         03.03.2026
+Kundenkonto: Kettler Systemhaus (GK 000417)
+
+6 × Paketmarke bis 5 kg national          5,19     31,14
+2 × Paketmarke bis 10 kg national         8,49     16,98
+Netto                                              48,12
+19 % USt                                            9,14
+Rechnungsbetrag                                    57,26 EUR
+Zahlurig per hinterIegtem Zahlungsdienst.

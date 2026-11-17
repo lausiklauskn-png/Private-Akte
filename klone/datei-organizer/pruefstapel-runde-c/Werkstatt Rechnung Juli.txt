@@ -1,0 +1,27 @@
+Kfz-Werkstatt Beispielschrauber
+
+Beispielschrauber · Am Bahndamm 3 · 23456 Altdorf-Beispiel
+
+Frau Nicole Weber
+Birkenallee 30
+23456 Altdorf-Beispiel
+
+Rechnung Nr.: 23-417
+Kennzeichen: BSP-NW 230
+Datum: 07.07.2023
+
+Rechnung
+
+Pos.   Arbeit/Material                               EUR
+1      Hauptuntersuchung mit AU (Fremdleistung)      141,50
+2      Glühlampe Abblendlicht links erneuert         12,80
+3      Wischerblätter vorn                           29,90
+4      Arbeitszeit 0,5 Std.                          39,00
+       Gesamt inkl. MwSt                             223,20
+
+Zahlbar innerhalb 14 Tagen. Nächste HU: 07/2025.
+
+Danke für Ihren Auftrag
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00

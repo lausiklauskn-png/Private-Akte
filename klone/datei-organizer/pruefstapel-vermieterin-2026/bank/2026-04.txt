@@ -1,0 +1,94 @@
+Raiffeisen- und Bürgerbank Sellenbrück eG                          KONTOAUSZUG
+Marktstraße 3 · 31999 Sellenbrück                   Nr. 4/2026 · Blatt 1 von 1
+BIC GENODEF0SLB
+
+Kontoinhaberin: Hannelore Wiebusch, Lindenhofweg 14, 31999 Sellenbrück
+IBAN: DE00 3499 9000 0001 2345 67    Kontoart: Giro Klassik    Währung: EUR
+Auszugszeitraum: 01.04.2026 bis 30.04.2026    erstellt am 30.04.2026
+==============================================================================
+Bu-Tag Wert   Vorgang / Verwendungszweck                            Umsatz EUR
+------------------------------------------------------------------------------
+              alter Kontostand (Auszug 3/2026)                     19.834,35 H
+
+01.04. 01.04. DAUERAUFTRAG                                             98,18 S
+              Hauswartservice Brinkmeier
+              Hausmeister Lindenhofweg 14
+              lt. Monatsrechnung Vormonat
+01.04. 01.04. GUTSCHRIFT                                              800,00 H
+              Brandtner Markus u. Sabine
+              MIETE LINDENHOFWEG 14 1.OG LINKS
+              DAUERAUFTRAG
+01.04. 01.04. SEPA-UEBERWEISUNG                                       322,00 S
+              Justara Rechtsschutz-Versicherung AG
+              RS-000 771 204 Beitrag 04/26-03/27
+02.04. 02.04. GUTSCHRIFT                                              700,00 H
+              Aydemir Selin u. Emre
+              Miete April DG Lindenhofweg 14
+07.04. 07.04. SEPA-LASTSCHRIFT                                        295,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 ERDGAS ABSCHLAG 04/2026
+              MANDAT SW-2044170-01
+07.04. 07.04. SEPA-LASTSCHRIFT                                         35,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 ALLGEMEINSTROM ABSCHLAG
+              04/2026 MANDAT SW-2044170-02
+07.04. 07.04. GUTSCHRIFT                                              500,00 H
+              Petrovic Dragan
+              Miete April Teilzahlung
+              wie besprochen
+10.04. 10.04. SEPA-LASTSCHRIFT                                         42,95 S
+              Telvia Kommunikation GmbH
+              KD 77004129 RG 7700409013 03/2026
+              TELVIA ZUHAUSE 50
+10.04. 10.04. SEPA-UEBERWEISUNG                                       393,00 S
+              Alltagshilfe Pohlmann
+              Rechnung 2026-Q1-021 Jan-Maerz
+13.04. 13.04. SEPA-LASTSCHRIFT                                         86,00 S
+              Bundeskasse Kfz-Steuer HZA Wendelsburg
+              KRAFTST K0004817260 XSB-HW 000
+              11.04.2026-10.04.2027
+15.04. 15.04. SEPA-LASTSCHRIFT                                         58,00 S
+              Nordlicht Energie GmbH
+              NL-4417-2026 ABSCHLAG 04/2026
+              V-88204417 MANDAT NL-4417-2026-M1
+15.04. 15.04. SEPA-LASTSCHRIFT                                        105,43 S
+              Gebaeudedienste Ahlers u. Kramp GbR
+              AK-26-1127 APRIL 2026
+              VERTRAG AK-V-2025-039 MANDAT AK-039
+16.04. 16.04. SEPA-LASTSCHRIFT                                        153,51 S
+              Waermemass Abrechnungsdienst GmbH
+              LG 118-0417 RECHNUNG 60-118-2026
+              ABRECHNUNG 2025
+16.04. 16.04. SEPA-LASTSCHRIFT                                        146,40 S
+              Druckhaus Wendelsburg GmbH u. Co. KG
+              TAGEBLATT ABO 40011726
+              BEZUGSGELD 2. QUARTAL 2026
+17.04. 17.04. SEPA-LASTSCHRIFT                                        122,47 S
+              Wupsetaler Versicherung AG
+              H 00-4471-9029 HAUSRAT
+              BEITRAG 01.04.2026-31.03.2027
+              MANDAT WV-H-0044719029
+22.04. 22.04. BARGELDAUSZAHLUNG                                       300,00 S
+              GA RAIBA SELLENBRUECK MARKTSTR 3
+              22.04. 11.27 KARTE 1
+30.04. 30.04. BAREINZAHLUNG                                           200,00 H
+              EINZAHLUNG AM SCHALTER
+              Petrovic Rueckstand
+30.04. 30.04. SEPA-LASTSCHRIFT                                        412,00 S
+              Landeshypo Mittelland AG
+              DARLEHEN 600 0441 7790 RATE 04/2026
+              ZINS UND TILGUNG
+30.04. 30.04. GUTSCHRIFT                                            1.138,46 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 04.26
+              ALTERSRENTE
+30.04. 30.04. GUTSCHRIFT                                              696,02 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 04.26
+              WITWENRENTE
+
+              neuer Kontostand vom 30.04.2026                      21.298,89 H
+==============================================================================
+Summe Belastungen: 2.569,94 S   Summe Gutschriften: 4.034,48 H   Posten: 20
+Eingeräumte Kontoüberziehung: 2.000,00 EUR · Sollzinssatz 11,25 % p. a.
+Bitte prüfen Sie den Auszug. Einwendungen sind unverzüglich zu erheben.

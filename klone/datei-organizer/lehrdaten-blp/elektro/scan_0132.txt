@@ -1,0 +1,9 @@
+Raiffeisenbank Altenmoos eG – Entgeltabrechnunq Auslandszahlungsverkehr
+Datum 20.07.2026    Konto DE00 0000 0000 0000 0001 14
+
+Zahlungseingang aus der Schweiz, Auftraggeber Bergbahnen Graubach AG
+Betrag EUR 1.350,00   Entgeltregelung SHA
+
+Bearbeitungsentgelt Auslandszahlung          12,50
+Fremde Spesen Korrespondenzbank               7,50
+Belastung gesamt                             20,00 EUR

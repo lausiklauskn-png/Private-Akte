@@ -1,0 +1,34 @@
+ABSCHLEPPDIENST BEISPIEL-HAKEN GmbH
+Pannenhilfe · Bergung · Umsetzen · 24h-Notdienst
+Gewerbering 9 · 54322 Musterhausen-Süd · Tel. 0000 112233
+
+Herrn
+Edgar Pfauenthal
+Lindenhof 3
+54321 Musterhausen
+
+RECHNUNG                 Nr. 2026-1103-077
+Rechnungsdatum: 03.11.2026          Leistungsdatum: 03.11.2026
+Auftraggeber der Maßnahme: Stadt Musterhausen, Ordnungsamt (Az. OA-AS-26/0244)
+Fahrzeug: VW-Beispiel Kombi, grau, BSP-EP 903
+
+Pos  Leistung                                         Betrag
+1    Anfahrt und Umsetzen des Fahrzeugs (Pauschale)  165,00 EUR
+2    Standgebühr Verwahrplatz, 2 Tage à 15,00         30,00 EUR
+3    Herausgabe außerhalb der Geschäftszeit           25,00 EUR
+                                        Nettobetrag  220,00 EUR
+                                        USt 19 %      41,80 EUR
+                                        Gesamt       261,80 EUR
+
+Das Fahrzeug wurde Ihnen gegen Vorlage des Fahrzeugscheins am
+03.11.2026 um 21:40 Uhr herausgegeben. Eine Anzahlung von 0,00 EUR wurde
+geleistet. Der Restbetrag ist innerhalb von 14 Tagen, spätestens
+bis 17.11.2026, ohne Abzug zu überweisen:
+
+Bank: Beispielbank · IBAN DE00 0000 0000 0000 0000 00
+Verwendungszweck: RE 2026-1103-077
+
+Die Kosten der behördlichen Anordnung werden Ihnen gesondert von der
+Stadt Musterhausen in Rechnung gestellt.
+
+Steuer-Nr. 000/000/00000 · Geschäftsführer: Hans Haken-Muster

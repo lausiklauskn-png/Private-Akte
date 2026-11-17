@@ -1,0 +1,123 @@
+[Scan Teil 1 von 3]
+MegaMarkt Beispiel
+Verbravchermarkt Mühlbrück
+Gewerbepark l
+34567 Mühlbrück am See
+Tel. 1234 778899
+
+EUR
+RINDERHACK 50OG                    21,96  A
+   4 Stk x  5,49
+TOASTROT VOLLK.                    1,39  A
+SEKT TROCKEN 0,75                   4,49  B
+SAHNE 200ML                         0,79  A
+ANZUENDER 32                      2,49  B
+WASCHMITTEL 40WL                    9,99  B
+TRAUBEN HELL 500G                   2,79  A
+ROTWEIN TROCKN                     5,99  B
+MINERALWA5SER 12XlL                 5,49  A
+ZAHNPASTA                           0,95  B
+PFAND 6X0,25                        1,50  B
+HAFHNCHENBRUT 1KG                 l9,78  A
+   2 Stk x  9,89
+H-MILCH 1,5% 1L                     2,l8  A
+    Stk x  1,09
+MOZZARELLA 125G                     1,70  A
+   2 Stk x  0,85
+KAFFEEBOHNEN 1KG                   13,99  A
+CHIPS PAPRIKA                       3,58  A
+   2 Sfk x  1,79
+GOUDA JUNG SCHEIBEN                 3,98  A
+   2 Stk x  1,99
+BROTZEITLATTE                     14,99  A
+GRILKAESE 2ST                      5,58  A
+   2 5tk x  2,79
+SERVIETTEN LG 50ST                 1,99  B
+[Scan Teil 2 von 3]
+MAISKOLBEN 25T                      1,99  A
+BAUERNBROT 1K                      3,49  A
+FISCHSTAEBCHEN 30ST                 4,4  A
+ZWIEBELN 1KG                        l,29  A
+SPAHFTTI KG                       1,89  A
+SHAMPOO 300ML                       2,29  B
+NUDELSAAT 1KG                      4,49  A
+TOMATFN PASSIERT                    1,58  A
+   2 Stk x  0,79
+BLUMENSTRAUSS                       7,99  A
+TEELICHTER 5OST                     2,99  B
+AFFFE GEMAHLF 500G                6,99  A
+KAROFFELN FK 2,5KG                 3,29  
+MEHL TYPE 405 1KG                   0,79  A
+8UTTER 25OG                         2,39  A
+KATOFFELSALAT 1KG                  3,99  A
+PIZZA SALAMI TK                     2,49  A
+APPTELLFR 5OST                     3,49  B
+PAPRIK MIX 500G                    2,49  A
+ZUCKER lKG                          1,19  A
+HONIG 500G                          4,99  A
+GURKE STUECK                        0,69  A
+BIER PILS 20X0,5                   14,99  B
+WEISSWEIN HALBTR.                  32,94  B
+   6 Sfk x  5,49
+BANNEN LO5E                        3,74  A
+   2 Stk x  1,87
+SHOKOLADF VOLMICH                1,1  A
+SHWEINFNACKEN MRINIERT           1,49  A
+QUARK 40% 500G                      1,49  A
+KEKSE BUTTER                        1,49  A
+TORTEN8ODEN HELL                    1,89  A
+KUECENROLLE 4X                     3,49  B
+KASFPLATTE FEST.                  25,98  A
+[Scan Teil 3 von 3]
+   2 Stk x  12,99
+GUMMIBAERHFN 30G                  1,29  A
+REIS LANGKORN 1K                   7,16  A
+   4 Stk x  l,79
+BROETCHEN 10ER                      2,99  A
+BECHER 0,3L 50ST                    2,99  B
+NUSSNOUGATCRFME                     3,49  A
+MOEHREN KG                         1,19  A
+AEPFL ELSTAR 2KG                   3,99  A
+MUESLI KNUSPER                      2,B9  A
+JOGHURT NATUR 500G                  0,89  A
+GESCHIRRTABS 60ST                   7,99  B
+TEE PFEFFERMINZ                     1,29  A
+SALAMI AM STUECK                    3,89  A
+SPUELMTTEL 900ML                   1,9  B
+KOCHSCHINKEN 20G                   2,29  A
+BAGUETTE KNOBLAUCH                  1,49  A
+SENF MITTELSCHARF                   1,78  A
+   2 Sfk x  0,89
+SINAT TK 750G                      1,59  A
+CORNFLAKFS 750G                    14,94  A
+   6 Stk x  2,49
+APFELSCHORLE 6X1,5L                18,96  A
+   4 Stk x  4,7
+TOILETTENPAPER 10X                29,94  B
+   6 Stk x  4,99
+EIER FREILAND 10ST                 13,16  A
+   4 Stk x  3,29
+MAYONNAISE 500ML                    2,29  A
+SPARERIBS MARIN.                    B,99  A
+KATZENFUTTER 12X85G                21,96  B
+   4 Stk x  5,49
+POMMES TK 2,5KG                     3,99  A
+ZITRONEN NETZ                       1,49  A
+SALAT EISBERG                       0,99  A
+--------------------------------------------
+SUMME                             455,O7   
+Anzahl Atikel: 118
+
+GIROCARD                          455,07   
+
+Mw5t   Satz     Netto     Steuer    Brutto
+A      7,0%    283,19     19,82    303,01
+B     19,0%    127,78     24,28    1S2,06
+
+04.11.2023  10:52  Kasse 07  Bon 0117  Bed. 4
+
+Vielen Dak für Ihren Einkauf
+SE-Transaktion 44B127  Sgnaturzähler 902211
+TSE-Start 2023-11-04T10:41:09  TSE-Ende 2023-11-04T10:52:47
+Seriennr. Kasse B5P-MM-7
+Bon bitte aufbewahren - Umtausch nur mit Bon

@@ -1,0 +1,15 @@
+Beispiel Inkasso Forderungsmanagement GmbH
+Forderungsstraße 1 · 99950 Beispielort
+
+Herrn Markus Feldhaus, Mühlbachstraße 140, 99905 Musterhausen am Rhein
+
+Zahlungsaufforderung  Az. INK-0000000          Datum 08.05.2026
+Auftraggeber: Beispielmarkt Online-Versand, Rechnung Nr. 000-00000
+
+Hauptforderung            64,90 EUR
+Mahnkosten Auftraggeber    5,00 EUR
+Inkassokosten             29,50 EUR
+Gesamt                    99,40 EUR
+
+Zahlen Sie bitte bis zum 22.05.2026 auf IBAN DE00 0000 0000 0000 0000 00,
+sonst leiten wir weitere Schritte ein.

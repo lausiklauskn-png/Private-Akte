@@ -1,0 +1,114 @@
+FRISCHKAUF EXEMPEL
+Hauptstraße 12, 67890 Exempelheim
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+VANILLEEIS 1L
+  2 x 2,49        4,98 B
+KAFFEE GEMAHLEN 500G             5,99 B
+OLIVENÖL
+  2 x 6,99        13,98 B
+MAYONNAISE                       1,69 B
+AVOCADO                          1,29 B
+BRATWURST 6ER                    3,99 B
+NUSS-NOUGAT-CREME
+  2 x 2,99        5,98 B
+FRISCHMILCH 3,8% AKTION          0,83 B
+POMMES TK 1KG
+  2 x 1,99        3,98 B
+CORNFLAKES                       1,99 B
+KEKSE BUTTER
+  2 x 1,39        2,78 B
+ZUCKER 1KG                       0,99 B
+ALUFOLIE                         1,99 A
+SALZ                             0,49 B
+PAPRIKA MIX 3ER
+  2 x 2,29        4,58 B
+HAFERFLOCKEN                     0,89 B
+RABATT 20% HAFERFLOCKEN         -0,18 B
+KAFFEE GEMAHLEN 500G AKTION
+  2 x 4,19        8,38 B
+WEICHSPÜLER
+  3 x 1,79        5,37 A
+PIZZA SALAMI TK                  2,79 B
+HÄHNCHENBRUSTFILET AKTION
+  3 x 4,54        13,62 B
+ZITRONEN NETZ                    1,49 B
+SPÜLMASCHINENTABS 40             4,99 A
+APFELSAFT 1L
+  3 x 1,29        3,87 A
+KOCHSCHINKEN
+  3 x 2,29        6,87 B
+FRUCHTJOGHURT 4X
+  2 x 1,79        3,58 B
+FRISCHMILCH 3,8%
+  2 x 1,19        2,38 B
+LACHSFILET TK
+  2 x 5,99        11,98 B
+FISCHSTÄBCHEN TK                 2,49 B
+HONIG                            3,99 B
+MEHL TYPE 405
+  2 x 0,79        1,58 B
+HACKFLEISCH GEM 500G             4,99 B
+VOLLKORNBROT                     1,89 B
+RABATT 20% VOLLKORNBROT         -0,38 B
+KOCHSCHINKEN
+  3 x 2,29        6,87 B
+GOUDA SCHEIBEN
+  2 x 1,99        3,98 B
+GRILLKOHLE                       4,99 A
+MÜLLBEUTEL AKTION                1,25 A
+CHIPS                            1,79 B
+ZITRONEN NETZ                    1,49 B
+BRÜHE GEKÖRNT
+  2 x 1,99        3,98 B
+KAFFEE GEMAHLEN 500G AKTION
+  2 x 4,19        8,38 B
+VANILLEEIS 1L                    2,49 B
+GEFRIERBEUTEL                    1,29 A
+QUARK MAGER                      0,79 B
+PENNE 500G
+  2 x 0,99        1,98 B
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+RABATT 20% VOLLKORNBROT         -0,76 B
+COLA 1,5L                        1,39 A
+PFAND                            0,25 A
+BIRNEN
+  2 x 2,49        4,98 B
+SPINAT TK 750G                   1,49 B
+ORANGENSAFT 1L
+  3 x 1,79        5,37 A
+ERBSEN TK                        1,29 B
+SALZ                             0,49 B
+CORNFLAKES                       1,99 B
+PAPRIKA MIX 3ER                  2,29 B
+SCHORLE 1L                       0,99 A
+PFAND                            0,25 A
+REIS LANGKORN 1KG                1,79 B
+FISCHSTÄBCHEN TK                 2,49 B
+SALAT EISBERG                    1,19 B
+GRILLKOHLE
+  2 x 4,99        9,98 A
+BANANEN
+  3 x 1,49        4,47 B
+ROTWEIN                          3,99 A
+AVOCADO
+  2 x 1,29        2,58 B
+BIRNEN                           2,49 B
+------------------------------------
+ZWISCHENSUMME                 228,18
+====================================
+SUMME EUR                     228,18
+GIROCARD                     228,18
+POSTEN: 65
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   38,63   7,34   45,97
+B 7 %   170,29   11,92   182,21
+
+30.04.2026 10:05  BON 3933  KASSE 2  BED. 23
+TSE-TRANSAKTION 19910  SIGNATUR-ZÄHLER 625172
+START 10:05:02  ENDE 10:05:58
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

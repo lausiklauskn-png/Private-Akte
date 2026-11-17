@@ -1,0 +1,37 @@
+# Gemeinde Probedorf – Steueramt
+Gemeinde Probedorf – Steueramt · Rathausstraße 1 · 56789 Probedorf
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Kassenzeichen: GW-0000-118
+Datum: 26.01.2026
+
+# Gewerbesteuerbescheid 2024 und Vorauszahlungen
+
+Sehr geehrte Frau Hartwig,
+
+|Angabe|Betrag|
+|Steuermessbetrag (Finanzamt)|212,00 €|
+|Hebesatz|380 %|
+|Gewerbesteuer 2024|805,60 €|
+|bereits geleistet|600,00 €|
+|Nachzahlung|205,60 €|
+
+Die Nachzahlung ist bis zum 15.02.2026 zu leisten.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 26.01.2026
+
+@spalten 2
+## Vorauszahlungen
+Ab 2026 vierteljährlich 201,40 € zum 15.02., 15.05., 15.08. und 15.11.
+
+## Anrechnung
+Die Gewerbesteuer wird teilweise auf die Einkommensteuer angerechnet.
+
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid ist innerhalb eines Monats Widerspruch möglich. Einwände gegen den Messbetrag sind beim Finanzamt zu erheben.
+
+@ende

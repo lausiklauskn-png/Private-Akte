@@ -1,0 +1,41 @@
+{
+ "stapel": "/home/user/datei-organizer/pruefstapel-anfragen",
+ "calc": "/home/user/workflow-calculate",
+ "feld": {
+  "absender": [
+   13,
+   57
+  ],
+  "email": [
+   45,
+   60
+  ],
+  "kundennr": [
+   44,
+   44
+  ],
+  "produkt": [
+   87,
+   98
+  ],
+  "produktFalsch": 26,
+  "menge": [
+   43,
+   97
+  ],
+  "masse": [
+   55,
+   60
+  ],
+  "farben": [
+   55,
+   60
+  ]
+ },
+ "strittig": {
+  "absender": 3,
+  "kundennr": 16,
+  "menge": 3,
+  "produkt": 1
+ }
+}

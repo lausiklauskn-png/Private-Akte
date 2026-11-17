@@ -1,0 +1,25 @@
+Kaffeerösterei Haselbrunn
+Bahnhofstr. 80, 37996 Molkenrode
+Tel. 0000 62287
+
+Fa. Café-Bäckerei Kornblume
+z. Hd. Frau Wellbrock
+Mühlgasse 7
+37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: 2026-17262
+Datum 12.10.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Filterkaffee Mild, 1 kg      6     17,50     105,00
+  2  Espresso Bohne Haus, 1 kg     3     21,80      65,40
+
+Nettobetrag                                  170,40
+zzgl. 7 % USt                               11,93
+Gesamt                                       182,33 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 1552 37
+USt-IdNr. DE000000666

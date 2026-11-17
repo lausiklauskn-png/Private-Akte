@@ -1,0 +1,16 @@
+BAUMARKT BEISPIEL APP
+
+Dein digitaler Kassenbon
+Baumarkt Musterstadt-Nord
+Datum: 14.03.2026 13:12
+Bon-Nr.: BM-3301-118
+
+Artikel   Menge   Betrag
+Wandfarbe weiß 10 l   1   39,99 EUR
+Malerrolle Set   1   12,49 EUR
+Abdeckvlies   1   9,99 EUR
+Kreppband   2   5,98 EUR
+
+Summe: 68,45 EUR
+Bezahlt mit: Kreditkarte
+Gespart mit der App: 2,05 EUR

@@ -1,0 +1,11 @@
+Hafenbank Beispielhafen eG                 Kontoauszug 4/2026, Blatt 1
+Girokonto Marlene Ostwald, IBAN DE00 0000 0000 0000 0000 00
+
+Alter Saldo 31.03.2026                                       112,40
+01.04.  Jobcenter Beispielhafen, Bürgergeld 04/26          +623,00
+01.04.  Wohnungsgenossenschaft Beispielhafen eG, Miete     -548,00
+08.04.  Familienkasse Beispielnord, Kindergeld Finn        +259,00
+10.04.  Beispielkasse Nord, Mutterschaftsgeld              +390,00
+15.04.  Supermarkt Frischkai Beispiel, Zuschuss MuSchG     +214,60
+22.04.  Wellenfunk Beispiel, Mobilfunk                      -14,99
+Neuer Saldo 30.04.2026                                     1.036,01

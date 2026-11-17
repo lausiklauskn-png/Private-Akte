@@ -1,0 +1,32 @@
+{
+ "rollenwechsel": {
+  "n": 80,
+  "neu": 70,
+  "alt": 70,
+  "mcnemar": {
+   "nurAlt": 0,
+   "nurNeu": 0,
+   "p": 1
+  },
+  "spanneNeu": [
+   0.7849700281693438,
+   0.9306651696322249
+  ]
+ },
+ "vorgang_neu": {
+  "paareImVorgang": 807,
+  "davonVerbunden": 83,
+  "trefferquote": 0.10285006195786865,
+  "verbundenePaare": 966,
+  "davonImSelbenVorgang": 83,
+  "genauigkeit": 0.08592132505175984
+ },
+ "vorgang_alt": {
+  "paareImVorgang": 807,
+  "davonVerbunden": 83,
+  "trefferquote": 0.10285006195786865,
+  "verbundenePaare": 966,
+  "davonImSelbenVorgang": 83,
+  "genauigkeit": 0.08592132505175984
+ }
+}

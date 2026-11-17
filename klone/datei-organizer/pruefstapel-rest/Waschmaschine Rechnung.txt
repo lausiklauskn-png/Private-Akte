@@ -1,0 +1,22 @@
+Elektro Beispiel-Bauer
+Hauptstr. 12 · 84999 Beispielhausen
+
+Frau
+Sabine Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Rechnung: EB-20-0301
+Datum: 17.03.2020
+
+Rechnung
+
+Pos.   Artikel   Menge   Betrag
+1   Waschmaschine Beispiel WM 8 kg A+++   1   549,00 EUR
+2   Lieferung und Anschluss   1   49,00 EUR
+3   Altgerätemitnahme   1   20,00 EUR
+   Gesamt inkl. MwSt.      618,00 EUR
+
+Bezahlt per EC-Karte. Herstellergarantie 5 Jahre – bitte Rechnung aufbewahren.
+
+Vielen Dank

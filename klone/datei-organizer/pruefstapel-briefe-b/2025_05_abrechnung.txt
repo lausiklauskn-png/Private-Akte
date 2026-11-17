@@ -1,0 +1,29 @@
+Rhein-Ruhr Logistikzentrum Hüttenrode GmbH        Verdienstnachweis
+Abr.-Monat 05/2025        PersNr 20418      Kst 3310 Wareneingang
+
+Wojcik, Dennis    geb. 26.07.88    StKl 1   KFB 0,5   rk
+Eintritt 01.03.2019        Tarifgr. L3
+
+ LA   Bezeichnung               Menge    Faktor     Betrag
+ 100  Tariflohn                 162,5    16,42    2.668,25
+ 210  Nachtzuschlag 25% stfr     48,0     4,11      197,28
+ 215  Sonntagszuschl. 50% stfr    8,0     8,21       65,68
+ 300  VWL AG-Anteil                                  13,29
+                                              ------------
+      Gesamtbrutto                               2.944,50
+
+      Lohnsteuer        291,41      KV-Beitrag     229,63
+      Kirchensteuer      18,22      RV-Beitrag     249,35
+      SolZ                0,00      AV-Beitrag      34,86
+                                    PV-Beitrag      64,35
+                                              ------------
+      Gesetzliches Netto                         2.056,68
+
+ 900  VWL Überweisung                               -40,00
+ 950  Abführung Ins.-Verw. Dr. Uhlenbrock
+      71 IK 204/25 (pfändb. Betrag lt. Tabelle)     -96,45
+ 960  Kantine                                       -38,60
+                                              ------------
+      Auszahlung                                 1.881,63
+
+Url.-Rest 17,0 T.   Zeitkonto +11,25 Std.

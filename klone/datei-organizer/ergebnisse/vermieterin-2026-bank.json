@@ -1,0 +1,67 @@
+{
+ "stapel": "/home/user/datei-organizer/pruefstapel-vermieterin-2026",
+ "lesbarText": {
+  "umsaetze": 240,
+  "tagUndBetrag": "100.0 % (240/240; 98–100)",
+  "gegenpartei": "100.0 % (240/240; 98–100)",
+  "zweck": "100.0 % (240/240; 98–100)",
+  "vollstaendig": "100.0 % (240/240; 98–100)",
+  "rechnungsnummer": "100.0 % (52/52; 93–100)"
+ },
+ "lesbarGescannt": {
+  "umsaetze": 240,
+  "tagUndBetrag": "96.3 % (231/240; 93–98)",
+  "gegenpartei": "100.0 % (240/240; 98–100)",
+  "zweck": "88.3 % (212/240; 84–92)",
+  "vollstaendig": "84.6 % (203/240; 79–89)",
+  "rechnungsnummer": "94.2 % (49/52; 84–98)"
+ },
+ "blp": {
+  "einordner": 3,
+  "auszuegeSaldoStimmt": "12/12",
+  "umsaetzeGelesen": 240,
+  "strittig": 19,
+  "einBeleg": {
+   "richtig": "79.7 % (47/59; 68–88)",
+   "falscherBeleg": 0,
+   "keinTreffer": 12
+  },
+  "mehrereBelegeInEinerZahlung": "1/1",
+  "ohneBeleg": {
+   "n": 161,
+   "faelschlichZugeordnet": 18
+  },
+  "fehler": [
+   "2026-01.txt #1: belege/Brinkmeier R 26-014 Januar.txt, obwohl kein Beleg dazugehört",
+   "2026-01.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-02.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-02.txt #13: belege/AK-26-1012.txt, obwohl kein Beleg dazugehört",
+   "2026-03.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-03.txt #14: belege/AK-26-1012.txt, obwohl kein Beleg dazugehört",
+   "2026-04.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-05.txt #5: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-05.txt #11: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-06.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-06.txt #9: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-06.txt #13: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-07.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-07.txt #8: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-07.txt #12: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-08.txt #6: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-08.txt #9: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-08.txt #14: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-09.txt #7: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-09.txt #9: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-09.txt #12: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-10.txt #7: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-10.txt #10: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-10.txt #13: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-11.txt #7: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-11.txt #9: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-11.txt #13: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört",
+   "2026-12.txt #7: kein Treffer für belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "2026-12.txt #10: belege/Telvia Rechnung April.txt, obwohl kein Beleg dazugehört",
+   "2026-12.txt #14: belege/AK-26-1127 April.txt, obwohl kein Beleg dazugehört"
+  ]
+ }
+}

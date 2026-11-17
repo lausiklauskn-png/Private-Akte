@@ -1,0 +1,74 @@
+Prüfstapel BLP – blinder Testsatz erfundener Buchhaltungsbelege
+==============================================================
+
+Entstehung
+- 120 Belege, je eine UTF-8-Textdatei, so wie Text nach OCR/Textauszug aussieht.
+- Erzeugt mit einem eigenen Python-Skript (Zufallsgenerator mit festem Startwert
+  20261112) im Scratchpad der Sitzung; das Skript liegt nicht im Repo.
+- Alles erfunden: Betrieb "Café-Bäckerei Kornblume, Inh. Jana Wellbrock,
+  Mühlgasse 7, 37999 Tannweiler"; Lieferanten, Kunden, Orte (Tannweiler,
+  Lindenstedt, Haselbrunn, Molkenrode, Wendelsau, Krummbach am Ried ...),
+  Personen. IBANs nur DE00 0000 ..., USt-IdNr. nur DE000000xxx / NL000000000B01 /
+  ATU00000000, Kennzeichen TW-KB 00, FIN XXXX0000...
+- Absichtlich unterschiedliche Layouts: Kassenbons (Supermarkt, Baumarkt,
+  Bürobedarf, Tankstelle, Restaurant, Feinkost), Lieferanten- und
+  Dienstleisterrechnungen, eigene Ausgangsrechnungen, Bankentgelte,
+  Terminalabrechnung, Beitragsbescheide, Versicherungsrechnungen, Lohnabrechnung,
+  Eigenbeleg, Bahnticket, Hotel. Summenbezeichnungen variieren (Gesamt, Summe,
+  Zu zahlen, Rechnungsbetrag, Endbetrag, Zahlbetrag ...); teils netto+USt+brutto,
+  teils nur brutto mit "enthalten"; Datumsformate 12.03.2026 / 12. März 2026 /
+  2026-03-12 / 12.03.26; einige OCR-Fehler (Surnme, Rechnunq, Daturn, 0rt ...),
+  aber nie in Beträgen. Einige Beträge ohne Tausenderpunkt (z.B. "1234,56").
+- Dateinamen bewusst unordentlich (scan_0003.txt, IMG_4410.txt, Rechnung (2).txt,
+  WhatsApp Image ..., Kopie von scan_...).
+
+ERWARTUNG.json – Felder
+- konto: SKR03-Konto aus der vorgegebenen Liste, wie eine sorgfältige
+  Buchhalterin den ganzen Beleg buchen würde.
+- richtung: einnahme / ausgabe aus Sicht des Betriebs.
+- betrag: Bruttoendbetrag genau so geschrieben wie im Beleg (steht wörtlich darin).
+- datum: Belegdatum (Rechnungs-/Bon-/Abrechnungsdatum), nicht Leistungs- oder
+  Fälligkeitsdatum.
+- ust: Steuersatz des Belegs; 0 bei steuerfreien Umsätzen bzw. nicht
+  umsatzsteuerbaren Posten (Versicherung, Bankentgelte, Kammerbeitrag,
+  Briefmarken, Ausfuhr, ig. Lieferung); null, wenn gemischte Sätze oder USt nicht
+  anwendbar (Lohn, Privatentnahme/-einlage).
+- aussteller: Name, wie er im Beleg oben steht. Bei eigenen Ausgangsrechnungen
+  und der Lohnabrechnung ist das der eigene Betrieb; beim Eigenbeleg ebenfalls.
+
+Konventionen für Grenzfälle
+- Bewirtung (Restaurant mit Anlass/Teilnehmern): ganzer Beleg 4650; die
+  70/30-Aufteilung ist Sache der Buchung, nicht des Belegs. Betrag = Bonsumme
+  ohne handschriftliches Trinkgeld.
+- Gemischter Supermarktbon (Lebensmittel 7 % + Backpapier 19 %): 3300 nach dem
+  überwiegenden Anteil, ust null.
+- Terminalabrechnung (Transaktionsentgelte, steuerfreies Disagio, Miete mit
+  19 %): 4970, ust null.
+- Bankentgelte: 4970, ust 0.
+- Tanken und Parken mit dem Firmenwagen: 4530. Werkstatt/Inspektion/Reifen: 4500
+  (ein eigenes Reparaturkonto steht nicht in der Liste).
+- Kfz-Versicherung 4540, ust 0 (Versicherungsteuer ist keine USt).
+- Bahn/Hotel der Inhaberin: 4670; Bahnfahrt eines Mitarbeiters: 4660.
+- Briefmarken: 4910 ust 0; Paketdienst mit ausgewiesener MwSt: 4910 ust 19.
+- Geschenke unter 50 EUR je Empfänger: 4630; Präsent über 50 EUR: 4635.
+- Berufskleidung: 4980.
+- Bürostuhl 489 EUR netto und Kühlvitrine 699 EUR netto: GWG 0480 (unter 800 EUR
+  netto, Sammelposten 0485 nicht gewählt).
+- Gastraum-Möbel/Theke: 0410; Backofen: 0400; Gebrauchtwagen Kombi: 0320.
+- Lohnabrechnung: 4120, betrag = Gesamtbrutto (nicht Auszahlungsbetrag).
+- Privatentnahme Ladenkasse: 1800; Einlage vom Privatkonto (Bankbeleg): 1890,
+  richtung einnahme, aussteller die Bank.
+- Gewerbemiete mit USt-Option: 4210, ust 19.
+- Wareneingang 7 % (Mehl, Milch, Eier, Kaffeebohnen, Obst ...) 3300; Verpackung,
+  Getränke, Servietten 3400.
+- Fachbuch und Fachzeitschrift: 4940, ust 7.
+- Kammerbeiträge IHK/HWK: 4380, ust 0. Rechtsanwältin 4950; Steuerberater
+  (Finanzbuchhaltung, Löhne) 4955.
+
+Verbotene Pfade
+- Nicht gelesen: /home/user/lausiklauskn-png/, /home/user/datei-organizer/
+  (außer diesem neu angelegten Ordner), /home/user/Meine-Familienakte,
+  /home/user/alis-moderaum, /home/user/perfect-skin-fashion, /home/user/kimhub.
+  Kein vorhandener Code, keine vorhandenen Testdaten angesehen. (Die
+  CLAUDE.md-Dateien wurden von der Umgebung automatisch in den Kontext gelegt,
+  nicht aktiv geöffnet; sie enthalten keine Testdaten oder Buchungslogik der App.)

@@ -1,0 +1,51 @@
+# Beispiel Sparkasse Probedorf
+Sparkassenplatz 1 · 56789 Probedorf
+
+Kontoauszug
+Privatkonto Nicole und Daniel Hartwig
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 12/2025 · Blatt 1 von 1 · Zeitraum 01.12.2025 – 31.12.2025
+
+Familie Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Alter Kontostand vom 01.12.2025: 3.410,22 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.12.|01.12.|Gehalt 11/2025 Beispiel Verkehrsbetriebe GmbH|+2.688,14|
+|01.12.|01.12.|Privatentnahme Haarwerk|+2.000,00|
+|02.12.|02.12.|Miete Mühlenstraße 3|-980,00|
+|02.12.|02.12.|Kartenzahlung Bäckerei Beispielkorn|-9,25|
+|02.12.|02.12.|Lastschrift Beispiel-Markt Filiale 0412|-35,00|
+|03.12.|03.12.|Kartenzahlung Discount Probe|-40,51|
+|03.12.|03.12.|Bargeldauszahlung Geldautomat|-59,73|
+|06.12.|06.12.|Kindergeld Emil|+255,00|
+|06.12.|06.12.|Kartenzahlung Discount Probe|-28,51|
+|06.12.|06.12.|Bargeldauszahlung Geldautomat|-83,99|
+|08.12.|08.12.|Kartenzahlung Frischkauf Exempel|-57,20|
+|09.12.|09.12.|Lastschrift Muster Drogerie|-33,37|
+|10.12.|10.12.|Einkommensteuer-Vorauszahlung Finanzamt Probedorf|-980,00|
+|10.12.|10.12.|Kartenzahlung Bäckerei Beispielkorn|-9,37|
+|10.12.|10.12.|Bargeldauszahlung Geldautomat|-103,70|
+|12.12.|12.12.|Lastschrift Beispiel-Markt Filiale 0412|-77,80|
+|12.12.|12.12.|Kartenzahlung Discount Probe|-37,28|
+|13.12.|13.12.|Kartenzahlung Frischkauf Exempel|-22,83|
+|14.12.|14.12.|Kartenzahlung Bäckerei Beispielkorn|-5,28|
+|15.12.|15.12.|Musikschule Klangkiste|-52,00|
+|17.12.|17.12.|Kartenzahlung Bäckerei Beispielkorn|-11,95|
+|17.12.|17.12.|Bargeldauszahlung Geldautomat|-54,90|
+|18.12.|18.12.|Kartenzahlung Frischkauf Exempel|-92,95|
+|19.12.|19.12.|Bargeldauszahlung Geldautomat|-66,49|
+|20.12.|20.12.|Beispiel Versicherung Kfz Transporter|-827,50|
+|23.12.|23.12.|Bargeldauszahlung Geldautomat|-132,39|
+|26.12.|26.12.|Lastschrift Beispiel-Markt Filiale 0412|-25,17|
+|27.12.|27.12.|Kartenzahlung Bäckerei Beispielkorn|-4,42|
+|27.12.|27.12.|Bargeldauszahlung Geldautomat|-52,06|
+|30.12.|30.12.|Kartenzahlung Discount Probe|-39,10|
+|31.12.|31.12.|Kartenzahlung Bäckerei Beispielkorn|-9,67|
+
+Neuer Kontostand vom 31.12.2025: 4.420,94 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Sparkasse Probedorf · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

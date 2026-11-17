@@ -1,0 +1,1862 @@
+{
+ "app": "Pro-Verbund (Familienakte, BookLedgerPro, Workflow PDF Pro, Private Brain Pro)",
+ "stand": "Vereinigung der vier REFERENZ.json vom 13.11.2026",
+ "merkmale": [
+  {
+   "id": "FA-M01",
+   "art": "zweck",
+   "text": "Die App ist eine private Familienakte, die Unterlagen, Termine, Fristen und Aufgaben einer Familie an einem Ort übersichtlich ordnet.",
+   "gewicht": "kern",
+   "beleg": "README.md; NEUSTART_AUFTRAG.md, Ziel",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M02",
+   "art": "zweck",
+   "text": "Die App ordnet eingehende Schriftstücke Lebensbereichen und Vorgängen zu, damit man sie später im Zusammenhang wiederfindet.",
+   "gewicht": "kern",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 3; Menü Dokumente",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M03",
+   "art": "nutzer",
+   "text": "Die App richtet sich an Privatpersonen und Familien ohne technische Vorkenntnisse; Oberfläche und Texte sind auf Deutsch.",
+   "gewicht": "kern",
+   "beleg": "README.md; CLAUDE.md, Oberfläche",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M04",
+   "art": "nutzer",
+   "text": "Die App nennt in sichtbaren Texten keinen Personennamen, sondern spricht vom „Nutzer“; Erklärungen sind kurz und stehen hinter einem Fragezeichen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Oberfläche",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M05",
+   "art": "plattform",
+   "text": "Die App läuft als Web-App im Browser ohne eigenen Server und lässt sich installieren (Name „Familienakte Basic“).",
+   "gewicht": "kern",
+   "beleg": "README.md; CLAUDE.md, Namen",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M06",
+   "art": "plattform",
+   "text": "Die App gibt es zusätzlich als native Android-App und als Windows-App (Name „Familienakte Pro“).",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Namen; lib/fassungen.ts",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M07",
+   "art": "plattform",
+   "text": "Die App ist am PC, am Tablet und am Handy bedienbar; Listen und Kopfleiste passen sich schmalen Bildschirmen an.",
+   "gewicht": "wichtig",
+   "beleg": "NEUSTART_AUFTRAG.md; lib/fassungen.ts 2.28.38",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M08",
+   "art": "plattform",
+   "text": "Die nativen Apps prüfen auf Tipp auf eine neue Fassung über einen eigenen Update-Server; die Web-App aktualisiert sich selbst und zeigt ein Update-Fähnchen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Updates; lib/fassungen.ts 2.28.52",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M09",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Gesundheit & Arbeit (Befunde, Krankmeldungen, Krankenkasse, Arbeitgeber, Anträge und Bescheide).",
+   "gewicht": "kern",
+   "beleg": "app/health-portal.tsx, Menü health",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M10",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Familie & Personen, in dem Personen, Organisationen und Objekte angelegt und geöffnet werden.",
+   "gewicht": "kern",
+   "beleg": "app/health-portal.tsx, Menü family",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M11",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Wohnen (Mietunterlagen, Nebenkosten, Mängel und Reparaturen).",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Menü home",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M12",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Fahrzeuge (Papiere, Werkstatt, TÜV und Versicherung).",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Menü vehicles",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M13",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Käufe & Garantien (Rechnungen, Garantieende, Geräte mit Seriennummern).",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Menü purchases",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M14",
+   "art": "bereich",
+   "text": "Die App hat einen Bereich Termine & Aufgaben mit Cockpit, Fristen und Aufgaben, Kalender und Tagebuch.",
+   "gewicht": "kern",
+   "beleg": "app/health-portal.tsx, Menü termine; CLAUDE.md (neun Hauptbereiche)",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M15",
+   "art": "funktion",
+   "text": "Die App hat eine Startseite mit Suche, anstehenden Fristen, zuletzt Wichtigem und schnellen Aktionen sowie einer Einstiegshilfe „So fängst du an“.",
+   "gewicht": "wichtig",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 1; lib/fassungen.ts 2.28.39",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M16",
+   "art": "funktion",
+   "text": "Die App nimmt Dateien (PDF, Word, Fotos, Scans, E-Mails) in einer Eingangszentrale entgegen und schlägt Bereich, Titel und Datum vor.",
+   "gewicht": "kern",
+   "beleg": "app/health-portal.tsx, Menü inbox; lib/fassungen.ts 2.28.39",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M17",
+   "art": "funktion",
+   "text": "Die App legt ein Dokument erst ab, nachdem der Nutzer den Vorschlag bestätigt hat; mehrere Eingänge lassen sich gesammelt bestätigen.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.39, 2.28.44, 2.28.66",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M18",
+   "art": "funktion",
+   "text": "Die App erkennt in eingegangenen Schreiben Fristen und schlägt sie als Termin vor.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.39, 2.28.66",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M19",
+   "art": "funktion",
+   "text": "Die App liest den Text eines Schriftstücks (Textebene oder Texterkennung) und nutzt ihn für Einordnung und Suche.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.8, 2.28.46, 2.28.66",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M20",
+   "art": "funktion",
+   "text": "Die App kann Papierdokumente mit der Kamera fotografieren, gerade ziehen und als durchsuchbares PDF ablegen; viele Fotos können als Stapel später eingeordnet werden.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.8, 2.28.25, 2.28.47; Menü stapel",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M21",
+   "art": "funktion",
+   "text": "Die App enthält ein PDF-Werkzeug zum Scannen, Zuschneiden, Felder setzen, Ausfüllen und Ausgeben von PDFs.",
+   "gewicht": "beiwerk",
+   "beleg": "app/health-portal.tsx, Menü workflowpdf; lib/fassungen.ts 2.28.9",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M22",
+   "art": "funktion",
+   "text": "Die App holt neue Dateien von selbst aus einem gewählten Eingangsordner, in Blöcken zu 20, ohne eine Zweitkopie anzulegen.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.44",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M23",
+   "art": "funktion",
+   "text": "Die App hat eine Dokumentenbibliothek mit Filter und Suche, in der jede Unterlage als Zeile mit Vorschau geöffnet werden kann.",
+   "gewicht": "kern",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 4; lib/fassungen.ts 2.28.39",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M24",
+   "art": "funktion",
+   "text": "Die App sucht über alle Einträge und Dokumente und versteht dabei Alltagswörter, Monatsnamen, Datumsangaben und Synonyme.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.39",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M25",
+   "art": "funktion",
+   "text": "Die App bietet eine private Bedeutungssuche, deren Sprachmodell einmal bewusst geladen wird und danach auf dem Gerät läuft.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.24, 2.28.46",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M26",
+   "art": "funktion",
+   "text": "Die App nimmt Suchbegriffe, Erinnerungen und Tagebucheinträge auch per Spracheingabe (Mikrofon) entgegen.",
+   "gewicht": "wichtig",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 1; lib/fassungen.ts 2.28.29, 2.28.49",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M27",
+   "art": "funktion",
+   "text": "Die App verwaltet Fristen und Aufgaben mit Fälligkeit; eine Erinnerung gehört zur Aufgabe, erledigte Punkte lassen sich rückgängig machen.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Fassung 2.28.39; lib/fassungen.ts 2.28.39",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M28",
+   "art": "funktion",
+   "text": "Die App zeigt in einem Cockpit zuerst Überfälliges und Heutiges, dann Aufgaben, Fristen und Vorgänge.",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Hilfe-Thema cockpit",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M29",
+   "art": "funktion",
+   "text": "Die App hat einen eigenen Kalender mit Erinnerungston („Glocke“), der auf Android auch bei geschlossener App und nach einem Neustart meldet.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.27, 2.28.28, 2.28.47",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M30",
+   "art": "schnittstelle",
+   "text": "Die App gleicht Termine in beide Richtungen mit Google-, Microsoft- oder dem Gerätekalender ab.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.43; CLAUDE.md, Kalender",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M31",
+   "art": "funktion",
+   "text": "Die App hat ein Tagebuch, in dem Erlebnisse mit Stimmung, Person und bis zu 12 Fotos oder Videos festgehalten werden und beim passenden Termin wieder auftauchen.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.49; Hilfe-Thema tagebuch",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M32",
+   "art": "funktion",
+   "text": "Die App bereitet mit einer Assistenz Schreiben und Antworten auf Briefe oder E-Mails als Entwurf vor; der Nutzer entscheidet über den Versand.",
+   "gewicht": "kern",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 6; lib/fassungen.ts 2.28.49",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M33",
+   "art": "sicherheit",
+   "text": "Die App verdeckt persönliche Angaben, bevor ein Text an eine externe KI geht, und setzt sie in der Antwort auf dem Gerät wieder ein.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.49; CLAUDE.md, Plan Rückmeldung D",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M34",
+   "art": "funktion",
+   "text": "Die App führt Korrespondenz als Vorgang: Entwürfe, versendete Schreiben und Antworten stehen im Zusammenhang.",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Menü correspondence",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M35",
+   "art": "funktion",
+   "text": "Die App verknüpft Dokumente, Personen, Objekte und Vorgänge miteinander und lässt den Nutzer die Zuordnung prüfen und bestätigen.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.39, 2.28.53",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M36",
+   "art": "daten",
+   "text": "Die App speichert alle Daten lokal auf dem Gerät (Browser-Speicher oder selbst gewählter Ordner); die Daten verlassen das Gerät nicht von selbst.",
+   "gewicht": "kern",
+   "beleg": "README.md, Wo liegen die Daten?",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M37",
+   "art": "daten",
+   "text": "Die App kann die Akte in einem selbst gewählten Ordner ablegen, auch auf USB-Stick, SD-Karte oder in einem OneDrive-Ordner.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md, Speicherwege",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M38",
+   "art": "sicherheit",
+   "text": "Die nativen Apps können die Originale verschlüsselt in einem Tresor mit Passwort ablegen, den sich mehrere zusammengehörige Apps teilen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Gemeinsamer Tresor; lib/fassungen.ts 2.28.56",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M39",
+   "art": "sicherheit",
+   "text": "Die App erstellt eine Vollsicherung, auf Wunsch verschlüsselt mit Passwort und einem Notfallblatt, und erinnert nach 7 Tagen ohne Sicherung.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.41",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M40",
+   "art": "daten",
+   "text": "Die App liest eine Sicherung wieder ein und führt sie mit einer benutzten Akte zusammen, ohne etwas zu löschen; bei Unterschieden fragt sie.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.40",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M41",
+   "art": "daten",
+   "text": "Die App sichert nach Änderungen höchstens einmal am Tag von selbst an einen zweiten Ort (z. B. Cloud-Ordner oder Stick).",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.65",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M42",
+   "art": "daten",
+   "text": "Die App gleicht die Akte zwischen mehreren Geräten ab, über eine gemeinsame Festplatte, das eigene Netz oder ein verschlüsseltes Paket, ohne fremden Server.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.42, 2.28.45, 2.28.48",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M43",
+   "art": "funktion",
+   "text": "Die App exportiert die Akte als Datei und kann Unterlagen drucken oder teilen.",
+   "gewicht": "wichtig",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 8; lib/fassungen.ts 2.28.47",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M44",
+   "art": "funktion",
+   "text": "Die App hat einen Papierkorb für Erinnerungen, Aufgaben, Fristen, Notizen und aussortierte Dokumente mit Zurückholen.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.39, 2.28.53",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M45",
+   "art": "sicherheit",
+   "text": "Die App behandelt Gesundheitsdaten als geschützten Bereich; an andere Apps gehen davon nur Titel, Bereich und Datum.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.50; app/health-portal.tsx (protectedHealthArea)",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M46",
+   "art": "schnittstelle",
+   "text": "Die App übernimmt E-Mails mit Anlagen aus einer befreundeten Mail-App von selbst und auf Tipp aus einem Microsoft-Postfach; Anlagen werden auch aus weitergeleiteten Mails gelesen.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.50, 2.28.65",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M47",
+   "art": "schnittstelle",
+   "text": "Die App versendet Schreiben über die Mail-App des Geräts mit Anlagen oder über ein Microsoft-Postfach.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.65; lib/app-stand.ts (mailapp, mssend)",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M48",
+   "art": "schnittstelle",
+   "text": "Die App arbeitet mit Schwester-Apps (Buchhaltung, privates Archiv, PDF-Werkzeug) zusammen, die über eine Kurzfassung je Dokument die Familienakte durchsuchen können.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.50; CLAUDE.md, Pro-App-Verbund",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M49",
+   "art": "schnittstelle",
+   "text": "Die App holt neue Dateien aus einem Cloud-Ordner als Kopie in den Eingang und vermerkt ihre Herkunft.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.65",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M50",
+   "art": "funktion",
+   "text": "Die App hat eine Hilfe mit Themen als Bild, einer Landkarte aller Funktionen mit ihrem Stand auf diesem Gerät und Sprüngen an die passende Stelle.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.33, 2.28.36, 2.28.51; lib/app-stand.ts",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M51",
+   "art": "funktion",
+   "text": "Die App bringt eine erfundene Beispielfamilie mit und hat einen Demo-Modus, der sich wieder verlassen lässt, ohne eigene Daten zu verändern.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md; CLAUDE.md, Demo",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M52",
+   "art": "funktion",
+   "text": "Die App zeigt an jeder Unterlage, wo die Datei gespeichert ist, und listet die Geräte des Nutzers.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.61",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M53",
+   "art": "funktion",
+   "text": "Die App lässt die Schriftgröße im Kopf zwischen 85 und 150 % einstellen und zeigt Tooltips an Knöpfen.",
+   "gewicht": "beiwerk",
+   "beleg": "lib/fassungen.ts 2.28.57, 2.28.64",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M54",
+   "art": "grenze",
+   "text": "Die App ordnet nichts ohne Bestätigung endgültig ein; Vorschläge bleiben Vorschläge.",
+   "gewicht": "kern",
+   "beleg": "lib/fassungen.ts 2.28.66; NEUSTART_AUFTRAG.md, Funktion 3",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M55",
+   "art": "grenze",
+   "text": "Die App verschickt Schreiben nicht selbstständig; die Assistenz erstellt nur Entwürfe.",
+   "gewicht": "kern",
+   "beleg": "NEUSTART_AUFTRAG.md, Funktion 6",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M56",
+   "art": "grenze",
+   "text": "Die App verschlüsselt keine E-Mails beim Versand; verschlüsselt wird nur im Tresor und in Sicherungen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Offen (Verschlüsselung beim Mailversand)",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M57",
+   "art": "grenze",
+   "text": "Die App gleicht ihre Daten nicht über ein öffentliches Netz ab; die Netz-Seite zeigt nur eine Visitenkarte.",
+   "gewicht": "wichtig",
+   "beleg": "app/health-portal.tsx, Menü netz; CLAUDE.md, Kim-sync",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M58",
+   "art": "grenze",
+   "text": "Die App löscht beim Abgleich oder Einlesen nichts; Unterschiede werden zur Wahl gestellt.",
+   "gewicht": "wichtig",
+   "beleg": "lib/fassungen.ts 2.28.40, 2.28.42, 2.28.48",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M59",
+   "art": "grenze",
+   "text": "Die App ersetzt einen gewählten, gerade nicht erreichbaren Speicherort nicht still durch einen anderen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Speicherwege",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "FA-M60",
+   "art": "grenze",
+   "text": "Die App hat keine eigenen Bereiche für Versicherungen, Finanzen sowie Vollmachten & Vorsorge; solche Unterlagen werden über die Bibliothek gesucht.",
+   "gewicht": "beiwerk",
+   "beleg": "app/health-portal.tsx, Menü family (\"Noch kein eigener Bereich\")",
+   "app": "Meine Familienakte"
+  },
+  {
+   "id": "BLP-M01",
+   "art": "zweck",
+   "text": "Die App ist eine Buchhaltung für deutsche Verhältnisse (Steuerrecht Deutschland zuerst).",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md „Was BookLedgerPro ist“",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M02",
+   "art": "zweck",
+   "text": "Die App soll Geld und Steuer für kleine Betriebe und Familien abdecken, ausdrücklich ohne Profi-Werkzeuge für Steuerkanzleien.",
+   "gewicht": "kern",
+   "beleg": "docs/PULS.md „Bauplan Neuausrichtung“",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M03",
+   "art": "nutzer",
+   "text": "Die App kennt vier Nutzungsmodi: Privat, Kleinunternehmer, Selbstständig, Berater.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md „Design-Grundlage und Modus Privat“",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M04",
+   "art": "nutzer",
+   "text": "Privatpersonen sollen ihre Belege für die eigene Steuer (z. B. Anlage N) sammeln können.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PULS.md Neuausrichtung; ROADMAP Phase 7",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M05",
+   "art": "nutzer",
+   "text": "Mehrere getrennte Buchhaltungen (z. B. Laden, zweiter Laden, Haushalt) können auf einem Gerät geführt werden.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md „Buchhaltung statt Mandant“; docs/MANDANTEN.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M06",
+   "art": "plattform",
+   "text": "Es gibt eine native Android-App.",
+   "gewicht": "kern",
+   "beleg": "docs/ANDROID.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M07",
+   "art": "plattform",
+   "text": "Es gibt eine native Windows-App.",
+   "gewicht": "kern",
+   "beleg": "docs/WINDOWS.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M08",
+   "art": "plattform",
+   "text": "Eine Browser-Fassung (PWA) läuft als eigene App „BookLedger Basic“ mit getrennter Datenbank.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Fahrplan Pro/Basic",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M09",
+   "art": "plattform",
+   "text": "Die App arbeitet offline; Daten liegen auf dem Gerät, ohne eigenen Server.",
+   "gewicht": "kern",
+   "beleg": "README.md; ARCHITECTURE.md Prinzip 1",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M10",
+   "art": "plattform",
+   "text": "Updates der nativen Apps kommen vom eigenen Server mit Unterschrift.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md Windows-Fassung (family-projekt.de, Ed25519)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M11",
+   "art": "bereich",
+   "text": "Hauptbereich Buchen: Belege, Journal, Kasse, Konten, Anlagen, Verbindlichkeiten.",
+   "gewicht": "kern",
+   "beleg": "src/ui/shell.js NAV_GRUPPEN",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M12",
+   "art": "bereich",
+   "text": "Hauptbereich Verkauf: Angebote, Aufträge, Kunden, Shop-Übernahme, Nachkalkulation.",
+   "gewicht": "wichtig",
+   "beleg": "src/ui/shell.js NAV_GRUPPEN",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M13",
+   "art": "bereich",
+   "text": "Hauptbereich Team: Mitarbeiter mit Zeiterfassung und Lohnbuchung.",
+   "gewicht": "wichtig",
+   "beleg": "src/ui/shell.js; ROADMAP Phase 3",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M14",
+   "art": "bereich",
+   "text": "Hauptbereich Auswerten: EÜR, Umsatzsteuer-Voranmeldung, Summen-/Saldenliste, Kontenblatt.",
+   "gewicht": "kern",
+   "beleg": "src/ui/views/reports.js, berichte.js",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M15",
+   "art": "funktion",
+   "text": "Buchungen werden in doppelter Buchführung mit Soll/Haben und automatischer Umsatzsteuer-Aufteilung erfasst.",
+   "gewicht": "kern",
+   "beleg": "ROADMAP Phase 1",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M16",
+   "art": "funktion",
+   "text": "Der Kontenplan basiert auf SKR03.",
+   "gewicht": "wichtig",
+   "beleg": "ROADMAP Phase 1",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M17",
+   "art": "funktion",
+   "text": "Belege (Foto, PDF, E-Mail) werden eingelesen und verschlüsselt am Gerät abgelegt.",
+   "gewicht": "kern",
+   "beleg": "ROADMAP Phase 2; CLAUDE.md Mail teilen",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M18",
+   "art": "funktion",
+   "text": "Aus einem Beleg werden Datum, Betrag, Steuersatz und Rechnungsnummer ohne KI erkannt.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md 0.1.16/0.1.17, Belegerkennung trainiert",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M19",
+   "art": "funktion",
+   "text": "Aus einem Beleg wird ein Buchungsvorschlag mit Konto erzeugt, ohne dass Daten das Gerät verlassen.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md Belegerkennung trainiert (src/ai/categorize.js, kontoModell.js)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M20",
+   "art": "funktion",
+   "text": "Belege lassen sich mit der Kamera scannen und werden sofort zum durchsuchbaren PDF.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Scanner-Kern von Workflow PDF",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M21",
+   "art": "funktion",
+   "text": "Belege sind per Wortsuche und optional per Bedeutungssuche durchsuchbar.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Suche über Belege",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M22",
+   "art": "funktion",
+   "text": "Rechnungspositionen werden aus einer Rechnung im PDF-Text ausgelesen und gegen die Summe geprüft.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md Mail teilen / Positionen",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M23",
+   "art": "funktion",
+   "text": "Aus einem Auftrag wird eine Ausgangsrechnung samt Buchungsentwurf erzeugt.",
+   "gewicht": "wichtig",
+   "beleg": "ROADMAP Phase 3 (invoicing)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M24",
+   "art": "funktion",
+   "text": "Eingangsrechnungen können als offene Verbindlichkeiten geführt und beim Bank-Import abgeglichen werden.",
+   "gewicht": "wichtig",
+   "beleg": "src/ui/views/payables.js; src/domain/bankimport.js",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M25",
+   "art": "funktion",
+   "text": "Ein Bank- bzw. Kontoauszug kann eingelesen und mit Buchungen abgeglichen werden.",
+   "gewicht": "wichtig",
+   "beleg": "src/domain/bankimport.js; CLAUDE.md 0.1.16 (Auszug als Text hinter Vorschau-Schalter)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M26",
+   "art": "funktion",
+   "text": "Für die offene Ladenkasse gibt es einen täglichen Tagesabschluss aus dem gezählten Bestand mit Foto, festgeschrieben.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md Kasse & Tagesabschluss",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M27",
+   "art": "funktion",
+   "text": "Der Kassenbestand kann per Sprache eingegeben werden; bei auffällig hoher Einnahme fragt die App nach.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PULS.md Kasse & Tagesabschluss",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M28",
+   "art": "funktion",
+   "text": "Eine Quittungsvorlage erzeugt gedruckte Quittungen, deren Kopie als Beleg abgelegt wird.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md Kasse & Tagesabschluss",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M29",
+   "art": "funktion",
+   "text": "Die Startseite zeigt für Betriebe die fällige Umsatzsteuer, eine Steuer-Rücklage und den Kassenstand heute.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PULS.md Startseite für Betriebe (0.1.12)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M30",
+   "art": "funktion",
+   "text": "Anlagegüter werden mit Abschreibung (AfA) verzeichnet und gebucht.",
+   "gewicht": "wichtig",
+   "beleg": "src/ui/views/anlagen.js",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M31",
+   "art": "funktion",
+   "text": "Löhne werden als bereits berechnete Beträge GoBD-sicher gebucht, mit Lohnkonto je Mitarbeiter.",
+   "gewicht": "wichtig",
+   "beleg": "docs/LOHN.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M32",
+   "art": "funktion",
+   "text": "Kostenstellen können Buchungen zugeordnet und ausgewertet werden.",
+   "gewicht": "beiwerk",
+   "beleg": "ROADMAP Phase 3",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M33",
+   "art": "funktion",
+   "text": "Eine Nachkalkulation vergleicht Soll- und Ist-Kosten je Auftrag (nur intern).",
+   "gewicht": "beiwerk",
+   "beleg": "src/ui/views/nachkalkulation.js",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M34",
+   "art": "funktion",
+   "text": "Daten lassen sich als DATEV-orientierte CSV für den Steuerberater exportieren.",
+   "gewicht": "kern",
+   "beleg": "docs/DATEV_IMPORT.md; ROADMAP Phase 4",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M35",
+   "art": "funktion",
+   "text": "Ein Steuer-Assistent mit externer KI nutzt nur zusammengefasste Kennzahlen und ist freiwillig.",
+   "gewicht": "beiwerk",
+   "beleg": "ROADMAP Phase 4 (taxAssist)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M36",
+   "art": "funktion",
+   "text": "Eine „Frage an die Belege“ schickt höchstens fünf pseudonymisierte Belegtexte nach Vorschau und Bestätigung an eine EU-KI.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md Frage an die Belege",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M37",
+   "art": "funktion",
+   "text": "Ein Test-Modus erlaubt das Ausprobieren in einem wegwerfbaren Test-Tresor ohne die echten Daten zu berühren.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/TEST_MODUS.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M38",
+   "art": "daten",
+   "text": "Alle Daten sind mit Passwort verschlüsselt (AES-GCM, Schlüssel nur im Arbeitsspeicher).",
+   "gewicht": "kern",
+   "beleg": "ARCHITECTURE.md Prinzip 2",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M39",
+   "art": "daten",
+   "text": "Datensicherung ist Pflicht: erzwungenes erstes Backup, verschlüsselte Backup-Datei und Schlüsselteilung in mehrere Teile.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md Goldene Regel 2; docs/DATENSICHERUNG.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M40",
+   "art": "daten",
+   "text": "In der App wird der Bestand automatisch in einen gemeinsamen Tresorordner (z. B. SD-Karte) gesichert, Beleg-Originale einzeln.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Tresorordner C/C2",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M41",
+   "art": "sicherheit",
+   "text": "Festgeschriebene Buchungen werden nie gelöscht, sondern storniert; eine Hash-Kette sichert die Unveränderbarkeit (GoBD).",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md Goldene Regel 5; ROADMAP Phase 1",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M42",
+   "art": "sicherheit",
+   "text": "Festschreiben bleibt immer ein Schritt von Hand; auch Vorschläge und Übernahmen erzeugen nur Entwürfe.",
+   "gewicht": "kern",
+   "beleg": "ROADMAP Phase 2/3; views/shopbuchung.js",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M43",
+   "art": "sicherheit",
+   "text": "Externe KI ist nur mit eigenem Schlüssel, opt-in und mit EU-Anbietern (Mistral, Google Vision EU) nutzbar.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Goldene Regel 8",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M44",
+   "art": "sicherheit",
+   "text": "Vor dem Senden an eine KI werden Namen nach Muster verdeckt und Anweisungen an eine KI im Text halten den Vorgang an.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Namen nach Muster verdecken; ROADMAP Phase 2 (2026-10-14)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M45",
+   "art": "sicherheit",
+   "text": "Ein Geheim-Fach mit eigenem Code schützt besonders sensible Einträge zusätzlich.",
+   "gewicht": "beiwerk",
+   "beleg": "ROADMAP Geheim-Fach",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M46",
+   "art": "sicherheit",
+   "text": "Kunden-, Mitarbeiter- und Zeitdaten werden verschlüsselt gespeichert; Betroffenenrechte (Export, Löschen) sind umgesetzt.",
+   "gewicht": "wichtig",
+   "beleg": "ROADMAP Phase 3/4",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M47",
+   "art": "schnittstelle",
+   "text": "Belege kommen aus Workflow PDF Pro (Scan) über Teilen oder das Eingangsfach im gemeinsamen Tresorordner.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Workflow-PDF-Einbindung; docs/PULS.md Eingang übernehmen",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M48",
+   "art": "schnittstelle",
+   "text": "Geteilte E-Mails (.eml) werden zum Beleg, jeder PDF- oder Bild-Anhang zum eigenen Beleg.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Mail an BookLedgerPro teilen",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M49",
+   "art": "schnittstelle",
+   "text": "Angebote aus Angebotsplaner (Workflow Calculate) und Bedarfsanalyse (Workflow Needs) werden übernommen; beide sind eingebettet.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Calculate/Needs eingebettet; D22",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M50",
+   "art": "schnittstelle",
+   "text": "Angenommene Angebote gehen als Auftrag an Mein WorkFloh, der Rechnungs- und Bezahltstand wird zurückgemeldet.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Rundlauf R1–R3",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M51",
+   "art": "schnittstelle",
+   "text": "Eine Shop-Warenwirtschaft übergibt Umsatz- und Wareneinkaufssummen eines Zeitraums als Buchungsentwürfe.",
+   "gewicht": "wichtig",
+   "beleg": "docs/UEBERNAHME_SHOP.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M52",
+   "art": "schnittstelle",
+   "text": "Die App teilt einen Tresorordner mit Passwort mit Private Brain Pro, Workflow PDF Pro und der Familienakte (Pro-Verbund).",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Fahrplan Tresorordner; ROADMAP Pro-Verbund",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M53",
+   "art": "schnittstelle",
+   "text": "Die App ist ein Knoten im SBKIM-Mycel-Netz mit „Überall suchen“ über App, Tresorordner und Netz.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md Pro-Umbau 11/13; ROADMAP Phase 5",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M54",
+   "art": "grenze",
+   "text": "Die App berechnet keine Lohnsteuer und Sozialversicherung (keine Brutto-Netto-Abrechnung).",
+   "gewicht": "wichtig",
+   "beleg": "docs/LOHN.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M55",
+   "art": "grenze",
+   "text": "Es gibt keine ELSTER-Einreichung; die Steuerdaten werden nur als Datenpaket aufbereitet.",
+   "gewicht": "wichtig",
+   "beleg": "ROADMAP Phase 4 (ehrlich offen), Phase 8.7 geplant",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M56",
+   "art": "grenze",
+   "text": "Der DATEV-Export ist nicht zertifiziert.",
+   "gewicht": "beiwerk",
+   "beleg": "ROADMAP Phase 4; docs/DATEV_IMPORT.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M57",
+   "art": "grenze",
+   "text": "Die Kasse hat keine TSE; es ist eine offene Ladenkasse ohne Kassensystem.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md Kasse & Tagesabschluss",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M58",
+   "art": "grenze",
+   "text": "Die App holt Kontoumsätze nicht selbst bei der Bank ab (kein Online-Banking).",
+   "gewicht": "beiwerk",
+   "beleg": "ROADMAP Phase 8.6 (Bank Stufe 1/2 offen)",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "BLP-M59",
+   "art": "grenze",
+   "text": "Lagerbestand und Inventur führt die App nicht; sie bleiben in der Shop-Warenwirtschaft.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/UEBERNAHME_SHOP.md",
+   "app": "BookLedgerPro"
+  },
+  {
+   "id": "WPP-M01",
+   "art": "zweck",
+   "text": "Die App dient dazu, PDF-Formulare und Papierdokumente einzulesen, Formularfelder zu erkennen oder zu setzen, auszufüllen und als festes oder ausfüllbares PDF auszugeben.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M02",
+   "art": "zweck",
+   "text": "Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage.",
+   "gewicht": "kern",
+   "beleg": "README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M03",
+   "art": "zweck",
+   "text": "Die App arbeitet lokal auf dem Gerät, ohne Konto und weitgehend ohne Netz; Dokumente verlassen das Gerät nur auf ausdrückliche Wahl.",
+   "gewicht": "kern",
+   "beleg": "README.md; upstream/workflow-pdf/README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M04",
+   "art": "nutzer",
+   "text": "Zielgruppe sind Privatpersonen und kleine Betriebe, die Formulare, Briefe und Scans ohne Cloud-Dienst bearbeiten und ablegen wollen.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/IPHONE-WEBVERSION.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M05",
+   "art": "nutzer",
+   "text": "Nutzer ohne Programmierkenntnisse bedienen die App über benannte Knöpfe; Erklärungen stehen hinter Info-Symbolen in den Einstellungen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Einstellungen nach Leitfaden)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M06",
+   "art": "plattform",
+   "text": "Es gibt eine native Android-App (Android 8 oder neuer, aktuelle System-WebView ab 120), signiert und als Update über die vorhandene Installation installierbar.",
+   "gewicht": "kern",
+   "beleg": "docs/ANDROID-START.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M07",
+   "art": "plattform",
+   "text": "Es gibt eine native Windows-App (Windows 10/11, 64 Bit, Tauri 2 mit WebView2), installierbar ohne Administratorrechte, derzeit unsigniert.",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/PRODUKTSTAND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M08",
+   "art": "plattform",
+   "text": "Eine iOS-Fassung ist nur vorbereitet und wird nicht veröffentlicht; für iPhone/iPad gibt es stattdessen die kostenlose Web-App (PWA).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Entscheidung zu iOS); docs/IPHONE-WEBVERSION.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M09",
+   "art": "plattform",
+   "text": "Alle Fassungen (PWA, Android, Windows, iOS) werden auf denselben Stand nachgezogen; fehlt eine Fassung, wird die Lücke mit Grund dokumentiert.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Gleichstandsregel); AGENTS.md Regel 1",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M10",
+   "art": "plattform",
+   "text": "Updates werden über eine eigene Prüfung in der App angeboten („Auf Updates prüfen“ mit Versionsanzeige); Daten und Einstellungen bleiben bei Updates erhalten.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Updates unter Windows); AGENTS.md Regel 9",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M11",
+   "art": "bereich",
+   "text": "Die App hat eine Bibliothek mit Ordnern, in denen Dokumente abgelegt, verschoben, dupliziert (als Vorlage) und gelöscht werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Ordner)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M12",
+   "art": "bereich",
+   "text": "Die App hat einen PDF-/Formular-Editor, in dem Felder gesetzt, verschoben, vergrößert und direkt auf der Seite ausgefüllt werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md; README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M13",
+   "art": "bereich",
+   "text": "Die App hat einen eigenen Übersetzen-Bereich mit selbst benannten Ordnern.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md (Übersetzen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M14",
+   "art": "bereich",
+   "text": "Die Einstellungen enthalten einen Bereich „Tresor & Ablage“ mit Zustand, Pfad, „In Dateien öffnen“ und einem hervorgehobenen nächsten Schritt.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Einstellungen nach Leitfaden); docs/TRESORORDNER.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M15",
+   "art": "funktion",
+   "text": "Dokumente lassen sich als PDF oder Bild einlesen, auch ganze Ordner, per Ziehen auf die Seite oder durch Anhängen von Seiten an ein vorhandenes Dokument.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Einlesen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M16",
+   "art": "funktion",
+   "text": "Ein Scanner wandelt Fotos in PDF: Blatt im Foto finden, Ecken mit Lupe korrigieren, entzerren und auf A4, US Letter oder andere Formate gerade ziehen; unsichere Seiten werden zur Prüfung markiert.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Scannen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M17",
+   "art": "funktion",
+   "text": "Gescannte Seiten können per Texterkennung (OCR) durchsuchbar gemacht werden (Haken „Durchsuchbar“).",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md (1.0.9)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M18",
+   "art": "funktion",
+   "text": "Vorhandene Formularfelder eines PDF werden samt Wert übernommen; neue Felder werden offline aus Linien, Rahmen und Kästchen im Seitenbild erkannt.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Vorhandene Formulare, Erkennen offline)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M19",
+   "art": "funktion",
+   "text": "Feldererkennung mit KI ist freiwillig und läuft nur mit eigenem Schlüssel eines Anbieters (z. B. Mistral EU, Anthropic, OpenAI); erkannte Felder bleiben Vorschläge, bis sie bestätigt werden.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md (Erkennen mit KI, Vorschläge prüfen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M20",
+   "art": "funktion",
+   "text": "Felder gibt es in mehreren Arten (Text, Datum, Kästchen, E-Mail, Internetadresse, QR-Code, eigene Feldarten) mit wählbarer Schriftgröße je Feld.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md; docs/PRODUKTSTAND.md (Kern 1.1.9)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M21",
+   "art": "funktion",
+   "text": "Ausgabe als festes PDF, ausfüllbares (vorbelegtes) PDF, leere ausfüllbare Vorlage sowie Ansehen und Drucken.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Ausgeben); README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M22",
+   "art": "funktion",
+   "text": "PDFs lassen sich zwischen Deutsch, Russisch und Englisch übersetzen, Seite für Seite in der Lage des Originals; Behördenformulare können übersetzt ausgefüllt und die Einträge ins Original zurückgesetzt werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Übersetzen, Behördenformulare)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M23",
+   "art": "funktion",
+   "text": "Übersetzen geht lokal mit Android-Sprachmodellen, über Google Chrome mit geschütztem Hin- und Rücktransport oder über einen KI-Anbieter mit eigenem Schlüssel; vor dem Senden wird gereinigt und gefragt.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; AGENTS.md (Übersetzung)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M24",
+   "art": "funktion",
+   "text": "Die Bibliothek ist per Wortsuche und optional per Bedeutungssuche (lokales Sprachmodell) durchsuchbar; das Einordnen startet erst auf Knopfdruck.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M25",
+   "art": "funktion",
+   "text": "An jedem Foto kann eine Bildbeschreibung stehen (eigene Worte per Text oder Mikrofon, oder ein Bildmodell auf Knopfdruck); die Suche findet diese Beschreibung.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRODUKTSTAND.md (Gleichstand Bildbeschreibung); docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M26",
+   "art": "funktion",
+   "text": "Spracheingabe ist in der App verfügbar.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M27",
+   "art": "funktion",
+   "text": "Die Bibliothek lässt sich als verschlüsselte Sicherungsdatei (.wfps) sichern und zurückholen; Zurückholen fügt hinzu und überschreibt nie.",
+   "gewicht": "kern",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M28",
+   "art": "funktion",
+   "text": "Lange Arbeiten (Sichern, Prüfen, Einordnen, Bildbeschreibung) laufen als Hintergrundaufgabe mit Mitteilung, Fortschritt und Abbrechen weiter.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md (Pro-Umbau 4)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M29",
+   "art": "funktion",
+   "text": "Unter Windows können angeschlossene Scanner (WIA, USB oder Netz) und Kameras ausgewählt werden, mit Vorlage Glas/Einzug, 150–600 dpi und Farbmodus.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCANNER-UND-KAMERA-WINDOWS.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M30",
+   "art": "funktion",
+   "text": "„Überall suchen“ durchsucht neben der eigenen Bibliothek auch die Fächer anderer Pro-Apps im gemeinsamen Tresor und auf Wunsch das Netz.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 12)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M31",
+   "art": "funktion",
+   "text": "Schriftgröße der Oberfläche ist über einen Knopf „A··A“ im Kopf einstellbar; die Version steht klein neben dem Namen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 12)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M32",
+   "art": "daten",
+   "text": "Ohne Ordnerwahl arbeitet die App mit einer internen Arbeitsablage; eine SD-Karte ist optional.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/ANDROID-START.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M33",
+   "art": "daten",
+   "text": "Die dauerhafte Hauptablage ist ein verschlüsselter Tresor in einem selbst gewählten Ordner (Gerätespeicher, SD-Karte oder anderer Datenträger); bei der Übernahme reisen Originale, Felder und Übersetzungsstände mit.",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/ANDROID-START.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M34",
+   "art": "daten",
+   "text": "Das Original eines eingelesenen Dokuments wird unverändert neben der bearbeiteten Fassung aufbewahrt.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md; docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M35",
+   "art": "daten",
+   "text": "Ein gemeinsamer Tresorordner für alle Pro-Apps hat Fächer je App und Übergabefächer, ein verschlüsseltes Inhaltsverzeichnis je Fach und Schreiber und wird nie durch Löschen in einem Fach verändert.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M36",
+   "art": "daten",
+   "text": "Ordnerwahl und Speichern in den Tresor sind geschützt: Rückfrage vor neuer Ablage, keine Verschachtelung, Warnung bei „Speichern unter“ in den Tresorordner, Hilfe „Wo liegt was?“.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Ordnerwahl und Tresor-Schutz); docs/PRODUKTSTAND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M37",
+   "art": "sicherheit",
+   "text": "Tresor und Sicherungen sind mit Passwort verschlüsselt (PBKDF2-SHA256 mit 600 000 Runden, AES-256-GCM); das Passwort liegt nur im Arbeitsspeicher bzw. im eigenen nativen Dialog.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md; docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M38",
+   "art": "sicherheit",
+   "text": "Für ein vergessenes Passwort gibt es Ersatzschlüssel (5 Teile, 3 genügen), die als Datei gespeichert werden können; ein neuer Satz macht den alten ungültig.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ANDROID-START.md (Ersatzschlüssel)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M39",
+   "art": "sicherheit",
+   "text": "Der entsperrte Zustand kann auf dem Gerät gemerkt werden (Android Keystore bzw. Windows DPAPI), gebunden an App und Tresorkennung; manuelles Sperren ist möglich.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRO-VERBUND-NATIV.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M40",
+   "art": "sicherheit",
+   "text": "Dateien werden nur auf Knopfdruck auf versteckte Inhalte geprüft; die App zeigt ehrlich „nicht geprüft“ und behauptet keinen Virenschutz.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 5; docs/SICHERUNG-UND-HINTERGRUND.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M41",
+   "art": "sicherheit",
+   "text": "Vor jeder Übertragung an einen externen Dienst wird der Inhalt gereinigt, nachgefragt und ein Abbruch ohne Senden angeboten; es gibt keine ungefragten Datei-Uploads.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 5",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M42",
+   "art": "sicherheit",
+   "text": "Ein empfangener Eingang wird erst bestätigt, wenn PDF, Original und Quittung dauerhaft gespeichert und zurückgelesen sind (Größe und SHA-256 geprüft).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M43",
+   "art": "schnittstelle",
+   "text": "Dateien lassen sich über das Betriebssystem an die App teilen bzw. mit „Öffnen mit“ übernehmen und gehen durch denselben Import wie in der App.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md; docs/IPHONE-WEBVERSION.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M44",
+   "art": "schnittstelle",
+   "text": "Ausgaben lassen sich über den Teilen-Dialog des Betriebssystems weitergeben; der Empfänger startet in einem eigenen Fenster (Appwechsel).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Appwechsel 1.0.13)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M45",
+   "art": "schnittstelle",
+   "text": "Mit Familienakte Pro, Private Brain Pro und BookLedgerPro arbeitet die App freiwillig über den gemeinsamen Tresor zusammen: Eingang mit Einzelauswahl, Ausgang bis 20 MiB je Datei, Empfangsquittung und Rückbezug.",
+   "gewicht": "kern",
+   "beleg": "docs/PRO-VERBUND-BEDIENUNG.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M46",
+   "art": "schnittstelle",
+   "text": "Andere Apps können den Scanner direkt starten (Android-Intent bzw. Web-Adresse mit Scan-Parameter); das Ergebnis geht über Teilen zurück.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Kern 1.1.4, Scanner-Direktstart); docs/PRODUKTSTAND.md (Direktstart)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M47",
+   "art": "schnittstelle",
+   "text": "Die App ist ein Knoten im eigenen Netz (SBKIM/Mycel): mit Chefcode (Chef-PIN, Beitritts-Zettel) entsteht ein eigenes Netz, und sie kann auf Wunsch Suchanfragen beantworten (ab Werk aus).",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 13, 14 A, 14 A3)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M48",
+   "art": "schnittstelle",
+   "text": "Eine Pro-App-Verbund-Karte zeigt die Zusammenarbeit der Pro-Apps.",
+   "gewicht": "beiwerk",
+   "beleg": "git log (1.0.15, 1.0.16)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M49",
+   "art": "grenze",
+   "text": "Der Formular-Kern wird bytegleich aus der Web-App übernommen und in der Pro-App nie von Hand geändert; Geräteanbindung geschieht nur in Adaptern.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 2; docs/PRO-EINGANG.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M50",
+   "art": "grenze",
+   "text": "Erkannte Felder sind Vorschläge; gepunktete Linien werden offline nicht erkannt und KI-Positionen sind ungefähr.",
+   "gewicht": "beiwerk",
+   "beleg": "upstream/workflow-pdf/README.md (Grenzen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M51",
+   "art": "grenze",
+   "text": "Beim Übersetzen bricht der Text innerhalb eines Absatzes neu um, schräger Text bleibt stehen, und Texterkennung kann sich verlesen.",
+   "gewicht": "beiwerk",
+   "beleg": "upstream/workflow-pdf/README.md (Grenzen)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M52",
+   "art": "grenze",
+   "text": "Der Windows-Installer ist unsigniert, und der Einzug der eigenen Ablage in den Tresorordner gibt es unter Windows nicht.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/PRODUKTSTAND.md; docs/PRO-VERBUND-NATIV.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M53",
+   "art": "grenze",
+   "text": "TWAIN-Scanner werden unter Windows nicht erkannt; unter Android und in der PWA gibt es nur die Kamera als Scanquelle.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SCANNER-UND-KAMERA-WINDOWS.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M54",
+   "art": "grenze",
+   "text": "Die Web-App hat keinen verschlüsselten Ordner als Hauptablage und keine Übernahme per „Öffnen mit“.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/IPHONE-WEBVERSION.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M55",
+   "art": "grenze",
+   "text": "Eine Teilen-Auswahl des Betriebssystems bestätigt keinen Empfang in der Ziel-App; nur die Marke der Ziel-App im Tresor gilt als Empfang.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRO-VERBUND-BEDIENUNG.md",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "WPP-M56",
+   "art": "grenze",
+   "text": "Es gibt keinen Bezahlvorgang, keinen App Store-Vertrieb und kein Benutzerkonto.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md; docs/PRODUKTSTAND.md (iOS)",
+   "app": "Workflow PDF Pro"
+  },
+  {
+   "id": "PBP-M01",
+   "art": "zweck",
+   "text": "Eigene Dateien, Bilder und Nachrichten werden in einem gemeinsamen privaten Wissensbestand gesammelt, damit man sie nach Inhalt und Bedeutung wiederfindet und das Original öffnen kann.",
+   "gewicht": "kern",
+   "beleg": "docs/ZIEL-FUNKTIONEN-DESIGNSTAND-2026-10-24.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M02",
+   "art": "zweck",
+   "text": "Die Originale bleiben unverändert; die App führt nur einen Katalog mit Steckbrief, Bedeutungsvektor und Verweis auf das Original (liest nur, schlägt vor, bewegt nichts).",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md › Was dieses Repo ist; ZIEL-FUNKTIONEN",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M03",
+   "art": "zweck",
+   "text": "Die Datenhoheit bleibt beim Nutzer: Katalog und Suche arbeiten lokal auf dem Gerät, offline nutzbar.",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Privat und offline arbeiten",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M04",
+   "art": "nutzer",
+   "text": "Zielgruppe sind Privatpersonen, die ihre Daten nicht großen Anbietern anvertrauen wollen (Positionierung: in Heimarbeit gebaut, kein Konzern dahinter).",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Was dieses Repo ist",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M05",
+   "art": "nutzer",
+   "text": "Die Bedienung richtet sich an Nicht-Programmierer: Knöpfe statt Befehle, kurze Erklärungen hinter Info-Symbolen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md › Netzweit; Sitzung 3 (ⓘ-Klapper)",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M06",
+   "art": "plattform",
+   "text": "Native Android-App (signierte APK, Updates über die installierte App ohne Deinstallation).",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/ANDROID.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M07",
+   "art": "plattform",
+   "text": "Native Windows-App (x64-Setup, unsigniert) mit demselben Funktionskern wie Android.",
+   "gewicht": "kern",
+   "beleg": "docs/BAUSTAND-WINDOWS.md; README.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M08",
+   "art": "plattform",
+   "text": "Zusätzlich eine installierbare Web-App (PWA) mit den Möglichkeiten des Browsers; direkte Geräte-Mail und native Gerätefunktionen nur in Android/Windows.",
+   "gewicht": "wichtig",
+   "beleg": "README.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M09",
+   "art": "plattform",
+   "text": "Keine native iOS-, macOS- oder Linux-Ausgabe.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M10",
+   "art": "plattform",
+   "text": "Oberfläche in vier Sprachen (Deutsch, Englisch, Russisch, Polnisch) mit Hell/Dunkel und mehreren Farbthemen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Sprache, Befehle, Design; README.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M11",
+   "art": "bereich",
+   "text": "Hauptbereiche: Suche als Startseite, Dateien hinzufügen, Explorer, Postfach (Mail) und Einstellungen, über eine direkte Navigation erreichbar.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md › Sprache, Befehle, Design; docs/BESCHRIFTUNGEN-UND-ORDNER.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M12",
+   "art": "funktion",
+   "text": "Dateien und ganze Ordner lassen sich einlesen; jede Datei wird einmal gelesen, mit Fingerabdruck versehen und in den Katalog aufgenommen.",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Inhalte sammeln",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M13",
+   "art": "funktion",
+   "text": "Gemeinsame Suche über alle Inhalte: Wortsuche, Suche im Inhalt und Filter (Art, Tags, Pfad).",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Nach Inhalt und Bedeutung finden; docs/EXPLORER-SORTIEREN-UND-INHALT.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M14",
+   "art": "funktion",
+   "text": "Bedeutungssuche (semantisch) mit einem lokalen Sprachmodell, das der Nutzer einmal ausdrücklich herunterlädt; ohne Modell greift die Wortsuche.",
+   "gewicht": "kern",
+   "beleg": "docs/BEDEUTUNGSSUCHE-UND-LADEBALKEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M15",
+   "art": "funktion",
+   "text": "Optional ein größeres zweites Bedeutungsmodell nur für die Suche, mit Empfehlung aus einem Gerätecheck.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/BEDEUTUNGSSUCHE-ZWEITES-MODELL.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M16",
+   "art": "funktion",
+   "text": "Lokale Texterkennung (OCR) für Bilder und gescannte PDFs in DE/EN/RU/PL, ohne Übertragung der Dokumente.",
+   "gewicht": "wichtig",
+   "beleg": "docs/NATIVE-TEXTERKENNUNG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M17",
+   "art": "funktion",
+   "text": "Bildbeschreibung: ein lokales Bildmodell und eigene Beschreibungen (Text oder Mikrofon) machen Bilder durchsuchbar.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md › Designumbau Sitzung 4",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M18",
+   "art": "funktion",
+   "text": "Explorer als Ordnerbaum (z. B. E-Mails › Absender › Mail › Anhänge), sortierbar, mit Bild-/PDF-Vorschauen.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md; docs/EXPLORER-SORTIEREN-UND-INHALT.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M19",
+   "art": "funktion",
+   "text": "Vorgeschlagene Themenansichten (Kategorien) ordnen Dateien virtuell, ohne sie zu verschieben.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KATEGORIEN-VORSCHLAG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M20",
+   "art": "funktion",
+   "text": "Doppelte Dateien werden erkannt; zusätzliche Dateikopien lassen sich nach Inhaltsprüfung und Bestätigung bereinigen, mindestens eine Kopie bleibt.",
+   "gewicht": "wichtig",
+   "beleg": "README.md (.34); ZIEL-FUNKTIONEN",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M21",
+   "art": "funktion",
+   "text": "Original öffnen: native Importe speichern eine geprüfte Originalkopie; fehlende Originale lassen sich neu zuordnen, der Zustand (Original fehlt / ungeprüft) wird ehrlich angezeigt.",
+   "gewicht": "kern",
+   "beleg": "docs/ORIGINALE-LINKS-GMAIL.md; ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M22",
+   "art": "funktion",
+   "text": "Integriertes Postfach mit echten Mailkonten über IMAP/SMTP direkt vom Gerät: lesen, schreiben, senden mit Anhang, Ordner, Entwürfe.",
+   "gewicht": "kern",
+   "beleg": "docs/NATIVE-MAIL-ARCHITEKTUR.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M23",
+   "art": "funktion",
+   "text": "Anbietervorlagen für Telekom, Hetzner, Google/Gmail (OAuth), WEB.DE, GMX, Yahoo und IONOS.",
+   "gewicht": "wichtig",
+   "beleg": "docs/MAIL-ANBIETER.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M24",
+   "art": "funktion",
+   "text": "„Alle Konten“: Kopfzeilen und Text aller Konten (12 Monate) werden zusammen indexiert, nach Absender gebündelt und durchsuchbar.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ALLE-KONTEN-UND-ABSENDER.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M25",
+   "art": "funktion",
+   "text": "Mails werden in einer sicheren Originalansicht ohne Skripte dargestellt; Links öffnen nur auf ausdrücklichen Tipp im Browser.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Originalansicht; docs/ORIGINALE-LINKS-GMAIL.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M26",
+   "art": "funktion",
+   "text": "Aufräumen: Newsletter nach Ablaufdatum in den Papierkorb, Abmelden über List-Unsubscribe nur mit Bestätigung, Rückgängig möglich.",
+   "gewicht": "wichtig",
+   "beleg": "docs/AUFRAEUMEN-NEWSLETTER.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M27",
+   "art": "funktion",
+   "text": "Mail-Aktionen: Löschen in den Papierkorb des Anbieters, Wiederherstellen, Spam/Kein Spam, Verschieben in Anbieterordner, auch für viele Mails auf einmal.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md; CLAUDE.md (.24)",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M28",
+   "art": "funktion",
+   "text": "Automatische lokale Übersetzung empfangener Mails (DE/EN/RU/PL) unter dem Original.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/NATIVE-LOKALE-UEBERSETZUNG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M29",
+   "art": "funktion",
+   "text": "KI beim Schreiben: Gegenlesen oder Entwurf per Mistral (EU) oder Kopieren für ein eigenes KI-Abo; Namen und Kennungen werden vorher verdeckt, mit Vorschau „Das sieht die KI“.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KI-BEIM-SCHREIBEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M30",
+   "art": "funktion",
+   "text": "Spracheingabe (Mikrofon) in Suche und Freitextfeldern, mit wählbarer Diktatsprache und unter Windows wählbarem Mikrofon.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/MIKROFON-LAMPE-DATEIWAHL.md; docs/MIKROFON-WAHL-WINDOWS.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M31",
+   "art": "funktion",
+   "text": "Die App empfängt Dateien und Text über „Teilen“ aus anderen Apps und nimmt sie wie normale Importe auf.",
+   "gewicht": "wichtig",
+   "beleg": "docs/TEILEN-EMPFANG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M32",
+   "art": "funktion",
+   "text": "„Überall suchen“: eine Trefferliste aus eigenem Katalog, Tresorfächern anderer Pro-Apps und auf Wunsch dem Netz, mit Herkunftsangabe.",
+   "gewicht": "wichtig",
+   "beleg": "docs/UEBERALL-SUCHEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M33",
+   "art": "funktion",
+   "text": "Lange Arbeiten (Prüfen, Einordnen) laufen als Hintergrundaufgabe mit Mitteilung, Fortschritt und Abbrechen.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/HINTERGRUNDAUFGABE.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M34",
+   "art": "daten",
+   "text": "Eigener Speicherort auf Gerätespeicher oder SD-Karte, passwortverschlüsselt (AES-256-GCM, PBKDF2) für Mails, Anhänge, Originale und Katalogsicherung; auf neuem Gerät wiederherstellbar.",
+   "gewicht": "kern",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M35",
+   "art": "daten",
+   "text": "Mail-Anhänge bis 1 GiB werden stückweise direkt in den verschlüsselten Speicherort geschrieben.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M36",
+   "art": "daten",
+   "text": "Ersatzschlüssel: der Tresor-Schlüssel lässt sich in fünf Teile aufteilen, drei stellen ihn wieder her.",
+   "gewicht": "wichtig",
+   "beleg": "docs/TRESOR-ERSATZSCHLUESSEL.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M37",
+   "art": "daten",
+   "text": "Verschlüsselte Sicherung und Wiederherstellung des Katalogs; Wiederherstellen ergänzt nur, überschreibt nie.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md; ZIEL-FUNKTIONEN",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M38",
+   "art": "daten",
+   "text": "Kontozugangsdaten und Entwürfe liegen verschlüsselt im Gerätespeicher (Android-Keystore / Windows-DPAPI), Passwörter nur im nativen Dialog.",
+   "gewicht": "wichtig",
+   "beleg": "docs/NATIVE-MAIL-ARCHITEKTUR.md; CLAUDE.md › Native Mailarbeit",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M39",
+   "art": "daten",
+   "text": "Papierkorb des Explorers und „Ganzen Ordner leeren“ für Mail-Anhänge; gelöschte Anhänge sind in der Mail als gelöscht markiert.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md; ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M40",
+   "art": "sicherheit",
+   "text": "Prüfung beim Hinzufügen und auf Knopfdruck: jede Datei bekommt einen Befund (Anweisung an eine KI, versteckter Text, verdächtige Anhänge); Funde werden markiert, nicht entfernt.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md (.25); docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M41",
+   "art": "sicherheit",
+   "text": "Schutz-Prüfstelle gegen Viren, Spam und Betrug: Regeln ohne Netz, bekannte Schadlisten, Fingerabdruck-Abfrage bei VirusTotal nur auf Tipp, Übergabe an Virenscanner-App.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCHUTZ-VIREN-SPAM-BETRUG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M42",
+   "art": "sicherheit",
+   "text": "Bevor etwas an eine KI geht, werden Bild-Metadaten entfernt und versteckter Text zugedeckt; bei Auffälligkeiten hält die App einmal an.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Reinigung und Prüfung vor der KI",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M43",
+   "art": "sicherheit",
+   "text": "Internetschalter der App: Netzverbindungen lassen sich mit einem Tipp trennen, eine Lampe zeigt den Zustand.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KOMPAKTE-ANSICHT-UND-OFFLINE.md; docs/MIKROFON-LAMPE-DATEIWAHL.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M44",
+   "art": "sicherheit",
+   "text": "Cloud-Dienste (KI, OCR in der Cloud, VirusTotal) sind nur ausdrücklich nutzerausgelöst und mit eigenem Schlüssel; Standard ist lokal.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Was hier leicht kaputtgeht; KI-BEIM-SCHREIBEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M45",
+   "art": "sicherheit",
+   "text": "Gesperrte Bereiche: Werkzeuge und Studio-Funktionen hinter Freischalt-Codes; Herausgeber-Studio nur über versteckten Zugang.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/WERKZEUGE-UND-FREISCHALTUNG.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M46",
+   "art": "schnittstelle",
+   "text": "Gemeinsamer Tresorordner aller Pro-Apps (ein Passwort, Fächer je App); Einrichten durch reine Speicherwahl.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md; docs/PRO-VERBUND-NATIV.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M47",
+   "art": "schnittstelle",
+   "text": "Pro-Verbund mit der Familienakte: bestätigte Hin- und Rückgaben über den Tresor, Mails mit Anhängen als unveränderte .eml in deren Eingang.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-VERBUND-NATIV.md; CLAUDE.md (Mail an die Familienakte)",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M48",
+   "art": "schnittstelle",
+   "text": "„An BookLedgerPro teilen“: Rechnungsmails gehen als .eml an die Buchhaltungs-App bzw. in deren Tresor-Eingang.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › An BookLedgerPro teilen; TRESORORDNER.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M49",
+   "art": "schnittstelle",
+   "text": "Werkzeuge aus dem Verbund im App-Menü: Pinnwand, Such-Tool, Workflow PDF Pro, Kim-Sync, Datei-Post, BookLedgerPro.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/WERKZEUGE-UND-FREISCHALTUNG.md; CLAUDE.md (.34)",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M50",
+   "art": "schnittstelle",
+   "text": "Optionaler Netzknoten (SBKIM/Mycel) mit Siegel: eigene Identität, server-lose Suche bei Geräten im Netz, Standard aus; Chef-PIN und Beitritts-Zettel für ein eigenes Firmennetz.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SIEGEL-UND-MYCEL.md; docs/UEBERALL-SUCHEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M51",
+   "art": "schnittstelle",
+   "text": "Antworten ins Netz geben nur Titel/Steckbrief, Ausschnitte nur im eigenen Netz auf Wunsch.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/UEBERALL-SUCHEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M52",
+   "art": "schnittstelle",
+   "text": "Pro-App-Verbund-Karte als Übersicht in den Einstellungen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-App-Verbund als Vorschau)",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M53",
+   "art": "grenze",
+   "text": "Microsoft-/Outlook-Konten lassen sich noch nicht anmelden (nur Einrichtungsplan, OAuth-Registrierung fehlt).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PLAN_2026-11-12_MICROSOFT-KONTEN.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M54",
+   "art": "grenze",
+   "text": "Die Schutzprüfung ist kein vollständiger Virenscanner; die App schreibt nie „virenfrei“.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCHUTZ-VIREN-SPAM-BETRUG.md; README.md",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M55",
+   "art": "grenze",
+   "text": "Kataloge und Bestände werden zusammengeführt (nach Fingerabdruck/Message-ID), Dateiinhalte werden nicht verschmolzen; eine frei benannte gemischte Akte gibt es nicht.",
+   "gewicht": "beiwerk",
+   "beleg": "ZIEL-FUNKTIONEN › Abgleich",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M56",
+   "art": "grenze",
+   "text": "Der Index „Alle Konten“ lädt keine Anhänge und speichert höchstens 8.000 Zeichen je Nachricht.",
+   "gewicht": "beiwerk",
+   "beleg": "ZIEL-FUNKTIONEN › Abgleich",
+   "app": "Private Brain Pro"
+  },
+  {
+   "id": "PBP-M57",
+   "art": "grenze",
+   "text": "Mailabruf, Modell-Erstdownload und Cloud-KI brauchen Netz; ein Suchindex ist keine vollständige Originalsicherung.",
+   "gewicht": "wichtig",
+   "beleg": "ZIEL-FUNKTIONEN › Privat und offline arbeiten",
+   "app": "Private Brain Pro"
+  }
+ ]
+}

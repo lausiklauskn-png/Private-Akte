@@ -1,0 +1,4 @@
+Erfundene Testdaten für den Datei-Organizer (Familie Beispiel, Firmen „… Beispiel“).
+Keine echten Personen, Firmen, Kennzeichen oder Kontonummern.
+Den Ordner „Eingang“ in den Datei-Organizer-Ordner legen oder in der App „Testordner laden“ wählen.
+ERWARTUNG.json sagt je Datei, was richtig wäre – die Probe misst daran die Trefferquote.

@@ -1,0 +1,18 @@
+Ausdruck der elektronischen Lohnsteuerbescheinigung für 2025
+
+Arbeitgeber: Harms & Petersen Logistik GmbH, Hafenstraße 200, 28990 Brakenhude
+Arbeitnehmer: Torben Pahlke, geb. 22.11.1986, Möwenstieg 14, 28991 Brakenhude
+Identifikationsnummer: 00 000 000 412     Personalnummer: 00813
+Dauer des Dienstverhältnisses: 01.01. - 31.12.2025
+
+ 3. Bruttoarbeitslohn                                    37.912,40
+ 4. Einbehaltene Lohnsteuer                               4.612,00
+ 5. Einbehaltener Solidaritätszuschlag                        0,00
+22. Arbeitgeberanteil Rentenversicherung                  3.525,85
+23. Arbeitnehmeranteil Rentenversicherung                 3.525,85
+25. Arbeitnehmerbeiträge Krankenversicherung              3.166,69
+26. Arbeitnehmerbeiträge Pflegeversicherung                 663,47
+27. Arbeitnehmerbeiträge Arbeitslosenversicherung           492,86
+
+Steuerklasse 3   Kinderfreibetrag 1,0
+Übermittelt am 12.02.2026, Transferticket 000-PAHL-25

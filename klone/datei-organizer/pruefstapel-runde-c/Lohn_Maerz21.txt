@@ -1,0 +1,37 @@
+Beispiel Möbelwerkstatt GmbH
+
+Beispiel Möbelwerkstatt GmbH · Werkstraße 3 · 34560 Holzhausen-Beispiel
+
+Herrn Jörg Kesselring
+Lindenweg 12
+34567 Musterfelde
+
+Personalnummer: 0457
+Abrechnungsmonat: März 2021
+Steuerklasse: IV  Kinderfreibetrag: 0,5
+Krankenkasse: BKK Beispielwerk
+
+Verdienstabrechnung März 2021
+
+Lohnart                 Stunden   Betrag EUR
+Grundlohn Tischler      168       3.192,00
+Überstunden 25 %        6         142,50
+VWL Arbeitgeber                   26,59
+Gesamtbrutto                      3.361,09
+Lohnsteuer                        -412,33
+Solidaritätszuschlag              0,00
+Kirchensteuer                     -37,10
+KV-Beitrag AN                     -271,35
+RV-Beitrag AN                     -312,58
+AV-Beitrag AN                     -40,33
+PV-Beitrag AN                     -51,26
+Nettoverdienst                    2.236,14
+VWL Überweisung                   -40,00
+Auszahlungsbetrag                 2.196,14
+
+Der Betrag wird zum 31.03.2021 auf Ihr Konto DE00 0000 0000 0000 0000 00 überwiesen.
+Resturlaub: 17 Tage.
+
+
+----------------------------------------
+Beispiel Möbelwerkstatt GmbH · Amtsgericht Beispielstadt HRB 99901

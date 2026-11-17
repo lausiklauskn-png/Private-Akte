@@ -1,0 +1,27 @@
+# Hauptzollamt Beispielhafen
+Hauptzollamt Beispielhafen · Kaistraße 1 · 22999 Beispielhafen
+
+Herrn
+Daniel Lenz
+Hafenweg 12
+22999 Beispielhafen
+
+Steuernummer: KRAD 2207/4419
+Kennzeichen: BSP-DL 77 (Saison 03–10)
+Datum: 21.03.2023
+
+# Kraftfahrzeugsteuerbescheid
+
+Für das Kraftrad mit dem amtlichen Kennzeichen BSP-DL 77 wird die Steuer für die Zeit der Zulassung (März bis Oktober) auf 85,00 EUR jährlich festgesetzt.
+
+Die Steuer wird per Lastschrift eingezogen.
+
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Hauptzollamt Beispielhafen, Kaistraße 1, 22999 Beispielhafen, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

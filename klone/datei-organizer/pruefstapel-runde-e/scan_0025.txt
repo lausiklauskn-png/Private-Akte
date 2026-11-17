@@ -1,0 +1,30 @@
+Beispielflix Streaming GmbH
+Beispielflix Streaming GmbH · Serienstraße 1 · 10000 Beispielberlin
+
+Herrn Tobias Reuter
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Kundenkonto: tobias.r***@example.org
+Datum: 05.01.2026
+
+Rechnung Jahresabo 2026
+
+Sehr geehrter Herr Reuter,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Jahresabo Standard mit Werbung   1   59,88 €   59,88 €
+2   Studentenrabatt 20 %   1   -11,98 €   -11,98 €
+
+Nettobetrag: 47,90 €
+zzgl. 19 % MwSt.: 9,10 €
+Rechnungsbetrag: 57,00 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Mit freundlichen Grüßen
+Beispielflix Streaming GmbH
+Beispielflix Streaming GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

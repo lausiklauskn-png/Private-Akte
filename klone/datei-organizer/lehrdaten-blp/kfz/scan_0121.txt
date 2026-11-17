@@ -1,0 +1,14 @@
+Flottenkarte EUROTANK-Service · Sammelrechnung
+Kartenherausgeber: Tankkarten-Union GmbH, 45127 Essenau, DE000000061
+Kunde 660417 Kfz-Technik Brandhorst            Rechnung 26-07-660417 vom 31.07.2026
+Abrechnungszeitraum 01.07.–31.07.2026
+
+Datum   Station              Kfz         Produkt     Menge    Netto
+03.07.  Tankhof Wolmersh.    WOH-KB 24   Diesel      61,20    84,02
+09.07.  Autohof Leinetal     WOH-KB 100  Super E10   44,85    64,71
+17.07.  Tankhof Wolmersh.    WOH-KB 24   Diesel      57,10    78,15
+24.07.  Tankhof Wolmersh.    WOH-KB 7    Super E5    32,40    48,20
+28.07.  Station Bergfelden   WOH-KB 24   Diesel      66,05    90,68
+Kartengebühr 3 Karten                                           4,50
+
+Summe netto 370,26 · USt 19 % 70,35 · Rechnungsbetrag 440,61 EUR (Lastschrift 10.08.)

@@ -1,0 +1,37 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "getroffen",
+  "M03": "teilweise",
+  "M04": "getroffen",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "fehlt",
+  "M08": "getroffen",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "fehlt",
+  "M12": "getroffen",
+  "M13": "getroffen",
+  "M14": "getroffen",
+  "M15": "getroffen",
+  "M16": "getroffen",
+  "M17": "teilweise",
+  "M18": "teilweise"
+ },
+ "begruendung": {
+  "M03": "Liest PDFs des Hausverwaltungsprogramms; Unabhängigkeit vom erstellenden Programm nicht zugesagt, Layout-Vielfalt nur offene Frage.",
+  "M07": "Keine Prüfung des Heizkosten-Verbrauchsanteils 50–70 % und des Leerstands.",
+  "M11": "Keine Zuordnung von Belegen zu Beträgen.",
+  "M17": "Kein Versand ja; Mieterportal und Buchhaltung nicht ausdrücklich ausgeschlossen.",
+  "M18": "Lizenzmodell Bestandslizenz/Kleinlizenz, aber kein Preis je Einheit und Jahr bzw. Jahrespauschale."
+ },
+ "zusaetze": [
+  "Abhak- und Freigabe-Ablauf Buchhalterin/Verwalter mit Mehrnutzer-Sperrhinweis",
+  "Prüfsumme der Original-PDFs zwischen Läufen",
+  "Offline-Lizenzprüfung per Lizenzdatei",
+  "PDF-Ansicht mit Sprung zur Fundstelle",
+  "Druck/PDF-Export der Befundliste"
+ ]
+}

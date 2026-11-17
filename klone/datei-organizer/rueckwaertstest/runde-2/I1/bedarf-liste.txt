@@ -1,0 +1,53 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] KI-Programme im Internet werden kaum genutzt; wenn ich es ausprobiere, schwärze ich vorher von Hand
+B-02 [Bereich 1 Ausgangssituation (IST)] Die Auszubildende kopiert Texte unbearbeitet in KI-Programme, teils am eigenen Handy
+B-03 [Bereich 1 Ausgangssituation (IST)] Schriftsätze und Mails schreiben wir selbst in Word bzw. Outlook am Windows-PC
+B-04 [Bereich 2 Betroffener Prozess] Entwurf von Schriftsätzen und Mails
+B-05 [Bereich 2 Betroffener Prozess] Umgang mit Mandantendaten (Dokumente, Kundenkontakt)
+B-06 [Bereich 3 Nutzer / Beteiligte] Inhaberin (Rechtsanwältin)
+B-07 [Bereich 3 Nutzer / Beteiligte] Weitere Anwältin
+B-08 [Bereich 3 Nutzer / Beteiligte] Rechtsanwaltsfachangestellte
+B-09 [Bereich 3 Nutzer / Beteiligte] Auszubildende
+B-10 [Bereich 4 Problem / Schwachstelle] Von Hand schwärzen dauert länger, als den Text selbst zu schreiben
+B-11 [Bereich 4 Problem / Schwachstelle] Beim Schwärzen übersehe ich trotzdem etwas
+B-12 [Bereich 4 Problem / Schwachstelle] Mandantendaten (Namen, Kinder, Gehälter, Adressen, Kontonummern) können ungeschützt bei fremden Firmen landen
+B-13 [Bereich 4 Problem / Schwachstelle] Wir können der Kammer oder Mandanten nicht zeigen, dass wir aufpassen
+B-14 [Bereich 5 Ursache] Es gibt kein Werkzeug, das Namen und Zahlen vor dem Senden automatisch unkenntlich macht
+B-15 [Bereich 5 Ursache] Ein Verbot wird umgangen, weil die KI im Alltag nützlich ist
+B-16 [Bereich 6 Bedarf] Namen, Zahlen, Adressen und Kontonummern vor dem Senden an eine KI automatisch unkenntlich machen (muss)
+B-17 [Bereich 6 Bedarf] Die Antwort der KI hinterher wieder mit den echten Namen und Zahlen anzeigen (muss)
+B-18 [Bereich 6 Bedarf] Vor dem Senden genau sehen, was hinausgeht, und erst dann bestätigen (muss)
+B-19 [Bereich 6 Bedarf] Mandantennamen als Liste hinterlegen, damit sie sicher erkannt werden (muss)
+B-20 [Bereich 6 Bedarf] Frei wählen können, welches KI-Programm benutzt wird (soll)
+B-21 [Bereich 6 Bedarf] Etwas Vorzeigbares für Kammer oder Mandanten, dass wir aufpassen (soll)
+B-22 [Bereich 6 Bedarf] Ein Weg, den auch die Auszubildende gern benutzt, statt am eigenen Handy (muss)
+B-23 [Bereich 7 Ziel (SOLL)] Alle vier können KI-Programme für Entwürfe nutzen, ohne dass Mandantendaten erkennbar hinausgehen
+B-24 [Bereich 7 Ziel (SOLL)] Schneller Entwürfe für Schriftsätze und Mails
+B-25 [Bereich 8 Funktionaler Bedarf] Das System muss Namen, Adressen, Kontonummern, Beträge und Telefonnummern im Text vor dem Senden durch Platzhalter ersetzen
+B-26 [Bereich 8 Funktionaler Bedarf] Das System muss eine hinterlegte Liste von Mandantennamen beim Erkennen berücksichtigen
+B-27 [Bereich 8 Funktionaler Bedarf] Das System muss vor dem Senden anzeigen, was genau hinausgeht, und erst nach Bestätigung senden
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss in der Antwort der KI die Platzhalter wieder durch die echten Angaben ersetzen
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss mit verschiedenen KI-Anbietern funktionieren
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss eine kurze Beschreibung liefern, die man der Kammer oder Mandanten zeigen kann
+B-31 [Bereich 9 Organisatorischer Bedarf] Kurze Einweisung für alle vier
+B-32 [Bereich 9 Organisatorischer Bedarf] Regel im Büro: KI nur über diesen Weg
+B-33 [Bereich 10 Technischer Bedarf] Windows-PCs im Büro, Browser Edge
+B-34 [Bereich 10 Technischer Bedarf] Einfache Installation, der IT-Dienstleister kommt nur einmal im Monat
+B-35 [Bereich 11 Bestehende Systeme] Windows-PCs mit Edge
+B-36 [Bereich 11 Bestehende Systeme] Word und Outlook
+B-37 [Bereich 13 Daten] Texte aus Akten: Namen, Kinder, Gehälter, Adressen, Kontonummern
+B-38 [Bereich 13 Daten] Liste der Mandantennamen
+B-39 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: ja
+B-40 [Bereich 14 Datenschutz / Sicherheit] Anwaltliche Schweigepflicht
+B-41 [Bereich 14 Datenschutz / Sicherheit] Kein Server dazwischen darf Texte mitlesen oder speichern
+B-42 [Bereich 14 Datenschutz / Sicherheit] Keine Überwachung der Mitarbeiterinnen, wer was eingegeben hat
+B-43 [Bereich 15 Rahmenbedingungen] Budget-Rahmen (Angabe des Kunden): 40 bis 60 Euro im Monat für alle vier
+B-44 [Bereich 15 Rahmenbedingungen] Keine Versprechen von hundertprozentiger Sicherheit
+O-01 [Bereich 18 Offene Punkte] Wie man mit Angaben umgeht, die nicht automatisch erkannt werden
+O-02 [Bereich 18 Offene Punkte] Laufende Kosten der KI-Anbieter selbst
+N-01 [nicht gewünscht] Kein Server dazwischen, der Texte mitliest oder speichert
+N-02 [nicht gewünscht] Keine Protokollierung, wer was eingegeben hat (keine Überwachung der Mitarbeiterinnen)
+N-03 [nicht gewünscht] Keine Bindung an einen einzigen KI-Anbieter
+N-04 [nicht gewünscht] Kein Versprechen hundertprozentiger Sicherheit
+N-05 [nicht gewünscht] Nicht auf dem Handy für Akten
+Ausgefüllt: 17 von 18 Bereichen

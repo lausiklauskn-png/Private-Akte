@@ -1,0 +1,50 @@
+Frischkauf App – Dein digitaler Kassenbon
+
+Frischkauf Exempel, Mühlenstraße 50, 56789 Probedorf
+Einkauf vom 20.09.2025 um 17:12 Uhr
+Kundenkarte **** 8032
+
+Artikel   Menge   Preis
+Cola 1,5L   2   2,78 € A
+Pfand   2   0,50 € A
+Tomaten Rispe   1   2,49 € B
+Katzenfutter 12X   2   10,98 € A
+Pizza Salami Tk   1   2,79 € B
+Bananen   1   1,49 € B
+Salz   2   0,98 € B
+Zwiebeln 2Kg   1   1,79 € B
+Trauben Hell   2   5,58 € B
+Pommes Tk 1Kg   1   1,99 € B
+Vollkornbrot   1   1,89 € B
+Salz   2   0,98 € B
+Spülmittel   1   0,95 € A
+Müllbeutel   1   1,79 € A
+Thunfisch   1   1,49 € B
+Cola 1,5L   2   2,78 € A
+Pfand   2   0,50 € A
+Mehl Type 405   2   1,58 € B
+Karotten 2Kg   1   1,99 € B
+Apfelsaft 1L   2   2,58 € A
+Tomaten Rispe   1   2,49 € B
+Brokkoli   1   1,69 € B
+Schmand   1   0,79 € B
+Kerzen   1   2,49 € A
+Aufbackbrötchen 10Er   1   1,69 € B
+
+App-Coupon Vollkornbrot: -1,00 €
+App-Coupon Pfand: -1,20 €
+App-Coupon Cola 1,5L: -1,20 €
+
+Zwischensumme: 57,05 €
+Du hast gespart: 3,40 €
+Gesamtsumme: 53,65 €
+Bezahlt mit: Kreditkarte
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   21,30   4,05   25,35
+B 7 %   26,45   1,85   28,30
+
+Gesammelte Punkte: 53  ·  Punktestand: 3575
+Bon-ID: 416975724269  ·  Kasse 3  ·  TSE-Signatur gekürzt 50490919
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

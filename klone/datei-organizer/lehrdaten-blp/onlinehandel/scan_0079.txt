@@ -1,0 +1,11 @@
+DB - Ihre Fahrkarte / Rechnung
+Auftrag 000 771 208          gebucht am 01.07.2026
+
+Reisender: Marit Sandvoss (BahnCard 25)
+Firma: Teekontor Lindenblatt
+
+08.07.2026  Lüneburg ab 07:32  ->  Hamburg Hbf  ->  Bremen Hbf an 09:41
+08.07.2026  Bremen Hbf ab 17:17 -> Lüneburg an 19:28
+Flexpreis 2. Klasse mit BC25:  52,40 EUR  (inkl. MwSt 7 % 3,43 EUR)
+
+Reisezweck: Hausmesse Rooibos & More, Bremen (Inhaberin)

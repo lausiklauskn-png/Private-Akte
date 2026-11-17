@@ -1,0 +1,25 @@
+# Stadtwerke Musterau
+Stadtwerke Musterau · Postfach 20 · 37999 Musterau
+
+Herrn und Frau
+Gerhard und Ingrid Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Kundennummer: 08-14471
+Datum: 12.02.2001
+
+# Jahresverbrauchsabrechnung 2000
+
+|Sparte|Verbrauch|Betrag|
+|Strom|3.412 kWh|1.019,44 DM|
+|Gas|18.230 kWh|1.401,70 DM|
+|Wasser|96 m³|468,48 DM|
+|Summe||2.889,62 DM|
+|Abschläge gezahlt||2.760,00 DM|
+|Nachzahlung||129,62 DM|
+
+Bitte überweisen Sie den Nachzahlungsbetrag bis zum 05.03.2001. Ihr neuer Abschlag beträgt 245,00 DM monatlich.
+
+Mit freundlichen Grüßen
+@unterschrift

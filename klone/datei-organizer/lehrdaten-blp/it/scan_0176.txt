@@ -1,0 +1,9 @@
+ZahlFlink Payments – Gebührenbeleg
+Kettler Systemhaus, Händler-ID ZF-000417
+
+Zeitraum 01.10.2026–31.10.2026            ausgestellt 01.11.2026
+Anzahl Zahlungen: 31      Umsatz: 4.902,45 EUR
+Gebühren Standardzahlungen                  -132,92 EUR
+Gebühr Währungsumrechnung (CHF)               -6,38 EUR
+Summe einbehaltene Gebühren                  139,30 EUR
+Dieser Beleg weist keine Umsatzsteuer aus.

@@ -1,0 +1,23 @@
+PAPETERIE FEDERKIEL GmbH
+Feine Papierwaren für den Fachhandel
+Leinpfad 21 - 63999 Mainhausen-Süd
+
+Rechnung          RE-102233
+Datum             03.02.2026
+Kunden-Nr.        K-5519
+Auftrag           Messeorder Frühjahr
+
+Buchhandlung Lindenblatt, Marktgasse 7, 37999 Wehrstedt
+
+Nr  Artikel                             Menge   Preis    Summe
+ 1  Notizbuch A5 Leinen, sort.             24     5,40    129,60
+ 2  Grußkarten Klappkarte m. Umschlag     120     0,95    114,00
+ 3  Geschenkpapier Bogen 50x70            100     0,42     42,00
+ 4  Füllhalter 'Schulstart'                10     6,80     68,00
+
+Netto                                                     353,60
+19 % MwSt                                                  67,18
+Brutto                                                    420,78
+
+Zahlungsbedingung: 30 Tage netto / 10 Tage 3 % Skonto
+USt-IdNr. DE000000008 - IBAN DE00 0000 0000 0000 8888 08

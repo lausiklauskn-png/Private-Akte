@@ -1,0 +1,107 @@
+{
+ "app": "Wareneinsatz-Wächter",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Wirte sehen jede Woche ihren Wareneinsatz und schleichende Preiserhöhungen, statt erst Wochen später aus der BWA",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Nutzer: inhabergeführte Restaurants (ca. 0,3–2 Mio. € Umsatz)",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Lieferscheine und Rechnungen per Foto, PDF oder weitergeleiteter Mail einlesen (Texterkennung)",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M04",
+   "text": "Erkennt je Beleg Lieferant, Artikel, Menge, Einzelpreis; unsichere Lesungen in eine Prüfliste",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Umsatz aus dem DSFinV-K-Export der TSE-Kasse, damit unabhängig vom Kassenhersteller",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M06",
+   "text": "Wöchentliche Wareneinsatzquote getrennt nach Küche und Getränken",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Preissprung-Warnung je Artikel und Lieferant (z. B. „+14 % seit August“)",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Top-10-Kostentreiber der Woche/des Monats",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Keine Pflicht, Rezepte grammgenau zu pflegen; optional für die wichtigsten 10 Gerichte",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Gutschriften und Teillieferungen werden erkannt bzw. von Hand zugeordnet",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Beim Start Auswertung der letzten 3 Monate aus vorhandenen Belegen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M12",
+   "text": "Gleiche Artikel unterschiedlicher Schreibweise zusammenführen (lernt aus Korrekturen)",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M13",
+   "text": "Handy zum Fotografieren, Auswertung am PC/Browser oder Windows",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M14",
+   "text": "Texterkennung möglichst auf dem Gerät; Umsatz- und Preisdaten bleiben beim Betrieb, kein Weiterverkauf",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M15",
+   "text": "Sagt offen, dass es ohne Inventur eine Näherung ist",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M16",
+   "text": "Keine Kasse, keine Buchhaltung, kein Bestellsystem, keine Inventur-App, keine Steuerberatung",
+   "gewicht": "kern",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Preis je Standort und Monat, Probezeit mit Rückblick",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

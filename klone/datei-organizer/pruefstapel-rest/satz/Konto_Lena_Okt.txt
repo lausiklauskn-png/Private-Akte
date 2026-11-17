@@ -1,0 +1,21 @@
+# Beispiel Direktbank AG
+
+Lena Weidinger
+
+Kontoauszug Nr. 10/2025
+Zeitraum: 01.10.2025 – 31.10.2025
+IBAN: DE00 0000 0000 0000 0000 00
+
+|Buchungstag|Vorgang|Betrag EUR|
+|01.10.|Miete Hafergasse 17|-380,00|
+|02.10.|BAföG Studierendenwerk|+612,00|
+|05.10.|Dauerauftrag Eltern|+150,00|
+|10.10.|Beispielfunk Mobil|-14,99|
+|15.10.|Lohn Café Beispiel Minijob|+498,00|
+|27.10.|Kartenzahlung Supermarkt|-64,31|
+
+Alter Kontostand: 312,55 EUR
+Neuer Kontostand: 1.113,25 EUR
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+@fuss Beispiel Direktbank AG · BIC BSPLDE00XXX · Amtsgericht Beispielstadt HRB 00000

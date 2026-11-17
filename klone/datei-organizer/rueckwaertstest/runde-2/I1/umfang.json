@@ -1,0 +1,8 @@
+{"bausteine": [
+ {"katalog": "kipruef", "name": "Browser-App (Edge/PWA) zum Pseudonymisieren: Text einfügen, Namen/Adressen/IBAN/Beträge/Telefon/Daten automatisch durch Platzhalter ersetzen, Vorschau „Das geht hinaus“ mit Bestätigung, dann kopieren bzw. senden; alles nur im Browser, kein Zwischenserver, kein Protokoll", "groesse": "gross", "deckt": ["B-16","B-18","B-22","B-25","B-27","B-14","B-10","B-11","B-12","B-23","B-41","B-42"], "faktoren": ["ki"]},
+ {"katalog": "neu", "name": "Mandantenliste: Namen (verschlüsselt im Browser) hinterlegen, importieren aus einer Liste, beim Erkennen vorrangig verdecken, je Arbeitsplatz", "groesse": "klein", "deckt": ["B-19","B-26","B-38"], "faktoren": []},
+ {"katalog": "neu", "name": "Rückübersetzung: KI-Antwort einfügen, Platzhalter werden wieder durch die echten Angaben ersetzt, Ergebnis zum Kopieren nach Word/Outlook", "groesse": "klein", "deckt": ["B-17","B-28","B-24","B-04"], "faktoren": []},
+ {"katalog": "schnitt", "name": "Anbieter frei wählbar: Weg über Zwischenablage für jedes KI-Programm im Browser, optional direkte Anbindung mit eigenem Schlüssel (mehrere Anbieter, ohne Zwischenserver)", "groesse": "mittel", "deckt": ["B-20","B-29"], "faktoren": ["ki"]},
+ {"katalog": "neu", "name": "Vorzeigeblatt für Kammer und Mandanten (Druck/PDF): was verdeckt wird, wo die Grenzen liegen, kein Versprechen vollständiger Sicherheit", "groesse": "klein", "deckt": ["B-21","B-30","B-13","B-44"], "faktoren": ["druck"]},
+ {"katalog": "neu", "name": "Einrichtung auf vier Windows-PCs als Edge-App (Installieren-Knopf, ohne Admin-Aufwand) und kurze Einweisung mit Büro-Regel", "groesse": "klein", "deckt": ["B-31","B-32","B-33","B-34"], "faktoren": []}
+]}

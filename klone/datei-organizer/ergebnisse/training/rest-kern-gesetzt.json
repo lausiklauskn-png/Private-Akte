@@ -1,0 +1,413 @@
+{
+ "ordner": [
+  "pruefstapel-rest"
+ ],
+ "felder": {
+  "bereich": {
+   "neu": {
+    "ok": 139,
+    "n": 185,
+    "spanne": [
+     0.6843780278985087,
+     0.8080982061516159
+    ],
+    "falschSicher": 12,
+    "offen": 34,
+    "mitZweitfach": 149
+   },
+   "alt": {
+    "ok": 139,
+    "n": 185,
+    "spanne": [
+     0.6843780278985087,
+     0.8080982061516159
+    ],
+    "falschSicher": 12,
+    "offen": 34,
+    "mitZweitfach": 149
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "schriftstueck": {
+   "neu": {
+    "ok": 123,
+    "n": 185,
+    "spanne": [
+     0.59410136947422,
+     0.7289206765156465
+    ],
+    "falschSicher": 18,
+    "offen": 44
+   },
+   "alt": {
+    "ok": 121,
+    "n": 185,
+    "spanne": [
+     0.5830027414452168,
+     0.7188375310371176
+    ],
+    "falschSicher": 18,
+    "offen": 46
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 2,
+    "p": 0.5
+   }
+  },
+  "absender": {
+   "neu": {
+    "ok": 79,
+    "n": 185,
+    "spanne": [
+     0.35794509134751656,
+     0.4990779374766409
+    ],
+    "falschSicher": 21,
+    "offen": 85
+   },
+   "alt": {
+    "ok": 63,
+    "n": 185,
+    "spanne": [
+     0.27611611724435475,
+     0.4114527235195447
+    ],
+    "falschSicher": 36,
+    "offen": 86
+   },
+   "mcnemar": {
+    "nurAltRichtig": 2,
+    "nurNeuRichtig": 18,
+    "p": 0.0004024505615234375
+   }
+  },
+  "person": {
+   "neu": {
+    "ok": 87,
+    "n": 134,
+    "spanne": [
+     0.5653201688044022,
+     0.7248679891972462
+    ],
+    "falschSicher": 1,
+    "offen": 46
+   },
+   "alt": {
+    "ok": 87,
+    "n": 134,
+    "spanne": [
+     0.5653201688044022,
+     0.7248679891972462
+    ],
+    "falschSicher": 1,
+    "offen": 46
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "frist": {
+   "neu": {
+    "ok": 155,
+    "n": 185,
+    "spanne": [
+     0.7779449937269277,
+     0.8839854283834548
+    ],
+    "falschSicher": 4,
+    "offen": 26
+   },
+   "alt": {
+    "ok": 155,
+    "n": 185,
+    "spanne": [
+     0.7779449937269277,
+     0.8839854283834548
+    ],
+    "falschSicher": 4,
+    "offen": 26
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  }
+ },
+ "jeForm": {
+  "foto/schlecht": {
+   "n": 18,
+   "bereich": {
+    "n": 18,
+    "ok": 14
+   },
+   "schriftstueck": {
+    "n": 18,
+    "ok": 10
+   },
+   "absender": {
+    "n": 18,
+    "ok": 5
+   },
+   "person": {
+    "n": 18,
+    "ok": 8
+   },
+   "frist": {
+    "n": 18,
+    "ok": 11
+   }
+  },
+  "zwei-in-einem-scan": {
+   "n": 15,
+   "bereich": {
+    "n": 15,
+    "ok": 4
+   },
+   "schriftstueck": {
+    "n": 15,
+    "ok": 5
+   },
+   "absender": {
+    "n": 15,
+    "ok": 4
+   },
+   "person": {
+    "n": 15,
+    "ok": 7
+   },
+   "frist": {
+    "n": 15,
+    "ok": 8
+   }
+  },
+  "foto/mittel": {
+   "n": 23,
+   "bereich": {
+    "n": 23,
+    "ok": 20
+   },
+   "schriftstueck": {
+    "n": 23,
+    "ok": 16
+   },
+   "absender": {
+    "n": 23,
+    "ok": 14
+   },
+   "person": {
+    "n": 23,
+    "ok": 20
+   },
+   "frist": {
+    "n": 23,
+    "ok": 22
+   }
+  },
+  "pdf-scan/mittel": {
+   "n": 39,
+   "bereich": {
+    "n": 39,
+    "ok": 34
+   },
+   "schriftstueck": {
+    "n": 39,
+    "ok": 31
+   },
+   "absender": {
+    "n": 39,
+    "ok": 15
+   },
+   "person": {
+    "n": 39,
+    "ok": 31
+   },
+   "frist": {
+    "n": 39,
+    "ok": 34
+   }
+  },
+  "pdf-scan/gut": {
+   "n": 30,
+   "bereich": {
+    "n": 30,
+    "ok": 25
+   },
+   "schriftstueck": {
+    "n": 30,
+    "ok": 23
+   },
+   "absender": {
+    "n": 30,
+    "ok": 16
+   },
+   "person": {
+    "n": 30,
+    "ok": 19
+   },
+   "frist": {
+    "n": 30,
+    "ok": 27
+   }
+  },
+  "pdf-scan/schlecht": {
+   "n": 25,
+   "bereich": {
+    "n": 25,
+    "ok": 12
+   },
+   "schriftstueck": {
+    "n": 25,
+    "ok": 10
+   },
+   "absender": {
+    "n": 25,
+    "ok": 3
+   },
+   "person": {
+    "n": 25,
+    "ok": 12
+   },
+   "frist": {
+    "n": 25,
+    "ok": 18
+   }
+  },
+  "pdf-text": {
+   "n": 19,
+   "bereich": {
+    "n": 19,
+    "ok": 16
+   },
+   "schriftstueck": {
+    "n": 19,
+    "ok": 15
+   },
+   "absender": {
+    "n": 19,
+    "ok": 14
+   },
+   "person": {
+    "n": 19,
+    "ok": 15
+   },
+   "frist": {
+    "n": 19,
+    "ok": 19
+   }
+  },
+  "foto/gut": {
+   "n": 11,
+   "bereich": {
+    "n": 11,
+    "ok": 10
+   },
+   "schriftstueck": {
+    "n": 11,
+    "ok": 8
+   },
+   "absender": {
+    "n": 11,
+    "ok": 6
+   },
+   "person": {
+    "n": 11,
+    "ok": 8
+   },
+   "frist": {
+    "n": 11,
+    "ok": 11
+   }
+  },
+  "bildschirm": {
+   "n": 5,
+   "bereich": {
+    "n": 5,
+    "ok": 4
+   },
+   "schriftstueck": {
+    "n": 5,
+    "ok": 5
+   },
+   "absender": {
+    "n": 5,
+    "ok": 2
+   },
+   "person": {
+    "n": 5,
+    "ok": 4
+   },
+   "frist": {
+    "n": 5,
+    "ok": 5
+   }
+  }
+ },
+ "ocrGuete": {
+  "foto/schlecht": {
+   "n": 18,
+   "wortfehler": 0.672,
+   "gefunden": 0.432
+  },
+  "zwei-in-einem-scan": {
+   "n": 15,
+   "wortfehler": 0.882,
+   "gefunden": 0.817
+  },
+  "foto/mittel": {
+   "n": 23,
+   "wortfehler": 0.285,
+   "gefunden": 0.859
+  },
+  "pdf-scan/mittel": {
+   "n": 39,
+   "wortfehler": 0.232,
+   "gefunden": 0.919
+  },
+  "pdf-scan/gut": {
+   "n": 30,
+   "wortfehler": 0.175,
+   "gefunden": 0.986
+  },
+  "pdf-scan/schlecht": {
+   "n": 25,
+   "wortfehler": 0.734,
+   "gefunden": 0.381
+  },
+  "foto/gut": {
+   "n": 11,
+   "wortfehler": 0.143,
+   "gefunden": 0.969
+  },
+  "bildschirm": {
+   "n": 5,
+   "wortfehler": 0.061,
+   "gefunden": 1
+  }
+ },
+ "lesenOderEinordnen": {
+  "gut gelesen": {
+   "n": 122,
+   "bereich": 81,
+   "schriftstueck": 72,
+   "absender": 48,
+   "person": 75,
+   "frist": 88
+  },
+  "schlecht gelesen": {
+   "n": 44,
+   "bereich": 55,
+   "schriftstueck": 45,
+   "absender": 16,
+   "person": 39,
+   "frist": 66
+  }
+ }
+}

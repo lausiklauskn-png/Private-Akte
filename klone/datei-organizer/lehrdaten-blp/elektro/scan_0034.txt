@@ -1,0 +1,15 @@
+SMARTHOME DISTRIBUTION SÜD GmbH
+Rechnung Nr. 9100288173                 Kundennr. 55120
+Leistungsdatum = Rechnungsdatum 02.06.2026
+
+Empfaenger: Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos
+
+Pos. 10  KNX Schaltaktor 8-fach 16A REG            2 x 178,00 =  356,00
+Pos. 20  KNX Tastsensor 4-fach mit Display         5 x  92,00 =  460,00
+Pos. 30  KNX Spannungsversorgung 640 mA            1 x 144,00 =  144,00
+Pos. 40  Busleitung EIB-Y(St)Y 2x2x0,8 gruen 100m  1 x  60,00 =   60,00
+
+Netto-Summe                 1.020,00 EUR
+Umsatzsteuer 19,00 %        193,80 EUR
+Brutto-Summe                1.213,80 EUR
+Zahlbar innerhalb 21 Tagen rein netto.

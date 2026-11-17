@@ -1,0 +1,12 @@
+Stadtwerke Welsede GmbH – Abschlagsplan 2026
+Kunde: Tischlerei Vosskamp    Vertragskonto 300 417 2200
+
+Sparte Strom, Abnahmestelle Mühlenkamp 14 (Werkstatt)
+
+Fälligkeit     Abschlag brutto (inkl. 19 % USt)
+05.02.2026     310,00 EUR
+05.03.2026     310,00 EUR
+05.04.2026     310,00 EUR
+05.05.2026     310,00 EUR  <<< dieser Abschlag wurde am 05.05.2026 per SEPA eingezogen
+...
+Die Abschläge werden mit der Jahresrechnung verrechnet. Gläubiger-ID DE00ZZZ00000000417

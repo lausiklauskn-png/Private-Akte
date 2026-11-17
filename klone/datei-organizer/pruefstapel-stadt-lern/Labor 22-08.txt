@@ -1,0 +1,9 @@
+LABOR NORDBEISPIEL           Auftragsnummer L-004811
+Einsender: Klinikum Beispielhafen    Probe vom 15.08.2026
+Patientin: Gerda Brakmann, *1947
+
+Leukozyten    11,8  /nl   (4,0-10,0)  erhöht
+CRP           48    mg/l  (<5)        erhöht
+Hb            12,1  g/dl  (12,0-15,5)
+Kreatinin     0,9   mg/dl (0,5-1,0)
+Befund bestätigt. Dr. Beispiel-Fels, Laborärztin

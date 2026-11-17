@@ -1,0 +1,22 @@
+Autohaus Deichblick Beispiel – Service
+Ausfallstraße 70 · 29999 Beispielhafen · Werkstatt 0000-77020
+
+Werkstattrechnung WR-26-04712                   Datum 19.08.2026
+Kunde AD-11849 · Jonas Kranbeck · Möwenstieg 14 · 29999 Beispielhafen
+Fahrzeug: Van, Benzin · Kennzeichen BSP-JK 184 · km-Stand 117.402
+
+Arbeiten:
+- Inspektion nach Herstellervorgabe (60.000-km-Paket)            289,00
+- Bremsflüssigkeit erneuert                                        69,00
+- Wischerblätter vorn erneuert (Teile)                             34,90
+- Motoröl 5W-30, 4,8 l                                             71,52
+- Ölfilter, Luftfilter, Innenraumfilter                            88,40
+- Vorbereitung und Vorführung zur Hauptuntersuchung               39,00
+- HU-Gebühr (durchlaufender Posten, Prüfstelle)                   147,00
+                                                          ------------
+Summe netto                                                       738,82
+MwSt 19 %                                                         140,38
+Gesamt                                                            879,20 €
+
+Bezahlt mit EC-Karte am 19.08.2026. Danke für Ihren Besuch!
+Empfehlung: Bremsbeläge hinten bei nächster Inspektion prüfen (ca. 3 mm).

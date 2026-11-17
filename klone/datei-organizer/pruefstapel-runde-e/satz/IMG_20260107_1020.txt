@@ -1,0 +1,32 @@
+# Beispiel Gesundheitskasse
+Beispiel Gesundheitskasse · Am Kassenplatz 2 · 67800 Exempelheim
+
+Herrn Heinrich Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Versichertennummer: H000000000
+Datum: 07.01.2026
+
+# Befreiung von Zuzahlungen für das Jahr 2026
+
+Sehr geehrter Herr Vogelsang,
+
+Sie haben die Belastungsgrenze von 1 % Ihrer Bruttoeinnahmen (chronisch krank) für 2026 im Voraus gezahlt. Sie sind daher vom 01.01.2026 bis 31.12.2026 von Zuzahlungen befreit.
+
+Ihr Befreiungsausweis liegt bei. Bitte zeigen Sie ihn in Apotheken, Praxen und Sanitätshäusern vor.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 07.01.2026
+
+@spalten 2
+## Belastungsgrenze
+2 % der jährlichen Bruttoeinnahmen, bei chronischer Erkrankung 1 %.
+
+## Was gilt als Zuzahlung
+Zuzahlungen zu Arzneimitteln, Heilmitteln, Hilfsmitteln, Krankenhaus und Fahrkosten.
+
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats Widerspruch erhoben werden.
+
+@ende

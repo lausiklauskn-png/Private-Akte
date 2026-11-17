@@ -1,0 +1,23 @@
+WAHLBENACHRICHTIGUNG
+für die Wahl zum Landtag von Beispielland am Sonntag, 07. März 2027
+
+Absender: Stadt Beispielstadt – Der Gemeindewahlleiter
+Frau Sabine Beispielmann
+Musterweg 12
+12345 Beispielstadt
+
+Wählerverzeichnis Nr. 0412            Wahlbezirk 017            Wahlkreis 33 Beispielstadt-Ost
+
+Ihr Wahlraum: Grundschule am Erfundenen Park, Turnhalle, Parkweg 5 (barrierefrei)
+Wahlzeit: 8.00 bis 18.00 Uhr
+
+Bitte bringen Sie diese Benachrichtigung und Ihren Personalausweis oder Reisepass mit.
+
+Sie können auch durch Briefwahl wählen. Den Antrag auf Erteilung eines Wahlscheins finden Sie auf der Rückseite
+oder online unter wahlen.beispielstadt.example (QR-Code). Der Antrag muss bis Freitag vor der Wahl, 18 Uhr,
+bei der Gemeinde eingegangen sein.
+
+--- Rückseite: Antrag auf Erteilung eines Wahlscheins ---
+[ ] Bitte senden Sie den Wahlschein und die Briefwahlunterlagen an meine Wohnanschrift.
+[ ] an folgende abweichende Anschrift: ______________________
+Datum, Unterschrift: ______________________

@@ -1,0 +1,10 @@
+Sparkasse Beispielstadt-Nord - Kontoauszug 09/2026
+Eheleute Youssef und Leila Amrani - Giro DE00 0000 0000 0000 0000 00
+
+01.09.  Gehalt Klinikum                      +2.214,60
+01.09.  Miete Lindenhöhe-Ring 14             -  820,00
+05.09.  Gehalt Beispielbau Nord              +2.389,00
+09.09.  Finanzamt Beispielstadt-Nord, ESt-Erstattung 2025   +1.136,00
+12.09.  Stadtwerke Beispiel Abschlag          -  118,00
+19.09.  Supermarkt Kartenzahlung              -   76,42
+Saldo 30.09.                                  +3.402,18

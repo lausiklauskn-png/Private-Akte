@@ -1,0 +1,9 @@
+Sparkasse Heide-Elbe                         Kontoauszug 3/2026  Blatt 2
+Geschäftsgirokonto DE00 0000 0000 0000 0000 00  Teekontor Lindenblatt
+
+Buchungstag 02.03.2026  Wert 02.03.2026
+DAUERAUFTRAG
+Empfängcr: Marit Sandvoss (Privatkonto)
+IBAN: DE00 0000 0000 0000 0000 77
+Verwendungszweck: Privatentnahme Maerz 2026 - Lebensunterhalt
+                                                    Betrag  -1.800,00 EUR

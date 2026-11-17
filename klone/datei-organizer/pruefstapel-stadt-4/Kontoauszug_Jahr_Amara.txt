@@ -1,0 +1,4 @@
+Rheinufer Direktbank Beispiel AG, Jahreskontoauszug 2026
+Kunden-Nr. 0000000; IBAN DE00 0000 0000 0000 0000 00
+Zinsen Tagesgeld 2026: 71,20 EUR. Kapitalertragsteuer 0,00 EUR (Freistellungsauftrag).
+Endsaldo 31.12.2026: 6.204,03 EUR.

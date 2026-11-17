@@ -1,0 +1,18 @@
+WELLENREITER COSMETICS AG
+Kundenservice Friseur · Postfach 00 00 · 64201 Darmstadt
+
+Belegart: Faktra            Beleg 4181627237
+Fakturadatum: 2026-03-17       Debitor 772118
+
+Warenempfänger
+Haarstudio Federleicht · Marktgasse 7 · 37154 Northeim
+
+Materlal        Text                              Mg ME    Nettowert
+8001-2244       Tönungsschaum Silber 200ml        24 ST      124,73
+8001-7310       Entwickler 9% 1000ml               6 ST       48,57
+
+Summe Positionen                                            173,30
+MwSt 19,00 %                                                 32,93
+Fakturabetrag EUR                                           206,23
+
+Zahlungsbedingung: 30 Tage netto, 8 Tage 2 % Skonto

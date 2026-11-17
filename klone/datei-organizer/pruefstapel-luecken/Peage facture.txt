@@ -1,0 +1,26 @@
+Von: facturation@peage-exemple.example
+An: mara.kesselbrink@mail-beispiel.example
+Datum: 29.10.2026 08:01
+Betreff: Votre facture de péage en flux libre / Ihre Mautrechnung (Free-Flow) Nr. FL-2026-773190
+
+Bonjour, guten Tag,
+
+Sie haben am 26.10.2026 die Autobahnstrecke „A00 Exemple – Route des Lacs“
+mit freiem Durchfahrtssystem (ohne Schranke) befahren.
+
+Kennzeichen: BSP-MK 55 (D)
+Durchfahrten:
+  26.10.2026 10:14  Portique Exemple-Ouest   Klasse 1    6,40 €
+  26.10.2026 17:52  Portique Exemple-Ouest   Klasse 1    6,40 €
+                                         Gesamt         12,80 €
+
+Da innerhalb von 72 Stunden keine Zahlung auf unserer Website erfolgt ist,
+erhalten Sie diese Rechnung. Bitte zahlen Sie innerhalb von 30 Tagen,
+spätestens am 29.11.2026, unter www.peage-exemple.example/payer
+(Rechnungsnummer FL-2026-773190).
+
+Erfolgt keine Zahlung, wird ein Zuschlag von 90,00 € erhoben und die
+Forderung an unseren Inkassodienstleister übergeben.
+
+Cordialement / Mit freundlichen Grüßen
+Service Clients – Péage Exemple SA (erfunden)

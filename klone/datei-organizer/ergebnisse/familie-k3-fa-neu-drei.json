@@ -1,0 +1,624 @@
+{
+ "stapel": "/home/user/datei-organizer/pruefstapel-familie-k3",
+ "text": "/home/user/datei-organizer/pruefstapel-familie-k3",
+ "fa": "/home/user/fa-neu",
+ "n": 150,
+ "bereich": [
+  125,
+  150
+ ],
+ "absender": [
+  146,
+  150
+ ],
+ "titelMitAbsender": 146,
+ "titel": 149,
+ "fehler": [
+  "Beileid Familie Röder.txt: „–“ statt „Hannelore und Kurt Röder“",
+  "Danksagung Entwurf.txt: „DANKSAGUNG“ statt „Sabine Brandauer“",
+  "IMG-20260801-WA0004.txt: „POSTKARTE“ statt „Jonas“",
+  "IMG_20260324_1915.txt: „In stiller Trauer“ statt „Kolleginnen und Kollegen der Kessler Verpackungen GmbH“"
+ ],
+ "je": {
+  "20261006_103512.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Apotheke Zuzahlung Mama.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Arztbrief Kardiologie Mama.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Aurelia Leistungsabrechnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "BAföG Bescheid neu.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "BAföG Weiterförderung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Bausparvertrag Erben.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Beileid Familie Röder.txt": {
+   "bereich": false,
+   "absender": false
+  },
+  "Bestattungsauftrag Frommelt.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Blitzfon Vertrag Lena.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Dachrinne Pfaff Rechnung.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Danksagung Entwurf.txt": {
+   "bereich": false,
+   "absender": false
+  },
+  "Dokument (1).txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Dokument (12).txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Dokument (14).txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Dokument (3).txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Dokument (5).txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Dokument (7).txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Dokument (9).txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Eingewöhnung Kita Pusteblume.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Einkommensteuerbescheid 2025.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Elternsprechtag November.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Entrümpelung Angebot.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Erbschaftsteuer Aufforderung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Erbschein.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Ferienfreizeit Jonas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Ferienhaus Ostsee Buchung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "FitLine Mahnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "FlimmerBox Preisänderung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Friedhof Grabstelle Gebühr.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Gehaltsabrechnung Oktober 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Gerichtskosten Erbschein.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Grundbuch Berichtigung.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Grundsteuer 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Haftpflicht Umstellung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Halbjahreszeugnis Jonas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Halbwaisenrente Lena Nachweis.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Handy Reparatur Jonas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Hausnotruf Vertrag Mama.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Hausrat Beitrag 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Heimbesichtigung Abendsonne.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Heimvertrag Lindenhain.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Heizungswartung Termin.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Hochzeit Einladung Fiedler.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "IMG-20260801-WA0004.txt": {
+   "bereich": true,
+   "absender": false
+  },
+  "IMG_20260121_1702.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260218_0733.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "IMG_20260305_1744.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260324_1915.txt": {
+   "bereich": false,
+   "absender": false
+  },
+  "IMG_20260414_0822.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260617_0930.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260715_1130.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260721_2210.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20260914_1603.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20261013_1640.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20261102_1210.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "IMG_20261109_0802.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Immatrikulationsbescheinigung SoSe 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kaufvertrag Kawasaki.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kfz Umschreibung Termin.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kfz Versicherung Touran neu.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kfz-Steuer Bescheid Touran.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kieferorthopädie Rechnung Q1.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kinderbett Möbelwelt.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kita Ermäßigung Unterlagen.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kita Gebühren 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Klassenfahrt 7b Anmeldung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Klassenfahrt Abrechnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kontoauszug Juni 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kündigung Handy Thomas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Kündigung Wohnung Mama.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Laptop Lena Rechnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Lebensversicherung Leistungsantrag.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Lindenhain Aufnahme Termine.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Lindenhain Rechnung Oktober.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Lindwurm BKK Mitgliedschaft Lena.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Lohnabrechnung Januar.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Merkur Direktbank Nachlass.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Merkur Kontoauflösung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Mia Kita Ermäßigung Bescheid.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Mobilis Kinderunfall Angebot.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Motorrad Abmeldung.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Motorrad Versicherung 2026.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Nachlassgericht Testamentseröffnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Nebenkosten 2025 Mama.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Neues Dokument.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Notar Kostenrechnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Passtermin Mia.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Pflegedienst Rechnung Mai.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Pflegegrad 4 Bescheid.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Pflegegrad Gertrud Bescheid.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Rasenmäher Rechnung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Rechtsschutz Kündigung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Rentenanpassung Mama 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Rundfunkbeitrag Ummeldung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan 3.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0003.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0005.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0011.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0015.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0019.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Scan_0023.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0024.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0027.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0029.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0031.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0034.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Scan_0039.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Scan_0041.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0044.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0048.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0052.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0056.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0060.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0063.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0066.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Scan_0071.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0077.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0081.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0085.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Scan_0088.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Schornsteinfeger Feuerstättenschau.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Schulbuch Eigenanteil.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Semesterbeitrag WiSe 2026.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Seniorenstift Warteliste.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Sozialamt Hilfe zur Pflege.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Sparkasse Kontoumschreibung Termin.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Stadtwerke Vertragsübernahme.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Steinmetz Grabstein Anzahlung.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Sterbeurkunde Thomas.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Steuer-ID Lena.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "Steuerklasse Witwe.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "TSV Austritt Thomas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "TSV Jahreshauptversammlung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "TSV Jugend Beitrag Jonas.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "U7a Bescheinigung Mia.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "U7a Einladung Mia.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Unbenannt.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Voltaris Wechselbonus.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Vorsorgevollmacht Mama.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Waschmaschine Garantie Techniker.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Werbung Grünwerk Frühjahr.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Werkstudentin Abrechnung Mai.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Witwenrente Unterlagen.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Wohnungsabnahme Termin.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Zahnspange Jonas Kostenplan.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Zeitung Abo Umschreibung.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "doc00412.txt": {
+   "bereich": false,
+   "absender": true
+  },
+  "scan0001.txt": {
+   "bereich": true,
+   "absender": true
+  },
+  "Änderungsvertrag Arbeitszeit.txt": {
+   "bereich": true,
+   "absender": true
+  }
+ }
+}

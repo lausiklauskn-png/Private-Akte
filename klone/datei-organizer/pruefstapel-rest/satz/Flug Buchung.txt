@@ -1,0 +1,18 @@
+Von: Beispiel Air <booking@beispielair.example>
+An: julia.okafor-lenz@mail.example
+Gesendet: Fr 07.03.2025 21:14
+Betreff: Buchungsbestätigung XK7Q2P
+Anlagen: Rechnung_XK7Q2P.pdf
+
+Vielen Dank für Ihre Buchung!
+
+|Flug|Datum|Strecke|
+
+|BX 412|14.06.2025|Beispielhafen – Lissabon|
+
+|BX 413|28.06.2025|Lissabon – Beispielhafen|
+
+Passagiere: Julia Okafor-Lenz, Daniel Lenz
+
+Gesamtpreis: 612,40 EUR, bezahlt mit Kreditkarte.
+

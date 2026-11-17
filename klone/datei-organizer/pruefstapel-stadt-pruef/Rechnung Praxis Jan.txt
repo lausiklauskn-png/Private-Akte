@@ -1,0 +1,11 @@
+Hausarztpraxis Dr. med. Beispiel-Lenz
+Brunnenstraße 4 · 99999 Musterbach · Tel. 0000-210
+Patientennr. 00000
+
+Herrn Herbert Wiesnegger, Obere Dorfstraße 27, 99998 Musterbach-Kleeweiler
+Rechnung Nr. 2026-0114 vom 02.02.2026 (Privatleistung: Hausbesuch, Fadenentfernung, Attest)
+Hausbesuch (GOÄ 50)            31,56 €
+Fadenentfernung (GOÄ 2084)       9,44 €
+Attest Pflegebedürftigkeit      20,00 €
+Gesamt                          61,00 €
+Bitte überweisen Sie bis zum 20.02.2026 auf DE00 0000 0000 0000 0000 00.

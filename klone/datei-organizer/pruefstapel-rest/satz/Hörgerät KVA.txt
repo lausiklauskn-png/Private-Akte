@@ -1,0 +1,26 @@
+# Hörakustik Beispiel-Ohrmann
+Marktstr. 8 · 37999 Musterau
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Kunden-Nr.: HA-1902
+Rechnung: 2025-0588
+Datum: 01.07.2025
+
+# Rechnung Hörsystemversorgung beidseitig
+
+|Pos.|Artikel|Menge|Betrag|
+|1|Hörsystem Beispiel Comfort 5 RIC|2|3.180,00 EUR|
+|2|Anpassung und Service|1|0,00 EUR|
+|3|Ladestation|1|149,00 EUR|
+||Festbetrag Krankenkasse||-1.460,00 EUR|
+||gesetzliche Zuzahlung||20,00 EUR|
+||Ihr Eigenanteil||1.889,00 EUR|
+
+Bitte überweisen Sie Ihren Eigenanteil bis 31.07.2025. Garantie: 4 Jahre auf die Hörsysteme.
+
+Mit freundlichen Grüßen
+@unterschrift

@@ -1,0 +1,21 @@
+Kfz-Meisterwerkstatt Behrends & Tjarks
+Gewerbering 12
+26999 Wesselhaven
+USt-IdNr. DE000000000
+
+Radwerk Tidemann
+Inh. Maren Tidemann
+Kornspeicherweg 14
+26999 Wesselhaven
+
+Rechnung Nr. W-260225-04                    Datum: 25.02.2026
+Fahrzeug: Lieferwagen Norvik Cargo 1.6, WSH-RT 000, km-Stand 118.402
+
+Pos  Bezeichnung                              Menge   Einzelpreis      Gesamt
+1    Bremsscheiben und Beläge Vorderachse erneuert     1        189,00      189,00
+2    Arbeitslohn                                  2         74,00      148,00
+3    Bremsflüssigkeit wechseln                    1         49,00       49,00
+------------------------------------------------------------------------------
+Nettobetrag                                                     386,00 EUR
+zzgl. 19 % USt                                                   73,34 EUR
+Rechnungsbetrag                                                 459,34 EUR

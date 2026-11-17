@@ -1,0 +1,7 @@
+Beispiel Kreditkarten AG - Abrechnung Oktober 2026
+Karte **** **** **** 0000, Arne Petersen
+02.10. Bootsbedarf Beispiel        184,90
+11.10. Tankstelle Nordweg           71,20
+17.10. SHOPCLOUD*MEDIA 8800 Dublin  49,99
+25.10. Baumarkt Kaimauer           212,35
+Gesamtbetrag 518,44 EUR. Einzug per Lastschrift am 12.11.2026.

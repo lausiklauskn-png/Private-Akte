@@ -1,0 +1,20 @@
+Von: Autohaus Rheinblick Service <service@rheinblick-beispiel.example>
+An: daniel.lehnert@mail-beispiel.example
+Datum: 02.03.2026 17:55
+Betreff: Terminbestätigung Werkstatt – BSP-DL 2040E
+
+Sehr geehrter Herr Lehnert,
+
+hiermit bestätigen wir Ihren Werkstatttermin:
+
+Donnerstag, 12.03.2026, Annahme 7:30 Uhr
+Leistung: Jahresservice, Software-Update
+voraussichtliche Fertigstellung: ca. 15:00 Uhr
+Ersatzmobilität: E-Roller-Leihgabe reserviert (bitte Führerschein mitbringen)
+
+Bitte bringen Sie das Fahrzeug mit mindestens 30 % Ladestand und das
+Ladekabel mit. Falls Sie den Termin nicht wahrnehmen können, sagen Sie
+bitte bis 24 Stunden vorher ab.
+
+Ihr Serviceteam
+Autohaus Rheinblick Beispiel · Gewerbering 12 · 99905 Musterhausen am Rhein

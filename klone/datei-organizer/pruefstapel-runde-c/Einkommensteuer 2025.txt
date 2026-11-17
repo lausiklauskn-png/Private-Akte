@@ -1,0 +1,31 @@
+Finanzamt Talheim-Beispiel
+Steuerplatz 1 · 45678 Talheim-Beispiel
+
+Herrn Markus Rebmann
+Frau Katrin Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Steuernummer: 052/317/40021
+Datum: 11.08.2026
+
+Bescheid für 2025 über Einkommensteuer und Vorauszahlungen
+
+
+
+Einkünfte aus Gewerbebetrieb Ehefrau        3.912,00 €
+Einkünfte aus nichtselbständiger Arbeit     69.880,00 €
+festgesetzte Einkommensteuer               15.204,00 €
+abzüglich Lohnsteuer                      -15.611,00 €
+Erstattung                                   -407,00 €
+
+Der Erstattungsbetrag wird auf Ihr Konto bei der Direktbank Beispiel AG überwiesen.
+
+Vorauszahlungen: Wegen der gewerblichen Einkünfte werden ab dem 3. Quartal 2026 vierteljährliche Vorauszahlungen von je 290,00 € festgesetzt. Die erste Vorauszahlung ist am 10.09.2026 fällig. Da kein SEPA-Mandat vorliegt, überweisen Sie den Betrag bitte unter Angabe der Steuernummer.
+
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Einspruch eingelegt werden.
+
+Ihr Finanzamt
+
+
+Finanzamt Talheim-Beispiel · Steuerplatz 1 · 45678 Talheim-Beispiel · IBAN DE00 0000 0000 0000 0000 00

@@ -1,0 +1,11 @@
+elektro-teile24.example – Voltmarkt Handels GmbH
+Rechnung VM-5541902         Datum 24.02.2026    Zahlart: Kreditkarte
+
+Rechnungsadresse: Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos
+
+Artikel                                           Anz.    Netto
+Kreuzlinienlaser gruen "Level 360-3" mit Stativ     1    412,00
+
+Zwischensumme       412,00 EUR
+MwSt. 19 %          78,28 EUR
+Gesamtsumme         490,28 EUR

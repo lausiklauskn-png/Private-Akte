@@ -1,0 +1,49 @@
+Beispiel Direktbank AG
+Postfach 1000 · 60000 Beispielfurt
+
+Kontoauszug
+Girokonto Aylin Demir
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 7/2025 · Blatt 1 von 1 · Zeitraum 01.11.2025 – 30.11.2025
+
+Frau Aylin Demir
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Alter Kontostand vom 01.11.2025: 1.188,73 EUR
+
+Buchungstag   Valuta   Vorgang / Verwendungszweck   Betrag EUR
+01.11.   01.11.   Miete Kastanienallee 7 Beispiel Hausverwaltung   -1.240,00
+02.11.   02.11.   Mietanteil Tobias Reuter   +390,00
+03.11.   03.11.   Mietanteil Konstantin Wolf   +390,00
+03.11.   03.11.   Lastschrift Beispiel-Markt Filiale 0412   -85,71
+04.11.   04.11.   Kartenzahlung Bäckerei Beispielkorn   -12,22
+04.11.   04.11.   Kartenzahlung Frischkauf Exempel   -28,44
+05.11.   05.11.   Beispielnetz Breitband Internet   -42,01
+05.11.   05.11.   Kartenzahlung Frischkauf Exempel   -97,62
+07.11.   07.11.   Lastschrift Beispiel-Markt Filiale 0412   -55,79
+08.11.   08.11.   Lastschrift Muster Drogerie   -34,10
+11.11.   11.11.   Bargeldauszahlung Geldautomat   -77,06
+13.11.   13.11.   Bargeldauszahlung Geldautomat   -53,77
+14.11.   14.11.   Bargeldauszahlung Geldautomat   -63,04
+15.11.   15.11.   Beispiel Energie Abschlag Strom   -82,00
+15.11.   15.11.   Rundfunkbeitrag Beitragsservice   -55,08
+16.11.   16.11.   Kartenzahlung Frischkauf Exempel   -81,40
+16.11.   16.11.   Lastschrift Beispiel-Markt Filiale 0412   -81,29
+17.11.   17.11.   Lastschrift Muster Drogerie   -27,76
+20.11.   20.11.   Lastschrift Muster Drogerie   -29,23
+20.11.   20.11.   Bargeldauszahlung Geldautomat   -115,76
+22.11.   22.11.   Bargeldauszahlung Geldautomat   -86,83
+22.11.   22.11.   Kartenzahlung Frischkauf Exempel   -80,76
+24.11.   24.11.   Kartenzahlung Bäckerei Beispielkorn   -4,13
+28.11.   28.11.   Gehalt 11/2025 Beispiel-Klinikum Musterhausen   +2.618,40
+28.11.   28.11.   Sparplan Beispiel ETF   -150,00
+29.11.   29.11.   Kartenzahlung Bäckerei Beispielkorn   -6,68
+29.11.   29.11.   Kartenzahlung Bäckerei Beispielkorn   -12,07
+29.11.   29.11.   Lastschrift Muster Drogerie   -14,03
+
+Neuer Kontostand vom 30.11.2025: 1.970,35 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+Beispiel Direktbank AG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

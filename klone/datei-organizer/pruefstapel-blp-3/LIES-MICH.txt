@@ -1,0 +1,47 @@
+Prüfstapel 3 – erfundene Buchhaltungsbelege (Texte wie nach einer Texterkennung)
+
+Betrieb: Blumenwerkstatt Harkort, Inh. Mareike Harkort, Kirchgasse 7, 37299 Weidenrode
+(Blumenladen: Schnittblumen, Hochzeits- und Trauerfloristik, Raumbegrünung; zwei Angestellte, ein Lieferwagen).
+Alles ist erfunden: Firmen, Personen, Orte, Nummern. IBAN "DE00 0000 …", USt-IdNr. "DE0000000xx".
+Belegjahr 2026, drei Belege aus Dezember 2025.
+
+Inhalt: 120 Belege (*.txt), ERWARTUNG.json (Soll-Werte), diese Datei.
+Die Dateinamen sagen nichts über den Inhalt; ein Datum im Dateinamen ist das Scan-/Fotodatum
+(0–9 Tage nach dem Belegdatum), nicht das Belegdatum.
+
+Konventionen der Soll-Werte
+- datum   = Belegdatum (Rechnungs-, Bon-, Bescheid-, Abrechnungsdatum), nie Liefer-/Leistungs-/Fälligkeitsdatum.
+            Bahnfahrkarte: Buchungsdatum. Kontoabschluss der Bank: Abschlussdatum ("per"), nicht das Druckdatum.
+            Hotelrechnung: Rechnungsdatum (Abreisetag). Mahnung: Datum der Mahnung, nicht der Ursprungsrechnung.
+- betrag  = zu zahlender Bruttobetrag, deutsch geschrieben, steht wörtlich im Text.
+            Lohnabrechnung: Auszahlungsbetrag. Jahresrechnung Strom: Nachzahlung (nicht der Jahres-Bruttobetrag).
+            Schlussrechnung mit Anzahlung: Restbetrag. Mahnung: Gesamtforderung inkl. Mahnkosten.
+            Kartenterminal-Abrechnung: Summe der Entgelte (nicht Umsatz oder Auszahlung). Dauermietrechnung: Monatsmiete.
+- ust     = 19 oder 7; bei gemischten Belegen der Satz mit dem größeren Betrag (ist der steuerfreie Teil der
+            größte, dann 0). 0 = steuerfrei / nicht steuerbar / keine Umsatzsteuer ausgewiesen (auch
+            Versicherungen: dort steht "Versicherungsteuer 19 %", das ist keine Umsatzsteuer; Reverse-Charge-
+            Rechnungen aus dem Ausland; Kleinunternehmer § 19; Gebühren- und Beitragsbescheide; Bankentgelte).
+            null = Lohnabrechnung, Privatentnahme/-einlage, Eigenbeleg (Reisekostenabrechnung der Angestellten).
+- richtung = einnahme bei eigenen Ausgangsrechnungen, eigener Mahnung, Z-Bericht der Ladenkasse,
+            Provisionsgutschriften, Privateinlagen und bei der Lieferanten-Gutschrift (Rückerstattung); sonst ausgabe.
+- aussteller = Name wie im Text. Bei Ausgangsrechnungen, Lohnabrechnungen und Eigenbelegen der Betrieb selbst.
+- konto   = Sicht der Buchhaltung des Betriebs. Festlegungen in Zweifelsfällen:
+            Schnittblumen/Pflanzen aus den Niederlanden (innergem. Erwerb, 0 % ausgewiesen) -> 3300 nach Warenart.
+            Lieferanten-Gutschrift und Lieferanten-Mahnung -> Konto der Ursprungsrechnung (3400).
+            Eigene Mahnung an einen Kunden -> Erlöskonto der Ursprungsrechnung (8300).
+            Präsentkorb über 50 EUR an einen Geschäftspartner -> 4635, kleine Kundengeschenke -> 4630.
+            Hotel/Bahn für die Angestellte -> 4660, für die Inhaberin -> 4670 (Name des Gastes/Reisenden steht im Beleg).
+            Baumarkt-, Software-, Abfall-, Rundfunk-, Berufskleidungsbelege -> 4980 bzw. wie in ERWARTUNG.json.
+            Steuerberater (Buchführung/Lohn) -> 4955; Anwalt und Betriebsberater -> 4950.
+            Kartenterminal: Entgelte und Gerätemiete -> 4970. Tippgeberprovision der Versicherung -> 8500 (steuerfrei, ust 0).
+            Kassensystem, Ladentheke -> 0410; Kühlzelle, Bindetisch -> 0400; Drucker, Tablet, Heckenschere/Sackkarre -> 0480.
+            Hochzeit: Abschlagsrechnung über Dekorationsleistung -> 8400; Schlussrechnung überwiegend Blumen -> 8300.
+
+Besonderheiten
+- Unterschiedliche Aufmachung je Aussteller, unterschiedliche Datums- und Betragsschreibweisen
+  (14.03.2026, 14.03.26, 14. März 2026, 2026-03-14, 14-03-2026, 14.3.2026, englisch "Mar 2, 2026").
+- Viele Belege tragen mehrere Daten (Liefer-/Leistungsdatum, Zeitraum, Fälligkeit, Druckdatum, Buchungsdatum).
+- 23 Belege enthalten je einen OCR-Tippfehler in einem Wort (nie in Beträgen, Daten, Ausstellernamen).
+- Gemischte Steuersätze: Großmarkt (7/19), Bewirtung (Speisen 7 %, Getränke 19 %), Hotel (7/19),
+  Wasser/Abwasser (7 % + nicht steuerbar), Post (19 % + steuerfrei), eigene Rechnungen (7/19), Z-Bericht.
+- Lange Artikelbezeichnungen sind in Tabellenrechnungen teils abgeschnitten (wie bei schmalen Spalten).

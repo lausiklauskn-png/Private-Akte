@@ -1,0 +1,25 @@
+Gasversorgung Riedtal AG
+Lindenweg 46, 37994 Krummbach am Ried
+Kundenservice 0000 300
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnunq Gas
+Rg.-Nr. 4407320
+Rechnunqsdatum: 07.07.2026
+Verbrauchsstelle: Mühlgasse 7, Zähler-Nr. 0862142
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Arbeitspreis Erdgas 4136 kWh à 0,1040     1    430,14     430,14
+  2  Grundpreis                   1     21,90      21,90
+
+Nettobetrag                                  452,04
+zzgl. 19 % USt                               85,89
+Endbetrag                                    537,93 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9284 36
+USt-IdNr. DE000000319

@@ -1,0 +1,22 @@
+Maschinenfabrik Beispiel GmbH
+
+Verdienstabrechnung Februar 2001
+
+Personal-Nr.: 1177
+Name: Pfannschmidt, Gerhard
+StKl.: III/0,5  Konf.: ev
+
+Lohnart   Bezeichnung   Betrag DM
+100   Monatslohn   5.240,00
+210   Schichtzulage   318,00
+300   Gesamtbrutto   5.558,00
+500   Lohnsteuer   -712,33
+510   Solidaritätszuschlag   -39,17
+520   Kirchensteuer   -64,10
+600   Krankenversicherung   -375,17
+610   Rentenversicherung   -531,82
+620   Arbeitslosenversicherung   -180,64
+630   Pflegeversicherung   -47,24
+900   Auszahlung   3.607,53
+
+Auszahlung auf Konto bei der Kreissparkasse Musterau.

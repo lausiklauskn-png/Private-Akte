@@ -1,0 +1,1880 @@
+{
+ "Abitur Prüfungsplan Leon.txt": {
+  "datei": "Abitur Prüfungsplan Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Abrechnung Aug25 Tim.txt": {
+  "datei": "Abrechnung Aug25 Tim.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Angebot Betriebshaftpflicht.txt": {
+  "datei": "Angebot Betriebshaftpflicht.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Anwalt Gegenseite.txt": {
+  "datei": "Anwalt Gegenseite.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Apotheke Bon.txt": {
+  "datei": "Apotheke Bon.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Arbeitsvertrag Werkstudentin.txt": {
+  "datei": "Arbeitsvertrag Werkstudentin.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Arztbrief Opa Klinik.txt": {
+  "datei": "Arztbrief Opa Klinik.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Ausbildungsverguetung Aug 2023.txt": {
+  "datei": "Ausbildungsverguetung Aug 2023.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Ausbildungsvertrag Jonas.txt": {
+  "datei": "Ausbildungsvertrag Jonas.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Ausbildungsvertrag Tim.txt": {
+  "datei": "Ausbildungsvertrag Tim.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Auszug Sparkasse Nov22.txt": {
+  "datei": "Auszug Sparkasse Nov22.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "BAfoeG Bescheid.txt": {
+  "datei": "BAfoeG Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "BAfoeG Formblatt5.txt": {
+  "datei": "BAfoeG Formblatt5.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "BG Aufnahme.txt": {
+  "datei": "BG Aufnahme.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "BKK Kuendigung Sabine.txt": {
+  "datei": "BKK Kuendigung Sabine.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Bank Vollmacht.txt": {
+  "datei": "Bank Vollmacht.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Baumarkt Bon Farbe.txt": {
+  "datei": "Baumarkt Bon Farbe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Baumpflege Rechnung.txt": {
+  "datei": "Baumpflege Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Befund Herz Opa.txt": {
+  "datei": "Befund Herz Opa.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Berufshaftpflicht Fotografin.txt": {
+  "datei": "Berufshaftpflicht Fotografin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Bescheid Pflegegrad 2.txt": {
+  "datei": "Bescheid Pflegegrad 2.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Bescheid Witwenrente.txt": {
+  "datei": "Bescheid Witwenrente.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Bestatter Rechnung.txt": {
+  "datei": "Bestatter Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Bestätigung Kündigung Hausverwaltung.txt": {
+  "datei": "Bestätigung Kündigung Hausverwaltung.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Bon lang Kaufhaus Einzug.txt": {
+  "datei": "Bon lang Kaufhaus Einzug.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 4
+ },
+ "Bon_Grossmarkt_lang.txt": {
+  "datei": "Bon_Grossmarkt_lang.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 5
+ },
+ "Brief Ersatzkasse Lea.txt": {
+  "datei": "Brief Ersatzkasse Lea.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Brief FA neue StNr.txt": {
+  "datei": "Brief FA neue StNr.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Brief KK Jonas.txt": {
+  "datei": "Brief KK Jonas.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Brief an Eltern Formblatt3.txt": {
+  "datei": "Brief an Eltern Formblatt3.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Brief an Marco Unterhalt.txt": {
+  "datei": "Brief an Marco Unterhalt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Buchung Ostsee.txt": {
+  "datei": "Buchung Ostsee.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Busreise Rechnung.txt": {
+  "datei": "Busreise Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Depot Heinz Abschluss.txt": {
+  "datei": "Depot Heinz Abschluss.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Direktbank Eroeffnung.txt": {
+  "datei": "Direktbank Eroeffnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "ESt 2024 Bescheid.txt": {
+  "datei": "ESt 2024 Bescheid.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "ESt Bescheid 2023 Weber.txt": {
+  "datei": "ESt Bescheid 2023 Weber.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Eheurkunde.txt": {
+  "datei": "Eheurkunde.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Einkommensteuer 2020.txt": {
+  "datei": "Einkommensteuer 2020.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Einkommensteuer 2021 Katrin.txt": {
+  "datei": "Einkommensteuer 2021 Katrin.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Einkommensteuer 2023.txt": {
+  "datei": "Einkommensteuer 2023.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Einkommensteuer 2025.txt": {
+  "datei": "Einkommensteuer 2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Einladung Seniorenkreis.txt": {
+  "datei": "Einladung Seniorenkreis.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Elternabend Finn.txt": {
+  "datei": "Elternabend Finn.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Elternbrief Klassenfahrt (2).txt": {
+  "datei": "Elternbrief Klassenfahrt (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Elternbrief Klassenfahrt.txt": {
+  "datei": "Elternbrief Klassenfahrt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Elternsprechtag Leon.txt": {
+  "datei": "Elternsprechtag Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Elternsprechtag.txt": {
+  "datei": "Elternsprechtag.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Entlassbrief.txt": {
+  "datei": "Entlassbrief.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "ErbSt Bescheid.txt": {
+  "datei": "ErbSt Bescheid.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Erbschaftsteuer Erklärung.txt": {
+  "datei": "Erbschaftsteuer Erklärung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Erbschein Antrag Termin.txt": {
+  "datei": "Erbschein Antrag Termin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Erbschein.txt": {
+  "datei": "Erbschein.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Erinnerung UStVA.txt": {
+  "datei": "Erinnerung UStVA.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Ersatzkasse Zusatzbeitrag.txt": {
+  "datei": "Ersatzkasse Zusatzbeitrag.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "FA Aufforderung Erklaerung.txt": {
+  "datei": "FA Aufforderung Erklaerung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "FA Erbschaftsteuer.txt": {
+  "datei": "FA Erbschaftsteuer.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Fahrschule Rechnung Leon.txt": {
+  "datei": "Fahrschule Rechnung Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Familienkasse Jonas 2025.txt": {
+  "datei": "Familienkasse Jonas 2025.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Familienkasse Lea Studium.txt": {
+  "datei": "Familienkasse Lea Studium.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Familienkasse Tim 18.txt": {
+  "datei": "Familienkasse Tim 18.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Ferienhaus Ostsee.txt": {
+  "datei": "Ferienhaus Ostsee.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Ferienlager Paul.txt": {
+  "datei": "Ferienlager Paul.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Finanzamt Fragebogen.txt": {
+  "datei": "Finanzamt Fragebogen.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Finanzamt neue Steuernummer.txt": {
+  "datei": "Finanzamt neue Steuernummer.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Fotograf Hochzeit Rechnung.txt": {
+  "datei": "Fotograf Hochzeit Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Fragebogen steuerliche Erfassung.txt": {
+  "datei": "Fragebogen steuerliche Erfassung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Fußball Verein Finn.txt": {
+  "datei": "Fußball Verein Finn.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Führerschein Antrag Leon.txt": {
+  "datei": "Führerschein Antrag Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Gartenbau Rechnung 2025.txt": {
+  "datei": "Gartenbau Rechnung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Gartenpflege Rechnung.txt": {
+  "datei": "Gartenpflege Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Gehalt Juli 2023 Katrin.txt": {
+  "datei": "Gehalt Juli 2023 Katrin.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Gemeindearchiv Fotos.txt": {
+  "datei": "Gemeindearchiv Fotos.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Genehmigung Hoergeraet.txt": {
+  "datei": "Genehmigung Hoergeraet.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Gewerbe.txt": {
+  "datei": "Gewerbe.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Gewerbeanmeldung Katrin.txt": {
+  "datei": "Gewerbeanmeldung Katrin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Girokonto Leon.txt": {
+  "datei": "Girokonto Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Grundsteuer 2021.txt": {
+  "datei": "Grundsteuer 2021.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Grundsteuer 2025.txt": {
+  "datei": "Grundsteuer 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Grundsteuerwert Bescheid.txt": {
+  "datei": "Grundsteuerwert Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Gruss Kirchengemeinde 80.txt": {
+  "datei": "Gruss Kirchengemeinde 80.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "HNO Befund.txt": {
+  "datei": "HNO Befund.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "HU Termin Motorrad.txt": {
+  "datei": "HU Termin Motorrad.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "HWK 2025.txt": {
+  "datei": "HWK 2025.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "HWK Beitrag 2022.txt": {
+  "datei": "HWK Beitrag 2022.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Haftpflicht Familie.txt": {
+  "datei": "Haftpflicht Familie.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Handy Tim Vertrag.txt": {
+  "datei": "Handy Tim Vertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Handyvertrag Jonas.txt": {
+  "datei": "Handyvertrag Jonas.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Handyvertrag Leon.txt": {
+  "datei": "Handyvertrag Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Hausnotruf Vertrag.txt": {
+  "datei": "Hausnotruf Vertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Hausrat Umzug.txt": {
+  "datei": "Hausrat Umzug.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Hausrat neue Adresse (2).txt": {
+  "datei": "Hausrat neue Adresse (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Hausrat neue Adresse.txt": {
+  "datei": "Hausrat neue Adresse.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Hecke Angebot.txt": {
+  "datei": "Hecke Angebot.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Hilfeplan 2025.txt": {
+  "datei": "Hilfeplan 2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Hilfeplan 2026.txt": {
+  "datei": "Hilfeplan 2026.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Hochzeitsreise.txt": {
+  "datei": "Hochzeitsreise.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Hoeherstufung PG3.txt": {
+  "datei": "Hoeherstufung PG3.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Hoerstudio KVA.txt": {
+  "datei": "Hoerstudio KVA.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Höherstufung Pflegegrad.txt": {
+  "datei": "Höherstufung Pflegegrad.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_2021_0312.txt": {
+  "datei": "IMG_2021_0312.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "IMG_2023_0615.txt": {
+  "datei": "IMG_2023_0615.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 3
+ },
+ "IMG_2023_0714.txt": {
+  "datei": "IMG_2023_0714.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "IMG_2023_1104.txt": {
+  "datei": "IMG_2023_1104.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3
+ },
+ "IMG_20240503_191455.txt": {
+  "datei": "IMG_20240503_191455.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 5
+ },
+ "IMG_2024_0720.txt": {
+  "datei": "IMG_2024_0720.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "IMG_2025_0614.txt": {
+  "datei": "IMG_2025_0614.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3
+ },
+ "IMG_2026_0131.txt": {
+  "datei": "IMG_2026_0131.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 3
+ },
+ "IMG_2026_0307.txt": {
+  "datei": "IMG_2026_0307.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "Ida Gymnasium Anmeldung.txt": {
+  "datei": "Ida Gymnasium Anmeldung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Inkasso Lea.txt": {
+  "datei": "Inkasso Lea.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Inkasso Netzwelle.txt": {
+  "datei": "Inkasso Netzwelle.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Inkasso Versand.txt": {
+  "datei": "Inkasso Versand.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Internet Vertrag.txt": {
+  "datei": "Internet Vertrag.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Jahressteuerbescheinigung Sparkasse 2023.txt": {
+  "datei": "Jahressteuerbescheinigung Sparkasse 2023.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Jugendamt Beistandschaft Ende.txt": {
+  "datei": "Jugendamt Beistandschaft Ende.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Jugendamt Hilfeplan Mia.txt": {
+  "datei": "Jugendamt Hilfeplan Mia.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Jugendamt Neudorf.txt": {
+  "datei": "Jugendamt Neudorf.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Jugendamt neue Bank.txt": {
+  "datei": "Jugendamt neue Bank.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "KFO Behandlungsplan.txt": {
+  "datei": "KFO Behandlungsplan.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kamera Rechnung.txt": {
+  "datei": "Kamera Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kanzlei Brief April.txt": {
+  "datei": "Kanzlei Brief April.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kassenbon App 19.09.txt": {
+  "datei": "Kassenbon App 19.09.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kassenwechsel Katrin.txt": {
+  "datei": "Kassenwechsel Katrin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Katrin Gehalt März 2021.txt": {
+  "datei": "Katrin Gehalt März 2021.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kaufbeleg Waschmaschine.txt": {
+  "datei": "Kaufbeleg Waschmaschine.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kaufvertrag Auto.txt": {
+  "datei": "Kaufvertrag Auto.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kaution zurueck.txt": {
+  "datei": "Kaution zurueck.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kfz Steuer Katrin.txt": {
+  "datei": "Kfz Steuer Katrin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kfz Steuer Transporter.txt": {
+  "datei": "Kfz Steuer Transporter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kfz Versicherung 2022.txt": {
+  "datei": "Kfz Versicherung 2022.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kfz Versicherung Adresse.txt": {
+  "datei": "Kfz Versicherung Adresse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kfz Versicherung Ende.txt": {
+  "datei": "Kfz Versicherung Ende.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kfz Versicherung Katrin Name.txt": {
+  "datei": "Kfz Versicherung Katrin Name.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kfz Versicherung Rebmann 2026.txt": {
+  "datei": "Kfz Versicherung Rebmann 2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kfz Versicherung Transporter 2022.txt": {
+  "datei": "Kfz Versicherung Transporter 2022.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kindergeld Ausbildung Jonas.txt": {
+  "datei": "Kindergeld Ausbildung Jonas.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kindergeld Leon 18.txt": {
+  "datei": "Kindergeld Leon 18.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kindergeld Pflegekind.txt": {
+  "datei": "Kindergeld Pflegekind.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kindergeld Weiterzahlung Tim.txt": {
+  "datei": "Kindergeld Weiterzahlung Tim.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Klassenfahrt Paul.txt": {
+  "datei": "Klassenfahrt Paul.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Kleingarten Kuendigung.txt": {
+  "datei": "Kleingarten Kuendigung.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Klinikum Aufnahme.txt": {
+  "datei": "Klinikum Aufnahme.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Konto Tim.txt": {
+  "datei": "Konto Tim.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kontoauszug Dez 2021.txt": {
+  "datei": "Kontoauszug Dez 2021.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kontoauszug Gemeinschaftskonto.txt": {
+  "datei": "Kontoauszug Gemeinschaftskonto.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Kontoauszug Oma Jan 2026.txt": {
+  "datei": "Kontoauszug Oma Jan 2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kontoauszug_2022_08.txt": {
+  "datei": "Kontoauszug_2022_08.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Krankenkasse Namensänderung.txt": {
+  "datei": "Krankenkasse Namensänderung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Krankenkasse Tim Mitglied.txt": {
+  "datei": "Krankenkasse Tim Mitglied.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Krankenversicherung Mia.txt": {
+  "datei": "Krankenversicherung Mia.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kreisarchiv Auskunft.txt": {
+  "datei": "Kreisarchiv Auskunft.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kuendigung Arbeitgeber.txt": {
+  "datei": "Kuendigung Arbeitgeber.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kuendigung Streaming.txt": {
+  "datei": "Kuendigung Streaming.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kuendigung Wohnung Ahornstrasse.txt": {
+  "datei": "Kuendigung Wohnung Ahornstrasse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kuendigung Wohnung Bestaetigung.txt": {
+  "datei": "Kuendigung Wohnung Bestaetigung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kündigung Haftpflicht Markus.txt": {
+  "datei": "Kündigung Haftpflicht Markus.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kündigung Handy Erwin.txt": {
+  "datei": "Kündigung Handy Erwin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kündigung IKK.txt": {
+  "datei": "Kündigung IKK.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kündigung Lindenweg.txt": {
+  "datei": "Kündigung Lindenweg.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kündigung Wohnung Katrin.txt": {
+  "datei": "Kündigung Wohnung Katrin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Kündigung Zeitung Opa.txt": {
+  "datei": "Kündigung Zeitung Opa.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Laptop Tim Garantie.txt": {
+  "datei": "Laptop Tim Garantie.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Lea Personalausweis.txt": {
+  "datei": "Lea Personalausweis.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Lebensversicherung Auszahlung.txt": {
+  "datei": "Lebensversicherung Auszahlung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Leon Klassenfahrt.txt": {
+  "datei": "Leon Klassenfahrt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Lohn_Maerz21.txt": {
+  "datei": "Lohn_Maerz21.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mahnung Beispielfunk.txt": {
+  "datei": "Mahnung Beispielfunk.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Mahnung Netzwelle.txt": {
+  "datei": "Mahnung Netzwelle.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Mahnung Telefon.txt": {
+  "datei": "Mahnung Telefon.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mahnung Versand.txt": {
+  "datei": "Mahnung Versand.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Mail Jana.txt": {
+  "datei": "Mail Jana.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Mail Jonas Steuer.txt": {
+  "datei": "Mail Jonas Steuer.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mail Kontowechsel.txt": {
+  "datei": "Mail Kontowechsel.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mail Lea Umzug.txt": {
+  "datei": "Mail Lea Umzug.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mail Papa Unterhalt.txt": {
+  "datei": "Mail Papa Unterhalt.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Mail Steuerbüro EÜR.txt": {
+  "datei": "Mail Steuerbüro EÜR.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Mail von Ingrid.txt": {
+  "datei": "Mail von Ingrid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Meldebestaetigung Beispielstadt.txt": {
+  "datei": "Meldebestaetigung Beispielstadt.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Meldebestaetigung Neudorf.txt": {
+  "datei": "Meldebestaetigung Neudorf.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Meldebestätigung Jonas.txt": {
+  "datei": "Meldebestätigung Jonas.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Meldebestätigung.txt": {
+  "datei": "Meldebestätigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Mietvertrag Jonas Kranichsfeld.txt": {
+  "datei": "Mietvertrag Jonas Kranichsfeld.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Mietvertrag Muehlgasse.txt": {
+  "datei": "Mietvertrag Muehlgasse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Mietvertrag neues Haus.txt": {
+  "datei": "Mietvertrag neues Haus.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Minijob Abrechnung Juni.txt": {
+  "datei": "Minijob Abrechnung Juni.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Motorrad Kaufvertrag.txt": {
+  "datei": "Motorrad Kaufvertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Motorrad Versicherung.txt": {
+  "datei": "Motorrad Versicherung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Nachlassgericht Testament.txt": {
+  "datei": "Nachlassgericht Testament.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Nachsendeauftrag (2).txt": {
+  "datei": "Nachsendeauftrag (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Nachsendeauftrag.txt": {
+  "datei": "Nachsendeauftrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Nachsendung Mama.txt": {
+  "datei": "Nachsendung Mama.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Namensänderung Bank.txt": {
+  "datei": "Namensänderung Bank.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Nebenkostenabrechnung 2025.txt": {
+  "datei": "Nebenkostenabrechnung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Neue Steuernummer Gewerbe.txt": {
+  "datei": "Neue Steuernummer Gewerbe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Notar Rechnung Vollmacht.txt": {
+  "datei": "Notar Rechnung Vollmacht.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Personalausweis neu.txt": {
+  "datei": "Personalausweis neu.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Pflegeberatung Oma.txt": {
+  "datei": "Pflegeberatung Oma.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Pflegedienst Rechnung Mai.txt": {
+  "datei": "Pflegedienst Rechnung Mai.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Pflegegeld Bescheid.txt": {
+  "datei": "Pflegegeld Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Pflegegrad Antrag Opa.txt": {
+  "datei": "Pflegegrad Antrag Opa.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Pflegegrad Bescheid.txt": {
+  "datei": "Pflegegrad Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Pflegekasse Adresse.txt": {
+  "datei": "Pflegekasse Adresse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Pflegekasse Begutachtung.txt": {
+  "datei": "Pflegekasse Begutachtung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Pflegekasse Sterbefall.txt": {
+  "datei": "Pflegekasse Sterbefall.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Pflegevertrag.txt": {
+  "datei": "Pflegevertrag.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "RE_2025-031_Ott.txt": {
+  "datei": "RE_2025-031_Ott.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Rasenmäher Gartencenter.txt": {
+  "datei": "Rasenmäher Gartencenter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Rechnung Hecke.txt": {
+  "datei": "Rechnung Hecke.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rechnung Hochzeit Neumann.txt": {
+  "datei": "Rechnung Hochzeit Neumann.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rechnung Hoerstudio.txt": {
+  "datei": "Rechnung Hoerstudio.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Rechnung Steuerberatung.txt": {
+  "datei": "Rechnung Steuerberatung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Reiseunterlagen Harz.txt": {
+  "datei": "Reiseunterlagen Harz.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Rente Witwe Bescheid.txt": {
+  "datei": "Rente Witwe Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rentenanpassung 2022.txt": {
+  "datei": "Rentenanpassung 2022.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Rentenanpassung Opa 2021.txt": {
+  "datei": "Rentenanpassung Opa 2021.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rentenbezugsmitteilung 2025.txt": {
+  "datei": "Rentenbezugsmitteilung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rentenbezugsmitteilung.txt": {
+  "datei": "Rentenbezugsmitteilung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Reparatur Spülmaschine.txt": {
+  "datei": "Reparatur Spülmaschine.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Reparatur Waschmaschine (2).txt": {
+  "datei": "Reparatur Waschmaschine (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Reparatur Waschmaschine.txt": {
+  "datei": "Reparatur Waschmaschine.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Rueckmeldung SoSe.txt": {
+  "datei": "Rueckmeldung SoSe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Rundfunk Lea.txt": {
+  "datei": "Rundfunk Lea.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "SV Ausweis.txt": {
+  "datei": "SV Ausweis.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Scheidungsbeschluss.txt": {
+  "datei": "Scheidungsbeschluss.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Schlussrechnung Stadtwerke.txt": {
+  "datei": "Schlussrechnung Stadtwerke.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Schlussrechnung Strom alt.txt": {
+  "datei": "Schlussrechnung Strom alt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Schule Anmeldung Mats.txt": {
+  "datei": "Schule Anmeldung Mats.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Schulwechsel Leon.txt": {
+  "datei": "Schulwechsel Leon.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Screenshot_eBon_Frischemarkt.txt": {
+  "datei": "Screenshot_eBon_Frischemarkt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Seniorenhandy Garantie.txt": {
+  "datei": "Seniorenhandy Garantie.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Sparkasse Kuendigung.txt": {
+  "datei": "Sparkasse Kuendigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Sparkasse Nachlass.txt": {
+  "datei": "Sparkasse Nachlass.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Stadtwerke Abschlag.txt": {
+  "datei": "Stadtwerke Abschlag.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Standesamt Anmeldung Eheschließung.txt": {
+  "datei": "Standesamt Anmeldung Eheschließung.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Standesamt Name.txt": {
+  "datei": "Standesamt Name.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Sterbeurkunde Opa.txt": {
+  "datei": "Sterbeurkunde Opa.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Steuer ID Jonas.txt": {
+  "datei": "Steuer ID Jonas.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Steuerbescheid Kraftrad.txt": {
+  "datei": "Steuerbescheid Kraftrad.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Steuerklasse.txt": {
+  "datei": "Steuerklasse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Steuerklassenwechsel.txt": {
+  "datei": "Steuerklassenwechsel.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Streaming Preiserhöhung.txt": {
+  "datei": "Streaming Preiserhöhung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Strom Anmeldung Bühlstrom.txt": {
+  "datei": "Strom Anmeldung Bühlstrom.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Strom Brunnwald 2021.txt": {
+  "datei": "Strom Brunnwald 2021.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Strom Schlussrechnung.txt": {
+  "datei": "Strom Schlussrechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Strom Talheim 2025.txt": {
+  "datei": "Strom Talheim 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Strom neu Vertragsbestaetigung.txt": {
+  "datei": "Strom neu Vertragsbestaetigung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Tankquittung.txt": {
+  "datei": "Tankquittung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Termin Perso.txt": {
+  "datei": "Termin Perso.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Treppenlift Werbung.txt": {
+  "datei": "Treppenlift Werbung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "USt Bescheid 2023.txt": {
+  "datei": "USt Bescheid 2023.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "UVS Bescheid.txt": {
+  "datei": "UVS Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "UVS Einstellung Tim.txt": {
+  "datei": "UVS Einstellung Tim.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Ummeldung Beispielhausen.txt": {
+  "datei": "Ummeldung Beispielhausen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Ummeldung Katrin Leon.txt": {
+  "datei": "Ummeldung Katrin Leon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Umzug Angebot.txt": {
+  "datei": "Umzug Angebot.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Umzugsfirma Rechnung.txt": {
+  "datei": "Umzugsfirma Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Unterhalt Leon Anpassung.txt": {
+  "datei": "Unterhalt Leon Anpassung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Unterhalt Leon Jugendamt.txt": {
+  "datei": "Unterhalt Leon Jugendamt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Vermieter Bestaetigung.txt": {
+  "datei": "Vermieter Bestaetigung.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Versicherung Beitragsanpassung.txt": {
+  "datei": "Versicherung Beitragsanpassung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Versicherung Motorrad.txt": {
+  "datei": "Versicherung Motorrad.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Vertrag Handy Lea.txt": {
+  "datei": "Vertrag Handy Lea.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Vertrag Wohnpark.txt": {
+  "datei": "Vertrag Wohnpark.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Volksbank Nachlass.txt": {
+  "datei": "Volksbank Nachlass.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Volljaehrigenunterhalt Tim.txt": {
+  "datei": "Volljaehrigenunterhalt Tim.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Vorsorgeregister.txt": {
+  "datei": "Vorsorgeregister.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Vorsorgevollmacht Hildegard.txt": {
+  "datei": "Vorsorgevollmacht Hildegard.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "WG Mietvertrag Lea.txt": {
+  "datei": "WG Mietvertrag Lea.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Waschmaschine Rechnung.txt": {
+  "datei": "Waschmaschine Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Wasserrechnung 2023.txt": {
+  "datei": "Wasserrechnung 2023.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Wasserschaden Hausrat.txt": {
+  "datei": "Wasserschaden Hausrat.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Werbung Kreditkarte.txt": {
+  "datei": "Werbung Kreditkarte.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Werbung Kueche.txt": {
+  "datei": "Werbung Kueche.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Werbung Moebel.txt": {
+  "datei": "Werbung Moebel.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Werbung Rechtsschutz.txt": {
+  "datei": "Werbung Rechtsschutz.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Werbung Solaranlage.txt": {
+  "datei": "Werbung Solaranlage.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Werkstatt Rechnung Juli.txt": {
+  "datei": "Werkstatt Rechnung Juli.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Werkstatt Transporter.txt": {
+  "datei": "Werkstatt Transporter.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Willkommen Ersatzkasse.txt": {
+  "datei": "Willkommen Ersatzkasse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Witwenrente Antrag.txt": {
+  "datei": "Witwenrente Antrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Wohnungsabnahme Brunnwald.txt": {
+  "datei": "Wohnungsabnahme Brunnwald.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Zahlungserinnerung KFO.txt": {
+  "datei": "Zahlungserinnerung KFO.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Zahnarzt Mats.txt": {
+  "datei": "Zahnarzt Mats.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Zahnarzt Rechnung Lea.txt": {
+  "datei": "Zahnarzt Rechnung Lea.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Zahnarzt.txt": {
+  "datei": "Zahnarzt.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Zahnspange Finn Kostenplan.txt": {
+  "datei": "Zahnspange Finn Kostenplan.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Zeugnis Abi Kopie.txt": {
+  "datei": "Zeugnis Abi Kopie.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Zulassung Uni.txt": {
+  "datei": "Zulassung Uni.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Zuzahlung Klinik.txt": {
+  "datei": "Zuzahlung Klinik.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "alt_Gesellenbrief.txt": {
+  "datei": "alt_Gesellenbrief.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "an Sparkasse Name.txt": {
+  "datei": "an Sparkasse Name.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "eBon 2026-02-07.txt": {
+  "datei": "eBon 2026-02-07.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "eBon Kaufhalle 23-11-2024.txt": {
+  "datei": "eBon Kaufhalle 23-11-2024.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "eBon_Beispielmarkt_App.txt": {
+  "datei": "eBon_Beispielmarkt_App.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "kassenzettel tanken.txt": {
+  "datei": "kassenzettel tanken.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0001.txt": {
+  "datei": "scan_0001.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "scan_0007.txt": {
+  "datei": "scan_0007.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "scan_0042 (2).txt": {
+  "datei": "scan_0042 (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "scan_0042.txt": {
+  "datei": "scan_0042.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ }
+}

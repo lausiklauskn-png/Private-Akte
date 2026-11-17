@@ -1,0 +1,7 @@
+portokasse-online.example | Aufladung Frankierguthaben
+Beleg AUF-26-0098812 vom 08.07.2026
+Konto: Kfz-Technik Brandhorst (werkstatt@brandhorst-kfz.example)
+
+Aufladung Portoguthaben für Internetmarken (Briefversand Rechnungen/Mahnungen)     50,00 EUR
+Zahlungsart: Lastschrift
+Kein Umsatzsteuerausweis – Wertzeichen für umsatzsteuerfreie Universaldienstleistungen.

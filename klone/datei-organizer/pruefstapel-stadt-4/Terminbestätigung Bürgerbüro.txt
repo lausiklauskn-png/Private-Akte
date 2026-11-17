@@ -1,0 +1,21 @@
+Von: Terminvergabe Stadt Musterhausen <termine@musterhausen-beispiel.invalid>
+An: amara.okonkwo@post-beispiel.invalid
+Datum: 08.04.2026 12:20
+Betreff: Terminbestätigung – An- / Ummeldung einer Wohnung
+
+Guten Tag Frau Okonkwo,
+
+Ihr Termin ist gebucht:
+
+  Dienstleistung:  Ummeldung innerhalb der Stadt (1 Person)
+  Datum / Uhrzeit: Dienstag, 21.04.2026, 08:40 Uhr
+  Ort:             Bürgerbüro, Rathausplatz 3, Erdgeschoss, Aufrufanzeige
+  Vorgangs-Nr.:    MW-26-04218
+
+Bitte mitbringen: Personalausweis oder Reisepass, Wohnungsgeberbestätigung.
+
+Termin absagen oder verschieben:
+https://termine.musterhausen-beispiel.invalid/storno?id=MW-26-04218
+
+Die Ummeldung ist gebührenfrei. Melden Sie sich innerhalb von zwei Wochen nach dem
+Einzug an.

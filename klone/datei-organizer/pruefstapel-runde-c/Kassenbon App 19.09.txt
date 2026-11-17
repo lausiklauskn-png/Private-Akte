@@ -1,0 +1,42 @@
+Kaufhalle Sonnental App
+Digitaler Kassenbon (eBon)
+Exportiert aus der App am 19.09.2026
+
+Kaufhalle Sonnental Beispiel
+Markt Talheim
+Gewerbestraße 12, 45678 Talheim-Beispiel
+
+Kundenkarte: **** 2207
+Einkauf vom 19.09.2026 um 09:41 Uhr
+
+Artikel                         Betrag  MwSt
+Kaeseplatte Fest.                  12,99  A
+Bauernbrot 1Kg                      3,49  A
+4 x Fischstaebchen 30St            17,96  A
+Mozzarella 125G                     0,85  A
+Eier Freiland 10St                  3,29  A
+Gouda Jung Scheiben                 1,99  A
+H-Milch 1,5% 1L                     1,09  A
+Orangensaft 1L                      1,99  A
+Kekse Butter                        1,49  A
+Butter 250G                         2,39  A
+Waschmittel 40Wl                    9,99  B
+Muesli Knusper                      2,89  A
+2 x Spinat Tk 750G                  3,18  A
+Spareribs Marin.                    8,99  A
+Becher 0,3L 50St                    2,99  B
+Salami Am Stueck                    3,89  A
+Toilettenpapier 10X                 4,99  B
+Kaffee Gemahlen 500G                6,99  A
+--------------------------------------------
+Gesamtsumme                        91,44   
+Bezahlt mit girocard               91,44   
+
+Gesammelte Bonuspunkte: 182
+Ihr Punktestand: 2688
+
+Filiale 118  Kasse 1  Bon 88412
+TSE: Seriennr. 3be51d09  Trans.-Nr. 3110025
+
+Ihr eBon wurde in der App unter Kassenbons abgelegt.
+Bitte beachten: Für Garantiefälle können Sie den eBon als PDF exportieren.

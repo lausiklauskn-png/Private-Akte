@@ -1,0 +1,43 @@
+{
+ "haushalte": [
+  {
+   "id": "h-lindner",
+   "name": "Lindner",
+   "personen": [
+    {
+     "vorname": "Horst",
+     "name": "Lindner",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Renate",
+     "name": "Lindner",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Lindner",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "Pkw Saalburg Tavio KRH-HL 412",
+    "Motorrad Zschopautal ZT 250 KRH-H 47"
+   ]
+  },
+  {
+   "id": "h-brettschneider",
+   "name": "Brettschneider",
+   "personen": [
+    {
+     "vorname": "Ingeborg",
+     "name": "Brettschneider",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [
+    "Pkw Saalburg Mino KRH-GB 118"
+   ]
+  }
+ ]
+}

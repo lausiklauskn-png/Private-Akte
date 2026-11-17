@@ -1,0 +1,16 @@
+Beispiel Kreditkarten AG · Kartenallee 1 · 29900 Beispielstadt
+
+Monatsabrechnung Oktober 2026
+Karteninhaber: Arne Petersen, Karte **** **** **** 0000
+
+Datum   Händler                                   Betrag
+02.10.  BAUMARKT DEICHSEITE BEISPIEL               84,20
+11.10.  TANKSTELLE AM SIEL BEISPIEL                71,30
+19.10.  GLUECKSREISEN*BSP  GR-0000                 249,00   ← von uns nicht bestellt?
+27.10.  KISTENKRAM VERSAND                          36,90
+Summe                                             441,40 EUR
+
+Der Betrag wird am 15.11.2026 von Ihrem Girokonto eingezogen.
+Fragen zu Umsätzen: 0000-778899.
+
+[Handnotiz Arne: Glücksreisen nie gebucht – reklamiert am 02.11.]

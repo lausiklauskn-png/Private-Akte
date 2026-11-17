@@ -1,0 +1,11 @@
+NEUE NACHRICHT
+Kundenportal Beispiel Energie Online
+
+Ihre Zahlung ist eingegangen
+
+Kunden-Nr.: 9100233
+Abschlag Strom 10/2025: 54,00 EUR
+Vielen Dank
+
+Nachricht-ID 868690
+Diese Nachricht wurde automatisch gesendet. Bitte nicht antworten.

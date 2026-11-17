@@ -1,0 +1,31 @@
+Beispiel Forderungsmanagement AG
+
+Beispiel Forderungsmanagement · Postfach 4040 · 45699 Beispielstadt
+
+Frau Nicole Weber
+Mühlgasse 4
+23458 Neudorf-Beispiel
+
+Aktenzeichen: BFM-24-0081776
+Gläubiger: Beispiel-Versand GmbH
+Datum: 11.11.2024
+
+Zahlungsaufforderung
+
+Sehr geehrte Frau Weber,
+
+die Beispiel-Versand GmbH hat uns die Forderung aus der Bestellung 4471-2209 übertragen.
+
+Hauptforderung  164,97 EUR
+Mahngebühr Gläubiger  2,50 EUR
+Inkassokosten  49,50 EUR
+Verzugszinsen  1,83 EUR
+Gesamt  218,80 EUR
+
+Zahlen Sie bitte bis zum 25.11.2024. Ratenzahlung ist nach Absprache möglich.
+
+Mit freundlichen Grüßen
+Beispiel Forderungsmanagement AG
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00

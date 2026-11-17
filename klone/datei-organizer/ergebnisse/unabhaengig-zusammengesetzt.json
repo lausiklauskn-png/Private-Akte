@@ -1,0 +1,417 @@
+{
+ "ordner": "/tmp/claude-0/-home-user/60903395-d850-557c-93be-429a97e424d9/scratchpad/blind-map",
+ "dateien": 150,
+ "organizer": {
+  "schriftstueck": {
+   "n": 150,
+   "ok": 92,
+   "falschSicher": 15,
+   "offen": 43
+  },
+  "kategorie": {
+   "n": 150,
+   "ok": 98,
+   "falschSicher": 13,
+   "offen": 39
+  },
+  "absender": {
+   "n": 150,
+   "ok": 81,
+   "falschSicher": 47,
+   "offen": 22
+  },
+  "person": {
+   "n": 143,
+   "ok": 96,
+   "falschSicher": 2,
+   "offen": 45
+  },
+  "frist": {
+   "n": 56,
+   "ok": 27,
+   "falschSicher": 4,
+   "offen": 25
+  },
+  "betrag": {
+   "n": 0,
+   "ok": 0,
+   "falschSicher": 0,
+   "offen": 0
+  }
+ },
+ "familienakte": {
+  "kat": {
+   "n": 150,
+   "ok": 54
+  },
+  "abs": {
+   "n": 150,
+   "ok": 54
+  },
+  "pruef": 150
+ },
+ "bookledgerpro": {
+  "betrag": {
+   "n": 7,
+   "ok": 0
+  },
+  "datum": {
+   "n": 7,
+   "ok": 0
+  }
+ },
+ "offenDateien": 128,
+ "jeHaushalt": {
+  "h-pahlke": {
+   "n": 25,
+   "ok": 18
+  },
+  "h-wiechmann": {
+   "n": 18,
+   "ok": 11
+  },
+  "h-ottens": {
+   "n": 30,
+   "ok": 23
+  },
+  "h-grube": {
+   "n": 25,
+   "ok": 13
+  },
+  "h-soerensen": {
+   "n": 14,
+   "ok": 9
+  },
+  "h-kluever": {
+   "n": 18,
+   "ok": 12
+  },
+  "h-basturk": {
+   "n": 20,
+   "ok": 12
+  }
+ },
+ "nutzer": {
+  "profil": "kein Lernen",
+  "antworten": 0,
+  "falscheAntworten": 0
+ },
+ "gehalt": {
+  "zeitraum": {
+   "n": 0,
+   "ok": 0
+  },
+  "brutto": {
+   "n": 0,
+   "ok": 0
+  },
+  "netto": {
+   "n": 0,
+   "ok": 0
+  },
+  "auszahlung": {
+   "n": 0,
+   "ok": 0
+  },
+  "lohnsteuer": {
+   "n": 0,
+   "ok": 0
+  },
+  "steuerklasse": {
+   "n": 0,
+   "ok": 0
+  },
+  "steuerId": {
+   "n": 0,
+   "ok": 0
+  },
+  "svNummer": {
+   "n": 0,
+   "ok": 0
+  },
+  "krankenkasse": {
+   "n": 0,
+   "ok": 0
+  }
+ },
+ "jeHaushaltFeld": {
+  "h-pahlke": {
+   "schriftstueck": {
+    "n": 25,
+    "ok": 21,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 25,
+    "ok": 18,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 25,
+    "ok": 12,
+    "falschSicher": 9
+   },
+   "person": {
+    "n": 23,
+    "ok": 15,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 12,
+    "ok": 6,
+    "falschSicher": 2
+   },
+   "offen": 18,
+   "dateien": 25
+  },
+  "h-wiechmann": {
+   "schriftstueck": {
+    "n": 18,
+    "ok": 11,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 18,
+    "ok": 11,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 18,
+    "ok": 10,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 17,
+    "ok": 14,
+    "falschSicher": 0
+   },
+   "offen": 14,
+   "dateien": 18,
+   "frist": {
+    "n": 5,
+    "ok": 3,
+    "falschSicher": 0
+   }
+  },
+  "h-ottens": {
+   "schriftstueck": {
+    "n": 30,
+    "ok": 19,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 30,
+    "ok": 23,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 30,
+    "ok": 18,
+    "falschSicher": 10
+   },
+   "person": {
+    "n": 29,
+    "ok": 17,
+    "falschSicher": 0
+   },
+   "offen": 27,
+   "dateien": 30,
+   "frist": {
+    "n": 11,
+    "ok": 5,
+    "falschSicher": 1
+   }
+  },
+  "h-grube": {
+   "schriftstueck": {
+    "n": 25,
+    "ok": 13,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 25,
+    "ok": 13,
+    "falschSicher": 4
+   },
+   "absender": {
+    "n": 25,
+    "ok": 14,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 24,
+    "ok": 15,
+    "falschSicher": 0
+   },
+   "offen": 25,
+   "dateien": 25,
+   "frist": {
+    "n": 7,
+    "ok": 3,
+    "falschSicher": 0
+   }
+  },
+  "h-soerensen": {
+   "schriftstueck": {
+    "n": 14,
+    "ok": 7,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 14,
+    "ok": 9,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 14,
+    "ok": 6,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 13,
+    "ok": 9,
+    "falschSicher": 0
+   },
+   "offen": 13,
+   "dateien": 14,
+   "frist": {
+    "n": 6,
+    "ok": 4,
+    "falschSicher": 0
+   }
+  },
+  "h-kluever": {
+   "schriftstueck": {
+    "n": 18,
+    "ok": 9,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 18,
+    "ok": 12,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 18,
+    "ok": 11,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 17,
+    "ok": 14,
+    "falschSicher": 0
+   },
+   "offen": 13,
+   "dateien": 18,
+   "frist": {
+    "n": 7,
+    "ok": 4,
+    "falschSicher": 0
+   }
+  },
+  "h-basturk": {
+   "schriftstueck": {
+    "n": 20,
+    "ok": 12,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 20,
+    "ok": 12,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 20,
+    "ok": 10,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 20,
+    "ok": 12,
+    "falschSicher": 2
+   },
+   "offen": 18,
+   "dateien": 20,
+   "frist": {
+    "n": 8,
+    "ok": 2,
+    "falschSicher": 1
+   }
+  }
+ },
+ "jeArt": {
+  "Brief": {
+   "n": 15,
+   "ok": 9
+  },
+  "Bescheid": {
+   "n": 25,
+   "ok": 15
+  },
+  "Abrechnung": {
+   "n": 8,
+   "ok": 7
+  },
+  "Mahnung": {
+   "n": 6,
+   "ok": 4
+  },
+  "Rechnung": {
+   "n": 23,
+   "ok": 14
+  },
+  "Termin": {
+   "n": 13,
+   "ok": 7
+  },
+  "Kassenbon": {
+   "n": 7,
+   "ok": 4
+  },
+  "Kontoauszug": {
+   "n": 4,
+   "ok": 4
+  },
+  "Kündigung": {
+   "n": 5,
+   "ok": 3
+  },
+  "Angebot/Werbung": {
+   "n": 9,
+   "ok": 4
+  },
+  "Vertrag": {
+   "n": 9,
+   "ok": 6
+  },
+  "Bescheinigung": {
+   "n": 11,
+   "ok": 8
+  },
+  "Aufforderung": {
+   "n": 10,
+   "ok": 8
+  },
+  "Befund": {
+   "n": 5,
+   "ok": 5
+  }
+ },
+ "doppelt": {
+  "n": 0,
+  "ok": 0,
+  "falsch": 0
+ },
+ "leer": {
+  "n": 0,
+  "ok": 0
+ },
+ "anhang": {
+  "n": 0,
+  "ok": 0
+ },
+ "blpKonto": {
+  "n": 0,
+  "blp": 0
+ }
+}

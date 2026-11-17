@@ -1,0 +1,44 @@
+Stadtwerke Musterhausen Beispiel · Energieweg 2 · 99900 Musterhausen am Rhein
+
+Herrn
+Daniel Lehnert
+Am Kranenpfad 5, Wohnung 3.2
+99902 Musterhausen am Rhein
+
+                                                    Musterhausen, 14.01.2026
+Vertragskonto: 0000000014
+Zähler-Nr.: 0ESY000217 (Ladepunkt / Wallbox, separater Zähler)
+Kundenservice: 0000-112233 (Mo–Fr 8–18 Uhr)
+
+Jahresabrechnung Strom „MusterStrom Mobil“ (Ladestrom)
+Abrechnungszeitraum 01.01.2025 – 31.12.2025
+
+Sehr geehrter Herr Lehnert,
+
+anbei erhalten Sie Ihre Jahresabrechnung für den Ladestrom-Tarif.
+
+Zählerstand alt (01.01.2025)        12.408 kWh  (abgelesen)
+Zählerstand neu (31.12.2025)        14.991 kWh  (Kundenablesung)
+Verbrauch                            2.583 kWh
+
+Arbeitspreis 2.583 kWh x 0,2790 €         720,66 €
+Grundpreis 12 Monate x 9,90 €             118,80 €
+Summe netto                                839,46 €
+zzgl. 19 % Umsatzsteuer                    159,50 €
+Gesamtbetrag brutto                        998,96 €
+abzgl. geleistete Abschläge (12 x 79,00 €) 948,00 €
+Nachzahlung                                 50,96 €
+
+Den Nachzahlungsbetrag buchen wir am 02.02.2026 von Ihrem Konto
+DE00 0000 0000 0000 0000 00 ab (SEPA-Mandat MU-STW-0000118). Sie brauchen nichts zu tun.
+
+Ihr neuer Abschlag ab Februar 2026: 84,00 € monatlich, jeweils zum 2. des Monats.
+
+Ihr Verbrauch im Vergleich: Vorjahr 2.211 kWh. Ein Haushalt mit E-Auto und
+ca. 15.000 km Fahrleistung liegt bei 2.000–3.000 kWh.
+
+Mit freundlichen Grüßen
+Ihre Stadtwerke Musterhausen Beispiel
+– maschinell erstellt, ohne Unterschrift gültig –
+
+Seite 1 von 2

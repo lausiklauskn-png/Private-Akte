@@ -1,0 +1,21 @@
+Sparkasse Kranbachtal                                   Kontoauszug 1/2026
+Girokonto 0012345678   Thomas Brandauer u. Sabine Brandauer
+IBAN DE00 2405 0000 0012 3456 78
+Auszug vom 31.01.2026        Blatt 1 von 1
+
+Datum   Wert    Vorgang                                        Betrag EUR
+02.01.  02.01.  Lastschrift Stadtwerke Wiesenfeld Abschlag      -138,00
+02.01.  02.01.  Dauerauftrag Bausparkasse Lindenhof AG           -50,00
+05.01.  05.01.  Lastschrift Stadt Wiesenfeld Kita-Beitrag        -96,00
+12.01.  12.01.  Lastschrift FunkWelle Mobil GmbH                  -34,99
+15.01.  15.01.  Lastschrift TSV Wiesenfeld 1908 e.V.              -48,00
+20.01.  20.01.  Kartenzahlung Frischemarkt Hagedorn               -87,43
+28.01.  28.01.  Gutschrift Lohn/Gehalt Kessler Verpackungen     +1.612,37
+29.01.  29.01.  Gutschrift Gehalt Brettschneider Haustechnik    +2.904,11
+30.01.  30.01.  Familienkasse Kranbachtal Kindergeld              +765,00
+
+Alter Kontostand  3.204,55 +
+Neuer Kontostand  7.931,61 +
+
+Bitte prüfen Sie die Buchungen. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Sparkasse Kranbachtal · Marktplatz 3 · 37999 Wiesenfeld · BIC SPKRXXX0000

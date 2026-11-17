@@ -1,0 +1,14 @@
+  Physiotherapie & Massagepraxis Lindenhof
+  Kastanienweg 14, 37287 Wehrstedt
+----------------------------------
+KASSENBELEG            Bon 000127
+29.01.2026  09:58   Kasse 1
+----------------------------------
+Buch 'Rückenschule für je    19,95 B
+Buch 'Faszien-Yoga kompak    16,99 B
+----------------------------------
+SUMME EUR                    36,94
+Bar                          36,94
+----------------------------------
+B = 7% MwSt    Netto 34,52  MwSt 2,42
+Bücher sind vom Umtausch ausgeschlossen.

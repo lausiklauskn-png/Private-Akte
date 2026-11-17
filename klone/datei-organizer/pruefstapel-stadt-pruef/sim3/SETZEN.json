@@ -1,0 +1,3504 @@
+{
+ "AW Zaehlerstand bitte.txt": {
+  "datei": "AW_Zaehlerstand_bitte.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Ablesekarte Wasser.txt": {
+  "datei": "Ablesekarte_Wasser.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Abmeldung Auto Papa.txt": {
+  "datei": "Abmeldung_Auto_Papa.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Abmeldung Jana.txt": {
+  "datei": "Abmeldung_Jana.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Abmeldung Musikschule.txt": {
+  "datei": "Abmeldung_Musikschule.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Abnahme Termin Bau.txt": {
+  "datei": "Abnahme_Termin_Bau.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Abschlag 1 Rohbau.txt": {
+  "datei": "Abschlag_1_Rohbau.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Abschlag Strom WG neu.txt": {
+  "datei": "Abschlag_Strom_WG_neu.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Agentur Termin.txt": {
+  "datei": "Agentur_Termin.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Anforderung Unterlagen StB.txt": {
+  "datei": "Anforderung_Unterlagen_StB.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Anmeldung Gymnasium.txt": {
+  "datei": "Anmeldung_Gymnasium.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Antrag Kinderzuschlag.txt": {
+  "datei": "Antrag_Kinderzuschlag.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Arztbericht Fahrradunfall.txt": {
+  "datei": "Arztbericht_Fahrradunfall.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "locherloecher",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Auftragsbestaetigung_GF-Mobil.txt": {
+  "datei": "Auftragsbestaetigung_GF-Mobil.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Badumbau Zuschuss.txt": {
+  "datei": "Badumbau_Zuschuss.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Bank Umschreibung.txt": {
+  "datei": "Bank_Umschreibung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knicke",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Baugenehmigung BV Sonnenacker 7.txt": {
+  "datei": "Baugenehmigung_BV_Sonnenacker_7.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "locherloecher",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Befund Labor Schwangerschaft.txt": {
+  "datei": "Befund_Labor_Schwangerschaft.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Beitrag Hausrat 2026.txt": {
+  "datei": "Beitrag_Hausrat_2026.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Beitragsinfo 2026.txt": {
+  "datei": "Beitragsinfo_2026.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Beleg Einzahlung Hofladen.txt": {
+  "datei": "Beleg_Einzahlung_Hofladen.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Betreuungsvertrag Krippe.txt": {
+  "datei": "Betreuungsvertrag_Krippe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "locherloecher",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Bon Rasenmaeher Garantie AUFHEBEN.txt": {
+  "datei": "Bon_Rasenmaeher_Garantie_AUFHEBEN.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "qr-link",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Brief Krankenkasse Kostenübernahme.txt": {
+  "datei": "Brief_Krankenkasse_Kostenuebernahme.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Brief Standesamt Sterbeurkunde.txt": {
+  "datei": "Brief_Standesamt_Sterbeurkunde.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "DRV Witwenrente Unterlagen.txt": {
+  "datei": "DRV_Witwenrente_Unterlagen.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "EF-2026-117 Rechnung.txt": {
+  "datei": "EF-2026-117_Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "locherloecher",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Eingangsbestätigung Steuer 2025.txt": {
+  "datei": "Eingangsbestaetigung_Steuer_2025.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Einladung JC.txt": {
+  "datei": "Einladung_JC.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Einladung Weihnachtsfeier Kita.txt": {
+  "datei": "Einladung_Weihnachtsfeier_Kita.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Elektro Auftragsbestaetigung.txt": {
+  "datei": "Elektro_Auftragsbestaetigung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Elternbrief Skilager (2).txt": {
+  "datei": "Elternbrief_Skilager_2.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Elterngeldstelle Nachforderung.txt": {
+  "datei": "Elterngeldstelle_Nachforderung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Entlassbrief klinik.txt": {
+  "datei": "Entlassbrief_klinik.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Erbschaftsteuer Aufforderung.txt": {
+  "datei": "Erbschaftsteuer_Aufforderung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Erbschein Übersendung.txt": {
+  "datei": "Erbschein_Uebersendung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Familienkasse Eingang KG-Antrag.txt": {
+  "datei": "Familienkasse_Eingang_KG-Antrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Familienversicherung Kind.txt": {
+  "datei": "Familienversicherung_Kind.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Ferienbetreuung Rechnung.txt": {
+  "datei": "Ferienbetreuung_Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "knicke",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Funkwelle_Rechnung_2026-02.txt": {
+  "datei": "Funkwelle_Rechnung_2026-02.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Förderverein Feuerwehr Beitrag.txt": {
+  "datei": "Foerderverein_Feuerwehr_Beitrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Gebühr Kontrolle Laden.txt": {
+  "datei": "Gebuehr_Kontrolle_Laden.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Gehalt Maerz Thomas.txt": {
+  "datei": "Gehalt_Maerz_Thomas.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Glasfaser Auftrag Sonnenacker.txt": {
+  "datei": "Glasfaser_Auftrag_Sonnenacker.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Glasfaser Preis Info.txt": {
+  "datei": "Glasfaser_Preis_Info.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Grundbesitz Obere Dorfstr 2026.txt": {
+  "datei": "Grundbesitz_Obere_Dorfstr_2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Grundbesitzabgaben 2026 Lindenhang.txt": {
+  "datei": "Grundbesitzabgaben_2026_Lindenhang.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "code128",
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Grundsteuer Bauplatz.txt": {
+  "datei": "Grundsteuer_Bauplatz.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "HKP Zahnspange.txt": {
+  "datei": "HKP_Zahnspange.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Hammerfix Rechnung Regal Laden.txt": {
+  "datei": "Hammerfix_Rechnung_Regal_Laden.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "IMG_0815.txt": {
+  "datei": "IMG_0815.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "aushang",
+  "seiten": 1
+ },
+ "IMG_20260119_0912.txt": {
+  "datei": "IMG_20260119_0912.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "IMG_20260122_081433.txt": {
+  "datei": "IMG_20260122_081433.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "IMG_20260328_101544.txt": {
+  "datei": "IMG_20260328_101544.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "IMG_2210.txt": {
+  "datei": "IMG_2210.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "konto",
+  "seiten": 1
+ },
+ "IMG_4471.txt": {
+  "datei": "IMG_4471.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Ihre Bestellung PF-204118733.txt": {
+  "datei": "Ihre_Bestellung_PF-204118733.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "kopie-der-kopie"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Jahresmeldung Minijob.txt": {
+  "datei": "Jahresmeldung_Minijob.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "KK Zahnspange Emil.txt": {
+  "datei": "KK_Zahnspange_Emil.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "knicke",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "KVA Bad barrierefrei.txt": {
+  "datei": "KVA_Bad_barrierefrei.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kassenbon Apotheke WG.txt": {
+  "datei": "Kassenbon_Apotheke_WG.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Kassenzettel.txt": {
+  "datei": "Kassenzettel.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Kfz_Beitragsanpassung.txt": {
+  "datei": "Kfz_Beitragsanpassung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "locherloecher",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "KiZ Bescheid März.txt": {
+  "datei": "KiZ_Bescheid_Maerz.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kiga Beitrag Ben neu.txt": {
+  "datei": "Kiga_Beitrag_Ben_neu.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kindergeld Sophie Ausbildung.txt": {
+  "datei": "Kindergeld_Sophie_Ausbildung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kinderkrankengeld.txt": {
+  "datei": "Kinderkrankengeld.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kita Bescheid April.txt": {
+  "datei": "Kita_Bescheid_April.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kontoauszug Gesundheit Okt.txt": {
+  "datei": "Kontoauszug_Gesundheit_Okt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "konto",
+  "seiten": 1
+ },
+ "Kostenbescheid Bauamt.txt": {
+  "datei": "Kostenbescheid_Bauamt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "locherloecher",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kostenrechnung Gericht.txt": {
+  "datei": "Kostenrechnung_Gericht.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kuendigung_bestaetigung.txt": {
+  "datei": "Kuendigung_bestaetigung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Kündigung Pflegevertrag.txt": {
+  "datei": "Kuendigung_Pflegevertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Lebensvers Ablauf.txt": {
+  "datei": "Lebensvers_Ablauf.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Lebensvers Auszahlung.txt": {
+  "datei": "Lebensvers_Auszahlung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Lohn_Aug_26.txt": {
+  "datei": "Lohn_Aug_26.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Lohnsteuerbesch_2025.txt": {
+  "datei": "Lohnsteuerbesch_2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mahnung Funk.txt": {
+  "datei": "Mahnung_Funk.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mahnung Musikschule.txt": {
+  "datei": "Mahnung_Musikschule.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mahnung Zahnarzt.txt": {
+  "datei": "Mahnung_Zahnarzt.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mail Kita Eingewöhnung.txt": {
+  "datei": "Mail_Kita_Eingewoehnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Mail Krankenkasse Bonus.txt": {
+  "datei": "Mail_Krankenkasse_Bonus.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Meldebestätigung Neubau.txt": {
+  "datei": "Meldebestaetigung_Neubau.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mia Spange Anteil.txt": {
+  "datei": "Mia_Spange_Anteil.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mietschulden Mahnung Labor.txt": {
+  "datei": "Mietschulden_Mahnung_Labor.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Minijob Rosa.txt": {
+  "datei": "Minijob_Rosa.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mitgliedsbescheinigung Jana.txt": {
+  "datei": "Mitgliedsbescheinigung_Jana.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Mutterpass Termine.txt": {
+  "datei": "Mutterpass_Termine.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "NK Abrechnung 2025 Talblick.txt": {
+  "datei": "NK_Abrechnung_2025_Talblick.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Nachlassgericht Testament Eröffnung.txt": {
+  "datei": "Nachlassgericht_Testament_Eroeffnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "locherloecher",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Nebenkosten 2025 WG.txt": {
+  "datei": "Nebenkosten_2025_WG.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "locherloecher",
+   "kopie-der-kopie",
+   "tonerverlauf"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Newsletter Wohnreich.txt": {
+  "datei": "Newsletter_Wohnreich.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Paketfix Mahnung falsch.txt": {
+  "datei": "Paketfix_Mahnung_falsch.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Pflegegrad 3 Bescheid.txt": {
+  "datei": "Pflegegrad_3_Bescheid.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Pflegegrad Termin Mail.txt": {
+  "datei": "Pflegegrad_Termin_Mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Pflegekasse Abschluss Mail.txt": {
+  "datei": "Pflegekasse_Abschluss_Mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Pflegevertrag_scan.txt": {
+  "datei": "Pflegevertrag_scan.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Prospekt_Hammerfix_Herbst.txt": {
+  "datei": "Prospekt_Hammerfix_Herbst.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "werbung",
+  "seiten": 1
+ },
+ "Quittung Zulassungsstelle.txt": {
+  "datei": "Quittung_Zulassungsstelle.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "kopie-der-kopie"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Raiffbank Info Sparen.txt": {
+  "datei": "Raiffbank_Info_Sparen.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Drucker.txt": {
+  "datei": "Rechnung_Drucker.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Feindiagnostik.txt": {
+  "datei": "Rechnung_Feindiagnostik.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Lohnbuero Nov.txt": {
+  "datei": "Rechnung_Lohnbuero_Nov.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Pflege April.txt": {
+  "datei": "Rechnung_Pflege_April.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "locherloecher",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Praxis Jan.txt": {
+  "datei": "Rechnung_Praxis_Jan.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung Werkstatt Lieferwagen.txt": {
+  "datei": "Rechnung_Werkstatt_Lieferwagen.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rechnung_Maerz_handy.txt": {
+  "datei": "Rechnung_Maerz_handy.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Regulierung hausrat.txt": {
+  "datei": "Regulierung_hausrat.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "locherloecher",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Reklamation Mail KK.txt": {
+  "datei": "Reklamation_Mail_KK.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "Rentenanpassung 2026.txt": {
+  "datei": "Rentenanpassung_2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rentenbezugsmitteilung 2026.txt": {
+  "datei": "Rentenbezugsmitteilung_2026.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rohbau Rate Auszahlung.txt": {
+  "datei": "Rohbau_Rate_Auszahlung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rollator Kostenuebernahme.txt": {
+  "datei": "Rollator_Kostenuebernahme.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "tonerverlauf"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Rundfunk Erinnerung.txt": {
+  "datei": "Rundfunk_Erinnerung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "SMS_Glasfaser_Termin.txt": {
+  "datei": "SMS_Glasfaser_Termin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "chat",
+  "seiten": 1
+ },
+ "Scan 2026-10-21 Jobcenter.txt": {
+  "datei": "Scan_2026-10-21_Jobcenter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "locherloecher",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0001.txt": {
+  "datei": "Scan_0001.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0042 (2).txt": {
+  "datei": "Scan_0042_2.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0042 (3).txt": {
+  "datei": "Scan_0042_3.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 2
+ },
+ "Scan_0042.txt": {
+  "datei": "Scan_0042.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0043.txt": {
+  "datei": "Scan_0043.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "knicke",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0057.txt": {
+  "datei": "Scan_0057.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0071.txt": {
+  "datei": "Scan_0071.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0093.txt": {
+  "datei": "Scan_0093.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0107.txt": {
+  "datei": "Scan_0107.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0233.txt": {
+  "datei": "Scan_0233.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Scan_0310.txt": {
+  "datei": "Scan_0310.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Schaden_Kueche.txt": {
+  "datei": "Schaden_Kueche.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Schlussrechnung_BV114.txt": {
+  "datei": "Schlussrechnung_BV114.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Schraubhof Kuendigung.txt": {
+  "datei": "Schraubhof_Kuendigung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Schule Materialliste 2b.txt": {
+  "datei": "Schule_Materialliste_2b.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "locherloecher",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Spendenquittung FF.txt": {
+  "datei": "Spendenquittung_FF.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Stadtwerke_Wasserzaehler.txt": {
+  "datei": "Stadtwerke_Wasserzaehler.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Standesamt Geburt Begleitschreiben.txt": {
+  "datei": "Standesamt_Geburt_Begleitschreiben.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "locherloecher",
+   "kopie-der-kopie",
+   "tonerverlauf"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Sterbefall Rechnung Pflegedienst.txt": {
+  "datei": "Sterbefall_Rechnung_Pflegedienst.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Sterbeurkunde Papa Anschreiben.txt": {
+  "datei": "Sterbeurkunde_Papa_Anschreiben.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Steuerbescheid Felix 2025.txt": {
+  "datei": "Steuerbescheid_Felix_2025.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Steuerbescheinigung_Kapital.txt": {
+  "datei": "Steuerbescheinigung_Kapital.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Strom Neubau Vertrag.txt": {
+  "datei": "Strom_Neubau_Vertrag.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Stromwechsel Angebot.txt": {
+  "datei": "Stromwechsel_Angebot.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Talblick Kuendigung Wohnung.txt": {
+  "datei": "Talblick_Kuendigung_Wohnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Terminbestätigung Zulassung.txt": {
+  "datei": "Terminbestaetigung_Zulassung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "UVG Bescheid.txt": {
+  "datei": "UVG_Bescheid.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Vertrag Lager Paketfix.txt": {
+  "datei": "Vertrag_Lager_Paketfix.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Vorauszahlung ESt 2027.txt": {
+  "datei": "Vorauszahlung_ESt_2027.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "WBA_Jobcenter_Sep.txt": {
+  "datei": "WBA_Jobcenter_Sep.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "WG Einkauf geteilt.txt": {
+  "datei": "WG_Einkauf_geteilt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "Werbung Kreditkarte Gold.txt": {
+  "datei": "Werbung_Kreditkarte_Gold.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "werbung",
+  "seiten": 1
+ },
+ "Werkstatt Reifen Okt.txt": {
+  "datei": "Werkstatt_Reifen_Okt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "locherloecher",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Zahnarzt Termin Emil.txt": {
+  "datei": "Zahnarzt_Termin_Emil.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knicke",
+   "kopie-der-kopie",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Zahnspange Rechnung Okt.txt": {
+  "datei": "Zahnspange_Rechnung_Okt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Zettel_Werkstatt.txt": {
+  "datei": "Zettel_Werkstatt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "karte",
+  "seiten": 1
+ },
+ "Zeugnis Abitur kopie.txt": {
+  "datei": "Zeugnis_Abitur_kopie.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Zweitwohnungsteuer Can.txt": {
+  "datei": "Zweitwohnungsteuer_Can.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "knicke",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Zwischenzeugnis.txt": {
+  "datei": "Zwischenzeugnis.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "angebot elektro neubau.txt": {
+  "datei": "angebot_elektro_neubau.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "angebot kfz wechsel.txt": {
+  "datei": "angebot_kfz_wechsel.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "aufhebungsvertrag.txt": {
+  "datei": "aufhebungsvertrag.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "bausparen zuteilung.txt": {
+  "datei": "bausparen_zuteilung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "beitrag verein 2026.txt": {
+  "datei": "beitrag_verein_2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "locherloecher",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "bon markt juli.txt": {
+  "datei": "bon_markt_juli.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "qr-link",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "brief erbschaftsteuer notar.txt": {
+  "datei": "brief_erbschaftsteuer_notar.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "brief nachlassgericht 2.txt": {
+  "datei": "brief_nachlassgericht_2.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "brief pflege kostenvoranschlag.txt": {
+  "datei": "brief_pflege_kostenvoranschlag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "brief steuer (2).txt": {
+  "datei": "brief_steuer_2.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "portalausdruck",
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "konto",
+  "seiten": 1
+ },
+ "brief steuer.txt": {
+  "datei": "brief_steuer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "girocode",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "brief vermieter mieterhoehung.txt": {
+  "datei": "brief_vermieter_mieterhoehung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "einladung seniorenkaffee.txt": {
+  "datei": "einladung_seniorenkaffee.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "erstattung kfz.txt": {
+  "datei": "erstattung_kfz.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "familienkasse brief.txt": {
+  "datei": "familienkasse_brief.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "knicke",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "kassenbon schulbedarf.txt": {
+  "datei": "kassenbon_schulbedarf.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "thermopapier-verblasst",
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "bon",
+  "seiten": 1
+ },
+ "kfz steuer LT300.txt": {
+  "datei": "kfz_steuer_LT300.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128"
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "kindergeld info.txt": {
+  "datei": "kindergeld_info.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "datamatrix-frankierung",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "kk abrechnung sep.txt": {
+  "datei": "kk_abrechnung_sep.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "kontoauszug_nov.txt": {
+  "datei": "kontoauszug_nov.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "portalausdruck",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "konto",
+  "seiten": 1
+ },
+ "kto_aug_wiesnegger.txt": {
+  "datei": "kto_aug_wiesnegger.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "portalausdruck",
+   "knicke",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "konto",
+  "seiten": 1
+ },
+ "kuendigung bestaetigt handy.txt": {
+  "datei": "kuendigung_bestaetigt_handy.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "lohn feb.txt": {
+  "datei": "lohn_feb.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "mahnung funkwelle!!.txt": {
+  "datei": "mahnung_funkwelle.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "code128"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "mail kondolenz.txt": {
+  "datei": "mail_kondolenz.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "mail_haftpflicht_fahrrad.txt": {
+  "datei": "mail_haftpflicht_fahrrad.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "ratenvereinbarung.txt": {
+  "datei": "ratenvereinbarung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "handyfoto",
+   "knicke",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "rechnung kfz lieferwagen.txt": {
+  "datei": "rechnung_kfz_lieferwagen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "retoure.txt": {
+  "datei": "retoure.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "mail",
+  "seiten": 1
+ },
+ "rollator verordnung.txt": {
+  "datei": "rollator_verordnung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "knicke",
+   "locherloecher",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "rundfunk mama.txt": {
+  "datei": "rundfunk_mama.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "lichtreflex",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "scan 0017.txt": {
+  "datei": "scan_0017.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "scan0033.txt": {
+  "datei": "scan0033.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "randnotiz-handschrift",
+   "locherloecher",
+   "kopie-der-kopie"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "schülerbeförderung emil.txt": {
+  "datei": "schuelerbefoerderung_emil.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung",
+   "code128",
+   "strichcode-bescheid"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "knicke",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "skilager abschnitt.txt": {
+  "datei": "skilager_abschnitt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "knicke",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "verwackelt",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "stadtwerke umschreibung.txt": {
+  "datei": "stadtwerke_umschreibung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   "code128",
+   "girocode"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen",
+   "niedrige-aufloesung"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "werbung moebel kinderzimmer.txt": {
+  "datei": "werbung_moebel_kinderzimmer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   "qr-link"
+  ],
+  "fehlerbilder": [
+   "kopie-der-kopie"
+  ],
+  "art": "werbung",
+  "seiten": 1
+ },
+ "whatsapp export felix.txt": {
+  "datei": "whatsapp_export_felix.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "chat",
+  "seiten": 1
+ },
+ "zettel erna.txt": {
+  "datei": "zettel_erna.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten"
+  ],
+  "art": "zettel",
+  "seiten": 1
+ },
+ "zettel inkasso.txt": {
+  "datei": "zettel_inkasso.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handyfoto",
+   "hintergrund-hell",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "zettel",
+  "seiten": 1
+ },
+ "zettel vom vermieter.txt": {
+  "datei": "zettel_vom_vermieter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kleines-blatt-auf-glasplatte",
+   "flachbett",
+   "deckelschatten",
+   "niedrige-aufloesung"
+  ],
+  "art": "zettel",
+  "seiten": 1
+ },
+ "zinsmitteilung.txt": {
+  "datei": "zinsmitteilung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "randnotiz-handschrift",
+   "einzug-schief",
+   "sensorstreifen"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Änderungsbescheid Grundsteuer Dez.txt": {
+  "datei": "Aenderungsbescheid_Grundsteuer_Dez.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   "datamatrix-frankierung"
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-dunkel",
+   "perspektive",
+   "ungleiches-licht",
+   "schatten-hand-handy",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ },
+ "Übermittlungsprotokoll USt 12-2025.txt": {
+  "datei": "Uebermittlungsprotokoll_USt_12-2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "portalausdruck",
+   "handyfoto",
+   "locherloecher",
+   "hintergrund-holz",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "portal",
+  "seiten": 1
+ },
+ "Übertrittszeugnis.txt": {
+  "datei": "Uebertrittszeugnis.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "handyfoto",
+   "hintergrund-stoff",
+   "perspektive",
+   "ungleiches-licht",
+   "farbstich",
+   "unschaerfe",
+   "jpeg-kompression"
+  ],
+  "art": "brief",
+  "seiten": 1
+ }
+}

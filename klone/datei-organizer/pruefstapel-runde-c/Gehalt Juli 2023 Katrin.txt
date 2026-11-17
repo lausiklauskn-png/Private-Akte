@@ -1,0 +1,26 @@
+Praxis für Physiotherapie Beispiel-Vogt
+Lohnbüro · Kurpark 3 · 45690 Brunnwald
+
+Frau
+Katrin Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Entgeltabrechnung Juli 2023
+Pers.-Nr. 017   StKl V (bisher II)   Kinderfreibeträge 0,5   Krankenkasse IKK Beispiel Süd
+Namensänderung: Sommerfeld -> Rebmann ab 16.06.2023
+
+Bezüge                                Betrag
+Grundgehalt Teilzeit 30 Std           2.460,00
+Fahrtkostenzuschuss                   45,00
+Gesamtbrutto                          2.505,00
+
+Lohnsteuer                            412,83
+Kirchensteuer                         0,00
+Kranken- und Pflegeversicherung       258,02
+Rentenversicherung                    232,97
+Arbeitslosenversicherung              32,57
+Netto                                 1.568,61
+Auszahlung an IBAN DE00 0000 0000 0000 0000 00
+
+Hinweis: Durch die Steuerklasse V ist der Lohnsteuerabzug höher. Bitte beachten Sie die Pflicht zur Abgabe einer Steuererklärung.

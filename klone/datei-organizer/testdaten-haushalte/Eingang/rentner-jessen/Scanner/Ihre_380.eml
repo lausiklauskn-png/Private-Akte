@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: gerda.jessen@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Tue, 23 Dec 2025 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hallo Gerda Jessen,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-56874649
+Rechnungsbetrag: 90,05 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

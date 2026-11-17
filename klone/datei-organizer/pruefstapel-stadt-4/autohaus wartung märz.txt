@@ -1,0 +1,31 @@
+AUTOHAUS RHEINBLICK BEISPIEL
+Verkauf · Service · Leasing · E-Mobilität
+Gewerbering 12 · 99905 Musterhausen am Rhein · Tel. 0000-889900
+
+Herrn Daniel Lehnert
+Am Kranenpfad 5
+99902 Musterhausen am Rhein
+
+Rechnung WA-26-0388                    Datum: 12.03.2026
+Kunden-Nr. AH-04271
+Fahrzeug: Beispiel e-Kompakt 64 kWh, amtl. Kennz. BSP-DL 2040E
+FIN: XXXXXXXXXXXX00000 · Erstzulassung 04/2024 · km-Stand 31.482
+
+Auftrag: Jahresservice laut Herstellervorgabe (Leasingfahrzeug)
+
+AW = Arbeitswerte (1 AW = 6 Min.)
+Jahresinspektion Elektrofahrzeug                    12 AW    168,00 €
+Hochvoltsystem Sichtprüfung                          4 AW     56,00 €
+Bremsflüssigkeit erneuern                            5 AW     70,00 €
+Innenraumfilter ersetzen                              2 AW     28,00 €
+Material: Bremsflüssigkeit DOT4 1 l, Pollenfilter              64,80 €
+Software-Update Batteriemanagement                   kostenlos
+Scheibenwaschzusatz                                             6,90 €
+                                                Netto        393,70 €
+                                                MwSt 19 %     74,80 €
+                                                Gesamt       468,50 €
+
+Bezahlt per Girocard am 12.03.2026 – vielen Dank.
+Nächster Service: 03/2027 bzw. 45.000 km.
+
+Ihr Serviceberater: Kai Beispielfeld

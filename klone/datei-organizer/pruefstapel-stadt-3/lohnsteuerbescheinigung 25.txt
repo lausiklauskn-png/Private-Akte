@@ -1,0 +1,14 @@
+Ausdruck der elektronischen Lohnsteuerbescheinigung für 2025
+Arbeitgeber: Logistikzentrum Beispiel-Nord GmbH, Gewerbepark 40, 00127 Beispielstadt-Nord
+Arbeitnehmer: Youssef Amrani, geb. 1984   Identifikationsnr. 00 000 000 000 (Beispiel)
+Dauer des Dienstverhältnisses: 01.01. - 31.12.2025   Steuerklasse III
+
+Bruttoarbeitslohn           27.964,00 EUR
+Einbehaltene Lohnsteuer      1.987,00 EUR
+Solidaritätszuschlag             0,00 EUR
+Kirchensteuer                    0,00 EUR
+Arbeitnehmeranteil Rentenversicherung 2.600,05 EUR
+Arbeitnehmeranteil Krankenversicherung 2.296,00 EUR
+Arbeitnehmeranteil Pflegeversicherung 502,00 EUR
+
+Ausgestellt am 12.02.2026. Bitte für die Steuererklärung aufbewahren.

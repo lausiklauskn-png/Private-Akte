@@ -1,0 +1,13 @@
+Abrechnung der Brutto/Netto-Bezüge für November 2026                  Blatt 1
+
+Firma Teekontor Lindenblatt · Salzgasse 14 · 21335 Lüneburg
+Frau Ilka Thormählen, Wichernstraße 00, 21335 Lüneburg · Pers.-Nr. 002
+
+Lohnart  Bezeichnung                Menge   Faktor    Betrag
+1000     Gehalt                                        1.180,00
+1105     Mehrarbeit Adventssamstage  12 Std  14,50       174,00
+1300     Weihnachtsgeld                                  250,00
+                                     Gesamt-Brutto     1.604,00
+
+Steuerrechtliche Abzüge 187,22 · SV-rechtliche Abzüge 329,62
+Netto-Verdienst 1.087,16 · Auszahlungsbetrag 1.087,16 EUR

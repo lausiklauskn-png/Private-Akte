@@ -1,0 +1,11 @@
+Von: Hotel Beispiel Alfama <reservas@hotel-beispiel.example>
+An: julia.okafor-lenz@mail.example
+Gesendet: Sa 08.03.2025 10:02
+Betreff: Reservation confirmed / Reservierung bestätigt
+
+Dear Mrs Okafor-Lenz,
+
+we confirm your reservation 14.06.–28.06.2025, double room, breakfast included. Total 1.540,00 EUR, payable at the hotel.
+
+Free cancellation until 11.06.2025.
+

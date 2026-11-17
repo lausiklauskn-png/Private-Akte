@@ -1,0 +1,20 @@
+Deutsche Rentenversicherung Beispielland
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versicherungsnummer: 00 120552 P 004
+Datum: 20.01.2025
+
+Bescheinigung über Leistungen für 2024 (Rentenbezugsmitteilung)
+
+Diese Angaben haben wir an das Finanzamt übermittelt.
+
+Zeile   Angabe   Betrag
+4   Rentenbetrag Altersrente   15.736,20 EUR
+4   Rentenbetrag Witwerrente   5.524,26 EUR
+6   Rentenanpassungsbetrag   2.811,00 EUR
+   Beiträge KV/PV   1.823,40 EUR
+

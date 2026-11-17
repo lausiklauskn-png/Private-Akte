@@ -1,0 +1,211 @@
+<title>Gewinn durch Reduktion</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: eine ruhige Spalte mit viel Weißraum – die Seite selbst soll reduziert wirken. Prinzipien als Liste, Anwendung als Gegenüberstellung vorher/nachher, Fragen am Ende. */
+:root{
+  --bg:#f6f6f3; --paper:#ffffff; --ink:#1b1d22; --ink2:#50545e; --ink3:#7a7f8a; --line:#dcdcd6;
+  --sumi:#2e3a5c; --sumi-soft:#e8ebf2; --weg:#9a3b2f; --weg-soft:#f5e7e4; --bleibt:#2f6b48; --bleibt-soft:#e5f0e9;
+  --display:"Zen Kaku Gothic New","Hiragino Sans","Segoe UI",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121317; --paper:#1a1c22; --ink:#e9e9e4; --ink2:#b5b8bf; --ink3:#8b8f98; --line:#2d3038;
+  --sumi:#9fb0dc; --sumi-soft:#1e2536; --weg:#f0a493; --weg-soft:#3a201c; --bleibt:#8fd2a8; --bleibt-soft:#182c21; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121317; --paper:#1a1c22; --ink:#e9e9e4; --ink2:#b5b8bf; --ink3:#8b8f98; --line:#2d3038;
+  --sumi:#9fb0dc; --sumi-soft:#1e2536; --weg:#f0a493; --weg-soft:#3a201c; --bleibt:#8fd2a8; --bleibt-soft:#182c21; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);margin:0}
+.wrap{max-width:820px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0;font-weight:700}
+h1{font-size:clamp(1.9rem,5vw,2.7rem)}
+h2{font-size:clamp(1.35rem,3.4vw,1.7rem)}
+h3{font-size:1.05rem}
+p{margin:0;max-width:66ch}
+.zeichen{font:500 .8rem var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--sumi)}
+.kopf{display:flex;flex-direction:column;gap:14px}
+.lead{color:var(--ink2);font-size:1.08rem}
+.zitat{border-left:2px solid var(--sumi);padding:2px 0 2px 16px;font-size:1.12rem;color:var(--ink)}
+.zitat cite{display:block;margin-top:6px;font-style:normal;font-size:.88rem;color:var(--ink3)}
+section{display:flex;flex-direction:column;gap:16px}
+.prinzipien{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.prinzipien li{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:4px 14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.prinzipien .nr{font:700 1rem var(--display);color:var(--sumi);padding-top:2px}
+.prinzipien b{display:block}
+.prinzipien span{color:var(--ink2)}
+.anwendung{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.vn{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:620px){.vn{grid-template-columns:1fr}}
+.vorher,.nachher{border-radius:8px;padding:12px 14px;font-size:.96rem}
+.vorher{background:var(--weg-soft)} .nachher{background:var(--bleibt-soft)}
+.vorher h3{color:var(--weg);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.nachher h3{color:var(--bleibt);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.vorher ul,.nachher ul{margin:6px 0 0;padding-left:1.1em;display:flex;flex-direction:column;gap:3px}
+.notiz{color:var(--ink3);font-size:.92rem}
+.drei{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.drei{grid-template-columns:1fr}}
+.drei>div{border-top:2px solid var(--sumi);padding-top:10px;display:flex;flex-direction:column;gap:4px}
+.drei b{font-family:var(--display)}
+.rang{border-collapse:collapse;width:100%;font-size:.95rem}
+.tabelle{overflow-x:auto}
+.rang th,.rang td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.rang th{font:500 .78rem var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+.pill{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.8rem;font-weight:600;white-space:nowrap}
+.knapp{background:var(--sumi-soft);color:var(--sumi)} .raus{background:var(--weg-soft);color:var(--weg)}
+.fragen{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:10px;max-width:68ch}
+.fuss{color:var(--ink3);font-size:.86rem}
+code{font-size:.9em}
+</style>
+
+<div class="wrap">
+  <header class="kopf">
+    <span class="zeichen">Diskussionsgrundlage · 13.11.2026</span>
+    <h1>Gewinn durch Reduktion</h1>
+    <p class="zitat">„KI kann verlieren durch die Maximierung, aber nicht durch die Reduktion. Durch die Reduktion könnte sie gewinnen. Siehe Gehirn.“<cite>Klaus</cite></p>
+    <p class="lead">Grundlage sind zwei deiner Apps, „Ordnung auf Japanisch“ und family-projekt-go („Chatty“), dazu Runde 3: zehn Lebenslagen und ein Kritiker mit deinen Einwänden. Ein Agent hat beide Repos am Code gelesen; die öffentlichen Seiten konnte er aus dieser Sitzung nicht öffnen.</p>
+  </header>
+
+  <section aria-labelledby="h-lehre">
+    <span class="zeichen">Die Lehre aus „Ordnung auf Japanisch“</span>
+    <h2 id="h-lehre">Reduziert ist der Weg des Nutzers, nicht das Produkt</h2>
+    <p>Die App selbst ist nicht klein: sechs Themen, sechs Sprachen, 148 Bilder. Der Nutzer merkt davon nichts. Er beantwortet beim Einrichten drei Fragen, einmal im Leben der App, mit fertigen Vorgaben. Danach braucht er jeden Tag zwei Tipps bis zur Arbeit und einen Tipp je erledigtem Schritt. Was als Nächstes kommt, entscheidet die App. Gespeichert wird nur „Schritt erledigt um Uhrzeit“, alles andere wird daraus gerechnet. Darum gibt es nichts zu pflegen.</p>
+    <div class="drei">
+      <div><b>3 Fragen</b><span>einmal, mit fertiger Antwort</span></div>
+      <div><b>2 Tipps</b><span>jeden Tag bis zur Arbeit</span></div>
+      <div><b>0 Pflege</b><span>nur das Ereignis wird gespeichert</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-prinzip">
+    <span class="zeichen">Zehn Prinzipien, am Code belegt</span>
+    <h2 id="h-prinzip">Wie die App das Weglassen erzwingt</h2>
+    <ol class="prinzipien">
+      <li><span class="nr">P1</span><div><b>Eine Sache pro Bildschirm.</b><span>Ein Schritt, ein Knopf „Fertig“.</span></div></li>
+      <li><span class="nr">P2</span><div><b>Die App entscheidet das Nächste.</b><span>Oben steht genau eine Karte „Weiter mit …“, keine Übersicht zum Auswählen.</span></div></li>
+      <li><span class="nr">P3</span><div><b>Wenige Fragen, nur einmal, mit fertiger Antwort.</b><span>Wer nichts antippt, bekommt die übliche Reihenfolge.</span></div></li>
+      <li><span class="nr">P4</span><div><b>Auswahl statt Freitext, mit Obergrenze.</b><span>Feste Zeiten (10, 15, 20 oder 25 Minuten), Räume mit Höchstzahl.</span></div></li>
+      <li><span class="nr">P5</span><div><b>Nur das Ereignis speichern, alles andere rechnen.</b><span>Keine Listen, keine Kategorien, keine Notizen, also nichts zu pflegen.</span></div></li>
+      <li><span class="nr">P6</span><div><b>Erledigt ist erledigt.</b><span>Sechs Sekunden Rückgängig, kein Stapel zum Bestätigen.</span></div></li>
+      <li><span class="nr">P7</span><div><b>Ein Ende statt einer Endlosliste.</b><span>Stempel 済 „geschafft“, „ein Schrank pro Tag, nicht zwei“.</span></div></li>
+      <li><span class="nr">P8</span><div><b>Loslassen mit Datum.</b><span>Die Kiste des Zweifels geht nach einem Jahr ungeöffnet weg. Vergessen ist eine Funktion, wie im Gehirn.</span></div></li>
+      <li><span class="nr">P9</span><div><b>Fortschritt sichtbar, aber nie als Pflicht.</b><span>Kreis und Kette, aber kein rotes „überfällig“.</span></div></li>
+      <li><span class="nr">P10</span><div><b>Sicherheit ist der einzige Zwang.</b><span>Die Warnung „Nie mischen“ lässt sich nicht abschalten. Alles andere darf man weglassen.</span></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="h-anw">
+    <span class="zeichen">Anwendung</span>
+    <h2 id="h-anw">Was das für unsere Apps heißen würde</h2>
+
+    <div class="anwendung">
+      <h3>Familienakte: Jens' Problem</h3>
+      <p class="notiz">Jens: Früher nahm er die Akte, legte ab und war fertig. Heute muss er sich mit dem Werkzeug beschäftigen.</p>
+      <div class="vn">
+        <div class="vorher"><h3>Heute</h3><ul><li>viele Bereiche, Suche, Kalender, Sicherung, Einstellungen</li><li>der Nutzer ordnet, benennt, bestätigt</li><li>eine Startseite mit vielen Wegen</li></ul></div>
+        <div class="nachher"><h3>Reduziert</h3><ul><li>je Brief nur eine Frage: „Muss ich etwas tun?“</li><li>den Rest ordnet der Sortier-Kern selbst zu (P2, P5)</li><li>die Startseite zeigt nur die nächste Frist</li><li>„Briefkorb leer“ als sichtbares Ende (P7)</li><li>Aufbewahrungsfristen laufen ab; einmal im Jahr eine Sammelfrage (P8)</li></ul></div>
+      </div>
+    </div>
+
+    <div class="anwendung">
+      <h3>„Pflege-Post“: der einzige Kandidat, der nach Runde 3 übrig bleibt</h3>
+      <p class="notiz">Laut Kritiker gibt es echten Bedarf nur dort, wo Fachwissen, Frist und Geld zusammenkommen. In Runde 3 traf das nur auf die Pflege zu, wo du eine Fachkraft hast.</p>
+      <div class="vn">
+        <div class="vorher"><h3>Heute bei den Kindern</h3><ul><li>Briefe von Pflegekasse und Medizinischem Dienst stapeln sich bei den Eltern</li><li>am Wochenende vorlesen am Telefon</li><li>Gutachten mit 30 Seiten, Frist ein Monat</li></ul></div>
+        <div class="nachher"><h3>Reduziert</h3><ul><li>ein Weg hinein (Foto), zwei Felder heraus: „bis wann“ und „was tun“</li><li>Auswahl aus vier Handlungen, kein Freitext (P4)</li><li>beim Gutachten nur die zwei, drei Stellen, an denen Punkte zum nächsten Grad fehlten</li><li>reine Lese-Post verschwindet nach 30 Tagen aus der Sicht (P8)</li><li>Rot nur bei Fristen mit Rechtsfolge (P10)</li></ul></div>
+      </div>
+    </div>
+
+    <div class="anwendung">
+      <h3>Chatty (family-projekt-go)</h3>
+      <p class="notiz">Bewertet mit 1 von 5: Den Kern baut man heute in unter einer Stunde als Alexa- oder Home-Assistant-Routine, und die Pflege landet bei der Familie.</p>
+      <div class="vn">
+        <div class="vorher"><h3>Geplant</h3><ul><li>Raumsensor, Tablet, Begrüßung, Avatar</li><li>Erinnerungen, Anrufe auf Zuruf</li><li>Roboter, Befüllstation, eigene Vernetzung</li></ul></div>
+        <div class="nachher"><h3>Der Kern nach Reduktion</h3><ul><li>Mama bestätigt die Tablette</li><li>nur wenn das ausbleibt, eine stille Nachricht an die Kinder: „9 Uhr nicht bestätigt“</li><li>erspart den täglichen Kontrollanruf, ohne Sensor, Tablet und Avatar</li><li>erst mit vorhandener App bei drei Haushalten erproben, bevor Code entsteht</li></ul></div>
+      </div>
+    </div>
+
+    <div class="anwendung">
+      <h3>Workflow Needs: die Bedarfsanalyse selbst</h3>
+      <div class="vn">
+        <div class="vorher"><h3>Heute</h3><ul><li>18 Bereiche plus Rahmen-Fragen, alle gleich wichtig</li><li>die Bedarfsanalyse wird gründlicher, aber auch länger</li></ul></div>
+        <div class="nachher"><h3>Reduziert</h3><ul><li>zuerst drei Fragen: Was tut weh? Wer nutzt es auf welchem Gerät? Was darf es höchstens kosten?</li><li>die 18 Bereiche bleiben deine Prüfliste im Hintergrund</li><li>je Branche fertige Vorgaben zum Streichen statt leerer Felder (P3)</li><li>„Weiß nicht“ wandert in eine Kiste des Zweifels bis zur nächsten Fassung (P8)</li><li>neue Pflichtfrage: „Was nimmt es dem Kunden weg, und wie viel Pflege kostet es ihn?“</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-grenzen">
+    <span class="zeichen">Grenzen</span>
+    <h2 id="h-grenzen">Wo Reduktion in „zu wenig“ kippt</h2>
+    <ul class="fragen">
+      <li>Fristen mit Rechtsfolge, Originale und Belege mit Aufbewahrungspflicht dürfen nie automatisch vergessen werden. Loslassen gilt nur für die Sicht.</li>
+      <li>Was weggelassen wird, muss als „nicht gewünscht“ festgehalten werden, sonst baut es jemand wieder hinein.</li>
+      <li>Reduktion braucht einen Kern, der gut genug erkennt und sichtbar sagt, wenn er unsicher ist. Sonst ist es nur Wegsehen.</li>
+      <li>Die Sicherung muss bleiben, aber still und ohne Pflege.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-stand">
+    <span class="zeichen">Stand Runde 3</span>
+    <h2 id="h-stand">Was die Prüfung übrig lässt</h2>
+    <p>Zehn Lebenslagen, sechs Prüfsteine (belegter Bedarf, Reduktion, nicht in einer Stunde selbst gebaut, nicht schon da, erreichbarer Käufer, ehrliche Null). Zwei Lebenslagen fanden gar nichts. Neun Ideen kamen knapp durch, der Kritiker ließ vier stehen. Keine Idee besteht ohne Einschränkung.</p>
+    <div class="tabelle"><table class="rang">
+      <thead><tr><th>Idee</th><th>Urteil</th><th>Was es wegnimmt</th></tr></thead>
+      <tbody>
+        <tr><td>Gutachten-Gegenleser</td><td><span class="pill knapp">knapp · 1</span></td><td>das Durcharbeiten des Pflegegutachtens; zeigt nur die fehlenden Punkte und die Frist</td></tr>
+        <tr><td>Brief-Zweitblick</td><td><span class="pill knapp">knapp · 2</span></td><td>Lesen, Grübeln und Vorlesen am Telefon; drei Zeilen statt eines Briefs</td></tr>
+        <tr><td>Pflegetöpfe-Wächter</td><td><span class="pill knapp">knapp · 3</span></td><td>das Nachrechnen, ob Entlastungsbetrag und Budget verfallen</td></tr>
+        <tr><td>Prüfbereit ambulant</td><td><span class="pill knapp">knapp · 4</span></td><td>das Übersetzen der Prüfanleitung in eine eigene Probe</td></tr>
+        <tr><td>Werbe-Ampel, Order-Wächter, „Ja vor Ort“, Haftungs-Wecker, Kita-Bescheid</td><td><span class="pill raus">raus</span></td><td>gibt es schon, ein Zettel reicht, oder ohne Kanzlei gefährlich</td></tr>
+      </tbody>
+    </table></div>
+    <p class="notiz">Bündelvorschlag des Kritikers: Die ersten drei werden eine schmale „Pflege-Post“ für die Kinder pflegebedürftiger Eltern, auf dem vorhandenen Sortier-Kern. Bauen lohnt nur, wenn deine Fachkraft die Regeln verantwortet und das Werkzeug empfiehlt. Realistisch wären im ersten Jahr 5.000–15.000 € Umsatz.</p>
+  </section>
+
+  <section aria-labelledby="h-do">
+    <span class="zeichen">Hauptprüfung</span>
+    <h2 id="h-do">Datei-Organizer für Betriebe</h2>
+    <p>Vier Agenten haben geprüft: den heutigen Stand am Code, eine Kundin (Planungsbüro, 18 Leute), den Markt und ein IT-Systemhaus als möglichen Wiederverkäufer. Danach kam ein Kritiker mit deinen Maßstäben. Gemessen wurde nichts, Kundin und Systemhaus sind Rollenspiele.</p>
+    <div class="drei">
+      <div><b>Kundin 3/5</b><span>zahlt 5.000–10.000 € einmalig und 150–300 € im Monat, aber nur mit Zugriffsrechten, Outlook-Archiven und Ausstieg</span></div>
+      <div><b>Systemhaus 3/5</b><span>5–8 von 60 Kunden im ersten Jahr; es fehlen Rechte, eine Übersicht über alle Kunden und Vertretung im Support</span></div>
+      <div><b>Markt 2/5</b><span>Paperless-ngx hat seit Juli 2026 kostenlos lokale KI; die GoBD verlangt ein eigenes Archiv</span></div>
+    </div>
+    <div class="anwendung">
+      <h3>Urteil des Kritikers: als Dauerprodukt nicht bauen, als Aufräumwerkzeug im Pilot testen</h3>
+      <div class="vn">
+        <div class="vorher"><h3>Fällt weg</h3><ul><li>dauerhafte Ablage mit Rechteverwaltung</li><li>unveränderbares Archiv nach GoBD</li><li>Chat, Fristen-Erkennung, Abo</li></ul></div>
+        <div class="nachher"><h3>Bleibt: einmal aufräumen, dann übergeben</h3><ul><li>Bestand aufnehmen, nur lesend</li><li>Doppelungen aus der Sicht: zuerst nach Größe, dann nach Fingerabdruck, dann nach den inneren Merkmalen aus dem Prüfkern</li><li>Ordnung als Sicht nach Kunde und Projekt</li><li>ein offenes Bündel an das Archiv, das DMS, Paperless oder die KI, die der Betrieb schon hat</li><li>Lizenz je Einsatz, verkauft über Systemhäuser</li></ul></div>
+      </div>
+      <p class="notiz">So werden Paperless, Windows und Copilot zu Abnehmern statt Gegnern. Das Risiko „Einzelentwickler“ schrumpft auf einen einzelnen Einsatz.</p>
+    </div>
+    <h3>Was heute fehlt (am Code geprüft)</h3>
+    <ul class="fragen">
+      <li>Die Texterkennung ist im Kern vorhanden, aber in der App nicht angeschlossen. Scans bleiben dort ohne Text.</li>
+      <li>Der Prüfkern des Auslieferungsprüfers ist noch nicht eingebunden. Er liest aus PDFs schon Autor, Programm, Titel, Erstellungsdatum und Anhänge, bisher aber nur als Befund.</li>
+      <li>Doppelungen erkennt der Organizer nur bei exakt gleichem Inhalt. Es fehlen die Vorsortierung nach Größe, Versionen („Kopie von“, „(2)“), Namenskonflikte, fast gleiche Dateien und dieselbe Rechnungsnummer beim selben Absender.</li>
+      <li>Erprobt ist er nur bis etwa 800 Dateien. Betriebe haben 50.000 bis 100.000.</li>
+    </ul>
+    <h3>Die nächsten drei Schritte laut Kritiker</h3>
+    <ol class="fragen">
+      <li><b>Mengenprobe zuerst</b> (2–3 Wochen, nützt auch der Familienakte): 50.000 erfundene Dateien, Vorsortierung nach Größe, Wiederaufnahme nach Abbruch, ein Bestandsbericht in Zahlen. Die Grenzen werden vorab gesetzt. Fällt die Probe durch, braucht es zuerst ein Programm für Windows statt des Browsers, oder die Idee wird gelassen.</li>
+      <li><b>Abnehmer vor dem Bau:</b> Erst bekommst du eine Vorschau des Bestandsberichts, dann ein echtes Systemhaus oder ein Betrieb. Ohne schriftliche Zusage für einen bezahlten Pilot (1.500–2.500 €) wird nicht gebaut.</li>
+      <li><b>Pilot mit Grenzen vorab:</b> ein Projektordner und eine Mailablage. Ziel sind mindestens 85 % richtig zugeordnet und höchstens 1 % falsch, aber als sicher ausgegeben.</li>
+    </ol>
+    <p class="notiz">Ehrliche Rechnung: Der schlanke Kern kostet 7–9 Wochen, mit Pilot 10–12 Wochen. Im ersten Jahr kämen realistisch 5.000–15.000 € herein. Tragbar ist das nur, weil Prüfkern, Doppelungserkennung und Formatleser ohnehin der Familienakte nützen.</p>
+  </section>
+
+  <section aria-labelledby="h-fragen">
+    <span class="zeichen">Zum Besprechen</span>
+    <h2 id="h-fragen">Fragen an dich</h2>
+    <ol class="fragen">
+      <li>Soll Reduktion in Needs eine feste Pflichtfrage werden („Was nimmt es weg, wie viel Pflege kostet es?“), und sollen die 18 Bereiche hinter drei Einstiegsfragen verschwinden?</li>
+      <li>Willst du die Familienakte nach diesen Prinzipien prüfen lassen, also eine Liste, was wegfallen oder automatisch werden könnte? Jens wäre der erste Prüfer.</li>
+      <li>Ist die „Pflege-Post“ ein Thema für deine Fachkraft? Wenn ja, wären die nächsten Schritte ein Gespräch mit ihr und eine Vorschau mit drei Bildschirmen.</li>
+      <li>Datei-Organizer: Mit der Mengenprobe (50.000 Dateien) und der Doppelungserkennung anfangen? Beides nützt auch der Familienakte.</li>
+      <li>Kennst du ein Systemhaus oder einen Betrieb, der einen bezahlten Pilot zusagen würde?</li>
+      <li>Welche weiteren Apps sollen durch diesen Filter? Zum Beispiel BookLedgerPro oder Private Brain Pro: Was davon ist Maximierung?</li>
+    </ol>
+  </section>
+
+  <p class="fuss">Quellen im Datei-Organizer: <code>rueckwaertstest/runde-3/</code> mit REGELN.md, markt/ (zehn Lebenslagen), KRITIK.md, FAMILY-PROJEKT-GO.md und REDUKTION-ORDNUNG.md. Alle Bewertungen stammen von KI-Agenten nach kurzer Netzrecherche; mit echten Kunden hat niemand gesprochen.</p>
+</div>

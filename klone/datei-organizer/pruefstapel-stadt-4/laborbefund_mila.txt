@@ -1,0 +1,11 @@
+Labor Beispiel Diagnostik
+Laborweg 1, 99920 Beispielgroßstadt
+Auftrags-Nr. L-0003817
+
+Befundbericht                 Eingang: 11.06.2026   Ausgang: 12.06.2026
+Patient: Mila Yilmaz, geb. 2026     Einsender: Dr. Beispiel-Lindner
+
+Hämoglobin 11,8 g/dl     (10,5 - 14,0)
+Ferritin    32 µg/l      (15 - 150)
+CRP        < 0,3 mg/dl   (< 0,5)
+Beurteilung: Alle untersuchten Parameter im altersentsprechenden Normbereich.

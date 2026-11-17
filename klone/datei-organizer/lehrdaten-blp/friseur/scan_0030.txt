@@ -1,0 +1,10 @@
+Umsatzdetails (Onlinebanking)
+Konto: DE00 0000 0000 0000 0042 00  Haarstudio Federleicht
+
+Wertstellung: 2026-09-23
+Art: Überweisungseingang
+Von: Helga und Rolf Osterkamp
+Text: Schenkung an Merle, Starthilfe Salon, priat
+Betrag: 4.232,00 EUR  H
+
+Vermerk: Geld gehört Inhaberin privat -> Privateinlage, kein Erlös

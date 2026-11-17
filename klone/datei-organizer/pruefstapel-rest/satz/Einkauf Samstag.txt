@@ -1,0 +1,126 @@
+@bon
+BEISPIEL-GROSSMARKT NORD
+Hafenring 2, 22999 Beispielhafen
+Tel. 0000 000000  USt-IdNr. DE000000000
+
+Muesli Frucht                 2,99 A
+  Rabatt 20%                 -0,60 A
+Honig 500g                    3,99 A
+  2 x 2,99
+Kerzen 10er                   5,98 B
+Spaghetti 500g                0,99 A
+  2 x 2,79
+Eier Bodenh, 10St             5,58 A
+  3 x 0,79
+Kidneybohnen                  2,37 A
+Eier Bodenh, 10St             2,79 A
+  3 x 1,99
+Salami Scheiben               5,97 A
+Zucker 1kg                    1,19 A
+  2 x 2,49
+Kuechenrolle 4er              4,98 B
+  2 x 1,49
+Kekse Butter                  2,98 A
+Shampoo                       1,95 B
+Orangen 2kg                   2,99 A
+Pizza Margherita TK           2,29 A
+  2 x 2,49
+Tomaten Rispe                 4,98 A
+  3 x 0,89
+Salzstangen                   2,67 A
+  2 x 1,39
+Gurken Glas                   2,78 A
+Kekse Butter                  1,49 A
+  3 x 1,99
+Weichspueler                  5,97 B
+  3 x 0,95
+Babybrei Karotte              2,85 A
+  2 x 1,79
+Marmelade Erdbeer             3,58 A
+Chips Paprika                 1,79 A
+Bananen                       1,73 A
+  4 x 1,79
+Reis Langkorn 1kg             7,16 A
+Mais Dose                     0,89 A
+Spinat TK                     1,29 A
+Erbsen TK                     1,19 A
+Vollkornbrot 750g             2,19 A
+Duschgel                      1,25 B
+Reis Langkorn 1kg             1,79 A
+Haferflocken                  0,89 A
+Nussnougatcreme               2,79 A
+Essig Kraeuter                0,89 A
+  4 x 3,49
+Gluehbirne LED               13,96 B
+  2 x 2,19
+Vollkornbrot 750g             4,38 A
+  2 x 1,19
+Zucker 1kg                    2,38 A
+Butter 250g                   2,29 A
+Zahnpasta                     0,95 B
+  3 x 0,89
+Mais Dose                     2,67 A
+Kidneybohnen                  0,79 A
+  2 x 2,47
+Aepfel lose                   4,94 A
+  2 x 1,29
+Zwiebeln 1kg                  2,58 A
+Vollkornbrot 750g             2,19 A
+  Rabatt 20%                 -0,44 A
+  4 x 1,79
+Reis Langkorn 1kg             7,16 A
+  2 x 1,79
+Chips Paprika                 3,58 A
+Babybrei Karotte              0,95 A
+  Rabatt 20%                 -0,19 A
+Schokolade Vollmilch          1,19 A
+  3 x 2,29
+Sonnenblumenoel 1l            6,87 A
+  Rabatt 20%                 -1,37 A
+  3 x 1,89
+Alufolie                      5,67 B
+Eisbergsalat                  1,19 A
+Vollkornbrot 750g             2,19 A
+  2 x 1,25
+Duschgel                      2,50 B
+  Rabatt 20%                 -0,50 B
+Essig Kraeuter                0,89 A
+  4 x 1,29
+Quark 20% 500g                5,16 A
+Weintrauben                   2,79 A
+Honig 500g                    3,99 A
+Kakao Pulver                  2,49 A
+Zitronen Netz                 1,49 A
+Toilettenpapier 10er          4,29 B
+  2 x 1,79
+Muellbeutel 35l               3,58 B
+  2 x 1,29
+Pfeffer gemahlen              2,58 A
+Weintrauben                   2,79 A
+  4 x 1,29
+Pfeffer gemahlen              5,16 A
+Muesli Frucht                 2,99 A
+Pizza Margherita TK           2,29 A
+Shampoo                       1,95 B
+Spaghetti 500g                0,99 A
+Pizza Margherita TK           2,29 A
+  Rabatt 20%                 -0,46 A
+Babybrei Karotte              0,95 A
+Pommes TK                     2,19 A
+Butter 250g                   2,29 A
+Gluehbirne LED                3,49 B
+--------------------------------------
+Zwischensumme                 214,72
+Pfand gesamt                    0,00
+Coupon Treuepunkte             -2,00 A
+======================================
+SUMME EUR                     212,72
+Kreditkarte                   212,72
+
+Steuer   Netto     MwSt     Brutto
+A  7%    146,45    10,25    156,70
+B 19%     47,08     8,94     56,02
+Posten: 72
+
+29.11.2025  11:20  Kasse 04  Bed. 112  Bon 2091
+Vielen Dank fuer Ihren Einkauf!

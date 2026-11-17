@@ -1,0 +1,21 @@
+BAUMARKT BEISPIEL WERKZEUG & GARTEN
+Gewerbepark 9, 34560 Beispielstadt
+Tel. 00000 000000
+UST-ID DE000000000
+
+Blumenerde 70 l
+  3 x 6,99        20,97 A
+Rosenschere Bypass              17,99 A
+Rasensamen Spiel & Sport 2 kg    19,95 A
+Pflanzkübel 40 cm
+  2 x 12,49        24,98 A
+------------------------------------
+SUMME EUR                    83,89
+Girocard                      83,89
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   70,50   13,39   83,89
+
+28.03.2026 10:12  Bon 9169  Kasse 3
+TSE-Signatur 8062842549
+Vielen Dank für Ihren Einkauf!

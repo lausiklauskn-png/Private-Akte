@@ -1,0 +1,13 @@
+flugwerk-reisen.example – Geschäftsreiseportal
+Flugwerk GmbH, Flughafenstr. 100, 90411 Nürnberg
+
+Rechnung / E-Ticket-Beleg FW-26-0091417                    17.08.2026
+Reisender: KETTLER/MAREK MR        Firma: Kettler Systemhaus
+
+Flug Nürnberg (NUE) – Hamburg (HAM) 02.09.2026 07:10
+Flug Hamburg (HAM) – Nürnberg (NUE) 03.09.2026 18:45
+Tarif Economy Flex inkl. Steuern und Gebühren
+Flugpreis netto                241,36
+Umsatzsteuer 19 % (Inland)      45,86
+Gesamtpreis                    287,22 EUR
+Reiseanlass lt. Buchung: Partnerkonferenz CloudKontor

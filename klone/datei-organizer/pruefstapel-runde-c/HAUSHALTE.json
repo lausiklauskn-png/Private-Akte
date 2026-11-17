@@ -1,0 +1,188 @@
+{
+ "haushalte": [
+  {
+   "id": "c1-mehrgenerationen",
+   "titel": "Mehrgenerationenhaus, Umzug 2022, Erbfall 2024",
+   "name": "Wendeloh",
+   "anschrift": "Am Kirschberg 12, 34567 Mühlbrück am See",
+   "personen": [
+    {
+     "vorname": "Erwin",
+     "name": "Wendeloh",
+     "anrede": "Herr",
+     "rolle": "Großvater, Rentner, ab 2023 Pflegegrad 2, später 3, verstorben am 12.03.2024 (Erbfall)"
+    },
+    {
+     "vorname": "Hildegard",
+     "name": "Wendeloh",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Rentnerin, seit 2024 Witwe und Alleinerbin, bezieht Witwenrente, 2026 Pflegeantrag"
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Wendeloh",
+     "anrede": "Herr",
+     "rolle": "Vater, angestellter Elektriker, Hauptmieter, Bevollmächtigter der Mutter seit 2024"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Wendeloh",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Verwaltung"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Wendeloh",
+     "anrede": "Herr",
+     "rolle": "Sohn, geb. 14.05.2005, 2021 Schüler, volljährig seit 05/2023, seit 08/2023 Azubi Kfz-Mechatroniker, seit 03/2025 eigene Wohnung in Kranichsfeld (Gartenstraße 3), eigenes Leichtkraftrad"
+    },
+    {
+     "vorname": "Lea",
+     "name": "Wendeloh",
+     "anrede": "Kind",
+     "rolle": "Tochter, geb. 02.02.2009, Gymnasiastin"
+    },
+    {
+     "vorname": "Mats",
+     "name": "Wendeloh",
+     "anrede": "Kind",
+     "rolle": "Sohn, geb. 30.06.2014, 2022 Grundschule am Bühl, seit 2024 weiterführende Schule"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-WL 412",
+    "BSP-JW 25"
+   ]
+  },
+  {
+   "id": "c1-patchwork",
+   "titel": "Patchwork-Familie, Heirat 2023, Pflegekind ab 2024",
+   "name": "Rebmann",
+   "anschrift": "Ahornstraße 5, 45678 Talheim-Beispiel",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Rebmann",
+     "anrede": "Herr",
+     "rolle": "Vater von Finn und Ida, Hauseigentümer, Heirat 06/2023, seit 07/2023 Steuerklasse III, Pflegevater von Mia"
+    },
+    {
+     "vorname": "Katrin",
+     "name": "Rebmann",
+     "anrede": "Frau",
+     "rolle": "Mutter von Leon, bis 06/2023 Katrin Sommerfeld (Rosenhof 9, 45690 Brunnwald), Zuzug 04/2023, Heirat 16.06.2023, Steuerklasse V, Physiotherapeutin, Krankenkassenwechsel 2024, seit 03/2025 Fotografie im Nebengewerbe (eigene Steuernummer), Pflegemutter von Mia"
+    },
+    {
+     "vorname": "Leon",
+     "name": "Sommerfeld",
+     "anrede": "Herr",
+     "rolle": "Sohn von Katrin aus erster Ehe, geb. 03.02.2008, Schüler, volljährig seit 03.02.2026 (Unterhalt direkt, eigenes Konto, eigener Handyvertrag, Abitur 2026, Minijob)"
+    },
+    {
+     "vorname": "Finn",
+     "name": "Rebmann",
+     "anrede": "Kind",
+     "rolle": "Sohn von Markus aus erster Ehe, geb. 11.09.2012, Gymnasium"
+    },
+    {
+     "vorname": "Ida",
+     "name": "Rebmann",
+     "anrede": "Kind",
+     "rolle": "Tochter von Markus aus erster Ehe, geb. 27.04.2015, ab 2025 Gymnasium"
+    },
+    {
+     "vorname": "Mia",
+     "name": "Kaufner",
+     "anrede": "Kind",
+     "rolle": "Pflegekind, geb. 07.10.2017, seit 01.03.2024 in Vollzeitpflege (Jugendamt Landkreis Beispielland, Pflegegeld)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MR 180",
+    "BSP-KS 83"
+   ]
+  },
+  {
+   "id": "c2-selbststaendig",
+   "titel": "Paar, er selbstständiger Tischler seit 2022, Tochter studiert",
+   "name": "Kesselring",
+   "anschrift": "Lindenweg 12, 34567 Musterfelde",
+   "personen": [
+    {
+     "vorname": "Jörg",
+     "name": "Kesselring",
+     "anrede": "Herr",
+     "rolle": "Vater, bis 02/2022 angestellter Tischler, seit 03/2022 selbstständig (Tischlerei Kesselring, neue Steuernummer 123/789/45678)"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kesselring",
+     "anrede": "Frau",
+     "rolle": "Mutter, angestellt; 04/2023 Wechsel von BKK Beispielwerk zur Beispiel Ersatzkasse"
+    },
+    {
+     "vorname": "Lea",
+     "name": "Kesselring",
+     "anrede": "Frau",
+     "rolle": "Tochter, geb. 2005, bis 2023 Schülerin (Abitur), seit 10/2024 Studentin in Beispielstadt (BAföG, eigene KV, eigener Handyvertrag, WG Am Kanal 5, ab 08/2026 Wohnheim)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KT 77",
+    "BSP-JM 9"
+   ]
+  },
+  {
+   "id": "c2-alleinerziehend",
+   "titel": "Alleinerziehende Mutter mit zwei Söhnen",
+   "name": "Weber",
+   "anschrift": "Mühlgasse 4, 23458 Neudorf-Beispiel",
+   "personen": [
+    {
+     "vorname": "Nicole",
+     "name": "Weber",
+     "anrede": "Frau",
+     "rolle": "Mutter, bis 08/2022 Nicole Hartmann; Trennung 2021, Scheidung 2022, Bankwechsel 2023, Umzug 05/2024 von Birkenallee 30, 23456 Altdorf-Beispiel"
+    },
+    {
+     "vorname": "Tim",
+     "name": "Hartmann",
+     "anrede": "Herr",
+     "rolle": "Sohn, geb. 15.03.2007, Schüler, seit 03/2025 volljährig, seit 08/2025 Auszubildender (eigenes Konto, eigene KV-Mitgliedschaft)"
+    },
+    {
+     "vorname": "Paul",
+     "name": "Hartmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, geb. 2012, Schüler, Unterhaltsvorschuss"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-NW 230"
+   ]
+  },
+  {
+   "id": "c2-rentnerin",
+   "titel": "Verwitwete Rentnerin mit Pflegegrad",
+   "name": "Sommerfeld",
+   "anschrift": "Parkallee 2, Wohnpark Beispielhain, Wohnung 14, 56790 Beispielhausen",
+   "personen": [
+    {
+     "vorname": "Gertrud",
+     "name": "Sommerfeld",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, verwitwet seit 11/2020, Pflegegrad 2 ab 2023, Pflegegrad 3 ab 11/2025, Hörgeräte 2024, Klinik 09/2024, seit 04/2025 betreutes Wohnen (vorher Ahornstraße 7, 56789 Kleinbeispiel)"
+    },
+    {
+     "vorname": "Martina",
+     "name": "Kranz",
+     "anrede": "Frau",
+     "rolle": "Tochter (eigener Haushalt in Beispielfeld), Miterbin, seit 04/2023 Vorsorgebevollmächtigte"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-GS 55"
+   ]
+  }
+ ]
+}

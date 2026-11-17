@@ -1,0 +1,11 @@
+PayFreund - Gebührenaufstellung
+Teekontor Lindenblatt                          Monat: Oktober 2026
+
+Datum   Vorgang                               Brutto    Gebühr
+div.    Verkäufe Inland (188)               5.204,10   -147,36
+div.    Verkäufe international (17)           911,60    -36,28
+12.10.  Rückbuchungsgebühr Käuferschutzfall              -16,00
+-----------------------------------------------------------------
+Gebühren gesamt                                         199,64 EUR
+
+Hinweis: Kein Umsatzsteuerausweis, steuerbefreite Zahlungsdienstleistung.

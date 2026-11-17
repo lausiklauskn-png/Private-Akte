@@ -1,0 +1,34 @@
+# Rentenversicherung Beispiel-Land
+Rentenversicherung Beispiel-Land · Rentenplatz 1 · 30000 Beispielhannover
+
+Frau Sabine Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Versicherungsnummer: 00 000000 B 000
+Datum: 06.10.2025
+
+# Renteninformation 2025
+
+Sehr geehrte Frau Brandtner,
+
+mit dieser Renteninformation erhalten Sie einen Überblick über Ihre bisher erworbenen Anwartschaften.
+
+|Angabe|Betrag|
+|Rente wegen voller Erwerbsminderung|1.104,22 €|
+|Höhe der künftigen Regelaltersrente (bisherige Beiträge)|612,48 €|
+|Höhe bei gleichbleibenden Beiträgen|1.188,90 €|
+
+
+Bitte prüfen Sie Ihren Versicherungsverlauf. Kindererziehungszeiten für Lena, Jonas und Mia sind berücksichtigt.
+
+Mit freundlichen Grüßen
+@unterschrift
+Rentenversicherung Beispiel-Land
+@seite
+Rentenversicherung Beispiel-Land · Seite 2 · Renteninformation 2025
+
+## Wichtige Hinweise
+Die Renteninformation ist kein Bescheid. Die tatsächliche Rentenhöhe kann wegen künftiger Rentenanpassungen und Änderungen im Erwerbsleben abweichen.
+
+Bitte bedenken Sie, dass von der Rente Beiträge zur Kranken- und Pflegeversicherung und gegebenenfalls Steuern zu zahlen sind.

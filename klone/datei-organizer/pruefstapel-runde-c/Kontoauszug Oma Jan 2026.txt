@@ -1,0 +1,21 @@
+Sparkasse Beispieltal
+Kontoauszug 01/2026   Blatt 1
+
+Hildegard Wendeloh
+Am Kirschberg 12, 34567 Mühlbrück am See
+Girokonto  IBAN DE00 0000 0000 0000 0000 00
+
+Buchung   Wert      Vorgang                                      Betrag EUR
+02.01.    02.01.    Dauerauftrag Haushaltsgeld an T. Wendeloh    -350,00
+05.01.    05.01.    Bergland Reisen Beispiel Gutschrift Storno     45,00
+12.01.    12.01.    Apotheke am See Kartenzahlung                 -23,40
+15.01.    15.01.    Seniorenkreis Mühlbrück Jahresbeitrag         -24,00
+20.01.    20.01.    Hörakustik Klangfein Beispiel Batterien       -12,90
+30.01.    30.01.    Renten Service Witwenrente 02/2026            671,44
+30.01.    30.01.    Renten Service Altersrente 02/2026            812,30
+30.01.    30.01.    Kontoführung                                  -4,90
+
+Alter Kontostand 31.12.2025      3.208,77 €
+Neuer Kontostand 30.01.2026      4.322,31 €
+
+Sparbuch 9988 1200 (früher Erwin Wendeloh): Guthaben 26.701,45 €

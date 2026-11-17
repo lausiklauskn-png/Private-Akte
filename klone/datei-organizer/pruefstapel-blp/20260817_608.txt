@@ -1,0 +1,25 @@
+Autohaus Rottner GmbH
+Neuwagen & Gebrauchte
+Bahnhofstr. 76, 37996 Molkenrode
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung Fahrzeugkauf
+Rechnungsnummer: FZ-2744
+Datum 17. September 2026
+Fahrzeug wird dem Betriebsvermögen zugeordnet.
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Pkw Kombi, Gebrauchtwagen, EZ 03/2023, FIN XXXX0000000000000     1 21.500,00  21.500,00
+  2  Überführung und Zulassung     1    390,00     390,00
+
+Nettobetrag                               21.890,00
+zzgl. 19 % USt                            4.159,10
+Surnme                                     26.049,10 EUR
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9700 95
+USt-IdNr. DE000000128

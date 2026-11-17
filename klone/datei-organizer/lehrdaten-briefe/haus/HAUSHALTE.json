@@ -1,0 +1,53 @@
+{
+ "haushalte": [
+  {
+   "id": "h-brodersen",
+   "name": "Familie Brodersen, Uhlenhorn",
+   "personen": [
+    {
+     "vorname": "Henning",
+     "name": "Brodersen",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Maren",
+     "name": "Brodersen",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Jonte",
+     "name": "Brodersen",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Fenja",
+     "name": "Brodersen",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "WDM-HB 412",
+    "WDM-H 9"
+   ]
+  },
+  {
+   "id": "h-tiedemann",
+   "name": "Eheleute Tiedemann, Süderlohe",
+   "personen": [
+    {
+     "vorname": "Gerd",
+     "name": "Tiedemann",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Ilse",
+     "name": "Tiedemann",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [
+    "WDM-IT 303"
+   ]
+  }
+ ]
+}

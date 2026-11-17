@@ -1,0 +1,32 @@
+{"titel": "Angebote, Rechnungen und Belege vom Handy – Buchhaltung ohne Sonntagsarbeit",
+ "kunde": {"firma": "Elektro Beispielhof", "ansprechpartner": "Tobias Beispielhof", "mail": "tobias@elektro-beispielhof.example"},
+ "bereiche": {
+  "1": ["Rechnungen schreibe ich in Word", "Belege sammle ich in der Hosentasche", "Buchhaltung mache ich sonntags in einem kostenlosen Online-Programm", "Jahresübersicht habe ich erst, wenn der Steuerberater fertig ist"],
+  "2": ["Angebot und Rechnung", "Belege erfassen", "Buchhaltung", "Jahresabschluss und Umsatzsteuer"],
+  "3": [{"text": "Inhaber (ich selbst, alleine)", "anzahl": 1}, {"text": "Steuerberater", "anzahl": 1}, {"text": "Kunden (bekommen Angebot und Rechnung)", "anzahl": null}],
+  "4": ["Angebot und Rechnung tippe ich doppelt", "Belege gehen verloren oder sind zerknittert", "Sonntags geht Zeit für Buchhaltung drauf", "Keine Übersicht über Einnahmen und Ausgaben im Jahr", "Das Online-Programm ist mir zu kompliziert"],
+  "5": ["Word kennt kein Angebot, aus dem eine Rechnung wird", "Belege werden nicht sofort erfasst, sondern gesammelt", "Programm ist für mich zu umständlich, also schiebe ich es auf"],
+  "6": [
+   {"text": "Aus einem Angebot direkt die Rechnung machen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein doppeltes Tippen"}},
+   {"text": "Quittung knipsen, Programm schlägt vor, was es ist", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "keine Zettel in der Tasche, kein Sonntag mehr dafür"}},
+   {"text": "Einnahmen-Überschuss-Rechnung am Jahresende vorbereitet", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Überblick, ohne auf den Steuerberater zu warten"}},
+   {"text": "Umsatzsteuermeldung vorbereitet", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "weniger Arbeit vor dem Termin"}},
+   {"text": "Kundendaten bleiben bei mir, nicht bei einer Firma im Netz", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "ruhiges Gefühl"}}
+  ],
+  "7": ["Rechnung aus dem Angebot mit einem Griff", "Beleg direkt auf der Baustelle erledigt", "Übersicht über Einnahmen und Ausgaben jederzeit", "Am Jahresende liegen EÜR und Umsatzsteuer vorbereitet da", "Einfach zu bedienen"],
+  "8": ["Das System muss Angebote erstellen können", "Das System muss aus einem Angebot eine Rechnung machen", "Das System muss Belege per Handykamera aufnehmen", "Das System muss zu einem Beleg vorschlagen, was es ist", "Das System muss Einnahmen und Ausgaben übers Jahr zeigen", "Das System muss die Einnahmen-Überschuss-Rechnung vorbereiten", "Das System muss die Umsatzsteuermeldung vorbereiten", "Das System muss Kundendaten speichern"],
+  "9": ["Keine Schulung, muss sich selbst erklären", "Belege sofort knipsen statt sammeln"],
+  "10": ["Android-Handy auf der Baustelle"],
+  "11": ["Word", "Kostenloses Online-Buchhaltungsprogramm"],
+  "12": [],
+  "13": ["Angebote", "Rechnungen", "Belege und Quittungen", "Kundendaten"],
+  "14": ["personenbezogene Daten: ja (Kundendaten)", "Kundendaten sollen nicht bei irgendeiner Firma im Netz liegen"],
+  "15": ["wenig Zeit, soll einfach sein", "Abo nur, wenn billig; lieber einmal zahlen"],
+  "18": [
+   {"text": "Wie bekommt der Steuerberater die Daten?", "wer": "Tobias Beispielhof mit Steuerberater", "bis": ""},
+   {"text": "Was passiert mit den Daten aus dem alten Online-Programm?", "wer": "Tobias Beispielhof", "bis": ""},
+   {"text": "Wie viele Angebote, Rechnungen und Belege im Monat?", "wer": "Tobias Beispielhof", "bis": ""},
+   {"text": "Budget: wie viel ist „billig“ beim Abo, wie viel beim Einmalkauf?", "wer": "Tobias Beispielhof", "bis": ""},
+   {"text": "Wie viele Stunden kostet der Sonntag heute im Monat?", "wer": "Tobias Beispielhof", "bis": ""}
+  ]
+ }}

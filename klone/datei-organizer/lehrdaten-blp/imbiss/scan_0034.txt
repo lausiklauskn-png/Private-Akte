@@ -1,0 +1,15 @@
+HANDELSHOF GASTRO Kassel-Waldau
+Kunde 0091442
+30.01.2026 06:55 Beleg 71877
+
+Energy Drink 24x0,25          21,36 A
+Eistee Pfirsich 12x0,5         7,08 A
+Kaffee Bohne 1kg x4           43,96 A
+Malzbier 24x0,33              11,90 A
+Wasser still 6x1,5 x10        25,90 A
+Radler 24x0,33                12,48 A
+
+Netto A            122,68
+USt 19%             23,31
+Gesamt EUR         145,99
+Girocard           145,99

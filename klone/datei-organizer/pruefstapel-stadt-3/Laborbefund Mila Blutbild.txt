@@ -1,0 +1,15 @@
+Labor Beispiel-Diagnostik · Gesundheitsweg 3 · 00140 Beispielstadt-Nord
+BEFUNDBERICHT
+Auftrags-Nr. LB-0446231     Entnahme: 21.10.2026     Befund: 22.10.2026
+Einsender: Kinderarztpraxis Dr. Beispiel-Lorenz
+Patientin: Wendebach, Mila, geb. 2024 (weiblich)
+
+Kleines Blutbild
+Leukozyten    8,6      /nl     6,0 - 17,5
+Erythrozyten  4,4      /pl     3,7 - 5,3
+Hämoglobin    11,6     g/dl    10,5 - 13,5
+Hämatokrit    35       %       32 - 42
+Thrombozyten  311      /nl     150 - 450
+Ferritin      21       ug/l    12 - 60
+
+Beurteilung: alle Werte im altersentsprechenden Normbereich.

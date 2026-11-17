@@ -1,0 +1,9 @@
+Kontoumsätze Geschäftskonto – Export aus dem Onlinebanking
+Kontoinhaberin Merle Osterkamp / Haarstudio Federleicht
+
+Datum        Text                                           Betrag
+25.01.2026   Lastschrift KITA REGENBOGEN NORTHEIM
+             Elternbeitrag Lina Osterkamp Juli            -353,70
+
+Notiz Buchhaltung: privat veranlasst, über Geschäftskonto abgebucht
+= Privatentnahme

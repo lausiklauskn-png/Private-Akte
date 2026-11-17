@@ -1,0 +1,51 @@
+# Beispiel Sparkasse Probedorf
+Sparkassenplatz 1 · 56789 Probedorf
+
+Kontoauszug
+Geschäftskonto Haarwerk Hartwig, Inh. Nicole Hartwig
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 11/2025 · Blatt 1 von 1 · Zeitraum 01.11.2025 – 30.11.2025
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Alter Kontostand vom 01.11.2025: 6.210,40 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.11.|01.11.|Miete Ladenlokal Marktplatz 9 Beispiel Immobilien KG|-1.582,70|
+|02.11.|02.11.|Kartenzahlung Frischkauf Exempel|-59,85|
+|03.11.|03.11.|Kartenumsätze Terminal 10/2025|+4.210,35|
+|03.11.|03.11.|Lastschrift Beispiel-Markt Filiale 0412|-90,75|
+|03.11.|03.11.|Bargeldauszahlung Geldautomat|-127,53|
+|04.11.|04.11.|Kartenzahlung Frischkauf Exempel|-65,22|
+|06.11.|06.11.|Bargeldauszahlung Geldautomat|-107,03|
+|07.11.|07.11.|Kartenzahlung Frischkauf Exempel|-44,24|
+|08.11.|08.11.|Kartenzahlung Bäckerei Beispielkorn|-12,50|
+|09.11.|09.11.|Kartenzahlung Bäckerei Beispielkorn|-8,16|
+|10.11.|10.11.|Umsatzsteuer-Vorauszahlung Finanzamt Probedorf|-612,00|
+|13.11.|13.11.|Lastschrift Muster Drogerie|-24,10|
+|14.11.|14.11.|Friseurbedarf Beispiel Großhandel Rg 88-2025-10311|-364,81|
+|14.11.|14.11.|Kartenzahlung Discount Probe|-62,69|
+|14.11.|14.11.|Bargeldauszahlung Geldautomat|-102,16|
+|15.11.|15.11.|Beispielgas Abschlag Laden|-94,00|
+|17.11.|17.11.|Bareinzahlung Tageslosung|+1.840,00|
+|17.11.|17.11.|Bargeldauszahlung Geldautomat|-73,76|
+|17.11.|17.11.|Lastschrift Muster Drogerie|-30,47|
+|22.11.|22.11.|Kartenzahlung Frischkauf Exempel|-65,45|
+|23.11.|23.11.|Kartenzahlung Bäckerei Beispielkorn|-12,34|
+|25.11.|25.11.|Kartenzahlung Bäckerei Beispielkorn|-11,66|
+|25.11.|25.11.|Kartenzahlung Bäckerei Beispielkorn|-11,64|
+|25.11.|25.11.|Lastschrift Beispiel-Markt Filiale 0412|-77,14|
+|25.11.|25.11.|Kartenzahlung Discount Probe|-41,03|
+|27.11.|27.11.|Kartenzahlung Bäckerei Beispielkorn|-9,93|
+|28.11.|28.11.|Lohn Aushilfe Salon|-556,00|
+|28.11.|28.11.|Privatentnahme|-2.000,00|
+|29.11.|29.11.|Lastschrift Beispiel-Markt Filiale 0412|-33,37|
+|30.11.|30.11.|Beispiel Termine Online Abo|-46,41|
+|30.11.|30.11.|Lastschrift Muster Drogerie|-20,70|
+
+Neuer Kontostand vom 30.11.2025: 5.913,11 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Sparkasse Probedorf · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

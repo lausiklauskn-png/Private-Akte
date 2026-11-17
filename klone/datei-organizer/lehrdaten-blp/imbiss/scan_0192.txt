@@ -1,0 +1,13 @@
+gastro-profi24.example – Ihr Onlineshop für Gastronomiebedarf
+Rechnung RE-2026-448120       Bestelldatum 21.04.2026
+
+Rechnungsadresse: Hartwigs Grillstube & Partyservice, Kornmarkt 7, 34999 Wesenrode
+
+Artikel                                              Menge   Preis netto
+Kombidämpfer 6 x GN 1/1, Direktdampf, Touch            1       3.890,00
+Untergestell Edelstahl mit Einschüben                  1         329,00
+Speditionsversand                                      1          89,00
+
+Zwischensumme   4.308,00 €
+MwSt. 19 %      818,52 €
+Gesamt          5.126,52 €   — bezahlt per Vorkasse

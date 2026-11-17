@@ -1,0 +1,20 @@
+BEISPIEL VOLKSBANK TESTDORF
+Postfach 10 20 30 - 00000 Beispielort
+----------------------------------------
+Ihr Zeichen: VN 20995  Unser Zeichen: Az. 490/25  Datum: 11.01.2025
+||| |||| || ||||| ||| 5679649
+
+Dirk Lohmeyer (Beispiel) - Beispielgasse 3, 00000 Testdorf
+
+KONTOAUSZUG
+
+IBAN: DE00 0000 0000 0000 0000 00
+Auszug Nr.: 7/2025
+Alter Saldo 842,10
+Neuer Saldo 611,45
+
+[X] Maschinell erstellt   [ ] Original folgt
+
+Kontoauszug ist maschinell erstellt. Einwendungen binnen 6 Wochen.
+
+Blatt 1/1   Vordr. 8337-11.25

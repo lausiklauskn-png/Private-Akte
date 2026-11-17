@@ -1,0 +1,16 @@
+TERMIN-APP (BEISPIEL)
+
+PUSH
+
+Neue Nachricht
+
+PRAXIS: Dr. Beispiel-Svensson, Dermatologie
+TERMIN: Do 27.11.2025, 14:30
+GRUND: Hautkrebsvorsorge
+PATIENTIN: Julia Okafor-Lenz
+
+Neue Nachricht: Ihr Termin ist bestätigt
+
+Absage bis 24 Stunden vorher kostenfrei.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

@@ -1,0 +1,11 @@
+Sparkasse Beispielstadt-Nord - Jahreskontoauszug 2026
+Frau Hildegard Krummbeck - Konto DE00 0000 0000 0000 0000 00
+
+Anfangsbestand 01.01.                      4.208,33
+Rente (12 Zahlungen)                       +15.384,00
+Pflegekasse (Pflegegeld)                   + 6.120,00
+Miete                                       - 5.760,00
+Pflegedienst                                - 3.980,00
+Stadtwerke, Telefon, Versicherung           - 1.862,45
+Endbestand 31.12.                           14.109,88
+Zinsen 2026: 12,33 EUR, einbehaltene Kapitalertragsteuer 0,00 EUR

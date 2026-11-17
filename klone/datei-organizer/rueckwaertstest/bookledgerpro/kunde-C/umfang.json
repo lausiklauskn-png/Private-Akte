@@ -1,0 +1,10 @@
+{"bausteine":[
+{"katalog":"rechnung","name":"Belegablage und einfache Buchhaltung mit zwei getrennten Bereichen (eigene Steuer / Shop als Kleinunternehmerin) in einem Programm","groesse":"mittel","deckt":["B-21","B-30"],"faktoren":["offline"]},
+{"katalog":"scan","name":"Belege fotografieren oder aus der Handy-Galerie übernehmen und als Beleg ablegen","groesse":"klein","deckt":["B-31"],"faktoren":["offline"]},
+{"katalog":"datei","name":"Verschlüsselte Sicherung des Bestands auf SD-Karte mit Wiederherstellen","groesse":"mittel","deckt":["B-20","B-32"],"faktoren":["offline"]},
+{"katalog":"suche","name":"Belege per Suchwort und Jahr wiederfinden (Text der Belege durchsuchen, offline)","groesse":"mittel","deckt":["B-23","B-33"],"faktoren":["offline"]},
+{"katalog":"schnitt","name":"Monatssummen aus dem Shop-Programm übernehmen (Export einlesen und zuordnen)","groesse":"mittel","deckt":["B-22","B-34"],"faktoren":[]},
+{"katalog":"schnitt","name":"Kontoumsätze direkt von der Bank abholen (Bankschnittstelle)","groesse":"gross","deckt":["B-25","B-35"],"faktoren":["server"]},
+{"katalog":"schnitt","name":"Steuererklärung elektronisch ans Finanzamt übermitteln","groesse":"gross","deckt":["B-24","B-36"],"faktoren":["server"]},
+{"katalog":"lager","name":"Warenbestand der Taschen mit Inventur führen","groesse":"klein","deckt":["B-26","B-37"],"faktoren":["offline"]}
+]}

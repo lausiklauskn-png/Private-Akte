@@ -1,0 +1,25 @@
+Gastro-Großhandel Beispiel-Markt · Buchhaltung · Gewerbepark 55 · 00127 Beispielstadt-Nord
+
+Grillstube Beispiel-Eck
+Herrn Dimitrios Kalanteris
+Nordring 115
+00105 Beispielstadt-Nord
+
+Kunden-Nr. GG-30514                                         Datum 07.10.2026
+
+Zahlungserinnerung
+
+Sehr geehrter Herr Kalanteris,
+
+sicher ist es Ihrer Aufmerksamkeit entgangen: Für folgende Rechnung konnten wir
+noch keinen Zahlungseingang verbuchen.
+
+Rechnung 260917-0442 vom 18.09.2026, fällig 02.10.2026     1.188,10 EUR
+
+Wir bitten Sie, den Betrag bis zum 16.10.2026 zu überweisen.
+Bis zum Ausgleich können wir Lieferungen nur gegen Barzahlung oder EC-Karte ausführen.
+
+Hat sich Ihre Zahlung mit diesem Schreiben gekreuzt, danken wir Ihnen.
+
+Mit freundlichen Grüßen
+Debitorenbuchhaltung

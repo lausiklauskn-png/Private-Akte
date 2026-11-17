@@ -1,0 +1,42 @@
+Beispiel Volksbank Exempelheim eG
+Genossenschaftsweg 3 · 67890 Exempelheim
+
+Kontoauszug
+Gemeinschaftskonto Heinrich und Ilse Vogelsang
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 15/2025 · Blatt 1 von 1 · Zeitraum 01.11.2025 – 30.11.2025
+
+Herrn und Frau
+Heinrich und Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Alter Kontostand vom 01.11.2025: 8.402,11 EUR
+
+Buchungstag   Valuta   Vorgang / Verwendungszweck   Betrag EUR
+01.11.   01.11.   Betriebsrente Beispiel Pensionskasse   +286,18
+01.11.   01.11.   Kartenzahlung Discount Probe   -31,39
+02.11.   02.11.   Kartenzahlung Bäckerei Beispielkorn   -5,28
+03.11.   03.11.   Spende Seniorenkreis St. Beispiel   -20,00
+05.11.   05.11.   Hausnotruf Sicher Zuhause   -25,50
+06.11.   06.11.   Lastschrift Beispiel-Markt Filiale 0412   -77,69
+08.11.   08.11.   Lastschrift Muster Drogerie   -6,88
+09.11.   09.11.   Bargeldauszahlung Geldautomat   -82,62
+12.11.   12.11.   Zeitung Beispiel Anzeiger Abo   -42,90
+12.11.   12.11.   Lastschrift Beispiel-Markt Filiale 0412   -22,09
+15.11.   15.11.   Kartenzahlung Discount Probe   -15,49
+16.11.   16.11.   Kartenzahlung Bäckerei Beispielkorn   -9,59
+22.11.   22.11.   Lastschrift Beispiel-Markt Filiale 0412   -31,19
+24.11.   24.11.   Beispiel Brennstoffe Heizöl   -1.895,36
+24.11.   24.11.   Kartenzahlung Discount Probe   -38,68
+26.11.   26.11.   Kartenzahlung Frischkauf Exempel   -78,56
+26.11.   26.11.   Kartenzahlung Discount Probe   -8,75
+28.11.   28.11.   Rente RV Beispiel-Land Heinrich   +1.540,22
+28.11.   28.11.   Rente RV Beispiel-Land Ilse   +723,78
+28.11.   28.11.   Kartenzahlung Discount Probe   -50,65
+30.11.   30.11.   Lastschrift Muster Drogerie   -17,61
+
+Neuer Kontostand vom 30.11.2025: 8.492,06 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+Beispiel Volksbank Exempelheim eG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

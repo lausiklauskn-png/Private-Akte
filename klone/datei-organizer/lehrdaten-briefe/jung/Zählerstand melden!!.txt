@@ -1,0 +1,24 @@
+Westmark Netz GmbH - Ihr Netzbetreiber für Strom und Gas
+
+Malte Kessing
+Hüttenstraße 41
+47923 Lindenrath
+                                               Lindenrath, 01.12.2025
+Marktlokation DE 000711 47923 6000 0000 0000 2218 4
+
+Bitte lesen Sie Ihren Stromzähler ab
+
+Guten Tag,
+
+für die Jahresabrechnung Ihres Lieferanten benötigen wir den Stand Ihres
+Zählers 1 LOG 0065 771 902 (Keller, Zählerschrank links, 3. Feld).
+
+Teilen Sie uns den Stand bitte bis 19.12.2025 mit
+ - online: ablesung.westmark-netz.example, Zugangscode 7741-KX2
+ - per Postkarte (anbei)
+ - telefonisch 0299 880 12 12 (Sprachcomputer)
+
+Notieren Sie nur die Ziffern vor dem Komma. Erhalten wir keinen Wert,
+wird der Verbrauch rechnerisch ermittelt.
+
+Vielen Dank für Ihre Mithilfe.

@@ -1,0 +1,22 @@
+Direktbank Beispiel AG
+Kontoauszug Nr. 4/2024
+
+Markus Rebmann und Katrin Rebmann
+Ahornstraße 5, 45678 Talheim-Beispiel
+Gemeinschaftskonto  IBAN DE00 0000 0000 0000 0000 00
+
+Datum     Vorgang                                             Betrag
+02.04.    Familienkasse KG 456FK112233 Finn, Ida               500,00
+02.04.    Familienkasse KG 789FK445566 Leon, Mia               250,00
+03.04.    Landkreis Beispielland Pflegegeld 51.3-PK-2024-0117  1.049,50
+03.04.    Patrick Sommerfeld Unterhalt Leon April              543,00
+05.04.    Stadtwerke Talheim Beispiel Abschlag 220871          -168,00
+08.04.    Kaufhalle Sonnental Kartenzahlung                    -142,37
+15.04.    Gemeinde Talheim Grundsteuer Q2                      -126,90
+15.04.    Rheintal Beispiel Versicherung HP-90231              -7,90
+22.04.    Tankstelle Talblick                                  -71,20
+29.04.    Umbuchung von Gehaltskonto M. Rebmann                 2.000,00
+30.04.    Umbuchung von Gehaltskonto K. Rebmann                 800,00
+
+Alter Saldo 31.03.2024     2.217,40 €
+Neuer Saldo 30.04.2024     6.343,53 €

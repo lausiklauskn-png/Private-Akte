@@ -1,0 +1,13 @@
+SB-TANK 24  Automatentankstelle
+Standort 0417 Wehrstedt, Am Bahndamm
+
+Quittung
+08.07.2026 06:55     Terminal 01
+Produkt:  SUPER E10
+Menge:    40,21 L
+Preis/L:  1,669 EUR
+BETRAG:   67,11 EUR
+MwSt 19%: 10,72 EUR
+Netto:    56,39 EUR
+Karte:    girocard ****0014
+Beleg bitte aufbewahren

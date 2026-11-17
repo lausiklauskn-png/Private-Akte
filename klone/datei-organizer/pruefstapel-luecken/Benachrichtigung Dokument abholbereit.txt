@@ -1,0 +1,22 @@
+Von: Bürgerservice Musterhausen <buergerservice@musterhausen.example>
+An: erika.probstein@posteingang.example
+Datum: 05.11.2026 14:27
+Betreff: Ihr Dokument ist abholbereit – Vorgangsnummer BS-2026-48311
+
+Sehr geehrte Frau Probstein,
+
+Ihr beantragtes Dokument
+
+  Personalausweis (Antrag vom 08.10.2026)
+
+liegt ab sofort im Bürgerservice Musterhausen, Rathaus, Erdgeschoss, zur Abholung bereit.
+
+Bitte vereinbaren Sie für die Abholung einen Termin unter termin.musterhausen.example oder
+Tel. 0000 / 12 34 50. Die Abholung muss bis zum 20.01.2027 erfolgen.
+
+Bringen Sie bitte Ihren alten Personalausweis mit. Sie können auch eine Person Ihres Vertrauens schicken;
+diese benötigt eine schriftliche Vollmacht und ihren eigenen Ausweis.
+
+Mit freundlichen Grüßen
+Ihr Bürgerservice Musterhausen
+Diese E-Mail wurde automatisch versendet.

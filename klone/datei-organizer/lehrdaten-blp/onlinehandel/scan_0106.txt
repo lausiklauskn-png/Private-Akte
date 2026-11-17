@@ -1,0 +1,10 @@
+PAYFREUND (Europe) S.à r.l. - Monatliche Kontoabrechnung
+Händlerkonto: hallo@teekontor-lindenblatt.example (Teekontor Lindenblatt)
+Zeitraum 01.01.2026 - 31.01.2026
+
+Empfangene Zahlungen: 214 Transaktionen       6.412,80 EUR
+Transaktionsgebühren (2,49 % + 0,35 EUR)       -234,58 EUR
+Gebühr Währungsumrechnung (CHF, GBP)             -6,12 EUR
+Summe Gebühren Januar                           240,70 EUR
+
+Die Gebühren sind als Finanzdienstleistung von der Umsatzsteuer befreit.

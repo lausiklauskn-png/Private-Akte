@@ -1,0 +1,32 @@
+! | j Finanzamt Beispielkreis Steuernummer 000/000/00000
+Steuerweg 1 : 99990 Beispielkreisstadt Datum 14.05.2026
+Finanzamt Beispielkreis Steuernummer 000/000/00000 - Steuerweg
+INN 3 REN once
+Herrn Thomas Kieselmayr X DZ 725 ke Ei ARNETRSEN
+und Frau Sabine Kieselmayr Are Nr Be
+Lindenhang 12 3 re
+99999 Musterbach EEE:
+Bescheid für 2025
+über Einkommensteuer, Solidaritätszuschlag und Kirchensteuer
+Festsetzung Einkommen- Solidaritäts- Kirchen-
+steuer zuschlag steuer rk
+festgesetzt werden 5.912,00 0,00 473,04
+ab Steuerabzug vom Lohn 7.104,00 0,00 568,32
+verbleibende Beträge -1.192,00 0,00 -95,28
+Abrechnung: Erstattung insgesamt 1.287,28 €
+De. Der Erstattungsbetrag wird auf das Konto IBAN DE00 0000 0000 0000 0000 00
+überwiesen.
+m Ermittlung des zu versteuernden Einkommens (Auszug)
+= Einkünfte aus nichtselbständiger Arbeit
+5 Ehemann Bruttoarbeitslohn 52.400 €, Werbungskosten 1.938 €
+= Ehefrau _Bruttoarbeitslohn 16.900 €, Arbeitnehmer-Pauschbetrag
+| Sonderausgaben, Vorsorgeaufwendungen Es
+sr3 Steuerermäßigung haushaltsnahe Dienstleistungen 212€
+Erläuterungen
+Die Aufwendungen für das Arbeitszimmer konnten nicht berücksichtigt werden,
+da kein Nachweis vorgelegt wurde. Die Kinderbetreuungskosten für Ben wurden
+in Höhe von 1.540 € anerkannt.
+Rechtsbehelfsbelehrung
+Der Bescheid kann mit dem Einspruch angefochten werden. Die Frist für die
+Einlegung des Einspruchs beträgt einen Monat. Sie beginnt mit Ablauf des Tages,
+an dem Ihnen dieser Bescheid bekannt gegeben worden ist.

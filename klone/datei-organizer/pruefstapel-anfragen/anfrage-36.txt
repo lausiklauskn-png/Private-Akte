@@ -1,0 +1,11 @@
+=== Kontaktformular www.beschriftung-hellwig.example ===
+Eingang: 24.03.2027 12:01
+
+Name:         Kerstin Busch
+Firma:        Yoga-Studio Atem
+E-Mail:       kerstin@yoga-atem.example
+Telefon:      0000 112233
+PLZ/Ort:      00555 Ruhetal
+Kundennummer: 
+Nachricht:
+Wir hätten gern 30 Tassen mit unserem Logo für die Teeküche im Studio.

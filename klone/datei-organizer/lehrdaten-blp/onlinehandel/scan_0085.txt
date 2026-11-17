@@ -1,0 +1,14 @@
+Stadtwerke Ilmenautal GmbH                         JAHRESVERBRAUCHSABRECHNUNG STROM
+Vertragskonto 400 118 2207                         Datum 17.02.2026
+Teekontor Lindenblatt, Salzgasse 14, 21335 Lüneburg
+
+Abrechnungszeitraum 01.01.2025 - 31.12.2025
+Zählerstand alt 48.211 kWh / neu 52.946 kWh = Verbrauch 4.735 kWh
+
+Arbeitspreis 4.735 kWh x 29,10 ct                1.377,89
+Grundpreis 12 Monate x 11,96                       143,47
+Summe netto                                      1.521,36
+Umsatzsteuer 19 %                                  289,06
+Rechnungsbetrag                                  1.810,42
+abzüglich gezahlter Abschläge                   -1.692,00
+Nachzahlung                                        118,42 EUR

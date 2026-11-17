@@ -1,0 +1,36 @@
+{
+ "text": "/home/user/datei-organizer/pruefstapel-vermieterin-ocr",
+ "mitSollFrist": 40,
+ "ohneSollFrist": 53,
+ "strittig": 0,
+ "familienakte": {
+  "fristRichtig": "25/40 = 62.5 % (47–76)",
+  "falschesDatum": 1,
+  "keineErkannt": 14,
+  "faelschlichEineFrist": "5/53",
+  "erinnerungGeplant": "25/40 = 62.5 % (47–76)"
+ },
+ "kern": {
+  "fristRichtig": "33/40 = 82.5 % (68–91)",
+  "falschesDatum": 3,
+  "keineErkannt": 4,
+  "faelschlichEineFrist": "10/53"
+ },
+ "verloren": [
+  "2025-01-15 Brinkmeier Winterdienst.txt: Soll 2025-01-29, Familienakte keine, Kern 2025-01-29",
+  "Laborbefund_2025-01.txt: Soll 2025-04-23, Familienakte keine, Kern 2025-04-23",
+  "Einladung JHV Landfrauen.txt: Soll 2025-02-14, Familienakte keine, Kern 2025-02-14",
+  "MD Begutachtung.txt: Soll 2025-02-25, Familienakte keine, Kern 2025-02-25",
+  "Bestaetigung Kuendigung DG.txt: Soll 2025-06-30, Familienakte keine, Kern 2025-06-30",
+  "OP Termin Auge.txt: Soll 2025-05-06, Familienakte keine, Kern 2025-05-07",
+  "IMG_20250502_1107.txt: Soll 2025-05-09, Familienakte 2025-03-13, Kern 2025-05-09",
+  "Buergerbuero Ausweis.txt: Soll 2025-06-24, Familienakte keine, Kern 2025-06-24",
+  "AW Bad DG - Baubeginn und Fliesen.txt: Soll 2025-07-08, Familienakte keine, Kern 2025-07-08",
+  "Reimers HU Erinnerung.txt: Soll 2025-08-12, Familienakte keine, Kern keine",
+  "Telvia Glasfaser Auftragsbestaetigung.txt: Soll 2025-10-28, Familienakte keine, Kern 2025-10-28",
+  "Aushang Ablesung Oktober.txt: Soll 2025-10-16, Familienakte keine, Kern 2025-10-16",
+  "Zaehlerwechsel Wasser.txt: Soll 2025-11-04, Familienakte keine, Kern keine",
+  "Landfrauen Adventsfahrt.txt: Soll 2025-11-21, Familienakte keine, Kern 2025-11-21",
+  "LStHV Termin Januar.txt: Soll 2026-01-13, Familienakte keine, Kern 2026-01-13"
+ ]
+}

@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: tom.hafenrose@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Sun, 30 Mar 2025 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Lieber Herr Hafenrose,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-19428539
+Rechnungsbetrag: 173,43 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

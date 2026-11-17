@@ -1,0 +1,36 @@
+{"titel": "Familienpost und Fristen im Griff",
+ "kunde": {"firma": "Haushalt Beispielmann", "ansprechpartner": "Sabine Beispielmann", "mail": "sabine@beispielmann.example"},
+ "bereiche": {
+  "1": ["Drei Papierordner und eine Schublade", "Fotos von Briefen auf dem Handy", "Kalender auf dem Handy", "Notizzettel am Kühlschrank", "Briefe an die Krankenkasse abends selbst geschrieben", "Gelegentlich eine KI im Browser für Briefe"],
+  "2": ["Post der Familie und der Mutter ablegen", "Fristen und Termine im Blick behalten", "Antworten auf Briefe schreiben", "Unterlagen sichern"],
+  "3": [{"text": "Sabine (kümmert sich um alles)", "anzahl": 1}, {"text": "Mutter (79), um deren Post es oft geht", "anzahl": 1}, {"text": "Ehemann", "anzahl": 1}, {"text": "Kinder (14 und 19)", "anzahl": 2}],
+  "4": ["Zweimal eine Widerspruchsfrist verpasst", "Unterlagen liegen an vier, fünf Stellen verteilt", "Wer welchen Termin hat, weiß nur mein Kopf", "Briefe an die Krankenkasse kosten mich Abende", "Schlechtes Gefühl, Gesundheitsdaten in eine Browser-KI zu geben"],
+  "5": ["Brief lag unter einem Stapel", "Kein fester Ort für die Post", "Termine nirgends gemeinsam festgehalten", "Keine Hilfe beim Formulieren, die ich mit gutem Gefühl nutzen kann"],
+  "6": [
+   {"text": "Keine Frist mehr verpassen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein Ärger und keine Nachteile mehr durch verpasste Widersprüche"}},
+   {"text": "Alles nach Person und Thema wiederfinden, auch mit Alltagswörtern wie „Zahnarzt März“", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein Suchen mehr in Ordnern und Handyfotos"}},
+   {"text": "Daten bleiben bei mir zu Hause, keine fremde Cloud", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Gutes Gefühl bei Mamas Gesundheitsdaten"}},
+   {"text": "Post nur noch fotografieren statt selbst sortieren und nach Fristen absuchen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Weniger Arbeit mit der Post"}},
+   {"text": "Nichts wird ohne mein Okay abgelegt oder verschickt", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich behalte die Kontrolle"}},
+   {"text": "Hilfe beim Formulieren von Antworten, ohne dass Namen und Diagnosen nach draußen gehen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Abende frei statt Briefe schreiben"}},
+   {"text": "Regelmäßige Sicherung, die ich nicht vergessen kann", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Nichts geht verloren"}},
+   {"text": "Morgens ein Blick: was ist heute fällig", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Termine nicht mehr nur im Kopf"}},
+   {"text": "Auf Deutsch und ohne Technikwissen bedienbar", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich komme allein zurecht"}}
+  ],
+  "7": ["Alle Unterlagen der Familie an einem Ort, nach Person und Thema", "Keine verpasste Frist mehr", "Morgens sehen, was heute fällig ist", "Post fotografieren, kurz drüberschauen, fertig"],
+  "8": ["Das System muss fotografierte Briefe aufnehmen können.", "Das System muss Briefe einer Person und einem Thema zuordnen (Mamas Arztsachen, Job, Wohnung, Auto).", "Das System muss Fristen aus Briefen erkennen und mir vorschlagen.", "Das System muss mir vor dem Ablegen einen Vorschlag zum Drüberschauen zeigen.", "Das System muss mir morgens zeigen, was heute fällig ist.", "Das System muss Termine je Person festhalten.", "Das System muss Unterlagen mit Alltagswörtern wie „Zahnarzt März“ finden.", "Das System muss beim Formulieren von Antworten helfen, ohne Namen und Diagnosen nach draußen zu geben.", "Das System muss nichts ohne mein Okay ablegen oder verschicken.", "Das System muss regelmäßig sichern und mich erinnern, wenn das nicht geklappt hat."],
+  "9": ["Einrichtung höchstens ein Wochenende", "Keine Schulung nötig, ich will es selbst können", "Neue Gewohnheit: Post gleich fotografieren"],
+  "10": ["Android-Handy", "Windows-PC", "Ab und zu das Tablet der Tochter", "Daten bleiben zu Hause, keine fremde Cloud"],
+  "11": ["Kalender auf dem Handy", "Handykamera", "Papierordner"],
+  "12": ["Kalender auf dem Handy"],
+  "13": ["Arztbriefe der Mutter", "Krankenkassenpost", "Bescheide", "Schreiben vom Arbeitgeber", "Mietunterlagen", "Werkstattrechnungen", "Termine der Familie", "Fotos von Briefen"],
+  "14": ["Personenbezogene Daten: ja", "Gesundheitsdaten der Mutter", "Keine fremde Cloud", "Namen und Diagnosen gehen nicht nach draußen"],
+  "15": ["Budget einmalig bis etwa 80 €", "Kein Abo", "Einrichtung höchstens ein Wochenende", "Auf Deutsch"],
+  "18": [
+   {"text": "Sollen Mann und Kinder selbst etwas eintragen oder nur ich?", "wer": "Sabine", "bis": ""},
+   {"text": "Wohin soll gesichert werden (z. B. Festplatte, Stick)?", "wer": "Sabine", "bis": ""},
+   {"text": "Was passiert mit den alten Ordnern – alles einscannen oder nur Neues?", "wer": "Sabine", "bis": ""},
+   {"text": "Ist die Mutter einverstanden, dass ihre Arztbriefe so abgelegt werden?", "wer": "Sabine mit Mutter", "bis": ""},
+   {"text": "Wie viel Zeit kosten Post und Briefe heute im Monat?", "wer": "Sabine", "bis": ""}
+  ]
+ }}

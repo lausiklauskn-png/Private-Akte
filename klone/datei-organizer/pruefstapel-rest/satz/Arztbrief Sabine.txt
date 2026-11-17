@@ -1,0 +1,23 @@
+# Kreisklinik Beispielhausen
+Innere Medizin · Klinikweg 1 · 84999 Beispielhausen
+
+Frau Dr. med. Beispiel-Hofer
+Hausärztin
+Dorfstr. 2
+84999 Beispielhausen
+
+Patientin: Sabine Weidinger, geb. 14.09.1986
+Datum: 03.11.2023
+
+# Arztbrief – ambulante Untersuchung
+
+Sehr geehrte Frau Kollegin,
+
+wir berichten über o. g. Patientin, die sich am 02.11.2023 vorstellte.
+
+Befund: Sonographie Abdomen unauffällig, Schilddrüse mit kleinem Knoten rechts (6 mm), echoarm.
+
+Empfehlung: Kontrolle in 12 Monaten, TSH-Bestimmung beim Hausarzt.
+
+Mit kollegialen Grüßen
+@unterschrift

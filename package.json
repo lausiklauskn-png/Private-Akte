@@ -1,0 +1,13 @@
+{
+  "name": "private-akte",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bau": "node tools/bau.mjs",
+    "bau:pruefen": "node tools/bau.mjs --pruefen",
+    "probe": "node tests/probe.cjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}

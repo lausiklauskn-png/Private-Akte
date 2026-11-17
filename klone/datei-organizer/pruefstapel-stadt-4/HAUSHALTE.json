@@ -1,0 +1,856 @@
+{
+ "haushalte": [
+  {
+   "id": "h1",
+   "titel": "Mehrgenerationenhaus Brückmann",
+   "name": "Brückmann",
+   "anschrift": "Lindenhofweg 12, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Großvater, Rentner (früher Chemiewerk)",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Rentnerin, Pflegegrad beantragt",
+     "geburtsjahr": 1951
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Vater, Schichtleiter Chemiewerk",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Arzthelferin",
+     "geburtsjahr": 1977
+    },
+    {
+     "vorname": "Lena",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Klasse 11",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gymnasium Klasse 9, Turnverein",
+     "geburtsjahr": 2011
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HB 412",
+    "BSP-SB 77"
+   ]
+  },
+  {
+   "id": "h2",
+   "titel": "Pendlerpaar Lehnert/Okonkwo mit E-Auto",
+   "name": "Lehnert",
+   "anschrift": "Am Kranenpfad 5, Wohnung 3.2, 99902 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Daniel",
+     "name": "Lehnert",
+     "anrede": "Herr",
+     "rolle": "Softwareentwickler, pendelt in die Großstadt",
+     "geburtsjahr": 1988
+    },
+    {
+     "vorname": "Amara",
+     "name": "Okonkwo",
+     "anrede": "Frau",
+     "rolle": "Projektleiterin, Lebenspartnerin, pendelt mit ÖPNV-Abo",
+     "geburtsjahr": 1990
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 2040E"
+   ]
+  },
+  {
+   "id": "h3",
+   "titel": "Lehrer Wiesbeck mit vermieteter Einliegerwohnung",
+   "name": "Wiesbeck",
+   "anschrift": "Rebhangstraße 31, 99903 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Florian",
+     "name": "Wiesbeck",
+     "anrede": "Herr",
+     "rolle": "Lehrer am Gymnasium, Eigentümer und Vermieter",
+     "geburtsjahr": 1982
+    },
+    {
+     "vorname": "Petra",
+     "name": "Sommerfeld",
+     "anrede": "Frau",
+     "rolle": "Mieterin der Einliegerwohnung (Rebhangstraße 31a)",
+     "geburtsjahr": 1995
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-FW 318"
+   ]
+  },
+  {
+   "id": "h4",
+   "titel": "Junge Familie Yilmaz/Berger mit Neugeborenem",
+   "name": "Yilmaz",
+   "anschrift": "Gartenstadtring 88, 99904 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Kerem",
+     "name": "Yilmaz",
+     "anrede": "Herr",
+     "rolle": "Vater, Chemielaborant, Elternzeit ab Mai",
+     "geburtsjahr": 1993
+    },
+    {
+     "vorname": "Julia",
+     "name": "Berger",
+     "anrede": "Frau",
+     "rolle": "Mutter, Erzieherin, Mutterschutz/Elternzeit",
+     "geburtsjahr": 1995
+    },
+    {
+     "vorname": "Mila",
+     "name": "Yilmaz",
+     "anrede": "Kind",
+     "rolle": "Tochter, geboren Februar 2026",
+     "geburtsjahr": 2026
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KY 93"
+   ]
+  },
+  {
+   "id": "h5",
+   "titel": "Witwer Pfeiffenberg mit Vorsorgevollmacht für die Schwester",
+   "name": "Pfeiffenberg",
+   "anschrift": "Fährgasse 3, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Walter",
+     "name": "Pfeiffenberg",
+     "anrede": "Herr",
+     "rolle": "Witwer, Rentner, Bevollmächtigter der Schwester",
+     "geburtsjahr": 1944
+    },
+    {
+     "vorname": "Hildegard",
+     "name": "Pfeiffenberg",
+     "anrede": "Frau",
+     "rolle": "Schwester, ledig, wohnt im Seniorenstift Beispielhof, Pflegegrad 3",
+     "geburtsjahr": 1947
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h6",
+   "titel": "Patchworkfamilie Feldhaus/Kramer im Wechselmodell",
+   "name": "Feldhaus",
+   "anschrift": "Mühlbachstraße 140, 99905 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Feldhaus",
+     "anrede": "Herr",
+     "rolle": "Vater, Außendienst IT-Firma",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Nadine",
+     "name": "Kramer",
+     "anrede": "Frau",
+     "rolle": "Partnerin, Verwaltungsangestellte Stadtverwaltung",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Tim",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "Sohn von Markus, Wechselmodell (Woche um Woche)",
+     "geburtsjahr": 2014
+    },
+    {
+     "vorname": "Emma",
+     "name": "Kramer",
+     "anrede": "Kind",
+     "rolle": "Tochter von Nadine, Musikschule",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Paul",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "gemeinsamer Sohn, Kita",
+     "geburtsjahr": 2022
+    },
+    {
+     "vorname": "Katrin",
+     "name": "Aldenhoven",
+     "anrede": "Frau",
+     "rolle": "Mutter von Tim, andere Anschrift (Weidenweg 9, 99906 Beispielstadt)",
+     "geburtsjahr": 1985
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MF 840",
+    "BSP-NK 186"
+   ]
+  },
+  {
+   "id": "h1",
+   "titel": "Mehrgenerationenhaus Brückmann",
+   "name": "Brückmann",
+   "anschrift": "Lindenhofweg 12, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Großvater, Rentner (früher Chemiewerk)",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Rentnerin, Pflegegrad beantragt",
+     "geburtsjahr": 1951
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Vater, Schichtleiter Chemiewerk",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Arzthelferin",
+     "geburtsjahr": 1977
+    },
+    {
+     "vorname": "Lena",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Klasse 11",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gymnasium Klasse 9, Turnverein",
+     "geburtsjahr": 2011
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HB 412",
+    "BSP-SB 77"
+   ]
+  },
+  {
+   "id": "h2",
+   "titel": "Pendlerpaar Lehnert/Okonkwo mit E-Auto",
+   "name": "Lehnert",
+   "anschrift": "Am Kranenpfad 5, Wohnung 3.2, 99902 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Daniel",
+     "name": "Lehnert",
+     "anrede": "Herr",
+     "rolle": "Softwareentwickler, pendelt in die Großstadt",
+     "geburtsjahr": 1988
+    },
+    {
+     "vorname": "Amara",
+     "name": "Okonkwo",
+     "anrede": "Frau",
+     "rolle": "Projektleiterin, Lebenspartnerin, pendelt mit ÖPNV-Abo",
+     "geburtsjahr": 1990
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 2040E"
+   ]
+  },
+  {
+   "id": "h3",
+   "titel": "Lehrer Wiesbeck mit vermieteter Einliegerwohnung",
+   "name": "Wiesbeck",
+   "anschrift": "Rebhangstraße 31, 99903 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Florian",
+     "name": "Wiesbeck",
+     "anrede": "Herr",
+     "rolle": "Lehrer am Gymnasium, Eigentümer und Vermieter",
+     "geburtsjahr": 1982
+    },
+    {
+     "vorname": "Petra",
+     "name": "Sommerfeld",
+     "anrede": "Frau",
+     "rolle": "Mieterin der Einliegerwohnung (Rebhangstraße 31a)",
+     "geburtsjahr": 1995
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-FW 318"
+   ]
+  },
+  {
+   "id": "h4",
+   "titel": "Junge Familie Yilmaz/Berger mit Neugeborenem",
+   "name": "Yilmaz",
+   "anschrift": "Gartenstadtring 88, 99904 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Kerem",
+     "name": "Yilmaz",
+     "anrede": "Herr",
+     "rolle": "Vater, Chemielaborant, Elternzeit ab Mai",
+     "geburtsjahr": 1993
+    },
+    {
+     "vorname": "Julia",
+     "name": "Berger",
+     "anrede": "Frau",
+     "rolle": "Mutter, Erzieherin, Mutterschutz/Elternzeit",
+     "geburtsjahr": 1995
+    },
+    {
+     "vorname": "Mila",
+     "name": "Yilmaz",
+     "anrede": "Kind",
+     "rolle": "Tochter, geboren Februar 2026",
+     "geburtsjahr": 2026
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KY 93"
+   ]
+  },
+  {
+   "id": "h5",
+   "titel": "Witwer Pfeiffenberg mit Vorsorgevollmacht für die Schwester",
+   "name": "Pfeiffenberg",
+   "anschrift": "Fährgasse 3, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Walter",
+     "name": "Pfeiffenberg",
+     "anrede": "Herr",
+     "rolle": "Witwer, Rentner, Bevollmächtigter der Schwester",
+     "geburtsjahr": 1944
+    },
+    {
+     "vorname": "Hildegard",
+     "name": "Pfeiffenberg",
+     "anrede": "Frau",
+     "rolle": "Schwester, ledig, wohnt im Seniorenstift Beispielhof, Pflegegrad 3",
+     "geburtsjahr": 1947
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h6",
+   "titel": "Patchworkfamilie Feldhaus/Kramer im Wechselmodell",
+   "name": "Feldhaus",
+   "anschrift": "Mühlbachstraße 140, 99905 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Feldhaus",
+     "anrede": "Herr",
+     "rolle": "Vater, Außendienst IT-Firma",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Nadine",
+     "name": "Kramer",
+     "anrede": "Frau",
+     "rolle": "Partnerin, Verwaltungsangestellte Stadtverwaltung",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Tim",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "Sohn von Markus, Wechselmodell (Woche um Woche)",
+     "geburtsjahr": 2014
+    },
+    {
+     "vorname": "Emma",
+     "name": "Kramer",
+     "anrede": "Kind",
+     "rolle": "Tochter von Nadine, Musikschule",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Paul",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "gemeinsamer Sohn, Kita",
+     "geburtsjahr": 2022
+    },
+    {
+     "vorname": "Katrin",
+     "name": "Aldenhoven",
+     "anrede": "Frau",
+     "rolle": "Mutter von Tim, andere Anschrift (Weidenweg 9, 99906 Beispielstadt)",
+     "geburtsjahr": 1985
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MF 840",
+    "BSP-NK 186"
+   ]
+  },
+  {
+   "id": "h1",
+   "titel": "Mehrgenerationenhaus Brückmann",
+   "name": "Brückmann",
+   "anschrift": "Lindenhofweg 12, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Großvater, Rentner (früher Chemiewerk)",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Rentnerin, Pflegegrad beantragt",
+     "geburtsjahr": 1951
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Vater, Schichtleiter Chemiewerk",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Arzthelferin",
+     "geburtsjahr": 1977
+    },
+    {
+     "vorname": "Lena",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Klasse 11",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gymnasium Klasse 9, Turnverein",
+     "geburtsjahr": 2011
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HB 412",
+    "BSP-SB 77"
+   ]
+  },
+  {
+   "id": "h2",
+   "titel": "Pendlerpaar Lehnert/Okonkwo mit E-Auto",
+   "name": "Lehnert",
+   "anschrift": "Am Kranenpfad 5, Wohnung 3.2, 99902 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Daniel",
+     "name": "Lehnert",
+     "anrede": "Herr",
+     "rolle": "Softwareentwickler, pendelt in die Großstadt",
+     "geburtsjahr": 1988
+    },
+    {
+     "vorname": "Amara",
+     "name": "Okonkwo",
+     "anrede": "Frau",
+     "rolle": "Projektleiterin, Lebenspartnerin, pendelt mit ÖPNV-Abo",
+     "geburtsjahr": 1990
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 2040E"
+   ]
+  },
+  {
+   "id": "h3",
+   "titel": "Lehrer Wiesbeck mit vermieteter Einliegerwohnung",
+   "name": "Wiesbeck",
+   "anschrift": "Rebhangstraße 31, 99903 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Florian",
+     "name": "Wiesbeck",
+     "anrede": "Herr",
+     "rolle": "Lehrer am Gymnasium, Eigentümer und Vermieter",
+     "geburtsjahr": 1982
+    },
+    {
+     "vorname": "Petra",
+     "name": "Sommerfeld",
+     "anrede": "Frau",
+     "rolle": "Mieterin der Einliegerwohnung (Rebhangstraße 31a)",
+     "geburtsjahr": 1995
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-FW 318"
+   ]
+  },
+  {
+   "id": "h4",
+   "titel": "Junge Familie Yilmaz/Berger mit Neugeborenem",
+   "name": "Yilmaz",
+   "anschrift": "Gartenstadtring 88, 99904 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Kerem",
+     "name": "Yilmaz",
+     "anrede": "Herr",
+     "rolle": "Vater, Chemielaborant, Elternzeit ab Mai",
+     "geburtsjahr": 1993
+    },
+    {
+     "vorname": "Julia",
+     "name": "Berger",
+     "anrede": "Frau",
+     "rolle": "Mutter, Erzieherin, Mutterschutz/Elternzeit",
+     "geburtsjahr": 1995
+    },
+    {
+     "vorname": "Mila",
+     "name": "Yilmaz",
+     "anrede": "Kind",
+     "rolle": "Tochter, geboren Februar 2026",
+     "geburtsjahr": 2026
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KY 93"
+   ]
+  },
+  {
+   "id": "h5",
+   "titel": "Witwer Pfeiffenberg mit Vorsorgevollmacht für die Schwester",
+   "name": "Pfeiffenberg",
+   "anschrift": "Fährgasse 3, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Walter",
+     "name": "Pfeiffenberg",
+     "anrede": "Herr",
+     "rolle": "Witwer, Rentner, Bevollmächtigter der Schwester",
+     "geburtsjahr": 1944
+    },
+    {
+     "vorname": "Hildegard",
+     "name": "Pfeiffenberg",
+     "anrede": "Frau",
+     "rolle": "Schwester, ledig, wohnt im Seniorenstift Beispielhof, Pflegegrad 3",
+     "geburtsjahr": 1947
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h6",
+   "titel": "Patchworkfamilie Feldhaus/Kramer im Wechselmodell",
+   "name": "Feldhaus",
+   "anschrift": "Mühlbachstraße 140, 99905 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Feldhaus",
+     "anrede": "Herr",
+     "rolle": "Vater, Außendienst IT-Firma",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Nadine",
+     "name": "Kramer",
+     "anrede": "Frau",
+     "rolle": "Partnerin, Verwaltungsangestellte Stadtverwaltung",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Tim",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "Sohn von Markus, Wechselmodell (Woche um Woche)",
+     "geburtsjahr": 2014
+    },
+    {
+     "vorname": "Emma",
+     "name": "Kramer",
+     "anrede": "Kind",
+     "rolle": "Tochter von Nadine, Musikschule",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Paul",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "gemeinsamer Sohn, Kita",
+     "geburtsjahr": 2022
+    },
+    {
+     "vorname": "Katrin",
+     "name": "Aldenhoven",
+     "anrede": "Frau",
+     "rolle": "Mutter von Tim, andere Anschrift (Weidenweg 9, 99906 Beispielstadt)",
+     "geburtsjahr": 1985
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MF 840",
+    "BSP-NK 186"
+   ]
+  },
+  {
+   "id": "h1",
+   "titel": "Mehrgenerationenhaus Brückmann",
+   "name": "Brückmann",
+   "anschrift": "Lindenhofweg 12, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Großvater, Rentner (früher Chemiewerk)",
+     "geburtsjahr": 1948
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Rentnerin, Pflegegrad beantragt",
+     "geburtsjahr": 1951
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Brückmann",
+     "anrede": "Herr",
+     "rolle": "Vater, Schichtleiter Chemiewerk",
+     "geburtsjahr": 1975
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Brückmann",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Arzthelferin",
+     "geburtsjahr": 1977
+    },
+    {
+     "vorname": "Lena",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Tochter, Gymnasium Klasse 11",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brückmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gymnasium Klasse 9, Turnverein",
+     "geburtsjahr": 2011
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HB 412",
+    "BSP-SB 77"
+   ]
+  },
+  {
+   "id": "h2",
+   "titel": "Pendlerpaar Lehnert/Okonkwo mit E-Auto",
+   "name": "Lehnert",
+   "anschrift": "Am Kranenpfad 5, Wohnung 3.2, 99902 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Daniel",
+     "name": "Lehnert",
+     "anrede": "Herr",
+     "rolle": "Softwareentwickler, pendelt in die Großstadt",
+     "geburtsjahr": 1988
+    },
+    {
+     "vorname": "Amara",
+     "name": "Okonkwo",
+     "anrede": "Frau",
+     "rolle": "Projektleiterin, Lebenspartnerin, pendelt mit ÖPNV-Abo",
+     "geburtsjahr": 1990
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 2040E"
+   ]
+  },
+  {
+   "id": "h3",
+   "titel": "Lehrer Wiesbeck mit vermieteter Einliegerwohnung",
+   "name": "Wiesbeck",
+   "anschrift": "Rebhangstraße 31, 99903 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Florian",
+     "name": "Wiesbeck",
+     "anrede": "Herr",
+     "rolle": "Lehrer am Gymnasium, Eigentümer und Vermieter",
+     "geburtsjahr": 1982
+    },
+    {
+     "vorname": "Petra",
+     "name": "Sommerfeld",
+     "anrede": "Frau",
+     "rolle": "Mieterin der Einliegerwohnung (Rebhangstraße 31a)",
+     "geburtsjahr": 1995
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-FW 318"
+   ]
+  },
+  {
+   "id": "h4",
+   "titel": "Junge Familie Yilmaz/Berger mit Neugeborenem",
+   "name": "Yilmaz",
+   "anschrift": "Gartenstadtring 88, 99904 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Kerem",
+     "name": "Yilmaz",
+     "anrede": "Herr",
+     "rolle": "Vater, Chemielaborant, Elternzeit ab Mai",
+     "geburtsjahr": 1993
+    },
+    {
+     "vorname": "Julia",
+     "name": "Berger",
+     "anrede": "Frau",
+     "rolle": "Mutter, Erzieherin, Mutterschutz/Elternzeit",
+     "geburtsjahr": 1995
+    },
+    {
+     "vorname": "Mila",
+     "name": "Yilmaz",
+     "anrede": "Kind",
+     "rolle": "Tochter, geboren Februar 2026",
+     "geburtsjahr": 2026
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KY 93"
+   ]
+  },
+  {
+   "id": "h5",
+   "titel": "Witwer Pfeiffenberg mit Vorsorgevollmacht für die Schwester",
+   "name": "Pfeiffenberg",
+   "anschrift": "Fährgasse 3, 99901 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Walter",
+     "name": "Pfeiffenberg",
+     "anrede": "Herr",
+     "rolle": "Witwer, Rentner, Bevollmächtigter der Schwester",
+     "geburtsjahr": 1944
+    },
+    {
+     "vorname": "Hildegard",
+     "name": "Pfeiffenberg",
+     "anrede": "Frau",
+     "rolle": "Schwester, ledig, wohnt im Seniorenstift Beispielhof, Pflegegrad 3",
+     "geburtsjahr": 1947
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h6",
+   "titel": "Patchworkfamilie Feldhaus/Kramer im Wechselmodell",
+   "name": "Feldhaus",
+   "anschrift": "Mühlbachstraße 140, 99905 Musterhausen am Rhein",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Feldhaus",
+     "anrede": "Herr",
+     "rolle": "Vater, Außendienst IT-Firma",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Nadine",
+     "name": "Kramer",
+     "anrede": "Frau",
+     "rolle": "Partnerin, Verwaltungsangestellte Stadtverwaltung",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Tim",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "Sohn von Markus, Wechselmodell (Woche um Woche)",
+     "geburtsjahr": 2014
+    },
+    {
+     "vorname": "Emma",
+     "name": "Kramer",
+     "anrede": "Kind",
+     "rolle": "Tochter von Nadine, Musikschule",
+     "geburtsjahr": 2016
+    },
+    {
+     "vorname": "Paul",
+     "name": "Feldhaus",
+     "anrede": "Kind",
+     "rolle": "gemeinsamer Sohn, Kita",
+     "geburtsjahr": 2022
+    },
+    {
+     "vorname": "Katrin",
+     "name": "Aldenhoven",
+     "anrede": "Frau",
+     "rolle": "Mutter von Tim, andere Anschrift (Weidenweg 9, 99906 Beispielstadt)",
+     "geburtsjahr": 1985
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MF 840",
+    "BSP-NK 186"
+   ]
+  }
+ ]
+}

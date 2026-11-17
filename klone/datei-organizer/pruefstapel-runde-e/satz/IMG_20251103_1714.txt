@@ -1,0 +1,33 @@
+# Beispielfunk Mobil GmbH
+Beispielfunk Mobil GmbH · Antennenstraße 1 · 40000 Beispieldorf
+
+Herrn Konstantin Wolf
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Kundennummer: BM-0000-5521
+Rechnungsnummer: R-25-10-9931
+Datum: 03.11.2025
+
+# Ihre Mobilfunkrechnung Oktober 2025
+
+Sehr geehrter Herr Wolf,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Grundgebühr Smart M|1|16,80 €|16,80 €|
+|2|Datenpass EU 5 GB|1|4,20 €|4,20 €|
+|3|Drittanbieter: Premium-SMS Gewinnspiel|1|4,99 €|4,99 €|
+|4|Gutschrift Treuebonus|1|-2,50 €|-2,50 €|
+
+Nettobetrag: 23,49 €
+zzgl. 19 % MwSt.: 4,46 €
+Rechnungsbetrag: 27,95 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Mit freundlichen Grüßen
+Beispielfunk Mobil GmbH
+@fuss Beispielfunk Mobil GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

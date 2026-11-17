@@ -1,0 +1,21 @@
+BEISPIEL-APOTHEKE AM MARKT
+Markt 7, 34567 Beispielstadt
+Tel. 00000 000000
+UST-ID DE000000000
+
+Inkontinenz-Einlagen 30 St.     12,95 A
+Wundcreme 100 ml                 8,49 A
+Blutzucker-Teststreifen 50      24,90 A
+Rezeptzuzahlung
+  2 x 5,00        10,00 B
+------------------------------------
+SUMME EUR                    56,34
+Girocard                      56,34
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   38,94   7,40   46,34
+B 7 %   9,35   0,65   10,00
+
+15.10.2025 16:05  Bon 7494  Kasse 4
+TSE-Signatur 3294845086
+Vielen Dank für Ihren Einkauf!

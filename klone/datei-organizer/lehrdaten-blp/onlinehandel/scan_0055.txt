@@ -1,0 +1,18 @@
+Rooibos & More Handelsges. mbH
+Hafenstraße 00 · 28217 Bremen
+www.rooibos-more.example · USt-IdNr.: DE000000333
+
+Kunde: Teekontor Lindenblatt (Kd.-Nr. 5512)                   Beleg: RE-118844
+Bestellt am 08.04.2026 über Händlerportal    Belegdatum: 10.04.2026
+
+Art.-Nr.   Beschreibung                      Menge     Netto
+RB-1001    Rooibos Natur Superior 5kg-Sack   2         118,00
+RB-1040    Rooibos Vanille 1kg               10         96,50
+HB-2210    Honeybush pur 1kg                 6          68,10
+FR-3305    Früchtetee Rote Grütze 1kg        12        150,00
+
+Summe Positionen                                       432,60
+Umsatzsteuer 7 %                                       30,28
+Zu zahlen                                              462,88 EUR
+
+Zahlungsart: Rechnungskauf 30 Tage netto

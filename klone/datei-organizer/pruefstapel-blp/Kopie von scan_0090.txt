@@ -1,0 +1,23 @@
+Verpackung Rehberg GmbH
+Bahnhofstr. 77, 37996 Molkenrode
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnunq
+Rg.-Nr. 24135
+Rechnungsdatum: 6. Oktober 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Bäckertüten weiß 1000 St.     5     18,90      94,50
+  2  Coffee-to-go-Becher 0,3 l 1000 St.     3     89,00     267,00
+
+Nettobetrag                                  361,50
+zzgl. 19 % USt                               68,69
+SUMME EUR                                    430,19 EUR
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 3315 95
+USt-IdNr. DE000000847

@@ -1,0 +1,19 @@
+name: pruefung
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  klone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Klone gegen ihre Pins prüfen
+        run: node tools/klon-nachziehen.mjs --pruefen
+      - name: tresor.js ist der frische Bau
+        run: npm ci && npm run bau:pruefen

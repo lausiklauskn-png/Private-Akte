@@ -1,0 +1,25 @@
+Von: termine@buergeramt.beispielhafen.example
+An: tobias.siemsen@beispielmail.example
+Datum: Mo, 22. Jun 2026 18:04
+Betreff: Terminbestätigung Bürgeramt – Ummeldung (Vorgang BA-2026-07724)
+
+Guten Tag Herr Siemsen,
+
+hiermit bestätigen wir Ihren Termin:
+
+  Dienstleistung:  Ummeldung innerhalb Beispielhafens (1 Person)
+  Datum:           Freitag, 03.07.2026
+  Uhrzeit:         10:40 Uhr
+  Ort:             Bürgeramt, Rathausmarkt 1, Erdgeschoss, Schalter 4–9
+
+Bitte bringen Sie mit:
+  - Personalausweis bzw. Reisepass
+  - Wohnungsgeberbestätigung (bei Eigentum: formlose Erklärung)
+
+Wenn Sie den Termin nicht wahrnehmen können, sagen Sie ihn bitte über den
+Link in dieser Mail ab, damit er neu vergeben werden kann:
+https://termine.beispielhafen.example/absagen/0000
+
+Diese E-Mail wurde automatisch versendet. Bitte antworten Sie nicht darauf.
+
+Ihre Stadtverwaltung Beispielhafen

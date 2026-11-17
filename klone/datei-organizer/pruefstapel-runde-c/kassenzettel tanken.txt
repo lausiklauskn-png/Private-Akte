@@ -1,0 +1,19 @@
+Tankstelle Bühlblick Beispiel
+Landstraße 40
+34567 Mühlbrück am See
+
+Säule 4
+Super E10  48,31 L                 84,42  B
+   Preis/L  1,749 EUR
+SCHEIBENREINIGER 3L                 4,99  B
+KAFFEE TO GO                        2,50  B
+--------------------------------------------
+SUMME EUR                          91,91   
+Girocard                           91,91   
+
+Netto 77,24  MwSt 19 % 14,67
+02.06.2025  07:12  Beleg 58812  Kasse 1
+TSE 2a7c11  Zähler 300982
+Sammeln Sie Punkte mit der Bühlblick Karte
+Waschanlage heute 2 Euro günstiger
+Gute Fahrt!

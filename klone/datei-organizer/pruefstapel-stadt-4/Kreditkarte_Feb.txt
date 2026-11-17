@@ -1,0 +1,19 @@
+BEISPIEL KREDITKARTEN SERVICE GMBH
+Kartenweg 3 · 99920 Beispielgroßstadt
+
+Monatsabrechnung Februar 2026
+Karte 0000 XXXX XXXX 0000   Inhaberin: Amara Okonkwo
+
+Datum   Buchung                              Betrag EUR
+02.02.  Beispiel Bahn Ticketshop               -49,90
+05.02.  Cafe Rheinblick                        -12,40
+09.02.  Streamingdienst Beispiel               -11,99
+14.02.  GLOBALPAY*7731 LU 0000-0000            -89,00
+17.02.  Tankstelle Beispiel Süd                -58,20
+21.02.  Restaurant Zum Beispielfass            -64,50
+24.02.  Zahlungseingang Danke                  +150,00
+
+Neuer Saldo                                   -134,99 EUR
+Der Betrag wird am 05.03.2026 per Lastschrift von Ihrem Konto bei der
+Nova Beispiel Neobank (IBAN DE00 0000 0000 0000 0000 00) eingezogen.
+Reklamationen bitte innerhalb von 6 Wochen.

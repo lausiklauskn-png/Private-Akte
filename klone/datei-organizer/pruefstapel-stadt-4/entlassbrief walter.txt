@@ -1,0 +1,10 @@
+Rheinklinik Musterhausen Beispiel - Abteilung Unfallchirurgie
+Fall-Nr. 000000000
+ENTLASSBRIEF
+Patient: Walter Pfeiffenberg, geb. 1944, Fährgasse 3, 99901 Musterhausen am Rhein
+Aufnahme 06.04.2026, Entlassung 13.04.2026
+
+Diagnose: Handgelenksnahe Fraktur rechts nach Sturz im Treppenhaus, operativ versorgt (Plattenosteosynthese).
+Verlauf: Komplikationsloser Verlauf, Wunde reizlos. Schmerzmedikation nach Plan, Antithrombose bis 4 Wochen.
+Empfehlung: Fadenzug nach 12 Tagen beim Hausarzt, Physiotherapie, Kontrolle in der Sprechstunde in 6 Wochen.
+Mit freundlichen kollegialen Grüßen, Oberarzt Dr. Beispiel-Wendt

@@ -1,6 +1,7 @@
 'use strict';
-/* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+/* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
+   Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
+const FASSUNG = '0.2.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -191,10 +192,11 @@ function vStart(){
   return `<h1 class="titel">Was möchtest du finden?</h1><p class="unter">Hineinlegen, finden, herausgeben. Mehr macht die Akte nicht.</p>
   ${sucheFeld()}
   ${s.frage ? treffer() : `
+  ${echtAbschnitt()}
   <div class="abschnitt"><h2>Fällig <span>${termine.length} Termine und Fristen</span></h2><div class="liste">${termineSortiert().slice(0,3).map(terminZeile).join('')}</div></div>
   <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln sechs">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
   <div class="abschnitt"><h2>Zuletzt abgelegt</h2><div class="liste">${zuletzt.map(d => docZeile(d)).join('')}</div></div>`}
-  <p class="hinweis">Vorschau ${FASSUNG} · Alle Unterlagen sind erfunden. Nichts wird gespeichert.</p>${fuss()}`;
+  <p class="hinweis">Vorschau ${FASSUNG} · Gespeichert wird nur, was du unter „Deine Unterlagen“ hineinlegst – auf diesem Gerät. Alles andere ist erfunden.</p>${fuss()}`;
 }
 function vAkten(){
   if (!s.bereich) return `<h1 class="titel">Akten</h1><p class="unter">Dieselben sechs Bereiche wie auf der Startseite.</p>
@@ -498,9 +500,74 @@ document.addEventListener('submit', ev => {
   }
   if (f.dataset.form === 'termin') { const [j,m,t] = f.am.value.split('-').map(Number); termine.push({titel:f.titel.value.trim(),am:new Date(j,m-1,t),art:f.art.value,doc:+f.doc.value||null}); s.zuDoc = null; stadtNeu(); toast('Eingetragen. Der Termin steht auch auf der Startseite unter „Fällig“.'); }
 });
+
+/* ---------- Deine Unterlagen: echt, im Tresor der Familienakte (tresor.js = Brücke zum Klon) ---------- */
+const T = () => window.PrivateAkteTresor;
+const echt = { liste:null, fehler:'', datei:null, laeuft:false };
+const echtTitel = d => d.titel || d.originalName;
+const echtArt = d => { const e = (d.originalName.split('.').pop() || '').toUpperCase().slice(0,4); return e === 'JPEG' ? 'JPG' : e || 'DAT'; };
+const echtGroesse = n => n < 1024 ? n + ' B' : n < 1048576 ? Math.round(n/1024) + ' KB' : (n/1048576).toFixed(1).replace('.',',') + ' MB';
+const echtDatum = iso => iso ? datum(new Date(iso.length === 10 ? iso + 'T12:00:00' : iso)) : '';
+const fehlerText = e => (e && e.message) || 'Das hat nicht geklappt.';
+async function echtLaden(){
+  if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
+  else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
+  if (s.ansicht === 'start' && !s.frage) mainZeigen();
+}
+function echtAbschnitt(){
+  const l = echt.liste;
+  const innen = l === null ? '<p class="leer">Der Tresor wird geöffnet …</p>'
+    : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
+    : !l.length ? '<p class="leer">Noch nichts hineingelegt. Probier es mit einer Datei aus – sie bleibt auf diesem Gerät.</p>'
+    : l.map(d => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 m-ok">echt</span>${ic('weiter')}</button>`).join('');
+  return `<div class="abschnitt" id="echt"><h2>Deine Unterlagen <span>echt · auf diesem Gerät gespeichert</span></h2><div class="liste">${innen}</div>
+   <div class="reihe"><button class="knopf gruen" data-a="echt-neu" ${l === null || echt.fehler ? 'disabled' : ''}>${ic('ordner')} Datei hineinlegen</button><input type="file" id="echt-datei" hidden></div></div>`;
+}
+function fEchtNeu(datei){
+  echt.datei = datei;
+  const zuGross = datei.size > T().hoechstBytes;
+  fenster(`${fk('In die Akte legen', esc(datei.name) + ' · ' + echtGroesse(datei.size))}
+   ${zuGross ? `<p class="leer">Die Datei ist größer als ${echtGroesse(T().hoechstBytes)}. So große Dateien nimmt der Tresor nicht.</p>` : `<form class="felder" data-form="echt">
+    <label>Was ist es? <input class="feld" name="titel" value="${esc(datei.name.replace(/\.[^.]+$/, ''))}" required maxlength="200"></label>
+    <label>Bereich <select class="feld" name="bereich" required><option value="">Bereich wählen …</option>${T().bereiche.map(b => `<option>${esc(b)}</option>`).join('')}</select></label>
+    <label>Datum der Unterlage <input class="feld" type="date" name="datum"></label>
+    <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
+   </form>
+   <p class="hinweis">Die Datei wird im Speicher dieses Browsers abgelegt – mit dem Tresor der Familienakte. Sie verlässt das Gerät nicht.</p>`}`);
+}
+function fEcht(id){
+  const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
+  fenster(`${fk(esc(echtTitel(d)), esc(d.category))}
+   <dl class="angaben"><dt>Datei</dt><dd>${esc(d.originalName)} · ${echtGroesse(d.sizeBytes)}</dd>${d.documentDate ? `<dt>Datum</dt><dd>${echtDatum(d.documentDate)}</dd>` : ''}<dt>Abgelegt</dt><dd>${echtDatum(d.addedAt)}</dd><dt>Liegt</dt><dd>im Tresor auf diesem Gerät</dd></dl>
+   <button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>
+   <div class="reihe"><button class="knopf hell" data-a="echt-raus" data-id="${esc(d.id)}">Aus der Akte nehmen</button></div>`);
+}
+Object.assign(A, {
+ 'echt-neu': () => $('echt-datei').click(),
+ 'echt-auf': e => fEcht(e.dataset.id),
+ 'echt-oeffnen': async e => {
+   try { const f = await T().datei(e.dataset.id), url = URL.createObjectURL(f), a = document.createElement('a');
+     a.href = url; a.target = '_blank'; a.rel = 'noopener'; if (!/^(application\/pdf|image\/|text\/plain)/.test(f.type)) a.download = f.name;
+     document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
+   } catch (err) { toast(fehlerText(err)); } },
+ 'echt-raus': async e => {
+   if (echt.laeuft) return; echt.laeuft = true;
+   try { const erg = await T().herausnehmen(e.dataset.id); zu(); await echtLaden(); toast(erg.fehler.length ? erg.fehler[0] : 'Aus der Akte genommen.'); }
+   catch (err) { toast(fehlerText(err)); } finally { echt.laeuft = false; } }
+});
+document.addEventListener('change', ev => { if (ev.target.id === 'echt-datei' && ev.target.files[0]) { fEchtNeu(ev.target.files[0]); ev.target.value = ''; } });
+document.addEventListener('submit', async ev => {
+  const f = ev.target; if (f.dataset.form !== 'echt') return; ev.preventDefault();
+  if (echt.laeuft || !echt.datei) return; echt.laeuft = true;
+  const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true;
+  try {
+    const d = await T().ablegen(echt.datei, {bereich:f.bereich.value, datum:f.datum.value || null, titel:f.titel.value.trim(), notiz:null});
+    echt.datei = null; zu(); await echtLaden(); toast(`„${echtTitel(d)}“ liegt in ${d.category}.`);
+  } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { echt.laeuft = false; }
+});
 function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
-farbeAkte(); kopfZeigen(); zeigen();
+farbeAkte(); kopfZeigen(); zeigen(); echtLaden();
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
 
 /* ---------- Tooltips: Maus oder Stift über einem Knopf, ohne Klick; abschaltbar in der Hilfe ---------- */

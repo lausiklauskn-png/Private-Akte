@@ -1,0 +1,27 @@
+Von: info@plakette-beispielumwelt.example
+An: h.sommerlatt@seniorenmail-beispiel.example
+Datum: 11.11.2026 15:03
+Betreff: Vorkasse-Rechnung zu Ihrer Bestellung #PV-90233 (Umweltplakette)
+
+Sehr geehrte Frau Sommerlatt,
+
+vielen Dank für Ihre telefonische Bestellung. Bitte prüfen Sie Ihre Angaben:
+
+Kennzeichen: BSP-HS 1960
+Fahrzeugschein-Feld 14.1 (Emissionsschlüssel): 0000 (laut Ihrer Angabe)
+Ergebnis: Schadstoffgruppe 4 – grüne Plakette
+
+VORKASSE-RECHNUNG Nr. PV-2026-90233 vom 11.11.2026
+  1 × Umweltplakette grün, mit Kennzeichen beschriftet     6,90 €
+  1 × Versand Brief                                        0,95 €
+  Summe (inkl. 19 % MwSt. 1,25 €)                          7,85 €
+
+Bitte überweisen Sie den Betrag bis 25.11.2026 an:
+Plakettenversand Beispiel-Umwelt UG (haftungsbeschränkt)
+IBAN DE00 0000 0000 0000 0000 00 · Verwendungszweck PV-90233
+
+Nach Zahlungseingang versenden wir die Plakette innerhalb von 2 Werktagen.
+Geht bis zum genannten Datum keine Zahlung ein, wird die Bestellung storniert.
+
+Mit freundlichen Grüßen
+Ihr Team von Plakettenversand Beispiel-Umwelt

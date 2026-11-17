@@ -1,0 +1,31 @@
+Finanzamt Beispielhafen
+- Kraftfahrzeugsteuer -
+Am Zollhaus 1, 29999 Beispielhafen
+
+Herrn Arne Petersen
+Fischmarkt 7
+29999 Beispielhafen
+
+Kraftfahrzeugsteuerbescheid                    Datum: 17.02.2026
+Steuernummer/Kennzeichen: BSP-KK 7
+
+Kraftfahrzeug: Personenkraftwagen, Fahrzeugklasse M1
+Erstzulassung: 03.2023 · Hubraum 1.498 cm³ · Kraftstoff: Benzin
+CO2-Emissionen (WLTP): 128 g/km
+Steuerpflicht ab: 09.02.2026
+
+Berechnung der Jahressteuer
+  Sockelbetrag Hubraum (15 x 2,00 EUR)         30,00 EUR
+  CO2-Komponente (33 g/km x 2,00 EUR)          66,00 EUR
+  Jahressteuer                                 96,00 EUR
+
+Für den Zeitraum 09.02.2026 bis 08.02.2027 sind 96,00 EUR zu entrichten.
+Der Betrag wird zum Fälligkeitstag 09.02.2026 bzw. zehn Tage nach
+Bekanntgabe dieses Bescheides vom angegebenen Konto abgebucht
+(SEPA-Lastschriftmandat liegt vor).
+
+Die Steuerfestsetzung für das abgemeldete Fahrzeug BSP-KK 7 (alt, VW Kombi)
+endet mit dem 08.02.2026; zu viel gezahlte Steuer (31,00 EUR) wird erstattet.
+
+Dieser Bescheid ist nach § 155 AO maschinell erstellt.
+Rechtsbehelfsbelehrung: Einspruch binnen eines Monats nach Bekanntgabe.

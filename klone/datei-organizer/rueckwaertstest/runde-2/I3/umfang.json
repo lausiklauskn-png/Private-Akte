@@ -1,0 +1,11 @@
+{"bausteine": [
+ {"katalog": "neu", "name": "Anlagenkartei: Kunden mit Anlagen (Gerät, Seriennummer, Wartungsintervall), Anlagenhistorie mit Protokollen, getauschten Teilen und offenen Mängeln", "groesse": "mittel", "deckt": ["B-24", "B-33", "B-35", "B-52", "B-56"], "faktoren": ["offline", "nutzer"]},
+ {"katalog": "kalender", "name": "Fälligkeitsliste und Erinnerung: bald fällige und überfällige Wartungen je Kunde, Erinnerung fürs Büro", "groesse": "mittel", "deckt": ["B-22", "B-34", "B-29"], "faktoren": ["nutzer"]},
+ {"katalog": "neu", "name": "Wartungsprotokoll auf dem Handy: Checkliste, Messwerte, Fotos, Unterschrift des Kunden am Bildschirm, Protokoll als PDF", "groesse": "gross", "deckt": ["B-23", "B-36", "B-37", "B-53", "B-54", "B-55", "B-30"], "faktoren": ["offline", "druck"]},
+ {"katalog": "plattform", "name": "Android-App für die Monteure und Windows-Fassung fürs Büro", "groesse": "mittel", "deckt": ["B-45", "B-46"], "faktoren": []},
+ {"katalog": "neu", "name": "Offline-Betrieb mit Abgleich über einen kleinen Betriebsserver (Monteure ↔ Büro, Konflikte sichtbar)", "groesse": "gross", "deckt": ["B-25", "B-38", "B-47", "B-21"], "faktoren": ["offline", "server", "nutzer"]},
+ {"katalog": "neu", "name": "Terminvorschlag an den Kunden per Link, Kunde bestätigt oder wählt anderen Termin", "groesse": "mittel", "deckt": ["B-26", "B-39", "B-32"], "faktoren": ["server"]},
+ {"katalog": "schnitt", "name": "Übergabe der Wartungsdaten (Kunde, Leistung, Material, Zeit) als Exportdatei ans Handwerkerprogramm", "groesse": "mittel", "deckt": ["B-27", "B-40", "B-50"], "faktoren": []},
+ {"katalog": "altdaten", "name": "Einmalige Übernahme der Excel-Wartungsliste (Kunden, Anlagen, letzte Wartung)", "groesse": "mittel", "deckt": ["B-44", "B-51", "B-49"], "faktoren": []},
+ {"katalog": "tresor", "name": "Vollständiger Export aller Daten mit Fotos (offenes Format) und automatische Sicherung", "groesse": "klein", "deckt": ["B-28", "B-41", "B-58"], "faktoren": []}
+]}

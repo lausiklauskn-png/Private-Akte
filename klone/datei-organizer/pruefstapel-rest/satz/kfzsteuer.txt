@@ -1,0 +1,27 @@
+# Hauptzollamt Beispielburg
+Hauptzollamt Beispielburg · Zollstraße 5 · 80999 Beispielburg
+
+Frau
+Sabine Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Steuernummer: KFZ 4410/22813
+Kennzeichen: BSP-SW 88
+Datum: 09.06.2021
+
+# Kraftfahrzeugsteuerbescheid
+
+Für das Fahrzeug mit dem amtlichen Kennzeichen BSP-SW 88 wird die Kraftfahrzeugsteuer ab dem 01.06.2021 festgesetzt.
+
+Jahressteuer: 118,00 EUR. Die Steuer wird per SEPA-Lastschrift jeweils zum 01.06. eingezogen.
+
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Hauptzollamt Beispielburg, Zollstraße 5, 80999 Beispielburg, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

@@ -1,0 +1,37 @@
+STADTWERKE MUSTERHAUSEN BEISPIEL
+Energie · Wasser · Wärme
+
+Herrn Florian Wiesbeck
+Rebhangstraße 31
+99903 Musterhausen am Rhein
+
+Rechnungsdatum: 09.01.2026        Rechnungs-Nr.: 26-RE-0004471
+Vertragskonto:  0000000377        Lieferstelle: Rebhangstraße 31 (Hauptwohnung + Einlieger 31a)
+
+JAHRESVERBRAUCHSABRECHNUNG 2025 – Erdgas und Trinkwasser
+
+1. Erdgas (Zähler 0ESY000903)
+   Verbrauch 14.220 kWh (1.302 m³, Zustandszahl 0,9561, Brennwert 11,423)
+   Arbeitspreis 0,1090 €/kWh .............. 1.549,98 €
+   Grundpreis 365 Tage ......................   156,00 €
+   CO2-Kosten (in Arbeitspreis enthalten)
+2. Trinkwasser (Zähler W-0000412)
+   Verbrauch 148 m³ x 2,31 € ................   341,88 €
+   Zählermiete ..............................    24,00 €
+3. Schmutzwasser 148 m³ x 2,64 € ...........   390,72 €
+
+Zwischensumme netto ........................ 2.462,58 €
+USt (Gas 19 %, Wasser 7 %) ..................   386,05 €
+Rechnungsbetrag ............................ 2.848,63 €
+geleistete Abschläge ....................... 2.760,00 €
+=============================================================
+Nachzahlung ................................    88,63 €
+
+Der Betrag wird mit dem nächsten Abschlag am 15.02.2026 eingezogen.
+Neuer Abschlag ab März 2026: 240,00 € / Monat.
+
+Hinweis für Vermieter: Eine Aufteilung nach Wohneinheiten nehmen wir nicht vor.
+Für die Nebenkostenabrechnung Ihrer Mieter verwenden Sie bitte die Werte der
+Unterzähler oder den vereinbarten Umlageschlüssel.
+
+Fragen? Kundencenter Energieweg 2, Tel. 0000-112233, service@stadtwerke-beispiel.example

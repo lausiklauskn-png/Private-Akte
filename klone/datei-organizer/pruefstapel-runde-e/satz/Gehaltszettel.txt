@@ -1,0 +1,25 @@
+# Zusatzversorgungskasse Beispiel-Land
+Zusatzversorgungskasse Beispiel-Land · Versorgungsweg 1 · 67000 Beispielmainz
+
+Frau Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+# Rentenabrechnung / Zahlungsmitteilung Dezember 2025
+
+Versicherungsnummer: ZV-000-4431
+Krankenkasse: Beispiel Gesundheitskasse
+
+|Lohnart|Bezeichnung|Betrag|
+|100|Betriebsrente (Zusatzversorgung öffentlicher Dienst)|188,42 €|
+||Gesamtbrutto|188,42 €|
+
+|Abzug|Betrag|
+|Krankenversicherung (voller Satz abzgl. Freibetrag)|0,20 €|
+|Pflegeversicherung|6,78 €|
+|Lohnsteuer|7,54 €|
+
+Gesetzliches Netto: 173,90 €
+Auszahlungsbetrag: 173,90 € auf IBAN DE00 0000 0000 0000 0000 00
+
+@fuss Zusatzversorgungskasse Beispiel-Land · Lohnbuchhaltung · Bei Rückfragen bitte Personalnummer angeben

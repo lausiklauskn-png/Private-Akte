@@ -1,0 +1,7 @@
+Bezirksregierung Beispiel, Lehrerbesoldung
+Personal-Nr. LB-000000, Mitteilung August 2026: Stufenaufstieg in A13
+Grundgehalt                  5.012,34
+Beihilfeabschlag                  0,00
+Brutto                       5.012,34
+Netto Auszahlung             3.940,18 EUR zum 31.08.2026
+Neue Erfahrungsstufe 7 ab 01.08.2026.

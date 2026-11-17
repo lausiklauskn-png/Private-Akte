@@ -1,0 +1,17 @@
+Von: Kistenkram Beispiel Versand <versand@kistenkram-beispiel.example>
+An: Lukas Behrend
+Datum: 19.03.2026
+Betreff: Hurra! Ihre Sendung ist unterwegs 📦
+
+Hallo Lukas,
+Dein Paket ist auf dem Weg und kommt voraussichtlich am 21.03.2026.
+Sendungsnummer: 00000000000000
+
+------------------------------------------------------------
+Rechnung KK-R-2026-000000 zu Bestellnummer KK-000-0000000
+Notebook „Beispielbook 14 Pro“, 16 GB, 512 GB SSD   749,00 EUR
+Versand                                               0,00 EUR
+Gesamt inkl. 19 % USt. (119,59 EUR)                 749,00 EUR
+Zahlart: Kauf auf Rechnung – zahlbar bis 02.04.2026
+Garantie: 2 Jahre Herstellergarantie
+------------------------------------------------------------

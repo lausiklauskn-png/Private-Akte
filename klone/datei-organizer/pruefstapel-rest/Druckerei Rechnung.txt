@@ -1,0 +1,26 @@
+Druckhaus Beispiel KG
+Papierstr. 9 · 04999 Musterstadt
+
+Grafikdesign Nora Feldkamp
+Nora Feldkamp
+Kirchgasse 3
+04999 Musterstadt
+
+Rechnungsnr.: DB-25-0912
+Kundennr.: 11880
+Datum: 09.05.2025
+
+Rechnung
+
+Pos.   Artikel   Auflage   Betrag
+1   Flyer DIN lang, 4/4-farbig, 170 g   2.500   148,00 EUR
+2   Visitenkarten 350 g matt   500   39,00 EUR
+3   Plakat A1   20   96,00 EUR
+4   Datencheck   1   15,00 EUR
+   Netto      298,00 EUR
+   USt 19 %      56,62 EUR
+   Brutto      354,62 EUR
+
+Zahlbar innerhalb 14 Tagen bis 23.05.2025 ohne Abzug.
+
+Druckhaus Beispiel KG · AG Musterstadt HRA 4411 · IBAN DE00 0000 0000 0000 0000 00

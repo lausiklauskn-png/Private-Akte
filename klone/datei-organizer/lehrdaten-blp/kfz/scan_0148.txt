@@ -1,0 +1,28 @@
+Kfz-Technik Brandhorst
+Inh. Henrik Brandhorst · Kfz-Meisterbetrieb · Teile & Reifen
+Ziegeleiweg 14 · 37199 Wolmershagen
+Tel. 05500 000 41-0 · werkstatt@brandhorst-kfz.example
+USt-IdNr. DE000000000 · St.-Nr. 00/000/00000
+
+Bäckerei Lührmann GmbH
+Fuhrpark
+Marktstraße 2
+37199 Wolmershagen
+
+RECHNUNG Nr. 2026-0058                                   Datum: 02.02.2026
+Lieferwagen Kasten 2.0 TDI · WOH-BL 000 · Fahrgestellnr. endet auf ...00417 · km 211.905
+
+Pos  Bezeichnung                               Menge    E-Preis     Gesamt
+1    Inspektion nach Herstellervorgabe (groß)  2,60 AW-Std     82,00     213,20
+2    Motoröl 5W-30 Longlife                    6,50 Ltr     14,90      96,85
+3    Ölfilter, Luftfilfer, Kraftstofffilter       1 Satz     61,80      61,80
+4    Zahnriemen mit Wasserpumpe ersetzeri – Lohn  3,20 AW-Std     82,00     262,40
+5    Zahnriemensatz inkl. Wasscrpumpe             1 Satz    189,00     189,00
+
+Nettobetrag                                        823,25
+zzgl. 19 % MwSt                                    156,42
+Rechnungsbetrag                                    979,67
+
+Zahlungsziel: 10 Tage netto. Nächste HU fällig 08/2026.
+Bankverbindung: Volksbank Wolmershagen eG · IBAN DE00 0000 0000 0000 0000 00
+Kfz-Technik Brandhorst · Inhaber Henrik Brandhorst · Mitglied der Kfz-Innung

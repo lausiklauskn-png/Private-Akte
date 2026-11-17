@@ -1,0 +1,30 @@
+Fahrschule Kurve Beispiel
+Inh. Sven Beispiel · Marktplatz 8 · 45678 Talheim-Beispiel
+
+Frau Katrin Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Fahrschüler: Leon Sommerfeld, Klasse B / BF17
+Rechnungsnummer: FK-25-0412
+Datum: 15.04.2025
+
+Zwischenrechnung Ausbildung Klasse B
+
+Sehr geehrte Frau Rebmann,
+
+Leon hat die theoretische Prüfung am 08.04.2025 bestanden. Herzlichen Glückwunsch! Für die bisherige Ausbildung berechnen wir:
+
+Grundbetrag                         390,00
+Lernmaterial und App                 89,00
+Übungsfahrten 8 x 45 Min. à 62,00   496,00
+Sonderfahrten 6 x 45 Min. à 72,00   432,00
+Vorstellung Theorieprüfung           30,00
+Gesamt                            1.437,00
+
+Bitte überweisen Sie den Betrag bis zum 15.05.2025. Die restlichen Sonderfahrten und die praktische Prüfung rechnen wir gesondert ab.
+
+Mit freundlichen Grüßen
+
+
+Fahrschule Kurve Beispiel · IBAN DE00 0000 0000 0000 0000 00

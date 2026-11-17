@@ -1,0 +1,16 @@
+Von: Beispielversand <service@beispielversand.example>
+An: familie.brandtner@example.org
+Datum: 18.03.2026 07:52
+Betreff: Ihre Rechnung zur Bestellung 3021-90114
+
+Hallo Familie Brandtner,
+
+Ihre Bestellung ist unterwegs! Die Rechnung finden Sie als PDF im Anhang.
+
+Kinderfahrradhelm Gr. S – 39,99 €
+Fahrradschloss – 19,99 €
+Gesamt: 59,98 € (bezahlt per Lastschrift)
+
+Viel Freude mit Ihrem Einkauf!
+
+Anhang: Rechnung_3021-90114.pdf

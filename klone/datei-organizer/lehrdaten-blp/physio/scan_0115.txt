@@ -1,0 +1,12 @@
+Volksbank Wehrstedt eG – Online-Banking
+Auftragsbestätigung SEPA-Überweisung
+
+Auftraggeber:     Physiotherapie & Massagepraxis Lindenhof
+Empfänger:        Svenja Kortmann
+IBAN Empfänger:   DE00 0000 0000 0000 0000 00
+Betrag:           1.813,58 EUR
+Verwendungszweck: Gehalt Februar 2026 Pers.-Nr. 0001
+Ausführung:       26.02.2026
+Status:           ausgeführt   TAN-Verfahren SecureGo
+
+Auftragsnummer 00000482917

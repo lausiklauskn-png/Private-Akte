@@ -1,0 +1,125 @@
+{
+ "app": "KI-Schleuse",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Schützt Betriebe mit Berufsgeheimnis davor, dass Klartext von Mandanten-, Patienten- oder Kundendaten an fremde KI-Dienste geht",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Zielgruppe: kleine Kanzleien, Steuerbüros, Praxen, Pflegedienste (2–50 Personen), auch über IT-Dienstleister, Datenschutzbeauftragte und KI-Berater vertrieben",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Erkennung und Verdecken laufen vollständig auf dem Gerät; kein Klartext geht an einen Server des Anbieters",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M04",
+   "text": "Erkennt deutsche Muster: Personennamen, Anschriften, Geburtsdaten, IBAN, Steuer-ID, Versichertennummer, Aktenzeichen, Telefon, E-Mail",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Ersetzt Erkanntes durch stabile Platzhalter; derselbe Name bekommt in einer Sitzung immer denselben Platzhalter",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M06",
+   "text": "Setzt die Antwort der KI auf dem Gerät wieder in Klartext zurück",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Prüft vor dem Senden den verdeckten Text noch einmal auf übrig gebliebenen Klartext und hält dann an",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Nimmt eigene Listen auf (Mandanten-, Patienten-, Kundennamen, Ortsbegriffe), die immer verdeckt werden",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Zeigt vor dem Senden eine Vorschau „das sieht die KI“; gesendet wird erst auf Bestätigung",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Anbieterneutral: funktioniert mit beliebigen KI-Diensten, verkauft keine eigene KI",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M11",
+   "text": "Grundweg ohne Installation in fremde Programme: Text einfügen, verdeckt kopieren, Antwort einfügen, zurückgesetzt kopieren",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M12",
+   "text": "Browser-Erweiterung für Chrome/Edge als zweite Stufe, die das Eingabefeld der KI-Seite abfängt",
+   "gewicht": "beiwerk",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M13",
+   "text": "Läuft als Browser-App und unter Windows; Handy nur eingeschränkt (kein Eingriff in fremde Apps), offen benannt",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M14",
+   "text": "Zuordnung Platzhalter ↔ Klartext nur lokal, verschlüsselt oder nur für die Sitzung im Speicher",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M15",
+   "text": "Nachweisprotokoll nur mit Art und Anzahl verdeckter Angaben, nie mit Inhalten",
+   "gewicht": "wichtig",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M16",
+   "text": "Kein Mitlesen durch Vorgesetzte, keine Mitarbeiter-Rangliste",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Verspricht keine vollständige Anonymisierung; sagt, dass Pseudonyme personenbezogen bleiben und kein Auftragsverarbeitungsvertrag ersetzt wird",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M18",
+   "text": "Zentrale Regelvorgabe für den ganzen Betrieb (Muster, Listen) ohne zentrale Inhalte",
+   "gewicht": "beiwerk",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M19",
+   "text": "Zählt anonym „Fälle abgefangen“ als Beleg für die KI-Kompetenz-Dokumentation",
+   "gewicht": "beiwerk",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M20",
+   "text": "Preis je Nutzer und Monat im einstelligen Eurobereich, Mindestpaket für kleine Betriebe",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

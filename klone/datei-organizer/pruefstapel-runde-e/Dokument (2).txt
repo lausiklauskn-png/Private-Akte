@@ -1,0 +1,24 @@
+Eiscafé Beispiel Venezia
+Eiscafé Beispiel Venezia · Marktplatz 4 · 34567 Beispielstadt
+
+Frau Lena Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Verdienstabrechnung August 2025
+
+Beschäftigung: kurzfristig, Schülerin
+Steuer: pauschal durch Arbeitgeber
+
+Lohnart   Bezeichnung   Betrag
+100   Stundenlohn 12,82 € × 32,2 Std.   412,50 €
+   Gesamtbrutto   412,50 €
+
+Abzug   Betrag
+Rentenversicherung (befreit)   0,00 €
+Lohnsteuer (pauschal AG)   0,00 €
+
+Gesetzliches Netto: 412,50 €
+Auszahlungsbetrag: 412,50 € auf IBAN DE00 0000 0000 0000 0000 00
+
+Eiscafé Beispiel Venezia · Lohnbuchhaltung · Bei Rückfragen bitte Personalnummer angeben

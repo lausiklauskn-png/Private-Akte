@@ -1,0 +1,36 @@
+{
+  "fassung": "0.4.8",
+  "datum": "2026-11-15",
+  "freigabe": "Klaus 15.11.2026: „0.4.8 veröffentlichen“",
+  "inhalt": "Discovery: Sprecher „Arthur“ (15 Tonspuren), Kurzfilme als echte Filme (Briefträger, Der Kern rät, Strafzettel), Kreislauf-Film im Murmel-Stil, Stadtfilm mit vier Städten, Landung und Finale, Kurzform (43 s) und „Runde für Runde“ (58 s), Film-Ansicht der Bühne mit Baum-Standbild als Hintergrund, „Führung starten“ spielt dort das große Video (75 s), 3D erst auf Wunsch gebaut, Leistungsmessung der 3D-Bühne, Ladebalken an jedem Film, alte gezeichnete Kurzfilme nicht mehr gezeigt (#45–#48)",
+  "android": {
+    "commit": "908b3d32b572a9052ba44336fad637d5b9bad16a",
+    "lauf": 43776349955,
+    "datei": "Datei-Organizer-Pro-0.4.8.apk",
+    "versionCode": 48,
+    "groesse": 71185208,
+    "sha256": "e137adbc70493a04ed8c767b5f0e2de21ea10dd2302616f231bfb158cee8ca2f",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.8",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.8.apk",
+    "geprueft": "Release-Lauf grün (Bau und Veröffentlichung); Release-Datei aus der Sitzung geladen, Größe und SHA-256 gleich .apk.json und GitHub-Angabe; Discovery-Dateien liegen in der APK"
+  },
+  "windows": {
+    "commit": "908b3d32b572a9052ba44336fad637d5b9bad16a",
+    "lauf": 43776351795,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.8-x64-setup.exe",
+    "groesse": 86209730,
+    "sha256": "ee747b76ba3ee8176961a9b396386ee086181233301ed9e674e8d59063d63133",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.8-x64-setup.exe",
+    "geprueft": "Release-Lauf grün (Bau und Veröffentlichung, Download vom Update-Server im Lauf per SHA-256 verglichen); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.7)"
+  },
+  "basic": {
+    "commit": "908b3d32b572a9052ba44336fad637d5b9bad16a",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Merge-Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "paketgroesse": "Durch die Discovery-Filme (rund 60 MB) deutlich größer als 0.4.7: APK 16,3 → 71,2 MB, Windows 31,0 → 86,2 MB",
+  "hinweis": "Das Repo stand zwischenzeitlich auf privat; die Läufe auf main starteten erst, nachdem Klaus es wieder öffentlich gestellt hatte",
+  "nicht_geprueft": "Nicht am Gerät: Film-Ansicht, großes Video, Stadtfilm und Ladebalken in der Android-App und unter Windows; Update von 0.4.7 auf 0.4.8 am Tablet; Update-Server aus der Sitzung nicht abrufbar"
+}

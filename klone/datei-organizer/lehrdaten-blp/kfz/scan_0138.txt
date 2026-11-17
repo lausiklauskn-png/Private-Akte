@@ -1,0 +1,12 @@
+bueroversand-nord.example | Rcchnung
+Verkäufer: Kontorbcdarf Thomsen GmbH, Speicherstr. 12, 24103 Kielholm, DE000000033
+Bestellnr. 440-2209871 | Rechnungsnr. INV-DE-0098812 | 14.08.2026
+Lieferadresse: Kfz-Technik Brandhorst, Büro, Ziegeleiweg 14, 37199 Wolmershagen
+
+Qty   Description                          Unit price     Amount
+1     Multifunktions-Laserdrucker A3 Farbe mit Unterschrank (Bürogerät)   1.249,00   1.249,00
+
+Subtotal                                         1.249,00
+VAT 19%                                            237,31
+Total EUR                                        1.486,31
+Zahlungsart: Rechnungskauf, fällig am 28.08.2026

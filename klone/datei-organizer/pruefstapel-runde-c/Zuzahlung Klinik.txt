@@ -1,0 +1,24 @@
+Klinikum Beispielhausen – Patientenverwaltung
+
+Frau Gertrud Sommerfeld
+Ahornstraße 7
+56789 Kleinbeispiel
+
+Fallnummer: 24-0902-1188
+Datum: 25.09.2024
+
+Rechnung über die gesetzliche Zuzahlung
+
+Sehr geehrte Frau Sommerfeld,
+
+für Ihren stationären Aufenthalt vom 02.09.2024 bis 11.09.2024 ist nach § 39 SGB V eine Zuzahlung von 10,00 EUR je Kalendertag zu leisten.
+
+10 Tage x 10,00 EUR = 100,00 EUR
+
+Bitte überweisen Sie den Betrag bis zum 09.10.2024. Haben Sie in diesem Jahr bereits die Belastungsgrenze erreicht, legen Sie uns bitte Ihre Befreiungsbescheinigung vor.
+
+Mit freundlichen Grüßen
+Patientenverwaltung
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00

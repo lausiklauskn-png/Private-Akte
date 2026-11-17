@@ -1,0 +1,361 @@
+{
+ "stellen": [
+  {
+   "name": "Finanzamt Beispielhafen",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Am Zollhaus 1, 29999 Beispielhafen",
+   "kennung": "Steuernummer 99/000/00000; Aktenzeichen ESt-2025-…"
+  },
+  {
+   "name": "Stadt Beispielhafen – Bürgeramt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausmarkt 1, 29999 Beispielhafen",
+   "kennung": "Vorgangsnummer BA-2026-00000"
+  },
+  {
+   "name": "Stadt Beispielhafen – Steueramt (Grundsteuer, Hundesteuer)",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausmarkt 1, 29999 Beispielhafen",
+   "kennung": "Kassenzeichen 0000.0000.0000"
+  },
+  {
+   "name": "Stadt Beispielhafen – Standesamt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausmarkt 3, 29999 Beispielhafen",
+   "kennung": "Registernummer G 000/2026"
+  },
+  {
+   "name": "Stadt Beispielhafen – Bauordnungsamt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausmarkt 5, 29999 Beispielhafen",
+   "kennung": "Aktenzeichen BV-63-0000/2026"
+  },
+  {
+   "name": "Landkreis Beispielland – Kfz-Zulassungsstelle",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausweg 10, 29998 Beispieldorf",
+   "kennung": "Vorgang KFZ-000000"
+  },
+  {
+   "name": "Landkreis Beispielland – Sozialamt / Pflege",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausweg 12, 29998 Beispieldorf",
+   "kennung": "Aktenzeichen 50.2-0000"
+  },
+  {
+   "name": "Familienkasse Beispielnord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 29999 Beispielhafen",
+   "kennung": "Kindergeldnummer 000FK000000"
+  },
+  {
+   "name": "Jobcenter Beispielhafen",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kaiweg 4, 29999 Beispielhafen",
+   "kennung": "BG-Nummer 00000BG0000000"
+  },
+  {
+   "name": "Agentur für Arbeit Beispielhafen",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kaiweg 2, 29999 Beispielhafen",
+   "kennung": "Kundennummer 000A000000"
+  },
+  {
+   "name": "Deutsche Rentenversicherung Beispielnord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rentenstraße 1, 29990 Beispielstadt",
+   "kennung": "Versicherungsnummer 00 000000 X 000"
+  },
+  {
+   "name": "Amtsgericht Beispielhafen",
+   "art": "Gericht",
+   "gruppe": 1,
+   "anschrift": "Gerichtsplatz 2, 29999 Beispielhafen",
+   "kennung": "Aktenzeichen 0 C 000/26; Nachlass 0 VI 000/26"
+  },
+  {
+   "name": "Beitragsservice Rundfunk Beispielland",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 29900 Beispielstadt",
+   "kennung": "Beitragsnummer 000 000 000"
+  },
+  {
+   "name": "Elterngeldstelle Landkreis Beispielland",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausweg 14, 29998 Beispieldorf",
+   "kennung": "Aktenzeichen EG-0000/26"
+  },
+  {
+   "name": "Hafenbank Beispielhafen eG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Ankerplatz 8, 29999 Beispielhafen",
+   "kennung": "IBAN DE00 0000 0000 0000 0000 00; Kundennummer 0000000"
+  },
+  {
+   "name": "Nordküsten Sparkasse Beispiel",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Marktstraße 20, 29999 Beispielhafen",
+   "kennung": "IBAN DE00 0000 0000 0000 0000 00; Darlehen Nr. 0000000000"
+  },
+  {
+   "name": "Beispiel Kreditkarten AG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Kartenallee 1, 29900 Beispielstadt",
+   "kennung": "Kartennummer **** **** **** 0000"
+  },
+  {
+   "name": "Beispielwind Versicherung AG",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Sturmweg 5, 29900 Beispielstadt",
+   "kennung": "Versicherungsschein KH-0000000 / HR-0000000"
+  },
+  {
+   "name": "Leuchtturm Lebensversicherung Beispiel",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Turmweg 1, 29900 Beispielstadt",
+   "kennung": "Vertragsnummer LV 000 000 000"
+  },
+  {
+   "name": "Beispielkasse Nord (Krankenkasse)",
+   "art": "Krankenkasse",
+   "gruppe": 2,
+   "anschrift": "Gesundweg 2, 29999 Beispielhafen",
+   "kennung": "Versichertennummer X000000000"
+  },
+  {
+   "name": "Pflegekasse bei der Beispielkasse Nord",
+   "art": "Pflegekasse",
+   "gruppe": 2,
+   "anschrift": "Gesundweg 2, 29999 Beispielhafen",
+   "kennung": "Versichertennummer X000000000; Antrag PG-0000"
+  },
+  {
+   "name": "Möwe Inkasso Beispiel GmbH",
+   "art": "Inkasso",
+   "gruppe": 2,
+   "anschrift": "Forderungsgasse 9, 29900 Beispielstadt",
+   "kennung": "Aktenzeichen MI-0000000"
+  },
+  {
+   "name": "Beispielwerft Nordhafen GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Werftkai 1, 29999 Beispielhafen",
+   "kennung": "Personalnummer 00000"
+  },
+  {
+   "name": "Hafenlager Beispiel Logistik GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Kaiweg 30, 29999 Beispielhafen",
+   "kennung": "Personalnummer AH-0000"
+  },
+  {
+   "name": "Supermarkt Frischkai Beispiel",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Hafenstraße 50, 29999 Beispielhafen",
+   "kennung": "Personalnummer 0000"
+  },
+  {
+   "name": "Steuerbüro Beispiel & Partner",
+   "art": "Steuerberatung",
+   "gruppe": 2,
+   "anschrift": "Kontorhausweg 6, 29999 Beispielhafen",
+   "kennung": "Mandantennummer 00000"
+  },
+  {
+   "name": "Wohnungsgenossenschaft Beispielhafen eG",
+   "art": "Vermieter",
+   "gruppe": 3,
+   "anschrift": "Genossenschaftsweg 1, 29999 Beispielhafen",
+   "kennung": "Mitgliedsnummer 0000; Mietvertrag WE-00-000"
+  },
+  {
+   "name": "Hausverwaltung Kaimauer Beispiel GmbH",
+   "art": "Hausverwaltung",
+   "gruppe": 3,
+   "anschrift": "Speicherstraße 2, 29999 Beispielhafen",
+   "kennung": "Objekt 000, Einheit 00"
+  },
+  {
+   "name": "Stadtwerke Beispielhafen",
+   "art": "Versorger",
+   "gruppe": 3,
+   "anschrift": "Werkstraße 1, 29999 Beispielhafen",
+   "kennung": "Vertragskonto 000000000; Zählernummer 0BSP000000"
+  },
+  {
+   "name": "Wellenfunk Beispiel Mobilfunk & Internet",
+   "art": "Telekommunikation",
+   "gruppe": 3,
+   "anschrift": "Funkturmweg 3, 29900 Beispielstadt",
+   "kennung": "Kundennummer WF-000000; Rufnummer 0000-000000"
+  },
+  {
+   "name": "Elektro Kielholz Beispiel",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 12, 29999 Beispielhafen",
+   "kennung": "Rechnungsnummer EK-2026-000"
+  },
+  {
+   "name": "Dach & Fach Beispiel Bau GmbH",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 20, 29999 Beispielhafen",
+   "kennung": "Auftragsnummer DF-0000"
+  },
+  {
+   "name": "Sanitär Strandgut Beispiel",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 4, 29999 Beispielhafen",
+   "kennung": "Rechnungsnummer SS-000/26"
+  },
+  {
+   "name": "Autohaus Deichblick Beispiel",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Ausfallstraße 70, 29999 Beispielhafen",
+   "kennung": "Kundennummer AD-00000"
+  },
+  {
+   "name": "Kistenkram Beispiel Versand (Onlinehändler)",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Lagerallee 100, 29900 Beispielstadt",
+   "kennung": "Bestellnummer KK-000-0000000"
+  },
+  {
+   "name": "Möbelhafen Beispiel",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Ausfallstraße 88, 29999 Beispielhafen",
+   "kennung": "Kundennummer 000000; Auftrag MH-0000"
+  },
+  {
+   "name": "Großhandel Kontorkaffee Beispiel",
+   "art": "Lieferant",
+   "gruppe": 3,
+   "anschrift": "Lagerallee 7, 29900 Beispielstadt",
+   "kennung": "Kundennummer KKB-0000"
+  },
+  {
+   "name": "Glücksreisen Beispiel (Werbung)",
+   "art": "Werbung",
+   "gruppe": 3,
+   "anschrift": "Postfach 0000, 29900 Beispielstadt",
+   "kennung": "Werbecode GR-0000"
+  },
+  {
+   "name": "Praxis Dr. med. Beispiel-Lohse (Allgemeinmedizin)",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Ärztehaus am Hafen, Kaiweg 8, 29999 Beispielhafen",
+   "kennung": "Patientennummer 00000"
+  },
+  {
+   "name": "Kinderarztpraxis Dr. Muster-Wendt",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Schulstraße 2, 29999 Beispielhafen",
+   "kennung": "Patientennummer K0000"
+  },
+  {
+   "name": "Zahnarztpraxis Beispiel-Holm",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Ärztehaus am Hafen, Kaiweg 8, 29999 Beispielhafen",
+   "kennung": "Patientennummer Z0000; HKP-Nummer 0000"
+  },
+  {
+   "name": "Klinikum Beispielhafen",
+   "art": "Krankenhaus",
+   "gruppe": 4,
+   "anschrift": "Klinikweg 1, 29999 Beispielhafen",
+   "kennung": "Fallnummer 0000000000"
+  },
+  {
+   "name": "Labor Nordbeispiel",
+   "art": "Labor",
+   "gruppe": 4,
+   "anschrift": "Laborweg 3, 29990 Beispielstadt",
+   "kennung": "Auftragsnummer L-000000"
+  },
+  {
+   "name": "Pflegedienst Leuchtfeuer Beispiel",
+   "art": "Pflegedienst",
+   "gruppe": 4,
+   "anschrift": "Lotsenweg 20, 29999 Beispielhafen",
+   "kennung": "Kundennummer PL-000"
+  },
+  {
+   "name": "Grundschule am Leuchtturm Beispielhafen",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Schulstraße 10, 29999 Beispielhafen",
+   "kennung": "Klasse 3b / 1a"
+  },
+  {
+   "name": "Gymnasium Kaiserdeich Beispiel",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Deichstraße 30, 29999 Beispielhafen",
+   "kennung": "Klasse 7c / 9a / Q1"
+  },
+  {
+   "name": "Kita Seesternchen Beispiel",
+   "art": "Kita",
+   "gruppe": 4,
+   "anschrift": "Möwenstieg 2, 29999 Beispielhafen",
+   "kennung": "Betreuungsvertrag KS-000"
+  },
+  {
+   "name": "TuS Beispielhafen von 1900 e. V.",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Sportplatzweg 1, 29999 Beispielhafen",
+   "kennung": "Mitgliedsnummer 0000"
+  },
+  {
+   "name": "Hochschule Beispielhafen",
+   "art": "Hochschule",
+   "gruppe": 4,
+   "anschrift": "Campusring 1, 29999 Beispielhafen",
+   "kennung": "Matrikelnummer 0000000"
+  },
+  {
+   "name": "Verwandte und Nachbarn (Privatpost)",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "verschiedene Anschriften, erfunden",
+   "kennung": "keine Kennung"
+  },
+  {
+   "name": "Eigene Notizen und Mails",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "–",
+   "kennung": "keine Kennung"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+# Fernsehtechnik Beispiel
+Fernsehtechnik Beispiel · Bildröhrenweg 1 · 67890 Exempelheim
+
+Herrn und Frau
+Heinrich und Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Datum: 09.12.2025
+
+# Rechnung Reparatur Fernseher
+
+Sehr geehrte Familie Vogelsang,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Netzteilplatine getauscht|1|89,00 €|89,00 €|
+|2|Anfahrt|1|25,00 €|25,00 €|
+|3|Sendersuchlauf und Einweisung|1|20,00 €|20,00 €|
+
+Nettobetrag: 134,00 €
+zzgl. 19 % MwSt.: 25,46 €
+Rechnungsbetrag: 159,46 €
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Auf die Reparatur gewähren wir 6 Monate Garantie.
+
+Mit freundlichen Grüßen
+Fernsehtechnik Beispiel
+@fuss Fernsehtechnik Beispiel · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

@@ -1,0 +1,15 @@
+# Beispiel Forderungsmanagement GmbH
+Postfach 99 · 10999 Beispielberlin
+
+Frau
+Julia Okafor
+Uferstraße 3
+22999 Beispielhafen
+
+Aktenzeichen: BFM-14-889120
+Datum: 28.04.2014
+
+# Erledigungsbestätigung
+
+Die Forderung wurde vollständig bezahlt. Der Vorgang ist abgeschlossen.
+

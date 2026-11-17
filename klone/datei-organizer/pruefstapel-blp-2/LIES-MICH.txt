@@ -1,0 +1,57 @@
+PRÜFSTAPEL BLP-2 – blind erstellter Testsatz (120 erfundene Belege)
+====================================================================
+
+Wie erstellt
+- Alle 120 Textdateien und ERWARTUNG.json stammen aus einem einzigen eigenen Skript
+  (lag nur im Sitzungs-Scratchpad, nicht im Repo). Beträge werden im Skript gerechnet,
+  die Texte sind von Hand formuliert, so wie Belege nach Texterkennung aussehen.
+- Erfundener Betrieb: "Radwerk Tidemann", Fahrradwerkstatt mit Laden, Inh. Maren Tidemann,
+  Kornspeicherweg 14, 26999 Wesselhaven (Ort, PLZ, alle Firmen, Personen, Marken erfunden).
+  Ein Angestellter (Ole Brandsen). IBAN nur DE00 0000 ..., USt-IdNr. DE000000000.
+- Belegjahr 2026 (Januar bis Anfang November). Einige Dateien enthalten absichtlich
+  OCR-Tippfehler in Wörtern (z. B. "Rechnuug", "Bezeichnnng", "Privatentnahrne"), nie in Beträgen.
+- Es wurde KEIN verbotener Pfad gelesen: nichts unter /home/user/ außer diesem Ausgabeordner,
+  insbesondere nicht pruefstapel-blp/, bookledgerpro, lausiklauskn-png oder anderer Code/Daten.
+  Die App und frühere Testdaten sind dem Ersteller unbekannt.
+
+Felder in ERWARTUNG.json
+- konto: SKR03 aus der vorgegebenen Liste, Urteil für den Beleg als Ganzes.
+- richtung: aus Sicht des Betriebs. Eigene Ausgangsrechnungen/Kassenbelege, Provisions-
+  gutschriften und Privateinlagen = einnahme; alles andere = ausgabe.
+- betrag: Bruttoendbetrag genau wie gedruckt (deutsches Format, ohne Währung).
+- datum: Belegdatum (Rechnungs-/Bon-/Bescheiddatum), nicht Leistungs- oder Fälligkeitsdatum.
+- ust: überwiegender Steuersatz des Belegs. 0 = Beleg ist ausdrücklich steuerfrei / nicht
+  steuerbar / weist keine USt aus (Versicherung, Bank, Beiträge, Briefmarken, städtischer
+  Parkschein, steuerfreie Miete, igL, Ausfuhr, Mehrzweck-Gutschein). null = Frage stellt sich
+  nicht (Lohnabrechnung, Privatentnahme/-einlage, Reisekosten-Eigenbelege mit Pauschalen).
+- aussteller: Name wie im Belegkopf. Bei Eigenbelegen, Lohnabrechnungen und eigenen
+  Ausgangsrechnungen "Radwerk Tidemann" (auf den zwei eigenen Kassenbons in Großbuchstaben, wie gedruckt).
+
+Grenzfälle und getroffene Entscheidungen
+- Bewirtung immer 4650; 2026 Speisen 7 %, Getränke 19 % -> ust = überwiegender Satz
+  (zwei Belege 7, die Getränkerunde in der Hafenbar 19). Trinkgeld steht nicht im Betrag.
+- Hotel mit Frühstück und Beherbergungsabgabe: 4670, ust 7 (überwiegend), Betrag = Gesamtrechnung.
+- Kfz-Reparatur, HU/AU, Reifen, Inspektion, Autoglas -> 4500; Tanken (auch mit Scheibenreiniger)
+  und Parken -> 4530; Kfz-Versicherung -> 4540.
+- Geschenke: Grenze 50 EUR netto je Empfänger. Wein (3 Empfänger je 14,40) und Präsentkorb
+  36,36 netto -> 4630; Präsentkorb 108,40 netto und Gutschein 150,00 -> 4635.
+- Jahresabrechnung Gas: betrag = Nachzahlung (304,92), nicht der Jahres-Bruttobetrag.
+- Kartenabrechnung: betrag = Summe der Entgelte, nicht der Kartenumsatz. Zwei Abrechnungen
+  steuerfrei (ust 0), eine mit 19 % ausgewiesen.
+- Lohnabrechnung: 4120, betrag = Gesamtbrutto (so wird Gehalt gebucht). Wer den
+  Auszahlungsbetrag liest (1.916,62 bzw. 2.037,67), liest den Zahlbetrag – als vertretbare
+  Abweichung gesondert werten.
+- Mitarbeiter-Reise: Reisekostenabrechnung und Hotelrechnung für den Angestellten -> 4660;
+  Seminargebühr selbst -> 4945. Unternehmerin -> 4670.
+- Baumarkt-Bon mit Farbe/Spachtel (Ausbesserung Ladenwand) -> 4260; Baumarkt-Bon
+  Akku-Schlagschrauber 289 netto -> 0480. Montageständer 649 netto -> 0480.
+- Kompressor/Zentriermaschine -> 0400; Ladeneinrichtung und Kassensystem -> 0410
+  (0430 steht nicht in der Liste); gebrauchter Kombi -> 0320.
+- Rechtsanwältin -> 4950; Steuerkanzlei Buchführung/Lohn -> 4955.
+- Drogerie-Bon Reinigungsmittel -> 4250. Entsorgung, Software-Abo, Berufskleidung,
+  Feuerlöscherprüfung -> 4980. Sponsoring-Bandenwerbung -> 4600.
+- Energieriegel/Karten/Bücher zum Weiterverkauf -> 3300; Fachbücher/Fachzeitschrift
+  für den Betrieb -> 4940.
+- Lieferungen NL/DK mit USt-IdNr. -> 8125; Schweiz/Norwegen -> 8120.
+- Provisionsgutschriften (vom Auftraggeber ausgestellt) -> 8500, aussteller = Auftraggeber.
+- Privatentnahme/-einlage per Bankbeleg: aussteller = Bank; per Eigenbeleg = Radwerk Tidemann.

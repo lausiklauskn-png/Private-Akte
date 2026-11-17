@@ -1,0 +1,13 @@
+ladepunkt-franken.example
+Stadtwerke Regnitzgrund GmbH – Elektromobilität
+
+Monatsrechnung Ladekarte Nr. 0417-22               Rechnung vom 05.10.2026
+Kunde: Kettler Systemhaus – Fahrzeug BA-KS 58E
+
+Ladevorgänge September 2026
+ 03.09. Parkhaus Zentrum Süd AC      18,4 kWh
+ 11.09. Schnelllader P+R Heinrichsdamm DC 31,2 kWh
+ 24.09. Parkhaus Zentrum Süd AC      14,9 kWh
+ 64,5 kWh, Mischpreis netto                    31,48
+ Umsatzsteuer 19 %                              5,98
+ Rechnungsbetrag                               37,46 EUR

@@ -1,0 +1,12 @@
+KLINIKUM BEISPIELHAFEN - Patientenabrechnung
+Rechnungsnummer KB-2026-004417            Datum 30.01.2026
+Fallnummer 0000000000
+
+Herr Heinrich Brakmann, Deichgrafenstraße 22, 29999 Beispielhafen
+
+Gesetzliche Zuzahlung stationär (7 Tage x 10,00 EUR)         70,00 EUR
+Zuzahlung gesamt                                              70,00 EUR
+
+Bitte überweisen Sie den Betrag bis zum 12.02.2026
+IBAN DE00 0000 0000 0000 0000 00, Verwendungszweck: KB-2026-004417
+Bei Fragen: Patientenverwaltung 0000-444100

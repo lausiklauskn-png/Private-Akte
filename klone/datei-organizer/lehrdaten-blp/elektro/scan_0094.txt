@@ -1,0 +1,12 @@
+mobilo Business – Mobilfunkrechnung
+Rechnungsmonat Maerz 2026 · Rahmenvertrag 77114 · 3 SIM-Karten
+
+Rufnummer            Tarif                 Grundpreis   Nutzung    Summe
+0150 0000 114        Business L 30 GB        24,00       0,00     24,00
+0150 0000 115        Business M 12 GB        16,00       1,90     17,90
+0150 0000 116        Business S (Azubi)       9,00       0,00      9,00
+                                                                 ------
+Nettobetrag                                                       50,90
+zzgl. USt 19 %                                                     9,67
+Gesamtbetrag                                                      60,57 EUR
+Faellig: 14.04.2026 per SEPA

@@ -1,0 +1,30 @@
+Sanitär Strandgut Beispiel
+Heizung · Bad · Lüftung
+Gewerbering 4 · 29999 Beispielhafen
+Tel. 0000-30404 · Notdienst 0000-30499
+
+Rechnung SS-061/26
+Datum: 15.05.2026
+
+Herrn Tobias Siemsen
+Am Sielgraben 9, 29999 Beispielhafen
+
+Baustelle Kiebitzring 5 – Sanitärinstallation Neubau (Fertigmontage)
+
+Pos. Menge  Bezeichnung                                   EP         GP
+1    1 St   Wand-WC spülrandlos mit Vorwandelement     612,00     612,00
+2    1 St   Waschtisch 60 cm mit Unterschrank          438,00     438,00
+3    1 St   Duschsystem Thermostat, bodengleich        786,00     786,00
+4    1 St   Gäste-WC komplett                          529,00     529,00
+5    1 St   Außenzapfstelle frostsicher                 96,00      96,00
+6   22 Std  Montage Geselle                             58,00   1.276,00
+7    1 psch Kleinmaterial, Dichtungen                  143,00     143,00
+                                                            ----------
+                                               Netto        3.880,00 €
+                                               19 % USt       737,20 €
+                                               Gesamt       4.617,20 €
+
+Bitte zahlen Sie innerhalb von 21 Tagen bis zum 05.06.2026.
+IBAN DE00 0000 0000 0000 0000 00
+
+Wir danken für den Auftrag. Die Wartung der Hebeanlage empfehlen wir jährlich.

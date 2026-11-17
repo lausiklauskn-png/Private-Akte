@@ -1,0 +1,27 @@
+Von: termine@beispielkreis-landratsamt.invalid
+Gesendet: Dienstag, 9. Juni 2026 20:03
+An: jonas.l@beispiel-mail.invalid
+Betreff: Ihre Terminbuchung bei der Kfz-Zulassungsstelle
+
+Sehr geehrter Herr Lindenbrecht,
+
+Ihre Terminbuchung war erfolgreich.
+
+Anliegen:     Adressänderung (Umzug innerhalb des Landkreises)
+Termin:       Donnerstag, 18.06.2026, 10:30 Uhr
+Standort:     Landratsamt Beispielkreis, Kfz-Zulassung, Landratsweg 10
+Buchungscode: KFZ-0000-26
+
+Bitte mitbringen:
+ * Personalausweis mit neuer Anschrift
+ * Zulassungsbescheinigung Teil I (Fahrzeugschein)
+ * bei Vertretung: Vollmacht und Ausweis des Halters
+
+Eine Adressänderung kostet 12,60 Euro (bar oder EC-Karte). Das Kennzeichen
+kann im Landkreis bleiben.
+
+Termin absagen oder verschieben: über den Link in Ihrem Kundenkonto.
+Bitte erscheinen Sie pünktlich, sonst verfällt der Termin.
+
+Mit freundlichen Grüßen
+Landratsamt Beispielkreis

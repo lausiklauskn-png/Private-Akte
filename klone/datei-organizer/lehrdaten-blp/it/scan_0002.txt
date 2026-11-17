@@ -1,0 +1,13 @@
+werkzeugkiste-online.example
+Schraubwerk Versand GmbH, Remscheider Str. 100, 42369 Wuppertal
+
+Ihre Rechnung Nr. 700318845        Datum 12.05.2026
+Bestellt von: Kettler Systemhaus, T. Wrede
+
+Akku-Bohrhammer 18 V im Koffer mit 2 Akkus und Ladegerät      318,00
+Versandkosten                                                  14,90
+
+Nettosumme    332,90
+USt 19 %      63,25
+Gesamt        396,15 EUR
+Zahlungsart: Kauf auf Rechnung, fällig am 26.05.2026

@@ -1,0 +1,23 @@
+# Brennstoffe Beispiel-Huber
+Lagerhausstr. 1 · 84999 Beispielhausen
+
+Herrn
+Martin Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Rechnung: HB-22-1190
+Lieferdatum: 27.10.2022
+Datum: 27.10.2022
+
+# Rechnung Heizöllieferung
+
+|Artikel|Menge|Preis je 100 l|Betrag|
+|Heizöl EL schwefelarm|3.000 l|142,30 EUR|4.269,00 EUR|
+|Additiv|1||18,00 EUR|
+|Gesamt inkl. MwSt.|||4.287,00 EUR|
+
+Zahlbar bis 10.11.2022 ohne Abzug.
+
+Vielen Dank für Ihren Auftrag
+@unterschrift

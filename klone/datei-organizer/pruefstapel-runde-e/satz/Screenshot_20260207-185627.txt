@@ -1,0 +1,71 @@
+@appbon
+Beispiel-Markt App – Dein digitaler Kassenbon
+
+Beispiel-Markt Filiale 0560, Landstraße 3, 56789 Probedorf
+Einkauf vom 07.02.2026 um 10:47 Uhr
+Kundenkarte **** 7266
+
+|Artikel|Menge|Preis|
+|Müsli Nuss|1|2,49 € B|
+|Erbsen Tk|1|1,29 € B|
+|Eier Bodenh. 10Er|2|5,38 € B|
+|Rotwein|1|3,99 € A|
+|Butter 250G|1|2,39 € B|
+|Zucker 1Kg|1|0,99 € B|
+|Mayonnaise|1|1,69 € B|
+|Rotwein|1|3,99 € A|
+|Kidneybohnen|2|1,58 € B|
+|Zahnpasta|2|1,98 € A|
+|Bier 6X0,33|2|8,98 € A|
+|Pfand|2|0,96 € A|
+|Waschmittel 20Wl|1|5,99 € A|
+|H-Milch 1,5% 1L|1|0,99 € B|
+|Sahne 200Ml|1|0,99 € B|
+|Tee Pfefferminz|1|1,19 € B|
+|Mozzarella|1|0,89 € B|
+|Spülmittel|2|1,90 € A|
+|Gefrierbeutel|2|2,58 € A|
+|Brühe Gekörnt|1|1,99 € B|
+|Paprika Mix 3Er|2|4,58 € B|
+|Eier Bodenh. 10Er|1|2,69 € B|
+|Fruchtjoghurt 4X|1|1,79 € B|
+|Brühe Gekörnt|1|1,99 € B|
+|Bier 6X0,33|1|4,49 € A|
+|Pfand|1|0,48 € A|
+|Gouda Scheiben|1|1,99 € B|
+|Duschgel|1|1,25 € A|
+|Cola 1,5L|1|1,39 € A|
+|Pfand|1|0,25 € A|
+|Knoblauch|1|0,69 € B|
+|Ingwer|1|0,89 € B|
+|Tomaten Passiert|1|0,69 € B|
+|Kekse Butter|2|2,78 € B|
+|Duschgel|2|2,50 € A|
+|Brühe Gekörnt|2|3,98 € B|
+|Mineralwasser 6X1,5L|1|1,74 € A|
+|Pfand|1|1,50 € A|
+|Aufbackbrötchen 10Er|1|1,69 € B|
+|Mozzarella|1|0,89 € B|
+|Windeln Gr.5|1|8,99 € A|
+|Schmand|2|1,58 € B|
+|Paprika Mix 3Er|1|2,29 € B|
+|Kochschinken|1|2,29 € B|
+|Gurke|2|1,58 € B|
+
+App-Coupon Brühe Gekörnt: -1,20 €
+App-Coupon Kekse Butter: -0,30 €
+App-Coupon Butter 250G: -1,00 €
+
+Zwischensumme: 107,21 €
+Du hast gespart: 2,50 €
+Gesamtsumme: 104,71 €
+Bezahlt mit: Girocard (kontaktlos)
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|44,50|8,46|52,96|
+|B 7 %|48,36|3,39|51,75|
+
+Gesammelte Punkte: 104  ·  Punktestand: 1242
+Bon-ID: 118527452017  ·  Kasse 8  ·  TSE-Signatur gekürzt 90930544
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

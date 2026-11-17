@@ -1,0 +1,10 @@
+Beispiel-Grünstrom Neustadt GmbH
+Digitaler Bescheid / Nachricht im Bürgerpostfach
+Zugestellt am 10.03.2028 an: Familie Behrendt
+Empfangsadresse: Solarstraße 21, 67890 Neustadt-Beispiel
+
+Betreff: Jahresabrechnung Strom 2027 inkl. Ladestrom
+
+Haushaltsstrom 1.840 kWh, Ladestrom Wallbox (Modul 3) 2.210 kWh, Gesamtbetrag 1.142,30 EUR. Abschläge 950,00 EUR. Nachzahlung 192,30 EUR, bitte überweisen bis 31.03.2028 (kein Lastschriftmandat hinterlegt).
+
+Dieses Dokument wurde elektronisch erstellt und ist ohne Unterschrift gültig.

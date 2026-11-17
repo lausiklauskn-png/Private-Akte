@@ -1,0 +1,11 @@
+TAXI  Funk-Taxi Rheinmünde eG
+Wagen 417     Konz.-Nr. 0417
+Ordnungsnr. 000417
+
+QUITTUNG
+Datum: 27.01.26   18:22
+Fahrt von: Hbf   nach: Uferstr. (Hotel)
+Fahrprels EUR 16,80
+inkl. 7% MwSt 1,10
+Betrag dankend erhalten
+Unterschrift Fahrer: (unleserlich)

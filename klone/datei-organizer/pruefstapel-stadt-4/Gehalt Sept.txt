@@ -1,0 +1,8 @@
+Beispiel IT-Solutions GmbH  Gehaltsabrechnung 09/2026  Personal-Nr. IT-0000
+Daniel Lehnert
+Gehalt                  5.900,00
+Jobticket (geldw. Vorteil)  58,00
+Brutto                  5.958,00
+Steuer/SV              -2.203,41
+Jobticket Zuzahlung       -58,00
+Auszahlung              3.696,59 EUR

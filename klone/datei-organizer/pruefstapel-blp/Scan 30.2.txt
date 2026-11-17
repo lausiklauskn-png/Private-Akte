@@ -1,0 +1,23 @@
+Gastro-Einrichtung Steinfurt GmbH
+Lindenweg 5, 37997 Haselbrunn
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnunqsnummer: GE-4589
+Datum 28.05.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Sitzgruppe Gastraum (6 Tische, 24 Stühle)     1  3.980,00   3.980,00
+  2  Theke Massivholz mit Glasaufsatz     1  2.650,00   2.650,00
+
+Nettobetrag                                6.630,00
+zzgl. 19 % USt                            1.259,70
+Gesamtbetrag                               7.889,70 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2967 90
+USt-IdNr. DE000000488

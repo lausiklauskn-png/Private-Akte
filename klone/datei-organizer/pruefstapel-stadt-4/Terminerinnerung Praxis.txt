@@ -1,0 +1,11 @@
+Von: terminservice@praxis-beispiel-lindner.example
+An: sabine.brueckmann@mail.example
+Datum: Fr, 13 Feb 2026 08:02:11 +0100
+Betreff: Terminerinnerung: Hausbesuch Gertrud Brückmann
+
+Guten Tag,
+wir erinnern an den Termin am Mittwoch, 18.02.2026, 10:30 Uhr (Hausbesuch, Blutdruckkontrolle).
+Online-Termin-Code T-000000. Bitte halten Sie die aktuelle Medikamentenliste bereit.
+Absagen bitte bis 24 Stunden vorher über das Portal oder Tel. 0000-1110000.
+
+Ihr Praxisteam Dr. Beispiel-Lindner

@@ -1,0 +1,44 @@
+{
+ "bewerter": 2,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "teilweise",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "fehlt",
+  "M08": "teilweise",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "fehlt",
+  "M13": "getroffen",
+  "M14": "getroffen",
+  "M15": "fehlt",
+  "M16": "getroffen",
+  "M17": "teilweise",
+  "M18": "teilweise",
+  "M19": "fehlt",
+  "M20": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Plan ist für eine einzelne Kanzlei mit vier Personen; weitere Zielbranchen und Vertrieb über IT-Dienstleister/Datenschutzbeauftragte fehlen.",
+  "M04": "Namen, Adressen, Daten, IBAN, Telefon, E-Mail, Aktenzeichen sind drin; Steuer-ID und Versichertennummer fehlen.",
+  "M07": "Keine automatische Nachprüfung des verdeckten Texts auf Rest-Klartext mit Halt; nur Sichtprüfung in der Vorschau.",
+  "M08": "Mandantenliste ist vorgesehen; weitere eigene Listen (Orte, Arbeitgeber) nur als offene Frage O-01.",
+  "M12": "Keine Browser-Erweiterung vorgesehen.",
+  "M15": "Plan sieht gar kein Protokoll vor, auch kein inhaltsfreies Nachweisprotokoll mit Art und Anzahl.",
+  "M17": "Keine vollständige Sicherheit und Pseudonymisierung ≠ Anonymisierung genannt; Hinweis, dass kein AV-Vertrag ersetzt wird, fehlt.",
+  "M18": "Nur Verteilung der Mandantenliste per verschlüsselter Exportdatei; keine zentrale Regelvorgabe für Muster.",
+  "M19": "Keine Zählung abgefangener Fälle.",
+  "M20": "Kein Preismodell je Nutzer und Monat; nur Budgetfrage."
+ },
+ "zusaetze": [
+  "Optionale direkte API-Anbindung an mehrere KI-Anbieter mit eigenem Schlüssel",
+  "Vorzeigeblatt als Druckansicht für Kammer und Mandanten",
+  "Einrichtung und Einweisung auf vier PCs mit Büro-Regel",
+  "Abwählen einzelner Ersetzungen und Verdecken von Hand in der Vorschau",
+  "Warnung bei von der KI veränderten Platzhaltern"
+ ]
+}

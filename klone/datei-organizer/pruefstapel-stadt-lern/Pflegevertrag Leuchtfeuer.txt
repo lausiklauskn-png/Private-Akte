@@ -1,0 +1,16 @@
+Pflegedienst Leuchtfeuer Beispiel · Lotsenweg 20 · 29999 Beispielhafen
+
+Pflegevertrag
+Kundennummer PL-000
+
+zwischen dem Pflegedienst Leuchtfeuer Beispiel und Herrn Heinrich Brakmann,
+Deichgrafenstraße 22, 29999 Beispielhafen (Pflegegrad 3)
+
+§ 1 Leistungen: Grundpflege morgens (Leistungskomplex 2), Hilfe beim Duschen zweimal wöchentlich.
+§ 2 Vergütung: nach Vergütungsvereinbarung mit der Pflegekasse; Abrechnung direkt mit der Pflegekasse,
+    Eigenanteil wird monatlich in Rechnung gestellt.
+§ 3 Kündigung: Der Pflegebedürftige kann jederzeit ohne Frist kündigen.
+    Der Pflegedienst kann mit einer Frist von sechs Wochen kündigen.
+
+Beispielhafen, 20.03.2026
+Unterschriften: Pflegedienstleitung · Heinrich Brakmann · Gerda Brakmann

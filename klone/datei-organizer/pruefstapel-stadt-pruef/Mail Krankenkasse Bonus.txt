@@ -1,0 +1,9 @@
+Von: service@beispiel-krankenkasse-sued.example
+An: sabine.kieselmayr@beispiel-mail.example
+Datum: Wed, 21 Oct 2026 10:12:04 +0200
+Betreff: Ihr Bonusheft 2026
+
+Guten Tag Frau Kieselmayr,
+Ihr Bonus für Vorsorge und Sport (60 €) wurde Ihrem Konto gutgeschrieben.
+Ihr Beitragssatz bleibt zum Jahreswechsel unverändert.
+Ihre Beispiel-Krankenkasse Süd

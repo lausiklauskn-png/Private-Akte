@@ -1,0 +1,1207 @@
+{
+ "stuecke": 150,
+ "wortfehlerAnteil": 0.03912640839635746,
+ "zeichenfehlerAnteil": 0.008565704472974079,
+ "dateien": [
+  {
+   "datei": "20261006_103512.txt",
+   "seiten": 1,
+   "woerter": 74,
+   "wortfehler": 4,
+   "zeichen": 585,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Apotheke Zuzahlung Mama.txt",
+   "seiten": 1,
+   "woerter": 56,
+   "wortfehler": 3,
+   "zeichen": 421,
+   "zeichenfehler": 40
+  },
+  {
+   "datei": "Arztbrief Kardiologie Mama.txt",
+   "seiten": 1,
+   "woerter": 122,
+   "wortfehler": 3,
+   "zeichen": 1015,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Aurelia Leistungsabrechnung.txt",
+   "seiten": 1,
+   "woerter": 72,
+   "wortfehler": 3,
+   "zeichen": 596,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "BAföG Bescheid neu.txt",
+   "seiten": 1,
+   "woerter": 96,
+   "wortfehler": 5,
+   "zeichen": 788,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "BAföG Weiterförderung.txt",
+   "seiten": 1,
+   "woerter": 81,
+   "wortfehler": 3,
+   "zeichen": 578,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Bausparvertrag Erben.txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 3,
+   "zeichen": 728,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Beileid Familie Röder.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 4,
+   "zeichen": 441,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Bestattungsauftrag Frommelt.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 2,
+   "zeichen": 912,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Blitzfon Vertrag Lena.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 6,
+   "zeichen": 589,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Dachrinne Pfaff Rechnung.txt",
+   "seiten": 1,
+   "woerter": 102,
+   "wortfehler": 7,
+   "zeichen": 673,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Danksagung Entwurf.txt",
+   "seiten": 1,
+   "woerter": 70,
+   "wortfehler": 0,
+   "zeichen": 472,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "Dokument (1).txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 2,
+   "zeichen": 681,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Dokument (12).txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 6,
+   "zeichen": 798,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Dokument (14).txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 4,
+   "zeichen": 709,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "seiten": 1,
+   "woerter": 67,
+   "wortfehler": 3,
+   "zeichen": 522,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Dokument (5).txt",
+   "seiten": 1,
+   "woerter": 67,
+   "wortfehler": 0,
+   "zeichen": 486,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "Dokument (7).txt",
+   "seiten": 1,
+   "woerter": 118,
+   "wortfehler": 1,
+   "zeichen": 662,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Dokument (9).txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 4,
+   "zeichen": 703,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Eingewöhnung Kita Pusteblume.txt",
+   "seiten": 1,
+   "woerter": 99,
+   "wortfehler": 2,
+   "zeichen": 722,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Einkommensteuerbescheid 2025.txt",
+   "seiten": 1,
+   "woerter": 109,
+   "wortfehler": 5,
+   "zeichen": 867,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Elternsprechtag November.txt",
+   "seiten": 1,
+   "woerter": 50,
+   "wortfehler": 1,
+   "zeichen": 376,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Entrümpelung Angebot.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 8,
+   "zeichen": 566,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Erbschaftsteuer Aufforderung.txt",
+   "seiten": 1,
+   "woerter": 99,
+   "wortfehler": 2,
+   "zeichen": 772,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Erbschein.txt",
+   "seiten": 1,
+   "woerter": 101,
+   "wortfehler": 11,
+   "zeichen": 716,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "Ferienfreizeit Jonas.txt",
+   "seiten": 1,
+   "woerter": 88,
+   "wortfehler": 3,
+   "zeichen": 642,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Ferienhaus Ostsee Buchung.txt",
+   "seiten": 1,
+   "woerter": 111,
+   "wortfehler": 3,
+   "zeichen": 814,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "FitLine Mahnung.txt",
+   "seiten": 1,
+   "woerter": 82,
+   "wortfehler": 3,
+   "zeichen": 561,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "FlimmerBox Preisänderung.txt",
+   "seiten": 1,
+   "woerter": 72,
+   "wortfehler": 2,
+   "zeichen": 534,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Friedhof Grabstelle Gebühr.txt",
+   "seiten": 1,
+   "woerter": 116,
+   "wortfehler": 3,
+   "zeichen": 928,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Gehaltsabrechnung Oktober 2026.txt",
+   "seiten": 1,
+   "woerter": 58,
+   "wortfehler": 17,
+   "zeichen": 409,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "Gerichtskosten Erbschein.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 2,
+   "zeichen": 670,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Grundbuch Berichtigung.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 3,
+   "zeichen": 664,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Grundsteuer 2026.txt",
+   "seiten": 1,
+   "woerter": 95,
+   "wortfehler": 3,
+   "zeichen": 735,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Haftpflicht Umstellung.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 4,
+   "zeichen": 791,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Halbjahreszeugnis Jonas.txt",
+   "seiten": 1,
+   "woerter": 69,
+   "wortfehler": 3,
+   "zeichen": 606,
+   "zeichenfehler": 23
+  },
+  {
+   "datei": "Halbwaisenrente Lena Nachweis.txt",
+   "seiten": 1,
+   "woerter": 92,
+   "wortfehler": 2,
+   "zeichen": 683,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Handy Reparatur Jonas.txt",
+   "seiten": 1,
+   "woerter": 78,
+   "wortfehler": 1,
+   "zeichen": 566,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Hausnotruf Vertrag Mama.txt",
+   "seiten": 1,
+   "woerter": 96,
+   "wortfehler": 3,
+   "zeichen": 793,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Hausrat Beitrag 2026.txt",
+   "seiten": 1,
+   "woerter": 104,
+   "wortfehler": 3,
+   "zeichen": 843,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Heimbesichtigung Abendsonne.txt",
+   "seiten": 1,
+   "woerter": 63,
+   "wortfehler": 2,
+   "zeichen": 508,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Heimvertrag Lindenhain.txt",
+   "seiten": 1,
+   "woerter": 130,
+   "wortfehler": 2,
+   "zeichen": 991,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Heizungswartung Termin.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 5,
+   "zeichen": 613,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Hochzeit Einladung Fiedler.txt",
+   "seiten": 1,
+   "woerter": 87,
+   "wortfehler": 1,
+   "zeichen": 539,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "IMG-20260801-WA0004.txt",
+   "seiten": 1,
+   "woerter": 66,
+   "wortfehler": 1,
+   "zeichen": 411,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "IMG_20260121_1702.txt",
+   "seiten": 1,
+   "woerter": 71,
+   "wortfehler": 11,
+   "zeichen": 486,
+   "zeichenfehler": 49
+  },
+  {
+   "datei": "IMG_20260218_0733.txt",
+   "seiten": 1,
+   "woerter": 88,
+   "wortfehler": 3,
+   "zeichen": 690,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "IMG_20260305_1744.txt",
+   "seiten": 1,
+   "woerter": 44,
+   "wortfehler": 1,
+   "zeichen": 308,
+   "zeichenfehler": 32
+  },
+  {
+   "datei": "IMG_20260324_1915.txt",
+   "seiten": 1,
+   "woerter": 50,
+   "wortfehler": 1,
+   "zeichen": 307,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "IMG_20260414_0822.txt",
+   "seiten": 1,
+   "woerter": 76,
+   "wortfehler": 3,
+   "zeichen": 510,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "IMG_20260617_0930.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 2,
+   "zeichen": 683,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "IMG_20260715_1130.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 2,
+   "zeichen": 597,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "IMG_20260721_2210.txt",
+   "seiten": 1,
+   "woerter": 44,
+   "wortfehler": 2,
+   "zeichen": 332,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "IMG_20260914_1603.txt",
+   "seiten": 1,
+   "woerter": 60,
+   "wortfehler": 3,
+   "zeichen": 411,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "IMG_20261013_1640.txt",
+   "seiten": 1,
+   "woerter": 85,
+   "wortfehler": 5,
+   "zeichen": 619,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "IMG_20261102_1210.txt",
+   "seiten": 1,
+   "woerter": 52,
+   "wortfehler": 4,
+   "zeichen": 359,
+   "zeichenfehler": 31
+  },
+  {
+   "datei": "IMG_20261109_0802.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 6,
+   "zeichen": 627,
+   "zeichenfehler": 26
+  },
+  {
+   "datei": "Immatrikulationsbescheinigung SoSe 2026.txt",
+   "seiten": 1,
+   "woerter": 74,
+   "wortfehler": 9,
+   "zeichen": 633,
+   "zeichenfehler": 10
+  },
+  {
+   "datei": "Kaufvertrag Kawasaki.txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 3,
+   "zeichen": 863,
+   "zeichenfehler": 47
+  },
+  {
+   "datei": "Kfz Umschreibung Termin.txt",
+   "seiten": 1,
+   "woerter": 72,
+   "wortfehler": 2,
+   "zeichen": 660,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Kfz Versicherung Touran neu.txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 2,
+   "zeichen": 742,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Kfz-Steuer Bescheid Touran.txt",
+   "seiten": 1,
+   "woerter": 76,
+   "wortfehler": 3,
+   "zeichen": 648,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Kieferorthopädie Rechnung Q1.txt",
+   "seiten": 1,
+   "woerter": 72,
+   "wortfehler": 3,
+   "zeichen": 554,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Kinderbett Möbelwelt.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 4,
+   "zeichen": 590,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Kita Ermäßigung Unterlagen.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 1,
+   "zeichen": 740,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Kita Gebühren 2026.txt",
+   "seiten": 1,
+   "woerter": 140,
+   "wortfehler": 1,
+   "zeichen": 1086,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Klassenfahrt 7b Anmeldung.txt",
+   "seiten": 1,
+   "woerter": 132,
+   "wortfehler": 5,
+   "zeichen": 1000,
+   "zeichenfehler": 85
+  },
+  {
+   "datei": "Klassenfahrt Abrechnung.txt",
+   "seiten": 1,
+   "woerter": 61,
+   "wortfehler": 3,
+   "zeichen": 418,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Kontoauszug Juni 2026.txt",
+   "seiten": 1,
+   "woerter": 114,
+   "wortfehler": 7,
+   "zeichen": 921,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Kündigung Handy Thomas.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 3,
+   "zeichen": 579,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Kündigung Wohnung Mama.txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 2,
+   "zeichen": 775,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Laptop Lena Rechnung.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 7,
+   "zeichen": 593,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Lebensversicherung Leistungsantrag.txt",
+   "seiten": 1,
+   "woerter": 101,
+   "wortfehler": 1,
+   "zeichen": 739,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Lindenhain Aufnahme Termine.txt",
+   "seiten": 1,
+   "woerter": 92,
+   "wortfehler": 2,
+   "zeichen": 712,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Lindenhain Rechnung Oktober.txt",
+   "seiten": 1,
+   "woerter": 73,
+   "wortfehler": 3,
+   "zeichen": 542,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Lindwurm BKK Mitgliedschaft Lena.txt",
+   "seiten": 1,
+   "woerter": 96,
+   "wortfehler": 7,
+   "zeichen": 703,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Lohnabrechnung Januar.txt",
+   "seiten": 1,
+   "woerter": 71,
+   "wortfehler": 7,
+   "zeichen": 612,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Merkur Direktbank Nachlass.txt",
+   "seiten": 1,
+   "woerter": 113,
+   "wortfehler": 3,
+   "zeichen": 791,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Merkur Kontoauflösung.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 7,
+   "zeichen": 601,
+   "zeichenfehler": 9
+  },
+  {
+   "datei": "Mia Kita Ermäßigung Bescheid.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 1,
+   "zeichen": 662,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Mobilis Kinderunfall Angebot.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 3,
+   "zeichen": 639,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Motorrad Abmeldung.txt",
+   "seiten": 1,
+   "woerter": 53,
+   "wortfehler": 3,
+   "zeichen": 486,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Motorrad Versicherung 2026.txt",
+   "seiten": 1,
+   "woerter": 79,
+   "wortfehler": 3,
+   "zeichen": 558,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Nachlassgericht Testamentseröffnung.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 3,
+   "zeichen": 755,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Nebenkosten 2025 Mama.txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 5,
+   "zeichen": 853,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "seiten": 1,
+   "woerter": 52,
+   "wortfehler": 2,
+   "zeichen": 380,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Notar Kostenrechnung.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 5,
+   "zeichen": 531,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Passtermin Mia.txt",
+   "seiten": 1,
+   "woerter": 62,
+   "wortfehler": 3,
+   "zeichen": 527,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Pflegedienst Rechnung Mai.txt",
+   "seiten": 1,
+   "woerter": 62,
+   "wortfehler": 2,
+   "zeichen": 482,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Pflegegrad 4 Bescheid.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 2,
+   "zeichen": 616,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Pflegegrad Gertrud Bescheid.txt",
+   "seiten": 1,
+   "woerter": 120,
+   "wortfehler": 3,
+   "zeichen": 936,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Rasenmäher Rechnung.txt",
+   "seiten": 1,
+   "woerter": 64,
+   "wortfehler": 3,
+   "zeichen": 419,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Rechtsschutz Kündigung.txt",
+   "seiten": 1,
+   "woerter": 72,
+   "wortfehler": 2,
+   "zeichen": 568,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Rentenanpassung Mama 2026.txt",
+   "seiten": 1,
+   "woerter": 89,
+   "wortfehler": 2,
+   "zeichen": 636,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Rundfunkbeitrag Ummeldung.txt",
+   "seiten": 1,
+   "woerter": 82,
+   "wortfehler": 1,
+   "zeichen": 624,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Scan 3.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 1,
+   "zeichen": 647,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Scan_0003.txt",
+   "seiten": 1,
+   "woerter": 124,
+   "wortfehler": 4,
+   "zeichen": 969,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0005.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 3,
+   "zeichen": 575,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Scan_0011.txt",
+   "seiten": 1,
+   "woerter": 105,
+   "wortfehler": 15,
+   "zeichen": 739,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "Scan_0015.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 6,
+   "zeichen": 611,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Scan_0019.txt",
+   "seiten": 1,
+   "woerter": 107,
+   "wortfehler": 3,
+   "zeichen": 847,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0023.txt",
+   "seiten": 1,
+   "woerter": 114,
+   "wortfehler": 4,
+   "zeichen": 884,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0024.txt",
+   "seiten": 1,
+   "woerter": 103,
+   "wortfehler": 3,
+   "zeichen": 737,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0027.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 4,
+   "zeichen": 648,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0029.txt",
+   "seiten": 1,
+   "woerter": 85,
+   "wortfehler": 2,
+   "zeichen": 590,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Scan_0031.txt",
+   "seiten": 1,
+   "woerter": 115,
+   "wortfehler": 3,
+   "zeichen": 937,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0034.txt",
+   "seiten": 1,
+   "woerter": 85,
+   "wortfehler": 3,
+   "zeichen": 645,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0039.txt",
+   "seiten": 1,
+   "woerter": 105,
+   "wortfehler": 4,
+   "zeichen": 836,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0041.txt",
+   "seiten": 1,
+   "woerter": 105,
+   "wortfehler": 3,
+   "zeichen": 824,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0044.txt",
+   "seiten": 1,
+   "woerter": 112,
+   "wortfehler": 4,
+   "zeichen": 831,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0048.txt",
+   "seiten": 1,
+   "woerter": 40,
+   "wortfehler": 2,
+   "zeichen": 314,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Scan_0052.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 11,
+   "zeichen": 613,
+   "zeichenfehler": 12
+  },
+  {
+   "datei": "Scan_0056.txt",
+   "seiten": 1,
+   "woerter": 107,
+   "wortfehler": 3,
+   "zeichen": 819,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0060.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 2,
+   "zeichen": 707,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Scan_0063.txt",
+   "seiten": 1,
+   "woerter": 87,
+   "wortfehler": 2,
+   "zeichen": 688,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Scan_0066.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 1,
+   "zeichen": 583,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Scan_0071.txt",
+   "seiten": 1,
+   "woerter": 70,
+   "wortfehler": 4,
+   "zeichen": 526,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Scan_0077.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 2,
+   "zeichen": 584,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Scan_0081.txt",
+   "seiten": 1,
+   "woerter": 60,
+   "wortfehler": 4,
+   "zeichen": 456,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Scan_0085.txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 3,
+   "zeichen": 824,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Scan_0088.txt",
+   "seiten": 1,
+   "woerter": 50,
+   "wortfehler": 2,
+   "zeichen": 427,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Schornsteinfeger Feuerstättenschau.txt",
+   "seiten": 1,
+   "woerter": 76,
+   "wortfehler": 2,
+   "zeichen": 579,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Schulbuch Eigenanteil.txt",
+   "seiten": 1,
+   "woerter": 79,
+   "wortfehler": 1,
+   "zeichen": 538,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Semesterbeitrag WiSe 2026.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 1,
+   "zeichen": 661,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Seniorenstift Warteliste.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 2,
+   "zeichen": 696,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Sozialamt Hilfe zur Pflege.txt",
+   "seiten": 1,
+   "woerter": 111,
+   "wortfehler": 5,
+   "zeichen": 841,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Sparkasse Kontoumschreibung Termin.txt",
+   "seiten": 1,
+   "woerter": 86,
+   "wortfehler": 2,
+   "zeichen": 673,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Stadtwerke Vertragsübernahme.txt",
+   "seiten": 1,
+   "woerter": 105,
+   "wortfehler": 2,
+   "zeichen": 762,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Steinmetz Grabstein Anzahlung.txt",
+   "seiten": 1,
+   "woerter": 110,
+   "wortfehler": 5,
+   "zeichen": 809,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Sterbeurkunde Thomas.txt",
+   "seiten": 1,
+   "woerter": 45,
+   "wortfehler": 0,
+   "zeichen": 406,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "Steuer-ID Lena.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 3,
+   "zeichen": 675,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Steuerklasse Witwe.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 5,
+   "zeichen": 708,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "TSV Austritt Thomas.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 0,
+   "zeichen": 573,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "TSV Jahreshauptversammlung.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 2,
+   "zeichen": 610,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "TSV Jugend Beitrag Jonas.txt",
+   "seiten": 1,
+   "woerter": 50,
+   "wortfehler": 2,
+   "zeichen": 422,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "U7a Bescheinigung Mia.txt",
+   "seiten": 1,
+   "woerter": 55,
+   "wortfehler": 0,
+   "zeichen": 448,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "U7a Einladung Mia.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 1,
+   "zeichen": 596,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Unbenannt.txt",
+   "seiten": 1,
+   "woerter": 81,
+   "wortfehler": 8,
+   "zeichen": 636,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Voltaris Wechselbonus.txt",
+   "seiten": 1,
+   "woerter": 73,
+   "wortfehler": 5,
+   "zeichen": 469,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Vorsorgevollmacht Mama.txt",
+   "seiten": 1,
+   "woerter": 132,
+   "wortfehler": 2,
+   "zeichen": 1027,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Waschmaschine Garantie Techniker.txt",
+   "seiten": 1,
+   "woerter": 89,
+   "wortfehler": 4,
+   "zeichen": 619,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Werbung Grünwerk Frühjahr.txt",
+   "seiten": 1,
+   "woerter": 95,
+   "wortfehler": 2,
+   "zeichen": 586,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Werkstudentin Abrechnung Mai.txt",
+   "seiten": 1,
+   "woerter": 64,
+   "wortfehler": 4,
+   "zeichen": 463,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Witwenrente Unterlagen.txt",
+   "seiten": 1,
+   "woerter": 129,
+   "wortfehler": 3,
+   "zeichen": 960,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Wohnungsabnahme Termin.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 2,
+   "zeichen": 764,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Zahnspange Jonas Kostenplan.txt",
+   "seiten": 1,
+   "woerter": 104,
+   "wortfehler": 2,
+   "zeichen": 805,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Zeitung Abo Umschreibung.txt",
+   "seiten": 1,
+   "woerter": 81,
+   "wortfehler": 6,
+   "zeichen": 636,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "doc00412.txt",
+   "seiten": 1,
+   "woerter": 79,
+   "wortfehler": 2,
+   "zeichen": 684,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "scan0001.txt",
+   "seiten": 1,
+   "woerter": 95,
+   "wortfehler": 1,
+   "zeichen": 705,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Änderungsvertrag Arbeitszeit.txt",
+   "seiten": 1,
+   "woerter": 107,
+   "wortfehler": 6,
+   "zeichen": 838,
+   "zeichenfehler": 26
+  }
+ ]
+}

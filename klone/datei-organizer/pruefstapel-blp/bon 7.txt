@@ -1,0 +1,22 @@
+Getränke Lomann OHG
+Gewerbering 53, 37998 Lindenstedt
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: 28868
+Datum 22. Januar 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Cola 0,33 l Kiste 24         5     16,80      84,00
+
+Nettobetrag                                   84,00
+zzgl. 19 % USt                               15,96
+Summe                                         99,96 EUR
+
+Bitte überweisen Sie den Betrag bis 05.02.26 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 6986 48
+USt-IdNr. DE000000665

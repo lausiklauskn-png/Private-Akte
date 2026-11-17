@@ -1,0 +1,8 @@
+Raiffeisenbank Altenmoos eG                    Umsatzdetail
+Konto: Geschaeftskonto Elektro Brandhuber   IBAN DE00 0000 0000 0000 0001 14
+
+Buchungstag 02.03.2026     Wert 02.03.2026
+Dauerauftrag an: Markus und Helga Brandhuber (Privatkonto)
+IBAN Empfaenger: DE00 0000 0000 0000 0099 01
+Verwendungszweck: PRIVATENTNAHME MAERZ 2026 LEBENSHALTUNG
+Betrag:  -2.800,00 EUR

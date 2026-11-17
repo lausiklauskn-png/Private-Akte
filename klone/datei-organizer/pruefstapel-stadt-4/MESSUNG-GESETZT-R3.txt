@@ -1,0 +1,37 @@
+200 Schriftstücke aus 1 Ordner(n), Soll: SOLL.json
+
+== bereich ==
+  neu  128/200 = 64.0 % (57–70 %) · falsch und sicher 17 · falsch und offen 55 · Fach oder Zweitfach 140
+  alt  128/200 = 64.0 % (57–70 %) · falsch und sicher 17 · falsch und offen 55 · Fach oder Zweitfach 140
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== schriftstueck ==
+  neu  116/200 = 58.0 % (51–65 %) · falsch und sicher 28 · falsch und offen 56
+  alt  116/200 = 58.0 % (51–65 %) · falsch und sicher 28 · falsch und offen 56
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== absender ==
+  neu  91/198 = 46.0 % (39–53 %) · falsch und sicher 21 · falsch und offen 86
+  alt  90/198 = 45.5 % (39–52 %) · falsch und sicher 21 · falsch und offen 87
+  McNemar: nur alt richtig 1, nur neu richtig 2, p=1.000
+
+== person ==
+  neu  101/171 = 59.1 % (52–66 %) · falsch und sicher 2 · falsch und offen 68
+  alt  101/171 = 59.1 % (52–66 %) · falsch und sicher 2 · falsch und offen 68
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== frist ==
+  neu  162/200 = 81.0 % (75–86 %) · falsch und sicher 5 · falsch und offen 33
+  alt  163/200 = 81.5 % (76–86 %) · falsch und sicher 5 · falsch und offen 32
+  McNemar: nur alt richtig 1, nur neu richtig 0, p=1.000
+
+Lesegüte je Form: {"foto/gut":{"n":31,"wortfehler":0.478,"gefunden":0.872},"pdf-scan/schlecht":{"n":30,"wortfehler":0.349,"gefunden":0.891},"foto/schlecht":{"n":31,"wortfehler":0.953,"gefunden":0.082},"pdf-scan/mittel":{"n":34,"wortfehler":0.409,"gefunden":0.975},"pdf-scan/gut":{"n":36,"wortfehler":0.425,"gefunden":0.982},"foto/mittel":{"n":38,"wortfehler":0.726,"gefunden":0.564}}
+Lesen oder Einordnen: {"gut gelesen":{"n":135,"bereich":76,"schriftstueck":71,"absender":66,"person":77,"frist":93},"schlecht gelesen":{"n":65,"bereich":38,"schriftstueck":31,"absender":5,"person":31,"frist":57}}
+
+Je Form/Güte (neu):
+  foto/gut           n=31 bereich 77 % · schriftstueck 68 % · absender 53 % · person 68 % · frist 90 %
+  foto/mittel        n=38 bereich 71 % · schriftstueck 50 % · absender 21 % · person 42 % · frist 68 %
+  foto/schlecht      n=31 bereich 6 % · schriftstueck 13 % · absender 3 % · person 26 % · frist 52 %
+  pdf-scan/gut       n=36 bereich 69 % · schriftstueck 72 % · absender 61 % · person 81 % · frist 94 %
+  pdf-scan/mittel    n=34 bereich 79 % · schriftstueck 76 % · absender 76 % · person 82 % · frist 94 %
+  pdf-scan/schlecht  n=30 bereich 77 % · schriftstueck 67 % · absender 62 % · person 73 % · frist 87 %

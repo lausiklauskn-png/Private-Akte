@@ -1,0 +1,16 @@
+# Landesversicherungsanstalt Beispielland
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versicherungsnummer: 00 120552 P 004
+Datum: 10.06.2004
+
+# Renteninformation
+
+Ihre bisher erreichte Rentenanwartschaft: Wenn Sie wegen voller Erwerbsminderung keine Arbeit mehr ausüben könnten, bekämen Sie eine monatliche Rente von 912,40 Euro.
+
+Höhe Ihrer künftigen Regelaltersrente ohne weitere Beiträge: 846,15 Euro, bei Beiträgen wie im Durchschnitt der letzten fünf Jahre: 1.104,20 Euro.
+

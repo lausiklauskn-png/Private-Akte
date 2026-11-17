@@ -1,0 +1,13 @@
+Stadtwerke Wesenrode GmbH
+Jahresverbrauchsabrechnung Erdgas 2025
+Rechnungsnummer 26-G-0004417         Datum 20.01.2026
+Zähler 7GA000417  Kornmarkt 7
+
+Verbrauch 01.01.–31.12.2025     41.280 kWh
+Arbeitspreis 41.280 x 0,0890          3.673,92
+Grundpreis 12 Monate                    186,00
+Summe netto                           3.859,92
+Umsatzsteuer 19 %                       733,38
+Brutto                                4.593,30
+abzgl. geleistete Abschläge          -4.320,00
+Nachzahlung                           273,30 EUR

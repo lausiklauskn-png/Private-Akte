@@ -1,0 +1,31 @@
+Ambulanter Pflegedienst Beispielhilfe gGmbH
+
+Frau Gertrud Sommerfeld
+Ahornstraße 7
+56789 Kleinbeispiel
+
+Klientennummer: 1120
+Rechnungsnummer: 23-05-1120
+Datum: 09.06.2023
+
+Rechnung Mai 2023 – Eigenanteil
+
+Sehr geehrte Frau Sommerfeld,
+
+Leistung                        Anzahl    Betrag EUR
+LK 2 Kleine Morgentoilette      31        697,50
+LK 15 Hauswirtschaft            4         112,40
+Wegepauschale                   35        87,50
+Ausbildungsumlage                         9,80
+Gesamt                                    907,20
+Pflegesachleistung PG 2                   -724,00
+Entlastungsbetrag                         -125,00
+Ihr Eigenanteil                           58,20
+
+Bitte überweisen Sie den Eigenanteil bis zum 23.06.2023.
+
+Mit freundlichen Grüßen
+Verwaltung
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00

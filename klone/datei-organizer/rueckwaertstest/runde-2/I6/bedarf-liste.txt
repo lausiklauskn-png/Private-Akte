@@ -1,0 +1,56 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Dicker Ordner mit Unterlagen zur Qualitätsprüfung
+B-02 [Bereich 1 Ausgangssituation (IST)] Checklisten in Excel
+B-03 [Bereich 1 Ausgangssituation (IST)] Einmal ein bezahltes Probe-Audit mit einer Beraterin, inzwischen veraltet
+B-04 [Bereich 1 Ausgangssituation (IST)] Großes Pflegeprogramm für Doku und Abrechnung, macht aber keinen Probedurchlauf
+B-05 [Bereich 2 Betroffener Prozess] Vorbereitung auf die Qualitätsprüfung im ambulanten Dienst
+B-06 [Bereich 2 Betroffener Prozess] Maßnahmen nachhalten: was tun wir, wer, bis wann
+B-07 [Bereich 3 Nutzer / Beteiligte] Pflegedienstleitung
+B-08 [Bereich 3 Nutzer / Beteiligte] Qualitätsbeauftragte (Teilzeit)
+B-09 [Bereich 3 Nutzer / Beteiligte] Mitarbeitende in der Pflege, in Teams
+B-10 [Bereich 4 Problem / Schwachstelle] Wir wissen nicht, ob wir eine Prüfung morgen bestehen würden – nur Bauchgefühl
+B-11 [Bereich 4 Problem / Schwachstelle] Seit Juli wird anders geprüft, mehr wie die Versorgung wirklich ist, unsere Unterlagen passen dazu nicht mehr
+B-12 [Bereich 4 Problem / Schwachstelle] Zwei Tage Ausnahmezustand, wenn die Prüfung angekündigt wird
+B-13 [Bereich 4 Problem / Schwachstelle] Probe-Audit mit Beraterin ist teuer und schnell veraltet
+B-14 [Bereich 4 Problem / Schwachstelle] Keine Übersicht, ob wir über die Zeit besser werden
+B-15 [Bereich 5 Ursache] Das Pflegeprogramm kann keinen ehrlichen Probedurchlauf
+B-16 [Bereich 5 Ursache] Excel-Listen und Ordner sind nicht auf die neue Prüfart abgestimmt
+B-17 [Bereich 5 Ursache] Niemand hält die Fragen aktuell, wenn sich die Regeln ändern
+B-18 [Bereich 6 Bedarf] Uns selbst so prüfen wie die Prüfer: ein paar Klienten auswählen, die Fragen durchgehen, eine Bewertung bekommen (muss)
+B-19 [Bereich 6 Bedarf] Aus dem Ergebnis eine Maßnahmenliste: was tun wir, wer kümmert sich, bis wann (muss)
+B-20 [Bereich 6 Bedarf] Die Fragen sind immer aktuell und werden nachgezogen, wenn sich die Regeln ändern (muss)
+B-21 [Bereich 6 Bedarf] Alle drei Monate wiederholen und sehen, ob wir besser werden (soll)
+B-22 [Bereich 6 Bedarf] Kurze Liste für die zwei Tage vor der echten Prüfung, was bereitliegen muss (soll)
+B-23 [Bereich 6 Bedarf] Sehen, wo ein Team schwach ist, ohne einzelne Mitarbeitende bloßzustellen (soll)
+B-24 [Bereich 7 Ziel (SOLL)] Jederzeit ehrlich wissen, wo wir vor einer Prüfung stehen
+B-25 [Bereich 7 Ziel (SOLL)] Ruhig in die angekündigte Prüfung gehen, alles liegt bereit
+B-26 [Bereich 7 Ziel (SOLL)] Über die Quartale sichtbar besser werden
+B-27 [Bereich 8 Funktionaler Bedarf] Das System muss eine Probeprüfung mit einer Auswahl von Klienten (nur Nummern) anhand der aktuellen Prüffragen durchführen lassen
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss am Ende eine Bewertung je Prüfbereich anzeigen
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss aus der Bewertung Maßnahmen mit Zuständigkeit und Termin machen und deren Stand anzeigen
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss Probeprüfungen speichern und mit früheren vergleichen
+B-31 [Bereich 8 Funktionaler Bedarf] Das System muss eine kurze Bereitlege-Liste für die zwei Tage vor der Prüfung zeigen
+B-32 [Bereich 8 Funktionaler Bedarf] Das System muss Ergebnisse je Team zusammenfassen, nicht je Person
+B-33 [Bereich 8 Funktionaler Bedarf] Das System muss den Fragenkatalog aktualisieren können, wenn sich die Prüfregeln ändern
+B-34 [Bereich 9 Organisatorischer Bedarf] Qualitätsbeauftragte führt die Probeprüfung durch, Pflegedienstleitung schaut drauf
+B-35 [Bereich 9 Organisatorischer Bedarf] Rhythmus: alle drei Monate
+B-36 [Bereich 9 Organisatorischer Bedarf] Kurze Einweisung reicht
+B-37 [Bereich 10 Technischer Bedarf] Tablet und PC im Büro
+B-38 [Bereich 10 Technischer Bedarf] Im Besprechungsraum ist das WLAN schlecht, muss dort trotzdem gehen
+B-39 [Bereich 11 Bestehende Systeme] Großes Pflegeprogramm für Doku und Abrechnung, wird nicht gewechselt
+B-40 [Bereich 11 Bestehende Systeme] Excel-Checklisten
+B-41 [Bereich 12 Schnittstellen] Keine Anbindung ans Pflegeprogramm nötig
+B-42 [Bereich 13 Daten] Klienten nur als Nummer
+B-43 [Bereich 13 Daten] Bewertungen, Maßnahmen, Termine
+B-44 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: nein – keine Klientennamen, keine Diagnosen
+B-45 [Bereich 14 Datenschutz / Sicherheit] Mitarbeitende nicht einzeln bewerten
+B-46 [Bereich 15 Rahmenbedingungen] Budget 60 bis 100 Euro im Monat, wenn es das Probe-Audit spart
+B-47 [Bereich 15 Rahmenbedingungen] Prüfung wird zwei Arbeitstage vorher angekündigt
+O-01 [Bereich 18 Offene Punkte] Wer zieht die Fragen nach, wenn sich die Regeln ändern, und wie oft?
+O-02 [Bereich 18 Offene Punkte] Monatlicher Preis statt Einmalpreis?
+N-01 [nicht gewünscht] keine zweite Pflegedokumentation
+N-02 [nicht gewünscht] keine Klientennamen oder Diagnosen speichern
+N-03 [nicht gewünscht] kein Versprechen, dass wir die Prüfung sicher bestehen
+N-04 [nicht gewünscht] keine Bewertung oder Rangliste einzelner Mitarbeitender
+N-05 [nicht gewünscht] kein Ersatz für das bestehende Pflegeprogramm
+Ausgefüllt: 18 von 18 Bereichen

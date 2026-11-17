@@ -1,0 +1,33 @@
+Autohaus Beispiel GmbH
+Autohaus Beispiel GmbH · Industriering 5 · 34567 Beispielstadt
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kilometerstand: 118.204 km
+Datum: 18.11.2025
+
+Rechnung Nr. 25-8821 – Inspektion BSP-MB 412
+
+Sehr geehrter Herr Brandtner,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Inspektion nach Herstellervorgabe   1   189,00 €   189,00 €
+2   Motoröl 5W-30, Liter   5,5   16,90 €   92,95 €
+3   Ölfilter   1   14,80 €   14,80 €
+4   Bremsflüssigkeit wechseln   1   69,00 €   69,00 €
+5   Wischerblätter Satz   1   32,50 €   32,50 €
+6   Umweltpauschale   1   6,90 €   6,90 €
+
+Nettobetrag: 405,15 €
+zzgl. 19 % MwSt.: 76,98 €
+Rechnungsbetrag: 482,13 €
+
+Bitte überweisen Sie den Betrag von 482,13 € bis zum 01.12.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Autohaus Beispiel GmbH
+Autohaus Beispiel GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

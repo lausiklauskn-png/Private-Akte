@@ -1,0 +1,213 @@
+{
+ "ordner": "pruefstapel-unabhaengig",
+ "belege": 150,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null,
+   "fehlt": 0
+  },
+  {
+   "name": "ZWEITER",
+   "modell": "Claude-Agent B, eigenes Urteil",
+   "fehlt": 0
+  },
+  {
+   "name": "DRITTER-CLAUDE",
+   "modell": "Claude-Agent C, eigenes Urteil",
+   "fehlt": 0
+  },
+  {
+   "name": "DRITTER",
+   "modell": "Codex (GPT-6)",
+   "fehlt": 0
+  }
+ ],
+ "felder": {
+  "bereich": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 143
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 144
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 128
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 141
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 131
+    },
+    {
+     "a": "DRITTER-CLAUDE",
+     "b": "DRITTER",
+     "gleich": 129
+    }
+   ],
+   "fleissKappa": 0.8984937192988818,
+   "einstimmig": 126,
+   "strittig": []
+  },
+  "schriftstueck": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 146
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 145
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 146
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 149
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 148
+    },
+    {
+     "a": "DRITTER-CLAUDE",
+     "b": "DRITTER",
+     "gleich": 147
+    }
+   ],
+   "fleissKappa": 0.9766982670869152,
+   "einstimmig": 144,
+   "strittig": []
+  },
+  "absender": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 142
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 141
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 127
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 149
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 131
+    },
+    {
+     "a": "DRITTER-CLAUDE",
+     "b": "DRITTER",
+     "gleich": 130
+    }
+   ],
+   "fleissKappa": 0.9099925181280695,
+   "einstimmig": 124,
+   "strittig": []
+  },
+  "person": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 134
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 131
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 132
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 146
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 148
+    },
+    {
+     "a": "DRITTER-CLAUDE",
+     "b": "DRITTER",
+     "gleich": 146
+    }
+   ],
+   "fleissKappa": 0.9240194896039363,
+   "einstimmig": 130,
+   "strittig": []
+  },
+  "frist": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 139
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 139
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 139
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER-CLAUDE",
+     "gleich": 150
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 148
+    },
+    {
+     "a": "DRITTER-CLAUDE",
+     "b": "DRITTER",
+     "gleich": 148
+    }
+   ],
+   "fleissKappa": 0.9262823386429974,
+   "einstimmig": 138,
+   "strittig": []
+  }
+ }
+}

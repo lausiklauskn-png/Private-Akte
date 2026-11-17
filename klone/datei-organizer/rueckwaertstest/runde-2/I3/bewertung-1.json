@@ -1,0 +1,40 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "fehlt",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "teilweise",
+  "M08": "getroffen",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "getroffen",
+  "M13": "fehlt",
+  "M14": "getroffen",
+  "M15": "getroffen",
+  "M16": "teilweise",
+  "M17": "getroffen",
+  "M18": "fehlt",
+  "M19": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Büro und Monteure eines Heizungs-/Wärmepumpenbetriebs; Lüftung, Trinkwasser und Elektro/E-Check/DGUV V3 fehlen.",
+  "M04": "Keine QR-Aufkleber; Anlage nur über Suche bzw. Seriennummer.",
+  "M07": "Fälligkeit je Anlage aus Intervall; Fälligkeit je Wartungsvertrag fehlt.",
+  "M13": "Keine Übersicht der Wartungsverträge mit wiederkehrendem Umsatz.",
+  "M16": "Betriebsserver und AV mit Hoster genannt; Datensparsamkeit und EU-Standort nicht festgelegt, Cloud als offene Frage.",
+  "M18": "Kein Hinweis, dass keine normgerechte Prüfung garantiert wird; Normen nur als offene Frage.",
+  "M19": "Kein Preismodell je Betrieb oder je Anlage."
+ },
+ "zusaetze": [
+  "Eigener Betriebsserver für Abgleich und Terminseite",
+  "Einmalige Excel-Übernahme mit Spaltenzuordnung",
+  "Automatische Sicherung",
+  "Rollen und Benutzer-/Geräteverwaltung",
+  "Konfliktliste beim Abgleich"
+ ]
+}

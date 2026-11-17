@@ -1,0 +1,213 @@
+@bon
+BEISPIEL SUPERMARKT CENTER
+Am Center 1, 04999 Musterstadt
+Tel. 0000 000000  USt-IdNr. DE000000000
+
+Salzstangen                   0,89 A
+  2 x 0,99
+Moehren 1kg                   1,98 A
+  Rabatt 20%                 -0,40 A
+Zucker 1kg                    1,19 A
+  2 x 1,29
+Pfeffer gemahlen              2,58 A
+  3 x 1,19
+Schokolade Vollmilch          3,57 A
+  2 x 1,45
+Feuchttuecher                 2,90 B
+  2 x 2,29
+Pizza Margherita TK           4,58 A
+Zucker 1kg                    1,19 A
+  2 x 2,99
+Orangen 2kg                   5,98 A
+  2 x 4,99
+Spuelmaschinentabs            9,98 B
+  Rabatt 20%                 -2,00 B
+Gummibaerchen                 0,99 A
+Aepfel lose                   2,47 A
+Schwamm 10er                  1,49 B
+  3 x 1,29
+Quark 20% 500g                3,87 A
+  2 x 2,99
+Kerzen 10er                   5,98 B
+  4 x 0,69
+Senf mittelscharf             2,76 A
+Apfelschorle 6x1,5l           4,14 B
+  Pfand                       1,50 B
+  2 x 2,79
+Nussnougatcreme               5,58 A
+Kerzen 10er                   2,99 B
+H-Milch 1,5%                  0,99 A
+  2 x 1,19
+Spuelmittel                   2,38 B
+Erbsen TK                     1,19 A
+  2 x 2,19
+Pommes TK                     4,38 A
+Moehren 1kg                   0,99 A
+  4 x 2,79
+Eier Bodenh, 10St            11,16 A
+Kidneybohnen                  0,79 A
+Hackfleisch gem,              4,99 A
+  3 x 1,09
+Vollmilch 3,5% 1l             3,27 A
+Alufolie                      1,89 B
+  2 x 1,49
+Toastbrot                     2,98 A
+Zitronen Netz                 1,49 A
+  2 x 1,99
+Weichspueler                  3,98 B
+Sonnenblumenoel 1l            2,29 A
+  3 x 2,89
+Wiener Wuerstchen             8,67 A
+  4 x 1,79
+Orangensaft 1l                7,16 B
+Tomaten Rispe                 2,49 A
+Windeln Gr,5                  9,99 B
+  3 x 1,79
+Marmelade Erdbeer             5,37 A
+Marmelade Erdbeer             1,79 A
+Rotwein trocken               4,99 B
+  2 x 2,94
+Mineralwasser 6x1,5l          5,88 B
+  Pfand                       3,00 B
+Frischhaltefolie              1,29 B
+  2 x 1,59
+Broetchen 6er                 3,18 A
+Alufolie                      1,89 B
+  2 x 3,99
+Honig 500g                    7,98 A
+  2 x 1,99
+Weichspueler                  3,98 B
+  2 x 1,79
+Kochschinken                  3,58 A
+Tomaten passiert              0,79 A
+  3 x 1,79
+Chips Paprika                 5,37 A
+  4 x 4,99
+Spuelmaschinentabs           19,96 B
+Thunfisch Dose                1,69 A
+  2 x 1,09
+Vollmilch 3,5% 1l             2,18 A
+Mineralwasser 6x1,5l          2,94 B
+  Pfand                       1,50 B
+Mais Dose                     0,89 A
+Broetchen 6er                 1,59 A
+Mineralwasser 6x1,5l          2,94 B
+  Pfand                       1,50 B
+  3 x 1,99
+Salami Scheiben               5,97 A
+Spuelmaschinentabs            4,99 B
+Alufolie                      1,89 B
+  2 x 5,49
+Waschmittel 20WL             10,98 B
+  2 x 1,79
+Muellbeutel 35l               3,58 B
+  Rabatt 20%                 -0,72 B
+Kartoffeln 2,5kg              2,99 A
+Mais Dose                     0,89 A
+Zucker 1kg                    1,19 A
+  2 x 1,29
+Frischhaltefolie              2,58 B
+Eis Vanille 1l                2,49 A
+  2 x 0,59
+Tomatenmark                   1,18 A
+Chips Paprika                 1,79 A
+  4 x 0,79
+Kidneybohnen                  3,16 A
+  4 x 3,99
+Honig 500g                   15,96 A
+  4 x 2,89
+Wiener Wuerstchen            11,56 A
+  4 x 1,19
+Schokolade Vollmilch          4,76 A
+  2 x 1,89
+Alufolie                      3,78 B
+Tomaten Rispe                 2,49 A
+Duschgel                      1,25 B
+Pommes TK                     2,19 A
+Salami Scheiben               1,99 A
+  3 x 2,94
+Mineralwasser 6x1,5l          8,82 B
+  Pfand                       4,50 B
+  2 x 0,79
+Paprika rot                   1,58 A
+  Rabatt 20%                 -0,32 A
+Zahnpasta                     0,95 B
+  2 x 4,49
+Lachsfilet TK                 8,98 A
+Vollmilch 3,5% 1l             1,09 A
+Shampoo                       1,95 B
+Pizza Margherita TK           2,29 A
+Mais Dose                     0,89 A
+Mayonnaise                    1,39 A
+  2 x 1,59
+Broetchen 6er                 3,18 A
+  4 x 1,69
+Thunfisch Dose                6,76 A
+Paprika rot                   0,79 A
+Eier Bodenh, 10St             2,79 A
+  Rabatt 20%                 -0,56 A
+  2 x 4,49
+Grillkohle 3kg                8,98 B
+Essig Kraeuter                0,89 A
+  4 x 2,49
+Fischstaebchen                9,96 A
+  4 x 3,99
+Katzenstreu                  15,96 B
+  Rabatt 20%                 -3,19 B
+  3 x 0,99
+H-Milch 1,5%                  2,97 A
+  Rabatt 20%                 -0,59 A
+Servietten                    1,29 B
+Toilettenpapier 10er          4,29 B
+  3 x 4,99
+Rotwein trocken              14,97 B
+  3 x 2,79
+Eier Bodenh, 10St             8,37 A
+Waschmittel 20WL              5,49 B
+  3 x 2,94
+Mineralwasser 6x1,5l          8,82 B
+  Pfand                       4,50 B
+Babybrei Karotte              0,95 A
+  2 x 2,49
+Tomaten Rispe                 4,98 A
+  2 x 2,94
+Mineralwasser 6x1,5l          5,88 B
+  Pfand                       3,00 B
+  3 x 1,29
+Pfeffer gemahlen              3,87 A
+  2 x 1,89
+Gouda jung Scheiben           3,78 A
+  4 x 0,99
+H-Milch 1,5%                  3,96 A
+  3 x 0,99
+H-Milch 1,5%                  2,97 A
+  2 x 2,47
+Aepfel lose                   4,94 A
+  2 x 5,99
+Kaffee gemahlen 500g         11,98 A
+  2 x 1,49
+Kekse Butter                  2,98 A
+  2 x 1,79
+Orangensaft 1l                3,58 B
+Thunfisch Dose                1,69 A
+Sonnenblumenoel 1l            2,29 A
+Salami Scheiben               1,99 A
+Haehnchenbrust                6,49 A
+Kuechenrolle 4er              2,49 B
+--------------------------------------
+Zwischensumme                 482,62
+Pfand gesamt                   19,50
+Leergut Pfandbon               -4,75 B
+Coupon Treuepunkte             -2,00 A
+======================================
+SUMME EUR                     495,37
+Kartenzahlung girocard        495,37
+
+Steuer   Netto     MwSt     Brutto
+A  7%    259,12    18,14    277,26
+B 19%    183,29    34,82    218,11
+Posten: 117
+
+20.12.2025  16:03  Kasse 04  Bed. 112  Bon 9650
+Weihnachtsaktion: 1 Coupon eingelöst
+Vielen Dank fuer Ihren Einkauf!

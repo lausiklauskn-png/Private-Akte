@@ -1,0 +1,23 @@
+Von: Rheinwelle <rechnung@rheinwelle-beispiel.example>
+An: thomas.brueckmann@mail-beispiel.example
+Datum: 03.09.2026 05:10
+Betreff: Ihre Rechnung August 2026 ist da – Kunden-Nr. RW-0007712
+Anhang: Rechnung_RW26-08-2209187.pdf
+
+Hallo Thomas Brückmann,
+
+Ihre Rechnung für August 2026 steht bereit.
+
+Rufnummer 0000 0000412 (Nutzer: Jonas)
+  Rheinwelle Mobil Young 15 GB, anteilig 08.–31.08.     10,06 €
+  Anschlusspreis (einmalig)                             19,99 €
+  Zuzahlung Smartphone Beispielphone A5                 49,00 €
+  Verbindungen außerhalb der Flat                        0,00 €
+  Gesamtbetrag inkl. 19 % USt                           79,05 €
+
+Abbuchung am 10.09.2026 von Ihrem Konto IBAN DE00 0000 0000 0000 0000 00.
+
+Hinweis: Das Datenvolumen von Jonas war am 27.08. zu 100 % verbraucht.
+Mit einem Daten-Paket „+5 GB“ für 4,99 € surft er wieder schnell.
+
+Ihr Rheinwelle-Team

@@ -1,0 +1,11 @@
+Lohnjournal März 2026 – Hartwigs Grillstube & Partyservice
+erstellt durch Lohnbüro (Mandant 20417)
+
+PersNr Name            Brutto     Steuer    SV-AN     Netto
+001    Thoms, Meike    2.650,00   303,83   561,14   1.785,03
+003    Arat, Selin       556,00     0,00     0,00     556,00
+004    Brandl, Luca      500,40     0,00     0,00     500,40
+----------------------------------------------------------
+Summe Bruttolöhne      3.706,40
+Auszahlung gesamt      2.841,43
+Zahlung an Arbeitnehmer per Sammelüberweisung 31.03.2026

@@ -1,0 +1,13 @@
+technikhafen.example  –  Bestellung 254887789
+Rechnung vom 2026-04-03
+
+Rechnungsadresse: Haarstudio Federleicht, Marktgasse 7, 37154 Northeim
+
+Artikel
+1 x Notebook 15,6" Business, 16 GB RAM, 512 GB SSD   1.130,17
+    (für Terminplanung und Buchhaltung im Salon)
+
+Summe netto     1.130,17
+USt 19%         214,73
+Gesamt          1.344,90 EUR
+Zahlart: Kreditkarte ****0000

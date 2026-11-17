@@ -1,0 +1,37 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "teilweise",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "getroffen",
+  "M08": "getroffen",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "getroffen",
+  "M13": "fehlt",
+  "M14": "getroffen",
+  "M15": "teilweise",
+  "M16": "teilweise",
+  "M17": "teilweise"
+ },
+ "begruendung": {
+  "M02": "PDL und QM-Beauftragte ja; Berater für mehrere Dienste fehlen.",
+  "M04": "Bewertung ‚nach dem Bewertungsschema der Prüfer‘, aber Stufen A–D nicht genannt, Inhalt offene Frage.",
+  "M13": "Keine Berater-Lizenz für mehrere getrennte Dienste.",
+  "M15": "Kein Bestehens-Versprechen ja; ‚keine Rechtsberatung‘ fehlt.",
+  "M16": "Keine Diagnosen gespeichert, aber nicht als ‚kein Medizinprodukt, keine Therapieempfehlung‘ abgegrenzt.",
+  "M17": "Monatliches Abo genannt; jährliche Variante fehlt."
+ },
+ "zusaetze": [
+  "Abgleich Tablet ↔ PC mit Konfliktanzeige",
+  "Automatische verschlüsselte Sicherung",
+  "Server für Freischaltung/Abo",
+  "Zufällige Ziehung der Stichprobe aus Nummernliste",
+  "Startseite mit Stand auf einen Blick"
+ ]
+}

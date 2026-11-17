@@ -1,0 +1,29 @@
+# MIETERPORTAL BEISPIEL WOHNEN
+
+NEUE NACHRICHT
+
+Neue Nachricht
+
+MIETVERTRAG: MV-12-0412
+OBJEKT: Hafenweg 12, WE 07
+ERGEBNIS: NACHZAHLUNG 218,44 EUR
+ZAHLBAR BIS: 15.07.2025
+BEREITGESTELLT: 13.06.2025
+
+# Betriebskostenabrechnung 2024 bereitgestellt
+
+|Kostenart|Anteil|
+
+|Heizung/Warmwasser|1.140,20 EUR|
+
+|Wasser/Abwasser|402,10 EUR|
+
+|Müll|188,90 EUR|
+
+|Hauswart|212,00 EUR|
+
+|Vorauszahlungen|-1.724,76 EUR|
+
+Bitte überweisen Sie die Nachzahlung bis 15.07.2025. Belegeinsicht nach Terminvereinbarung.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

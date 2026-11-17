@@ -1,0 +1,1084 @@
+{
+ "dateien": [
+  {
+   "datei": "RE-260114-0871_hinrichsen.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "623,56",
+   "datum": "2026-01-14",
+   "ust": 19,
+   "aussteller": "Zweiradgroßhandel Hinrichsen & Pohl GmbH"
+  },
+  {
+   "datei": "scan_0007.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "704,00",
+   "datum": "2026-02-03",
+   "ust": 19,
+   "aussteller": "Veloteile Brakmann KG"
+  },
+  {
+   "datei": "Rechnung Talvo TB-118204 (2).txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "3.346,28",
+   "datum": "2026-03-09",
+   "ust": 19,
+   "aussteller": "Talvo Bikes Vertriebs GmbH"
+  },
+  {
+   "datei": "lichtwerk_maerz.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "763,50",
+   "datum": "2026-03-24",
+   "ust": 19,
+   "aussteller": "Lichtwerk Sündermann GmbH & Co. KG"
+  },
+  {
+   "datei": "elbkette 40077.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "596,50",
+   "datum": "2026-04-16",
+   "ust": 19,
+   "aussteller": "Elbkette Fahrradteile e.K."
+  },
+  {
+   "datei": "EN-2026-03381.pdf.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "1.864,73",
+   "datum": "2026-05-06",
+   "ust": 19,
+   "aussteller": "E-Antrieb Nordmark GmbH"
+  },
+  {
+   "datei": "doc00031_ocr.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "989,13",
+   "datum": "2026-06-11",
+   "ust": 19,
+   "aussteller": "Helm & Co. Handelsgesellschaft mbH"
+  },
+  {
+   "datei": "Ohlsen_Rg1407.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "606,90",
+   "datum": "2026-07-21",
+   "ust": 19,
+   "aussteller": "Taschenmanufaktur Ohlsen"
+  },
+  {
+   "datei": "vosskamp kinderräder sept.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "1.899,24",
+   "datum": "2026-09-02",
+   "ust": 19,
+   "aussteller": "Kinderrad-Import Vosskamp GmbH"
+  },
+  {
+   "datei": "kuestenkarten_KK-2260218.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "339,73",
+   "datum": "2026-02-18",
+   "ust": 7,
+   "aussteller": "Küstenkarten Verlag Ihnen GmbH"
+  },
+  {
+   "datei": "Buchgrossh. B-774120.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "237,97",
+   "datum": "2026-04-08",
+   "ust": 7,
+   "aussteller": "Buchgroßhandel Rademaker & Thoms"
+  },
+  {
+   "datei": "SK-05-3317.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "209,93",
+   "datum": "2026-05-20",
+   "ust": 7,
+   "aussteller": "Sportnahrung Kellinghus Großhandel"
+  },
+  {
+   "datei": "IMG_4471_karten_nachbestellung.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "301,80",
+   "datum": "2026-08-05",
+   "ust": 7,
+   "aussteller": "Küstenkarten Verlag Ihnen GmbH"
+  },
+  {
+   "datei": "AR_2026-0019_aalderks.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "143,99",
+   "datum": "2026-01-22",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "Ausgangsrechnung 2026-0041.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "502,78",
+   "datum": "2026-02-12",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "verkauf_wilmsen_trekkingrad.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "1.158,90",
+   "datum": "2026-03-28",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "kasse_004417.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "39,35",
+   "datum": "2026-04-30",
+   "ust": 19,
+   "aussteller": "RADWERK TIDEMANN"
+  },
+  {
+   "datei": "2026-0118 Harmsen.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "656,88",
+   "datum": "2026-05-15",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "Rg_Stadtbuecherei_0152.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "482,66",
+   "datum": "2026-06-19",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "0171-ricklefs-citybike.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "828,80",
+   "datum": "2026-07-08",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "scan0214.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "793,02",
+   "datum": "2026-08-27",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "Rechnung 2026-0263 (Kopie).txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "233,24",
+   "datum": "2026-10-06",
+   "ust": 19,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "AR-0058_touristinfo_karten.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "431,85",
+   "datum": "2026-03-11",
+   "ust": 7,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "bon 005102.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "35,80",
+   "datum": "2026-06-02",
+   "ust": 7,
+   "aussteller": "RADWERK TIDEMANN"
+  },
+  {
+   "datei": "foerderverein_buecher_2026-0239.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "489,95",
+   "datum": "2026-09-14",
+   "ust": 7,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "0101_NL_waddenkant.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "3.070,00",
+   "datum": "2026-04-22",
+   "ust": 0,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "rechnung-dk-2026-0203.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "2.216,00",
+   "datum": "2026-08-12",
+   "ust": 0,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "Export CH Leuenbacher 0127.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "1.923,00",
+   "datum": "2026-05-27",
+   "ust": 0,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "scan_export_norwegen.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "1.305,00",
+   "datum": "2026-09-23",
+   "ust": 0,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "provision_velolease_Q1.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "636,65",
+   "datum": "2026-03-31",
+   "ust": 19,
+   "aussteller": "Velolease Nordwest GmbH"
+  },
+  {
+   "datei": "Gutschrift P-778120.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "252,88",
+   "datum": "2026-06-30",
+   "ust": 19,
+   "aussteller": "Radschutz Versicherungsvermittlung AG"
+  },
+  {
+   "datei": "velolease q3 provisionsabr.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "892,50",
+   "datum": "2026-09-30",
+   "ust": 19,
+   "aussteller": "Velolease Nordwest GmbH"
+  },
+  {
+   "datei": "kartenabrechnung_jan.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "67,41",
+   "datum": "2026-02-02",
+   "ust": 0,
+   "aussteller": "Kartenwerk Payment Services GmbH"
+  },
+  {
+   "datei": "KA-0426.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "118,28",
+   "datum": "2026-05-04",
+   "ust": 0,
+   "aussteller": "Kartenwerk Payment Services GmbH"
+  },
+  {
+   "datei": "terminal gebühren juli scan.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "177,50",
+   "datum": "2026-08-03",
+   "ust": 19,
+   "aussteller": "Kartenwerk Payment Services GmbH"
+  },
+  {
+   "datei": "bank_entgelte_I-2026.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "76,38",
+   "datum": "2026-03-31",
+   "ust": 0,
+   "aussteller": "Deichland Sparbank eG"
+  },
+  {
+   "datei": "Kontoabschluss Entgelte Q3.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "82,82",
+   "datum": "2026-09-30",
+   "ust": 0,
+   "aussteller": "Deichland Sparbank eG"
+  },
+  {
+   "datei": "miete laden jan26.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.594,60",
+   "datum": "2026-01-02",
+   "ust": 19,
+   "aussteller": "Grundstücksgemeinschaft Speicherhof Eilts GbR"
+  },
+  {
+   "datei": "Mietrechnung_M-2026-06.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.594,60",
+   "datum": "2026-06-01",
+   "ust": 19,
+   "aussteller": "Grundstücksgemeinschaft Speicherhof Eilts GbR"
+  },
+  {
+   "datei": "garage lager q2.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "255,00",
+   "datum": "2026-04-01",
+   "ust": 0,
+   "aussteller": "Hinrika Janssen-Böhlke"
+  },
+  {
+   "datei": "stadtwerke_abschlag_strom_01.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "170,00",
+   "datum": "2026-01-15",
+   "ust": 19,
+   "aussteller": "Stadtwerke Wesselhaven GmbH"
+  },
+  {
+   "datei": "Gas Jahresabrechnung 2025.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "304,92",
+   "datum": "2026-02-20",
+   "ust": 19,
+   "aussteller": "Stadtwerke Wesselhaven GmbH"
+  },
+  {
+   "datei": "wasserverband_2026.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "267,07",
+   "datum": "2026-07-10",
+   "ust": 7,
+   "aussteller": "Wasserverband Wesselhavener Marsch"
+  },
+  {
+   "datei": "sw_abschlag_0926.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "395,00",
+   "datum": "2026-09-15",
+   "ust": 19,
+   "aussteller": "Stadtwerke Wesselhaven GmbH"
+  },
+  {
+   "datei": "blitzblank märz.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "259,42",
+   "datum": "2026-03-31",
+   "ust": 19,
+   "aussteller": "Blitzblank Gebäudedienste Uphoff"
+  },
+  {
+   "datei": "BB-2608-141_reinigung.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "386,75",
+   "datum": "2026-08-31",
+   "ust": 19,
+   "aussteller": "Blitzblank Gebäudedienste Uphoff"
+  },
+  {
+   "datei": "Feddersen_2026-0093.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "596,19",
+   "datum": "2026-02-09",
+   "ust": 19,
+   "aussteller": "Elektro Feddersen Meisterbetrieb"
+  },
+  {
+   "datei": "IMG_20260529_baumarkt.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "72,74",
+   "datum": "2026-05-29",
+   "ust": 19,
+   "aussteller": "BAUHOF HEIMWERKERMARKT"
+  },
+  {
+   "datei": "rolltor reparatur TG-11872.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "514,08",
+   "datum": "2026-10-13",
+   "ust": 19,
+   "aussteller": "Tor- und Schließtechnik Garrelts GmbH"
+  },
+  {
+   "datei": "friesenschild_BH_2026.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "456,96",
+   "datum": "2026-01-05",
+   "ust": 0,
+   "aussteller": "Friesenschild Versicherung a.G."
+  },
+  {
+   "datei": "Inhaltsversicherung Beitrag.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "609,28",
+   "datum": "2026-01-05",
+   "ust": 0,
+   "aussteller": "Friesenschild Versicherung a.G."
+  },
+  {
+   "datei": "scan_elektronikvers.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "173,74",
+   "datum": "2026-07-01",
+   "ust": 0,
+   "aussteller": "Hansemarsch Sachversicherung AG"
+  },
+  {
+   "datei": "kfz versicherung 2026.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "735,42",
+   "datum": "2026-01-08",
+   "ust": 0,
+   "aussteller": "Friesenschild Versicherung a.G."
+  },
+  {
+   "datei": "Nachtrag_KF-12.550.031.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "112,46",
+   "datum": "2026-08-20",
+   "ust": 0,
+   "aussteller": "Friesenschild Versicherung a.G."
+  },
+  {
+   "datei": "werkstatt_bremsen_feb.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "459,34",
+   "datum": "2026-02-25",
+   "ust": 19,
+   "aussteller": "Kfz-Meisterwerkstatt Behrends & Tjarks"
+  },
+  {
+   "datei": "HU AU quittung.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "150,00",
+   "datum": "2026-04-14",
+   "ust": 19,
+   "aussteller": "Prüfstelle Wesselhaven – Kfz-Sachverständige Ukena PartG"
+  },
+  {
+   "datei": "reifen poppinga.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "410,00",
+   "datum": "2026-04-02",
+   "ust": 19,
+   "aussteller": "Reifen Poppinga GmbH"
+  },
+  {
+   "datei": "W-260717-11.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "352,12",
+   "datum": "2026-07-17",
+   "ust": 19,
+   "aussteller": "Kfz-Meisterwerkstatt Behrends & Tjarks"
+  },
+  {
+   "datei": "autoglas_AG-2077.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "127,93",
+   "datum": "2026-10-20",
+   "ust": 19,
+   "aussteller": "Autoglas Lüpkes"
+  },
+  {
+   "datei": "tanken_190126.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "7983,11",
+   "datum": "2026-01-19",
+   "ust": 19,
+   "aussteller": "TANKHOF AM DEICH"
+  },
+  {
+   "datei": "IMG_0305_tankbon.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "8705,87",
+   "datum": "2026-03-05",
+   "ust": 19,
+   "aussteller": "ROLAND STATION 24"
+  },
+  {
+   "datei": "tankhof juni.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "7293,03",
+   "datum": "2026-06-08",
+   "ust": 19,
+   "aussteller": "TANKHOF AM DEICH"
+  },
+  {
+   "datei": "2026-09-09_tank.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "8249,95",
+   "datum": "2026-09-09",
+   "ust": 19,
+   "aussteller": "TANKHOF AM DEICH"
+  },
+  {
+   "datei": "parkhaus_messe.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "9,00",
+   "datum": "2026-03-17",
+   "ust": 19,
+   "aussteller": "PARKHAUS HANSEKONTOR"
+  },
+  {
+   "datei": "parkschein kurpromenade.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "3,00",
+   "datum": "2026-07-02",
+   "ust": 0,
+   "aussteller": "Stadt Wesselhaven-Bad"
+  },
+  {
+   "datei": "HWK Beitragsbescheid 2026.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "376,50",
+   "datum": "2026-02-16",
+   "ust": 0,
+   "aussteller": "Handwerkskammer Küstenland"
+  },
+  {
+   "datei": "innung_beitrag.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "275,00",
+   "datum": "2026-01-12",
+   "ust": 0,
+   "aussteller": "Zweiradmechaniker-Innung Nordwest"
+  },
+  {
+   "datei": "gewerbeverein 2026-061.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "120,00",
+   "datum": "2026-03-02",
+   "ust": 0,
+   "aussteller": "Gewerbeverein Wesselhaven e.V."
+  },
+  {
+   "datei": "kuestennetz_0126.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "59,50",
+   "datum": "2026-02-04",
+   "ust": 19,
+   "aussteller": "Küstennetz Telekommunikation GmbH"
+  },
+  {
+   "datei": "Telefonrechnung Mai.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "68,45",
+   "datum": "2026-06-04",
+   "ust": 19,
+   "aussteller": "Küstennetz Telekommunikation GmbH"
+  },
+  {
+   "datei": "mobilfunk-2026-07.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "44,98",
+   "datum": "2026-08-06",
+   "ust": 19,
+   "aussteller": "Funkwelle Mobil GmbH"
+  },
+  {
+   "datei": "porto_quittung_feb.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "21,80",
+   "datum": "2026-02-27",
+   "ust": 0,
+   "aussteller": "POSTAGENTUR im Schreibwarenhaus Meenken"
+  },
+  {
+   "datei": "paketwelle sammelrg mai.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "160,84",
+   "datum": "2026-05-31",
+   "ust": 19,
+   "aussteller": "Paketwelle Logistik GmbH"
+  },
+  {
+   "datei": "PW-0926.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "96,40",
+   "datum": "2026-09-18",
+   "ust": 19,
+   "aussteller": "Paketwelle Logistik GmbH"
+  },
+  {
+   "datei": "anzeiger_fruehjahrscheck.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "314,16",
+   "datum": "2026-03-13",
+   "ust": 19,
+   "aussteller": "Wesselhavener Anzeiger Verlagsgesellschaft mbH"
+  },
+  {
+   "datei": "Druckerei Papierboot PB-3390.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "271,32",
+   "datum": "2026-04-07",
+   "ust": 19,
+   "aussteller": "Druckerei Papierboot"
+  },
+  {
+   "datei": "werbetechnik_schaufenster.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "573,58",
+   "datum": "2026-06-15",
+   "ust": 19,
+   "aussteller": "Werbetechnik Kruse & Onnen GbR"
+  },
+  {
+   "datei": "klickmarkt_2026-07.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "181,50",
+   "datum": "2026-08-01",
+   "ust": 19,
+   "aussteller": "Klickmarkt Online-Werbung GmbH"
+  },
+  {
+   "datei": "weinkontor geschenke.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "43,20",
+   "datum": "2026-10-27",
+   "ust": 19,
+   "aussteller": "WEINKONTOR TEN BRINK"
+  },
+  {
+   "datei": "siefkes_praesent_1182.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "43,27",
+   "datum": "2026-05-12",
+   "ust": 19,
+   "aussteller": "Feinkost & Präsente Siefkes"
+  },
+  {
+   "datei": "präsentkorb gross 1240.txt",
+   "konto": "4635",
+   "richtung": "ausgabe",
+   "betrag": "129,00",
+   "datum": "2026-06-24",
+   "ust": 19,
+   "aussteller": "Feinkost & Präsente Siefkes"
+  },
+  {
+   "datei": "gutschein_wellness_geschenk.txt",
+   "konto": "4635",
+   "richtung": "ausgabe",
+   "betrag": "150,00",
+   "datum": "2026-09-04",
+   "ust": 0,
+   "aussteller": "Wellnesshof Marschblick"
+  },
+  {
+   "datei": "bewirtung_altes_siel.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "78,00",
+   "datum": "2026-02-05",
+   "ust": 7,
+   "aussteller": "Gasthaus Zum Alten Siel"
+  },
+  {
+   "datei": "IMG_0618_ladiga.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "87,20",
+   "datum": "2026-06-18",
+   "ust": 7,
+   "aussteller": "RISTORANTE LA DIGA"
+  },
+  {
+   "datei": "hafenbar_bewirtungsbeleg.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "57,90",
+   "datum": "2026-10-01",
+   "ust": 19,
+   "aussteller": "Hafenbar Kimmung"
+  },
+  {
+   "datei": "bahnticket_messe_tidemann.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "69,00",
+   "datum": "2026-03-16",
+   "ust": 7,
+   "aussteller": "NORDLANDBAHN Fernverkehr AG"
+  },
+  {
+   "datei": "hotel kontorhaus H-26-03344.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "113,00",
+   "datum": "2026-03-18",
+   "ust": 7,
+   "aussteller": "Hotel Kontorhaus am Fleet"
+  },
+  {
+   "datei": "reisekosten_tidemann_haendlertag.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "155,20",
+   "datum": "2026-09-25",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "RK Brandsen Mai 2026.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "145,60",
+   "datum": "2026-05-22",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "gaestehaus_soerupfeld_brandsen.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "72,00",
+   "datum": "2026-05-20",
+   "ust": 7,
+   "aussteller": "Gästehaus Sörupfeld"
+  },
+  {
+   "datei": "seminar_e-antrieb_AK-0177.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "493,85",
+   "datum": "2026-05-11",
+   "ust": 19,
+   "aussteller": "E-Antrieb Nordmark GmbH – Akademie"
+  },
+  {
+   "datei": "BZ-26-4410 lehrgang.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "253,47",
+   "datum": "2026-10-08",
+   "ust": 19,
+   "aussteller": "Bildungszentrum der Handwerkskammer Küstenland"
+  },
+  {
+   "datei": "fachzeitschrift_abo_2026.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "94,16",
+   "datum": "2026-01-20",
+   "ust": 7,
+   "aussteller": "Speichenblatt Fachverlag GmbH"
+  },
+  {
+   "datei": "buchhandlung fachbücher.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "84,70",
+   "datum": "2026-07-14",
+   "ust": 7,
+   "aussteller": "BUCHHANDLUNG LESEDEICH"
+  },
+  {
+   "datei": "stb_fibu_Q1.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "630,70",
+   "datum": "2026-04-10",
+   "ust": 19,
+   "aussteller": "Steuerkanzlei Oltmanns & Freese PartG mbB"
+  },
+  {
+   "datei": "Steuerkanzlei 2026-01102.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "669,97",
+   "datum": "2026-10-09",
+   "ust": 19,
+   "aussteller": "Steuerkanzlei Oltmanns & Freese PartG mbB"
+  },
+  {
+   "datei": "RA Brodersen 0061.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "453,87",
+   "datum": "2026-03-20",
+   "ust": 19,
+   "aussteller": "Rechtsanwältin Dr. Swantje Brodersen"
+  },
+  {
+   "datei": "kanzlei_agb_pruefung.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "702,10",
+   "datum": "2026-07-30",
+   "ust": 19,
+   "aussteller": "Rechtsanwältin Dr. Swantje Brodersen"
+  },
+  {
+   "datei": "bon_schreibwaren_0901.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "59,18",
+   "datum": "2026-01-09",
+   "ust": 19,
+   "aussteller": "SCHREIBWARENHAUS MEENKEN"
+  },
+  {
+   "datei": "BK-88104277.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "219,67",
+   "datum": "2026-04-27",
+   "ust": 19,
+   "aussteller": "Bürokontor Direkt Versand GmbH"
+  },
+  {
+   "datei": "meenken august.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "25,53",
+   "datum": "2026-08-18",
+   "ust": 19,
+   "aussteller": "SCHREIBWARENHAUS MEENKEN"
+  },
+  {
+   "datei": "IMG_20260303_akkuschrauber.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "343,91",
+   "datum": "2026-03-03",
+   "ust": 19,
+   "aussteller": "BAUHOF HEIMWERKERMARKT"
+  },
+  {
+   "datei": "toenjes montagestaender.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "772,31",
+   "datum": "2026-06-05",
+   "ust": 19,
+   "aussteller": "Werkstattbedarf Tönjes GmbH"
+  },
+  {
+   "datei": "Kaufvertrag_Kombi_GW-2026-0718.txt",
+   "konto": "0320",
+   "richtung": "ausgabe",
+   "betrag": "19.447,50",
+   "datum": "2026-08-17",
+   "ust": 19,
+   "aussteller": "Autohaus Greefswarder GmbH"
+  },
+  {
+   "datei": "WB-260223-102 maschinen.txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "3.938,90",
+   "datum": "2026-02-23",
+   "ust": 19,
+   "aussteller": "Werkstattbedarf Tönjes GmbH"
+  },
+  {
+   "datei": "ladenbau LB-2026-014.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "7.163,80",
+   "datum": "2026-01-28",
+   "ust": 19,
+   "aussteller": "Ladenbau Habben & Ortgies GmbH"
+  },
+  {
+   "datei": "kassensystem_KT-0420.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "2.058,70",
+   "datum": "2026-04-20",
+   "ust": 19,
+   "aussteller": "Kassentechnik Wilts"
+  },
+  {
+   "datei": "lohn_brandsen_2026-03.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "2.850,00",
+   "datum": "2026-03-27",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "Entgeltabrechnung Juli Brandsen.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "3.030,00",
+   "datum": "2026-07-29",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "eigenbeleg privatentnahme feb.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "400,00",
+   "datum": "2026-02-13",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "ueberweisung_privat_mai.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "2.200,00",
+   "datum": "2026-05-29",
+   "ust": null,
+   "aussteller": "Deichland Sparbank eG"
+  },
+  {
+   "datei": "scan_zettel_0109.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "150,00",
+   "datum": "2026-09-01",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "einzahlung privateinlage.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "5.000,00",
+   "datum": "2026-01-06",
+   "ust": null,
+   "aussteller": "Deichland Sparbank eG"
+  },
+  {
+   "datei": "EB-2026-19 einlage.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "8.000,00",
+   "datum": "2026-08-14",
+   "ust": null,
+   "aussteller": "Radwerk Tidemann"
+  },
+  {
+   "datei": "entsorgung_april.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "160,65",
+   "datum": "2026-04-24",
+   "ust": 19,
+   "aussteller": "Entsorgung Marschland GmbH – zertifizierter Entsorgungsfachbetrieb"
+  },
+  {
+   "datei": "werkbuch_lizenz_2026.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "414,12",
+   "datum": "2026-01-02",
+   "ust": 19,
+   "aussteller": "Werkbuch Software UG (haftungsbeschränkt)"
+  },
+  {
+   "datei": "arbeitskleidung 5518.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "357,10",
+   "datum": "2026-05-08",
+   "ust": 19,
+   "aussteller": "Berufsmode Eggerking"
+  },
+  {
+   "datei": "feuerloescher_pruefung.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "83,30",
+   "datum": "2026-09-10",
+   "ust": 19,
+   "aussteller": "Brandschutz Heikens"
+  },
+  {
+   "datei": "sponsoring_bande_tus.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "678,30",
+   "datum": "2026-06-26",
+   "ust": 19,
+   "aussteller": "Sportverein TuS Wesselhaven von 1907 e.V. – wirtschaftlicher Geschäftsbetrieb"
+  },
+  {
+   "datei": "drogerie reinigungsmittel.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "42,96",
+   "datum": "2026-11-04",
+   "ust": 19,
+   "aussteller": "DROGERIE SANDKAMP"
+  }
+ ]
+}

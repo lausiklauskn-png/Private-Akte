@@ -1,0 +1,23 @@
+Bau & Werk Beispiel
+Baumarkt Mühlbrück
+Gewerbepark 3, 34567 Mühlbrück am See
+
+Artikel                            Betrag
+WANDFARBE WEISS 10L                39,99  B
+WANDFARBE WEISS 10L                39,99  B
+ABDECKFOLIE 4X5M                    3,99  B
+MALERKREPP 50M                      5,49  B
+FARBROLLE 25CM SET                 12,99  B
+PINSEL 3ER                          6,99  B
+DUEBEL 6MM 100ST                    4,49  B
+SPAX 4X40 200ST                     8,99  B
+LAMPENFASSUNG E27                   3,49  B
+GLUEHBIRNE LED 3ER                  9,99  B
+SILIKON WEISS                       6,49  B
+--------------------------------------------
+SUMME EUR                         142,89   
+EC-KARTE                          142,89   
+
+Umtausch nur mit Bon innerhalb von 30 Tagen.
+25.06.2022  11:08  Kasse 5  Beleg 0029117
+TSE-Signaturzähler 88123

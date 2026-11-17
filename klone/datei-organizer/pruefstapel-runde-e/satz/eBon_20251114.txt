@@ -1,0 +1,38 @@
+@appbon
+Beispiel-Markt App – Dein digitaler Kassenbon
+
+Beispiel-Markt Filiale 1188, Kastanienallee 30, 45678 Musterhausen
+Einkauf vom 14.11.2025 um 21:31 Uhr
+Kundenkarte **** 2762
+
+|Artikel|Menge|Preis|
+|Erbsen Tk|1|1,29 € B|
+|Spaghetti 500G|1|0,99 € B|
+|Kidneybohnen|2|1,58 € B|
+|Honig|2|7,98 € B|
+|Zwiebeln 2Kg|1|1,79 € B|
+|Emmentaler Gerieben|1|1,89 € B|
+|Honig|2|7,98 € B|
+|Trauben Hell|1|2,79 € B|
+|Shampoo|2|3,30 € A|
+|Champignons 400G|1|2,19 € B|
+|Bananen|1|1,49 € B|
+|Zwiebeln 2Kg|1|1,79 € B|
+
+App-Coupon Shampoo: -0,30 €
+App-Coupon Emmentaler Gerieben: -0,80 €
+App-Coupon Honig: -0,30 €
+
+Zwischensumme: 35,06 €
+Du hast gespart: 1,40 €
+Gesamtsumme: 33,66 €
+Bezahlt mit: Girocard (kontaktlos)
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|2,77|0,53|3,30|
+|B 7 %|28,37|1,99|30,36|
+
+Gesammelte Punkte: 33  ·  Punktestand: 2276
+Bon-ID: 719498676509  ·  Kasse 6  ·  TSE-Signatur gekürzt 21272700
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

@@ -1,0 +1,14 @@
+Rheinklinik Musterhausen Beispiel
+Patientenverwaltung
+Fall-Nr. 000000000                         Rechnung Nr. KL-2026-0000417
+                                           Datum: 27.02.2026
+
+Frau Julia Berger, Gartenstadtring 88, 99904 Musterhausen am Rhein
+
+Zuzahlung stationärer Aufenthalt 15.02. - 20.02.2026 (gesetzlicher Eigenanteil)
+ 5 Tage x 10,00 EUR                                          50,00 EUR
+Wahlleistung Familienzimmer 3 Nächte x 45,00 EUR            135,00 EUR
+Gesamtbetrag                                                185,00 EUR
+
+Bitte überweisen Sie den Betrag bis zum 14.03.2026 auf das Konto IBAN DE00 0000 0000 0000 0000 00,
+Verwendungszweck: Fall-Nr. 000000000. Bei Fragen: Tel. 0000-2220000.

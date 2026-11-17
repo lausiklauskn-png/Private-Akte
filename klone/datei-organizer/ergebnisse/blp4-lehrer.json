@@ -1,0 +1,370 @@
+{
+ "ordner": "pruefstapel-blp-4",
+ "belege": 120,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent, eigenes Urteil"
+  },
+  {
+   "name": "Dritter (fremde KI)",
+   "modell": "Codex (GPT-6)"
+  }
+ ],
+ "paare": [
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Zweiter (Claude-Agent)",
+   "gleich": 117,
+   "n": 120
+  },
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 113,
+   "n": 120
+  },
+  {
+   "a": "Zweiter (Claude-Agent)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 114,
+   "n": 120
+  }
+ ],
+ "fleissKappa": 0.9540325283705489,
+ "einstimmig": 112,
+ "mehrheit": 120,
+ "strittig": [],
+ "ersterGegenMehrheit": {
+  "ok": 118,
+  "n": 120
+ },
+ "konto": {
+  "sollErster": {
+   "alt ohne Namen": {
+    "ok": 63,
+    "n": 120,
+    "spanne": [
+     0.43626835924004914,
+     0.6121806272071544
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 88,
+    "n": 120,
+    "spanne": [
+     0.6478739437150142,
+     0.8043165964588853
+    ]
+   },
+   "alt mit Namen": {
+    "ok": 78,
+    "n": 120,
+    "spanne": [
+     0.5612115776488139,
+     0.7294823410344072
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 94,
+    "n": 120,
+    "spanne": [
+     0.7014547414958805,
+     0.8476337715724263
+    ]
+   }
+  },
+  "sollMehrheit": {
+   "alt ohne Namen": {
+    "ok": 64,
+    "n": 120,
+    "spanne": [
+     0.4444262910579696,
+     0.6201723575383017
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 90,
+    "n": 120,
+    "spanne": [
+     0.6655869783172575,
+     0.8189028861547777
+    ]
+   },
+   "alt mit Namen": {
+    "ok": 79,
+    "n": 120,
+    "spanne": [
+     0.5697466444292892,
+     0.7370969364029997
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 95,
+    "n": 120,
+    "spanne": [
+     0.7105215895553653,
+     0.8547165856620093
+    ]
+   }
+  },
+  "sollEinstimmig": {
+   "alt ohne Namen": {
+    "ok": 60,
+    "n": 112,
+    "spanne": [
+     0.44370185823984964,
+     0.6253579613759014
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 84,
+    "n": 112,
+    "spanne": [
+     0.6624206047806067,
+     0.8209981325296514
+    ]
+   },
+   "alt mit Namen": {
+    "ok": 75,
+    "n": 112,
+    "spanne": [
+     0.5781805614493123,
+     0.7498535817255056
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 90,
+    "n": 112,
+    "spanne": [
+     0.7204572147130448,
+     0.86655125202084
+    ]
+   }
+  }
+ },
+ "richtung": {
+  "sollMehrheit": {
+   "alt ohne Namen": {
+    "ok": 99,
+    "n": 120,
+    "spanne": [
+     0.7472413105195714,
+     0.8825955132940744
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 109,
+    "n": 120,
+    "spanne": [
+     0.843290092093749,
+     0.9480433532105753
+    ]
+   },
+   "alt mit Namen": {
+    "ok": 116,
+    "n": 120,
+    "spanne": [
+     0.9174184205147198,
+     0.9869626598330794
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 117,
+    "n": 120,
+    "spanne": [
+     0.9290687625956524,
+     0.9914619799012145
+    ]
+   }
+  }
+ },
+ "mcnemar": {
+  "Konto, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 4,
+   "nurNeuRichtig": 30,
+   "p": 0.00000616488978266716
+  },
+  "Konto, Mehrheit, mit Namen": {
+   "nurAltRichtig": 8,
+   "nurNeuRichtig": 24,
+   "p": 0.0070003666914999485
+  },
+  "Richtung, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 2,
+   "nurNeuRichtig": 12,
+   "p": 0.012939453125
+  },
+  "Richtung, Mehrheit, mit Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 1,
+   "p": 1
+  }
+ },
+ "herkunftNeuMitNamen": {
+  "modell · falsch": 8,
+  "modell · richtig": 84,
+  "regeln (eigener Beleg) · falsch": 2,
+  "regeln · falsch": 8,
+  "regeln · richtig": 7,
+  "modell (Regeln ohne Hinweis) · falsch": 1,
+  "regeln (eigener Beleg) · richtig": 4,
+  "regeln (fremder Beleg) · falsch": 6
+ },
+ "fehlerNeuMitNamen": [
+  {
+   "datei": "2026-01-29 Scan 11.txt",
+   "ist": "0400",
+   "soll": "0480",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "2026-04-06 Foto 7.txt",
+   "ist": "8400",
+   "soll": "1890",
+   "herkunft": "regeln (eigener Beleg)"
+  },
+  {
+   "datei": "2026-07-08 Foto 28.txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "2026-09-16 eingang 7.txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "Beleg (103).txt",
+   "ist": "8300",
+   "soll": "8400",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "Beleg (144).txt",
+   "ist": "3400",
+   "soll": "4260",
+   "herkunft": "modell (Regeln ohne Hinweis)"
+  },
+  {
+   "datei": "Beleg (32).txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "Beleg (72).txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "Beleg (95).txt",
+   "ist": "8500",
+   "soll": "8300",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "CCF01052026_00020.txt",
+   "ist": "4940",
+   "soll": "4980",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "CCF16022026_00036.txt",
+   "ist": "4940",
+   "soll": "4380",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "CCF21102026_00002.txt",
+   "ist": "4630",
+   "soll": "3400",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "CCF22032026_00018.txt",
+   "ist": "4660",
+   "soll": "4670",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "doc63503388.txt",
+   "ist": "8400",
+   "soll": "8300",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "doc71374891.txt",
+   "ist": "8300",
+   "soll": "8400",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "IMG_20260305_122242.txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "mail-anhang-59333.txt",
+   "ist": "8400",
+   "soll": "4670",
+   "herkunft": "regeln (eigener Beleg)"
+  },
+  {
+   "datei": "mail-anhang-72356.txt",
+   "ist": "4955",
+   "soll": "4950",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "Scan 02.11.26 15-18.txt",
+   "ist": "0400",
+   "soll": "3400",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "Scan 03.06.26 08-15.txt",
+   "ist": "4940",
+   "soll": "3300",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "Scan 26.01.26 08-08.txt",
+   "ist": "3400",
+   "soll": "4980",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "Scan 27.08.26 16-20.txt",
+   "ist": "0480",
+   "soll": "3400",
+   "herkunft": "regeln (fremder Beleg)"
+  },
+  {
+   "datei": "scan_3636.txt",
+   "ist": "4940",
+   "soll": "3400",
+   "herkunft": "regeln"
+  },
+  {
+   "datei": "scan_8008.txt",
+   "ist": "0400",
+   "soll": "0480",
+   "herkunft": "modell"
+  },
+  {
+   "datei": "SCN782505.txt",
+   "ist": "4940",
+   "soll": "4980",
+   "herkunft": "regeln"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+Boekstack B.V.
+Software voor de boekhandel / Software für den Buchhandel
+Oudegracht 999, 3511 XX Utrecht, Nederland
+BTW NL000000000B02
+
+Factuur / Rechnung  BS-2026-051877
+Datum: 01.05.2026
+
+Klant / Kunde: Buchhandlung Lindenblatt, Friederike Ansorge
+Marktgasse 7, 37999 Wehrstedt, Duitsland - USt-IdNr. DE000000000
+
+Abonnement "Boekstack Cloud - Warenwirtschaft und Antiquariatskatalog",
+1 Arbeitsplatz + Kassenanbindung, Zeitraum 01.05.2026 - 31.05.2026
+
+Bedrag excl. btw / Nettobetrag          49,00 EUR
+Btw / USt  0 % (verlegd)                 0,00 EUR
+Totaal / Gesamt                         49,00 EUR
+
+Btw verlegd - Steuerschuldnerschaft des Leistungsempfängers (Reverse Charge).
+Automatische incasso / Einzug per SEPA-Lastschrift.

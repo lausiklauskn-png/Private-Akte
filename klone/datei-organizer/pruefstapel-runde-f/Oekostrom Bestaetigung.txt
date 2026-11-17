@@ -1,0 +1,10 @@
+Beispiel-Grünstrom Neustadt GmbH
+Digitaler Bescheid / Nachricht im Bürgerpostfach
+Zugestellt am 20.02.2027 an: Familie Behrendt
+Empfangsadresse: Solarstraße 21, 67890 Neustadt-Beispiel
+
+Betreff: Vertragsbestätigung Tarif FlexGrün Dynamik
+
+Lieferbeginn 01.03.2027, Zähler-ID DE00BSP0000000001 (intelligentes Messsystem). Arbeitspreis dynamisch nach Börsenstunde, Grundpreis 14,90 EUR/Monat, Netznutzung Modul 3 für steuerbare Wallbox. Abschlag 95,00 EUR monatlich per Lastschrift.
+
+Dieses Dokument wurde elektronisch erstellt und ist ohne Unterschrift gültig.

@@ -1,0 +1,6 @@
+{ "name": "Pseudonymisierer Basic", "short_name": "Pseudonymisierer", "description": "Dateien pseudonymisieren für jede KI und die Antwort zurückführen – alles auf dem Gerät.", "lang": "de", "id": "./pseudonymisierer.html", "start_url": "./pseudonymisierer.html", "scope": "./", "display": "standalone", "background_color": "#f2f7fa", "theme_color": "#0b3154",
+  "icons": [
+    { "src": "pseudonymisierer-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "pseudonymisierer-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "pseudonymisierer.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ] }

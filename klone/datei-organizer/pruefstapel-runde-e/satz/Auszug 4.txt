@@ -1,0 +1,25 @@
+# Beispielbank Beispielstadt eG
+Bankplatz 1 · 34567 Beispielstadt
+
+Kontoauszug
+Tagesgeldkonto Markus und Sabine Brandtner
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 4/2025 · Blatt 1 von 1 · Zeitraum 01.12.2025 – 31.12.2025
+
+Familie Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Alter Kontostand vom 01.12.2025: 12.400,00 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.12.|01.12.|Übertrag vom Girokonto|+300,00|
+|03.12.|03.12.|Übertrag vom Girokonto Weihnachtsgeld|+900,00|
+|12.12.|12.12.|Übertrag auf Girokonto Klassenfahrt/Weihnachten|-800,00|
+|19.12.|19.12.|Übertrag auf Girokonto Geschenke|-250,00|
+|31.12.|31.12.|Zinsgutschrift 4. Quartal|+61,48|
+
+Neuer Kontostand vom 31.12.2025: 12.611,48 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispielbank Beispielstadt eG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

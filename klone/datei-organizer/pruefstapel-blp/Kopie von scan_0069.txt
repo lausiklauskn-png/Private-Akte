@@ -1,0 +1,24 @@
+Glanzwerk Gebäudereinigung
+Meisterbetrieb
+Hafenstraße 57, 37994 Krummbach am Ried
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rg.-Nr. GW787-26
+Rechnunqsdatum: 2026-04-16
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Grundreinigung Backstube inkl. Abzugshaube     1    410,00     410,00
+  2  Reinigungsmittel             1     22,60      22,60
+
+Nettobetrag                                  432,60
+zzgl. 19 % USt                               82,19
+Rechnungsbetrag                              514,79 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2212 28
+USt-IdNr. DE000000573

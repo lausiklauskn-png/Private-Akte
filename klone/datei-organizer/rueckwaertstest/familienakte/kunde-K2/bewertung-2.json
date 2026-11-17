@@ -1,0 +1,15 @@
+{"bewerter":2,"wertung":{
+"M01":"getroffen","M02":"teilweise","M03":"getroffen","M04":"teilweise","M05":"teilweise","M06":"getroffen","M07":"teilweise","M08":"teilweise","M09":"getroffen","M10":"getroffen",
+"M11":"getroffen","M12":"getroffen","M13":"getroffen","M14":"getroffen","M15":"teilweise","M16":"teilweise","M17":"getroffen","M18":"getroffen","M19":"teilweise","M20":"teilweise",
+"M21":"fehlt","M22":"fehlt","M23":"getroffen","M24":"getroffen","M25":"teilweise","M26":"fehlt","M27":"getroffen","M28":"teilweise","M29":"getroffen","M30":"getroffen",
+"M31":"teilweise","M32":"getroffen","M33":"getroffen","M34":"fehlt","M35":"fehlt","M36":"getroffen","M37":"teilweise","M38":"getroffen","M39":"getroffen","M40":"teilweise",
+"M41":"teilweise","M42":"getroffen","M43":"teilweise","M44":"getroffen","M45":"teilweise","M46":"teilweise","M47":"fehlt","M48":"teilweise","M49":"teilweise","M50":"teilweise",
+"M51":"getroffen","M52":"teilweise","M53":"getroffen","M54":"getroffen","M55":"getroffen","M56":"fehlt","M57":"teilweise","M58":"fehlt","M59":"fehlt","M60":"fehlt"},
+"zusaetze":[
+"Einmalige Übernahme der Daten aus einer alten Web-App (K-04) als eigener Bauschritt",
+"Sortier-Kern als eigenes Stück neben dem Eingang (K-14)",
+"Kein Abo, keine Werbung, kein Zähldienst; läuft ohne Anmeldung/Konto",
+"Ausdrücklich keine iOS/macOS-Ausgabe; Rechte-/Rollenverwaltung innerhalb der Familie offen (O-01)",
+"Bau-Reihenfolge in zehn Schritten und Prüfung von Stunden/Zuschlägen sowie Widersprüchen im Auftrag",
+"Offene Fragen zu KI-Anbieter, Schwester-Apps, Tablet, E-Mail-/Cloud-Diensten"
+]}

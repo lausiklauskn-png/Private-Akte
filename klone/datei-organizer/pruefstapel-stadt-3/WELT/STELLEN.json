@@ -1,0 +1,417 @@
+{
+ "stellen": [
+  {
+   "name": "Bezirksamt Beispielstadt-Nord – Bürgeramt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, 00110, Beispielstadt-Nord",
+   "kennung": "Vorgang BA-2026-#####"
+  },
+  {
+   "name": "Bezirksamt Beispielstadt-Nord – Gewerbeamt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, Haus B, 00110, Beispielstadt-Nord",
+   "kennung": "Gewerbe-Nr. GW-###/##"
+  },
+  {
+   "name": "Ausländerbehörde Beispielstadt-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Behördenhof 4, 00111, Beispielstadt-Nord",
+   "kennung": "Az. ABH 43.##-#####"
+  },
+  {
+   "name": "Jugendamt Beispielstadt-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Behördenhof 6, 00111, Beispielstadt-Nord",
+   "kennung": "Az. JA 51-UV-####"
+  },
+  {
+   "name": "Elterngeldstelle Beispielstadt-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Behördenhof 6, Zimmer 210, 00111, Beispielstadt-Nord",
+   "kennung": "Az. EG-2026-######"
+  },
+  {
+   "name": "Finanzamt Beispielstadt-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Steuerstraße 10, 00112, Beispielstadt-Nord",
+   "kennung": "Steuernummer 00/000/#####"
+  },
+  {
+   "name": "Hauptzollamt Beispielstadt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Zollkai 2, 00113, Beispielstadt-Nord",
+   "kennung": "Az. HZA-KFZ-######"
+  },
+  {
+   "name": "Jobcenter Beispielstadt-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Arbeitsweg 20, 00114, Beispielstadt-Nord",
+   "kennung": "BG-Nr. 000A########"
+  },
+  {
+   "name": "Agentur für Arbeit Beispielstadt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Arbeitsweg 22, 00114, Beispielstadt-Nord",
+   "kennung": "Kunden-Nr. 000D######"
+  },
+  {
+   "name": "Familienkasse Beispielregion",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kindergeldallee 1, 00115 Beispielstadt-Süd",
+   "kennung": "Kindergeld-Nr. 000FK######"
+  },
+  {
+   "name": "Zulassungsstelle Beispielkreis",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kfz-Straße 8, 00116 Beispielkreis-Mitte",
+   "kennung": "Vorgang ZUL-######"
+  },
+  {
+   "name": "Beispiel-Rentenversicherung Bund-Nord",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rentenring 100, 00117 Beispielhausen",
+   "kennung": "Vers.-Nr. 00 ###### X ###"
+  },
+  {
+   "name": "Amtsgericht Beispielstadt-Nord – Nachlassgericht",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Justizplatz 3, 00118, Beispielstadt-Nord",
+   "kennung": "Az. ## VI ###/26"
+  },
+  {
+   "name": "Beispiel-Beitragsservice Rundfunk",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 00119 Beispielhausen",
+   "kennung": "Beitragsnr. ### ### ###"
+  },
+  {
+   "name": "Sozialamt Beispielstadt-Nord – Grundsicherung",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Behördenhof 8, 00111, Beispielstadt-Nord",
+   "kennung": "Az. SO-GS-#####"
+  },
+  {
+   "name": "Sparkasse Beispielstadt-Nord",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Marktplatz 5, 00120, Beispielstadt-Nord",
+   "kennung": "Konto DE00 0000 0000 0000 0000 00, Kunden-Nr. ########"
+  },
+  {
+   "name": "Beispiel-Volksbank Nord eG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Genossenschaftsweg 2, 00120, Beispielstadt-Nord",
+   "kennung": "Mitglieds-Nr. VB-#####"
+  },
+  {
+   "name": "NordDirekt Beispielbank AG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Online-Allee 1, 00121 Beispielhausen",
+   "kennung": "Depot/Konto Kunden-ID ND-#######"
+  },
+  {
+   "name": "Musterkarte Kreditkarten-Service",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Kartenweg 7, 00122 Beispielhausen",
+   "kennung": "Kartenkonto MK-####-####"
+  },
+  {
+   "name": "Gesundheitskasse Beispielland",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Kassenstraße 12, 00123, Beispielstadt-Nord",
+   "kennung": "Vers.-Nr. X000######"
+  },
+  {
+   "name": "Privata Beispiel-Krankenversicherung a.G.",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenplatz 3, 00124 Beispielhausen",
+   "kennung": "Vers.-Schein PKV-#######"
+  },
+  {
+   "name": "Beispiel-Assekuranz Kfz",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenplatz 9, 00124 Beispielhausen",
+   "kennung": "Vertrag KFZ-########"
+  },
+  {
+   "name": "Hausrat & Haftpflicht Beispiel-Versicherung",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenplatz 11, 00124 Beispielhausen",
+   "kennung": "Vertrag HR-#######"
+  },
+  {
+   "name": "Inkasso Beispiel & Partner",
+   "art": "Inkasso",
+   "gruppe": 2,
+   "anschrift": "Forderungsweg 13, 00125 Beispielhausen",
+   "kennung": "Akten-Nr. IK-26-######"
+  },
+  {
+   "name": "Rechtsanwältin Dr. Mareike Beispiel",
+   "art": "Kanzlei",
+   "gruppe": 2,
+   "anschrift": "Kanzleigasse 4, 00126, Beispielstadt-Nord",
+   "kennung": "Az. ##/26 MB"
+  },
+  {
+   "name": "Notariat Beispielstadt-Nord",
+   "art": "Notar",
+   "gruppe": 2,
+   "anschrift": "Justizplatz 7, 00118, Beispielstadt-Nord",
+   "kennung": "UR-Nr. ###/2026"
+  },
+  {
+   "name": "Logistikzentrum Beispiel-Nord GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Gewerbepark 40, 00127, Beispielstadt-Nord",
+   "kennung": "Personal-Nr. LZ-#####"
+  },
+  {
+   "name": "Klinikum Beispielstadt-Nord gGmbH – Personalabteilung",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Klinikstraße 1, 00128, Beispielstadt-Nord",
+   "kennung": "Personal-Nr. KL-######"
+  },
+  {
+   "name": "Gaststätte Beispielhafen GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Hafenkante 30, 00102, Beispielstadt-Nord",
+   "kennung": "Personal-Nr. GH-###"
+  },
+  {
+   "name": "Beispielbau Nord GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Gewerbepark 12, 00127, Beispielstadt-Nord",
+   "kennung": "Personal-Nr. BB-####"
+  },
+  {
+   "name": "Wohnungsbaugesellschaft Beispielstadt-Nord mbH",
+   "art": "Vermieter",
+   "gruppe": 3,
+   "anschrift": "Wohnplatz 1, 00130, Beispielstadt-Nord",
+   "kennung": "Mieter-Nr. WBG-####-###"
+  },
+  {
+   "name": "Hausverwaltung Muster & Söhne",
+   "art": "Hausverwaltung",
+   "gruppe": 3,
+   "anschrift": "Verwalterstraße 8, 00131, Beispielstadt-Nord",
+   "kennung": "Objekt-Nr. HV-###/Einheit ##"
+  },
+  {
+   "name": "Fernwärme Beispielstadt-Nord GmbH",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Wärmeweg 2, 00132, Beispielstadt-Nord",
+   "kennung": "Kunden-Nr. FW-#######"
+  },
+  {
+   "name": "Beispiel-Strom Nord GmbH",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Netzstraße 6, 00132, Beispielstadt-Nord",
+   "kennung": "Vertragskonto 000-#######"
+  },
+  {
+   "name": "Funkwelt Beispiel Mobilfunk",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Postfach 0000, 00133 Beispielhausen",
+   "kennung": "Kunden-Nr. FW-M-########"
+  },
+  {
+   "name": "Glasfaser Beispielnetz GmbH",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Kabelring 3, 00134, Beispielstadt-Nord",
+   "kennung": "Anschluss-ID GF-######"
+  },
+  {
+   "name": "Beispiel-Stream Plus",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Online, Kundenservice Postfach 0000, 00135 Beispielhausen",
+   "kennung": "Konto-ID BS-#####"
+  },
+  {
+   "name": "Frischmarkt Beispiel (Supermarktkette mit App)",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Altmarkt 2, 00103, Beispielstadt-Nord",
+   "kennung": "App-Kunden-ID FM-########"
+  },
+  {
+   "name": "Sparmarkt Beispiel",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Nordring 80, 00105, Beispielstadt-Nord",
+   "kennung": "Bon-Nr. ####"
+  },
+  {
+   "name": "Beispiel-Lieferflitzer",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Online, Postfach 0000, 00136 Beispielhausen",
+   "kennung": "Bestell-Nr. LF-########"
+  },
+  {
+   "name": "Sanitär- und Heizungsbau Beispiel-Handwerk",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Werkstattweg 5, 00137, Beispielstadt-Nord",
+   "kennung": "Rechnungs-Nr. SH-2026-###"
+  },
+  {
+   "name": "Gastro-Großhandel Beispiel-Markt",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Gewerbepark 55, 00127, Beispielstadt-Nord",
+   "kennung": "Kunden-Nr. GG-#####"
+  },
+  {
+   "name": "Reisemobil-Service Beispiel-Camp",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Campingstraße 1, 00138, Beispielstadt-Nord",
+   "kennung": "Auftrags-Nr. RM-#####"
+  },
+  {
+   "name": "Möbelhaus Beispielland",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Einkaufspark 1, 00139 Beispielhausen",
+   "kennung": "Werbung/Kundenkarte MB-#######"
+  },
+  {
+   "name": "Kinderarztpraxis Dr. Beispiel-Lorenz",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Lindenhöhe-Ring 2, 00101, Beispielstadt-Nord",
+   "kennung": "Patienten-Nr. KA-#####"
+  },
+  {
+   "name": "Zahnärztin Dr. Inga Musterfeld",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Altmarkt 9, 00103, Beispielstadt-Nord",
+   "kennung": "Patienten-Nr. ZM-####"
+  },
+  {
+   "name": "MVZ Beispielstadt-Nord",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Gesundheitsweg 1, 00140, Beispielstadt-Nord",
+   "kennung": "Fall-Nr. MVZ-######"
+  },
+  {
+   "name": "Klinikum Beispielstadt-Nord – Patientenverwaltung",
+   "art": "Krankenhaus",
+   "gruppe": 4,
+   "anschrift": "Klinikstraße 1, 00128, Beispielstadt-Nord",
+   "kennung": "Fall-Nr. ##########"
+  },
+  {
+   "name": "Labor Beispiel-Diagnostik",
+   "art": "Labor",
+   "gruppe": 4,
+   "anschrift": "Gesundheitsweg 3, 00140, Beispielstadt-Nord",
+   "kennung": "Auftrags-Nr. LB-#######"
+  },
+  {
+   "name": "Pflegedienst Beispiel-Hand",
+   "art": "Pflegedienst",
+   "gruppe": 4,
+   "anschrift": "Altmarktgasse 1, 00103, Beispielstadt-Nord",
+   "kennung": "Klienten-Nr. PD-###"
+  },
+  {
+   "name": "Grundschule am Beispielpark",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Parkweg 10, 00101, Beispielstadt-Nord",
+   "kennung": "Klasse #x"
+  },
+  {
+   "name": "Gesamtschule Beispielstadt-Nord",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Schulallee 20, 00105, Beispielstadt-Nord",
+   "kennung": "Jahrgang ##, Klasse ##x"
+  },
+  {
+   "name": "Kita Sonnenbeispiel",
+   "art": "Kita",
+   "gruppe": 4,
+   "anschrift": "Lindenhöhe-Ring 30, 00101, Beispielstadt-Nord",
+   "kennung": "Gruppe „Igel“, Kind-Nr. K-###"
+  },
+  {
+   "name": "Volkshochschule Beispielstadt-Nord",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Bildungsplatz 2, 00141, Beispielstadt-Nord",
+   "kennung": "Kurs-Nr. 26-#####"
+  },
+  {
+   "name": "Beispiel-Moscheegemeinde Nord e.V.",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Gemeindeweg 7, 00101, Beispielstadt-Nord",
+   "kennung": "Mitglieds-Nr. MG-###"
+  },
+  {
+   "name": "Ev. Beispiel-Kirchengemeinde Altmarkt",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Kirchplatz 1, 00103, Beispielstadt-Nord",
+   "kennung": "—"
+  },
+  {
+   "name": "TuS Beispiel-Nord 1908 e.V.",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Sportplatzweg 1, 00106, Beispielstadt-Nord",
+   "kennung": "Mitglieds-Nr. TuS-####"
+  },
+  {
+   "name": "Nachbarin Gisela Beispiel-Rosen",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "Altmarktgasse 22, 2. OG, 00103, Beispielstadt-Nord",
+   "kennung": "—"
+  },
+  {
+   "name": "Verwandte/Freunde (private Post und Einladungen)",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "verschieden",
+   "kennung": "—"
+  }
+ ]
+}

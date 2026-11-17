@@ -1,0 +1,30 @@
+Statistisches Landesamt Beispielland
+Referat Haushaltsstatistiken · Erhebungsstelle Mikrozensus
+
+An den Haushalt
+Herrn Jonas Fiktiv
+Lindenallee 7a
+67890 Fantasiedorf
+
+Kennnummer Ihres Haushalts: MZ-26-4-08812-03
+Zugangsschlüssel für den Online-Fragebogen: XK7Q-BEISPIEL-22                    Datum: 30.10.2026
+
+Mikrozensus 2026 – Ihr Haushalt wurde ausgewählt
+
+Sehr geehrter Herr Fiktiv,
+
+Ihre Anschrift wurde in einem mathematischen Zufallsverfahren für den Mikrozensus ausgewählt. Für die
+meisten Fragen besteht nach dem Mikrozensusgesetz Auskunftspflicht.
+
+So können Sie teilnehmen:
+  1. Online unter erhebung.statistik-beispielland.example mit dem oben stehenden Zugangsschlüssel, oder
+  2. im persönlichen Interview: unsere Erhebungsbeauftragte, Frau Gisela Zählmuster, kommt am
+     01.12.2026 zwischen 16 und 19 Uhr zu Ihnen.
+
+Bitte füllen Sie den Fragebogen bis zum 27.11.2026 online aus. Dann entfällt der Interviewtermin.
+
+Ihre Angaben werden streng vertraulich behandelt und nur für statistische Zwecke verwendet.
+
+Mit freundlichen Grüßen
+Im Auftrag
+Weidenbach-Muster

@@ -1,0 +1,7 @@
+Labor Beispiel Diagnostik   Auftrags-Nr. L-0009120
+Befund vom 08.10.2026 - Patientin: Amara Okonkwo, geb. 1990, Am Kranenpfad 5, Whg 3.2
+
+TSH            4,9 mU/l     (0,4 - 4,0)    erhöht
+fT4            1,0 ng/dl    (0,8 - 1,8)
+Vitamin B12    312 pg/ml    (200 - 900)
+Kommentar: Leichte TSH-Erhöhung, Kontrolle in 6 bis 8 Wochen empfohlen. Bitte mit der Hausarztpraxis besprechen.

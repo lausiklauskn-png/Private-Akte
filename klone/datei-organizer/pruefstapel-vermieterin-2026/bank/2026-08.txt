@@ -1,0 +1,92 @@
+Raiffeisen- und Bürgerbank Sellenbrück eG                          KONTOAUSZUG
+Marktstraße 3 · 31999 Sellenbrück                   Nr. 8/2026 · Blatt 1 von 1
+BIC GENODEF0SLB
+
+Kontoinhaberin: Hannelore Wiebusch, Lindenhofweg 14, 31999 Sellenbrück
+IBAN: DE00 3499 9000 0001 2345 67    Kontoart: Giro Klassik    Währung: EUR
+Auszugszeitraum: 01.08.2026 bis 31.08.2026    erstellt am 31.08.2026
+==============================================================================
+Bu-Tag Wert   Vorgang / Verwendungszweck                            Umsatz EUR
+------------------------------------------------------------------------------
+              alter Kontostand (Auszug 7/2026)                     22.641,66 H
+
+03.08. 03.08. DAUERAUFTRAG                                             98,18 S
+              Hauswartservice Brinkmeier
+              Hausmeister Lindenhofweg 14
+              lt. Monatsrechnung Vormonat
+03.08. 03.08. GUTSCHRIFT                                              865,00 H
+              Brandtner Markus u. Sabine
+              MIETE LINDENHOFWEG 14 1.OG LINKS
+              DAUERAUFTRAG
+03.08. 03.08. GUTSCHRIFT                                              705,00 H
+              Aydemir Selin u. Emre
+              Miete August DG Lindenhofweg 14
+03.08. 03.08. SEPA-UEBERWEISUNG                                       285,60 S
+              Malerbetrieb Kowalczyk
+              Rg 2026-031 Decke Whg Petrovic
+05.08. 05.08. SEPA-LASTSCHRIFT                                        295,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 ERDGAS ABSCHLAG 08/2026
+              MANDAT SW-2044170-01
+05.08. 05.08. SEPA-LASTSCHRIFT                                         35,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 ALLGEMEINSTROM ABSCHLAG
+              08/2026 MANDAT SW-2044170-02
+05.08. 05.08. GUTSCHRIFT                                              875,00 H
+              Petrovic Dragan
+              Miete + NK Lindenhofweg 14 1.OG re
+05.08. 05.08. SEPA-LASTSCHRIFT                                        321,74 S
+              Finanzamt Wendelsburg
+              STNR 000/123/40077 EST/KIST 2025
+              ABSCHLUSSZAHLUNG
+10.08. 10.08. SEPA-LASTSCHRIFT                                         44,95 S
+              Telvia Kommunikation GmbH
+              KD 77004129 RG 7700424057 07/2026
+              TELVIA ZUHAUSE 50
+13.08. 13.08. SEPA-UEBERWEISUNG                                       478,00 S
+              Reisedienst Hollmann GmbH
+              HO-BOD-0913-07 Restzahlung
+14.08. 14.08. SEPA-UEBERWEISUNG                                       224,23 S
+              Stadtkasse Sellenbrueck
+              BZ 00.2140.007731.4 Grundbesitzabg.
+              3. Rate
+14.08. 14.08. SEPA-UEBERWEISUNG                                       329,00 S
+              Wasserverband Obere Wupse
+              5.0417.221 3. Abschlag
+17.08. 17.08. SEPA-LASTSCHRIFT                                         58,00 S
+              Nordlicht Energie GmbH
+              NL-4417-2026 ABSCHLAG 08/2026
+              V-88204417 MANDAT NL-4417-2026-M1
+17.08. 17.08. SEPA-LASTSCHRIFT                                        105,43 S
+              Gebaeudedienste Ahlers u. Kramp GbR
+              AK-26-1277 AUGUST 2026
+              VERTRAG AK-V-2025-039 MANDAT AK-039
+24.08. 24.08. GUTSCHRIFT                                              212,48 H
+              Petrovic Mirela
+              Nebenkosten 2025 Nachzahlung
+              1.OG rechts
+27.08. 27.08. SEPA-UEBERWEISUNG                                     1.672,45 S
+              ZahnMed Abrechnungsservice Mittelland
+              ZM-2026-01877 Wiebusch
+31.08. 31.08. SEPA-LASTSCHRIFT                                        412,00 S
+              Landeshypo Mittelland AG
+              DARLEHEN 600 0441 7790 RATE 08/2026
+              ZINS UND TILGUNG
+31.08. 31.08. GUTSCHRIFT                                            1.177,18 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 08.26
+              ALTERSRENTE
+31.08. 31.08. GUTSCHRIFT                                              719,69 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 08.26
+              WITWENRENTE
+31.08. 31.08. GUTSCHRIFT                                              347,00 H
+              Mittelland Pflegekasse
+              M000481726 PV-26-0441726
+              PFLEGEGELD PG2 09/26
+
+              neuer Kontostand vom 31.08.2026                      23.183,43 H
+==============================================================================
+Summe Belastungen: 4.359,58 S   Summe Gutschriften: 4.901,35 H   Posten: 20
+Eingeräumte Kontoüberziehung: 2.000,00 EUR · Sollzinssatz 11,25 % p. a.
+Bitte prüfen Sie den Auszug. Einwendungen sind unverzüglich zu erheben.

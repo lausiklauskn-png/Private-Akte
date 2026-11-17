@@ -1,0 +1,17 @@
+paymaxx terminals                       Händlerabrechnung
+PMX Zahlungssysteme GmbH · Ratingen
+
+Vertragsunternehmen: Physiotherapie Lindenhof, VU-Nr. 4417 882
+Abrechnung Kartenumsätze April 2026                  Beleg-Nr. HA-2604-0091
+Datum 04.05.2026
+
+Umsatzart            Anzahl    Umsatz EUR    Entgelt EUR
+girocard               148      6.214,50        15,54
+Mastercard/Visa Debit   41      1.883,20        16,95
+Kreditkarte             12        744,00        11,90
+---------------------------------------------------------
+Transaktionsentgelte (Disagio), umsatzsteuerfrei          44,39
+Autorisierungsgebühren 201 x 0,07                         14,07
+Summe Kartengebühren                                      58,46 EUR
+
+Die Kartenumsätze wurden abzüglich der Gebühren ausgezahlt.

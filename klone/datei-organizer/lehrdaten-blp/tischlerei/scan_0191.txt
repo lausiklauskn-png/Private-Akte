@@ -1,0 +1,13 @@
+Steuerbüro Wellinghoff · Lohnbuchhaltung
+LOHNJOURNAL September 2026 · Mandant 41700 Tischlerei Vosskamp
+
+PNr  Name                 Brutto      LSt/KiSt     SV-AN      Netto     Auszahlung
+002  Riekötter, M.       3.621,79      548,10     736,02    2.337,67    2.297,67
+003  Dreyhaupt, J.       3.380,00      195,40     690,84    2.493,76    2.493,76
+004  Vosskamp-Meinert      538,00        0,00       0,00      538,00      538,00
+005  Tiemann, L. (Azubi)   960,00        0,00     196,94      763,06      763,06
+---------------------------------------------------------------------------------
+Summe Bruttolöhne        8.499,79                                       6.092,49
+
+Zahllauf Löhne/Gehälter am 29.09.2026 vom Konto DE00 0000 0000 0041 7001 00
+Buchungsvorschlag: Löhne und Gehälter 8.499,79 EUR

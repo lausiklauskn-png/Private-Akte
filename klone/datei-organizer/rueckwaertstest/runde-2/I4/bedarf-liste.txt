@@ -1,0 +1,59 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Unser Verwaltungsprogramm erzeugt jedes Jahr ein paar hundert Nebenkostenabrechnungen als PDF, die liegen auf unserem Laufwerk.
+B-02 [Bereich 1 Ausgangssituation (IST)] Vor dem Versand schaut die Buchhalterin noch einmal drüber und vergleicht in Excel mit dem Vorjahr – bei rund 600 Einheiten nur stichprobenhaft.
+B-03 [Bereich 1 Ausgangssituation (IST)] Nach dem Versand kommen Widersprüche, Mietervereine und Anfragen auf Belegeinsicht.
+B-04 [Bereich 2 Betroffener Prozess] Nebenkostenabrechnung (Betriebskosten) vor dem Versand an die Mieter
+B-05 [Bereich 2 Betroffener Prozess] Bearbeitung von Widersprüchen und Belegeinsicht nach dem Versand
+B-06 [Bereich 3 Nutzer / Beteiligte] Inhaber (Verwalter)
+B-07 [Bereich 3 Nutzer / Beteiligte] Buchhalterin
+B-08 [Bereich 3 Nutzer / Beteiligte] Mitarbeiter in der Verwaltung
+B-09 [Bereich 3 Nutzer / Beteiligte] Mieter und Eigentümer als Empfänger der Abrechnung
+B-10 [Bereich 4 Problem / Schwachstelle] Fehler fallen oft erst beim Mieter oder Mieterverein auf: Positionen, die man nicht umlegen darf, Schlüssel, die nicht aufgehen, falsche Zeiträume.
+B-11 [Bereich 4 Problem / Schwachstelle] Ist die Frist vorbei, ist die Nachzahlung weg – echtes Geld für die Eigentümer und Ärger für uns.
+B-12 [Bereich 4 Problem / Schwachstelle] Prüfen geht nur stichprobenhaft, weil es zu viele Abrechnungen sind.
+B-13 [Bereich 4 Problem / Schwachstelle] Abweichende Umlage-Regeln in einzelnen Mietverträgen gehen leicht unter.
+B-14 [Bereich 5 Ursache] Das Verwaltungsprogramm prüft die eigenen Abrechnungen nicht gegen.
+B-15 [Bereich 5 Ursache] Das Verwaltungsprogramm lässt sich kaum mit anderen Programmen verbinden.
+B-16 [Bereich 5 Ursache] Der Vergleich mit dem Vorjahr läuft von Hand in Excel.
+B-17 [Bereich 6 Bedarf] Jede fertige Abrechnung vor dem Versand so lesen lassen, wie ein Mieterverein sie lesen würde (muss)
+B-18 [Bereich 6 Bedarf] Eine Liste mit Rot und Gelb, und genau wo in der Abrechnung es steht (muss)
+B-19 [Bereich 6 Bedarf] Wenn sich etwas nicht sicher sagen lässt: „bitte prüfen“ statt grün (muss)
+B-20 [Bereich 6 Bedarf] Abweichende Umlage-Regeln aus einzelnen Mietverträgen berücksichtigen können (muss)
+B-21 [Bereich 6 Bedarf] Vergleich mit dem Vorjahr, damit Ausreißer auffallen (soll)
+B-22 [Bereich 6 Bedarf] Alle Abrechnungen eines Jahres auf einmal prüfen, nicht nur Stichproben (soll)
+B-23 [Bereich 6 Bedarf] Günstige Fassung für meine zwei eigenen Wohnungen (kann)
+B-24 [Bereich 7 Ziel (SOLL)] Fehler in den Abrechnungen werden vor dem Versand gefunden, nicht erst nach Widerspruch.
+B-25 [Bereich 7 Ziel (SOLL)] Nachzahlungen gehen nicht mehr durch verpasste Fristen oder angreifbare Abrechnungen verloren.
+B-26 [Bereich 7 Ziel (SOLL)] Die Buchhalterin muss nicht mehr stichprobenhaft in Excel vergleichen.
+B-27 [Bereich 8 Funktionaler Bedarf] Das System muss die fertigen Abrechnungen als PDF vom Laufwerk lesen können.
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss Positionen erkennen, die nicht umgelegt werden dürfen.
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss prüfen, ob Verteilerschlüssel aufgehen.
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss prüfen, ob Abrechnungszeitraum und Fristen stimmen.
+B-31 [Bereich 8 Funktionaler Bedarf] Das System muss je Abrechnung eine Liste mit Rot, Gelb und „bitte prüfen“ zeigen und die Fundstelle nennen.
+B-32 [Bereich 8 Funktionaler Bedarf] Das System muss abweichende Umlage-Regeln je Mietvertrag hinterlegen können.
+B-33 [Bereich 8 Funktionaler Bedarf] Das System muss die Abrechnung mit dem Vorjahr vergleichen können.
+B-34 [Bereich 8 Funktionaler Bedarf] Das System muss die Abrechnung unverändert lassen und darf nichts selbst verschicken.
+B-35 [Bereich 9 Organisatorischer Bedarf] Die Buchhalterin prüft die Liste vor dem Versand, die Entscheidung trifft der Verwalter.
+B-36 [Bereich 9 Organisatorischer Bedarf] Kurze Einweisung für uns drei.
+B-37 [Bereich 10 Technischer Bedarf] Läuft auf den Windows-PCs im Büro.
+B-38 [Bereich 10 Technischer Bedarf] Zugriff auf unser gemeinsames Laufwerk.
+B-39 [Bereich 11 Bestehende Systeme] Unser Hausverwaltungsprogramm (erzeugt die Abrechnungen)
+B-40 [Bereich 11 Bestehende Systeme] Excel
+B-41 [Bereich 11 Bestehende Systeme] Gemeinsames Laufwerk im Büro
+B-42 [Bereich 12 Schnittstellen] Die PDFs aus dem Verwaltungsprogramm vom Laufwerk lesen; eine direkte Verbindung zum Programm gibt es kaum.
+B-43 [Bereich 13 Daten] Nebenkostenabrechnungen als PDF, rund 600 Einheiten im Jahr
+B-44 [Bereich 13 Daten] Vorjahresabrechnungen zum Vergleich
+B-45 [Bereich 13 Daten] Besondere Umlage-Regeln aus Mietverträgen
+B-46 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: ja
+B-47 [Bereich 14 Datenschutz / Sicherheit] Mieternamen und Abrechnungen dürfen nicht in eine fremde Cloud und nicht an eine KI.
+B-48 [Bereich 15 Rahmenbedingungen] Budget-Rahmen: ein paar hundert Euro im Jahr für den ganzen Bestand
+B-49 [Bereich 15 Rahmenbedingungen] Für die zwei eigenen Wohnungen höchstens 30 bis 40 Euro im Jahr
+B-50 [Bereich 15 Rahmenbedingungen] Hinweise, keine Rechtsberatung
+O-01 [Bereich 18 Offene Punkte] Welche Prüfregeln genau gelten (z. B. was nicht umlagefähig ist) – mit wem abstimmen?
+O-02 [Bereich 18 Offene Punkte] Wie kommen die Vorjahreswerte hinein, wenn das Verwaltungsprogramm nichts ausgibt?
+N-01 [nicht gewünscht] Die Abrechnung nicht umschreiben oder verändern
+N-02 [nicht gewünscht] Nichts selbst verschicken
+N-03 [nicht gewünscht] Keine Rechtsberatung, nur Hinweise
+N-04 [nicht gewünscht] Keine Daten in eine fremde Cloud
+N-05 [nicht gewünscht] Keine Daten an eine KI geben
+Ausgefüllt: 18 von 18 Bereichen

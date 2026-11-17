@@ -1,0 +1,9 @@
+shopbaukasten.example Ltd., Dublin
+Invoice SB-2026-02-880412 · 01.02.2026
+
+Account: Teekontor Lindenblatt · VAT ID DE000000000
+
+Onlineshop-Software "Basic Shop" - Monatsabo Februar 2026           29,00 EUR
+VAT 0 % (reverse charge - Steuerschuldnerschaft des Leistungsempfängers)
+Total                                                               29,00 EUR
+Charged to card ending 0000

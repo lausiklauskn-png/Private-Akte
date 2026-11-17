@@ -1,0 +1,40 @@
+Hausverwaltung Muster & Söhne
+Verwalterstraße 8 · 00131 Beispielstadt-Nord
+
+Grillstube Beispiel-Eck
+Inh. Dimitrios Kalanteris
+z. Hd. Frau Sofia Kalanteri
+Nordring 115
+00105 Beispielstadt-Nord
+
+Objekt-Nr. HV-087/Einheit 01 (Gewerbeeinheit EG, 64 m²)          Datum: 11.09.2026
+
+Nebenkostenabrechnung 2025 – Gewerbemietverhältnis
+
+Abrechnungszeitraum: 01.01.2025 – 31.12.2025
+
+Position                    Verteiler        Gesamt EUR    Anteil      Ihr Betrag
+Grundsteuer                 m²                4.210,00    64/486          554,40
+Gebäudeversicherung         m² (Gewerbezuschlag)  2.980,00  Zuschlag      612,30
+Wasser/Abwasser             Zwischenzähler    3.355,00    eig. Zähler   1.088,22
+Müll (Gewerbetonne 1.100 l) nach Gefäß        2.140,00    Gefäß 3         713,33
+Fettabscheider Wartung      direkt              460,00    100 %           460,00
+Hausreinigung/Winterdienst  m²                2.205,00    64/486          290,37
+Allgemeinstrom              m²                  712,00    64/486           93,76
+Verwaltungskosten           laut Vertrag                  pauschal        240,00
+-------------------------------------------------------------------------------
+Summe netto                                                             4.052,38
+zzgl. 19 % USt (Option zur Umsatzsteuer)                                  769,95
+Summe brutto                                                            4.822,33
+abzüglich Vorauszahlungen 12 x 330,00 EUR brutto                       -3.960,00
+-------------------------------------------------------------------------------
+Nachzahlung                                                               862,33
+
+Bitte überweisen Sie die Nachzahlung bis zum 15.10.2026 auf das Hauskonto
+IBAN DE00 0000 0000 0000 0000 00, Verwendungszweck HV-087/01 NK25.
+Diese Abrechnung gilt als Rechnung im Sinne des UStG; Steuernummer des Vermieters 00/000/00000.
+
+Die Vorauszahlung wird ab 01.11.2026 auf 400,00 EUR brutto monatlich angepasst.
+
+Mit freundlichen Grüßen
+Muster & Söhne Hausverwaltung GbR

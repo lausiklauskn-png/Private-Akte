@@ -1,0 +1,34 @@
+{
+  "fassung": "0.4.5",
+  "datum": "2026-11-15",
+  "freigabe": "Klaus 15.11.2026: „neue Fassung veröffentlichen“",
+  "inhalt": "Sortier-Kern rekursiv verbessert (gelernte Art, Absender- und Frist-Wahl; Bereich an fremden Prüfunterlagen 79 → 83 %, gesichert an zwei unabhängigen Welten), Doppelte prüfen mit Haken und Papierkorb-Menü (ältere/jüngere behalten, alle Kopien herausnehmen), Fotos ohne Text selbst zuordnen oder herausnehmen, Hilfetexte berichtigt (#38)",
+  "android": {
+    "commit": "9c75fec9b761ec5670146f95ec56c0efdb9fea1b",
+    "lauf": 43718716786,
+    "datei": "Datei-Organizer-Pro-0.4.5.apk",
+    "versionCode": 45,
+    "groesse": 10515657,
+    "sha256": "3b6a35540ee432df43d3f64b587d2bd850840e7e3f4d928f44072348ed35b5c5",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.5",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.5.apk",
+    "geprueft": "Release-Lauf grün (Emulator, Überinstallation, Feed unterschrieben, Download vom Update-Server von außen per SHA-256 im Lauf); Release-Datei aus der Sitzung geladen, SHA-256 gleich .sha256 und .apk.json"
+  },
+  "windows": {
+    "commit": "9c75fec9b761ec5670146f95ec56c0efdb9fea1b",
+    "lauf": 43718375514,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.5-x64-setup.exe",
+    "groesse": 25296607,
+    "sha256": "f28b6741a82ba35c61febb2d5c518b1970ada3d3499b5f34df38019731b66e49",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.5-x64-setup.exe",
+    "geprueft": "Release-Lauf grün (Auslieferungsbau installiert, gestartet, entfernt; Feed unterschrieben; Download vom Update-Server von außen per SHA-256 im Lauf)",
+    "hinweis": "Installer unsigniert (wie 0.4.4)"
+  },
+  "basic": {
+    "commit": "9c75fec9b761ec5670146f95ec56c0efdb9fea1b",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages über den Merge-Stand; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_geprueft": "kein echtes Gerät, kein echter Windows-PC; Update-Server aus der Sitzung nicht abrufbar"
+}

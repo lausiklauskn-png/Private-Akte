@@ -1,0 +1,21 @@
+Volksbank Beispieldorf eG
+
+Herr Ruben Falkenhain
+Mühlenweg 5
+67890 Beispieldorf
+
+Kontoauszug 9/2026 Geschäftskonto
+Kontoinhaber: Ruben Falkenhain
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 30.09.2026
+
+Alter Kontostand               1367,41 EUR
+02.09.  Kartenzahlung Beispiel-Markt                 -89,00
+06.09.  Lastschrift Versicherung                     -66,00
+10.09.  Dauerauftrag Miete                          -470,00
+14.09.  Gutschrift Lohn/Gehalt                      2303,00
+18.09.  Lastschrift Beispielfunk Mobil               -27,00
+22.09.  Bargeldauszahlung Automat                   -100,00
+Neuer Kontostand               2918,41 EUR
+
+Volksbank Beispieldorf eG · Lindenallee 7 · 67890 Beispieldorf · BIC BSPDEXXX

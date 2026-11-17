@@ -1,0 +1,13 @@
+PAKETBLITZ Logistik GmbH – Geschäftskundenabrechnung
+Kundennr. 5 000 417 · Kfz-Technik Brandhorst
+Rechnung PB-2026-04-771 vom 30.04.2026 · Zeitraum April 2026
+
+001;Paket bis 5 kg national (Versand Teile an Endkunden);7;SDG;4,29;30,03
+002;Paket bis 31,5 kg national;3;SDG;11,90;35,70
+003;Sperrgutzuschlag Stoßfänger;1;SDG;22,00;22,00
+004;Treibstoffzuschlag;1;PSCH;3,14;3,14
+
+NETTO:                                              90,87
+UST 19%:                                            17,27
+BRUTTO:                                            108,14
+Paketblitz Logistik GmbH, Frachtring 1, 34123 Kasselrode, DE000000083

@@ -1,0 +1,7 @@
+Leistungsabrechnung Mai 2026 (Sachleistung)    Kundennummer PL-017
+Pflegegrad 3, Sachleistungsbudget 1.497,00 EUR
+Erbrachte Leistungen: 13 Einsätze Grundpflege à 53,40 = 694,20 EUR
+ zzgl. Medikamentengabe 12 x 9,10 = 109,20 EUR
+Abgerechnet mit der Pflegekasse: 803,40 EUR
+Restbudget: 693,60 EUR (verfällt nicht, wird übertragen)
+Kein Betrag offen.

@@ -1,0 +1,23 @@
+Ausdruck der elektronischen Lohnsteuerbescheinigung für 2025
+Arbeitgeber: Hechsteig Präzisionsteile GmbH, Albstr. 100, 72419 Talbrunn
+Arbeitnehmer: Aumüller, Stefan, Im Öschle 12, 72419 Talbrunn
+eTIN AMLLSTFN66C14T   Identifikationsnr. 44 710 388 2xx
+Steuerklasse 3 · Kinderfreibeträge 1,0 · Faktor –
+
+ 1. Dauer des Dienstverhältnisses         01.01.–31.12.
+ 3. Bruttoarbeitslohn                              58.214,40
+ 4. Einbehaltene Lohnsteuer                         6.902,00
+ 5. Solidaritätszuschlag                                0,00
+ 6. Kirchensteuer AN                                  552,16
+15. Kurzarbeitergeld                                1.204,80
+17. steuerfreie AG-Leistungen Fahrten Whg–Arb.          0,00
+22. AG-Anteil ges. RV                               5.413,94
+23. AN-Anteil ges. RV                               5.413,94
+25. AN-Beiträge ges. KV                             4.721,19
+26. AN-Beiträge soz. PV                               989,64
+27. AN-Beiträge AV                                    756,79
+
+Hinweis: Der Pauschbetrag für das behinderte Kind ist als Frei-
+betrag in den ELStAM nicht eingetragen (Antrag Lohnsteuerermäßi-
+gung nötig).
+Datum der Übermittlung: 21.01.2026

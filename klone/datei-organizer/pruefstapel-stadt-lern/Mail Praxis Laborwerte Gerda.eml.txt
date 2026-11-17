@@ -1,0 +1,19 @@
+Von: Praxis Dr. med. Beispiel-Lohse <praxis@beispiel-lohse.example>
+An: Gerda Brakmann
+Datum: 18.08.2026 15:40
+Betreff: Ihre Blutwerte nach dem Klinikaufenthalt
+
+Liebe Frau Brakmann,
+
+wie besprochen schicke ich Ihnen die Ergebnisse vom Labor Nordbeispiel (Auftragsnummer L-000000):
+
+  CRP (Entzündungswert)    12 mg/l   (Klinik: 148 mg/l)  – deutlich gebessert
+  Leukozyten               8,1 /nl   – im Normbereich
+  Hämoglobin               11,9 g/dl – leicht erniedrigt
+
+Beurteilung: Die Lungenentzündung ist abgeklungen. Leichte Blutarmut, vermutlich nach dem Infekt.
+Wir kontrollieren am Donnerstag, 27.08.2026, um 9:15 Uhr. Bitte nüchtern kommen.
+
+Herzliche Grüße
+Dr. med. A. Beispiel-Lohse
+Ärztehaus am Hafen, Kaiweg 8, 29999 Beispielhafen

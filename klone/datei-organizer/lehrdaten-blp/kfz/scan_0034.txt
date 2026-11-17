@@ -1,0 +1,17 @@
+ZAHNRIEMEN-PROFI.example
+ein Angebot der Motorenteile Kessler UG (haftungsbeschränkt)
+Am Viadukt 4 · 08056 Zwickenau
+
+Ihre Bestellung 55-90021 vom 20.08.2026 (Kundenkonto: Kfz-Technik Brandhorst)
+Rechnung RE-55-90021 · Leistungsdatum 21.08.2026
+
+Qty   Description                          Unit price     Amount
+2     Zahnriemensatz mit Wasserpumpe           104,90     209,80
+2     Thermostat mit Dichtung                   15,20      30,40
+1     Ventildeckeldichtung                      12,70      12,70
+2     Kurbelwellensimmerring                     7,35      14,70
+
+Subtotal                                           267,60
+VAT 19%                                             50,84
+Total EUR                                          318,44
+Bezahlt per Firmenkreditkarte ****0000. USt-IdNr. DE000000014

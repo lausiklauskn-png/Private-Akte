@@ -1,0 +1,13 @@
+Return-Path: <kontowechsel@norddirekt.example>
+From: NordDirekt Kontowechselservice <kontowechsel@norddirekt.example>
+To: jonas.wendebach@mail.example
+Subject: Kontowechsel: Zwischenstand
+Date: Fri, 18 Sep 2026 10:11:00 +0200
+Hallo Jonas Wendebach,
+Ihr Kontowechsel läuft. Bereits umgestellt: Gehalt (Gaststätte Beispielhafen), Kita Sonnenbeispiel. Noch
+offen: Rundfunkbeitrag, Hausratversicherung.
+Hinweis: Bis zum Wechseltag buchen wir Ihr altes Konto weiter an. Bitte lassen Sie es bis dahin gedeckt.
+Ihr NordDirekt-Team
+Return-Path: <kontowechsel@norddirekt.example> Geschäftsführung: A. Beispiel Bankverbindung: Beispielbank Nord
+Sitz: Beispielstadt-Nord USt-IdNr.: DE000839502 IBAN DEO0 0000 0000 0000. 0000.00
+Registergericht: Amtsgericht Beispielstadt HRB 33726 BIC BEISDEXXXX

@@ -1,0 +1,20 @@
+UNTERSUCHUNGSBERICHT HAUPTUNTERSUCHUNG nach § 29 StVZO
+Prüfstützpunkt im Autohaus Deichblick Beispiel, Ausfallstraße 70, 29999 Beispielhafen
+Prüfnummer: HU-0000-26-4471               Datum: 19.08.2026
+
+Halter: Jonas Kranbeck, Möwenstieg 14, 29999 Beispielhafen
+Amtl. Kennzeichen: BSP-JK 184          FIN: BSPYYYY0000000000
+Fahrzeugart: Pkw (M1)                 Erstzulassung: 05/2016
+km-Stand: 117.402
+
+Ergebnis: OHNE FESTGESTELLTE MÄNGEL
+Prüfplakette zugeteilt: 08/2028
+
+Hinweise (keine Mängel):
+- Bremsbelag hinten verschlissen, noch zulässig
+- Leichter Rost Schweller links
+
+Abgasuntersuchung: bestanden (Lambda 0,998)
+
+Prüfingenieur: Dipl.-Ing. (FH) R. Musterhaus-Beispiel
+Dieser Bericht ist bei der nächsten Untersuchung vorzulegen.

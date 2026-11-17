@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: klaus.fleetmann@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Wed, 15 Apr 2026 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sehr geehrter Herr Fleetmann,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-69197474
+Rechnungsbetrag: 178,93 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

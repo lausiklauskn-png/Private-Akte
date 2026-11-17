@@ -1,0 +1,51 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Je Kunde ein Ordner mit Word-Dateien
+B-02 [Bereich 1 Ausgangssituation (IST)] Teilnahme an Schulungen in einer Excel-Liste
+B-03 [Bereich 1 Ausgangssituation (IST)] Fragen der Kunden („Dürfen wir Programm X benutzen?“) kommen per E-Mail
+B-04 [Bereich 1 Ausgangssituation (IST)] Liste der erlaubten Programme je Kunde, die keiner pflegt
+B-05 [Bereich 2 Betroffener Prozess] Kurze Workshops zum EU-KI-Gesetz vor Ort bei den Kunden
+B-06 [Bereich 2 Betroffener Prozess] Nachweis, wer teilgenommen hat und was gelernt wurde
+B-07 [Bereich 2 Betroffener Prozess] Pflege der Liste erlaubter Programme je Kunde
+B-08 [Bereich 2 Betroffener Prozess] Wiederholung bzw. Nachschauen nach einem halben Jahr
+B-09 [Bereich 3 Nutzer / Beteiligte] Ich als Beraterin (allein)
+B-10 [Bereich 3 Nutzer / Beteiligte] Kunden: Arztpraxen, zwei Steuerbüros, Handwerker, ein Verein
+B-11 [Bereich 3 Nutzer / Beteiligte] Mitarbeiter der Kunden, die an den Schulungen teilnehmen
+B-12 [Bereich 4 Problem / Schwachstelle] Wenn ein Kunde fragt „Was haben wir schon gemacht?“, suche ich eine halbe Stunde
+B-13 [Bereich 4 Problem / Schwachstelle] Die Liste der erlaubten Programme stimmt nach drei Monaten nicht mehr
+B-14 [Bereich 4 Problem / Schwachstelle] Kein Überblick, wo bei welchem Kunden etwas fällig ist oder fehlt
+B-15 [Bereich 4 Problem / Schwachstelle] Vorlagen werden für jede Praxis neu kopiert
+B-16 [Bereich 5 Ursache] Alles liegt verstreut in Word, Excel und Mails
+B-17 [Bereich 5 Ursache] Keiner fühlt sich für die Programm-Liste zuständig, ich auch nicht
+B-18 [Bereich 5 Ursache] Es gibt keine Erinnerung an Fristen
+B-19 [Bereich 6 Bedarf] Ein Blick auf alle Kunden: was erledigt ist, was fällig ist, was fehlt (muss)
+B-20 [Bereich 6 Bedarf] Teilnahme in der Schulung direkt auf dem Tablet abhaken, auch ohne WLAN (muss)
+B-21 [Bereich 6 Bedarf] Ein Nachweisblatt für den Kunden mit Datum, wer was gelernt hat, mit meinem Namen und Logo (muss)
+B-22 [Bereich 6 Bedarf] Erinnerung, wenn bei einem Kunden ein halbes Jahr um ist (muss)
+B-23 [Bereich 6 Bedarf] Liste der erlaubten Programme je Kunde, die aktuell bleibt (soll)
+B-24 [Bereich 6 Bedarf] Eine Vorlage für Arztpraxen einmal gut machen und bei allen Praxen nutzen, ohne sie zu kopieren (soll)
+B-25 [Bereich 6 Bedarf] Daten jederzeit herausholen können, je Kunde (muss)
+B-26 [Bereich 7 Ziel (SOLL)] Auf Nachfrage eines Kunden in wenigen Minuten sagen können, was schon gemacht wurde
+B-27 [Bereich 7 Ziel (SOLL)] Pro Kunde etwa eine Stunde im Quartal sparen
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss alle Kunden in einer Übersicht zeigen, mit erledigt, fällig und fehlend
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss je Kunde die Schulungen mit Datum, Thema und Teilnehmern festhalten
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss die Teilnahme auf dem Tablet ohne Internet abhaken lassen
+B-31 [Bereich 8 Funktionaler Bedarf] Das System muss ein Teilnahmeblatt mit Datum, Inhalten, meinem Namen und Logo zum Drucken bzw. als PDF erstellen
+B-32 [Bereich 8 Funktionaler Bedarf] Das System muss mich erinnern, wenn bei einem Kunden ein halbes Jahr seit der letzten Schulung um ist
+B-33 [Bereich 8 Funktionaler Bedarf] Das System muss je Kunde eine Liste erlaubter Programme mit Stand-Datum führen
+B-34 [Bereich 8 Funktionaler Bedarf] Das System muss Vorlagen (z. B. für Arztpraxen) einmal führen und bei mehreren Kunden verwenden
+B-35 [Bereich 8 Funktionaler Bedarf] Das System muss die Daten je Kunde getrennt halten und vollständig exportieren können
+B-36 [Bereich 9 Organisatorischer Bedarf] Ich pflege es allein, es muss also schnell gehen
+B-37 [Bereich 10 Technischer Bedarf] Laptop mit Windows, Tablet für unterwegs, Handy
+B-38 [Bereich 10 Technischer Bedarf] In Praxen oft kein WLAN für Gäste
+B-39 [Bereich 11 Bestehende Systeme] Word, Excel, E-Mail
+B-40 [Bereich 13 Daten] Kundenstamm, Schulungen, Teilnehmerlisten, erlaubte Programme, Vorlagen
+B-41 [Bereich 13 Daten] Getrennt je Kunde
+B-42 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: ja (Namen der Teilnehmer)
+B-43 [Bereich 14 Datenschutz / Sicherheit] Daten der Kunden sollen bei mir bleiben
+B-44 [Bereich 15 Rahmenbedingungen] Budget-Rahmen: 50 bis 130 Euro im Monat, wenn ich pro Kunde eine Stunde im Quartal spare
+O-01 [Bereich 18 Offene Punkte] Ob die Erinnerung auch aufs Handy kommen soll
+O-02 [Bereich 18 Offene Punkte] Wie genau „was gelernt“ auf dem Blatt aussehen soll
+N-01 [nicht gewünscht] keine Noten oder Bewertungen einzelner Mitarbeiter an den Chef
+N-02 [nicht gewünscht] keine Rechtsgutachten, und das Programm soll nicht so tun, als ob
+N-03 [nicht gewünscht] keine Kundendaten bei fremden Anbietern
+Ausgefüllt: 17 von 18 Bereichen

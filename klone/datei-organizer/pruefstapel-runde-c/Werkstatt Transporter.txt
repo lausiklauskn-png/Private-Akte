@@ -1,0 +1,32 @@
+Autohaus Beispielmotor GmbH
+
+Autohaus Beispielmotor · Industriestr. 5 · 34567 Musterfelde
+
+Tischlerei Kesselring
+Herrn Jörg Kesselring
+Lindenweg 12
+34567 Musterfelde
+
+Auftrag: W-24-5512
+Kennzeichen: BSP-KT 77
+km-Stand: 118.402
+Datum: 15.11.2024
+
+Rechnung Inspektion und Bremsen
+
+Pos.   Bezeichnung                                   Betrag EUR
+1      Inspektion 120.000 km nach Herstellervorgabe  289,00
+2      Bremsbeläge VA erneuert                       164,30
+3      Bremsscheiben VA                              198,60
+4      Motoröl 5W30, 7,5 l                           89,25
+5      Altöl-Entsorgung                              6,50
+       Netto                                         747,65
+       19 % MwSt                                     142,05
+       Rechnungsbetrag                               889,70
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug, also bis 29.11.2024.
+
+Gute Fahrt wünscht Ihr Beispielmotor-Team
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00 · HRB 7781

@@ -1,0 +1,33 @@
+SANITÄR- UND HEIZUNGSBAU BEISPIEL-HANDWERK
+Werkstattweg 5 · 00137 Beispielstadt-Nord · Tel. 0000-55 31
+USt-IdNr. DE000000000
+
+Frau Hildegard Krummbeck
+Altmarktgasse 22, 3. OG links
+00103 Beispielstadt-Nord
+
+RECHNUNG                         Rechnungs-Nr. SH-2026-214
+Rechnungsdatum 21.08.2026        Leistungszeitraum 11.08.–13.08.2026
+Kunden-Nr. 40917                 Ihr Auftrag vom 22.07.2026 (Angebot AN-2026-118)
+
+Pos  Leistung                                                     Betrag EUR
+1    Badewanne demontiert und entsorgt                                390,00
+2    Bodenablauf/Rinne, Gefälleestrich                                860,00
+3    Abdichtung 4,4 m2                                                211,20
+4    Fliesen R11 verlegt 6,5 m2                                       728,00
+5    Duschklappsitz montiert                                          245,00
+6    Haltegriffe 2 St                                                 178,00
+7    Thermostat-Brausegarnitur                                        310,00
+8    Duschvorhangstange                                                65,00
+9    Arbeitszeit 17,5 h a 62,00                                     1.085,00
+                                                 Nettobetrag        4.072,20
+                                                 19 % MwSt            773,72
+                                                 RECHNUNGSBETRAG    4.845,92
+
+Darin enthaltene Lohnkosten (für § 35a EStG): 1.085,00 EUR netto, 1.291,15 EUR brutto.
+
+Zahlbar ohne Abzug bis zum 04.09.2026 auf
+IBAN DE00 0000 0000 0000 0000 00 · Beispiel-Volksbank Nord
+Bitte Rechnungsnummer angeben.
+
+Vielen Dank für Ihren Auftrag. Gute Nutzung!

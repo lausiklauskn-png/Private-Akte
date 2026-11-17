@@ -1,0 +1,15 @@
+# Bundesverwaltungsamt (Beispiel)
+Darlehensverwaltung · 50999 Musterköln
+
+Frau
+Julia Okafor
+Uferstraße 3
+22999 Beispielhafen
+
+Darlehensnummer: D-0000-4412-77
+Datum: 22.06.2015
+
+# Tilgungsbestätigung
+
+Ihr Darlehen ist durch Ihre vorzeitige Ablösung vom 01.06.2015 vollständig getilgt. Nachlass: 1.104,00 EUR. Bitte bewahren Sie diese Bestätigung auf.
+

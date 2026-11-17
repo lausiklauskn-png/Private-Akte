@@ -1,0 +1,25 @@
+HARMS & PETERSEN LOGISTIK GMBH          Abrechnungsmonat 10/2026
+Personal-Nr. 00813   Kostenstelle 412 Lager Süd
+Herrn Torben Pahlke, Möwenstieg 14, 28991 Brakenhude
+
+Steuerklasse 3  Kinderfreib. 1,0  Konf. --  KK: Hanseatische Gesundheitskasse
+
+Lohnart                          Menge     Satz         Betrag
+1000 Grundlohn                 160,00 h    19,40      3.104,00
+1210 Nachtzuschlag 25%          18,00 h     4,85         87,30
+1500 VWL AG-Anteil                                        26,59
+---------------------------------------------------------------
+Gesamtbrutto                                          3.217,89
+
+Lohnsteuer                                              231,50
+Solidaritätszuschlag                                      0,00
+Kirchensteuer                                             0,00
+KV-Beitrag AN                                           268,70
+PV-Beitrag AN                                            56,31
+RV-Beitrag AN                                           299,26
+AV-Beitrag AN                                            41,83
+---------------------------------------------------------------
+Nettoverdienst                                        2.320,29
+VWL-Überweisung                                          -40,00
+Auszahlungsbetrag                                     2.280,29
+Überweisung an DE00 0000 0000 0000 0081 30

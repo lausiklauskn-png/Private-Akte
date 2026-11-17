@@ -1,0 +1,23 @@
+Von: Funkwelle Kundenservice <rechnung@funkwelle.example>
+An: nadine.hollerbusch@example.org
+Datum: Sa, 28. Mär 2026 07:12
+Betreff: Zahlungserinnerung zu Ihrer Rechnung März – Kundennr. FW-30418877
+
+Hallo Frau Hollerbusch,
+
+bestimmt ist es Ihnen im Alltag durchgerutscht: Für Ihre Rechnung vom 05.03.2026
+(Rechnungsnr. R-2026-03-0918821) über 29,36 € haben wir noch keinen Zahlungseingang
+gesehen.
+
+Bitte überweisen Sie den offenen Betrag bis spätestens 04.04.2026.
+IBAN: DE00 0000 0000 0000 0000 00
+Verwendungszweck: FW-30418877
+
+Haben Sie schon bezahlt? Dann betrachten Sie diese Erinnerung als gegenstandslos.
+
+Viele Grüße
+Ihr Funkwelle Kundenservice
+
+--
+Beispiel-Mobilfunk Funkwelle · Antennenweg 7 · 99970 Beispielstadt
+Diese E-Mail wurde automatisch erstellt.

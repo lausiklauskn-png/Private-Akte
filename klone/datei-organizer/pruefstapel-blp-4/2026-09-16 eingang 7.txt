@@ -1,0 +1,19 @@
+Barsortiment Hallweg & Brandis GmbH - Am Güterbahnhof 40 - 34999 Niederaula-Ost
+
+Buchhandlung Lindenblatt                           Rechnung 26-0398102
+Marktgasse 7                                       Rechnungsdatum 16.09.2026
+37999 Wehrstedt                                    Kunde 17 440
+
+Artikelgruppe                Menge  E-Preis     Betrag  St
+Buch Barsortimentslager        148     8,94   1.323,12  1
+Kalender 2027 Wand/Tisch        12     6,20      74,40
+Lesezeichen magnetisch VE        4     9,50      38,00  2
+
+Steuerschlüssel      Netto        USt       Brutto
+1 =  7 %          1.323,12      92,62     1.415,74
+2 = 19 %            112,40      21,36       133,76
+
+Zahlbetrag                                   1.549,50 EUR
+
+Fällig am 16.10.2026. USt-IdNr. DE000000001
+IBAN DE00 0000 0000 0000 1111 01

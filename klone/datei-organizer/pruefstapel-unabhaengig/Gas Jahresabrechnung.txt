@@ -1,0 +1,20 @@
+Stadtwerke Brakenhude GmbH
+
+Herrn Hinrich Ottens
+Ellernbusch 9
+28996 Brakenhude-Sieldeich
+
+Jahresabrechnung Erdgas                      Kundennummer 0040 1102
+Abrechnungszeitraum 01.10.2025 - 30.09.2026  Rechnungsdatum 19.10.2026
+
+Zählerstand alt 18.411 m³  neu 20.084 m³  Verbrauch 1.673 m³
+x Zustandszahl 0,9548 x Brennwert 11,226 = 17.933 kWh
+
+Arbeitspreis 17.933 kWh x 10,89 ct            1.952,90 EUR
+Grundpreis 12 Monate x 14,50 EUR                174,00 EUR
+CO2-Preis enthalten
+Summe brutto                                   2.126,90 EUR
+geleistete Abschläge 12 x 185,00              -2.220,00 EUR
+Guthaben                                          93,10 EUR
+
+Das Guthaben überweisen wir auf Ihr Konto. Neuer Abschlag ab 01.11.2026: 177,00 EUR.

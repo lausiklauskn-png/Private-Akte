@@ -1,0 +1,1280 @@
+{
+ "20250812.txt": {
+  "datei": "20250812.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 3,
+  "zweitesStueck": "20251020.txt"
+ },
+ "20250904.txt": {
+  "datei": "20250904.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "20250906.txt": {
+  "datei": "20250906.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "20250912.txt": {
+  "datei": "20250912.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "20251027.txt": {
+  "datei": "20251027.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "20251117.txt"
+ },
+ "20251030.txt": {
+  "datei": "20251030.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "20251110.txt": {
+  "datei": "20251110.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "20251119.txt": {
+  "datei": "20251119.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "20251121.txt": {
+  "datei": "20251121.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3,
+  "zweitesStueck": "20251127.txt"
+ },
+ "20251122.txt": {
+  "datei": "20251122.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "20251124.txt": {
+  "datei": "20251124.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "20251202.txt": {
+  "datei": "20251202.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "20251209.txt": {
+  "datei": "20251209.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3,
+  "zweitesStueck": "20260210.txt"
+ },
+ "20251215.txt": {
+  "datei": "20251215.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 2
+ },
+ "20260107.txt": {
+  "datei": "20260107.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "20260126.txt": {
+  "datei": "20260126.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "20260202.txt": {
+  "datei": "20260202.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "20260316.txt": {
+  "datei": "20260316.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "AW Mail.txt": {
+  "datei": "AW Mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Abrechnung_202510.txt": {
+  "datei": "Abrechnung_202510.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Abrechnung_202511.txt": {
+  "datei": "Abrechnung_202511.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Abrechnung_202512.txt": {
+  "datei": "Abrechnung_202512.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Ausdruck Mail 15.txt": {
+  "datei": "Ausdruck Mail 15.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2,
+  "zweitesStueck": "Ausdruck Mail 2.txt"
+ },
+ "Ausdruck Mail 16.txt": {
+  "datei": "Ausdruck Mail 16.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Ausdruck Mail 9.txt": {
+  "datei": "Ausdruck Mail 9.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Auszug 11.txt": {
+  "datei": "Auszug 11.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Auszug 15.txt": {
+  "datei": "Auszug 15.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "Dokument (12).txt"
+ },
+ "Auszug 4.txt": {
+  "datei": "Auszug 4.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Auszug 5.txt": {
+  "datei": "Auszug 5.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Auszug 6.txt": {
+  "datei": "Auszug 6.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Beispiel.txt": {
+  "datei": "Beispiel.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "Beispielfunk.txt"
+ },
+ "Beitragsservice.txt": {
+  "datei": "Beitragsservice.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "Beleg12.txt": {
+  "datei": "Beleg12.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Beleg15.txt": {
+  "datei": "Beleg15.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Beleg18.txt": {
+  "datei": "Beleg18.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Beleg27.txt": {
+  "datei": "Beleg27.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Beleg7.txt": {
+  "datei": "Beleg7.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Bon.txt": {
+  "datei": "Bon.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Brief.txt": {
+  "datei": "Brief.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Dokument (1).txt": {
+  "datei": "Dokument (1).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "Dokument (11).txt": {
+  "datei": "Dokument (11).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "Dokument (2).txt"
+ },
+ "Dokument (3).txt": {
+  "datei": "Dokument (3).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Dokument (4).txt": {
+  "datei": "Dokument (4).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Dokument (7).txt": {
+  "datei": "Dokument (7).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "E-Mail.txt"
+ },
+ "Dokument (9).txt": {
+  "datei": "Dokument (9).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Einkauf 14.03.txt": {
+  "datei": "Einkauf 14.03.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Einkauf 23.05.txt": {
+  "datei": "Einkauf 23.05.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Frischkauf_App_Bon.txt": {
+  "datei": "Frischkauf_App_Bon.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Friseurbedarf.txt": {
+  "datei": "Friseurbedarf.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Gehaltszettel.txt": {
+  "datei": "Gehaltszettel.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Gymnasium.txt": {
+  "datei": "Gymnasium.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 4,
+  "zweitesStueck": "IMG_20250915_1742.txt"
+ },
+ "Hörakustik.txt": {
+  "datei": "Hörakustik.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "IMG_20250620_1545.txt": {
+  "datei": "IMG_20250620_1545.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 2
+ },
+ "IMG_20250816_1914.txt": {
+  "datei": "IMG_20250816_1914.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "IMG_20250828_1962.txt": {
+  "datei": "IMG_20250828_1962.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "IMG_20250903_1112.txt": {
+  "datei": "IMG_20250903_1112.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_20251002_1327.txt": {
+  "datei": "IMG_20251002_1327.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_20251015_1130.txt": {
+  "datei": "IMG_20251015_1130.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "IMG_20251103_1714.txt": {
+  "datei": "IMG_20251103_1714.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "IMG_20251104_1976.txt": {
+  "datei": "IMG_20251104_1976.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "IMG_20251105_2328.txt": {
+  "datei": "IMG_20251105_2328.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "IMG_20251108_2042.txt": {
+  "datei": "IMG_20251108_2042.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "IMG_20251110_1667.txt": {
+  "datei": "IMG_20251110_1667.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "IMG_20260211_1481.txt"
+ },
+ "IMG_20251111_1634.txt": {
+  "datei": "IMG_20251111_1634.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "IMG_20251201_1967.txt": {
+  "datei": "IMG_20251201_1967.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_20251219_1160.txt": {
+  "datei": "IMG_20251219_1160.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "IMG_20260107_1020.txt": {
+  "datei": "IMG_20260107_1020.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "IMG_20260127_1785.txt": {
+  "datei": "IMG_20260127_1785.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "IMG_20260508_1889.txt"
+ },
+ "IMG_20260214_2097.txt": {
+  "datei": "IMG_20260214_2097.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_20260228_2111.txt": {
+  "datei": "IMG_20260228_2111.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "IMG_20260402_1304.txt": {
+  "datei": "IMG_20260402_1304.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "IMG_20260412_1115.txt": {
+  "datei": "IMG_20260412_1115.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "KA 01-2026.txt": {
+  "datei": "KA 01-2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "KA 03-2026.txt": {
+  "datei": "KA 03-2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "KA 10-2025.txt": {
+  "datei": "KA 10-2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "Lohn 10-2025.txt"
+ },
+ "KA 12-2025.txt": {
+  "datei": "KA 12-2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Kassenzettel Großeinkauf.txt": {
+  "datei": "Kassenzettel Großeinkauf.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kontoauszug_2025_10.txt": {
+  "datei": "Kontoauszug_2025_10.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Kontoauszug_2026_02.txt": {
+  "datei": "Kontoauszug_2026_02.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Kreisverwaltung.txt": {
+  "datei": "Kreisverwaltung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 3,
+  "zweitesStueck": "Lohn 12-2025.txt"
+ },
+ "Lohn 01-2026.txt": {
+  "datei": "Lohn 01-2026.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Lohn 11-2025.txt": {
+  "datei": "Lohn 11-2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Mail 01.02.2026.txt": {
+  "datei": "Mail 01.02.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "Mail 05.03.2026.txt"
+ },
+ "Mail 08.01.2026.txt": {
+  "datei": "Mail 08.01.2026.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Mail 08.12.2025.txt": {
+  "datei": "Mail 08.12.2025.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Mail 22.12.2025.txt": {
+  "datei": "Mail 22.12.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Motorradhaus.txt": {
+  "datei": "Motorradhaus.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Musikschule.txt": {
+  "datei": "Musikschule.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Muster_Drogerie_App_Bon.txt": {
+  "datei": "Muster_Drogerie_App_Bon.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "PXL_20251220_452895478.txt": {
+  "datei": "PXL_20251220_452895478.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "PXL_20260430_996752666.txt": {
+  "datei": "PXL_20260430_996752666.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Post.txt": {
+  "datei": "Post.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Rechnung neu.txt": {
+  "datei": "Rechnung neu.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Rentenversicherung.txt": {
+  "datei": "Rentenversicherung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "Scan 01.04.2019.txt": {
+  "datei": "Scan 01.04.2019.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Scan 01.10.2025.txt": {
+  "datei": "Scan 01.10.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "Scan 02.02.2026.txt": {
+  "datei": "Scan 02.02.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "Scan 02.10.2025.txt": {
+  "datei": "Scan 02.10.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan 03.11.2025.txt": {
+  "datei": "Scan 03.11.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "Scan 04.04.2026.txt": {
+  "datei": "Scan 04.04.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Scan 04.09.2025.txt": {
+  "datei": "Scan 04.09.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan 06.02.2026.txt": {
+  "datei": "Scan 06.02.2026.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Scan 07.11.2025.txt": {
+  "datei": "Scan 07.11.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan 09.02.2026.txt": {
+  "datei": "Scan 09.02.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Scan 12.01.2026.txt": {
+  "datei": "Scan 12.01.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Scan 13.02.2026.txt": {
+  "datei": "Scan 13.02.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Scan 14.10.2025.txt": {
+  "datei": "Scan 14.10.2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "Scan 14.11.2025.txt": {
+  "datei": "Scan 14.11.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "Scan 14.12.2025.txt": {
+  "datei": "Scan 14.12.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Scan 16.01.2026.txt": {
+  "datei": "Scan 16.01.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "Scan 18.01.2026.txt": {
+  "datei": "Scan 18.01.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Scan 18.11.2025.txt": {
+  "datei": "Scan 18.11.2025.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Scan 19.12.2025.txt": {
+  "datei": "Scan 19.12.2025.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Scan 24.09.2025.txt": {
+  "datei": "Scan 24.09.2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Scan 25.04.2026.txt": {
+  "datei": "Scan 25.04.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Scan 28.10.2025.txt": {
+  "datei": "Scan 28.10.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan 28.11.2025.txt": {
+  "datei": "Scan 28.11.2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "Scan 30.03.2026.txt": {
+  "datei": "Scan 30.03.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "Scan003.txt": {
+  "datei": "Scan003.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "Scan010.txt": {
+  "datei": "Scan010.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Scan013.txt": {
+  "datei": "Scan013.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan017.txt": {
+  "datei": "Scan017.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "Scan030.txt": {
+  "datei": "Scan030.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Scan054.txt": {
+  "datei": "Scan054.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "Scan065.txt": {
+  "datei": "Scan065.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Scan067.txt": {
+  "datei": "Scan067.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "Scan070.txt": {
+  "datei": "Scan070.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "Scan077.txt": {
+  "datei": "Scan077.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Scan085.txt": {
+  "datei": "Scan085.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "Scan090.txt": {
+  "datei": "Scan090.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "Screenshot_20260207-185627.txt": {
+  "datei": "Screenshot_20260207-185627.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 2
+ },
+ "Screenshot_20260321-170540.txt": {
+  "datei": "Screenshot_20260321-170540.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Seniorenkreis.txt": {
+  "datei": "Seniorenkreis.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "Stadtwerke.txt": {
+  "datei": "Stadtwerke.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "TSV.txt": {
+  "datei": "TSV.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "WhatsApp Image 2025-11-26 at 13.10.txt": {
+  "datei": "WhatsApp Image 2025-11-26 at 13.10.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "WhatsApp Image 2025-12-19 at 17.17.txt": {
+  "datei": "WhatsApp Image 2025-12-19 at 17.17.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "WhatsApp Image 2026-03-04 at 17.10.txt": {
+  "datei": "WhatsApp Image 2026-03-04 at 17.10.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "bon lang 3.txt": {
+  "datei": "bon lang 3.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "bon lang 6.txt": {
+  "datei": "bon lang 6.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "bon lang 8.txt": {
+  "datei": "bon lang 8.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "eBon_20250920.txt": {
+  "datei": "eBon_20250920.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "eBon_20251018.txt": {
+  "datei": "eBon_20251018.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 2
+ },
+ "eBon_20251114.txt": {
+  "datei": "eBon_20251114.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "eBon_20260411.txt": {
+  "datei": "eBon_20260411.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "ebon 07.03.txt": {
+  "datei": "ebon 07.03.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "ebon 24.01.txt": {
+  "datei": "ebon 24.01.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "kassenbon.txt": {
+  "datei": "kassenbon.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "kontoauszug neu.txt": {
+  "datei": "kontoauszug neu.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "mail_20251015.txt": {
+  "datei": "mail_20251015.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "mail_20251125.txt": {
+  "datei": "mail_20251125.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "mail_20260220.txt": {
+  "datei": "mail_20260220.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "mail_20260318.txt": {
+  "datei": "mail_20260318.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "neu.txt": {
+  "datei": "neu.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "scan_0025.txt": {
+  "datei": "scan_0025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0043.txt": {
+  "datei": "scan_0043.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0047.txt": {
+  "datei": "scan_0047.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0062.txt": {
+  "datei": "scan_0062.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0065.txt": {
+  "datei": "scan_0065.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0079.txt": {
+  "datei": "scan_0079.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 2
+ },
+ "scan_0088.txt": {
+  "datei": "scan_0088.png",
+  "form": "bildschirm",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0098.txt": {
+  "datei": "scan_0098.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "scan_0107.txt": {
+  "datei": "scan_0107.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "scan_0111.txt": {
+  "datei": "scan_0111.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "scan_0120.txt": {
+  "datei": "scan_0120.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0133.txt": {
+  "datei": "scan_0133.pdf",
+  "form": "pdf-text",
+  "qualitaet": null,
+  "seiten": 1
+ },
+ "scan_0137.txt": {
+  "datei": "scan_0137.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "scan_0153.txt": {
+  "datei": "scan_0153.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "scan_0154.txt": {
+  "datei": "scan_0154.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "scan_0177.txt": {
+  "datei": "scan_0177.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2
+ },
+ "scan_0211.txt": {
+  "datei": "scan_0211.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2
+ },
+ "scan_0223.txt": {
+  "datei": "scan_0223.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 1
+ },
+ "scan_0227.txt": {
+  "datei": "scan_0227.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "scan_0249.txt": {
+  "datei": "scan_0249.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "scan_0265.txt": {
+  "datei": "scan_0265.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0269.txt": {
+  "datei": "scan_0269.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "scan_0280.txt": {
+  "datei": "scan_0280.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2
+ },
+ "scan_0302.txt": {
+  "datei": "scan_0302.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "scan_0308.txt": {
+  "datei": "scan_0308.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 1
+ },
+ "scan_0346.txt": {
+  "datei": "scan_0346.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "scan_0351.txt": {
+  "datei": "scan_0351.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0376.txt": {
+  "datei": "scan_0376.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 1
+ },
+ "scan_0380.txt": {
+  "datei": "scan_0380.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "seiten": 1,
+  "seitenGesetzt": 1
+ },
+ "scan_0394.txt": {
+  "datei": "scan_0394.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "unbenannt.txt": {
+  "datei": "unbenannt.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "seiten": 1,
+  "seitenGesetzt": 2
+ },
+ "20251020.txt": {
+  "datei": "20250812.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 3,
+  "zweitesStueck": "20251020.txt",
+  "inScanVon": "20250812.txt"
+ },
+ "20251117.txt": {
+  "datei": "20251027.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "20251117.txt",
+  "inScanVon": "20251027.txt"
+ },
+ "20251127.txt": {
+  "datei": "20251121.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3,
+  "zweitesStueck": "20251127.txt",
+  "inScanVon": "20251121.txt"
+ },
+ "20260210.txt": {
+  "datei": "20251209.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 3,
+  "zweitesStueck": "20260210.txt",
+  "inScanVon": "20251209.txt"
+ },
+ "Ausdruck Mail 2.txt": {
+  "datei": "Ausdruck Mail 15.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 2,
+  "zweitesStueck": "Ausdruck Mail 2.txt",
+  "inScanVon": "Ausdruck Mail 15.txt"
+ },
+ "Dokument (12).txt": {
+  "datei": "Auszug 15.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "Dokument (12).txt",
+  "inScanVon": "Auszug 15.txt"
+ },
+ "Beispielfunk.txt": {
+  "datei": "Beispiel.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "Beispielfunk.txt",
+  "inScanVon": "Beispiel.txt"
+ },
+ "Dokument (2).txt": {
+  "datei": "Dokument (11).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "Dokument (2).txt",
+  "inScanVon": "Dokument (11).txt"
+ },
+ "E-Mail.txt": {
+  "datei": "Dokument (7).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "seiten": 3,
+  "zweitesStueck": "E-Mail.txt",
+  "inScanVon": "Dokument (7).txt"
+ },
+ "IMG_20250915_1742.txt": {
+  "datei": "Gymnasium.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 4,
+  "zweitesStueck": "IMG_20250915_1742.txt",
+  "inScanVon": "Gymnasium.txt"
+ },
+ "IMG_20260211_1481.txt": {
+  "datei": "IMG_20251110_1667.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "IMG_20260211_1481.txt",
+  "inScanVon": "IMG_20251110_1667.txt"
+ },
+ "IMG_20260508_1889.txt": {
+  "datei": "IMG_20260127_1785.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "IMG_20260508_1889.txt",
+  "inScanVon": "IMG_20260127_1785.txt"
+ },
+ "Lohn 10-2025.txt": {
+  "datei": "KA 10-2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 2,
+  "zweitesStueck": "Lohn 10-2025.txt",
+  "inScanVon": "KA 10-2025.txt"
+ },
+ "Lohn 12-2025.txt": {
+  "datei": "Kreisverwaltung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "seiten": 3,
+  "zweitesStueck": "Lohn 12-2025.txt",
+  "inScanVon": "Kreisverwaltung.txt"
+ },
+ "Mail 05.03.2026.txt": {
+  "datei": "Mail 01.02.2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "seiten": 2,
+  "zweitesStueck": "Mail 05.03.2026.txt",
+  "inScanVon": "Mail 01.02.2026.txt"
+ }
+}

@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Kantine Werk Ost / Fa. Morgenroth Metallbau
+Industriestr. 40
+37996 Molkenrode
+
+RECHNUNG
+Rg.-Nr. KB-2026-200
+Datum 12.03.2026
+Lieferdatum: 12.03.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Torten zum Mitnehmen, Stück     6     28,00     168,00
+  2  Blechkuchen Streusel, Blech     2     34,00      68,00
+
+Nettobetrag                                  236,00
+zzgl. 7 % USt                               16,52
+Zahlbetrag                                   252,52 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Bitte überweisen Sie den Betrag bis 26. März 2026 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 6031 75
+USt-IdNr. DE000000585

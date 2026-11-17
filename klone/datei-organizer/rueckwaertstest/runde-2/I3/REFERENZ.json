@@ -1,0 +1,119 @@
+{
+ "app": "Anlagenpass",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Wartungsgeschäft von SHK- und Elektrobetrieben sichern: keine vergessene Wartung, Historie je Anlage griffbereit",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Nutzer: Büro und Monteure in Betrieben mit 3–30 Leuten (Heizung, Wärmepumpe, Lüftung, Trinkwasser, E-Check/DGUV V3)",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Die Anlage steht im Mittelpunkt (Typ, Seriennummer, Standort, Kunde), nicht der Auftrag",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M04",
+   "text": "QR-Aufkleber je Anlage; Scannen öffnet die Anlage mit Historie und offenen Mängeln",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Wartungsprotokoll am Handy ausfüllen mit Messwerten, Fotos und Unterschrift",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M06",
+   "text": "Funktioniert vollständig offline (Keller ohne Netz) und gleicht später ab",
+   "gewicht": "kern",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M07",
+   "text": "Fälligkeiten je Anlage und Vertrag; Liste „überfällig / bald fällig“",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Nächster Termin wird nach dem Wartungsrhythmus vorgeschlagen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Kunde bestätigt den Termin über einen Link ohne App",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Protokollvorlagen je Anlagenart, anpassbar",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Mängel aus dem Protokoll werden als offene Punkte beim nächsten Besuch angezeigt",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M12",
+   "text": "Übergabe an das vorhandene Handwerkerprogramm zur Rechnung per Export (CSV/PDF)",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M13",
+   "text": "Übersicht Wartungsverträge mit wiederkehrendem Umsatz",
+   "gewicht": "beiwerk",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M14",
+   "text": "Büro arbeitet am PC im Browser oder unter Windows",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M15",
+   "text": "Daten gehören dem Betrieb, vollständiger Export von Fotos und Protokollen",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M16",
+   "text": "Kundendaten nur so weit nötig; Speicherung im eigenen Ordner/Gerät oder EU-Server mit AV-Vertrag",
+   "gewicht": "wichtig",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M17",
+   "text": "Schreibt keine Rechnungen, macht keine Buchhaltung, bestellt kein Material, keine Plantafel für den ganzen Betrieb",
+   "gewicht": "kern",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M18",
+   "text": "Garantiert keine normgerechte Prüfung; Vorlagen ersetzen keine Fachkunde",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M19",
+   "text": "Preis pauschal je Betrieb oder je Anlage",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

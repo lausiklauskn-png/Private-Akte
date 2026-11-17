@@ -1,0 +1,143 @@
+{
+ "haushalte": [
+  {
+   "id": "hh-wendelin",
+   "titel": "Familie mit Kindern",
+   "name": "Familie Wendelin",
+   "anschrift": "Amselweg 14, 34567 Musterhausen",
+   "personen": [
+    {
+     "vorname": "Tobias",
+     "name": "Wendelin",
+     "anrede": "Herr",
+     "rolle": "Vater, Lagerleiter angestellt"
+    },
+    {
+     "vorname": "Svenja",
+     "name": "Wendelin",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Arzthelferin"
+    },
+    {
+     "vorname": "Lina",
+     "name": "Wendelin",
+     "anrede": "Kind",
+     "rolle": "Tochter, 9 Jahre, Grundschule"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Wendelin",
+     "anrede": "Kind",
+     "rolle": "Sohn, 4 Jahre, Kita"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TW 412"
+   ]
+  },
+  {
+   "id": "hh-roemerling",
+   "titel": "Älteres Paar",
+   "name": "Gerhard und Ilse Römerling",
+   "anschrift": "Am Beispielhang 3, 45678 Beispielheim",
+   "personen": [
+    {
+     "vorname": "Gerhard",
+     "name": "Römerling",
+     "anrede": "Herr",
+     "rolle": "Rentner, 76"
+    },
+    {
+     "vorname": "Ilse",
+     "name": "Römerling",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, 73"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-GR 770"
+   ]
+  },
+  {
+   "id": "hh-kesselring",
+   "titel": "Alleinlebende mit Nebenjob",
+   "name": "Dana Kesselring",
+   "anschrift": "Kastanienallee 27, 56789 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Dana",
+     "name": "Kesselring",
+     "anrede": "Frau",
+     "rolle": "Pflegefachkraft, Minijob im Café"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DK 23"
+   ]
+  },
+  {
+   "id": "hh-wg-linden",
+   "titel": "Wohngemeinschaft",
+   "name": "WG Lindenstraße 8",
+   "anschrift": "Lindenstraße 8, 56789 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Malte",
+     "name": "Osterkamp",
+     "anrede": "Herr",
+     "rolle": "Student"
+    },
+    {
+     "vorname": "Ayla",
+     "name": "Brenner",
+     "anrede": "Frau",
+     "rolle": "Auszubildende"
+    },
+    {
+     "vorname": "Pit",
+     "name": "Haugwitz",
+     "anrede": "Herr",
+     "rolle": "Student, Werkstudent"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "hh-falkenhain",
+   "titel": "Selbstständiger mit Familie",
+   "name": "Familie Falkenhain",
+   "anschrift": "Mühlenweg 5, 67890 Beispieldorf",
+   "personen": [
+    {
+     "vorname": "Ruben",
+     "name": "Falkenhain",
+     "anrede": "Herr",
+     "rolle": "Tischlermeister, selbstständig"
+    },
+    {
+     "vorname": "Mareike",
+     "name": "Falkenhain",
+     "anrede": "Frau",
+     "rolle": "Bürokauffrau, Teilzeit"
+    },
+    {
+     "vorname": "Ole",
+     "name": "Falkenhain",
+     "anrede": "Kind",
+     "rolle": "Sohn, 15 Jahre, Gymnasium"
+    },
+    {
+     "vorname": "Mia",
+     "name": "Falkenhain",
+     "anrede": "Kind",
+     "rolle": "Tochter, 11 Jahre"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-RF 300",
+    "BSP-MF 518",
+    "BSP-RF 77"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+    SPARMARKT BEISPIEL
+    Nordring 80
+    00105 Beispielstadt-Nord
+    Tel. 0000-150 80
+
+  Bon-Nr. 2264     Kasse 1   Bed. 04
+  03.11.2026  07:52
+
+  ZITRONEN 1KG NETZ          1,99
+  PETERSILIE BUND  2 X 0,89  1,78
+  ZWIEBELN 5KG               3,49
+  TOMATEN 1KG                2,29
+  FETA 200G        4 X 1,69  6,76
+  KUGELSCHREIBER 3ER         1,49
+  KASSENROLLE 57MM 5ER       3,99
+  -----------------------------
+  SUMME                     21,79
+  BAR                       25,00
+  RUECKGELD                  3,21
+
+  MWST A 7%   15,33 + 1,07
+  MWST B 19%   4,61 + 0,88
+  Beleg für Bewirtung/Gewerbe? Fragen Sie nach einer Rechnung.
+  TSE  2026-11-03T07:52:14  Sig-Z. 61187

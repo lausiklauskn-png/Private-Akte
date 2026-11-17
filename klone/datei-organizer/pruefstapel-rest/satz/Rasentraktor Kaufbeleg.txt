@@ -1,0 +1,23 @@
+# Landtechnik Beispiel GmbH
+Am Feld 3 · 84999 Beispielhausen
+
+Herrn
+Martin Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Rechnung: LT-2021-0422
+Datum: 24.04.2021
+
+# Rechnung
+
+|Pos.|Artikel|Menge|Betrag|
+|1|Rasentraktor Beispiel RT 92|1|2.490,00 EUR|
+|2|Mulchkit|1|129,00 EUR|
+|3|Übergabe und Einweisung|1|0,00 EUR|
+||Gesamt inkl. 19 % MwSt.||2.619,00 EUR|
+
+Betrag bar erhalten. Garantie: 3 Jahre ab Kaufdatum, Seriennummer RT92-000417.
+
+Danke für Ihren Einkauf
+@unterschrift

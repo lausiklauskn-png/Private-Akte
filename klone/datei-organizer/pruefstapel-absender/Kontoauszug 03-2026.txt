@@ -1,0 +1,20 @@
+Beispielbank Musterhausen eG
+Schillerstraße 60 · 34567 Musterhausen
+
+Familie Wendelin
+Amselweg 14
+34567 Musterhausen
+
+Kontoauszug Nr. 3/2026 Girokonto
+Kontoinhaber: Familie Wendelin
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 31.03.2026
+
+Alter Kontostand               2922,18 EUR
+02.03.  Bargeldauszahlung Automat                   -100,00
+06.03.  Lastschrift Versicherung                     -24,00
+10.03.  Lastschrift Beispielfunk Mobil               -30,00
+14.03.  Überweisung Gutschrift                        92,00
+18.03.  Kartenzahlung Beispiel-Markt                 -42,00
+22.03.  Lastschrift Stadtwerke Abschlag             -122,00
+Neuer Kontostand               2696,18 EUR

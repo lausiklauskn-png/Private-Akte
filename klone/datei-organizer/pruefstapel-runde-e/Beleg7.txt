@@ -1,0 +1,22 @@
+SCHREIBWAREN BEISPIEL FEDERKIEL
+Marktplatz 5, 56789 Probedorf
+Tel. 00000 000000
+UST-ID DE000000000
+
+Schulhefte Lineatur 2, A5
+  6 x 0,69        4,14 A
+Malkasten 12 Farben              8,95 A
+Wachsmalstifte                   3,49 A
+Heftumschläge sortiert
+  6 x 0,59        3,54 A
+Füller Anfänger                 14,95 A
+------------------------------------
+SUMME EUR                    35,07
+Girocard                      35,07
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   29,47   5,60   35,07
+
+30.08.2025 11:40  Bon 5244  Kasse 6
+TSE-Signatur 1326714435
+Vielen Dank für Ihren Einkauf!

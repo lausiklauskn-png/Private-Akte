@@ -1,0 +1,189 @@
+{
+ "haushalte": [
+  {
+   "id": "hh-quellmann",
+   "titel": "Familie Quellmann",
+   "name": "Quellmann",
+   "anschrift": "Ahornweg 7, 12345 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Tobias",
+     "name": "Quellmann",
+     "anrede": "Herr",
+     "rolle": "Vater"
+    },
+    {
+     "vorname": "Sanne",
+     "name": "Quellmann",
+     "anrede": "Frau",
+     "rolle": "Mutter"
+    },
+    {
+     "vorname": "Lio",
+     "name": "Quellmann",
+     "anrede": "Kind",
+     "rolle": "Sohn, Grundschüler"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TQ 412",
+    "BSP-SQ 77"
+   ]
+  },
+  {
+   "id": "hh-pfauenthal",
+   "titel": "Edgar Pfauenthal (allein mit Hund)",
+   "name": "Pfauenthal",
+   "anschrift": "Lindenhof 3, 54321 Musterhausen",
+   "personen": [
+    {
+     "vorname": "Edgar",
+     "name": "Pfauenthal",
+     "anrede": "Herr",
+     "rolle": "alleinlebend, Hundehalter"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-EP 903"
+   ]
+  },
+  {
+   "id": "hh-kesselbrink-ufermann",
+   "titel": "Paar Kesselbrink/Ufermann",
+   "name": "Kesselbrink / Ufermann",
+   "anschrift": "Brückenstraße 22, 67890 Beispielburg",
+   "personen": [
+    {
+     "vorname": "Mara",
+     "name": "Kesselbrink",
+     "anrede": "Frau",
+     "rolle": "Partnerin, selbstständig (GbR)"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Ufermann",
+     "anrede": "Herr",
+     "rolle": "Partner"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MK 55",
+    "BSP-JU 808"
+   ]
+  },
+  {
+   "id": "hh-sommerlatt",
+   "titel": "Hildegard Sommerlatt (Rentnerin)",
+   "name": "Sommerlatt",
+   "anschrift": "Am Teich 1, 99999 Musterdorf",
+   "personen": [
+    {
+     "vorname": "Hildegard",
+     "name": "Sommerlatt",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, Hundehalterin"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HS 1960"
+   ]
+  },
+  {
+   "id": "hh-beispielmann",
+   "titel": "Familie Beispielmann",
+   "name": "Beispielmann",
+   "anschrift": "Musterweg 12, 12345 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Beispielmann",
+     "anrede": "Herr",
+     "rolle": "Vater"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Beispielmann",
+     "anrede": "Frau",
+     "rolle": "Mutter"
+    },
+    {
+     "vorname": "Lena",
+     "name": "Beispielmann",
+     "anrede": "Kind",
+     "rolle": "Tochter (16)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TB 412"
+   ]
+  },
+  {
+   "id": "hh-probstein",
+   "titel": "Erika Probstein (allein lebend)",
+   "name": "Probstein",
+   "anschrift": "Am Erfundenen Hang 3, 54321 Musterhausen",
+   "personen": [
+    {
+     "vorname": "Erika",
+     "name": "Probstein",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, verwitwet, Hauseigentümerin"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "hh-fiktiv",
+   "titel": "Paar Fiktiv / Ausgedacht",
+   "name": "Fiktiv / Ausgedacht",
+   "anschrift": "Lindenallee 7a, 67890 Fantasiedorf",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Fiktiv",
+     "anrede": "Herr",
+     "rolle": "Partner, fährt Motorrad"
+    },
+    {
+     "vorname": "Mira",
+     "name": "Ausgedacht",
+     "anrede": "Frau",
+     "rolle": "Partnerin, fährt Auto"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MA 77",
+    "BSP-JF 9"
+   ]
+  },
+  {
+   "id": "hh-erfundel",
+   "titel": "Familie Erfundel",
+   "name": "Erfundel",
+   "anschrift": "Testgasse 44, 33333 Probehausen",
+   "personen": [
+    {
+     "vorname": "Kemal",
+     "name": "Erfundel",
+     "anrede": "Herr",
+     "rolle": "Vater"
+    },
+    {
+     "vorname": "Ayla",
+     "name": "Erfundel",
+     "anrede": "Frau",
+     "rolle": "Mutter"
+    },
+    {
+     "vorname": "Deniz",
+     "name": "Erfundel",
+     "anrede": "Kind",
+     "rolle": "Sohn (9)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KE 2024"
+   ]
+  }
+ ]
+}

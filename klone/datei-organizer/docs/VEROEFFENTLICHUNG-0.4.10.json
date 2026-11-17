@@ -1,0 +1,35 @@
+{
+  "fassung": "0.4.10",
+  "datum": "2026-11-16",
+  "freigabe": "Klaus 16.11.2026: „Prüf weiter und dann veröffentliche bitte.“",
+  "inhalt": "Discovery: „reihum“ neu gesprochen (Tonspur und Kugel-Film); aus dem Browser nur noch der Klick als Geräusch (kein Briefrascheln, kein Zischen); Stadtwahl immer antippbar (untere Leiste deckte die zweite Zeile zu), bei offener Karte rückt sie daneben; Stadtfilme zeigen beim Laden ihr Standbild und laufen beim Wählen von selbst; Ladeanzeige mit drei kreisenden Murmeln und Prozentzahl (#51)",
+  "android": {
+    "commit": "63a2cb5147c7983339bb049042f1b0ce27f30d91",
+    "lauf": 43787235867,
+    "datei": "Datei-Organizer-Pro-0.4.10.apk",
+    "versionCode": 50,
+    "groesse": 72287032,
+    "sha256": "37a49cfb257ee65d99e788e2985f06e2ef539467f3f71ea37efd28bcc0c49a51",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.10",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.10.apk",
+    "geprueft": "Release-Lauf grün; Release-Datei aus der Sitzung geladen, Größe und SHA-256 gleich .apk.json"
+  },
+  "windows": {
+    "commit": "63a2cb5147c7983339bb049042f1b0ce27f30d91",
+    "lauf": 43787862699,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.10-x64-setup.exe",
+    "groesse": 87427855,
+    "sha256": "a01cb836df25549572c37a14bc0d9f0cd265db553951d46973bbbb1f9ba95aeb",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.10-x64-setup.exe",
+    "geprueft": "Release-Lauf grün im ersten Versuch (nach dem Android-Lauf gestartet); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.9)"
+  },
+  "basic": {
+    "commit": "63a2cb5147c7983339bb049042f1b0ce27f30d91",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_enthalten": "Figur mit mehreren Augen in der Kiosk-Schlange (nicht behoben, Neudreh nur mit Klaus' Ja); der Kugel-Film unten hat noch die ältere Ladeanzeige (Balken)",
+  "nicht_geprueft": "Ton nicht angehört („reihum“, Musik); nicht am Gerät: Stadtwahl, Standbild beim Laden, neue Ladeanzeige, Update von 0.4.9; Update-Server aus der Sitzung nicht abrufbar"
+}

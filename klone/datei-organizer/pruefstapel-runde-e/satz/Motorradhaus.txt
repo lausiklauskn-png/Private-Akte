@@ -1,0 +1,31 @@
+# Motorradhaus Beispiel
+Motorradhaus Beispiel · Kurvenweg 2 · 56788 Probedorf
+
+Herrn Daniel Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Datum: 21.03.2026
+
+# Rechnung W-26-0321 – Reifenwechsel und Inspektion BSP-DH 77
+
+Sehr geehrter Herr Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Reifen vorn 120/70 ZR17|1|139,00 €|139,00 €|
+|2|Reifen hinten 180/55 ZR17|1|169,00 €|169,00 €|
+|3|Montage und Wuchten|2|25,00 €|50,00 €|
+|4|Frühjahrsinspektion Paket|1|119,00 €|119,00 €|
+|5|Kettenkit|1|189,00 €|189,00 €|
+
+Nettobetrag: 666,00 €
+zzgl. 19 % MwSt.: 126,54 €
+Rechnungsbetrag: 792,54 €
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Mit freundlichen Grüßen
+Motorradhaus Beispiel
+@fuss Motorradhaus Beispiel · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

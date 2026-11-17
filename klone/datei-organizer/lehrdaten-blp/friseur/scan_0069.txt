@@ -1,0 +1,13 @@
+routex-ähnliche FLOTTENKARTE „FuelPass Business“
+Sammelrechnung Kraftstoffe
+
+Kunde: Haarstudio Federleicht – 37154 Northeim             Rechnung 065320593
+Abrechnungszeitraum Mai 2026, erstellt 26.07.2026
+
+Datum   Station              Produkt     Liter    Netto
+div.    4 Tankvorgänge       Super E10   167,99   245,27
+Kennzeichen NOM-HF 714
+
+Summe netto      245,27
+USt 19 %         46,60
+Gesamt           291,87 EUR – Lastschrift in 10 Tagen

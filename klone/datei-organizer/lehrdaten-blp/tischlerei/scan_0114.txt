@@ -1,0 +1,11 @@
+werkzeugprofi-online.example     Rechnung 4000698877
+WPO Handels GmbH, Logistikpark 12, 34999 Fuldabrück-Ost
+
+Tischlerei Vosskamp, Mühlenkamp 14, 32791 Welsede          Datum 21.01.2026
+
+Art.-Nr.  Beschreibung                                   Anz.  Betrag
+510233    Akku-Bohrschrauber 18 V Set, 2 Akkus 4,0 Ah,     1   289,00
+          Schnellladegerät, Systemkoffer
+
+Nettosumme 289,00 EUR / USt 19 % 54,91 EUR / Gesamt 343,91 EUR
+Bezahlt per Lastschrift. USt-IdNr. DE000001918

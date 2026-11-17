@@ -1,0 +1,29 @@
+{"titel": "Selbst-Check vor der Qualitätsprüfung",
+ "kunde": {"firma": "Pflegedienst Lindenhof Beispiel GmbH", "ansprechpartner": "Sabine Probst", "mail": "pdl@lindenhof-pflege.example"},
+ "bereiche": {
+  "1": ["Dicker Ordner mit Unterlagen zur Qualitätsprüfung", "Checklisten in Excel", "Einmal ein bezahltes Probe-Audit mit einer Beraterin, inzwischen veraltet", "Großes Pflegeprogramm für Doku und Abrechnung, macht aber keinen Probedurchlauf"],
+  "2": ["Vorbereitung auf die Qualitätsprüfung im ambulanten Dienst", "Maßnahmen nachhalten: was tun wir, wer, bis wann"],
+  "3": [{"text": "Pflegedienstleitung", "anzahl": 1}, {"text": "Qualitätsbeauftragte (Teilzeit)", "anzahl": 1}, {"text": "Mitarbeitende in der Pflege, in Teams", "anzahl": 25}],
+  "4": ["Wir wissen nicht, ob wir eine Prüfung morgen bestehen würden – nur Bauchgefühl", "Seit Juli wird anders geprüft, mehr wie die Versorgung wirklich ist, unsere Unterlagen passen dazu nicht mehr", "Zwei Tage Ausnahmezustand, wenn die Prüfung angekündigt wird", "Probe-Audit mit Beraterin ist teuer und schnell veraltet", "Keine Übersicht, ob wir über die Zeit besser werden"],
+  "5": ["Das Pflegeprogramm kann keinen ehrlichen Probedurchlauf", "Excel-Listen und Ordner sind nicht auf die neue Prüfart abgestimmt", "Niemand hält die Fragen aktuell, wenn sich die Regeln ändern"],
+  "6": [
+   {"text": "Uns selbst so prüfen wie die Prüfer: ein paar Klienten auswählen, die Fragen durchgehen, eine Bewertung bekommen", "prio": "muss", "nutzen": {"stundenMonat": 6, "euroMonat": null, "text": "erspart das teure Probe-Audit, ehrliches Bild statt Bauchgefühl"}, "handeln": "vorschlagen"},
+   {"text": "Aus dem Ergebnis eine Maßnahmenliste: was tun wir, wer kümmert sich, bis wann", "prio": "muss", "nutzen": {"stundenMonat": 3, "euroMonat": null, "text": "nichts geht verloren, klare Zuständigkeiten"}, "handeln": "vorschlagen"},
+   {"text": "Die Fragen sind immer aktuell und werden nachgezogen, wenn sich die Regeln ändern", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "sonst nützt das Ganze nichts"}, "handeln": "egal"},
+   {"text": "Alle drei Monate wiederholen und sehen, ob wir besser werden", "prio": "soll", "nutzen": {"stundenMonat": 2, "euroMonat": null, "text": "Fortschritt sichtbar"}, "handeln": "vorschlagen"},
+   {"text": "Kurze Liste für die zwei Tage vor der echten Prüfung, was bereitliegen muss", "prio": "soll", "nutzen": {"stundenMonat": 2, "euroMonat": null, "text": "weniger Ausnahmezustand"}, "handeln": "egal"},
+   {"text": "Sehen, wo ein Team schwach ist, ohne einzelne Mitarbeitende bloßzustellen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "gezielt schulen, Personal halten"}, "handeln": "egal"}
+  ],
+  "7": ["Jederzeit ehrlich wissen, wo wir vor einer Prüfung stehen", "Ruhig in die angekündigte Prüfung gehen, alles liegt bereit", "Über die Quartale sichtbar besser werden"],
+  "8": ["Das System muss eine Probeprüfung mit einer Auswahl von Klienten (nur Nummern) anhand der aktuellen Prüffragen durchführen lassen", "Das System muss am Ende eine Bewertung je Prüfbereich anzeigen", "Das System muss aus der Bewertung Maßnahmen mit Zuständigkeit und Termin machen und deren Stand anzeigen", "Das System muss Probeprüfungen speichern und mit früheren vergleichen", "Das System muss eine kurze Bereitlege-Liste für die zwei Tage vor der Prüfung zeigen", "Das System muss Ergebnisse je Team zusammenfassen, nicht je Person", "Das System muss den Fragenkatalog aktualisieren können, wenn sich die Prüfregeln ändern"],
+  "9": ["Qualitätsbeauftragte führt die Probeprüfung durch, Pflegedienstleitung schaut drauf", "Rhythmus: alle drei Monate", "Kurze Einweisung reicht"],
+  "10": ["Tablet und PC im Büro", "Im Besprechungsraum ist das WLAN schlecht, muss dort trotzdem gehen"],
+  "11": ["Großes Pflegeprogramm für Doku und Abrechnung, wird nicht gewechselt", "Excel-Checklisten"],
+  "12": ["Keine Anbindung ans Pflegeprogramm nötig"],
+  "13": ["Klienten nur als Nummer", "Bewertungen, Maßnahmen, Termine"],
+  "14": ["personenbezogene Daten: nein – keine Klientennamen, keine Diagnosen", "Mitarbeitende nicht einzeln bewerten"],
+  "15": ["Budget 60 bis 100 Euro im Monat, wenn es das Probe-Audit spart", "Prüfung wird zwei Arbeitstage vorher angekündigt"],
+  "18": [{"text": "Wer zieht die Fragen nach, wenn sich die Regeln ändern, und wie oft?", "wer": "", "bis": ""}, {"text": "Monatlicher Preis statt Einmalpreis?", "wer": "", "bis": ""}]
+ },
+ "rahmen": {"geraete": ["tablet", "windows"], "offline": "unterwegs", "eigene": [], "eigeneText": "", "datenort": ["geraet", "server"], "sicherung": ["verschluesselt", "allein"], "budgetEuro": null},
+ "nicht": ["keine zweite Pflegedokumentation", "keine Klientennamen oder Diagnosen speichern", "kein Versprechen, dass wir die Prüfung sicher bestehen", "keine Bewertung oder Rangliste einzelner Mitarbeitender", "kein Ersatz für das bestehende Pflegeprogramm"]}

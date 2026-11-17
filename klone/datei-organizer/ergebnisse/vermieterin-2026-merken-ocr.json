@@ -1,0 +1,47 @@
+{
+ "stapel": "pruefstapel-vermieterin-2026",
+ "text": "pruefstapel-vermieterin-2026-ocr",
+ "gemerkt": "merken/vermieterin-2025.json",
+ "bereich": {
+  "n": 94,
+  "ohne": "72/94",
+  "mit": "79/94",
+  "spanneOhne": [
+   0.6709711260353912,
+   0.8400589470623505
+  ],
+  "spanneMit": [
+   0.7532737570410223,
+   0.9008447365240871
+  ],
+  "besserDurchMerken": 11,
+  "schlechterDurchMerken": 4,
+  "p": 0.1185,
+  "gemerktGegriffen": 74
+ },
+ "konto": {
+  "n": 45,
+  "ohne": "26/45",
+  "mit": "29/45",
+  "spanneOhne": [
+   0.433005327959445,
+   0.7103151201831219
+  ],
+  "spanneMit": [
+   0.49835546011952203,
+   0.7678110864309596
+  ],
+  "besserDurchMerken": 5,
+  "schlechterDurchMerken": 2,
+  "p": 0.4531,
+  "gemerktGegriffen": 32
+ },
+ "bank": {
+  "ohneBeleg": 161,
+  "faelschlichOhneMerken": 18,
+  "faelschlichMitMerken": 18,
+  "mitBeleg": 59,
+  "richtigOhneMerken": 47,
+  "richtigMitMerken": 46
+ }
+}

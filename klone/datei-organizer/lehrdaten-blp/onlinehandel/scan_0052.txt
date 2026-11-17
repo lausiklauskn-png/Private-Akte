@@ -1,0 +1,20 @@
+Entgeltabrechnung für Januar 2026
+
+Arbeitgeber: Teekontor Lindenblatt, Inh. Marit Sandvoss, Salzgasse 14, 21335 Lüneburg
+Arbeitnehmerin: Ilka Thormählen, Personal-Nr. 002, Steuerklasse V, Teilzeit 20 Std./Woche
+Eintritt: 01.04.2023   SV-Nr. 00 000000 T 000
+
+Bezüge
+Gehalt Teilzeit                                1.180,00
+Gesamtbrutto                                   1.180,00
+
+Abzüge
+Lohnsteuer                                        94,16
+Kirchensteuer                                      8,47
+Krankenversicherung AN                            96,17
+Rentenversicherung AN                            109,74
+Arbeitslosenversicherung AN                       15,34
+Pflegeversicherung AN                             21,24
+
+Auszahlungsbetrag                                834,88 EUR
+Überweisung auf IBAN DE00 0000 0000 0000 0000 21 am 29.01.2026

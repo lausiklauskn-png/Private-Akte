@@ -1,0 +1,33 @@
+Wasserverband Beispieltal
+Wasserverband Beispieltal · Quellweg 1 · 34569 Beispielstadt
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kundennummer: WV-118-0044
+Datum: 11.02.2026
+
+Verbrauchsabrechnung Wasser und Abwasser 2025
+
+Sehr geehrter Herr Brandtner,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Frischwasser m³   214   1,92 €   410,88 €
+2   Schmutzwasser m³   214   2,85 €   609,90 €
+3   Grundgebühr Zähler, Monate   12   4,50 €   54,00 €
+4   abzgl. Vorauszahlungen   12   -85,00 €   -1.020,00 €
+
+Nettobetrag: 54,78 €
+zzgl. 7 % MwSt.: 3,83 €
+Rechnungsbetrag: 58,61 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Das Guthaben wird mit der nächsten Vorauszahlung verrechnet.
+
+Mit freundlichen Grüßen
+Wasserverband Beispieltal
+Wasserverband Beispieltal · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

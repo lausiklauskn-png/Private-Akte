@@ -1,0 +1,11 @@
+‚Online-Banking - Beispiekasse Beispielkreis
+® Beispielkasse Beispielkreis
+Übersicht Konten &Karten Umsätze Postfach Service Abmelden
+Auszug 04/2026 - Studienkredit Nr. 0000000
+Kunde: Can Kranewitt Kunden-Nr. 0000000
+Auszahlung Monatsrate +650,00
+Verwaltungsentgelt -0,00
+Zinsen Ifd. Monat 4,10 % -33,41
+Stand Kreditkonto -11.842,50
+Kreditrahmen insgesamt 18.000,00 EUR, Rückzahlung beginnt 24 Monate nach Studienende.
+https;//banking.example/umsaetze 1/1

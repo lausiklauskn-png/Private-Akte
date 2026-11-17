@@ -1,0 +1,12 @@
+büroklammer-versand.example
+Nordbüro Versandhandel GmbH, Hafenallee 5, 26122 Oldenburg
+
+Rechnung 40-2026-118417            Datum 16.02.2026
+Kettler Systemhaus, Bamberg        Kundennr. 660417
+
+2  Tonerkartusche für Bürodrucker (Eigenverbrauch)   38,90    77,80
+1  Etikettendrucker-Rollen 12er Pack                 54,00    54,00
+3  Versandkartons 10er Bund                           6,20    18,60
+Warenwert netto     150,40
+MwSt 19 %            28,58
+Endbetrag           178,98 EUR

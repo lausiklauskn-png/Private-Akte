@@ -1,0 +1,17 @@
+batteriewelt24.example  -  Starterbatterien direkt
+Akkuhaus Dornfeld GmbH, Ringstr. 5, 59423 Unnaburg, DE000000004
+
+Order / Rechnung #BW-778123
+Date: 2026-11-05     Customer: Kfz-Technik Brandhorst (B2B-Konto)
+Ship to: Ziegeleiweg 14, 37199 Wolmershagen
+
+Qty   Description                          Unit price     Amount
+3     Starterbatterie 12V 60Ah 540A             52,10     156,30
+2     Starterbatterie AGM 12V 70Ah Start-Stop      96,40     192,80
+5     Batteriepfand entfaellt (Rueckgabe)        0,00       0,00
+1     Versandpauschale Palette                  14,90      14,90
+
+Subtotal                                           364,00
+VAT 19%                                             69,16
+Total EUR                                          433,16
+Paid via SEPA-Lastschrift. Vielen Dank fuer Ihre Bestellung!

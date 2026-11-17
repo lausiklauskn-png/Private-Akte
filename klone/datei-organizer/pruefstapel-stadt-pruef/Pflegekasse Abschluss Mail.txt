@@ -1,0 +1,8 @@
+Von: pflegekasse@beispiel-krankenkasse-sued.example
+Betreff: Beendigung Pflegevertrag, Schlussabrechnung Pflegesachleistung
+Datum: Thu, 16 Jul 2026 14:20:00 +0200
+
+Sehr geehrte Frau Brandlechner-Beispiel,
+wir haben die Mitteilung des ambulanten Pflegedienstes erhalten, dass der Pflegevertrag für Herrn Wiesnegger zum 30.06.2026 endet.
+Die restlichen Sachleistungen für Juni haben wir direkt abgerechnet. Das Pflegegeld wird weitergezahlt.
+Mit freundlichen Grüßen, Pflegekasse

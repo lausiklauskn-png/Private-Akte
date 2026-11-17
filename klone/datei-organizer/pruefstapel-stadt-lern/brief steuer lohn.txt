@@ -1,0 +1,10 @@
+Ausdruck der elektronischen Lohnsteuerbescheinigung 2025
+Arbeitgeber: Beispielwerft Nordhafen GmbH, Werftkai 1, 29999 Beispielhafen
+Arbeitnehmer: Kranbeck, Jonas, geb. 1984, Steuerklasse III
+Bescheinigungszeitraum: 01.01.2025 - 31.12.2025
+Bruttoarbeitslohn            41.870,00 EUR
+Einbehaltene Lohnsteuer       2.311,00 EUR
+Solidaritätszuschlag              0,00 EUR
+Beiträge Rentenversicherung   3.894,00 EUR
+Beiträge Krankenversicherung  3.071,00 EUR
+Die Daten wurden an die Finanzverwaltung übermittelt. Dieser Ausdruck ist für Ihre Unterlagen bestimmt.

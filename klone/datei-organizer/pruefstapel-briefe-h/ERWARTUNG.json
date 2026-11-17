@@ -1,0 +1,1504 @@
+{
+ "dateien": [
+  {
+   "datei": "KV Rollstuhl neu.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sanitätshaus Lechtaler & Sohn GmbH",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "scan_0007.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Bergland-Krankenkasse",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Lechtaler Bremse.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sanitätshaus Lechtaler & Sohn GmbH",
+   "person": "Tobias Brandl",
+   "frist": "2025-08-01"
+  },
+  {
+   "datei": "Bescheid ZBFS.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landesamt für Soziales und Teilhabe – Regionalstelle Altenmoos",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "HZA Kfz 2025.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Isarstadt",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (2).txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wernsried – Straßenverkehrsbehörde",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Handgas.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Fahrzeugumbau Dirnberger e. K.",
+   "person": "Tobias Brandl",
+   "frist": "2025-01-24"
+  },
+  {
+   "datei": "Beitrag KFZ 2026.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Donauland Versicherung AG",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Kaufvertrag Maschine.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Tobias Brandl",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Krad.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Donauland Versicherung AG",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "UV Gutachten.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Alpenrand Unfallversicherung a. G.",
+   "person": "Tobias Brandl",
+   "frist": "2025-05-30"
+  },
+  {
+   "datei": "Integrationsamt_Bewilligung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Inklusionsamt Donau-Wald",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Lohn 09-2025.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Kreuzeder Maschinenbau GmbH",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Aufnahme Nachsorge.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Querschnittzentrum Hochfirst",
+   "person": "Tobias Brandl",
+   "frist": "2025-10-06"
+  },
+  {
+   "datei": "Elternbrief_3b.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule am Kirchfeld Wernsried",
+   "person": "Mia Brandl",
+   "frist": "2025-05-09"
+  },
+  {
+   "datei": "Kindergeld.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Donau-Wald",
+   "person": "Mia Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Strom Jahresrechnung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wernsried KU",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20250322_bon.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "BAUFUCHS Heimwerkermarkt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KA_2025_011.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Raiffeisenbank Altenmoos eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Angebot Bad.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Haustechnik Pöllinger GmbH & Co. KG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Pflegekasse Zuschuss.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Bergland-Pflegekasse",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Arztbrief CI Kontrolle.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Universitäts-HNO-Klinik Lohemünde",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "KVA_Hoerwelt.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hörwelt Brinkhaus Pädakustik",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "HKK Ablehnung.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hanse-Küsten-Kasse",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Widerspruch FM.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Aylin Demir",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hanse-Küsten-Kasse",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung 4471.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hörwelt Brinkhaus Pädakustik",
+   "person": "Lina Demir",
+   "frist": "2025-10-02"
+  },
+  {
+   "datei": "Änderungsbescheid GdB Lina.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landesamt für Teilhabe Nordwest – Außenstelle Emsfurt",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Beiblatt.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Landesamt für Teilhabe Nordwest – Außenstelle Emsfurt",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse der Hanse-Küsten-Kasse",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Beratungseinsatz Erinnerung.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse der Hanse-Küsten-Kasse",
+   "person": "Lina Demir",
+   "frist": "2025-07-31"
+  },
+  {
+   "datei": "Förderbedarf.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Regionales Landesamt für Schule und Bildung Emsfurt",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Kreis Schulbegleitung.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landkreis Lohemarsch – Fachdienst Teilhabe",
+   "person": "Lina Demir",
+   "frist": null
+  },
+  {
+   "datei": "Kita_Gebuehr_2025.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Neuhaven an der Lohe – Fachbereich Kinder und Jugend",
+   "person": "Emre Demir",
+   "frist": null
+  },
+  {
+   "datei": "Kinderkrankengeld Auszahlung.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Hanse-Küsten-Kasse",
+   "person": "Jonas Demir",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Neuhaven-Lohemarsch",
+   "person": null,
+   "frist": "2025-09-11"
+  },
+  {
+   "datei": "NK 2024 Deichgrafenweg.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsbau Lohemarsch eG",
+   "person": null,
+   "frist": "2025-07-15"
+  },
+  {
+   "datei": "Ihr Vertrag.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Fonaris Mobilfunk",
+   "person": "Aylin Demir",
+   "frist": null
+  },
+  {
+   "datei": "bon drogerie.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Drogerie Seestern",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Einladung Sommerfest.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Imke Folkerts",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rechnung HU.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Siebels GmbH",
+   "person": "Jonas Demir",
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Termin U7a.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinderarztpraxis Dr. Wiebke",
+   "person": "Emre Demir",
+   "frist": "2025-02-04"
+  },
+  {
+   "datei": "Preisanpassung.txt",
+   "haushalt": "h-demir",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Lumio Stream",
+   "person": "Jonas Demir",
+   "frist": null
+  },
+  {
+   "datei": "MRT Verlauf 2025.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Neurozentrum am Stadthafen",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Rentenbescheid.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Nordost",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "DRV Weitergewährung.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Nordost",
+   "person": "Sandra Olbrich",
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Änderungsvertrag_TZ.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Hafenlogistik Karlsmünde GmbH",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "BEM Einladung.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Termin",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Schwerbehindertenvertretung der Hafenlogistik Karlsmünde GmbH",
+   "person": "Sandra Olbrich",
+   "frist": "2025-06-17"
+  },
+  {
+   "datei": "Bescheid Versorgungsamt 2025.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landesamt für Gesundheit und Soziales Küstenland",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Widerspruch SoVD Kopie.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Sozialbund Küstenland e. V.",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Befreiung 2026.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ostseekasse",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Krankengeld endet.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Ostseekasse",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "20250304_103355.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Möwen-Apotheke",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Physio Eigenanteil.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Therapiehaus Warnowblick",
+   "person": "Sandra Olbrich",
+   "frist": "2025-05-05"
+  },
+  {
+   "datei": "MD Termin.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Dienst Küstenland",
+   "person": "Sandra Olbrich",
+   "frist": "2025-11-18"
+  },
+  {
+   "datei": "FA Nachweise.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Karlsmünde",
+   "person": "Sandra Olbrich",
+   "frist": "2025-07-25"
+  },
+  {
+   "datei": "Mieterhöhung Kranstr.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Greifenberg & Thode",
+   "person": null,
+   "frist": "2025-11-30"
+  },
+  {
+   "datei": "Gas Abschlag neu.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Karlsmünde AG",
+   "person": "Henrik Voss",
+   "frist": null
+  },
+  {
+   "datei": "Abo Kündigung bestätigt.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Karlsmünder Tageblatt Verlags-GmbH",
+   "person": "Henrik Voss",
+   "frist": null
+  },
+  {
+   "datei": "PHV 2026.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Baltische Versicherung von 1871 VVaG",
+   "person": "Henrik Voss",
+   "frist": null
+  },
+  {
+   "datei": "Inkasso.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Forderungsmanagement Nordlicht GmbH",
+   "person": "Henrik Voss",
+   "frist": "2025-09-12"
+  },
+  {
+   "datei": "Steuerbescheinigung Bank.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Ostsee-Sparkasse Karlsmünde",
+   "person": "Sandra Olbrich",
+   "frist": null
+  },
+  {
+   "datei": "Hotel Bodden.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Hotel Boddenkieker",
+   "person": null,
+   "frist": "2025-08-01"
+  },
+  {
+   "datei": "Rechnung Waschmaschine.txt",
+   "haushalt": "h-olbrich",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektrohaus Kagelmacher",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Blindengeld Bescheid.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Kreis Nordergeest – Fachdienst Soziale Sicherung",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "scan0002.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Nordergeester Landkrankenkasse",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Sehwerk Rechnung.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sehwerk Hilfsmittel GmbH",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-02-14"
+  },
+  {
+   "datei": "Reparatur Lesegerät.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sehwerk Hilfsmittel GmbH",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Rundfunk.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Beitragsstelle der Rundfunkanstalten",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Wertmarke verlängern.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Landesamt für soziale Dienste Nordmark",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-10-15"
+  },
+  {
+   "datei": "Augenklinik Brief.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenklinik am Fördeufer",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung 2025.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Nordmark",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Werftrente.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Versorgungskasse der Nordwerft AG",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Grundsteuer 2025.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinde Süderhaveby – Amt Mittlere Geest",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-02-15"
+  },
+  {
+   "datei": "Rechnung Hecke.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Garten- und Landschaftspflege Momme Jessen",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-10-20"
+  },
+  {
+   "datei": "Schornsteinfeger.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bezirksschornsteinfeger Olaf Dethlefsen",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-03-11"
+  },
+  {
+   "datei": "Wasser 2025.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Wasserverband Mittlere Geest",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Heizöl.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Brennstoffe Hinrichs & Sohn",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "Hausnotruf Vertrag.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Johannes-Hilfswerk Nordergeest gGmbH",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Notar Termin.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notar Dr. Friedrich Asmussen",
+   "person": "Ingeborg Thomsen",
+   "frist": "2025-03-27"
+  },
+  {
+   "datei": "AG Erbschein.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Hattbüll – Nachlassgericht",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "LV Auszahlung.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Hanseatische Lebensversicherung a. G.",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Brief Jule.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Jule Thomsen",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Vernichtungsprotokoll.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Aktenvernichtung Nordergeest GmbH",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Auszug Oktober.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Nordergeest",
+   "person": "Ingeborg Thomsen",
+   "frist": null
+  },
+  {
+   "datei": "Hörbücherei Beitrag.txt",
+   "haushalt": "h-thomsen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Norddeutsche Hörbücherei für Blinde e. V.",
+   "person": "Ingeborg Thomsen",
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Labor Q3.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Nierenzentrum Hüttenrode",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Genehmigung Fahrten.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Knappschaftliche Betriebskasse Ruhrland",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Taxi Kowalke Q1.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Taxi- und Mietwagenbetrieb Kowalke",
+   "person": "Marek Nowicki",
+   "frist": "2025-04-22"
+  },
+  {
+   "datei": "Befreiung Unterlagen.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Knappschaftliche Betriebskasse Ruhrland",
+   "person": "Marek Nowicki",
+   "frist": "2025-03-14"
+  },
+  {
+   "datei": "TX Evaluation.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Universitätsklinikum Ruhrstadt – Transplantationsambulanz",
+   "person": "Marek Nowicki",
+   "frist": "2025-11-13"
+  },
+  {
+   "datei": "KH Zuzahlung.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "St.-Barbara-Hospital Hüttenrode gGmbH",
+   "person": "Marek Nowicki",
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Dokument (5).txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "St.-Barbara-Hospital Hüttenrode gGmbH",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "EM-Rente.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Knappschaft-Ruhr",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "AA Aufhebung.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Agentur für Arbeit Reckfeld",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Lohi Unterlagen.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Lohnsteuerhilfe Hellbachland e. V.",
+   "person": null,
+   "frist": "2025-05-16"
+  },
+  {
+   "datei": "Pacht 2026.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein \"Glückauf Halde Süd\" e. V.",
+   "person": "Marek Nowicki",
+   "frist": "2026-02-28"
+  },
+  {
+   "datei": "Rasenmäher.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Grünland Gartencenter Reckfeld",
+   "person": "Beata Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Knöllchen.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Stadt Hüttenrode – Ordnungsamt, Bußgeldstelle",
+   "person": "Beata Nowicki",
+   "frist": "2025-08-08"
+  },
+  {
+   "datei": "Police neu Kfz.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Revier-Direkt Versicherung AG",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Mahnung Strom.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Hellbach Energie GmbH",
+   "person": "Marek Nowicki",
+   "frist": "2025-03-07"
+  },
+  {
+   "datei": "Karte Kollegen.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Manni Skrzypczak",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Kreditkarte 05.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Volksbank Hellbach-Revier eG",
+   "person": "Beata Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "bon_frischhof.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "FRISCHHOF Lebensmittel",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Feriendialyse.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Ferienpark Geestland",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Pflegekasse.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse bei der Knappschaftlichen Betriebskasse Ruhrland",
+   "person": "Marek Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Fernseher KV.txt",
+   "haushalt": "h-nowicki",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Radio-Fernsehtechnik Jablonski",
+   "person": "Beata Nowicki",
+   "frist": null
+  },
+  {
+   "datei": "Beschluss Betreuung.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Talbrunn – Betreuungsgericht",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "AG Jahresbericht.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Talbrunn – Betreuungsgericht",
+   "person": "Felix Aumüller",
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "EGH Bescheid 2025.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Landratsamt Hohenried – Eingliederungshilfe",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Werkstattlohn 10-25.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Talbrunner Werkstätten gGmbH",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Werkstattvertrag.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Talbrunner Werkstätten gGmbH",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "PB Bescheid.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landratsamt Hohenried – Eingliederungshilfe",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Assistenz Rechnung Nov.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Miteinander Assistenzdienst Talbrunn",
+   "person": "Felix Aumüller",
+   "frist": "2025-12-19"
+  },
+  {
+   "datei": "Grundsicherung.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landratsamt Hohenried – Sozialamt",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Familienkasse Nachweis.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Alb-Neckar",
+   "person": "Felix Aumüller",
+   "frist": "2025-10-10"
+  },
+  {
+   "datei": "Fahrdienst Berechtigung 2026.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Landratsamt Hohenried – Eingliederungshilfe",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Schwabenmobil Abr.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Fahrdienst Schwabenmobil",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Ausweis neu.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Hohenried – Versorgungsamt",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Verhinderungspflege.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse der Albland-Krankenkasse",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Infoabend Wohnen.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Talbrunner Wohnverbund der Lebenswege gGmbH",
+   "person": "Felix Aumüller",
+   "frist": "2026-01-22"
+  },
+  {
+   "datei": "Reifen Rechnung.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Schairer",
+   "person": "Stefan Aumüller",
+   "frist": "2025-04-30"
+  },
+  {
+   "datei": "Krad Beitrag.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Schwäbische Gemeindeversicherung VVaG",
+   "person": "Stefan Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "LSt-Besch 2025.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Hechsteig Präzisionsteile GmbH",
+   "person": "Stefan Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Gebäudeversicherung.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Versicherungen",
+   "absender": "Schwäbische Gemeindeversicherung VVaG",
+   "person": null,
+   "frist": "2026-01-15"
+  },
+  {
+   "datei": "Rechnung 10-2025.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Albnetz Telekommunikation GmbH",
+   "person": "Gabriele Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "TSV Beitrag.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "TSV Talbrunn 1899 e. V.",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Freizeit Bodensee.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Miteinander e. V. Talbrunn – Reisen und Freizeiten",
+   "person": "Felix Aumüller",
+   "frist": "2025-06-30"
+  },
+  {
+   "datei": "Auszug_Felix_09.txt",
+   "haushalt": "h-aumueller",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Hohenried",
+   "person": "Felix Aumüller",
+   "frist": null
+  },
+  {
+   "datei": "Klinikum Rechnung.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Klinikum Friedrichsau gGmbH",
+   "person": "Martina Seidel",
+   "frist": "2025-04-18"
+  },
+  {
+   "datei": "Klinikum Korrektur.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Klinikum Friedrichsau gGmbH",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "PVS Chefarzt.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ärztliche Verrechnungsstelle Mitteldeutschland GmbH",
+   "person": "Martina Seidel",
+   "frist": "2025-05-02"
+  },
+  {
+   "datei": "PKV Abrechnung.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Elster-Saale Krankenversicherung a. G.",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "PKV Rückfrage.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Elster-Saale Krankenversicherung a. G.",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Beihilfebescheid 05-25.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Landesverwaltungsamt Mitteldeutschland – Beihilfestelle",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Widerspruch Beihilfe Fahrten.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Martina Seidel",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Arztbrief Onko.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Onkologische Schwerpunktpraxis am Schillerpark",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "scan_0118.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ärztliche Verrechnungsstelle Mitteldeutschland GmbH",
+   "person": "Martina Seidel",
+   "frist": "2025-06-06"
+  },
+  {
+   "datei": "GdB Bescheid Martina.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landesverwaltungsamt Mitteldeutschland – Referat Schwerbehindertenrecht",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Schulamt Wiedereingliederung.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landesschulamt Mitteldeutschland – Regionalstelle Friedrichsau",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Amtsarzt.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Termin",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Gesundheitsamt Friedrichsau – Amtsärztlicher Dienst",
+   "person": "Martina Seidel",
+   "frist": "2025-09-04"
+  },
+  {
+   "datei": "Rechnung SH.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sanitätshaus Elsterkorsett",
+   "person": "Martina Seidel",
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "Bezüge 11-2025.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landesamt für Besoldung und Versorgung Mitteldeutschland",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Immatrikulation WS25.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Universität Saalfurt – Studierendenservice",
+   "person": "Paula Seidel",
+   "frist": null
+  },
+  {
+   "datei": "BAföG.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studentenwerk Saalfurt – Amt für Ausbildungsförderung",
+   "person": "Paula Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Mietvertrag Burgstr.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausgemeinschaft Burgstraße 44 GbR",
+   "person": "Paula Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Ordnerliste Keller.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Olaf Seidel",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Reifenwechsel.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autoservice Böttcher",
+   "person": "Olaf Seidel",
+   "frist": "2025-10-28"
+  },
+  {
+   "datei": "Deckungszusage.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Justitia-Mitte Rechtsschutz AG",
+   "person": "Martina Seidel",
+   "frist": null
+  },
+  {
+   "datei": "Geschirrspüler Kundendienst.txt",
+   "haushalt": "h-seidel",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Pätzold",
+   "person": null,
+   "frist": "2025-12-08"
+  }
+ ]
+}

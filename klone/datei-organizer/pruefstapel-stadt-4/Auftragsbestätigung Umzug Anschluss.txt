@@ -1,0 +1,23 @@
+Von: Rheinwelle Auftragsservice <auftrag@rheinwelle-beispiel.example>
+An: daniel.lehnert@mail-beispiel.example
+Datum: 02.11.2026 08:20
+Betreff: Auftragsbestätigung Umzug Ihres Anschlusses – Kunden-Nr. RW-0002631
+Anhang: Auftragsbestaetigung_Umzug_RW-0002631.pdf
+
+Hallo Herr Lehnert,
+
+wir haben Ihren Umzugsauftrag erhalten und bestätigen:
+
+Bisheriger Anschluss: Am Kranenpfad 5, Wohnung 3.2
+Neuer Anschluss:      Am Kranenpfad 5, Wohnung 4.1
+Tarif:                Rheinwelle Glasfaser 1000 (unverändert, 59,99 €/Monat)
+Umzugsgebühr:         0,00 € (Umzug im selben Gebäude)
+
+Technikertermin: Dienstag, 17.11.2026, Zeitfenster 8–12 Uhr
+Bitte stellen Sie sicher, dass jemand zu Hause ist und der Techniker
+Zugang zum Hausanschlussraum im Keller erhält.
+
+Der Anschluss in Wohnung 3.2 wird am Tag der Aktivierung abgeschaltet.
+Bis dahin bleibt Ihr Internet über die alte Dose wie gewohnt verfügbar.
+
+Ihr Rheinwelle-Team

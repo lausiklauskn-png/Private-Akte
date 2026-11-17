@@ -1,0 +1,12 @@
+=== Kontaktformular www.beschriftung-hellwig.example ===
+Eingang: 31.03.2027 11:11
+
+Name:         Birgit Haas
+Firma:        Pflegedienst Herzenswärme
+E-Mail:       verwaltung@pflege-herzenswaerme.example
+Telefon:      0000 5050
+PLZ/Ort:      00565 Pflegefeld
+Kundennummer: K-2788
+Nachricht:
+300 Kugelschreiber und 20 T-Shirts für die Mitarbeiterinnen, jeweils einfarbig
+mit Logo.

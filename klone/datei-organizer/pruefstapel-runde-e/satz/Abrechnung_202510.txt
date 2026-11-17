@@ -1,0 +1,35 @@
+# Beispiel Verkehrsbetriebe GmbH
+Beispiel Verkehrsbetriebe GmbH · Depotstraße 20 · 56780 Probedorf
+
+Herrn Daniel Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+# Entgeltabrechnung Oktober 2025
+
+Personalnummer: B-2231
+Steuerklasse: IV
+Krankenkasse: Beispiel Gesundheitskasse
+
+|Lohnart|Bezeichnung|Betrag|
+|100|Grundentgelt Fahrdienst EG 5|3.190,00 €|
+|110|Schichtzulage|120,00 €|
+|120|Sonntagszuschlag 24 Std.|108,00 €|
+|130|Spesenpauschale steuerfrei|56,00 €|
+||Gesamtbrutto|3.474,00 €|
+
+|Abzug|Betrag|
+|Lohnsteuer|538,47 €|
+|Kirchensteuer 9 %|48,46 €|
+|Krankenversicherung 8,55 %|297,03 €|
+|Rentenversicherung 9,3 %|323,08 €|
+|Arbeitslosenversicherung 1,3 %|45,16 €|
+|Pflegeversicherung|62,53 €|
+
+Gesetzliches Netto: 2.159,27 €
+Auszahlungsbetrag: 2.159,27 € auf IBAN DE00 0000 0000 0000 0000 00
+
+|Jahreswerte bis Monat|Brutto|Lohnsteuer|Sozialversicherung|
+|Oktober 2025|31.960,80 €|4.846,23 €|6.600,60 €|
+
+@fuss Beispiel Verkehrsbetriebe GmbH · Lohnbuchhaltung · Bei Rückfragen bitte Personalnummer angeben

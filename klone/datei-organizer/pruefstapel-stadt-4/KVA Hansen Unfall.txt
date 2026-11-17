@@ -1,0 +1,33 @@
+Kfz-Meisterbetrieb Beispiel Hansen
+Unfallinstandsetzung · Lack · Karosserie · alle Marken
+Gewerbering 20 · 99905 Musterhausen am Rhein · Tel. 0000-221100
+
+Kostenvoranschlag Nr. KV-26-0091                       Datum: 19.06.2026
+
+Kunde: Daniel Lehnert, Am Kranenpfad 5, 99902 Musterhausen am Rhein
+Fahrzeug: Beispiel e-Kompakt, BSP-DL 2040E, km 38.110
+Schadenursache: Auffahrunfall 16.06.2026 (Heckschaden, Fremdverschulden lt. Kunde)
+Versicherung: Rheinland Beispiel, Schaden-Nr. SCH-26-004417
+
+Ersatzteile
+  Stoßfänger hinten, grundiert                             412,00 €
+  Heckklappe Außenblech                                    690,00 €
+  Rückleuchte links (LED)                                  318,50 €
+  Parksensor hinten 2x                                     144,00 €
+  Kleinteile, Clips                                         38,20 €
+Arbeitslohn Karosserie 9,5 Std.                           826,50 €
+Lackierung inkl. Material                                 980,00 €
+HV-Freischaltung durch Fachkraft (E-Fahrzeug)             120,00 €
+Kalibrierung Assistenzsysteme                             165,00 €
+                                              Netto     3.694,20 €
+                                              MwSt 19 %   701,90 €
+                                              Summe     4.396,10 €
+
+Reparaturdauer ca. 6 Arbeitstage nach Teileeingang.
+Ein Gutachten wurde von der Versicherung beauftragt (Sachverständigenbüro
+Beispiel-Prüf, Besichtigung 22.06.2026 bei uns im Betrieb).
+
+Dieser Kostenvoranschlag ist unverbindlich. Erteilen Sie uns den Auftrag,
+verrechnen wir die KV-Gebühr (35,00 €) mit der Reparatur.
+
+Jörn Hansen, Kfz-Technikermeister

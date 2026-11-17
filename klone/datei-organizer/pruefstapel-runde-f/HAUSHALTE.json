@@ -1,0 +1,131 @@
+{
+ "haushalte": [
+  {
+   "id": "f-familie-alt",
+   "titel": "Familie mit zwei Kindern, Hausbau 2003",
+   "name": "Familie Kornblum",
+   "anschrift": "Am Feldrain 8, 34568 Beispieldorf",
+   "personen": [
+    {
+     "vorname": "Gerd",
+     "name": "Kornblum",
+     "anrede": "Herr",
+     "rolle": "Vater"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Kornblum",
+     "anrede": "Frau",
+     "rolle": "Mutter"
+    },
+    {
+     "vorname": "Lena",
+     "name": "Kornblum",
+     "anrede": "Kind",
+     "rolle": "Tochter, geb. 1994"
+    },
+    {
+     "vorname": "Tim",
+     "name": "Kornblum",
+     "anrede": "Kind",
+     "rolle": "Sohn, geb. 1996"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-GK 412"
+   ]
+  },
+  {
+   "id": "f-arbeitslos",
+   "titel": "Arbeitsloser Mann, ab 2009 wieder angestellt",
+   "name": "Ralf Dommel",
+   "anschrift": "Birkenstraße 5, 45678 Musterhausen",
+   "personen": [
+    {
+     "vorname": "Ralf",
+     "name": "Dommel",
+     "anrede": "Herr",
+     "rolle": "Haushaltsvorstand"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-RD 77"
+   ]
+  },
+  {
+   "id": "f-rentnerin",
+   "titel": "Witwe mit Rente, Pflege und Erbfall",
+   "name": "Hildegard Wiesner",
+   "anschrift": "Kastanienallee 9, 56789 Beispielburg",
+   "personen": [
+    {
+     "vorname": "Hildegard",
+     "name": "Wiesner",
+     "anrede": "Frau",
+     "rolle": "Witwe, Rentnerin"
+    },
+    {
+     "vorname": "Uwe",
+     "name": "Wiesner",
+     "anrede": "Herr",
+     "rolle": "Sohn, Bevollmächtigter"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "f-zukunft",
+   "titel": "Junges Paar mit Baby, E-Auto, 2027 bis 2030",
+   "name": "Familie Behrendt",
+   "anschrift": "Solarstraße 21, 67890 Neustadt-Beispiel",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Behrendt",
+     "anrede": "Herr",
+     "rolle": "Partner"
+    },
+    {
+     "vorname": "Mira",
+     "name": "Behrendt",
+     "anrede": "Frau",
+     "rolle": "Partnerin"
+    },
+    {
+     "vorname": "Ella",
+     "name": "Behrendt",
+     "anrede": "Kind",
+     "rolle": "Tochter, geb. 2028"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JB 2028E",
+    "BSP-JB 30E"
+   ]
+  },
+  {
+   "id": "f-selbststaendig",
+   "titel": "Selbstständiger Fotograf 1999 bis 2012",
+   "name": "Peter Lichtner",
+   "anschrift": "Marktgasse 4, 78901 Beispielheim",
+   "personen": [
+    {
+     "vorname": "Peter",
+     "name": "Lichtner",
+     "anrede": "Herr",
+     "rolle": "Fotograf, Inhaber Fotostudio Lichtblick"
+    },
+    {
+     "vorname": "Anja",
+     "name": "Lichtner",
+     "anrede": "Frau",
+     "rolle": "Ehefrau"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-PL 99",
+    "BSP-PL 7"
+   ]
+  }
+ ]
+}

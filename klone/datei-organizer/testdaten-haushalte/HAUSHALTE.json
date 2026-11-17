@@ -1,0 +1,256 @@
+{
+ "hinweis": "Was ein Start-Assistent in der Familienakte abfragen würde (alles erfunden).",
+ "haushalte": [
+  {
+   "id": "familie-petersen",
+   "titel": "Familie mit drei Kindern",
+   "name": "Petersen",
+   "anschrift": "Möwenstieg 4, 20101 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Jan",
+     "name": "Petersen",
+     "voll": "Jan Petersen",
+     "rolle": "Vater, Lagerlogistiker",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Maren",
+     "name": "Petersen",
+     "voll": "Maren Petersen",
+     "rolle": "Mutter, Pflegekraft in Teilzeit",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Finn",
+     "name": "Petersen",
+     "voll": "Finn Petersen",
+     "rolle": "Kind, 12, Gymnasium",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Ida",
+     "name": "Petersen",
+     "voll": "Ida Petersen",
+     "rolle": "Kind, 8, Grundschule",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Lotta",
+     "name": "Petersen",
+     "voll": "Lotta Petersen",
+     "rolle": "Kind, 3, Kita",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JP 210",
+    "BSP-MP 77"
+   ],
+   "arbeitgeber": {
+    "Jan": "Logistik Nord Beispiel GmbH",
+    "Maren": "Pflegedienst Sonnenseite Beispiel gGmbH"
+   }
+  },
+  {
+   "id": "alleinerziehend-brodersen",
+   "titel": "Alleinerziehend mit Kind",
+   "name": "Brodersen",
+   "anschrift": "Lindenhof 12, 20102 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Sabine",
+     "name": "Brodersen",
+     "voll": "Sabine Brodersen",
+     "rolle": "Mutter, Verkäuferin",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Mia",
+     "name": "Brodersen",
+     "voll": "Mia Brodersen",
+     "rolle": "Kind, 6, Grundschule und Hort",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [],
+   "arbeitgeber": {
+    "Sabine": "Modehaus Beispiel KG"
+   }
+  },
+  {
+   "id": "einzelperson-clausen",
+   "titel": "Einzelperson",
+   "name": "Clausen",
+   "anschrift": "Kaiweg 3, 20103 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Thomas",
+     "name": "Clausen",
+     "voll": "Thomas Clausen",
+     "rolle": "Softwareentwickler",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TC 77"
+   ],
+   "arbeitgeber": {
+    "Thomas": "Softwarehaus Beispiel GmbH"
+   }
+  },
+  {
+   "id": "arbeitslos-lorenzen",
+   "titel": "Arbeitslos, Bürgergeld",
+   "name": "Lorenzen",
+   "anschrift": "Am Kanal 21, 20104 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Dirk",
+     "name": "Lorenzen",
+     "voll": "Dirk Lorenzen",
+     "rolle": "arbeitsuchend, 52",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [],
+   "arbeitgeber": {}
+  },
+  {
+   "id": "professorin-asmussen",
+   "titel": "Professorin, verbeamtet",
+   "name": "Asmussen",
+   "anschrift": "Professorenweg 9, 20105 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Katrin",
+     "name": "Asmussen",
+     "voll": "Katrin Asmussen",
+     "rolle": "Professorin",
+     "anrede": "Frau",
+     "titel": "Prof. Dr."
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KA 1"
+   ],
+   "arbeitgeber": {}
+  },
+  {
+   "id": "selbststaendig-thomsen",
+   "titel": "Selbstständiger Malermeister",
+   "name": "Thomsen",
+   "anschrift": "Farbenweg 5, 20106 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Ole",
+     "name": "Thomsen",
+     "voll": "Ole Thomsen",
+     "rolle": "Malermeister, Einzelunternehmer",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Anke",
+     "name": "Thomsen",
+     "voll": "Anke Thomsen",
+     "rolle": "Ehefrau, Büro",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-OT 5"
+   ],
+   "arbeitgeber": {}
+  },
+  {
+   "id": "rentner-jessen",
+   "titel": "Rentnerpaar",
+   "name": "Jessen",
+   "anschrift": "Rosenstieg 2, 20107 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Hinrich",
+     "name": "Jessen",
+     "voll": "Hinrich Jessen",
+     "rolle": "Rentner, 78",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Gerda",
+     "name": "Jessen",
+     "voll": "Gerda Jessen",
+     "rolle": "Rentnerin, 75, Pflegegrad",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [],
+   "arbeitgeber": {}
+  },
+  {
+   "id": "entwickler-fleetmann",
+   "titel": "Selbstständiger App-Entwickler (wie Klaus), nebenher angestellt",
+   "name": "Fleetmann",
+   "anschrift": "Elbblick 14, 20109 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Klaus",
+     "name": "Fleetmann",
+     "voll": "Klaus Fleetmann",
+     "rolle": "App-Entwickler, Android-Nutzer, Haushaltsbuch",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [],
+   "arbeitgeber": {
+    "Klaus": "Hafenservice Nord Beispiel GmbH"
+   }
+  },
+  {
+   "id": "boutique-hafenrose",
+   "titel": "Inhaberin einer Boutique (Mode, Dessous, Parfüm, Beauty)",
+   "name": "Hafenrose",
+   "anschrift": "Jungfernstieg-Beispiel 3, 20110 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Ali",
+     "name": "Hafenrose",
+     "voll": "Ali Hafenrose",
+     "rolle": "Inhaberin Boutique Moderaum Beispiel",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Tom",
+     "name": "Hafenrose",
+     "voll": "Tom Hafenrose",
+     "rolle": "Ehemann, angestellt",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-AH 12"
+   ],
+   "arbeitgeber": {
+    "Tom": "Logistik Nord Beispiel GmbH"
+   }
+  },
+  {
+   "id": "studentin-ketelsen",
+   "titel": "Studentin",
+   "name": "Ketelsen",
+   "anschrift": "WG Hafenblick 7, 20108 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Lena",
+     "name": "Ketelsen",
+     "voll": "Lena Ketelsen",
+     "rolle": "Studentin, 22",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [],
+   "arbeitgeber": {
+    "Lena": "Café Möwe Beispiel"
+   }
+  }
+ ]
+}

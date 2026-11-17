@@ -1,0 +1,17 @@
+Von: Rechnerwerk Service <service@rechnerwerk.example>
+An: anke.rehders@postfach.example
+Betreff: Ihr Servicefall RW-2026-118840 - Garantiereparatur abgeschlossen
+
+Guten Tag Frau Rehders,
+
+Ihr Notebook "Rechnerwerk Slim 14" (Seriennummer RW14000000447) wurde im Rahmen der
+Herstellergarantie repariert.
+
+Durchgeführte Arbeiten: Austausch Mainboard und Tastatur (Fehlerbild: Ladeanschluss ohne
+Funktion, Tasten klemmen). Kosten für Sie: 0,00 EUR.
+Das Gerät ist heute per Paketdienst an Sie zurückgegangen. Sendungsnummer 00340000001188.
+
+Die Garantie für die getauschten Teile läuft bis zum Ende der ursprünglichen Garantiezeit
+(14.03.2028).
+
+Ihr Rechnerwerk-Serviceteam

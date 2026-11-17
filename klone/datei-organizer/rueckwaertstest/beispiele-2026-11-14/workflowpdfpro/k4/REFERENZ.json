@@ -1,0 +1,418 @@
+{
+ "app": "Workflow PDF Pro",
+ "stand": {
+  "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+  "commit": "d37701a",
+  "datum": "2026-11-09"
+ },
+ "quellen": [
+  "CLAUDE.md",
+  "AGENTS.md",
+  "README.md",
+  "docs/PRODUKTSTAND.md",
+  "docs/TRESORORDNER.md",
+  "docs/SICHERUNG-UND-HINTERGRUND.md",
+  "docs/SCANNER-UND-KAMERA-WINDOWS.md",
+  "docs/PRO-EINGANG.md",
+  "docs/PRO-VERBUND-BEDIENUNG.md",
+  "docs/PRO-VERBUND-NATIV.md",
+  "docs/ANDROID-START.md",
+  "docs/IPHONE-WEBVERSION.md",
+  "upstream/workflow-pdf/README.md",
+  "git log origin/main"
+ ],
+ "merkmale": [
+  {
+   "id": "M01",
+   "art": "zweck",
+   "text": "Die App dient dazu, PDF-Formulare und Papierdokumente einzulesen, Formularfelder zu erkennen oder zu setzen, auszufüllen und als festes oder ausfüllbares PDF auszugeben.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md"
+  },
+  {
+   "id": "M02",
+   "art": "zweck",
+   "text": "Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage.",
+   "gewicht": "kern",
+   "beleg": "README.md"
+  },
+  {
+   "id": "M03",
+   "art": "zweck",
+   "text": "Die App arbeitet lokal auf dem Gerät, ohne Konto und weitgehend ohne Netz; Dokumente verlassen das Gerät nur auf ausdrückliche Wahl.",
+   "gewicht": "kern",
+   "beleg": "README.md; upstream/workflow-pdf/README.md"
+  },
+  {
+   "id": "M04",
+   "art": "nutzer",
+   "text": "Zielgruppe sind Privatpersonen und kleine Betriebe, die Formulare, Briefe und Scans ohne Cloud-Dienst bearbeiten und ablegen wollen.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/IPHONE-WEBVERSION.md"
+  },
+  {
+   "id": "M05",
+   "art": "nutzer",
+   "text": "Nutzer ohne Programmierkenntnisse bedienen die App über benannte Knöpfe; Erklärungen stehen hinter Info-Symbolen in den Einstellungen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Einstellungen nach Leitfaden)"
+  },
+  {
+   "id": "M06",
+   "art": "plattform",
+   "text": "Es gibt eine native Android-App (Android 8 oder neuer, aktuelle System-WebView ab 120), signiert und als Update über die vorhandene Installation installierbar.",
+   "gewicht": "kern",
+   "beleg": "docs/ANDROID-START.md"
+  },
+  {
+   "id": "M07",
+   "art": "plattform",
+   "text": "Es gibt eine native Windows-App (Windows 10/11, 64 Bit, Tauri 2 mit WebView2), installierbar ohne Administratorrechte, derzeit unsigniert.",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/PRODUKTSTAND.md"
+  },
+  {
+   "id": "M08",
+   "art": "plattform",
+   "text": "Eine iOS-Fassung ist nur vorbereitet und wird nicht veröffentlicht; für iPhone/iPad gibt es stattdessen die kostenlose Web-App (PWA).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Entscheidung zu iOS); docs/IPHONE-WEBVERSION.md"
+  },
+  {
+   "id": "M09",
+   "art": "plattform",
+   "text": "Alle Fassungen (PWA, Android, Windows, iOS) werden auf denselben Stand nachgezogen; fehlt eine Fassung, wird die Lücke mit Grund dokumentiert.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Gleichstandsregel); AGENTS.md Regel 1"
+  },
+  {
+   "id": "M10",
+   "art": "plattform",
+   "text": "Updates werden über eine eigene Prüfung in der App angeboten („Auf Updates prüfen“ mit Versionsanzeige); Daten und Einstellungen bleiben bei Updates erhalten.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Updates unter Windows); AGENTS.md Regel 9"
+  },
+  {
+   "id": "M11",
+   "art": "bereich",
+   "text": "Die App hat eine Bibliothek mit Ordnern, in denen Dokumente abgelegt, verschoben, dupliziert (als Vorlage) und gelöscht werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Ordner)"
+  },
+  {
+   "id": "M12",
+   "art": "bereich",
+   "text": "Die App hat einen PDF-/Formular-Editor, in dem Felder gesetzt, verschoben, vergrößert und direkt auf der Seite ausgefüllt werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md; README.md"
+  },
+  {
+   "id": "M13",
+   "art": "bereich",
+   "text": "Die App hat einen eigenen Übersetzen-Bereich mit selbst benannten Ordnern.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md (Übersetzen)"
+  },
+  {
+   "id": "M14",
+   "art": "bereich",
+   "text": "Die Einstellungen enthalten einen Bereich „Tresor & Ablage“ mit Zustand, Pfad, „In Dateien öffnen“ und einem hervorgehobenen nächsten Schritt.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Einstellungen nach Leitfaden); docs/TRESORORDNER.md"
+  },
+  {
+   "id": "M15",
+   "art": "funktion",
+   "text": "Dokumente lassen sich als PDF oder Bild einlesen, auch ganze Ordner, per Ziehen auf die Seite oder durch Anhängen von Seiten an ein vorhandenes Dokument.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Einlesen)"
+  },
+  {
+   "id": "M16",
+   "art": "funktion",
+   "text": "Ein Scanner wandelt Fotos in PDF: Blatt im Foto finden, Ecken mit Lupe korrigieren, entzerren und auf A4, US Letter oder andere Formate gerade ziehen; unsichere Seiten werden zur Prüfung markiert.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Scannen)"
+  },
+  {
+   "id": "M17",
+   "art": "funktion",
+   "text": "Gescannte Seiten können per Texterkennung (OCR) durchsuchbar gemacht werden (Haken „Durchsuchbar“).",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md (1.0.9)"
+  },
+  {
+   "id": "M18",
+   "art": "funktion",
+   "text": "Vorhandene Formularfelder eines PDF werden samt Wert übernommen; neue Felder werden offline aus Linien, Rahmen und Kästchen im Seitenbild erkannt.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Vorhandene Formulare, Erkennen offline)"
+  },
+  {
+   "id": "M19",
+   "art": "funktion",
+   "text": "Feldererkennung mit KI ist freiwillig und läuft nur mit eigenem Schlüssel eines Anbieters (z. B. Mistral EU, Anthropic, OpenAI); erkannte Felder bleiben Vorschläge, bis sie bestätigt werden.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md (Erkennen mit KI, Vorschläge prüfen)"
+  },
+  {
+   "id": "M20",
+   "art": "funktion",
+   "text": "Felder gibt es in mehreren Arten (Text, Datum, Kästchen, E-Mail, Internetadresse, QR-Code, eigene Feldarten) mit wählbarer Schriftgröße je Feld.",
+   "gewicht": "wichtig",
+   "beleg": "upstream/workflow-pdf/README.md; docs/PRODUKTSTAND.md (Kern 1.1.9)"
+  },
+  {
+   "id": "M21",
+   "art": "funktion",
+   "text": "Ausgabe als festes PDF, ausfüllbares (vorbelegtes) PDF, leere ausfüllbare Vorlage sowie Ansehen und Drucken.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Ausgeben); README.md"
+  },
+  {
+   "id": "M22",
+   "art": "funktion",
+   "text": "PDFs lassen sich zwischen Deutsch, Russisch und Englisch übersetzen, Seite für Seite in der Lage des Originals; Behördenformulare können übersetzt ausgefüllt und die Einträge ins Original zurückgesetzt werden.",
+   "gewicht": "kern",
+   "beleg": "upstream/workflow-pdf/README.md (Übersetzen, Behördenformulare)"
+  },
+  {
+   "id": "M23",
+   "art": "funktion",
+   "text": "Übersetzen geht lokal mit Android-Sprachmodellen, über Google Chrome mit geschütztem Hin- und Rücktransport oder über einen KI-Anbieter mit eigenem Schlüssel; vor dem Senden wird gereinigt und gefragt.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; AGENTS.md (Übersetzung)"
+  },
+  {
+   "id": "M24",
+   "art": "funktion",
+   "text": "Die Bibliothek ist per Wortsuche und optional per Bedeutungssuche (lokales Sprachmodell) durchsuchbar; das Einordnen startet erst auf Knopfdruck.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M25",
+   "art": "funktion",
+   "text": "An jedem Foto kann eine Bildbeschreibung stehen (eigene Worte per Text oder Mikrofon, oder ein Bildmodell auf Knopfdruck); die Suche findet diese Beschreibung.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRODUKTSTAND.md (Gleichstand Bildbeschreibung); docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M26",
+   "art": "funktion",
+   "text": "Spracheingabe ist in der App verfügbar.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md"
+  },
+  {
+   "id": "M27",
+   "art": "funktion",
+   "text": "Die Bibliothek lässt sich als verschlüsselte Sicherungsdatei (.wfps) sichern und zurückholen; Zurückholen fügt hinzu und überschreibt nie.",
+   "gewicht": "kern",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M28",
+   "art": "funktion",
+   "text": "Lange Arbeiten (Sichern, Prüfen, Einordnen, Bildbeschreibung) laufen als Hintergrundaufgabe mit Mitteilung, Fortschritt und Abbrechen weiter.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SICHERUNG-UND-HINTERGRUND.md (Pro-Umbau 4)"
+  },
+  {
+   "id": "M29",
+   "art": "funktion",
+   "text": "Unter Windows können angeschlossene Scanner (WIA, USB oder Netz) und Kameras ausgewählt werden, mit Vorlage Glas/Einzug, 150–600 dpi und Farbmodus.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCANNER-UND-KAMERA-WINDOWS.md"
+  },
+  {
+   "id": "M30",
+   "art": "funktion",
+   "text": "„Überall suchen“ durchsucht neben der eigenen Bibliothek auch die Fächer anderer Pro-Apps im gemeinsamen Tresor und auf Wunsch das Netz.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 12)"
+  },
+  {
+   "id": "M31",
+   "art": "funktion",
+   "text": "Schriftgröße der Oberfläche ist über einen Knopf „A··A“ im Kopf einstellbar; die Version steht klein neben dem Namen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 12)"
+  },
+  {
+   "id": "M32",
+   "art": "daten",
+   "text": "Ohne Ordnerwahl arbeitet die App mit einer internen Arbeitsablage; eine SD-Karte ist optional.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/ANDROID-START.md"
+  },
+  {
+   "id": "M33",
+   "art": "daten",
+   "text": "Die dauerhafte Hauptablage ist ein verschlüsselter Tresor in einem selbst gewählten Ordner (Gerätespeicher, SD-Karte oder anderer Datenträger); bei der Übernahme reisen Originale, Felder und Übersetzungsstände mit.",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/ANDROID-START.md"
+  },
+  {
+   "id": "M34",
+   "art": "daten",
+   "text": "Das Original eines eingelesenen Dokuments wird unverändert neben der bearbeiteten Fassung aufbewahrt.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md; docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M35",
+   "art": "daten",
+   "text": "Ein gemeinsamer Tresorordner für alle Pro-Apps hat Fächer je App und Übergabefächer, ein verschlüsseltes Inhaltsverzeichnis je Fach und Schreiber und wird nie durch Löschen in einem Fach verändert.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md"
+  },
+  {
+   "id": "M36",
+   "art": "daten",
+   "text": "Ordnerwahl und Speichern in den Tresor sind geschützt: Rückfrage vor neuer Ablage, keine Verschachtelung, Warnung bei „Speichern unter“ in den Tresorordner, Hilfe „Wo liegt was?“.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Ordnerwahl und Tresor-Schutz); docs/PRODUKTSTAND.md"
+  },
+  {
+   "id": "M37",
+   "art": "sicherheit",
+   "text": "Tresor und Sicherungen sind mit Passwort verschlüsselt (PBKDF2-SHA256 mit 600 000 Runden, AES-256-GCM); das Passwort liegt nur im Arbeitsspeicher bzw. im eigenen nativen Dialog.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md; docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M38",
+   "art": "sicherheit",
+   "text": "Für ein vergessenes Passwort gibt es Ersatzschlüssel (5 Teile, 3 genügen), die als Datei gespeichert werden können; ein neuer Satz macht den alten ungültig.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ANDROID-START.md (Ersatzschlüssel)"
+  },
+  {
+   "id": "M39",
+   "art": "sicherheit",
+   "text": "Der entsperrte Zustand kann auf dem Gerät gemerkt werden (Android Keystore bzw. Windows DPAPI), gebunden an App und Tresorkennung; manuelles Sperren ist möglich.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRO-VERBUND-NATIV.md"
+  },
+  {
+   "id": "M40",
+   "art": "sicherheit",
+   "text": "Dateien werden nur auf Knopfdruck auf versteckte Inhalte geprüft; die App zeigt ehrlich „nicht geprüft“ und behauptet keinen Virenschutz.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 5; docs/SICHERUNG-UND-HINTERGRUND.md"
+  },
+  {
+   "id": "M41",
+   "art": "sicherheit",
+   "text": "Vor jeder Übertragung an einen externen Dienst wird der Inhalt gereinigt, nachgefragt und ein Abbruch ohne Senden angeboten; es gibt keine ungefragten Datei-Uploads.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 5"
+  },
+  {
+   "id": "M42",
+   "art": "sicherheit",
+   "text": "Ein empfangener Eingang wird erst bestätigt, wenn PDF, Original und Quittung dauerhaft gespeichert und zurückgelesen sind (Größe und SHA-256 geprüft).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md"
+  },
+  {
+   "id": "M43",
+   "art": "schnittstelle",
+   "text": "Dateien lassen sich über das Betriebssystem an die App teilen bzw. mit „Öffnen mit“ übernehmen und gehen durch denselben Import wie in der App.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-EINGANG.md; docs/IPHONE-WEBVERSION.md"
+  },
+  {
+   "id": "M44",
+   "art": "schnittstelle",
+   "text": "Ausgaben lassen sich über den Teilen-Dialog des Betriebssystems weitergeben; der Empfänger startet in einem eigenen Fenster (Appwechsel).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRODUKTSTAND.md (Appwechsel 1.0.13)"
+  },
+  {
+   "id": "M45",
+   "art": "schnittstelle",
+   "text": "Mit Familienakte Pro, Private Brain Pro und BookLedgerPro arbeitet die App freiwillig über den gemeinsamen Tresor zusammen: Eingang mit Einzelauswahl, Ausgang bis 20 MiB je Datei, Empfangsquittung und Rückbezug.",
+   "gewicht": "kern",
+   "beleg": "docs/PRO-VERBUND-BEDIENUNG.md"
+  },
+  {
+   "id": "M46",
+   "art": "schnittstelle",
+   "text": "Andere Apps können den Scanner direkt starten (Android-Intent bzw. Web-Adresse mit Scan-Parameter); das Ergebnis geht über Teilen zurück.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md (Kern 1.1.4, Scanner-Direktstart); docs/PRODUKTSTAND.md (Direktstart)"
+  },
+  {
+   "id": "M47",
+   "art": "schnittstelle",
+   "text": "Die App ist ein Knoten im eigenen Netz (SBKIM/Mycel): mit Chefcode (Chef-PIN, Beitritts-Zettel) entsteht ein eigenes Netz, und sie kann auf Wunsch Suchanfragen beantworten (ab Werk aus).",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-Umbau 13, 14 A, 14 A3)"
+  },
+  {
+   "id": "M48",
+   "art": "schnittstelle",
+   "text": "Eine Pro-App-Verbund-Karte zeigt die Zusammenarbeit der Pro-Apps.",
+   "gewicht": "beiwerk",
+   "beleg": "git log (1.0.15, 1.0.16)"
+  },
+  {
+   "id": "M49",
+   "art": "grenze",
+   "text": "Der Formular-Kern wird bytegleich aus der Web-App übernommen und in der Pro-App nie von Hand geändert; Geräteanbindung geschieht nur in Adaptern.",
+   "gewicht": "wichtig",
+   "beleg": "AGENTS.md Regel 2; docs/PRO-EINGANG.md"
+  },
+  {
+   "id": "M50",
+   "art": "grenze",
+   "text": "Erkannte Felder sind Vorschläge; gepunktete Linien werden offline nicht erkannt und KI-Positionen sind ungefähr.",
+   "gewicht": "beiwerk",
+   "beleg": "upstream/workflow-pdf/README.md (Grenzen)"
+  },
+  {
+   "id": "M51",
+   "art": "grenze",
+   "text": "Beim Übersetzen bricht der Text innerhalb eines Absatzes neu um, schräger Text bleibt stehen, und Texterkennung kann sich verlesen.",
+   "gewicht": "beiwerk",
+   "beleg": "upstream/workflow-pdf/README.md (Grenzen)"
+  },
+  {
+   "id": "M52",
+   "art": "grenze",
+   "text": "Der Windows-Installer ist unsigniert, und der Einzug der eigenen Ablage in den Tresorordner gibt es unter Windows nicht.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; docs/PRODUKTSTAND.md; docs/PRO-VERBUND-NATIV.md"
+  },
+  {
+   "id": "M53",
+   "art": "grenze",
+   "text": "TWAIN-Scanner werden unter Windows nicht erkannt; unter Android und in der PWA gibt es nur die Kamera als Scanquelle.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SCANNER-UND-KAMERA-WINDOWS.md"
+  },
+  {
+   "id": "M54",
+   "art": "grenze",
+   "text": "Die Web-App hat keinen verschlüsselten Ordner als Hauptablage und keine Übernahme per „Öffnen mit“.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/IPHONE-WEBVERSION.md"
+  },
+  {
+   "id": "M55",
+   "art": "grenze",
+   "text": "Eine Teilen-Auswahl des Betriebssystems bestätigt keinen Empfang in der Ziel-App; nur die Marke der Ziel-App im Tresor gilt als Empfang.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/PRO-VERBUND-BEDIENUNG.md"
+  },
+  {
+   "id": "M56",
+   "art": "grenze",
+   "text": "Es gibt keinen Bezahlvorgang, keinen App Store-Vertrieb und kein Benutzerkonto.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md; docs/PRODUKTSTAND.md (iOS)"
+  }
+ ]
+}
