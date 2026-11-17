@@ -702,6 +702,29 @@ try {
     await page.waitForFunction(() => !document.querySelector("[data-installieren]"), null, { timeout: 3000 }).catch(() => {});
     soll("Installieren: Knopf nur mit Angebot des Browsers, Tipp öffnet die Installation, danach ist er weg", ohne === 0 && da && await page.evaluate(() => window.__inst) === 1 && await page.locator("[data-installieren]").count() === 0, `ohne=${ohne} da=${da}`);
   }
+  { // Im Rahmen einer anderen App (src/rahmen.ts): kein eigener Service Worker, direkte Übergabe von Index und Originalen.
+    console.log("Im Rahmen (Übergabe an die Hülle)");
+    const rctx = await browser.newContext({ viewport: { width: 1100, height: 800 } });
+    await rctx.addInitScript(() => { window.__paket = null; window.DO_RAHMEN = { name: "Private Akte", uebergeben: async (p) => { window.__paket = { ordner: p.ordner, n: p.dateien.length, datei: p.dateien[0]?.datei instanceof File, groesse: p.dateien[0]?.datei.size, pfad: p.dateien[0]?.pfad, index: JSON.parse(p.index), fehlen: p.fehlen.length }; return { ok: true }; } }; });
+    const rp = await rctx.newPage(); const rf = []; rp.on("pageerror", (e) => rf.push(String(e)));
+    await rp.goto(basis);
+    await rp.locator("[data-testordner]").click();
+    await rp.waitForFunction(() => /\d+ (Dateien|sortiert)/.test(document.body.innerText) && !document.querySelector("[data-ladebalken]"), null, { timeout: 60000 }).catch(() => {});
+    await rp.waitForTimeout(800);
+    await rp.evaluate(() => { location.hash = "akte"; });
+    await rp.waitForSelector("[data-uebergeben]", { timeout: 5000 }).catch(() => {});
+    soll("Rahmen: Knopf „An die Private Akte übergeben“", ((await rp.locator("[data-uebergeben]").innerText().catch(() => "")) || "").includes("Private Akte"));
+    await rp.locator("[data-uebergeben]").click().catch(() => {});
+    await rp.waitForFunction(() => window.__paket, null, { timeout: 30000 }).catch(() => {});
+    const pk = await rp.evaluate(() => window.__paket);
+    const frei = pk ? pk.index.dateien.filter((d) => d.pruefstand === "frei").length : -1;
+    soll("Rahmen: Übergabe trägt Index und die freien Originale als Dateien", !!pk && pk.datei && pk.groesse > 0 && pk.index.format === "datei-organizer-index" && pk.n + pk.fehlen === frei && pk.n > 50, pk ? `n=${pk.n} frei=${frei} fehlen=${pk.fehlen}` : "kein Paket");
+    soll("Rahmen: Meldung nach der Übergabe", ((await rp.locator("[data-uebergabe] [data-meldung]").innerText().catch(() => "")) || "").includes("übergeben"));
+    soll("Rahmen: kein eigener Service Worker", (await rp.evaluate(async () => (await navigator.serviceWorker.getRegistrations()).length)) === 0);
+    soll("Rahmen: keine Fehler in der Konsole", rf.length === 0, rf.slice(0, 2).join(" | "));
+    await rctx.close();
+    soll("Ohne Rahmen: kein Übergabe-Knopf", await page.evaluate(() => { location.hash = "akte"; return new Promise((ok) => setTimeout(() => ok(!document.querySelector("[data-uebergeben]")), 300)); }));
+  }
   soll("Keine Fehler in der Konsole", fehler.length === 0, fehler.slice(0, 3).join(" | "));
 } finally {
   await browser.close(); server.close();

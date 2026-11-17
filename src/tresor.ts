@@ -89,7 +89,25 @@ const sicherung = {
 // Gesperrtes). Zusätzlich hier aus demselben Index: Datum und der dort gelesene Text – er wird der Textauszug der Unterlage, damit
 // die Akte nicht noch einmal lesen muss. Nur Dateien direkt im Ordner. Ohne Index ist es ein einfacher Stapel ohne Einordnung.
 type OrdnerStueck = { name: string; groesse: number; bereich: string; neuerBereich: boolean; art: string; datum: string | null; hinweis: string; warnung: string; doppelt: boolean; text: string };
-let organizerOrdner: { handle: FileSystemDirectoryHandle; stuecke: OrdnerStueck[] } | null = null;
+let organizerOrdner: { hole: (name: string) => Promise<File>; stuecke: OrdnerStueck[] } | null = null;
+const MIME: Record<string, string> = { pdf: "application/pdf", jpg: "image/jpeg", jpeg: "image/jpeg", png: "image/png", webp: "image/webp", gif: "image/gif", txt: "text/plain", eml: "message/rfc822" };
+/** Der Organizer übergibt Dateien ohne Typ; der Tresor und das Lesen erkennen ihn dann an der Endung. */
+const mitTyp = (f: File) => f.type ? f : new File([f], f.name, { type: MIME[(f.name.split(".").pop() || "").toLowerCase()] || "", lastModified: f.lastModified });
+function organizerStapel(ordner: string, indexText: string | null, liste: Array<{ name: string; size: number }>, hole: (name: string) => Promise<File>) {
+  const u = indexText ? organizerUebernahme(indexText, liste, [...FAMILY_CATEGORIES]) : null;
+  const roh = new Map<string, { datum?: unknown; text?: unknown }>();
+  if (u?.ok && indexText) for (const e of (JSON.parse(indexText) as { dateien: Array<{ pfad?: unknown; groesse?: unknown; datum?: unknown; text?: unknown }> }).dateien)
+    if (e && typeof e.pfad === "string" && typeof e.groesse === "number") roh.set(organizerSchluessel({ name: e.pfad, size: e.groesse }), e);
+  const fest = new Set(FAMILY_CATEGORIES.map((b) => b.toLocaleLowerCase("de")));
+  const stuecke = liste.sort((a, b) => a.name.localeCompare(b.name, "de")).map((f): OrdnerStueck => {
+    const k = organizerSchluessel(f), v = u?.vorschlaege.get(k), r = roh.get(k), d = typeof r?.datum === "string" && /^\d{4}-\d{2}-\d{2}/.test(r.datum) ? r.datum.slice(0, 10) : null;
+    const bereich = v?.vorschlag.lebensbereich || "";
+    return { name: f.name, groesse: f.size, bereich, neuerBereich: !!bereich && !fest.has(bereich.toLocaleLowerCase("de")), art: v?.vorschlag.dokumentart || "", datum: d,
+      hinweis: v?.vorschlag.hinweis || "", warnung: v?.hinweis || "", doppelt: !!u?.doppelt.has(k), text: typeof r?.text === "string" ? r.text.slice(0, 20000) : "" };
+  });
+  organizerOrdner = { hole, stuecke };
+  return { ordner, index: !!u?.ok, grund: indexText ? u?.grund || "" : "", stuecke: stuecke.map(({ text, ...s }) => ({ ...s, text: text.length > 0 })) };
+}
 const organizer = {
   async waehlen() {
     const handle = await chooseExportDestination("Welcher Ordner soll in die Akte?");
@@ -99,20 +117,13 @@ const organizer = {
       const f = await e.getFile();
       if (e.name === ORGANIZER_INDEX) { if (f.size <= ORGANIZER_INDEX_MAX) indexText = await f.text(); } else dateien.push(f);
     }
-    const liste = dateien.map((f) => ({ name: f.name, size: f.size }));
-    const u = indexText ? organizerUebernahme(indexText, liste, [...FAMILY_CATEGORIES]) : null;
-    const roh = new Map<string, { datum?: unknown; text?: unknown }>();
-    if (u?.ok && indexText) for (const e of (JSON.parse(indexText) as { dateien: Array<{ pfad?: unknown; groesse?: unknown; datum?: unknown; text?: unknown }> }).dateien)
-      if (e && typeof e.pfad === "string" && typeof e.groesse === "number") roh.set(organizerSchluessel({ name: e.pfad, size: e.groesse }), e);
-    const fest = new Set(FAMILY_CATEGORIES.map((b) => b.toLocaleLowerCase("de")));
-    const stuecke = liste.sort((a, b) => a.name.localeCompare(b.name, "de")).map((f): OrdnerStueck => {
-      const k = organizerSchluessel(f), v = u?.vorschlaege.get(k), r = roh.get(k), d = typeof r?.datum === "string" && /^\d{4}-\d{2}-\d{2}/.test(r.datum) ? r.datum.slice(0, 10) : null;
-      const bereich = v?.vorschlag.lebensbereich || "";
-      return { name: f.name, groesse: f.size, bereich, neuerBereich: !!bereich && !fest.has(bereich.toLocaleLowerCase("de")), art: v?.vorschlag.dokumentart || "", datum: d,
-        hinweis: v?.vorschlag.hinweis || "", warnung: v?.hinweis || "", doppelt: !!u?.doppelt.has(k), text: typeof r?.text === "string" ? r.text.slice(0, 20000) : "" };
-    });
-    organizerOrdner = { handle, stuecke };
-    return { ordner: handle.name, index: !!u?.ok, grund: indexText ? u?.grund || "" : "", stuecke: stuecke.map(({ text, ...s }) => ({ ...s, text: text.length > 0 })) };
+    return organizerStapel(handle.name, indexText, dateien.map((f) => ({ name: f.name, size: f.size })), async (name) => (await handle.getFileHandle(name)).getFile());
+  },
+  /** Direkte Übergabe aus dem Datei-Organizer im Rahmen (0.5.0): Index als Text und die Originale als Dateien, ohne Ordnerwahl.
+   *  `pfad` ist der Name im Index (auch aus Unterordnern oder Anhang einer Mail); abgelegt wird unter dem Dateinamen. */
+  ausStapel(ordner: string, indexText: string, dateien: Array<{ pfad: string; datei: File }>) {
+    const nach = new Map(dateien.filter((x) => x && typeof x.pfad === "string" && x.datei instanceof File).map((x) => [x.pfad, mitTyp(x.datei)]));
+    return organizerStapel(ordner, indexText.length <= ORGANIZER_INDEX_MAX ? indexText : null, [...nach].map(([pfad, f]) => ({ name: pfad, size: f.size })), async (name) => { const f = nach.get(name); if (!f) throw new Error("Datei fehlt in der Übergabe."); return f; });
   },
   /** Legt die genannten Dateien ab (Bereich je Datei wie übergeben). Fehlt der Text aus dem Organizer, liest die Akte selbst. */
   async uebernehmen(auswahl: Array<{ name: string; bereich: string }>, fortschritt?: (fertig: number, gesamt: number, name: string) => void) {
@@ -122,7 +133,7 @@ const organizer = {
       fortschritt?.(i, auswahl.length, w.name);
       const s = organizerOrdner.stuecke.find((x) => x.name === w.name); if (!s) continue;
       try {
-        const datei = await (await organizerOrdner.handle.getFileHandle(s.name)).getFile();
+        const datei = await organizerOrdner.hole(s.name);
         let text = s.text; if (!text && (istBild(datei) || istPdf(datei))) { try { text = (await textLesen(datei)).text; } catch { text = ""; } }
         await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: s.hinweis ? `Aus dem Datei-Organizer – ${s.hinweis}`.slice(0, 1000) : null, titel: null, textAuszug: text || null });
         aus.abgelegt++;

@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "bau": "node tools/bau.mjs",
-    "bau:pruefen": "node tools/bau.mjs --pruefen",
+    "bau": "node tools/bau.mjs && node tools/rahmen-bauen.mjs",
+    "bau:pruefen": "node tools/bau.mjs --pruefen && node tools/rahmen-bauen.mjs --pruefen",
     "probe": "node tests/probe.cjs"
   },
   "devDependencies": {
