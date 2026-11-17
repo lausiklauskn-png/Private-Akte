@@ -30,11 +30,11 @@ a{color:var(--akz)}
 .kopfknoepfe{display:flex;gap:6px;align-items:center}
 .kopfknoepfe .nurbreit{display:none}
 /* Werkzeugleiste: am Handy eigene Zeile zum Wischen */
-.werkleiste{order:9;flex:1 1 100%;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -14px;padding:2px 14px 4px;scroll-snap-type:x proximity}
-.werkleiste::-webkit-scrollbar{display:none}
-.werk{--a:#3f8fe0;--b:#185abd;flex:none;display:inline-flex;align-items:center;gap:7px;padding:5px 12px 5px 5px;border-radius:999px;background:var(--glas);border:1px solid rgba(255,255,255,.9);box-shadow:var(--schatten);font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;scroll-snap-align:start}
-.werk i,.tupfer{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 8px color-mix(in srgb,var(--b) 35%,transparent)}
-.werk i .icon,.tupfer .icon{width:16px;height:16px}
+.werkleiste{order:9;flex:1 1 100%;display:flex;gap:12px;justify-content:center;padding:2px 0 4px}
+.werk{--a:#3f8fe0;--b:#185abd;flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 8px color-mix(in srgb,var(--b) 35%,transparent)}
+.werk .icon{width:22px;height:22px}
+.tupfer{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff;background:linear-gradient(150deg,var(--a),var(--b));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 8px color-mix(in srgb,var(--b) 35%,transparent)}
+.tupfer .icon{width:16px;height:16px}
 .werk:hover{transform:translateY(-1px)}
 
 /* Navigation: Handy unten, breit links */
@@ -174,8 +174,6 @@ textarea.feld{width:100%;min-height:96px;resize:vertical;display:block}
 .schild:hover b,.schild:focus-visible b{text-decoration:underline}
 @media(min-width:640px){.schild b{font-size:17px}.schild small{font-size:12px}.schild::after{width:14px;height:14px;margin-left:-7px}}
 .baumfilm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.baumtext{position:absolute;left:50%;top:8px;transform:translateX(-50%);background:#0b1b3dd9;color:#fff;border-radius:99px;padding:4px 12px;font-size:12px;white-space:nowrap;animation:weg .4s 5.5s forwards}
-@keyframes weg{to{opacity:0}}
 .logos{display:flex;gap:14px;align-items:center;margin:10px 0}
 .logos figure{margin:0;text-align:center;font-size:12px;color:var(--muted)}
 .logos img{width:64px;height:64px;display:block;margin:0 auto 4px}
@@ -213,3 +211,7 @@ button.wokasten:hover h3,button.wokasten:focus-visible h3{text-decoration:underl
  .wo.unten{grid-template-columns:1fr 1fr}
  .wopfeil::before{content:"→"}.wopfeil.beide::before{content:"⇄"}
 }
+/* Tooltips */
+.tipp{position:fixed;z-index:60;max-width:240px;background:#0b1b3d;color:#fff;border-radius:10px;padding:7px 11px;font-size:13px;line-height:1.3;box-shadow:0 8px 24px rgba(11,27,61,.35);pointer-events:none}
+.tipp b{display:block}.tipp small{display:block;font-size:12px;opacity:.85;margin-top:2px}
+.schalter{display:flex;align-items:center;gap:8px;font-size:13.5px;margin-top:12px}

@@ -4,12 +4,12 @@ Eine App für alle Unterlagen: in der Mitte die Akte, an den Ästen die Programm
 
 Web-App: https://lausiklauskn-png.github.io/Private-Akte/
 
-**Stand: Vorschau 0.1.2 (17.11.2026).** Alles ist Beispiel – erfundene Daten, nichts wird gespeichert,
+**Stand: Vorschau 0.1.3 (17.11.2026).** Alles ist Beispiel – erfundene Daten, nichts wird gespeichert,
 kein echtes Programm wird geöffnet, keine KI, kein Postfach, kein Kalender-Konto ist angeschlossen.
 
 ## Was die Vorschau zeigt
 
-- Werkzeugleiste oben: Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF im Familienbüro),
+- Werkzeugleiste oben (runde farbige Knöpfe, Namen als Tooltip mit der Maus, abschaltbar hinter „?“): Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF im Familienbüro),
   Dateien hineingeben (Datei-Organizer), Notiz, Kalender; dazu Drucken, Farbpalette,
   Sicherung, Hilfe – am Handy hinter „⋯“.
 - Städte: Familienbüro (Schreiben, Tabellen, Folien, Workflow PDF), Portemonnaie mit „An BookLedgerPro geben“

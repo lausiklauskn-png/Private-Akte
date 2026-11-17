@@ -1,4 +1,4 @@
-# Abschlussbrief – Private Akte, Vorschau 0.1.2 (17.11.2026)
+# Abschlussbrief – Private Akte, Vorschau 0.1.3 (17.11.2026)
 
 Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Version 3 „Private Act“).
 
@@ -53,9 +53,28 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
   beiden Breiten angesehen. Offline-Vorrat mit 0.1.2 nicht erneut von Hand geprüft. Der Tresor ist nur gezeigt,
   gespeichert wird weiter nichts (Datenschutzerklärung unverändert).
 
+## Nachtrag 0.1.3 (Klaus 17.11., nach dem Ansehen von 0.1.2)
+
+- **„Wo liegt was?“ ist in Ordnung so** (Klaus).
+- **Erklärkarten unter dem Baumbild entfernt** (Halle, Städte, Helfer, gestrichelter Weg, neuer Ast) – Klaus: überflüssig,
+  das Bild erklärt alles. Auch der Text „Die Helfer tragen die Dateien in die Akte.“ über dem Film ist weg; der Film
+  bleibt („als Fantasie da lassen“, ob Agenten oder Menschen ist nicht wichtig).
+- **Leiste oben: nur runde farbige Knöpfe ohne Beschriftung**, dazu **echte Tooltips** (eigene Blase `#tipp`, nach 0,4 s
+  mit Maus oder Stift ohne Klick, auch bei Tastatur-Fokus; Name und eine Zeile wozu). Dieselben Tooltips an Drucken,
+  Farbpalette, Sicherung, Hilfe. Am Handy passen die fünf Knöpfe ohne Wischen in eine Zeile.
+- **Tooltips abschaltbar:** Haken „Tooltips an den Knöpfen anzeigen“ im Fenster hinter „?“ (gilt bis zum Neuladen,
+  die Vorschau speichert nichts). Klaus denkt an Einstellungen unter „Baum“ – dann zieht der Haken dorthin.
+- Grenze: mit dem Finger gibt es keinen Tooltip (kein Darüberfahren); am Handy sagen nur Bild und Farbe, was der
+  Knopf tut. Nicht am Gerät geprüft.
+- Tresor: wird in der Vorschau nirgends eingerichtet, nur gezeigt (Schild-Knopf „Sicherung“: „eingerichtet (Beispiel)“).
+  Wo er später eingerichtet wird (Einstellungen), ist offen.
+- Fassung 0.1.3; Probe `tests/probe.cjs` 90 Prüfungen, keine Fehler (390 px und 1280 px).
+
 ## Noch zu entscheiden
 
-- „Wo liegt was?“: stimmt Bild und Wortlaut? Bleibt es unter dem Baum oder ist das zu lang?
+- Einstellungen: wo (unter „Baum“?), und was hinein kommt (Tooltips, Tresor einrichten).
+- Handy: reichen die Knöpfe ohne Wort, oder soll ein Tipp kurz den Namen zeigen?
+
 
 - Was genau war zu kompliziert? Klaus danach fragen (am Handy zeigen lassen) und daraus streichen.
 - Erinnerung im Kalender (Glocke oder Gerätekalender), Helfer auf dem Gerät oder über Server, Größe des
@@ -73,13 +92,13 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.2.md und README.md.
+Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.3.md und README.md.
 Ich fand die Vorschau zu kompliziert und habe den Überblick verloren. Frage mich zuerst, was mir am Handy
 zu viel war, und schlage vor, was gestrichen oder zusammengelegt wird (erst als Vorschau zeigen).
 Schon entschieden: kein Sammelknopf „Ablegen“, kein Knopf „Landkarte“, Kalender als Knopf und als Stadt,
 der Baum bleibt das Bild mit den Schildern (kein 3D-Baum). Eine Landkarte kommt vielleicht später wieder,
-dann als Ansicht der Baumstruktur der App. Neu in 0.1.2: „Wo liegt was?“ unter dem Baum (ein Tresor für alles) –
-frage mich, ob Bild und Wortlaut stimmen.
+dann als Ansicht der Baumstruktur der App. Neu in 0.1.3: runde Knöpfe mit Tooltips, Baum ohne Erklärkarten –
+frage mich nach den Einstellungen (Tooltips, Tresor einrichten) und ob die Knöpfe am Handy ohne Wort reichen.
 Bei jeder Änderung die Fassung erhöhen (FASSUNG in app.js, VERSION in sw.js, ?v= in index.html), mit
 tests/probe.cjs in Handy- und PC-Breite prüfen und einen Entwurfs-PR anlegen. Zusammenführen nur auf mein Wort.
 ```

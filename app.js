@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -124,7 +124,7 @@ const mails = [
 ];
 const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
-const s = { ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
+const s = { tipps:true, ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
 
 /* ---------- Helfer ---------- */
 let toastZeit;
@@ -162,8 +162,8 @@ const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#
 const MEHR = [['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · Basic`;
-  $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" title="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}"><i>${ic(i)}</i>${t}</button>`).join('');
-  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" title="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
+  $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
+  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
     + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
 function navZeigen(){
@@ -238,7 +238,7 @@ function woLiegtWas(){
   <p class="hinweis">So ist die App gedacht. In dieser Vorschau ist der Tresor nur gezeigt – gespeichert wird nichts. Die Zahlen sind die Beispiele von eben.</p></div>`;
 }
 function vBaum(){
-  const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video><span class="baumtext">Die Helfer tragen die Dateien in die Akte.</span>` : '';
+  const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video>` : '';
   s.reisen = 0;
   return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Städte – jede Stadt ist ein Programm. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
   <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
@@ -246,13 +246,6 @@ function vBaum(){
    <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
    ${STAEDTE.map(schild).join('')}
    <button class="schild aussen" style="left:0;top:93%" data-a="hinaus-info"><b>→ BookLedgerPro</b><small>Weg nach außen</small></button>${film}</div></div>
-  <div class="abschnitt zweier">
-   <div class="karte"><b>Die Halle in der Mitte = die Akte.</b> Hier liegt alles, hier wird gesucht. Jede Datei bleibt, wo sie einsortiert wurde; herausgeholt wird immer eine Kopie.</div>
-   <div class="karte"><b>Städte an den Ästen = die Programme.</b> Familienbüro, Portemonnaie, Datei-Organizer, Private Brain, Kalender. Tipp auf die Stadt öffnet sie in derselben App.</div>
-   <div class="karte"><b>Bunte Kugeln = die Helfer.</b> Sie arbeiten in der Stadt: lesen, zuordnen, rechnen. Sie raten, du berichtigst, sie lernen. Du kannst auch alles selbst zuordnen.</div>
-   <div class="karte"><b>Gestrichelter Weg = nach außen.</b> Das Portemonnaie gibt den Monat als Datei an BookLedgerPro. Die Buchhaltung selbst bleibt draußen.</div>
-   <div class="karte" style="grid-column:1/-1"><b>Der neue Ast mit den Kränen = ein neues Programm.</b> Hier ist der Kalender eingezogen. Eine neue Stadt ändert nichts an der Halle und nichts an den anderen Städten.</div>
-  </div>
   ${woLiegtWas()}
   <p class="hinweis">Tippe ein Schild an. Das Bild stammt aus der Discovery-Seite des Datei-Organizers.</p>${fuss()}`;
 }
@@ -435,6 +428,7 @@ const A = {
    <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Städte. Darunter „Wo liegt was?“: ein Tresor für alles.</li>
    <li><b>Farbpalette:</b> der bunte runde Knopf. Jedes Programm merkt sich seine eigene Farbe.</li></ul>
    <div class="logos"><figure><img src="./bilder/logo-basic-rund.png" alt="Zeichen der Basic-Fassung auf Weiß">Basic<br>diese Web-App</figure><figure><img src="./bilder/logo-pro-rund.png" alt="Zeichen der Pro-Fassung mit buntem Rand">Pro<br>bunter Rand</figure></div>
+   <label class="schalter"><input type="checkbox" data-tippwahl ${s.tipps?'checked':''}> Tooltips an den Knöpfen anzeigen</label>
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
  sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
@@ -508,3 +502,20 @@ function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, einga
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen();
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
+
+/* ---------- Tooltips: Maus oder Stift über einem Knopf, ohne Klick; abschaltbar in der Hilfe ---------- */
+let tippZeit;
+function tippWeg(){ clearTimeout(tippZeit); $('tipp').hidden = true; }
+function tippZeigen(e){
+  const el = $('tipp'); el.innerHTML = `<b>${esc(e.dataset.tipp)}</b>${e.dataset.tipp2 ? `<small>${esc(e.dataset.tipp2)}</small>` : ''}`; el.hidden = false;
+  const r = e.getBoundingClientRect(), b = el.getBoundingClientRect();
+  el.style.left = Math.max(8, Math.min(innerWidth - b.width - 8, r.left + r.width/2 - b.width/2)) + 'px';
+  el.style.top = (r.bottom + 8 + b.height > innerHeight ? r.top - b.height - 8 : r.bottom + 8) + 'px';
+}
+document.addEventListener('pointerover', ev => { if (!s.tipps || ev.pointerType === 'touch') return; const e = ev.target.closest('[data-tipp]'); if (!e) return; clearTimeout(tippZeit); tippZeit = setTimeout(() => tippZeigen(e), 400); });
+document.addEventListener('pointerout', ev => { if (ev.target.closest('[data-tipp]')) tippWeg(); });
+document.addEventListener('focusin', ev => { const e = ev.target.closest('[data-tipp]'); if (s.tipps && e && e.matches(':focus-visible')) tippZeigen(e); });
+document.addEventListener('focusout', tippWeg);
+document.addEventListener('pointerdown', tippWeg);
+addEventListener('scroll', tippWeg, true);
+document.addEventListener('change', ev => { if (ev.target.matches('[data-tippwahl]')) { s.tipps = ev.target.checked; toast(s.tipps ? 'Tooltips sind an.' : 'Tooltips sind aus.'); } });
