@@ -135,7 +135,7 @@ const bed = { geladen:null, frage:false, phase:'', fertig:0, gesamt:0, fehler:''
 let toastZeit;
 function toast(t){ $('toast').textContent = t; clearTimeout(toastZeit); toastZeit = setTimeout(() => $('toast').textContent = '', 5200); }
 const ort = d => `${bereich(d.bereich).name} / ${d.vorgang}`;
-const SYN = {was:'',wie:'',wo:'',und:'',für:'',fürs:'',ein:'',eine:'',einen:'',dokumente:'',unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
+const SYN = {auf:'',aus:'',mit:'',von:'',vom:'',bei:'',nach:'',den:'',dem:'',des:'',einer:'',einem:'',oder:'',wann:'',welche:'',gibt:'',ist:'',sind:'',habe:'',hat:'',finde:'',was:'',wie:'',wo:'',und:'',für:'',fürs:'',ein:'',eine:'',einen:'',dokumente:'',unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
 const suchWoerter = frage => frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
 /* Beispiele: erst alle Wörter; findet das nichts, zählt, wer die meisten Wörter trifft (Klaus 17.11.: „Gehaltsabrechnung September“
    soll wenigstens die Gehaltsabrechnung finden). Rückgabe: Treffer und ob nur ein Teil der Wörter passte. */
