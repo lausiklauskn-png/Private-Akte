@@ -22,12 +22,24 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand
+## Stand (17.11.2026, Vorschau 0.2.0)
 
+- **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
+- **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
+  der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
+  `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
+  Speicher: Browser-Speicher des Geräts (OPFS, sonst IndexedDB), dasselbe Register wie die Familienakte. Alles andere ist weiter Beispiel.
+- **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
+  Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `bcd48a4` (9.732 Dateien, Sortier-Kern in `lib/`). Pin `klone/datei-organizer.herkunft.json`.
-- `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74, mit der Korrektur der Kalender-Schleife). Pin `klone/familienakte.herkunft.json`.
-- Offen: Hülle, Portemonnaie, Bau und Ausgabe. Es gibt noch keine lauffähige App.
+- `klone/datei-organizer/` – Datei-Organizer @ `bcd48a4`. `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
+- **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 313 MB). Besser: Pages auf „GitHub Actions“ umstellen
+  und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
+- **Offen bei Klaus:** Familienbüro in der App (Vorschau) oder nur aufrufen (unten „Entschieden“); Portemonnaie offen oder gleich im Tresor.
+- **Als Nächstes (Klaus 17.11.):** „Tresor exportieren / importieren“ – Sicherung als Datei mit Datum auf den Speicher des Handys oder
+  eine beliebige SD-Karte und von dort wieder herein, mit der Sicherung der Familienakte (kein eigenes Format).
+- Probe: `python3 -m http.server 8765` im Repo-Ordner, dann `node tests/probe.cjs` (Ordner `p/` am Aufrufort anlegen).
 
 ## Feste Regeln
 

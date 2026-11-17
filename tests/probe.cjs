@@ -14,7 +14,22 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.1.5 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.2.0 · Basic'), 'Fassung beim Namen');
+    // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
+    await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-neu]').disabled); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
+    await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
+    await p.waitForSelector('[data-form=echt]'); await breit('echt hineinlegen'); await p.fill('[data-form=echt] [name=titel]', `Probe-Unterlage ${name}`);
+    await p.selectOption('[data-form=echt] [name=bereich]', 'Haus & Wohnung'); await p.fill('[data-form=echt] [name=datum]', '2026-11-03'); await klick('[data-form=echt] button[type=submit]');
+    await p.waitForSelector('#echt [data-a=echt-auf]'); soll((await p.locator('#echt [data-a=echt-auf]').count())===1, 'eine echte Unterlage in der Liste');
+    soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`) && (await p.locator('#echt').innerText()).includes('Haus & Wohnung · 03.11.2026'), 'Titel, Bereich und Datum in der Zeile');
+    await p.screenshot({path:`p/${name}-1b-echt.png`});
+    await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
+    await p.waitForSelector('[data-form=echt]'); await p.selectOption('[data-form=echt] [name=bereich]', 'Archiv'); await klick('[data-form=echt] button[type=submit]');
+    await p.waitForFunction(() => document.getElementById('toast').textContent.includes('Dublette')); soll(true, 'dieselbe Datei zweimal: der Tresor meldet die Dublette'); await klick('[data-a=zu]');
+    await p.reload(); await p.waitForSelector('#echt [data-a=echt-auf]'); soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`), 'nach dem Neuladen noch da');
+    const inhalt = await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; return (await t.datei(d.id)).text(); }); soll(inhalt === `Erfundene Probe-Unterlage ${name}`, 'die Datei kommt unverändert aus dem Tresor');
+    await klick('#echt [data-a=echt-auf]'); soll((await text()).includes('im Tresor auf diesem Gerät'), 'Fenster der echten Unterlage'); await breit('echt offen'); await klick('[data-a=echt-raus]');
+    await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-auf]')); soll((await text()).includes('Noch nichts hineingelegt'), 'herausgenommen: Liste wieder leer');
     if (name==='handy') { soll(await p.locator('[data-a=mehr]').isVisible(), 'Mehr-Knopf'); soll(!(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible()), 'Drucken hinter Mehr');
       await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue button').count())===4,'vier Einträge hinter Mehr'); await p.keyboard.press('Escape'); }
     else soll(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible(), 'Drucken sichtbar am PC');
