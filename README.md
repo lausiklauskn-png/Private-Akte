@@ -4,7 +4,7 @@ Eine App für alle Unterlagen: in der Mitte die Akte, an den Ästen die Programm
 
 Web-App: https://lausiklauskn-png.github.io/Private-Akte/
 
-**Stand: Vorschau 0.3.3 (17.11.2026).** Echt sind zwei Dinge, beide mit dem unveränderten Tresor der Familienakte (`klone/familienakte`):
+**Stand: Vorschau 0.3.4 (17.11.2026).** Echt sind zwei Dinge, beide mit dem unveränderten Tresor der Familienakte (`klone/familienakte`):
 
 - **„Deine Unterlagen“** auf der Startseite: Dateien liegen im Speicher des Browsers und bleiben nach dem Neuladen da.
 - **Tresor exportieren / importieren** (Schild-Knopf): ein mit Passwort verschlüsselter Ordner mit Datum an einem frei gewählten Ort
@@ -15,7 +15,7 @@ Alles andere ist Beispiel – erfundene Daten, kein echtes Programm wird geöffn
 ## Was die Vorschau zeigt
 
 - Werkzeugleiste oben (runde farbige Knöpfe, Namen als Tooltip mit der Maus, abschaltbar hinter „?“): Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF im Familienbüro),
-  Dateien hineingeben (Datei-Organizer), Notiz, Kalender; dazu Drucken, Farbpalette,
+  Importieren (grün), Exportieren (rot), Notiz, Kalender; dazu Drucken, Farbpalette,
   Sicherung, Hilfe – am Handy hinter „⋯“.
 - Tools: Familienbüro (Schreiben, Tabellen, Folien, Workflow PDF), Portemonnaie mit „An BookLedgerPro geben“
   (Weg nach außen), Datei-Organizer, Private Brain (E-Mail), Kalender.

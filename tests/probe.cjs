@@ -14,10 +14,10 @@ const { chromium } = require('playwright');
     const klick = async sel => { await p.locator(sel).first().click(); };
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
-    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.3.3 · Basic'), 'Fassung beim Namen');
+    soll((await p.locator('.werk').count())===6, 'sechs Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
+    soll((await text()).includes('0.3.4 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
-    await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-neu]').disabled); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
+    await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
     await p.waitForSelector('[data-form=echt]'); await breit('echt hineinlegen'); await p.fill('[data-form=echt] [name=titel]', `Probe-Unterlage ${name}`);
     soll((await p.locator('#echt-bereiche option').count())===18, 'die 18 festen Bereiche der Familienakte zur Auswahl'); await p.fill('[data-form=echt] [name=bereich]', '  haus &  wohnung '); await p.fill('[data-form=echt] [name=datum]', '2026-11-03'); await klick('[data-form=echt] button[type=submit]');
@@ -36,8 +36,8 @@ const { chromium } = require('playwright');
     soll(await p.evaluate(() => echtBereiche().includes('Motorboot') && echtBereich(' motorBOOT ')==='Motorboot' && echtBereich('Segelboot')==='Segelboot' && echtBereich('Haus und Wohnung')==='Haus & Wohnung'), 'eigener Bereich steht zur Auswahl, andere Schreibweise ergibt denselben');
     await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.herausnehmen((await t.liste()).find(d => d.category==='Motorboot').id); }); await p.reload(); await p.waitForSelector('#echt [data-a=echt-auf]');
     // Tresor exportieren (verschlüsselter Ordner am gewählten Ort), Speicher des Browsers leeren, wieder importieren
-    const sicherungAuf = async () => { if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=sicherung]' : '.kopfknoepfe [data-a=sicherung]'); };
-    await sicherungAuf(); soll((await text()).includes('1 Unterlage'), 'Sicherung zählt die echte Unterlage'); soll((await p.locator('#letzter-export').innerText()).includes('Noch kein Ordner angelegt') || name==='pc', 'vor dem ersten Export: noch kein Ordner'); soll((await text()).includes('Tresor als Ordner anlegen') || name==='pc', 'erstes Mal: Tresor als Ordner anlegen'); await klick('[data-a=sich-export]');
+    const sicherungAuf = async () => { await klick('.werk[data-a=export]'); };
+    await sicherungAuf(); soll((await text()).includes('1 Unterlage'), 'Sicherung zählt die echte Unterlage'); soll((await p.locator('#letzter-export').innerText()).includes('Noch kein Backup') || name==='pc', 'vor dem ersten Export: noch kein Ordner'); soll((await text()).includes('Backup erstellen') || name==='pc', 'erstes Mal: Tresor als Ordner anlegen'); await klick('[data-a=sich-export]');
     await p.fill('[name=p1]','kurz'); await p.fill('[name=p2]','kurz'); await p.evaluate(() => document.querySelector('[data-form=export]').noValidate = true); await klick('[data-form=export] button[type=submit]');
     await p.waitForFunction(() => document.getElementById('toast').textContent.includes('mindestens 10')); soll(true, 'zu kurzes Passwort wird abgewiesen');
     await p.fill('[name=p1]','Erfundenes-Probe-Passwort-1'); await p.fill('[name=p2]','Erfundenes-Probe-Passwort-1'); await klick('[data-form=export] button[type=submit]');
@@ -45,18 +45,18 @@ const { chromium } = require('playwright');
     const exp = await p.evaluate(async name => { const z = await (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name); const o = []; for await (const [n, h] of z.entries()) { o.push(n); if (h.kind==='directory') for await (const [m] of h.entries()) o.push(n+'/'+m); } return o; }, name);
     soll(exp.some(n => /^Familienakte_Vollsicherung_.*\/Vollsicherung_Verschluesselt\.json$/.test(n)) && !exp.some(n => /Register\.json$/.test(n)), 'Ordner mit Datum am gewählten Ort, Register nur verschlüsselt');
     const [blatt] = await Promise.all([p.waitForEvent('download'), klick('[data-a=sich-blatt]')]); soll(/^Notfallblatt_.*\.txt$/.test(blatt.suggestedFilename()), 'Notfallblatt als Datei'); await klick('.fenster .reihe [data-a=zu]');
-    await sicherungAuf(); soll(/Zuletzt exportiert: \d\d\.\d\d\.\d{4}/.test(await p.locator('#letzter-export').innerText()) && (await p.locator('#letzter-export').innerText()).includes('probe-ziel-'+name), 'Sicherung nennt, wann und wohin zuletzt exportiert wurde'); await klick('[data-a=zu]');
+    await sicherungAuf(); soll(/Letztes Backup: \d\d\.\d\d\.\d{4}/.test(await p.locator('#letzter-export').innerText()) && (await p.locator('#letzter-export').innerText()).includes('probe-ziel-'+name), 'Sicherung nennt, wann und wohin zuletzt exportiert wurde'); await klick('[data-a=zu]');
     await p.evaluate(async () => { const w = await navigator.storage.getDirectory(); for await (const [n] of w.entries()) if (!n.startsWith('probe-ziel-')) await w.removeEntry(n, {recursive:true}); for (const k of Object.keys(localStorage)) if (k !== 'private-akte-letzter-export') localStorage.removeItem(k); });
-    await p.reload(); await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-neu]').disabled); soll((await text()).includes('Noch nichts hineingelegt'), 'Speicher des Browsers geleert: Tresor leer');
-    await sicherungAuf(); await klick('[data-a=sich-import]'); await p.waitForSelector('[data-form=import]'); soll((await text()).includes('Familienakte_Vollsicherung_'), 'Import nennt die gefundene Sicherung');
+    await p.reload(); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Speicher des Browsers geleert: Tresor leer');
+    await klick('.werk[data-a=import]'); soll((await p.locator('.fenster .zeile').count())===3 && (await text()).includes('Datei in die Akte legen') && (await text()).includes('Backup einlesen'), 'Importieren: Datei, Backup, vorsortieren'); await klick('[data-a=sich-import]'); await p.waitForSelector('[data-form=import]'); soll((await text()).includes('Familienakte_Vollsicherung_'), 'Import nennt die gefundene Sicherung');
     await p.fill('[name=passwort]','Falsches-Passwort-123'); await klick('[data-form=import] button[type=submit]'); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('passt nicht'), null, {timeout:60000}); soll(true, 'falsches Passwort wird abgewiesen');
     await p.fill('[name=passwort]','Erfundenes-Probe-Passwort-1'); await klick('[data-form=import] button[type=submit]'); await p.waitForSelector('#echt [data-a=echt-auf]', {timeout:60000});
     soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`), 'nach dem Import wieder da');
     const zurueck = await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; return (await t.datei(d.id)).text(); }); soll(zurueck === `Erfundene Probe-Unterlage ${name}`, 'die Datei kommt unverändert aus dem Export zurück');
-    await klick('#echt [data-a=echt-auf]'); soll((await text()).includes('im Tresor auf diesem Gerät'), 'Fenster der echten Unterlage'); await breit('echt offen'); await klick('[data-a=echt-raus]');
+    await klick('#echt [data-a=echt-auf]'); soll((await text()).includes('in der Akte auf diesem Gerät'), 'Fenster der echten Unterlage'); await breit('echt offen'); await klick('[data-a=echt-raus]');
     await p.waitForFunction(() => !document.querySelector('#echt [data-a=echt-auf]')); soll((await text()).includes('Noch nichts hineingelegt'), 'herausgenommen: Liste wieder leer');
     if (name==='handy') { soll(await p.locator('[data-a=mehr]').isVisible(), 'Mehr-Knopf'); soll(!(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible()), 'Drucken hinter Mehr');
-      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue button').count())===4,'vier Einträge hinter Mehr'); await p.keyboard.press('Escape'); }
+      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue button').count())===3,'drei Einträge hinter Mehr'); await p.keyboard.press('Escape'); }
     else soll(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible(), 'Drucken sichtbar am PC');
     soll((await p.locator('.werk').first().innerText()).trim()==='', 'Werkzeugknöpfe ohne Beschriftung'); soll(await p.evaluate(() => { const r = document.querySelector('.werk').getBoundingClientRect(); return Math.abs(r.width-r.height) < 1; }), 'Werkzeugknöpfe rund');
     await p.hover('.werk[data-a=kalender]'); await p.waitForTimeout(600); soll(await p.locator('#tipp').isVisible() && (await p.locator('#tipp').innerText()).includes('Kalender'), 'Tooltip ohne Klick'); await p.screenshot({path:`p/${name}-1b-tipp.png`}); await p.mouse.move(5, 400); soll(!(await p.locator('#tipp').isVisible()), 'Tooltip geht wieder weg');
@@ -83,7 +83,7 @@ const { chromium } = require('playwright');
     await klick('.werk[data-a=notiz]'); await klick('[data-a=sprechen]'); await p.fill('[name=titel]','Anruf Hausverwaltung'); await p.selectOption('[data-form=notiz] [name=bereich]','wohnen'); await p.fill('[name=vorgang]','Nebenkosten 2025'); await p.check('[name=termin]'); await p.screenshot({path:`p/${name}-11-notiz.png`}); await klick('[data-form=notiz] [type=submit]');
     soll((await text()).includes('Termin zu „Anruf Hausverwaltung“'),'Kalender zur Notiz'); await klick('[data-form=termin] [type=submit]'); soll((await p.locator('.fenster .liste .zeile').count())===4,'vier Termine'); await p.screenshot({path:`p/${name}-12-kalender.png`}); await klick('[data-a=zu]');
     // Organizer
-    await klick('.werk[data-a=viele]'); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
+    await klick('.werk[data-a=import]'); await klick('.fenster [data-a=viele]'); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
     // Mail
     await klick('.schild[data-id=mail]'); await klick('[data-a=mail-ki]'); soll((await text()).includes('⟦STELLE-1⟧'),'Mail an KI'); await klick('[data-a=zu]');
     // Suche + Mappe
