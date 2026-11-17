@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Privater Aktenschrank für Gesundheit, Arbeit, Familie, Wohnen, Fahrzeuge, Käufe, Garantien und wichtige Unterlagen." />
+    <meta name="theme-color" content="#0b3154" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="color-scheme" content="light" />
+    <link rel="stylesheet" href="./native/familienakte-app.css" />
+    <link rel="stylesheet" href="./native/pro-bedienung.css" />
+    <style>.familienakte-start{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#f2f7fa;color:#0b3154;font-family:system-ui,sans-serif}.familienakte-start-marke{display:flex;align-items:center;gap:10px}.familienakte-start-marke span{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#0b3154;color:#fff;font-weight:700;font-size:14px}.familienakte-start-marke strong{letter-spacing:.08em}.familienakte-start p{margin:0;font-size:15px;color:#4b5d6b}</style>
+    <!-- Internetschalter (Standard aus): Zustand für Browser/Windows, dann die byte-gleiche Hülle aus Private Brain Pro. -->
+    <script src="./native/familienakte-windows.js"></script>
+    <script src="./native/familienakte-netz.js"></script>
+    <script src="./native/native-network.js"></script>
+    <!-- Schriftgröße „A··A“ wie in den Pro-Apps; setzt die gemerkte Größe schon vor dem ersten Bild. -->
+    <script src="./native/pro-bedienung.js"></script>
+    <script defer src="./native/25_pseudonym.js"></script>
+    <script defer src="./native/familienakte-app.js"></script>
+    <script defer src="./native/installieren.js" data-name="Familienakte" data-in=".header-actions" data-klasse="familienakte-install"></script>
+    <script defer src="./native/familienakte-android.js"></script>
+    <script defer src="./native/pro-geraet.js"></script>
+    <title>Familienakte Pro</title>
+  </head>
+  <body class="antialiased">
+    <div id="root"><!-- Startfläche (E2) nur in der Hintergrundfarbe, bis die App gezeichnet ist (Klaus 11.11.: kein altes Logo beim Start). -->
+      <div class="familienakte-start" aria-hidden="true"></div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

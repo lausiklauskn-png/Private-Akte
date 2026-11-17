@@ -26,7 +26,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
 - `klone/datei-organizer/` – Datei-Organizer @ `bcd48a4` (9.732 Dateien, Sortier-Kern in `lib/`). Pin `klone/datei-organizer.herkunft.json`.
-- Offen: Klon der Familienakte (nach deren Ausgabe 2.28.74), Hülle, Portemonnaie, Bau und Ausgabe. Es gibt noch keine lauffähige App.
+- `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74, mit der Korrektur der Kalender-Schleife). Pin `klone/familienakte.herkunft.json`.
+- Offen: Hülle, Portemonnaie, Bau und Ausgabe. Es gibt noch keine lauffähige App.
 
 ## Feste Regeln
 

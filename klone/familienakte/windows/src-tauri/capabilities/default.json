@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Nur die app-eigenen Befehle (Diktat über Windows-Spracherkennung); keine Shell-, Datei- oder Netzbefehle für die Seite.",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:event:default",
+    "core:window:allow-set-focus",
+    "core:window:allow-set-fullscreen",
+    "core:window:allow-is-fullscreen",
+    "core:window:allow-close"
+  ]
+}

@@ -1,0 +1,79 @@
+name: Prüfung bei jedem PR
+
+# D1: Typprüfung, Fachprüfungen, Lint, Build, Herkunft der byte-gleichen Bausteine und die Oberflächenproben (Playwright).
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pruefung:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Vorhandenen Modell-Download mit Abbruch und Wiederaufnahme prüfen
+        run: node tools/native/test-models.mjs
+      - name: Typprüfung
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Herkunft der byte-gleichen Bausteine
+        run: npm run check:herkunft
+      - name: Gemeinsamen PDF-Updateweg prüfen
+        run: npm run check:pdf-update
+      - name: PDF-Rückgabe ohne Kopie und temporären Arbeitsraum prüfen
+        run: |
+          node scripts/run-pdf-rueckgabe-tests.mjs
+          node scripts/run-pdf-rueckgabe-gegenprobe.mjs
+          node scripts/run-pdf-arbeitsraum-tests.mjs
+      - name: Fachprüfungen und Systemprüfung
+        run: npm run check
+      - name: Signierwerkzeug (Wegwerf-Schlüssel, kein echter)
+        run: npm run check:signing
+      - name: Build und Einzeldatei
+        run: npm run build:single
+      - name: Browser für die Oberflächenproben
+        # Der Ubuntu-Paketserver ist auf den GitHub-Rechnern zeitweise nicht erreichbar (DNS). Dann ohne Systempakete:
+        # die Bibliotheken für Chromium bringt das Rechner-Abbild schon mit, es fehlen höchstens Zusatzschriften.
+        run: |
+          if timeout 240 npx playwright install --with-deps chromium; then exit 0; fi
+          echo "Systempakete nicht erreichbar – Chromium ohne Systempakete"
+          for versuch in 1 2 3; do
+            if npx playwright install chromium; then exit 0; fi
+            sleep 20
+          done
+          exit 1
+      - name: Privaten Index mit wirklicher IndexedDB prüfen
+        run: node tools/native/test-private-index.mjs
+      - name: Diagnose der Pro-Ablage nach Neustart
+        run: |
+          DEBUG=pw:browser node tests/ui/_opfs-reload-diagnose.mjs
+          DEBUG=pw:browser node tests/ui/pro-dokumente.test.mjs
+      - name: Oberflächenproben (Playwright)
+        run: npm run test:ui
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: familienakte-pwa-dist
+          path: |
+            dist/
+            dist-single/
+          retention-days: 7
