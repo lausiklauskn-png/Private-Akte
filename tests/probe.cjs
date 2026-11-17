@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.1 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -47,6 +47,12 @@ const { chromium } = require('playwright');
     await p.fill('.suche input','Zettel vom Arzt'); await p.keyboard.press('Enter'); await p.waitForSelector('#sinn-treffer .m-arbeit'); soll((await p.locator('#sinn-treffer').innerText()).includes('dem Sinn nach · 0,42') && (await p.locator('#bed-frage').count())===0, 'Treffer dem Sinn nach als eigener Abschnitt mit Nähe, keine Frage mehr');
     await p.fill('.suche input','Gehaltsabrechnung September'); await p.keyboard.press('Enter'); await p.waitForSelector('#beispiel-treffer'); soll((await p.locator('#beispiel-treffer').innerText()).includes('Gehaltsabrechnung Oktober 2026') && (await p.locator('#beispiel-treffer').innerText()).includes('nicht alle Wörter passen'), 'ein Wort passt nicht: der Rest wird trotzdem gefunden'); soll(await p.evaluate(() => { const b = document.querySelector('#beispiel-treffer'), s = document.querySelector('#sinn-treffer'); return !s || (b.compareDocumentPosition(s) & Node.DOCUMENT_POSITION_FOLLOWING) > 0; }), 'Wort-Treffer stehen über „dem Sinn nach“');
     await p.fill('.suche input','Probe Kaktus'); await p.keyboard.press('Enter'); await p.waitForSelector('#echt-treffer'); soll((await p.locator('#echt-treffer').innerText()).includes('nicht alle Wörter passen'), 'echte Unterlagen: ein Wort passt nicht, der Rest wird gefunden'); await p.screenshot({path:`p/${name}-1e-sinn.png`});
+    // Klaus' Bilder 0.4.0: Füll- und Bereichswörter dürfen im Rückfall nicht alles treffen; Fremdes lag dem Sinn nach bei 0,11 und 0,16
+    await p.evaluate(() => { window.PrivateAkteTresor.bedeutung.suchen = async () => []; });
+    await p.fill('.suche input','Dokumente für eine Auslandsreise'); await p.keyboard.press('Enter'); await p.waitForFunction(() => document.querySelector('.leer') || document.querySelector('#echt-treffer') || document.querySelector('#beispiel-treffer')); soll((await p.locator('#echt-treffer').count())===0 && (await p.locator('#beispiel-treffer').count())===0, 'Füllwörter und „Dokumente“ treffen nicht jede Unterlage');
+    await p.fill('.suche input','was brauche ich für eine Auslandsreise'); await p.keyboard.press('Enter'); await p.waitForSelector('.leer'); soll((await p.locator('#beispiel-treffer').count())===0, '„was“ trifft nicht die Waschmaschine');
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; t.bedeutung.suchen = async () => [{id:d.id, naehe:0.16, roh:0.85, wort:false}]; });
+    await p.fill('.suche input','Auslandsreise Unsinn'); await p.keyboard.press('Enter'); await p.waitForSelector('.leer'); await p.waitForTimeout(400); soll((await p.locator('#sinn-treffer').count())===0, 'Nähe 0,16 gilt als fremd und wird nicht gezeigt');
     // Der echte Suchweg mit gestelltem Rechner (das Sprachmodell kann die Probe nicht laden): Sage Modul 04 verschmilzt Wörter und
     // Bedeutung, der Mittelwert wird abgezogen. Der Rechner ahmt den hohen Boden nach: jeder Text bekommt denselben großen Anteil
     // und einen kleinen, der von seinen Wörtern abhängt.

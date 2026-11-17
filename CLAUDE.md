@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.0)
+## Stand (17.11.2026, Vorschau 0.4.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.1 nach Klaus' Bildern vom Tablet (17.11., 0.4.0 mit echtem Modell, drei eigene Unterlagen):** (1) Fremdes kam „dem Sinn
+  nach“ auf 0,11 und 0,16 (dieselbe Notiz bei „September Gehaltsabrechnung“ und „Zählerstand Nebenkostenabrechnung“) – untere
+  Grenze jetzt **0,2** statt 0,1. Ein wirklich passender Sinn-Treffer war auf den Bildern nicht dabei; die Grenze „mindestens halb so
+  nah wie das Beste“ ist darum **weiter geschätzt**, ebenso offen, ob 0,2 bei größerem Bestand Passendes abschneidet (bei drei
+  Unterlagen trägt der Mittelwert wenig). (2) Rückfall „nicht alle Wörter passen“: „Dokumente für eine Auslandsreise“ zeigte alle
+  Unterlagen, „was brauche ich …“ die Waschmaschine. Einzeln gesucht wird jetzt nur, was Inhalt trägt (`teilWoerter` in
+  `src/tresor.ts`: ohne Füllwörter und ohne Bereichswörter des Klons wie „Dokumente“, „Brief“); bei den Beispielen Füllwörter in `SYN`.
+  Probe 202 grün; am Gerät ungeprüft.
 - **0.4.0 Suche nach Sage-Protokol umgestellt (Klaus 17.11.: „Mache das“):** `klone/sage-protokol/src/modules/04_match.js` @ `4e62f90`
   (MIT, mit `LICENSE`; Baustein statt App, darum `klon-nachziehen.mjs … --nur datei,datei` – Pin und `--pruefen` wie bei den anderen
   Klonen). In `src/tresor.ts` (`bedeutung`): Lesen und Teilen in Abschnitte weiter über den Klon der Familienakte (`readMeaningCorpus`,

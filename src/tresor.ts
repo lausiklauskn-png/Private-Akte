@@ -4,7 +4,7 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
-import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText } from "../klone/familienakte/lib/family-search.ts";
+import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -78,6 +78,14 @@ function suchen(frage: string, liste: Suchbar[]) {
   if (!hasFamilySearchContent(deutung)) return [] as string[];
   return liste.map((d) => ({ id: d.id, punkte: scoreFamilySearchText(`${d.titel || ""} ${familyDocumentSearchText(d)}`, deutung, [d.documentDate]) }))
     .filter((t) => t.punkte > 0).sort((a, b) => b.punkte - a.punkte).map((t) => t.id);
+}
+// Wörter für den Rückfall „nicht alle Wörter passen“ (Klaus 17.11., Bilder 0.4.0: „Dokumente für eine Auslandsreise“ zeigte alle
+// Unterlagen): einzeln gesucht wird nur, was Inhalt trägt – keine Füllwörter und keine Bereichswörter des Klons („Dokumente“,
+// „Brief“ …), die allein gesucht jede Unterlage treffen. Die Deutung kommt unverändert aus dem Klon.
+function teilWoerter(frage: string) {
+  const deutung = interpretFamilySearchQuery(frage);
+  const neben = new Set([deutung, ...deutung.alternatives].flatMap((d) => d.groups.filter((g) => g.optional).map((g) => g.word)));
+  return frage.split(/\s+/).filter((w) => w && !neben.has(normalizeFamilySearch(w)) && hasFamilySearchContent(interpretFamilySearchQuery(w)));
 }
 // Sprechen: das Diktat der Familienakte (Spracherkennung des Browsers), unverändert. Nichts wird aufgenommen oder gespeichert.
 const diktat = {
@@ -171,5 +179,5 @@ const bedeutung = {
   /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
   zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
 };
-const alles = { ...tresor, sicherung, suchen, diktat, bedeutung };
+const alles = { ...tresor, sicherung, suchen, teilWoerter, diktat, bedeutung };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;
