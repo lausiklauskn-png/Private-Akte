@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.3)
+## Stand (17.11.2026, Vorschau 0.4.4)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.4 (Klaus 17.11.: seine PDFs haben nicht unbedingt eine Textebene; am Tablet stand lange nur „läuft noch …“):** Scan-PDFs
+  werden ganz erkannt (bis 60 Seiten statt 5). Solange gelesen oder gerechnet wird, steht dabei, was geschieht
+  („Texterkennung: <Datei>, Seite 3 von 30“, „Bedeutung wird gerechnet: Abschnitt 12 von 80“; `bedeutung.lage()`, alle 0,7 s
+  abgefragt). Kein Abbruch-Knopf. Dauer je Seite am Tablet ungemessen; ein Scan-PDF ist in der Probe nicht dabei.
 - **0.4.3 Text beim Ablegen lesen, Texterkennung für Fotos und Scans (Klaus 17.11.: „Das machen wir“):** `src/text-lesen.ts` –
   PDF: Textebene (bis 60 Seiten); fehlt sie, die ersten 5 Seiten als Bild; Foto (PNG/JPG/WebP): Texterkennung. Tesseract mit
   deutschem Sprachpaket unverändert aus dem Klon (`klone/familienakte/public/apps/workflow-pdf/vendor/tesseract`, Einstellungen wie

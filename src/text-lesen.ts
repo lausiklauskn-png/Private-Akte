@@ -1,5 +1,5 @@
 // Text einer Datei beim Ablegen lesen (Klaus 17.11.: Fotos von Belegen sollen über ihren Inhalt gefunden werden, ohne Umweg über
-// Workflow PDF). PDF: erst die Textebene; fehlt sie (Scan), die ersten Seiten als Bild. Foto: Texterkennung. Alles auf dem Gerät.
+// Workflow PDF). PDF: erst die Textebene; fehlt sie (Scan), die Seiten als Bild (höchstens 60). Foto: Texterkennung. Alles auf dem Gerät.
 // Die Texterkennung ist Tesseract aus dem Klon der Familienakte (klone/familienakte/public/apps/workflow-pdf/vendor/tesseract,
 // unverändert, deutsches Sprachpaket) mit denselben Einstellungen wie dort (app/wfpdf-kern.ts); dessen Lader selbst hängt an den
 // Pfaden der Familienakte und kann hier nicht benutzt werden.
@@ -19,7 +19,11 @@ function ocrWorker() {
 }
 const sauber = (text: string) => text.replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
 async function erkennen(c: HTMLCanvasElement) { const r = await (await ocrWorker()).recognize(c); c.width = c.height = 0; return sauber(r.data.text || ""); }
-const KANTE = 2400, OCR_SEITEN = 5, TEXT_SEITEN = 60;
+const KANTE = 2400, OCR_SEITEN = 60, TEXT_SEITEN = 60;
+// Was gerade geschieht, für die Anzeige (die Texterkennung braucht je Seite einige Sekunden).
+let lage = "";
+export const leseLage = () => lage;
+export const leseLageSetzen = (text: string) => { lage = text; };
 async function bildLeinwand(datei: File) {
   const bild = await createImageBitmap(datei), f = Math.min(1, KANTE / Math.max(bild.width, bild.height));
   const c = document.createElement("canvas"); c.width = Math.round(bild.width * f); c.height = Math.round(bild.height * f);
@@ -32,7 +36,7 @@ export const istBild = (datei: File) => /^image\/(png|jpeg|webp)$/.test(datei.ty
 export const istPdf = (datei: File) => datei.type === "application/pdf" || /\.pdf$/i.test(datei.name);
 /** Gelesener Text und woher er kommt: „textebene“ (PDF mit Text), „erkannt“ (Texterkennung), „“ (nichts gelesen). */
 export async function textLesen(datei: File): Promise<{ text: string; art: "textebene" | "erkannt" | "" }> {
-  if (istBild(datei)) { const text = await erkennen(await bildLeinwand(datei)); return { text, art: text ? "erkannt" : "" }; }
+  if (istBild(datei)) { lage = `Texterkennung: ${datei.name}`; const text = await erkennen(await bildLeinwand(datei)); return { text, art: text ? "erkannt" : "" }; }
   if (!istPdf(datei)) return { text: "", art: "" };
   const lib = await loadPdfJs(), pdf = await lib.getDocument({ data: new Uint8Array(await datei.arrayBuffer()) }).promise as Pdf;
   try {
@@ -42,6 +46,7 @@ export async function textLesen(datei: File): Promise<{ text: string; art: "text
     if (ebene.length >= 20) return { text: ebene, art: "textebene" };
     const erkannt: string[] = [];
     for (let n = 1; n <= Math.min(pdf.numPages, OCR_SEITEN); n++) {
+      lage = `Texterkennung: ${datei.name}, Seite ${n} von ${Math.min(pdf.numPages, OCR_SEITEN)}`;
       const seite = await pdf.getPage(n), grund = seite.getViewport({ scale: 1 }), viewport = seite.getViewport({ scale: KANTE / Math.max(grund.width, grund.height) });
       const c = document.createElement("canvas"); c.width = Math.round(viewport.width); c.height = Math.round(viewport.height);
       await seite.render({ canvasContext: c.getContext("2d")!, viewport }).promise; erkannt.push(await erkennen(c));

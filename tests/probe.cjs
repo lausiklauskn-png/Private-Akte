@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.3 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.4 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -71,7 +71,7 @@ const { chromium } = require('playwright');
       return aus;
     });
     // Texterkennung: ein Foto mit gedrucktem Text wird auf dem Gerät gelesen (Tesseract aus dem Klon), der Auszug liegt an der Unterlage
-    soll(await p.evaluate(async () => { const t = window.PrivateAkteTresor; return typeof t.bedeutung.gelesen === 'function'; }), 'Lesestand ist abfragbar');
+    soll(await p.evaluate(async () => { const t = window.PrivateAkteTresor; return typeof t.bedeutung.gelesen === 'function' && t.bedeutung.lage() === ''; }), 'Lesestand ist abfragbar');
     const ocrProbe = await p.evaluate(async () => {
       const t = window.PrivateAkteTresor, c = document.createElement('canvas'); c.width = 1400; c.height = 500; const x = c.getContext('2d');
       x.fillStyle = '#fff'; x.fillRect(0, 0, 1400, 500); x.fillStyle = '#000'; x.font = '64px Arial'; x.fillText('Quittung Fahrradladen', 60, 160); x.fillText('Schlauch und Mantel 38,50 Euro', 60, 300);

@@ -5,7 +5,7 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
-import { textLesen, textGemerkt, istBild, istPdf } from "./text-lesen.ts";
+import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen } from "./text-lesen.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -144,13 +144,15 @@ function zentriert(a: Float32Array, b: Float32Array, mitte: Float32Array) {
 }
 /** Liest die Unterlagen, teilt sie in Abschnitte und rechnet, was noch nicht gerechnet ist. `stand` = Kennung der Liste. */
 async function korpusBauen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) {
+  leseLageSetzen("Unterlagen werden gelesen");
   const gelesen = await readMeaningCorpus(await browserVault(), () => {}, { ocr: textGemerkt });
   const teile: Array<{ id: string; text: string; n: number }> = [];
   for (const d of gelesen.documents) if (d.id.startsWith("d:")) meaningSections(d.text).texts.forEach((text, n) => teile.push({ id: d.id.slice(2), text, n }));
   const abschnitte: Abschnitt[] = [];
-  for (const t of teile) { abschnitte.push({ label: `${t.id}#${t.n}`, id: t.id, text: t.text, passageVec: await vektorZu(t.text) }); fortschritt?.(abschnitte.length, teile.length); }
+  for (const t of teile) { abschnitte.push({ label: `${t.id}#${t.n}`, id: t.id, text: t.text, passageVec: await vektorZu(t.text) }); fortschritt?.(abschnitte.length, teile.length); leseLageSetzen(`Bedeutung wird gerechnet: Abschnitt ${abschnitte.length} von ${teile.length}`); }
   let mitte: Float32Array | null = null;
   if (abschnitte.length >= 3) { mitte = new Float32Array(MODELL.dim); for (const a of abschnitte) for (let i = 0; i < mitte.length; i++) mitte[i] += a.passageVec[i] / abschnitte.length; }
+  leseLageSetzen("");
   korpus = { stand, abschnitte, mitte, unterlagen: gelesen.documents.filter((d) => d.id.startsWith("d:")).length, ohneInhalt: gelesen.metadataOnly };
   return korpus;
 }
@@ -185,6 +187,8 @@ const bedeutung = {
     return [...je.values()];
   },
   /** Was zuletzt gelesen wurde: Zahl der Unterlagen, wie viele davon ohne lesbaren Inhalt (nur Titel, Bereich, Notiz), Abschnitte. */
+  /** Was gerade geschieht, solange gelesen oder gerechnet wird (leer = nichts). */
+  lage: () => leseLage(),
   gelesen: () => korpus ? { unterlagen: korpus.unterlagen, ohneInhalt: korpus.ohneInhalt, abschnitte: korpus.abschnitte.length } : null,
   /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
   zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
