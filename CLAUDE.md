@@ -49,6 +49,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   aus der Familienakte kennt) – daran sieht man auch, ob Wort- oder Bedeutungssuche gefunden hat. (3) Passt ein Wort nicht
   („Gehaltsabrechnung September“), wird gezeigt, was die meisten Wörter trifft, mit dem Hinweis „nicht alle Wörter passen“ –
   bei den Beispielen (`suche`) und bei den echten Unterlagen (`echtSuche`, Wort für Wort über die Suche des Klons).
+  (4) Mikrofon: lief nach „Finden“ unsichtbar weiter (Klaus am Tablet) – jetzt endet das Diktat bei „Finden“, bei jedem
+  Neuzeichnen der Ansicht und wenn die App in den Hintergrund geht. Am Tablet bestätigt: das Mikrofon selbst nimmt auf.
 - **0.3.7 Bedeutungssuche hinter „Finden“ und Zurück (Klaus 17.11.):** kein eigener Knopf. Nach jedem „Finden“ steht unter der
   Suchleiste „Auch nach Bedeutung suchen? … (rund 140 MB) · Ja / Nein“, solange das Sprachmodell nicht geladen ist. **Nein** blendet
   die Zeile bis zum nächsten „Finden“ aus (kein „nicht mehr fragen“; später in den Einstellungen wieder einschaltbar – Einstellungen

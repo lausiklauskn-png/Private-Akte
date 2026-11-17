@@ -516,7 +516,7 @@ document.addEventListener('change', ev => {
 });
 document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
-  if (f.dataset.form === 'suche') { s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
+  if (f.dataset.form === 'suche') { if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
   if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
   if (f.dataset.form === 'notiz') {
     const d = neuesDoc({titel:f.titel.value.trim(),art:'NOTIZ',bereich:f.bereich.value,vorgang:f.vorgang.value.trim()||'Notizen',herkunft:'Notiz, von Hand zugeordnet',text:f.text.value.trim()});
@@ -675,7 +675,8 @@ document.addEventListener('submit', async ev => {
     } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
   }
 });
-function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
+/* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
+function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden(); bedPruefen();
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
@@ -801,3 +802,4 @@ addEventListener('popstate', () => {
   else { s.ansicht = 'start'; zeigen(); scrollTo(0,0); }
 });
 new MutationObserver(() => queueMicrotask(zurAbgleich)).observe(document.body, {childList:true, subtree:true});
+document.addEventListener('visibilitychange', () => { if (document.hidden && sprech.an) sprechEnde(false); });
