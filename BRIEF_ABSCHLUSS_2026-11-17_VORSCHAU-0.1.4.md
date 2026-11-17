@@ -79,6 +79,17 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
   Reihenfolge).
 - Fassung 0.1.4; Probe `tests/probe.cjs` 92 Prüfungen, keine Fehler.
 
+## Vorgabe für den Bau (Klaus 17.11.)
+
+- **Dieselbe Mechanik wie die Familienakte**, damit später ein Abgleich möglich ist: Jens kann seine Familienakte
+  weiter ausbauen, die Private Akte am Handy nutzen und beides später abgleichen. Für den Bau heißt das: Tresor,
+  Register und Sicherungs-/Paketformat der Familienakte übernehmen, kein eigenes Format erfinden.
+- Vorschlag Reihenfolge (von Klaus noch nicht bestätigt): 1 Tresor · 2 Hinzufügen, Eingang, Unterlagen · 3 Werkzeuge
+  einzeln als unveränderte Kopien (Workflow PDF, Datei-Organizer, Kalender, Portemonnaie, E-Mail zuletzt) ·
+  4 Sicherung und Nach außen. Vor Schritt 1 die Datenschutzerklärung ergänzen. PR #1 (Gerüst, Klon-Werkzeug)
+  damit abgleichen – in dieser Sitzung nicht gelesen.
+- Offen: zuerst Web-App oder gleich Android; welchen Stand Jens' Familienakte hat (nicht nachgesehen).
+
 ## Noch zu entscheiden
 
 - Einstellungen: wo (unter „Baum“?), und was hinein kommt (Tooltips, Tresor einrichten).
