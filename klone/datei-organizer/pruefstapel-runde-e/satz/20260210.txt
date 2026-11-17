@@ -1,0 +1,35 @@
+# Beispiel Gesundheitskasse
+Beispiel Gesundheitskasse · Am Kassenplatz 2 · 67800 Exempelheim
+
+Frau Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Versichertennummer: I000000000
+Datum: 10.02.2026
+
+# Genehmigung einer stationären Vorsorgemaßnahme
+
+Sehr geehrte Frau Vogelsang,
+
+Ihrem Antrag auf eine stationäre Vorsorgeleistung wird entsprochen. Die Maßnahme dauert drei Wochen und findet in der Kurklinik Beispiel-Bad statt.
+
+Bitte treten Sie die Maßnahme am 13.04.2026 an. Die Klinik meldet sich direkt bei Ihnen mit den Anreiseinformationen.
+
+Sie leisten eine Zuzahlung von 10,00 € je Kalendertag, die Ihnen die Klinik in Rechnung stellt.
+
+Mit freundlichen Grüßen
+@unterschrift
+Beispiel Gesundheitskasse
+@seite
+Beispiel Gesundheitskasse · Seite 2 · Genehmigung einer stationären Vorsorgemaßnahme
+
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei der oben genannten Stelle einzulegen.
+
+Die Frist ist auch gewahrt, wenn der Widerspruch rechtzeitig bei einer anderen zuständigen Behörde eingeht. Ein Widerspruch hat keine aufschiebende Wirkung, soweit gesetzlich nichts anderes bestimmt ist.
+
+
+
+## Hinweise zum Datenschutz
+Ihre Daten werden ausschließlich zur Bearbeitung Ihres Anliegens verarbeitet. Weitere Informationen erhalten Sie auf Anfrage oder auf unserer Internetseite unter dem Stichwort Datenschutz.

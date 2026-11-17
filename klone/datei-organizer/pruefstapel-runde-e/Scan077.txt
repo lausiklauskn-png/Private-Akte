@@ -1,0 +1,29 @@
+Beispiel Brennstoffe Ölhandel
+Beispiel Brennstoffe Ölhandel · Tanklager 1 · 67800 Exempelheim
+
+Herrn Heinrich Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Lieferschein: LS-25-3318
+Datum: 24.10.2025
+
+Rechnung Heizöllieferung
+
+Sehr geehrter Herr Vogelsang,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Heizöl EL schwefelarm, Liter   1800   0,89 €   1.593,00 €
+2   Anfahrt Kleinmengenzuschlag   1   0,00 €   0,00 €
+
+Nettobetrag: 1.593,00 €
+zzgl. 19 % MwSt.: 302,67 €
+Rechnungsbetrag: 1.895,67 €
+
+Bitte überweisen Sie den Betrag von 1.895,67 € bis zum 24.11.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Beispiel Brennstoffe Ölhandel
+Beispiel Brennstoffe Ölhandel · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

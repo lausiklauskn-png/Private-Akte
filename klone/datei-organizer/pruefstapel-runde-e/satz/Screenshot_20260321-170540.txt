@@ -1,0 +1,44 @@
+@appbon
+Beispiel-Markt App – Dein digitaler Kassenbon
+
+Beispiel-Markt Filiale 0731, Kurparkstraße 8, 67890 Exempelheim
+Einkauf vom 21.03.2026 um 10:12 Uhr
+Kundenkarte **** 7307
+
+|Artikel|Menge|Preis|
+|Erbsen Tk|1|1,29 € B|
+|Gouda Scheiben|2|3,98 € B|
+|Brühe Gekörnt|1|1,99 € B|
+|Windeln Gr.5|1|8,99 € A|
+|Haferflocken|1|0,89 € B|
+|Tomaten Rispe|1|2,49 € B|
+|Zitronen Netz|1|1,49 € B|
+|Lachsfilet Tk|1|5,99 € B|
+|Karotten 2Kg|1|1,99 € B|
+|Küchenrolle 4Er|1|2,49 € A|
+|Birnen|1|2,49 € B|
+|Zucker 1Kg|1|0,99 € B|
+|Bananen|1|1,49 € B|
+|Sahne 200Ml|2|1,98 € B|
+|Joghurt Natur 500G|1|0,89 € B|
+|Quark Mager|1|0,79 € B|
+|Kakaopulver|1|2,49 € B|
+|Apfelsaft 1L|1|1,29 € A|
+|Windeln Gr.5|1|8,99 € A|
+
+App-Coupon Küchenrolle 4Er: -0,80 €
+App-Coupon Küchenrolle 4Er: -0,80 €
+
+Zwischensumme: 52,99 €
+Du hast gespart: 1,60 €
+Gesamtsumme: 51,39 €
+Bezahlt mit: Girocard (kontaktlos)
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|18,29|3,47|21,76|
+|B 7 %|27,69|1,94|29,63|
+
+Gesammelte Punkte: 51  ·  Punktestand: 317
+Bon-ID: 706467491999  ·  Kasse 5  ·  TSE-Signatur gekürzt 42992680
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

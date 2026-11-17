@@ -1,0 +1,24 @@
+PRÜFBESCHEINIGUNG
+über die Gasprüfung einer Flüssiggasanlage in Fahrzeugen
+(Prüfung nach den anerkannten Regeln der Technik, Arbeitsblatt G 607)
+
+Prüfstelle: Reisemobil-Service Beispiel-Camp, Campingstraße 1, 00138 Beispielstadt-Nord
+Sachkundiger: M. Beispielprüfer, Sachkunde-Nr. 0000-SK-117
+
+Fahrzeughalter: Gerhard Pfeilsticker, Am Weidenteich 5, 00106 Beispielstadt-Nord
+Fahrzeugart: Wohnmobil         Amtl. Kennzeichen: BSP-GP 1953
+Fahrgestell-Nr.: BSPXXXXXXXXXX0017
+
+Anlage: 2 x 11-kg-Flaschen, Gaskasten außen belüftet
+Verbraucher: Heizung, Kühlschrank (Absorber), Kocher 3-flammig
+Druckregler: 30 mbar, Baujahr 2026 (neu)
+
+Dichtheitsprüfung:              [x] bestanden
+Funktionsprüfung Verbraucher:   [x] bestanden
+Abgasführung Heizung:           [x] in Ordnung
+Schlauchleitungen:              [x] nicht älter als 10 Jahre
+
+Ergebnis: Die Anlage ist dicht und betriebssicher.
+Prüfplakette Nr. 004417 erteilt. Nächste Prüfung: 03/2028
+
+Beispielstadt-Nord, 17.03.2026          Stempel Beispiel-Camp     gez. Beispielprüfer

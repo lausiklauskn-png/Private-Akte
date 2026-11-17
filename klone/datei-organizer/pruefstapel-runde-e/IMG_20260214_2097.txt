@@ -1,0 +1,22 @@
+BÄCKEREI & CAFÉ BEISPIEL KURPARK
+Am Kurpark 3, 67890 Exempelheim
+Tel. 00000 000000
+UST-ID DE000000000
+
+Käsekuchen Stück
+  2 x 3,20        6,40 B
+Kännchen Kaffee
+  2 x 4,60        9,20 A
+Roggenbrötchen
+  4 x 0,55        2,20 B
+------------------------------------
+SUMME EUR                    17,80
+Bar gegeben                   17,80
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   7,73   1,47   9,20
+B 7 %   8,04   0,56   8,60
+
+14.02.2026 15:30  Bon 2071  Kasse 3
+TSE-Signatur 4052831531
+Vielen Dank für Ihren Einkauf!

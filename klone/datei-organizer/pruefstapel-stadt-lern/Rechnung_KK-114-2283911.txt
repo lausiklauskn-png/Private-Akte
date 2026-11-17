@@ -1,0 +1,32 @@
+Von: Kistenkram Beispiel Versand <rechnung@kistenkram-beispiel.example>
+An: lukas.behrend@post-beispiel.example
+Datum: Fr, 13. Mär 2026 09:41
+Betreff: Ihre Rechnung zur Bestellung KK-114-2283911
+
+Hallo Lukas Behrend,
+
+danke für deine Bestellung bei Kistenkram! Deine Ware ist unterwegs. Hier deine Rechnung:
+
+Rechnungsnummer: KKR-2026-0081734
+Bestellnummer: KK-114-2283911
+Rechnungsdatum: 13.03.2026
+Lieferanschrift: Lukas Behrend, Speicherstraße 41, 3. OG, 29999 Beispielhafen
+
+1 x Notebook 15,6" „Wellenbrecher Pro“, 16 GB RAM, 512 GB SSD   849,00 €
+1 x Notebook-Rucksack schwarz                                    39,99 €
+Versand                                                           0,00 €
+---------------------------------------------------------------------
+Gesamt (inkl. 19 % MwSt. 141,93 €)                               888,99 €
+
+Zahlart: Kauf auf Rechnung
+Bitte überweise den Betrag bis 27.03.2026 an:
+Kistenkram Beispiel Versand, IBAN DE00 0000 0000 0000 0000 00
+Verwendungszweck: KKR-2026-0081734
+
+Gewährleistung 2 Jahre, Herstellergarantie 24 Monate (Garantiekarte liegt dem Gerät bei).
+Rücksendung innerhalb von 30 Tagen über dein Kundenkonto.
+
+Viele Grüße
+dein Kistenkram-Team
+
+Diese E-Mail wurde automatisch erstellt. Antworten an diese Adresse werden nicht gelesen.

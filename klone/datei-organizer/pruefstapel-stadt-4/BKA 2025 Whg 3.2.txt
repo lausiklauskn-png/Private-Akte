@@ -1,0 +1,36 @@
+Hausverwaltung Beispiel Immobilien GmbH
+Verwalterweg 7 · 99902 Musterhausen am Rhein
+
+Frau Amara Okonkwo / Herrn Daniel Lehnert
+Am Kranenpfad 5, Wohnung 4.1
+99902 Musterhausen am Rhein
+
+Objekt: Am Kranenpfad 5 · Mietobjekt-Nr. 0118/32 (Whg. 3.2, bis 31.03.2026)
+                                                               17.07.2026
+
+Betriebs- und Heizkostenabrechnung für den Zeitraum 01.01.2025 – 31.12.2025
+
+Kostenart              Gesamtkosten   Schlüssel             Ihr Anteil
+Grundsteuer               4.212,00 €  Wohnfläche 68/1.020     280,80 €
+Wasser/Abwasser           6.840,00 €  Personen 2/30          456,00 €
+Müllabfuhr                2.910,00 €  Wohnfläche             194,00 €
+Hausreinigung             3.360,00 €  Wohnfläche             224,00 €
+Gartenpflege              1.530,00 €  Wohnfläche             102,00 €
+Allgemeinstrom              980,00 €  Wohnfläche              65,33 €
+Aufzug Wartung            2.640,00 €  Einheiten 1/15         176,00 €
+Gebäudeversicherung       2.115,00 €  Wohnfläche             141,00 €
+Heizung/Warmwasser (lt. Abrechnung Messdienst)              1.012,64 €
+-----------------------------------------------------------------------
+Summe Ihr Anteil                                            2.651,77 €
+geleistete Vorauszahlungen 12 x 205,00 €                    2.460,00 €
+Nachzahlung                                                   191,77 €
+abzgl. Einbehalt aus Kaution (Schreiben vom 22.04.2026)      -250,00 €
+-----------------------------------------------------------------------
+Guthaben zu Ihren Gunsten                                      58,23 €
+
+Das Guthaben überweisen wir Ihnen bis zum 15.08.2026. Einwendungen gegen
+die Abrechnung können Sie innerhalb von zwölf Monaten nach Zugang erheben.
+Belegeinsicht nach Terminvereinbarung in unserem Büro.
+
+Mit freundlichen Grüßen
+Hausverwaltung Beispiel Immobilien GmbH

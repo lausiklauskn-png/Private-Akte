@@ -1,0 +1,26 @@
+Von: Stadtwerke Musterhausen Beispiel <kundenservice@stadtwerke-beispiel.example>
+An: amara.okonkwo@mail-beispiel.example
+Datum: Do, 2. Apr. 2026, 08:12
+Betreff: Ihr Umzug innerhalb Musterhausens – bitte Zählerstände mitteilen
+
+Guten Tag Frau Okonkwo,
+
+wir haben Ihre Umzugsmeldung erhalten. Ihr Haushaltsstromvertrag
+(Vertragskonto 0000000581) zieht mit Ihnen um:
+
+alte Lieferstelle:  Am Kranenpfad 5, Whg. 3.2 – Zähler 0ESY000441 – Ende 31.03.2026
+neue Lieferstelle:  Am Kranenpfad 5, Whg. 4.1 – Zähler 0ESY000452 – Beginn 01.04.2026
+
+Damit wir richtig abrechnen können, teilen Sie uns bitte bis zum
+10.04.2026 beide Zählerstände (Auszug und Einzug) mit – am einfachsten
+im Kundenportal unter „Zählerstand melden“ oder per Antwort auf diese Mail.
+Ohne Ihre Angabe müssen wir die Stände schätzen.
+
+Der Ladestrom-Vertrag von Herrn Lehnert (Wallbox in der Tiefgarage) ist
+vom Umzug nicht betroffen.
+
+Ihr Abschlag bleibt vorerst bei 62,00 € im Monat.
+
+Freundliche Grüße
+Ihr Kundenservice der Stadtwerke Musterhausen Beispiel
+Energieweg 2 · 99900 Musterhausen am Rhein · Tel. 0000-112233

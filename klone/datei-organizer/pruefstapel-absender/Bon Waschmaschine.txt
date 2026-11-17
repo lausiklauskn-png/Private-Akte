@@ -1,0 +1,15 @@
+        ELEKTROMARKT BEISPIELWELT
+        Rathausplatz 48
+        45678 Beispielheim
+------------------------------------
+Waschmaschine WM-Beispiel 8kg    549,00
+Anschlussschlauch 2m           12,99
+Altgeräteabholung               0,00
+------------------------------------
+SUMME EUR                     561,99
+Bar
+
+11.04.2026 10:20  Kasse 4  Bon 3020
+
+Vielen Dank für Ihren Einkauf!
+Umtausch nur mit Bon.

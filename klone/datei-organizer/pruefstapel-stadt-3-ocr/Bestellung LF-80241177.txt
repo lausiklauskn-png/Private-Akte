@@ -1,0 +1,41 @@
+j.wendebach@mailbox.example
+
+nm
+
+From: Beispiel-Lieferflitzer <bestellung@lieferflitzer example>
+
+To: jwendebach@mailbox.example
+
+Date: Fri, 13 Feb 2026 19:58:41 +0100
+
+Subject: Deine Bestellung LF-80241177 ist unterwegs 4» — Beleg
+
+Hi Jonas,
+
+deine Bestellung bei „Pizzeria Beispielbella” ist unterwegs
+
+Voraussichtliche Ankunft: 20:25-20:35 Uhr
+
+Bestell-Nr.: LF-80241177
+
+Lieferadresse: Hafenkante 3a, 00102 Beispielstadt-Nord
+
+1x Pizza Margherita 32 cm 9,50 €
+
+1x Kinder-Nudein mit Tomatensoße 5,90 €
+
+1x Apfelschorle 0,5 | 2,80 €
+Zwischensumme 18,20 €
+Liefergebühr 1,99 €
+Servicegebühr 0,99 €
+
+Gutschein „HAFENS* 5,00 €
+Gesamt 16,18 €
+Bezahlt mit: PayBeispiel (j.w...@mailbox.example)
+Dies ist dein Beleg. Die Rechnung des Restaurants mit ausgewiesener USt findest
+du in der App unter „Bestellungen”
+Guten Appetit!
+Dein Lieferflitzer-Team
+
+bez./
+1

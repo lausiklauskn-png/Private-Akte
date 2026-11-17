@@ -1,0 +1,355 @@
+{
+ "ordner": "pruefstapel-blp-3",
+ "belege": 120,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent, eigenes Urteil"
+  },
+  {
+   "name": "Dritter (fremde KI)",
+   "modell": "Codex (GPT-6)"
+  }
+ ],
+ "fehlend": [],
+ "felder": {
+  "datum": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Zweiter (Claude-Agent)",
+     "gleich": 119,
+     "n": 120
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 119,
+     "n": 120
+    },
+    {
+     "a": "Zweiter (Claude-Agent)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    }
+   ],
+   "einstimmig": 119,
+   "mehrheit": 120,
+   "strittig": [],
+   "ersterGegenMehrheit": {
+    "ok": 119,
+    "n": 120
+   },
+   "systeme": {
+    "alt": {
+     "ok": 87,
+     "n": 120,
+     "spanne": [
+      0.6390686764395932,
+      0.7969722015852385
+     ]
+    },
+    "neu": {
+     "ok": 116,
+     "n": 120,
+     "spanne": [
+      0.9174184205147198,
+      0.9869626598330794
+     ]
+    }
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 29,
+    "p": 3.725290298461914e-9
+   },
+   "gegenErsten": {
+    "alt": {
+     "ok": 88,
+     "n": 120,
+     "spanne": [
+      0.6478739437150142,
+      0.8043165964588853
+     ]
+    },
+    "neu": {
+     "ok": 117,
+     "n": 120,
+     "spanne": [
+      0.9290687625956524,
+      0.9914619799012145
+     ]
+    }
+   },
+   "fehlerNeu": [
+    {
+     "datei": "CCF_001412.txt",
+     "ist": null,
+     "soll": "2026-06-03"
+    },
+    {
+     "datei": "CCF_001430.txt",
+     "ist": null,
+     "soll": "2026-03-02"
+    },
+    {
+     "datei": "SCN260306-3.txt",
+     "ist": "2025-12-01",
+     "soll": "2026-03-02"
+    },
+    {
+     "datei": "SCN260403-8.txt",
+     "ist": "2026-03-31",
+     "soll": "2026-04-01"
+    }
+   ]
+  },
+  "ust": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Zweiter (Claude-Agent)",
+     "gleich": 120,
+     "n": 120
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    },
+    {
+     "a": "Zweiter (Claude-Agent)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    }
+   ],
+   "einstimmig": 120,
+   "mehrheit": 120,
+   "strittig": [],
+   "ersterGegenMehrheit": {
+    "ok": 120,
+    "n": 120
+   },
+   "systeme": {
+    "alt": {
+     "ok": 79,
+     "n": 120,
+     "spanne": [
+      0.5697466444292892,
+      0.7370969364029997
+     ]
+    },
+    "neu": {
+     "ok": 115,
+     "n": 120,
+     "spanne": [
+      0.9061578707045692,
+      0.9820735474941622
+     ]
+    }
+   },
+   "mcnemar": {
+    "nurAltRichtig": 1,
+    "nurNeuRichtig": 37,
+    "p": 2.837623469531536e-10
+   },
+   "gegenErsten": {
+    "alt": {
+     "ok": 79,
+     "n": 120,
+     "spanne": [
+      0.5697466444292892,
+      0.7370969364029997
+     ]
+    },
+    "neu": {
+     "ok": 115,
+     "n": 120,
+     "spanne": [
+      0.9061578707045692,
+      0.9820735474941622
+     ]
+    }
+   },
+   "fehlerNeu": [
+    {
+     "datei": "IMG_20261112_151324.txt",
+     "ist": null,
+     "soll": 0
+    },
+    {
+     "datei": "IMG_20261114_145643.txt",
+     "ist": 19,
+     "soll": 0
+    },
+    {
+     "datei": "SCN260424-5.txt",
+     "ist": null,
+     "soll": 0
+    },
+    {
+     "datei": "SCN260729-9.txt",
+     "ist": 7,
+     "soll": 19
+    },
+    {
+     "datei": "scan_0464.txt",
+     "ist": null,
+     "soll": 0
+    }
+   ]
+  },
+  "betrag": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Zweiter (Claude-Agent)",
+     "gleich": 118,
+     "n": 120
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 118,
+     "n": 120
+    },
+    {
+     "a": "Zweiter (Claude-Agent)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    }
+   ],
+   "einstimmig": 118,
+   "mehrheit": 120,
+   "strittig": [],
+   "ersterGegenMehrheit": {
+    "ok": 118,
+    "n": 120
+   },
+   "systeme": {
+    "alt": {
+     "ok": 117,
+     "n": 120,
+     "spanne": [
+      0.9290687625956524,
+      0.9914619799012145
+     ]
+    },
+    "neu": {
+     "ok": 117,
+     "n": 120,
+     "spanne": [
+      0.9290687625956524,
+      0.9914619799012145
+     ]
+    }
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   },
+   "gegenErsten": {
+    "alt": {
+     "ok": 115,
+     "n": 120,
+     "spanne": [
+      0.9061578707045692,
+      0.9820735474941622
+     ]
+    },
+    "neu": {
+     "ok": 115,
+     "n": 120,
+     "spanne": [
+      0.9061578707045692,
+      0.9820735474941622
+     ]
+    }
+   },
+   "fehlerNeu": [
+    {
+     "datei": "IMG_20260624_182223.txt",
+     "ist": 74930,
+     "soll": 50895
+    },
+    {
+     "datei": "doc05029.txt",
+     "ist": 350770,
+     "soll": 20770
+    },
+    {
+     "datei": "doc05608.txt",
+     "ist": 465000,
+     "soll": 214200
+    }
+   ]
+  },
+  "konto": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Zweiter (Claude-Agent)",
+     "gleich": 116,
+     "n": 120
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 118,
+     "n": 120
+    },
+    {
+     "a": "Zweiter (Claude-Agent)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 116,
+     "n": 120
+    }
+   ],
+   "einstimmig": 115,
+   "mehrheit": 120,
+   "strittig": [],
+   "ersterGegenMehrheit": {
+    "ok": 119,
+    "n": 120
+   }
+  },
+  "richtung": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Zweiter (Claude-Agent)",
+     "gleich": 120,
+     "n": 120
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    },
+    {
+     "a": "Zweiter (Claude-Agent)",
+     "b": "Dritter (fremde KI)",
+     "gleich": 120,
+     "n": 120
+    }
+   ],
+   "einstimmig": 120,
+   "mehrheit": 120,
+   "strittig": [],
+   "ersterGegenMehrheit": {
+    "ok": 120,
+    "n": 120
+   }
+  }
+ }
+}

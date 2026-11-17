@@ -1,0 +1,10 @@
+Von: noreply@portal.praxis-beispiel-lindner.example
+An: walter.pfeiffenberg@mail.example
+Datum: Do, 16 Apr 2026 11:20:44 +0200
+Betreff: Neue Nachricht im Patientenportal
+Anhang: Verordnung_Physio.pdf
+
+Sehr geehrter Herr Pfeiffenberg,
+die Verordnung für Krankengymnastik (6 Behandlungen) liegt im Portal. Bitte lösen Sie sie bis zum 28.04.2026
+bei einer Physiotherapiepraxis ein, danach verfällt die Verordnung. Der Fadenzug ist am 24.04. um 9:00 Uhr.
+Ihre Praxis Dr. Beispiel-Lindner

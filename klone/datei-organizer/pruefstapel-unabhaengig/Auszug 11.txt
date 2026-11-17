@@ -1,0 +1,14 @@
+KONTOR DIREKTBANK                   Kontoauszug Nr. 11/2026
+Girokonto Dörte Wiechmann           IBAN DE00 0000 0000 0000 2209 00
+
+Buchungstag  Text                                                     Soll      Haben
+             Saldo alt 31.10.2026                                               88,14
+02.11.2026   Mietzahlung Ahrens + Vogt Kranichweg 3a                742,00
+02.11.2026   Familienkasse Kindergeld Jonte                                    255,00
+02.11.2026   Unterhaltsvorschuss Bezirksamt Ost                                227,00
+04.11.2026   Lastschrift Funkwelle Mobil                             19,99
+05.11.2026   Kartenzahlung Frischmarkt Kranich                       47,30
+06.11.2026   HGK Kinderkrankengeld                                             222,64
+             Saldo neu 06.11.2026                                               -16,51
+
+Dispositionskredit 500,00 EUR, Sollzins 11,9 % p.a.

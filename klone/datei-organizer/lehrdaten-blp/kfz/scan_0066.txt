@@ -1,0 +1,9 @@
+cloudfon.example – virtuelle Telefonanlage
+Anbieter: Sprachnetz Hoyer GmbH, Serverweg 3, 76133 Karlsfelde, DE000000087
+Rechnung SN-2026-10-0417       01.10.2026       Kunde Kfz-Technik Brandhorst
+
+Telefonanlage "Team 5" – 5 Nebenstellen, Monat Oktober 2026      24,50
+Ansage/Warteschleife "Werkstatt"                                  3,00
+Gesprächsminuten Paket 500                                        6,90
+Subtotal 34,40 | VAT 19% 6,54 | Total 40,94 EUR
+Zahlung per Kreditkarte

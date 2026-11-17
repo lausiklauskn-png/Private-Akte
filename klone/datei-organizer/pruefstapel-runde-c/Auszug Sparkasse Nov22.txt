@@ -1,0 +1,21 @@
+Sparkasse Beispieltal
+Kontoauszug  Girokonto  Nicole Weber
+IBAN DE00 0000 0000 0000 0000 00  Auszug 11/2022  vom 01.11.2022 bis 30.11.2022
+
+Datum  Erläuterung  Betrag EUR
+01.11.  Miete Birkenallee 30 Hausverwaltung Beispielhof  -820,00
+01.11.  Gehalt Beispiel Logistik GmbH  2.284,16
+02.11.  Unterhalt Tim und Paul  Marco Hartmann  450,00
+04.11.  Familienkasse Kindergeld 2 Kinder  438,00
+07.11.  Lastschrift Stadtwerke Altdorf Strom  -76,00
+10.11.  Kartenzahlung Beispiel Discount  -94,37
+15.11.  Kfz-Versicherung BSP-NW 230  -41,20
+18.11.  Hort Grundschule Paul  -95,00
+21.11.  Bargeld Automat  -100,00
+28.11.  Streaming Beispielflix  -12,99
+30.11.  Entgelt Kontoführung  -6,90
+
+Kontostand alt  412,83
+Kontostand neu  2.338,53
+
+Bitte erheben Sie Einwendungen gegen diesen Auszug innerhalb von sechs Wochen.

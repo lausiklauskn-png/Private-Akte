@@ -1,0 +1,9 @@
+Beispiel-Raiffbank Musterbach eG
+Rechnung über Bereitstellungszinsen
+Darlehen 0000000-DV1, Rechnungsdatum 30.04.2026
+
+Bereitstellungszinsen für 3 Monate auf 215.000,00 EUR
+   (0,25 % p.m. nach Ablauf der bereitstellungszinsfreien Zeit)   537,50 EUR
+
+Bitte überweisen Sie den Betrag bis zum 15.05.2026 auf Ihr Darlehenskonto, da für diese Position keine Einzugsermächtigung vorliegt.
+IBAN DE00 0000 0000 0000 0000 00

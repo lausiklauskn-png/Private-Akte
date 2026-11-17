@@ -1,0 +1,34 @@
+# Dachdeckerei Beispiel & Sohn GmbH
+Dachdeckerei Beispiel & Sohn GmbH · Ziegelweg 7 · 34567 Beispielstadt
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Bauvorhaben: Lindenweg 14
+Datum: 10.11.2025
+
+# Rechnung Nr. 2025-219 – Reparatur Dachrinne
+
+Sehr geehrter Herr Brandtner,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Arbeitszeit Geselle, Stunden|4,5|58,00 €|261,00 €|
+|2|Arbeitszeit Meister, Stunden|1|72,00 €|72,00 €|
+|3|Hängerinne Zink, lfm|6|28,40 €|170,40 €|
+|4|Rinnenhaken|8|6,20 €|49,60 €|
+|5|Hubsteiger|1|145,00 €|145,00 €|
+
+Nettobetrag: 698,00 €
+zzgl. 19 % MwSt.: 132,62 €
+Rechnungsbetrag: 830,62 €
+
+Bitte überweisen Sie den Betrag von 830,62 € bis zum 10.12.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Der Lohnanteil von 333,00 € netto ist nach § 35a EStG steuerlich absetzbar.
+
+Mit freundlichen Grüßen
+Dachdeckerei Beispiel & Sohn GmbH
+@fuss Dachdeckerei Beispiel & Sohn GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

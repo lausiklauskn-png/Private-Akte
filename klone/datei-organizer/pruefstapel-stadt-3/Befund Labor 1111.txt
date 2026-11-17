@@ -1,0 +1,16 @@
+Labor Beispiel-Diagnostik
+Gesundheitsweg 3 · 00140 Beispielstadt-Nord
+Auftrags-Nr. LB-0450912        Eingang: 10.11.2026   Bericht: 11.11.2026
+Einsender: MVZ Beispielstadt-Nord
+Patient: Amrani, Abdelkader, geb. 1955
+
+Parameter            Ergebnis     Einheit    Referenz
+HbA1c                8,1  (!)     %          4,8 - 5,9
+Nüchternglukose      162  (!)     mg/dl      70 - 99
+Kreatinin            1,0          mg/dl      0,7 - 1,2
+eGFR                 78           ml/min     > 60
+Cholesterin ges.     214  (!)     mg/dl      < 200
+LDL                  139  (!)     mg/dl      < 116
+
+Kommentar: HbA1c erhöht, Einstellung ggf. überprüfen. Befundinterpretation obliegt dem behandelnden Arzt.
+(!) = außerhalb des Referenzbereichs

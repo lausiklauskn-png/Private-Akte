@@ -1,0 +1,34 @@
+---------- Weitergeleitete Nachricht ---------
+Von: Sanne <s.quellmann@familie-quellmann.example>
+Datum: 08.11.2026 21:40
+Betreff: WG: Avviso di mancato pagamento / Mitteilung über nicht bezahlte Maut
+An: Tobias <t.quellmann@familie-quellmann.example>
+
+Das ist doch von der Herbstfahrt, oder? Kannst du das bitte überweisen?
+
+> Von: noreply@pedaggio-esempio.example
+> Betreff: Rapporto di Mancato Pagamento Nr. RMPP 2026/0098812
+>
+> Pedaggio Esempio S.r.l. – Concessionaria Autostrada A00 (esempio)
+>
+> Gentile Cliente / Sehr geehrte Kundin, sehr geehrter Kunde,
+>
+> am 18.10.2026 um 09:47 hat Ihr Fahrzeug mit dem Kennzeichen
+> BSP-TQ 412 (D) die Mautstation „Esempio Nord“ in Richtung
+> „Lago Esempio“ passiert, ohne die Maut zu entrichten
+> (Fahrspur Telepass genutzt, kein gültiges Gerät erkannt).
+>
+> Mautbetrag (Maut):          14,30 EUR
+> Bearbeitungskosten:          2,70 EUR
+> Zu zahlen:                  17,00 EUR
+>
+> Bitte zahlen Sie den Betrag innerhalb von 15 Tagen nach Erhalt,
+> spätestens bis 05.12.2026, online unter
+> www.pedaggio-esempio.example/pagamenti  (Code RMPP 2026/0098812)
+> oder per Überweisung: IBAN DE00 0000 0000 0000 0000 00 (Beispielkonto).
+>
+> Nach Ablauf der Frist können zusätzliche Kosten für die Beitreibung
+> durch ein Inkassounternehmen entstehen.
+>
+> Cordiali saluti / Mit freundlichen Grüßen
+> Servizio Clienti Pedaggio Esempio

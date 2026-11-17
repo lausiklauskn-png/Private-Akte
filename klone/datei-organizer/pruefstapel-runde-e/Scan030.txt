@@ -1,0 +1,32 @@
+Beispiel Kassensysteme GmbH
+Beispiel Kassensysteme GmbH · Bonweg 10 · 50000 Musterköln
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Datum: 18.09.2025
+
+Rechnung KS-25-09-118 – Kassensystem für Haarwerk Hartwig
+
+Sehr geehrte Frau Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Touch-Kasse Beispiel Salon Pro mit TSE   1   899,00 €   899,00 €
+2   Bondrucker 80 mm   1   189,00 €   189,00 €
+3   Kassenschublade   1   79,00 €   79,00 €
+4   Einrichtung vor Ort   1   120,00 €   120,00 €
+
+Nettobetrag: 1.287,00 €
+zzgl. 19 % MwSt.: 244,53 €
+Rechnungsbetrag: 1.531,53 €
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Garantie 36 Monate auf Hardware. Die TSE-Zertifikatslaufzeit endet am 18.09.2030. Software-Abo wird separat abgerechnet.
+
+Mit freundlichen Grüßen
+Beispiel Kassensysteme GmbH
+Beispiel Kassensysteme GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

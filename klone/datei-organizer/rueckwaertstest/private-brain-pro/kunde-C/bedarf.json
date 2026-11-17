@@ -1,0 +1,38 @@
+{"titel": "Ein gemeinsamer geschützter Ablageort für Mails, Rechnungen, Scans und Fachtexte",
+ "kunde": {"firma": "Übersetzungsbüro Beispiel-Kowalski", "ansprechpartner": "Dr. Miriam Beispiel-Kowalski", "mail": "miriam@beispiel-kowalski.example"},
+ "bereiche": {
+  "1": ["Kundenmails in Thunderbird am PC", "Rechnungen, Scans und Fachtexte verstreut, teils in Dropbox", "Buchhaltung in einem eigenen Buchhaltungsprogramm", "Familienunterlagen in einem eigenen Programm", "Jedes Programm mit eigenem Passwort und eigenem Ordner"],
+  "2": ["Dokumente ablegen und wiederfinden", "Kundenkontakt per Mail", "Buchhaltung: Rechnungen weitergeben", "Termine und Fristen"],
+  "3": [{"text": "Inhaberin (Übersetzerin, arbeitet allein von zu Hause)", "anzahl": 1}, {"text": "Kunden (schreiben Mails, auch fremdsprachig)", "anzahl": null}],
+  "4": ["Unterlagen liegen verstreut", "Viele Passwörter und viele Ordner", "Suche nach Inhalten, die sie nur sinngemäß erinnert, dauert", "Rechnungsmails müssen von Hand in die Buchhaltung", "Fremdsprachige Mails nicht sofort verständlich"],
+  "5": ["Jedes Programm hat seinen eigenen Ablageort", "Suche geht nur nach genauen Wörtern"],
+  "6": [
+   {"text": "Ein gemeinsamer geschützter Ablageort für alle Programme mit nur einem Passwort", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "weniger Passwörter, alles an einem Ort"}},
+   {"text": "Einrichtung ohne Fachwissen in wenigen Handgriffen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kann es selbst einrichten"}},
+   {"text": "Rechnungsmails mit einem Tipp an die Buchhaltung geben", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Abtippen, kein Umweg"}},
+   {"text": "Inhalte nach Sinn finden, nicht nur nach genauem Wort", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "schneller wiederfinden"}},
+   {"text": "Oberfläche auch auf Polnisch", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "Fremdsprachige Mails sofort verstehen, Original bleibt erhalten", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "KI zum Gegenlesen beim Schreiben, Kundennamen gehen nicht hinaus", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "Gleich auf PC und Android-Tablet", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "App fürs iPhone", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "Automatischer Abgleich aller Geräte über eine Cloud", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}},
+   {"text": "Eingebauter Terminkalender mit Fristen", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": ""}}
+  ],
+  "7": ["Alle Unterlagen an einem geschützten Ort, ein Passwort", "Rechnungen gehen mit einem Tipp in die Buchhaltung", "Ich finde Dinge, auch wenn ich nur noch weiß, worum es ging", "Ich verstehe fremdsprachige Mails sofort"],
+  "8": ["Das System muss Mails, Rechnungen, Scans und Fachtexte an einem gemeinsamen geschützten Ort ablegen.", "Das System muss mit einem Passwort für alle beteiligten Programme auskommen.", "Das System muss sich in wenigen Handgriffen ohne Fachwissen einrichten lassen.", "Das System muss eine Rechnungsmail mit einem Tipp an die Buchhaltung weitergeben.", "Das System muss Inhalte auch sinngemäß finden.", "Das System muss die Oberfläche auf Polnisch anbieten.", "Das System muss fremdsprachige Mails übersetzt zeigen und das Original behalten.", "Das System muss beim Gegenlesen durch eine KI Kundennamen zurückhalten."],
+  "9": ["Keine Schulung gewünscht, muss selbsterklärend sein"],
+  "10": ["Windows-PC", "Android-Tablet", "iPhone (zusätzlich gewünscht)", "Gleiche Bedienung auf PC und Tablet"],
+  "11": ["Thunderbird", "Buchhaltungsprogramm", "Programm für Familienunterlagen", "Dropbox"],
+  "12": ["Mail → Buchhaltungsprogramm", "Gemeinsamer Ablageort für Buchhaltungs- und Familienprogramm", "Dropbox (Cloud-Abgleich, zusätzlich gewünscht)"],
+  "13": ["Kundenmails", "Rechnungen", "Scans", "Fachtexte und Übersetzungen", "Familienunterlagen"],
+  "14": ["personenbezogene Daten: ja", "Kundennamen dürfen nicht an eine KI gehen", "Ablageort geschützt"],
+  "15": ["Budget-Rahmen: bis 150 € im Jahr, wenn es Arbeit spart"],
+  "18": [
+   {"text": "Welches Buchhaltungs- und welches Familienprogramm genau? Können die den gemeinsamen Ablageort nutzen?", "wer": "Kundin", "bis": ""},
+   {"text": "Wie viel Zeit kostet das Suchen und Weitergeben heute pro Monat?", "wer": "Kundin", "bis": ""},
+   {"text": "Soll Dropbox bleiben oder ersetzt werden?", "wer": "Kundin", "bis": ""},
+   {"text": "Wo soll der Ablageort liegen (PC, Tablet, Cloud)?", "wer": "Kundin", "bis": ""},
+   {"text": "Welche Fristen gehören in den Kalender?", "wer": "Kundin", "bis": ""}
+  ]
+ }}

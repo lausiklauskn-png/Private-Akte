@@ -1,0 +1,19 @@
+Kartenwerk Zahlungssysteme GmbH
+Händlerabrechnung - Börsenallee 20 - 60999 Frankfurt-Mainfeld
+
+Monatsabrechnung Kartenakzeptanz                   Datum: 01.06.2026
+Vertragspartner-Nr. 44 0071 882                    Zeitraum: Mai 2026
+Händler: Buchhandlung Lindenblatt, Marktgasse 7, 37999 Wehrstedt
+Terminal-ID 61104417
+
+Kartenart            Anzahl      Umsatz EUR     Entgelt EUR
+girocard                318        5.104,80          12,76
+Kreditkarte EU           61        1.142,50          11,31
+Kreditkarte Non-EU        4          165,00           3,14
+Transaktionsentgelt     383  x 0,08                  30,64
+                                  ---------       --------
+Summe                              6.412,30          57,85
+
+Die Kartenumsätze wurden Ihnen taggleich gutgeschrieben.
+Die Entgelte in Höhe von 57,85 EUR werden am 05.06.2026 Ihrem Konto belastet.
+Zahlungsverkehrsleistungen sind nach § 4 Nr. 8 UStG umsatzsteuerfrei.

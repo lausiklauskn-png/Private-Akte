@@ -1,0 +1,22 @@
+Entgeltabrechnung für Februar 2026                               Blatt 1
+Arbeitgeber: Blumenwerkstatt Harkort, Kirchgasse 7, 37299 Weidenrode
+Pers.-Nr. 3   Jule Petermann, Floristin   St.-Kl. I   Eintritt 01.09.2021
+erstellt am 25.02.2026
+
+Lohnart                         Betrag
+Gehalt                         2.680,00
+Gesamtbrutto                   2.680,00
+
+Steuerliche Abzüge
+Lohnsteuer                       247,16
+Kirchensteuer                     22,24
+Solidaritätszuschlag               0,00
+Sozialversicherung (AN-Anteil)
+Krankenversicherung              229,14
+Rentenversicherung               249,24
+Arbeitslosenversicherung          34,84
+Pflegeversicherung                64,32
+
+Gesetzliches Netto             1.833,06
+Auszahlungsbetrag              1.833,06 EUR
+Überweisung auf IBAN DE00 0000 0000 0000 0007 03

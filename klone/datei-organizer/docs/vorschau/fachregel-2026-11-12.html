@@ -1,0 +1,110 @@
+<title>Fachregel Familienakte</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Aufbau: eine Lesespalte; oben der Grundsatz, darunter acht Entscheidungskarten mit Ja/Nein, unten die Zusammenfassung zum Kopieren. */
+:root{--bg:#f6f8f8;--flaeche:#ffffff;--text:#16242a;--leise:#56686e;--linie:#d5dedf;--akzent:#0f6b72;--akzent-hell:#e1f0f0;--ja:#1d7a46;--nein:#a23a2c;
+--schrift:"Inter",system-ui,sans-serif;--kopf:"Space Grotesk","Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10191c;--flaeche:#182327;--text:#e6eeee;--leise:#9fb1b5;--linie:#2c3b40;--akzent:#58c2c9;--akzent-hell:#17363a;--ja:#5cc98a;--nein:#ee8a7a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10191c;--flaeche:#182327;--text:#e6eeee;--leise:#9fb1b5;--linie:#2c3b40;--akzent:#58c2c9;--akzent-hell:#17363a;--ja:#5cc98a;--nein:#ee8a7a;color-scheme:dark}
+body{background:var(--bg);color:var(--text);font:16px/1.55 var(--schrift);padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:46rem;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+h1{font:600 1.7rem/1.2 var(--kopf);margin:0;text-wrap:balance}
+h2{font:600 1.1rem/1.3 var(--kopf);margin:0;text-wrap:balance}
+p{margin:0}.leise{color:var(--leise);font-size:.92rem}
+.grundsatz{background:var(--akzent-hell);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.grundsatz b{font-family:var(--kopf)}
+.punkt{background:var(--flaeche);border:1px solid var(--linie);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.kopf{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.nr{font:600 .8rem var(--kopf);letter-spacing:.06em;color:var(--akzent)}
+.weg{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-weight:500}
+.fach{border:1px solid var(--akzent);color:var(--akzent);border-radius:999px;padding:2px 10px;font-size:.9rem}
+.fach.zweit{border-style:dashed;color:var(--leise);border-color:var(--leise)}
+ul{margin:0;padding-left:1.1rem;display:flex;flex-direction:column;gap:2px}
+.stimmen{font-size:.88rem;color:var(--leise);font-variant-numeric:tabular-nums}
+.wahl{display:flex;gap:8px;flex-wrap:wrap}
+.wahl button{font:500 .95rem var(--schrift);padding:7px 18px;border-radius:8px;border:1px solid var(--linie);background:var(--bg);color:var(--text);cursor:pointer}
+.wahl button:focus-visible{outline:2px solid var(--akzent);outline-offset:2px}
+.wahl button[aria-pressed="true"][data-w="ja"]{background:var(--ja);border-color:var(--ja);color:var(--flaeche)}
+.wahl button[aria-pressed="true"][data-w="nein"]{background:var(--nein);border-color:var(--nein);color:var(--flaeche)}
+.aus{background:var(--flaeche);border:1px solid var(--linie);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+#antwort{font:500 1rem var(--schrift);user-select:all;overflow-wrap:anywhere}
+#kopieren{align-self:flex-start;font:500 .95rem var(--schrift);padding:7px 16px;border-radius:8px;border:1px solid var(--akzent);background:var(--akzent);color:var(--flaeche);cursor:pointer}
+</style>
+<main>
+<header style="display:flex;flex-direction:column;gap:8px">
+<p class="nr">VORSCHAU · 12.11.2026 · NICHTS GEBAUT</p>
+<h1>In welches Fach gehört ein Brief, der in zwei passt?</h1>
+<p>Vier unabhängige Einordner (drei Claude-Agenten, Codex) haben 150 erfundene Briefe abgelegt. Bei 126 waren alle einig. Bei 24 gab es zwei Meinungen, immer an denselben Stellen. Für diese Stellen braucht der Sortier-Kern eine feste Regel, sonst lässt sich nicht messen, ob er richtig ablegt.</p>
+</header>
+
+<section class="grundsatz">
+<p><b>Grundsatz: Die Sache entscheidet, nicht der Absender.</b></p>
+<p>Ein Brief liegt in dem Fach, um dessen Gegenstand es geht: das Auto, das Kind, die Rente. Das zweite passende Fach wird als <span class="fach zweit">auch zu finden unter</span> gemerkt. Abgelegt wird einmal, gefunden wird der Brief in beiden Fächern und über die Suche.</p>
+<p class="leise">So hat die Mehrheit der Einordner in fast allen strittigen Fällen entschieden. Das Zweitfach ist ein Vorschlag von Codex.</p>
+</section>
+
+<section class="punkt" data-p="1"><div class="kopf"><span class="nr">PUNKT 1</span><h2>Versicherung für ein Fahrzeug</h2></div>
+<div class="weg"><span class="fach">Auto &amp; Mobilität</span> bzw. <span class="fach">Motorrad</span><span class="fach zweit">auch: Versicherungen</span></div>
+<ul><li>Kfz-Police, Beitragsrechnung, Wechsel der Autoversicherung</li><li>Saisonkennzeichen-Versicherung fürs Motorrad</li></ul>
+<p class="stimmen">3 Briefe · 3 Einordner für das Fahrzeug-Fach, 1 für Versicherungen</p>
+<p class="leise">Unter „Versicherungen“ bleiben Haftpflicht, Hausrat, Leben, Rechtsschutz – alles ohne eigenes Sachfach.</p></section>
+
+<section class="punkt" data-p="2"><div class="kopf"><span class="nr">PUNKT 2</span><h2>Post von der Krankenkasse</h2></div>
+<div class="weg"><span class="fach">Gesundheit &amp; Pflege</span><span class="fach zweit">auch: Rente, Arbeit &amp; Sozialversicherung</span></div>
+<ul><li>Mitgliedsbescheinigung, Beitragsbescheid</li><li>Krankengeld, Kinderkrankengeld</li></ul>
+<p class="stimmen">5 Briefe · hier waren die Einordner am uneinigsten (2 Gesundheit, 1–2 Sozialversicherung, 1 Versicherungen)</p>
+<p class="leise">Vorschlag: alles von der Krankenkasse an einem Ort, weil man es dort zuerst sucht.</p></section>
+
+<section class="punkt" data-p="3"><div class="kopf"><span class="nr">PUNKT 3</span><h2>Geld und Bescheide fürs Kind</h2></div>
+<div class="weg"><span class="fach">Familie &amp; persönliche Dokumente</span><span class="fach zweit">auch: Steuern &amp; Behörden</span></div>
+<ul><li>Kindergeld, Elterngeld, Unterhaltsvorschuss, Kita-Gutschein</li><li>Schule, Ausbildung, Studium, BAföG (ein eigenes Fach dafür gibt es nicht)</li></ul>
+<p class="stimmen">3 Briefe · 3 Einordner für Familie, 1 für Behörden</p></section>
+
+<section class="punkt" data-p="4"><div class="kopf"><span class="nr">PUNKT 4</span><h2>Steuer, die an einer Sache hängt</h2></div>
+<div class="weg"><span class="fach">Fach der Sache</span><span class="fach zweit">auch: Steuern &amp; Behörden</span></div>
+<ul><li>Kfz-Steuer → Auto &amp; Mobilität</li><li>Erbschaftsteuer → Erbschaft, Vollmachten &amp; Vorsorge</li><li>Grundsteuer → Haus &amp; Wohnung</li><li>Rentenbezugsmitteilung, Riester-Zulage → Rente, Arbeit &amp; Sozialversicherung</li></ul>
+<p class="stimmen">4 Briefe · meist 3 zu 1 für das Sachfach, bei der Rentenbezugsmitteilung 2 zu 2</p>
+<p class="leise">Unter „Steuern &amp; Behörden“ bleiben Einkommensteuer, Steuerbescheide, Ausweise, Meldeamt.</p></section>
+
+<section class="punkt" data-p="5"><div class="kopf"><span class="nr">PUNKT 5</span><h2>Gerät gekauft, mit Garantie</h2></div>
+<div class="weg"><span class="fach">Technik, Geräte &amp; Reparaturen</span><span class="fach zweit">auch: Einkäufe, Rechnungen &amp; Garantien</span></div>
+<ul><li>Rechnung für Fernseher, Drucker, Waschmaschine</li><li>Rasenmäher und Gartengeräte → Garten &amp; Grundstück</li></ul>
+<p class="stimmen">2 Briefe · 3 zu 1 und 2 zu 2</p>
+<p class="leise">Unter „Einkäufe“ bleiben Kassenbons, Bestellungen, Rücksendungen ohne Gerät.</p></section>
+
+<section class="punkt" data-p="6"><div class="kopf"><span class="nr">PUNKT 6</span><h2>Abo oder Mitgliedschaft</h2></div>
+<div class="weg"><span class="fach">Verträge &amp; Abonnements</span><span class="fach zweit">auch: Fach der Sache</span></div>
+<ul><li>Fitnessstudio, Zeitung, Streaming, Mobilfunk</li><li>Monatskarte für Bus und Bahn</li></ul>
+<p class="stimmen">2 Briefe · Fitness 3 zu 1 für Verträge, Monatskarte 2 zu 2</p>
+<p class="leise">Die Ausnahme vom Grundsatz: Bei einem Abo ist die Kündigungsfrist das Wichtige, darum liegt es bei den Verträgen.</p></section>
+
+<section class="punkt" data-p="7"><div class="kopf"><span class="nr">PUNKT 7</span><h2>Mahnung und Inkasso</h2></div>
+<div class="weg"><span class="fach">Finanzen &amp; Konten</span><span class="fach zweit">auch: Fach der ursprünglichen Rechnung</span></div>
+<ul><li>Inkasso-Schreiben, letzte Mahnung von einem fremden Büro</li><li>Die erste Mahnung des Händlers bleibt bei dessen Rechnung</li></ul>
+<p class="stimmen">1 Brief · 3 zu 1</p></section>
+
+<section class="punkt" data-p="8"><div class="kopf"><span class="nr">PUNKT 8</span><h2>Eine Fächerliste für die ganze Gruppe</h2></div>
+<p>Der Sortier-Kern kennt heute 21 Fächer, die Familienakte 18. Drei Paare sind in der Familienakte zusammengelegt: Rente mit Arbeit, Einkäufe mit Rechnungen, Erbschaft mit Vollmachten.</p>
+<div class="weg"><span class="fach">18 Fächer der Familienakte gelten überall</span></div>
+<p class="leise">Sonst misst jeder Knoten gegen eine andere Liste. Genau das hat heute einen Vergleich verfälscht.</p></section>
+
+<section class="aus">
+<h2>Deine Antwort</h2>
+<p class="leise">Tippe je Punkt Ja oder Nein und schick mir die Zeile. Du kannst sie auch einfach diktieren.</p>
+<p id="antwort">Noch nichts gewählt.</p>
+<button id="kopieren" type="button">Zeile kopieren</button>
+</section>
+</main>
+<script>
+const wahl={};
+document.querySelectorAll(".punkt").forEach(p=>{
+  const n=p.dataset.p,d=document.createElement("div");d.className="wahl";
+  for(const w of ["ja","nein"]){const b=document.createElement("button");b.type="button";b.id="p"+n+"-"+w;b.dataset.w=w;b.textContent=w==="ja"?"Ja":"Nein";b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",()=>{wahl[n]=w;d.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));zeige();});d.append(b);}
+  p.append(d);
+});
+function zeige(){const t=Object.keys(wahl).sort().map(n=>n+" "+(wahl[n]==="ja"?"Ja":"Nein")).join(", ");document.getElementById("antwort").textContent=t?"Fachregel: "+t:"Noch nichts gewählt.";}
+document.getElementById("kopieren").addEventListener("click",e=>{const el=document.getElementById("antwort");
+  navigator.clipboard.writeText(el.textContent).then(()=>{e.target.textContent="Kopiert";},()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);e.target.textContent="Markiert – jetzt kopieren";});});
+</script>

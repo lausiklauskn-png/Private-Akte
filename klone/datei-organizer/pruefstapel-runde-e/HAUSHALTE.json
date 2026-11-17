@@ -1,0 +1,129 @@
+{
+ "haushalte": [
+  {
+   "id": "e-grossfamilie",
+   "titel": "Großfamilie mit sechs Personen, Eigenheim, ein Auto",
+   "name": "Familie Brandtner",
+   "anschrift": "Lindenweg 14, 34567 Beispielstadt",
+   "personen": [
+    {
+     "vorname": "Markus",
+     "name": "Brandtner",
+     "anrede": "Herr",
+     "rolle": "Vater, Elektriker (angestellt)"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Brandtner",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verwaltungsangestellte in Teilzeit"
+    },
+    {
+     "vorname": "Lena",
+     "name": "Brandtner",
+     "anrede": "Kind",
+     "rolle": "Tochter, 16 Jahre, Gymnasium"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brandtner",
+     "anrede": "Kind",
+     "rolle": "Sohn, 11 Jahre, Gymnasium"
+    },
+    {
+     "vorname": "Mia",
+     "name": "Brandtner",
+     "anrede": "Kind",
+     "rolle": "Tochter, 4 Jahre, Kita"
+    },
+    {
+     "vorname": "Gertrud",
+     "name": "Brandtner",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Pflegegrad 2"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MB 412"
+   ]
+  },
+  {
+   "id": "e-wg",
+   "titel": "Wohngemeinschaft mit drei Erwachsenen",
+   "name": "WG Kastanienallee 7",
+   "anschrift": "Kastanienallee 7, 45678 Musterhausen",
+   "personen": [
+    {
+     "vorname": "Aylin",
+     "name": "Demir",
+     "anrede": "Frau",
+     "rolle": "Pflegerin im Schichtdienst, Hauptmieterin"
+    },
+    {
+     "vorname": "Tobias",
+     "name": "Reuter",
+     "anrede": "Herr",
+     "rolle": "Student mit BAföG"
+    },
+    {
+     "vorname": "Konstantin",
+     "name": "Wolf",
+     "anrede": "Herr",
+     "rolle": "Fahrradkurier im Minijob"
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "e-selbststaendige",
+   "titel": "Selbstständige Friseurin mit Laden, Ehemann Busfahrer, ein Kind",
+   "name": "Familie Hartwig",
+   "anschrift": "Mühlenstraße 3, 56789 Probedorf",
+   "personen": [
+    {
+     "vorname": "Nicole",
+     "name": "Hartwig",
+     "anrede": "Frau",
+     "rolle": "Friseurmeisterin, Salon Haarwerk Hartwig"
+    },
+    {
+     "vorname": "Daniel",
+     "name": "Hartwig",
+     "anrede": "Herr",
+     "rolle": "Busfahrer"
+    },
+    {
+     "vorname": "Emil",
+     "name": "Hartwig",
+     "anrede": "Kind",
+     "rolle": "Sohn, 7 Jahre, Grundschule"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DH 77",
+    "BSP-NH 215"
+   ]
+  },
+  {
+   "id": "e-senioren",
+   "titel": "Seniorenpaar (81 und 77)",
+   "name": "Heinrich und Ilse Vogelsang",
+   "anschrift": "Am Kurpark 22, 67890 Exempelheim",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Vogelsang",
+     "anrede": "Herr",
+     "rolle": "Rentner, 81 Jahre, schwerbehindert (GdB 80)"
+    },
+    {
+     "vorname": "Ilse",
+     "name": "Vogelsang",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, 77 Jahre"
+    }
+   ],
+   "fahrzeuge": []
+  }
+ ]
+}

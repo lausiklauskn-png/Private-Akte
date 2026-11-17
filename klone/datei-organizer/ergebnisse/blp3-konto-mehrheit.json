@@ -1,0 +1,176 @@
+{
+ "ordner": "pruefstapel-blp-3",
+ "belege": 120,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent, eigenes Urteil"
+  },
+  {
+   "name": "Dritter (fremde KI)",
+   "modell": "Codex (GPT-6)"
+  }
+ ],
+ "paare": [
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Zweiter (Claude-Agent)",
+   "gleich": 116,
+   "n": 120
+  },
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 118,
+   "n": 120
+  },
+  {
+   "a": "Zweiter (Claude-Agent)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 116,
+   "n": 120
+  }
+ ],
+ "fleissKappa": 0.9712542719345874,
+ "einstimmig": 115,
+ "mehrheit": 120,
+ "strittig": [],
+ "ersterGegenMehrheit": {
+  "ok": 119,
+  "n": 120
+ },
+ "konto": {
+  "sollErster": {
+   "alt": {
+    "ok": 9,
+    "n": 120,
+    "spanne": [
+     0.039956662006448734,
+     0.13641056839109136
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 68,
+    "n": 120,
+    "spanne": [
+     0.47729757992376215,
+     0.6518997172687806
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 80,
+    "n": 120,
+    "spanne": [
+     0.5783093452093498,
+     0.744683897772007
+    ]
+   }
+  },
+  "sollMehrheit": {
+   "alt": {
+    "ok": 8,
+    "n": 120,
+    "spanne": [
+     0.03416489747129058,
+     0.12605267077718166
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 67,
+    "n": 120,
+    "spanne": [
+     0.46904360820302915,
+     0.6440040268404459
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 79,
+    "n": 120,
+    "spanne": [
+     0.5697466444292892,
+     0.7370969364029997
+    ]
+   }
+  },
+  "sollEinstimmig": {
+   "alt": {
+    "ok": 8,
+    "n": 115,
+    "spanne": [
+     0.03566822646477971,
+     0.13129014501456757
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 66,
+    "n": 115,
+    "spanne": [
+     0.4825830328016102,
+     0.660464519570623
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 78,
+    "n": 115,
+    "spanne": [
+     0.588312128684693,
+     0.7566849093895166
+    ]
+   }
+  }
+ },
+ "richtung": {
+  "sollMehrheit": {
+   "alt": {
+    "ok": 88,
+    "n": 120,
+    "spanne": [
+     0.6478739437150142,
+     0.8043165964588853
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 94,
+    "n": 120,
+    "spanne": [
+     0.7014547414958805,
+     0.8476337715724263
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 109,
+    "n": 120,
+    "spanne": [
+     0.843290092093749,
+     0.9480433532105753
+    ]
+   }
+  }
+ },
+ "mcnemar": {
+  "Konto, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 1,
+   "nurNeuRichtig": 60,
+   "p": 5.377642775528102e-17
+  },
+  "Konto, Mehrheit, mit Namen": {
+   "nurAltRichtig": 1,
+   "nurNeuRichtig": 72,
+   "p": 1.5670109524204556e-20
+  },
+  "Richtung, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 6,
+   "p": 0.03125
+  },
+  "Richtung, Mehrheit, mit Namen": {
+   "nurAltRichtig": 1,
+   "nurNeuRichtig": 22,
+   "p": 0.0000057220458984375
+  }
+ }
+}

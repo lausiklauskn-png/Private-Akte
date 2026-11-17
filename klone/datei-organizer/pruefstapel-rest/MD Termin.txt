@@ -1,0 +1,14 @@
+Medizinischer Dienst Beispielland
+
+ANKÜNDIGUNG EINES HAUSBESUCHS
+
+Versicherter: Gerhard Pfannschmidt
+Auftrag der Pflegekasse: AOK Beispielland
+Termin: Dienstag, 08.04.2025, zwischen 10.00 und 12.00 Uhr
+Gutachterin: Frau Beispiel-Lorenz, Pflegefachkraft
+
+[X] Bitte Medikamentenplan bereitlegen
+[X] Bitte Arztberichte bereitlegen
+
+Wenn Sie den Termin nicht wahrnehmen können, rufen Sie uns bitte an.
+

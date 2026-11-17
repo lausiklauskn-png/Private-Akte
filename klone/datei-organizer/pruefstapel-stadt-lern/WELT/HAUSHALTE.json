@@ -1,0 +1,215 @@
+{
+ "haushalte": [
+  {
+   "id": "h1",
+   "titel": "Familie mit Schulkindern",
+   "name": "Familie Kranbeck",
+   "anschrift": "Möwenstieg 14, 29999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Kranbeck",
+     "anrede": "Herr",
+     "rolle": "Vater, Schweißer auf der Werft",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Svenja",
+     "name": "Kranbeck",
+     "anrede": "Frau",
+     "rolle": "Mutter, Teilzeit Pflegehelferin",
+     "geburtsjahr": 1986
+    },
+    {
+     "vorname": "Lene",
+     "name": "Kranbeck",
+     "anrede": "Kind",
+     "rolle": "Tochter, 7. Klasse",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Mats",
+     "name": "Kranbeck",
+     "anrede": "Kind",
+     "rolle": "Sohn, 3. Klasse",
+     "geburtsjahr": 2017
+    },
+    {
+     "vorname": "Ida",
+     "name": "Kranbeck",
+     "anrede": "Kind",
+     "rolle": "Tochter, Kita",
+     "geburtsjahr": 2021
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JK 184"
+   ]
+  },
+  {
+   "id": "h2",
+   "titel": "Alleinerziehende",
+   "name": "Haushalt Ostwald",
+   "anschrift": "Lotsenweg 3a, 29999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Marlene",
+     "name": "Ostwald",
+     "anrede": "Frau",
+     "rolle": "Mutter, Verkäuferin, Bezug Bürgergeld aufstockend",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Finn",
+     "name": "Ostwald",
+     "anrede": "Kind",
+     "rolle": "Sohn, 1. Klasse",
+     "geburtsjahr": 2019
+    },
+    {
+     "vorname": "Tilda",
+     "name": "Ostwald",
+     "anrede": "Kind",
+     "rolle": "Tochter, geboren im Mai 2026",
+     "geburtsjahr": 2026
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h3",
+   "titel": "Rentnerpaar mit Pflegebedarf",
+   "name": "Eheleute Brakmann",
+   "anschrift": "Deichgrafenstraße 22, 29999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Heinrich",
+     "name": "Brakmann",
+     "anrede": "Herr",
+     "rolle": "Rentner, früher Hafenlotse, pflegebedürftig",
+     "geburtsjahr": 1944
+    },
+    {
+     "vorname": "Gerda",
+     "name": "Brakmann",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, pflegende Ehefrau",
+     "geburtsjahr": 1947
+    },
+    {
+     "vorname": "Claudia",
+     "name": "Brakmann-Ruge",
+     "anrede": "Frau",
+     "rolle": "Tochter mit Vorsorgevollmacht, wohnt auswärts",
+     "geburtsjahr": 1972
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-HB 47"
+   ]
+  },
+  {
+   "id": "h4",
+   "titel": "Junges Paar beim Hausbau",
+   "name": "Paar Siemsen/Ahlers",
+   "anschrift": "Am Sielgraben 9 (Neubau, Bezug ab Juli: Kiebitzring 5), 29999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Tobias",
+     "name": "Siemsen",
+     "anrede": "Herr",
+     "rolle": "Elektroingenieur bei den Stadtwerken",
+     "geburtsjahr": 1994
+    },
+    {
+     "vorname": "Nele",
+     "name": "Ahlers",
+     "anrede": "Frau",
+     "rolle": "Lehrerin, später Elternzeit",
+     "geburtsjahr": 1995
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-TS 994",
+    "BSP-NA 21"
+   ]
+  },
+  {
+   "id": "h5",
+   "titel": "Selbstständige mit Laden",
+   "name": "Haushalt Petersen",
+   "anschrift": "Fischmarkt 7, 29999 Beispielhafen (Wohnung über dem Laden „Petersens Kram & Kaffee“)",
+   "personen": [
+    {
+     "vorname": "Inken",
+     "name": "Petersen",
+     "anrede": "Frau",
+     "rolle": "Inhaberin Laden für Geschenke und Kaffee",
+     "geburtsjahr": 1979
+    },
+    {
+     "vorname": "Arne",
+     "name": "Petersen",
+     "anrede": "Herr",
+     "rolle": "Ehemann, Bootsbauer angestellt",
+     "geburtsjahr": 1977
+    },
+    {
+     "vorname": "Jule",
+     "name": "Petersen",
+     "anrede": "Kind",
+     "rolle": "Tochter, Oberstufe",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Ole",
+     "name": "Petersen",
+     "anrede": "Kind",
+     "rolle": "Sohn, 9. Klasse",
+     "geburtsjahr": 2011
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-IP 79",
+    "BSP-KK 7"
+   ]
+  },
+  {
+   "id": "h6",
+   "titel": "Student mit Nebenjob in WG",
+   "name": "WG Hafenkante",
+   "anschrift": "Speicherstraße 41, 3. OG, 29999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Lukas",
+     "name": "Behrend",
+     "anrede": "Herr",
+     "rolle": "Student Schiffbau, Nebenjob im Hafenlager",
+     "geburtsjahr": 2004
+    },
+    {
+     "vorname": "Emre",
+     "name": "Yıldırım-Beispiel",
+     "anrede": "Herr",
+     "rolle": "Mitbewohner, Auszubildender",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Paula",
+     "name": "Fehrs",
+     "anrede": "Frau",
+     "rolle": "Mitbewohnerin, Studentin",
+     "geburtsjahr": 2005
+    },
+    {
+     "vorname": "Karin",
+     "name": "Behrend",
+     "anrede": "Frau",
+     "rolle": "Mutter von Lukas, zahlt Miete mit, wohnt außerhalb",
+     "geburtsjahr": 1970
+    }
+   ],
+   "fahrzeuge": []
+  }
+ ]
+}

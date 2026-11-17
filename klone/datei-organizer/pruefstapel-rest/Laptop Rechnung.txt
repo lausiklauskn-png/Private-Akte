@@ -1,0 +1,26 @@
+Beispiel Computer Versand GmbH
+Chipweg 1 · 01999 Beispieldresden
+
+Herrn
+Daniel Lenz
+Hafenweg 12
+22999 Beispielhafen
+
+Rechnungsnr.: BCV-2024-118870
+Bestellnr.: 88120
+Datum: 29.11.2024
+
+Rechnung
+
+Pos.   Artikel   Menge   Einzel   Gesamt
+1   Notebook Beispiel Pro 14, 32 GB   1   1.399,00   1.399,00
+2   USB-C Dock   1   129,00   129,00
+3   Garantieerweiterung 36 Monate   1   99,00   99,00
+4   Versand   1   0,00   0,00
+   Netto         1.367,23
+   MwSt 19 %         259,77
+   Gesamt EUR         1.627,00
+
+Bereits bezahlt per Sofortüberweisung. Gewährleistung 24 Monate, erweiterte Garantie bis 28.11.2027.
+
+Beispiel Computer Versand GmbH · AG Beispieldresden HRB 1234 · USt-IdNr DE000000000

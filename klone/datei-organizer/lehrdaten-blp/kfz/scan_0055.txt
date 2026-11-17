@@ -1,0 +1,18 @@
+Teilezentrum Ostfalen eG
+- Tagesrechnung Thekenabholung -
+Filiale Wolmershagen, Bahnhofstraße 40
+
+Kunde: 20077 Kfz-Technik Brandhorst            Bearbeiter: Hr. Ilic
+Beleg 5-112908   12.05.2026  07:52 Uhr
+
+001;Ölfilter Patrone;2;ST;5,15;10,30
+002;Luftfilter Einsatz;2;ST;9,80;19,60
+003;Innenraumfilter Aktivkohle;3;ST;11,20;33,60
+004;Keilrippenriemen 6PK1070;1;ST;14,60;14,60
+005;Wischerblatt Flachbalken 600mm;4;ST;6,75;27,00
+
+NETTO:                                             105,10
+UST 19%:                                            19,97
+BRUTTO:                                            125,07
+
+Sammelabbuchung zum Monatsende.  UID DE000000005

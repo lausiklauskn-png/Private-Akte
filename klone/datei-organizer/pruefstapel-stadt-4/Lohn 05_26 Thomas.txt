@@ -1,0 +1,17 @@
+Chemiewerk Beispiel-Rhein GmbH
+Entgeltabrechnung Mai 2026      Personal-Nr. 000000
+Thomas Brückmann, Schichtleiter
+
+Gehalt                       3.820,00
+Schichtzulage Nacht            412,60
+Jubiläumszahlung (25 Jahre)  1.000,00
+Brutto                       5.232,60
+Lohnsteuer                    -958,33
+Solidaritätszuschlag             0,00
+Kirchensteuer                  -76,67
+Krankenversicherung           -429,07
+Rentenversicherung            -486,63
+Arbeitslosenversicherung       -68,02
+Pflegeversicherung             -92,00
+Netto                       3.121,88 EUR
+Auszahlung an IBAN DE00 0000 0000 0000 0000 00 zum 28.05.2026

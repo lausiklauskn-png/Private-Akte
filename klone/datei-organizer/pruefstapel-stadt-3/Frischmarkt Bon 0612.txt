@@ -1,0 +1,31 @@
+        FRISCHMARKT BEISPIEL
+     Lindenhöhe-Center, Filiale 0412
+       Beispielstadt-Nord
+   Tel. 0000-1212 · www.frischmarkt.example
+
+Datum 06.12.2026   Zeit 18:47   Kasse 03   Bed. 117
+------------------------------------------
+Milch 3,5% 1l          2 x 1,19     2,38 A
+Fladenbrot                          1,49 A
+Hähnchenschenkel 2kg                7,99 A
+Reis Basmati 5kg                    8,99 A
+Tomaten Strauch 1kg                 2,79 A
+Gurke                               0,69 A
+Joghurt natur 1kg      2 x 1,79     3,58 A
+Datteln 500g                        3,49 A
+Windeln Gr. 6                       9,95 B
+Spülmittel                          1,29 B
+Kinderzahnpasta                     1,95 B
+Pfand Leergut                      -1,75 A
+------------------------------------------
+SUMME                      EUR     42,84
+EC-Karte                           42,84
+------------------------------------------
+MwSt   Netto    Steuer  Brutto
+A 7%   29,25    2,05    31,30
+B 19%  11,93    2,27    14,20  (inkl. Pfand)
+------------------------------------------
+App-Kunden-ID FM-****2914
+Gesammelt: 42 Punkte · Punktestand 1.180
+TSE-Signatur: ...7F3A  Transaktion 88412
+     Vielen Dank für Ihren Einkauf!

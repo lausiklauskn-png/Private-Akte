@@ -1,0 +1,22 @@
+@bon
+EISCAFÉ BEISPIEL DOLCE
+Mühlbachweg 12, 56789 Probedorf
+Tel. 00000 000000
+UST-ID DE000000000
+
+Eisbecher Erdbeer                7,50 A
+Kinderbecher Pirat               4,90 A
+Cappuccino                       3,40 A
+Kugel Schoko
+  2 x 1,60        3,20 B
+------------------------------------
+SUMME EUR                    19,00
+Bar gegeben                   19,00
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|13,28|2,52|15,80|
+|B 7 %|2,99|0,21|3,20|
+
+16.08.2025 15:21  Bon 7764  Kasse 1
+TSE-Signatur 8135638693
+Vielen Dank für Ihren Einkauf!

@@ -1,0 +1,22 @@
+Bausparkasse Beispiel-Heim AG
+Lindenallee 47 · 34567 Musterhausen
+
+Familie Falkenhain
+Mühlenweg 5
+67890 Beispieldorf
+
+Jahreskontoauszug Darlehen 2025
+Kontoinhaber: Familie Falkenhain
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 5. Januar 2026
+
+Alter Kontostand               2119,62 EUR
+02.01.  Kartenzahlung Beispiel-Markt                -105,00
+06.01.  Lastschrift Beispielfunk Mobil               -25,00
+10.01.  Lastschrift Stadtwerke Abschlag             -105,00
+14.01.  Überweisung Gutschrift                       225,00
+18.01.  Dauerauftrag Miete                          -462,00
+22.01.  Bargeldauszahlung Automat                   -100,00
+26.01.  Lastschrift Versicherung                     -71,00
+30.01.  Gutschrift Lohn/Gehalt                      2478,00
+Neuer Kontostand               3954,62 EUR

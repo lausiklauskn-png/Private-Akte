@@ -1,0 +1,198 @@
+{
+ "ordner": "pruefstapel-blp-2",
+ "belege": 120,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent, eigenes Urteil"
+  },
+  {
+   "name": "Dritter (fremde KI)",
+   "modell": "Codex (GPT-6)"
+  }
+ ],
+ "paare": [
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Zweiter (Claude-Agent)",
+   "gleich": 117,
+   "n": 120
+  },
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 118,
+   "n": 120
+  },
+  {
+   "a": "Zweiter (Claude-Agent)",
+   "b": "Dritter (fremde KI)",
+   "gleich": 118,
+   "n": 120
+  }
+ ],
+ "fleissKappa": 0.9798641630043948,
+ "einstimmig": 117,
+ "mehrheit": 119,
+ "strittig": [
+  {
+   "datei": "parkhaus_messe.txt",
+   "stimmen": [
+    "4530",
+    "4670",
+    "4500"
+   ]
+  }
+ ],
+ "ersterGegenMehrheit": {
+  "ok": 118,
+  "n": 119
+ },
+ "konto": {
+  "sollErster": {
+   "alt": {
+    "ok": 9,
+    "n": 120,
+    "spanne": [
+     0.039956662006448734,
+     0.13641056839109136
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 74,
+    "n": 120,
+    "spanne": [
+     0.5273391477284313,
+     0.6987561223585186
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 89,
+    "n": 120,
+    "spanne": [
+     0.6567130404034741,
+     0.8116271619194934
+    ]
+   }
+  },
+  "sollMehrheit": {
+   "alt": {
+    "ok": 9,
+    "n": 119,
+    "spanne": [
+     0.040296784434261525,
+     0.13750617482383995
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 72,
+    "n": 119,
+    "spanne": [
+     0.5152473444421884,
+     0.688266774553331
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 87,
+    "n": 119,
+    "spanne": [
+     0.6451232726783624,
+     0.8026077891117802
+    ]
+   }
+  },
+  "sollEinstimmig": {
+   "alt": {
+    "ok": 8,
+    "n": 117,
+    "spanne": [
+     0.0350512906011003,
+     0.12914382101609115
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 72,
+    "n": 117,
+    "spanne": [
+     0.5248959637038179,
+     0.6985370262599032
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 87,
+    "n": 117,
+    "spanne": [
+     0.6576075278949651,
+     0.8140843398062239
+    ]
+   }
+  }
+ },
+ "richtung": {
+  "sollMehrheit": {
+   "alt": {
+    "ok": 96,
+    "n": 120,
+    "spanne": [
+     0.7196316465662729,
+     0.8617561908001696
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 101,
+    "n": 120,
+    "spanne": [
+     0.7659051081885379,
+     0.8962310399232437
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 115,
+    "n": 120,
+    "spanne": [
+     0.9061578707045692,
+     0.9820735474941622
+    ]
+   }
+  }
+ },
+ "mcnemar": {
+  "Konto, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 3,
+   "nurNeuRichtig": 66,
+   "p": 1.857035033560328e-16
+  },
+  "Konto, Mehrheit, mit Namen": {
+   "nurAltRichtig": 3,
+   "nurNeuRichtig": 81,
+   "p": 1.0221367431741194e-20
+  },
+  "Richtung, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 5,
+   "p": 0.0625
+  },
+  "Richtung, Mehrheit, mit Namen": {
+   "nurAltRichtig": 2,
+   "nurNeuRichtig": 21,
+   "p": 0.00006604194641113281
+  }
+ },
+ "bauplan": {
+  "modell": "Claude-Agent nach Codex-Bauplan",
+  "ohneKonto": 1,
+  "unsicher": 13,
+  "gegenMehrheitAlle": {
+   "ok": 119,
+   "n": 119
+  },
+  "gegenMehrheitWoKonto": {
+   "ok": 119,
+   "n": 119
+  }
+ }
+}

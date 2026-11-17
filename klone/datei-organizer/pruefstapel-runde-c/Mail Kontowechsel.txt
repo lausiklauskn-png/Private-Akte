@@ -1,0 +1,19 @@
+Von: Beispiel Direktbank Kontowechselservice
+An: Nicole Weber
+Gesendet: 06.03.2023 10:15
+Betreff: Ihr Kontowechsel: Status
+
+Hallo Frau Weber,
+
+Ihr Kontowechsel läuft. Folgende Zahlungspartner haben wir über Ihre neue IBAN informiert:
+
+Beispiel Logistik GmbH (Gehalt)  bestätigt
+Familienkasse Beispielland (Kindergeld)  bestätigt
+Stadtwerke Altdorf (Strom)  bestätigt
+Beispiel Versicherung (Kfz)  bestätigt
+Beispielflix (Streaming)  offen
+Landkreis Altdorf-Beispiel Jugendamt (Unterhaltsvorschuss)  nicht elektronisch erreichbar – bitte selbst bis 20.03.2023 informieren, damit die Aprilzahlung ankommt
+
+Unterhaltszahler Marco Hartmann: Privatpersonen informieren wir nicht. Bitte teilen Sie ihm die neue Bankverbindung selbst mit.
+
+Ihr Beispiel Direktbank Team

@@ -1,0 +1,22 @@
+Renten Service (Beispiel)
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Rentennummer: 00 120552 P 004
+Datum: Juni 2025
+
+Rentenanpassung zum 1. Juli 2025
+
+Sehr geehrter Herr Pfannschmidt,
+
+Ihre Altersrente wird zum 01.07.2025 um 3,74 Prozent angepasst.
+
+   bisher   ab 01.07.2025
+Monatliche Rente   1.322,41 EUR   1.371,87 EUR
+KV-Beitrag   -108,44 EUR   -112,49 EUR
+PV-Beitrag   -45,62 EUR   -49,39 EUR
+Zahlbetrag   1.168,35 EUR   1.209,99 EUR
+

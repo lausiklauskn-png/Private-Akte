@@ -1,0 +1,29 @@
+Beispiel Sparkasse Probedorf
+Sparkassenplatz 1 · 56789 Probedorf
+
+Kontoauszug
+Kreditkartenabrechnung Daniel Hartwig
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 13/2026 · Blatt 1 von 1 · Zeitraum 01.03.2026 – 31.03.2026
+
+Herrn Daniel Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Alter Kontostand vom 01.03.2026: 0,00 EUR
+
+Buchungstag   Valuta   Vorgang / Verwendungszweck   Betrag EUR
+01.03.   01.03.   Kartenzahlung Discount Probe   -23,41
+04.03.   04.03.   Beispiel Urlaubsportal Anzahlung   -469,20
+04.03.   04.03.   Kartenzahlung Discount Probe   -15,81
+12.03.   12.03.   Tankstelle Beispiel Probedorf   -61,40
+18.03.   18.03.   Kartenzahlung Frischkauf Exempel   -82,39
+20.03.   20.03.   Bargeldauszahlung Geldautomat   -64,57
+21.03.   21.03.   Motorradhaus Beispiel   -691,00
+23.03.   23.03.   Bargeldauszahlung Geldautomat   -62,62
+25.03.   25.03.   Jahresgebühr Kreditkarte   -29,00
+
+Neuer Kontostand vom 31.03.2026: -1.499,40 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+Beispiel Sparkasse Probedorf · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

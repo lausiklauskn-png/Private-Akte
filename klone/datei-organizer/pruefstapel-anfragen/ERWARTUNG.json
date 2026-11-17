@@ -1,0 +1,1089 @@
+{
+  "dateien": [
+    {
+      "datei": "anfrage-01.eml",
+      "absender": "TSV Grün-Weiß Oberhain",
+      "email": "markus.lindner@tsv-oberhain.example",
+      "kundennr": "Kd.-Nr. 10234",
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 80
+        },
+        {
+          "art": "Banner",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 3000,
+        "hoeheMm": 800
+      },
+      "farben": 2
+    },
+    {
+      "datei": "anfrage-02.eml",
+      "absender": "Julia Brandt",
+      "email": "julia.brandt@mailpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tischkarte Acryl",
+          "menge": 60
+        },
+        {
+          "art": "Sektglas",
+          "menge": 2
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-03.eml",
+      "absender": "Bäckerei Sonnenkorn GmbH",
+      "email": "o.kranz@sonnenkorn-baeckerei.example",
+      "kundennr": "K-2207",
+      "produkte": [
+        {
+          "art": "Fahrzeugfolierung",
+          "menge": 1
+        },
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 500
+        }
+      ],
+      "masse": {
+        "breiteMm": 100,
+        "hoeheMm": 100
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-04.eml",
+      "absender": "Grundschule am Lindenhof",
+      "email": "sekretariat@gs-lindenhof.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schild",
+          "menge": null
+        }
+      ],
+      "masse": {
+        "breiteMm": 600,
+        "hoeheMm": 400
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-05.eml",
+      "absender": "Kessler Haustechnik",
+      "email": "t.kessler@kessler-haustechnik.example",
+      "kundennr": "Kd-Nr: 10871",
+      "produkte": [
+        {
+          "art": "Kugelschreiber",
+          "menge": 250
+        },
+        {
+          "art": "Flaschenöffner",
+          "menge": 50
+        }
+      ],
+      "masse": null,
+      "farben": 1
+    },
+    {
+      "datei": "anfrage-06.eml",
+      "absender": "Stefan Wirth",
+      "email": "stefan.wirth@heimnetz.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 24
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-07.eml",
+      "absender": "Chor Liederkranz Talbach e.V.",
+      "email": "kasse@liederkranz-talbach.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 100
+        },
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 30
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-08.eml",
+      "absender": "Autohaus Berger & Söhne KG",
+      "email": "f.berger@autohaus-berger.example",
+      "kundennr": "Kundennr. 4471",
+      "produkte": [
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": 200
+        },
+        {
+          "art": "Plott-Schriftzug",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 2500,
+        "hoeheMm": 600
+      },
+      "farben": 1
+    },
+    {
+      "datei": "anfrage-09.eml",
+      "absender": "Lena Hofmann",
+      "email": "lena.hofmann@postfach.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 40
+        },
+        {
+          "art": "Tasse",
+          "menge": 2
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-10.eml",
+      "absender": "Kita Sonnenblume",
+      "email": "leitung@kita-sonnenblume.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 1
+        },
+        {
+          "art": "T-Shirt",
+          "menge": 15
+        }
+      ],
+      "masse": {
+        "breiteMm": 1200,
+        "hoeheMm": 900
+      },
+      "farben": 3
+    },
+    {
+      "datei": "anfrage-11.eml",
+      "absender": "Gasthaus Zur Linde",
+      "email": "marion@gasthaus-linde.example",
+      "kundennr": "Kd.-Nr. 10519",
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": null
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-12.eml",
+      "absender": "FC Blau-Gelb Westerfeld",
+      "email": "jugend@fc-blaugelb.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Banner",
+          "menge": 2
+        }
+      ],
+      "masse": {
+        "breiteMm": 4000,
+        "hoeheMm": 1000
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-13.eml",
+      "absender": "Steuerberatung Albrecht & Partner",
+      "email": "empfang@albrecht-partner.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Kugelschreiber",
+          "menge": 500
+        },
+        {
+          "art": "Tasse",
+          "menge": 50
+        }
+      ],
+      "masse": null,
+      "farben": 1
+    },
+    {
+      "datei": "anfrage-14.eml",
+      "absender": "Werner Gruber",
+      "email": "w.gruber@seniorenpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 6
+        },
+        {
+          "art": "anderes",
+          "menge": 1
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-15.eml",
+      "absender": "Musikschule Klangwerk",
+      "email": "leitung@klangwerk-musikschule.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tischkarte Acryl",
+          "menge": 20
+        },
+        {
+          "art": "Schild",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 300,
+        "hoeheMm": 200
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-16.eml",
+      "absender": "Zimmerei Holzwerk Brandl",
+      "email": "buero@holzwerk-brandl.example",
+      "kundennr": "Kd.-Nr. 10088",
+      "produkte": [
+        {
+          "art": "Fahrzeugfolierung",
+          "menge": 2
+        },
+        {
+          "art": "Plott-Schriftzug",
+          "menge": 2
+        }
+      ],
+      "masse": {
+        "breiteMm": 1200,
+        "hoeheMm": 300
+      },
+      "farben": 2
+    },
+    {
+      "datei": "anfrage-17.eml",
+      "absender": "Clara Neumann",
+      "email": "clara.neumann@familienmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 25
+        }
+      ],
+      "masse": null,
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-18.eml",
+      "absender": "Gymnasium Am Schlossberg",
+      "email": "abi2027@schlossberg-gym.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 110
+        },
+        {
+          "art": "Flaschenöffner",
+          "menge": 120
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-19.eml",
+      "absender": "Imkerei Honigtal",
+      "email": "rolf@imkerei-honigtal.example",
+      "kundennr": "Kundennr: 5582",
+      "produkte": [
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 1000
+        }
+      ],
+      "masse": {
+        "breiteMm": 50,
+        "hoeheMm": 30
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-20.eml",
+      "absender": "Kanuverein Wellenreiter e.V.",
+      "email": "vorstand@kanu-wellenreiter.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Banner",
+          "menge": null
+        }
+      ],
+      "masse": {
+        "breiteMm": 2000,
+        "hoeheMm": 1000
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-21.eml",
+      "absender": "Ingrid Pohl",
+      "email": "ingrid.pohl@privatmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Flaschenöffner",
+          "menge": 1
+        },
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 1
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-22.eml",
+      "absender": "Hausverwaltung Kramer GmbH",
+      "email": "verwaltung@kramer-hv.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schild",
+          "menge": 36
+        },
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 36
+        }
+      ],
+      "masse": {
+        "breiteMm": 80,
+        "hoeheMm": 20
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-23.eml",
+      "absender": "Jörg Simon",
+      "email": "joerg.simon@laufmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 30
+        },
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": 30
+        }
+      ],
+      "masse": null,
+      "farben": 2
+    },
+    {
+      "datei": "anfrage-24.eml",
+      "absender": "Weingut Rebhang",
+      "email": "kontakt@weingut-rebhang.example",
+      "kundennr": "K-1950",
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 300
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 150
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-25.eml",
+      "absender": "Melanie Fuchs",
+      "email": "melanie.fuchs@mailpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "anderes",
+          "menge": 1
+        },
+        {
+          "art": "Tasse",
+          "menge": 3
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-26.txt",
+      "absender": "Freiwillige Feuerwehr Kirchdorf",
+      "email": "t.weber@ff-kirchdorf.example",
+      "kundennr": "Kd.-Nr. 10342",
+      "produkte": [
+        {
+          "art": "Tasse",
+          "menge": 60
+        },
+        {
+          "art": "Kugelschreiber",
+          "menge": 100
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-27.txt",
+      "absender": "Physiotherapie Bewegt",
+      "email": "praxis@physio-bewegt.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schild",
+          "menge": 1
+        },
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 500,
+        "hoeheMm": 350
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-28.txt",
+      "absender": "Paul Meier",
+      "email": "paul.meier@kumpelmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 12
+        },
+        {
+          "art": "Flaschenöffner",
+          "menge": 12
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-29.txt",
+      "absender": "Tanzschule Rhythmus",
+      "email": "info@tanzschule-rhythmus.example",
+      "kundennr": "Kundennummer 2289",
+      "produkte": [
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 200
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-30.txt",
+      "absender": "Elektro Zimmermann",
+      "email": "service@elektro-zimmermann.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Fahrzeugfolierung",
+          "menge": null
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-31.txt",
+      "absender": "Heimatverein Altbach",
+      "email": "vorstand@heimatverein-altbach.example",
+      "kundennr": "Kd. Nr. 10650",
+      "produkte": [
+        {
+          "art": "Banner",
+          "menge": 2
+        },
+        {
+          "art": "Plott-Schriftzug",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 5000,
+        "hoeheMm": 800
+      },
+      "farben": 3
+    },
+    {
+      "datei": "anfrage-32.txt",
+      "absender": "Sophie Lang",
+      "email": "sophie.lang@herzmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 2
+        },
+        {
+          "art": "Tischkarte Acryl",
+          "menge": 80
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 80
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-33.txt",
+      "absender": "Partnerschaftsverein Talbach–Saint-Aubin e.V.",
+      "email": "info@partnerschaft-talbach.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Kugelschreiber",
+          "menge": 150
+        },
+        {
+          "art": "Tasse",
+          "menge": 40
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-34.txt",
+      "absender": "Brauerei Kellergold",
+      "email": "einkauf@kellergold-brauerei.example",
+      "kundennr": "Kd-Nr. K-0412",
+      "produkte": [
+        {
+          "art": "Flaschenöffner",
+          "menge": 500
+        },
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 2000
+        }
+      ],
+      "masse": {
+        "breiteMm": 80,
+        "hoeheMm": 80
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-35.txt",
+      "absender": "Günter Albers",
+      "email": "g.albers@rentnerpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": 20
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-36.txt",
+      "absender": "Yoga-Studio Atem",
+      "email": "kerstin@yoga-atem.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tasse",
+          "menge": 30
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-37.txt",
+      "absender": "Metallbau Steiner GmbH",
+      "email": "r.steiner@metallbau-steiner.example",
+      "kundennr": "10912",
+      "produkte": [
+        {
+          "art": "Schild",
+          "menge": 3
+        }
+      ],
+      "masse": {
+        "breiteMm": 1200,
+        "hoeheMm": 500
+      },
+      "farben": 1
+    },
+    {
+      "datei": "anfrage-38.txt",
+      "absender": "Hannah Kurz",
+      "email": "hannah.kurz@mailpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 1
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 4
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-39.txt",
+      "absender": "Förderverein Grundschule Birkenweg",
+      "email": "foerderverein@gs-birkenweg.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 180
+        }
+      ],
+      "masse": null,
+      "farben": 2
+    },
+    {
+      "datei": "anfrage-40.txt",
+      "absender": "Fahrschule Tempo",
+      "email": "info@fahrschule-tempo.example",
+      "kundennr": "Kd.-Nr. 10456",
+      "produkte": [
+        {
+          "art": "Fahrzeugfolierung",
+          "menge": 3
+        },
+        {
+          "art": "anderes",
+          "menge": 6
+        }
+      ],
+      "masse": {
+        "breiteMm": 500,
+        "hoeheMm": 300
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-41.txt",
+      "absender": "Ralf Dietrich",
+      "email": "ralf.dietrich@heimnetz.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": null
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-42.txt",
+      "absender": "Sportschützen Hubertus e.V.",
+      "email": "kassierer@schuetzen-hubertus.example",
+      "kundennr": "Kundennr. 3344",
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 50
+        },
+        {
+          "art": "Banner",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 2000,
+        "hoeheMm": 500
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-43.txt",
+      "absender": "Café Kaffeeklatsch",
+      "email": "eva@cafe-kaffeeklatsch.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tischkarte Acryl",
+          "menge": 25
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 100
+        }
+      ],
+      "masse": {
+        "breiteMm": 100,
+        "hoeheMm": 150
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-44.txt",
+      "absender": "Murat Yilmaz",
+      "email": "murat.yilmaz@familienmail.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Flaschenöffner",
+          "menge": 120
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-45.txt",
+      "absender": "Pflegedienst Herzenswärme",
+      "email": "verwaltung@pflege-herzenswaerme.example",
+      "kundennr": "K-2788",
+      "produkte": [
+        {
+          "art": "Kugelschreiber",
+          "menge": 300
+        },
+        {
+          "art": "T-Shirt",
+          "menge": 20
+        }
+      ],
+      "masse": null,
+      "farben": 1
+    },
+    {
+      "datei": "anfrage-46.txt",
+      "absender": "Karnevalsverein Narrhalla Talbach",
+      "email": null,
+      "kundennr": "Kd.-Nr. 10199",
+      "produkte": [
+        {
+          "art": "Banner",
+          "menge": 1
+        },
+        {
+          "art": "T-Shirt",
+          "menge": 40
+        }
+      ],
+      "masse": {
+        "breiteMm": 6000,
+        "hoeheMm": 1200
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-47.txt",
+      "absender": "Gisela Herrmann",
+      "email": "gisela.herrmann@seniorenpost.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 2
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 2
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-48.txt",
+      "absender": "Malerbetrieb Farbenfroh",
+      "email": null,
+      "kundennr": "K-1103",
+      "produkte": [
+        {
+          "art": "Fahrzeugfolierung",
+          "menge": 1
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-49.txt",
+      "absender": "Volkshochschule Talbach",
+      "email": "ute.becker@vhs-talbach.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Kugelschreiber",
+          "menge": 200
+        },
+        {
+          "art": "Tasse",
+          "menge": 25
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-50.txt",
+      "absender": "Dennis Vogel",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 15
+        }
+      ],
+      "masse": null,
+      "farben": 2
+    },
+    {
+      "datei": "anfrage-51.txt",
+      "absender": "Apotheke am Markt",
+      "email": null,
+      "kundennr": "Kd.-Nr. 10611",
+      "produkte": [
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 1
+        },
+        {
+          "art": "Schild",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 2000,
+        "hoeheMm": 1500
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-52.txt",
+      "absender": "Tennisclub Rot-Weiß Bergen",
+      "email": "sport@tc-rotweiss-bergen.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Sektglas",
+          "menge": 40
+        },
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 10
+        },
+        {
+          "art": "anderes",
+          "menge": 8
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-53.txt",
+      "absender": "Katrin Engel",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tasse",
+          "menge": null
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-54.txt",
+      "absender": "Getränkehandel Durstlöscher",
+      "email": null,
+      "kundennr": "Kundennummer 7720",
+      "produkte": [
+        {
+          "art": "Flaschenöffner",
+          "menge": 1000
+        },
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": 250
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-55.txt",
+      "absender": "Ev. Kirchengemeinde Oberhain",
+      "email": "gemeindebuero@ev-oberhain.example",
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Banner",
+          "menge": 1
+        },
+        {
+          "art": "Tasse",
+          "menge": 80
+        }
+      ],
+      "masse": {
+        "breiteMm": 3000,
+        "hoeheMm": 1000
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-56.txt",
+      "absender": "Renate Kaiser",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Tischkarte Acryl",
+          "menge": 35
+        },
+        {
+          "art": "Geschenkkarte Holz",
+          "menge": 35
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-57.txt",
+      "absender": "Bitwerk UG",
+      "email": "hallo@bitwerk.example",
+      "kundennr": "Kd-Nr. 10930",
+      "produkte": [
+        {
+          "art": "T-Shirt",
+          "menge": 25
+        },
+        {
+          "art": "Kugelschreiber",
+          "menge": 500
+        },
+        {
+          "art": "Aufkleber/Folie",
+          "menge": 300
+        }
+      ],
+      "masse": {
+        "breiteMm": 70,
+        "hoeheMm": 70
+      },
+      "farben": 4
+    },
+    {
+      "datei": "anfrage-58.txt",
+      "absender": "Männergesangverein Eintracht",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schild",
+          "menge": 1
+        },
+        {
+          "art": "Plott-Schriftzug",
+          "menge": 1
+        }
+      ],
+      "masse": {
+        "breiteMm": 400,
+        "hoeheMm": 300
+      },
+      "farben": null
+    },
+    {
+      "datei": "anfrage-59.txt",
+      "absender": "Reitverein Hufschlag e.V.",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "Schlüsselanhänger Leder",
+          "menge": 60
+        },
+        {
+          "art": "Schiefer-Untersetzer",
+          "menge": 60
+        }
+      ],
+      "masse": null,
+      "farben": null
+    },
+    {
+      "datei": "anfrage-60.txt",
+      "absender": "Dana Peters",
+      "email": null,
+      "kundennr": null,
+      "produkte": [
+        {
+          "art": "anderes",
+          "menge": null
+        }
+      ],
+      "masse": null,
+      "farben": null
+    }
+  ]
+}

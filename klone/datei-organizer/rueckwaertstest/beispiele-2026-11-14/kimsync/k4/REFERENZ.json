@@ -1,0 +1,409 @@
+{
+ "app": "Kim-sync",
+ "stand": {
+  "repo": "lausiklauskn-png/Kim-sync",
+  "commit": "bd7f533",
+  "datum": "2026-11-14"
+ },
+ "quellen": [
+  "CLAUDE.md",
+  "README.md",
+  "manifest.json",
+  "index.html (Beschriftungen, Einstellungen)",
+  "git log origin/main"
+ ],
+ "merkmale": [
+  {
+   "id": "M01",
+   "art": "zweck",
+   "text": "Die App ist ein kleiner Messenger für Bilder, Videos und kurze Nachrichten zwischen zwei oder mehr Geräten, die denselben Raum-Code kennen.",
+   "gewicht": "kern",
+   "beleg": "README.md, Einleitung; manifest.json description"
+  },
+  {
+   "id": "M02",
+   "art": "zweck",
+   "text": "Die App kommt ohne Benutzerkonto aus; wer den Raum-Code kennt, gehört zum Raum.",
+   "gewicht": "kern",
+   "beleg": "manifest.json description; README.md, So geht es"
+  },
+  {
+   "id": "M03",
+   "art": "nutzer",
+   "text": "Die App richtet sich an Familie und kleine Gruppen ohne technische Vorkenntnisse.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md, Netzweit (Ton)"
+  },
+  {
+   "id": "M04",
+   "art": "plattform",
+   "text": "Die App ist eine installierbare Web-App (PWA) ohne Build-Schritt, bestehend aus einer index.html.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Kopf; manifest.json"
+  },
+  {
+   "id": "M05",
+   "art": "plattform",
+   "text": "Die App läuft nach dem ersten Besuch offline weiter; ein Service Worker hält die Dateien im Vorrat.",
+   "gewicht": "wichtig",
+   "beleg": "sw.js; CLAUDE.md, Cache-Bump"
+  },
+  {
+   "id": "M06",
+   "art": "plattform",
+   "text": "Die App steht in der Teilen-Liste des Handys und nimmt dort Bilder, Videos und beliebige Dateien an.",
+   "gewicht": "wichtig",
+   "beleg": "manifest.json share_target; CLAUDE.md, Teilen → 405"
+  },
+  {
+   "id": "M07",
+   "art": "plattform",
+   "text": "Die App zeigt einen Installieren-Knopf in der Kopfleiste und hinten in den Einstellungen, der als installierte App verschwindet.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Installieren; assets/installieren.js"
+  },
+  {
+   "id": "M08",
+   "art": "plattform",
+   "text": "Ein Neu-laden-Knopf wirft nur die eigenen Vorräte weg und lädt die neueste Fassung, ohne Raum und Nachrichten zu löschen.",
+   "gewicht": "beiwerk",
+   "beleg": "assets/neuladen.js; CLAUDE.md"
+  },
+  {
+   "id": "M09",
+   "art": "bereich",
+   "text": "Die App hat Räume: man legt einen neuen Raum mit Code (XXXX-XXXX-XXXX-XXXX) an oder tritt mit einem Code bei.",
+   "gewicht": "kern",
+   "beleg": "README.md, So geht es 1–3; index.html Willkommen"
+  },
+  {
+   "id": "M10",
+   "art": "funktion",
+   "text": "Einladen geht über einen Link oder den Code zum Kopieren oder Teilen.",
+   "gewicht": "kern",
+   "beleg": "README.md, So geht es 2; index.html „Jemanden einladen“"
+  },
+  {
+   "id": "M11",
+   "art": "funktion",
+   "text": "Man kann Text schreiben, Bilder und Videos wählen und senden; sie erscheinen beim Gegenüber im Verlauf.",
+   "gewicht": "kern",
+   "beleg": "README.md, So geht es 4"
+  },
+  {
+   "id": "M12",
+   "art": "funktion",
+   "text": "Beliebige Dateien (PDF, ZIP, APK) gehen unverändert hinaus; beim Empfänger steht eine Karte mit Name, Größe und Speichern, nie eine Anzeige.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, So geht es 5; CLAUDE.md, Räume im Tresor und Dateien"
+  },
+  {
+   "id": "M13",
+   "art": "sicherheit",
+   "text": "Bei App- und Programmdateien steht beim Empfänger eine Warnung, und Dateinamen werden von Steuer-, Richtungs- und Pfadzeichen bereinigt.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Dateien (dateiNameSicher, PROGRAMM_ENDUNG)"
+  },
+  {
+   "id": "M14",
+   "art": "funktion",
+   "text": "Eine Ansicht zeigt Bilder und Videos groß mit Blättern, Wischen, Speichern und einem Videoabspieler (Abspielen, Stopp, ±10 s, Zeitleiste).",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Ansicht"
+  },
+  {
+   "id": "M15",
+   "art": "funktion",
+   "text": "Eine Galerie zeigt alle Bilder und Videos des Raums; langer Druck oder Ziehen wählt mehrere zum gemeinsamen Löschen aus.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md, Auswahl in der Galerie"
+  },
+  {
+   "id": "M16",
+   "art": "funktion",
+   "text": "Bilder und Videos stehen in der Mitte des Verlaufs, Textblasen links und rechts.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Bilder und Videos in der Mitte"
+  },
+  {
+   "id": "M17",
+   "art": "funktion",
+   "text": "Löschen entfernt eine Nachricht nur auf diesem Gerät; ein Merkzettel verhindert, dass sie vom Relais wiederkommt.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md, Grabstein"
+  },
+  {
+   "id": "M18",
+   "art": "funktion",
+   "text": "Nach vollständigem Empfang schickt das Gegenüber eine Quittung; beim Absender steht „abgeholt“, in der Gruppe mit Zahl, erst wenn alle abgeholt haben wird vom Relais gelöscht.",
+   "gewicht": "kern",
+   "beleg": "README.md, Abholbestätigung; CLAUDE.md, Vom Relais löschen erst, wenn ALLE abgeholt haben"
+  },
+  {
+   "id": "M19",
+   "art": "funktion",
+   "text": "Lesebestätigungen zeigen „gelesen“ in Blau, wenn alle eine Nachricht gesehen haben.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Quittungen auch für Text; gelesen"
+  },
+  {
+   "id": "M20",
+   "art": "funktion",
+   "text": "Was nicht hinausging, bleibt „wird gesendet“ und geht nach, sobald die Verbindung zurück ist.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Wie es übertragen wird"
+  },
+  {
+   "id": "M21",
+   "art": "funktion",
+   "text": "Eine Liste „Räume“ zeigt alle bekannten Räume; ein Tipp wechselt hinein, Räume lassen sich benennen und entfernen.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Räume; CLAUDE.md, Räume im Tresor"
+  },
+  {
+   "id": "M22",
+   "art": "sicherheit",
+   "text": "Ein Tresor mit Passwort (mindestens 8 Zeichen) speichert alle Räume verschlüsselt; beim Öffnen wird das Passwort einmal abgefragt.",
+   "gewicht": "kern",
+   "beleg": "README.md, Räume; CLAUDE.md, Tresor kimsync_raeume"
+  },
+  {
+   "id": "M23",
+   "art": "funktion",
+   "text": "Eine Raumzeile unter der Kopfleiste nennt den aktuellen Raum und die Personen, die dort etwas geschickt haben.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Raumzeile unter der Kopfleiste"
+  },
+  {
+   "id": "M24",
+   "art": "funktion",
+   "text": "Jede Person zeigt Name und Profilbild; ein Tipp zeigt das Bild groß oder nur die Nachrichten dieser Person.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Gruppe wie bei WhatsApp"
+  },
+  {
+   "id": "M25",
+   "art": "funktion",
+   "text": "Wer den Raum anlegt, leitet ihn: nur die Leitung lässt neue Geräte nach Bestätigung ein und kann jemanden herausnehmen.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Eintritt mit Bestätigung; Gruppe (leitung, umzug)"
+  },
+  {
+   "id": "M26",
+   "art": "sicherheit",
+   "text": "Herausnehmen erzeugt einen neuen Raumschlüssel, den nur die verbleibenden Geräte bekommen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, umzug"
+  },
+  {
+   "id": "M27",
+   "art": "funktion",
+   "text": "Private Nachrichten gehen an genau ein Gerät im Raum und sind für die anderen nicht lesbar.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Private Nachricht an ein Gerät"
+  },
+  {
+   "id": "M28",
+   "art": "sicherheit",
+   "text": "Man kann eine Person per Sicherheitsnummer bestätigen; sie bekommt dann einen grünen Haken.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Gegenbestätigung (grüner Haken)"
+  },
+  {
+   "id": "M29",
+   "art": "sicherheit",
+   "text": "Alles wird auf dem Gerät verschlüsselt (AES-GCM, Schlüssel über PBKDF2); die Relais sehen nur verschlüsselte Teile und eine Raum-Marke.",
+   "gewicht": "kern",
+   "beleg": "README.md, Wie es übertragen wird; CLAUDE.md, Raum-Marke und Schlüssel"
+  },
+  {
+   "id": "M30",
+   "art": "sicherheit",
+   "text": "Jeder Zettel ist signiert und wird beim Empfang geprüft.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; modules/echtheit.js"
+  },
+  {
+   "id": "M31",
+   "art": "sicherheit",
+   "text": "Empfangene Bilder werden neu gezeichnet, bevor sie gezeigt oder gespeichert werden; Metadaten und angehängte Daten fallen weg, ein nicht zeichenbares Bild wird nicht gezeigt.",
+   "gewicht": "kern",
+   "beleg": "README.md; CLAUDE.md, Empfangene Bilder werden neu gezeichnet"
+  },
+  {
+   "id": "M32",
+   "art": "schnittstelle",
+   "text": "Nachrichten reisen als signierte Nostr-Zettel über Relais; mehrere Relais laufen parallel.",
+   "gewicht": "kern",
+   "beleg": "README.md, Einleitung; CLAUDE.md, Relais"
+  },
+  {
+   "id": "M33",
+   "art": "daten",
+   "text": "Bilder werden vor dem Senden verkleinert, Videos unverändert in Teilen gesendet und beim Empfänger zusammengesetzt, mit Fortschrittsanzeige.",
+   "gewicht": "kern",
+   "beleg": "README.md; CLAUDE.md, Relais-Weg bis 200 MB, Ladebalken"
+  },
+  {
+   "id": "M34",
+   "art": "grenze",
+   "text": "Über die Relais gehen Dateien bis 200 MB; darüber oder schneller über Datei-Post.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Große Videos; CLAUDE.md, Teile"
+  },
+  {
+   "id": "M35",
+   "art": "schnittstelle",
+   "text": "Große Videos und Dateien über 20 MB gehen mit Zugangscode verschlüsselt über Datei-Post (dateien.family-projekt.de), bis 1 GB.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Große Videos; CLAUDE.md, Große Videos"
+  },
+  {
+   "id": "M36",
+   "art": "funktion",
+   "text": "Die Leitung kann ihren Datei-Post-Zugang an die Gruppe verteilen, ohne den Zugangscode weiterzugeben.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Datei-Post-Zugang aus der Gruppe"
+  },
+  {
+   "id": "M37",
+   "art": "funktion",
+   "text": "Relais wählt jedes Gerät selbst (eigene oder öffentliche); ein frisches Gerät hat keins, der Einladungslink bringt die Relais des Raums mit.",
+   "gewicht": "wichtig",
+   "beleg": "README.md, Relais; CLAUDE.md, Relais gehören zum Gerät und zum Raum"
+  },
+  {
+   "id": "M38",
+   "art": "schnittstelle",
+   "text": "Für ein privates Relais gibt es einen Zulassungsdienst, der Geräteschlüssel der Gruppe automatisch nachträgt.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Zulassungsdienst; server/zulassung/"
+  },
+  {
+   "id": "M39",
+   "art": "funktion",
+   "text": "Eine verschlüsselte Sicherungsdatei (.ksb) nimmt Räume, Nachrichten, Bilder und Gerätschlüssel mit; Einspielen ergänzt nur und ermöglicht den Umzug aufs neue Gerät.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Sicherung in eine Datei"
+  },
+  {
+   "id": "M40",
+   "art": "funktion",
+   "text": "Eine Suche findet Nachrichten nach Wörtern und Absendernamen und springt zur Fundstelle.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Suche mit Lupe; assets/suche.js"
+  },
+  {
+   "id": "M41",
+   "art": "funktion",
+   "text": "Eine zuschaltbare Bedeutungssuche findet Nachrichten nach Sinn; das Sprachmodell wird erst nach Rückfrage geladen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Bedeutungssuche an/aus"
+  },
+  {
+   "id": "M42",
+   "art": "funktion",
+   "text": "An jedem Textfeld steht ein Mikrofon zum Diktieren mit wählbarer Sprache.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Mikrofon an jedem Textfeld; assets/diktat.js"
+  },
+  {
+   "id": "M43",
+   "art": "funktion",
+   "text": "Fremde Nachrichten lassen sich auf dem Gerät automatisch übersetzen, ohne Cloud-Dienst.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Übersetzen auf dem Gerät"
+  },
+  {
+   "id": "M44",
+   "art": "funktion",
+   "text": "Links in Nachrichten sind anklickbar, ohne dass Text als HTML ausgeführt wird.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Links im Text anklickbar"
+  },
+  {
+   "id": "M45",
+   "art": "funktion",
+   "text": "Bilder und Dateien lassen sich über „Teilen / Öffnen mit“ an andere Apps weitergeben.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Teilen / Öffnen mit"
+  },
+  {
+   "id": "M46",
+   "art": "funktion",
+   "text": "Neue Nachrichten können eine Benachrichtigung auslösen (Haken in den Einstellungen).",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Benachrichtigen als Haken"
+  },
+  {
+   "id": "M47",
+   "art": "bereich",
+   "text": "Die Einstellungen enthalten Name, Profilbild, Aussehen, Relais, Große Videos, Sicherung, Tresor, Diktat, Übersetzen und Gruppenleiste.",
+   "gewicht": "wichtig",
+   "beleg": "index.html, Einstellungen"
+  },
+  {
+   "id": "M48",
+   "art": "plattform",
+   "text": "Die Oberfläche hat drei Themen (Dunkel, Neon, Hell), umschaltbar auch in der Kopfleiste.",
+   "gewicht": "wichtig",
+   "beleg": "README.md; CLAUDE.md, Thema und Sprache in der Kopfleiste"
+  },
+  {
+   "id": "M49",
+   "art": "plattform",
+   "text": "Die Oberfläche spricht Deutsch, Englisch und Russisch; Nachrichten und Codes werden nie übersetzt.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Sprache; assets/sprache.js"
+  },
+  {
+   "id": "M50",
+   "art": "plattform",
+   "text": "Die Gruppe steht auf breiten Schirmen in einer Seitenleiste, die links, oben oder aus sein und eingeklappt werden kann.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Gruppenleiste"
+  },
+  {
+   "id": "M51",
+   "art": "plattform",
+   "text": "Bedienelemente nutzen Liniensymbole statt Emojis.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Liniensymbole; assets/symbole.js"
+  },
+  {
+   "id": "M52",
+   "art": "schnittstelle",
+   "text": "Die App ist zugleich ein SBKIM-Knoten mit Lampen, Siegel und Mycel-Fenster; beim Laden geht dafür nichts ins Netz.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, SBKIM-Knoten"
+  },
+  {
+   "id": "M53",
+   "art": "daten",
+   "text": "Daten liegen nur auf dem Gerät (IndexedDB KimSync1, localStorage kimsync_*); einen eigenen Server mit Nutzerdaten gibt es nicht.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Speicher-Namen"
+  },
+  {
+   "id": "M54",
+   "art": "grenze",
+   "text": "Rauswerfen kann nicht zurückholen, was jemand schon empfangen hat; Geräte mit älterer Fassung ziehen beim Umzug nicht mit.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, umzug Grenzen"
+  },
+  {
+   "id": "M55",
+   "art": "grenze",
+   "text": "Benachrichtigungen bei ganz geschlossener App gibt es nicht, weil dafür ein Push-Server fehlt.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Offen (Klaus)"
+  },
+  {
+   "id": "M56",
+   "art": "grenze",
+   "text": "Wer die Adresse eines Relais kennt, kann lesen; Inhalte bleiben verschlüsselt, Fremde fernhalten geht nur auf dem Relais selbst.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Schutz der eigenen Relais"
+  }
+ ]
+}

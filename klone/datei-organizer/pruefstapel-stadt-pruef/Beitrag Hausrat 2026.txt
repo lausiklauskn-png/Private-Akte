@@ -1,0 +1,10 @@
+BEISPIEL-VERSICHERUNG ALLGEMEINE AG
+Beitragsrechnung 2026
+Versicherungsschein 00-000000-0 · Hausrat + Privathaftpflicht Familienpaket
+
+Zeitraum 01.01.2026 – 31.12.2026
+Hausrat 148,20 EUR · Privathaftpflicht 62,80 EUR · Versicherungsteuer 20,01 EUR
+Jahresbeitrag 231,01 EUR
+
+Der Beitrag wird am 03.01.2026 per SEPA-Lastschrift eingezogen (Gläubiger-ID DE00ZZZ00000000000).
+Es ist nichts zu veranlassen.

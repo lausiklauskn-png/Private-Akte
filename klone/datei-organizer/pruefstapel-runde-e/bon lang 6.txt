@@ -1,0 +1,189 @@
+BEISPIEL-MARKT
+Filiale 0412, Ringstraße 40, 34567 Beispielstadt
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+MÜSLI NUSS                       2,49 B
+SPINAT TK 750G
+  2 x 1,49        2,98 B
+DUSCHGEL
+  2 x 1,25        2,50 A
+AUFBACKBRÖTCHEN 10ER
+  2 x 1,69        3,38 B
+MINERALWASSER 6X1,5L
+  3 x 1,74        5,22 A
+PFAND
+  3 x 1,50        4,50 A
+KAROTTEN 2KG                     1,99 B
+DEO
+  2 x 1,95        3,90 A
+CHIPS
+  4 x 1,79        7,16 B
+FRISCHKÄSE                       1,29 B
+ZAHNPASTA
+  3 x 0,99        2,97 A
+AVOCADO
+  3 x 1,29        3,87 B
+TASCHENTÜCHER                    1,49 A
+MAYONNAISE
+  3 x 1,69        5,07 B
+TRAUBEN HELL
+  3 x 2,79        8,37 B
+COLA 1,5L                        1,39 A
+PFAND                            0,25 A
+GEWÜRZ PAPRIKA
+  2 x 1,29        2,58 B
+GEWÜRZ PAPRIKA                   1,29 B
+RABATT 20% GEWÜRZ PAPRIKA       -0,26 B
+FISCHSTÄBCHEN TK
+  2 x 2,49        4,98 B
+TEE PFEFFERMINZ
+  3 x 1,19        3,57 B
+FRISCHKÄSE
+  3 x 1,29        3,87 B
+REIS LANGKORN 1KG                1,79 B
+VANILLEEIS 1L
+  2 x 2,49        4,98 B
+POMMES TK 1KG
+  2 x 1,99        3,98 B
+SENF
+  4 x 0,79        3,16 B
+ZITRONEN NETZ                    1,49 B
+GEFRIERBEUTEL                    1,29 A
+GRILLKOHLE
+  3 x 4,99        14,97 A
+BANANEN
+  3 x 1,49        4,47 B
+MAYONNAISE
+  2 x 1,69        3,38 B
+KETCHUP
+  4 x 1,89        7,56 B
+POMMES TK 1KG
+  3 x 1,99        5,97 B
+BATTERIEN AA 8ER                 4,49 A
+ZUCKER 1KG
+  4 x 0,99        3,96 B
+TASCHENTÜCHER                    1,49 A
+GEWÜRZ PAPRIKA                   1,29 B
+GEFRIERBEUTEL AKTION             0,90 A
+EMMENTALER GERIEBEN
+  2 x 1,89        3,78 B
+RABATT 20% EMMENTALER GER       -0,76 B
+PIZZA SALAMI TK
+  2 x 2,79        5,58 B
+MAIS DOSE
+  2 x 0,89        1,78 B
+KARTOFFELN FEST 2,5KG AKTION     2,44 B
+TOILETTENPAPIER 8ER              3,99 A
+MÜLLBEUTEL                       1,79 A
+ERDBEERKONFITÜRE AKTION
+  2 x 1,25        2,50 B
+SPINAT TK 750G                   1,49 B
+RABATT 20% SPINAT TK 750G       -0,30 B
+MAIS DOSE
+  2 x 0,89        1,78 B
+H-MILCH 1,5% 1L
+  2 x 0,99        1,98 B
+SENF
+  2 x 0,79        1,58 B
+SPÜLMASCHINENTABS 40
+  2 x 4,99        9,98 A
+AVOCADO                          1,29 B
+SPAGHETTI 500G
+  2 x 0,99        1,98 B
+DUSCHGEL
+  2 x 1,25        2,50 A
+CHIPS                            1,79 B
+QUARK MAGER AKTION
+  4 x 0,55        2,20 B
+CHAMPIGNONS 400G
+  3 x 2,19        6,57 B
+CORNFLAKES                       1,99 B
+KOCHSCHINKEN                     2,29 B
+GUMMIBÄRCHEN
+  2 x 0,99        1,98 B
+FRUCHTJOGHURT 4X                 1,79 B
+ESSIG
+  3 x 0,95        2,85 B
+ZAHNPASTA
+  2 x 0,99        1,98 A
+PENNE 500G                       0,99 B
+ZAHNPASTA                        0,99 A
+ZWIEBELN 2KG
+  2 x 1,79        3,58 B
+BATTERIEN AA 8ER AKTION
+  4 x 3,14        12,56 A
+BATTERIEN AA 8ER                 4,49 A
+H-MILCH 1,5% 1L
+  2 x 0,99        1,98 B
+HÄHNCHENBRUSTFILET
+  4 x 6,49        25,96 B
+FRISCHKÄSE
+  4 x 1,29        5,16 B
+AUFBACKBRÖTCHEN 10ER
+  2 x 1,69        3,38 B
+HONIG
+  2 x 3,99        7,98 B
+KNOBLAUCH                        0,69 B
+BLUMEN STRAUSS                   4,99 B
+INGWER
+  2 x 0,89        1,78 B
+FRISCHMILCH 3,8%
+  2 x 1,19        2,38 B
+ÄPFEL ELSTAR 1KG                 2,99 B
+GEFRIERBEUTEL AKTION             0,90 A
+MOZZARELLA AKTION
+  4 x 0,62        2,48 B
+KEKSE BUTTER
+  2 x 1,39        2,78 B
+JOGHURT NATUR 500G
+  2 x 0,89        1,78 B
+RABATT 20% JOGHURT NATUR        -0,36 B
+LACHSFILET TK
+  3 x 5,99        17,97 B
+EIER BODENH. 10ER
+  2 x 2,69        5,38 B
+APFELSAFT 1L                     1,29 A
+APFELSAFT 1L
+  2 x 1,29        2,58 A
+BANANEN                          1,49 B
+TASCHENTÜCHER
+  4 x 1,49        5,96 A
+KAKAOPULVER
+  3 x 2,49        7,47 B
+HACKFLEISCH GEM 500G
+  3 x 4,99        14,97 B
+QUARK MAGER
+  4 x 0,79        3,16 B
+RABATT 20% QUARK MAGER          -0,63 B
+HACKFLEISCH GEM 500G AKTION
+  2 x 3,49        6,98 B
+SALZSTANGEN
+  2 x 0,89        1,78 B
+NUSS-NOUGAT-CREME                2,99 B
+HAFERFLOCKEN
+  2 x 0,89        1,78 B
+GEWÜRZ PAPRIKA
+  2 x 1,29        2,58 B
+ZWIEBELN 2KG                     1,79 B
+BROKKOLI                         1,69 B
+KETCHUP
+  3 x 1,89        5,67 B
+------------------------------------
+ZWISCHENSUMME                 379,22
+LEERGUTBON 0000524              -3,10 A
+COUPON WOCHENENDE              -5,00 A
+====================================
+SUMME EUR                     371,12
+GIROCARD                     371,12
+POSTEN: 103
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   72,50   13,77   86,27
+B 7 %   266,21   18,64   284,85
+
+29.11.2025 10:37  BON 2187  KASSE 7  BED. 17
+TSE-TRANSAKTION 39243  SIGNATUR-ZÄHLER 572823
+START 10:37:02  ENDE 10:37:37
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

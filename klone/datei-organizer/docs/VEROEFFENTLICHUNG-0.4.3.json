@@ -1,0 +1,33 @@
+{
+  "fassung": "0.4.3",
+  "datum": "2026-11-14",
+  "freigabe": "Klaus 14.11.2026: „ziehst du durch bis zum Ende … bringst dann die 3 Versionen hier zum Download“",
+  "android": {
+    "commit": "bf44f9e02fd3cfd04b329bc50cbf97763dc9d960",
+    "lauf": 43547054990,
+    "datei": "Datei-Organizer-Pro-0.4.3.apk",
+    "versionCode": 43,
+    "groesse": 9551861,
+    "sha256": "7e34f5bcde09961ed97bee794c002c041ecdc01e6a8f45cd1a8e833a577880eb",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.3",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.3.apk",
+    "geprueft": "Emulator: Erstinstallation, Testordner eingelesen, überinstalliert, Stand erhalten; Feed gegen den Schlüssel der App; Download vom Update-Server von außen per SHA-256 (im Lauf)"
+  },
+  "windows": {
+    "commit": "617a2dc678a8b2ab1e9d85e75c4204f341a61778",
+    "lauf": 43541397352,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.3-x64-setup.exe",
+    "groesse": 24686562,
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.3-x64-setup.exe",
+    "geprueft": "Auslieferungsbau installiert, gestartet, entfernt; Feed gegen den Schlüssel der App; Download von außen per SHA-256 (im Lauf)",
+    "hinweis": "gebaut vor #20: ohne aria-label am Ordner-Feld im Kopf (sonst gleich)"
+  },
+  "basic": {
+    "commit": "bf44f9e02fd3cfd04b329bc50cbf97763dc9d960",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "pages-build-deployment grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "geschenkbox": "https://claude.ai/artifact/XeUMGuSZ49FzsJYjwQznM7 (Version 22; Quelle Meine-Familienakte docs/geschenk/geschenkbox-pro.html, PR #179)",
+  "nicht_geprueft": "kein echtes Gerät, kein echter Windows-PC; anonymer Download aus der Sitzung nicht möglich (Proxy; GitHub-Repo privat)"
+}

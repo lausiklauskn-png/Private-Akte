@@ -1,0 +1,23 @@
+Hotel Am Kongresspark
+Messeallee 0, 00000 Großstadt
+
+Café-Bäckerei Kornblume
+Frau Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Hotelrechnung
+Rechnungsnummer: H-88122
+Rechnungsdatum: 02.04.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Übernachtung Einzelzimmer     1     89,00      89,00
+
+Nettobetrag                                   89,00
+zzgl. 7 % USt                                6,23
+Summe                                         95,23 EUR
+
+Frühstück wurde nicht gebucht.
+Anreise 01.04.2026, Abreise 02.04.2026
+
+Bankverbindung: IBAN DE00 0000 0000 0000 3282 55
+USt-IdNr. DE000000412

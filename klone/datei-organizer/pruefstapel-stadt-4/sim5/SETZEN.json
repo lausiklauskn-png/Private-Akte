@@ -1,0 +1,3808 @@
+{
+ "AG_Bescheinigung_Elterngeld.txt": {
+  "datei": "AG_Bescheinigung_Elterngeld.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "000000",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "unterstrichen",
+   "einzug",
+   "grauschleier",
+   "schief -1.5°",
+   "einzug-stauchung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "AW Entwurf Vorsorgevollmacht.txt": {
+  "datei": "AW Entwurf Vorsorgevollmacht.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "vergilbt",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "farbstich kalt",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "AW Ihr neuer Tarif Glasfaser.txt": {
+  "datei": "AW Ihr neuer Tarif Glasfaser.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "AW Ticket 77120 Reklamation.txt": {
+  "datei": "AW Ticket 77120 Reklamation.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "einzug",
+   "schief -1.0°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Adressänderung Abo bestätigt.txt": {
+  "datei": "Adressänderung Abo bestätigt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "einzug",
+   "schief 3.7°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Angebot Bad Elektro.txt": {
+  "datei": "Angebot Bad Elektro.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5083F04CF5D79A5CBEA1D667008511A0095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "textmarker",
+   "knick",
+   "flachbett",
+   "schief 1.4°",
+   "deckelschatten",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Anmeldung Gymnasium.txt": {
+  "datei": "Anmeldung Gymnasium.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Arbeitsvertrag_scan.txt": {
+  "datei": "Arbeitsvertrag_scan.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "eselsohr",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Auftragsbestätigung Umzug Anschluss.txt": {
+  "datei": "Auftragsbestätigung Umzug Anschluss.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "unterstrichen",
+   "hintergrund holztisch",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Aushang Rauchmelder.txt": {
+  "datei": "Aushang Rauchmelder.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "schief 1.5°",
+   "deckelschatten",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Autohaus Reifenwechsel Aktion.txt": {
+  "datei": "Autohaus Reifenwechsel Aktion.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://autohausrheinbli.example/aktion?c=524254f7",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund heller tisch",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "BKA 2025 Whg 3.2.txt": {
+  "datei": "BKA 2025 Whg 3.2.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA534272E360B81E322E7AB08D85DB07A0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nHausverwaltung Beispiel Immobilien GmbH\nDE00098197592883966074\nEUR191.77\n\n\nHausverwaltung Beispiel Immobilien GmbH",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "handnotiz",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Beispielflix Kündigung bestätigt.txt": {
+  "datei": "Beispielflix Kündigung bestätigt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Beitragskonto TV.txt": {
+  "datei": "Beitragskonto TV.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "textmarker",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief -2.1°",
+   "deckelschatten",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Beitragsservice Abmeldung bestaetigt.txt": {
+  "datei": "Beitragsservice Abmeldung bestaetigt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "vergilbt",
+   "einzug",
+   "grauschleier",
+   "schief 0.6°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Beratungsvermerk Wohnraumanpassung.txt": {
+  "datei": "Beratungsvermerk Wohnraumanpassung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "50.0-112/26",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Besoldung 8_26.txt": {
+  "datei": "Besoldung 8_26.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "LB-000000",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Bestätigung Online-Antrag Elterngeld.txt": {
+  "datei": "Bestätigung Online-Antrag Elterngeld.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Black Week bei Beispielmarkt.txt": {
+  "datei": "Black Week bei Beispielmarkt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://beispielmarktang.example/aktion?c=82493970",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Bon Apotheke 0612.txt": {
+  "datei": "Bon Apotheke 0612.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-kassenbeleg",
+    "inhalt": "V0;KASSE04;Kassenbeleg-V1;Beleg^21.35_0.00_0.00_0.00_0.00^21.35:Bar;84163;43663;2026-12-06T16:41:00.000Z;2026-12-06T16:41:00.000Z;ecdsa-plain-SHA384;unixTime;646B4E688FBDA814E5D368684B7EAEA2BE87761B;BEISPIELPUBKEYBE87761B",
+    "zweck": "TSE-Kassenbeleg"
+   }
+  ],
+  "fehlerbilder": [
+   "thermo-verblasst",
+   "zerknittert",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Bonusaktion Kreditkarte.txt": {
+  "datei": "Bonusaktion Kreditkarte.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://beispielkredit.example/aktion/1009ab",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Brief Beispielmarkt LETZTE.txt": {
+  "datei": "Brief Beispielmarkt LETZTE.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA50539451CB22667D0146847C55610B40095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "BMK-0711093",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nBEISPIELMARKT ONLINE-VERSAND\nDE00476373595027017908\nEUR154.88\n\n\nBMK-0711093",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "handnotiz",
+   "flachbett",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Bürgerkonto Kita-Anmeldung Mila.txt": {
+  "datei": "Bürgerkonto Kita-Anmeldung Mila.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "einzug",
+   "schief 0.3°",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Bürgerkonto Postfach neue Nachricht.txt": {
+  "datei": "Bürgerkonto Postfach neue Nachricht.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "einzug",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief 2.9°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "Bürgerkonto_Eingangsbestaetigung_KG.txt": {
+  "datei": "Bürgerkonto_Eingangsbestaetigung_KG.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "DRV Anpassung Walter.txt": {
+  "datei": "DRV Anpassung Walter.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5236BCC15AFCCEA434517DD466109B50095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "00 120344",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingekreist",
+   "knick",
+   "eselsohr",
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "DRV Rente Hildegard Einstellung.txt": {
+  "datei": "DRV Rente Hildegard Einstellung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5D6FD5BF2BB48497DA128CEABD12CCF0095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingekreist",
+   "eingangsstempel",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "E-Rechnung_Beispielmarkt_000-1182734-5512098.txt": {
+  "datei": "E-Rechnung_Beispielmarkt_000-1182734-5512098.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nBeispielmarkt Online-Versand\nDE00000000000000000000\nEUR149.88\n\n\nBM-RE-2026-0337815",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "ERechnung_BM_Weihnachten.txt": {
+  "datei": "ERechnung_BM_Weihnachten.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "BM-RE-2026-1194002",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "knick",
+   "hintergrund heller tisch",
+   "lichtverlauf",
+   "blendung",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "EStB info erstattung.txt": {
+  "datei": "EStB info erstattung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "textmarker",
+   "einzug",
+   "schief 0.9°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Einladung Berufsberatung Lena.txt": {
+  "datei": "Einladung Berufsberatung Lena.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Einladung Vorspiel.txt": {
+  "datei": "Einladung Vorspiel.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "knick",
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Einsatzplan Mail.txt": {
+  "datei": "Einsatzplan Mail.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "vergilbt",
+   "hintergrund holztisch",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Eltern-App Kursfahrt.txt": {
+  "datei": "Eltern-App Kursfahrt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "schief 2.0°",
+   "deckelschatten",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "Elternbrief Kursfahrt.txt": {
+  "datei": "Elternbrief Kursfahrt.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "eselsohr",
+   "hintergrund holztisch",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Elterngeld fehlende Unterlagen.txt": {
+  "datei": "Elterngeld fehlende Unterlagen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "EG-2026-0417",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "einzug",
+   "kopie-der-kopie",
+   "schief -2.9°",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "Elterngeldbescheid_Berger.txt": {
+  "datei": "Elterngeldbescheid_Berger.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "textmarker",
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Elterngeldstelle Nachweis Einkommen Kerem.txt": {
+  "datei": "Elterngeldstelle Nachweis Einkommen Kerem.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kaffeefleck",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief -3.3°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Elternsprechtag Mail.txt": {
+  "datei": "Elternsprechtag Mail.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Entgeltabrechnung_06_2026.txt": {
+  "datei": "Entgeltabrechnung_06_2026.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund heller tisch",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Erbschaftsteuer Aufforderung.txt": {
+  "datei": "Erbschaftsteuer Aufforderung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5AD979505D480DF7664ACD39483B2430095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "knick",
+   "hintergrund holztisch",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Erbschein_Ausfertigung.txt": {
+  "datei": "Erbschein_Ausfertigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "dienstsiegel",
+   "knick",
+   "eselsohr",
+   "flachbett",
+   "schief 2.7°",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Erstattung Handelsplatz Bestellung HP-00718823.txt": {
+  "datei": "Erstattung Handelsplatz Bestellung HP-00718823.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "FA Erinnerung Steuererklaerung.txt": {
+  "datei": "FA Erinnerung Steuererklaerung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "einzug-stauchung",
+   "jpeg q85"
+  ]
+ },
+ "Facharzt Termin App.txt": {
+  "datei": "Facharzt Termin App.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Familienkasse Tim Berechtigtenbestimmung.txt": {
+  "datei": "Familienkasse Tim Berechtigtenbestimmung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "eselsohr",
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Geburtsurkunde Mila.txt": {
+  "datei": "Geburtsurkunde Mila.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "dienstsiegel",
+   "vergilbt",
+   "flachbett",
+   "grauschleier",
+   "schief 1.1°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Gehalt Sept.txt": {
+  "datei": "Gehalt Sept.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Glasfaser kommt Fährgasse.txt": {
+  "datei": "Glasfaser kommt Fährgasse.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://rheinwelleglas.example/aktion/70bc83",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eselsohr",
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Grippeimpfung Einladung.txt": {
+  "datei": "Grippeimpfung Einladung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief 2.7°",
+   "deckelschatten",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "HKP genehmigt.txt": {
+  "datei": "HKP genehmigt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "vergilbt",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Hansen Rg HU Corsa.txt": {
+  "datei": "Hansen Rg HU Corsa.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "R-26-0533",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nKfz-Meisterbetrieb Beispiel Hansen\nDE00000000000000000000\nEUR370.45\n\n\nR-26-0533",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "flachbett",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Hausarzt Ueberweisung Physio.txt": {
+  "datei": "Hausarzt Ueberweisung Physio.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Heimkosten Feb.txt": {
+  "datei": "Heimkosten Feb.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nSeniorenstift Beispielhof\nDE00000000000000000000\nEUR2387.00\n\n\nSeniorenstift Beispielhof",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "eselsohr",
+   "einzug",
+   "grauschleier",
+   "schief -4.5°",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Hilfe zur Pflege Unterlagen.txt": {
+  "datei": "Hilfe zur Pflege Unterlagen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5BEEB47E653C683BC61C527ECD2A92B0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "50.0-087/26",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "knick",
+   "einzug",
+   "einzug-stauchung",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "IMG_20260401_093355.txt": {
+  "datei": "IMG_20260401_093355.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "vergilbt",
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "IMG_20261119_grundsteuer.txt": {
+  "datei": "IMG_20261119_grundsteuer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "GB-318-0031-2",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nStadt Musterhausen am Rhein  Steueramt\nDE00000000000000000000\nEUR177.50\n\n\nGB-318-0031-2",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "eingangsstempel",
+   "knick",
+   "vergilbt",
+   "flachbett",
+   "schief 4.0°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "IMG_3071 pflegeantrag.txt": {
+  "datei": "IMG_3071 pflegeantrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "handnotiz",
+   "knick",
+   "flachbett",
+   "schief -1.1°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "IMG_4471.txt": {
+  "datei": "IMG_4471.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA576E7836BEE50FD7AEAFF74B4880B5A0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "093FK128442",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "handnotiz",
+   "eingangsstempel",
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "IMG_5531.txt": {
+  "datei": "IMG_5531.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nRheinklinik Musterhausen Beispiel\nDE00000000000000000000\nEUR185.00\n\n\nKL-2026-0000417",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "IMG_8812.txt": {
+  "datei": "IMG_8812.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-kassenbeleg",
+    "inhalt": "V0;KASSE02;Kassenbeleg-V1;Beleg^42.90_0.00_0.00_0.00_0.00^42.90:Bar;17785;47285;2026-05-03T15:18:00.000Z;2026-05-03T15:18:00.000Z;ecdsa-plain-SHA384;unixTime;18C65E7028C3DADD967E7D93A8F94C2AA290D5D1;BEISPIELPUBKEYA290D5D1",
+    "zweck": "TSE-Kassenbeleg"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "thermo-verblasst",
+   "zerknittert",
+   "beleg-auf-scannerglas",
+   "flachbett",
+   "schief -0.4°",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Ihre Zahlung ist eingegangen.txt": {
+  "datei": "Ihre Zahlung ist eingegangen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "einzug",
+   "schief -1.1°",
+   "einzugsstreifen",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Ihre erste Rechnung Mobil.txt": {
+  "datei": "Ihre erste Rechnung Mobil.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://rheinwellerechnu.example/aktion?c=5455115b",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "einzug",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Impftermin Mila.txt": {
+  "datei": "Impftermin Mila.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "bildschirm abfotografiert",
+   "moiré",
+   "farbstich warm",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Jahresabrechnung Gas Lindenhof.txt": {
+  "datei": "Jahresabrechnung Gas Lindenhof.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "0000000205",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nStadtwerke Musterhausen Beispiel\nDE00650267674201605100\nEUR3660.00\n\n\n0000000205",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "kaffeefleck",
+   "vergilbt",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief 2.4°",
+   "deckelschatten",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Jobticket Bestätigung Verkehrsverbund.txt": {
+  "datei": "Jobticket Bestätigung Verkehrsverbund.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "unterstrichen",
+   "eingangsstempel",
+   "knick",
+   "vergilbt",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief -3.4°",
+   "lochung",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "KVA Hansen Unfall.txt": {
+  "datei": "KVA Hansen Unfall.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "SCH-26-004417",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Kindergeld Bescheid Mila.txt": {
+  "datei": "Kindergeld Bescheid Mila.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief -1.0°",
+   "deckelschatten",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Kita Anfrage Bestaetigung.txt": {
+  "datei": "Kita Anfrage Bestaetigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knick",
+   "einzug",
+   "schief 0.6°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Kita Gebuehr neu.txt": {
+  "datei": "Kita Gebuehr neu.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "eselsohr",
+   "flachbett",
+   "deckelschatten",
+   "jpeg q85"
+  ]
+ },
+ "Kita Gebühren Bescheid Paul.txt": {
+  "datei": "Kita Gebühren Bescheid Paul.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Klinik Mila Geburt.txt": {
+  "datei": "Klinik Mila Geburt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "flachbett",
+   "schief -3.6°",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "Kontoaufloesung Sparkasse.txt": {
+  "datei": "Kontoaufloesung Sparkasse.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Kontoauszug 06.txt": {
+  "datei": "Kontoauszug 06.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "knick",
+   "kaffeefleck",
+   "hintergrund küchenarbeitsplatte",
+   "wölbung",
+   "lichtverlauf",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Kontoauszug Hildegard 02.txt": {
+  "datei": "Kontoauszug Hildegard 02.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "eselsohr",
+   "einzug",
+   "kopie-der-kopie",
+   "schief -2.0°",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Kontoauszug_Jahr_Amara.txt": {
+  "datei": "Kontoauszug_Jahr_Amara.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "eingangsstempel",
+   "knick",
+   "vergilbt",
+   "einzug",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief -5.2°",
+   "lochung",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Kostenrechnung AG.txt": {
+  "datei": "Kostenrechnung AG.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "7700 0214 2600 3",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nAmtsgericht Musterhausen\nDE00000000000000000000\nEUR38500.00\n\n\n7700 0214 2600 3",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knick",
+   "flachbett",
+   "grauschleier",
+   "schief -1.0°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Kostenvoranschlag Pflege.txt": {
+  "datei": "Kostenvoranschlag Pflege.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Kreditkarte_Feb.txt": {
+  "datei": "Kreditkarte_Feb.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "unterstrichen",
+   "knick",
+   "hintergrund holztisch",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Labor Privatrechnung.txt": {
+  "datei": "Labor Privatrechnung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nLabor Beispiel Diagnostik\nDE00000000000000000000\nEUR42.35\n\n\nL-0009120",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "knick",
+   "vergilbt",
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Laborwerte Amara.txt": {
+  "datei": "Laborwerte Amara.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "L-0009120",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "hintergrund heller tisch",
+   "wölbung",
+   "lichtverlauf",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Lohn 05_26 Thomas.txt": {
+  "datei": "Lohn 05_26 Thomas.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "knick",
+   "flachbett",
+   "deckelschatten",
+   "jpeg q85"
+  ]
+ },
+ "Lohn 10 Kerem.txt": {
+  "datei": "Lohn 10 Kerem.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Mail Wasserschaden.txt": {
+  "datei": "Mail Wasserschaden.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Mail_Elternzeit_bestaetigt.txt": {
+  "datei": "Mail_Elternzeit_bestaetigt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eselsohr",
+   "flachbett",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Meldebestaetigung_Okonkwo.txt": {
+  "datei": "Meldebestaetigung_Okonkwo.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knick",
+   "flachbett",
+   "schief -0.8°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Mietvertrag neue Wohnung 4.1 SCAN.txt": {
+  "datei": "Mietvertrag neue Wohnung 4.1 SCAN.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA59091C03751EE518CA89552F7EC49300095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "handnotiz",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Mitgliedsbescheinigung.txt": {
+  "datei": "Mitgliedsbescheinigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Mitteilung Pflegegrad 3.txt": {
+  "datei": "Mitteilung Pflegegrad 3.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Musikschule Gebuehr.txt": {
+  "datei": "Musikschule Gebuehr.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingekreist",
+   "vergilbt",
+   "einzug",
+   "schief 1.2°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Musikschule Rechnung 2HJ.txt": {
+  "datei": "Musikschule Rechnung 2HJ.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingekreist",
+   "knick",
+   "einzug",
+   "schief 5.0°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Nebenkosten Petra.txt": {
+  "datei": "Nebenkosten Petra.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nEntwurf / Kopie\nDE00339757010057418541\nEUR93.40\n\n\nEntwurf / Kopie",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "hintergrund tischdecke",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Notar Rechnung 000-2026.pdf.txt": {
+  "datei": "Notar Rechnung 000-2026.pdf.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "000/000/0000x",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nDr. Beispiel Vogt, Notar\nDE00000000000000000000\nEUR203.49\n\n\n000/000/0000x",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Notariat_Kostenrechnung_Dez.txt": {
+  "datei": "Notariat_Kostenrechnung_Dez.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5C58299EC470FBF5EA1AACEDBBB7D550095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "flachbett",
+   "schief -1.4°",
+   "deckelschatten",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Notdienst Wasserschaden 31a.txt": {
+  "datei": "Notdienst Wasserschaden 31a.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nElektro Beispiel Kurz  Notdienst\nDE00648229272283445863\nEUR335.16\n\n\n2026-209",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "eingekreist",
+   "knick",
+   "eselsohr",
+   "vergilbt",
+   "hintergrund tischdecke",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Nova Konto App.txt": {
+  "datei": "Nova Konto App.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "vergilbt",
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "grauschleier",
+   "schief 3.9°",
+   "deckelschatten",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Paketblitz Nachforschung 00341.txt": {
+  "datei": "Paketblitz Nachforschung 00341.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Pflege Eigenanteil Rechnung.txt": {
+  "datei": "Pflege Eigenanteil Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "2026-0507",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nAmbulanter Pflegedienst Beispielhilfe\nDE00070743976226650208\nEUR412.60\n\n\n2026-0507",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "vergilbt",
+   "flachbett",
+   "schief -0.9°",
+   "deckelschatten",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Pflegegrad 3.txt": {
+  "datei": "Pflegegrad 3.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "PK-0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "vergilbt",
+   "einzug",
+   "schief 1.2°",
+   "einzugsstreifen",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Pflegestützpunkt Einladung.txt": {
+  "datei": "Pflegestützpunkt Einladung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Pflegevertrag.txt": {
+  "datei": "Pflegevertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "lochung",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Portal Bauspar.txt": {
+  "datei": "Portal Bauspar.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "bildschirm abfotografiert",
+   "moiré",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Preisanpassung Strom 2027.txt": {
+  "datei": "Preisanpassung Strom 2027.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterschrift",
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Quittung Standesamt.txt": {
+  "datei": "Quittung Standesamt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "26-00318",
+    "zweck": "Quittungsnummer"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "thermo-verblasst",
+   "zerknittert",
+   "beleg-auf-scannerglas",
+   "flachbett",
+   "grauschleier",
+   "schief 1.2°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "RE_ ELSTER rückfrage.txt": {
+  "datei": "RE_ ELSTER rückfrage.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Rechnung Bestattung.txt": {
+  "datei": "Rechnung Bestattung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nKirchengemeinde St. Beispiel\nDE00000000000000000000\nEUR285.00\n\n\n2026-0188",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "einzug",
+   "einzug-stauchung",
+   "jpeg q85"
+  ]
+ },
+ "Rechnung R-26-0417 Hansen.txt": {
+  "datei": "Rechnung R-26-0417 Hansen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5DC0A96EBA02F5A3A8811F7687FD77C0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nKfz-Meisterbetrieb Beispiel Hansen\nDE00000000000000000000\nEUR300.00\n\n\nVersicherung",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "knick",
+   "einzug",
+   "kopie-der-kopie",
+   "schief -2.7°",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Rechnung RW Nov doppelt.txt": {
+  "datei": "Rechnung RW Nov doppelt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "RW-0002631",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "eingekreist",
+   "eingangsstempel",
+   "flachbett",
+   "schief 0.4°",
+   "deckelschatten",
+   "lochung",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Rechnung Verein.txt": {
+  "datei": "Rechnung Verein.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nTurnverein Beispiel 1888 Musterhausen e.V.\nDE00410791776498186867\nEUR105.00\n\n\nTurnverein Beispiel 1888 Musterhausen e.V.",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "lichtverlauf",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Rechnung_RW-0004418_2026-02.txt": {
+  "datei": "Rechnung_RW-0004418_2026-02.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5BB3BC75D687D9D85845125881B72670095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterstrichen",
+   "einzug",
+   "kopie-der-kopie",
+   "schief -1.5°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Renteninformation 2026 Daniel.txt": {
+  "datei": "Renteninformation 2026 Daniel.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Retoure HP-00811904 Etikett.txt": {
+  "datei": "Retoure HP-00811904 Etikett.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "00340019920033",
+    "zweck": "Sendungsnummer"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Rg 2026-147 Elektro Kurz.txt": {
+  "datei": "Rg 2026-147 Elektro Kurz.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA57E26E1B0CD1C37E61AE18C0A91CFC20095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nELEKTRO BEISPIEL KURZ\nDE00000000000000000000\nEUR1164.18\n\n\n2026-147",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Rundfunk Befreiung Bescheid.txt": {
+  "datei": "Rundfunk Befreiung Bescheid.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5445F075F84AD3301F664C202ECE83F0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nBeitragsservice Rundfunk Beispiel\nDE00595340935706503231\nEUR55.08\n\n\n381 447 902",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Rückkehr Schicht mail.txt": {
+  "datei": "Rückkehr Schicht mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "flachbett",
+   "grauschleier",
+   "schief 1.3°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "SMS Ausweis abholbereit.txt": {
+  "datei": "SMS Ausweis abholbereit.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "bildschirm abfotografiert",
+   "moiré",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "SMS Hansen Auto fertig.txt": {
+  "datei": "SMS Hansen Auto fertig.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "schief 3.1°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Scan_0042 (2).txt": {
+  "datei": "Scan_0042 (2).jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Scan_0042 (3).txt": {
+  "datei": "Scan_0042 (3).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "0000000014",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "unterstrichen",
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Scan_0042 (4).txt": {
+  "datei": "Scan_0042 (4).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "einzug",
+   "schief -0.8°",
+   "einzug-stauchung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Scan_0042.txt": {
+  "datei": "Scan_0042.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA58CBA72D1B8A98400C46D39C3501D680095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "GB-412-0012-7",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "hintergrund heller tisch",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Scan_0057 (2).txt": {
+  "datei": "Scan_0057 (2).pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5F0D31B4C4185F62EA2F3BFEB8A004D0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nElektro Beispiel Kurz\nDE00000000000000000000\nEUR2171.75\n\n\n2026-171",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "knick",
+   "flachbett",
+   "deckelschatten",
+   "jpeg q85"
+  ]
+ },
+ "Scan_0057.txt": {
+  "datei": "Scan_0057.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "140FK310277",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "unterstrichen",
+   "knick",
+   "kaffeefleck",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Scan_0063.txt": {
+  "datei": "Scan_0063.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "00 230751",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "einzug",
+   "schief -1.4°",
+   "einzug-stauchung",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Schaden E-Auto Bestätigung.txt": {
+  "datei": "Schaden E-Auto Bestätigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "vergilbt",
+   "flachbett",
+   "schief 0.8°",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Schlussrechnung Heim.txt": {
+  "datei": "Schlussrechnung Heim.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "einzug",
+   "einzug-stauchung",
+   "jpeg q85"
+  ]
+ },
+ "Schülerabo Lena VB.txt": {
+  "datei": "Schülerabo Lena VB.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA562AD3F9CEC5331B4469EBC804A1BD30095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "textmarker",
+   "knick",
+   "vergilbt",
+   "einzug",
+   "schief 3.3°",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Screenshot_20260203-0715_StadtwerkeApp.txt": {
+  "datei": "Screenshot_20260203-0715_StadtwerkeApp.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "schief -0.3°",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Seniorennachmittag.txt": {
+  "datei": "Seniorennachmittag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "eselsohr",
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Servicetermin bestätigt.txt": {
+  "datei": "Servicetermin bestätigt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://autohausrheinbli.example/aktion?c=a26ccda0",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "jpeg q85"
+  ]
+ },
+ "Sommerkurs Angebot.txt": {
+  "datei": "Sommerkurs Angebot.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://musikschulemus.example/aktion/70737a",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "eselsohr",
+   "flachbett",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Spende steuer.txt": {
+  "datei": "Spende steuer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "kaffeefleck",
+   "flachbett",
+   "schief -0.9°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Spendenquittung Julia.txt": {
+  "datei": "Spendenquittung Julia.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief 1.7°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Stadtwerke Bleiben lohnt sich.txt": {
+  "datei": "Stadtwerke Bleiben lohnt sich.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5EBA83B8F36CA88AA0223A6AFA8A3180095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Sterbeurkunde_HP.txt": {
+  "datei": "Sterbeurkunde_HP.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "dienstsiegel",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Taufe Einladung.txt": {
+  "datei": "Taufe Einladung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "flachbett",
+   "schief 3.2°",
+   "deckelschatten",
+   "lochung",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Termin Übergabe.txt": {
+  "datei": "Termin Übergabe.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund dunkle unterlage",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "Terminbestätigung Bürgerbüro.txt": {
+  "datei": "Terminbestätigung Bürgerbüro.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "einzug-stauchung",
+   "jpeg q85"
+  ]
+ },
+ "Terminerinnerung Praxis.txt": {
+  "datei": "Terminerinnerung Praxis.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "U3 Mila.txt": {
+  "datei": "U3 Mila.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Umzug Zählerstand Stadtwerke.txt": {
+  "datei": "Umzug Zählerstand Stadtwerke.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "kaffeefleck",
+   "vergilbt",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief 1.8°",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Vertragszusammenfassung Handy Jonas.txt": {
+  "datei": "Vertragszusammenfassung Handy Jonas.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "RW-0007712",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "knick",
+   "hintergrund heller tisch",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "WG Termin Notariat.txt": {
+  "datei": "WG Termin Notariat.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "jpeg q85"
+  ]
+ },
+ "Wechselangebot Police.txt": {
+  "datei": "Wechselangebot Police.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://rheinlandbeisp.example/aktion/82d9a5",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "kaffeefleck",
+   "flachbett",
+   "grauschleier",
+   "schief -1.2°",
+   "deckelschatten",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Weihnachten Absprache.txt": {
+  "datei": "Weihnachten Absprache.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief -3.9°",
+   "deckelschatten",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "Werkstatt reg.txt": {
+  "datei": "Werkstatt reg.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nAbrechnung Regulierung SCH-26-000000\nDE00000000000000000000\nEUR3260.60\n\n\nAbrechnung Regulierung SCH-26-000000",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterstrichen",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Zahlung erledigt Inkasso.txt": {
+  "datei": "Zahlung erledigt Inkasso.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "INK-0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Zahlungserinnerung Beispielmarkt.txt": {
+  "datei": "Zahlungserinnerung Beispielmarkt.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "unterstrichen",
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Zahlungserinnerung Rundfunk.txt": {
+  "datei": "Zahlungserinnerung Rundfunk.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5B7B8567B167955479180747004A1080095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "640 118 255",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Zahlungserinnerung Stadtkasse.txt": {
+  "datei": "Zahlungserinnerung Stadtkasse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA5FB73BACCE28B9A6AD0667E651B2F620095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "GB-318-0031-2",
+    "zweck": "Strichcode Bescheid/Vorgang"
+   }
+  ],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "vergilbt",
+   "flachbett",
+   "schief 1.1°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Zahnersatz Zusatz.txt": {
+  "datei": "Zahnersatz Zusatz.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "knick",
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "Zettel Anruf.txt": {
+  "datei": "Zettel Anruf.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "Zettel Mieterhoehung Antwort.txt": {
+  "datei": "Zettel Mieterhoehung Antwort.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "zerknittert",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "Zulassung Termin Mail.txt": {
+  "datei": "Zulassung Termin Mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "Zulassungsstelle Anhörung Versicherung.txt": {
+  "datei": "Zulassungsstelle Anhörung Versicherung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA55540093D954FE7B04FE9598E33C1590095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "textmarker",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "Zusatzleistung Rechnung.txt": {
+  "datei": "Zusatzleistung Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nHausarztpraxis Dr. Beispiel-Lindner\nDE00420853597360842441\nEUR86.90\n\n\nP-2026-0932",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "eselsohr",
+   "einzug",
+   "grauschleier",
+   "schief 1.5°",
+   "einzugsstreifen",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "Zuschuss Bad.txt": {
+  "datei": "Zuschuss Bad.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "eingekreist",
+   "eingangsstempel",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "app labor facharzt.txt": {
+  "datei": "app labor facharzt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "screenshot-ausgedruckt",
+   "flachbett",
+   "kopie-der-kopie",
+   "schief 3.3°",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "arbeitsagentur abmeldung.txt": {
+  "datei": "arbeitsagentur abmeldung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund tischdecke",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "autohaus wartung märz.txt": {
+  "datei": "autohaus wartung märz.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA549511A404A61D56D01F36E52F4E0480095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "AH-04271",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "bon baeckerei 0418.txt": {
+  "datei": "bon baeckerei 0418.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "qr-kassenbeleg",
+    "inhalt": "V0;KASSE04;Kassenbeleg-V1;Beleg^42.80_0.00_0.00_0.00_0.00^42.80:Bar;36464;25964;2026-12-14T09:42:00.000Z;2026-12-14T09:42:00.000Z;ecdsa-plain-SHA384;unixTime;95F6D3D9B3994A560F57220158907E8198877888;BEISPIELPUBKEY98877888",
+    "zweck": "TSE-Kassenbeleg"
+   }
+  ],
+  "fehlerbilder": [
+   "thermo-verblasst",
+   "zerknittert",
+   "beleg-auf-scannerglas",
+   "flachbett",
+   "schief -2.2°",
+   "deckelschatten",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "brief arzt gertrud.txt": {
+  "datei": "brief arzt gertrud.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "kaffeefleck",
+   "flachbett",
+   "schief -0.7°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "brief steuer.txt": {
+  "datei": "brief steuer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "unterstrichen",
+   "flachbett",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief -3.4°",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "eVB Halterwechsel.txt": {
+  "datei": "eVB Halterwechsel.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund tischdecke",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "elster_nachricht_rueckfrage.txt": {
+  "datei": "elster_nachricht_rueckfrage.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "entlassbrief walter.txt": {
+  "datei": "entlassbrief walter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "eselsohr",
+   "einzug",
+   "schief 1.5°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "familienkasse_mail_auszahlungstermine.txt": {
+  "datei": "familienkasse_mail_auszahlungstermine.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund tischdecke",
+   "lichtverlauf",
+   "blendung",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "freistellung.txt": {
+  "datei": "freistellung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "knick",
+   "hintergrund holztisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "gutachten mail.txt": {
+  "datei": "gutachten mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "schief -0.4°",
+   "einzug-stauchung",
+   "jpeg q85"
+  ]
+ },
+ "halbjahr lena.txt": {
+  "datei": "halbjahr lena.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "hartmann rechnung 2025.txt": {
+  "datei": "hartmann rechnung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "2026-0073",
+    "zweck": "Kundennummer"
+   },
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nSteuerberatung Beispiel Hartmann\nDE00000000000000000000\nEUR968.66\n\n\n2026-0073",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "einzug",
+   "schief -1.1°",
+   "einzug-stauchung",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "inkasso 1.txt": {
+  "datei": "inkasso 1.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "flachbett",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "kasse mila.txt": {
+  "datei": "kasse mila.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "eselsohr",
+   "einzug",
+   "grauschleier",
+   "schief -2.3°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 150 dpi",
+   "binarisiert"
+  ]
+ },
+ "kaution abrechnung alte whg.txt": {
+  "datei": "kaution abrechnung alte whg.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA57143363A91137EB2B27B21807C69AB0095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "unterschrift",
+   "unterstrichen",
+   "flachbett",
+   "grauschleier",
+   "schief -0.9°",
+   "lochung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "kfz jahresbeitrag.txt": {
+  "datei": "kfz jahresbeitrag.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingangsstempel",
+   "knick",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "unschärfe",
+   "sensorrauschen",
+   "quer-gedreht",
+   "jpeg q62"
+  ]
+ },
+ "kvbeleg zulassung.txt": {
+  "datei": "kvbeleg zulassung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterstrichen",
+   "eselsohr",
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "laborbefund_mila.txt": {
+  "datei": "laborbefund_mila.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "knick",
+   "vergilbt",
+   "einzug",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief 1.5°",
+   "einzugsstreifen",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "leasing.txt": {
+  "datei": "leasing.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "textmarker",
+   "hintergrund dunkle unterlage",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "mail katrin kindergeld.txt": {
+  "datei": "mail katrin kindergeld.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "eselsohr",
+   "hintergrund tischdecke",
+   "perspektive",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "mail widerspruch karte.txt": {
+  "datei": "mail widerspruch karte.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund holztisch",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "mutterschaftsgeld.txt": {
+  "datei": "mutterschaftsgeld.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "qr-girocode",
+    "inhalt": "BCD\n002\n1\nSCT\n\nBeispielkasse Gesundheit\nDE00000000000000000000\nEUR13.00\n\n\nBeispielkasse Gesundheit",
+    "zweck": "Überweisung"
+   }
+  ],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "neue Police.txt": {
+  "datei": "neue Police.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "KH-0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "flachbett",
+   "schief 0.4°",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "notiz belege.txt": {
+  "datei": "notiz belege.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund heller tisch",
+   "perspektive",
+   "lichtverlauf",
+   "blendung",
+   "bildschirm abfotografiert",
+   "moiré",
+   "farbstich kalt",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "onboarding mail.txt": {
+  "datei": "onboarding mail.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "flachbett",
+   "deckelschatten",
+   "jpeg q85"
+  ]
+ },
+ "pflegedienst genehmigung.txt": {
+  "datei": "pflegedienst genehmigung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "unschärfe",
+   "verwackelt",
+   "sensorrauschen",
+   "jpeg q62"
+  ]
+ },
+ "pflegegrad2 !!.txt": {
+  "datei": "pflegegrad2 !!.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "PK-0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "knick",
+   "einzug",
+   "kopie-der-kopie",
+   "schief 4.8°",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 100 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "push u-untersuchung.txt": {
+  "datei": "push u-untersuchung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund küchenarbeitsplatte",
+   "lichtverlauf",
+   "blendung",
+   "bildschirm abfotografiert",
+   "moiré",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "rechnung vorsorge.txt": {
+  "datei": "rechnung vorsorge.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "textmarker",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "regulierung Hausrat.txt": {
+  "datei": "regulierung Hausrat.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "unterstrichen",
+   "einzug",
+   "schief 0.3°",
+   "einzug-stauchung",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "rentenbezugsmitteilung opa.txt": {
+  "datei": "rentenbezugsmitteilung opa.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA571A69E8A0A9BCA3556FC9A1B8572270095",
+    "zweck": "Frankierung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "vergilbt",
+   "einzug",
+   "schief 0.8°",
+   "einzugsstreifen",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ },
+ "scan_nachlass_eroeffnung.txt": {
+  "datei": "scan_nachlass_eroeffnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund dunkle unterlage",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "sms praxis sabine.txt": {
+  "datei": "sms praxis sabine.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund holztisch",
+   "lichtverlauf",
+   "schatten",
+   "bildschirm abfotografiert",
+   "moiré",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "stadtwerke rebhang 2025.txt": {
+  "datei": "stadtwerke rebhang 2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "datamatrix",
+    "inhalt": "DEA51546546B241FCFECB06CBE32E0098F0095",
+    "zweck": "Frankierung"
+   },
+   {
+    "typ": "code128",
+    "inhalt": "26-RE-0004471",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "eingekreist",
+   "eingangsstempel",
+   "knick",
+   "hintergrund dunkle unterlage",
+   "lichtverlauf",
+   "farbstich warm",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "wasserschaden meldung.txt": {
+  "datei": "wasserschaden meldung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [],
+  "fehlerbilder": [
+   "eingangsstempel",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich kalt",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "werbung solar stadtwerke.txt": {
+  "datei": "werbung solar stadtwerke.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "qr-link",
+    "inhalt": "https://sonneaufsdach.example/aktion/426bbc",
+    "zweck": "Werbung"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "hintergrund tischdecke",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "schatten",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "jpeg q80"
+  ]
+ },
+ "wettkampf meldung.txt": {
+  "datei": "wettkampf meldung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "einzug",
+   "kopie-der-kopie",
+   "grauschleier",
+   "schief 2.1°",
+   "einzug-stauchung",
+   "staub",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q38"
+  ]
+ },
+ "zettel paketblitz briefkasten.txt": {
+  "datei": "zettel paketblitz briefkasten.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "00340019770218",
+    "zweck": "Sendungsnummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "beleg-auf-scannerglas",
+   "flachbett",
+   "deckelschatten",
+   "graustufen",
+   "jpeg q85"
+  ]
+ },
+ "zettel tür elektriker.txt": {
+  "datei": "zettel tür elektriker.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "codes": [],
+  "fehlerbilder": [
+   "hintergrund heller tisch",
+   "perspektive",
+   "wölbung",
+   "lichtverlauf",
+   "blendung",
+   "farbstich warm",
+   "unschärfe",
+   "sensorrauschen",
+   "messenger-komprimiert",
+   "jpeg q55"
+  ]
+ },
+ "zeugnis tim.txt": {
+  "datei": "zeugnis tim.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "codes": [],
+  "fehlerbilder": [
+   "eselsohr",
+   "hintergrund küchenarbeitsplatte",
+   "perspektive",
+   "lichtverlauf",
+   "sensorrauschen",
+   "jpeg q92"
+  ]
+ },
+ "zuteilung bausparen.txt": {
+  "datei": "zuteilung bausparen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "codes": [
+   {
+    "typ": "code128",
+    "inhalt": "BS-0000000",
+    "zweck": "Kundennummer"
+   }
+  ],
+  "fehlerbilder": [
+   "handnotiz",
+   "einzug",
+   "grauschleier",
+   "schief 1.3°",
+   "einzugsstreifen",
+   "einzug-stauchung",
+   "auflösung 150 dpi",
+   "graustufen",
+   "jpeg q62"
+  ]
+ }
+}

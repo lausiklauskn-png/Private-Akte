@@ -1,0 +1,36 @@
+# Beispiel Sparkasse Beispielstadt
+Bankplatz 1 · 34567 Beispielstadt
+
+Kontoauszug
+Girokonto Gertrud Brandtner
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 6/2025 · Blatt 1 von 1 · Zeitraum 01.11.2025 – 30.11.2025
+
+Frau Gertrud Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Alter Kontostand vom 01.11.2025: 3.122,55 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.11.|01.11.|Witwenrente RV Beispiel-Land|+1.018,44|
+|01.11.|01.11.|Altersrente RV Beispiel-Land|+644,10|
+|01.11.|01.11.|Pflegegeld Pflegekasse Beispiel|+347,00|
+|02.11.|02.11.|Kartenzahlung Frischkauf Exempel|-26,37|
+|08.11.|08.11.|Pflegedienst Hand in Hand Eigenanteil|-345,00|
+|10.11.|10.11.|Kartenzahlung Bäckerei Beispielkorn|-4,67|
+|15.11.|15.11.|Beispiel-Apotheke Rezeptzuzahlungen|-23,40|
+|19.11.|19.11.|Lastschrift Beispiel-Markt Filiale 0412|-89,01|
+|23.11.|23.11.|Kartenzahlung Bäckerei Beispielkorn|-6,47|
+|25.11.|25.11.|Kostgeld an Markus Brandtner|-400,00|
+|25.11.|25.11.|Kartenzahlung Bäckerei Beispielkorn|-8,45|
+|25.11.|25.11.|Kartenzahlung Bäckerei Beispielkorn|-13,72|
+|25.11.|25.11.|Kartenzahlung Discount Probe|-34,24|
+|27.11.|27.11.|Kartenzahlung Frischkauf Exempel|-34,82|
+|27.11.|27.11.|Lastschrift Beispiel-Markt Filiale 0412|-26,87|
+|28.11.|28.11.|Kartenzahlung Discount Probe|-41,69|
+
+Neuer Kontostand vom 30.11.2025: 4.077,38 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Sparkasse Beispielstadt · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

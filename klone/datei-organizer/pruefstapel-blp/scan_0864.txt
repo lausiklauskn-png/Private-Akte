@@ -1,0 +1,23 @@
+Café-Bäckerei Kornblume · Inh. Jana Wellbrock · Mühlgasse 7 · 37999 Tannweiler
+
+Abrechnung der Brutto/Netto-Bezüge für März 2026
+Erstellt am 28.03.26
+
+Personal-Nr. 001   Mirko Ortlepp
+Tätigkeit: Konditor
+Steuerklasse 1   Krankenkasse: Riedtal BKK
+
+Bezeichnung                   Betrag
+Gehalt                        2.850,00
+Gesamtbrutto                  2.850,00
+
+Lohnsteuer                    228,00
+Solidaritätszuschlag          0,00
+KV-Beitrag AN                 249,38
+RV-Beitrag AN                 265,05
+AV-Beitrag AN                 37,05
+PV-Beitrag AN                 51,30
+
+Nettobezüge                   2.019,22
+Auszahlungsbetrag             2.019,22
+Überweisung an IBAN DE00 0000 0000 0000 2651 81

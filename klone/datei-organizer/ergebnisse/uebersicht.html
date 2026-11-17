@@ -1,0 +1,112 @@
+<title>Datei-Organizer Testlauf</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: ein Bericht in Spalte, Kennzahlen oben, dann Tabellen je Frage; Farben wie die Familienakte (Marine, Petrol). */
+:root{--bg:#f2f6f9;--karte:#ffffff;--fg:#15283a;--leise:#56697a;--linie:#d8e2ea;--navy:#0b3154;--akzent:#087f7a;--gut:#1f7a3f;--mittel:#9a6a00;--schwach:#b42318;--fa:#c26b00;
+--schrift:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--zahlen:ui-monospace,"Cascadia Mono","Roboto Mono",Menlo,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e161d;--karte:#16222c;--fg:#e2eaf0;--leise:#9db0be;--linie:#2f4352;--navy:#cfe3f2;--akzent:#5cc3cc;--gut:#5bc27f;--mittel:#e0b04a;--schwach:#f08a80;--fa:#f0a35a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e161d;--karte:#16222c;--fg:#e2eaf0;--leise:#9db0be;--linie:#2f4352;--navy:#cfe3f2;--akzent:#5cc3cc;--gut:#5bc27f;--mittel:#e0b04a;--schwach:#f08a80;--fa:#f0a35a;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--schrift)}
+.seite{max-width:1080px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:18px}
+h1{font-size:clamp(1.5rem,3vw,2rem);color:var(--navy);margin:0;text-wrap:balance}
+h2{font-size:1.15rem;color:var(--navy);margin:0 0 4px;text-wrap:balance}
+p{margin:0;max-width:72ch}.leise{color:var(--leise)}
+.karte{background:var(--karte);border:1px solid var(--linie);border-radius:14px;padding:18px;display:grid;gap:10px;min-width:0}
+.kennzahlen{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.kz{background:var(--karte);border:1px solid var(--linie);border-radius:12px;padding:12px 14px}
+.kz b{display:block;font:600 1.6rem/1.2 var(--zahlen);color:var(--navy);font-variant-numeric:tabular-nums}
+.kz span{font-size:.82rem;color:var(--leise)}
+.tab{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--linie);vertical-align:middle}
+thead th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--leise);font-weight:700}
+td.z{font-family:var(--zahlen);font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+td.gut{color:var(--gut);font-weight:700}td.mittel{color:var(--mittel);font-weight:700}td.schwach{color:var(--schwach);font-weight:700}
+.bz{min-width:140px}
+.balken{position:relative;height:10px;border-radius:5px;background:var(--linie);overflow:hidden}
+.balken .org{position:absolute;inset:0 auto 0 0;background:var(--akzent);border-radius:5px}
+.balken .fa{position:absolute;top:-2px;bottom:-2px;width:3px;background:var(--fa)}
+.legende{display:flex;gap:16px;flex-wrap:wrap;font-size:.82rem;color:var(--leise)}
+.legende i{display:inline-block;width:12px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.hh small{display:block;color:var(--leise);font-size:.78rem}
+</style>
+<div class="seite">
+<header class="karte" style="gap:6px">
+<p class="leise" style="font-size:.8rem;letter-spacing:.06em;text-transform:uppercase">Datei-Organizer · Testlauf vom 12.11.2026 · alles erfundene Daten</p>
+<h1>Wie gut sortiert der Datei-Organizer – an eigenen und an fremden Briefen?</h1>
+<p class="leise">6 normale Runden und 2 Runden „neben der Spur“ (abfotografierte, schiefe, dunkle Briefe, Unsinnsnamen, Mehrfachkopien). Jede Runde hat neue Formulierungen, Daten, Beträge und Dateinamen. Daneben der heutige Eingang der Familienakte und BookLedgerPro am selben Stapel.</p>
+</header>
+<section class="kennzahlen" aria-label="Kennzahlen Blindtest">
+<div class="kz"><b>50,7 %</b><span>Blindtest (fremde Briefe): Bereich richtig, 65,3 % mit zusammengesetzten Namen · Familienakte heute 28 %</span></div>
+<div class="kz"><b>54 %</b><span>Blindtest: Absender richtig · heute 36 %</span></div>
+<div class="kz"><b>61,3 %</b><span>Blindtest: Dokumentart richtig</span></div>
+<div class="kz"><b>67,1 %</b><span>Blindtest: Person richtig</span></div>
+</section>
+<section class="kennzahlen" aria-label="Kennzahlen eigener Generator">
+<div class="kz"><b>5.790</b><span>Dateien aus dem eigenen Generator</span></div>
+<div class="kz"><b>91,3 %</b><span>Bereich richtig, eigener Generator (Familienakte heute 54,9 %) – geschönt durch Überanpassung</span></div>
+<div class="kz"><b>96,3 %</b><span>Absender richtig (heute 76,4 %)</span></div>
+<div class="kz"><b>99,2 %</b><span>Person richtig zugeordnet</span></div>
+<div class="kz"><b>40 %</b><span>landen bei „bitte prüfen“ (heute 93 %)</span></div>
+</section>
+<section class="karte"><h2>Unabhängiger Prüfstapel (150 Briefe, von einem anderen Agenten geschrieben)</h2>
+<p class="leise">Ein Hilfs-Agent ohne Einblick in den Kern und in die eigenen Vorlagen hat 150 eigene erfundene Briefe aus 7 Haushalten (Ort „Brakenhude“) mit eigenen Soll-Werten geschrieben. Regeln vorab festgelegt (docs/PRUEFSTAPEL-REGELN.md), einmal gemessen, ohne Anpassung. <b>Das ist der ehrliche Wert für fremde Post – und er liegt weit unter dem des eigenen Generators.</b></p>
+<div class="tab"><table><thead><tr><th>Feld</th><th>Datei-Organizer-Kern</th><th>sicher, aber falsch</th><th>Familienakte heute</th><th>nachträglich: Bereichsnamen zusammengesetzt</th></tr></thead><tbody><tr><th scope="row">Bereich</th><td class="z schwach">50,7 %</td><td class="z">31</td><td class="z">28 %</td><td class="z">65,3 % (Familienakte 36 %)</td></tr><tr><th scope="row">Dokumentart</th><td class="z schwach">61,3 %</td><td class="z">15</td><td class="z">–</td><td class="z">gleich</td></tr><tr><th scope="row">Absender</th><td class="z schwach">54 %</td><td class="z">47</td><td class="z">36 %</td><td class="z">gleich</td></tr><tr><th scope="row">Person</th><td class="z schwach">67,1 %</td><td class="z">2</td><td class="z">–</td><td class="z">gleich</td></tr><tr><th scope="row">Frist</th><td class="z schwach">48,2 %</td><td class="z">4</td><td class="z">–</td><td class="z">gleich</td></tr></tbody></table></div>
+<ul class="leise">
+<li>Die offizielle Zahl ist die linke. Der Wert rechts ist nachträglich: In meinem Auftrag an den Hilfs-Agenten standen die Bereiche durch Kommas getrennt; er hat dadurch 32 Soll-Werte als Bruchstücke geschrieben („Rente“, „Einkäufe“ …), die kein Programm treffen kann. Rechts sind diese Bruchstücke mechanisch auf den vollen Namen gesetzt, sonst nichts.</li>
+<li>Typische echte Fehler des Kerns: Absender mit Werbezeile oder Anschrift dahinter („… GmbH – Ihr Partner für …“), „Von:“-Zeilen in Mails als Text, private Absender („Oma Hanne“), Strafzettel als Behörde statt Auto, Apothekenbon als Einkauf statt Gesundheit, Ferienhaus als Wohnen statt Reisen.</li>
+<li>Nicht gemessen: Beträge auf Kassenbons und Gehaltsfelder (der Stapel enthält dafür keine Soll-Werte).</li>
+</ul></section>
+<section class="karte">
+<h2>Je Feld (eigener Generator)</h2>
+<div class="legende"><span><i style="background:var(--akzent)"></i>Datei-Organizer-Kern</span><span><i style="background:var(--fa)"></i>Familienakte heute</span><span>„sicher, aber falsch“ = die App war sich sicher und lag falsch (das Schlimmste)</span></div>
+<div class="tab"><table><thead><tr><th>Feld</th><th>gesamt</th><th>normal</th><th>neben der Spur</th><th>sicher, aber falsch</th><th>Familienakte heute</th><th></th></tr></thead><tbody><tr><th scope="row">Bereich</th><td class="z mittel">91,3 %</td><td class="z">91,9 %</td><td class="z">89,4 %</td><td class="z leise">125</td><td class="z">54,9 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 91,3 %, Familienakte heute 54,9 %"><span class="org" style="width:91.3%"></span><span class="fa" style="left:54.9%"></span></div></td></tr><tr><th scope="row">Dokumentart</th><td class="z mittel">88,3 %</td><td class="z">88,9 %</td><td class="z">86,7 %</td><td class="z leise">226</td><td class="z">–</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 88,3 %"><span class="org" style="width:88.3%"></span></div></td></tr><tr><th scope="row">Absender</th><td class="z gut">96,3 %</td><td class="z">97,8 %</td><td class="z">91,9 %</td><td class="z leise">71</td><td class="z">76,4 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 96,3 %, Familienakte heute 76,4 %"><span class="org" style="width:96.3%"></span><span class="fa" style="left:76.4%"></span></div></td></tr><tr><th scope="row">Person</th><td class="z gut">99,2 %</td><td class="z">99,8 %</td><td class="z">97,5 %</td><td class="z leise">8</td><td class="z">–</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 99,2 %"><span class="org" style="width:99.2%"></span></div></td></tr><tr><th scope="row">Frist</th><td class="z mittel">94,8 %</td><td class="z">96,9 %</td><td class="z">88,3 %</td><td class="z leise">8</td><td class="z">–</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 94,8 %"><span class="org" style="width:94.8%"></span></div></td></tr><tr><th scope="row">Betrag (Bon)</th><td class="z mittel">87,8 %</td><td class="z">85,4 %</td><td class="z">94,7 %</td><td class="z leise">38</td><td class="z">–</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 87,8 %"><span class="org" style="width:87.8%"></span></div></td></tr></tbody></table></div>
+</section>
+<section class="karte">
+<h2>Je Person und Lebenslage</h2>
+<div class="tab"><table><thead><tr><th>Haushalt</th><th>Dateien</th><th>Bereich</th><th>Dokumentart</th><th>Absender</th><th>Person</th><th>bitte prüfen</th></tr></thead><tbody><tr class="hh"><th scope="row">Familie mit drei Kindern<small>Jan (Vater, Lagerlogistiker), Maren (Mutter, Pflegekraft in Teilzeit), Finn (Kind, 12, Gymnasium), Ida (Kind, 8, Grundschule), Lotta (Kind, 3, Kita)</small></th><td class="z">727</td><td class="z gut">96,7 %</td><td class="z mittel">90,9 %</td><td class="z gut">97,2 %</td><td class="z gut">99,8 %</td><td class="z">46 %</td></tr><tr class="hh"><th scope="row">Alleinerziehend mit Kind<small>Sabine (Mutter, Verkäuferin), Mia (Kind, 6, Grundschule und Hort)</small></th><td class="z">517</td><td class="z gut">95,3 %</td><td class="z mittel">91,7 %</td><td class="z gut">96,2 %</td><td class="z gut">98 %</td><td class="z">43 %</td></tr><tr class="hh"><th scope="row">Einzelperson<small>Thomas (Softwareentwickler)</small></th><td class="z">486</td><td class="z gut">96,4 %</td><td class="z mittel">89,3 %</td><td class="z gut">97,5 %</td><td class="z gut">99,8 %</td><td class="z">44 %</td></tr><tr class="hh"><th scope="row">Arbeitslos, Bürgergeld<small>Dirk (arbeitsuchend, 52)</small></th><td class="z">441</td><td class="z mittel">92,8 %</td><td class="z mittel">86,6 %</td><td class="z gut">98,6 %</td><td class="z gut">98,7 %</td><td class="z">33 %</td></tr><tr class="hh"><th scope="row">Professorin, verbeamtet<small>Katrin (Professorin)</small></th><td class="z">471</td><td class="z gut">95 %</td><td class="z mittel">86,6 %</td><td class="z gut">96,9 %</td><td class="z gut">100 %</td><td class="z">39 %</td></tr><tr class="hh"><th scope="row">Selbstständiger Malermeister<small>Ole (Malermeister, Einzelunternehmer), Anke (Ehefrau, Büro)</small></th><td class="z">497</td><td class="z gut">95,3 %</td><td class="z schwach">84,5 %</td><td class="z gut">95,3 %</td><td class="z gut">99,8 %</td><td class="z">35 %</td></tr><tr class="hh"><th scope="row">Rentnerpaar<small>Hinrich (Rentner, 78), Gerda (Rentnerin, 75, Pflegegrad)</small></th><td class="z">457</td><td class="z mittel">93,6 %</td><td class="z mittel">88 %</td><td class="z gut">95,7 %</td><td class="z gut">99,7 %</td><td class="z">37 %</td></tr><tr class="hh"><th scope="row">Selbstständiger App-Entwickler (wie Klaus), nebenher angestellt<small>Klaus (App-Entwickler, Android-Nutzer, Haushaltsbuch)</small></th><td class="z">592</td><td class="z schwach">84,1 %</td><td class="z mittel">88 %</td><td class="z gut">98,3 %</td><td class="z gut">99,6 %</td><td class="z">55 %</td></tr><tr class="hh"><th scope="row">Inhaberin einer Boutique (Mode, Dessous, Parfüm, Beauty)<small>Ali (Inhaberin Boutique Moderaum Beispiel), Tom (Ehemann, angestellt)</small></th><td class="z">716</td><td class="z schwach">75,7 %</td><td class="z mittel">87,3 %</td><td class="z gut">96 %</td><td class="z gut">97,5 %</td><td class="z">47 %</td></tr><tr class="hh"><th scope="row">Studentin<small>Lena (Studentin, 22)</small></th><td class="z">468</td><td class="z mittel">93 %</td><td class="z mittel">89,3 %</td><td class="z mittel">90,8 %</td><td class="z gut">100 %</td><td class="z">45 %</td></tr></tbody></table></div>
+</section>
+<section class="karte">
+<h2>Bereich je Dokumentart</h2>
+<div class="tab"><table><thead><tr><th>Dokumentart</th><th>Anzahl</th><th>Bereich richtig</th><th></th></tr></thead><tbody><tr><th scope="row">Rechnung</th><td class="z">1.595</td><td class="z mittel">86,1 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 86,1 %"><span class="org" style="width:86.1%"></span></div></td></tr><tr><th scope="row">Abrechnung</th><td class="z">694</td><td class="z gut">96 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 96 %"><span class="org" style="width:96%"></span></div></td></tr><tr><th scope="row">Kassenbon</th><td class="z">509</td><td class="z schwach">82,9 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 82,9 %"><span class="org" style="width:82.9%"></span></div></td></tr><tr><th scope="row">Brief</th><td class="z">499</td><td class="z mittel">88,4 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 88,4 %"><span class="org" style="width:88.4%"></span></div></td></tr><tr><th scope="row">Vertrag</th><td class="z">435</td><td class="z gut">96,8 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 96,8 %"><span class="org" style="width:96.8%"></span></div></td></tr><tr><th scope="row">Bescheid</th><td class="z">413</td><td class="z gut">99,5 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 99,5 %"><span class="org" style="width:99.5%"></span></div></td></tr><tr><th scope="row">Bescheinigung</th><td class="z">286</td><td class="z gut">98,3 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 98,3 %"><span class="org" style="width:98.3%"></span></div></td></tr><tr><th scope="row">Termin</th><td class="z">243</td><td class="z gut">98,4 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 98,4 %"><span class="org" style="width:98.4%"></span></div></td></tr><tr><th scope="row">Kontoauszug</th><td class="z">162</td><td class="z gut">100 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 100 %"><span class="org" style="width:100%"></span></div></td></tr><tr><th scope="row">Aufforderung</th><td class="z">162</td><td class="z gut">99,4 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 99,4 %"><span class="org" style="width:99.4%"></span></div></td></tr><tr><th scope="row">Befund</th><td class="z">120</td><td class="z gut">100 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 100 %"><span class="org" style="width:100%"></span></div></td></tr><tr><th scope="row">Angebot/Werbung</th><td class="z">97</td><td class="z gut">100 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 100 %"><span class="org" style="width:100%"></span></div></td></tr><tr><th scope="row">Mahnung</th><td class="z">59</td><td class="z schwach">23,7 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 23,7 %"><span class="org" style="width:23.7%"></span></div></td></tr><tr><th scope="row">Kündigung</th><td class="z">18</td><td class="z gut">100 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 100 %"><span class="org" style="width:100%"></span></div></td></tr><tr><th scope="row">Foto</th><td class="z">2</td><td class="z schwach">0 %</td><td class="bz"><div class="balken" role="img" aria-label="Organizer 0 %"><span class="org" style="width:0%"></span></div></td></tr></tbody></table></div>
+</section>
+<section class="karte">
+<h2>Gehaltsabrechnungen (455 Stück, Aufbau wie in Lohnprogrammen)</h2>
+<div class="tab"><table><thead><tr><th>Feld</th><th>normal</th><th>neben der Spur (abfotografiert)</th></tr></thead><tbody><tr><th scope="row">Zeitraum</th><td class="z gut">100 %</td><td class="z mittel">85,3 %</td></tr><tr><th scope="row">Brutto</th><td class="z mittel">92,9 %</td><td class="z schwach">64,7 %</td></tr><tr><th scope="row">Netto</th><td class="z gut">99,1 %</td><td class="z schwach">78,4 %</td></tr><tr><th scope="row">Auszahlung</th><td class="z gut">99,4 %</td><td class="z schwach">79,3 %</td></tr><tr><th scope="row">Lohnsteuer</th><td class="z gut">98,2 %</td><td class="z mittel">86,2 %</td></tr><tr><th scope="row">Steuerklasse</th><td class="z mittel">92 %</td><td class="z schwach">73,3 %</td></tr><tr><th scope="row">Steuer-ID</th><td class="z gut">99,4 %</td><td class="z schwach">71,6 %</td></tr><tr><th scope="row">SV-Nummer</th><td class="z gut">99,7 %</td><td class="z schwach">67,2 %</td></tr><tr><th scope="row">Krankenkasse</th><td class="z gut">100 %</td><td class="z schwach">76,7 %</td></tr></tbody></table></div>
+</section>
+<section class="karte">
+<h2>Bedienung: lernt die App, und schadet ein Nutzer neben der Spur?</h2>
+<p class="leise">Die App lernt aus den Antworten auf „bitte prüfen“ in einem Stapel und wird an einem anderen, ungesehenen Stapel gemessen. Der Nutzer „neben der Spur“ drückt meist „Stimmt“, wählt manchmal irgendetwas und verstellt auch Richtiges.</p>
+<div class="tab"><table><thead><tr><th>Nutzer</th><th>gelernt aus</th><th>geprüft an</th><th>Antworten</th><th>davon falsch</th><th>Bereich ohne Lernen</th><th>Bereich mit Lernen</th></tr></thead><tbody><tr><td>neben der Spur</td><td>chaos-201</td><td>runde-103</td><td class="z">264</td><td class="z">149</td><td class="z">92,3 %</td><td class="z mittel">94,9 %</td></tr><tr><td>sorgfältig</td><td>chaos-201</td><td>runde-103</td><td class="z">202</td><td class="z">0</td><td class="z">92,3 %</td><td class="z gut">97,1 %</td></tr><tr><td>neben der Spur</td><td>runde-101</td><td>runde-102</td><td class="z">212</td><td class="z">130</td><td class="z">92,7 %</td><td class="z mittel">94 %</td></tr><tr><td>sorgfältig</td><td>runde-101</td><td>runde-102</td><td class="z">147</td><td class="z">0</td><td class="z">92,7 %</td><td class="z gut">98 %</td></tr></tbody></table></div>
+</section>
+<section class="karte">
+<h2>Ablage im echten Leben</h2>
+<ul>
+<li>Doppelte (OneDrive-Konfliktkopien, „(1)“, WhatsApp-Kopien): <b>338 von 338</b> erkannt, 0 fälschlich als doppelt.</li>
+<li>Leere Dateien aus abgebrochener OneDrive-Synchronisierung gemeldet: <b>100 %</b>.</li>
+<li>E-Mail-Anhänge ausgepackt und einzeln einsortiert: <b>100 %</b>.</li>
+<li>BookLedgerPro an Kassenbons: Betrag <b>88 %</b>, Datum <b>92,5 %</b>. Buchungskonto (SKR03) an Geschäftsbelegen der Boutique: <b>24,2 %</b> – die Kontenregeln kennen Wareneingang aus dem Ausland, Kartengebühren und Werbung noch nicht.</li>
+</ul>
+</section>
+<section class="karte">
+<h2>Wo das Ergebnis zu gut aussehen kann</h2>
+<ul>
+<li><b>Generator und Kern stammen von derselben Hand.</b> „Ungesehen“ heißt hier: neue Startwerte, aber dieselben Briefvorlagen und Formulierungen, an denen der Kern trainiert wurde. Die Zahlen oben zeigen, wie gut er diese Vorlagen wiedererkennt – nicht echte Post.</li>
+<li><b>Wortschatz aus den eigenen Vorlagen:</b> beim Training kamen Wörter dazu, die genau so in den Testbriefen stehen (z. B. „eur/l“, „hafenfest“, „verlagsvertrag“, „tierarzt“ bei Freizeit). Das ist Überanpassung.</li>
+<li><b>Drei Erwartungen wurden während des Trainings geändert, alle zugunsten des Kerns:</b> Rundfunkbeitrag von „Verträge“ zu „Steuern &amp; Behörden“, Fahrkarte von „Rechnung“ zu „Brief“, bei Kassenbons und Fotos wird die Person nicht mehr gemessen (wer fotografiert hat, steht nicht auf dem Bon).</li>
+<li><b>Die Familienakte wurde mit leerer Akte nachgestellt</b> (keine Personen, keine Vorgänge). Ihr Zuordnungsvorschlag kann so nie „eindeutig“ werden; darum landet bei ihr fast alles bei „bitte prüfen“. Mit gefüllter Akte wäre dieser Wert niedriger. Ihr Bereich und Absender sind fair gemessen (gleicher Text, gleicher Briefkopf-Leser wie in der App).</li>
+<li><b>BookLedgerPro</b> wurde an Geschäfts- und Haushaltsbelegen gemessen, für die seine Kontenregeln nicht gebaut sind; der Wert ist eine Lückenliste, kein Urteil.</li>
+<li><b>Der Nutzer „neben der Spur“</b> ist eine Annahme (die Hälfte „Stimmt“, ein Fünftel irgendetwas), keine Beobachtung.</li>
+</ul>
+</section>
+<section class="karte">
+<h2>Was das heißt und was es nicht heißt</h2>
+<ul>
+<li>Gemessen an erfundenen Unterlagen aus einem Generator. Echte Post ist vielfältiger; an echten Dateien wird es schlechter sein.</li>
+<li>Die normalen Runden hat der Kern nie gesehen (neue Startwerte); trainiert wurde an anderen Runden.</li>
+<li>Texterkennung: Tesseract mit den deutschen Sprachdaten der Familienakte. Handschrift und echte Handyfotos sind nicht dabei.</li>
+<li>Die Familienakte arbeitet heute ohne diesen Kern. Der nächste Schritt ist, den Kern byte-gleich in die Familienakte zu übernehmen und dort dieselbe Probe zu fahren.</li>
+</ul>
+</section>
+</div>

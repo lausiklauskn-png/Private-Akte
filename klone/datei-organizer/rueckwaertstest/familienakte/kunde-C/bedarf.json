@@ -1,0 +1,35 @@
+{"titel": "Digitales Hängeregister für Familienunterlagen mit Fristen und Briefhilfe",
+ "kunde": {"firma": "Privathaushalt Beispielhofer", "ansprechpartner": "Dr. Helga Beispielhofer", "mail": "helga.beispielhofer@post.example"},
+ "bereiche": {
+  "1": ["Hängeregister aus Papier", "Windows-Laptop mit Word für Briefe", "Papierkalender für Termine und Fristen", "USB-Stick als Sicherung"],
+  "2": ["Dokumente ablegen und wiederfinden", "Fristen und Termine im Blick behalten", "Briefe an Ämter schreiben", "Pflegeheim-Angelegenheiten des Bruders"],
+  "3": [{"text": "Dr. Helga Beispielhofer (führt alles)", "anzahl": 1}, {"text": "Bruder", "anzahl": 1}, {"text": "Betreuerin des Bruders", "anzahl": 1}, {"text": "Neffe (Einrichtungshilfe)", "anzahl": 1}],
+  "4": ["Zu viel Papier, zu wenig Ordnung", "Schreiben an Ämter kosten Stunden", "Fristen im Kopf behalten wird schwieriger", "Keine Übersicht über Beiträge und Kontostände"],
+  "5": ["Unterlagen für drei Lebensbereiche laufen in einem Register zusammen", "Fristen stehen nur im Papierkalender und im Kopf", "Briefe werden jedes Mal neu in Word geschrieben"],
+  "6": [
+   {"text": "Unterlagen nach Person und Thema geordnet, mit Fristen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich finde alles wieder und verpasse keine Frist"}},
+   {"text": "Daten bleiben privat und auf meinem Gerät", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich muss mir keine Sorgen um meine Gesundheitsdaten machen"}},
+   {"text": "Hilfe beim Schreiben von Briefen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Briefe an Ämter kosten mich heute Stunden"}},
+   {"text": "Große Schrift, gut lesbar", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich kann es ohne Brille-Gefummel bedienen"}},
+   {"text": "Eigene Abteilungen für Versicherungen, Finanzen und Vollmachten mit Übersicht über Beiträge und Kontostände", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ich sehe auf einen Blick, was ich zahle und was da ist"}},
+   {"text": "Antworten an Ämter gehen von selbst raus, wenn eine Frist naht", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Keine Frist rutscht mir durch"}},
+   {"text": "Bruder und Betreuerin können über das Internet mitlesen und mitschreiben", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Wir müssen nicht alles am Telefon besprechen"}}
+  ],
+  "7": ["Ein ordentliches digitales Hängeregister", "Es denkt an Fristen", "Es bereitet Briefe vor"],
+  "8": ["Das System muss Unterlagen nach Person und Thema ablegen", "Das System muss Fristen zu Unterlagen speichern und rechtzeitig daran erinnern", "Das System muss Briefe an Ämter vorbereiten", "Das System muss in großer, gut lesbarer Schrift anzeigen", "Das System muss Abteilungen für Versicherungen, Finanzen und Vollmachten führen", "Das System muss Beiträge und Kontostände übersichtlich zeigen", "Das System muss Antworten bei nahender Frist von selbst versenden können", "Das System muss Bruder und Betreuerin Lesen und Schreiben ermöglichen"],
+  "9": ["Einrichtung mit Hilfe des Neffen", "Rollen: ich führe, Bruder und Betreuerin lesen und schreiben mit"],
+  "10": ["Windows-Laptop", "Älteres Tablet", "Daten lokal auf dem Gerät"],
+  "11": ["Word auf dem Windows-Laptop", "Papierkalender", "USB-Stick als Sicherung"],
+  "12": [],
+  "13": ["Arztbefunde", "Bescheide", "Versicherungspolicen", "Kontoauszüge", "Vorsorgevollmachten", "Unterlagen zum Pflegeheim des Bruders"],
+  "14": ["personenbezogene Daten: ja", "Gesundheitsdaten (Arztbefunde)", "Daten sollen privat und lokal bleiben"],
+  "15": ["Budget-Rahmen (Angabe des Kunden): bis 150 € einmalig", "Einrichtungshilfe durch den Neffen"],
+  "18": [
+   {"text": "Wie passt „lokal und privat“ zum Mitlesen von Bruder und Betreuerin über das Internet?", "wer": "Dr. Beispielhofer", "bis": ""},
+   {"text": "Sollen Antworten an Ämter wirklich ohne Durchsicht rausgehen?", "wer": "Dr. Beispielhofer", "bis": ""},
+   {"text": "Darf die Betreuerin alle Unterlagen sehen oder nur die des Bruders?", "wer": "Dr. Beispielhofer", "bis": ""},
+   {"text": "Woher kommen Beiträge und Kontostände – abtippen oder aus Auszügen?", "wer": "Dr. Beispielhofer", "bis": ""},
+   {"text": "Soll der USB-Stick als Sicherung bleiben?", "wer": "Neffe", "bis": ""},
+   {"text": "Welches Betriebssystem hat das ältere Tablet?", "wer": "Neffe", "bis": ""}
+  ]
+ }}

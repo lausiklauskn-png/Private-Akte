@@ -1,0 +1,27 @@
+Mitteldeutsche Direktbank AG
+Wertpapierservice · 06990 Saalfurt
+
+Herrn Tobias Lindqvist, Töpfergasse 9, 04999 Großmölkau
+
+Depot 5 044 718 00         Verrechnungskonto DE55 9999 8000 0504 4718 00
+
+WERTPAPIERABRECHNUNG – Kauf (Sparplanausführung)
+Auftragsnummer 250815-004418       Handelstag 15.08.2025
+
+Wertpapier        Welt-Aktien Indexfonds thesaurierend (ETF)
+WKN / ISIN        A9ZX01 / XX00A9ZX0019
+Handelsplatz      außerbörslich, Sparplan
+Stück             1,8443
+Kurs              108,44 EUR
+Kurswert          200,00 EUR
+Provision           0,00 EUR (Sparplan-Aktion)
+Ausmachender Betrag    200,00 EUR zu Lasten Verrechnungskonto
+Valuta            19.08.2025
+
+Bestand nach Ausführung: 74,2210 Stück
+
+Steuerliche Hinweise: Kein steuerpflichtiger Vorgang. Die Vorabpauschale
+wird, sofern sie anfällt, Anfang des Folgejahres belastet.
+
+Diese Abrechnung wurde maschinell erstellt und wird nicht unterschrieben.
+Bitte prüfen Sie sie unverzüglich.

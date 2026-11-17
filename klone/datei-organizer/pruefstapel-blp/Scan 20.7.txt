@@ -1,0 +1,10 @@
+Volksbank Ried-Tal eG
+Umsatzdetails Geschäftskonto
+IBAN DE00 0000 0000 0000 1122 33
+Buchungstag: 05.09.2026
+Wertstellung: 05.09.2026
+
+Gutschrift Überweisung
+Auftraggeber: Jana Wellbrock (Privatkonto)
+Verwendungszweck: Einlage Liquidität Kornblume
+Betrag: +2.500,00 EUR

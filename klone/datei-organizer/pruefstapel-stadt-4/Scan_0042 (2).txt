@@ -1,0 +1,29 @@
+Beispielkasse Gesundheit
+Kassenplatz 9 · 99920 Beispielgroßstadt
+
+Herrn
+Walter Pfeiffenberg
+Fährgasse 3
+99901 Musterhausen am Rhein
+
+Versicherten-Nr. X000000000                     Beispielgroßstadt, 12.01.2026
+
+Mitteilung zu Ihrem Beitrag in der Krankenversicherung der Rentner
+
+Sehr geehrter Herr Pfeiffenberg,
+
+zum 01.07. wurde Ihre Rente angepasst. Daher teilen wir Ihnen Ihren neuen
+monatlichen Beitrag mit:
+
+  Allgemeiner Beitrag              7,3 %
+  Zusatzbeitrag Ihrer Kasse        1,9 %
+  Beitrag aus der gesetzlichen Rente   ab Februar 2026 auf Basis 1.984,00 EUR
+  Monatlich insgesamt              182,53 EUR
+
+Der Beitrag wird von der Deutschen Rentenversicherung einbehalten. Sie
+müssen nichts veranlassen.
+
+Mit freundlichen Grüßen
+Ihre Beispielkasse Gesundheit
+Team Mitglieder
+Dieses Schreiben wurde maschinell erstellt und ist ohne Unterschrift gültig.

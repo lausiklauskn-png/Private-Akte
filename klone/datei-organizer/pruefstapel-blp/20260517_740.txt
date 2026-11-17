@@ -1,0 +1,23 @@
+Pixelweide Online-Marketing
+Industriestr. 21, 37996 Molkenrode
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: 9143
+Rechnungsdatum: 2026-09-06
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Social-Media-Anzeigen Kampagne Mai     1    150,00     150,00
+  2  Betreuung                    2     55,00     110,00
+
+Nettobetrag                                  260,00
+zzgl. 19 % USt                               49,40
+Endbetrag                                    309,40 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2828 73
+USt-IdNr. DE000000502

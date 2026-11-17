@@ -1,0 +1,14 @@
+notebooksguenstig-shop.example GmbH · Online-Fachhandel · 12099 Berlin
+Rechnung Nr. 9004418822 · Datum: 26.01.2026 · Kundennr. 2281904
+
+Rechnungsadresse: Teekontor Lindenblatt, Inh. Marit Sandvoss, Salzgasse 14, 21335 Lüneburg
+
+Art.-Nr.     Artikel                                         Anz   Preis netto
+NB-14-7730   Business-Notebook 14" i7, 32 GB RAM, 1 TB SSD    1      1.259,66
+
+Warenwert netto            1.259,66 EUR
+Versand                        0,00 EUR
+Umsatzsteuer 19 %            239,34 EUR
+Rechnungsbetrag            1.499,00 EUR
+
+Zahlungsart: Kreditkarte. Ihre Bestellung wurde am 27.01.2026 versendet.

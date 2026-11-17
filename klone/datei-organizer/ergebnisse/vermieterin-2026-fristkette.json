@@ -1,0 +1,36 @@
+{
+ "text": "/home/user/datei-organizer/pruefstapel-vermieterin-2026",
+ "mitSollFrist": 42,
+ "ohneSollFrist": 52,
+ "strittig": 0,
+ "familienakte": {
+  "fristRichtig": "27/42 = 64.3 % (49–77)",
+  "falschesDatum": 0,
+  "keineErkannt": 15,
+  "faelschlichEineFrist": "5/52",
+  "erinnerungGeplant": "27/42 = 64.3 % (49–77)"
+ },
+ "kern": {
+  "fristRichtig": "33/42 = 78.6 % (64–88)",
+  "falschesDatum": 5,
+  "keineErkannt": 4,
+  "faelschlichEineFrist": "7/52"
+ },
+ "verloren": [
+  "Abfallgebuehren Bescheid 2026.txt: Soll 2026-03-15, Familienakte keine, Kern keine",
+  "Grundbesitzabgaben_2026_Stadt.txt: Soll 2026-02-15, Familienakte keine, Kern keine",
+  "Lohnsteuerhilfe Termin.txt: Soll 2026-03-12, Familienakte keine, Kern 2026-03-12",
+  "Landfrauen JHV Einladung.txt: Soll 2026-03-11, Familienakte keine, Kern 2026-03-11",
+  "Augenzentrum Termin Maerz.txt: Soll 2026-03-18, Familienakte keine, Kern 2026-03-18",
+  "OP Termin Auge rechts.txt: Soll 2026-04-21, Familienakte keine, Kern 2026-04-22",
+  "MD Begutachtung Termin.txt: Soll 2026-06-03, Familienakte keine, Kern 2026-06-03",
+  "HKP Bruecke Dr Halvorsen.txt: Soll 2026-06-22, Familienakte keine, Kern 2026-06-22",
+  "Woehlke Montagetermin.txt: Soll 2026-06-30, Familienakte keine, Kern 2026-06-22",
+  "Kallweit Terminankuendigung.txt: Soll 2026-08-26, Familienakte keine, Kern keine",
+  "Wahlbenachrichtigung Kommunalwahl.txt: Soll 2026-09-27, Familienakte keine, Kern 2026-09-25",
+  "droege wartung termin sept.txt: Soll 2026-09-08, Familienakte keine, Kern 2026-09-08",
+  "Hollmann Reiseunterlagen Bodensee.txt: Soll 2026-09-13, Familienakte keine, Kern 2026-09-13",
+  "Waermemass Ablesung Dezember.txt: Soll 2026-12-08, Familienakte keine, Kern 2026-12-08",
+  "Praxis Reschke Impftermin.txt: Soll 2026-11-24, Familienakte keine, Kern 2026-11-24"
+ ]
+}

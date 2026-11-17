@@ -1,0 +1,21 @@
+Beispiel Direktbank AG
+Rathausplatz 68 · 45678 Beispielheim
+
+Frau Dana Kesselring
+Kastanienallee 27
+56789 Beispielstadt
+
+Kontoauszug Juli 2026
+Kontoinhaber: Dana Kesselring
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 31.07.2026
+
+Alter Kontostand                662,31 EUR
+02.07.  Lastschrift Versicherung                     -77,00
+06.07.  Lastschrift Stadtwerke Abschlag              -66,00
+10.07.  Lastschrift Beispielfunk Mobil               -17,00
+14.07.  Kartenzahlung Beispiel-Markt                -103,00
+18.07.  Bargeldauszahlung Automat                    -50,00
+22.07.  Gutschrift Lohn/Gehalt                      1817,00
+26.07.  Dauerauftrag Miete                          -579,00
+Neuer Kontostand               1587,31 EUR

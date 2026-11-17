@@ -1,0 +1,23 @@
+# Beispiel Agrartechnik GmbH
+
+VERDIENSTABRECHNUNG MÄRZ 2025
+
+Pers.-Nr.: 0418
+Name: Martin Weidinger
+Steuerklasse: III / 2,5
+Krankenkasse: BKK Beispiel
+
+|Lohnart|Bezeichnung|Betrag|
+|1000|Grundgehalt|3.850,00|
+|1200|Schichtzulage|212,00|
+|2100|VWL AG-Anteil|26,59|
+|9000|Gesamtbrutto|4.088,59|
+|5000|Lohnsteuer|-298,41|
+|5100|Kirchensteuer|-23,87|
+|6000|KV-Beitrag|-347,53|
+|6100|RV-Beitrag|-380,24|
+|6200|AV-Beitrag|-53,15|
+|6300|PV-Beitrag|-49,06|
+|9900|Auszahlungsbetrag|2.936,33|
+
+Überweisung auf DE00 0000 0000 0000 0000 00

@@ -1,0 +1,26 @@
+Dentalabrechnung Westmark GmbH
+Abrechnungsstelle für Zahnärzte · Postfach 2104 · 47801 Lindenrath
+
+im Auftrag von: Zahnarztpraxis Dr. Derya Yıldırım-Hoff, Hüttenstr. 12
+
+Herrn Malte Kessing, Hüttenstraße 41, 47923 Lindenrath
+
+Liquidation Nr. 0725-118840                                14.10.2025
+Behandlung am 09.10.2025
+
+GOZ    Zahn   Leistung                              Faktor   Betrag
+1040   OK/UK  Professionelle Zahnreinigung, 28 Z.     2,3     101,36
+2080   36     Kompositfüllung zweiflächig, Mehr-
+              kostenvereinbarung (abzgl. Kassenanteil)3,2      71,58
+0090   36     Infiltrationsanästhesie                 2,3       7,76
+       Material Anästhetikum                                    1,12
+       Material Matrizensystem                                  4,60
+                                                              -------
+                                         Rechnungsbetrag      186,42 EUR
+
+Zahlbar binnen 30 Tagen (bis 13.11.2025) an Dentalabrechnung Westmark GmbH,
+DE22 3993 0000 0700 1456 03, Zweck 0725-118840.
+Heilbehandlungen sind umsatzsteuerfrei.
+
+Tipp: Reichen Sie die PZR bei Ihrer Krankenkasse ein - viele Kassen
+erstatten einen Teil.

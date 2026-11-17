@@ -1,0 +1,31 @@
+{"titel": "Alles wiederfinden – Mails, Fotos, Papierkram in einer App",
+ "kunde": {"firma": "Elektro Beispiel (privat)", "ansprechpartner": "Tobias Beispiel", "mail": "tobias@beispiel.example"},
+ "bereiche": {
+  "1": ["Mails in Gmail", "Fotos auf dem Handy", "Papierkram teils auf Papier, teils als Foto", "ab und zu der Laptop der Frau", "keine Ordnung, nichts eingerichtet"],
+  "2": ["Dokumente wiederfinden", "Mails lesen und finden", "Papierkram ablegen"],
+  "3": [{"text": "Tobias selbst (Nutzer)", "anzahl": 1}],
+  "4": ["Ich find nix wieder", "weiß nicht mehr, wie die Datei heißt", "Mails, Fotos und Papiere liegen an verschiedenen Stellen", "zu viele Newsletter", "Zeitverlust beim Suchen"],
+  "5": ["alles verstreut auf Handy, Gmail, Laptop", "keine Zeit und keine Lust zum Sortieren", "Suche geht nur über Dateinamen"],
+  "6": [
+   {"text": "Suchen und finden, ohne den Dateinamen zu wissen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nicht mehr ewig suchen"}},
+   {"text": "Mails gleich mit drin, mehrere Konten", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "alles an einer Stelle"}},
+   {"text": "kein Konzern, der mitliest", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "gutes Gefühl, Daten bleiben privat"}},
+   {"text": "Newsletter-Flut loswerden", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "weniger Krempel im Postfach"}}
+  ],
+  "7": ["Eine App, alles drin, fertig", "was ich suche, find ich auch", "keine Einrichtung"],
+  "8": ["Das System muss Mails, Fotos und Dokumente an einer Stelle zeigen", "Das System muss auch ohne Dateinamen finden, nach Inhalt", "Das System muss mehrere Mailkonten aufnehmen, darunter Gmail", "Das System muss auf dem Android-Handy laufen", "Das System muss beim Aussortieren von Newslettern helfen"],
+  "9": ["keine Schulung, muss von selbst gehen", "keine Einrichtung durch mich"],
+  "10": ["Android-Handy", "ggf. Laptop der Frau"],
+  "11": ["Gmail", "Handy-Galerie"],
+  "12": ["Gmail-Konto", "weitere Mailkonten"],
+  "13": ["E-Mails", "Fotos", "Papierkram/Dokumente", "Familiendaten (Kinder)"],
+  "14": ["personenbezogene Daten: ja", "kein Konzern soll mitlesen"],
+  "15": ["Budget möglichst unter 30 € (Angabe des Kunden)", "null Lust auf Einrichtung"],
+  "18": [
+   {"text": "Wie viele Mailkonten genau?", "wer": "Tobias", "bis": ""},
+   {"text": "Soll der Laptop der Frau mit dazu?", "wer": "Tobias", "bis": ""},
+   {"text": "30 € einmalig oder im Monat?", "wer": "Tobias", "bis": ""},
+   {"text": "Wie viele Fotos/Dokumente etwa?", "wer": "Tobias", "bis": ""},
+   {"text": "Papier: abfotografieren oder liegen lassen?", "wer": "Tobias", "bis": ""}
+  ]
+ }}

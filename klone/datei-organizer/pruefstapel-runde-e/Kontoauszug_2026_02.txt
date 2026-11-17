@@ -1,0 +1,31 @@
+Beispiel Volksbank Exempelheim eG
+Genossenschaftsweg 3 · 67890 Exempelheim
+
+Kontoauszug
+Girokonto Ilse Vogelsang
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 17/2026 · Blatt 1 von 1 · Zeitraum 01.02.2026 – 28.02.2026
+
+Frau Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Alter Kontostand vom 01.02.2026: 2.210,66 EUR
+
+Buchungstag   Valuta   Vorgang / Verwendungszweck   Betrag EUR
+02.02.   02.02.   Bargeldauszahlung Geldautomat   -67,91
+07.02.   07.02.   Kartenzahlung Bäckerei Beispielkorn   -12,89
+08.02.   08.02.   Lastschrift Beispiel-Markt Filiale 0412   -25,64
+09.02.   09.02.   Lastschrift Beispiel-Markt Filiale 0412   -32,54
+10.02.   10.02.   Hörakustik Beispiel Eigenanteil   -2.174,70
+14.02.   14.02.   Erbteil Nachlass Hedwig Exempel   +18.400,00
+16.02.   16.02.   Lastschrift Beispiel-Markt Filiale 0412   -66,84
+16.02.   16.02.   Kartenzahlung Frischkauf Exempel   -115,66
+20.02.   20.02.   Friseur Haarwerk Hartwig   -38,00
+21.02.   21.02.   Bargeldauszahlung Geldautomat   -56,77
+27.02.   27.02.   Rente RV Beispiel-Land   +723,78
+
+Neuer Kontostand vom 28.02.2026: 18.743,49 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+Beispiel Volksbank Exempelheim eG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

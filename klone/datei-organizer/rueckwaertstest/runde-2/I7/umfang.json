@@ -1,0 +1,12 @@
+{"bausteine": [
+ {"katalog": "scan", "name": "Beleg-Erfassung: Lieferscheine/Rechnungen per Handyfoto mit Texterkennung, Positionen (Artikel, Menge, Preis, Lieferant) auslesen", "groesse": "gross", "deckt": ["B-19", "B-25", "B-01", "B-05", "B-24", "B-32", "B-34"], "faktoren": ["ki"]},
+ {"katalog": "postfach", "name": "Rechnungs-Anhänge aus dem Mail-Postfach abholen und der Beleg-Erfassung übergeben", "groesse": "klein", "deckt": ["B-19", "B-25", "B-39"], "faktoren": []},
+ {"katalog": "neu", "name": "Prüfschritt: unsicher gelesene Felder markieren und den Inhaber nachfragen lassen; Teillieferungen dem Lieferschein zuordnen, Gutschriften verrechnen", "groesse": "mittel", "deckt": ["B-26", "B-27", "B-13"], "faktoren": []},
+ {"katalog": "lager", "name": "Artikel- und Preisstamm: Einkaufspreis je Artikel und Lieferant mit Verlauf, Artikel Küche oder Getränke zugeordnet (ohne Bestand/Inventur)", "groesse": "mittel", "deckt": ["B-28", "B-15", "B-40"], "faktoren": []},
+ {"katalog": "neu", "name": "Preiswarnung: Meldung, wenn ein Artikel gegenüber dem letzten bzw. gleitenden Preis deutlich teurer wird (Schwelle einstellbar)", "groesse": "klein", "deckt": ["B-18", "B-29", "B-11", "B-23"], "faktoren": []},
+ {"katalog": "schnitt", "name": "Import des Kassen-Exports (CSV/DSFinV-K), Umsatz je Tag/Woche, getrennt nach Küche und Getränke", "groesse": "mittel", "deckt": ["B-20", "B-30", "B-03", "B-36", "B-38", "B-41"], "faktoren": []},
+ {"katalog": "neu", "name": "Wochenbericht Wareneinsatz in Prozent vom Umsatz, Küche und Getränke getrennt, mit Verlauf über die Wochen", "groesse": "mittel", "deckt": ["B-17", "B-31", "B-22", "B-06", "B-10", "B-02", "B-14"], "faktoren": []},
+ {"katalog": "liste", "name": "Grobe Tellerkalkulation für 5–6 Hauptgerichte (Zutaten grob, Preise aus dem Preisstamm)", "groesse": "klein", "deckt": ["B-21", "B-12"], "faktoren": []},
+ {"katalog": "plattform", "name": "Android-App zum Fotografieren und Windows-Fassung fürs Büro", "groesse": "mittel", "deckt": ["B-34", "B-35"], "faktoren": []},
+ {"katalog": "tresor", "name": "Verschlüsselte Ablage der Belege und Zahlen auf dem Gerät mit automatischer Sicherung, keine Weitergabe an Dritte", "groesse": "klein", "deckt": ["B-43", "B-42"], "faktoren": []}
+]}

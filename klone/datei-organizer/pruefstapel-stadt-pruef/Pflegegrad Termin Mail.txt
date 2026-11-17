@@ -1,0 +1,9 @@
+Von: pflegekasse@beispiel-krankenkasse-sued.example
+An: monika.brandlechner@beispiel-mail.example
+Betreff: Begutachtung Pflegegrad – Termin 24.02.2026, 10:30 Uhr
+Datum: Tue, 10 Feb 2026 08:02:11 +0100
+
+Sehr geehrte Frau Brandlechner-Beispiel,
+zum Antrag auf Pflegegrad von Herrn Herbert Wiesnegger (Az. PK-000000) kommt der Gutachter am 24.02.2026 um 10:30 Uhr zu einem Hausbesuch.
+Bitte halten Sie bereit: Medikamentenplan, Arztberichte, Pflegetagebuch.
+Ist der Termin nicht möglich, melden Sie sich bitte unter 0000-555555.

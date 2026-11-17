@@ -1,0 +1,18 @@
+Büroversand Kliemannek GmbH
+Lagerstr. 70 · 44000 Brackhausen
+
+Rechnungsempfänger: Blumenwerkstatt Harkort, Inh. Mareike Harkort, Kirchgasse 7, 37299 Weidenrode
+Kd-Nr. 44523   Beleg 4470012207   Belegdatum 21.05.2026
+Lieferdatum 20.05.2026  Zahlungsziel 04.06.2026
+
+ArtNr    Artikel                      Mg   Einh   Preis    Betrag  St
+54041    Toner schwarz LJ-340 XL        2 Stk     68,90    137,80  19
+48453    Kartenständer Acryl A6        10 Stk      3,45     34,50  19
+53822    Preisschild-Stecker 100er      3 Pck      7,80     23,40  19
+84959    Versandkostenanteil            1 x        4,95      4,95  19
+
+Warenwert netto                                           200,65
+USt 19,00 % auf 200,65               38,12
+Zahlbetrag EUR                                            238,77
+
+Büroversand Kliemannek GmbH · USt-IdNr. DE000000000 · IBAN DE00 0000 0000 0000 0000 00

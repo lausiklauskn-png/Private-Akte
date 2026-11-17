@@ -1,0 +1,22 @@
+Sparkasse Altenried-Wolfering – Kartenservice
+
+Kreditkartenabrechnung 03/2026
+Karte **** **** **** 4417   Theresa Oberhofer
+Abrechnungsdatum 31.03.2026
+
+Datum   Umsatz                                        EUR
+02.03.  Bahn-Ticket online Altenried–Hochstadt       38,90
+06.03.  Motorradzubehör-Versand „Kurvenkram“        112,95
+        (Regenkombi, Kettenspray)
+11.03.  Musikdienst Abo mtl.                          10,99
+14.03.  Berghütte Hochfirstalm, Übernachtung          74,00
+14.03.  Skiverleih Hochfirst                          29,00
+21.03.  Buchversand: Lernskript Rechnungswesen        34,90
+27.03.  Gasthaus Oberwirt Hinterkreuth                18,00
+                                                    -------
+Summe Umsätze                                        318,74
+Auslandseinsatzentgelt                                 0,00
+Neuer Saldo                                          318,74
+
+Der Betrag wird am 15.04.2026 von Ihrem Girokonto abgebucht.
+Verfügungsrahmen 2.000 EUR.

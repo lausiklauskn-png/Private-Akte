@@ -1,0 +1,5 @@
+Beispielkasse Gesundheit
+Heil- und Kostenplan genehmigt (Festzuschuss)
+Versicherter: Walter Pfeiffenberg    X000000000    Datum 24.06.2026
+Der Festzuschuss von 1.200,00 EUR wird mit der Zahnarztrechnung verrechnet.
+Der Plan gilt 6 Monate.

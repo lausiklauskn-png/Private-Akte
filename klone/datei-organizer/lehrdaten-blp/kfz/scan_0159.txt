@@ -1,0 +1,9 @@
+Volksbank Wolmershagen eG                        Buchungsbeleg / Umsatzdetail
+Konto: Geschäftsgirokonto Kfz-Technik Brandhorst   IBAN DE00 0000 0000 0000 0000 00
+
+Buchungstag 02.03.2026     Wertstellung 02.03.2026
+Dauerauftrag an: Henrik und Katrin Brandhorst (Privatkonto)
+IBAN Empfänger: DE00 0000 0000 0000 0099 99
+Verwendungszweck: PRIVATENTNAHME MONAT MAERZ - UNTERHALT FAMILIE
+
+Betrag:  - 2.800,00 EUR

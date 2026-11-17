@@ -1,0 +1,9 @@
+Sparkasse Heide-Elbe - Sammelüberweisung ausgeführt
+Auftraggeber: Teekontor Lindenblatt, Konto DE00 0000 0000 0000 0000 00
+Ausführungsdatum 28.09.2026
+
+1  Thormaehlen Ilka   DE00 0000 0000 0000 0000 21   GEHALT 09/2026 NETTO     834,88
+2  Brucning Malte     DE00 0000 0000 0000 0000 34   LOHN AUSHILFE 09/2026    275,00
+
+Summe der Aufträgc: 2          Gcsamtbetrag: 1.109,88 EUR
+Zweck: Lohn- und Gehaltszahlung Septernber 2026

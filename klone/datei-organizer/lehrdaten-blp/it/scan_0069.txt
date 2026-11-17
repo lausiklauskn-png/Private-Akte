@@ -1,0 +1,14 @@
+VERDIENSTBESCHEINIGUNG                                   Monat 04/2026
+Arbeitgeber: Kettler Systemhaus, 96052 Bamberg     erstellt durch Lohnbüro
+Arbeitnehmer: Wrede, Tobias   Tätigkeit: IT-Systemtechniker   Vollzeit 40 Std.
+
+BRUTTOBEZÜGE
+ 1000 Festgehalt                               3.250,00
+ 1310 Überstundenvergütung 6 Std × 20,31         121,86
+ Summe Brutto                                  3.371,86
+
+GESETZLICHE ABZÜGE
+ Steuern (LSt/KiSt/SolZ)                         427,10
+ Sozialversicherung AN-Anteil                    730,19
+ Netto                                         2.214,57
+Überweisungsbetrag an IBAN DE00 0000 0000 0000 0000 02       2.214,57

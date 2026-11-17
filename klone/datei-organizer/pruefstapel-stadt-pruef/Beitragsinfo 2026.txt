@@ -1,0 +1,26 @@
+Beispiel-Beitragsservice Rundfunk
+Postfach 0000, 99970 Beispielstadt
+
+Herrn Thomas Kieselmayr
+Lindenhang 12
+99999 Musterbach
+
+Beitragsnummer: 000 000 000                               Februar 2026
+
+Ihre Zahlungsinformation
+
+Guten Tag,
+
+wir informieren Sie über die nächsten Abbuchungen für Ihr Beitragskonto.
+
+  Fälligkeit     Zeitraum             Betrag
+  15.02.2026     01.2026 – 03.2026    55,08 €
+  15.05.2026     04.2026 – 06.2026    55,08 €
+  15.08.2026     07.2026 – 09.2026    55,08 €
+  15.11.2026     10.2026 – 12.2026    55,08 €
+
+Die Beträge werden per SEPA-Lastschrift von Ihrem Konto
+IBAN DE00 0000 **** **** **00 00 eingezogen. Mandatsreferenz: 000000000.
+
+Bitte achten Sie auf ausreichende Kontodeckung.
+Ihr Beispiel-Beitragsservice

@@ -1,0 +1,25 @@
+Institut für Wasser- und Umweltanalytik Marschhaven
+akkreditiertes Prüflabor · Schleusenweg 15 · 25870 Marschhaven
+
+PRÜFBERICHT 25-W-04417                            Seite 1 von 1
+
+Auftraggeber:  G. Tiedemann, Moorweg 23, 25874 Süderlohe
+Probe:         Hausbrunnen (Bohrbrunnen 28 m), Zapfhahn Küche
+Entnahme:      12.05.2025 durch Auftraggeber, Eingang 12.05.2025
+
+Parameter            Ergebnis     Einheit    Grenzwert   Bewertung
+Koloniezahl 22 °C    14           KBE/ml     100         o. B.
+E. coli              0            /100 ml    0           o. B.
+Coliforme Keime      3            /100 ml    0           ÜBERSCHRITTEN
+Nitrat               31           mg/l       50          o. B.
+Eisen                0,62         mg/l       0,2         ÜBERSCHRITTEN
+Mangan               0,09         mg/l       0,05        ÜBERSCHRITTEN
+pH-Wert              6,9                     6,5–9,5     o. B.
+
+Beurteilung: Das Wasser entspricht in der vorliegenden Probe nicht
+den Anforderungen an Trinkwasser. Der Coliformen-Befund deutet auf
+Oberflächeneinfluss hin (Brunnenkopf, Abdeckung prüfen). Eisen und
+Mangan sind geogen bedingt und technisch entfernbar. Bis zur
+Nachuntersuchung Wasser zum Trinken abkochen.
+
+Dr. rer. nat. S. Ketels, Laborleitung

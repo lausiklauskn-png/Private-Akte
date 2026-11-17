@@ -1,0 +1,33 @@
+# Stadtwerke Beispielstadt
+Stadtwerke Beispielstadt · Werkstraße 1 · 34567 Beispielstadt
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kundennummer: SW-000-4412
+Rechnungsnummer: JA-2025-0044120
+Datum: 21.01.2026
+
+# Jahresabrechnung Strom 2025
+
+Sehr geehrter Herr Brandtner,
+
+für den Abrechnungszeitraum 01.01.2025 bis 31.12.2025 (Zählerstand alt 48.112, neu 52.986 kWh) ergibt sich:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Arbeitspreis 4.874 kWh|4874|0,27 €|1.306,23 €|
+|2|Grundpreis 12 Monate|12|11,50 €|138,00 €|
+|3|abzgl. Abschläge|12|-100,84 €|-1.210,08 €|
+
+Nettobetrag: 234,15 €
+zzgl. 19 % MwSt.: 44,49 €
+Rechnungsbetrag: 278,64 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Die Nachzahlung wird mit dem nächsten Abschlag am 15.02.2026 abgebucht. Ihr Verbrauch liegt 6 % über dem Vorjahr.
+
+Mit freundlichen Grüßen
+Stadtwerke Beispielstadt
+@fuss Stadtwerke Beispielstadt · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

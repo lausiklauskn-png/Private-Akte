@@ -1,0 +1,15 @@
+From: Autohaus Steffens Service <service@autohaus-steffens.example>
+To: yasemin.basturk@postfach.example
+Subject: Terminbestätigung Räderwechsel XY-YB 2207
+
+Sehr geehrte Frau Baştürk,
+
+hiermit bestätigen wir Ihren Termin:
+
+Mittwoch, 18.11.2026, 07:45 Uhr - Räderwechsel Sommer/Winter inkl. Einlagerung
+Fahrzeug: XY-YB 2207
+
+Ihre Winterräder liegen bei uns im Reifenhotel (Lagerplatz C-14). Dauer ca. 45 Minuten,
+Wartebereich mit Kaffee vorhanden.
+
+Ihr Serviceteam Autohaus Steffens

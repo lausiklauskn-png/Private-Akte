@@ -1,0 +1,109 @@
+[Scan Teil 1 von 3]
+KAUFHALLE SONNENTAL BEISPIFL
+Markt Talbeim
+Gewerbestrae 12
+45678 Talheim-Beispiel
+
+EUR
+KAFSEPLATE FE5T.                  12,99  A
+KARTOFFELN FK 2,5G                 3,29  A
+KUEHENROLLE 4X                     3,49  B
+8IER PILS 20X0,5                   14,99  B
+OLIVENOEL 0,7SL                     7,99  A
+MOZZAFLLA 125G                     O,85  A
+PFAN KSTEN BIER                   3,l0  8
+MAISKOLBE 2ST                      1,99  A
+HONIG 50G                          4,99  A
+NULN SPIRELI 500G                0,99  A
+SALAT EISBERG                       0,9  A
+ERDBEEREN 50O                      3,49  A
+TORTFNBODFN HEL                   11,34  A
+   6 Sfk x  1,B9
+8RATWURST GOB 1OT                 6,99  A
+SAHNF 200ML                         0,79  A
+BURNBROT 1KG                      3,49  A
+WASCHITTFL 40WL                    ,99  B
+KETCHUP 500M                       l,99  A
+RINDERHACK 500G                     5,49  A
+BANANEN LOSE                        1,87  A
+TEELICHTER SOST                     2,99  B
+TOMATEN PAS5IERT                    4,74  
+   6 Stk x  O,79
+[Scan Teil 2 von 3]
+TRABEN HELL 5OOG                   2,79  A
+MUELLBFUTEL 3L                     1,89  B
+TOMATEN RI5PE                       2,79  A
+GRLLKHE 10KG                     8,99  B
+LACHFILET TK 50G                 15,9B  A
+    Stk x  7,99
+MINERAWASSER 12X1L                 S,49  A
+ZAHNPATA                           0,95  B
+SALZSTANGFN 2S0G                    0,99  A
+QURK 4% 500G                      l,49  A
+CHOKOLADF VOLLMILCH                1,19  A
+APFELSCHORLE 61,5L                 4,74  A
+PIZZA SALAM TK                     2,49  A
+SPARERIBS MARIN.                    8,99  A
+MAYONNAISE O0ML                    2,29  A
+KFFFEBOHNEN 1K                   l3,99  A
+CHIP5 PAPRIKA                       1,7  A
+SAHNESTIF 3ER                      0,69  A
+GURKE STUEC                        0,69  A
+SEAK RI 2ST                     77,94  
+   6 Stk x  12,99
+SFF MITTE5CHARF                   1,8  A
+   2 Stk x  O,89
+GESCHIRRTA8S 60ST                  l5,98  B
+   2 Sfk x  ,99
+KAFF GEMAHLEN S00G                6,99  A
+PFAND 12X0,25                       3,3O  B
+BROTZFITPLATTE                     14,99  A
+SCHWFINFNACKEN MARINIERT           1l,49  A
+GUMMIBAERCHEN 300G                  1,29  A
+[Scan Teil 3 von 3]
+FISCHSTAFBCHE 3ST                 4,4  A
+CORNFLKE5 750G                     2,  A
+BECHER 0,3L 50ST                    5,98  B
+   2 Stk x  2,99
+TEF PFEFFEMINZ                     1,29  A
+ZITONFN NETZ                       1,49  A
+BATTERIEN AA 8ST                   11,98  B
+   2 Stk x  5,99
+TOILETTENPAPIFR 10X                 4,99  B
+REIS LAGKORN KG                   l,79  A
+NUSSNOGATCRFME                     3,49  A
+KATENFUTTER 12XB5G                 5,49  8
+8UTR 250G                         2,39  A
+PAND 6X0,25                        1,S0  B
+MARMLADE ERDBER                   1,79  A
+MOEHREN 1KG                         1,19  A
+COA 6X1,5L                         5,94  B
+ROTWFIN TROCKEN                     S,99  B
+5ERIETTN 3LG 50ST                11,94  8
+   6 5tk x  1,99
+5ET TROCKEN 0,75                   8,9B  B
+   2 Stk x  4,4
+SPUELMITTEL 900ML                   1,59  8
+H-MILCH 1,S% lL                     1,09  
+GRILLKAESE 2ST                      S,58  A
+   2 Stk x  2,79
+KARTOFFELSALAT 1KG                  3,9  A
+EISFE PFIRSICH 1,5L                l,19  B
+PAPTELLER 50ST                     3,9  B
+BAGUETTE KNOBLAUCH                  1,9  A
+ZUCKER 1KG                          1,19  A
+--------------------------------------------
+SUMMF                             423,62   
+Anzahl Artikel: l01
+
+GIOCARD                          423,62   
+
+MwSt   Satz     Netto     5teve    Brutto
+A      7,0%    269,99     18,90    288,89
+B     19,0%    113,22     21,51    134,73
+
+3l.01.2O26  16:44  Kasse 6  Beleg 10233  ed. 2
+
+Darnke! Ihre Kaufballe Sonnental
+TSE Serienr. f00ab77  Trans. 1298B  Zähler 66112
+Kundenkarte nicht vorgclegt - 0 Punkte

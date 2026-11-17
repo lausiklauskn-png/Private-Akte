@@ -1,0 +1,12 @@
+PayTerminal Services GmbH
+Monatsabrechnung Kartenakzeptanz        Juli 2026
+
+Händler: Haarstudio Federleicht, 37154 Northeim     Terminal-ID 53262922
+erstellt 28.01.2026
+
+Kartenumsatz girocard/Kredit            5.975,50
+Transaktionen                           110
+Disagio / Transaktionsentgelte          56,77
+Terminalmiete                           12,90
+Summe Entgelte (umsatzsteuerfrei bzw. netto)   69,67
+Die Entgelte wurden mit den Auszahlungen verrechnet.

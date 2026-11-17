@@ -1,0 +1,20 @@
+LANDKREIS BEISPIELLAND
+Kfz-Zulassungsstelle
+Kreishausweg 10, 29998 Beispieldorf
+
+Kassenbeleg / Gebührenquittung
+Kasse 3     Beleg 2026-0711-0388     09.07.2026  11:52
+
+Vorgang KFZ-118204
+Halter: Siemsen, Tobias
+Kennzeichen: BSP-TS 994 (unverändert)
+
+Pos  Gebührennummer   Bezeichnung                       Betrag
+1    224              Änderung Anschrift Zul.besch. I     12,10
+2    -                Prüfplakette/Siegel                  0,00
+                                                    ----------
+                       SUMME                            12,10 EUR
+                       EC-Karte                         12,10 EUR
+
+Gebühr nach GebOSt. Vielen Dank.
+Bitte Beleg aufbewahren.

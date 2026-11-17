@@ -1,0 +1,26 @@
+Großhandel Kremsried KG
+Am Anger 14, 37999 Tannweiler
+Tel. 0000 63413
+
+Fa. Café-Bäckerei Kornblume
+z. Hd. Frau Wellbrock
+Mühlgasse 7
+37999 Tannweiler
+
+Rechnung
+Rechnunqsnummer: R27523
+Datum 18. Mai 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Rosinen 5 kg                 1     22,40      22,40
+  2  Haselnüsse gemahlen 2,5 kg     6     28,70     172,20
+  3  Zucker raffiniert 25 kg      6     26,90     161,40
+
+Nettobetrag                                  356,00
+zzgl. 7 % USt                               24,92
+Gesamt                                       380,92 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7117 57
+USt-IdNr. DE000000931

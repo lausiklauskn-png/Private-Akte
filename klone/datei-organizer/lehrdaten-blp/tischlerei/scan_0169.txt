@@ -1,0 +1,25 @@
+Tischlerei Vosskamp
+Inh. Henrik Vosskamp · Tischlermeister
+Mühlenkamp 14 · 32791 Welsede
+Tel. 05291 / 55 01 20 · info@tischlerei-vosskamp.example
+St.-Nr. 000/0000/0417 · USt-IdNr. DE000000417
+
+Café Zeitlos · Inh. Merve Aydoğan · Marktplatz 12 · 32791 Welsede
+
+Rechnung Nr. 2026-0077 · Rechnungsdatum 30.06.2026 · Leistungszeitraum Juni 2026
+Ladenausbau gemäß Auftragsbestätigung AB-2026-019
+
+Nr  | Leistung | Menge | Einzelpreis | Gesamt
+001 | Ladentheke Eiche/Schwarzstahl 3,20 m mit Kuchenvitrine-Ausschnitt | 1 St | 5.400,00 | 5.400,00
+002 | Wandregal Kaffeebar, 5 Böden, hinterleuchtet | 1 St | 1.980,00 | 1.980,00
+003 | Sitzbank gepolstert Fensterfront 4,60 m | 1 St | 2.640,00 | 2.640,00
+004 | Elektroanschlüsse bauseits – entfällt | 0  | 0,00 | 0,00
+005 | Montage 2 Mann | 14 Std | 62,00 | 868,00
+
+Gesamt netto: 10.888,00 EUR
+19 % Umsatzsteuer: 2.068,72 EUR
+Gesamt brutto: 12.956,72 EUR
+abzgl. Abschlagszahlung vom 20.05.2026: siehe gesonderte Abschlagsrechnung 2026-0063
+Zahlungsziel: 10 Tage netto
+Bankverbindung: Volksbank Welsede eG · IBAN DE00 0000 0000 0041 7001 00 · BIC XXXXDE00XXX
+Tischlerei Vosskamp · Mitglied der Tischler-Innung Welsede-Land

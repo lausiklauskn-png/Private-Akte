@@ -1,0 +1,26 @@
+ABRECHNUNG 04/2026 - Gaststätte Beispielhafen GmbH \
+
+Personal-Nr. GH-031 Wendebach, Jonas Steuerklasse Il
+
+Grundgehalt (Teilzeit 24 Std.) 2.080,00
+
+Sachbezug Verpflegung 57,00
+
+Brutto 2.137,00
+
+Lohnsteuer 125,50
+
+KV 158,20
+
+RV 198,70
+
+AV 26,00
+
+PV (Kinderlos-Zuschlag entfällt) 36,40
+
+Netto 1.592,20
+
+Überweisung 30.04.2026 auf DEOO 0000 0000 0000 0000 00
+ABRECHNUNG 04/2026 - Gaststätte Beispielhafen Gmbl&eschäftsführung: S. Probe Bankverbindung: Beispielbank Nord
+Sitz: Beispielstadt-Nord USt-IdNr.: DE000722842 IBAN DEOO 0000 0000 0000 0000 00
+Registergericht: Amtsgericht Beispielstadt HRB 50838 BIC BEISDEXXXX

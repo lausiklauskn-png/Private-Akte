@@ -1,0 +1,29 @@
+Elektro Fuchsbau Beispiel
+Fachhandel und Kundendienst · Hauptstraße 44 · 45678 Talheim-Beispiel
+
+Herrn Markus Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Rechnungsnummer: FB-22-1871
+Kundennummer: 3304
+Datum: 14.05.2022
+
+Rechnung
+
+Sehr geehrter Herr Rebmann,
+
+wir bedanken uns für Ihren Auftrag und berechnen:
+
+Pos  Artikel                                   Menge  Preis
+1    Waschmaschine WM 8 Beispiel, 8 kg, 1400 U  1      649,00
+2    Lieferung, Anschluss, Altgerät mitnehmen    1       59,00
+3    Aquastop-Verlängerung                       1       19,90
+Gesamt inkl. 19 % USt                                  727,90
+
+Betrag bar erhalten. Gerät-Seriennummer WM8-22-004471. Es gelten 2 Jahre gesetzliche Gewährleistung; der Hersteller gibt zusätzlich 3 Jahre Garantie auf den Motor, bitte online registrieren. Diese Rechnung ist Ihr Garantienachweis.
+
+Ihr Fuchsbau-Team
+
+
+Elektro Fuchsbau Beispiel e.K. · USt-IdNr. DE000000000

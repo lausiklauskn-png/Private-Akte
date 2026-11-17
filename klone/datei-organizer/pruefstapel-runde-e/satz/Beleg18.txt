@@ -1,0 +1,20 @@
+@bon
+BEISPIEL ZOO EXEMPELHEIM
+Tierparkallee 1, 67890 Exempelheim
+Tel. 00000 000000
+UST-ID DE000000000
+
+Eintritt Senior ermäßigt
+  2 x 11,00        22,00 A
+Eintritt Schwerbehindert Begleitperson frei     0,00 A
+Futtertüte                       2,00 A
+------------------------------------
+SUMME EUR                    24,00
+Girocard                      24,00
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|20,17|3,83|24,00|
+
+20.05.2026 10:02  Bon 9419  Kasse 3
+TSE-Signatur 1293276972
+Vielen Dank für Ihren Einkauf!

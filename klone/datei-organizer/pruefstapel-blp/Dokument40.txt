@@ -1,0 +1,23 @@
+Druckerei Schwarzweiß
+Hafenstraße 68, 37994 Krummbach am Ried
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: 4080
+Rechnungsdatum: 14.02.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Stempelkarten Kaffee 2.000 St.     1     74,00      74,00
+  2  Plakate A2 50 St.            1     58,00      58,00
+
+Nettobetrag                                  132,00
+zzgl. 19 % USt                               25,08
+SUMME EUR                                    157,08 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 8621 73
+USt-IdNr. DE000000514

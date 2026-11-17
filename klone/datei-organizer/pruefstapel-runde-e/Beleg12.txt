@@ -1,0 +1,21 @@
+MUSTER DROGERIE
+Bahnhofstraße 22, 45678 Musterhausen
+Tel. 00000 000000
+UST-ID DE000000000
+
+Toilettenpapier 10er             4,95 A
+Spülmittel
+  2 x 0,95        1,90 A
+Zahnpasta                        1,45 A
+Shampoo                          2,25 A
+Müllbeutel 35 l                  1,79 A
+------------------------------------
+SUMME EUR                    12,34
+Girocard                      12,34
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   10,37   1,97   12,34
+
+21.11.2025 19:48  Bon 4024  Kasse 6
+TSE-Signatur 4198844994
+Vielen Dank für Ihren Einkauf!

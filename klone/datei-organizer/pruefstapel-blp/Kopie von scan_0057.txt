@@ -1,0 +1,22 @@
+Schilderwerk Kolbe
+Zur Mühle 80, 37995 Wendelsau
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: 5645
+Rechnungsdatum: 25. Oktober 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Kundenstopper A-Ständer bedruckt     1    129,00     129,00
+
+Nettobetrag                                  129,00
+zzgl. 19 % USt                               24,51
+Summe                                        153,51 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9614 41
+USt-IdNr. DE000000204

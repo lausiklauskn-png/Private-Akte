@@ -1,0 +1,44 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "getroffen",
+  "M05": "teilweise",
+  "M06": "getroffen",
+  "M07": "teilweise",
+  "M08": "teilweise",
+  "M09": "fehlt",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "fehlt",
+  "M13": "teilweise",
+  "M14": "teilweise",
+  "M15": "getroffen",
+  "M16": "getroffen",
+  "M17": "fehlt",
+  "M18": "teilweise",
+  "M19": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Plan für eine einzelne KI-Beraterin; IT-Dienstleister und externe Datenschutzbeauftragte als Nutzer nicht genannt.",
+  "M05": "Liste erlaubter Programme mit Stand-Datum, aber ohne die drei Stufen erlaubt/nur ohne Personendaten/verboten und ohne Datierung jeder Änderung.",
+  "M07": "Schulung mit Thema und Stichpunkten, Inhalte über Branchen-Vorlage; keine Schulungsbausteine 15–45 Minuten nach Rolle zusammenstellbar.",
+  "M08": "Abhaken offline am Tablet ja; Bestätigung per Handy-Link fehlt (kein Kundenzugang).",
+  "M09": "Kein Wissenstest; Plan schließt jede Bewertung aus.",
+  "M12": "Keine Bestätigung der Regeln durch Mitarbeitende mit einem Tipp.",
+  "M13": "Lokal und je Kunde getrennt mit Export ja; Verschlüsselung je Mandant nur als offene Frage.",
+  "M14": "Berater auf PC/Tablet/Handy ja; Teilnehmende haben keinen Zugang über das Handy.",
+  "M17": "Abgrenzung zu Konzern-Lernplattform/SCORM nicht erwähnt.",
+  "M18": "Logo der Beraterin auf dem Blatt ja; Abo gestaffelt nach Mandantenzahl nur als offene Frage zum Bezahlmodell.",
+  "M19": "Keine Übernahme von Zählwerten aus einem Vorfilter."
+ },
+ "zusaetze": [
+  "Android- und Windows-Hüllen",
+  "Zeitleiste ‚Was haben wir schon gemacht?‘ je Kunde",
+  "Sicherung mit Zusammenführen beim Wiedereinlesen",
+  "Suche über Kunden, Schulungen, Teilnehmer, Programme",
+  "Möglicher CSV-Import der alten Excel-Teilnahmeliste"
+ ]
+}

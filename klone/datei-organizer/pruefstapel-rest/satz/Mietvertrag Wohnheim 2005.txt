@@ -1,0 +1,18 @@
+# Studentenwerk Musterstadt – Wohnheimverwaltung
+
+Frau
+Nora Feldkamp
+Lindenweg 5
+39999 Beispieldorf
+
+Vertrag: WH-05-0118
+Datum: 15.08.2005
+
+# Mietvertrag Wohnheimplatz
+
+Zimmer 118 im Studentenwohnheim Am Park 2, möbliert, 12 m². Miete pauschal 189,00 Euro einschließlich Nebenkosten und Internetanschluß.
+
+Mietbeginn 01.10.2005, die Mietzeit ist auf die Regelstudienzeit begrenzt. Kaution 300,00 Euro.
+
+Beispieldorf/Musterstadt, den 15.08.2005
+@unterschrift

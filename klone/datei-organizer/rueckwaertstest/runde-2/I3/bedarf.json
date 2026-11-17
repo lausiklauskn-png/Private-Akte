@@ -1,0 +1,41 @@
+{"titel": "Wartungen nicht mehr vergessen – Protokoll auf dem Handy",
+ "kunde": {"firma": "Heizung & Sanitär Beispiel GmbH", "ansprechpartner": "Bernd Muster", "mail": "info@heizung-beispiel.example"},
+ "bereiche": {
+  "1": ["Fällige Wartungen stehen in einer Excel-Tabelle und im Kopf meiner Frau", "Wartungsprotokolle füllen die Monteure auf Papier aus", "Rechnungen schreiben wir mit unserem Handwerkerprogramm", "Termine machen wir per Telefon aus"],
+  "2": ["Wartung der rund 600 Heizungen und Wärmepumpen bei Kunden", "Termin mit dem Kunden ausmachen", "Protokoll beim Kunden vor Ort", "Daten für die Rechnung ins Büro bringen"],
+  "3": [{"text": "Inhaber (Meister)", "anzahl": 1}, {"text": "Monteure", "anzahl": 5}, {"text": "Azubi", "anzahl": 1}, {"text": "Büro (meine Frau)", "anzahl": 1}, {"text": "Kunden, die unterschreiben und Termine bestätigen", "anzahl": 600}],
+  "4": ["Jedes Jahr rutschen Wartungen durch", "Wenn der Kunde selbst anruft, ist es oft zu spät oder er hat einen anderen Betrieb geholt", "Papierprotokolle liegen eine Woche im Auto", "Beim nächsten Besuch weiß keiner, was letztes Jahr war, welche Teile getauscht wurden und was nicht in Ordnung war", "Für einen Termin wird zehnmal telefoniert"],
+  "5": ["Fälligkeiten hängen an einer Excel-Liste und am Gedächtnis einer Person", "Protokolle gibt es nur auf Papier, nicht beim Gerät gespeichert", "Kein gemeinsamer Stand zwischen Büro und Monteuren"],
+  "6": [
+   {"text": "Rechtzeitig sehen, bei welchem Kunden welche Wartung fällig ist", "prio": "muss", "nutzen": {"stundenMonat": 4, "euroMonat": 300, "text": "Zwei, drei Wartungen mehr im Jahr, Kunden bleiben bei uns"}, "handeln": "vorschlagen"},
+   {"text": "Wartungsprotokoll auf dem Handy mit Fotos, Messwerten und Unterschrift des Kunden", "prio": "muss", "nutzen": {"stundenMonat": 8, "euroMonat": null, "text": "Kein Papier mehr im Auto, Protokoll gleich im Büro"}, "handeln": "selbst"},
+   {"text": "Am Gerät sofort sehen: welches Gerät, Seriennummer, was letztes Mal war und welche Teile getauscht wurden", "prio": "muss", "nutzen": {"stundenMonat": 3, "euroMonat": null, "text": "Monteur ist vorbereitet, nichts wird übersehen"}, "handeln": "selbst"},
+   {"text": "Funktioniert auch im Keller ohne Netz", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Sonst ist es für uns nicht zu gebrauchen"}, "handeln": "egal"},
+   {"text": "Nächsten Termin vorschlagen, Kunde bestätigt ihn einfach", "prio": "soll", "nutzen": {"stundenMonat": 5, "euroMonat": null, "text": "Weniger Telefonieren im Büro"}, "handeln": "vorschlagen"},
+   {"text": "Daten für die Rechnung kommen ins Handwerkerprogramm rüber", "prio": "soll", "nutzen": {"stundenMonat": 3, "euroMonat": null, "text": "Nicht alles doppelt abtippen"}, "handeln": "vorschlagen"},
+   {"text": "Alle Daten samt Fotos mitnehmen können, wenn wir wechseln", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Die Daten gehören uns"}, "handeln": "egal"}
+  ],
+  "7": ["Keine Wartung wird mehr vergessen", "Protokoll ist fertig, wenn der Monteur das Haus verlässt", "Jeder sieht am Gerät die ganze Geschichte", "Termine ohne langes Telefonieren"],
+  "8": [
+   "Das System muss zu jedem Kunden die Anlagen mit Gerät, Seriennummer und Wartungsintervall führen.",
+   "Das System muss anzeigen, welche Wartungen bald fällig oder überfällig sind.",
+   "Das System muss dem Monteur am Gerät die bisherigen Protokolle, getauschten Teile und offenen Mängel zeigen.",
+   "Das System muss ein Wartungsprotokoll mit Messwerten und Fotos auf dem Handy erfassen.",
+   "Das System muss die Unterschrift des Kunden auf dem Handy aufnehmen.",
+   "Das System muss ohne Netz funktionieren und später abgleichen.",
+   "Das System muss einen nächsten Termin vorschlagen, den der Kunde bestätigen kann.",
+   "Das System muss die Daten für die Rechnung an unser Handwerkerprogramm übergeben.",
+   "Das System muss alle Daten mit Fotos vollständig exportieren können."
+  ],
+  "9": ["Monteure kurz einweisen", "Büro pflegt die Kunden und Anlagen", "Bestehende Excel-Liste einmal übernehmen"],
+  "10": ["Android-Handys der Monteure", "Windows-PC im Büro", "Muss im Keller ohne Netz gehen"],
+  "11": ["Handwerkerprogramm für Rechnungen", "Excel-Tabelle mit Wartungen"],
+  "12": ["Daten für die Rechnung ans Handwerkerprogramm", "Übernahme der Excel-Liste"],
+  "13": ["Kunden, Anlagen, Seriennummern", "Wartungsprotokolle mit Messwerten", "Fotos", "Unterschriften", "Rund 600 Anlagen"],
+  "14": ["personenbezogene Daten: ja", "Die Daten gehören uns"],
+  "15": ["Budget: 80 bis 100 Euro im Monat für den ganzen Betrieb, nicht pro Kopf"],
+  "18": [{"text": "Wie kommen die Daten genau ins Handwerkerprogramm (welches Format)?", "wer": "", "bis": ""}, {"text": "Wie bestätigt der Kunde den Termin (Mail, SMS, Link)?", "wer": "", "bis": ""}]
+ },
+ "rahmen": {"geraete": ["android", "windows"], "offline": "immer", "eigene": ["hinher"], "eigeneText": "Handwerkerprogramm für die Rechnungen bleibt", "datenort": ["server", "cloud"], "sicherung": ["allein"], "budgetEuro": null},
+ "nicht": ["Rechnungen schreiben", "Material bestellen", "Plantafel", "Buchhaltung", "Kein neues Programm für alles"]
+}

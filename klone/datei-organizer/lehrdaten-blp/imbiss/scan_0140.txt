@@ -1,0 +1,14 @@
+Kfz-Meisterwerkstatt Rademacher
+Rechnung 26-0291                         11.03.2026
+Fahrzeug: Kastenwagen WSR-HG 417, km 51.870
+Auftrag: Inspektion nach Herstellervorgabe, Bremsen vorn
+
+Inspektion groß (AW 22)                      198,00
+Bremsscheiben + Beläge vorn, Material        214,60
+Einbau Bremsen (AW 12)                       108,00
+Motoröl 6,5 l 5W-30, Ölfilter                 96,40
+Kleinteile                                    12,00
+
+Summe netto  629,00
+19 % MwSt    119,51
+Endsumme     748,51 EUR

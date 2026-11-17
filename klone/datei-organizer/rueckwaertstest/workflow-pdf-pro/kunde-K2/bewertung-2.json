@@ -1,0 +1,19 @@
+{"bewerter":2,"wertung":{
+"M01":"getroffen","M02":"getroffen","M03":"getroffen","M04":"teilweise","M05":"fehlt",
+"M06":"getroffen","M07":"teilweise","M08":"verkehrt","M09":"verkehrt","M10":"teilweise",
+"M11":"teilweise","M12":"teilweise","M13":"teilweise","M14":"teilweise","M15":"teilweise",
+"M16":"teilweise","M17":"fehlt","M18":"teilweise","M19":"teilweise","M20":"teilweise",
+"M21":"teilweise","M22":"teilweise","M23":"teilweise","M24":"teilweise","M25":"fehlt",
+"M26":"fehlt","M27":"getroffen","M28":"teilweise","M29":"teilweise","M30":"teilweise",
+"M31":"fehlt","M32":"verkehrt","M33":"getroffen","M34":"getroffen","M35":"teilweise",
+"M36":"getroffen","M37":"teilweise","M38":"teilweise","M39":"fehlt","M40":"teilweise",
+"M41":"teilweise","M42":"teilweise","M43":"fehlt","M44":"getroffen","M45":"getroffen",
+"M46":"getroffen","M47":"teilweise","M48":"getroffen","M49":"teilweise","M50":"fehlt",
+"M51":"fehlt","M52":"verkehrt","M53":"fehlt","M54":"fehlt","M55":"fehlt","M56":"teilweise"},
+"zusaetze":[
+"Windows-App mit dauerhafter Signatur (Referenz: Windows-Installer unsigniert)",
+"Browser-Web-App wird abgelöst und nicht weiterentwickelt (Referenz: PWA bleibt für iPhone/iPad und wird gleichgezogen)",
+"Pflicht-Ordnerwahl und Passwort bei der ersten Einrichtung, alles im gewählten Ordner statt App-Speicher (Referenz: interne Arbeitsablage ohne Ordnerwahl)",
+"Partner-Apps als Familien-, Mail- und Buchhaltungs-App eines Büros mit Inhaberin und zwei Mitarbeiterinnen; Frage nach eigenen Geräten/Mehrbenutzer",
+"Bauschritt-Reihenfolge, Stundenrechnung und Widersprüche im Auftrag (Größe/Stunden, Fristen, Begriffswechsel)",
+"Frage, ob die App selbst Mails versenden soll"]}

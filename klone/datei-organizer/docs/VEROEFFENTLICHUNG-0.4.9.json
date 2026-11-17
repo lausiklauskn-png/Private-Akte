@@ -1,0 +1,35 @@
+{
+  "fassung": "0.4.9",
+  "datum": "2026-11-16",
+  "freigabe": "Klaus 16.11.2026: „Okay, 49 kannst du starten. Auf Main setzen.“",
+  "inhalt": "Discovery: erzeugte Hintergrundmusik („Bing-Bing“) entfernt; ruhige Musik unter dem Sprecher in den vier Filmen mit eingebranntem Ton (große Geschichte, Kurzform, Runde für Runde, Kugel-Film); Knopf „Stadtfilm“ entfällt (Doppelung zu „Führung starten“), dafür in der 3D-Ansicht „Film-Ansicht“ als Rückweg zum Baum-Bild ohne selbst startenden Film (#50)",
+  "android": {
+    "commit": "6665bae6c4454836fef84938a10105518e63022c",
+    "lauf": 43783092615,
+    "datei": "Datei-Organizer-Pro-0.4.9.apk",
+    "versionCode": 49,
+    "groesse": 72282936,
+    "sha256": "0bed7948a58e7c6de086e4c61e13e2e17b8fcc87118008a3b1f1a5bec2673ba1",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.9",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.9.apk",
+    "geprueft": "Release-Lauf grün; Release-Datei aus der Sitzung geladen, Größe und SHA-256 gleich .apk.json und GitHub-Angabe"
+  },
+  "windows": {
+    "commit": "6665bae6c4454836fef84938a10105518e63022c",
+    "lauf": 43783094960,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.9-x64-setup.exe",
+    "groesse": 87423909,
+    "sha256": "16132f9277d9c77b5ee09208dc1d7224237b5435ad521d1e68b5ecff71733af4",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.9-x64-setup.exe",
+    "geprueft": "Bau grün; Hochladen beim ersten Versuch abgebrochen (Android lud zur selben Zeit auf denselben Server, „Another instance of rrsync“), zweiter Versuch desselben Laufs grün einschließlich Prüfung von außen; Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.8)"
+  },
+  "basic": {
+    "commit": "6665bae6c4454836fef84938a10105518e63022c",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Merge-Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_enthalten": "„reihum“ neu gesprochen (kam nach dem Start der Ausgabe, Fassung 0.4.10); Figur mit mehreren Augen in der Kiosk-Schlange (nicht behoben)",
+  "nicht_geprueft": "Musik nicht angehört; nicht am Gerät: Film-Ansicht, Rückweg aus 3D, Update von 0.4.8 auf 0.4.9; Update-Server aus der Sitzung nicht abrufbar"
+}

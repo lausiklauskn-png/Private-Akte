@@ -1,0 +1,21 @@
+Sparkasse Beispielheim
+Bahnhofstraße 85 · 45678 Beispielheim
+
+Gerhard und Ilse Römerling
+Am Beispielhang 3
+45678 Beispielheim
+
+Kontoauszug 6/2026
+Kontoinhaber: Gerhard und Ilse Römerling
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 30. Juni 2026
+
+Alter Kontostand               2129,10 EUR
+02.06.  Dauerauftrag Miete                          -633,00
+06.06.  Lastschrift Stadtwerke Abschlag             -101,00
+10.06.  Bargeldauszahlung Automat                   -100,00
+14.06.  Überweisung Gutschrift                       183,00
+18.06.  Kartenzahlung Beispiel-Markt                 -78,00
+22.06.  Lastschrift Beispielfunk Mobil               -40,00
+26.06.  Gutschrift Lohn/Gehalt                       962,00
+Neuer Kontostand               2322,10 EUR

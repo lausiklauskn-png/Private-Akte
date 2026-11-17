@@ -1,0 +1,33 @@
+{
+ "haushalte": [
+  {
+   "id": "h-brandis-wg",
+   "name": "Brandis (Studentin, WG Kastanienweg)",
+   "personen": [
+    {
+     "vorname": "Jule",
+     "name": "Brandis",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [
+    "Fahrrad Velmont Tour 7"
+   ]
+  },
+  {
+   "id": "h-kessing",
+   "name": "Kessing (Berufsanfänger, Single)",
+   "personen": [
+    {
+     "vorname": "Malte",
+     "name": "Kessing",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [
+    "PKW Corvin Piccolo (LRT-MK 412)",
+    "Motorrad Tavaro TX 500 (LRT-K 77)"
+   ]
+  }
+ ]
+}

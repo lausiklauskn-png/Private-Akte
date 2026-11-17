@@ -1,0 +1,16 @@
+Von: Beispiel Creative <billing@creative-beispiel.example>
+An: studio@feldkamp-grafik.example
+Gesendet: Do 04.09.2025 03:11
+Betreff: Ihre Rechnung für Creative Suite (Beispiel) – Jahresabo
+Anlagen: Rechnung_IE0000441.pdf
+
+Vielen Dank für Ihre Zahlung.
+
+Produkt   Zeitraum   Betrag
+
+Creative Suite Alle Apps   04.09.2025–03.09.2026   719,88 EUR
+
+davon MwSt 19 %   -   114,94 EUR
+
+Abgebucht von Kreditkarte **** 0000. Das Abo verlängert sich automatisch.
+

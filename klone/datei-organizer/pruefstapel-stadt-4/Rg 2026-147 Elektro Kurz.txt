@@ -1,0 +1,30 @@
+ELEKTRO BEISPIEL KURZ
+Meisterbetrieb · Installation · E-Check · Notdienst
+Handwerkerhof 3 · 99903 Musterhausen am Rhein · Tel. 0000-334455
+
+Herrn Florian Wiesbeck
+Rebhangstraße 31
+99903 Musterhausen am Rhein
+
+Rechnung Nr. 2026-147                     Datum: 16.07.2026
+Baustelle: Rebhangstraße 31a (Einliegerwohnung)
+Ausführung: 13.07.–14.07.2026
+
+Pos  Menge  Einheit  Beschreibung                                    EP       GP
+1    1      Stk      Unterverteilung Einliegerwhg. erneuert,        385,00   385,00
+                     inkl. 2 FI/LS-Schalter
+2    3      Stk      Steckdose Küche zusätzlich gesetzt               38,50   115,50
+3    1      Stk      Herdanschlussdose ersetzt                         29,00    29,00
+4    6,5    Std      Monteur                                           58,00   377,00
+5    1      psch     Anfahrt                                           25,00    25,00
+6    1      psch     Kleinmaterial, Leitungen NYM 3x1,5               46,80    46,80
+                                                         Netto        978,30 €
+                                                    19 % MwSt         185,88 €
+                                                    Brutto          1.164,18 €
+Lohnanteil (für § 35a EStG): 402,00 € netto / 478,38 € brutto
+
+Zahlbar innerhalb 14 Tagen ohne Abzug, also bis 30.07.2026.
+Bankverbindung: IBAN DE00 0000 0000 0000 0000 00 · Volksbank Beispiel
+
+Vielen Dank für Ihren Auftrag!
+Martin Kurz, Elektromeister

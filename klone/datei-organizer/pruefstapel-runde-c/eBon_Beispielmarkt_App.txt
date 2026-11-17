@@ -1,0 +1,30 @@
+Beispielmarkt App – Ihr digitaler Kassenbon
+
+Hallo Lea, hier ist dein eBon vom 21.08.2026, 18:07 Uhr
+Filiale: Beispielmarkt Beispielstadt Campus, Mensaweg 1
+Kundenkarte: BM-PLUS **** 4471
+
+Artikel                   Menge   Einzelpreis   Betrag
+Kuechenrolle 4Er          2       2,99          5,98
+Zahnpasta                 1       1,45          1,45
+Gurke Stk                 2       0,69          1,38
+Toastbrot                 2       1,29          2,58
+Batterien Aa 8Er          2       4,99          9,98
+Joghurt Natur 500G        3       0,99          2,97
+Gummibaerchen             1       1,09          1,09
+Salat Eisberg             2       1,09          2,18
+Senf Mittelscharf         3       0,75          2,25
+Mayonnaise                3       1,79          5,37
+Tomaten Rispe             2       2,19          4,38
+Gummibaerchen             2       1,09          2,18
+Kaffee Gemahlen 500G      2       6,49          12,98
+Blumenstrauss             1       4,99          4,99
+
+Zwischensumme  59,76 EUR
+Coupon 3 % Studierende  -1,79 EUR
+Gesamt  57,97 EUR
+Bezahlt mit  Mobile Payment
+
+Gesammelte Punkte: 38  Punktestand: 1.204
+Dieser Bon ist ein gültiger Kassenbeleg. Für Umtausch zeige ihn in der App an der Kasse vor.
+Beispielmarkt GmbH & Co. KG · Bon-ID 7F2A-91C0-3311

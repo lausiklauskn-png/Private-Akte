@@ -1,0 +1,26 @@
+# Zweirad Beispiel-Kühn
+Werftstr. 5 · 22999 Beispielhafen
+
+Herrn
+Daniel Lenz
+Hafenweg 12
+22999 Beispielhafen
+
+Rechnung: ZK-25-0310
+Kennzeichen: BSP-DL 77
+km-Stand: 18.442
+Datum: 11.03.2025
+
+# Rechnung Saisonstart-Inspektion
+
+|Pos.|Leistung/Teil|Menge|Betrag|
+|1|Inspektion 18.000 km|1|149,00 EUR|
+|2|Motoröl 10W-40|3 l|47,70 EUR|
+|3|Ölfilter|1|12,90 EUR|
+|4|Kettensatz|1|189,00 EUR|
+|5|Montage Kettensatz|1,2 Std.|90,00 EUR|
+|6|Reifen hinten 180/55|1|164,00 EUR|
+||Gesamt inkl. MwSt.||652,60 EUR|
+
+Bezahlt per Karte am 11.03.2025. Vielen Dank!
+

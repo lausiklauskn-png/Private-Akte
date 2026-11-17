@@ -1,0 +1,9 @@
+cloudoffice.example – Abo-Rechnung
+Rechnungsnr. INV-74724870       2026-01-06
+
+Kunde: Haarstudio Federleicht, Merle Osterkamp
+Büro-Software (Textverarbeitung, Tabellen, E-Mail-Postfach),
+1 Nutzerlizenz, Monat September
+
+Betrag inkl. 19 % USt   9,99 EUR
+Netto 8,39 EUR / USt 1,60 EUR

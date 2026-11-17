@@ -1,0 +1,15 @@
+Steigtechnik-Direkt.example – Hoehenzugang Vertriebs GmbH
+
+Rechnung RG-7700451                  Bestellung vom 28.05.2026
+Rechnungsdatum 02.06.2026            Kundennr. 300881
+
+Rechnungsempfaenger: Elektro Brandhuber, 84577 Altenmoos
+
+Menge  Artikel                                             Netto
+1      Alu-Fahrgeruest "RollTower 150", Arbeitshoehe 6,3 m,
+       komplett mit Fahrbalken und Buehne                1.495,00
+1      Speditionsversand                                    85,00
+
+Nettosumme           1.580,00
+19 % MwSt.           300,20
+Rechnungsbetrag      1.880,20 EUR        Zahlart: Vorkasse – bezahlt

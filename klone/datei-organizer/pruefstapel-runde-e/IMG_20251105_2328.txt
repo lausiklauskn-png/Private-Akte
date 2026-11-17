@@ -1,0 +1,29 @@
+Ambulanter Pflegedienst Beispiel Hand in Hand
+Ambulanter Pflegedienst Beispiel Hand in Hand · Pflegeweg 4 · 34567 Beispielstadt
+
+Frau Gertrud Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kundennummer: PD-0618
+Datum: 05.11.2025
+
+Rechnung Oktober 2025 – Eigenanteil
+
+Sehr geehrte Frau Brandtner,
+
+die Pflegekasse hat ihren Anteil übernommen. Es verbleibt folgender Eigenanteil:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Investitionskostenpauschale je Einsatz   30   2,10 €   63,00 €
+2   Leistungen über Sachleistungsbetrag   1   214,60 €   214,60 €
+3   Hauswirtschaft (Entlastungsbetrag ausgeschöpft)   2   34,00 €   68,00 €
+
+Rechnungsbetrag: 345,60 €
+Pflegeleistungen sind umsatzsteuerfrei.
+
+Bitte überweisen Sie den Betrag von 345,60 € bis zum 20.11.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Ambulanter Pflegedienst Beispiel Hand in Hand
+Ambulanter Pflegedienst Beispiel Hand in Hand · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

@@ -1,0 +1,20 @@
+Radiologische Praxis Beispiel
+Am Klinikum 2 · 37999 Musterau
+
+Herrn Dr. med. Beispiel-Krause
+Kirchstraße 4
+37999 Musterau
+
+Patient: Pfannschmidt, Gerhard, geb. 12.05.1952
+Untersuchung: MRT Kniegelenk rechts
+Datum: 21.11.2006
+
+Befundbericht
+
+Sehr geehrter Herr Kollege,
+
+Befund: Degenerative Veränderung des Innenmeniskus Hinterhorn, Grad II. Kein Erguß. Knorpel femoral medial ausgedünnt.
+
+Beurteilung: Beginnende Gonarthrose medial. Konservative Therapie empfohlen.
+
+Mit kollegialen Grüßen

@@ -1,0 +1,16 @@
+        BEISPIEL DROGERIE
+        Hauptstraße 64
+        67890 Beispieldorf
+------------------------------------
+Shampoo                         2,45
+Zahnpasta                       0,95
+Waschmittel 20WL                4,95
+Schwämme 10er                   1,15
+------------------------------------
+SUMME EUR                       9,50
+Bar
+
+22. August 2026 11:57  Kasse 4  Bon 7008
+
+Vielen Dank für Ihren Einkauf!
+Umtausch nur mit Bon.

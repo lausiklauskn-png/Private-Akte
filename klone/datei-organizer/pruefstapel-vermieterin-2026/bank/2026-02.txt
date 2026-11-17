@@ -1,0 +1,97 @@
+Raiffeisen- und Bürgerbank Sellenbrück eG                          KONTOAUSZUG
+Marktstraße 3 · 31999 Sellenbrück                   Nr. 2/2026 · Blatt 1 von 1
+BIC GENODEF0SLB
+
+Kontoinhaberin: Hannelore Wiebusch, Lindenhofweg 14, 31999 Sellenbrück
+IBAN: DE00 3499 9000 0001 2345 67    Kontoart: Giro Klassik    Währung: EUR
+Auszugszeitraum: 01.02.2026 bis 27.02.2026    erstellt am 27.02.2026
+==============================================================================
+Bu-Tag Wert   Vorgang / Verwendungszweck                            Umsatz EUR
+------------------------------------------------------------------------------
+              alter Kontostand (Auszug 1/2026)                     17.006,98 H
+
+02.02. 02.02. DAUERAUFTRAG                                             95,20 S
+              Hauswartservice Brinkmeier
+              Hausmeister Lindenhofweg 14
+              lt. Monatsrechnung Vormonat
+02.02. 02.02. GUTSCHRIFT                                              800,00 H
+              Brandtner Markus u. Sabine
+              MIETE LINDENHOFWEG 14 1.OG LINKS
+              DAUERAUFTRAG
+02.02. 02.02. SEPA-LASTSCHRIFT                                        446,52 S
+              Wupsetaler Versicherung AG
+              K 00-4471-9028 KFZ XSB-HW 000
+              BEITRAG 01.01.-31.12.2026
+              MANDAT WV-K-0044719028
+03.02. 03.02. GUTSCHRIFT                                              700,00 H
+              Aydemir Selin u. Emre
+              Miete Februar DG Lindenhofweg 14
+05.02. 05.02. SEPA-LASTSCHRIFT                                        286,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 ERDGAS ABSCHLAG 02/2026
+              MANDAT SW-2044170-01
+05.02. 05.02. SEPA-LASTSCHRIFT                                         34,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 ALLGEMEINSTROM ABSCHLAG
+              02/2026 MANDAT SW-2044170-02
+05.02. 05.02. SEPA-LASTSCHRIFT                                         62,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-03 STROM ABSCHLAG 02/2026
+              MANDAT SW-2044170-03
+06.02. 06.02. GUTSCHRIFT                                              500,00 H
+              Petrovic Dragan
+              Miete Februar Teilbetrag
+              Rest folgt
+09.02. 06.02. KARTENZAHLUNG                                            72,56 S
+              TANKHOF SELLENBRUECK//SELLENBRUECK
+              06.02. 08.57 GIROCARD KARTE 1
+10.02. 10.02. SEPA-LASTSCHRIFT                                         42,95 S
+              Telvia Kommunikation GmbH
+              KD 77004129 RG 7700401882 01/2026
+              TELVIA ZUHAUSE 50
+12.02. 12.02. SEPA-UEBERWEISUNG                                       224,23 S
+              Stadtkasse Sellenbrueck
+              BZ 00.2140.007731.4 Grundbesitzabg.
+              1. Rate 2026
+13.02. 13.02. SEPA-UEBERWEISUNG                                       386,36 S
+              Wasserverband Obere Wupse
+              Kassenzeichen 5.0417.221 Nachz. 2025
+              57,36 + 1. Abschlag 2026
+16.02. 16.02. SEPA-LASTSCHRIFT                                        102,34 S
+              Gebaeudedienste Ahlers u. Kramp GbR
+              AK-26-1049 FEBRUAR 2026
+              VERTRAG AK-V-2025-039 MANDAT AK-039
+16.02. 16.02. SEPA-LASTSCHRIFT                                        173,00 S
+              Lohnsteuerhilfe Mittelland e.V.
+              MITGL 044-17726 BEITRAG 2026
+              BELEG B26-0451208
+18.02. 18.02. GUTSCHRIFT                                              393,00 H
+              Mittelland Pflegekasse
+              M000481726 EB-26-014402 ERSTATTUNG
+              ENTLASTUNGSBETRAG 10-12/25
+20.02. 20.02. SEPA-LASTSCHRIFT                                        138,43 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 JAHRESABRECHNUNG 2025
+              RG 26-ER-0081447 MANDAT SW-2044170-01
+20.02. 20.02. GUTSCHRIFT                                               12,36 H
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 GUTHABEN
+              JAHRESABRECHNUNG 2025 RG 26-ST-0081449
+27.02. 27.02. SEPA-LASTSCHRIFT                                        412,00 S
+              Landeshypo Mittelland AG
+              DARLEHEN 600 0441 7790 RATE 02/2026
+              ZINS UND TILGUNG
+27.02. 27.02. GUTSCHRIFT                                            1.142,37 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 02.26
+              ALTERSRENTE
+27.02. 27.02. GUTSCHRIFT                                              698,40 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 02.26
+              WITWENRENTE
+
+              neuer Kontostand vom 27.02.2026                      18.777,52 H
+==============================================================================
+Summe Belastungen: 2.475,59 S   Summe Gutschriften: 4.246,13 H   Posten: 20
+Eingeräumte Kontoüberziehung: 2.000,00 EUR · Sollzinssatz 11,25 % p. a.
+Bitte prüfen Sie den Auszug. Einwendungen sind unverzüglich zu erheben.

@@ -1,0 +1,7 @@
+Von: eltern-app@gymnasium-beispielrhein.example
+An: sabine.brueckmann@mail.example
+Datum: Mo, 30 Nov 2026 09:11:02 +0100
+Betreff: Elternsprechtag 09.12.2026 - bitte Termin buchen
+
+Guten Tag, am Mittwoch, 09.12.2026 von 15 bis 19 Uhr findet der Elternsprechtag statt. Ihr gebuchter Termin
+für Lena Brückmann: 16:20 Uhr bei Frau Beispiel-Vogt (Raum 118). Umbuchung in der Eltern-App bis 04.12.2026.

@@ -1,0 +1,23 @@
+Eiscafé Dolomiti Beispiel
+Inh. Marco Beispiel · Marktplatz 1 · 45678 Talheim-Beispiel
+
+Herrn
+Leon Sommerfeld
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Abrechnung Juni 2026 – geringfügige Beschäftigung
+Personalnummer: 14   Steuer-ID: 39 610 774 215   Eintritt: 02.05.2026
+Rentenversicherungspflicht: befreit (Antrag vom 02.05.2026)
+
+Datum        Stunden   Satz     Betrag
+Woche 23     9,0       13,90    125,10
+Woche 24     11,5      13,90    159,85
+Woche 25     8,0       13,90    111,20
+Woche 26     12,0      13,90    166,80
+Brutto                          562,95
+Abzüge Arbeitnehmer             0,00
+Auszahlung                      562,95
+
+Die Pauschalabgaben trägt der Arbeitgeber. Auszahlung auf IBAN DE00 0000 0000 0000 0000 00.
+Hinweis: Die Verdienstgrenze von 603 € monatlich ist einzuhalten.

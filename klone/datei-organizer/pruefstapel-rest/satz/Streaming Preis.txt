@@ -1,0 +1,11 @@
+Von: Beispielflix <info@beispielflix.example>
+An: daniel.lenz@mail.example
+Gesendet: Mi 01.10.2025 06:45
+Betreff: Wichtig: Änderung deines Abopreises
+
+Hallo Daniel,
+
+ab 01.11.2025 kostet dein Standard-Abo 15,99 EUR statt 13,99 EUR. Bitte stimme der Änderung bis 31.10.2025 in deinem Konto zu, sonst endet dein Abo zum 30.11.2025.
+
+Dein Beispielflix-Team
+

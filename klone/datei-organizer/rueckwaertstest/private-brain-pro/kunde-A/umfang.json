@@ -1,0 +1,8 @@
+{"bausteine":[
+{"katalog":"suche","name":"Bedeutungssuche über alle Unterlagen (Mails, Briefe, Fotos, PDFs) in einem Suchfeld, lokal mit eingebautem Modell, Originale nur verwiesen und aus dem Treffer geöffnet","groesse":"gross","deckt":["B-19","B-21","B-22","B-31","B-33","B-34"],"faktoren":["offline","ki"]},
+{"katalog":"scan","name":"Texterkennung (OCR) für abfotografierte und eingescannte Briefe, Text in den Suchkatalog","groesse":"mittel","deckt":["B-20","B-32"],"faktoren":["offline"]},
+{"katalog":"schnitt","name":"Mail-Anbindung IMAP/SMTP für drei Konten: Lesen und Schreiben im selben Programm wie die Suche","groesse":"gross","deckt":["B-23","B-35"],"faktoren":[]},
+{"katalog":"datei","name":"Verschlüsselte Ablage mit Passwort auf Tablet bzw. Speicherkarte, mit Wiederherstellung auf neuem Gerät","groesse":"mittel","deckt":["B-24","B-25","B-38","B-39"],"faktoren":["offline"]},
+{"katalog":"dateipruef","name":"Prüfung von Rechnungen und Anhängen mit Hinweis auf Auffälligkeiten, ohne etwas zu löschen","groesse":"mittel","deckt":["B-26","B-37"],"faktoren":["offline"]},
+{"katalog":"altdaten","name":"Ganze Ordner auf einmal einlesen (PDF-Ordner, Fotos, Scans) in den Katalog","groesse":"mittel","deckt":["B-27","B-36"],"faktoren":[]}
+]}

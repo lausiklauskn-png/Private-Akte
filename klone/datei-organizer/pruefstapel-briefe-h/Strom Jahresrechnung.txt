@@ -1,0 +1,19 @@
+Stadtwerke Wernsried KU                 Kundennr. 2004 118 7
+Verbrauchsabrechnung Strom              Rechnungsnr. VA 25 / 0061423
+Abnahmestelle: Am Hopfenrain 6          erstellt 21.01.2026
+
+Zeitraum 01.01.2025 – 31.12.2025
+Zählerstand alt  41.208   neu  45.731   Verbrauch 4.523 kWh
+(Vorjahr 3.390 kWh)
+
+Arbeitspreis  4.523 kWh x 31,84 ct        1.440,12
+Grundpreis    12 Mon. x 11,90               142,80
+Summe brutto                              1.582,92
+geleistete Abschläge 11 x 118,00         -1.298,00
+Nachzahlung                                 284,92 EUR
+
+wird zusammen mit dem neuen Abschlag (138,00 EUR mtl. ab Februar)
+am 05.02.2026 per SEPA-Mandat eingezogen.
+
+Hinweis: Mehrverbrauch? Unser Energieberater kommt kostenlos ins
+Haus (Lifter, Ladegeräte u. ä. erfassen wir gern gesondert).

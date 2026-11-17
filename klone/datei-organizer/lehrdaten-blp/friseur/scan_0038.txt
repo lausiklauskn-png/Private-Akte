@@ -1,0 +1,9 @@
+LOHNJOURNAL  April 2026                                 Seite 1
+Mandant: Haarstudio Federleicht (Merle Osterkamp)
+
+PersNr  Name              Brutto     LSt     SV-AN    Netto
+002     Brandner, J.     2.655,76  287,11  538,33  1.830,32
+003     Aksoy, D.        933,11    0,00  186,62  746,49
+
+Summe Bruttolöhne/-gehälter: 3.588,87
+Erstellt von Steuerkanzlei Ebeling & Rauch

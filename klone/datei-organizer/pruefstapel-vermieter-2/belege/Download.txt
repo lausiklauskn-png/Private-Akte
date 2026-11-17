@@ -1,0 +1,16 @@
+WohnPortal24 GmbH | Online-Immobilienmarkt | wohnportal24.example
+Hafenallee 100, 20999 Hansestadt | USt-ID DE000333444
+
+Invoice 2026-WP-118842
+Account ID: U-7781-3390   Listing ID: 99410772
+Invoice date: 03.04.2026
+
+Bill to: Stefan Brenner, Ahornstraße 12, 79997 Neudorf
+
+Item                                         Net      VAT 19%    Gross
+Inserat "Premium 4 Wochen" Wohnung        29,33     5,57    34,90
+---------------------------------------------------------------------
+Amount due                                                  EUR 34,90
+
+Payment: SEPA direct debit from DE00 6005 0000 0123 4567 89 on or after 06.04.2026
+Mandate reference WP24-U77813390

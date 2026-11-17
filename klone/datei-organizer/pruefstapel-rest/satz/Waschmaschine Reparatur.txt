@@ -1,0 +1,23 @@
+# Hausgeräte-Service Beispiel
+Werkstattgasse 2 · 22999 Beispielhafen
+
+Herrn und Frau
+Daniel Lenz und Julia Okafor-Lenz
+Hafenweg 12
+22999 Beispielhafen
+
+Auftrag: HS-2602-31
+Datum: 20.02.2026
+
+# Rechnung Reparatur Waschmaschine
+
+|Pos.|Leistung|Menge|Betrag|
+|1|Anfahrt|1|39,00 EUR|
+|2|Arbeitszeit|0,75 Std.|52,50 EUR|
+|3|Laugenpumpe|1|64,90 EUR|
+||Gesamt inkl. MwSt.||156,40 EUR|
+
+Bitte überweisen Sie den Betrag innerhalb von 14 Tagen, spätestens bis 06.03.2026.
+
+Mit freundlichen Grüßen
+@unterschrift

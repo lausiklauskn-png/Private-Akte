@@ -1,0 +1,11 @@
+Sparkasse Weidenrode                         Einzahlungsquittung SB-Terminal
+Filiale Marktplatz · Gerät 0003
+
+Datum/Zeit     05.01.2026  08:52
+Gutschrift auf IBAN DE00 0000 0000 0000 0000 00
+Kontoinhaber   Blumenwerkstatt Harkort
+Einzahlung bar                      5.000,00 EUR
+Einzahler      M. Harkort
+Vermerk        Privateinlage – Anschaffung Kasse/Kühlung
+
+Bitte Beleg aufbewahren.

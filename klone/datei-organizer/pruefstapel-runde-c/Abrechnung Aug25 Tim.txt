@@ -1,0 +1,22 @@
+Beispiel Elektrotechnik GmbH – Entgeltabrechnung August 2025
+
+Herrn Tim Hartmann, Mühlgasse 4, 23458 Neudorf-Beispiel
+Personalnummer: A-25-03  Steuerklasse: I  Kinderfreibetrag: 0  Konfession: rk
+Krankenkasse: Beispiel Gesundheitskasse  Steuer-IdNr.: 61 402 337 819
+
+Bezeichnung  Betrag EUR
+Ausbildungsvergütung 1. AJ  920,00
+VWL Arbeitgeber  13,29
+Gesamtbrutto  933,29
+Lohnsteuer  0,00
+Kirchensteuer  0,00
+Krankenversicherung  -75,66
+Pflegeversicherung  -21,47
+Rentenversicherung  -86,79
+Arbeitslosenversicherung  -12,13
+Nettobezug  737,24
+VWL-Überweisung Bausparvertrag  -13,29
+Auszahlung  723,95
+
+Überweisung auf IBAN DE00 0000 0000 0000 0000 00 (Beispiel Direktbank) am 29.08.2025.
+Resturlaub 2025: 12 Tage

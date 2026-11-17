@@ -1,0 +1,484 @@
+{
+ "dateien": [
+  {
+   "datei": "20260123_861.txt",
+   "konto": "4250"
+  },
+  {
+   "datei": "20260313_346.txt",
+   "konto": "4380"
+  },
+  {
+   "datei": "20260325_891.txt",
+   "konto": "4670"
+  },
+  {
+   "datei": "20260421_560.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "20260517_740.txt",
+   "konto": "4600"
+  },
+  {
+   "datei": "20260718_388.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "20260718_394.txt",
+   "konto": "4930"
+  },
+  {
+   "datei": "20260721_775.txt",
+   "konto": "0480"
+  },
+  {
+   "datei": "20260722_434.txt",
+   "konto": "4660"
+  },
+  {
+   "datei": "20260817_608.txt",
+   "konto": "0320"
+  },
+  {
+   "datei": "20260819_291.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "20260914_597.txt",
+   "konto": "1800"
+  },
+  {
+   "datei": "20260918_682.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "Dokument24.txt",
+   "konto": "4630"
+  },
+  {
+   "datei": "Dokument25.txt",
+   "konto": "4920"
+  },
+  {
+   "datei": "Dokument34.txt",
+   "konto": "4930"
+  },
+  {
+   "datei": "Dokument38.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Dokument4.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "Dokument40.txt",
+   "konto": "4600"
+  },
+  {
+   "datei": "Dokument6.txt",
+   "konto": "4360"
+  },
+  {
+   "datei": "Dokument7.txt",
+   "konto": "4210"
+  },
+  {
+   "datei": "IMG_3676.txt",
+   "konto": "4630"
+  },
+  {
+   "datei": "IMG_3791.txt",
+   "konto": "8120"
+  },
+  {
+   "datei": "IMG_3835.txt",
+   "konto": "4600"
+  },
+  {
+   "datei": "IMG_4284.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "IMG_5890.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "IMG_9342.txt",
+   "konto": "4540"
+  },
+  {
+   "datei": "Kopie von scan_0001.txt",
+   "konto": "4210"
+  },
+  {
+   "datei": "Kopie von scan_0005.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "Kopie von scan_0012.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "Kopie von scan_0034.txt",
+   "konto": "8120"
+  },
+  {
+   "datei": "Kopie von scan_0043.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Kopie von scan_0057.txt",
+   "konto": "4600"
+  },
+  {
+   "datei": "Kopie von scan_0059.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Kopie von scan_0067.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "Kopie von scan_0069.txt",
+   "konto": "4250"
+  },
+  {
+   "datei": "Kopie von scan_0071.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Kopie von scan_0090.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "konto": "4670"
+  },
+  {
+   "datei": "PDF_export_101.txt",
+   "konto": "4260"
+  },
+  {
+   "datei": "PDF_export_103.txt",
+   "konto": "4250"
+  },
+  {
+   "datei": "PDF_export_137.txt",
+   "konto": "8125"
+  },
+  {
+   "datei": "PDF_export_185.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "PDF_export_194.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "PDF_export_200.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "PDF_export_22.txt",
+   "konto": "0400"
+  },
+  {
+   "datei": "PDF_export_40.txt",
+   "konto": "4910"
+  },
+  {
+   "datei": "PDF_export_54.txt",
+   "konto": "4950"
+  },
+  {
+   "datei": "PDF_export_85.txt",
+   "konto": "4360"
+  },
+  {
+   "datei": "PDF_export_99.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "RE_13323.txt",
+   "konto": "4260"
+  },
+  {
+   "datei": "RE_24449.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "RE_29523.txt",
+   "konto": "4940"
+  },
+  {
+   "datei": "RE_29830.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "RE_32509.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "RE_33600.txt",
+   "konto": "4955"
+  },
+  {
+   "datei": "RE_45627.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "RE_63383.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "RE_77255.txt",
+   "konto": "4930"
+  },
+  {
+   "datei": "RE_82284.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "RE_89273.txt",
+   "konto": "8500"
+  },
+  {
+   "datei": "Rechnung (1).txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Rechnung (4).txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Rechnung (5).txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "Rechnung (6).txt",
+   "konto": "4945"
+  },
+  {
+   "datei": "Rechnung (7).txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "Scan 1.3.txt",
+   "konto": "4920"
+  },
+  {
+   "datei": "Scan 12.4.txt",
+   "konto": "0480"
+  },
+  {
+   "datei": "Scan 13.9.txt",
+   "konto": "4540"
+  },
+  {
+   "datei": "Scan 14.1.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "Scan 15.12.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "Scan 15.6.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "Scan 20.7.txt",
+   "konto": "1890"
+  },
+  {
+   "datei": "Scan 21.6.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "Scan 30.2.txt",
+   "konto": "0410"
+  },
+  {
+   "datei": "Scan 4.8.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "WhatsApp Image 2026-02-22 at 12.12.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-03-06 at 8.36.txt",
+   "konto": "4240"
+  },
+  {
+   "datei": "WhatsApp Image 2026-04-14 at 17.33.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-05-07 at 13.20.txt",
+   "konto": "4955"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-02 at 20.21.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-22 at 17.32.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-08-10 at 11.57.txt",
+   "konto": "4260"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-10 at 13.19.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-15 at 12.51.txt",
+   "konto": "4920"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-27 at 12.24.txt",
+   "konto": "4930"
+  },
+  {
+   "datei": "beleg.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "beleg_23.txt",
+   "konto": "4910"
+  },
+  {
+   "datei": "beleg_57.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "beleg_62.txt",
+   "konto": "4240"
+  },
+  {
+   "datei": "beleg_65.txt",
+   "konto": "4120"
+  },
+  {
+   "datei": "bon 23.txt",
+   "konto": "4945"
+  },
+  {
+   "datei": "bon 24.txt",
+   "konto": "4930"
+  },
+  {
+   "datei": "bon 33.txt",
+   "konto": "4910"
+  },
+  {
+   "datei": "bon 37.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "bon 39.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "bon 45.txt",
+   "konto": "4210"
+  },
+  {
+   "datei": "bon 50.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "bon 7.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "quittung17.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "quittung19.txt",
+   "konto": "4670"
+  },
+  {
+   "datei": "quittung2.txt",
+   "konto": "4380"
+  },
+  {
+   "datei": "quittung20.txt",
+   "konto": "8400"
+  },
+  {
+   "datei": "quittung24.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "quittung34.txt",
+   "konto": "4635"
+  },
+  {
+   "datei": "quittung41.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "quittung52.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "quittung8.txt",
+   "konto": "4600"
+  },
+  {
+   "datei": "rechnung.txt",
+   "konto": "4980"
+  },
+  {
+   "datei": "scan_0146.txt",
+   "konto": "4970"
+  },
+  {
+   "datei": "scan_0173.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "scan_0331.txt",
+   "konto": "4650"
+  },
+  {
+   "datei": "scan_0408.txt",
+   "konto": "8125"
+  },
+  {
+   "datei": "scan_0511.txt",
+   "konto": "3400"
+  },
+  {
+   "datei": "scan_0600.txt",
+   "konto": "3300"
+  },
+  {
+   "datei": "scan_0621.txt",
+   "konto": "4240"
+  },
+  {
+   "datei": "scan_0642.txt",
+   "konto": "4530"
+  },
+  {
+   "datei": "scan_0682.txt",
+   "konto": "8300"
+  },
+  {
+   "datei": "scan_0864.txt",
+   "konto": "4120"
+  },
+  {
+   "datei": "scan_0972.txt",
+   "konto": "4260"
+  }
+ ]
+}

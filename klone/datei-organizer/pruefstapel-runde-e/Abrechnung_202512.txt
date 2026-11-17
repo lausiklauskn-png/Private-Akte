@@ -1,0 +1,25 @@
+Beispiel Pensionskasse VVaG
+Beispiel Pensionskasse VVaG · Pensionsallee 1 · 50000 Musterköln
+
+Frau Gertrud Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Rentenabrechnung / Zahlungsmitteilung Dezember 2025
+
+Versorgungsnummer: PK-00-1188
+Krankenkasse: Beispiel Gesundheitskasse
+
+Lohnart   Bezeichnung   Betrag
+100   Hinterbliebenenrente aus der Versorgung Walter Brandtner   214,80 €
+   Gesamtbrutto   214,80 €
+
+Abzug   Betrag
+Krankenversicherung (voller Satz abzgl. Freibetrag)   4,71 €
+Pflegeversicherung   7,73 €
+Lohnsteuer   8,59 €
+
+Gesetzliches Netto: 193,77 €
+Auszahlungsbetrag: 193,77 € auf IBAN DE00 0000 0000 0000 0000 00
+
+Beispiel Pensionskasse VVaG · Lohnbuchhaltung · Bei Rückfragen bitte Personalnummer angeben

@@ -1,0 +1,944 @@
+{
+ "dateien": [
+  {
+   "datei": "2026-01-05 Krankenkasse Zusatzbeitrag.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Krankenkasse",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Abfallgebuehren Bescheid 2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Abfallwirtschaftsbetrieb Landkreis Wendelsburg",
+   "person": null,
+   "frist": "2026-03-15"
+  },
+  {
+   "datei": "Grundbesitzabgaben_2026_Stadt.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Sellenbrück – Stadtkasse",
+   "person": null,
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "wasserverband jahresabrechnung 2025.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Wasserverband Obere Wupse",
+   "person": null,
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "Landeshypo Jahreskontoauszug Darlehen.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Landeshypo Mittelland AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brinkmeier Preise ab Februar.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hauswartservice Brinkmeier",
+   "person": null,
+   "frist": "2026-03-01"
+  },
+  {
+   "datei": "Wupsetaler KFZ Beitrag 2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Wupsetaler Versicherung AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "fidelia_beitragsrechnung_haftpflicht.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "FIDELIA Sachversicherung AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Jahressteuerbescheinigung 2025 Raiba.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Raiffeisen- und Bürgerbank Sellenbrück eG",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Brief Petrovic Januar.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dragan Petrović",
+   "person": "Dragan Petrović",
+   "frist": null
+  },
+  {
+   "datei": "RV Mitteilung Finanzverwaltung 2025.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Rentenversicherung Mittelland",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Tageblatt Bezugspreis.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Wendelsburger Tageblatt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Stadtwerke Erdgas Jahresabrechnung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wendelsburg GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Nordlicht Vertragsbestaetigung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Nordlicht Energie GmbH",
+   "person": null,
+   "frist": "2026-04-07"
+  },
+  {
+   "datei": "Lohnsteuerhilfe Termin.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Lohnsteuerhilfe Mittelland e.V.",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-03-12"
+  },
+  {
+   "datei": "telvia preisanpassung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Telvia Kommunikation GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Erinnerung Miete Feb Petrovic (Kopie).txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": "Dragan Petrović",
+   "frist": null
+  },
+  {
+   "datei": "Pflegekasse Erstattung Feb.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Pflegekasse",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Landfrauen JHV Einladung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "LandFrauenverein Sellenbrück e.V.",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-03-11"
+  },
+  {
+   "datei": "Feuerstaettenbescheid Kallweit.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Uwe Kallweit, bevollmächtigter Bezirksschornsteinfeger",
+   "person": null,
+   "frist": "2026-09-30"
+  },
+  {
+   "datei": "Jobcenter Anfrage Mietverhaeltnis Petrovic.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Jobcenter Wendelsburger Land",
+   "person": "Dragan Petrović",
+   "frist": "2026-03-06"
+  },
+  {
+   "datei": "Augenzentrum Termin Maerz.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenzentrum Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-03-18"
+  },
+  {
+   "datei": "Fidelia Wohngebaeude Anpassung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Versicherungen",
+   "absender": "FIDELIA Sachversicherung AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "brandtner spuelkasten.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Markus u. Sabine Brandtner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Justara Beitrag 2026-27.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "JUSTARA Rechtsschutz-Versicherung AG",
+   "person": null,
+   "frist": "2026-04-01"
+  },
+  {
+   "datei": "Mahnung Petrovic Mietrueckstand 09-03.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "HZA Kfz-Steuer Abbuchung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Wendelsburg",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "aydemir baby + mietbescheinigung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Selin Aydemir",
+   "person": "Selin Aydemir",
+   "frist": null
+  },
+  {
+   "datei": "Mieterhoehung Brandtner 16.03.2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Augenzentrum Befund 18-03-2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenzentrum Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "OP Termin Auge rechts.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenzentrum Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-04-21"
+  },
+  {
+   "datei": "Kopie ALG Bescheid Petrovic.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Agentur für Arbeit Wendelsburg",
+   "person": "Dragan Petrović",
+   "frist": null
+  },
+  {
+   "datei": "Petrovic bitte ratenzahlung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dragan Petrović",
+   "person": "Dragan Petrović",
+   "frist": null
+  },
+  {
+   "datei": "Wohngeldstelle LK - Mietbescheinigung Aydemir.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Landkreis Wendelsburg – Wohngeldstelle",
+   "person": "Selin Aydemir",
+   "frist": "2026-04-17"
+  },
+  {
+   "datei": "Droege Angebot Wartungsvertrag.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Heizung-Sanitär Dröge GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KK Einkommensnachweise Befreiung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Krankenkasse",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-04-10"
+  },
+  {
+   "datei": "Raiba Preisaenderung Girokonto.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Raiffeisen- und Bürgerbank Sellenbrück eG",
+   "person": null,
+   "frist": "2026-05-15"
+  },
+  {
+   "datei": "Rechnung Alltagshilfe 1. Quartal.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Alltagshilfe Pohlmann",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-04-16"
+  },
+  {
+   "datei": "Ratenvereinbarung Petrovic unterschrieben.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "SW Schlussrechnung Strom EG.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wendelsburg GmbH",
+   "person": null,
+   "frist": "2026-04-24"
+  },
+  {
+   "datei": "Angebot Fenster DG und Haustuer - Woehlke.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Fensterbau Wöhlke GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Mietbescheinigung Wohngeld Aydemir Kopie.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "NK-Abrechnung 2025 Brandtner.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "NK 2025 Petrovic.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "nebenkosten_2025_DG_aydemir.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kindergeld Elif (Kopie von Fr. Aydemir).txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Mittelland",
+   "person": "Elif Aydemir",
+   "frist": null
+  },
+  {
+   "datei": "Augenzentrum Rechnung Wahlleistung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenzentrum Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-05-22"
+  },
+  {
+   "datei": "Mieterverein wg Brandtner.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Mieterverein Wendelsburg und Umgebung e.V.",
+   "person": null,
+   "frist": "2026-05-15"
+  },
+  {
+   "datei": "Stadt Ordnung Hecke Gehweg.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Stadt Sellenbrück – Fachdienst Ordnung",
+   "person": null,
+   "frist": "2026-05-29"
+  },
+  {
+   "datei": "Apotheke 20.04.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Linden-Apotheke Sellenbrück",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Reimers Inspektion RE 26-1873.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Reimers GmbH",
+   "person": null,
+   "frist": "2026-05-18"
+  },
+  {
+   "datei": "MD Begutachtung Termin.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Dienst Mittelland",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-06-03"
+  },
+  {
+   "datei": "stadtwerke mahnung strom.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wendelsburg GmbH",
+   "person": null,
+   "frist": "2026-05-20"
+  },
+  {
+   "datei": "Brandtner Zustimmung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Markus u. Sabine Brandtner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Woehlke Auftragsbestaetigung AB-2026-0297.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Fensterbau Wöhlke GmbH",
+   "person": null,
+   "frist": "2026-05-20"
+  },
+  {
+   "datei": "Hollmann Bodensee Reisebestaetigung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisedienst Hollmann GmbH",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-05-29"
+  },
+  {
+   "datei": "FA Rueckfrage Erhaltungsaufwand.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Finanzamt Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-06-12"
+  },
+  {
+   "datei": "Freistellungsauftrag Bestaetigung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Raiffeisen- und Bürgerbank Sellenbrück eG",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "HKP Bruecke Dr Halvorsen.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnärzte am Mühlenteich",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-06-22"
+  },
+  {
+   "datei": "Friedhof Gebuehr 2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Ev.-luth. Kirchengemeinde St. Marien Sellenbrück – Friedhofsverwaltung",
+   "person": null,
+   "frist": "2026-07-15"
+  },
+  {
+   "datei": "CREDITAS Inkasso Stadtwerke.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "CREDITAS Forderungsmanagement GmbH",
+   "person": null,
+   "frist": "2026-06-16"
+  },
+  {
+   "datei": "KK Genehmigung Zahnersatz.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Krankenkasse",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Petrovic neue Arbeit 8.6..txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dragan Petrović",
+   "person": "Dragan Petrović",
+   "frist": null
+  },
+  {
+   "datei": "Erinnerung Brandtner Differenz Juni.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hannelore Wiebusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Woehlke Montagetermin.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Fensterbau Wöhlke GmbH",
+   "person": null,
+   "frist": "2026-06-30"
+  },
+  {
+   "datei": "Rentenanpassung 2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mittelland",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Pflegekasse Bescheid Pflegegrad 2.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Pflegekasse",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Mertens Waschmaschine Rechnung+Garantie.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektrohaus Mertens",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "ESt-Bescheid 2025.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Lohi Bescheidpruefung + Anlage V.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Lohnsteuerhilfe Mittelland e.V.",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Wupsetaler Zahnzusatz Beitrag ab Juli.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Wupsetaler Versicherung AG",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "hagedorn_rasenmaeher_bon.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Baumarkt Hagedorn",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Dr Thiessen Bericht Knie.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Orthopädische Praxis Dr. med. Volkmar Thießen",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "Landeshypo Angebot Anschlussfinanzierung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Landeshypo Mittelland AG",
+   "person": null,
+   "frist": "2026-09-30"
+  },
+  {
+   "datei": "Zahnarzt Rechnung Bruecke ZM-2026-01877.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnärzte am Mühlenteich",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-09-03"
+  },
+  {
+   "datei": "Wohngeld Direktzahlung ab Sept.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Landkreis Wendelsburg – Wohngeldstelle",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief von Jonas.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Jonas",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kallweit Terminankuendigung.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Uwe Kallweit, bevollmächtigter Bezirksschornsteinfeger",
+   "person": null,
+   "frist": "2026-08-26"
+  },
+  {
+   "datei": "Wahlbenachrichtigung Kommunalwahl.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Sellenbrück – Bürgerbüro",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-09-27"
+  },
+  {
+   "datei": "droege wartung termin sept.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Heizung-Sanitär Dröge GmbH",
+   "person": null,
+   "frist": "2026-09-08"
+  },
+  {
+   "datei": "Hollmann Reiseunterlagen Bodensee.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisedienst Hollmann GmbH",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-09-13"
+  },
+  {
+   "datei": "Wupsetaler Leistungsabrechnung Zahn.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Wupsetaler Versicherung AG",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  },
+  {
+   "datei": "jessen bon 0509.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Frischmarkt Jessen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "SW Kuendigungsbestaetigung Strom.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wendelsburg GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Notarin Kostenrechnung 2026-0933.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Dr. Friederike Alsleben, Notarin",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-10-15"
+  },
+  {
+   "datei": "Pflegekasse Beratungsbesuch nachweisen.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Mittelland Pflegekasse",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-12-31"
+  },
+  {
+   "datei": "Optik Sehwerk Rechnung Brille.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Optik Sehwerk Wendelsburg",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-10-16"
+  },
+  {
+   "datei": "Woelk Kuendigung Stellplatz.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dieter Woelk",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Wupsetaler Kfz 2027 Vorabinfo.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Brief",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Wupsetaler Versicherung AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Landeshypo Prolongation bestaetigt.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Landeshypo Mittelland AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Waermemass Ablesung Dezember.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Wärmemaß Abrechnungsdienst GmbH",
+   "person": null,
+   "frist": "2026-12-08"
+  },
+  {
+   "datei": "Praxis Reschke Impftermin.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hausarztpraxis Dr. med. Almut Reschke",
+   "person": "Hannelore Wiebusch",
+   "frist": "2026-11-24"
+  },
+  {
+   "datei": "Kautionskonto Aydemir Auszug 2026.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Raiffeisen- und Bürgerbank Sellenbrück eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Spendenbescheinigung St Marien.txt",
+   "haushalt": "h-wiebusch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Ev.-luth. Kirchengemeinde St. Marien Sellenbrück",
+   "person": "Hannelore Wiebusch",
+   "frist": null
+  }
+ ]
+}

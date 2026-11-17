@@ -1,0 +1,265 @@
+{
+ "bookledgerpro": {
+  "kern": 18,
+  "quote": 86,
+  "bewerter": [
+   86,
+   92
+  ],
+  "einig": 89,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "calculate": {
+  "kern": 17,
+  "quote": 85,
+  "bewerter": [
+   88,
+   85
+  ],
+  "einig": 94,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "dateiorganizer": {
+  "kern": 20,
+  "quote": 85,
+  "bewerter": [
+   85,
+   88
+  ],
+  "einig": 95,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "familienakte": {
+  "kern": 20,
+  "quote": 90,
+  "bewerter": [
+   90,
+   93
+  ],
+  "einig": 95,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "kimsync": {
+  "kern": 15,
+  "quote": 77,
+  "bewerter": [
+   80,
+   77
+  ],
+  "einig": 93,
+  "bestanden": false,
+  "fehlt": [
+   "M10 Einladen geht über einen Link oder den Code zum Kopieren oder Teilen."
+  ],
+  "verkehrt": []
+ },
+ "kimsync/k4": {
+  "kern": 15,
+  "quote": 100,
+  "bewerter": [
+   100,
+   100
+  ],
+  "einig": 100,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "mixarium": {
+  "kern": 16,
+  "quote": 78,
+  "bewerter": [
+   81,
+   78
+  ],
+  "einig": 94,
+  "bestanden": false,
+  "fehlt": [],
+  "verkehrt": [
+   "M38 Die App legt automatisch Sicherungsstände in einem Tresor auf dem Gerät an, aus dem man frühere Stände wiederherstellen, exportieren oder löschen kann."
+  ]
+ },
+ "mixarium/k4": {
+  "kern": 16,
+  "quote": 94,
+  "bewerter": [
+   94,
+   94
+  ],
+  "einig": 100,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "mixariumpage": {
+  "kern": 12,
+  "quote": 83,
+  "bewerter": [
+   83,
+   83
+  ],
+  "einig": 100,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "needs": {
+  "kern": 16,
+  "quote": 75,
+  "bewerter": [
+   78,
+   75
+  ],
+  "einig": 94,
+  "bestanden": false,
+  "fehlt": [
+   "M13 Die App fragt den Rahmen des Vorhabens ab: Geräte, Betrieb ohne Internet, Abgleich zwischen Geräten, eigene vorhandene Programme, Datenort, Sicherung und Ort einer KI (keine, Gerät, Dienst, beides)."
+  ],
+  "verkehrt": []
+ },
+ "needs/k4": {
+  "kern": 16,
+  "quote": 94,
+  "bewerter": [
+   97,
+   94
+  ],
+  "einig": 94,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "privatebrainpro": {
+  "kern": 14,
+  "quote": 82,
+  "bewerter": [
+   86,
+   82
+  ],
+  "einig": 93,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "proverbund": {
+  "kern": 69,
+  "quote": 57,
+  "bewerter": [
+   59,
+   60
+  ],
+  "einig": 91,
+  "bestanden": false,
+  "fehlt": [
+   "FA-M23 Die App hat eine Dokumentenbibliothek mit Filter und Suche, in der jede Unterlage als Zeile mit Vorschau geöffnet werden kann.",
+   "FA-M32 Die App bereitet mit einer Assistenz Schreiben und Antworten auf Briefe oder E-Mails als Entwurf vor; der Nutzer entscheidet über den Versand.",
+   "FA-M33 Die App verdeckt persönliche Angaben, bevor ein Text an eine externe KI geht, und setzt sie in der Antwort auf dem Gerät wieder ein.",
+   "BLP-M03 Die App kennt vier Nutzungsmodi: Privat, Kleinunternehmer, Selbstständig, Berater.",
+   "BLP-M15 Buchungen werden in doppelter Buchführung mit Soll/Haben und automatischer Umsatzsteuer-Aufteilung erfasst.",
+   "WPP-M11 Die App hat eine Bibliothek mit Ordnern, in denen Dokumente abgelegt, verschoben, dupliziert (als Vorlage) und gelöscht werden.",
+   "WPP-M15 Dokumente lassen sich als PDF oder Bild einlesen, auch ganze Ordner, per Ziehen auf die Seite oder durch Anhängen von Seiten an ein vorhandenes Dokument.",
+   "WPP-M18 Vorhandene Formularfelder eines PDF werden samt Wert übernommen; neue Felder werden offline aus Linien, Rahmen und Kästchen im Seitenbild erkannt.",
+   "WPP-M21 Ausgabe als festes PDF, ausfüllbares (vorbelegtes) PDF, leere ausfüllbare Vorlage sowie Ansehen und Drucken.",
+   "WPP-M27 Die Bibliothek lässt sich als verschlüsselte Sicherungsdatei (.wfps) sichern und zurückholen; Zurückholen fügt hinzu und überschreibt nie.",
+   "PBP-M21 Original öffnen: native Importe speichern eine geprüfte Originalkopie; fehlende Originale lassen sich neu zuordnen, der Zustand (Original fehlt / ungeprüft) wird ehrlich angezeigt.",
+   "PBP-M40 Prüfung beim Hinzufügen und auf Knopfdruck: jede Datei bekommt einen Befund (Anweisung an eine KI, versteckter Text, verdächtige Anhänge); Funde werden markiert, nicht entfernt."
+  ],
+  "verkehrt": []
+ },
+ "rezeptbuch": {
+  "kern": 17,
+  "quote": 68,
+  "bewerter": [
+   68,
+   68
+  ],
+  "einig": 100,
+  "bestanden": false,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "rezeptbuch/k4": {
+  "kern": 17,
+  "quote": 94,
+  "bewerter": [
+   94,
+   97
+  ],
+  "einig": 94,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "toolpoint": {
+  "kern": 17,
+  "quote": 88,
+  "bewerter": [
+   88,
+   91
+  ],
+  "einig": 94,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "workflohpage": {
+  "kern": 15,
+  "quote": 60,
+  "bewerter": [
+   67,
+   63
+  ],
+  "einig": 80,
+  "bestanden": false,
+  "fehlt": [
+   "M11 Die Seite listet acht Leistungen als Karten (z. B. Fahrzeugfolierung, Fahrzeugbeschriftung, Digitaldruck, 3D-Schilder, Lichtwerbung, Leuchtbuchstaben, Gravur, Fensterfolie), jede mit Symbol, Kurztext und Merkmalen.",
+   "M12 Die Leistungen lassen sich nach Kategorie filtern (Alle, Fahrzeug, Druck & Folie, Schilder & Gravur, Lichtwerbung) und über ein Suchfeld nach Wörtern durchsuchen.",
+   "M20 Die Anfrage geht nicht über einen Server, sondern öffnet das eigene E-Mail-Programm mit vorausgefülltem Betreff und Text (mailto)."
+  ],
+  "verkehrt": []
+ },
+ "workflohpage/k4": {
+  "kern": 15,
+  "quote": 90,
+  "bewerter": [
+   90,
+   97
+  ],
+  "einig": 87,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "workflowpdfpro": {
+  "kern": 17,
+  "quote": 74,
+  "bewerter": [
+   74,
+   74
+  ],
+  "einig": 100,
+  "bestanden": false,
+  "fehlt": [],
+  "verkehrt": []
+ },
+ "workflowpdfpro/k4": {
+  "kern": 17,
+  "quote": 91,
+  "bewerter": [
+   91,
+   97
+  ],
+  "einig": 88,
+  "bestanden": true,
+  "fehlt": [],
+  "verkehrt": []
+ }
+}

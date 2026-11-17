@@ -1,0 +1,290 @@
+<title>Sieben Tool-Ideen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: ein Prospekt in einer Spalte; je Tool ein Abschnitt mit Szene, Ablauf, Gründen, Vor-/Nachteilen und einer Faktenleiste rechts (am Handy darunter). */
+:root{
+  --bg:#f3f5f7; --paper:#ffffff; --ink:#18212b; --ink2:#4a5866; --ink3:#6c7a88; --line:#d6dde4;
+  --accent:#1d6f8c; --accent-soft:#e1eff4; --good:#2d7a4b; --good-soft:#e4f2e9; --bad:#a3462d; --bad-soft:#f6e6e0; --note:#7a5a12; --note-soft:#f6efd9;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif; --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11161c; --paper:#182029; --ink:#e7edf2; --ink2:#b3c0cc; --ink3:#8a99a7; --line:#2b3743;
+  --accent:#6cc0dc; --accent-soft:#16303b; --good:#7fd29c; --good-soft:#163024; --bad:#f0a084; --bad-soft:#3a2219; --note:#e6c66e; --note-soft:#332a14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11161c; --paper:#182029; --ink:#e7edf2; --ink2:#b3c0cc; --ink3:#8a99a7; --line:#2b3743;
+  --accent:#6cc0dc; --accent-soft:#16303b; --good:#7fd29c; --good-soft:#163024; --bad:#f0a084; --bad-soft:#3a2219; --note:#e6c66e; --note-soft:#332a14; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.8rem,4.5vw,2.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.4rem,3.2vw,1.85rem)}
+h3{font-size:1.02rem;letter-spacing:.02em}
+p{margin:0}
+.lead{color:var(--ink2);max-width:66ch;margin-top:12px;font-size:1.06rem}
+.inhalt{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.inhalt a{color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 13px;font-size:.92rem}
+.inhalt a:hover,.inhalt a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.inhalt b{font-family:var(--display);color:var(--accent);margin-right:4px}
+.tool{margin-top:40px;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tool-kopf{padding:22px 24px 18px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.kennung{font:700 .78rem var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.fuer{color:var(--ink2)}
+.tool-rumpf{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:0}
+@media (max-width:820px){.tool-rumpf{grid-template-columns:1fr}}
+.text{padding:20px 24px 24px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.szene{font-size:1.08rem;border-left:3px solid var(--accent);padding:2px 0 2px 14px;color:var(--ink)}
+.schritte{margin:6px 0 0;padding-left:1.3em;display:flex;flex-direction:column;gap:4px}
+.abschnitt{display:flex;flex-direction:column;gap:6px}
+.abschnitt>p,.abschnitt li{max-width:68ch}
+.pro-contra{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:560px){.pro-contra{grid-template-columns:1fr}}
+.pro,.contra{border-radius:10px;padding:12px 14px}
+.pro{background:var(--good-soft)} .contra{background:var(--bad-soft)}
+.pro h3{color:var(--good)} .contra h3{color:var(--bad)}
+.pro ul,.contra ul{margin:6px 0 0;padding-left:1.15em;display:flex;flex-direction:column;gap:3px}
+.einwand{background:var(--note-soft);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.einwand .wer{font:700 .78rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--note)}
+.einwand q{font-style:italic;quotes:"„" "“"}
+.fakten{border-left:1px solid var(--line);padding:20px 20px 24px;display:flex;flex-direction:column;gap:14px;background:var(--accent-soft)}
+@media (max-width:820px){.fakten{border-left:0;border-top:1px solid var(--line)}}
+.fakt dt{font:700 .72rem var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.fakt dd{margin:2px 0 0;font-size:.95rem}
+.test{display:flex;align-items:baseline;gap:8px}
+.test .zahl{font:700 1.7rem var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.rechnung{font-variant-numeric:tabular-nums;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg);display:grid;grid-template-columns:1fr auto;gap:4px 16px;font-size:.96rem}
+.rechnung .summe{font-weight:700;border-top:1px solid var(--line);padding-top:4px}
+.ersatz{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.ersatz{grid-template-columns:1fr}}
+.ersatz>div{border:1px dashed var(--accent);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.ersatz h3{color:var(--accent)}
+.schluss{margin-top:44px;display:flex;flex-direction:column;gap:12px}
+.schluss ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:8px;max-width:72ch}
+.fuss{margin-top:32px;color:var(--ink3);font-size:.88rem;max-width:80ch}
+@media (prefers-reduced-motion:no-preference){.inhalt a{transition:border-color .15s,color .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Sieben Tool-Ideen, erklärt wie im Kundengespräch</h1>
+    <p class="lead">Zehn Berufs-Agenten haben ihren Alltag nach Lücken abgesucht, ein Analyse-Agent hat aus 30 Ideen sieben ausgewählt. Hier steht je Tool, was es ist, wie ein Tag damit aussieht, warum man es braucht, was dagegen spricht und warum es das noch nicht gibt. Wo du einen Einwand hattest, steht meine Antwort darunter. Marktzahlen und Preise stammen aus kurzer Netzrecherche und sind Schätzungen; mit echten Kunden hat niemand gesprochen.</p>
+    <nav class="inhalt" aria-label="Die sieben Tools">
+      <a href="#ware"><b>I7</b>Wareneinsatz-Wächter</a>
+      <a href="#pflege"><b>I6</b>Prüfbereit ambulant</a>
+      <a href="#belege"><b>I5</b>Belegjäger</a>
+      <a href="#nebenkosten"><b>I4</b>Nebenkosten-Prüfer</a>
+      <a href="#anlage"><b>I3</b>Anlagenpass und zwei Ersatzideen</a>
+      <a href="#mappe"><b>I2</b>KI-Kompetenz-Mappe</a>
+      <a href="#schleuse"><b>I1</b>KI-Schleuse</a>
+      <a href="#fazit">Meine Empfehlung</a>
+    </nav>
+  </header>
+
+  <!-- I7 -->
+  <section class="tool" id="ware" aria-labelledby="t7">
+    <div class="tool-kopf"><span class="kennung">I7 · Restaurant</span><h2 id="t7">Wareneinsatz-Wächter</h2>
+      <p class="fuer">Für Wirte, die erst Monate später vom Steuerberater erfahren, dass die Küche zu teuer eingekauft hat.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Montagmorgen, Kaffee. Auf dem Handy steht: „Letzte Woche Küche 34 % statt 30 %. Grund: Rinderhüfte beim Großhändler +18 % seit August, und Sahne doppelt bestellt.“ Sie rufen beim Händler an, statt es im Dezember in der BWA zu lesen.</p>
+      <div class="abschnitt"><h3>Was heißt „Wareneinsatz“ überhaupt?</h3>
+        <p>Wareneinsatz ist der Anteil vom Umsatz, den Sie für Lebensmittel und Getränke ausgeben. Verkaufen Sie für 100 € und haben dafür für 30 € eingekauft, sind es 30 %. Bei Speisen gelten etwa 28–33 % als gesund. Steigt der Wert, liegt es fast immer an einem von drei Dingen: Der Lieferant ist teurer geworden, die Portionen sind gewachsen, oder es wird zu viel weggeworfen. Das Werkzeug misst nicht, was im Müll landet. Es zeigt, dass der Wert davonläuft und bei welchem Artikel.</p></div>
+      <div class="abschnitt"><h3>Warum lohnt sich das?</h3>
+        <div class="rechnung" role="table" aria-label="Beispielrechnung">
+          <span>Jahresumsatz (Beispiel)</span><span>900.000 €</span>
+          <span>2 Prozentpunkte mehr Wareneinsatz, unbemerkt</span><span>× 2 %</span>
+          <span class="summe">Verlust im Jahr</span><span class="summe">18.000 €</span>
+        </div>
+        <p>Das Werkzeug kostet etwa 600 € im Jahr. Es lohnt sich schon, wenn es einen einzigen schleichenden Preissprung zwei Monate früher zeigt.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Das sagt mir überhaupt nichts … nicht, dass das den Aufwand nur erhöht und die Kosten in die Höhe treibt.</q></p>
+        <p><b>Meine Antwort:</b> Berechtigt, denn genau daran scheitern die bekannten Programme: Sie verlangen grammgenaue Rezepte und eine Inventur. Hier ist der Aufwand ein Foto vom Lieferschein, den der Fahrer ohnehin dalässt (etwa 10 Sekunden). Dazu kommt einmal pro Woche eine Datei aus der Kasse, die jede Kasse in Deutschland ausgeben können muss. Kein Wiegen, keine Rezepte, keine Inventur. Fotografiert aber niemand die Lieferscheine, nützt das Werkzeug nichts. Das muss man dem Wirt vorher sagen.</p></div>
+      <div class="abschnitt"><h3>So läuft es</h3>
+        <ol class="schritte"><li>Lieferschein oder Rechnung fotografieren, oder die Mail des Lieferanten weiterleiten.</li><li>Das Werkzeug liest Artikel, Menge und Preis; was es nicht sicher lesen kann, legt es zum Nachsehen hin.</li><li>Einmal pro Woche den Kassenexport einlesen.</li><li>Montags kommt die Quote für Küche und Getränke, dazu Warnungen wie „Lachs bei Lieferant B +12 %“.</li></ol></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>Fehler in Wochen statt nach einem Jahr sehen</li><li>keine Rezeptpflege, keine Inventur</li><li>läuft mit jeder Kasse</li><li>Preise bleiben im Betrieb</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>ohne Inventur nur eine Näherung (eine Großlieferung verzerrt eine Woche)</li><li>unordentliche Lieferscheine werden falsch gelesen</li><li>technisch die schwierigste der sieben Ideen</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht?</h3>
+        <p>Die großen Programme (Apicbase ab etwa 400 $ im Monat, FoodNotify ab etwa 175 €) kommen aus der Großküche und verlangen Disziplin, die ein inhabergeführtes Restaurant nicht hat. Die Kassen kennen den Umsatz, aber nicht die Lieferscheine. Dazwischen ist eine Lücke.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">100 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>Restaurants mit 0,3–2 Mio. € Umsatz</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>49 € im Monat je Standort, 30 Tage frei mit Rückblick auf drei Monate</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>rund 158.000 Betriebe im Gastgewerbe (DEHOGA 2022), Anteil Speisegastronomie unbekannt</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>Lesefehler bei Lieferscheinen machen die Quote falsch</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I6 -->
+  <section class="tool" id="pflege" aria-labelledby="t6">
+    <div class="tool-kopf"><span class="kennung">I6 · Ambulanter Pflegedienst</span><h2 id="t6">Prüfbereit ambulant</h2>
+      <p class="fuer">Für Pflegedienstleitungen, die vor jeder Qualitätsprüfung zwei Tage in Panik Ordner durchblättern.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Ein Dienstagnachmittag im Quartal. Die Pflegedienstleitung lässt sich vom Tablet sechs Klienten zufällig ziehen, nur als Nummern. Sie geht mit einer Pflegekraft die Fragen durch, die auch der Prüfer stellt. Nach einer Stunde steht da: „Schmerzerfassung: B, zwei Fälle ohne aktuellen Eintrag. Maßnahme bis 15.12., Team Nord.“</p>
+      <div class="abschnitt"><h3>Worum geht es, in einfachen Worten?</h3>
+        <p>Jeder ambulante Pflegedienst wird regelmäßig vom Medizinischen Dienst geprüft. Seit Juli 2026 gelten dafür neue Regeln: Geprüft wird nicht mehr vor allem das Papier, sondern ob die Versorgung beim Klienten stimmt. Die Prüfung wird nur zwei Arbeitstage vorher angekündigt, und das Ergebnis ist öffentlich. Das Werkzeug ist eine Probeprüfung, so wie eine Probeklausur vor der Prüfung oder ein Vorab-Check vor dem TÜV. Man stellt sich dieselben Fragen, bewertet ehrlich (A bis D) und bekommt eine Liste, was bis wann zu verbessern ist. Gespeichert werden keine Diagnosen und keine Namen.</p></div>
+      <div class="abschnitt"><h3>So läuft es</h3>
+        <ol class="schritte"><li>Probe-Stichprobe ziehen, Klienten nur als Nummer.</li><li>Die Fragen je Qualitätsbereich am Tablet beantworten, offline.</li><li>Jede Antwort mit A bis D bewerten, daraus entsteht eine Maßnahmenliste mit Frist und Team.</li><li>Jedes Quartal wiederholen und den Verlauf ansehen; vor der echten Prüfung zeigt die Zwei-Tage-Liste, was bereitliegen muss.</li></ol></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>keine Überraschung in der echten Prüfung</li><li>günstiger als ein bezahltes Probeaudit</li><li>zeigt Lücken je Team, ohne Einzelne bloßzustellen</li><li>keine Klientendaten im Werkzeug</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>der Fragenkatalog muss fachlich stimmen und nach jeder Regeländerung gepflegt werden</li><li>kleinster Markt der sieben</li><li>ohne Pflege-Fachfrau als Partnerin nicht baubar</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht?</h3>
+        <p>Die neuen Prüfregeln sind gerade erst in Kraft. QM-Programme verwalten Handbücher, die großen Pflegeprogramme dokumentieren. Einen ehrlichen Probelauf „Würden wir bestehen?“ bietet keines davon.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Das kann ich mir überhaupt nicht vorstellen, weil ich nicht vom Fachgebiet bin.</q></p>
+        <p><b>Meine Antwort:</b> Das ist auch das größte Risiko dieser Idee. Die Technik ist einfach (Fragebogen, Bewertung, Liste, Verlauf). Den Inhalt aber kann nur jemand aus der Pflege richtig schreiben und pflegen. Sinnvoll ist die Idee nur mit einer Partnerin, etwa einer Pflegedienstleitung oder QM-Beraterin, die die Fragen verantwortet und das Werkzeug mit verkauft.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">94 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>Pflegedienste mit 10–60 Mitarbeitenden, QM-Berater</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>59–99 € im Monat je Dienst; Berater 249 € für zehn Dienste</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>rund 15.500 ambulante Dienste (2023)</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>Fachinhalt falsch oder veraltet</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I5 -->
+  <section class="tool" id="belege" aria-labelledby="t5">
+    <div class="tool-kopf"><span class="kennung">I5 · Steuerkanzlei</span><h2 id="t5">Belegjäger</h2>
+      <p class="fuer">Für Steuerkanzleien, die jeden Monat hinter fehlenden Quittungen hertelefonieren.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Der Malermeister bekommt eine SMS von seiner Kanzlei: „12 Belege fehlen noch.“ Er tippt auf den Link, gibt seine PIN ein und sieht eine Liste: „03.10. Tankstelle 63,40 €“, „07.10. Baumarkt 212,90 €“. Bei jeder Zeile hat er drei Knöpfe: <b>Foto</b>, <b>privat</b>, <b>kommt später</b>. Nach fünf Minuten im Lieferwagen ist alles erledigt, ohne Anmeldung und ohne App.</p>
+      <div class="abschnitt"><h3>Warum braucht die Kanzlei das?</h3>
+        <p>Ist der Monat gebucht, fehlen je Mandant oft 15 bis 40 Belege zu Bankumsätzen. Die Zeit der Fachkräfte geht ins Nachfragen statt ins Buchen, und Fachkräfte sind knapp. Viele kleine Mandanten wollen sich in kein Portal einloggen und schicken lieber gar nichts.</p></div>
+      <div class="abschnitt"><h3>So läuft es</h3>
+        <ol class="schritte"><li>Die Kanzlei liest die offenen Umsätze als Datei aus ihrem Programm ein.</li><li>Jeder Mandant bekommt einen eigenen, kurzlebigen Link mit PIN.</li><li>Der Mandant antwortet je Zeile mit einem Tipp; Erinnerungen kommen von selbst.</li><li>Die Kanzlei bekommt die Belege fertig zugeordnet zurück, danach wird alles gelöscht.</li></ol></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>spart Telefon- und Mailzeit jeden Monat</li><li>der Mandant braucht kein Konto und keine App</li><li>„privat“ und „kommt später“ beenden das Rätselraten</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>braucht einen kleinen Server in Deutschland</li><li>ein Link ohne Anmeldung muss bei Berufsgeheimnis sehr sicher sein</li><li>DATEV könnte das selbst einbauen</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht?</h3>
+        <p>Die vorhandenen Lösungen (DATEV Unternehmen online, TaxDome, hmd) setzen alle ein Portal mit Anmeldung voraus. Laut einem Anbieter ist die automatische Anforderung über DATEV erst „in Planung“. Den einfachsten Weg für den Mandanten hat bisher niemand gebaut.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Steuerfachkräfte müssen ab und zu Belege hereinbitten, aber per Link … könnte ich mir vielleicht vorstellen.</q></p>
+        <p><b>Meine Antwort:</b> Genau das ist die Idee, und der Link ist der Kern: Ohne Anmeldung antworten deutlich mehr Mandanten. Ehrlich bleibt, dass dies die einzige der sieben Ideen ist, die nicht ohne Server auskommt.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">88 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>die Kanzlei; Mandanten zahlen nichts</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>59 € im Monat bis 50 Mandanten, 129 € bis 200</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>rund 89.000 Steuerberater; 40.000–50.000 Kanzleien (Schätzung)</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>DATEV baut es selbst</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I4 -->
+  <section class="tool" id="nebenkosten" aria-labelledby="t4">
+    <div class="tool-kopf"><span class="kennung">I4 · Hausverwaltung und Vermieter</span><h2 id="t4">Nebenkosten-Prüfer</h2>
+      <p class="fuer">Für Verwalter und Vermieter, die ihre fertigen Nebenkostenabrechnungen vor dem Versand gegenprüfen wollen.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Ende November liegen 600 Abrechnungen als PDF auf dem Laufwerk. Der Verwalter zieht den Ordner ins Werkzeug. Nach einer Viertelstunde steht da: „14 rot, 31 gelb.“ Ein Beispiel: „Haus Lindenstraße, Seite 2: Verteilerschlüssel ergibt 103 %“, ein anderes: „Gartenpflege ist laut Mietvertrag Wohnung 4 nicht umlagefähig“. Diese 45 schaut er sich an, die übrigen gehen raus.</p>
+      <div class="abschnitt"><h3>Warum lohnt sich das?</h3>
+        <p>Laut Mieterbund ist etwa jede zweite Abrechnung fehlerhaft. Jeder Fehler bedeutet Widerspruch, Belegeinsicht und Ärger. Wer die Frist von zwölf Monaten verpasst, verliert die Nachzahlung ganz.</p></div>
+      <div class="abschnitt"><h3>So läuft es</h3>
+        <ol class="schritte"><li>Die fertigen Abrechnungen als PDF hineinlegen, aus welchem Programm auch immer.</li><li>Das Werkzeug prüft unter anderem Umlagefähigkeit, ob die Schlüssel 100 % ergeben, Zeitraum, Frist und den Vergleich mit dem Vorjahr.</li><li>Heraus kommt eine Ampelliste mit Seite und Begründung; im Zweifel „bitte prüfen“ statt Grün.</li></ol></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>funktioniert mit jedem Abrechnungsprogramm</li><li>nichts abtippen, alles bleibt auf dem eigenen Rechner</li><li>weniger Widersprüche und verlorene Nachzahlungen</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>Haftungsfrage bei Fehlalarm oder übersehenem Fehler</li><li>das Regelwerk muss gepflegt werden</li><li>beliebige PDF-Layouts zu lesen ist technisch nicht einfach</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht?</h3>
+        <p>Die Verwaltungsprogramme erstellen Abrechnungen, prüfen sie aber nicht unabhängig. Das bekannte Prüfwerkzeug (Mieterbund und co2online) arbeitet für die Mieterseite. Für die Vermieterseite, nur mit dem PDF, gibt es nichts.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Da muss ja auch händisch was eingegeben oder gescannt werden.</q></p>
+        <p><b>Meine Antwort:</b> Für Verwaltungen nicht. Ihr Programm erzeugt das PDF ohnehin, das geht direkt hinein. Nur wer nach Absprache vom Mietvertrag abweicht, trägt diese Sonderregel einmal ein. Kleinvermieter mit einer Papierabrechnung können sie fotografieren; das wird weniger zuverlässig gelesen.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">94 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>Hausverwaltungen mit 500–3.000 Einheiten, private Vermieter</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>0,40–0,80 € je Einheit und Jahr; Kleinvermieter 29–49 € im Jahr</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>5,2–5,5 Mio. private Vermieterhaushalte; Verwaltungen: einige Tausend (Schätzung)</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>Haftung und Grenze zur Rechtsberatung</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I3 -->
+  <section class="tool" id="anlage" aria-labelledby="t3">
+    <div class="tool-kopf"><span class="kennung">I3 · Heizung und Elektro</span><h2 id="t3">Anlagenpass</h2>
+      <p class="fuer">Wartungsverträge mit QR-Aufkleber an der Anlage: Der Monteur scannt und sieht die ganze Geschichte des Geräts.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Ein Monteur steht im Keller vor der Wärmepumpe und scannt den Aufkleber. Er sieht: „letzte Wartung 11/2025, offener Mangel: Ausdehnungsgefäß prüfen.“ Er trägt die Messwerte ein, der Kunde unterschreibt auf dem Handy, und das Büro sieht die Wartung sofort als erledigt.</p>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Das machen die Heizungsbauer selber. Da würde ich eine neue Idee gerne entgegennehmen.</q></p>
+        <p><b>Meine Antwort:</b> Einverstanden. Auch der Berufs-Agent selbst sah das größte Risiko darin, dass HERO und Co. die Wartung nachbauen und Betriebe „nicht noch eine App“ wollen. Aus denselben Recherchen kommen zwei Ideen, die ich für stärker halte:</p></div>
+      <div class="ersatz">
+        <div><h3>Datencheck &amp; Freigabe</h3><span class="kennung">Werbetechnik, Textildruck, Stickerei</span>
+          <p>Ein Kunde schickt sein Logo als Handyfoto, als Word-Datei oder als alte Corel-Datei. Das Werkzeug prüft jede Datei mit einer Ampel: ob es eine Vektorgrafik ist, ob die Auflösung für die Endgröße reicht, ob eine Schnittkontur da ist und ob sich das Motiv sticken lässt (feine Linien, Schrift unter 5 mm). Danach bekommt der Kunde eine Freigabeseite mit Vorschaubild zum Unterschreiben, und es gibt keinen Streit mehr, wenn die Farbe nicht passt. Den Aufschlag für die Datenaufbereitung trägt es gleich ins Angebot ein, das passt zu Workflow Calculate.</p>
+          <p><b>Warum es das nicht gibt:</b> Die verbreiteten Prüfprogramme prüfen nur PDF und kennen keinen Stick. Online-Shops gestalten, prüfen aber keine fremden Dateien.</p>
+          <p><b>Risiko:</b> Corel- und Illustrator-Dateien sicher zu lesen ist schwer; die Stickeignung bleibt ohne Punchprogramm eine Schätzung.</p></div>
+        <div><h3>Fördermappe Heizung</h3><span class="kennung">Heizungsbauer</span>
+          <p>Jeder Heizungstausch mit Förderung braucht mehrere Bestätigungen, einen Vertrag mit Bedingung, den hydraulischen Abgleich, Rechnungen und Fotos, und die Fristen laufen bis zu 36 Monate. Fehlt ein Papier, bekommt der Kunde kein Geld, und der Betrieb hat den Ärger. Das Werkzeug legt je Kunde eine Mappe mit Checkliste an, zeigt, was fehlt und welche Frist läuft, und füllt die Daten aus dem Angebot vor.</p>
+          <p><b>Warum es das nicht gibt:</b> Handwerkerprogramme haben dafür nichts Eigenes; Fördergeldservices nehmen Gebühren je Fall.</p>
+          <p><b>Risiko:</b> Die Förderregeln ändern sich laufend; fällt die Förderung weg, fällt das Produkt weg.</p></div>
+      </div>
+      <p>Beide Ersatzideen sind noch nicht durch Needs und den Test gelaufen. Das hole ich nach, sobald du eine davon willst.</p>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">83 %</span><span>der Kern-Merkmale im Test (Anlagenpass)</span></div>
+      <div class="fakt"><dt>Anlagenpass</dt><dd>79 € im Monat; rund 96.000 SHK- und Elektrobetriebe</dd></div>
+      <div class="fakt"><dt>Datencheck</dt><dd>19–39 € im Monat; Werbetechnik und kleine Druckereien</dd></div>
+      <div class="fakt"><dt>Fördermappe</dt><dd>29 € im Monat + 5 € je Mappe; rund 24.000 SHK-Betriebe mit Heizungsgeschäft (Schätzung)</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I2 -->
+  <section class="tool" id="mappe" aria-labelledby="t2">
+    <div class="tool-kopf"><span class="kennung">I2 · KI-Berater und Datenschutzbeauftragte</span><h2 id="t2">KI-Kompetenz-Mappe für Berater</h2>
+      <p class="fuer">Das Arbeitswerkzeug für Berater, die 20 bis 40 kleine Betriebe im sicheren Umgang mit KI schulen und betreuen.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Die Beraterin öffnet am Montag die Übersicht: 31 Betriebe, davon 4 gelb („Werkzeugliste älter als 6 Monate“) und einer rot („neue Mitarbeiterin ohne Unterweisung“). Am Mittwoch schult sie die Zahnarztpraxis. Die Teilnehmer haken am Tablet ab, auch ohne Netz. Am Ende druckt sie das datierte Nachweisblatt mit ihrem Logo, und für die Praxis ist das Thema für sechs Monate erledigt.</p>
+      <div class="abschnitt"><h3>Was ich mir darunter vorstelle</h3>
+        <p>Je Betrieb gibt es eine Akte mit drei Dingen. Erstens eine Werkzeugliste: ChatGPT „nur ohne Personendaten“, Übersetzungsprogramm „erlaubt“, Bewerbungen sortieren „verboten“, jeweils mit Stand-Datum. Zweitens, wer wann geschult wurde. Drittens den Termin für die nächste Wiederholung. Branchenvorlagen (Praxis, Handwerk, Kanzlei) pflegt die Beraterin einmal und verteilt sie auf alle Betriebe. Die Ampel zeigt, wo etwas veraltet ist.</p></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>40 Akten auf einen Blick statt Word, Excel und Mail</li><li>datierter Nachweis auf Knopfdruck</li><li>für die Beraterin gebaut, nicht für den Endkunden</li><li>passt zur KI-Schleuse (gemeinsam verkaufen)</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>der Druck sinkt: die EU-Pflicht wurde 2026 abgeschwächt</li><li>kleiner Käufermarkt, Zahl der Berater unbekannt</li><li>leicht nachzubauen</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht?</h3>
+        <p>E-Learning-Anbieter verkaufen an den Endkunden, Governance-Programme zielen auf Konzerne. Ein Werkzeug für den Berater mit vielen Kleinstkunden fehlt.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Die lässt sich im Handumdrehen erstellen.</q></p>
+        <p><b>Meine Antwort:</b> Stimmt, technisch ist sie die kleinste der sieben Ideen. Ihr Wert liegt nicht im Code, sondern in gepflegten Branchenvorlagen und im Vertriebsweg. Jede Beraterin, die sie nutzt, trägt das Werkzeug in 30 Betriebe und kann dort die KI-Schleuse gleich mit anbieten. Dass jeder sie nachbauen kann, ist ihre Schwäche.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">81 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>KI-Trainer, IT-Dienstleister, externe Datenschutzbeauftragte</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>49 € im Monat bis 15 Betriebe, 129 € unbegrenzt</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>Berater: Tausende (keine belastbare Zahl); Endkunden rund 100.000 KI-nutzende Betriebe</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>sinkender Pflichtdruck</dd></div>
+    </dl></div>
+  </section>
+
+  <!-- I1 -->
+  <section class="tool" id="schleuse" aria-labelledby="t1">
+    <div class="tool-kopf"><span class="kennung">I1 · Kanzleien, Steuerbüros, Praxen</span><h2 id="t1">KI-Schleuse</h2>
+      <p class="fuer">Namen, Kontonummern und Geburtsdaten werden auf dem eigenen Rechner unkenntlich, bevor ein Text an ChatGPT und Co. geht.</p></div>
+    <div class="tool-rumpf"><div class="text">
+      <p class="szene">Die Auszubildende will eine Mandantenmail von ChatGPT umformulieren lassen. Sie fügt den Text in die Schleuse ein. Darin steht jetzt „⟦PERSON-1⟧ schreibt wegen ⟦AKTENZEICHEN-1⟧“, und sie sieht genau, was hinausgeht. Sie kopiert, fragt die KI und fügt die Antwort wieder ein. Die Schleuse setzt die echten Namen zurück. Niemand hat etwas verboten, und trotzdem hat der Klartext das Büro nicht verlassen.</p>
+      <div class="abschnitt"><h3>Warum braucht man das?</h3>
+        <p>Mitarbeiter benutzen KI ohnehin, notfalls auf dem eigenen Handy, und Verbote wirken nicht. Kanzleien, Steuerbüros und Praxen unterliegen der Schweigepflicht. Bisher schwärzen sie von Hand oder verzichten auf KI. Die Schleuse schützt im Moment des Fehlers, nicht erst durch eine Schulung.</p></div>
+      <div class="pro-contra"><div class="pro"><h3>Vorteile</h3><ul><li>kein Klartext verlässt den Rechner</li><li>funktioniert mit jeder KI, kein Anbieterwechsel</li><li>Vorschau „das geht hinaus“ vor jedem Senden</li><li>kurzer Bauweg: der Baustein zum Verdecken ist schon fertig</li></ul></div>
+        <div class="contra"><h3>Nachteile</h3><ul><li>was die Erkennung übersieht, wiegt in falscher Sicherheit</li><li>Microsoft und Google könnten so etwas kostenlos einbauen</li><li>am Handy nur eingeschränkt</li></ul></div></div>
+      <div class="abschnitt"><h3>Warum gibt es das noch nicht, jedenfalls für Kleine?</h3>
+        <p>Die vorhandenen Filter (Nightfall, Purview, Prompt Security) sind für Konzerne gebaut und laufen über die Cloud. Kanzlei-KIs wie Noxtua verkaufen ihre eigene Plattform. KI-Shield schickt den Klartext zu einem Filter-Server. Einen kleinen Filter, der nur auf dem eigenen Gerät arbeitet und deutsche Muster wie Steuer-ID oder Versichertennummer kennt, gibt es für Zwei- bis Zehn-Personen-Betriebe nicht.</p></div>
+      <div class="einwand"><span class="wer">Dein Einwand</span>
+        <p><q>Kanzleien arbeiten jetzt schon ganz hart daran, so etwas selber zu entwickeln … ich stelle es mir schwer vor.</q></p>
+        <p><b>Meine Antwort:</b> Für große Kanzleien stimmt das, die bauen selbst oder kaufen Noxtua. Gemeint sind die vielen kleinen ohne eigene IT, und dieselbe Schleuse passt auch für Steuerbüros, Arztpraxen und Pflegedienste. Schwer ist nicht der Bau, denn das Verdecken (Modul 25 mit letzter Sicherung) läuft schon in Needs und BookLedgerPro. Schwer ist der Verkauf. Darum würde ich die Schleuse nicht allein anbieten, sondern über die Berater aus I2.</p></div>
+    </div>
+    <dl class="fakten">
+      <div class="fakt test"><span class="zahl">83 %</span><span>der Kern-Merkmale im Test getroffen</span></div>
+      <div class="fakt"><dt>Wer kauft</dt><dd>Betriebe mit 2–50 Personen und Berufsgeheimnis</dd></div>
+      <div class="fakt"><dt>Preisidee</dt><dd>5–9 € je Nutzer und Monat; Kanzlei-Paket höher</dd></div>
+      <div class="fakt"><dt>Markt</dt><dd>167.547 Anwälte, rund 89.000 Steuerberater; größter Markt der sieben</dd></div>
+      <div class="fakt"><dt>Größtes Risiko</dt><dd>falsches Sicherheitsgefühl, große Anbieter ziehen nach</dd></div>
+    </dl></div>
+  </section>
+
+  <section class="schluss" id="fazit" aria-labelledby="tf">
+    <h2 id="tf">Meine Empfehlung</h2>
+    <ol>
+      <li><b>KI-Schleuse und KI-Kompetenz-Mappe als Paar.</b> Der Kern zum Verdecken ist fertig, die Mappe ist klein, und die Berater verkaufen beides zusammen in viele kleine Betriebe. Das ist der kürzeste Weg zu einem ersten zahlenden Kunden.</li>
+      <li><b>Nebenkosten-Prüfer.</b> Der Nutzen ist in Euro messbar, und er braucht weder Server noch App-Wechsel beim Kunden. Das PDF-Lesen gibt es schon (Workflow PDF, Belegerkennung in BookLedgerPro).</li>
+      <li><b>Datencheck &amp; Freigabe</b> statt Anlagenpass, weil Workflow Calculate die Werbetechnik schon kennt. Vorher prüfen, ob sich Corel- und Illustrator-Dateien zuverlässig lesen lassen.</li>
+    </ol>
+    <p>Wareneinsatz-Wächter und Prüfbereit ambulant würde ich erst angehen, wenn es einen Partner aus der Gastronomie bzw. der Pflege gibt. Den Belegjäger erst, wenn klar ist, ob DATEV selbst nachzieht.</p>
+  </section>
+
+  <p class="fuss">Stand 13.11.2026. Quelle: Datei-Organizer <code>rueckwaertstest/runde-2/</code> (AUSWAHL.md, markt/, ERGEBNIS.md). Die Szenen sind erfunden und zeigen nur, wie es sich anfühlen soll. Testwerte: Anteil der Kern-Merkmale, die ein fremder Bau-Agent allein aus dem Needs-Bauauftrag geplant hat, gewertet von zwei Bewertern. Sie belegen nicht, dass jemand das Tool kauft.</p>
+</div>

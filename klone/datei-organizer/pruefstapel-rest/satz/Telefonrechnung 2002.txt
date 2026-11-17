@@ -1,0 +1,25 @@
+# Beispiel Telekom AG
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Kundennummer: 000 4410 2201
+Rechnungsmonat: Januar 2002
+Datum: 05.02.2002
+
+# Ihre Rechnung
+
+Bitte beachten Sie: Seit 1. Januar 2002 rechnen wir in Euro ab.
+
+|Leistung|Betrag|
+|Monatliche Beträge T-Anschluß|13,33 EUR|
+|Verbindungen Ortsnetz|8,12 EUR|
+|Verbindungen Fernzone|6,40 EUR|
+|Netto|27,85 EUR|
+|16 % USt.|4,46 EUR|
+|Rechnungsbetrag|32,31 EUR|
+
+Der Betrag wird am 15.02.2002 von Ihrem Konto abgebucht.
+

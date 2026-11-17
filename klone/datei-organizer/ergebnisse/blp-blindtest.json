@@ -1,0 +1,1064 @@
+{
+ "vergleich": {
+  "betrag": {
+   "n": 120,
+   "blp": 120,
+   "kern": 115,
+   "nurBlp": 5,
+   "nurKern": 0
+  },
+  "datum": {
+   "n": 120,
+   "blp": 97,
+   "kern": 99,
+   "nurBlp": 15,
+   "nurKern": 17
+  },
+  "aussteller": {
+   "n": 120,
+   "blp": 117,
+   "kern": 89,
+   "nurBlp": 31,
+   "nurKern": 3
+  }
+ },
+ "ordner": "pruefstapel-blp",
+ "belege": 120,
+ "felder": {
+  "betrag": {
+   "n": 120,
+   "ok": 120
+  },
+  "datum": {
+   "n": 120,
+   "ok": 97
+  },
+  "ust": {
+   "n": 112,
+   "ok": 108
+  },
+  "richtung": {
+   "n": 120,
+   "ok": 101
+  },
+  "konto": {
+   "n": 120,
+   "ok": 10
+  }
+ },
+ "wilson": {
+  "betrag": [
+   0.9689797289440706,
+   1
+  ],
+  "datum": [
+   0.7287868300416364,
+   0.8687506694738739
+  ],
+  "ust": [
+   0.9117520412990205,
+   0.9860256137057446
+  ],
+  "richtung": [
+   0.7659051081885379,
+   0.8962310399232437
+  ],
+  "konto": [
+   0.045893154816730314,
+   0.14662373772987763
+  ]
+ },
+ "uebereinstimmung": {
+  "n": 120,
+  "gleich": 0.975,
+  "kappa": 0.9738067520372526
+ },
+ "kontoEinig": {
+  "n": 117,
+  "ok": 10
+ },
+ "verwechslung": {
+  "3300→3400": 3,
+  "0410→4980": 1,
+  "4250→4980": 3,
+  "8400→4980": 6,
+  "4945→4980": 2,
+  "8500→4980": 1,
+  "3300→4980": 10,
+  "8300→4980": 6,
+  "4240→4980": 3,
+  "4940→4940": 1,
+  "4670→4980": 3,
+  "4500→4980": 3,
+  "4650→4980": 4,
+  "4930→4980": 2,
+  "4360→4980": 2,
+  "4980→4980": 1,
+  "4630→3400": 1,
+  "4930→4930": 3,
+  "0320→4980": 1,
+  "4530→4980": 9,
+  "3400→4980": 5,
+  "8125→4980": 2,
+  "4955→4980": 2,
+  "4120→4120": 2,
+  "1800→4980": 1,
+  "4950→8400": 1,
+  "4600→4980": 5,
+  "4920→4210": 3,
+  "4970→4980": 6,
+  "4380→4980": 2,
+  "4210→4980": 3,
+  "0480→4980": 2,
+  "4540→4980": 2,
+  "4260→4980": 3,
+  "8120→4980": 2,
+  "4910→4980": 3,
+  "1890→4980": 1,
+  "4650→3400": 2,
+  "4630→4980": 1,
+  "4635→4980": 1,
+  "4660→4980": 1,
+  "3400→3400": 3,
+  "4260→3400": 1,
+  "0400→4980": 1
+ },
+ "fehler": [
+  {
+   "datei": "Kopie von scan_0059.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "3300"
+  },
+  {
+   "datei": "Scan 30.2.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0410"
+  },
+  {
+   "datei": "Kopie von scan_0069.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "bon 50.txt",
+   "feld": "datum",
+   "ist": "2026-08-06",
+   "soll": "2026-08-09"
+  },
+  {
+   "datei": "bon 50.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "bon 50.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "bon 23.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-01-22"
+  },
+  {
+   "datei": "bon 23.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4945"
+  },
+  {
+   "datei": "RE_89273.txt",
+   "feld": "datum",
+   "ist": "2026-01-03",
+   "soll": "2026-03-28"
+  },
+  {
+   "datei": "RE_89273.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "RE_89273.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8500"
+  },
+  {
+   "datei": "WhatsApp Image 2026-04-14 at 17.33.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "quittung41.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "quittung41.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-03-06 at 8.36.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-10 at 13.19.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-02-22"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-10 at 13.19.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "feld": "datum",
+   "ist": "2026-04-02",
+   "soll": "2026-04-01"
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "Rechnung (5).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "scan_0682.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "scan_0682.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "Kopie von scan_0012.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-27 at 12.24.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4930"
+  },
+  {
+   "datei": "Dokument6.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "Dokument6.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4360"
+  },
+  {
+   "datei": "scan_0621.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "Dokument38.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "IMG_3676.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4630"
+  },
+  {
+   "datei": "20260817_608.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-17"
+  },
+  {
+   "datei": "20260817_608.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0320"
+  },
+  {
+   "datei": "beleg.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "beleg.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "IMG_4284.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "20260325_891.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "Scan 15.6.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "Kopie von scan_0005.txt",
+   "feld": "datum",
+   "ist": "2026-02-18",
+   "soll": "2026-02-22"
+  },
+  {
+   "datei": "Kopie von scan_0005.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Kopie von scan_0005.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "bon 37.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "bon 37.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "PDF_export_137.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "PDF_export_137.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8125"
+  },
+  {
+   "datei": "20260918_682.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "RE_33600.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4955"
+  },
+  {
+   "datei": "RE_24449.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "WhatsApp Image 2026-02-22 at 12.12.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "WhatsApp Image 2026-02-22 at 12.12.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "PDF_export_103.txt",
+   "feld": "datum",
+   "ist": "2026-04-05",
+   "soll": "2026-03-22"
+  },
+  {
+   "datei": "PDF_export_103.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "20260914_597.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1800"
+  },
+  {
+   "datei": "PDF_export_54.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "PDF_export_54.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4950"
+  },
+  {
+   "datei": "Kopie von scan_0057.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-10-25"
+  },
+  {
+   "datei": "Kopie von scan_0057.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "Dokument25.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4920"
+  },
+  {
+   "datei": "quittung20.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "quittung20.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "quittung24.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "Kopie von scan_0090.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-10-06"
+  },
+  {
+   "datei": "Kopie von scan_0090.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "PDF_export_194.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-02 at 20.21.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "quittung2.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4380"
+  },
+  {
+   "datei": "WhatsApp Image 2026-05-07 at 13.20.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4955"
+  },
+  {
+   "datei": "bon 45.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4210"
+  },
+  {
+   "datei": "20260721_775.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0480"
+  },
+  {
+   "datei": "Dokument7.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4210"
+  },
+  {
+   "datei": "IMG_9342.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "IMG_9342.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4540"
+  },
+  {
+   "datei": "WhatsApp Image 2026-08-10 at 11.57.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "Rechnung (4).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "Scan 1.3.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4920"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-22 at 17.32.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-22 at 17.32.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "quittung19.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "quittung8.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "20260718_394.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-04-28"
+  },
+  {
+   "datei": "20260718_394.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4930"
+  },
+  {
+   "datei": "Rechnung (6).txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-10-05"
+  },
+  {
+   "datei": "Rechnung (6).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4945"
+  },
+  {
+   "datei": "PDF_export_85.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "PDF_export_85.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4360"
+  },
+  {
+   "datei": "IMG_3791.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "IMG_3791.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8120"
+  },
+  {
+   "datei": "20260313_346.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4380"
+  },
+  {
+   "datei": "Rechnung (7).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "scan_0408.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "scan_0408.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8125"
+  },
+  {
+   "datei": "bon 33.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "Scan 20.7.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Scan 20.7.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1890"
+  },
+  {
+   "datei": "PDF_export_40.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "Rechnung (1).txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-05-18"
+  },
+  {
+   "datei": "Rechnung (1).txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "3300"
+  },
+  {
+   "datei": "quittung17.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "RE_82284.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4650"
+  },
+  {
+   "datei": "beleg_57.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "RE_45627.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "IMG_5890.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "Scan 21.6.txt",
+   "feld": "datum",
+   "ist": "2026-01-01",
+   "soll": "2026-01-31"
+  },
+  {
+   "datei": "Scan 21.6.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "scan_0173.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "Kopie von scan_0043.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-18"
+  },
+  {
+   "datei": "Kopie von scan_0043.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "3300"
+  },
+  {
+   "datei": "PDF_export_99.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "bon 7.txt",
+   "feld": "datum",
+   "ist": "2026-02-05",
+   "soll": "2026-01-22"
+  },
+  {
+   "datei": "bon 7.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "Dokument24.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4630"
+  },
+  {
+   "datei": "quittung34.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4635"
+  },
+  {
+   "datei": "RE_63383.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "RE_63383.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "beleg_23.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "20260722_434.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4660"
+  },
+  {
+   "datei": "scan_0600.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-03"
+  },
+  {
+   "datei": "scan_0600.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "Kopie von scan_0034.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Kopie von scan_0034.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8120"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-15 at 12.51.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4920"
+  },
+  {
+   "datei": "RE_29830.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "RE_29830.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "IMG_3835.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "Scan 4.8.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-07-28"
+  },
+  {
+   "datei": "20260718_388.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-03-08"
+  },
+  {
+   "datei": "20260718_388.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "20260421_560.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "20260421_560.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "Scan 13.9.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "Scan 13.9.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4540"
+  },
+  {
+   "datei": "20260517_740.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "bon 39.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4650"
+  },
+  {
+   "datei": "beleg_62.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "Scan 15.12.txt",
+   "feld": "datum",
+   "ist": "2026-02-23",
+   "soll": "2026-02-09"
+  },
+  {
+   "datei": "RE_13323.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4260"
+  },
+  {
+   "datei": "Dokument4.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "quittung52.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "PDF_export_101.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "Dokument40.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "Scan 14.1.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "PDF_export_22.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0400"
+  },
+  {
+   "datei": "Kopie von scan_0001.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4210"
+  },
+  {
+   "datei": "20260123_861.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "scan_0972.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "RE_32509.txt",
+   "feld": "datum",
+   "ist": "2026-04-01",
+   "soll": "2026-04-30"
+  },
+  {
+   "datei": "RE_32509.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "20260819_291.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "Kopie von scan_0067.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "scan_0146.txt",
+   "feld": "datum",
+   "ist": "2026-07-01",
+   "soll": "2026-07-31"
+  },
+  {
+   "datei": "scan_0146.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "Scan 12.4.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0480"
+  },
+  {
+   "datei": "scan_0642.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "PDF_export_200.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "scan_0331.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "Kopie von scan_0071.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "beleg_65.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-08-28"
+  },
+  {
+   "datei": "PDF_export_185.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  }
+ ]
+}

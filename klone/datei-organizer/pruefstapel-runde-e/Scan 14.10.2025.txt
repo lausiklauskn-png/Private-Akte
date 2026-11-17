@@ -1,0 +1,36 @@
+Hausarztpraxis Dr. med. Beispiel
+Hausarztpraxis Dr. med. Beispiel · Ärztehaus Marktstraße 2 · 34567 Beispielstadt
+
+Frau Gertrud Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Patientin: Gertrud Brandtner, geb. 12.02.1941
+Datum: 14.10.2025
+
+Laborbefund vom 10.10.2025
+
+Sehr geehrte Frau Brandtner,
+
+anbei erhalten Sie die Ergebnisse der Blutuntersuchung zur Weitergabe an den Pflegedienst bzw. die behandelnden Fachärzte.
+
+Wert   Ergebnis   Referenz
+HbA1c   7,1 %   < 6,5 %
+Kreatinin   1,3 mg/dl   0,5–1,0
+eGFR   39 ml/min   > 60
+Kalium   4,6 mmol/l   3,5–5,1
+TSH   1,8 mU/l   0,4–4,0
+
+
+Beurteilung: leicht eingeschränkte Nierenfunktion, Diabetes ausreichend eingestellt. Die Metformin-Dosis sollte nicht erhöht werden. Kontrolle in drei Monaten.
+
+Mit freundlichen Grüßen
+Dr. med. A. Beispiel, Fachärztin für Allgemeinmedizin
+Hausarztpraxis Dr. med. Beispiel · Seite 2 · Laborbefund vom 10.10.2025
+
+Medikamentenplan (Stand 14.10.2025)
+Wirkstoff   morgens   mittags   abends
+Metformin 500 mg   1   0   1
+Ramipril 5 mg   1   0   0
+Torasemid 10 mg   1   0   0
+Simvastatin 20 mg   0   0   1

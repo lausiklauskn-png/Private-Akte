@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: sabine.brodersen@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Mon, 25 May 2026 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sehr geehrte Frau Brodersen,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-16183273
+Rechnungsbetrag: 18,48 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

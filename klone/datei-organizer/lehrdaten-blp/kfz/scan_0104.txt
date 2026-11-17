@@ -1,0 +1,13 @@
+Kontorbedarf Thomsen GmbH (bueroversand-nord.example)
+Rechnung INV-DE-0071190 – 03.03.2026 – Kunde Kfz-Technik Brandhorst
+
+Qty   Description                          Unit price     Amount
+2     Toner schwarz kompatibel XL               38,90      77,80
+1     Toner Farbset CMY                         96,00      96,00
+1     Briefumschläge DIN lang Fenster 1000er      21,50      21,50
+1     Thermorollen Kasse 80mm 50er              27,90      27,90
+
+Subtotal                                           223,20
+VAT 19%                                             42,41
+Total EUR                                          265,61
+USt-IdNr. DE000000033

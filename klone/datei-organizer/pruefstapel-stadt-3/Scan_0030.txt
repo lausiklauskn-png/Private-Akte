@@ -1,0 +1,7 @@
+Gesundheitskasse Beispielland
+Mitgliedsbescheinigung    Datum 21.08.2026
+
+Frau Fatima Amrani, geb. 1958, wohnhaft Lindenhöhe-Ring 14, 00101 Beispielstadt-Nord, ist seit dem 14.08.2026 bei uns freiwillig krankenversichert (Vers.-Nr. X000912245).
+Der monatliche Beitrag beträgt 223,40 EUR zuzüglich Pflegeversicherung 49,10 EUR, Einzug jeweils zum Monatsende.
+Die elektronische Gesundheitskarte wird gesondert zugesandt.
+Diese Bescheinigung gilt zur Vorlage bei Behörden.

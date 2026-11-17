@@ -1,0 +1,28 @@
+KFZ-WERKSTATT BEISPIEL-SCHRAUBHOF
+Meisterbetrieb · Reparatur aller Marken · HU/AU im Haus
+Werkstattweg 9 · 99999 Musterbach · Tel. 0000-38810
+
+Herrn Klaus-Dieter Tannreiter
+Marktplatz 5
+99999 Musterbach
+
+RECHNUNG Nr. 2026-0311                     Datum: 19.03.2026
+Auftragsnr. W-2214                         Kennzeichen: BSP-LT 300
+Fahrzeug: Lieferwagen 3,5 t, Erstzulassung 05/2017, km-Stand 184.302
+
+Pos  Bezeichnung                                   Menge    Einzel     Gesamt
+1    Hauptuntersuchung nach § 29 StVZO               1     138,00     138,00
+2    Abgasuntersuchung                               1      52,00      52,00
+3    Bremsscheiben + Beläge HA ersetzt               1     286,40     286,40
+4    Arbeitszeit Bremse (AW à 9,50)                 14       9,50     133,00
+5    Glühlampe Kennzeichenbeleuchtung                2       3,10       6,20
+6    Kleinteile, Bremsenreiniger                     1      12,80      12,80
+                                                         Netto      628,40 €
+                                                   + 19 % MwSt      119,40 €
+                                                   GESAMT           747,80 €
+
+HU-Plakette erteilt, nächste HU 03/2027.
+Zahlbar ohne Abzug bis 02.04.2026.
+Bankverbindung: Beispielkasse Beispielkreis, IBAN DE00 0000 0000 0000 0000 00
+
+Vielen Dank für Ihren Auftrag! Gute Fahrt.

@@ -1,0 +1,27 @@
+Beispiel Kraftfahrt Versicherung AG
+Versicherungsplatz 3 · 50999 Musterköln
+
+Herrn
+Martin Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Versicherungsschein-Nr.: KF-302-4417788
+Kennzeichen: BSP-MW 412
+Datum: 14.11.2023
+
+Beitragsrechnung für das Versicherungsjahr 2024
+
+Sehr geehrter Herr Weidinger,
+
+für Ihren Pkw BSP-MW 412 gilt im kommenden Jahr die Schadenfreiheitsklasse SF 13.
+
+Sparte   Beitrag
+Kfz-Haftpflicht   426,62 EUR
+Teilkasko   261,48 EUR
+Gesamt   688,10 EUR
+
+Der Betrag wird am 01.01.2024 von Ihrem Konto DE00 0000 0000 0000 0000 00 abgebucht.
+
+Mit freundlichen Grüßen
+Beispiel Kraftfahrt Versicherung AG · Amtsgericht Musterköln HRB 12345

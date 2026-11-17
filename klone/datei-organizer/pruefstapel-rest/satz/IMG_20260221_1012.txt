@@ -1,0 +1,124 @@
+@bon
+BEISPIEL-DISCOUNT SUED
+Südstraße 44, 04999 Musterstadt
+Tel. 0000 000000  USt-IdNr. DE000000000
+
+Penne 500g                    0,99 A
+  2 x 2,99
+Kerzen 10er                   5,98 B
+Schwamm 10er                  1,49 B
+  4 x 1,19
+Erbsen TK                     4,76 A
+  3 x 0,99
+Gummibaerchen                 2,97 A
+Tee Pfefferminz               1,29 A
+Quark 20% 500g                1,29 A
+  4 x 0,99
+H-Milch 1,5%                  3,96 A
+  3 x 2,79
+Eier Bodenh, 10St             8,37 A
+  3 x 0,49
+Salz jodiert                  1,47 A
+  3 x 2,99
+Kartoffeln 2,5kg              8,97 A
+Fischstaebchen                2,49 A
+  2 x 0,89
+Salzstangen                   1,78 A
+Muellbeutel 35l               1,79 B
+Kidneybohnen                  0,79 A
+Orangensaft 1l                1,79 B
+Wiener Wuerstchen             2,89 A
+  3 x 4,49
+Grillkohle 3kg               13,47 B
+Spuelmittel                   1,19 B
+Windeln Gr,5                  9,99 B
+  2 x 1,29
+Frischhaltefolie              2,58 B
+Orangen 2kg                   2,99 A
+  4 x 5,99
+Kaffee gemahlen 500g         23,96 A
+  4 x 2,19
+Vollkornbrot 750g             8,76 A
+Erbsen TK                     1,19 A
+  3 x 1,49
+Kekse Butter                  4,47 A
+  2 x 0,79
+Kidneybohnen                  1,58 A
+  Rabatt 20%                 -0,32 A
+  2 x 0,69
+Salatgurke                    1,38 A
+  2 x 4,49
+Lachsfilet TK                 8,98 A
+Zahnpasta                     0,95 B
+  Rabatt 20%                 -0,19 B
+Grillkohle 3kg                4,49 B
+  2 x 0,69
+Senf mittelscharf             1,38 A
+  2 x 1,79
+Chips Paprika                 3,58 A
+Kartoffeln 2,5kg              2,99 A
+  2 x 2,99
+Kartoffeln 2,5kg              5,98 A
+  4 x 1,25
+Duschgel                      5,00 B
+  Rabatt 20%                 -1,00 B
+Eier Bodenh, 10St             2,79 A
+Tomaten Rispe                 2,49 A
+  3 x 1,25
+Duschgel                      3,75 B
+Tee Pfefferminz               1,29 A
+Kartoffeln 2,5kg              2,99 A
+  4 x 0,99
+Moehren 1kg                   3,96 A
+Senf mittelscharf             0,69 A
+  2 x 1,89
+Gouda jung Scheiben           3,78 A
+  3 x 0,99
+Penne 500g                    2,97 A
+  3 x 1,79
+Orangensaft 1l                5,37 B
+Lachsfilet TK                 4,49 A
+  Rabatt 20%                 -0,90 A
+  3 x 2,99
+Muesli Frucht                 8,97 A
+Penne 500g                    0,99 A
+  2 x 4,49
+Grillkohle 3kg                8,98 B
+  2 x 1,29
+Frischhaltefolie              2,58 B
+  Rabatt 20%                 -0,52 B
+Duschgel                      1,25 B
+Kerzen 10er                   2,99 B
+  4 x 0,49
+Salz jodiert                  1,96 A
+  3 x 1,19
+Erbsen TK                     3,57 A
+  3 x 0,99
+H-Milch 1,5%                  2,97 A
+Grillkohle 3kg                4,49 B
+  2 x 2,99
+Muesli Frucht                 5,98 A
+  2 x 4,99
+Batterien AA 8er              9,98 B
+  3 x 2,19
+Vollkornbrot 750g             6,57 A
+  2 x 2,29
+Butter 250g                   4,58 A
+Bruehe Instant                1,69 A
+  2 x 1,29
+Quark 20% 500g                2,58 A
+--------------------------------------
+Zwischensumme                 259,75
+Pfand gesamt                    0,00
+Leergut Pfandbon               -1,50 B
+======================================
+SUMME EUR                     258,25
+Bar                           258,25
+
+Steuer   Netto     MwSt     Brutto
+A  7%    162,01    11,34    173,35
+B 19%     71,34    13,56     84,90
+Posten: 63
+
+21.02.2026  10:09  Kasse 04  Bed. 112  Bon 2516
+Vielen Dank fuer Ihren Einkauf!

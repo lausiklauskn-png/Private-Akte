@@ -1,0 +1,21 @@
+# AOK Beispielland
+AOK Beispielland · Gesundheitsplatz 1 · 37999 Musterau
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versichertennummer: P000000000
+Datum: 15.12.2010
+
+# Neuer Beitragssatz ab 1. Januar 2011
+
+Sehr geehrter Herr Pfannschmidt,
+
+der allgemeine Beitragssatz in der gesetzlichen Krankenversicherung steigt ab 1. Januar 2011 auf 15,5 Prozent. Ihr Arbeitgeber berücksichtigt das automatisch.
+
+Einen Zusatzbeitrag erhebt die AOK Beispielland nicht.
+
+Mit freundlichen Grüßen
+@unterschrift

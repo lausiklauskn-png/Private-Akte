@@ -1,0 +1,23 @@
+Von: Beispiel Paketdienst <noreply@paket-beispiel.example>
+An: mira.ausgedacht@posteingang.example
+Datum: 11.11.2026, 18:02
+Betreff: Ihre Sendung 00 4455 6677 wartet: Einfuhrabgaben bitte bezahlen
+
+Hallo Mira Ausgedacht,
+
+Ihre Sendung aus dem Nicht-EU-Ausland ist im Zollzentrum angekommen. Für die Zustellung fallen
+Einfuhrabgaben an, die wir für Sie beim Zoll auslegen:
+
+  Einfuhrumsatzsteuer          8,72 EUR
+  Zoll                         0,00 EUR
+  Auslagepauschale             6,00 EUR
+  zu zahlen                   14,72 EUR
+
+Bitte zahlen Sie bis zum 21.11.2026 in Ihrem Kundenkonto oder in der Paket-App (Menü „Meine Sendungen“).
+Erfolgt bis dahin keine Zahlung, geht die Sendung an den Absender zurück.
+
+Wichtig: Wir fordern Sie niemals per SMS zur Eingabe von Kartendaten auf. Melden Sie sich zur Zahlung
+nur selbst über die App oder unsere Seite an.
+
+Ihr Beispiel Paketdienst
+Sendungsinhalt laut Händler: „Handyhülle, Ladekabel“ – Händler: Fernost-Beispielshop

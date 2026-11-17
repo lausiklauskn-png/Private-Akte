@@ -1,0 +1,14 @@
+Entgeltabrechnung September 2026
+Arbeitgeber: Haarstudio Federleicht, Merle Osterkamp, Marktgasse 7, 37154 Northeim
+
+Arbeitnehmerin: Jule Brandner, Friseurgesellin     Pers.-Nr. 002
+Steuerklasse I   Krankenkasse: AOK        Eintritt 01.09.2022
+
+Gehalt                          2.341,51
+Umsatzprovision Verkauf         64,50
+Gesamtbrutto                    2.406,01
+Lohnsteuer                     -257,57
+Sozialversicherung AN          -480,01
+Auszahlungsbetrag               1.668,43
+
+Überweisung auf IBAN DE00 0000 0000 0000 2222 02

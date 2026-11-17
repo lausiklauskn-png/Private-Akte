@@ -1,0 +1,7 @@
+Tank-Automat  24h  Raiffeisen-Markt Hagenau
+Beleg 55120    07.11.2026  05:44
+Zapfpunkt 2  DIESEL
+Menge 60,12 Liter   Preis 1,649
+Betrag          99,14 EUR
+USt 19%          15,83 EUR
+Karte RWG-Kundenkarte 0000417

@@ -1,0 +1,22 @@
+Großhandel Kremsried KG
+Bahnhofstr. 61, 37997 Haselbrunn
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnunqsnummer: 29876
+Rechnungsdatum: 9. Februar 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Holzrührstäbchen 1000 St.     5      6,40      32,00
+
+Nettobetrag                                   32,00
+zzgl. 19 % USt                                6,08
+Summe                                         38,08 EUR
+
+Bitte überweisen Sie den Betrag bis 23.02.2026 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2512 99
+USt-IdNr. DE000000501

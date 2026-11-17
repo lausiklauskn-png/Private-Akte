@@ -1,0 +1,24 @@
+Laborgemeinschaft Lahn-Ohm      MVZ für Laboratoriumsmedizin
+Einsender: Praxis Dr. Hedda Wintrich, Allgemeinmedizin
+Pat.: Tiedemann, Maren  *23.09.1988  w     Auftrag 5-0311-2207
+Abnahme 11.03.2025 07:55      Eingang 11.03.2025 11:20
+Material: Serum, EDTA-Blut
+
+Analyse               Ergebnis   Einheit    Referenz
+Leukozyten              6,1      /nl        3,9 – 10,2
+Erythrozyten            4,3      /pl        3,9 – 5,2
+Hämoglobin             11,4  -   g/dl       12,0 – 15,6
+MCV                     79   -   fl         80 – 99
+Thrombozyten           288       /nl        150 – 370
+Ferritin                 9   -   µg/l       13 – 150
+TSH basal               1,84     mU/l       0,27 – 4,20
+Vitamin D (25-OH)       17   -   ng/ml      > 30
+HbA1c                   5,2      %          < 5,7
+Kreatinin               0,74     mg/dl      0,50 – 0,90
+GPT (ALT)               21       U/l        < 35
+
+Beurteilung: Mikrozytäre, hypochrome Konstellation bei erniedrigtem
+Speichereisen, vereinbar mit Eisenmangel. Vitamin-D-Insuffizienz.
+Kontrolle nach Substitution in 8–12 Wochen empfohlen.
+
+Validiert: Dr. rer. nat. Ochs      Druck 11.03.2025 16:02

@@ -1,0 +1,36 @@
+{
+ "bewerter": 2,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "getroffen",
+  "M03": "getroffen",
+  "M04": "getroffen",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "getroffen",
+  "M08": "fehlt",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "fehlt",
+  "M12": "teilweise",
+  "M13": "getroffen",
+  "M14": "getroffen",
+  "M15": "teilweise",
+  "M16": "getroffen",
+  "M17": "fehlt"
+ },
+ "begruendung": {
+  "M08": "Keine Top-10-Kostentreiber.",
+  "M11": "Keine Startauswertung der letzten 3 Monate.",
+  "M12": "Zuordnung zu Stammzeilen über Namen/Artikelnummer, aber kein ausdrückliches Lernen aus Korrekturen beim Zusammenführen von Schreibweisen.",
+  "M15": "Verzerrung ohne Inventur nur als Frage an den Kunden; dass die App es offen als Näherung ausweist, steht nicht fest.",
+  "M17": "Kein Preismodell, keine Probezeit mit Rückblick."
+ },
+ "zusaetze": [
+  "IMAP-Mail-Abruf aus dem Postfach",
+  "Summenprobe Positionen gegen Belegsumme",
+  "Tellerkalkulation für 5–6 Gerichte",
+  "Verschlüsselte automatische Sicherung",
+  "Vollständigkeitshinweis „unvollständig“ im Wochenbericht"
+ ]
+}

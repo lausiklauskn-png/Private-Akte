@@ -1,0 +1,19 @@
+@bon
+BAECKEREI BEISPIEL-SOMMER
+Kirchgasse 1, Musterstadt
+
+Kasse 2  Bon 4711
+
+Broetchen 4x                1,80 A
+Laugenbrezel                0,95 A
+Kaffee to go                2,60 B
+------------------------------------
+SUMME EUR                     5,35
+Gegeben BAR                  10,00
+Rueckgeld                     4,65
+
+A 7%  Netto 2,57  MwSt 0,18
+B 19% Netto 2,18  MwSt 0,42
+
+06.09.2025  07:52
+Vielen Dank fuer Ihren Einkauf

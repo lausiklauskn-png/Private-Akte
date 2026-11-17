@@ -1,0 +1,26 @@
+Reifen Schaller
+Hafenstraße 24, 37996 Molkenrode
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Werkstattrechnung
+Rechnungsnummer: W37885
+Datum 03.06.2026
+Fahrzeug: Lieferwagen, amtl. Kennz. TW-KB 00
+Km-Stand: 57946
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Reifenwechsel Sommer/Winter     1     38,00      38,00
+  2  Reifeneinlagerung Saison     1     32,00      32,00
+  3  Auswuchten 4 Räder           1     24,00      24,00
+
+Nettobetrag                                   94,00
+zzgl. 19 % USt                               17,86
+Endbetrag                                    111,86 EUR
+
+Bitte überweisen Sie den Betrag bis 17.06.2026 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7126 16
+USt-IdNr. DE000000988

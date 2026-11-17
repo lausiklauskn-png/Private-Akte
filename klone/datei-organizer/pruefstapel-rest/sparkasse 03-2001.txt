@@ -1,0 +1,20 @@
+Kreissparkasse Musterau
+
+Gerhard und Ingrid Pfannschmidt
+
+Kontoauszug Nr. 3/2001
+Zeitraum: 01.03.2001 – 31.03.2001
+IBAN: DE00 0000 0000 0000 0000 00
+
+Buchungstag   Vorgang   Betrag DM
+01.03.   Lohn Maschinenfabrik Beispiel   +3412,80
+02.03.   Miete WBG Beispiel eG   -812,00
+05.03.   Stadtwerke Nachzahlung   -129,62
+15.03.   GEZ Rundfunkgebühr   -94,74
+20.03.   Bargeldauszahlung   -400,00
+
+Alter Kontostand: 3.120,44 DM
+Neuer Kontostand: 5.096,88 DM
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Kreissparkasse Musterau · BIC BSPLDE00XXX · Amtsgericht Beispielstadt HRB 00000

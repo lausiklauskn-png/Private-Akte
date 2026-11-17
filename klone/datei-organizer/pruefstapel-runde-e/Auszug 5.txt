@@ -1,0 +1,31 @@
+Beispielbank Beispielstadt eG
+Bankplatz 1 · 34567 Beispielstadt
+
+Kontoauszug
+Jugendgirokonto Lena Brandtner
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 5/2025 · Blatt 1 von 1 · Zeitraum 01.08.2025 – 31.08.2025
+
+Frau Sabine Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Alter Kontostand vom 01.08.2025: 184,30 EUR
+
+Buchungstag   Valuta   Vorgang / Verwendungszweck   Betrag EUR
+01.08.   01.08.   Taschengeld Dauerauftrag Sabine Brandtner   +60,00
+02.08.   02.08.   Kartenzahlung Bäckerei Beispielkorn   -3,00
+03.08.   03.08.   Kartenzahlung Frischkauf Exempel   -44,22
+04.08.   04.08.   Kartenzahlung Discount Probe   -14,14
+14.08.   14.08.   Kartenzahlung Discount Probe   -11,17
+15.08.   15.08.   Lohn Ferienjob Eiscafé Beispiel   +412,50
+15.08.   15.08.   Kartenzahlung Frischkauf Exempel   -87,55
+18.08.   18.08.   Kartenzahlung Bäckerei Beispielkorn   -11,25
+19.08.   19.08.   Lastschrift Muster Drogerie   -25,37
+20.08.   20.08.   Beispielfunk Prepaid Aufladung   -15,00
+31.08.   31.08.   Lastschrift Muster Drogerie   -27,55
+
+Neuer Kontostand vom 31.08.2025: 417,55 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+Beispielbank Beispielstadt eG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

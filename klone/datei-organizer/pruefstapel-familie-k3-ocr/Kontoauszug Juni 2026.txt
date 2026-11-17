@@ -1,0 +1,24 @@
+Sparkasse Kranbachtal Kontoauszug 6/2026
+Girokonto 0012345678 Sabine Brandauer
+
+IBAN DEO® 2405 0000 0012 3456 78
+
+Auszug vom 30.06.2026 Blatt 1 von 2
+
+Datum Vorgang Betrag EUR
+01.06. Lastschrift Mobilis Versicherung AG Kfz XYZ-TB 000 -59,52
+02.06. Lastschrift Stadtwerke Wiesenfeld Abschlag -142,00
+02.06. Gutschrift Mobilis Versicherung AG Erstattung KR-55-209931 +37,10
+05.06. Lastschrift Stadt Wiesenfeld Kita-Beitrag -90,00
+08.06. Gutschrift Dennis Hartwig Bareinzahlung Motorrad +4.300, 00
+12.06. Lastschrift Funkwelle Mobil GmbH Raten Endgerät -18,50
+23.06. Gutschrift Merkur Direktbank AG Nachlass +4.312,77
+26.06. Gutschrift Kessler Verpackungen Gehalt +1.511,08
+29.06. Gutschrift Rentenversicherung Mitte-Land Rente 07/26 +1.854,50
+30.06. Familienkasse Kranbachtal Kindergeld +765,00
+Alter Kontostand 88.412,15 +
+
+Neuer Kontostand 100.691,08 +
+
+Sparkasse Kranbachtal - Marktplatz 3 . 37999 Wiesenfeld - BIC SPKRXXX0000
+

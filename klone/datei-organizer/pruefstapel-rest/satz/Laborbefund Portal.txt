@@ -1,0 +1,26 @@
+# PATIENTENPORTAL LABOR (BEISPIEL)
+
+NEUE NACHRICHT IN IHREM POSTFACH
+
+Neue Nachricht
+
+PATIENT: Daniel Lenz
+AUFTRAG: L-26-0044817
+EINSENDER: Hausarztpraxis Beispiel
+DATUM: 15.01.2026
+
+# Ihre Laborwerte sind verfügbar
+
+|Parameter|Wert|Referenz|
+
+|Cholesterin gesamt|228 mg/dl|< 200|
+
+|LDL|152 mg/dl|< 116|
+
+|HDL|51 mg/dl|> 40|
+
+|HbA1c|5,4 %|< 5,7|
+
+Besprechungstermin in der Hausarztpraxis: 22.01.2026, 8:40 Uhr.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

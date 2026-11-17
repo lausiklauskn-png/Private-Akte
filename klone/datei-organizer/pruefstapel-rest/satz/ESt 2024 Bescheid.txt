@@ -1,0 +1,32 @@
+# Finanzamt Musterstadt-Süd
+Finanzamt Musterstadt-Süd · Steuerplatz 2 · 04999 Musterstadt
+
+Frau
+Nora Feldkamp
+Kirchgasse 3
+04999 Musterstadt
+
+Steuernummer: 231/455/01882
+Datum: 10.11.2025
+
+# Bescheid für 2024 über Einkommensteuer
+
+Festsetzung: Einkommensteuer 3.411,00 EUR. Einkünfte aus selbständiger Arbeit (Grafikdesign): 31.884 EUR. Entlastungsbetrag für Alleinerziehende berücksichtigt.
+
+Abrechnung: Bisher gezahlt (Vorauszahlungen) 2.400,00 EUR. Nachzahlung 1.011,00 EUR, zu entrichten bis 15.12.2025 (kein Lastschriftmandat für ESt).
+
+@seite
+Erläuterungen und Vorauszahlungen
+|Fälligkeit|Vorauszahlung|
+|10.03.2026|850,00 EUR|
+|10.06.2026|850,00 EUR|
+|10.09.2026|850,00 EUR|
+|10.12.2026|850,00 EUR|
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Finanzamt Musterstadt-Süd, Steuerplatz 2, 04999 Musterstadt, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

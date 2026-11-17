@@ -1,0 +1,12 @@
+Von: Beispiel Urlaubsportal <buchung@urlaubsportal-beispiel.example>
+An: daniel.hartwig@example.org
+Datum: 20.02.2026 19:03
+Betreff: Buchungsbestätigung und Rechnung – Pauschalreise Familienhotel Beispiel-Alm
+
+Hallo Familie Hartwig,
+
+Ihre Reise ist gebucht: 3 Personen, 25.07.–01.08.2026, Familienhotel Beispiel-Alm, All inclusive. Gesamtpreis 2.346,00 €.
+Die Anzahlung von 469,20 € wird sofort fällig, der Restbetrag von 1.876,80 € bis zum 01.06.2026.
+Rechnung, Sicherungsschein und Reiseinformationen finden Sie im Anhang.
+
+Anhang: Rechnung_UP-26-55180.pdf, Sicherungsschein.pdf

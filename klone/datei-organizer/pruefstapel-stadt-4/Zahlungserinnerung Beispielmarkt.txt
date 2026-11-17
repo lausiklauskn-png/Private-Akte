@@ -1,0 +1,23 @@
+Von: Beispielmarkt Zahlungsservice <zahlung@beispielmarkt.example>
+An: markus.feldhaus@mail-beispiel.example
+Datum: 10.04.2026 06:30
+Betreff: Zahlungserinnerung zu Ihrer Bestellung 000-1182734-5512098
+Anhang: Rechnung_BM-RE-2026-0337815.pdf
+
+Hallo Markus Feldhaus,
+
+im Alltag kann eine Rechnung schon mal untergehen. Für Ihre Bestellung vom
+12.03.2026 konnten wir bisher leider keinen Zahlungseingang feststellen.
+
+Offener Betrag:        149,88 €
+Mahngebühr:              0,00 €
+Rechnungsnummer:       BM-RE-2026-0337815
+
+1. MAHNUNG
+Bitte überweisen Sie den Betrag bis spätestens 24.04.2026 auf
+IBAN DE00 0000 0000 0000 0000 00 (Verwendungszweck: BM-RE-2026-0337815).
+
+Haben Sie bereits bezahlt? Dann betrachten Sie diese Nachricht bitte als
+gegenstandslos.
+
+Ihr Beispielmarkt-Team

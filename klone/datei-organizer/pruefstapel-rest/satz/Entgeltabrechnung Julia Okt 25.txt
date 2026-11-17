@@ -1,0 +1,23 @@
+# Beispiel Logistik SE
+
+ENTGELTABRECHNUNG 10/2025
+
+PERS.-NR.: 77120
+NAME: Okafor-Lenz, Julia
+STKL.: IV  KIST: --
+KV: Techniker Beispiel KK
+
+|LA|BEZEICHNUNG|BETRAG|
+|0100|Gehalt|4.420,00|
+|0410|Jobticket geldwerter Vorteil|29,00|
+|0900|Brutto|4.449,00|
+|5000|LSt|-618,25|
+|5100|SolZ|0,00|
+|6000|KV AN|-376,62|
+|6100|RV AN|-413,76|
+|6200|AV AN|-57,84|
+|6300|PV AN|-75,63|
+|7000|Jobticket Abzug|-29,00|
+|9999|NETTO/AUSZ.|2.877,90|
+
+Mitarbeiterportal · Dokument erzeugt 28.10.2025

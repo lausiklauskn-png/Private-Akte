@@ -1,0 +1,12 @@
+terminfuchs.example – Buchungsportal für Beauty-Termine
+Abrechnung Empfehlungsprogramm
+
+Abrechnungsnr. 03868290       erstellt 2026-02-23
+Empfänger: Haarstudio Federleicht (Salon-ID 59933)
+
+Sie haben 4 neue Salons geworben.
+Werbeprovision (Gutschrift)            92,05 EUR
+Umsatzsteuer 19 %                      17,49 EUR
+Gutschriftsbetrag                      109,54 EUR
+
+Diese Gutschrift gilt als Rechnung im Sinne des § 14 Abs. 2 UStG.

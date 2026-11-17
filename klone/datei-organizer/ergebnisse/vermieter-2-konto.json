@@ -1,0 +1,245 @@
+{
+ "ordner": "pruefstapel-vermieter-2/belege",
+ "belege": 50,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null
+  },
+  {
+   "name": "Zweiter (Claude-Agent)",
+   "modell": "Claude-Agent"
+  }
+ ],
+ "paare": [
+  {
+   "a": "Erster (Stapel-Autor)",
+   "b": "Zweiter (Claude-Agent)",
+   "gleich": 38,
+   "n": 50
+  }
+ ],
+ "fleissKappa": 0.7280145058930191,
+ "einstimmig": 38,
+ "mehrheit": 38,
+ "strittig": [
+  {
+   "datei": "grundbesitzabgaben_2026.txt",
+   "stimmen": [
+    "4380",
+    "4980"
+   ]
+  },
+  {
+   "datei": "IMG_20260318_0941.txt",
+   "stimmen": [
+    "4250",
+    "4260"
+   ]
+  },
+  {
+   "datei": "steuerbuero_2025.txt",
+   "stimmen": [
+    "4955",
+    "4950"
+   ]
+  },
+  {
+   "datei": "gartenpflege_fruehjahr.txt",
+   "stimmen": [
+    "4250",
+    "4260"
+   ]
+  },
+  {
+   "datei": "IMG_20261028_1712.txt",
+   "stimmen": [
+    "4250",
+    "4260"
+   ]
+  },
+  {
+   "datei": "NK-Abrechnung_2025_EG.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "NK-Abrechnung_2025_OG.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "quittung_garage1_Q1.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "quittung_garage1_Q2.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "dokument.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "quittung_garage1_Q4.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  },
+  {
+   "datei": "garage2_rechnung_2026.txt",
+   "stimmen": [
+    "8120",
+    "8400"
+   ]
+  }
+ ],
+ "ersterGegenMehrheit": {
+  "ok": 38,
+  "n": 38
+ },
+ "konto": {
+  "sollErster": {
+   "alt": {
+    "ok": 21,
+    "n": 50,
+    "spanne": [
+     0.2937479723456693,
+     0.5576680331222217
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 23,
+    "n": 50,
+    "spanne": [
+     0.3296943460178263,
+     0.5960136567161192
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 23,
+    "n": 50,
+    "spanne": [
+     0.3296943460178263,
+     0.5960136567161192
+    ]
+   }
+  },
+  "sollMehrheit": {
+   "alt": {
+    "ok": 21,
+    "n": 38,
+    "spanne": [
+     0.3970602917908942,
+     0.6985383468844911
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 23,
+    "n": 38,
+    "spanne": [
+     0.4471758699869596,
+     0.7440214073638108
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 23,
+    "n": 38,
+    "spanne": [
+     0.4471758699869596,
+     0.7440214073638108
+    ]
+   }
+  },
+  "sollEinstimmig": {
+   "alt": {
+    "ok": 21,
+    "n": 38,
+    "spanne": [
+     0.3970602917908942,
+     0.6985383468844911
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 23,
+    "n": 38,
+    "spanne": [
+     0.4471758699869596,
+     0.7440214073638108
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 23,
+    "n": 38,
+    "spanne": [
+     0.4471758699869596,
+     0.7440214073638108
+    ]
+   }
+  }
+ },
+ "richtung": {
+  "sollMehrheit": {
+   "alt": {
+    "ok": 41,
+    "n": 49,
+    "spanne": [
+     0.7096339333048477,
+     0.9148740301179102
+    ]
+   },
+   "neu ohne Namen": {
+    "ok": 41,
+    "n": 49,
+    "spanne": [
+     0.7096339333048477,
+     0.9148740301179102
+    ]
+   },
+   "neu mit Namen": {
+    "ok": 43,
+    "n": 49,
+    "spanne": [
+     0.7575533759811903,
+     0.9426525224019018
+    ]
+   }
+  }
+ },
+ "mcnemar": {
+  "Konto, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 2,
+   "p": 0.5
+  },
+  "Konto, Mehrheit, mit Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 2,
+   "p": 0.5
+  },
+  "Richtung, Mehrheit, ohne Namen": {
+   "nurAltRichtig": 0,
+   "nurNeuRichtig": 0,
+   "p": 1
+  },
+  "Richtung, Mehrheit, mit Namen": {
+   "nurAltRichtig": 1,
+   "nurNeuRichtig": 3,
+   "p": 0.625
+  }
+ }
+}

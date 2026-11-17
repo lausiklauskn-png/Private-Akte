@@ -1,0 +1,13 @@
+Von: Beispiel Termine <billing@beispiel-termine.example>
+An: info@haarwerk-hartwig.example
+Datum: 01.02.2026 04:00
+Betreff: Ihre Rechnung für Februar 2026 – Salon-Paket
+
+Hallo Haarwerk Hartwig,
+
+vielen Dank, dass Sie Beispiel Termine nutzen. Ihre Monatsrechnung über 39,00 € zzgl. MwSt. (Salon-Paket inkl. SMS-Erinnerungen) finden Sie im Anhang.
+Der Betrag wird per Lastschrift eingezogen.
+
+Ihr Beispiel Termine Team
+
+Anhang: RE-2026-02-008812.pdf

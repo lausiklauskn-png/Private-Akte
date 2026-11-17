@@ -1,0 +1,16 @@
+Lohn- und Gehaltsabrechnung für Juni 2026            Blatt 1
+Firma  Physiotherapie & Massagepraxis Lindenhof                              Abr.-Kreis 01
+Arbeitnehmerin  Kortmann, Svenja   geb. 00.00.1994   SV-Nr. 00 000000 K 000
+
+BRUTTOBEZÜGE
+  Monatsgehalt                               2.730,00
+  Urlaubsgeld (Einmalbezug)                    400,00
+  Summe Brutto                               3.130,00
+ABZÜGE
+  Steuern (LSt, KiSt)                          398,40
+  Sozialversicherung Arbeitnehmeranteil        664,10
+NETTO                                        2.067,50
+  ./. vermögenswirksame Leistung (Anlage)      -40,00
+AUSZAHLUNG                                   2.027,50
+
+Zahltag 29.06.2026 · Urlaub: Anspruch 28 / genommen 9 / Rest 19 Tage

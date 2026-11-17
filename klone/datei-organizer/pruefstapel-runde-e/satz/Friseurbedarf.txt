@@ -1,0 +1,35 @@
+# Friseurbedarf Beispiel Großhandel
+Friseurbedarf Beispiel Großhandel · Lagerstraße 30 · 56070 Beispielkoblenz
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Kundennummer: FB-1188 (Haarwerk Hartwig)
+Datum: 31.10.2025
+
+# Rechnung 88-2025-10311 – Salonbedarf
+
+Sehr geehrte Frau Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Haarfarbe Beispiel Color 60 ml, sortiert|36|5,40 €|194,40 €|
+|2|Oxidant 6 % 1 l|6|6,90 €|41,40 €|
+|3|Shampoo Salongröße 1 l|8|11,20 €|89,60 €|
+|4|Handtücher schwarz|24|3,10 €|74,40 €|
+|5|Einweg-Umhänge 100 Stk.|2|18,50 €|37,00 €|
+|6|Folie Rolle|4|7,80 €|31,20 €|
+
+Nettobetrag: 468,00 €
+zzgl. 19 % MwSt.: 88,92 €
+Rechnungsbetrag: 556,92 €
+
+Bitte überweisen Sie den Betrag von 556,92 € bis zum 30.11.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Zahlbar innerhalb von 30 Tagen ohne Abzug, bei Zahlung innerhalb von 10 Tagen 2 % Skonto.
+
+Mit freundlichen Grüßen
+Friseurbedarf Beispiel Großhandel
+@fuss Friseurbedarf Beispiel Großhandel · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

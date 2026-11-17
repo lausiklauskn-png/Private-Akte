@@ -1,0 +1,16 @@
+ELEKTRIK-PARTNER SÜD
+Fahrzeugelektrik · Serisorik · Leuchtmittel
+Kd 880231   Brandhorst Kfz-Technik (Kfz-Technik Brandhorst)   37199 Wolmershagen
+RE 4400917 / 16.07.2026
+
+001;Lichtmaschine 14V 120A (Tavsh);1;ST;119,00;119,00
+002;Anlasser 12V 1,4kW;1;ST;97,80;97,80
+003;Lambdasonde Regelsonde;2;ST;38,60;77,20
+004;Glühlampe H7 12V 55W;20;ST;1,85;37,00
+005;Sicherungssortimct Flachstecker;1;ST;6,40;6,40
+
+NETTO:                                             337,40
+UST 19%:                                            64,11
+BRUTTO:                                            401,51
+Elektrik-Partner Süd GmbH, Kabclgase 9, 86153 Augsfeld, DE000000009
+Zahlung per Lastschrift am 31.07.2026

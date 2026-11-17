@@ -1,0 +1,19 @@
+SCHREIBWAREN BEISPIEL
+Marktplatz 7, Musterstadt
+
+Kasse 2  Bon 4711
+
+Schulhefte A4 Lin,4 x5      4,75 B
+Fueller Patronen            2,49 B
+Zeichenblock A3             3,99 B
+Schnellhefter 10er          2,90 B
+Tuschkasten                 8,95 B
+------------------------------------
+SUMME EUR                    23,08
+EC-Karte                     23,08
+
+A 7%  Netto 0,00  MwSt 0,00
+B 19% Netto 19,39  MwSt 3,69
+
+28.08.2025  15:30
+Vielen Dank fuer Ihren Einkauf

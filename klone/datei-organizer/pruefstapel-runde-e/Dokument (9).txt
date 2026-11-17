@@ -1,0 +1,33 @@
+Beispielgas Versorgung GmbH
+Beispielgas Versorgung GmbH · Flammenweg 1 · 56000 Beispielkoblenz
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Vertragskonto: BG-0000-9090
+Datum: 15.01.2026
+
+Jahresabrechnung Erdgas 2025 – Ladenlokal Marktplatz 9
+
+Sehr geehrte Frau Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Erdgas kWh   8240   0,11 €   922,88 €
+2   Grundpreis Monate   12   14,90 €   178,80 €
+3   CO2-Abgabe kWh   8240   0,01 €   90,64 €
+4   abzgl. Abschläge   12   -94,00 €   -1.128,00 €
+
+Nettobetrag: 64,32 €
+zzgl. 19 % MwSt.: 12,22 €
+Rechnungsbetrag: 76,54 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Ihr Guthaben überweisen wir in den nächsten Tagen auf Ihr Konto.
+
+Mit freundlichen Grüßen
+Beispielgas Versorgung GmbH
+Beispielgas Versorgung GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

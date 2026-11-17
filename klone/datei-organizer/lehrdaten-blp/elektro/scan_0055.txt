@@ -1,0 +1,17 @@
+elektro-teile24.example  -  Onlineshop der Voltmarkt Handels GmbH
+Rechnung / Lieferschein
+
+Rechnungsnummer: VM-5530071        Bestellnr.: 88120045
+Rechnungsdatum:  05.03.2026        Zahlart: PayPal (bereits bezahlt)
+
+Rechnungsadresse: Markus Brandhuber, Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos
+
+Artikel                                      Anz.   Preis     Summe
+FI-Schutzschalter 40A 30mA 4-pol Typ A        3    27,90     83,70
+Phasenschiene 3-pol 12TE Gabel                5     6,10     30,50
+Reihenklemme grau 2,5mm² (50 Stueck)          2    14,40     28,80
+Versandkosten                                                 5,00
+
+Zwischensumme (netto)      148,00 EUR
+MwSt. 19 %                 28,12 EUR
+Gesamtsumme                176,12 EUR

@@ -1,0 +1,39 @@
+# Beispiel Hypothekenbank AG
+Beispiel Hypothekenbank AG · Kreditallee 40 · 60000 Beispielfurt
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Darlehensnummer: 000 4471 22
+Objekt: Lindenweg 14, Beispielstadt
+Datum: 01.12.2025
+
+# Ende der Zinsbindung Ihres Darlehens – Ihr Angebot zur Anschlussfinanzierung
+
+Sehr geehrte Frau Brandtner, sehr geehrter Herr Brandtner,
+
+die Sollzinsbindung Ihres Darlehens endet am 30.06.2026. Die Restschuld beträgt zu diesem Zeitpunkt voraussichtlich 118.420,55 €.
+
+Wir bieten Ihnen eine Anschlussfinanzierung mit 10 Jahren Zinsbindung zu einem gebundenen Sollzins von 3,45 % p. a. an. Die Monatsrate läge bei 812,00 €.
+
+Damit wir die Anschlussfinanzierung rechtzeitig einrichten können, senden Sie uns bitte die unterschriebene Vereinbarung bis zum 28.02.2026 zurück. Danach gelten die dann aktuellen Konditionen.
+
+Mit freundlichen Grüßen
+@unterschrift
+Beispiel Hypothekenbank AG
+
+Anlage: Prolongationsvereinbarung (2-fach), Europäisches Standardisiertes Merkblatt
+@seite
+Beispiel Hypothekenbank AG · Seite 2 · Ende der Zinsbindung Ihres Darlehens – Ihr Angebot zur Anschlussfinanzierung
+
+## Übersicht Ihres Angebots
+|Merkmal|Wert|
+|Restschuld 30.06.2026|118.420,55 €|
+|Sollzins gebunden|3,45 %|
+|effektiver Jahreszins|3,50 %|
+|Monatsrate|812,00 €|
+|Zinsbindung bis|30.06.2036|
+
+
+Sondertilgungen bis 5 % der ursprünglichen Darlehenssumme jährlich sind kostenfrei möglich.

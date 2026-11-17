@@ -1,0 +1,21 @@
+Aulachtaler Bank eG  –  Kartenservice
+Abrechnung Kreditkarte Classic  **** **** **** 3391
+Karteninhaberin: Miriam Brandl          Abrechnungsdatum 29.12.2025
+
+Beleg-    Buchung   Verwendung                              EUR
+datum
+02.12.    03.12.    SPIELKISTE AM TURM KRAEHENFURT          64,90
+05.12.    08.12.    ONLINESHOP LESEFUCHS.EXAMPLE            38,45
+09.12.    10.12.    BAHN-FERNVERKEHR TICKET 2 ERW 2 KI     112,60
+13.12.    15.12.    WEIHNACHTSMARKT GLUEHSTAND (KONTAKTL.)  14,00
+19.12.    22.12.    SPORTHAUS KIEFER, SKIHELM KIND          59,95
+20.12.    22.12.    HOFLADEN ZIEGLER GANS                   78,20
+23.12.    27.12.    PARKHAUS KORNHAUS                        4,50
+                                                          -------
+Summe Umsätze                                              372,60
+Saldo Vormonat (ausgeglichen)                                0,00
+
+Der Betrag von 372,60 EUR wird am 05.01.2026 Ihrem Girokonto
+DE12 9999 0000 0041 5520 18 belastet.
+
+Verfügungsrahmen 2.500 EUR · Sperr-Notruf 0700 999 116

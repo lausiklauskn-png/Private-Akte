@@ -1,0 +1,361 @@
+{
+ "stellen": [
+  {
+   "name": "Finanzamt Musterhausen-Beispiel",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Steuerweg 1, 99900 Musterhausen am Rhein",
+   "kennung": "Steuernummer 000/000/0000x; ELSTER-Nachricht Transfer-Ticket XX0-000-000"
+  },
+  {
+   "name": "Stadtverwaltung Musterhausen – Bürgerkonto",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, 99900 Musterhausen am Rhein",
+   "kennung": "Bürgerkonto-Nr. BK-2026-00000; Kassenzeichen 5.0000.000000.0"
+  },
+  {
+   "name": "Stadtkasse Musterhausen (Grundbesitzabgaben)",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, 99900 Musterhausen am Rhein",
+   "kennung": "Kassenzeichen GB-000-0000-0"
+  },
+  {
+   "name": "Bürgerbüro Musterhausen (Meldewesen)",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 3, 99900 Musterhausen am Rhein",
+   "kennung": "Vorgangs-Nr. MW-26-00000"
+  },
+  {
+   "name": "Standesamt Musterhausen",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 3, 99900 Musterhausen am Rhein",
+   "kennung": "Register-Nr. G 000/2026"
+  },
+  {
+   "name": "Kreisverwaltung Beispielkreis – Zulassungsstelle",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausstraße 10, 99910 Beispielkreisstadt",
+   "kennung": "Vorgang KFZ-0000000; Kennzeichen BSP-…"
+  },
+  {
+   "name": "Kreisverwaltung Beispielkreis – Pflegestützpunkt und Wohngeld",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausstraße 10, 99910 Beispielkreisstadt",
+   "kennung": "Az. 50.0-000/26"
+  },
+  {
+   "name": "Familienkasse Beispielregion",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 99920 Beispielgroßstadt",
+   "kennung": "Kindergeld-Nr. 000FK000000"
+  },
+  {
+   "name": "Agentur für Arbeit Beispielregion",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Arbeitsweg 2, 99920 Beispielgroßstadt",
+   "kennung": "Kunden-Nr. 000A000000"
+  },
+  {
+   "name": "Elterngeldstelle Beispielkreis",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Kreishausstraße 12, 99910 Beispielkreisstadt",
+   "kennung": "Az. EG-2026-0000"
+  },
+  {
+   "name": "Deutsche Rentenversicherung Beispielland",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rentenallee 5, 99930 Beispielhauptstadt",
+   "kennung": "Versicherungs-Nr. 00 000000 X 000"
+  },
+  {
+   "name": "Amtsgericht Musterhausen – Nachlassgericht",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Justizplatz 2, 99900 Musterhausen am Rhein",
+   "kennung": "Az. 00 VI 000/26"
+  },
+  {
+   "name": "Beitragsservice Rundfunk Beispiel",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 99940 Beispielstadt",
+   "kennung": "Beitragsnummer 000 000 000"
+  },
+  {
+   "name": "Notariat Beispiel Vogt",
+   "art": "Privat",
+   "gruppe": 1,
+   "anschrift": "Justizplatz 5, 99900 Musterhausen am Rhein",
+   "kennung": "Urkundenrolle Nr. 000/2026"
+  },
+  {
+   "name": "Bausparkasse Beispiel-Heim AG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Sparallee 20, 99930 Beispielhauptstadt",
+   "kennung": "Vertrags-Nr. BS-0000000"
+  },
+  {
+   "name": "Rheinufer Direktbank Beispiel AG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Bankenhof 1, 99920 Beispielgroßstadt",
+   "kennung": "Kunden-Nr. 0000000; IBAN DE00 0000 0000 0000 0000 00"
+  },
+  {
+   "name": "Nova Beispiel Neobank",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Digitalstraße 7, 99920 Beispielgroßstadt",
+   "kennung": "Kunden-ID NB-00000000"
+  },
+  {
+   "name": "Sparkasse Musterhausen-Beispiel",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Marktplatz 4, 99900 Musterhausen am Rhein",
+   "kennung": "Konto IBAN DE00 0000 0000 0000 0000 00"
+  },
+  {
+   "name": "Beispiel Kreditkarten Service GmbH",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Kartenweg 3, 99920 Beispielgroßstadt",
+   "kennung": "Karten-Nr. 0000 XXXX XXXX 0000"
+  },
+  {
+   "name": "Beispielkasse Gesundheit (gesetzliche Krankenkasse)",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Kassenplatz 9, 99920 Beispielgroßstadt",
+   "kennung": "Versicherten-Nr. X000000000"
+  },
+  {
+   "name": "Beispielkasse Pflege (Pflegekasse)",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Kassenplatz 9, 99920 Beispielgroßstadt",
+   "kennung": "Az. PK-0000000"
+  },
+  {
+   "name": "Lindgrün Beispiel Zusatzversicherung AG",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenweg 14, 99930 Beispielhauptstadt",
+   "kennung": "Versicherungsschein ZV-00000000"
+  },
+  {
+   "name": "Rheinland Beispiel Kfz- und Hausratversicherung",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenweg 16, 99930 Beispielhauptstadt",
+   "kennung": "Schaden-Nr. SCH-26-000000; Vertrag KH-0000000"
+  },
+  {
+   "name": "Beispiel Inkasso Forderungsmanagement GmbH",
+   "art": "Firma",
+   "gruppe": 2,
+   "anschrift": "Forderungsstraße 1, 99950 Beispielort",
+   "kennung": "Az. INK-0000000"
+  },
+  {
+   "name": "Chemiewerk Beispiel-Rhein GmbH",
+   "art": "Firma",
+   "gruppe": 2,
+   "anschrift": "Werkstraße 100, 99901 Musterhausen am Rhein",
+   "kennung": "Personal-Nr. 000000"
+  },
+  {
+   "name": "Beispiel IT-Solutions GmbH",
+   "art": "Firma",
+   "gruppe": 2,
+   "anschrift": "Technologiepark 4, 99920 Beispielgroßstadt",
+   "kennung": "Personal-Nr. IT-0000"
+  },
+  {
+   "name": "Bezirksregierung Beispiel – Lehrerbesoldung",
+   "art": "Amt",
+   "gruppe": 2,
+   "anschrift": "Regierungsplatz 1, 99930 Beispielhauptstadt",
+   "kennung": "Personal-Nr. LB-000000"
+  },
+  {
+   "name": "Steuerberatung Beispiel Hartmann",
+   "art": "Firma",
+   "gruppe": 2,
+   "anschrift": "Kanzleiweg 3, 99900 Musterhausen am Rhein",
+   "kennung": "Mandanten-Nr. 00000"
+  },
+  {
+   "name": "Stadtwerke Musterhausen Beispiel",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Energieweg 2, 99900 Musterhausen am Rhein",
+   "kennung": "Vertragskonto 0000000000; Zähler-Nr. 0ESY000000"
+  },
+  {
+   "name": "Rheinwelle Beispiel Glasfaser und Mobilfunk",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Netzstraße 8, 99920 Beispielgroßstadt",
+   "kennung": "Kunden-Nr. RW-0000000"
+  },
+  {
+   "name": "Beispielflix Streaming",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Medienplatz 1, 99920 Beispielgroßstadt",
+   "kennung": "Konto-ID BF-000000"
+  },
+  {
+   "name": "Beispielmarkt Online-Versand",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Logistikallee 50, 99960 Beispielhausen",
+   "kennung": "Bestell-Nr. 000-0000000-0000000; E-Rechnung"
+  },
+  {
+   "name": "Handelsplatz Beispiel Marktplatz",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Logistikallee 52, 99960 Beispielhausen",
+   "kennung": "Bestell-Nr. HP-00000000"
+  },
+  {
+   "name": "Paketblitz Beispiel Zustelldienst",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Depotweg 5, 99901 Musterhausen am Rhein",
+   "kennung": "Sendungs-Nr. 00000000000000"
+  },
+  {
+   "name": "Autohaus Rheinblick Beispiel",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 12, 99905 Musterhausen am Rhein",
+   "kennung": "Kunden-Nr. AH-00000; Auftrags-Nr. WA-26-0000"
+  },
+  {
+   "name": "Kfz-Meisterbetrieb Beispiel Hansen",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 20, 99905 Musterhausen am Rhein",
+   "kennung": "Rechnungs-Nr. R-26-0000"
+  },
+  {
+   "name": "Verkehrsverbund Beispiel-Rhein (ÖPNV-Abo)",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Bahnhofsplatz 1, 99920 Beispielgroßstadt",
+   "kennung": "Abo-Nr. VB-000000"
+  },
+  {
+   "name": "Hausverwaltung Beispiel Immobilien GmbH",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Verwalterweg 7, 99902 Musterhausen am Rhein",
+   "kennung": "Mietobjekt-Nr. 0000/00"
+  },
+  {
+   "name": "Elektro Beispiel Kurz",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Handwerkerhof 3, 99903 Musterhausen am Rhein",
+   "kennung": "Rechnungs-Nr. 2026-000"
+  },
+  {
+   "name": "Bäckerei und Café Beispielkorn",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Marktplatz 9, 99900 Musterhausen am Rhein",
+   "kennung": "Bon-Nr. 0000"
+  },
+  {
+   "name": "Hausarztpraxis Dr. Beispiel-Lindner",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Ärztehaus am Park, Parkstraße 2, 99900 Musterhausen am Rhein",
+   "kennung": "Patienten-Nr. 0000; Online-Termin-Code T-000000"
+  },
+  {
+   "name": "Labor Beispiel Diagnostik",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Laborweg 1, 99920 Beispielgroßstadt",
+   "kennung": "Auftrags-Nr. L-0000000"
+  },
+  {
+   "name": "Rheinklinik Musterhausen Beispiel",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Klinikstraße 1, 99900 Musterhausen am Rhein",
+   "kennung": "Fall-Nr. 000000000"
+  },
+  {
+   "name": "Ambulanter Pflegedienst Beispielhilfe",
+   "art": "Firma",
+   "gruppe": 4,
+   "anschrift": "Pflegeweg 4, 99901 Musterhausen am Rhein",
+   "kennung": "Klienten-Nr. PD-0000"
+  },
+  {
+   "name": "Seniorenstift Beispielhof",
+   "art": "Firma",
+   "gruppe": 4,
+   "anschrift": "Stiftsallee 1, 99902 Musterhausen am Rhein",
+   "kennung": "Bewohner-Nr. SB-000"
+  },
+  {
+   "name": "Gymnasium am Beispielrhein (Eltern-App)",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Schulstraße 15, 99900 Musterhausen am Rhein",
+   "kennung": "Schüler-ID G-00000"
+  },
+  {
+   "name": "Städtische Kita Sonnenbeispiel",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Kitaweg 2, 99905 Musterhausen am Rhein",
+   "kennung": "Betreuungsvertrag KT-000"
+  },
+  {
+   "name": "Musikschule Musterhausen Beispiel",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Kulturhaus, Am Theater 1, 99900 Musterhausen am Rhein",
+   "kennung": "Schüler-Nr. MS-000"
+  },
+  {
+   "name": "Turnverein Beispiel 1888 Musterhausen",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Sporthallenweg 6, 99903 Musterhausen am Rhein",
+   "kennung": "Mitglieds-Nr. TV-0000"
+  },
+  {
+   "name": "Kirchengemeinde St. Beispiel",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Kirchplatz 1, 99900 Musterhausen am Rhein",
+   "kennung": "Gemeindebrief / Spendenquittung Nr. 000"
+  },
+  {
+   "name": "Nachbarschaft und Verwandte (privat)",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "verschiedene Anschriften in Musterhausen am Rhein",
+   "kennung": "keine; eigene Notizen, Karten, Mails"
+  }
+ ]
+}

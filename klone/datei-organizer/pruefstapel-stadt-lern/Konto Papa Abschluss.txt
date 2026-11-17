@@ -1,0 +1,14 @@
+Hafenbank Beispielhafen eG · Ankerplatz 8 · 29999 Beispielhafen
+
+Kontoauszug Nr. 12/2026 – Abschlussauszug        Erstellt: 14.12.2026
+Konto: Girokonto Heinrich Brakmann (verstorben), Kundennummer 0000000
+IBAN DE00 0000 0000 0000 0000 00
+Verfügungsberechtigt: Gerda Brakmann (Erbin), Claudia Brakmann-Ruge (Vollmacht)
+
+Datum   Buchung                                         Betrag
+01.12.  Rentenrückforderung DRV Beispielnord          -1.754,90
+03.12.  Kontoführung anteilig                              -4,90
+14.12.  Übertrag Restguthaben auf Konto G. Brakmann    -2.911,77
+Neuer Saldo                                                 0,00
+
+Das Konto wurde am 14.12.2026 aufgelöst.

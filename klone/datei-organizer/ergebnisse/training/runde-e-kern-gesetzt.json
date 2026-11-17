@@ -1,0 +1,413 @@
+{
+ "ordner": [
+  "pruefstapel-runde-e"
+ ],
+ "felder": {
+  "bereich": {
+   "neu": {
+    "ok": 147,
+    "n": 185,
+    "spanne": [
+     0.7306691680757533,
+     0.8465341600045002
+    ],
+    "falschSicher": 16,
+    "offen": 22,
+    "mitZweitfach": 160
+   },
+   "alt": {
+    "ok": 143,
+    "n": 185,
+    "spanne": [
+     0.7074137315084242,
+     0.8274260495567648
+    ],
+    "falschSicher": 21,
+    "offen": 21,
+    "mitZweitfach": 156
+   },
+   "mcnemar": {
+    "nurAltRichtig": 2,
+    "nurNeuRichtig": 6,
+    "p": 0.2890625
+   }
+  },
+  "schriftstueck": {
+   "neu": {
+    "ok": 145,
+    "n": 185,
+    "spanne": [
+     0.7190125926064006,
+     0.8370089619663206
+    ],
+    "falschSicher": 16,
+    "offen": 24
+   },
+   "alt": {
+    "ok": 149,
+    "n": 185,
+    "spanne": [
+     0.7423867060221754,
+     0.8559983955656103
+    ],
+    "falschSicher": 16,
+    "offen": 20
+   },
+   "mcnemar": {
+    "nurAltRichtig": 6,
+    "nurNeuRichtig": 2,
+    "p": 0.2890625
+   }
+  },
+  "absender": {
+   "neu": {
+    "ok": 82,
+    "n": 185,
+    "spanne": [
+     0.37353498051499207,
+     0.5152607085704637
+    ],
+    "falschSicher": 32,
+    "offen": 71
+   },
+   "alt": {
+    "ok": 82,
+    "n": 185,
+    "spanne": [
+     0.37353498051499207,
+     0.5152607085704637
+    ],
+    "falschSicher": 32,
+    "offen": 71
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "person": {
+   "neu": {
+    "ok": 94,
+    "n": 118,
+    "spanne": [
+     0.7151753531939933,
+     0.8593410681268034
+    ],
+    "falschSicher": 0,
+    "offen": 24
+   },
+   "alt": {
+    "ok": 94,
+    "n": 118,
+    "spanne": [
+     0.7151753531939933,
+     0.8593410681268034
+    ],
+    "falschSicher": 0,
+    "offen": 24
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "frist": {
+   "neu": {
+    "ok": 170,
+    "n": 185,
+    "spanne": [
+     0.8705431506556757,
+     0.9502505727611986
+    ],
+    "falschSicher": 1,
+    "offen": 14
+   },
+   "alt": {
+    "ok": 168,
+    "n": 185,
+    "spanne": [
+     0.857776207175809,
+     0.9418357427335331
+    ],
+    "falschSicher": 3,
+    "offen": 14
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 2,
+    "p": 0.5
+   }
+  }
+ },
+ "jeForm": {
+  "zwei-in-einem-scan": {
+   "n": 15,
+   "bereich": {
+    "n": 15,
+    "ok": 8
+   },
+   "schriftstueck": {
+    "n": 15,
+    "ok": 8
+   },
+   "absender": {
+    "n": 15,
+    "ok": 5
+   },
+   "person": {
+    "n": 15,
+    "ok": 8
+   },
+   "frist": {
+    "n": 15,
+    "ok": 14
+   }
+  },
+  "pdf-scan/schlecht": {
+   "n": 20,
+   "bereich": {
+    "n": 20,
+    "ok": 11
+   },
+   "schriftstueck": {
+    "n": 20,
+    "ok": 12
+   },
+   "absender": {
+    "n": 20,
+    "ok": 1
+   },
+   "person": {
+    "n": 20,
+    "ok": 6
+   },
+   "frist": {
+    "n": 20,
+    "ok": 15
+   }
+  },
+  "foto/mittel": {
+   "n": 22,
+   "bereich": {
+    "n": 22,
+    "ok": 17
+   },
+   "schriftstueck": {
+    "n": 22,
+    "ok": 21
+   },
+   "absender": {
+    "n": 22,
+    "ok": 8
+   },
+   "person": {
+    "n": 22,
+    "ok": 18
+   },
+   "frist": {
+    "n": 22,
+    "ok": 21
+   }
+  },
+  "pdf-scan/gut": {
+   "n": 22,
+   "bereich": {
+    "n": 22,
+    "ok": 20
+   },
+   "schriftstueck": {
+    "n": 22,
+    "ok": 18
+   },
+   "absender": {
+    "n": 22,
+    "ok": 15
+   },
+   "person": {
+    "n": 22,
+    "ok": 18
+   },
+   "frist": {
+    "n": 22,
+    "ok": 22
+   }
+  },
+  "foto/gut": {
+   "n": 19,
+   "bereich": {
+    "n": 19,
+    "ok": 16
+   },
+   "schriftstueck": {
+    "n": 19,
+    "ok": 16
+   },
+   "absender": {
+    "n": 19,
+    "ok": 7
+   },
+   "person": {
+    "n": 19,
+    "ok": 19
+   },
+   "frist": {
+    "n": 19,
+    "ok": 18
+   }
+  },
+  "pdf-text": {
+   "n": 19,
+   "bereich": {
+    "n": 19,
+    "ok": 18
+   },
+   "schriftstueck": {
+    "n": 19,
+    "ok": 17
+   },
+   "absender": {
+    "n": 19,
+    "ok": 17
+   },
+   "person": {
+    "n": 19,
+    "ok": 16
+   },
+   "frist": {
+    "n": 19,
+    "ok": 18
+   }
+  },
+  "foto/schlecht": {
+   "n": 17,
+   "bereich": {
+    "n": 17,
+    "ok": 13
+   },
+   "schriftstueck": {
+    "n": 17,
+    "ok": 15
+   },
+   "absender": {
+    "n": 17,
+    "ok": 7
+   },
+   "person": {
+    "n": 17,
+    "ok": 14
+   },
+   "frist": {
+    "n": 17,
+    "ok": 14
+   }
+  },
+  "pdf-scan/mittel": {
+   "n": 37,
+   "bereich": {
+    "n": 37,
+    "ok": 31
+   },
+   "schriftstueck": {
+    "n": 37,
+    "ok": 26
+   },
+   "absender": {
+    "n": 37,
+    "ok": 21
+   },
+   "person": {
+    "n": 37,
+    "ok": 32
+   },
+   "frist": {
+    "n": 37,
+    "ok": 34
+   }
+  },
+  "bildschirm": {
+   "n": 14,
+   "bereich": {
+    "n": 14,
+    "ok": 13
+   },
+   "schriftstueck": {
+    "n": 14,
+    "ok": 12
+   },
+   "absender": {
+    "n": 14,
+    "ok": 1
+   },
+   "person": {
+    "n": 14,
+    "ok": 12
+   },
+   "frist": {
+    "n": 14,
+    "ok": 14
+   }
+  }
+ },
+ "ocrGuete": {
+  "zwei-in-einem-scan": {
+   "n": 15,
+   "wortfehler": 0.693,
+   "gefunden": 0.795
+  },
+  "pdf-scan/schlecht": {
+   "n": 20,
+   "wortfehler": 0.766,
+   "gefunden": 0.338
+  },
+  "foto/mittel": {
+   "n": 22,
+   "wortfehler": 0.352,
+   "gefunden": 0.767
+  },
+  "pdf-scan/gut": {
+   "n": 22,
+   "wortfehler": 0.207,
+   "gefunden": 0.969
+  },
+  "foto/gut": {
+   "n": 19,
+   "wortfehler": 0.243,
+   "gefunden": 0.911
+  },
+  "foto/schlecht": {
+   "n": 17,
+   "wortfehler": 0.538,
+   "gefunden": 0.59
+  },
+  "pdf-scan/mittel": {
+   "n": 37,
+   "wortfehler": 0.263,
+   "gefunden": 0.863
+  },
+  "bildschirm": {
+   "n": 14,
+   "wortfehler": 0.283,
+   "gefunden": 0.775
+  }
+ },
+ "lesenOderEinordnen": {
+  "gut gelesen": {
+   "n": 102,
+   "bereich": 84,
+   "schriftstueck": 79,
+   "absender": 50,
+   "person": 83,
+   "frist": 97
+  },
+  "schlecht gelesen": {
+   "n": 64,
+   "bereich": 67,
+   "schriftstueck": 73,
+   "absender": 22,
+   "person": 66,
+   "frist": 83
+  }
+ }
+}

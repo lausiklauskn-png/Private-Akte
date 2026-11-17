@@ -1,0 +1,165 @@
+BEISPIEL-MARKT
+Filiale 1188, Kastanienallee 30, 45678 Musterhausen
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+LACHSFILET TK                    5,99 B
+FRISCHKÄSE
+  3 x 1,29        3,87 B
+COLA 1,5L
+  3 x 1,39        4,17 A
+PFAND
+  3 x 0,25        0,75 A
+THUNFISCH
+  3 x 1,49        4,47 B
+BATTERIEN AA 8ER
+  2 x 4,49        8,98 A
+KÜCHENROLLE 4ER
+  3 x 2,49        7,47 A
+KERZEN                           2,49 A
+PENNE 500G                       0,99 B
+BRÜHE GEKÖRNT
+  2 x 1,99        3,98 B
+BIER 6X0,33                      4,49 A
+PFAND                            0,48 A
+KARTOFFELN FEST 2,5KG
+  2 x 3,49        6,98 B
+KIDNEYBOHNEN
+  2 x 0,79        1,58 B
+GOUDA SCHEIBEN                   1,99 B
+KETCHUP
+  2 x 1,89        3,78 B
+TOMATEN PASSIERT
+  2 x 0,69        1,38 B
+RABATT 20% TOMATEN PASSIE       -0,28 B
+AVOCADO
+  2 x 1,29        2,58 B
+RABATT 20% AVOCADO              -0,52 B
+H-MILCH 1,5% 1L                  0,99 B
+APFELSAFT 1L                     1,29 A
+POMMES TK 1KG                    1,99 B
+VANILLEEIS 1L
+  2 x 2,49        4,98 B
+KAFFEE GEMAHLEN 500G             5,99 B
+SPAGHETTI 500G
+  2 x 0,99        1,98 B
+SHAMPOO
+  3 x 1,65        4,95 A
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+BABYBREI GLAS                    1,09 B
+ESSIG                            0,95 B
+SALAMI AUFSCHNITT                1,89 B
+RABATT 20% SALAMI AUFSCHN       -0,38 B
+CHAMPIGNONS 400G                 2,19 B
+ZUCKER 1KG
+  3 x 0,99        2,97 B
+NUSS-NOUGAT-CREME
+  2 x 2,99        5,98 B
+SONNENBLUMENÖL                   2,29 B
+SALAT EISBERG
+  2 x 1,19        2,38 B
+H-MILCH 1,5% 1L
+  2 x 0,99        1,98 B
+FRISCHMILCH 3,8%
+  3 x 1,19        3,57 B
+NUSS-NOUGAT-CREME
+  2 x 2,99        5,98 B
+HACKFLEISCH GEM 500G
+  2 x 4,99        9,98 B
+EIER BODENH. 10ER                2,69 B
+BLUMEN STRAUSS
+  2 x 4,99        9,98 B
+BUTTER 250G
+  2 x 2,39        4,78 B
+RABATT 20% BUTTER 250G          -0,96 B
+BLUMEN STRAUSS                   4,99 B
+FEUCHTTÜCHER                     1,49 A
+SENF
+  2 x 0,79        1,58 B
+COLA 1,5L                        1,39 A
+PFAND                            0,25 A
+WEICHSPÜLER
+  2 x 1,79        3,58 A
+REIS LANGKORN 1KG
+  2 x 1,79        3,58 B
+ZAHNPASTA
+  3 x 0,99        2,97 A
+SONNENBLUMENÖL                   2,29 B
+WEICHSPÜLER
+  2 x 1,79        3,58 A
+BABYBREI GLAS AKTION
+  2 x 0,76        1,52 B
+ZWIEBELN 2KG AKTION
+  3 x 1,25        3,75 B
+SPÜLMASCHINENTABS 40
+  2 x 4,99        9,98 A
+GOUDA SCHEIBEN                   1,99 B
+DUSCHGEL                         1,25 A
+KAROTTEN 2KG                     1,99 B
+KNOBLAUCH                        0,69 B
+AUFBACKBRÖTCHEN 10ER             1,69 B
+KEKSE BUTTER
+  2 x 1,39        2,78 B
+FRISCHKÄSE
+  3 x 1,29        3,87 B
+SALAT EISBERG
+  2 x 1,19        2,38 B
+GEFRIERBEUTEL                    1,29 A
+RABATT 20% GEFRIERBEUTEL        -0,26 A
+WEICHSPÜLER
+  3 x 1,79        5,37 A
+NUSS-NOUGAT-CREME                2,99 B
+KETCHUP                          1,89 B
+KATZENFUTTER 12X AKTION          3,84 A
+CHAMPIGNONS 400G
+  2 x 2,19        4,38 B
+ZUCKER 1KG                       0,99 B
+MÜLLBEUTEL AKTION
+  3 x 1,25        3,75 A
+DUSCHGEL
+  2 x 1,25        2,50 A
+KOCHSCHINKEN
+  2 x 2,29        4,58 B
+MAIS DOSE
+  3 x 0,89        2,67 B
+TOMATEN PASSIERT
+  2 x 0,69        1,38 B
+KERZEN
+  2 x 2,49        4,98 A
+WINDELN GR.5
+  2 x 8,99        17,98 A
+MAYONNAISE AKTION
+  3 x 1,18        3,54 B
+RABATT 20% MAYONNAISE AKT       -0,71 B
+NUSS-NOUGAT-CREME
+  2 x 2,99        5,98 B
+LACHSFILET TK
+  2 x 5,99        11,98 B
+FRUCHTJOGHURT 4X AKTION          1,25 B
+KOCHSCHINKEN                     2,29 B
+DUSCHGEL                         1,25 A
+ZWIEBELN 2KG                     1,79 B
+DUSCHGEL
+  2 x 1,25        2,50 A
+BANANEN
+  3 x 1,49        4,47 B
+KAKAOPULVER                      2,49 B
+WAAGE: BANANEN 1,236 KG X 1,49     1,84 B
+------------------------------------
+ZWISCHENSUMME                 303,52
+LEERGUTBON 0000974              -2,25 A
+====================================
+SUMME EUR                     301,27
+VISA                     301,27
+POSTEN: 91
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   84,46   16,05   100,51
+B 7 %   187,63   13,13   200,76
+
+28.02.2026 20:05  BON 8363  KASSE 2  BED. 49
+TSE-TRANSAKTION 79499  SIGNATUR-ZÄHLER 129555
+START 20:05:02  ENDE 20:05:44
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

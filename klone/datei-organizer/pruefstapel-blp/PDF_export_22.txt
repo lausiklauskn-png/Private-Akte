@@ -1,0 +1,24 @@
+Bäckereitechnik Ofenmeister GmbH
+Industriestr. 32, 37997 Haselbrunn
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: OM-3912
+Rechnungsdatum: 2026-02-19
+Seriennummer: OM-3E-000123
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Etagenbackofen 3 Herde, elektrisch     1 18.900,00  18.900,00
+  2  Lieferung, Montage, Inbetriebnahme     1    950,00     950,00
+
+Nettobetrag                               19.850,00
+zzgl. 19 % USt                            3.771,50
+Summe                                     23.621,50 EUR
+
+Bitte überweisen Sie den Betrag bis 05.03.26 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 6251 85
+USt-IdNr. DE000000962

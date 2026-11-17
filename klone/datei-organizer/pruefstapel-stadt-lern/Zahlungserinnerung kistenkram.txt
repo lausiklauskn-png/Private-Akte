@@ -1,0 +1,18 @@
+Von: Kistenkram Beispiel Versand <zahlung@kistenkram-beispiel.example>
+An: lukas.behrend@post-beispiel.example
+Datum: Mo, 6. Apr 2026 07:12
+Betreff: Freundliche Zahlungserinnerung – Rechnung KKR-2026-0081734
+
+Hallo Lukas Behrend,
+
+vielleicht ist es dir im Alltag durchgerutscht: Für deine Bestellung KK-114-2283911 (Notebook „Wellenbrecher Pro“, Rucksack) konnten wir bisher keinen Zahlungseingang feststellen.
+
+Offener Betrag: 888,99 €
+Fällig seit: 27.03.2026
+
+Bitte überweise den Betrag bis spätestens 17.04.2026. Falls du schon gezahlt hast, betrachte diese Nachricht als gegenstandslos.
+
+Konto: IBAN DE00 0000 0000 0000 0000 00 · Verwendungszweck KKR-2026-0081734
+
+Liebe Grüße
+dein Kistenkram-Team

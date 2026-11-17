@@ -1,0 +1,23 @@
+3 Finanzamt Beispielkreis U
+E Kruftfahrzeugsteuerstelle
+; a  ——
+KR Faannant baspeärsie Serum | 9 Bigießmunndt
+Ss ae Datum: 03.03 2006
+Bi: Herrn
+r Klaus-Dieter Tannreiter
+= Marktplatz 5
+E 3 9999 Musterbach
+E Kraft fahrzeugsteuerbescheid (Änderungsbescheid)
+- Fahrzeug: Lieferwagen, amtl Kennzeichen BSP-LT 300
+E Fahrzeugklasse: N1, zulässiges Gesamtgewicht 3.400 kg
+E Schadstoffklasse: Euro 6
+E Die Steuer wird ab 01.03.2026 auf jährlich 214,00 € festgesetzt.
+h- Grund der Änderung: neue Angaben zum Gewicht nach Umbau (Laderaumregal).
+4 Die Steuer wird jährlich im Voraus am 01.03. von Ihrem Konto
+- IBAN DEOO 0000 0000 0000 0000 00 eingezogen (SEPA-Lastschriftmandat vom
+Be 12.04.2019). Sie brauchen nichts weiter zu veranlassen.
+E Erstattung für den bisherigen Zeitraum: 0,00 €
+Ri
+Er
+19
+h

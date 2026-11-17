@@ -1,0 +1,354 @@
+{
+ "stellen": [
+  {
+   "name": "Finanzamt Beispielkreis",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Steuerweg 1, 99990 Beispielkreisstadt",
+   "kennung": "Steuernummer 000/000/00000"
+  },
+  {
+   "name": "Gemeindeverwaltung Musterbach",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, 99999 Musterbach",
+   "kennung": "Az. GV-2026-0000"
+  },
+  {
+   "name": "Landratsamt Beispielkreis – Kfz-Zulassung",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Landratsweg 10, 99990 Beispielkreisstadt",
+   "kennung": "Vorgangsnr. KFZ-0000-26"
+  },
+  {
+   "name": "Landratsamt Beispielkreis – Sozialamt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Landratsweg 10, 99990 Beispielkreisstadt",
+   "kennung": "Az. SOZ-00/0000"
+  },
+  {
+   "name": "Landratsamt Beispielkreis – Bauamt",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Landratsweg 12, 99990 Beispielkreisstadt",
+   "kennung": "Bauantrag BA-2026-000"
+  },
+  {
+   "name": "Familienkasse Beispielregion",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 99990 Beispielkreisstadt",
+   "kennung": "Kindergeldnr. 000FK000000"
+  },
+  {
+   "name": "Agentur für Arbeit Beispielkreis",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Arbeitsweg 2, 99990 Beispielkreisstadt",
+   "kennung": "Kundennr. 000A000000"
+  },
+  {
+   "name": "Jobcenter Beispielkreis",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Arbeitsweg 4, 99990 Beispielkreisstadt",
+   "kennung": "BG-Nr. 00000BG0000000"
+  },
+  {
+   "name": "Deutsche Beispiel-Rentenversicherung Süd",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rentenring 5, 99980 Beispielhausen",
+   "kennung": "Vers.-Nr. 00 000000 X 000"
+  },
+  {
+   "name": "Amtsgericht Beispielkreisstadt – Nachlassgericht",
+   "art": "Gericht",
+   "gruppe": 1,
+   "anschrift": "Gerichtsplatz 3, 99990 Beispielkreisstadt",
+   "kennung": "Az. VI 000/26"
+  },
+  {
+   "name": "Beispiel-Beitragsservice Rundfunk",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Postfach 0000, 99970 Beispielstadt",
+   "kennung": "Beitragsnr. 000 000 000"
+  },
+  {
+   "name": "Standesamt Musterbach",
+   "art": "Amt",
+   "gruppe": 1,
+   "anschrift": "Rathausplatz 1, 99999 Musterbach",
+   "kennung": "Reg.-Nr. G 00/2026"
+  },
+  {
+   "name": "Beispiel-Raiffbank Musterbach eG",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Bankgasse 2, 99999 Musterbach",
+   "kennung": "Kontonr. intern 0000000, IBAN DE00 0000 0000 0000 0000 00"
+  },
+  {
+   "name": "Beispielkasse Beispielkreis",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Kassenplatz 1, 99990 Beispielkreisstadt",
+   "kennung": "Kunden-Nr. 0000000"
+  },
+  {
+   "name": "Beispiel-Bausparkasse Süd",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Bauspar-Allee 9, 99980 Beispielhausen",
+   "kennung": "Vertrag BSV-000000"
+  },
+  {
+   "name": "Beispiel-Kreditkarten-Service",
+   "art": "Bank",
+   "gruppe": 2,
+   "anschrift": "Kartenstraße 4, 99970 Beispielstadt",
+   "kennung": "Karte **** 0000, Abrechnungsnr. KK-000000"
+  },
+  {
+   "name": "Beispiel-Versicherung Allgemeine AG",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Policenweg 6, 99970 Beispielstadt",
+   "kennung": "Versicherungsschein 00-000000-0"
+  },
+  {
+   "name": "Musterbacher Beispiel-Kfz-Versicherung",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Ringstraße 11, 99970 Beispielstadt",
+   "kennung": "Vertrag KFZ-000000"
+  },
+  {
+   "name": "Beispiel-Lebensversicherung aG",
+   "art": "Versicherung",
+   "gruppe": 2,
+   "anschrift": "Vorsorgeplatz 2, 99980 Beispielhausen",
+   "kennung": "Police LV-0000000"
+  },
+  {
+   "name": "Beispiel-Krankenkasse Süd",
+   "art": "Krankenkasse",
+   "gruppe": 2,
+   "anschrift": "Gesundheitsweg 8, 99990 Beispielkreisstadt",
+   "kennung": "Vers.-Nr. A000000000"
+  },
+  {
+   "name": "Beispiel-Pflegekasse bei der Beispiel-Krankenkasse Süd",
+   "art": "Pflegekasse",
+   "gruppe": 2,
+   "anschrift": "Gesundheitsweg 8, 99990 Beispielkreisstadt",
+   "kennung": "Az. PK-000000"
+  },
+  {
+   "name": "Beispiel-Inkasso GmbH",
+   "art": "Inkasso",
+   "gruppe": 2,
+   "anschrift": "Forderungsstraße 1, 99960 Beispielburg",
+   "kennung": "Az. INK-0000000"
+  },
+  {
+   "name": "Beispiel-Maschinenbau Musterbach GmbH",
+   "art": "Arbeitgeber",
+   "gruppe": 2,
+   "anschrift": "Industriestraße 30, 99999 Musterbach",
+   "kennung": "Personalnr. 00000"
+  },
+  {
+   "name": "Beispiel-Lohnbüro Kieferle",
+   "art": "Firma",
+   "gruppe": 2,
+   "anschrift": "Bürogasse 3, 99999 Musterbach",
+   "kennung": "Mandantennr. 0000"
+  },
+  {
+   "name": "Vermieter Alois Beispielhuber (privat)",
+   "art": "Privat",
+   "gruppe": 3,
+   "anschrift": "Bachgasse 14, 99999 Musterbach",
+   "kennung": "Mietobjekt Bahnhofstraße 21, 2. OG"
+  },
+  {
+   "name": "Beispiel-Hausverwaltung Talblick",
+   "art": "Hausverwaltung",
+   "gruppe": 3,
+   "anschrift": "Am Talblick 2, 99999 Musterbach",
+   "kennung": "Objekt-Nr. 000-00"
+  },
+  {
+   "name": "Beispiel-Stadtwerke Musterbach",
+   "art": "Energieversorger",
+   "gruppe": 3,
+   "anschrift": "Werkstraße 1, 99999 Musterbach",
+   "kennung": "Vertragskonto 000000000"
+  },
+  {
+   "name": "Beispiel-Energie Südland AG",
+   "art": "Energieversorger",
+   "gruppe": 3,
+   "anschrift": "Netzallee 5, 99970 Beispielstadt",
+   "kennung": "Kundennr. E-0000000"
+  },
+  {
+   "name": "Beispiel-Mobilfunk Funkwelle",
+   "art": "Mobilfunk",
+   "gruppe": 3,
+   "anschrift": "Antennenweg 7, 99970 Beispielstadt",
+   "kennung": "Kundennr. FW-00000000, Tel. 0000-000000"
+  },
+  {
+   "name": "Beispiel-Glasfaser Musterbach",
+   "art": "Internet",
+   "gruppe": 3,
+   "anschrift": "Kabelweg 2, 99999 Musterbach",
+   "kennung": "Anschluss-ID GF-000000"
+  },
+  {
+   "name": "Kfz-Werkstatt Beispiel-Schraubhof",
+   "art": "Firma",
+   "gruppe": 3,
+   "anschrift": "Werkstattweg 9, 99999 Musterbach",
+   "kennung": "Auftragsnr. W-0000"
+  },
+  {
+   "name": "Beispiel-Bau Hinterbühl GmbH",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 4, 99997 Musterbach-Hinterbühl",
+   "kennung": "Bauvorhaben BV-000"
+  },
+  {
+   "name": "Elektro Beispiel-Funkenstein",
+   "art": "Handwerker",
+   "gruppe": 3,
+   "anschrift": "Kupfergasse 6, 99999 Musterbach",
+   "kennung": "Rechnungsnr. EF-2026-000"
+  },
+  {
+   "name": "Beispiel-Versandhaus Paketfix",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Lagerstraße 100, 99960 Beispielburg",
+   "kennung": "Bestellnr. PF-000000000"
+  },
+  {
+   "name": "Beispiel-Markt Musterbach",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Einkaufsstraße 2, 99999 Musterbach",
+   "kennung": "Bon-Nr. 0000"
+  },
+  {
+   "name": "Beispiel-Baumarkt Hammerfix",
+   "art": "Händler",
+   "gruppe": 3,
+   "anschrift": "Gewerbering 12, 99990 Beispielkreisstadt",
+   "kennung": "Kundenkarte 0000000"
+  },
+  {
+   "name": "Beispiel-Möbelhaus Wohnreich (Werbung)",
+   "art": "Werbung",
+   "gruppe": 3,
+   "anschrift": "Möbelweg 1, 99990 Beispielkreisstadt",
+   "kennung": "Aktionscode WR-0000"
+  },
+  {
+   "name": "Hausarztpraxis Dr. med. Beispiel-Lenz",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Brunnenstraße 4, 99999 Musterbach",
+   "kennung": "Patientennr. 00000"
+  },
+  {
+   "name": "Zahnarztpraxis Beispiel-Weißgerber",
+   "art": "Arzt",
+   "gruppe": 4,
+   "anschrift": "Brunnenstraße 6, 99999 Musterbach",
+   "kennung": "Patientennr. Z-0000"
+  },
+  {
+   "name": "Beispiel-Labor Südkreis",
+   "art": "Labor",
+   "gruppe": 4,
+   "anschrift": "Laborweg 3, 99990 Beispielkreisstadt",
+   "kennung": "Auftragsnr. L-000000"
+  },
+  {
+   "name": "Kreisklinik Beispielkreis",
+   "art": "Klinik",
+   "gruppe": 4,
+   "anschrift": "Klinikweg 1, 99990 Beispielkreisstadt",
+   "kennung": "Fallnr. 000000000"
+  },
+  {
+   "name": "Ambulanter Pflegedienst Beispiel-Fürsorge",
+   "art": "Pflegedienst",
+   "gruppe": 4,
+   "anschrift": "Sonnenstraße 15, 99999 Musterbach",
+   "kennung": "Klientennr. P-000"
+  },
+  {
+   "name": "Grundschule Musterbach",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Schulweg 1, 99999 Musterbach",
+   "kennung": "Klasse 2b/4a"
+  },
+  {
+   "name": "Beispiel-Gymnasium Beispielkreisstadt",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Bildungsallee 5, 99990 Beispielkreisstadt",
+   "kennung": "Klasse 7c/Q12"
+  },
+  {
+   "name": "Kindergarten Beispiel-Regenbogen",
+   "art": "Kita",
+   "gruppe": 4,
+   "anschrift": "Wiesenweg 2, 99999 Musterbach",
+   "kennung": "Platz-Nr. K-00"
+  },
+  {
+   "name": "Musikschule Beispiel-Klangwerk",
+   "art": "Schule",
+   "gruppe": 4,
+   "anschrift": "Kirchplatz 7, 99999 Musterbach",
+   "kennung": "Schülernr. M-000"
+  },
+  {
+   "name": "Freiwillige Feuerwehr Musterbach – Förderverein e. V.",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Gerätehausweg 1, 99999 Musterbach",
+   "kennung": "Mitgliedsnr. 000"
+  },
+  {
+   "name": "Sportverein Beispiel-Musterbach 1920 e. V.",
+   "art": "Verein",
+   "gruppe": 4,
+   "anschrift": "Am Sportplatz 1, 99999 Musterbach",
+   "kennung": "Mitgliedsnr. SV-0000"
+  },
+  {
+   "name": "Nachbarin Erna Beispielwirth (privat)",
+   "art": "Privat",
+   "gruppe": 4,
+   "anschrift": "Obere Dorfstraße 25, 99998 Musterbach-Kleeweiler",
+   "kennung": ""
+  },
+  {
+   "name": "Notariat Beispiel-Siegelmann",
+   "art": "Notar",
+   "gruppe": 4,
+   "anschrift": "Kanzleigasse 2, 99990 Beispielkreisstadt",
+   "kennung": "Urkundenrolle Nr. 000/2026"
+  }
+ ]
+}

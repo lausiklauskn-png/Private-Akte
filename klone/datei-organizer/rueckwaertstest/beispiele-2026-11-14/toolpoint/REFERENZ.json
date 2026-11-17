@@ -1,0 +1,407 @@
+{
+ "app": "PWA Toolpoint",
+ "stand": {
+  "repo": "lausiklauskn-png/PWA-Toolpoint",
+  "commit": "bbb0193",
+  "datum": "2026-11-14"
+ },
+ "quellen": [
+  "CLAUDE.md",
+  "README.md",
+  "docs/sessions/BRIEF_naechste-sitzung.md",
+  "index.html",
+  "auslieferungspruefer.html",
+  "assets/config/listings.js",
+  "assets/karte.js",
+  "assets/studio.js",
+  "tools/",
+  "git log origin/main"
+ ],
+ "merkmale": [
+  {
+   "id": "M01",
+   "art": "zweck",
+   "text": "Die Seite ist ein offener Marktplatz, auf dem Fremde Progressive Web Apps finden und eigene Apps anbieten können.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Was dieses Repo ist; README.md"
+  },
+  {
+   "id": "M02",
+   "art": "zweck",
+   "text": "Die Seite stellt Vertrauen durch nachprüfbare Angaben her (gemessene Zahlen mit Datum, Wächter, Siegel), nicht durch persönliche Bekanntschaft.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Was dieses Repo ist; index.html #pruefung"
+  },
+  {
+   "id": "M03",
+   "art": "zweck",
+   "text": "Die Seite ist die offene zweite Instanz neben family-projekt.de und läuft auf derselben Marktplatz-Software, aber getrennt in Marke und Daten.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Was dieses Repo ist; README.md"
+  },
+  {
+   "id": "M04",
+   "art": "zweck",
+   "text": "Die Seite bietet unten einen Weg, eine eigene App oder Website bauen zu lassen („Eigene App oder Website gewünscht?“), unverbindlich per Formular.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #auftrag"
+  },
+  {
+   "id": "M05",
+   "art": "nutzer",
+   "text": "Die Seite richtet sich an Fremde aus dem ganzen Markt, im sachlichen, knappen Ton ohne Mitmach-Appelle oder Community-Ton.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Der Ton"
+  },
+  {
+   "id": "M06",
+   "art": "nutzer",
+   "text": "Anbieter treten nur mit einem Kürzel auf, nie mit Klarnamen.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #eintragen; assets/config/listings.js, Schema „by“"
+  },
+  {
+   "id": "M07",
+   "art": "plattform",
+   "text": "Die Seite läuft ohne Bau-Schritt und ohne fremde Laufzeit-Abhängigkeiten im Browser (keine CDNs) als statische Seite.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Disziplin; README.md"
+  },
+  {
+   "id": "M08",
+   "art": "plattform",
+   "text": "Die Seite ist eine installierbare PWA mit Service Worker und Offline-Vorrat; ein Installieren-Knopf steht in der Kopfleiste und verschwindet in der installierten App.",
+   "gewicht": "wichtig",
+   "beleg": "manifest.json; sw.js; CLAUDE.md, Installieren-Knopf"
+  },
+  {
+   "id": "M09",
+   "art": "plattform",
+   "text": "Die Seite hat die Adresse pwa-toolpoint.de, pwa-toolpoint.com leitet dorthin weiter.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Was dieses Repo ist; CNAME"
+  },
+  {
+   "id": "M10",
+   "art": "plattform",
+   "text": "Die Seite ist am Handy wie am PC ohne seitliches Rollen bedienbar; die Kopfleiste bricht bei schmalen Breiten um.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Installieren-Knopf (gemessen 320–1280 px)"
+  },
+  {
+   "id": "M11",
+   "art": "plattform",
+   "text": "Die Seite hat drei Farbthemen (Nacht, Signal, Tag), gesetzt vor dem ersten Anstrich, und einen Aktualisieren-Knopf, der Vorrat und Service Worker verwirft.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Themen und Kopf-Werkzeuge; assets/thema.js"
+  },
+  {
+   "id": "M12",
+   "art": "plattform",
+   "text": "Die Seite ist auf Deutsch und Englisch mit einem Sprachknopf umschaltbar; die Wahl wird gemerkt und sperrt die Browser-Übersetzung.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Deutsch und Englisch; assets/sprache.js, assets/i18n-*.js"
+  },
+  {
+   "id": "M13",
+   "art": "plattform",
+   "text": "Impressum und Datenschutz werden nicht übersetzt; die Seiten sagen das und nennen den Weg zum Browser-Übersetzer.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Deutsch und Englisch"
+  },
+  {
+   "id": "M14",
+   "art": "bereich",
+   "text": "Die Startseite zeigt die Liste aller Einträge als kompakte Karten (Symbol, Name, Beschreibung, Messwerte); Anbieter, Bereich und Links liegen hinter „Mehr zeigen“.",
+   "gewicht": "kern",
+   "beleg": "index.html #liste; assets/karte.js; CLAUDE.md, Weniger Text auf einmal"
+  },
+  {
+   "id": "M15",
+   "art": "bereich",
+   "text": "Die Startseite erklärt in vier Aufklappern, wie geprüft wird: gemessene Ladezeit, Wächter, Siegel, Suche nach Bedeutung.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #pruefung"
+  },
+  {
+   "id": "M16",
+   "art": "bereich",
+   "text": "Die Startseite zeigt einen „Fund der Woche“ (Weekly Discovery), der wöchentlich wechselt, nur Einträge mit Bild nimmt und nicht kaufbar ist.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #fund; .github/workflows/statische-liste.yml"
+  },
+  {
+   "id": "M17",
+   "art": "bereich",
+   "text": "Es gibt eine Übersichtsseite „Alle Apps“ (/apps/) nach Bereich geordnet und je App eine eigene Detailseite mit Messverlauf und Mängeln.",
+   "gewicht": "kern",
+   "beleg": "apps/index.html; tools/detailseiten.mjs; CLAUDE.md, S7"
+  },
+  {
+   "id": "M18",
+   "art": "bereich",
+   "text": "Es gibt eine versteckte Knotenkarte (knotenkarte.html), die nur über fünfmaliges Tippen auf das Marken-Quadrat erreichbar ist und nicht in Navigation oder Sitemap steht.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Die Knotenkarte ist versteckt; knotenkarte.html"
+  },
+  {
+   "id": "M19",
+   "art": "bereich",
+   "text": "Es gibt eine Seite zur KI-Schulung nach Art. 4 EU AI Act und eine Erklärseite „So funktioniert das Mycel“.",
+   "gewicht": "beiwerk",
+   "beleg": "ki-schulung.html; sicherheit.html; schulung/"
+  },
+  {
+   "id": "M20",
+   "art": "funktion",
+   "text": "Die Seite sucht nach Bedeutung statt nach Stichwörtern; das Sprachmodell (~30 MB) lädt erst nach einem ausdrücklichen Haken.",
+   "gewicht": "kern",
+   "beleg": "index.html #suche, #semantisch; CLAUDE.md, Das Suchfeld der Übersicht"
+  },
+  {
+   "id": "M21",
+   "art": "funktion",
+   "text": "Ohne Bedeutungssuche filtert die Seite die Einträge über eine Wortsuche; die Übersicht /apps/ hat einen Wortfilter und übergibt mit Enter als ?q= an den Marktplatz.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Das Suchfeld der Übersicht; assets/app-suche.js"
+  },
+  {
+   "id": "M22",
+   "art": "funktion",
+   "text": "Das Suchfeld hat ein Mikrofon für Spracheingabe mit wählbarer Sprache; ohne Spracherkennung im Browser bleibt der Knopf stehen und erklärt sich.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #sucheMic, #sucheMicLang"
+  },
+  {
+   "id": "M23",
+   "art": "funktion",
+   "text": "Jede Karte zeigt die gemessenen Lighthouse-Werte Leistung, Bedienbarkeit, Gute Praxis und Auffindbarkeit mit Messdatum und Quelle – auch schlechte Werte.",
+   "gewicht": "kern",
+   "beleg": "index.html Karten; assets/karte.js; CLAUDE.md, Weniger Text auf einmal"
+  },
+  {
+   "id": "M24",
+   "art": "funktion",
+   "text": "Jede Karte zeigt geprüfte Eigenschaften (installierbar, offlinefähig, kein Zähldienst gefunden), die ein täglicher Lauf nachprüft.",
+   "gewicht": "wichtig",
+   "beleg": "index.html Karten; tools/eigenschaften-pruefen.mjs; .github/workflows/eigenschaften-taeglich.yml"
+  },
+  {
+   "id": "M25",
+   "art": "funktion",
+   "text": "Die Messwerte holt ein täglicher Lauf aus einer fremden Messreihe und backt sie in die Einträge; der Marktplatz misst nicht selbst.",
+   "gewicht": "kern",
+   "beleg": "tools/messwerte-holen.mjs; .github/workflows/messwerte-taeglich.yml; git log"
+  },
+  {
+   "id": "M26",
+   "art": "funktion",
+   "text": "Die Liste ist eine Zeitachse: die Einträge stehen nach Anlagedatum aufsteigend, die Karte zeigt „seit Monat Jahr“.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Die Liste ist eine Zeitachse"
+  },
+  {
+   "id": "M27",
+   "art": "funktion",
+   "text": "Jede Karte hat die Knöpfe „Einzelheiten →“, „Zur Seite ↗“, wo abweichend „Zur App ↗“, „Woher die Zahlen?“ und „⚑ Melden“.",
+   "gewicht": "wichtig",
+   "beleg": "index.html Karten; CLAUDE.md, Workfloh PDF mit Erklärvideo"
+  },
+  {
+   "id": "M28",
+   "art": "funktion",
+   "text": "Ein Eintrag kann ein Erklärvideo tragen, das die Detailseite erst beim Antippen lädt; die Karte zeigt nur einen Hinweis.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Workfloh PDF mit Erklärvideo"
+  },
+  {
+   "id": "M29",
+   "art": "funktion",
+   "text": "Über das Formular „Deine eigene App eintragen“ reicht man Name, Kürzel, Adresse, Bildlink, Bereich und Beschreibung ein; jeder Eintrag wird vor der Veröffentlichung angesehen.",
+   "gewicht": "kern",
+   "beleg": "index.html #eintragen"
+  },
+  {
+   "id": "M30",
+   "art": "funktion",
+   "text": "Das Eintragsformular zeigt eine Bildvorschau und erklärt, woher man einen Bildlink bekommt; SVG und Bilder vom Gerät gehen nicht.",
+   "gewicht": "beiwerk",
+   "beleg": "index.html #eintragen"
+  },
+  {
+   "id": "M31",
+   "art": "funktion",
+   "text": "Ein verstecktes Pflege-Studio (langer Druck auf die Fußzeile) zeigt die Warteschlange der Einsendungen samt Herkunft und veröffentlicht Einträge.",
+   "gewicht": "kern",
+   "beleg": "assets/studio.js; CLAUDE.md, Das Pflege-Studio"
+  },
+  {
+   "id": "M32",
+   "art": "funktion",
+   "text": "Eine Ampel je Eintrag (grün, gelb, rot) kann im Studio nur verschärft und nur in der Datei gelöst werden; Rot zeigt den Grund, nimmt den Link weg und lässt den Eintrag sichtbar.",
+   "gewicht": "kern",
+   "beleg": "assets/config/wache-hand.json; docs/RAUSWURF-REGEL.md; CLAUDE.md, Die Ampel"
+  },
+  {
+   "id": "M33",
+   "art": "funktion",
+   "text": "Ein Automatik-Schalter zeigt bei anhaltend schlechten Messwerten ein gerechnetes Gelb auch den Besuchern; Rot bleibt Handarbeit.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Der Automatik-Schalter; docs/RAUSWURF-REGEL.md"
+  },
+  {
+   "id": "M34",
+   "art": "funktion",
+   "text": "Ein Eintrag lässt sich im Studio mit einem Klick auf Wartung (unsichtbar) und zurück schalten; eine Sperre geht dabei vor.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Wartung; assets/karte.js (sichtbare)"
+  },
+  {
+   "id": "M35",
+   "art": "funktion",
+   "text": "Nach einer Änderung an den Einträgen schreibt ein Arbeitsablauf die Karten als echtes HTML in die Seite, baut Detailseiten und Sitemap neu und prüft vor dem Commit.",
+   "gewicht": "wichtig",
+   "beleg": ".github/workflows/statische-liste.yml; tools/statische-listen.mjs; tools/sitemap-bauen.mjs"
+  },
+  {
+   "id": "M36",
+   "art": "funktion",
+   "text": "Ein Abgleich-Werkzeug vergleicht die Messwerte mit family-projekt.de und meldet nur Widersprüche bei gleichem Datum als Fehler.",
+   "gewicht": "beiwerk",
+   "beleg": "tools/markt-abgleich.mjs; CLAUDE.md, Der Abgleich"
+  },
+  {
+   "id": "M37",
+   "art": "funktion",
+   "text": "Der frühere Auslieferungsprüfer ist umgezogen; die alte Adresse auslieferungspruefer.html leitet mit Anhängsel und Sprungpunkt zur eigenen App weiter.",
+   "gewicht": "wichtig",
+   "beleg": "auslieferungspruefer.html"
+  },
+  {
+   "id": "M38",
+   "art": "daten",
+   "text": "Die Einträge stehen in einer Datei assets/config/listings.js (Name, stabile Kennung, Text, englischer Text, Kürzel, Adresse, Bild, Bereich, seit, Messung, Eigenschaften); der deutsche Text ist zugleich der Suchkorpus.",
+   "gewicht": "kern",
+   "beleg": "assets/config/listings.js, Schema"
+  },
+  {
+   "id": "M39",
+   "art": "daten",
+   "text": "Der Marktplatz zeigt rund drei Dutzend Einträge, eigene Apps und Markt-Einträge; Detailseiten liegen unter apps/<kennung>/.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #liste; apps/"
+  },
+  {
+   "id": "M40",
+   "art": "daten",
+   "text": "Lokale Daten liegen in einer eigenen Datenbank-Kennung „pwatoolpoint“, damit sie nicht mit Geschwister-Apps auf derselben Adresse kollidieren.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Disziplin"
+  },
+  {
+   "id": "M41",
+   "art": "daten",
+   "text": "Die Detailseiten sind indexierbar, tragen JSON-LD ohne Bewertungssterne, Preis oder erfundenes Datum und stehen in einer gebauten Sitemap.",
+   "gewicht": "wichtig",
+   "beleg": "tools/detailseiten.mjs; tools/sitemap-bauen.mjs; CLAUDE.md, S9"
+  },
+  {
+   "id": "M42",
+   "art": "schnittstelle",
+   "text": "Die Seite ist ein SBKIM-Knoten mit Statuslampen (LEBT, VERKEHR, FREMD), Siegel mit Andock-Werkzeug und Mycel-Fenster; die Module werden erst in der Leerlauf-Pause geladen.",
+   "gewicht": "kern",
+   "beleg": "index.html #lamps; assets/sbkim-init.js; assets/siegel-inhalt.js; CLAUDE.md, Siegel und Lampen"
+  },
+  {
+   "id": "M43",
+   "art": "schnittstelle",
+   "text": "Die SBKIM-Module unter sbkim/ sind byte-gleiche Kopien aus Sage-Protokol und werden per SHA-256 von einem Drift-Guard bewacht.",
+   "gewicht": "wichtig",
+   "beleg": "tools/drift-guard.mjs; CLAUDE.md, Disziplin"
+  },
+  {
+   "id": "M44",
+   "art": "schnittstelle",
+   "text": "Das eigene Netz nutzt mehrere frei wählbare Relais parallel; ein eigener Raum getrennt vom übrigen Netz ist vorbereitet, aber noch nicht aktiv.",
+   "gewicht": "beiwerk",
+   "beleg": "assets/config/netz.js; netz-verwaltung.html; CLAUDE.md, Das eigene Netz"
+  },
+  {
+   "id": "M45",
+   "art": "schnittstelle",
+   "text": "Einsendungen gehen an die gemeinsame Einreich-API von family-projekt.de; der Server leitet das Ziel aus der Browser-Herkunft ab und committet ins richtige Repo.",
+   "gewicht": "wichtig",
+   "beleg": "assets/config/listings.js (PT_SUBMIT_ENDPOINT); CLAUDE.md, Eine Warteschlange, zwei Märkte"
+  },
+  {
+   "id": "M46",
+   "art": "sicherheit",
+   "text": "Im Browser liegt kein GitHub-Token; das Studio ist durch ein vom Server geprüftes Passwort geschützt, der lange Druck ist nur Aufräumen.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Das Pflege-Studio"
+  },
+  {
+   "id": "M47",
+   "art": "sicherheit",
+   "text": "Die Seite lädt keine Werbe-Netzwerke und keine Zählpixel und nutzt keine fremden Dienste.",
+   "gewicht": "kern",
+   "beleg": "index.html Fußzeile"
+  },
+  {
+   "id": "M48",
+   "art": "sicherheit",
+   "text": "Bildadressen werden geprüft: nur https oder gleich-ursprüngliche Pfade, kein SVG.",
+   "gewicht": "beiwerk",
+   "beleg": "assets/studio.js (sicheresBild); CLAUDE.md, Ein eigenes Bild aus dem Depot"
+  },
+  {
+   "id": "M49",
+   "art": "sicherheit",
+   "text": "Das Auftragsformular hat ein verstecktes Honigtopf-Feld gegen Spam.",
+   "gewicht": "beiwerk",
+   "beleg": "index.html #auftrag („bitte frei lassen“)"
+  },
+  {
+   "id": "M50",
+   "art": "sicherheit",
+   "text": "Eine Kopfleisten-Lampe „FREMD“ meldet fremde Herkunft; das Siegel hängt an Bedingungen, nicht an Selbstauskunft.",
+   "gewicht": "wichtig",
+   "beleg": "index.html #lamp-fremd, #pruefung"
+  },
+  {
+   "id": "M51",
+   "art": "grenze",
+   "text": "Die Seite ist in Stufe 0/1: es gibt keine Preise, keine Provision und keinen Bezahlvorgang; vor dem ersten Preis muss ein Gewerbe angemeldet sein.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md, Die Stufen; README.md"
+  },
+  {
+   "id": "M52",
+   "art": "grenze",
+   "text": "Die Seite baut keine eigene Kasse, keine automatische Auszahlung, keinen Kopierschutz und keine Nutzungsmeldung.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md, Was NICHT gebaut wird"
+  },
+  {
+   "id": "M53",
+   "art": "grenze",
+   "text": "Hochladen von Bildern ist nicht möglich; ein Eintrag braucht einen öffentlichen Bildlink.",
+   "gewicht": "beiwerk",
+   "beleg": "index.html #eintragen"
+  },
+  {
+   "id": "M54",
+   "art": "grenze",
+   "text": "Impressum und Datenschutz tragen echte Pflichtangaben und dürfen nicht durch Platzhalter ersetzt werden.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md, Disziplin"
+  },
+  {
+   "id": "M55",
+   "art": "grenze",
+   "text": "Ein Headless-Smoke mit Drift-Guard, Detailseiten-Probe und Gegenprobe (eingebaute Fehler müssen rot werden) gilt als Beweis; Tablet und Geräte sind nicht gemessen.",
+   "gewicht": "beiwerk",
+   "beleg": "package.json; tests/smoke.mjs; tests/gegenprobe.sh"
+  }
+ ]
+}

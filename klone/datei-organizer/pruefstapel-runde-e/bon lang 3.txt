@@ -1,0 +1,122 @@
+DISCOUNT PROBE
+Ringweg 3, 45678 Musterhausen
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+FRUCHTJOGHURT 4X
+  3 x 1,79        5,37 B
+EMMENTALER GERIEBEN              1,89 B
+QUARK MAGER
+  2 x 0,79        1,58 B
+AUFBACKBRÖTCHEN 10ER             1,69 B
+BABYBREI GLAS
+  3 x 1,09        3,27 B
+QUARK MAGER                      0,79 B
+MÜSLI NUSS
+  2 x 2,49        4,98 B
+RABATT 20% MÜSLI NUSS           -1,00 B
+WINDELN GR.5
+  2 x 8,99        17,98 A
+GEWÜRZ PAPRIKA
+  2 x 1,29        2,58 B
+SALAT EISBERG
+  3 x 1,19        3,57 B
+ZUCCHINI
+  3 x 0,99        2,97 B
+ZUCKER 1KG
+  2 x 0,99        1,98 B
+WINDELN GR.5
+  2 x 8,99        17,98 A
+RABATT 20% WINDELN GR.5         -3,60 A
+FEUCHTTÜCHER                     1,49 A
+RABATT 20% FEUCHTTÜCHER         -0,30 A
+CORNFLAKES
+  3 x 1,99        5,97 B
+NUSS-NOUGAT-CREME                2,99 B
+SPINAT TK 750G
+  3 x 1,49        4,47 B
+ÄPFEL ELSTAR 1KG                 2,99 B
+HAFERFLOCKEN AKTION
+  2 x 0,62        1,24 B
+KAKAOPULVER AKTION               1,74 B
+SALAMI AUFSCHNITT                1,89 B
+GOUDA SCHEIBEN
+  2 x 1,99        3,98 B
+RABATT 20% GOUDA SCHEIBEN       -0,80 B
+WASCHMITTEL 20WL
+  3 x 5,99        17,97 A
+LACHSFILET TK
+  2 x 5,99        11,98 B
+KARTOFFELN FEST 2,5KG AKTION
+  2 x 2,44        4,88 B
+TEELICHTER 50                    2,99 A
+BUTTER 250G                      2,39 B
+KETCHUP
+  3 x 1,89        5,67 B
+SAHNE 200ML
+  2 x 0,99        1,98 B
+SALZSTANGEN                      0,89 B
+HÄHNCHENBRUSTFILET               6,49 B
+ZAHNPASTA                        0,99 A
+BANANEN
+  3 x 1,49        4,47 B
+OLIVENÖL                         6,99 B
+BIER 6X0,33
+  2 x 4,49        8,98 A
+PFAND
+  2 x 0,48        0,96 A
+KOCHSCHINKEN
+  2 x 2,29        4,58 B
+KOCHSCHINKEN                     2,29 B
+CHAMPIGNONS 400G
+  2 x 2,19        4,38 B
+RABATT 20% CHAMPIGNONS 40       -0,88 B
+ROTWEIN                          3,99 A
+FISCHSTÄBCHEN TK                 2,49 B
+BROKKOLI
+  2 x 1,69        3,38 B
+GOUDA SCHEIBEN
+  3 x 1,99        5,97 B
+THUNFISCH                        1,49 B
+THUNFISCH                        1,49 B
+TOMATEN RISPE                    2,49 B
+HÄHNCHENBRUSTFILET               6,49 B
+WEICHSPÜLER                      1,79 A
+KOCHSCHINKEN
+  2 x 2,29        4,58 B
+ROTWEIN
+  2 x 3,99        7,98 A
+THUNFISCH AKTION
+  2 x 1,04        2,08 B
+ZITRONEN NETZ AKTION             1,04 B
+RABATT 20% ZITRONEN NETZ        -0,21 B
+KATZENFUTTER 12X                 5,49 A
+MÜSLI NUSS                       2,49 B
+FRISCHMILCH 3,8%                 1,19 B
+FRISCHKÄSE                       1,29 B
+NUSS-NOUGAT-CREME                2,99 B
+RABATT 20% NUSS-NOUGAT-CR       -0,60 B
+EMMENTALER GERIEBEN              1,89 B
+MÜLLBEUTEL                       1,79 A
+FEUCHTTÜCHER
+  2 x 1,49        2,98 A
+FRISCHKÄSE                       1,29 B
+AUFBACKBRÖTCHEN 10ER
+  3 x 1,69        5,07 B
+------------------------------------
+ZWISCHENSUMME                 246,61
+LEERGUTBON 0000822              -1,25 A
+====================================
+SUMME EUR                     245,36
+GIROCARD                     245,36
+POSTEN: 69
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   74,13   14,08   88,21
+B 7 %   146,87   10,28   157,15
+
+04.10.2025 18:44  BON 6043  KASSE 5  BED. 70
+TSE-TRANSAKTION 88872  SIGNATUR-ZÄHLER 255933
+START 18:44:02  ENDE 18:44:42
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

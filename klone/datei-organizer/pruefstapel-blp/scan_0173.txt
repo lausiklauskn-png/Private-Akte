@@ -1,0 +1,27 @@
+Autohaus Rottner GmbH
+Am Anger 62, 37997 Haselbrunn
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rg.-Nr. W25186
+Rechnungsdatum: 05.08.2026
+Fahrzeug: Lieferwagen, amtl. Kennz. TW-KB 00
+Km-Stand: 111737
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Inspektion nach Herstellervorgabe     1    189,00     189,00
+  2  Motoröl 5W-30 l            4,5     14,90      67,05
+  3  Ölfilter                     1     16,40      16,40
+  4  Innenraumfilter              1     24,90      24,90
+
+Nettobetrag                                  297,35
+zzgl. 19 % USt                               56,50
+Summe                                        353,85 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7952 31
+USt-IdNr. DE000000867

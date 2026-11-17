@@ -1,0 +1,12 @@
+Zahnarztpraxis Beispiel-Holm
+Kaiweg 8, 29999 Beispielhafen
+
+Heil- und Kostenplan (Kieferorthopädie)  HKP-Nummer 0004
+Patient: Mats Kranbeck, geb. 2017       Patientennummer Z0000
+
+Geplant: festsitzende Apparatur Oberkiefer, 8 Quartale
+Voraussichtliche Gesamtkosten                     2.340,00 EUR
+Anteil der Kasse (nach Genehmigung)               1.872,00 EUR
+Eigenanteil der Eltern (vorläufig)                  468,00 EUR
+Bitte reichen Sie den Plan zur Genehmigung bei Ihrer Krankenkasse ein.
+Der Behandlungsbeginn ist erst nach Genehmigung möglich.

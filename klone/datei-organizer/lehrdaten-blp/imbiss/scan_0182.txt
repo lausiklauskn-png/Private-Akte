@@ -1,0 +1,9 @@
+PayFront Kartenakzeptanz GmbH
+Händlerabrechnung Februar 2026           Vertragsnr. VU-0041771
+Terminal-ID 60004177  Grillstube Hartwig
+
+Kartenumsatz girocard        4.812,60    Entgelt 0,25 %     12,03
+Kartenumsatz Kreditkarte     1.240,30    Entgelt 1,19 %     14,76
+Transaktionen 411 St. à 0,07                                28,77
+Summe Disagio/Transaktionsentgelte (umsatzsteuerfrei)       55,56 EUR
+Der Betrag wurde von Ihrer Auszahlung einbehalten.

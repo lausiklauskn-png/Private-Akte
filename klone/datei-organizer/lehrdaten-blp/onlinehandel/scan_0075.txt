@@ -1,0 +1,11 @@
+DB Fernverkehr - Online-Ticket (Rechnung)
+Auftragsnummer 000 412 771       Buchungsdatum 02.06.2026
+
+Reisende: Ilka Thormählen
+Rechnung an: Teekontor Lindenblatt, Salzgasse 14, 21335 Lüneburg
+
+Hinfahrt 09.06.2026 Lüneburg -> Bremen Hbf, ICE/RE, Sparpreis
+Rückfahrt 09.06.2026 Bremen Hbf -> Lüneburg
+Preis 39,80 EUR inkl. 7 % MwSt 2,60 EUR
+
+Zweck: Lieferantenbesuch Rooibos & More (Dienstreise der Mitarbeiterin)

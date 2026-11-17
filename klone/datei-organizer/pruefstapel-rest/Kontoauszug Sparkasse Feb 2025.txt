@@ -1,0 +1,21 @@
+Kreissparkasse Musterau
+
+Gerhard Pfannschmidt
+
+Kontoauszug Nr. 2/2025
+Zeitraum: 01.02.2025 – 28.02.2025
+IBAN: DE00 0000 0000 0000 0000 00
+
+Buchungstag   Vorgang   Betrag EUR
+03.02.   Rente DRV   +1168,35
+03.02.   Witwerrente DRV   +411,18
+03.02.   Miete WBG Beispiel eG   -612,00
+10.02.   Pflegedienst Beispiel-Herz   -83,50
+14.02.   Linden-Apotheke Musterau   -24,10
+28.02.   Hausnotruf Beispiel   -25,50
+
+Alter Kontostand: 6.412,18 EUR
+Neuer Kontostand: 7.246,61 EUR
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Kreissparkasse Musterau · BIC BSPLDE00XXX · Amtsgericht Beispielstadt HRB 00000

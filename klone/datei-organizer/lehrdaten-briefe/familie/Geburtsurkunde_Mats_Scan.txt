@@ -1,0 +1,26 @@
+                         GEBURTSURKUNDE
+
+Standesamt Krähenfurt                     Registernummer G 41/2025
+
+Kind
+  Geburtsname        Haas
+  Vorname(n)         Mats Kerem
+  Geschlecht         männlich
+  Geburtstag         17.01.2025
+  Geburtsort         Krähenfurt
+
+Mutter
+  Familienname       Haas
+  Geburtsname        Demirel
+  Vorname(n)         Aylin
+
+Vater
+  Familienname       Haas
+  Vorname(n)         Dominik
+
+Krähenfurt, 23.01.2025
+
+                                   Die Standesbeamtin
+(Siegel)                           Leibfritz
+
+Gebühr 12,00 € bezahlt

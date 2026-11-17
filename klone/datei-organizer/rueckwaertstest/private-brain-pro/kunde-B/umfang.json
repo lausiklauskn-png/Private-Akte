@@ -1,0 +1,7 @@
+{"bausteine":[
+{"katalog":"suche","name":"Inhaltssuche über Mails, Fotos und Dokumente an einer Stelle (Bedeutungssuche auf dem Gerät, ohne Dateinamen)","groesse":"gross","deckt":["B-18","B-26","B-25","B-20"],"faktoren":["offline","ki"]},
+{"katalog":"schnitt","name":"Mail-Anbindung mehrerer Konten (Gmail per OAuth, weitere per IMAP), Mails in den Suchbestand übernehmen","groesse":"mittel","deckt":["B-19","B-27"],"faktoren":[]},
+{"katalog":"altdaten","name":"Einlesen vorhandener Fotos aus der Handy-Galerie und abfotografierter Papiere in den Suchbestand","groesse":"mittel","deckt":["B-25"],"faktoren":[]},
+{"katalog":"neu","name":"Newsletter erkennen und gesammelt aussortieren bzw. abmelden","groesse":"klein","deckt":["B-21","B-29"],"faktoren":[]},
+{"katalog":"neu","name":"Android-App-Hülle ohne Einrichtung (installieren, Konten verbinden, fertig)","groesse":"mittel","deckt":["B-28"],"faktoren":[]}
+]}

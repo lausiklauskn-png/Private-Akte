@@ -1,0 +1,13 @@
+Beispiel-Maschinenbau Musterbach GmbH · Entgeltabrechnung 03/2026
+Personalnr. 00000  Thomas Kieselmayr   Steuerklasse 3   KV-Zusatzbeitrag 1,7 %
+
+Bruttogehalt            4.320,00
+Schichtzulage             210,00
+Lohnsteuer               -402,16
+Solidaritätszuschlag        0,00
+Krankenversicherung      -371,25
+Rentenversicherung       -421,83
+Arbeitslosenvers.         -58,83
+Pflegeversicherung       -78,40
+Auszahlung                3.207,53
+vermögenswirksame Leistungen Arbeitgeber 40,00 EUR

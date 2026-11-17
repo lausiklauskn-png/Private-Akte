@@ -1,0 +1,43 @@
+{
+ "bewerter": 2,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "getroffen",
+  "M05": "teilweise",
+  "M06": "getroffen",
+  "M07": "teilweise",
+  "M08": "getroffen",
+  "M09": "fehlt",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "fehlt",
+  "M13": "teilweise",
+  "M14": "teilweise",
+  "M15": "getroffen",
+  "M16": "getroffen",
+  "M17": "fehlt",
+  "M18": "fehlt",
+  "M19": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Nur eine einzelne Beraterin; IT-Dienstleister und externe Datenschutzbeauftragte als Nutzer fehlen.",
+  "M05": "Liste erlaubter Programme mit Stand-Datum, aber ohne die drei Stufen erlaubt/nur ohne Personendaten/verboten und ohne Datierung je Änderung.",
+  "M07": "Vorlagen enthalten Schulungsinhalte, aber keine 15–45-Minuten-Bausteine nach Rolle und Branche.",
+  "M09": "Kein Wissenstest.",
+  "M12": "Keine Bestätigung der Regeln durch Mitarbeitende.",
+  "M13": "Lokal, eigener Ordner, je Kunde getrennt, Export ja; Verschlüsselung je Mandant fehlt (nur offene Frage).",
+  "M14": "Berater-Geräte ja; Teilnehmende haben keinen Zugang per Handy („kein Kundenzugang“).",
+  "M17": "Nicht erwähnt.",
+  "M18": "Kein Abo/White-Label-Modell; Einmalbau, Bezahlmodell offen.",
+  "M19": "Keine Übernahme von Zählwerten aus einem Vorfilter."
+ },
+ "zusaetze": [
+  "Native Android- und Windows-Hüllen",
+  "Zeitleiste „Was haben wir schon gemacht?“ je Kunde",
+  "Sicherung mit Wiedereinlesen ohne Überschreiben",
+  "Optionaler einmaliger Excel-Import alter Teilnehmerlisten",
+  "Suche über Kunden, Schulungen, Teilnehmer, Programme"
+ ]
+}

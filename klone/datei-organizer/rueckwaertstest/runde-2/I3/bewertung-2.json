@@ -1,0 +1,39 @@
+{
+ "bewerter": 2,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "fehlt",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "getroffen",
+  "M08": "getroffen",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "getroffen",
+  "M13": "fehlt",
+  "M14": "getroffen",
+  "M15": "getroffen",
+  "M16": "teilweise",
+  "M17": "getroffen",
+  "M18": "fehlt",
+  "M19": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Nur Heizungs-/Wärmepumpenbetrieb; Elektrobetriebe (E-Check/DGUV V3), Lüftung, Trinkwasser fehlen.",
+  "M04": "Keine QR-Aufkleber; Anlage nur über Suche bzw. Seriennummer.",
+  "M13": "Keine Übersicht der Wartungsverträge mit wiederkehrendem Umsatz.",
+  "M16": "Betriebsserver mit AV-Vertrag und Verschlüsselung; Datensparsamkeit und EU-Standort nicht festgelegt, Cloud-Anbieter als offene Frage.",
+  "M18": "Kein Hinweis, dass Vorlagen keine normgerechte Prüfung garantieren; Normen nur als offene Frage.",
+  "M19": "Kein Preismodell je Betrieb oder Anlage."
+ },
+ "zusaetze": [
+  "Kleiner Betriebsserver für Abgleich und Terminseite",
+  "Rollen Inhaber/Büro/Monteur/Azubi mit Rechten",
+  "Einmalige Excel-Übernahme mit Spaltenzuordnung",
+  "Automatische Sicherung",
+  "Konfliktliste beim Abgleich"
+ ]
+}

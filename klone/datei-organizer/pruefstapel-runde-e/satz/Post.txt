@@ -1,0 +1,32 @@
+# Beispiel Versicherung AG
+Beispiel Versicherung AG · Versicherungsring 3 · 50000 Musterköln
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Versicherungsschein-Nr.: WG-000-118-77
+Risikoort: Lindenweg 14
+Datum: 10.11.2025
+
+# Wohngebäudeversicherung – Anpassung des Beitrags zum 01.01.2026
+
+Sehr geehrter Herr Brandtner,
+
+aufgrund gestiegener Baupreise erhöht sich der Anpassungsfaktor für Ihre Wohngebäudeversicherung. Ihr Jahresbeitrag steigt ab dem 01.01.2026 von 694,20 € auf 731,90 €.
+
+Der Versicherungsschutz bleibt unverändert und schließt Elementarschäden ein. Sie müssen nichts weiter tun; der Beitrag wird wie gewohnt abgebucht.
+
+Mit freundlichen Grüßen
+@unterschrift
+Beispiel Versicherung AG
+@seite
+Beispiel Versicherung AG · Seite 2 · Wohngebäudeversicherung – Anpassung des Beitrags zum 01.01.2026
+
+## Ihr Sonderkündigungsrecht
+Erhöht sich der Beitrag ohne Änderung des Versicherungsumfangs, können Sie den Vertrag innerhalb eines Monats nach Zugang dieser Mitteilung kündigen, frühestens zum Zeitpunkt des Wirksamwerdens der Erhöhung.
+
+## Beitragsübersicht
+|Baustein|bisher|neu|
+|Feuer, Leitungswasser, Sturm|548,10 €|578,00 €|
+|Elementar|146,10 €|153,90 €|

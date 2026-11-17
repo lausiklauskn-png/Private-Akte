@@ -1,0 +1,68 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Fällige Wartungen stehen in einer Excel-Tabelle und im Kopf meiner Frau
+B-02 [Bereich 1 Ausgangssituation (IST)] Wartungsprotokolle füllen die Monteure auf Papier aus
+B-03 [Bereich 1 Ausgangssituation (IST)] Rechnungen schreiben wir mit unserem Handwerkerprogramm
+B-04 [Bereich 1 Ausgangssituation (IST)] Termine machen wir per Telefon aus
+B-05 [Bereich 2 Betroffener Prozess] Wartung der rund 600 Heizungen und Wärmepumpen bei Kunden
+B-06 [Bereich 2 Betroffener Prozess] Termin mit dem Kunden ausmachen
+B-07 [Bereich 2 Betroffener Prozess] Protokoll beim Kunden vor Ort
+B-08 [Bereich 2 Betroffener Prozess] Daten für die Rechnung ins Büro bringen
+B-09 [Bereich 3 Nutzer / Beteiligte] Inhaber (Meister)
+B-10 [Bereich 3 Nutzer / Beteiligte] Monteure
+B-11 [Bereich 3 Nutzer / Beteiligte] Azubi
+B-12 [Bereich 3 Nutzer / Beteiligte] Büro (meine Frau)
+B-13 [Bereich 3 Nutzer / Beteiligte] Kunden, die unterschreiben und Termine bestätigen
+B-14 [Bereich 4 Problem / Schwachstelle] Jedes Jahr rutschen Wartungen durch
+B-15 [Bereich 4 Problem / Schwachstelle] Wenn der Kunde selbst anruft, ist es oft zu spät oder er hat einen anderen Betrieb geholt
+B-16 [Bereich 4 Problem / Schwachstelle] Papierprotokolle liegen eine Woche im Auto
+B-17 [Bereich 4 Problem / Schwachstelle] Beim nächsten Besuch weiß keiner, was letztes Jahr war, welche Teile getauscht wurden und was nicht in Ordnung war
+B-18 [Bereich 4 Problem / Schwachstelle] Für einen Termin wird zehnmal telefoniert
+B-19 [Bereich 5 Ursache] Fälligkeiten hängen an einer Excel-Liste und am Gedächtnis einer Person
+B-20 [Bereich 5 Ursache] Protokolle gibt es nur auf Papier, nicht beim Gerät gespeichert
+B-21 [Bereich 5 Ursache] Kein gemeinsamer Stand zwischen Büro und Monteuren
+B-22 [Bereich 6 Bedarf] Rechtzeitig sehen, bei welchem Kunden welche Wartung fällig ist (muss)
+B-23 [Bereich 6 Bedarf] Wartungsprotokoll auf dem Handy mit Fotos, Messwerten und Unterschrift des Kunden (muss)
+B-24 [Bereich 6 Bedarf] Am Gerät sofort sehen: welches Gerät, Seriennummer, was letztes Mal war und welche Teile getauscht wurden (muss)
+B-25 [Bereich 6 Bedarf] Funktioniert auch im Keller ohne Netz (muss)
+B-26 [Bereich 6 Bedarf] Nächsten Termin vorschlagen, Kunde bestätigt ihn einfach (soll)
+B-27 [Bereich 6 Bedarf] Daten für die Rechnung kommen ins Handwerkerprogramm rüber (soll)
+B-28 [Bereich 6 Bedarf] Alle Daten samt Fotos mitnehmen können, wenn wir wechseln (muss)
+B-29 [Bereich 7 Ziel (SOLL)] Keine Wartung wird mehr vergessen
+B-30 [Bereich 7 Ziel (SOLL)] Protokoll ist fertig, wenn der Monteur das Haus verlässt
+B-31 [Bereich 7 Ziel (SOLL)] Jeder sieht am Gerät die ganze Geschichte
+B-32 [Bereich 7 Ziel (SOLL)] Termine ohne langes Telefonieren
+B-33 [Bereich 8 Funktionaler Bedarf] Das System muss zu jedem Kunden die Anlagen mit Gerät, Seriennummer und Wartungsintervall führen.
+B-34 [Bereich 8 Funktionaler Bedarf] Das System muss anzeigen, welche Wartungen bald fällig oder überfällig sind.
+B-35 [Bereich 8 Funktionaler Bedarf] Das System muss dem Monteur am Gerät die bisherigen Protokolle, getauschten Teile und offenen Mängel zeigen.
+B-36 [Bereich 8 Funktionaler Bedarf] Das System muss ein Wartungsprotokoll mit Messwerten und Fotos auf dem Handy erfassen.
+B-37 [Bereich 8 Funktionaler Bedarf] Das System muss die Unterschrift des Kunden auf dem Handy aufnehmen.
+B-38 [Bereich 8 Funktionaler Bedarf] Das System muss ohne Netz funktionieren und später abgleichen.
+B-39 [Bereich 8 Funktionaler Bedarf] Das System muss einen nächsten Termin vorschlagen, den der Kunde bestätigen kann.
+B-40 [Bereich 8 Funktionaler Bedarf] Das System muss die Daten für die Rechnung an unser Handwerkerprogramm übergeben.
+B-41 [Bereich 8 Funktionaler Bedarf] Das System muss alle Daten mit Fotos vollständig exportieren können.
+B-42 [Bereich 9 Organisatorischer Bedarf] Monteure kurz einweisen
+B-43 [Bereich 9 Organisatorischer Bedarf] Büro pflegt die Kunden und Anlagen
+B-44 [Bereich 9 Organisatorischer Bedarf] Bestehende Excel-Liste einmal übernehmen
+B-45 [Bereich 10 Technischer Bedarf] Android-Handys der Monteure
+B-46 [Bereich 10 Technischer Bedarf] Windows-PC im Büro
+B-47 [Bereich 10 Technischer Bedarf] Muss im Keller ohne Netz gehen
+B-48 [Bereich 11 Bestehende Systeme] Handwerkerprogramm für Rechnungen
+B-49 [Bereich 11 Bestehende Systeme] Excel-Tabelle mit Wartungen
+B-50 [Bereich 12 Schnittstellen] Daten für die Rechnung ans Handwerkerprogramm
+B-51 [Bereich 12 Schnittstellen] Übernahme der Excel-Liste
+B-52 [Bereich 13 Daten] Kunden, Anlagen, Seriennummern
+B-53 [Bereich 13 Daten] Wartungsprotokolle mit Messwerten
+B-54 [Bereich 13 Daten] Fotos
+B-55 [Bereich 13 Daten] Unterschriften
+B-56 [Bereich 13 Daten] Rund 600 Anlagen
+B-57 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: ja
+B-58 [Bereich 14 Datenschutz / Sicherheit] Die Daten gehören uns
+B-59 [Bereich 15 Rahmenbedingungen] Budget: 80 bis 100 Euro im Monat für den ganzen Betrieb, nicht pro Kopf
+O-01 [Bereich 18 Offene Punkte] Wie kommen die Daten genau ins Handwerkerprogramm (welches Format)?
+O-02 [Bereich 18 Offene Punkte] Wie bestätigt der Kunde den Termin (Mail, SMS, Link)?
+N-01 [nicht gewünscht] Rechnungen schreiben
+N-02 [nicht gewünscht] Material bestellen
+N-03 [nicht gewünscht] Plantafel
+N-04 [nicht gewünscht] Buchhaltung
+N-05 [nicht gewünscht] Kein neues Programm für alles
+Ausgefüllt: 18 von 18 Bereichen

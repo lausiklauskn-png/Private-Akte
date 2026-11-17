@@ -1,0 +1,92 @@
+Raiffeisen- und Bürgerbank Sellenbrück eG                          KONTOAUSZUG
+Marktstraße 3 · 31999 Sellenbrück                   Nr. 9/2026 · Blatt 1 von 1
+BIC GENODEF0SLB
+
+Kontoinhaberin: Hannelore Wiebusch, Lindenhofweg 14, 31999 Sellenbrück
+IBAN: DE00 3499 9000 0001 2345 67    Kontoart: Giro Klassik    Währung: EUR
+Auszugszeitraum: 01.09.2026 bis 30.09.2026    erstellt am 30.09.2026
+==============================================================================
+Bu-Tag Wert   Vorgang / Verwendungszweck                            Umsatz EUR
+------------------------------------------------------------------------------
+              alter Kontostand (Auszug 8/2026)                     23.183,43 H
+
+01.09. 01.09. DAUERAUFTRAG                                             98,18 S
+              Hauswartservice Brinkmeier
+              Hausmeister Lindenhofweg 14
+              lt. Monatsrechnung Vormonat
+01.09. 01.09. GUTSCHRIFT                                              865,00 H
+              Brandtner Markus u. Sabine
+              MIETE LINDENHOFWEG 14 1.OG LINKS
+              DAUERAUFTRAG
+01.09. 01.09. GUTSCHRIFT                                              212,00 H
+              Kreiskasse Wendelsburg
+              WG 4417/26 AYDEMIR WOHNGELD 09/26
+02.09. 02.09. GUTSCHRIFT                                              493,00 H
+              Aydemir Selin u. Emre
+              Miete September DG Restbetrag
+              Wohngeld kommt vom Amt
+04.09. 04.09. GUTSCHRIFT                                              875,00 H
+              Petrovic Dragan
+              Miete + NK Lindenhofweg 14 1.OG re
+07.09. 07.09. SEPA-LASTSCHRIFT                                        295,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-01 ERDGAS ABSCHLAG 09/2026
+              MANDAT SW-2044170-01
+07.09. 07.09. SEPA-LASTSCHRIFT                                         35,00 S
+              Stadtwerke Wendelsburg GmbH
+              VK 2044170-02 ALLGEMEINSTROM ABSCHLAG
+              09/2026 MANDAT SW-2044170-02
+10.09. 10.09. SEPA-LASTSCHRIFT                                        376,50 S
+              Finanzamt Wendelsburg
+              STNR 000/123/40077 EST-VZ III/2026
+10.09. 10.09. SEPA-LASTSCHRIFT                                         44,95 S
+              Telvia Kommunikation GmbH
+              KD 77004129 RG 7700428390 08/2026
+              TELVIA ZUHAUSE 50
+11.09. 11.09. GUTSCHRIFT                                            1.170,72 H
+              Wupsetaler Versicherung AG
+              Z 00-4471-9030 L-26-0779412
+              LEISTUNG ZAHNERSATZ
+15.09. 15.09. SEPA-LASTSCHRIFT                                         58,00 S
+              Nordlicht Energie GmbH
+              NL-4417-2026 ABSCHLAG 09/2026
+              V-88204417 MANDAT NL-4417-2026-M1
+15.09. 15.09. SEPA-LASTSCHRIFT                                        105,43 S
+              Gebaeudedienste Ahlers u. Kramp GbR
+              AK-26-1311 SEPTEMBER 2026
+              VERTRAG AK-V-2025-039 MANDAT AK-039
+15.09. 15.09. SEPA-UEBERWEISUNG                                       268,80 S
+              Abfallwirtschaftsbetrieb LK Wendelsburg
+              AW-0044-71920 Abfallgeb. 2026 2. Rate
+16.09. 16.09. SEPA-UEBERWEISUNG                                       199,92 S
+              Heizung-Sanitaer Droege GmbH
+              Rechnung RE-2026-0611 Wartung Heizung
+21.09. 21.09. SEPA-UEBERWEISUNG                                        99,48 S
+              Uwe Kallweit Schornsteinfegermeister
+              RE20260298 LIEG 07 0117
+30.09. 30.09. SEPA-LASTSCHRIFT                                        412,00 S
+              Landeshypo Mittelland AG
+              DARLEHEN 600 0441 7790 RATE 09/2026
+              ZINS UND TILGUNG
+30.09. 30.09. GUTSCHRIFT                                            1.177,18 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 09.26
+              ALTERSRENTE
+30.09. 30.09. GUTSCHRIFT                                              719,69 H
+              Rentenversicherung Mittelland
+              RV-NR 00170348W999 RENTE 09.26
+              WITWENRENTE
+30.09. 30.09. GUTSCHRIFT                                              347,00 H
+              Mittelland Pflegekasse
+              M000481726 PV-26-0441726
+              PFLEGEGELD PG2 10/26
+30.09. 30.09. ENTGELTABSCHLUSS                                         20,40 S
+              Raiffeisen- und Buergerbank Sellenbrueck eG
+              ABSCHLUSS PER 30.09.2026
+              KONTOFUEHRUNG 17,70 BUCHUNGSPOSTEN 2,70
+
+              neuer Kontostand vom 30.09.2026                      27.029,36 H
+==============================================================================
+Summe Belastungen: 2.013,66 S   Summe Gutschriften: 5.859,59 H   Posten: 20
+Eingeräumte Kontoüberziehung: 2.000,00 EUR · Sollzinssatz 11,25 % p. a.
+Bitte prüfen Sie den Auszug. Einwendungen sind unverzüglich zu erheben.

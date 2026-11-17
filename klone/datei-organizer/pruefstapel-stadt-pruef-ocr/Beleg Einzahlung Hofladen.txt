@@ -1,0 +1,12 @@
+BEISPIELKASSE BEISPIELKREIS Filiale Muste
+Einzahlungsbeleg Geldautomat
+Datum 03.10.2026 14:12 Autom. 0042
+Konto DEO® 0000 0000 0000 0000 O0
+Bareinzahlung 1.340,00 EUR
+50er x 12 20er X 35 Rest Münzen
+Vielen Dank für Ihr Vertrauen
+ep:zrlel
+GE:
+Thaler
+ee
+Dee

@@ -1,0 +1,38 @@
+# Beispiel Onlinebank
+Postfach 1000 · 60000 Beispielfurt
+
+Kontoauszug
+Konto Konstantin Wolf
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 9/2025 · Blatt 1 von 1 · Zeitraum 01.12.2025 – 31.12.2025
+
+Herrn Konstantin Wolf
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Alter Kontostand vom 01.12.2025: 87,12 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.12.|01.12.|Kartenzahlung Frischkauf Exempel|-59,85|
+|02.12.|02.12.|Kartenzahlung Discount Probe|-49,60|
+|03.12.|03.12.|Mietanteil an Aylin Demir|-390,00|
+|03.12.|03.12.|Bargeldauszahlung Geldautomat|-121,34|
+|05.12.|05.12.|Wohngeld Stadt Musterhausen|+214,00|
+|06.12.|06.12.|Beispielfunk Mobil Rechnung|-23,49|
+|06.12.|06.12.|Kartenzahlung Discount Probe|-35,66|
+|08.12.|08.12.|Bargeldauszahlung Geldautomat|-94,60|
+|08.12.|08.12.|Lastschrift Beispiel-Markt Filiale 0412|-20,96|
+|10.12.|10.12.|Lohn 11/2025 Beispiel Kurier & Logistik UG|+556,00|
+|14.12.|14.12.|Kartenzahlung Discount Probe|-51,23|
+|14.12.|14.12.|Kartenzahlung Discount Probe|-8,04|
+|14.12.|14.12.|Kartenzahlung Frischkauf Exempel|-22,39|
+|15.12.|15.12.|Radwerkstatt Beispiel Speiche Rg 1077|-186,30|
+|15.12.|15.12.|Kartenzahlung Bäckerei Beispielkorn|-10,55|
+|19.12.|19.12.|Lastschrift Beispiel-Markt Filiale 0412|-38,47|
+|26.12.|26.12.|Lastschrift Beispiel-Markt Filiale 0412|-40,48|
+
+Neuer Kontostand vom 31.12.2025: -295,84 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Onlinebank · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

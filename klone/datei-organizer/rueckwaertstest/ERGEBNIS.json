@@ -1,0 +1,421 @@
+{
+ "familienakte": {
+  "kern": 20,
+  "plaene": {
+   "A": {
+    "quote": 73,
+    "bewerter1": 73,
+    "bewerter2": 75,
+    "einig": 95,
+    "bestanden": false,
+    "fehlt": [
+     "M05 Die App läuft als Web-App im Browser ohne eigenen Server und lässt sich installieren (Name „Familienakte Basic“)."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Tagesansicht „Heute“ je Person",
+     "Ablage nach Person × Thema statt nach Lebensbereichen",
+     "Gesamte App-Daten mit Passwort verschlüsselt (AES-GCM/PBKDF2)",
+     "Einverständnis der Mutter vor Ablage ihrer Arztbriefe",
+     "Alle Daten auf dem Gerät mit Passwort verschlüsselt (AES-GCM/PBKDF2)",
+     "Einverständnis der Mutter vor Ablage von Gesundheitsdaten",
+     "KI-Anbieter mit eigenem Schlüssel des Nutzers"
+    ]
+   },
+   "B": {
+    "quote": 30,
+    "bewerter1": 33,
+    "bewerter2": 30,
+    "einig": 90,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die App ordnet eingehende Schriftstücke Lebensbereichen und Vorgängen zu, damit man sie später im Zusammenhang wiederfindet.",
+     "M09 Die App hat einen Bereich Gesundheit & Arbeit (Befunde, Krankmeldungen, Krankenkasse, Arbeitgeber, Anträge und Bescheide).",
+     "M10 Die App hat einen Bereich Familie & Personen, in dem Personen, Organisationen und Objekte angelegt und geöffnet werden.",
+     "M17 Die App legt ein Dokument erst ab, nachdem der Nutzer den Vorschlag bestätigt hat; mehrere Eingänge lassen sich gesammelt bestätigen.",
+     "M18 Die App erkennt in eingegangenen Schreiben Fristen und schlägt sie als Termin vor.",
+     "M32 Die App bereitet mit einer Assistenz Schreiben und Antworten auf Briefe oder E-Mails als Entwurf vor; der Nutzer entscheidet über den Versand.",
+     "M33 Die App verdeckt persönliche Angaben, bevor ein Text an eine externe KI geht, und setzt sie in der Antwort auf dem Gerät wieder ein.",
+     "M54 Die App ordnet nichts ohne Bestätigung endgültig ein; Vorschläge bleiben Vorschläge.",
+     "M55 Die App verschickt Schreiben nicht selbstständig; die Assistenz erstellt nur Entwürfe."
+    ],
+    "verkehrt": [
+     "M05 Die App läuft als Web-App im Browser ohne eigenen Server und lässt sich installieren (Name „Familienakte Basic“).",
+     "M39 Die App erstellt eine Vollsicherung, auf Wunsch verschlüsselt mit Passwort und einem Notfallblatt, und erinnert nach 7 Tagen ohne Sicherung."
+    ],
+    "zusaetze": [
+     "Ablegen ohne Pflichtfelder („Foto machen, fertig“)",
+     "Garantieende als Frist im Überblick",
+     "Geräteschutz/Bildschirmsperre statt eigener Verschlüsselung",
+     "Erinnerungen über Android-Wecker/Alarm"
+    ]
+   },
+   "C": {
+    "quote": 40,
+    "bewerter1": 40,
+    "bewerter2": 43,
+    "einig": 95,
+    "bestanden": false,
+    "fehlt": [
+     "M06 Die App gibt es zusätzlich als native Android-App und als Windows-App (Name „Familienakte Pro“).",
+     "M17 Die App legt ein Dokument erst ab, nachdem der Nutzer den Vorschlag bestätigt hat; mehrere Eingänge lassen sich gesammelt bestätigen.",
+     "M18 Die App erkennt in eingegangenen Schreiben Fristen und schlägt sie als Termin vor.",
+     "M33 Die App verdeckt persönliche Angaben, bevor ein Text an eine externe KI geht, und setzt sie in der Antwort auf dem Gerät wieder ein.",
+     "M54 Die App ordnet nichts ohne Bestätigung endgültig ein; Vorschläge bleiben Vorschläge."
+    ],
+    "verkehrt": [
+     "M55 Die App verschickt Schreiben nicht selbstständig; die Assistenz erstellt nur Entwürfe."
+    ],
+    "zusaetze": [
+     "Eigene Abteilungen Versicherungen, Finanzen, Vollmachten mit Beiträgen und Kontoständen (Summen)",
+     "Mitlesen/-schreiben für Bruder und Betreuerin über Internet und Server",
+     "Zeitgesteuerter Versand von Antwortbriefen an Ämter bei nahender Frist",
+     "Briefvorlagen an Ämter mit Platzhaltern aus der Unterlage",
+     "Eigene Abteilungen Versicherungen, Finanzen, Vollmachten",
+     "Beiträge und Kontostände mit Summen in der Übersicht",
+     "Selbsttätiger Versand von Antwortbriefen bei nahender Frist (Server)",
+     "Zugang für Bruder und Betreuerin über das Internet (Server, Konten)"
+    ]
+   },
+   "K": {
+    "quote": 70,
+    "bewerter1": 73,
+    "bewerter2": 83,
+    "einig": 70,
+    "bestanden": false,
+    "fehlt": [
+     "M55 Die App verschickt Schreiben nicht selbstständig; die Assistenz erstellt nur Entwürfe."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Datenübernahme aus einer alten Web-App",
+     "Ausdrücklicher Ausschluss von Kindern und Großmutter als Nutzer",
+     "Übernahme der Daten aus der alten Web-App",
+     "Abgleich mit dem Sortier-Kern (K-14) als eigener Baustein"
+    ]
+   },
+   "K2": {
+    "quote": 90,
+    "einig": 95,
+    "bestanden": true,
+    "fehlt": [],
+    "verkehrt": []
+   }
+  }
+ },
+ "bookledgerpro": {
+  "kern": 18,
+  "plaene": {
+   "A": {
+    "quote": 61,
+    "bewerter1": 67,
+    "bewerter2": 64,
+    "einig": 83,
+    "bestanden": false,
+    "fehlt": [
+     "M03 Die App kennt vier Nutzungsmodi: Privat, Kleinunternehmer, Selbstständig, Berater.",
+     "M15 Buchungen werden in doppelter Buchführung mit Soll/Haben und automatischer Umsatzsteuer-Aufteilung erfasst."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Prüfanzeige, ob die Hash-Kette der Kasse unverändert ist",
+     "eigene Kategorien je Buch statt Kontenplan",
+     "Rollen/Kennung für Aushilfen (offen)",
+     "Geräteabgleich Handy↔PC (offen)",
+     "Excel-Altdaten-Übernahme (Frage)",
+     "Kassenbuch als getrennte Hash-Kette mit eigener Prüfanzeige",
+     "Kontoauszug-Umsätze werden Belegen (nicht Buchungen) zugeordnet und abgehakt",
+     "Kategorien statt Kontenplan; Rücklage-Rechenregel offen"
+    ]
+   },
+   "B": {
+    "quote": 44,
+    "bewerter1": 44,
+    "bewerter2": 44,
+    "einig": 100,
+    "bestanden": false,
+    "fehlt": [
+     "M03 Die App kennt vier Nutzungsmodi: Privat, Kleinunternehmer, Selbstständig, Berater.",
+     "M07 Es gibt eine native Windows-App.",
+     "M15 Buchungen werden in doppelter Buchführung mit Soll/Haben und automatischer Umsatzsteuer-Aufteilung erfasst.",
+     "M26 Für die offene Ladenkasse gibt es einen täglichen Tagesabschluss aus dem gezählten Bestand mit Foto, festgeschrieben.",
+     "M34 Daten lassen sich als DATEV-orientierte CSV für den Steuerberater exportieren.",
+     "M41 Festgeschriebene Buchungen werden nie gelöscht, sondern storniert; eine Hash-Kette sichert die Unveränderbarkeit (GoBD)."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Angebot und Rechnung als PDF für Kunden ausgeben/teilen",
+     "Rechnungsnummernkreis, Pflichtangaben, Logo",
+     "Beleg zuschneiden",
+     "Übernahme aus altem Online-Programm (offen)",
+     "Bedienbarkeit ohne Schulung als Prüfmaßstab",
+     "Angebot und Rechnung als PDF an Kunden ausgeben",
+     "Ein-Knopf-Umwandlung Angebot → Rechnung",
+     "Beleg zuschneiden und als PDF ablegen"
+    ]
+   },
+   "C": {
+    "quote": 31,
+    "bewerter1": 33,
+    "bewerter2": 33,
+    "einig": 89,
+    "bestanden": false,
+    "fehlt": [
+     "M14 Hauptbereich Auswerten: EÜR, Umsatzsteuer-Voranmeldung, Summen-/Saldenliste, Kontenblatt.",
+     "M15 Buchungen werden in doppelter Buchführung mit Soll/Haben und automatischer Umsatzsteuer-Aufteilung erfasst.",
+     "M18 Aus einem Beleg werden Datum, Betrag, Steuersatz und Rechnungsnummer ohne KI erkannt.",
+     "M19 Aus einem Beleg wird ein Buchungsvorschlag mit Konto erzeugt, ohne dass Daten das Gerät verlassen.",
+     "M26 Für die offene Ladenkasse gibt es einen täglichen Tagesabschluss aus dem gezählten Bestand mit Foto, festgeschrieben.",
+     "M34 Daten lassen sich als DATEV-orientierte CSV für den Steuerberater exportieren.",
+     "M41 Festgeschriebene Buchungen werden nie gelöscht, sondern storniert; eine Hash-Kette sichert die Unveränderbarkeit (GoBD)."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Elektronische Übermittlung der Steuererklärung ans Finanzamt",
+     "Kontoumsätze direkt bei der Bank abholen (Online-Banking)",
+     "Warenbestand und Inventur der Taschen",
+     "Beleg aus der Fotogalerie übernehmen",
+     "Wiederherstellen aus Sicherungsdatei mit Rückleseprüfung",
+     "eine Web-App für alle Geräte statt nativer Apps",
+     "Elektronische Übermittlung der Steuererklärung ans Finanzamt (ELSTER)",
+     "Kontoumsätze direkt bei der Bank abholen (Server)"
+    ]
+   },
+   "K": {
+    "quote": 75,
+    "bewerter1": 83,
+    "bewerter2": 75,
+    "einig": 83,
+    "bestanden": false,
+    "fehlt": [
+     "M03 Die App kennt vier Nutzungsmodi: Privat, Kleinunternehmer, Selbstständig, Berater."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "austauschbarer Kontenrahmen bis zur Klärung",
+     "Grenzlinie nach K-04 (Beauftragungsstufen)",
+     "ausdrücklicher Verzicht auf Kontoauszug-Einlesen",
+     "Kontenrahmen bewusst offen und austauschbar statt SKR03",
+     "Kontoauszug-Einlesen ausdrücklich ausgeschlossen",
+     "Jede Buchung trägt Beleg und Zeitstempel unveränderbar (ohne Hash-Kette)"
+    ]
+   },
+   "K2": {
+    "quote": 83,
+    "einig": 100,
+    "bestanden": true,
+    "fehlt": [],
+    "verkehrt": []
+   }
+  }
+ },
+ "workflow-pdf-pro": {
+  "kern": 17,
+  "plaene": {
+   "A": {
+    "quote": 59,
+    "bewerter1": 59,
+    "bewerter2": 59,
+    "einig": 100,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage.",
+     "M22 PDFs lassen sich zwischen Deutsch, Russisch und Englisch übersetzen, Seite für Seite in der Lage des Originals; Behördenformulare können übersetzt ausgefüllt und die Einträge ins Original zurückgesetzt werden.",
+     "M35 Ein gemeinsamer Tresorordner für alle Pro-Apps hat Fächer je App und Übergabefächer, ein verschlüsseltes Inhaltsverzeichnis je Fach und Schreiber und wird nie durch Löschen in einem Fach verändert.",
+     "M45 Mit Familienakte Pro, Private Brain Pro und BookLedgerPro arbeitet die App freiwillig über den gemeinsamen Tresor zusammen: Eingang mit Einzelauswahl, Ausgang bis 20 MiB je Datei, Empfangsquittung und Rückbezug."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Ordner je Kunde als Ordnungsprinzip",
+     "Start-/Entsperr-Bildschirm mit Pflicht-Ordnerwahl",
+     "Einarbeitungstest 'ein Nachmittag ohne Schulung'",
+     "ausdruecklich kein OCR, keine KI, kein Flachbettscanner (Gegenteil der Referenz)",
+     "Kunden-Ordner je Kunde als eigener Bereich",
+     "Foto-Bearbeitung 'Tischkante weg / A4-Scan-Aussehen' als eigene Anforderung",
+     "ausdrücklich keine Texterkennung, keine KI, kein Flachbettscanner (gegen Referenz)"
+    ]
+   },
+   "B": {
+    "quote": 26,
+    "bewerter1": 26,
+    "bewerter2": 26,
+    "einig": 94,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage.",
+     "M07 Es gibt eine native Windows-App (Windows 10/11, 64 Bit, Tauri 2 mit WebView2), installierbar ohne Administratorrechte, derzeit unsigniert.",
+     "M35 Ein gemeinsamer Tresorordner für alle Pro-Apps hat Fächer je App und Übergabefächer, ein verschlüsseltes Inhaltsverzeichnis je Fach und Schreiber und wird nie durch Löschen in einem Fach verändert.",
+     "M45 Mit Familienakte Pro, Private Brain Pro und BookLedgerPro arbeitet die App freiwillig über den gemeinsamen Tresor zusammen: Eingang mit Einzelauswahl, Ausgang bis 20 MiB je Datei, Empfangsquittung und Rückbezug."
+    ],
+    "verkehrt": [
+     "M06 Es gibt eine native Android-App (Android 8 oder neuer, aktuelle System-WebView ab 120), signiert und als Update über die vorhandene Installation installierbar.",
+     "M27 Die Bibliothek lässt sich als verschlüsselte Sicherungsdatei (.wfps) sichern und zurückholen; Zurückholen fügt hinzu und überschreibt nie.",
+     "M33 Die dauerhafte Hauptablage ist ein verschlüsselter Tresor in einem selbst gewählten Ordner (Gerätespeicher, SD-Karte oder anderer Datenträger); bei der Übernahme reisen Originale, Felder und Übersetzungsstände mit.",
+     "M37 Tresor und Sicherungen sind mit Passwort verschlüsselt (PBKDF2-SHA256 mit 600 000 Runden, AES-256-GCM); das Passwort liegt nur im Arbeitsspeicher bzw. im eigenen nativen Dialog."
+    ],
+    "zusaetze": [
+     "Satz-fuer-Satz-Uebersetzung neben dem Original mit Antippen-Hervorheben in beide Richtungen",
+     "Oberflaeche komplett auf Russisch",
+     "Formular-Eingabe auf Russisch, automatische Uebertragung ins Deutsche",
+     "PWA im Browser statt nativer App, ohne Verschluesselung/Sicherung",
+     "Satz-für-Satz-Übersetzung DE→RU mit beidseitiger Hervorhebung der Fundstelle",
+     "Oberfläche auf Russisch, Formulareingabe auf Russisch mit Übertragung ins Deutsche",
+     "Volltextsuche über OCR-Text",
+     "Form als PWA im Browser statt nativer App"
+    ]
+   },
+   "C": {
+    "quote": 44,
+    "bewerter1": 47,
+    "bewerter2": 44,
+    "einig": 94,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage.",
+     "M11 Die App hat eine Bibliothek mit Ordnern, in denen Dokumente abgelegt, verschoben, dupliziert (als Vorlage) und gelöscht werden.",
+     "M18 Vorhandene Formularfelder eines PDF werden samt Wert übernommen; neue Felder werden offline aus Linien, Rahmen und Kästchen im Seitenbild erkannt.",
+     "M27 Die Bibliothek lässt sich als verschlüsselte Sicherungsdatei (.wfps) sichern und zurückholen; Zurückholen fügt hinzu und überschreibt nie."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "globale Netzsperre mit Rueckfrage vor jedem Netzzugriff als eigener Baustein",
+     "Empfangsstatus 'unterwegs/angekommen' je Dokument",
+     "Mail-Anhang aus dem Mail-Programm uebernehmen und ausfuellen",
+     "Uebersetzung Englisch->Deutsch fuer Kassenformulare",
+     "SD-Karte als feste Ablage",
+     "Netzsperre mit Rückfrage vor jedem Netzzugriff als eigener Baustein",
+     "Status 'unterwegs / angekommen' je weitergegebenem Dokument",
+     "gezielte Rechnungsübergabe an das Buchhaltungsprogramm"
+    ]
+   },
+   "K": {
+    "quote": 62,
+    "bewerter1": 62,
+    "bewerter2": 62,
+    "einig": 100,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die App ist die native Pro-Fassung einer bestehenden Formular-Web-App und übernimmt deren vollständigen Funktionsumfang, ergänzt um Geräteanbindung und verschlüsselte Ablage."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "dauerhaft signierter Windows-Installer (Referenz: unsigniert)",
+     "keine PWA ausdruecklich ausgeschlossen",
+     "keine leeren Dateien bei Abbruch von 'Speichern unter'",
+     "Mehrnutzer-Bueroszenario (Inhaberin + zwei Mitarbeiterinnen)",
+     "dauerhaft signierte Installer auch unter Windows",
+     "ausdrücklich keine Web-App/PWA",
+     "'Speichern unter' ohne leere Dateien bei Abbruch/Fehler",
+     "Mehrbenutzer-Frage (Inhaberin + Mitarbeiterinnen)"
+    ]
+   },
+   "K2": {
+    "quote": 71,
+    "einig": 94,
+    "bestanden": false,
+    "fehlt": [],
+    "verkehrt": []
+   }
+  }
+ },
+ "private-brain-pro": {
+  "kern": 14,
+  "plaene": {
+   "A": {
+    "quote": 68,
+    "bewerter1": 71,
+    "bewerter2": 68,
+    "einig": 93,
+    "bestanden": false,
+    "fehlt": [
+     "M46 Gemeinsamer Tresorordner aller Pro-Apps (ein Passwort, Fächer je App); Einrichten durch reine Speicherwahl."
+    ],
+    "verkehrt": [],
+    "zusaetze": [
+     "Eigene Seite 'Hinweise' fuer auffaellige Rechnungen/Anhaenge",
+     "Suchmodell fest eingebaut statt vom Nutzer nachgeladen",
+     "Ausdruecklich keine Online-KI und keine Cloud-Dienste",
+     "Sicherung auf USB-Stick (Annahme)",
+     "Kein Ersatzweg bei Passwortverlust",
+     "Eigene Seite 'Hinweise' für auffällige Rechnungen/Anhänge",
+     "Suchmodell fest eingebaut statt ausdrücklich nachgeladen",
+     "Kein Ersatzweg bei vergessenem Passwort (bewusst)"
+    ]
+   },
+   "B": {
+    "quote": 36,
+    "bewerter1": 43,
+    "bewerter2": 39,
+    "einig": 79,
+    "bestanden": false,
+    "fehlt": [
+     "M21 Original öffnen: native Importe speichern eine geprüfte Originalkopie; fehlende Originale lassen sich neu zuordnen, der Zustand (Original fehlt / ungeprüft) wird ehrlich angezeigt.",
+     "M40 Prüfung beim Hinzufügen und auf Knopfdruck: jede Datei bekommt einen Befund (Anweisung an eine KI, versteckter Text, verdächtige Anhänge); Funde werden markiert, nicht entfernt.",
+     "M46 Gemeinsamer Tresorordner aller Pro-Apps (ein Passwort, Fächer je App); Einrichten durch reine Speicherwahl."
+    ],
+    "verkehrt": [
+     "M07 Native Windows-App (x64-Setup, unsigniert) mit demselben Funktionskern wie Android.",
+     "M22 Integriertes Postfach mit echten Mailkonten über IMAP/SMTP direkt vom Gerät: lesen, schreiben, senden mit Anhang, Ordner, Entwürfe."
+    ],
+    "zusaetze": [
+     "Erststart-Assistent 'installieren - Konten verbinden - fertig' ohne Einstellungsseite",
+     "Uebernahme der ganzen Android-Galerie in den Suchbestand",
+     "Papier mit der Kamera in der App abfotografieren",
+     "Nur Android-Handy, kein Mailversand (nur Lesen/Finden)",
+     "Erststart-Ablauf 'installieren → Konten verbinden → fertig'",
+     "Automatische Übernahme der Handy-Galerie",
+     "Papier mit der Kamera abfotografieren",
+     "Nur Lesen/Finden von Mails, kein Versand; kein Ordnen/Explorer"
+    ]
+   },
+   "C": {
+    "quote": 43,
+    "bewerter1": 50,
+    "bewerter2": 43,
+    "einig": 86,
+    "bestanden": false,
+    "fehlt": [
+     "M02 Die Originale bleiben unverändert; die App führt nur einen Katalog mit Steckbrief, Bedeutungsvektor und Verweis auf das Original (liest nur, schlägt vor, bewegt nichts).",
+     "M12 Dateien und ganze Ordner lassen sich einlesen; jede Datei wird einmal gelesen, mit Fingerabdruck versehen und in den Katalog aufgenommen.",
+     "M21 Original öffnen: native Importe speichern eine geprüfte Originalkopie; fehlende Originale lassen sich neu zuordnen, der Zustand (Original fehlt / ungeprüft) wird ehrlich angezeigt.",
+     "M40 Prüfung beim Hinzufügen und auf Knopfdruck: jede Datei bekommt einen Befund (Anweisung an eine KI, versteckter Text, verdächtige Anhänge); Funde werden markiert, nicht entfernt."
+    ],
+    "verkehrt": [
+     "M22 Integriertes Postfach mit echten Mailkonten über IMAP/SMTP direkt vom Gerät: lesen, schreiben, senden mit Anhang, Ordner, Entwürfe."
+    ],
+    "zusaetze": [
+     "iPhone-Fassung",
+     "Kalender mit Fristen und Erinnerungen",
+     "Cloud-Abgleich des Tresorordners ueber Dropbox/Cloud-Ordner",
+     "Oberflaeche nur DE/PL",
+     "Thunderbird bleibt Mailprogramm, Mails kommen von dort",
+     "Inhalte werden in den Tresor gelegt statt Verweis-Katalog",
+     "Cloud-Ordner-Abgleich (Dropbox) des Tresors",
+     "Kalender mit Fristen und Erinnerung"
+    ]
+   },
+   "K": {
+    "quote": 79,
+    "bewerter1": 86,
+    "bewerter2": 79,
+    "einig": 86,
+    "bestanden": false,
+    "fehlt": [],
+    "verkehrt": [],
+    "zusaetze": [
+     "Nutzer ausdruecklich auch Mitarbeiter und Familie (arbeitsplatzuebergreifend)",
+     "Designumbau (Liniensymbole, kompakte Zeilen) als eigener Baustein",
+     "Kaum echte Zusätze; Bildbeschreibung als Teil der Texterkennung gebündelt",
+     "Explizite Frage nach Mitarbeitern/Familie als Nutzer"
+    ]
+   },
+   "K2": {
+    "quote": 71,
+    "einig": 79,
+    "bestanden": false,
+    "fehlt": [],
+    "verkehrt": []
+   }
+  }
+ }
+}

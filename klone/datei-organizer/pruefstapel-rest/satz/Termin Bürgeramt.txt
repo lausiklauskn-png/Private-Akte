@@ -1,0 +1,17 @@
+# SERVICEPORTAL BEISPIELHAFEN
+
+BESTÄTIGUNG
+
+Neue Nachricht
+
+VORGANGSNR.: T-2026-118842
+LEISTUNG: Personalausweis beantragen
+TERMIN: 03.02.2026, 08:15 Uhr
+ORT: Bürgeramt Mitte, Schalter 4
+NAME: Daniel Lenz
+
+# Terminbestätigung
+
+Bitte bringen Sie ein biometrisches Passbild und Ihren alten Ausweis mit. Gebühr 37,00 EUR.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

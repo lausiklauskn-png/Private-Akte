@@ -1,0 +1,107 @@
+{
+ "app": "Belegjäger",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Fehlende Belege zu Bankumsätzen bei Mandanten einsammeln, ohne dass der Mandant ein Portal oder eine App braucht",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Käufer ist die Steuerkanzlei (Abo); Mandanten zahlen nichts",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Liest die Liste offener Bankumsätze als Export/CSV aus dem Kanzleiprogramm ein",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M04",
+   "text": "Erzeugt je Mandant einen kurzlebigen Link ohne Anmeldung, geschützt mit PIN, per SMS oder E-Mail",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Mandant sieht nur seine eigenen offenen Zeilen (Betrag, Datum, Verwendungszweck)",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M06",
+   "text": "Je Zeile drei Antworten: Foto des Belegs, „privat“, „kommt später“ (mit Grund)",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Zeilen nach Betrag geordnet, größte zuerst",
+   "gewicht": "beiwerk",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Erinnert selbst nach 3 und 7 Tagen; doppelte Anfragen werden unterdrückt",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Rücklauf als Stapel mit fertiger Zuordnung Beleg ↔ Umsatz zum Import ins Rechnungswesen",
+   "gewicht": "kern",
+   "gruppe": "schnittstelle"
+  },
+  {
+   "id": "M10",
+   "text": "Prüft auf dem Foto, ob Betrag und Datum zum Umsatz passen, und markiert Abweichungen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Übersicht der Kanzlei: je Mandant offen / beantwortet / überfällig",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M12",
+   "text": "Kanzlei arbeitet am PC im Browser; Mandant nur im Handy-Browser ohne App",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M13",
+   "text": "Daten auf dem Server in Deutschland nur bis zur Abholung, Löschung spätestens nach 30 Tagen",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M14",
+   "text": "Auftragsverarbeitung und Berufsgeheimnis (§ 57 StBerG, § 203 StGB) berücksichtigt",
+   "gewicht": "wichtig",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M15",
+   "text": "Keine Buchhaltung, keine Kontierung, kein Steuerrat, kein Chat",
+   "gewicht": "kern",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M16",
+   "text": "Ersetzt nicht das vorhandene Mandantenportal der Kanzlei",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Preis gestaffelt nach Mandantenzahl",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

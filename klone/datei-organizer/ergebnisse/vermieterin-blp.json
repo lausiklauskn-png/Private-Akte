@@ -1,0 +1,300 @@
+{
+ "eigenerName": "Hannelore Wiebusch",
+ "blp": "/home/user/bookledgerpro",
+ "vergleich": {
+  "betrag": {
+   "n": 45,
+   "blp": 38,
+   "kern": 37,
+   "nurBlp": 3,
+   "nurKern": 2
+  },
+  "datum": {
+   "n": 45,
+   "blp": 43,
+   "kern": 41,
+   "nurBlp": 3,
+   "nurKern": 1
+  },
+  "aussteller": {
+   "n": 45,
+   "blp": 20,
+   "kern": 38,
+   "nurBlp": 0,
+   "nurKern": 18
+  }
+ },
+ "ordner": "/tmp/claude-0/-home-user/60903395-d850-557c-93be-429a97e424d9/scratchpad/vm-blp/s",
+ "belege": 45,
+ "felder": {
+  "betrag": {
+   "n": 45,
+   "ok": 38
+  },
+  "datum": {
+   "n": 45,
+   "ok": 43
+  },
+  "ust": {
+   "n": 40,
+   "ok": 40
+  },
+  "richtung": {
+   "n": 45,
+   "ok": 41
+  },
+  "konto": {
+   "n": 45,
+   "ok": 26
+  }
+ },
+ "wilson": {
+  "betrag": [
+   0.712158094887512,
+   0.9225467468867133
+  ],
+  "datum": [
+   0.8517222081611939,
+   0.9877261309595557
+  ],
+  "ust": [
+   0.9123754607496077,
+   1
+  ],
+  "richtung": [
+   0.792661488316343,
+   0.9648894518657969
+  ],
+  "konto": [
+   0.433005327959445,
+   0.7103151201831219
+  ]
+ },
+ "uebereinstimmung": null,
+ "kontoEinig": {
+  "n": 0,
+  "ok": 0
+ },
+ "verwechslung": {
+  "4250→4980": 2,
+  "4260→4260": 9,
+  "4980→4980": 3,
+  "4240→4240": 3,
+  "4260→4980": 2,
+  "8400→4210": 1,
+  "4910→4910": 2,
+  "4930→4930": 1,
+  "4380→4950": 1,
+  "4360→4360": 1,
+  "4600→4600": 1,
+  "4600→4940": 1,
+  "4260→4240": 2,
+  "4250→4950": 2,
+  "4980→4380": 1,
+  "8400→8400": 3,
+  "4980→3400": 1,
+  "1800→4980": 1,
+  "4940→4940": 1,
+  "4945→4945": 1,
+  "4670→4945": 1,
+  "4970→4120": 1,
+  "4630→3300": 1,
+  "4920→4920": 1,
+  "4260→3400": 1,
+  "1800→4530": 1
+ },
+ "fehler": [
+  {
+   "datei": "Brinkmeier 2025-014.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "Tiedemann_RE-2025-0113.txt",
+   "feld": "datum",
+   "ist": "2025-02-26",
+   "soll": "2025-02-27"
+  },
+  {
+   "datei": "Stadtwerke Strom Allgemein Abrechnung 2024.txt",
+   "feld": "betrag",
+   "ist": 38928,
+   "soll": "18,72"
+  },
+  {
+   "datei": "Stadtwerke Strom Allgemein Abrechnung 2024.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Abschlagsplan Strom Allgemein 2025.txt",
+   "feld": "betrag",
+   "ist": 5800,
+   "soll": "34,00"
+  },
+  {
+   "datei": "scan_0015.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "Quittung Miete Petrovic bar.txt",
+   "feld": "betrag",
+   "ist": 36000,
+   "soll": "180,00"
+  },
+  {
+   "datei": "Quittung Miete Petrovic bar.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Quittung Miete Petrovic bar.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "8400"
+  },
+  {
+   "datei": "IMG_20250311_1604.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "HuG Beitrag 2025.txt",
+   "feld": "konto",
+   "ist": "4950",
+   "soll": "4380"
+  },
+  {
+   "datei": "wohnfinder24_rechnung.txt",
+   "feld": "konto",
+   "ist": "4940",
+   "soll": "4600"
+  },
+  {
+   "datei": "Droege AR-2025-0231.txt",
+   "feld": "betrag",
+   "ist": 894285,
+   "soll": "3.000,00"
+  },
+  {
+   "datei": "Droege AR-2025-0231.txt",
+   "feld": "konto",
+   "ist": "4240",
+   "soll": "4260"
+  },
+  {
+   "datei": "Droege Schlussrechnung Bad.txt",
+   "feld": "betrag",
+   "ist": 894285,
+   "soll": "5.942,85"
+  },
+  {
+   "datei": "Brinkmeier 2025-131.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "AK-25-1047.txt",
+   "feld": "konto",
+   "ist": "4950",
+   "soll": "4250"
+  },
+  {
+   "datei": "AK-25-1163.txt",
+   "feld": "konto",
+   "ist": "4950",
+   "soll": "4250"
+  },
+  {
+   "datei": "Waermemass Rechnung.txt",
+   "feld": "konto",
+   "ist": "4380",
+   "soll": "4980"
+  },
+  {
+   "datei": "Nachforderung NK Brandtner.txt",
+   "feld": "betrag",
+   "ist": 247041,
+   "soll": "190,41"
+  },
+  {
+   "datei": "Gutschrift NK Scholten.txt",
+   "feld": "betrag",
+   "ist": 180000,
+   "soll": "63,29"
+  },
+  {
+   "datei": "Gutschrift NK Scholten.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "IMG_20250108_0917.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4980"
+  },
+  {
+   "datei": "apotheke quittung.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1800"
+  },
+  {
+   "datei": "Fahrkarte Wupsetalbahn.txt",
+   "feld": "konto",
+   "ist": "4945",
+   "soll": "4670"
+  },
+  {
+   "datei": "Entgeltabrechnung Q1.txt",
+   "feld": "konto",
+   "ist": "4120",
+   "soll": "4970"
+  },
+  {
+   "datei": "bluetenzauber 30.09.txt",
+   "feld": "konto",
+   "ist": "3300",
+   "soll": "4630"
+  },
+  {
+   "datei": "Ostermann Fliesen.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "4260"
+  },
+  {
+   "datei": "Droege Gutschrift.txt",
+   "feld": "datum",
+   "ist": "2025-08-08",
+   "soll": "2025-08-20"
+  },
+  {
+   "datei": "Droege Gutschrift.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Notdienst Rohr.txt",
+   "feld": "konto",
+   "ist": "4240",
+   "soll": "4260"
+  },
+  {
+   "datei": "IMG_20250826_tanken.txt",
+   "feld": "konto",
+   "ist": "4530",
+   "soll": "1800"
+  }
+ ]
+}

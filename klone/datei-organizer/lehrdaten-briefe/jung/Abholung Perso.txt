@@ -1,0 +1,15 @@
+Betreff: Ihre Terminbuchung - Bestätigung Nr. BA-H-260122-0917
+Von: noreply@termine.lindenrath.example
+Gesendet: 13.01.2026 20:02
+
+Sie haben folgenden Termin gebucht:
+
+  Anliegen:  Abholung Personalausweis (Neuausstellung nach Verlust)
+  Wann:      Donnerstag, 22.01.2026, 09:10 Uhr
+  Wo:        Bürgeramt Lindenrath-Hafen, Speicherstraße 58, Schalter 4
+  Für:       Kessing, Malte
+
+Mitbringen: vorläufigen Ausweis, PIN-Brief der Druckerei, ggf. Vollmacht.
+Wenn Sie verhindert sind, sagen Sie bitte über den Link in dieser Mail ab,
+damit andere den Platz nutzen können. Bei mehr als 10 Min. Verspätung
+verfällt der Termin.

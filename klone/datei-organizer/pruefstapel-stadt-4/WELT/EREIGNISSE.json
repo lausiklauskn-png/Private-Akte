@@ -1,0 +1,721 @@
+{
+ "ereignisse": [
+  {
+   "monat": "2026-01",
+   "haushalt": "h1",
+   "person": "Thomas Brückmann",
+   "was": "Grundbesitzabgabenbescheid 2026 für das Haus",
+   "stellen": [
+    "Stadtkasse Musterhausen (Grundbesitzabgaben)",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Jahresabrechnung Ladestrom und neue Abschläge",
+   "stellen": [
+    "Stadtwerke Musterhausen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Nebenkostenabrechnung 2025 an die Mieterin der Einliegerwohnung",
+   "stellen": [
+    "Stadtwerke Musterhausen Beispiel",
+    "Nachbarschaft und Verwandte (privat)"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Rentenanpassung und Mitteilung zur Krankenversicherung der Rentner",
+   "stellen": [
+    "Deutsche Rentenversicherung Beispielland",
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h6",
+   "person": "Markus Feldhaus",
+   "was": "Vertragsverlängerung Glasfaser mit neuem Tarif",
+   "stellen": [
+    "Rheinwelle Beispiel Glasfaser und Mobilfunk"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h4",
+   "person": "Julia Berger",
+   "was": "Mutterschutzbescheinigung und Mutterschaftsgeld beantragt",
+   "stellen": [
+    "Hausarztpraxis Dr. Beispiel-Lindner",
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h4",
+   "person": "Mila Yilmaz",
+   "was": "Geburt in der Klinik, Geburtsurkunde",
+   "stellen": [
+    "Rheinklinik Musterhausen Beispiel",
+    "Standesamt Musterhausen"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h4",
+   "person": "Kerem Yilmaz",
+   "was": "Kindergeldantrag für Mila über das Bürgerkonto",
+   "stellen": [
+    "Familienkasse Beispielregion",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h1",
+   "person": "Gertrud Brückmann",
+   "was": "Antrag auf Pflegegrad nach Sturz",
+   "stellen": [
+    "Beispielkasse Pflege (Pflegekasse)",
+    "Hausarztpraxis Dr. Beispiel-Lindner"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h2",
+   "person": "Amara Okonkwo",
+   "was": "Kreditkartenabrechnung mit unbekannter Abbuchung, Widerspruch",
+   "stellen": [
+    "Beispiel Kreditkarten Service GmbH",
+    "Nova Beispiel Neobank"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h6",
+   "person": "Emma Kramer",
+   "was": "Anmeldung zum Klavierunterricht, Gebührenbescheid",
+   "stellen": [
+    "Musikschule Musterhausen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h5",
+   "person": "Hildegard Pfeiffenberg",
+   "was": "Heimkostenabrechnung, Bruder zahlt mit Vorsorgevollmacht",
+   "stellen": [
+    "Seniorenstift Beispielhof",
+    "Sparkasse Musterhausen-Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h4",
+   "person": "Mila Yilmaz",
+   "was": "Anmeldung bei der Krankenkasse (Familienversicherung) und U-Untersuchungen",
+   "stellen": [
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)",
+    "Hausarztpraxis Dr. Beispiel-Lindner"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h4",
+   "person": "Julia Berger",
+   "was": "Elterngeldantrag mit Bescheinigungen der Arbeitgeber",
+   "stellen": [
+    "Elterngeldstelle Beispielkreis",
+    "Chemiewerk Beispiel-Rhein GmbH",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h1",
+   "person": "Gertrud Brückmann",
+   "was": "Begutachtung zum Pflegegrad, Bescheid Pflegegrad 2",
+   "stellen": [
+    "Beispielkasse Pflege (Pflegekasse)",
+    "Kreisverwaltung Beispielkreis – Pflegestützpunkt und Wohngeld"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Steuererklärung 2025 mit Anlage Vermietung über die Steuerberaterin",
+   "stellen": [
+    "Steuerberatung Beispiel Hartmann",
+    "Finanzamt Musterhausen-Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Leasingrate und Wartung E-Auto im Autohaus",
+   "stellen": [
+    "Autohaus Rheinblick Beispiel",
+    "Rheinufer Direktbank Beispiel AG"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h6",
+   "person": "Tim Feldhaus",
+   "was": "Wechselmodell: Kindergeldberechtigung zwischen den Eltern geklärt",
+   "stellen": [
+    "Familienkasse Beispielregion",
+    "Nachbarschaft und Verwandte (privat)"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h1",
+   "person": "Lena Brückmann",
+   "was": "Elternabend und Kursfahrt nach Beispielstadt angekündigt",
+   "stellen": [
+    "Gymnasium am Beispielrhein (Eltern-App)"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h1",
+   "person": "Gertrud Brückmann",
+   "was": "Pflegedienst beginnt, Pflegevertrag und Kostenvoranschlag",
+   "stellen": [
+    "Ambulanter Pflegedienst Beispielhilfe",
+    "Beispielkasse Pflege (Pflegekasse)"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Sturz mit Krankenhausaufenthalt, Entlassbrief",
+   "stellen": [
+    "Rheinklinik Musterhausen Beispiel",
+    "Hausarztpraxis Dr. Beispiel-Lindner"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h2",
+   "person": "Amara Okonkwo",
+   "was": "Umzug in größere Wohnung im selben Haus, Ummeldung",
+   "stellen": [
+    "Hausverwaltung Beispiel Immobilien GmbH",
+    "Bürgerbüro Musterhausen (Meldewesen)",
+    "Stadtwerke Musterhausen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h6",
+   "person": "Markus Feldhaus",
+   "was": "Vergessene Rechnung Onlinehändler, erste Mahnung",
+   "stellen": [
+    "Beispielmarkt Online-Versand"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "ELSTER-Nachricht: Rückfrage des Finanzamts zu Werbungskosten",
+   "stellen": [
+    "Finanzamt Musterhausen-Beispiel",
+    "Steuerberatung Beispiel Hartmann"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h4",
+   "person": "Kerem Yilmaz",
+   "was": "Elternzeit beim Arbeitgeber beantragt",
+   "stellen": [
+    "Chemiewerk Beispiel-Rhein GmbH"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h1",
+   "person": "Jonas Brückmann",
+   "was": "Vereinsbeitrag Turnverein und Wettkampfmeldung",
+   "stellen": [
+    "Turnverein Beispiel 1888 Musterhausen"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h6",
+   "person": "Markus Feldhaus",
+   "was": "Forderung an Inkasso abgegeben, Zahlung und Erledigung",
+   "stellen": [
+    "Beispiel Inkasso Forderungsmanagement GmbH",
+    "Beispielmarkt Online-Versand"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h4",
+   "person": "Julia Berger",
+   "was": "Elterngeldbescheid",
+   "stellen": [
+    "Elterngeldstelle Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h1",
+   "person": "Thomas Brückmann",
+   "was": "Lohnabrechnung mit Schichtzulagen und Jubiläumszahlung",
+   "stellen": [
+    "Chemiewerk Beispiel-Rhein GmbH"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Jobwechsel: Kündigung alter Arbeitgeber, Vertrag bei der IT-Firma",
+   "stellen": [
+    "Beispiel IT-Solutions GmbH",
+    "Agentur für Arbeit Beispielregion"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h5",
+   "person": "Hildegard Pfeiffenberg",
+   "was": "Höherstufung auf Pflegegrad 3",
+   "stellen": [
+    "Beispielkasse Pflege (Pflegekasse)",
+    "Seniorenstift Beispielhof"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Einkommensteuerbescheid 2025 mit Erstattung",
+   "stellen": [
+    "Finanzamt Musterhausen-Beispiel",
+    "Steuerberatung Beispiel Hartmann"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h6",
+   "person": "Paul Feldhaus",
+   "was": "Kita-Gebührenbescheid nach neuer Einkommensstufe",
+   "stellen": [
+    "Städtische Kita Sonnenbeispiel",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h1",
+   "person": "Lena Brückmann",
+   "was": "Kursfahrt: Anzahlung, Einverständniserklärung über die Eltern-App",
+   "stellen": [
+    "Gymnasium am Beispielrhein (Eltern-App)",
+    "Sparkasse Musterhausen-Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Auffahrunfall mit dem E-Auto, Schadenmeldung und Gutachten",
+   "stellen": [
+    "Rheinland Beispiel Kfz- und Hausratversicherung",
+    "Kfz-Meisterbetrieb Beispiel Hansen"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h3",
+   "person": "Petra Sommerfeld",
+   "was": "Mieterhöhung für die Einliegerwohnung nach Mietspiegel",
+   "stellen": [
+    "Nachbarschaft und Verwandte (privat)",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h4",
+   "person": "Mila Yilmaz",
+   "was": "Impftermine und Laborbefund",
+   "stellen": [
+    "Hausarztpraxis Dr. Beispiel-Lindner",
+    "Labor Beispiel Diagnostik"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Zahnersatz, Heil- und Kostenplan und Zusatzversicherung",
+   "stellen": [
+    "Lindgrün Beispiel Zusatzversicherung AG",
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h6",
+   "person": "Nadine Kramer",
+   "was": "Gehaltsabrechnung und Stufenaufstieg im öffentlichen Dienst",
+   "stellen": [
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Werkstattrechnung nach Unfall, Regulierung durch Versicherung",
+   "stellen": [
+    "Kfz-Meisterbetrieb Beispiel Hansen",
+    "Rheinland Beispiel Kfz- und Hausratversicherung"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h1",
+   "person": "Heinrich Brückmann",
+   "was": "Bausparvertrag zugeteilt, Umbau zum barrierefreien Bad",
+   "stellen": [
+    "Bausparkasse Beispiel-Heim AG",
+    "Elektro Beispiel Kurz"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h6",
+   "person": "Tim Feldhaus",
+   "was": "Zeugnis und Anmeldung zum Gymnasium",
+   "stellen": [
+    "Gymnasium am Beispielrhein (Eltern-App)"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h4",
+   "person": "Kerem Yilmaz",
+   "was": "Wechsel des Stromanbieters abgelehnt, Verbleib bei den Stadtwerken mit Bonus",
+   "stellen": [
+    "Stadtwerke Musterhausen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Elektrikerrechnung für die Einliegerwohnung",
+   "stellen": [
+    "Elektro Beispiel Kurz"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Streamingabo gekündigt, Rundfunkbeitrag Befreiungsantrag für die Schwester",
+   "stellen": [
+    "Beispielflix Streaming",
+    "Beitragsservice Rundfunk Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h1",
+   "person": "Gertrud Brückmann",
+   "was": "Wohnraumanpassung: Zuschuss der Pflegekasse für das Bad",
+   "stellen": [
+    "Beispielkasse Pflege (Pflegekasse)",
+    "Kreisverwaltung Beispielkreis – Pflegestützpunkt und Wohngeld",
+    "Elektro Beispiel Kurz"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h2",
+   "person": "Amara Okonkwo",
+   "was": "Ummeldung des E-Autos auf neue Anschrift und Halterwechsel",
+   "stellen": [
+    "Kreisverwaltung Beispielkreis – Zulassungsstelle",
+    "Rheinland Beispiel Kfz- und Hausratversicherung"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h6",
+   "person": "Markus Feldhaus",
+   "was": "Paket verloren, Nachforschungsauftrag und Erstattung",
+   "stellen": [
+    "Paketblitz Beispiel Zustelldienst",
+    "Handelsplatz Beispiel Marktplatz"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h4",
+   "person": "Julia Berger",
+   "was": "Kita-Platz für Mila ab 2027 angefragt",
+   "stellen": [
+    "Städtische Kita Sonnenbeispiel",
+    "Stadtverwaltung Musterhausen – Bürgerkonto"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Neues Schuljahr, Besoldungsmitteilung mit Stufenaufstieg",
+   "stellen": [
+    "Bezirksregierung Beispiel – Lehrerbesoldung"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h1",
+   "person": "Jonas Brückmann",
+   "was": "Handyvertrag für den Sohn und erste Rechnung",
+   "stellen": [
+    "Rheinwelle Beispiel Glasfaser und Mobilfunk"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h5",
+   "person": "Hildegard Pfeiffenberg",
+   "was": "Tod der Schwester, Sterbeurkunde und Bestattungsrechnung",
+   "stellen": [
+    "Standesamt Musterhausen",
+    "Kirchengemeinde St. Beispiel",
+    "Seniorenstift Beispielhof"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Erbschein beantragt, Testament beim Notar",
+   "stellen": [
+    "Amtsgericht Musterhausen – Nachlassgericht",
+    "Notariat Beispiel Vogt"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Gehaltsabrechnung neue Firma und Jobticket",
+   "stellen": [
+    "Beispiel IT-Solutions GmbH",
+    "Verkehrsverbund Beispiel-Rhein (ÖPNV-Abo)"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h6",
+   "person": "Emma Kramer",
+   "was": "Musikschule Vorspiel, Einladung und Gebühren 2. Halbjahr",
+   "stellen": [
+    "Musikschule Musterhausen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h1",
+   "person": "Sabine Brückmann",
+   "was": "Vorsorgeuntersuchung und Rechnung über Zusatzleistung",
+   "stellen": [
+    "Hausarztpraxis Dr. Beispiel-Lindner",
+    "Lindgrün Beispiel Zusatzversicherung AG"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Auflösung der Konten der Schwester und Abmeldungen",
+   "stellen": [
+    "Sparkasse Musterhausen-Beispiel",
+    "Beitragsservice Rundfunk Beispiel",
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)",
+    "Deutsche Rentenversicherung Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h1",
+   "person": "Thomas Brückmann",
+   "was": "Kfz-Versicherung Jahresbeitrag und Wechsel zur günstigeren Police",
+   "stellen": [
+    "Rheinland Beispiel Kfz- und Hausratversicherung"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h4",
+   "person": "Kerem Yilmaz",
+   "was": "Ende Elternzeit, Rückkehr in den Betrieb und Lohnabrechnung",
+   "stellen": [
+    "Chemiewerk Beispiel-Rhein GmbH",
+    "Elterngeldstelle Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h6",
+   "person": "Nadine Kramer",
+   "was": "Neobank-Konto für gemeinsame Haushaltskasse eröffnet",
+   "stellen": [
+    "Nova Beispiel Neobank"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h3",
+   "person": "Petra Sommerfeld",
+   "was": "Wasserschaden in der Einliegerwohnung, Meldung an Hausratversicherung",
+   "stellen": [
+    "Rheinland Beispiel Kfz- und Hausratversicherung",
+    "Elektro Beispiel Kurz",
+    "Nachbarschaft und Verwandte (privat)"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h2",
+   "person": "Amara Okonkwo",
+   "was": "Laborwerte und Facharzttermin über die Krankenkassen-App",
+   "stellen": [
+    "Labor Beispiel Diagnostik",
+    "Beispielkasse Gesundheit (gesetzliche Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Erbschein erteilt, Erbschaftsteuererklärung angefordert",
+   "stellen": [
+    "Amtsgericht Musterhausen – Nachlassgericht",
+    "Finanzamt Musterhausen-Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h1",
+   "person": "Heinrich Brückmann",
+   "was": "Grippeschutzimpfung und Einladung Seniorennachmittag",
+   "stellen": [
+    "Hausarztpraxis Dr. Beispiel-Lindner",
+    "Kirchengemeinde St. Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h6",
+   "person": "Markus Feldhaus",
+   "was": "Weihnachtsbestellungen mit E-Rechnungen und Retoure",
+   "stellen": [
+    "Beispielmarkt Online-Versand",
+    "Handelsplatz Beispiel Marktplatz",
+    "Paketblitz Beispiel Zustelldienst"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h3",
+   "person": "Florian Wiesbeck",
+   "was": "Grundsteuer-Bescheid für Haus mit Einliegerwohnung geändert",
+   "stellen": [
+    "Stadtkasse Musterhausen (Grundbesitzabgaben)",
+    "Finanzamt Musterhausen-Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h2",
+   "person": "Daniel Lehnert",
+   "was": "Glasfaser-Umzugsauftrag und Doppelabrechnung reklamiert",
+   "stellen": [
+    "Rheinwelle Beispiel Glasfaser und Mobilfunk"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h1",
+   "person": "Lena Brückmann",
+   "was": "Halbjahresinformation und Elternsprechtag",
+   "stellen": [
+    "Gymnasium am Beispielrhein (Eltern-App)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h4",
+   "person": "Julia Berger",
+   "was": "Einladung Taufe/Namensfest, Spendenquittung",
+   "stellen": [
+    "Kirchengemeinde St. Beispiel",
+    "Nachbarschaft und Verwandte (privat)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h6",
+   "person": "Tim Feldhaus",
+   "was": "Weihnachtsferien im Wechselmodell, Absprache per Mail",
+   "stellen": [
+    "Nachbarschaft und Verwandte (privat)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h5",
+   "person": "Walter Pfeiffenberg",
+   "was": "Vorsorgevollmacht für sich selbst beim Notar beurkundet",
+   "stellen": [
+    "Notariat Beispiel Vogt"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h2",
+   "person": "Amara Okonkwo",
+   "was": "Jahreskontoauszug und Freistellungsauftrag geändert",
+   "stellen": [
+    "Rheinufer Direktbank Beispiel AG",
+    "Nova Beispiel Neobank"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h1",
+   "person": "Thomas Brückmann",
+   "was": "Bescheinigung über Kassenbons und Spendenbelege für die Steuer gesammelt",
+   "stellen": [
+    "Bäckerei und Café Beispielkorn",
+    "Kirchengemeinde St. Beispiel",
+    "Steuerberatung Beispiel Hartmann"
+   ]
+  }
+ ]
+}

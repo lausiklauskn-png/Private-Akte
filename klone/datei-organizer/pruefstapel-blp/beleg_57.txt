@@ -1,0 +1,26 @@
+Kfz-Meisterbetrieb Jaspers
+Lindenweg 71, 37997 Haselbrunn
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Werkstattrechnung
+Rechnungsnummer: W43586
+Rechnungsdatum: 11.02.2026
+Fahrzeug: Lieferwagen, amtl. Kennz. TW-KB 00
+Km-Stand: 81902
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Bremsbeläge vorne erneuern AW     1    142,00     142,00
+  2  Bremsbelagsatz               1     78,50      78,50
+  3  Bremsflüssigkeit             1     18,00      18,00
+
+Nettobetrag                                  238,50
+zzgl. 19 % USt                               45,32
+Summe                                        283,82 EUR
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9148 17
+USt-IdNr. DE000000797

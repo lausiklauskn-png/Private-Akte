@@ -1,0 +1,17 @@
+tonerfuchs.example – Druckerzubehör online
+TF Handels GmbH · Carl-Zeiss-Str. 9 · 55129 Mainz · USt-IdNr. DE000000000
+
+RECHNUNG 26-TF-551208                         Datum 03.03.2026
+Besfellt am 01.03.2026 von: buero@praxis-lindenhof.example
+
+Rechnungsanschrift: Physiotherapie & Massagepraxis Lindenhof, Kastanienweg 14, 37287 Wehrstedt
+
+Art.-Nr.  Artikel / Leistung                 Anz.   Elnzel  Betrag EUR
+14711  Toner schwarz f. OfficeJet M283       2    54,90     109,80
+15084  Toner Farbset C/M/Y                   1   139,00     139,00
+15457  Etiketten 70x36 mm, 100 Bl.           1    12,40      12,40
+
+Zwischensumme netto   261,20
+zzgl. 19 % USt        49,63
+Gesamtsumme           310,83 EUR
+Versand gratis – bezablt per Sofortüberweisung

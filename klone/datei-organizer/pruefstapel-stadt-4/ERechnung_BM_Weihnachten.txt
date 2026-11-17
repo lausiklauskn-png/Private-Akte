@@ -1,0 +1,26 @@
+Beispielmarkt Online-Versand · Logistikallee 50 · 99960 Beispielhausen · USt-IdNr. DE000000000
+
+RECHNUNG (elektronisch übermittelt, Format ZUGFeRD – Ausdruck)
+
+Rechnungsnummer:   BM-RE-2026-1194002
+Rechnungsdatum:    18.11.2026
+Bestell-Nr.:       000-4471209-8830156
+Besteller:         Markus Feldhaus, Mühlbachstraße 140, 99905 Musterhausen am Rhein
+Lieferung an:      dieselbe Anschrift
+Leistungsdatum:    17.11.2026
+
+Pos Bezeichnung                                    Menge   Gesamt
+1   Spielkonsole „Beispielbox One“ 1 TB, weiß        1     349,00 €
+    Seriennr. BXO-0000-00000-001
+2   Zweiter Controller, schwarz                      1      59,99 €
+3   Geschenkverpackung                               2       5,98 €
+                                            Summe brutto   414,97 €
+                                   enthaltene USt 19 %      66,26 €
+
+Bezahlt mit Kreditkarte (…0000) am 16.11.2026.
+
+Herstellergarantie Konsole: 2 Jahre ab Kaufdatum, zusätzlich gesetzliche
+Gewährleistung. Bitte bewahren Sie diese Rechnung als Kaufnachweis auf.
+Rückgabe bis 31.01.2027 (verlängerte Weihnachtsrückgabe).
+
+Notiz im Kundenkonto: „Geschenk für Tim – nicht in den Familienkalender!“

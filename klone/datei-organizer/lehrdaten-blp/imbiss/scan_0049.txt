@@ -1,0 +1,7 @@
+STROMTANKE Stadtwerke Wesenrode – Ladebeleg
+Ladepunkt Rathausparkplatz 02     Vorgang LP-26-0098812
+Start 19.06.2026 13:02  Ende 14:11
+Geladene Energie  31,4 kWh x 0,49 EUR
+Betrag brutto     15,39 EUR
+Umsatzsteuer 19 % 2,46 EUR
+Ladekarte: Hartwig Grillstube (e-Cargo)

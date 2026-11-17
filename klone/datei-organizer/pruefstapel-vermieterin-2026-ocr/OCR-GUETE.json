@@ -1,0 +1,1215 @@
+{
+ "stuecke": 151,
+ "wortfehlerAnteil": 0.046643203991624714,
+ "zeichenfehlerAnteil": 0.028475988692229153,
+ "dateien": [
+  {
+   "datei": "2026-01-05 Krankenkasse Zusatzbeitrag.txt",
+   "seiten": 1,
+   "woerter": 177,
+   "wortfehler": 7,
+   "zeichen": 1292,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Abfallgebuehren Bescheid 2026.txt",
+   "seiten": 1,
+   "woerter": 160,
+   "wortfehler": 8,
+   "zeichen": 1194,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "Angebot Fenster DG und Haustuer - Woehlke.txt",
+   "seiten": 1,
+   "woerter": 200,
+   "wortfehler": 17,
+   "zeichen": 1449,
+   "zeichenfehler": 23
+  },
+  {
+   "datei": "Apotheke 20.04.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 2,
+   "zeichen": 657,
+   "zeichenfehler": 48
+  },
+  {
+   "datei": "Augenzentrum Befund 18-03-2026.txt",
+   "seiten": 1,
+   "woerter": 170,
+   "wortfehler": 15,
+   "zeichen": 1366,
+   "zeichenfehler": 14
+  },
+  {
+   "datei": "Augenzentrum Rechnung Wahlleistung.txt",
+   "seiten": 1,
+   "woerter": 127,
+   "wortfehler": 10,
+   "zeichen": 963,
+   "zeichenfehler": 21
+  },
+  {
+   "datei": "Augenzentrum Termin Maerz.txt",
+   "seiten": 1,
+   "woerter": 109,
+   "wortfehler": 4,
+   "zeichen": 756,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Brandtner Zustimmung.txt",
+   "seiten": 1,
+   "woerter": 134,
+   "wortfehler": 1,
+   "zeichen": 896,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Brief Petrovic Januar.txt",
+   "seiten": 1,
+   "woerter": 148,
+   "wortfehler": 2,
+   "zeichen": 925,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Brief von Jonas.txt",
+   "seiten": 1,
+   "woerter": 161,
+   "wortfehler": 4,
+   "zeichen": 957,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Brinkmeier Preise ab Februar.txt",
+   "seiten": 1,
+   "woerter": 150,
+   "wortfehler": 5,
+   "zeichen": 998,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "CREDITAS Inkasso Stadtwerke.txt",
+   "seiten": 1,
+   "woerter": 167,
+   "wortfehler": 8,
+   "zeichen": 1333,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "Dr Thiessen Bericht Knie.txt",
+   "seiten": 1,
+   "woerter": 168,
+   "wortfehler": 3,
+   "zeichen": 1407,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Droege Angebot Wartungsvertrag.txt",
+   "seiten": 1,
+   "woerter": 173,
+   "wortfehler": 9,
+   "zeichen": 1283,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "ESt-Bescheid 2025.txt",
+   "seiten": 1,
+   "woerter": 244,
+   "wortfehler": 2,
+   "zeichen": 1915,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Erinnerung Brandtner Differenz Juni.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 1,
+   "zeichen": 631,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Erinnerung Miete Feb Petrovic (Kopie).txt",
+   "seiten": 1,
+   "woerter": 122,
+   "wortfehler": 6,
+   "zeichen": 779,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "FA Rueckfrage Erhaltungsaufwand.txt",
+   "seiten": 1,
+   "woerter": 158,
+   "wortfehler": 0,
+   "zeichen": 1222,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "Feuerstaettenbescheid Kallweit.txt",
+   "seiten": 1,
+   "woerter": 197,
+   "wortfehler": 8,
+   "zeichen": 1595,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Fidelia Wohngebaeude Anpassung.txt",
+   "seiten": 1,
+   "woerter": 149,
+   "wortfehler": 5,
+   "zeichen": 1135,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Freistellungsauftrag Bestaetigung.txt",
+   "seiten": 1,
+   "woerter": 126,
+   "wortfehler": 2,
+   "zeichen": 1003,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Friedhof Gebuehr 2026.txt",
+   "seiten": 1,
+   "woerter": 133,
+   "wortfehler": 5,
+   "zeichen": 1008,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Grundbesitzabgaben_2026_Stadt.txt",
+   "seiten": 1,
+   "woerter": 204,
+   "wortfehler": 2,
+   "zeichen": 1556,
+   "zeichenfehler": 12
+  },
+  {
+   "datei": "HKP Bruecke Dr Halvorsen.txt",
+   "seiten": 1,
+   "woerter": 178,
+   "wortfehler": 9,
+   "zeichen": 1426,
+   "zeichenfehler": 33
+  },
+  {
+   "datei": "HZA Kfz-Steuer Abbuchung.txt",
+   "seiten": 1,
+   "woerter": 101,
+   "wortfehler": 4,
+   "zeichen": 857,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Hollmann Bodensee Reisebestaetigung.txt",
+   "seiten": 1,
+   "woerter": 143,
+   "wortfehler": 11,
+   "zeichen": 1098,
+   "zeichenfehler": 20
+  },
+  {
+   "datei": "Hollmann Reiseunterlagen Bodensee.txt",
+   "seiten": 1,
+   "woerter": 140,
+   "wortfehler": 8,
+   "zeichen": 1055,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Jahressteuerbescheinigung 2025 Raiba.txt",
+   "seiten": 1,
+   "woerter": 100,
+   "wortfehler": 2,
+   "zeichen": 830,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Jobcenter Anfrage Mietverhaeltnis Petrovic.txt",
+   "seiten": 1,
+   "woerter": 158,
+   "wortfehler": 4,
+   "zeichen": 1175,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Justara Beitrag 2026-27.txt",
+   "seiten": 1,
+   "woerter": 118,
+   "wortfehler": 5,
+   "zeichen": 918,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "KK Einkommensnachweise Befreiung.txt",
+   "seiten": 1,
+   "woerter": 156,
+   "wortfehler": 10,
+   "zeichen": 1170,
+   "zeichenfehler": 10
+  },
+  {
+   "datei": "KK Genehmigung Zahnersatz.txt",
+   "seiten": 1,
+   "woerter": 149,
+   "wortfehler": 5,
+   "zeichen": 1102,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Kallweit Terminankuendigung.txt",
+   "seiten": 1,
+   "woerter": 141,
+   "wortfehler": 8,
+   "zeichen": 1005,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Kautionskonto Aydemir Auszug 2026.txt",
+   "seiten": 1,
+   "woerter": 109,
+   "wortfehler": 10,
+   "zeichen": 825,
+   "zeichenfehler": 15
+  },
+  {
+   "datei": "Kindergeld Elif (Kopie von Fr. Aydemir).txt",
+   "seiten": 1,
+   "woerter": 134,
+   "wortfehler": 3,
+   "zeichen": 970,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Kopie ALG Bescheid Petrovic.txt",
+   "seiten": 1,
+   "woerter": 155,
+   "wortfehler": 8,
+   "zeichen": 1242,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Landeshypo Angebot Anschlussfinanzierung.txt",
+   "seiten": 1,
+   "woerter": 201,
+   "wortfehler": 9,
+   "zeichen": 1394,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Landeshypo Jahreskontoauszug Darlehen.txt",
+   "seiten": 1,
+   "woerter": 109,
+   "wortfehler": 5,
+   "zeichen": 848,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Landeshypo Prolongation bestaetigt.txt",
+   "seiten": 1,
+   "woerter": 149,
+   "wortfehler": 5,
+   "zeichen": 1114,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Landfrauen JHV Einladung.txt",
+   "seiten": 1,
+   "woerter": 132,
+   "wortfehler": 13,
+   "zeichen": 1019,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "Lohi Bescheidpruefung + Anlage V.txt",
+   "seiten": 1,
+   "woerter": 207,
+   "wortfehler": 5,
+   "zeichen": 1457,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Lohnsteuerhilfe Termin.txt",
+   "seiten": 1,
+   "woerter": 141,
+   "wortfehler": 1,
+   "zeichen": 1193,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "MD Begutachtung Termin.txt",
+   "seiten": 1,
+   "woerter": 148,
+   "wortfehler": 4,
+   "zeichen": 1151,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Mahnung Petrovic Mietrueckstand 09-03.txt",
+   "seiten": 1,
+   "woerter": 174,
+   "wortfehler": 8,
+   "zeichen": 1119,
+   "zeichenfehler": 23
+  },
+  {
+   "datei": "Mertens Waschmaschine Rechnung+Garantie.txt",
+   "seiten": 1,
+   "woerter": 126,
+   "wortfehler": 6,
+   "zeichen": 919,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "Mietbescheinigung Wohngeld Aydemir Kopie.txt",
+   "seiten": 1,
+   "woerter": 150,
+   "wortfehler": 4,
+   "zeichen": 1159,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Mieterhoehung Brandtner 16.03.2026.txt",
+   "seiten": 1,
+   "woerter": 255,
+   "wortfehler": 12,
+   "zeichen": 1772,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "Mieterverein wg Brandtner.txt",
+   "seiten": 1,
+   "woerter": 184,
+   "wortfehler": 6,
+   "zeichen": 1373,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "NK 2025 Petrovic.txt",
+   "seiten": 1,
+   "woerter": 206,
+   "wortfehler": 12,
+   "zeichen": 1478,
+   "zeichenfehler": 60
+  },
+  {
+   "datei": "NK-Abrechnung 2025 Brandtner.txt",
+   "seiten": 1,
+   "woerter": 200,
+   "wortfehler": 10,
+   "zeichen": 1493,
+   "zeichenfehler": 42
+  },
+  {
+   "datei": "Nordlicht Vertragsbestaetigung.txt",
+   "seiten": 1,
+   "woerter": 159,
+   "wortfehler": 6,
+   "zeichen": 1296,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Notarin Kostenrechnung 2026-0933.txt",
+   "seiten": 1,
+   "woerter": 145,
+   "wortfehler": 7,
+   "zeichen": 1148,
+   "zeichenfehler": 17
+  },
+  {
+   "datei": "OP Termin Auge rechts.txt",
+   "seiten": 1,
+   "woerter": 174,
+   "wortfehler": 3,
+   "zeichen": 1178,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "Optik Sehwerk Rechnung Brille.txt",
+   "seiten": 1,
+   "woerter": 126,
+   "wortfehler": 5,
+   "zeichen": 943,
+   "zeichenfehler": 15
+  },
+  {
+   "datei": "Petrovic bitte ratenzahlung.txt",
+   "seiten": 1,
+   "woerter": 153,
+   "wortfehler": 2,
+   "zeichen": 919,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Petrovic neue Arbeit 8.6..txt",
+   "seiten": 1,
+   "woerter": 146,
+   "wortfehler": 2,
+   "zeichen": 875,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Pflegekasse Beratungsbesuch nachweisen.txt",
+   "seiten": 1,
+   "woerter": 158,
+   "wortfehler": 12,
+   "zeichen": 1132,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "Pflegekasse Bescheid Pflegegrad 2.txt",
+   "seiten": 1,
+   "woerter": 193,
+   "wortfehler": 7,
+   "zeichen": 1392,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Pflegekasse Erstattung Feb.txt",
+   "seiten": 1,
+   "woerter": 130,
+   "wortfehler": 4,
+   "zeichen": 935,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Praxis Reschke Impftermin.txt",
+   "seiten": 1,
+   "woerter": 133,
+   "wortfehler": 6,
+   "zeichen": 905,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "RV Mitteilung Finanzverwaltung 2025.txt",
+   "seiten": 1,
+   "woerter": 128,
+   "wortfehler": 1,
+   "zeichen": 1021,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Raiba Preisaenderung Girokonto.txt",
+   "seiten": 1,
+   "woerter": 175,
+   "wortfehler": 8,
+   "zeichen": 1272,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Ratenvereinbarung Petrovic unterschrieben.txt",
+   "seiten": 1,
+   "woerter": 219,
+   "wortfehler": 8,
+   "zeichen": 1432,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Rechnung Alltagshilfe 1. Quartal.txt",
+   "seiten": 1,
+   "woerter": 138,
+   "wortfehler": 10,
+   "zeichen": 917,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "Reimers Inspektion RE 26-1873.txt",
+   "seiten": 1,
+   "woerter": 148,
+   "wortfehler": 11,
+   "zeichen": 1058,
+   "zeichenfehler": 20
+  },
+  {
+   "datei": "Rentenanpassung 2026.txt",
+   "seiten": 1,
+   "woerter": 181,
+   "wortfehler": 5,
+   "zeichen": 1351,
+   "zeichenfehler": 29
+  },
+  {
+   "datei": "SW Kuendigungsbestaetigung Strom.txt",
+   "seiten": 1,
+   "woerter": 126,
+   "wortfehler": 5,
+   "zeichen": 976,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "SW Schlussrechnung Strom EG.txt",
+   "seiten": 1,
+   "woerter": 147,
+   "wortfehler": 8,
+   "zeichen": 1060,
+   "zeichenfehler": 30
+  },
+  {
+   "datei": "Spendenbescheinigung St Marien.txt",
+   "seiten": 1,
+   "woerter": 130,
+   "wortfehler": 6,
+   "zeichen": 1009,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Stadt Ordnung Hecke Gehweg.txt",
+   "seiten": 1,
+   "woerter": 177,
+   "wortfehler": 7,
+   "zeichen": 1262,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "Stadtwerke Erdgas Jahresabrechnung.txt",
+   "seiten": 1,
+   "woerter": 154,
+   "wortfehler": 9,
+   "zeichen": 1155,
+   "zeichenfehler": 33
+  },
+  {
+   "datei": "Tageblatt Bezugspreis.txt",
+   "seiten": 1,
+   "woerter": 149,
+   "wortfehler": 4,
+   "zeichen": 1025,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Waermemass Ablesung Dezember.txt",
+   "seiten": 1,
+   "woerter": 157,
+   "wortfehler": 6,
+   "zeichen": 1126,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "Wahlbenachrichtigung Kommunalwahl.txt",
+   "seiten": 1,
+   "woerter": 129,
+   "wortfehler": 1,
+   "zeichen": 994,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Woehlke Auftragsbestaetigung AB-2026-0297.txt",
+   "seiten": 1,
+   "woerter": 165,
+   "wortfehler": 5,
+   "zeichen": 1169,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "Woehlke Montagetermin.txt",
+   "seiten": 1,
+   "woerter": 140,
+   "wortfehler": 2,
+   "zeichen": 900,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "Woelk Kuendigung Stellplatz.txt",
+   "seiten": 1,
+   "woerter": 118,
+   "wortfehler": 1,
+   "zeichen": 753,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "Wohngeld Direktzahlung ab Sept.txt",
+   "seiten": 1,
+   "woerter": 198,
+   "wortfehler": 11,
+   "zeichen": 1366,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "Wohngeldstelle LK - Mietbescheinigung Aydemir.txt",
+   "seiten": 1,
+   "woerter": 166,
+   "wortfehler": 11,
+   "zeichen": 1296,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "Wupsetaler KFZ Beitrag 2026.txt",
+   "seiten": 1,
+   "woerter": 121,
+   "wortfehler": 10,
+   "zeichen": 896,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "Wupsetaler Kfz 2027 Vorabinfo.txt",
+   "seiten": 1,
+   "woerter": 170,
+   "wortfehler": 7,
+   "zeichen": 1221,
+   "zeichenfehler": 7
+  },
+  {
+   "datei": "Wupsetaler Leistungsabrechnung Zahn.txt",
+   "seiten": 1,
+   "woerter": 105,
+   "wortfehler": 5,
+   "zeichen": 849,
+   "zeichenfehler": 17
+  },
+  {
+   "datei": "Wupsetaler Zahnzusatz Beitrag ab Juli.txt",
+   "seiten": 1,
+   "woerter": 147,
+   "wortfehler": 4,
+   "zeichen": 1083,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "Zahnarzt Rechnung Bruecke ZM-2026-01877.txt",
+   "seiten": 1,
+   "woerter": 164,
+   "wortfehler": 13,
+   "zeichen": 1321,
+   "zeichenfehler": 34
+  },
+  {
+   "datei": "aydemir baby + mietbescheinigung.txt",
+   "seiten": 1,
+   "woerter": 165,
+   "wortfehler": 0,
+   "zeichen": 1043,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "bank/2026-01.txt",
+   "seiten": 2,
+   "woerter": 386,
+   "wortfehler": 14,
+   "zeichen": 3175,
+   "zeichenfehler": 248
+  },
+  {
+   "datei": "bank/2026-02.txt",
+   "seiten": 2,
+   "woerter": 387,
+   "wortfehler": 20,
+   "zeichen": 3295,
+   "zeichenfehler": 254
+  },
+  {
+   "datei": "bank/2026-03.txt",
+   "seiten": 2,
+   "woerter": 380,
+   "wortfehler": 21,
+   "zeichen": 3195,
+   "zeichenfehler": 255
+  },
+  {
+   "datei": "bank/2026-04.txt",
+   "seiten": 2,
+   "woerter": 378,
+   "wortfehler": 15,
+   "zeichen": 3208,
+   "zeichenfehler": 251
+  },
+  {
+   "datei": "bank/2026-05.txt",
+   "seiten": 2,
+   "woerter": 375,
+   "wortfehler": 10,
+   "zeichen": 3152,
+   "zeichenfehler": 245
+  },
+  {
+   "datei": "bank/2026-06.txt",
+   "seiten": 2,
+   "woerter": 386,
+   "wortfehler": 12,
+   "zeichen": 3200,
+   "zeichenfehler": 247
+  },
+  {
+   "datei": "bank/2026-07.txt",
+   "seiten": 2,
+   "woerter": 379,
+   "wortfehler": 15,
+   "zeichen": 3233,
+   "zeichenfehler": 252
+  },
+  {
+   "datei": "bank/2026-08.txt",
+   "seiten": 2,
+   "woerter": 363,
+   "wortfehler": 14,
+   "zeichen": 3098,
+   "zeichenfehler": 250
+  },
+  {
+   "datei": "bank/2026-09.txt",
+   "seiten": 2,
+   "woerter": 377,
+   "wortfehler": 12,
+   "zeichen": 3202,
+   "zeichenfehler": 249
+  },
+  {
+   "datei": "bank/2026-10.txt",
+   "seiten": 2,
+   "woerter": 373,
+   "wortfehler": 10,
+   "zeichen": 3143,
+   "zeichenfehler": 245
+  },
+  {
+   "datei": "bank/2026-11.txt",
+   "seiten": 2,
+   "woerter": 369,
+   "wortfehler": 15,
+   "zeichen": 3162,
+   "zeichenfehler": 250
+  },
+  {
+   "datei": "bank/2026-12.txt",
+   "seiten": 2,
+   "woerter": 379,
+   "wortfehler": 15,
+   "zeichen": 3147,
+   "zeichenfehler": 253
+  },
+  {
+   "datei": "belege/AK-26-1012.txt",
+   "seiten": 1,
+   "woerter": 62,
+   "wortfehler": 4,
+   "zeichen": 553,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/AK-26-1127 April.txt",
+   "seiten": 1,
+   "woerter": 63,
+   "wortfehler": 6,
+   "zeichen": 504,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/Autohof Tankbeleg Okt.txt",
+   "seiten": 1,
+   "woerter": 57,
+   "wortfehler": 9,
+   "zeichen": 413,
+   "zeichenfehler": 67
+  },
+  {
+   "datei": "belege/Brinkmeier Laub Sonder.txt",
+   "seiten": 1,
+   "woerter": 70,
+   "wortfehler": 1,
+   "zeichen": 484,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "belege/Brinkmeier R 26-014 Januar.txt",
+   "seiten": 1,
+   "woerter": 67,
+   "wortfehler": 4,
+   "zeichen": 528,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/Droege RE-2026-0702 Ausdehnungsgefaess.txt",
+   "seiten": 1,
+   "woerter": 112,
+   "wortfehler": 11,
+   "zeichen": 781,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/Droege Wartung RE-2026-0611.txt",
+   "seiten": 1,
+   "woerter": 90,
+   "wortfehler": 6,
+   "zeichen": 723,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/Eigenbeleg Fahrten 2026.txt",
+   "seiten": 1,
+   "woerter": 93,
+   "wortfehler": 5,
+   "zeichen": 701,
+   "zeichenfehler": 9
+  },
+  {
+   "datei": "belege/Fidelia Wohngebaeude Beitragsrechnung.txt",
+   "seiten": 1,
+   "woerter": 82,
+   "wortfehler": 5,
+   "zeichen": 706,
+   "zeichenfehler": 17
+  },
+  {
+   "datei": "belege/Flink Dachrinne 2026-211.txt",
+   "seiten": 1,
+   "woerter": 92,
+   "wortfehler": 6,
+   "zeichen": 628,
+   "zeichenfehler": 16
+  },
+  {
+   "datei": "belege/Hagedorn Bon 13-01.txt",
+   "seiten": 1,
+   "woerter": 63,
+   "wortfehler": 4,
+   "zeichen": 446,
+   "zeichenfehler": 47
+  },
+  {
+   "datei": "belege/Hartwig Quittung Kellertuer.txt",
+   "seiten": 1,
+   "woerter": 54,
+   "wortfehler": 3,
+   "zeichen": 383,
+   "zeichenfehler": 9
+  },
+  {
+   "datei": "belege/HuG Beitrag 2026.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 5,
+   "zeichen": 693,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/HuG Quittung Mietspiegel.txt",
+   "seiten": 1,
+   "woerter": 58,
+   "wortfehler": 6,
+   "zeichen": 408,
+   "zeichenfehler": 14
+  },
+  {
+   "datei": "belege/Kallweit Feuerstaettenschau Gebuehr.txt",
+   "seiten": 1,
+   "woerter": 104,
+   "wortfehler": 8,
+   "zeichen": 823,
+   "zeichenfehler": 17
+  },
+  {
+   "datei": "belege/Kallweit Rechnung 2026-0298.txt",
+   "seiten": 1,
+   "woerter": 92,
+   "wortfehler": 11,
+   "zeichen": 698,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "belege/Kowalczyk Rg 2026-031.txt",
+   "seiten": 1,
+   "woerter": 100,
+   "wortfehler": 7,
+   "zeichen": 715,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/Kuhlmann Rauchmelder.txt",
+   "seiten": 1,
+   "woerter": 93,
+   "wortfehler": 4,
+   "zeichen": 689,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "belege/Leselust Ratgeber.txt",
+   "seiten": 1,
+   "woerter": 59,
+   "wortfehler": 4,
+   "zeichen": 381,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/Lueders Bon Buero.txt",
+   "seiten": 1,
+   "woerter": 58,
+   "wortfehler": 6,
+   "zeichen": 396,
+   "zeichenfehler": 43
+  },
+  {
+   "datei": "belege/Nordlicht Abschlagsplan.txt",
+   "seiten": 1,
+   "woerter": 95,
+   "wortfehler": 16,
+   "zeichen": 694,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/Notdienst Meentzen N-26-0412.txt",
+   "seiten": 1,
+   "woerter": 96,
+   "wortfehler": 5,
+   "zeichen": 747,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "belege/Post Einschreiben 16.03.txt",
+   "seiten": 1,
+   "woerter": 63,
+   "wortfehler": 4,
+   "zeichen": 431,
+   "zeichenfehler": 12
+  },
+  {
+   "datei": "belege/Quittung bar Petrovic 30.04.txt",
+   "seiten": 1,
+   "woerter": 54,
+   "wortfehler": 7,
+   "zeichen": 399,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/RE-2026-0188 Droege.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 8,
+   "zeichen": 591,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "belege/RE-2026-0203 Droege Spuelkasten.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 7,
+   "zeichen": 639,
+   "zeichenfehler": 12
+  },
+  {
+   "datei": "belege/Raiba Entgelt Q1.txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 10,
+   "zeichen": 650,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "belege/Rechnung 1-2026 Stellplatz Woelk.txt",
+   "seiten": 1,
+   "woerter": 88,
+   "wortfehler": 1,
+   "zeichen": 606,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "belege/Rechnung 2-2026 Schluessel Aydemir.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 2,
+   "zeichen": 571,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "belege/Rehbein Container.txt",
+   "seiten": 1,
+   "woerter": 85,
+   "wortfehler": 11,
+   "zeichen": 614,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/SW Abschlagsplan Erdgas 2026.txt",
+   "seiten": 1,
+   "woerter": 101,
+   "wortfehler": 5,
+   "zeichen": 798,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/SW Gutschrift Allgemeinstrom 2025.txt",
+   "seiten": 1,
+   "woerter": 104,
+   "wortfehler": 9,
+   "zeichen": 744,
+   "zeichenfehler": 20
+  },
+  {
+   "datei": "belege/Sievers RE 26-0193.txt",
+   "seiten": 1,
+   "woerter": 91,
+   "wortfehler": 7,
+   "zeichen": 631,
+   "zeichenfehler": 13
+  },
+  {
+   "datei": "belege/Tageblatt Anzeige Stellplatz.txt",
+   "seiten": 1,
+   "woerter": 79,
+   "wortfehler": 3,
+   "zeichen": 603,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "belege/Tankhof 06.02.txt",
+   "seiten": 1,
+   "woerter": 48,
+   "wortfehler": 10,
+   "zeichen": 341,
+   "zeichenfehler": 50
+  },
+  {
+   "datei": "belege/Telvia Rechnung April.txt",
+   "seiten": 1,
+   "woerter": 74,
+   "wortfehler": 7,
+   "zeichen": 559,
+   "zeichenfehler": 16
+  },
+  {
+   "datei": "belege/Tiedemann Obstbaeume RE 2026 0241.txt",
+   "seiten": 1,
+   "woerter": 108,
+   "wortfehler": 9,
+   "zeichen": 712,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "belege/Tiedemann RE 2026 0087.txt",
+   "seiten": 1,
+   "woerter": 107,
+   "wortfehler": 7,
+   "zeichen": 790,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/Voss RE-2026-0077.txt",
+   "seiten": 1,
+   "woerter": 116,
+   "wortfehler": 7,
+   "zeichen": 872,
+   "zeichenfehler": 17
+  },
+  {
+   "datei": "belege/Waermemass Rechnung 60-118-2026.txt",
+   "seiten": 1,
+   "woerter": 104,
+   "wortfehler": 11,
+   "zeichen": 796,
+   "zeichenfehler": 20
+  },
+  {
+   "datei": "belege/Wertstoffhof Quittung.txt",
+   "seiten": 1,
+   "woerter": 38,
+   "wortfehler": 5,
+   "zeichen": 356,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/Woehlke AR-2026-118 Abschlag.txt",
+   "seiten": 1,
+   "woerter": 82,
+   "wortfehler": 5,
+   "zeichen": 625,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/Woehlke Schlussrechnung SR-2026-164.txt",
+   "seiten": 1,
+   "woerter": 154,
+   "wortfehler": 13,
+   "zeichen": 1129,
+   "zeichenfehler": 29
+  },
+  {
+   "datei": "belege/Wupsetalbahn Fahrkarte 11.03.txt",
+   "seiten": 1,
+   "woerter": 45,
+   "wortfehler": 4,
+   "zeichen": 337,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "belege/tankquittung juni.txt",
+   "seiten": 1,
+   "woerter": 46,
+   "wortfehler": 5,
+   "zeichen": 335,
+   "zeichenfehler": 47
+  },
+  {
+   "datei": "brandtner spuelkasten.txt",
+   "seiten": 1,
+   "woerter": 142,
+   "wortfehler": 4,
+   "zeichen": 840,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "droege wartung termin sept.txt",
+   "seiten": 1,
+   "woerter": 129,
+   "wortfehler": 4,
+   "zeichen": 930,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "fidelia_beitragsrechnung_haftpflicht.txt",
+   "seiten": 1,
+   "woerter": 92,
+   "wortfehler": 4,
+   "zeichen": 774,
+   "zeichenfehler": 14
+  },
+  {
+   "datei": "hagedorn_rasenmaeher_bon.txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 8,
+   "zeichen": 703,
+   "zeichenfehler": 50
+  },
+  {
+   "datei": "jessen bon 0509.txt",
+   "seiten": 1,
+   "woerter": 100,
+   "wortfehler": 6,
+   "zeichen": 595,
+   "zeichenfehler": 41
+  },
+  {
+   "datei": "nebenkosten_2025_DG_aydemir.txt",
+   "seiten": 1,
+   "woerter": 186,
+   "wortfehler": 8,
+   "zeichen": 1296,
+   "zeichenfehler": 32
+  },
+  {
+   "datei": "stadtwerke mahnung strom.txt",
+   "seiten": 1,
+   "woerter": 126,
+   "wortfehler": 5,
+   "zeichen": 970,
+   "zeichenfehler": 16
+  },
+  {
+   "datei": "telvia preisanpassung.txt",
+   "seiten": 1,
+   "woerter": 141,
+   "wortfehler": 3,
+   "zeichen": 998,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "wasserverband jahresabrechnung 2025.txt",
+   "seiten": 1,
+   "woerter": 160,
+   "wortfehler": 14,
+   "zeichen": 1142,
+   "zeichenfehler": 33
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+Beispiel Frischemarkt App  >  Meine Einkäufe  >  eBon
+
+Frischemarkt Beispielhausen, Parkallee 9
+Samstag, 08.11.2025, 09:26 Uhr  Kasse 3  Bon 0449-3317
+Kundenkonto: Martina K.
+Liefernotiz: für Mama, Wohnpark Whg. 14 – an der Rezeption abgeben
+
+Artikel                   Menge   Einzelpreis   Betrag
+Toastbrot                 1       1,29          1,29
+Taschentuecher            1       1,99          1,99
+Tee Pfefferminz           2       1,29          2,58
+Rotwein Trocken           2       4,49          8,98
+Mineralwasser 6X1,5       1       2,94          2,94
+Thunfisch Dose            1       1,59          1,59
+Butter 250G               1       2,29          2,29
+Zahnpasta                 1       1,45          1,45
+Tomaten Passiert          2       0,79          1,58
+Fusilli 500G              2       0,99          1,98
+Knoedel Halb+Halb         1       1,69          1,69
+Sekt                      1       3,99          3,99
+Rinderrouladen            1       12,98         12,98
+Kerzen 4Er                1       2,99          2,99
+Orangensaft 1L            2       1,79          3,58
+Shampoo                   3       2,45          7,35
+
+Summe  59,25 EUR
+Treuerabatt 3 %  -1,78 EUR
+Gesamt  57,47 EUR
+Zahlart  Kreditkarte (App)
+Lieferung Wohnpark  0,00 EUR (ab 50 EUR frei)
+
+Dieser digitale Bon ersetzt den Papierbon. Zum Ausdrucken in der App auf Teilen tippen.
+Beispiel Frischemarkt GmbH

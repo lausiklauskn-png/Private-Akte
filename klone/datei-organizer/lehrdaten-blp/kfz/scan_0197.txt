@@ -1,0 +1,15 @@
+druckfix24.example – Ihre Online-Druckerei
+Printhaus Sellmann GmbH, Papierweg 5, 97070 Würzfeld, DE000000064
+
+Rechnung 2026-DF-771204 zum Auftrag "Flyer Reifenwechsel Herbst"
+Rechnungsdatum 02.09.2026 · Kunde: Kfz-Technik Brandhorst, Wolmershagen
+
+Qty   Description                          Unit price     Amount
+1     Flyer DIN lang, 2-seitig, 135 g Bilderdruck, Auflage 5.000      89,90      89,90
+1     Datencheck Profi                           5,00       5,00
+1     Standardversand                            6,90       6,90
+
+Subtotal                                           101,80
+VAT 19%                                             19,34
+Total EUR                                          121,14
+Paid by SEPA. Danke für Ihren Auftrag!

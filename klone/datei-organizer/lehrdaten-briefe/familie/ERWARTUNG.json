@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "Kindergeld Mats.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Aulachtal",
+   "person": "Mats Haas",
+   "frist": null
+  },
+  {
+   "datei": "scan_0012.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landeselterngeldstelle Südland",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Elterngeld fehlt noch was.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landeselterngeldstelle Südland",
+   "person": "Aylin Haas",
+   "frist": "2025-03-07"
+  },
+  {
+   "datei": "Kita Gebühren 2025-26.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Krähenfurt – Amt für Bildung und Betreuung",
+   "person": "Lea Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Storchennest_Elternbrief_Nov.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kindertagesstätte Storchennest",
+   "person": "Lea Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Aulach-Gymnasium Krähenfurt",
+   "person": "Jonas Brandl",
+   "frist": "2025-03-13"
+  },
+  {
+   "datei": "Emil Halbjahr Kl2.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule am Mühlbach",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "Elternsprechtag_RS.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Realschule Krähenfurt-Ost",
+   "person": "Nora Haas",
+   "frist": "2025-11-27"
+  },
+  {
+   "datei": "Schulbesch Nora.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Realschule Krähenfurt-Ost",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "Ausbildungsvertrag.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zahnarztpraxis Dr. Anselm Krautter",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "Reise Tannbach Jonas.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Aulach-Gymnasium Krähenfurt",
+   "person": "Jonas Brandl",
+   "frist": "2026-04-24"
+  },
+  {
+   "datei": "KiZ_Ablehnung.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Aulachtal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Essen Okt.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Mensaverein Aulach-Gymnasium e.V.",
+   "person": "Jonas Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Geburtsurkunde_Mats_Scan.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Krähenfurt",
+   "person": "Mats Haas",
+   "frist": null
+  },
+  {
+   "datei": "Platzzusage Krippe.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Krähenfurt – Amt für Bildung und Betreuung",
+   "person": "Mats Haas",
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Kernzeit Kündigung Jonas.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Miriam Brandl",
+   "person": "Jonas Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Fahrtkosten Nora LRA.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Aulachtal – Schülerbeförderung",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "Stadtkasse.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadtkasse Krähenfurt",
+   "person": "Lea Brandl",
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "Familienpass 2026.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Bürgerbüro Krähenfurt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20250512_taufe.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Evang. Pfarramt Krähenfurt-Mühlvorstadt",
+   "person": "Mats Haas",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszug_2025_09.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Aulachtaler Bank eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Emil Schule Sparen.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreisbank Krähenfurt",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Forderungsmanagement Hornung & Partner GmbH",
+   "person": "Dominik Haas",
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Schreiben Zwergenland Inkasso.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "ProClaim Inkasso GmbH",
+   "person": "Miriam Brandl",
+   "frist": "2026-01-16"
+  },
+  {
+   "datei": "RA Brief Zahnspange.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Rechtsanwälte Seybold Kunzmann PartG",
+   "person": "Aylin Haas",
+   "frist": "2026-03-13"
+  },
+  {
+   "datei": "Dispo.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Aulachtaler Bank eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KK-Abrechnung Dez.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Aulachtaler Bank eG",
+   "person": "Miriam Brandl",
+   "frist": null
+  },
+  {
+   "datei": "PHV_Police_neu.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Südland Versicherungsverein a.G.",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Hausrat Beitrag 26.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Bergland Sachversicherung AG",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Wichtige Info zu Ihrem Vertrag.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Südland Versicherungsverein a.G.",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Unfall Emil gekündigt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Bergland Sachversicherung AG",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "Fensterscheibe Schaden.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Südland Versicherungsverein a.G.",
+   "person": "Jonas Brandl",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024 Bescheid.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Krähenfurt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "FA Erinnerung Abgabe.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Krähenfurt",
+   "person": null,
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "Terminbestätigung Buergeramt.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Bürgerbüro Krähenfurt",
+   "person": "Lea Brandl",
+   "frist": "2026-05-06"
+  },
+  {
+   "datei": "Meldebescheinigung.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Krähenfurt – Einwohnermeldeamt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Fr. Bechtle Steuer.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Steuerkanzlei Bechtle",
+   "person": null,
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Bruno.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Krähenfurt – Steueramt",
+   "person": "Miriam Brandl",
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "FA_VZ.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Krähenfurt",
+   "person": null,
+   "frist": "2026-02-06"
+  },
+  {
+   "datei": "Nebenkosten 2024.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnbau Aulachtal eG",
+   "person": null,
+   "frist": "2025-08-29"
+  },
+  {
+   "datei": "Zwiesele Miete ab Juli.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Ottmar Zwiesele",
+   "person": null,
+   "frist": "2026-06-30"
+  },
+  {
+   "datei": "Nachtrag MV Hund.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnbau Aulachtal eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Aushang Rauchmelder.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Messwerk Gebäudedienste GmbH",
+   "person": null,
+   "frist": "2026-02-18"
+  },
+  {
+   "datei": "Rollladen Kinderzi.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Rollladen- und Sonnenschutztechnik Ehmann",
+   "person": null,
+   "frist": "2025-07-18"
+  },
+  {
+   "datei": "Wiese Hohenacker Grundsteuer.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinde Hohenacker – Kämmerei",
+   "person": "Dominik Haas",
+   "frist": "2026-07-01"
+  },
+  {
+   "datei": "Gesundheit Schimmel Kinderzimmer.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Tobias Brandl",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kehrwoche_2026.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnbau Aulachtal eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Strom Jahresabrechnung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krähenfurt GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Gas neuer Abschlag.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krähenfurt GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Wasser Abwasser Bescheid.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krähenfurt – Eigenbetrieb Wasser und Abwasser",
+   "person": null,
+   "frist": "2026-03-16"
+  },
+  {
+   "datei": "Ablesekarte.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Netze Aulachtal GmbH",
+   "person": null,
+   "frist": "2025-12-19"
+  },
+  {
+   "datei": "Jetzt wechseln und sparen.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Grünhang Energie GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "SWK_Erinnerung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krähenfurt GmbH",
+   "person": "Tobias Brandl",
+   "frist": "2025-10-21"
+  },
+  {
+   "datei": "Parzelle 23 Jahresrechnung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein Sonnenhalde e.V.",
+   "person": "Tobias Brandl",
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "Garantie Technik Mäher.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Lagerhaus-Markt Hohenacker",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Angebot Obstbaumschnitt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Baumpflege Lorenz Häberle",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Hecke!!.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein Sonnenhalde e.V.",
+   "person": "Tobias Brandl",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "bon holderle.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Frischemarkt Holderle",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_4471.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Drogerie Sauberland",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schule Emil Ranzen.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Schulranzen-Stüble Versand",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "Retoure Stiefel.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Schuhhaus Trittfest Online",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Möbel Kinderbett offen.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Möbelhaus Rieger & Söhne",
+   "person": "Aylin Haas",
+   "frist": "2025-03-28"
+  },
+  {
+   "datei": "Bon_Schreibwaren.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Buch & Papier Scheerer",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "GKS Zusatzbeitrag.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Südland",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Kinderkrank Emil.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Südland",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Fragebogen Famvers.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Südland",
+   "person": "Tobias Brandl",
+   "frist": "2026-03-20"
+  },
+  {
+   "datei": "Mitgliedsbesch Azubi.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Südland",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "U9 Lea Termin.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinder- und Jugendarztpraxis Dr. Fezer",
+   "person": "Lea Brandl",
+   "frist": "2026-09-17"
+  },
+  {
+   "datei": "Arztbrief Lufu Emil.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinderpneumologie am Kreisklinikum Aulachtal",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "Labor TB 0325.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "MVZ Labor Aulachtal",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "KFO Rechnung Q3.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis für Kieferorthopädie Dr. Reichle",
+   "person": "Nora Haas",
+   "frist": "2025-10-30"
+  },
+  {
+   "datei": "apo.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Linden-Apotheke am Markt",
+   "person": "Lea Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Entlassbrief Mats.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kreisklinikum Aulachtal – Klinik für Kinder- und Jugendmedizin",
+   "person": "Mats Haas",
+   "frist": null
+  },
+  {
+   "datei": "Renteninfo 2025 Tobias.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherungsanstalt Südland",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Bescheinigung §92.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Bergland Lebensversicherung AG",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Lohn 2025-05.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Spedition Hirschbühl GmbH",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Änderungsvertrag TZ.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Therapiezentrum am Wehr GbR",
+   "person": "Miriam Brandl",
+   "frist": null
+  },
+  {
+   "datei": "KEZ Bescheid.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherungsanstalt Südland",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Mats Elternzeit Kinderhaus.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Evangelische Kirchenpflege Krähenfurt",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Kfz Beitrag 2026 Kombi.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Südland Versicherungsverein a.G.",
+   "person": "Tobias Brandl",
+   "frist": "2026-01-02"
+  },
+  {
+   "datei": "Police Van Auenland.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Auenland Direktversicherung AG",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Versicherung alt gekündigt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Bergland Sachversicherung AG",
+   "person": "Aylin Haas",
+   "frist": null
+  },
+  {
+   "datei": "Hauptzollamt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Residenzstadt",
+   "person": "Dominik Haas",
+   "frist": "2026-03-12"
+  },
+  {
+   "datei": "Inspektion 105tkm.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Stegmaier GmbH & Co. KG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Knöllchen.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Stadt Krähenfurt – Ordnungsamt, Bußgeldstelle",
+   "person": "Miriam Brandl",
+   "frist": "2025-07-04"
+  },
+  {
+   "datei": "tanken.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Tankpunkt Römerstraße",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Räderwechsel.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Stegmaier GmbH & Co. KG",
+   "person": null,
+   "frist": "2026-04-14"
+  },
+  {
+   "datei": "Moped Saison Police.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Südland Versicherungsverein a.G.",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "scan_0044.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Motorrad",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Residenzstadt",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Roller Beitrag.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Auenland Direktversicherung AG",
+   "person": "Dominik Haas",
+   "frist": "2026-03-01"
+  },
+  {
+   "datei": "Zweirad Wahl Rg.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad-Wahl",
+   "person": "Tobias Brandl",
+   "frist": "2025-04-25"
+  },
+  {
+   "datei": "Waschmaschine.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Hägele Hausgeräte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "20250920_101455.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "TechnoHalle Krähenfurt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schule Tablet Nora.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "TechnoHalle Krähenfurt",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "KVA Spülmaschine.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Elektro Hägele Hausgeräte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Antwort Kaffeeautomat.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Bohnenmeister Kundenservice",
+   "person": "Miriam Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Pulswerk Vertrag.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Fitnesshalle Pulswerk GmbH",
+   "person": "Miriam Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Aulachbote Preis.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Aulachtaler Bote Zeitungsverlag",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Flimmerkiste Kündigung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Flimmerkiste Streaming",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Handy Nora Okt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Funkwelle Mobil GmbH",
+   "person": "Nora Haas",
+   "frist": null
+  },
+  {
+   "datei": "Schule Bus Jonas.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsverbund Aulach GmbH",
+   "person": "Jonas Brandl",
+   "frist": null
+  },
+  {
+   "datei": "TSV Beitrag Emil.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "TSV 1894 Krähenfurt e.V.",
+   "person": "Emil Haas",
+   "frist": null
+  },
+  {
+   "datei": "Ihr Internet wird schneller.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "AulachNet Breitband GmbH",
+   "person": "Tobias Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Nachlassgericht Gerlinde.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Krähenfurt – Nachlassgericht",
+   "person": "Dominik Haas",
+   "frist": "2025-06-30"
+  },
+  {
+   "datei": "Erbschein.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Krähenfurt – Nachlassgericht",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "FA Residenzstadt ErbSt.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Residenzstadt – Erbschaft- und Schenkungsteuerstelle",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Notar Termin.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notariat Dr. Cornelia Übelhör",
+   "person": null,
+   "frist": "2026-03-24"
+  },
+  {
+   "datei": "Buchung Grünalp Pfingsten.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Ferienhof Grünalp",
+   "person": null,
+   "frist": "2026-04-27"
+  },
+  {
+   "datei": "Camping Reservierung.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Campingpark Schilfufer",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Seepferdchen Lea.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Bäderbetriebe Krähenfurt – Hallenbad Aulachaue",
+   "person": "Lea Brandl",
+   "frist": "2026-01-13"
+  },
+  {
+   "datei": "Anmeldung Zeltlager SJR.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Stadtjugendring Krähenfurt e.V.",
+   "person": "Emil Haas",
+   "frist": "2026-06-12"
+  },
+  {
+   "datei": "Katalog Familienzeit.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Sonnensegel Familienreisen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief Oma Hilde.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Oma Hilde",
+   "person": "Jonas Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Zettel Nachbar.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Eugen Pflüger",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Einladung Finja.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Katrin Mezger",
+   "person": "Lea Brandl",
+   "frist": "2025-09-27"
+  },
+  {
+   "datei": "Karte von Fam Lakatos.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Ilona und Peter Lakatos",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "Post von Frau Scheck.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Renate Scheck",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Karton 3.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Tobias Brandl",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Stadtarchiv Übernahme.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Stadtarchiv Krähenfurt",
+   "person": "Dominik Haas",
+   "frist": null
+  },
+  {
+   "datei": "alt_erledigt_2024.txt",
+   "haushalt": "h-haas",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Aylin Haas",
+   "person": null,
+   "frist": null
+  }
+ ]
+}

@@ -1,0 +1,3193 @@
+{
+ "konto": {
+  "iban": "DE00 3499 9000 0001 2345 67",
+  "inhaber": "Hannelore Wiebusch",
+  "bank": "Raiffeisen- und Bürgerbank Sellenbrück eG"
+ },
+ "auszuege": [
+  {
+   "datei": "2026-01.txt",
+   "saldoAlt": "14.891,71",
+   "saldoNeu": "17.006,98",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-01-02",
+     "wert": "2026-01-02",
+     "betrag": "-95,20",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-01-02",
+     "wert": "2026-01-02",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-01-05",
+     "wert": "2026-01-05",
+     "betrag": "700,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Januar DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-01-05",
+     "wert": "2026-01-05",
+     "betrag": "860,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-01-05",
+     "wert": "2026-01-05",
+     "betrag": "-286,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 01/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-01-05",
+     "wert": "2026-01-05",
+     "betrag": "-34,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 01/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-01-05",
+     "wert": "2026-01-05",
+     "betrag": "-62,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-03 STROM ABSCHLAG 01/2026 MANDAT SW-2044170-03",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-01-06",
+     "wert": "2026-01-06",
+     "betrag": "310,00",
+     "gegenpartei": "Dieter Woelk",
+     "zweck": "Stellplatz 2026 Rechn. 1/2026 und ein gutes neues Jahr",
+     "art": "gutschrift",
+     "rechnungsnummern": [
+      "1/2026"
+     ],
+     "stuecke": [
+      "belege/Rechnung 1-2026 Stellplatz Woelk.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-01-07",
+     "wert": "2026-01-07",
+     "betrag": "-393,00",
+     "gegenpartei": "Alltagshilfe Pohlmann",
+     "zweck": "Rechnung 2025-Q4-017 Haushaltshilfe Okt-Dez",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2025-Q4-017"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-01-08",
+     "wert": "2026-01-08",
+     "betrag": "-81,00",
+     "gegenpartei": "Haus- u. Grundeigentuemerverein Wendelsburg",
+     "zweck": "BEITRAG 2026 MITGL-NR 0417 B-2026-0417",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "B-2026-0417"
+     ],
+     "stuecke": [
+      "belege/HuG Beitrag 2026.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-01-09",
+     "wert": "2026-01-09",
+     "betrag": "-140,70",
+     "gegenpartei": "Druckhaus Wendelsburg GmbH u. Co. KG",
+     "zweck": "TAGEBLATT ABO 40011726 BEZUGSGELD 1. QUARTAL 2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-01-12",
+     "wert": "2026-01-12",
+     "betrag": "-42,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700398116 12/2025 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700398116"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-01-14",
+     "wert": "2026-01-13",
+     "betrag": "-37,84",
+     "gegenpartei": "BAUMARKT HAGEDORN//SELLENBRUECK",
+     "zweck": "13.01. 11.08 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Hagedorn Bon 13-01.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-01-15",
+     "wert": "2026-01-15",
+     "betrag": "-102,34",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1012 JANUAR 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1012"
+     ],
+     "stuecke": [
+      "belege/AK-26-1012.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-01-15",
+     "wert": "2026-01-15",
+     "betrag": "-250,04",
+     "gegenpartei": "Fidelia Sachversicherung AG",
+     "zweck": "KD-NR 0027-55-813 PH 00.660.412 HG 00.660.413 BEITRAG 2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "fidelia_beitragsrechnung_haftpflicht.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-01-16",
+     "wert": "2026-01-16",
+     "betrag": "-400,00",
+     "gegenpartei": "Bargeldauszahlung",
+     "zweck": "GA RAIBA SELLENBRUECK MARKTSTR 3 16.01. 10.42 KARTE 1",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-01-23",
+     "wert": "2026-01-22",
+     "betrag": "-58,43",
+     "gegenpartei": "FRISCHMARKT JESSEN//SELLENBRUECK",
+     "zweck": "22.01. 17.05 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-01-30",
+     "wert": "2026-01-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 01/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-01-30",
+     "wert": "2026-01-30",
+     "betrag": "1.142,37",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 01.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-01-30",
+     "wert": "2026-01-30",
+     "betrag": "698,40",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 01.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    }
+   ]
+  },
+  {
+   "datei": "2026-02.txt",
+   "saldoAlt": "17.006,98",
+   "saldoNeu": "18.777,52",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-02-02",
+     "wert": "2026-02-02",
+     "betrag": "-95,20",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Brinkmeier R 26-014 Januar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-02-02",
+     "wert": "2026-02-02",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-02-02",
+     "wert": "2026-02-02",
+     "betrag": "-446,52",
+     "gegenpartei": "Wupsetaler Versicherung AG",
+     "zweck": "K 00-4471-9028 KFZ XSB-HW 000 BEITRAG 01.01.-31.12.2026 MANDAT WV-K-0044719028",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wupsetaler KFZ Beitrag 2026.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-02-03",
+     "wert": "2026-02-03",
+     "betrag": "700,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Februar DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-02-05",
+     "wert": "2026-02-05",
+     "betrag": "-286,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 02/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Stadtwerke Erdgas Jahresabrechnung.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-02-05",
+     "wert": "2026-02-05",
+     "betrag": "-34,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 02/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-02-05",
+     "wert": "2026-02-05",
+     "betrag": "-62,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-03 STROM ABSCHLAG 02/2026 MANDAT SW-2044170-03",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "SW Kuendigungsbestaetigung Strom.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-02-06",
+     "wert": "2026-02-06",
+     "betrag": "500,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete Februar Teilbetrag Rest folgt",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-02-09",
+     "wert": "2026-02-06",
+     "betrag": "-72,56",
+     "gegenpartei": "TANKHOF SELLENBRUECK//SELLENBRUECK",
+     "zweck": "06.02. 08.57 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Tankhof 06.02.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-02-10",
+     "wert": "2026-02-10",
+     "betrag": "-42,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700401882 01/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700401882"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-02-12",
+     "wert": "2026-02-12",
+     "betrag": "-224,23",
+     "gegenpartei": "Stadtkasse Sellenbrueck",
+     "zweck": "BZ 00.2140.007731.4 Grundbesitzabg. 1. Rate 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Grundbesitzabgaben_2026_Stadt.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-02-13",
+     "wert": "2026-02-13",
+     "betrag": "-386,36",
+     "gegenpartei": "Wasserverband Obere Wupse",
+     "zweck": "Kassenzeichen 5.0417.221 Nachz. 2025 57,36 + 1. Abschlag 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "wasserverband jahresabrechnung 2025.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-02-16",
+     "wert": "2026-02-16",
+     "betrag": "-102,34",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1049 FEBRUAR 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1049"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-02-16",
+     "wert": "2026-02-16",
+     "betrag": "-173,00",
+     "gegenpartei": "Lohnsteuerhilfe Mittelland e.V.",
+     "zweck": "MITGL 044-17726 BEITRAG 2026 BELEG B26-0451208",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Lohnsteuerhilfe Termin.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-02-18",
+     "wert": "2026-02-18",
+     "betrag": "393,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 EB-26-014402 ERSTATTUNG ENTLASTUNGSBETRAG 10-12/25",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Erstattung Feb.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-02-20",
+     "wert": "2026-02-20",
+     "betrag": "-138,43",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 JAHRESABRECHNUNG 2025 RG 26-ER-0081447 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "26-ER-0081447"
+     ],
+     "stuecke": [
+      "Stadtwerke Erdgas Jahresabrechnung.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-02-20",
+     "wert": "2026-02-20",
+     "betrag": "12,36",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 GUTHABEN JAHRESABRECHNUNG 2025 RG 26-ST-0081449",
+     "art": "gutschrift",
+     "rechnungsnummern": [
+      "26-ST-0081449"
+     ],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-02-27",
+     "wert": "2026-02-27",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 02/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-02-27",
+     "wert": "2026-02-27",
+     "betrag": "1.142,37",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 02.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-02-27",
+     "wert": "2026-02-27",
+     "betrag": "698,40",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 02.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    }
+   ]
+  },
+  {
+   "datei": "2026-03.txt",
+   "saldoAlt": "18.777,52",
+   "saldoNeu": "19.834,35",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-03-02",
+     "wert": "2026-03-02",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-03-02",
+     "wert": "2026-03-02",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-03-02",
+     "wert": "2026-03-02",
+     "betrag": "-38,00",
+     "gegenpartei": "Landfrauenverein Sellenbrueck e.V.",
+     "zweck": "JAHRESBEITRAG 2026 WIEBUSCH H.",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Landfrauen JHV Einladung.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-03-03",
+     "wert": "2026-03-03",
+     "betrag": "700,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Maerz DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-03-05",
+     "wert": "2026-03-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 03/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-03-05",
+     "wert": "2026-03-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 03/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-03-05",
+     "wert": "2026-03-05",
+     "betrag": "-62,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-03 STROM ABSCHLAG 03/2026 MANDAT SW-2044170-03",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "SW Kuendigungsbestaetigung Strom.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-03-06",
+     "wert": "2026-03-06",
+     "betrag": "400,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete Maerz Teil, mehr geht gerade nicht",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-03-09",
+     "wert": "2026-03-09",
+     "betrag": "-142,80",
+     "gegenpartei": "Elektro Sievers",
+     "zweck": "Kd-Nr 20417 Treppenhaus",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Sievers RE 26-0193.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-03-10",
+     "wert": "2026-03-10",
+     "betrag": "-215,50",
+     "gegenpartei": "Finanzamt Wendelsburg",
+     "zweck": "STNR 000/123/40077 EST-VZ I/2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-03-10",
+     "wert": "2026-03-10",
+     "betrag": "-42,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700405561 02/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700405561"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-03-12",
+     "wert": "2026-03-12",
+     "betrag": "-220,15",
+     "gegenpartei": "Dachdeckerei Hinnerk Voss",
+     "zweck": "Rechnung RE-2026-0077 Kd 10417 Firstziegel Sturm",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE-2026-0077"
+     ],
+     "stuecke": [
+      "belege/Voss RE-2026-0077.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-03-13",
+     "wert": "2026-03-13",
+     "betrag": "-268,80",
+     "gegenpartei": "Abfallwirtschaftsbetrieb LK Wendelsburg",
+     "zweck": "AW-0044-71920 Abfallgeb. 2026 1. Rate",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Abfallgebuehren Bescheid 2026.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-03-16",
+     "wert": "2026-03-16",
+     "betrag": "-102,34",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1088 MAERZ 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1088"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-03-20",
+     "wert": "2026-03-20",
+     "betrag": "-227,53",
+     "gegenpartei": "Heizung-Sanitaer Droege GmbH",
+     "zweck": "RE-2026-0188 u. RE-2026-0203 Ventil DG + Spuelkasten Brandtner",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE-2026-0188",
+      "RE-2026-0203"
+     ],
+     "stuecke": [
+      "belege/RE-2026-0188 Droege.txt",
+      "belege/RE-2026-0203 Droege Spuelkasten.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-03-24",
+     "wert": "2026-03-24",
+     "betrag": "-500,00",
+     "gegenpartei": "Bargeldauszahlung",
+     "zweck": "GA RAIBA SELLENBRUECK MARKTSTR 3 24.03. 09.15 KARTE 1",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-03-31",
+     "wert": "2026-03-31",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 03/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-03-31",
+     "wert": "2026-03-31",
+     "betrag": "1.138,46",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 03.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-03-31",
+     "wert": "2026-03-31",
+     "betrag": "696,02",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 03.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-03-31",
+     "wert": "2026-03-31",
+     "betrag": "-17,40",
+     "gegenpartei": "Raiffeisen- und Buergerbank Sellenbrueck eG",
+     "zweck": "ABSCHLUSS PER 31.03.2026 KONTOFUEHRUNG 14,70 BUCHUNGSPOSTEN 2,70",
+     "art": "entgelt",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Raiba Entgelt Q1.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-04.txt",
+   "saldoAlt": "19.834,35",
+   "saldoNeu": "21.298,89",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-04-01",
+     "wert": "2026-04-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-04-01",
+     "wert": "2026-04-01",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-04-01",
+     "wert": "2026-04-01",
+     "betrag": "-322,00",
+     "gegenpartei": "Justara Rechtsschutz-Versicherung AG",
+     "zweck": "RS-000 771 204 Beitrag 04/26-03/27",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Justara Beitrag 2026-27.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-04-02",
+     "wert": "2026-04-02",
+     "betrag": "700,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete April DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-04-07",
+     "wert": "2026-04-07",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 04/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-04-07",
+     "wert": "2026-04-07",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 04/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-04-07",
+     "wert": "2026-04-07",
+     "betrag": "500,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete April Teilzahlung wie besprochen",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Ratenvereinbarung Petrovic unterschrieben.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-04-10",
+     "wert": "2026-04-10",
+     "betrag": "-42,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700409013 03/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700409013"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-04-10",
+     "wert": "2026-04-10",
+     "betrag": "-393,00",
+     "gegenpartei": "Alltagshilfe Pohlmann",
+     "zweck": "Rechnung 2026-Q1-021 Jan-Maerz",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026-Q1-021"
+     ],
+     "stuecke": [
+      "Rechnung Alltagshilfe 1. Quartal.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-04-13",
+     "wert": "2026-04-13",
+     "betrag": "-86,00",
+     "gegenpartei": "Bundeskasse Kfz-Steuer HZA Wendelsburg",
+     "zweck": "KRAFTST K0004817260 XSB-HW 000 11.04.2026-10.04.2027",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "HZA Kfz-Steuer Abbuchung.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-04-15",
+     "wert": "2026-04-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 04/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-04-15",
+     "wert": "2026-04-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1127 APRIL 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1127"
+     ],
+     "stuecke": [
+      "belege/AK-26-1127 April.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-04-16",
+     "wert": "2026-04-16",
+     "betrag": "-153,51",
+     "gegenpartei": "Waermemass Abrechnungsdienst GmbH",
+     "zweck": "LG 118-0417 RECHNUNG 60-118-2026 ABRECHNUNG 2025",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "60-118-2026"
+     ],
+     "stuecke": [
+      "belege/Waermemass Rechnung 60-118-2026.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-04-16",
+     "wert": "2026-04-16",
+     "betrag": "-146,40",
+     "gegenpartei": "Druckhaus Wendelsburg GmbH u. Co. KG",
+     "zweck": "TAGEBLATT ABO 40011726 BEZUGSGELD 2. QUARTAL 2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Tageblatt Bezugspreis.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-04-17",
+     "wert": "2026-04-17",
+     "betrag": "-122,47",
+     "gegenpartei": "Wupsetaler Versicherung AG",
+     "zweck": "H 00-4471-9029 HAUSRAT BEITRAG 01.04.2026-31.03.2027 MANDAT WV-H-0044719029",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-04-22",
+     "wert": "2026-04-22",
+     "betrag": "-300,00",
+     "gegenpartei": "Bargeldauszahlung",
+     "zweck": "GA RAIBA SELLENBRUECK MARKTSTR 3 22.04. 11.27 KARTE 1",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-04-30",
+     "wert": "2026-04-30",
+     "betrag": "200,00",
+     "gegenpartei": "Bareinzahlung",
+     "zweck": "EINZAHLUNG AM SCHALTER Petrovic Rueckstand",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Quittung bar Petrovic 30.04.txt"
+     ]
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-04-30",
+     "wert": "2026-04-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 04/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-04-30",
+     "wert": "2026-04-30",
+     "betrag": "1.138,46",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 04.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-04-30",
+     "wert": "2026-04-30",
+     "betrag": "696,02",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 04.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-05.txt",
+   "saldoAlt": "21.298,89",
+   "saldoNeu": "21.701,95",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-05-04",
+     "wert": "2026-05-04",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-05-04",
+     "wert": "2026-05-04",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-05-04",
+     "wert": "2026-05-04",
+     "betrag": "700,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Mai DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-05-05",
+     "wert": "2026-05-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 05/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-05-05",
+     "wert": "2026-05-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 05/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-05-05",
+     "wert": "2026-05-05",
+     "betrag": "960,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete Mai 860 + Rate 1 lt. Vereinbarung v. 02.04.",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Ratenvereinbarung Petrovic unterschrieben.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-05-05",
+     "wert": "2026-05-05",
+     "betrag": "393,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 EB-26-041877 ERSTATTUNG ENTLASTUNGSBETRAG 01-03/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rechnung Alltagshilfe 1. Quartal.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-05-11",
+     "wert": "2026-05-11",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700412377 04/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700412377"
+     ],
+     "stuecke": [
+      "belege/Telvia Rechnung April.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-05-13",
+     "wert": "2026-05-13",
+     "betrag": "84,37",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "NK-Abrechnung 2025 Nachzahlung 1.OG links",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-05-15",
+     "wert": "2026-05-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 05/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-05-15",
+     "wert": "2026-05-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1163 MAI 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1163"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-05-15",
+     "wert": "2026-05-15",
+     "betrag": "-224,23",
+     "gegenpartei": "Stadtkasse Sellenbrueck",
+     "zweck": "BZ 00.2140.007731.4 Grundbesitzabgaben 2. Rate",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Grundbesitzabgaben_2026_Stadt.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-05-15",
+     "wert": "2026-05-15",
+     "betrag": "-329,00",
+     "gegenpartei": "Wasserverband Obere Wupse",
+     "zweck": "Kassenzeichen 5.0417.221 2. Abschlag 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "wasserverband jahresabrechnung 2025.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-05-18",
+     "wert": "2026-05-18",
+     "betrag": "-328,44",
+     "gegenpartei": "Autohaus Reimers GmbH",
+     "zweck": "RE 26-1873 XSB-HW 000 Inspektion",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE 26-1873"
+     ],
+     "stuecke": [
+      "Reimers Inspektion RE 26-1873.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-05-19",
+     "wert": "2026-05-19",
+     "betrag": "-2.170,56",
+     "gegenpartei": "Fensterbau Woehlke GmbH",
+     "zweck": "AR-2026-118 Kd 30418 Abschlag Fenster DG u. Haustuer",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "AR-2026-118"
+     ],
+     "stuecke": [
+      "belege/Woehlke AR-2026-118 Abschlag.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-05-21",
+     "wert": "2026-05-21",
+     "betrag": "-148,00",
+     "gegenpartei": "Augenzentrum Wendelsburg",
+     "zweck": "Rechn. 2026/04417",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026/04417"
+     ],
+     "stuecke": [
+      "Augenzentrum Rechnung Wahlleistung.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-05-28",
+     "wert": "2026-05-28",
+     "betrag": "-120,00",
+     "gegenpartei": "Reisedienst Hollmann GmbH",
+     "zweck": "HO-BOD-0913-07 Anzahlung Bodensee",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Hollmann Bodensee Reisebestaetigung.txt"
+     ]
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-05-29",
+     "wert": "2026-05-29",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 05/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-05-29",
+     "wert": "2026-05-29",
+     "betrag": "1.138,46",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 05.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-05-29",
+     "wert": "2026-05-29",
+     "betrag": "696,02",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 05.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-06.txt",
+   "saldoAlt": "21.701,95",
+   "saldoNeu": "23.864,78",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-06-01",
+     "wert": "2026-06-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-06-01",
+     "wert": "2026-06-01",
+     "betrag": "800,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-06-02",
+     "wert": "2026-06-02",
+     "betrag": "658,80",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Juni DG 705,00 abzgl. Guthaben NK 2025 46,20",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "nebenkosten_2025_DG_aydemir.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-06-03",
+     "wert": "2026-06-03",
+     "betrag": "960,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete Juni + Rate 2",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Ratenvereinbarung Petrovic unterschrieben.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-06-05",
+     "wert": "2026-06-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 06/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-06-05",
+     "wert": "2026-06-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 06/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-06-05",
+     "wert": "2026-06-05",
+     "betrag": "-470,05",
+     "gegenpartei": "Arne Tiedemann Garten- u. Landschaftspflege",
+     "zweck": "RE 2026 0087 Hecke Vorgarten",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE 2026 0087"
+     ],
+     "stuecke": [
+      "belege/Tiedemann RE 2026 0087.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-06-10",
+     "wert": "2026-06-10",
+     "betrag": "-215,50",
+     "gegenpartei": "Finanzamt Wendelsburg",
+     "zweck": "STNR 000/123/40077 EST-VZ II/2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-06-10",
+     "wert": "2026-06-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700416204 05/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700416204"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-06-12",
+     "wert": "2026-06-12",
+     "betrag": "65,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "Differenz Juni Miete neu Dauerauftrag ist geaendert sorry",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Erinnerung Brandtner Differenz Juni.txt",
+      "Mieterhoehung Brandtner 16.03.2026.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-06-12",
+     "wert": "2026-06-12",
+     "betrag": "-117,94",
+     "gegenpartei": "CREDITAS Forderungsmanagement GmbH",
+     "zweck": "Az. 26/0417733 Stadtwerke Wendelsburg",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "CREDITAS Inkasso Stadtwerke.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-06-15",
+     "wert": "2026-06-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 06/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-06-15",
+     "wert": "2026-06-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1201 JUNI 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1201"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-06-17",
+     "wert": "2026-06-17",
+     "betrag": "-400,00",
+     "gegenpartei": "Bargeldauszahlung",
+     "zweck": "GA RAIBA SELLENBRUECK MARKTSTR 3 17.06. 10.03 KARTE 1",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-06-23",
+     "wert": "2026-06-22",
+     "betrag": "-579,00",
+     "gegenpartei": "ELEKTROHAUS MERTENS//SELLENBRUECK",
+     "zweck": "22.06. 11.34 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mertens Waschmaschine Rechnung+Garantie.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-06-26",
+     "wert": "2026-06-26",
+     "betrag": "694,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 06/26 U. 07/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-06-30",
+     "wert": "2026-06-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 06/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-06-30",
+     "wert": "2026-06-30",
+     "betrag": "1.138,46",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 06.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-06-30",
+     "wert": "2026-06-30",
+     "betrag": "696,02",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 06.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-06-30",
+     "wert": "2026-06-30",
+     "betrag": "-18,40",
+     "gegenpartei": "Raiffeisen- und Buergerbank Sellenbrueck eG",
+     "zweck": "ABSCHLUSS PER 30.06.2026 KONTOFUEHRUNG 15,70 BUCHUNGSPOSTEN 2,70",
+     "art": "entgelt",
+     "rechnungsnummern": [],
+     "stuecke": []
+    }
+   ]
+  },
+  {
+   "datei": "2026-07.txt",
+   "saldoAlt": "23.864,78",
+   "saldoNeu": "22.641,66",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-07-01",
+     "wert": "2026-07-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-07-01",
+     "wert": "2026-07-01",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-07-02",
+     "wert": "2026-07-02",
+     "betrag": "705,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Juli DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "nebenkosten_2025_DG_aydemir.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-07-03",
+     "wert": "2026-07-03",
+     "betrag": "1.640,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete Juli 860 + Restrueckstand 780 damit alles bezahlt. Danke!",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Ratenvereinbarung Petrovic unterschrieben.txt",
+      "Petrovic neue Arbeit 8.6..txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-07-06",
+     "wert": "2026-07-06",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 07/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-07-06",
+     "wert": "2026-07-06",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 07/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-07-08",
+     "wert": "2026-07-08",
+     "betrag": "-393,00",
+     "gegenpartei": "Alltagshilfe Pohlmann",
+     "zweck": "Rechnung 2026-Q2-019 April-Juni",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026-Q2-019"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-07-10",
+     "wert": "2026-07-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700420118 06/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700420118"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-07-10",
+     "wert": "2026-07-10",
+     "betrag": "-64,00",
+     "gegenpartei": "Kirchenamt Wendelsburg",
+     "zweck": "FH-C4-17 Friedhofsunterhaltung 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Friedhof Gebuehr 2026.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-07-10",
+     "wert": "2026-07-10",
+     "betrag": "-146,40",
+     "gegenpartei": "Druckhaus Wendelsburg GmbH u. Co. KG",
+     "zweck": "TAGEBLATT ABO 40011726 BEZUGSGELD 3. QUARTAL 2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Tageblatt Bezugspreis.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-07-15",
+     "wert": "2026-07-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 07/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-07-15",
+     "wert": "2026-07-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1240 JULI 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1240"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-07-15",
+     "wert": "2026-07-15",
+     "betrag": "-1.221,99",
+     "gegenpartei": "Fidelia Sachversicherung AG",
+     "zweck": "KD-NR 0027-55-813 WG 00.660.410 BEITRAG 01.07.2026-30.06.2027",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Fidelia Wohngebaeude Beitragsrechnung.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-07-17",
+     "wert": "2026-07-16",
+     "betrag": "-249,00",
+     "gegenpartei": "BAUMARKT HAGEDORN//SELLENBRUECK",
+     "zweck": "16.07. 10.47 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "hagedorn_rasenmaeher_bon.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-07-20",
+     "wert": "2026-07-20",
+     "betrag": "-298,20",
+     "gegenpartei": "Wupsetaler Versicherung AG",
+     "zweck": "Z 00-4471-9030 ZAHNPLUS 70 BEITRAG 01.07.2026-30.06.2027 MANDAT WV-Z-0044719030",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wupsetaler Zahnzusatz Beitrag ab Juli.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-07-22",
+     "wert": "2026-07-22",
+     "betrag": "-3.255,84",
+     "gegenpartei": "Fensterbau Woehlke GmbH",
+     "zweck": "SR-2026-164 Schlussrechnung Kd 30418",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "SR-2026-164"
+     ],
+     "stuecke": [
+      "belege/Woehlke Schlussrechnung SR-2026-164.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-07-31",
+     "wert": "2026-07-31",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 07/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-07-31",
+     "wert": "2026-07-31",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 07.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-07-31",
+     "wert": "2026-07-31",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 07.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-07-31",
+     "wert": "2026-07-31",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 08/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-08.txt",
+   "saldoAlt": "22.641,66",
+   "saldoNeu": "23.183,43",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-08-03",
+     "wert": "2026-08-03",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-08-03",
+     "wert": "2026-08-03",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-08-03",
+     "wert": "2026-08-03",
+     "betrag": "705,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete August DG Lindenhofweg 14",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "nebenkosten_2025_DG_aydemir.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-08-03",
+     "wert": "2026-08-03",
+     "betrag": "-285,60",
+     "gegenpartei": "Malerbetrieb Kowalczyk",
+     "zweck": "Rg 2026-031 Decke Whg Petrovic",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "Rg 2026-031"
+     ],
+     "stuecke": [
+      "belege/Kowalczyk Rg 2026-031.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-08-05",
+     "wert": "2026-08-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 08/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-08-05",
+     "wert": "2026-08-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 08/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-08-05",
+     "wert": "2026-08-05",
+     "betrag": "875,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-08-05",
+     "wert": "2026-08-05",
+     "betrag": "-321,74",
+     "gegenpartei": "Finanzamt Wendelsburg",
+     "zweck": "STNR 000/123/40077 EST/KIST 2025 ABSCHLUSSZAHLUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "ESt-Bescheid 2025.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-08-10",
+     "wert": "2026-08-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700424057 07/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700424057"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-08-13",
+     "wert": "2026-08-13",
+     "betrag": "-478,00",
+     "gegenpartei": "Reisedienst Hollmann GmbH",
+     "zweck": "HO-BOD-0913-07 Restzahlung",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Hollmann Bodensee Reisebestaetigung.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-08-14",
+     "wert": "2026-08-14",
+     "betrag": "-224,23",
+     "gegenpartei": "Stadtkasse Sellenbrueck",
+     "zweck": "BZ 00.2140.007731.4 Grundbesitzabg. 3. Rate",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Grundbesitzabgaben_2026_Stadt.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-08-14",
+     "wert": "2026-08-14",
+     "betrag": "-329,00",
+     "gegenpartei": "Wasserverband Obere Wupse",
+     "zweck": "5.0417.221 3. Abschlag",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "wasserverband jahresabrechnung 2025.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-08-17",
+     "wert": "2026-08-17",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 08/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-08-17",
+     "wert": "2026-08-17",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1277 AUGUST 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1277"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-08-24",
+     "wert": "2026-08-24",
+     "betrag": "212,48",
+     "gegenpartei": "Petrovic Mirela",
+     "zweck": "Nebenkosten 2025 Nachzahlung 1.OG rechts",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-08-27",
+     "wert": "2026-08-27",
+     "betrag": "-1.672,45",
+     "gegenpartei": "ZahnMed Abrechnungsservice Mittelland",
+     "zweck": "ZM-2026-01877 Wiebusch",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "ZM-2026-01877"
+     ],
+     "stuecke": [
+      "Zahnarzt Rechnung Bruecke ZM-2026-01877.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-08-31",
+     "wert": "2026-08-31",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 08/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-08-31",
+     "wert": "2026-08-31",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 08.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-08-31",
+     "wert": "2026-08-31",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 08.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-08-31",
+     "wert": "2026-08-31",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 09/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-09.txt",
+   "saldoAlt": "23.183,43",
+   "saldoNeu": "27.029,36",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-09-01",
+     "wert": "2026-09-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-09-01",
+     "wert": "2026-09-01",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-09-01",
+     "wert": "2026-09-01",
+     "betrag": "212,00",
+     "gegenpartei": "Kreiskasse Wendelsburg",
+     "zweck": "WG 4417/26 AYDEMIR WOHNGELD 09/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-09-02",
+     "wert": "2026-09-02",
+     "betrag": "493,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete September DG Restbetrag Wohngeld kommt vom Amt",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-09-04",
+     "wert": "2026-09-04",
+     "betrag": "875,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-09-07",
+     "wert": "2026-09-07",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 09/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-09-07",
+     "wert": "2026-09-07",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 09/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-09-10",
+     "wert": "2026-09-10",
+     "betrag": "-376,50",
+     "gegenpartei": "Finanzamt Wendelsburg",
+     "zweck": "STNR 000/123/40077 EST-VZ III/2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "ESt-Bescheid 2025.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-09-10",
+     "wert": "2026-09-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700428390 08/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700428390"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-09-11",
+     "wert": "2026-09-11",
+     "betrag": "1.170,72",
+     "gegenpartei": "Wupsetaler Versicherung AG",
+     "zweck": "Z 00-4471-9030 L-26-0779412 LEISTUNG ZAHNERSATZ",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wupsetaler Leistungsabrechnung Zahn.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-09-15",
+     "wert": "2026-09-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 09/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-09-15",
+     "wert": "2026-09-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1311 SEPTEMBER 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1311"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-09-15",
+     "wert": "2026-09-15",
+     "betrag": "-268,80",
+     "gegenpartei": "Abfallwirtschaftsbetrieb LK Wendelsburg",
+     "zweck": "AW-0044-71920 Abfallgeb. 2026 2. Rate",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Abfallgebuehren Bescheid 2026.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-09-16",
+     "wert": "2026-09-16",
+     "betrag": "-199,92",
+     "gegenpartei": "Heizung-Sanitaer Droege GmbH",
+     "zweck": "Rechnung RE-2026-0611 Wartung Heizung",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE-2026-0611"
+     ],
+     "stuecke": [
+      "belege/Droege Wartung RE-2026-0611.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-09-21",
+     "wert": "2026-09-21",
+     "betrag": "-99,48",
+     "gegenpartei": "Uwe Kallweit Schornsteinfegermeister",
+     "zweck": "RE20260298 LIEG 07 0117",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026-0298"
+     ],
+     "stuecke": [
+      "belege/Kallweit Rechnung 2026-0298.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-09-30",
+     "wert": "2026-09-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 09/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-09-30",
+     "wert": "2026-09-30",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 09.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-09-30",
+     "wert": "2026-09-30",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 09.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-09-30",
+     "wert": "2026-09-30",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 10/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-09-30",
+     "wert": "2026-09-30",
+     "betrag": "-20,40",
+     "gegenpartei": "Raiffeisen- und Buergerbank Sellenbrueck eG",
+     "zweck": "ABSCHLUSS PER 30.09.2026 KONTOFUEHRUNG 17,70 BUCHUNGSPOSTEN 2,70",
+     "art": "entgelt",
+     "rechnungsnummern": [],
+     "stuecke": []
+    }
+   ]
+  },
+  {
+   "datei": "2026-10.txt",
+   "saldoAlt": "27.029,36",
+   "saldoNeu": "29.988,14",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-10-01",
+     "wert": "2026-10-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-10-01",
+     "wert": "2026-10-01",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-10-01",
+     "wert": "2026-10-01",
+     "betrag": "212,00",
+     "gegenpartei": "Kreiskasse Wendelsburg",
+     "zweck": "WG 4417/26 AYDEMIR WOHNGELD 10/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-10-02",
+     "wert": "2026-10-02",
+     "betrag": "493,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Oktober DG Rest",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-10-05",
+     "wert": "2026-10-05",
+     "betrag": "875,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-10-05",
+     "wert": "2026-10-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 10/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-10-05",
+     "wert": "2026-10-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 10/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-10-08",
+     "wert": "2026-10-08",
+     "betrag": "393,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 EB-26-079915 ERSTATTUNG ENTLASTUNGSBETRAG 04-06/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-10-09",
+     "wert": "2026-10-09",
+     "betrag": "-146,40",
+     "gegenpartei": "Druckhaus Wendelsburg GmbH u. Co. KG",
+     "zweck": "TAGEBLATT ABO 40011726 BEZUGSGELD 4. QUARTAL 2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Tageblatt Bezugspreis.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-10-12",
+     "wert": "2026-10-12",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700432644 09/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700432644"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-10-13",
+     "wert": "2026-10-13",
+     "betrag": "-89,25",
+     "gegenpartei": "Notarin Dr. Friederike Alsleben",
+     "zweck": "2026/0933 UVZ 1102/2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026/0933"
+     ],
+     "stuecke": [
+      "Notarin Kostenrechnung 2026-0933.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-10-15",
+     "wert": "2026-10-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 10/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-10-15",
+     "wert": "2026-10-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1349 OKTOBER 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1349"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-10-15",
+     "wert": "2026-10-15",
+     "betrag": "-389,00",
+     "gegenpartei": "Optik Sehwerk Wendelsburg",
+     "zweck": "Auftrag 26-1182 Brille Wiebusch",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "26-1182"
+     ],
+     "stuecke": [
+      "Optik Sehwerk Rechnung Brille.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-10-21",
+     "wert": "2026-10-21",
+     "betrag": "-368,90",
+     "gegenpartei": "Heizung-Sanitaer Droege GmbH",
+     "zweck": "Rechnung RE-2026-0702 Ausdehnungsgefaess",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE-2026-0702"
+     ],
+     "stuecke": [
+      "belege/Droege RE-2026-0702 Ausdehnungsgefaess.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-10-26",
+     "wert": "2026-10-23",
+     "betrag": "-80,98",
+     "gegenpartei": "AUTOHOF KREUZ WENDELSBURG//WENDELSBURG",
+     "zweck": "23.10. 14.36 GIROCARD KARTE 1",
+     "art": "karte",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Autohof Tankbeleg Okt.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-10-30",
+     "wert": "2026-10-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 10/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-10-30",
+     "wert": "2026-10-30",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 10.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-10-30",
+     "wert": "2026-10-30",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 10.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-10-30",
+     "wert": "2026-10-30",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 11/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-11.txt",
+   "saldoAlt": "29.988,14",
+   "saldoNeu": "22.374,31",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-11-02",
+     "wert": "2026-11-02",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-11-02",
+     "wert": "2026-11-02",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-11-02",
+     "wert": "2026-11-02",
+     "betrag": "212,00",
+     "gegenpartei": "Kreiskasse Wendelsburg",
+     "zweck": "WG 4417/26 AYDEMIR WOHNGELD 11/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-11-03",
+     "wert": "2026-11-03",
+     "betrag": "493,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete November DG Rest",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-11-04",
+     "wert": "2026-11-04",
+     "betrag": "875,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-11-05",
+     "wert": "2026-11-05",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 11/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-11-05",
+     "wert": "2026-11-05",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 11/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-11-06",
+     "wert": "2026-11-06",
+     "betrag": "-58,31",
+     "gegenpartei": "Uwe Kallweit Schornsteinfegermeister",
+     "zweck": "Gebuehrenbescheid 2026-0299 Feuerstaettenschau",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026-0299"
+     ],
+     "stuecke": [
+      "belege/Kallweit Feuerstaettenschau Gebuehr.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-11-10",
+     "wert": "2026-11-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700436921 10/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700436921"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-11-13",
+     "wert": "2026-11-13",
+     "betrag": "-224,23",
+     "gegenpartei": "Stadtkasse Sellenbrueck",
+     "zweck": "BZ 00.2140.007731.4 Grundbesitzabg. 4. Rate 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Grundbesitzabgaben_2026_Stadt.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-11-13",
+     "wert": "2026-11-13",
+     "betrag": "-329,00",
+     "gegenpartei": "Wasserverband Obere Wupse",
+     "zweck": "Kassenzeichen 5.0417.221 4. Abschlag 2026",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "wasserverband jahresabrechnung 2025.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-11-16",
+     "wert": "2026-11-16",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 11/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-11-16",
+     "wert": "2026-11-16",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1388 NOVEMBER 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1388"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-11-17",
+     "wert": "2026-11-17",
+     "betrag": "-154,70",
+     "gegenpartei": "Dachrinnen-Reinigung Flink",
+     "zweck": "Rechnung 2026-211 Dachrinne Lindenhofweg",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "2026-211"
+     ],
+     "stuecke": [
+      "belege/Flink Dachrinne 2026-211.txt"
+     ]
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-11-20",
+     "wert": "2026-11-20",
+     "betrag": "-487,90",
+     "gegenpartei": "Arne Tiedemann Garten- u. Landschaftspflege",
+     "zweck": "Rg. 2026/0241 Obstbaumschnitt",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "RE 2026 0241"
+     ],
+     "stuecke": [
+      "belege/Tiedemann Obstbaeume RE 2026 0241.txt"
+     ]
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-11-24",
+     "wert": "2026-11-24",
+     "betrag": "-10.000,00",
+     "gegenpartei": "Hannelore Wiebusch",
+     "zweck": "Umbuchung auf Tagesgeld 20 0012345 01",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-11-30",
+     "wert": "2026-11-30",
+     "betrag": "-412,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 11/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-11-30",
+     "wert": "2026-11-30",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 11.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-11-30",
+     "wert": "2026-11-30",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 11.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-11-30",
+     "wert": "2026-11-30",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 12/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    }
+   ]
+  },
+  {
+   "datei": "2026-12.txt",
+   "saldoAlt": "22.374,31",
+   "saldoNeu": "24.796,52",
+   "umsaetze": [
+    {
+     "nr": 1,
+     "buchung": "2026-12-01",
+     "wert": "2026-12-01",
+     "betrag": "-98,18",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "Hausmeister Lindenhofweg 14 lt. Monatsrechnung Vormonat",
+     "art": "dauerauftrag",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Brinkmeier Preise ab Februar.txt"
+     ]
+    },
+    {
+     "nr": 2,
+     "buchung": "2026-12-01",
+     "wert": "2026-12-01",
+     "betrag": "865,00",
+     "gegenpartei": "Brandtner Markus u. Sabine",
+     "zweck": "MIETE LINDENHOFWEG 14 1.OG LINKS DAUERAUFTRAG",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Mieterhoehung Brandtner 16.03.2026.txt",
+      "NK-Abrechnung 2025 Brandtner.txt"
+     ]
+    },
+    {
+     "nr": 3,
+     "buchung": "2026-12-01",
+     "wert": "2026-12-01",
+     "betrag": "212,00",
+     "gegenpartei": "Kreiskasse Wendelsburg",
+     "zweck": "WG 4417/26 AYDEMIR WOHNGELD 12/26",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 4,
+     "buchung": "2026-12-02",
+     "wert": "2026-12-02",
+     "betrag": "493,00",
+     "gegenpartei": "Aydemir Selin u. Emre",
+     "zweck": "Miete Dezember DG Rest",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Wohngeld Direktzahlung ab Sept.txt"
+     ]
+    },
+    {
+     "nr": 5,
+     "buchung": "2026-12-04",
+     "wert": "2026-12-04",
+     "betrag": "875,00",
+     "gegenpartei": "Petrovic Dragan",
+     "zweck": "Miete + NK Lindenhofweg 14 1.OG re",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "NK 2025 Petrovic.txt"
+     ]
+    },
+    {
+     "nr": 6,
+     "buchung": "2026-12-07",
+     "wert": "2026-12-07",
+     "betrag": "-295,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-01 ERDGAS ABSCHLAG 12/2026 MANDAT SW-2044170-01",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Abschlagsplan Erdgas 2026.txt"
+     ]
+    },
+    {
+     "nr": 7,
+     "buchung": "2026-12-07",
+     "wert": "2026-12-07",
+     "betrag": "-35,00",
+     "gegenpartei": "Stadtwerke Wendelsburg GmbH",
+     "zweck": "VK 2044170-02 ALLGEMEINSTROM ABSCHLAG 12/2026 MANDAT SW-2044170-02",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/SW Gutschrift Allgemeinstrom 2025.txt"
+     ]
+    },
+    {
+     "nr": 8,
+     "buchung": "2026-12-08",
+     "wert": "2026-12-08",
+     "betrag": "-71,40",
+     "gegenpartei": "Hauswartservice Brinkmeier",
+     "zweck": "R 26-171 Laub Sonderleistung",
+     "art": "ueberweisung",
+     "rechnungsnummern": [
+      "R 26-171"
+     ],
+     "stuecke": [
+      "belege/Brinkmeier Laub Sonder.txt"
+     ]
+    },
+    {
+     "nr": 9,
+     "buchung": "2026-12-10",
+     "wert": "2026-12-10",
+     "betrag": "-376,50",
+     "gegenpartei": "Finanzamt Wendelsburg",
+     "zweck": "STNR 000/123/40077 EST-VZ IV/2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "ESt-Bescheid 2025.txt"
+     ]
+    },
+    {
+     "nr": 10,
+     "buchung": "2026-12-10",
+     "wert": "2026-12-10",
+     "betrag": "-44,95",
+     "gegenpartei": "Telvia Kommunikation GmbH",
+     "zweck": "KD 77004129 RG 7700441205 11/2026 TELVIA ZUHAUSE 50",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "7700441205"
+     ],
+     "stuecke": [
+      "telvia preisanpassung.txt"
+     ]
+    },
+    {
+     "nr": 11,
+     "buchung": "2026-12-11",
+     "wert": "2026-12-11",
+     "betrag": "-23,80",
+     "gegenpartei": "Druckhaus Wendelsburg GmbH u. Co. KG",
+     "zweck": "ANZEIGE 26-K-88104 KLEINANZEIGE 21.11.2026",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "26-K-88104"
+     ],
+     "stuecke": [
+      "belege/Tageblatt Anzeige Stellplatz.txt"
+     ]
+    },
+    {
+     "nr": 12,
+     "buchung": "2026-12-14",
+     "wert": "2026-12-14",
+     "betrag": "-100,00",
+     "gegenpartei": "Thomas Wiebusch",
+     "zweck": "Weihnachten fuer Jonas und Marie je 50 - pssst",
+     "art": "ueberweisung",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 13,
+     "buchung": "2026-12-15",
+     "wert": "2026-12-15",
+     "betrag": "-58,00",
+     "gegenpartei": "Nordlicht Energie GmbH",
+     "zweck": "NL-4417-2026 ABSCHLAG 12/2026 V-88204417 MANDAT NL-4417-2026-M1",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "belege/Nordlicht Abschlagsplan.txt"
+     ]
+    },
+    {
+     "nr": 14,
+     "buchung": "2026-12-15",
+     "wert": "2026-12-15",
+     "betrag": "-105,43",
+     "gegenpartei": "Gebaeudedienste Ahlers u. Kramp GbR",
+     "zweck": "AK-26-1426 DEZEMBER 2026 VERTRAG AK-V-2025-039 MANDAT AK-039",
+     "art": "lastschrift",
+     "rechnungsnummern": [
+      "AK-26-1426"
+     ],
+     "stuecke": []
+    },
+    {
+     "nr": 15,
+     "buchung": "2026-12-18",
+     "wert": "2026-12-18",
+     "betrag": "-600,00",
+     "gegenpartei": "Bargeldauszahlung",
+     "zweck": "GA RAIBA SELLENBRUECK MARKTSTR 3 18.12. 10.11 KARTE 1",
+     "art": "bar",
+     "rechnungsnummern": [],
+     "stuecke": []
+    },
+    {
+     "nr": 16,
+     "buchung": "2026-12-30",
+     "wert": "2026-12-30",
+     "betrag": "-438,00",
+     "gegenpartei": "Landeshypo Mittelland AG",
+     "zweck": "DARLEHEN 600 0441 7790 RATE 12/2026 ZINS UND TILGUNG",
+     "art": "lastschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Landeshypo Prolongation bestaetigt.txt"
+     ]
+    },
+    {
+     "nr": 17,
+     "buchung": "2026-12-30",
+     "wert": "2026-12-30",
+     "betrag": "1.177,18",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 12.26 ALTERSRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 18,
+     "buchung": "2026-12-30",
+     "wert": "2026-12-30",
+     "betrag": "719,69",
+     "gegenpartei": "Rentenversicherung Mittelland",
+     "zweck": "RV-NR 00170348W999 RENTE 12.26 WITWENRENTE",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Rentenanpassung 2026.txt"
+     ]
+    },
+    {
+     "nr": 19,
+     "buchung": "2026-12-30",
+     "wert": "2026-12-30",
+     "betrag": "347,00",
+     "gegenpartei": "Mittelland Pflegekasse",
+     "zweck": "M000481726 PV-26-0441726 PFLEGEGELD PG2 01/27",
+     "art": "gutschrift",
+     "rechnungsnummern": [],
+     "stuecke": [
+      "Pflegekasse Bescheid Pflegegrad 2.txt"
+     ]
+    },
+    {
+     "nr": 20,
+     "buchung": "2026-12-30",
+     "wert": "2026-12-30",
+     "betrag": "-20,40",
+     "gegenpartei": "Raiffeisen- und Buergerbank Sellenbrueck eG",
+     "zweck": "ABSCHLUSS PER 30.12.2026 KONTOFUEHRUNG 17,70 BUCHUNGSPOSTEN 2,70",
+     "art": "entgelt",
+     "rechnungsnummern": [],
+     "stuecke": []
+    }
+   ]
+  }
+ ]
+}

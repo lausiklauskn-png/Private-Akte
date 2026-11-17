@@ -1,0 +1,23 @@
+Druckerei Schwarzweiß
+Zur Mühle 11, 37998 Lindenstedt
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnunq
+Rechnungsnummer: 2623
+Rechnunqsdatum: 2026-09-22
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Flyer DIN lang, 4/4-farbig, 5.000 St.     1    189,00     189,00
+  2  Gestaltung Pauschale         1     90,00      90,00
+
+Nettobetrag                                  279,00
+zzgl. 19 % USt                               53,01
+Endbetrag                                    332,01 EUR
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9237 63
+USt-IdNr. DE000000530

@@ -1,0 +1,14 @@
+MUSTERKARTE - Kreditkartenabrechnung
+Kartenkonto MK-4410-2026      Abrechnung vom 30.06.2026    Karteninhaber: Gerhard Pfeilsticker
+
+Datum   Umsatz                                       Betrag
+04.06.  Camping Beispiel-See, Italien (EUR)          187,50
+06.06.  Tankstelle A99, Österreich                    94,20
+09.06.  Restaurant Alpenblick                          68,40
+12.06.  Camping Gardasee Beispiel (EUR)               241,00
+15.06.  Supermarkt Beispiel-Mercato                    52,13
+18.06.  Maut Brenner                                   12,50
+Auslandseinsatzentgelt 1,75 %                           11,30
+Neuer Saldo                                           667,03
+
+Der Betrag wird am 20.07.2026 per Lastschrift eingezogen. Mindestbetrag 25,00 EUR.

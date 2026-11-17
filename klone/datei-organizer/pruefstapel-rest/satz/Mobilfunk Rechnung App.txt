@@ -1,0 +1,20 @@
+# BEISPIELFUNK APP
+
+PUSH-BENACHRICHTIGUNG
+
+Neue Nachricht
+
+KD-NR.: BF-40020771
+RE-NR.: 2601-889120
+BETRAG: 29,99 EUR
+ABBUCHUNG: 10.02.2026
+
+# Deine Rechnung Januar 2026 ist da
+
+|Leistung|Betrag|
+
+|Tarif Beispiel Allnet 50 GB|24,99 EUR|
+
+|Smartwatch-Option|5,00 EUR|
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

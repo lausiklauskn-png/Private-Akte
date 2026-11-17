@@ -1,0 +1,19 @@
+        BEISPIEL-MARKT FRISCHEKAUF
+        Lindenallee 87
+        34567 Musterhausen
+------------------------------------
+Milch 3,5%                      1,19
+Toastbrot                       1,49
+Nudeln 1kg                      1,79
+Tomaten passiert                0,89
+Käse gerieben                   2,29
+Klopapier 10er                  4,95
+Spülmittel                      1,25
+------------------------------------
+SUMME EUR                      13,85
+Kreditkarte
+
+07.02.2026 13:33  Kasse 1  Bon 3705
+
+Vielen Dank für Ihren Einkauf!
+Umtausch nur mit Bon.

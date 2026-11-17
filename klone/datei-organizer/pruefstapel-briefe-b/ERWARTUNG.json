@@ -1,0 +1,1504 @@
+{
+ "dateien": [
+  {
+   "datei": "Aufenthalt Samir Verlängerung.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Felderbrück – Ausländerbehörde",
+   "person": "Samir Darwisch",
+   "frist": "2026-01-14"
+  },
+  {
+   "datei": "scan_0007.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Felderbrück – Ausländerbehörde",
+   "person": "Leyla Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Integrationskurs Leyla Zulassung.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Landesamt für Zuwanderung und Teilhabe",
+   "person": "Leyla Darwisch",
+   "frist": "2024-11-29"
+  },
+  {
+   "datei": "Zertifikat B1 Papa.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Volksbildungswerk Felderbrück e. V.",
+   "person": "Samir Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Bescheid_Kammer_2025-09.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Kammer für Handwerk und Gewerbe Ostfalen",
+   "person": "Samir Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Zeugnisprüfstelle der Länder",
+   "person": "Leyla Darwisch",
+   "frist": "2025-03-14"
+  },
+  {
+   "datei": "Kindergeld.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Ostfalen-Mitte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kita Beitrag Karim 25-26.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Felderbrück, Amt für Kinder und Bildung",
+   "person": "Karim Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "elternbrief klasse 3b.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule Am Mühlgraben",
+   "person": "Nour Darwisch",
+   "frist": "2025-05-09"
+  },
+  {
+   "datei": "JC Bewilligung ab 07-2025.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Landkreis Felderbrück",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Arbeitsvertrag Elektro Brandes.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Elektro Brandes GmbH",
+   "person": "Samir Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Lohn 10_2025.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Elektro Brandes GmbH",
+   "person": "Samir Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Brief Gesundheitskasse Familienvers.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Börde-Harz",
+   "person": "Leyla Darwisch",
+   "frist": "2025-08-15"
+  },
+  {
+   "datei": "U9 Karim.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis für Kinder- und Jugendmedizin Dr. Olbricht",
+   "person": "Karim Darwisch",
+   "frist": "2026-02-17"
+  },
+  {
+   "datei": "NK-Abrechnung 2024 Mühlgraben.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnbau Felderbrück eG",
+   "person": null,
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "strom abschlag.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Bördestrom Vertrieb GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20250906_bon.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Frischemarkt Sonnenhof",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Handy Samir neu.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Telvano Mobil GmbH",
+   "person": "Samir Darwisch",
+   "frist": null
+  },
+  {
+   "datei": "Autoversicherung 2026.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Nordlicht Versicherung AG",
+   "person": "Samir Darwisch",
+   "frist": "2026-01-02"
+  },
+  {
+   "datei": "Kontoauszug_Nr9_2025.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreisbank Felderbrück",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Einladung Sommerfest.txt",
+   "haushalt": "h-darwisch",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Willkommenskreis Felderbrück",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heimvertrag Deichblick Gerhard.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Deichblick gGmbH",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad Bescheid.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Pflegekasse bei der Küstenland Krankenkasse",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "MD kommt 4.3..txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Medizinischer Dienst Nordwest",
+   "person": "Gerhard Tönnissen",
+   "frist": "2025-03-04"
+  },
+  {
+   "datei": "Sozialamt fehlt noch.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Landkreis Marschland – Amt für Soziales",
+   "person": "Gerhard Tönnissen",
+   "frist": "2025-05-16"
+  },
+  {
+   "datei": "scan_0112.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Landkreis Marschland – Amt für Soziales",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Deichblick Rechnung Mai.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Deichblick gGmbH",
+   "person": "Gerhard Tönnissen",
+   "frist": "2025-05-15"
+  },
+  {
+   "datei": "Beschluss AG Betreuung.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Marschhaven – Betreuungsgericht",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Vermögensverzeichnis Gericht.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Marschhaven – Betreuungsgericht",
+   "person": "Gerhard Tönnissen",
+   "frist": "2025-08-01"
+  },
+  {
+   "datei": "Betreuerausweis.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Marschhaven",
+   "person": "Wiebke Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Entlassbrief KKH.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kreiskrankenhaus Marschhaven",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Zuzahlung befreit 2025.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Küstenland Krankenkasse",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung Wiebke.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Nordwest",
+   "person": "Wiebke Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Kfz Kündigung bestätigt.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Friesische Assekuranz VVaG",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "2025-11 Zoll KraftSt.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zollamt Emsmünde – Kraftfahrzeugsteuerstelle",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Apotheke.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Deich-Apotheke",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Gas 2024-25 Abrechnung.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Marschhaven",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "grundsteuer26.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Marschhaven – Steueramt",
+   "person": null,
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "Angelverein Austritt.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Sportfischerverein Marschhaven von 1926 e. V.",
+   "person": "Gerhard Tönnissen",
+   "frist": null
+  },
+  {
+   "datei": "Brief von Antje.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Antje",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Volkskasse Auszug 6.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Marschländer Volkskasse eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heckenschnitt.txt",
+   "haushalt": "h-toennissen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Garten- und Landschaftspflege Ubben",
+   "person": null,
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "RAin Seidl Vorschuss.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Kanzlei Seidl & Brandhuber",
+   "person": "Katrin Oberlechner",
+   "frist": "2025-02-21"
+  },
+  {
+   "datei": "Ladung 3 F 112-25.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Amtsgericht Rottenau – Familiengericht",
+   "person": "Katrin Oberlechner",
+   "frist": "2025-09-18"
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Amtsgericht Rottenau – Familiengericht",
+   "person": "Katrin Oberlechner",
+   "frist": "2025-04-07"
+  },
+  {
+   "datei": "Rentenauskunft Ehezeit.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Familie & persönliche Dokumente",
+   "absender": "Rentenversicherung Süd-Ost",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "UVG Bescheid Jonas.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Rottenau – Kreisjugendamt",
+   "person": "Jonas Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Mail Seidl Unterhalt.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Kanzlei Seidl & Brandhuber",
+   "person": "Jonas Oberlechner",
+   "frist": "2025-06-27"
+  },
+  {
+   "datei": "Scheidungsbeschluss rechtskräftig.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Amtsgericht Rottenau",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Mietvertrag Lindenweg.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Reitberger",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Bestätigung Kündigung Kirchfeldstr.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgesellschaft Aichberg mbH",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Meldebescheinigung.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Rottenau – Einwohnermeldeamt",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Angebot Umzug.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Umzüge Praxenthaler",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Strom Lindenweg Willkommen.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Rottwerke Energie GmbH",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Hort Gebühren.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Rottenau – Amt für Schule und Kindertagesstätten",
+   "person": "Jonas Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Logopädie Bericht Jonas.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis für Logopädie Annette Zehetmair",
+   "person": "Jonas Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Kinderkrank 03-2025.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Bergland Betriebskrankenkasse",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Nachtrag AV Stunden.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Steuerkanzlei Aigner & Partner mbB",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Rottenau",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Werkstatt Bremsen.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Meisterbetrieb Stadler",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "DSC_0418.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Stadt Isarkirchen – Verkehrsüberwachung",
+   "person": "Katrin Oberlechner",
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Fitness Zahlungserinnerung.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "VitaFit Studio Rottenau GmbH",
+   "person": "Katrin Oberlechner",
+   "frist": "2025-07-18"
+  },
+  {
+   "datei": "Haftpflicht Nachtrag Single.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Alpenrand Versicherung a. G.",
+   "person": "Katrin Oberlechner",
+   "frist": null
+  },
+  {
+   "datei": "Ferienhof Pfingsten.txt",
+   "haushalt": "h-oberlechner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Ferienhof Gschwendtner",
+   "person": null,
+   "frist": "2025-05-10"
+  },
+  {
+   "datei": "Beschluss Eröffnung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Amtsgericht Hüttenrode – Insolvenzgericht",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Uhlenbrock Fragebogen.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Dr. Uhlenbrock Rechtsanwälte Insolvenzverwaltung",
+   "person": "Dennis Wojcik",
+   "frist": "2025-05-05"
+  },
+  {
+   "datei": "Termin Beratung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Termin",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Schuldner- und Insolvenzberatung im Sozialwerk Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": "2024-11-19"
+  },
+  {
+   "datei": "scan_0044.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Schuldner- und Insolvenzberatung im Sozialwerk Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "P-Konto Bescheinigung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Schuldner- und Insolvenzberatung im Sozialwerk Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Stadtkasse Dispo gekündigt.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Stadtkasse Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": "2025-01-10"
+  },
+  {
+   "datei": "Brief Personalabteilung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Rhein-Ruhr Logistikzentrum Hüttenrode GmbH",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "LETZTE MAHNUNG.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Forderungsmanagement Westmark GmbH",
+   "person": "Dennis Wojcik",
+   "frist": "2024-10-18"
+  },
+  {
+   "datei": "Inkasso wg altem Handyvertrag.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Creditor Rhein Inkasso AG",
+   "person": "Dennis Wojcik",
+   "frist": "2024-09-02"
+  },
+  {
+   "datei": "GV Ladung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Termin",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Obergerichtsvollzieher Thomas Niehues",
+   "person": "Dennis Wojcik",
+   "frist": "2024-10-29"
+  },
+  {
+   "datei": "2025_05_abrechnung.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rhein-Ruhr Logistikzentrum Hüttenrode GmbH",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Monatsticket.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsbetriebe Emscher-Lippe",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Vermieter Mietrückstand.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Immobilienverwaltung Kattenstroth GmbH",
+   "person": "Dennis Wojcik",
+   "frist": "2024-12-06"
+  },
+  {
+   "datei": "Strom Sperre angedroht.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Energieversorgung Hüttenrode AG",
+   "person": "Dennis Wojcik",
+   "frist": "2025-02-10"
+  },
+  {
+   "datei": "Zahnarzt.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnarztpraxis Dr. Agnieszka Pawlak",
+   "person": "Dennis Wojcik",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "20250314_180212.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "PREISFUCHS Discount",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Auszug 05.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Stadtkasse Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "FA Erklärung abgeben.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Hüttenrode",
+   "person": "Dennis Wojcik",
+   "frist": "2025-08-29"
+  },
+  {
+   "datei": "KVA Waschmaschine.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Bülent Arslan",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Ihr Kreditwunsch - Zusage.txt",
+   "haushalt": "h-wojcik",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "FinanzPilot Vermittlungs-GmbH",
+   "person": "Dennis Wojcik",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Bestattung Roswitha.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Familie & persönliche Dokumente",
+   "absender": "Bestattungshaus Pietät Kretzschmar",
+   "person": "Roswitha Brackmann",
+   "frist": "2025-04-04"
+  },
+  {
+   "datei": "scan_0002.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Lindenroda",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Nachlassgericht Testament.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Lindenroda – Nachlassgericht",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Kostenrechnung Erbschein.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Landesjustizkasse Saaletal",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": "2025-07-25"
+  },
+  {
+   "datei": "Witwerrente bewilligt.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mittelland",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Rentenservice will Geld zurück.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenservice der Postbetriebe",
+   "person": "Roswitha Brackmann",
+   "frist": "2025-05-02"
+  },
+  {
+   "datei": "Handy Rosi gekündigt.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Saalefunk Telekommunikation GmbH",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Buchfreunde.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Leserunde Buchfreunde GmbH",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Sterbegeld Auszahlung.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Thüringer Vorsorge Lebensversicherung AG",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "KK Abmeldung Roswitha.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Saaletal Krankenkasse",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Volkskasse Nachlass.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Volkskasse Saaletal eG",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": "2025-06-13"
+  },
+  {
+   "datei": "FA ErbSt.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Geraberg – Erbschaftsteuerstelle",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Friedhof Gebühren.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Stadt Lindenroda – Friedhofsverwaltung",
+   "person": "Roswitha Brackmann",
+   "frist": "2025-05-12"
+  },
+  {
+   "datei": "Grabstein Angebot Seyfarth.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Steinmetzbetrieb Seyfarth & Sohn",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Karte von Ingrid und Lothar.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Ingrid und Lothar",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Pacht 2026 Sparte.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingartenverein \"Am Mühlteich\" e. V.",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "HU Bericht 2025.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kraftfahrzeug-Prüfstelle Saaletal GmbH",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Labor Dr Franke.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hausarztpraxis Dr. med. Sabine Franke",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Fernseher Rechnung.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Radio-Fernseh-Dietze",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Auszug Oktober.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Volkskasse Saaletal eG",
+   "person": "Heinz-Dieter Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Brief Betriebsarchiv Weberei.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Textilwerke Kahlenborn i. L. – Archivverwaltung",
+   "person": "Roswitha Brackmann",
+   "frist": null
+  },
+  {
+   "datei": "Storno Busreise.txt",
+   "haushalt": "h-brackmann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Saaletal-Reisen Omnibusbetrieb Göpfert",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Baugenehmigung Hopfenanger 9.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Landratsamt Wiesentalkreis – Baurechtsamt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bauamt Nachforderung.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Landratsamt Wiesentalkreis – Baurechtsamt",
+   "person": null,
+   "frist": "2025-04-11"
+  },
+  {
+   "datei": "Werkvertrag Hausbau.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Albtrauf-Haus Massivbau GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "AR 1 Bodenplatte.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Albtrauf-Haus Massivbau GmbH",
+   "person": null,
+   "frist": "2025-07-18"
+  },
+  {
+   "datei": "Notar Termin Kaufvertrag.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Notariat Dr. Friederike Lutz",
+   "person": null,
+   "frist": "2024-11-21"
+  },
+  {
+   "datei": "Notarkosten.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Notariat Dr. Friederike Lutz",
+   "person": null,
+   "frist": "2024-12-16"
+  },
+  {
+   "datei": "Grundbuch Eintragung.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Amtsgericht Kreisstadt Wiesen – Grundbuchamt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "GrESt Bescheid.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Kreisstadt Wiesen – Grunderwerbsteuerstelle",
+   "person": null,
+   "frist": "2025-01-13"
+  },
+  {
+   "datei": "Darlehen Bausparbank.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Wiesentaler Bausparbank AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Darlehenskonto Q3.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Wiesentaler Bausparbank AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Vermesser.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Vermessungsbüro Dipl.-Ing. Achim Wörz",
+   "person": null,
+   "frist": "2025-06-30"
+  },
+  {
+   "datei": "Angebot Elektro Zusatz.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Elektro Häberle GmbH & Co. KG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Fenster Zahlungserinnerung.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Fensterbau Rominger GmbH",
+   "person": null,
+   "frist": "2025-11-14"
+  },
+  {
+   "datei": "Baustrom.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Netze Wiesental GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Wasser Anschlussbeitrag.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Zweckverband Wasserversorgung Oberes Wiesental",
+   "person": null,
+   "frist": "2025-08-04"
+  },
+  {
+   "datei": "Bauherrenhaftpflicht.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Neckarland Landes-Assekuranz AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Kelterstr bestätigt.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Grundstücksgemeinschaft Mack GbR",
+   "person": null,
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "IMG_4418.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "BAUFREUND Bau- und Heimwerkermarkt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Mähroboter Rechnung Garantie.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Motorgeräte Schiefer",
+   "person": "Tobias Engbrecht",
+   "frist": null
+  },
+  {
+   "datei": "Angebot Außenanlage.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Grünwerk Garten- und Landschaftsbau Feucht",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "AG-Bescheinigung Bank.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Maschinenfabrik Kessler & Traub GmbH",
+   "person": "Tobias Engbrecht",
+   "frist": null
+  },
+  {
+   "datei": "Glasfaser Auftrag.txt",
+   "haushalt": "h-stelzer-engbrecht",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Wiesental Breitband GmbH",
+   "person": "Miriam Stelzer",
+   "frist": null
+  },
+  {
+   "datei": "Beihilfe Bescheid 0925.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landesamt für Bezüge und Versorgung Leinemark – Beihilfestelle",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Beihilfe fehlende Belege.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landesamt für Bezüge und Versorgung Leinemark – Beihilfestelle",
+   "person": "Annegret Vossloh",
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "Bezüge 11-2025.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landesamt für Bezüge und Versorgung Leinemark",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "PKV Beitrag 2026.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Leinetal Krankenversicherung a. G.",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "scan_0019.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Leinetal Krankenversicherung a. G.",
+   "person": "Frederik Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Dr Tiemann Q3.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis für Kieferorthopädie Dr. Carola Tiemann",
+   "person": "Frederik Vossloh",
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "Teilzeit bewilligt.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Regionales Landesamt für Schule und Bildung Leinestadt",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Versorgungsauskunft.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landesamt für Bezüge und Versorgung Leinemark",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "DU-Versicherung Nachtrag.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Beamtenhilfswerk Leben AG",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Krad Versicherung Saison.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Hansa-Leine Versicherung AG",
+   "person": "Holger Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Inspektion Mopped.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad-Technik Borchers",
+   "person": "Holger Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Zoll Krad.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Motorrad",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zollamt Leinestadt – Kraftfahrzeugsteuer",
+   "person": "Holger Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024 Bescheid.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Bad Hellingen",
+   "person": null,
+   "frist": "2025-10-20"
+  },
+  {
+   "datei": "Brief Schule Frederik.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Solebad-Gymnasium Bad Hellingen",
+   "person": "Frederik Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "KFO Befundbericht.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis für Kieferorthopädie Dr. Carola Tiemann",
+   "person": "Frederik Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Flimmerkiste teurer.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Kinora Streaming Services S.à r.l.",
+   "person": "Holger Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Ferienhaus Dänemark.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Nordseehus Ferienhausvermittlung ApS",
+   "person": null,
+   "frist": "2026-05-22"
+  },
+  {
+   "datei": "Pass Frederik fertig.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Bad Hellingen – Bürgerbüro",
+   "person": "Frederik Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Laptop Frederik Rechnung.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Computerhaus Hellweg GmbH",
+   "person": "Frederik Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Rückgabe Examensarbeit.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Landesprüfungsamt für Lehrämter Leinemark",
+   "person": "Annegret Vossloh",
+   "frist": null
+  },
+  {
+   "datei": "Abi 2001 Treffen.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Silke (geb. Ahlers)",
+   "person": "Annegret Vossloh",
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "Ihr Termin HU-AU.txt",
+   "haushalt": "h-vossloh",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Sievers & Sohn GmbH",
+   "person": "Annegret Vossloh",
+   "frist": null
+  }
+ ]
+}

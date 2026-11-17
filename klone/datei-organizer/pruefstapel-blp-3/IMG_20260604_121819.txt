@@ -1,0 +1,14 @@
+PayNord Zahlungssysteme GmbH                            Händlerabrechnung
+Händler-ID 0044120   Terminal-ID 60000417
+Blumenwerkstatt Harkort, Kirchgasse 7, 37299 Weidenrode
+Abrechnungsdatum 02.06.2026          Abrechnungsmonat Mai 2026
+Zeitraum 01.05.2026 – 31.05.2026
+
+Kartenumsätze girocard / Kreditkarte   398 Transaktionen      12.447,90
+Disagio 0,23 % vom Umsatz                                         28,63
+Transaktionsentgelt 398 x 0,07                                    27,86
+Summe Entgelte                                                    56,49 EUR
+Auszahlungsbetrag (Umsatz abzgl. Entgelte)                    12.391,41
+
+Die Entgelte sind als Finanzdienstleistnng nach § 4 Nr. 8 d UStG
+umsatzsteuerfrei. Die Entgelte wurden mit den Auszahlungen verrechnet.

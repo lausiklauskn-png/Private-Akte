@@ -1,0 +1,37 @@
+{
+ "titel": "Belege für eigene Steuer und Taschen-Shop in einem Programm, mit sicherer Sicherung",
+ "kunde": {"firma": "Taschen-Näherei Beispiel", "ansprechpartner": "Leyla Beispielova", "mail": "leyla@taschen-beispiel.example"},
+ "bereiche": {
+  "1": ["Belege in Ordnern im Regal", "Fotos von Belegen in der Galerie auf dem Handy", "Auswertungen aus dem Shop-Programm", "Shop-Summen werden von Hand abgetippt", "Eigene Steuer und Shop laufen getrennt"],
+  "2": ["Belege sammeln für die eigene Steuererklärung (Arbeitskleidung, Fahrten, Fortbildungen)", "Buchhaltung für den kleinen Online-Shop als Kleinunternehmerin", "Steuererklärung abgeben", "Kontoumsätze zuordnen", "Warenbestand und Inventur der Taschen"],
+  "3": [{"text": "Inhaberin (macht alles selbst)", "anzahl": 1}],
+  "4": ["Jedes Jahr Belege zusammensuchen", "Shop-Summen doppelt eingeben (abtippen)", "Zeitverlust, nur das Wochenende bleibt", "Angst, dass das Handy kaputt geht und alles weg ist", "Belege sind schwer wiederzufinden"],
+  "5": ["Belege liegen verstreut an mehreren Orten", "Shop-Programm und Belege sind nicht verbunden", "Keine richtige Sicherung der Fotos"],
+  "6": [
+   {"text": "Eine Sicherung, die wirklich funktioniert, gern verschlüsselt auf die SD-Karte", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Keine Angst mehr, dass alles weg ist"}},
+   {"text": "Belege für die eigene Steuer und den Shop getrennt, aber in einem Programm", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein Zusammensuchen mehr vor der Steuer"}},
+   {"text": "Monatssummen aus dem Shop übernehmen statt abtippen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Weniger Abtippen, weniger Fehler"}},
+   {"text": "Belege per Suchwort wiederfinden, z. B. „Sicherheitsschuhe 2025“", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Schnell finden statt suchen"}},
+   {"text": "Steuererklärung direkt ans Finanzamt schicken", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Alles in einem Programm"}},
+   {"text": "Kontoumsätze direkt von der Bank abholen, ohne Datei", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein Herunterladen und Einlesen von Dateien"}},
+   {"text": "Warenbestand der Taschen und Inventur mitführen", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Überblick über die Taschen"}}
+  ],
+  "7": ["Alle Belege an einem Ort, nach eigener Steuer und Shop getrennt", "Sicher gesichert, auch wenn das Gerät kaputt geht", "Steuer am Wochenende ohne Suchen erledigen"],
+  "8": ["Das System muss Belege getrennt nach eigener Steuer und Shop ablegen.", "Das System muss Belege fotografieren oder aus der Galerie übernehmen können.", "Das System muss eine verschlüsselte Sicherung anlegen, gern auf die SD-Karte.", "Das System muss Belege per Suchwort und Jahr wiederfinden.", "Das System muss Monatssummen aus dem Shop-Programm übernehmen.", "Das System muss Kontoumsätze direkt von der Bank abholen.", "Das System muss die Steuererklärung ans Finanzamt schicken können.", "Das System muss den Warenbestand der Taschen und eine Inventur führen können."],
+  "9": ["Bedienung muss sie allein am Wochenende hinbekommen", "Keine Mitarbeiter, keine Rollen"],
+  "10": ["Android-Tablet", "Alter Windows-Laptop", "Im Browser am Arbeitsplatz-PC", "SD-Karte als Sicherungsort"],
+  "11": ["Shop-Programm mit Auswertungen", "Fotogalerie", "Ordner im Regal"],
+  "12": ["Shop-Programm (Monatssummen)", "Bank (Kontoumsätze)", "Finanzamt (Steuererklärung)"],
+  "13": ["Belegfotos und Belege", "Fahrten, Arbeitskleidung, Fortbildungen", "Monatssummen aus dem Shop", "Kontoumsätze", "Warenbestand der Taschen"],
+  "14": ["personenbezogene Daten: ja", "Verschlüsselte Sicherung gewünscht", "Bank- und Steuerdaten sind dabei"],
+  "15": ["Budget: knapp bei Kasse, lieber günstig", "Zeit nur am Wochenende", "Kein fester Termin genannt"],
+  "18": [
+   {"text": "Welches Shop-Programm genau, und wie gibt es die Monatssummen aus?", "wer": "Kundin", "bis": ""},
+   {"text": "Welche Bank, und erlaubt sie das direkte Abholen?", "wer": "Kundin", "bis": ""},
+   {"text": "Gilt „ans Finanzamt schicken“ nur für die eigene Steuererklärung oder auch für den Shop?", "wer": "Kundin", "bis": ""},
+   {"text": "Soll der Arbeitsplatz-PC nur lesen oder auch Belege erfassen?", "wer": "Kundin", "bis": ""},
+   {"text": "Wie viele Taschen und Belege pro Jahr ungefähr?", "wer": "Kundin", "bis": ""},
+   {"text": "Konkreter Budget-Rahmen in Euro", "wer": "Kundin", "bis": ""}
+  ]
+ }
+}

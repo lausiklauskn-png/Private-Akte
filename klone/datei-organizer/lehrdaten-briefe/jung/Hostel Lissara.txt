@@ -1,0 +1,21 @@
+From: reservas@hostel-azulejo.example
+Subject: Booking confirmed / Reserva confirmada - AZ-88417
+Date: 14 May 2025 19:31
+
+Hi Jule,
+
+thanks for booking with us! Here are your details:
+
+ Check-in   Mon 4 Aug 2025 (from 3 pm)
+ Check-out  Sat 9 Aug 2025 (until 11 am)
+ Room       6-bed female dorm, 2 beds (Jule Brandis + Nora Feldkamp)
+ Total      5 nights x 2 x 27.00 = 270.00 EUR
+ Paid       40.50 EUR deposit - balance 229.50 EUR on arrival (card or cash)
+ City tax   2 EUR per person/night, not included
+
+Free cancellation until 3 days before arrival, after that the deposit
+is kept. Breakfast 7.30-10.30 on the roof, bring your own padlock for
+the lockers.
+
+Boa viagem!
+Hostel Azulejo Lissara, Rua das Andorinhas 14

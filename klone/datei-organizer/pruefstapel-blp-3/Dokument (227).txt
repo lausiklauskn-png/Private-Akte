@@ -1,0 +1,22 @@
+Entgeltabrechnung für Juni 2026                               Blatt 1
+Arbeitgeber: Blumenwerkstatt Harkort, Kirchgasse 7, 37299 Weidenrode
+Pers.-Nr. 5   Kerstin Brodthage, Verkauf (Teilzeit)   St.-Kl. V   Eintritt 01.09.2021
+erstellt am 25.06.2026
+
+Lohnart                         Betrag
+Gehalt                         1.420,00
+Gesamtbrutto                   1.420,00
+
+Steuerliche Abzüge
+Lohnsteuer                       131,50
+Kirchensteuer                      0,00
+Solidaritätszuschlag               0,00
+Sozialversicherung (AN-Anteil)
+Krankenversicherung              121,41
+Rentenversicherung               132,06
+Arbeitslosenversicherung          18,46
+Pflegeversicherung                34,08
+
+Gesetzliches Netto               982,49
+Auszahlungsbetrag                982,49 EUR
+Überweisung auf IBAN DE00 0000 0000 0000 0007 05

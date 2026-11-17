@@ -1,0 +1,31 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Bakkerij Van Ostrum B.V.
+Kerkstraat 0
+0000 AA Zwolledorp
+NIEDERLANDE
+USt-IdNr. NL000000000B01
+
+Rechnung / Invoice
+Rg.-Nr. KB-2026-EU1
+Rechnungsdatum: 17.06.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Backform-Set Kornblume Edition    40     18,50     740,00
+  2  Gewürzmischung Lebkuchen 1 kg    25     14,00     350,00
+
+Nettobetrag                                1.090,00
+USt 0 %                                        0,00
+Zahlbetrag                                 1.090,00 EUR
+
+Steuerfreie innergemeinschaftliche Lieferung gem. § 4 Nr. 1b i.V.m. § 6a UStG.
+Tax exempt intra-Community supply.
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 8239 65
+USt-IdNr. DE000000134

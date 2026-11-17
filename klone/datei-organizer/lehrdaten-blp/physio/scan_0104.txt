@@ -1,0 +1,12 @@
+stadtstrom-laden   Ladebeleg
+Stadtwerke Eschenrode-Wehrstedt GmbH – öffentliche Ladeinfrastruktur
+
+Ladepunkt: DE*SWE*E000417*2  (Parkplatz Stadthalle, AC 22 kW)
+Start 19.05.2026 08:02  Ende 19.05.2026 11:46
+Geladene Energie: 39,0 kWh    Tarif ad hoc 0,56 EUR/kWh
+
+Betrag brutto          21,84 EUR
+darin 19 % USt          3,49 EUR
+Betrag netto           18,35 EUR
+
+Zahlung: Kreditkarte ****0014      Fahrzeug: Kangoo E-Tech (Praxis)

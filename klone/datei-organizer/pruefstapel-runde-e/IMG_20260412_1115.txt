@@ -1,0 +1,19 @@
+TANKSTELLE BEISPIEL PROBEDORF
+Landstraße 1, 56789 Probedorf
+Tel. 00000 000000
+UST-ID DE000000000
+
+Super E5 Säule 2  14,62 l x 1,799    26,30 A
+Kettenspray Motorrad            11,99 A
+Visierreiniger                   6,49 A
+------------------------------------
+SUMME EUR                    44,78
+Bar gegeben                   44,78
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   37,63   7,15   44,78
+
+BSP-DH 77
+12.04.2026 09:03  Bon 8022  Kasse 2
+TSE-Signatur 8183917590
+Vielen Dank für Ihren Einkauf!

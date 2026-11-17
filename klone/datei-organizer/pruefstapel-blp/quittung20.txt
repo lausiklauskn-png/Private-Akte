@@ -1,0 +1,28 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Rademann Events GbR
+Schulstr. 15
+37998 Lindenstedt
+
+Rechnung
+Rechnunqsnummer: KB-2026-107
+Rechnungsdatum: 09.07.2026
+Leistungsdatum: 07.07.2026
+Kunden-Nr.: K252
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Leihgebühr Kaffeevollautomat Monat     1    120,00     120,00
+  2  Wartungspauschale            1     35,00      35,00
+
+Nettobetrag                                  155,00
+zzgl. 19 % USt                               29,45
+Zahlbetrag                                   184,45 EUR
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 6391 41
+USt-IdNr. DE000000481

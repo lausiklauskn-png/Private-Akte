@@ -1,0 +1,213 @@
+{
+ "ordner": "pruefstapel-runde-e",
+ "belege": 200,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null,
+   "fehlt": 0
+  },
+  {
+   "name": "EINORDNER-E1",
+   "modell": "E1",
+   "fehlt": 0
+  },
+  {
+   "name": "EINORDNER-E2",
+   "modell": "E2",
+   "fehlt": 0
+  },
+  {
+   "name": "EINORDNER-E3",
+   "modell": "E3",
+   "fehlt": 0
+  }
+ ],
+ "felder": {
+  "bereich": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E1",
+     "gleich": 190
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E2",
+     "gleich": 191
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E3",
+     "gleich": 188
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E2",
+     "gleich": 199
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E3",
+     "gleich": 191
+    },
+    {
+     "a": "EINORDNER-E2",
+     "b": "EINORDNER-E3",
+     "gleich": 190
+    }
+   ],
+   "fleissKappa": 0.9533191460149654,
+   "einstimmig": 185,
+   "strittig": []
+  },
+  "schriftstueck": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E1",
+     "gleich": 192
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E2",
+     "gleich": 192
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E3",
+     "gleich": 187
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E2",
+     "gleich": 196
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E3",
+     "gleich": 191
+    },
+    {
+     "a": "EINORDNER-E2",
+     "b": "EINORDNER-E3",
+     "gleich": 190
+    }
+   ],
+   "fleissKappa": 0.9510527195156102,
+   "einstimmig": 185,
+   "strittig": []
+  },
+  "absender": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E1",
+     "gleich": 191
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E2",
+     "gleich": 193
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E3",
+     "gleich": 194
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E2",
+     "gleich": 198
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E3",
+     "gleich": 197
+    },
+    {
+     "a": "EINORDNER-E2",
+     "b": "EINORDNER-E3",
+     "gleich": 199
+    }
+   ],
+   "fleissKappa": 0.9764114682386738,
+   "einstimmig": 191,
+   "strittig": []
+  },
+  "person": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E1",
+     "gleich": 180
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E2",
+     "gleich": 171
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E3",
+     "gleich": 183
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E2",
+     "gleich": 187
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E3",
+     "gleich": 187
+    },
+    {
+     "a": "EINORDNER-E2",
+     "b": "EINORDNER-E3",
+     "gleich": 180
+    }
+   ],
+   "fleissKappa": 0.8899784623016606,
+   "einstimmig": 165,
+   "strittig": []
+  },
+  "frist": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E1",
+     "gleich": 199
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E2",
+     "gleich": 199
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "EINORDNER-E3",
+     "gleich": 198
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E2",
+     "gleich": 200
+    },
+    {
+     "a": "EINORDNER-E1",
+     "b": "EINORDNER-E3",
+     "gleich": 199
+    },
+    {
+     "a": "EINORDNER-E2",
+     "b": "EINORDNER-E3",
+     "gleich": 199
+    }
+   ],
+   "fleissKappa": 0.9914920317559913,
+   "einstimmig": 198,
+   "strittig": []
+  }
+ }
+}

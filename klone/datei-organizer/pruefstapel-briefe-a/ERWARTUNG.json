@@ -1,0 +1,1504 @@
+{
+ "dateien": [
+  {
+   "datei": "Kaminkehrer 2025.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bezirkskaminkehrermeister Alois Stangl",
+   "person": null,
+   "frist": "2025-11-28"
+  },
+  {
+   "datei": "zettel kaminkehrer.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Kaminkehrerbetrieb Stangl",
+   "person": null,
+   "frist": "2026-03-18"
+  },
+  {
+   "datei": "LBG Beitrag.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Landwirtschaftliche Sozialversicherung Süd",
+   "person": "Josef Brandl",
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "Jagdgenossen Einladung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Termin",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Jagdgenossenschaft Hinterkreuth",
+   "person": "Josef Brandl",
+   "frist": "2026-03-06"
+  },
+  {
+   "datei": "Rechnung_48812.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Landtechnik Wimmer GmbH",
+   "person": "Josef Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Kindergeld Maxi.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Niederbayern-Ost",
+   "person": "Maximilian Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Schullandheim 9b.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Staatliche Realschule Markt Wolfering",
+   "person": "Lena Brandl",
+   "frist": "2026-01-23"
+  },
+  {
+   "datei": "Schlepper Versicherung 2026.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Rottgauer Versicherungsverein a.G.",
+   "person": "Josef Brandl",
+   "frist": null
+  },
+  {
+   "datei": "scan_0007.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Altenried",
+   "person": "Monika Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Grundsteuer VG.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Verwaltungsgemeinschaft Moosaich",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Strom Jahresabrechnung.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Überlandwerk Rottal-Isen eG",
+   "person": null,
+   "frist": "2025-10-17"
+  },
+  {
+   "datei": "Wasseruhr ablesen.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Zweckverband Wasserversorgung Kreuther Gruppe",
+   "person": null,
+   "frist": "2025-12-10"
+  },
+  {
+   "datei": "Auszug 2026-03.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Raiffeisenbank Altenrieder Land eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KFO Lena Quartal.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kieferorthopädische Praxis Dr. Veronika Stadler",
+   "person": "Lena Brandl",
+   "frist": "2026-02-20"
+  },
+  {
+   "datei": "LKK Fragebogen.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landwirtschaftliche Krankenkasse Süd",
+   "person": "Monika Brandl",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Lohn 0126.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Maschinenbau Graml GmbH",
+   "person": "Josef Brandl",
+   "frist": null
+  },
+  {
+   "datei": "ESt-Bescheid 2024.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Altenried",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kirchgeld.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Kath. Kirchenstiftung St. Leonhard Hinterkreuth",
+   "person": null,
+   "frist": "2025-07-31"
+  },
+  {
+   "datei": "Kanzlei Belege zurück.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Steuerkanzlei Obermaier & Lechner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief Tante Resi.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Resi Hintermaier",
+   "person": "Monika Brandl",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20251108.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Lagerhaus Stockenried",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Werkstatt Kombi TÜV.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Meisterbetrieb Franz Pichlmeier",
+   "person": "Monika Brandl",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "Handy Lena Vertrag.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Talfunk Mobil GmbH",
+   "person": "Monika Brandl",
+   "frist": null
+  },
+  {
+   "datei": "Waschmaschine.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Maierhofer e.K.",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Abfallgebühren.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Landratsamt Altenried",
+   "person": null,
+   "frist": "2026-03-01"
+  },
+  {
+   "datei": "Nachtrag Hausrat.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Rottgauer Versicherungsverein a.G.",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heizöl Angebot.txt",
+   "haushalt": "h-brandl",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Brennstoffe Kagerer",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung 2025 Gerd.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitteldeutsches Land",
+   "person": "Gerd Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Vorlage Christa.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Rentenversicherung Mitteldeutsches Land",
+   "person": "Christa Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Sachsenland – Pflegekasse",
+   "person": "Christa Zenker",
+   "frist": null
+  },
+  {
+   "datei": "MD Termin.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Dienst Sachsen-Süd",
+   "person": "Christa Zenker",
+   "frist": "2026-03-04"
+  },
+  {
+   "datei": "Arztbrief Kardio.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kardiologische Gemeinschaftspraxis Dr. Hähnel / Dipl.-Med. Voigt",
+   "person": "Gerd Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (4).txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Brandiswalde",
+   "person": null,
+   "frist": "2025-10-06"
+  },
+  {
+   "datei": "Apotheke_0312.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Linden-Apotheke Niederzschauwitz",
+   "person": "Christa Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Befreiung 2026.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Sachsenland",
+   "person": "Gerd Zenker",
+   "frist": null
+  },
+  {
+   "datei": "AZV Bescheid.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Abwasserzweckverband Obere Zschaue",
+   "person": null,
+   "frist": "2026-03-16"
+  },
+  {
+   "datei": "Fluessiggas Lieferung.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Erzland-Gas Handels GmbH",
+   "person": "Gerd Zenker",
+   "frist": "2025-11-14"
+  },
+  {
+   "datei": "Schornsteinfeger.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bezirksschornsteinfegermeister Jens Köhler",
+   "person": null,
+   "frist": "2026-02-10"
+  },
+  {
+   "datei": "Baumfällung Genehmigung.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Gemeindeverwaltung Zschauwitztal",
+   "person": "Gerd Zenker",
+   "frist": "2026-11-30"
+  },
+  {
+   "datei": "Rechnung Baumdienst.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Baum- und Gartenpflege Michael Trommer",
+   "person": null,
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Notar Kostenrechnung.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notarin Dr. Annett Lohse",
+   "person": null,
+   "frist": "2026-01-30"
+  },
+  {
+   "datei": "Amtsgericht Verwahrung.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Brandiswalde – Nachlassgericht",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KSK_Auszug_11.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Zschopenthal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Sparbrief fällig.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Zschopenthal",
+   "person": "Christa Zenker",
+   "frist": "2026-05-29"
+  },
+  {
+   "datei": "Beitrag ab 2026.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Brief",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Mittelsachsen Versicherungsverein a.G.",
+   "person": "Gerd Zenker",
+   "frist": "2025-12-31"
+  },
+  {
+   "datei": "Hörgeräte.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hörakustik Ullmann",
+   "person": "Gerd Zenker",
+   "frist": "2025-08-15"
+  },
+  {
+   "datei": "Busreise Advent.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisedienst Wetzel",
+   "person": null,
+   "frist": "2025-11-07"
+  },
+  {
+   "datei": "von Katrin.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Katrin",
+   "person": "Christa Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Fernseher Rep.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Radio-Fernseh-Dienst Günther",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kündigungsbestätigung Tageblatt.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Zschopenthaler Tageblatt",
+   "person": "Gerd Zenker",
+   "frist": null
+  },
+  {
+   "datei": "Bestellung 7741-2.txt",
+   "haushalt": "h-zenker",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Versandhaus Lindemann",
+   "person": "Christa Zenker",
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "fiche 2026-02.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Constructions Métalliques Rodenberg S.à r.l.",
+   "person": "Pascal Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Certificat 2025.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Constructions Métalliques Rodenberg S.à r.l.",
+   "person": "Pascal Weiland",
+   "frist": null
+  },
+  {
+   "datei": "KZL Differenz.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kinderzulagenkasse Luxemburg (KZL)",
+   "person": "Emil Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Familienkasse Nachweis.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Saarland-West",
+   "person": "Nadine Weiland",
+   "frist": "2026-02-13"
+  },
+  {
+   "datei": "Kita Gebühren ab August.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinde Illbach",
+   "person": "Emil Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Sonnenhügel Elternbrief.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kita Sonnenhügel",
+   "person": "Emil Weiland",
+   "frist": null
+  },
+  {
+   "datei": "GKG Erstattung.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse des Großherzogtums (GKG)",
+   "person": "Pascal Weiland",
+   "frist": null
+  },
+  {
+   "datei": "S1 eingetragen.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Dreiflüsse",
+   "person": "Pascal Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Emil U8.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinder- und Jugendarztpraxis Dr. Claudia Jochum",
+   "person": "Emil Weiland",
+   "frist": "2026-04-22"
+  },
+  {
+   "datei": "Darlehen Jahresauszug 2025.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Volksbank Hochwald-Ill eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Wohngebäude Beitrag.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Saarpfalz Brandkasse VVaG",
+   "person": null,
+   "frist": "2026-01-15"
+  },
+  {
+   "datei": "PHV Police.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Saarpfalz Brandkasse VVaG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Abschlag neu.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Energie Hochwald GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heizung Wartung Rechnung.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Haustechnik Schwindling & Sohn",
+   "person": null,
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "20260214_tanken.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Station Um Haff",
+   "person": "Pascal Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Verwarnung.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landesverwaltungsamt Saar-Hochwald – Zentrale Bußgeldbehörde",
+   "person": "Nadine Weiland",
+   "frist": "2025-09-19"
+  },
+  {
+   "datei": "Reifen.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Reifen- und Autoservice Kiefer",
+   "person": "Nadine Weiland",
+   "frist": null
+  },
+  {
+   "datei": "FA Abgabe 2025.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Merzlingen",
+   "person": null,
+   "frist": "2026-08-31"
+  },
+  {
+   "datei": "Camping Buchung.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Camping Les Dunes de Kervalen",
+   "person": null,
+   "frist": "2026-03-15"
+  },
+  {
+   "datei": "Preisanpassung Filmflut.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Filmflut Streaming GmbH",
+   "person": "Nadine Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Vitalhaus.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Vitalhaus Fitness Merzlingen",
+   "person": "Nadine Weiland",
+   "frist": null
+  },
+  {
+   "datei": "Bestellung Kinderschuhe.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Zwergenschritt Versand GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schreiben Inkasso.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Forderungsmanagement Südwest GmbH",
+   "person": "Pascal Weiland",
+   "frist": "2026-01-20"
+  },
+  {
+   "datei": "Kundendienst Spüler.txt",
+   "haushalt": "h-weiland",
+   "schriftstueck": "Termin",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Jungfleisch",
+   "person": null,
+   "frist": "2026-05-12"
+  },
+  {
+   "datei": "Police Krad Saison.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Rottgauer Versicherungsverein a.G.",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Zweirad Lang.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Lang",
+   "person": "Theresa Oberhofer",
+   "frist": "2026-04-17"
+  },
+  {
+   "datei": "Kaufvertrag gebraucht.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Florian Greil",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Mietvertrag Kirchgasse.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Anna Schmidbauer",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "NK 2025.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Anna Schmidbauer",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Gehalt_2026_03.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Holzwerk Lindhuber GmbH & Co. KG",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Zwischenzeugnis.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Holzwerk Lindhuber GmbH & Co. KG",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "AFBG Bescheid.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Altenried",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "kontoauszug_2026_004.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Altenried-Wolfering",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Kreditkarte März.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Altenried-Wolfering",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Zahlungserinnerung.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Kurvenkram Versand GmbH",
+   "person": "Theresa Oberhofer",
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Talfunk Vertrag neu.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Talfunk Mobil GmbH",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Notebook Rechnung.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Computer & Büro Seidl",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Befund Derma.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hautarztpraxis Dr. med. Irene Kollmannsberger",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Zusatzbeitrag.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Dreiflüsse",
+   "person": "Theresa Oberhofer",
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Ausweis abholen.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Markt Wolfering – Einwohnermeldeamt",
+   "person": "Theresa Oberhofer",
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "BU Angebot Makler.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Versicherungsbüro Huber",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "Mail von Vroni.txt",
+   "haushalt": "h-oberhofer",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Vroni",
+   "person": "Theresa Oberhofer",
+   "frist": null
+  },
+  {
+   "datei": "UVG Bescheid.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Zschopenthal",
+   "person": "Finn Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Schuluntersuchung Mia.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Zschopenthal – Gesundheitsamt",
+   "person": "Mia Kretzschmar",
+   "frist": "2025-11-18"
+  },
+  {
+   "datei": "Elternabend 5c.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Oberschule „Am Zschaueufer“ Brandiswalde",
+   "person": "Finn Kretzschmar",
+   "frist": "2025-09-25"
+  },
+  {
+   "datei": "Hort Elternbeitrag.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadtverwaltung Brandiswalde",
+   "person": "Mia Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Wohngeld.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Zschopenthal",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "WG Mieterhöhung.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft „Glück Auf“ Brandiswalde eG",
+   "person": "Jana Kretzschmar",
+   "frist": "2026-06-30"
+  },
+  {
+   "datei": "BK-Abrechnung 2024.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft „Glück Auf“ Brandiswalde eG",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Mahnung Strom.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Brandiswalde GmbH",
+   "person": "Jana Kretzschmar",
+   "frist": "2026-02-12"
+  },
+  {
+   "datei": "Abo Verbund.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsverbund Zschopenthal-Erzland (VZE)",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Lohn Mai.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Pflegedienst Sonnenblick gGmbH",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "KiKrankengeld.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Sachsenland",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Augenarzt Finn.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenarztpraxis Dipl.-Med. Hannelore Bräuer",
+   "person": "Finn Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Brille Finn.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenoptik Wiedemann",
+   "person": "Finn Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Auszug Nr 6.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Zschopenthal",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Meldebescheinigung.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadtverwaltung Brandiswalde – Einwohnermeldeamt",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "bon landmarkt.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Landmarkt Brandiswalde",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "SV Aufbau Beitrag.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "SV Aufbau Brandiswalde e.V.",
+   "person": "Finn Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Ferienlager Anmeldung.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Kreisjugendring Zschopenthal e.V.",
+   "person": "Finn Kretzschmar",
+   "frist": "2026-06-26"
+  },
+  {
+   "datei": "Brief Oma Erika.txt",
+   "haushalt": "h-kretzschmar",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Oma Erika",
+   "person": "Jana Kretzschmar",
+   "frist": null
+  },
+  {
+   "datei": "Erbschein.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Merzlingen – Nachlassgericht",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Erbschaft.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Merzlingen – Erbschaftsteuerstelle",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-05-30"
+  },
+  {
+   "datei": "Lebensbescheinigung Frankreich.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Caisse régionale de retraite des mineurs et sidérurgistes de l'Est (CRRMS)",
+   "person": "Hildegard Altmeyer",
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "Witwenrente Bescheid.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Saar-Bergbau",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Bank Nachlass.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Finanzen & Konten",
+   "absender": "Volksbank Hochwald-Ill eG",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-03-28"
+  },
+  {
+   "datei": "Pflegedienst 04-2026.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ökumenische Sozialstation Hochwald gGmbH",
+   "person": "Hildegard Altmeyer",
+   "frist": "2026-05-20"
+  },
+  {
+   "datei": "Hausnotruf.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Hilfswerk Saar-Hochwald e.V.",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Entlassbrief Juni.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Marienkrankenhaus Merzlingen",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-07-09"
+  },
+  {
+   "datei": "bon_metzger.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Metzgerei Schuler",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heizöl 2025.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Mineralöl Lauer GmbH",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-10-06"
+  },
+  {
+   "datei": "Wasser Jahresrechnung.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Wasserzweckverband Wellesbachtal",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Feuerstättenschau.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Schornsteinfegermeister Dirk Paulus",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-10-15"
+  },
+  {
+   "datei": "Angebot Dach.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dachdeckerei Bohr GmbH",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Schaden Sturm.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Saarpfalz Brandkasse VVaG",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Auszug Volksbank.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Volksbank Hochwald-Ill eG",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Brief Jeanne.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Jeanne",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "OGV Austritt.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Garten & Grundstück",
+   "absender": "Obst- und Gartenbauverein Wellesbach e.V.",
+   "person": "Hildegard Altmeyer",
+   "frist": "2025-12-13"
+  },
+  {
+   "datei": "Grube Unterlagen.txt",
+   "haushalt": "h-altmeyer",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Dokumentationsstelle Bergbau Warndt-Hochwald",
+   "person": "Hildegard Altmeyer",
+   "frist": null
+  },
+  {
+   "datei": "Elterngeld Bescheid.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Zschopenthal – Elterngeldstelle",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "Baugenehmigung Scheune.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Landratsamt Zschopenthal – Untere Bauaufsichtsbehörde",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Grundbuch Nachricht.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Amtsgericht Brandiswalde – Grundbuchamt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "20250927_091544.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "BauLand Fachmarkt Brandiswalde",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Sägewerk Rechnung.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Sägewerk und Holzhandel Uhlmann",
+   "person": "Tobias Lindner",
+   "frist": "2025-11-03"
+  },
+  {
+   "datei": "Darlehensvertrag KSK.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Kreissparkasse Zschopenthal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bausparen Jahresauszug.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Bausparkasse Elbweida AG",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "Moped Kennzeichen 2026.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Mittelsachsen Versicherungsverein a.G.",
+   "person": "Tobias Lindner",
+   "frist": null
+  },
+  {
+   "datei": "HU Bericht.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Prüfstelle Brandiswalde – Ing.-Büro Thieme",
+   "person": "Tobias Lindner",
+   "frist": "2026-04-23"
+  },
+  {
+   "datei": "Kaufvertrag Kombi.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Reuther GmbH",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "FFW Einladung.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Feuerwehrverein Kleinpöhlau e.V.",
+   "person": "Tobias Lindner",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Pachtvertrag Wiese.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Agrargenossenschaft Zschauwitztal eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Aufsitzmäher.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Forst- und Gartengeräte Schramm",
+   "person": "Tobias Lindner",
+   "frist": "2026-05-15"
+  },
+  {
+   "datei": "Stromvertrag.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stromversorgung Zschaueland GmbH",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "Glasfaser.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Breitband Erzland GmbH",
+   "person": "Tobias Lindner",
+   "frist": null
+  },
+  {
+   "datei": "U6 Jonas.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinderarztpraxis Dr. med. Kerstin Schubert",
+   "person": "Jonas Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Mutterschaftsgeld.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Gesundheitskasse Sachsenland",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "Elternzeit Bestätigung.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Gemeindeverwaltung Zschauwitztal",
+   "person": "Sarah Böhme",
+   "frist": null
+  },
+  {
+   "datei": "Lohi Beitrag.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Lohnsteuerhilfe Erzland e.V.",
+   "person": null,
+   "frist": "2026-04-17"
+  },
+  {
+   "datei": "Unfall Kündigung.txt",
+   "haushalt": "h-lindner-boehme",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Erzland Assekuranz AG",
+   "person": "Tobias Lindner",
+   "frist": null
+  }
+ ]
+}

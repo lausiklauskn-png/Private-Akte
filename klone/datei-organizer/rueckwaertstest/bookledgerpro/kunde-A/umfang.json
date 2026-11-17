@@ -1,0 +1,10 @@
+{"bausteine":[
+{"katalog":"scan","name":"Belegerfassung per Handyfoto: Foto aufnehmen, Text auf dem Gerät auslesen (Datum, Betrag, Steuersatz, Aussteller) und Beleg selbst einer Kategorie zuordnen, Vorschlag zum Bestätigen","groesse":"mittel","deckt":["B-27","B-38","B-39"],"faktoren":["offline","ki"]},
+{"katalog":"schnitt","name":"Rechnungen aus E-Mails übernehmen (Mail bzw. PDF-Anhang an die App teilen, als Beleg ablegen und auslesen)","groesse":"klein","deckt":["B-40"],"faktoren":["offline"]},
+{"katalog":"rechnung","name":"Kassenbuch mit täglichem Kassenabschluss: abends gezählten Kassenstand erfassen, Eintrag festschreiben (Storno statt Ändern, Hash-Kette)","groesse":"mittel","deckt":["B-28","B-41","B-42"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Lokale Datenhaltung ohne Cloud: App für Android und Windows, offline nutzbar, Daten verschlüsselt mit Passwort","groesse":"mittel","deckt":["B-29"],"faktoren":["offline"]},
+{"katalog":"rechnung","name":"Übersicht auf einen Blick: laufend berechnete fällige Umsatzsteuer, empfohlene Rücklage und Kassenstand heute","groesse":"klein","deckt":["B-31","B-43","B-44","B-45"],"faktoren":["offline"]},
+{"katalog":"schnitt","name":"Export für den Steuerberater: fertige Datei mit Buchungen und Belegen (Format noch offen, O-01)","groesse":"klein","deckt":["B-30","B-46"],"faktoren":[]},
+{"katalog":"rechnung","name":"Getrennte Bücher für Laden und Haushalt in einer App","groesse":"klein","deckt":["B-32","B-47"],"faktoren":["offline"]},
+{"katalog":"schnitt","name":"Kontoauszug als PDF aus dem Onlinebanking einlesen, Umsätze erkennen und gegen Belege abhaken","groesse":"mittel","deckt":["B-33","B-48"],"faktoren":["offline"]}
+]}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datei-Organizer Pro unter Windows installieren</title>
+<style>
+  :root { --navy: #0b2f52; --rot: #e02424; --rand: #d5dde5; --grau: #5d6b78; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif; color: #17222d; background: #f1f5f8; line-height: 1.45; }
+  main { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
+  h1 { color: var(--navy); font-size: 1.6rem; margin: 8px 0 4px; }
+  .unter { color: var(--grau); margin: 0 0 20px; }
+  .schritt { background: #fff; border: 1px solid var(--rand); border-radius: 14px; padding: 16px; margin: 0 0 18px; }
+  .schritt h2 { margin: 0 0 6px; font-size: 1.15rem; color: var(--navy); display: flex; gap: 10px; align-items: center; }
+  .nr { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: #fff; display: grid; place-items: center; font-size: 1rem; }
+  .schritt p { margin: 6px 0 12px; }
+  .bild { overflow-x: auto; padding: 14px 6px; }
+  .hinweis { font-size: .85rem; color: var(--grau); margin: 0; }
+  /* Der rote Kreis um die Stelle zum Anklicken */
+  .klick { position: relative; display: inline-block; }
+  .klick::after { content: ""; position: absolute; inset: -9px -13px; border: 4px solid var(--rot); border-radius: 999px; pointer-events: none; }
+  .klick::before { content: "hier klicken"; position: absolute; left: 50%; top: calc(100% + 12px); transform: translateX(-50%); white-space: nowrap; font: 700 .8rem "Segoe UI", Arial, sans-serif; color: var(--rot); background: #fff; padding: 1px 6px; border-radius: 6px; z-index: 2; }
+  .klick.oben::before { top: auto; bottom: calc(100% + 12px); }
+  /* Nachgezeichnete Fenster */
+  .edge { width: 380px; background: #fff; border: 1px solid #c9c9c9; border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.18); font-size: .86rem; }
+  .edge .kopf { display: flex; justify-content: space-between; padding: 10px 12px; font-weight: 600; border-bottom: 1px solid #eee; }
+  .edge .zeile { display: flex; gap: 10px; align-items: flex-start; padding: 12px; }
+  .edge .warn { flex: 0 0 auto; width: 22px; height: 22px; border-radius: 50%; background: #c42b1c; color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .edge .punkte { margin-left: auto; font-size: 1.2rem; letter-spacing: 1px; padding: 0 6px; }
+  .menue { width: 250px; margin: 6px 0 0 120px; background: #fff; border: 1px solid #c9c9c9; border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.18); padding: 6px 0; font-size: .86rem; }
+  .menue div { padding: 7px 14px; }
+  .dialog { width: 400px; background: #fff; border: 1px solid #c9c9c9; border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.18); padding: 16px; font-size: .86rem; }
+  .dialog b { display: block; margin-bottom: 6px; font-size: .95rem; }
+  .dialog .knoepfe { display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px; }
+  .knopf { display: inline-block; border: 1px solid #b9b9b9; border-radius: 4px; padding: 6px 16px; background: #f6f6f6; font-size: .86rem; }
+  .knopf.blau { background: #0067c0; border-color: #0067c0; color: #fff; }
+  .link { color: #0067c0; text-decoration: underline; }
+  .smart { width: 470px; min-height: 300px; background: #0f5fb4; color: #fff; padding: 26px 28px 20px; display: flex; flex-direction: column; font-size: .9rem; }
+  .smart h3 { margin: 0 0 14px; font-weight: 300; font-size: 1.45rem; }
+  .smart .link { color: #fff; }
+  .smart .unten { margin-top: auto; display: flex; gap: 10px; justify-content: flex-end; padding-top: 26px; }
+  .smart .knopf { background: transparent; color: #fff; border: 2px solid #fff; border-radius: 0; padding: 6px 22px; }
+  .smart dl { margin: 14px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; }
+  .smart dt, .smart dd { margin: 0; }
+  .setup { width: 430px; background: #f0f0f0; border: 1px solid #9a9a9a; box-shadow: 0 6px 22px rgba(0,0,0,.18); font-size: .86rem; }
+  .setup .titel { background: #fff; padding: 7px 10px; border-bottom: 1px solid #d0d0d0; display: flex; justify-content: space-between; }
+  .setup .inhalt { background: #fff; padding: 16px; min-height: 110px; }
+  .setup .fuss { display: flex; gap: 8px; justify-content: flex-end; padding: 12px; border-top: 1px solid #d0d0d0; }
+  .reihe { display: flex; flex-wrap: wrap; gap: 26px 18px; align-items: flex-start; }
+  .sperre { width: 400px; background: #fff; border: 1px solid #c9c9c9; border-radius: 8px; box-shadow: 0 6px 22px rgba(0,0,0,.18); padding: 18px; font-size: .88rem; }
+  .gelb { background: #fff7e0; border-color: #e6c66a; }
+  ol.weg { margin: 6px 0 0; padding-left: 20px; }
+  @media print { body { background: #fff; } .schritt { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Datei-Organizer Pro unter Windows installieren</h1>
+  <p class="unter">Windows warnt, weil das Setup keine gekaufte Signatur hat. Der Knopf zum Weitermachen ist versteckt – die rot eingekreisten Stellen zeigen, wo man klickt. Die Fenster sind nachgezeichnet; der Wortlaut kann je nach Windows-Version leicht abweichen.</p>
+
+  <section class="schritt">
+    <h2><span class="nr">1</span>Herunterladen: „Beibehalten“</h2>
+    <p>Der Browser (Edge) hält die Datei zuerst zurück. Mit der Maus auf die Zeile gehen, auf die drei Punkte klicken, dann „Beibehalten“.</p>
+    <div class="bild">
+      <div class="edge">
+        <div class="kopf"><span>Downloads</span><span>…</span></div>
+        <div class="zeile"><span class="warn">!</span><span>Datei-Organizer-Pro-Windows-…-setup.exe wird häufig nicht heruntergeladen.</span><span class="punkte"><span class="klick oben">···</span></span></div>
+      </div>
+      <div class="menue"><div>Löschen</div><div><span class="klick">Beibehalten</span></div><div>&nbsp;</div><div>Diese Datei als sicher melden</div></div>
+    </div>
+  </section>
+
+  <section class="schritt">
+    <h2><span class="nr">2</span>„Mehr anzeigen“ → „Trotzdem beibehalten“</h2>
+    <p>Edge fragt noch einmal nach. Erst „Mehr anzeigen“, dann „Trotzdem beibehalten“.</p>
+    <div class="bild reihe">
+      <div class="dialog">
+        <b>Vergewissern Sie sich, dass Sie der Datei vertrauen, bevor Sie sie öffnen</b>
+        Microsoft Defender SmartScreen konnte nicht überprüfen, ob diese Datei sicher ist.
+        <div style="margin-top:12px"><span class="klick"><span class="link">Mehr anzeigen ⌄</span></span></div>
+        <div class="knoepfe"><span class="knopf blau">Löschen</span><span class="knopf">Abbrechen</span></div>
+      </div>
+      <div class="dialog">
+        <b>Vergewissern Sie sich, dass Sie der Datei vertrauen, bevor Sie sie öffnen</b>
+        <div style="margin-top:10px"><span class="klick"><span class="link">Trotzdem beibehalten</span></span></div>
+        <div style="margin-top:30px" class="link">Diese App als sicher melden</div>
+        <div class="knoepfe"><span class="knopf blau">Löschen</span><span class="knopf">Abbrechen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schritt">
+    <h2><span class="nr">3</span>Setup starten: „Weitere Informationen“</h2>
+    <p>Die heruntergeladene Datei doppelt anklicken. Es erscheint ein blaues Fenster, in dem nur „Nicht ausführen“ steht. <b>Nicht</b> darauf klicken, sondern auf den kleinen unterstrichenen Text.</p>
+    <div class="bild">
+      <div class="smart">
+        <h3>Der Computer wurde durch Windows geschützt</h3>
+        Von Microsoft Defender SmartScreen wurde der Start einer unbekannten App verhindert. Die Ausführung dieser App stellt u. U. ein Risiko für den PC dar.
+        <div style="margin-top:8px"><span class="klick"><span class="link">Weitere Informationen</span></span></div>
+        <div class="unten"><span class="knopf">Nicht ausführen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schritt">
+    <h2><span class="nr">4</span>„Trotzdem ausführen“</h2>
+    <p>Jetzt erscheint der zweite Knopf.</p>
+    <div class="bild">
+      <div class="smart">
+        <h3>Der Computer wurde durch Windows geschützt</h3>
+        Von Microsoft Defender SmartScreen wurde der Start einer unbekannten App verhindert. Die Ausführung dieser App stellt u. U. ein Risiko für den PC dar.
+        <dl><dt>App:</dt><dd>Datei-Organizer-Pro-Windows-…-setup.exe</dd><dt>Herausgeber:</dt><dd>Unbekannter Herausgeber</dd></dl>
+        <div class="unten"><span class="klick oben"><span class="knopf">Trotzdem ausführen</span></span><span class="knopf">Nicht ausführen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schritt">
+    <h2><span class="nr">5</span>Installieren</h2>
+    <p>Sprache bestätigen, dann „Weiter“, „Installieren“ und zum Schluss „Fertigstellen“. Die App wird nur für den angemeldeten Benutzer installiert.</p>
+    <div class="bild">
+      <div class="setup">
+        <div class="titel"><span>Datei-Organizer Pro Setup</span><span>— ☐ ✕</span></div>
+        <div class="inhalt"><b>Willkommen beim Setup von Datei-Organizer Pro</b><br><br>Dieser Assistent führt durch die Installation.</div>
+        <div class="fuss"><span class="klick oben"><span class="knopf">Weiter &gt;</span></span><span class="knopf">Abbrechen</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schritt gelb">
+    <h2><span class="nr">!</span>Wenn es keinen Knopf „Trotzdem ausführen“ gibt</h2>
+    <p>Dann sperrt der PC selbst. Bei aktuellem Windows 11 ist das meist „Smart App Control“; das Fenster sieht dann etwa so aus und hat nur „OK“:</p>
+    <div class="bild">
+      <div class="sperre"><b>Smart App Control hat eine App blockiert, die möglicherweise unsicher ist</b><br>Datei-Organizer-Pro-Windows-…-setup.exe<div class="knoepfe" style="display:flex;justify-content:flex-end;margin-top:14px"><span class="knopf blau">OK</span></div></div>
+    </div>
+    <p>Abschalten (lässt sich danach nur durch eine Neuinstallation von Windows wieder einschalten):</p>
+    <ol class="weg">
+      <li>Startmenü → „Windows-Sicherheit“ öffnen</li>
+      <li>„App- &amp; Browsersteuerung“</li>
+      <li>„Einstellungen für Smart App Control“</li>
+      <li>„Aus“ wählen, dann das Setup noch einmal starten</li>
+    </ol>
+  </section>
+
+  <p class="hinweis">Datei-Organizer Pro · Anleitung vom 17.11.2026</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+PAYTERM Kartenakzeptanz GmbH · Abrechnung Oktober 2026 · 03.11.2026
+Händler: Kfz-Technik Brandhorst (ID 000417220)
+
+Disagio girocard                 31,07
+Disagio Mastercard/Visa          38,62
+Autorisierungsentgelte           11,34
+Chargeback-Bearbeitung 1x        15,00
+Terminalmiete                    14,90
+Netto 110,93 | USt (auf 14,90) 2,83 | Lastschrift 113,76 EUR

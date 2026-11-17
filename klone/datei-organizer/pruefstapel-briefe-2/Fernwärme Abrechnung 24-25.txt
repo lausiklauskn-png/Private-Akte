@@ -1,0 +1,24 @@
+Stadtwerke Oberaichkirchen KU                    Fernwärme-Jahresabrechnung
+Kundenkonto 20 044 719   Abnahmestelle Lindenanger 6 / Whg 4
+Abrechnungszeitraum 01.07.2024 – 30.06.2025      erstellt 14.08.2025
+
+Wärmemengenzähler Nr. 6 441 207
+  Stand 30.06.2024     38.412 kWh
+  Stand 30.06.2025     45.930 kWh
+  Verbrauch             7.518 kWh   (Vorjahr 8.004 kWh)
+
+  Arbeitspreis 7.518 kWh x 9,84 ct              739,77
+  Grundpreis 9 kW Anschlusswert x 38,20 EUR     343,80
+  Messpreis                                      42,00
+  Emissionspreis (CO2-Umlage)                    51,12
+  Summe netto                                 1.176,69
+  USt 19 %                                      223,57
+  Summe brutto                                1.400,26
+
+  gezahlte Abschläge 11 x 132,00             -1.452,00
+  GUTHABEN                                       51,74 EUR
+
+Das Guthaben überweisen wir in den nächsten Tagen auf Ihr Konto.
+Neuer Abschlag ab September 2025: 128,00 EUR (11 Raten).
+
+Der Anteil erneuerbarer Wärme (Hackschnitzel-Heizwerk) lag bei 71 %.

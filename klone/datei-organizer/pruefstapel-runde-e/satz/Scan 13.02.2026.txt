@@ -1,0 +1,32 @@
+# Beispiel-Reisen Busreisen GmbH
+Beispiel-Reisen Busreisen GmbH · Omnibusweg 3 · 67000 Beispielmainz
+
+Herrn und Frau
+Heinrich und Ilse Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Buchung: BR-26-0217
+Reisetermin: 05.–11.05.2026
+Datum: 13.02.2026
+
+# Reisebestätigung/Rechnung – Seniorenreise Beispielsee & Alpen
+
+Sehr geehrte Frau Vogelsang, sehr geehrter Herr Vogelsang,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Busreise mit Halbpension, Doppelzimmer, Personen|2|689,00 €|1.378,00 €|
+|2|Zuschlag Zimmer mit Balkon|2|42,00 €|84,00 €|
+|3|Reiserücktrittsversicherung|2|39,00 €|78,00 €|
+|4|Anzahlung|1|-280,00 €|-280,00 €|
+
+Rechnungsbetrag: 1.260,00 €
+Reiseleistung nach § 25 UStG; Sicherungsschein liegt bei.
+
+Bitte überweisen Sie den Betrag von 1.260,00 € bis zum 15.03.2026 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Beispiel-Reisen Busreisen GmbH
+@fuss Beispiel-Reisen Busreisen GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

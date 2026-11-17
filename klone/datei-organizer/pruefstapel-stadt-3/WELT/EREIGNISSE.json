@@ -1,0 +1,704 @@
+{
+ "ereignisse": [
+  {
+   "monat": "2026-01",
+   "haushalt": "h-amrani",
+   "person": "Leila Amrani",
+   "was": "Aufenthaltserlaubnis läuft im März ab – Einladung zur Verlängerung mit Terminvorgabe",
+   "stellen": [
+    "Ausländerbehörde Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Elterngeld-Bescheid für Mila (Partnerschaftsbonus abgelehnt, Teilbetrag bewilligt)",
+   "stellen": [
+    "Elterngeldstelle Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Jahresabrechnung Pflegedienst und neuer Pflegevertrag mit Preisanpassung",
+   "stellen": [
+    "Pflegedienst Beispiel-Hand",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h-kalanteris",
+   "person": "Sofia Kalanteri",
+   "was": "Umsatzsteuer-Voranmeldung Dezember versäumt – Erinnerung mit Verspätungszuschlag angedroht",
+   "stellen": [
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h-pfeilsticker",
+   "person": "Gerhard Pfeilsticker",
+   "was": "Beitragsrechnung Kfz-Versicherung für Wohnmobil und Motorrad (Saisonkennzeichen)",
+   "stellen": [
+    "Beispiel-Assekuranz Kfz"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h-wg-feingold",
+   "person": "Lara Feingold",
+   "was": "Lohnabrechnung Minijob und Mitteilung zur Rentenversicherungspflicht (Befreiungsantrag)",
+   "stellen": [
+    "Frischmarkt Beispiel (Supermarktkette mit App)",
+    "Beispiel-Rentenversicherung Bund-Nord"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-amrani",
+   "person": "Youssef Amrani",
+   "was": "Schichtplanänderung und Nachtzuschläge in der Lohnabrechnung; Lohnsteuerbescheinigung 2025",
+   "stellen": [
+    "Logistikzentrum Beispiel-Nord GmbH"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-amrani",
+   "person": "Nour Amrani",
+   "was": "Einladung U-Untersuchung und Impferinnerung; Rechnung für Atteste",
+   "stellen": [
+    "Kinderarztpraxis Dr. Beispiel-Lorenz"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-kalanteris",
+   "person": "Dimitrios Kalanteris",
+   "was": "Kontrolle Lebensmittelaufsicht angekündigt, Mängelschreiben nach Begehung",
+   "stellen": [
+    "Bezirksamt Beispielstadt-Nord – Gewerbeamt"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-pfeilsticker",
+   "person": "Ursula Pfeilsticker",
+   "was": "Renteninformation und Hinweis zur Steuerpflicht der Rente",
+   "stellen": [
+    "Beispiel-Rentenversicherung Bund-Nord",
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Kita-Platz-Zusage für Mila ab August mit Elternbeitragsbescheid",
+   "stellen": [
+    "Kita Sonnenbeispiel",
+    "Jugendamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Heizkostenabrechnung Fernwärme mit hoher Nachzahlung",
+   "stellen": [
+    "Fernwärme Beispielstadt-Nord GmbH",
+    "Wohnungsbaugesellschaft Beispielstadt-Nord mbH"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-amrani",
+   "person": "Leila Amrani",
+   "was": "Verlängerung Aufenthaltserlaubnis: Fiktionsbescheinigung, Gebührenbescheid, Nachforderung Arbeitgeberbescheinigung",
+   "stellen": [
+    "Ausländerbehörde Beispielstadt-Nord",
+    "Klinikum Beispielstadt-Nord gGmbH – Personalabteilung"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-amrani",
+   "person": "Fatima Amrani",
+   "was": "Familiennachzug: Verpflichtungserklärung und Krankenversicherungsnachweis gefordert",
+   "stellen": [
+    "Ausländerbehörde Beispielstadt-Nord",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Handyrechnung vergessen – erste Mahnung mit Mahngebühr",
+   "stellen": [
+    "Funkwelt Beispiel Mobilfunk"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-pfeilsticker",
+   "person": "Gerhard Pfeilsticker",
+   "was": "Wohnmobil aus dem Winterlager: Wartung, Gasprüfung und Rechnung",
+   "stellen": [
+    "Reisemobil-Service Beispiel-Camp"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-kalanteris",
+   "person": "Sofia Kalanteri",
+   "was": "Einkommensteuererklärung 2025 mit Gewinnermittlung über Steuerportal abgegeben, Eingangsbestätigung",
+   "stellen": [
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h-wendebach",
+   "person": "Mila Wendebach",
+   "was": "Mittelohrentzündung: Arztbrief und Rezept, Krankmeldung Kind für Arbeitgeber",
+   "stellen": [
+    "Kinderarztpraxis Dr. Beispiel-Lorenz",
+    "Gesundheitskasse Beispielland",
+    "Gaststätte Beispielhafen GmbH"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Zweite Mahnung, dann Übergabe an Inkasso mit Forderungsaufstellung",
+   "stellen": [
+    "Funkwelt Beispiel Mobilfunk",
+    "Inkasso Beispiel & Partner"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Sturz in der Wohnung, Krankenhausaufenthalt, Entlassbrief und Zuzahlungsrechnung",
+   "stellen": [
+    "Klinikum Beispielstadt-Nord – Patientenverwaltung",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-amrani",
+   "person": "Samir Amrani",
+   "was": "Klassenfahrt angekündigt: Elternbrief, Kosten und Antrag Bildung und Teilhabe",
+   "stellen": [
+    "Gesamtschule Beispielstadt-Nord",
+    "Jobcenter Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-pfeilsticker",
+   "person": "",
+   "was": "Motorrad wieder angemeldet, Kfz-Steuerbescheid",
+   "stellen": [
+    "Zulassungsstelle Beispielkreis",
+    "Hauptzollamt Beispielstadt"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-kalanteris",
+   "person": "Nikos Kalanteris",
+   "was": "Zeugnisgespräch, Warnbrief Versetzung gefährdet",
+   "stellen": [
+    "Gesamtschule Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Rückkehr in Teilzeit: neuer Arbeitsvertrag und erste Gehaltsabrechnung",
+   "stellen": [
+    "Gaststätte Beispielhafen GmbH"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Antrag Höherstufung Pflegegrad, Begutachtungstermin, Gutachten",
+   "stellen": [
+    "Gesundheitskasse Beispielland",
+    "Pflegedienst Beispiel-Hand"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Ratenzahlungsvereinbarung mit dem Inkassobüro, Beratung durch Anwältin",
+   "stellen": [
+    "Inkasso Beispiel & Partner",
+    "Rechtsanwältin Dr. Mareike Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-amrani",
+   "person": "",
+   "was": "Mieterhöhung nach Modernisierung (Aufzug, Dämmung) mit Begründung",
+   "stellen": [
+    "Wohnungsbaugesellschaft Beispielstadt-Nord mbH"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-kalanteris",
+   "person": "Dimitrios Kalanteris",
+   "was": "Unfall mit dem Lieferwagen auf dem Großmarktgelände: Schadenmeldung, Gutachten, Werkstattrechnung",
+   "stellen": [
+    "Beispiel-Assekuranz Kfz",
+    "Gastro-Großhandel Beispiel-Markt"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-pfeilsticker",
+   "person": "Ursula Pfeilsticker",
+   "was": "Zahnersatz: Heil- und Kostenplan und Zuschuss der Kasse",
+   "stellen": [
+    "Zahnärztin Dr. Inga Musterfeld",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h-wg-feingold",
+   "person": "Lara Feingold",
+   "was": "Rundfunkbeitrag: Anmeldung der WG-Wohnung und Festsetzungsbescheid",
+   "stellen": [
+    "Beispiel-Beitragsservice Rundfunk"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Bescheid Pflegegrad 3, Mehrleistungen; neuer Kostenvoranschlag Pflegedienst",
+   "stellen": [
+    "Gesundheitskasse Beispielland",
+    "Pflegedienst Beispiel-Hand"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-amrani",
+   "person": "Youssef Amrani",
+   "was": "Jobwechsel zum Bau: Kündigungsbestätigung, neuer Arbeitsvertrag, Arbeitszeugnis",
+   "stellen": [
+    "Logistikzentrum Beispiel-Nord GmbH",
+    "Beispielbau Nord GmbH"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-kalanteris",
+   "person": "Sofia Kalanteri",
+   "was": "Einkommensteuerbescheid 2025 mit Vorauszahlungen und Gewerbesteuermessbescheid",
+   "stellen": [
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-wendebach",
+   "person": "Mila Wendebach",
+   "was": "Eingewöhnung Kita: Vertrag, Essensgeld, Lastschriftmandat",
+   "stellen": [
+    "Kita Sonnenbeispiel",
+    "Sparkasse Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-pfeilsticker",
+   "person": "",
+   "was": "Wohnmobil-Urlaub: Kreditkartenabrechnung mit Auslandseinsatz, Campingrechnungen",
+   "stellen": [
+    "Musterkarte Kreditkarten-Service"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h-wg-feingold",
+   "person": "Lara Feingold",
+   "was": "Volkshochschul-Kurs Erste Hilfe: Anmeldebestätigung und Rechnung",
+   "stellen": [
+    "Volkshochschule Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Wohnungsumbau barrierearm: Antrag Zuschuss, Angebot Badumbau",
+   "stellen": [
+    "Gesundheitskasse Beispielland",
+    "Sanitär- und Heizungsbau Beispiel-Handwerk",
+    "Wohnungsbaugesellschaft Beispielstadt-Nord mbH"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-amrani",
+   "person": "Samir Amrani",
+   "was": "Kindergeld-Überprüfung aller drei Kinder, Schulbescheinigung für Samir angefordert",
+   "stellen": [
+    "Familienkasse Beispielregion"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-kalanteris",
+   "person": "Eleni Kalanteri",
+   "was": "Empfehlung weiterführende Schule und Anmeldung an der Gesamtschule",
+   "stellen": [
+    "Grundschule am Beispielpark",
+    "Gesamtschule Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Umzug aus der WG: Kündigung, Wohnungsübergabeprotokoll, Kautionsabrechnung offen",
+   "stellen": [
+    "Hausverwaltung Muster & Söhne"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-pfeilsticker",
+   "person": "Gerhard Pfeilsticker",
+   "was": "Radarfoto im Urlaub: Anhörungsbogen zu Geschwindigkeitsverstoß mit dem Motorrad",
+   "stellen": [
+    "Zulassungsstelle Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Unterhaltsvorschuss beantragt, Bescheid und Aufforderung zu Nachweisen",
+   "stellen": [
+    "Jugendamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Neue Wohnung: Ummeldung, Meldebestätigung, Stromvertrag und Glasfaser-Anschluss",
+   "stellen": [
+    "Bezirksamt Beispielstadt-Nord – Bürgeramt",
+    "Beispiel-Strom Nord GmbH",
+    "Glasfaser Beispielnetz GmbH"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-amrani",
+   "person": "Fatima Amrani",
+   "was": "Einreise Großeltern: Anmeldung, Aufenthaltstitel, Krankenversicherung",
+   "stellen": [
+    "Bezirksamt Beispielstadt-Nord – Bürgeramt",
+    "Ausländerbehörde Beispielstadt-Nord",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-kalanteris",
+   "person": "Kostas Kalanteris",
+   "was": "Aushilfe angemeldet: Minijob-Meldung und Lohnabrechnung aus dem Imbiss",
+   "stellen": [
+    "Beispiel-Rentenversicherung Bund-Nord",
+    "Sparkasse Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Badumbau ausgeführt: Handwerkerrechnung, Abnahme, Zuschussauszahlung",
+   "stellen": [
+    "Sanitär- und Heizungsbau Beispiel-Handwerk",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-wendebach",
+   "person": "Mila Wendebach",
+   "was": "Kita-Start, Elternbrief zum Sommerfest, Infektionshinweis",
+   "stellen": [
+    "Kita Sonnenbeispiel"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h-pfeilsticker",
+   "person": "Ursula Pfeilsticker",
+   "was": "Vereinsfest TuS: Einladung und Beitragsrechnung Seniorensport",
+   "stellen": [
+    "TuS Beispiel-Nord 1908 e.V."
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-amrani",
+   "person": "Leila Amrani",
+   "was": "Steuererklärung 2025 der Eheleute mit Schichtzuschlägen, Bescheid mit Erstattung",
+   "stellen": [
+    "Finanzamt Beispielstadt-Nord",
+    "Sparkasse Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-kalanteris",
+   "person": "Sofia Kalanteri",
+   "was": "Mietvertrag Imbissräume: Nebenkostenabrechnung Gewerbe und Indexmieterhöhung",
+   "stellen": [
+    "Hausverwaltung Muster & Söhne"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-wg-feingold",
+   "person": "Lara Feingold",
+   "was": "Supermarkt-App: geänderte Nutzungsbedingungen, Bon-Übersicht, Gutschein",
+   "stellen": [
+    "Frischmarkt Beispiel (Supermarktkette mit App)"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-krummbeck",
+   "person": "Gisela Beispiel-Rosen",
+   "was": "Nachbarin kümmert sich: Vollmacht, Brief der Nachbarin, Kirchengemeinde-Besuchsdienst",
+   "stellen": [
+    "Nachbarin Gisela Beispiel-Rosen",
+    "Ev. Beispiel-Kirchengemeinde Altmarkt"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-pfeilsticker",
+   "person": "Gerhard Pfeilsticker",
+   "was": "Bußgeldbescheid nach Anhörung, Zahlung über Direktbank",
+   "stellen": [
+    "Zulassungsstelle Beispielkreis",
+    "NordDirekt Beispielbank AG"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Kontowechsel zur Direktbank: Kontowechselservice, neue Karte, Kündigung Altkonto",
+   "stellen": [
+    "NordDirekt Beispielbank AG",
+    "Sparkasse Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Grundsicherung im Alter beantragt, Bescheid mit Anrechnung der Witwenrente",
+   "stellen": [
+    "Sozialamt Beispielstadt-Nord – Grundsicherung",
+    "Beispiel-Rentenversicherung Bund-Nord"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-amrani",
+   "person": "Youssef Amrani",
+   "was": "Arbeitsunfall auf der Baustelle: Unfallmeldung, Krankschreibung, Lohnfortzahlung",
+   "stellen": [
+    "Beispielbau Nord GmbH",
+    "MVZ Beispielstadt-Nord",
+    "Gesundheitskasse Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-kalanteris",
+   "person": "Dimitrios Kalanteris",
+   "was": "Gastro-Großhandel: Rechnung unbezahlt geblieben, Mahnung und Zahlungserinnerung",
+   "stellen": [
+    "Gastro-Großhandel Beispiel-Markt"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Inkasso-Forderung beglichen: Erledigungsschreiben; Streaming-Abo gekündigt",
+   "stellen": [
+    "Inkasso Beispiel & Partner",
+    "Beispiel-Stream Plus"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-pfeilsticker",
+   "person": "",
+   "was": "Wohnmobil abgemeldet über Winter, Saisonversicherung, Rechnung Winterlager",
+   "stellen": [
+    "Zulassungsstelle Beispielkreis",
+    "Beispiel-Assekuranz Kfz",
+    "Reisemobil-Service Beispiel-Camp"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Arzttermin U7 für Mila, Laborbefund Blutbild",
+   "stellen": [
+    "Kinderarztpraxis Dr. Beispiel-Lorenz",
+    "Labor Beispiel-Diagnostik"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-pfeilsticker",
+   "person": "Ursula Pfeilsticker",
+   "was": "Erbschaft nach Tod einer Schwester: Nachlassgericht, Testamentseröffnung, Notartermin",
+   "stellen": [
+    "Amtsgericht Beispielstadt-Nord – Nachlassgericht",
+    "Notariat Beispielstadt-Nord",
+    "Verwandte/Freunde (private Post und Einladungen)"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-amrani",
+   "person": "Abdelkader Amrani",
+   "was": "Arzttermine MVZ (Diabetes), Laborbefunde, Überweisung Augenarzt",
+   "stellen": [
+    "MVZ Beispielstadt-Nord",
+    "Labor Beispiel-Diagnostik"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-kalanteris",
+   "person": "",
+   "was": "Gewerbeanmeldung Lieferservice als Erweiterung, Lieferplattform-Vertrag",
+   "stellen": [
+    "Bezirksamt Beispielstadt-Nord – Gewerbeamt",
+    "Beispiel-Lieferflitzer"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-wg-feingold",
+   "person": "Lara Feingold",
+   "was": "Mobilfunkvertrag gewechselt, Rufnummernmitnahme, Schlussrechnung",
+   "stellen": [
+    "Funkwelt Beispiel Mobilfunk"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Hausratversicherung: Beitragsanpassung; Werbung Möbelhaus Seniorensessel",
+   "stellen": [
+    "Hausrat & Haftpflicht Beispiel-Versicherung",
+    "Möbelhaus Beispielland"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h-amrani",
+   "person": "Nour Amrani",
+   "was": "Moscheegemeinde: Einladung Kinderfest; Elternbrief Grundschule Laternenumzug",
+   "stellen": [
+    "Beispiel-Moscheegemeinde Nord e.V.",
+    "Grundschule am Beispielpark"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-pfeilsticker",
+   "person": "Gerhard Pfeilsticker",
+   "was": "Erbschein, Kontoauflösung der Verstorbenen, Erbschaftsteuererklärung angefordert",
+   "stellen": [
+    "Amtsgericht Beispielstadt-Nord – Nachlassgericht",
+    "Beispiel-Volksbank Nord eG",
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-amrani",
+   "person": "",
+   "was": "Betriebskostenabrechnung Vorjahr mit Nachzahlung, Ratenzahlungsantrag",
+   "stellen": [
+    "Wohnungsbaugesellschaft Beispielstadt-Nord mbH"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-kalanteris",
+   "person": "Sofia Kalanteri",
+   "was": "Jahresende: Kassennachschau angekündigt, Gewerbesteuer-Vorauszahlung, Zinsen aus Steuerbescheid",
+   "stellen": [
+    "Finanzamt Beispielstadt-Nord"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-wendebach",
+   "person": "Jonas Wendebach",
+   "was": "Weihnachtsgeld in Abrechnung, Jahresbescheinigung Kita-Beiträge",
+   "stellen": [
+    "Gaststätte Beispielhafen GmbH",
+    "Kita Sonnenbeispiel"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-wg-feingold",
+   "person": "Selin Ortaköy-Brandt",
+   "was": "Kautionsabrechnung endlich erhalten, Einladung Weihnachtsfeier",
+   "stellen": [
+    "Hausverwaltung Muster & Söhne",
+    "Verwandte/Freunde (private Post und Einladungen)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h-krummbeck",
+   "person": "Hildegard Krummbeck",
+   "was": "Jahreskontoauszug, Pflegekostenaufstellung für die Steuer, Kirchengemeinde Gruß",
+   "stellen": [
+    "Sparkasse Beispielstadt-Nord",
+    "Pflegedienst Beispiel-Hand",
+    "Ev. Beispiel-Kirchengemeinde Altmarkt"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+FrischMarkt Beispiel App
+Digitaler Kassenbon (eBon)
+Exportiert aus der App am 20.07.2024
+
+FrischMarkt Beispiel
+Filiale Mühlbrück am See
+Seestraße 18, 34567 Mühlbrück am See
+
+Kundenkarte: **** 4471
+Einkauf vom 20.07.2024 um 18:27 Uhr
+
+Artikel                         Betrag  MwSt
+Muellbeutel 35L                     1,89  B
+2 x Eier Freiland 10St              6,58  A
+Honig 500G                          4,99  A
+3 x Kekse Butter                    4,47  A
+Spuelmittel 900Ml                   1,59  B
+Nussnougatcreme                     3,49  A
+Fischstaebchen 30St                 4,49  A
+Zahnpasta                           0,95  B
+Pappteller 50St                     3,49  B
+Katzenfutter 12X85G                 5,49  B
+Batterien Aa 8St                    5,99  B
+Sahne 200Ml                         0,79  A
+Zwiebeln 1Kg                        1,29  A
+3 x Toastbrot Vollk.                4,17  A
+Kartoffelsalat 1Kg                  3,99  A
+Marmelade Erdbeer                   1,79  A
+Tee Pfefferminz                     1,29  A
+2 x Nudeln Spirelli 500G            1,98  A
+Grillkohle 10Kg                     8,99  B
+Zucker 1Kg                          1,19  A
+Tomaten Passiert                    0,79  A
+Grillkaese 2St                      2,79  A
+Schokolade Vollmilch                1,19  A
+Zitronen Netz                       1,49  A
+Coupon 10 % auf Obst               -0,61   
+--------------------------------------------
+Gesamtsumme                        74,55   
+Bezahlt mit girocard               74,55   
+
+Gesammelte Bonuspunkte: 74
+Ihr Punktestand: 1157
+
+Kasse 2  Bon-Nr. 7781  Bediener 12
+TSE-Seriennummer 7a91c0e4b2  Transaktion 1192233
+Signaturzähler 4472190
+Start 2024-07-20T18:21:04  Ende 2024-07-20T18:27:31
+
+Dieser Kassenbon wurde nur digital erstellt und in Ihrem Kundenkonto gespeichert.
+Rückgabe und Umtausch mit dem eBon in der App möglich.

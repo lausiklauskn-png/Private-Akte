@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Hotel Tannenblick GmbH
+Waldweg 3
+37997 Haselbrunn
+
+Rechnung
+Rg.-Nr. KB-2026-100
+Datum 06.04.2026
+Leistungsdatum: 31.03.2026
+Kunden-Nr.: K410
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Catering Kaffeepause inkl. Service     1    340,00     340,00
+  2  Servicepersonal Std.         4     32,00     128,00
+  3  Geschirrverleih pauschal     1     45,00      45,00
+
+Nettobetrag                                  513,00
+zzgl. 19 % USt                               97,47
+Summe                                        610,47 EUR
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7322 15
+USt-IdNr. DE000000638

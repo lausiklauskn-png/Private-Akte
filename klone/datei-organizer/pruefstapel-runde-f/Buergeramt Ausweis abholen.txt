@@ -1,0 +1,10 @@
+Bürgeramt Neustadt-Beispiel
+Digitaler Bescheid / Nachricht im Bürgerpostfach
+Zugestellt am 20.02.2030 an: Herrn Jonas Behrendt
+Empfangsadresse: Solarstraße 21, 67890 Neustadt-Beispiel
+
+Betreff: Ihr Personalausweis mit Smart-ID ist abholbereit
+
+Ihr neuer Personalausweis mit Smart-ID ist fertig. Termin zur Abholung: 05.03.2030, 08:40 Uhr, Schalter 4. Bitte bringen Sie den alten Ausweis mit. Die Smart-ID wird bei der Abholung auf Ihr Smartphone übertragen.
+
+Dieses Dokument wurde elektronisch erstellt und ist ohne Unterschrift gültig.

@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: dirk.lorenzen@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Wed, 01 Jan 2025 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sehr geehrter Herr Lorenzen,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-96376821
+Rechnungsbetrag: 126,14 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

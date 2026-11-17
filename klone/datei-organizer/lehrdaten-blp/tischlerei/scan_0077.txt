@@ -1,0 +1,15 @@
+kartenlese.example – Abrechnung Kartenterminal
+KLS Payment Services GmbH · Zahlungsallee 3 · 60999 Mainfurt
+
+Händlerabrechnung April 2026                      Händler-ID 4417220 · Tischlerei Vosskamp
+Abrechnungsdatum 04.05.2026
+
+Kartenumsätze girocard        11 Transaktionen      2.914,30 EUR
+Kartenumsätze Kreditkarte      3 Transaktionen        871,00 EUR
+Summe Umsätze                                       3.785,30 EUR
+abzgl. Transaktionsentgelte girocard 0,25 %            -7,29 EUR
+abzgl. Disagio Kreditkarte 1,39 %                     -12,11 EUR
+abzgl. Terminalmiete mobil                            -14,90 EUR
+Auszahlung auf DE00 0000 0000 0041 7001 00          3.751,00 EUR
+
+Summe Gebühren dieses Monats: 34,30 EUR (umsatzsteuerfrei nach § 4 Nr. 8 UStG, Miete inkl. USt)

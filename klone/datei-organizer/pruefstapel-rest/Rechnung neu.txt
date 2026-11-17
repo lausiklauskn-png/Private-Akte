@@ -1,0 +1,28 @@
+Autohaus Beispiel-Moser
+Gewerbering 8 · 84999 Beispielhausen
+
+Herrn
+Martin Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Rechnungs-Nr.: R-24-3381
+Kundennummer: 40071
+Kennzeichen: BSP-MW 412
+Datum: 31.05.2024
+
+Rechnung Inspektion
+
+Pos.   Bezeichnung   Menge   Betrag
+1   Inspektion nach Herstellervorgabe   1   189,00 EUR
+2   Motoröl 5W-30   4,5 l   76,50 EUR
+3   Ölfilter   1   14,90 EUR
+4   Bremsflüssigkeit wechseln   1   59,00 EUR
+5   Wischerblätter   2   32,80 EUR
+   Netto      312,10 EUR
+   19 % MwSt.      59,30 EUR
+   Gesamt      371,40 EUR
+
+Zahlbar ohne Abzug bis 14.06.2024 auf IBAN DE00 0000 0000 0000 0000 00.
+
+Autohaus Beispiel-Moser e.K. · Amtsgericht Beispielburg HRA 777 · IBAN DE00 0000 0000 0000 0000 00

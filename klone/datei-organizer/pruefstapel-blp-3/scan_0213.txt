@@ -1,0 +1,19 @@
+REISEKOSTENABRECHNUNG Arbeitnehmer                 Blumenwerkstatt Harkort
+
+Name: Jule Petermann                    Abrechnung erstellt am 12.03.2026
+Reise: Fachmesse Floristik Nord, Hansehafen
+Beginn 07.03.2026 06:30 Uhr      Ende 09.03.2026 19:45 Uhr
+
+Verpflegungspauschalen
+  Anreisetag                         14,00
+  Zwischentag 24 Std.                28,00
+  Abreisetag                         14,00
+  Kürzung Frühstück 2 x 5,60        -11,20
+Fahrt mit privatem Pkw zum Bahnhof Göttersen und zurück
+  2 x 23 km x 0,30 EUR               13,80
+Öffentlicher Nahverkehr Hansehafen (Belege verloren, Eigenangabe)
+                                      7,40
+Erstattungsbetrag                    66,00 EUR
+
+Hotel und Bahnfahrt wurden vom Betrieb direkt bezahlt.
+Auszahlung mit Gehalt März.  Unterschrift AN: J. Petermann   genehmigt: M.H.

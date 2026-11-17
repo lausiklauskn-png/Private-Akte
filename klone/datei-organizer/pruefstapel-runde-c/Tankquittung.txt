@@ -1,0 +1,19 @@
+Tankstelle Talblick Beispiel
+Bundesstraße 7
+45678 Talheim-Beispiel
+St.-Nr. 052/300/12345
+
+Diesel  52,10 L                    85,40  B
+   1,639 EUR/L  Säule 2
+Waschstraße Premium                12,90  B
+Brezel                              1,29  A
+--------------------------------------------
+Gesamt EUR                         99,59   
+Kreditkarte                        99,59   
+
+B 19 %  Netto 82,60  Steuer 15,69
+A  7 %  Netto 1,21  Steuer 0,08
+03.08.2024 08:55  Kasse 1  Beleg 22891
+TSE-Signatur 9f3a...e71  Zähler 448812
+Kundenbeleg - bitte aufbewahren
+Danke und gute Fahrt

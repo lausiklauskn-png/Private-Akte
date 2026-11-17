@@ -1,0 +1,17 @@
+@appbon
+BEISPIEL DROGERIE APP
+
+Dein digitaler Kassenbon
+Filiale Beispielhafen Hafenstraße
+Datum: 02.12.2025 12:10
+Bon-Nr.: D-7741-0012
+
+|Artikel|Menge|Betrag|
+|Sonnencreme LSF 30|1|4,95 EUR|
+|Zahnbürste|2|3,90 EUR|
+|Shampoo Repair|1|2,95 EUR|
+|Waschmittel Color|1|5,95 EUR|
+
+Summe: 17,75 EUR
+Bezahlt mit: Apple Pay
+Gespart mit der App: 0,00 EUR

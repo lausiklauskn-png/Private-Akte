@@ -1,0 +1,37 @@
+# Zulagenstelle für Altersvermögen Beispiel
+Zulagenstelle für Altersvermögen Beispiel · Zulagenweg 1 · 10000 Beispielberlin
+
+Frau Sabine Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Zulagenummer: 000000000000
+Datum: 08.07.2025
+
+# Bescheinigung über die Ermittlung der Altersvorsorgezulage für 2024
+
+Sehr geehrte Frau Brandtner,
+
+|Zulageart|Betrag|
+|Grundzulage|175,00 €|
+|Kinderzulage Lena|185,00 €|
+|Kinderzulage Jonas|300,00 €|
+|Kinderzulage Mia|300,00 €|
+|Summe|960,00 €|
+
+Die Zulage wurde Ihrem Altersvorsorgevertrag bei der Beispiel Lebensversicherung gutgeschrieben.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 08.07.2025
+
+@spalten 2
+## Mindesteigenbeitrag
+Die volle Zulage erhalten Sie, wenn Sie 4 % des Vorjahreseinkommens abzüglich Zulagen einzahlen.
+
+## Dauerzulagenantrag
+Mit einem Dauerzulagenantrag wird die Zulage jedes Jahr automatisch beantragt.
+
+## Festsetzung
+Sie können innerhalb eines Jahres nach Erteilung dieser Bescheinigung eine förmliche Festsetzung beantragen.
+
+@ende

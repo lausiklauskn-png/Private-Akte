@@ -1,0 +1,26 @@
+FRISCHMARKT Pöhler
+Filiale Tannweiler
+Ringstraße 21
+UID DE000000444
+
+Zitronen Netz
+  2 x 1,49        2,98 B
+Puderzucker 1kg
+  3 x 1,59        4,77 B
+Vanillezucker 10er             1,29 B
+Milch frisch 1,5% 1L
+  6 x 1,15        6,90 B
+Quark 40% 500g
+  4 x 1,79        7,16 B
+------------------------------------
+TOTAL EUR                     23,10
+
+Girocard                     23,10
+Kartenzahlung girocard
+Terminal-ID 00008049
+
+MwSt    Netto    Steuer   Brutto
+B 7%     21,59    1,51    23,10
+
+18.07.26 07:21  Bon 96093  Kasse 5
+Vie1en Dank und auf Wiedersehen

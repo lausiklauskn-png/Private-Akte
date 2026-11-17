@@ -1,0 +1,27 @@
+Kfz-Technik Brandhorst
+Inh. Henrik Brandhorst · Kfz-Meisterbetrieb · Teile & Reifen
+Ziegeleiweg 14 · 37199 Wolmershagen
+Tel. 05500 000 41-0 · werkstatt@brandhorst-kfz.example
+USt-IdNr. DE000000000 · St.-Nr. 00/000/00000
+
+Frau
+Marlies Petzold
+Birkenallee 9
+37199 Wolmershagen
+
+RECHNUNG Nr. 2026-0031                                   Datum: 15.01.2026
+Fahrzeug: Kompaktwagen 1.6, Kennz. WOH-MP 000, km-Stand 148.220, Annahme 13.01.2026
+
+Pos  Bezeichnung                               Menge    E-Preis     Gesamt
+1    Arbeitslohn: Bremsen VA erneuern          1,40 Std     82,00     114,80
+2    Bremsscheiben vorn (Satz)                    1 Stk     94,00      94,00
+3    Bremsbeläge vorn                             1 Stk     49,50      49,50
+4    Bremsflüssigkeit wechseln inkl. Material     1 psch     39,00      39,00
+
+Nettobetrag                                        297,30
+zzgl. 19 % MwSt                                     56,49
+Rechnungsbetrag                                    353,79
+
+Zahlbar bar oder per Karte bei Abholung. Altteile wurden auf Wunsch entsorgt.
+Bankverbindung: Volksbank Wolmershagen eG · IBAN DE00 0000 0000 0000 0000 00
+Kfz-Technik Brandhorst · Inhaber Henrik Brandhorst · Mitglied der Kfz-Innung

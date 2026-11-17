@@ -1,0 +1,25 @@
+Zweiradgroßhandel Hinrichsen & Pohl GmbH
+Am Güterkai 7
+27990 Bramstedtersiel
+USt-IdNr. DE000000000
+Steuernummer 00/000/00001
+
+Radwerk Tidemann
+Inh. Maren Tidemann
+Kornspeicherweg 14
+26999 Wesselhaven
+
+Rechnung Nr. RE-260114-0871                 Datum: 14.01.2026
+Kunden-Nr. 40718   Lieferdatum: 14.01.2026
+
+Pos  Bezeichnung                              Menge   Einzelpreis      Gesamt
+1    Schlauch 28" SV 40mm                        40          2,65      106,00
+2    Kette 9-fach 116 Glieder                    15         11,90      178,50
+3    Bremsbelag Scheibe organisch (Paar)         30          6,40      192,00
+4    Bowdenzug Schaltung Edelstahl               50          0,95       47,50
+------------------------------------------------------------------------------
+Nettobetrag                                                     524,00 EUR
+zzgl. 19 % USt                                                   99,56 EUR
+Rechnungsbetrag                                                 623,56 EUR
+
+Zahlungsziel: 14 Tage netto. IBAN DE00 0000 0000 0000 0000 00

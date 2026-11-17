@@ -1,0 +1,42 @@
+Hausverwaltung Beispiel Immobilien GmbH
+Verwalterweg 7 · 99902 Musterhausen am Rhein
+Tel. 0000-776655 · info@hv-beispiel.example
+
+Frau Amara Okonkwo
+Herrn Daniel Lehnert
+Am Kranenpfad 5, Wohnung 3.2
+99902 Musterhausen am Rhein
+
+Mietobjekt-Nr. 0118/41                                   16.03.2026
+
+Ihr Wechsel in die Wohnung 4.1 im selben Haus
+
+Sehr geehrte Frau Okonkwo, sehr geehrter Herr Lehnert,
+
+wie besprochen übersenden wir Ihnen den Mietvertrag für die Wohnung 4.1
+(4. OG links, 3 Zimmer, Küche, Bad, Balkon, ca. 84 m²) im Haus Am Kranenpfad 5
+in zweifacher Ausfertigung.
+
+Eckdaten:
+  Mietbeginn:            01.04.2026
+  Grundmiete:            1.010,00 €
+  Vorauszahlung Betriebskosten: 210,00 €
+  Vorauszahlung Heizkosten:     115,00 €
+  Gesamtmiete monatlich: 1.335,00 €
+  Kaution:               3.030,00 € (drei Nettokaltmieten)
+  Stellplatz TG Nr. 17:  65,00 € (gesonderte Vereinbarung)
+
+Der Mietvertrag für die bisherige Wohnung 3.2 wird im gegenseitigen
+Einvernehmen zum 31.03.2026 aufgehoben (Aufhebungsvereinbarung liegt bei).
+
+Bitte senden Sie uns beide Ausfertigungen des Mietvertrags sowie die
+Aufhebungsvereinbarung unterschrieben bis spätestens 27.03.2026 zurück.
+Eine Ausfertigung erhalten Sie gegengezeichnet zurück.
+
+Mit freundlichen Grüßen
+
+i. A. Corinna Beispielhaus
+Hausverwaltung Beispiel Immobilien GmbH
+
+Anlagen: Mietvertrag (2-fach), Aufhebungsvereinbarung Whg. 3.2,
+Hausordnung, Energieausweis (Kopie)

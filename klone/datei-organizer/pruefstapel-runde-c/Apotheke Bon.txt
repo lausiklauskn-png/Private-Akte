@@ -1,0 +1,25 @@
+Beispiel-Apotheke am Markt
+Marktplatz 2, 56789 Kleinbeispiel
+Tel. 0000 445566
+
+Kundin: Sommerfeld, G. (Kundenkarte 0912)
+
+Artikel  Menge  EUR
+Ramipril 5 mg N3 (Rezept)  1  5,00
+Zuzahlung gesetzlich
+Pantoprazol 20 mg N2 (Rezept)  1  5,00
+Zuzahlung gesetzlich
+Inkontinenzvorlagen Normal 28 St.  2  0,00
+Pflegehilfsmittel – Abrechnung Pflegekasse
+Einmalhandschuhe 100 St.  1  0,00
+Pflegehilfsmittel – Abrechnung Pflegekasse
+Magnesium Brause 20 St.  1  4,95
+Taschentücher Box  1  1,99
+
+Summe  16,94
+bar  20,00
+zurück  3,06
+
+Zuzahlungsquittung für Ihre Unterlagen – Belastungsgrenze beachten!
+07.11.2023  10:02  Kasse 1  Beleg 33187
+Gute Besserung wünscht Ihr Apothekenteam

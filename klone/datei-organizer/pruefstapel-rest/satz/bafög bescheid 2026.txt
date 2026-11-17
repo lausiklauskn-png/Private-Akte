@@ -1,0 +1,36 @@
+# Studierendenwerk Beispielstadt
+Amt für Ausbildungsförderung · Mensaplatz 1 · 93999 Beispielstadt
+
+Frau
+Lena Weidinger
+Hafergasse 17
+93999 Beispielstadt
+
+Förderungsnummer: BA-4471-2024-0815
+Datum: 14.01.2026
+
+# Änderungsbescheid über Ausbildungsförderung
+
+Sehr geehrte Frau Weidinger,
+
+aufgrund Ihrer neuen Anschrift und der geänderten Miete wird der Bedarf ab Januar 2026 neu berechnet.
+
+Bitte reichen Sie die Mietbescheinigung (Formblatt 2) bis 28.02.2026 nach, sonst wird die Förderung vorläufig gekürzt.
+
+|Position|bisher|neu|
+|Grundbedarf|475,00 EUR|475,00 EUR|
+|Wohnpauschale|380,00 EUR|380,00 EUR|
+|Anrechnung Einkommen Eltern|-243,00 EUR|-198,00 EUR|
+|Förderungsbetrag|612,00 EUR|657,00 EUR|
+
+Mit freundlichen Grüßen
+@unterschrift
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Studierendenwerk Beispielstadt, Mensaplatz 1, 93999 Beispielstadt, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

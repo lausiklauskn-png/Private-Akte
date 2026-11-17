@@ -1,0 +1,10 @@
+ZahlFlink Payments S.à r.l.
+Monatsabrechnung Händlerkonto         Februar 2026
+Händler: Kettler Systemhaus – Onlineshop         erstellt 01.03.2026
+
+Eingegangene Zahlungen (23 Transaktionen)             3.418,70 EUR
+Transaktionsgebühren 2,49 % + 0,35 EUR je Zahlung       -93,18 EUR
+Rückbuchungsgebühr (1 Fall)                             -14,00 EUR
+Auszahlung auf Bankkonto                              3.311,52 EUR
+
+Gebühren gesamt Februar: 107,18 EUR (Finanzdienstleistung, ohne Umsatzsteuer)

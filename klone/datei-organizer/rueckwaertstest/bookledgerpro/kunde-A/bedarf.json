@@ -1,0 +1,35 @@
+{"titel": "Belege, Kasse und Steuer für Geschenkeladen und Haushalt ordnen",
+ "kunde": {"firma": "Geschenkeladen Beispielmann", "ansprechpartner": "Sabine Beispielmann", "mail": "sabine@geschenkeladen-beispiel.example"},
+ "bereiche": {
+  "1": ["Quittungen und Rechnungen im Schuhkarton", "Rechnungen kommen teils per E-Mail", "Belege teils nur als Handyfoto", "Excel-Tabelle", "Kassenbuch auf Papier, Kassenzählung abends auf einem Zettel", "Onlinebanking-Auszüge als PDF"],
+  "2": ["Belege sammeln und einsortieren", "Tageskasse zählen und festhalten", "Umsatzsteuer und Rücklage im Blick behalten", "Unterlagen an den Steuerberater geben", "Haushaltsausgaben der Familie getrennt führen", "Kontoauszug abgleichen"],
+  "3": [{"text": "Inhaberin", "anzahl": 1}, {"text": "Aushilfe im Laden", "anzahl": 2}, {"text": "Steuerberater", "anzahl": 1}, {"text": "Familie (Haushalt)", "anzahl": null}],
+  "4": ["Belege müssen abgetippt und einsortiert werden", "Kassenzettel geht gern verloren", "Steuerberater muss alles abtippen und schimpft jedes Quartal", "Ich weiß nie, wie viel Umsatzsteuer gerade fällig ist", "Ich weiß nicht, was ich zurücklegen müsste", "Laden und Familie laufen durcheinander"],
+  "5": ["Belege kommen auf drei Wegen: Papier, E-Mail, Foto", "Kassenstand nur auf losem Zettel, nicht fest abgelegt", "Keine Stelle, an der alles zusammenläuft", "Umsatzsteuer wird nirgends laufend ausgerechnet"],
+  "6": [
+   {"text": "Belege nur abfotografieren, Abtippen und Einsortieren abgenommen bekommen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Abtippen mehr, kein Schuhkarton"}},
+   {"text": "Kasse abends zählen und sauber festhalten, später nicht heimlich änderbar", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Finanzamt hat nichts zu meckern, Zettel geht nicht mehr verloren"}},
+   {"text": "Alles bleibt auf Handy und PC, ohne Internet nutzbar, mit Passwort, keine Cloud", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Daten bleiben bei mir"}},
+   {"text": "Dem Steuerberater eine fertige Datei schicken", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Steuerberater muss nicht mehr abtippen"}},
+   {"text": "Auf einen Blick Umsatzsteuer, Rücklage und Kassenstand heute sehen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "ich weiß, was fällig ist und was ich zurücklegen muss"}},
+   {"text": "Laden und Familie getrennt führen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Durcheinander zwischen Geschäft und Haushalt"}},
+   {"text": "Kontoauszug einlesen und abhaken", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "wäre nett"}}
+  ],
+  "7": ["Kein Schuhkarton mehr, alle Belege an einer Stelle", "Höchstens zehn Minuten am Tag", "Kassenbuch, an dem das Finanzamt nichts auszusetzen hat", "Ich weiß jederzeit, was an Umsatzsteuer fällig ist"],
+  "8": ["Das System muss Belege aus einem Foto übernehmen und den Inhalt selbst auslesen.", "Das System muss Belege selbst einsortieren, soweit es geht.", "Das System muss Rechnungen aus E-Mails aufnehmen können.", "Das System muss den abends gezählten Kassenstand festhalten.", "Das System muss verhindern, dass ein festgehaltener Kassenstand später heimlich geändert wird.", "Das System muss die fällige Umsatzsteuer anzeigen.", "Das System muss anzeigen, was zurückgelegt werden sollte.", "Das System muss den Kassenstand von heute anzeigen.", "Das System muss eine fertige Datei für den Steuerberater erzeugen.", "Das System muss Laden und Haushalt getrennt führen.", "Das System muss Kontoauszüge einlesen und abhaken lassen."],
+  "9": ["Einrichten an einem Nachmittag", "Danach höchstens zehn Minuten am Tag", "Abläufe für die Aushilfen (z. B. Kasse zählen) noch klären"],
+  "10": ["Android-Handy im Laden", "Windows-PC im Büro", "Muss ohne Internet funktionieren", "Passwortschutz", "Keine Cloud"],
+  "11": ["Excel-Tabelle", "Kassenbuch auf Papier", "Onlinebanking (Auszüge als PDF)", "E-Mail-Postfach"],
+  "12": ["Datei an den Steuerberater", "Kontoauszüge aus dem Onlinebanking als PDF", "Rechnungen aus E-Mails"],
+  "13": ["Quittungen und Rechnungen (Papier, Foto, E-Mail)", "Tägliche Kassenzählung", "Umsätze des Ladens", "Haushaltsausgaben der Familie", "Kontoauszüge"],
+  "14": ["Personenbezogene Daten: ja (Familie, Rechnungsadressen)", "Mit Passwort geschützt", "Keine Cloud, Daten bleiben auf eigenen Geräten", "Kassenaufzeichnungen dürfen nicht nachträglich unbemerkt änderbar sein"],
+  "15": ["Budget-Rahmen: einmalig bis etwa 200 Euro (Angabe der Kundin)", "Einrichtung an einem Nachmittag", "Aufwand danach höchstens zehn Minuten am Tag", "Anforderungen des Finanzamts an das Kassenbuch"],
+  "18": [
+   {"text": "Welches Dateiformat braucht der Steuerberater?", "wer": "Steuerberater", "bis": ""},
+   {"text": "Welche Vorgaben des Finanzamts gelten genau für die Bargeldkasse?", "wer": "Steuerberater", "bis": ""},
+   {"text": "Dürfen bzw. sollen die Aushilfen die Kasse selbst erfassen?", "wer": "Sabine Beispielmann", "bis": ""},
+   {"text": "Wie viele Belege fallen ungefähr im Monat an?", "wer": "Sabine Beispielmann", "bis": ""},
+   {"text": "Wie viel Zeit kostet Belege und Kasse heute im Monat?", "wer": "Sabine Beispielmann", "bis": ""},
+   {"text": "Soll das Handy mit dem PC abgeglichen werden, und wie ohne Cloud?", "wer": "Sabine Beispielmann", "bis": ""}
+  ]
+ }}

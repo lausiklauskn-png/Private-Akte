@@ -1,0 +1,12 @@
+ELKATEC Elektrogroßhandel GmbH & Co. KG
+Rechnung 26-0077402                                  07.05.2026
+Kd.-Nr. 104417   Lieferschein 7771840   Komm.: PV Stadlmair (AC-Seite)
+
+1  H07RN-F 5G6   Gummischlauchleitung 5G6 Ring 50m        1 Rg   246,00   246,00
+2  NH00-Tr       NH-Sicherungslasttrenner Gr.00 3p        1 St    52,00    52,00
+3  UESS-T1T2     Ueberspannungsableiter Typ 1+2 4-pol     1 St   168,00   168,00
+4  HUT-KL16      Durchgangsklemme 16mm²                  20 St     1,70    34,00
+
+Netto-Warenwert   500,00
+MwSt 19 %         95,00
+Gesamtbetrag      595,00   EUR

@@ -1,0 +1,16 @@
+mobilstrom e-roaming GmbH · Friedricbstraße 000 · 10117 Berlin
+
+Monatsrecbnung Ladekarte                          Nr. MS-2608-0044171
+Abrechnungsmonat August 2026            Rechnungsdatum 02.09.2026
+Vertragspartner: Physiotherapie & Massagepraxis Lindenhof       Ladekarte Nr. 0000-4171
+
+Datum     Ladestation                      kWh     Betrag netto
+04.08.    Kasssel, Parkhaus Friedrichsplatz  18,4       9,02
+12.08.    Göttingen, Kaufpark               22,1      10,83
+27.08.    Witzenhausen, Marktplatz          16,3       7,99
+Grundgebühr Ladekarte                                  4,01
+Summe netto                                           31,85
+USt 19 %                                               6,05
+Rechnungsbetrag                                       37,90 EUR
+
+Fahrzeug: Renault Kangoo E-Tech. Abbiichung in 5 Tagen.

@@ -1,0 +1,9 @@
+{"bausteine":[
+{"katalog":"liste","name":"Digitale Ablage (Hängeregister) nach Person und Thema, Unterlagen lokal auf dem Gerät gespeichert","groesse":"mittel","deckt":["B-20","B-21","B-30"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Fristen je Unterlage speichern mit rechtzeitiger Erinnerung","groesse":"mittel","deckt":["B-20","B-31"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Briefvorbereitung an Ämter aus Vorlagen mit Angaben der Unterlage, Ausgabe zum Drucken","groesse":"mittel","deckt":["B-22","B-32"],"faktoren":["druck"]},
+{"katalog":"neu","name":"Darstellung mit großer, gut lesbarer Schrift (einstellbar)","groesse":"klein","deckt":["B-23","B-33"],"faktoren":[]},
+{"katalog":"liste","name":"Abteilungen Versicherungen, Finanzen und Vollmachten mit Übersicht über Beiträge und Kontostände","groesse":"mittel","deckt":["B-24","B-34","B-35"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Selbsttätiger Versand von Antworten an Ämter bei nahender Frist","groesse":"mittel","deckt":["B-25","B-36"],"faktoren":["server"]},
+{"katalog":"datei","name":"Gemeinsamer Zugriff über das Internet: Bruder und Betreuerin lesen und schreiben mit","groesse":"gross","deckt":["B-26","B-37"],"faktoren":["nutzer","server"]}
+]}

@@ -1,0 +1,47 @@
+Prüfstapel BLP-4 – 120 erfundene Belege (Belegjahr 2026)
+
+Betrieb
+  Buchhandlung Lindenblatt, Inh. Friederike Ansorge e.K., Marktgasse 7, 37999 Wehrstedt
+  Sortimentsbuchhandlung mit Antiquariat, Papeterie, Lesecafé, Ticket-Vorverkauf und Paketshop.
+  Regelbesteuert. Beschäftigte: Jonas Hartwig (Buchhändler), Mirela Kostić (Minijob),
+  Tabea Runge (Auszubildende). Firmenwagen Kombi WEH-LB 26 (ab April 2026).
+  Alles ist erfunden: Firmen, Personen, Orte, Nummern. IBAN nur "DE00 0000 …", USt-IdNr. "DE0000000xx".
+
+Dateien
+  120 Textdateien (*.txt) im Zustand "nach Texterkennung", Dateinamen ohne Bezug zum Inhalt.
+  ERWARTUNG.json: Soll-Werte je Datei (konto, richtung, betrag, datum, ust, aussteller).
+  In 24 Belegen stehen einzelne OCR-Tippfehler in Wörtern (meist q statt g), nie in Beträgen,
+  Daten oder im Namen des Ausstellers.
+
+Konventionen der Soll-Werte
+  konto      genau ein Konto der Kontenliste, aus Sicht der Buchhaltung der Buchhandlung.
+  richtung   selbst ausgestellte Belege = einnahme, Belege anderer = ausgabe.
+             Privateinlage = einnahme, Privatentnahme = ausgabe.
+             Ausnahmen bei selbst erstellten Belegen, die Ausgaben sind: Lohnabrechnungen (4120),
+             Eigenbeleg Kassenentnahme (1800), Eigenbeleg Reisekosten der Inhaberin (4670).
+  datum      Belegdatum (Rechnungs-, Bon-, Bescheid-, Abrechnungsdatum), nicht Liefer-/Leistungs-/Fälligkeitsdatum.
+  betrag     zu zahlender Bruttobetrag, wörtlich im Text.
+  ust        19 oder 7; bei gemischten Belegen der Satz mit dem größeren Betrag; 0 bei steuerfrei,
+             nicht steuerbar, Reverse Charge oder ohne Umsatzsteuerausweis (auch Versicherungen mit
+             Versicherungsteuer, Bescheide, Beiträge); null bei Lohn, Eigenbelegen über Entnahme/Einlage
+             und Reisekostenpauschalen.
+  aussteller Name wie im Text geschrieben (bei fremden Belegen auch in Großschreibung des Belegkopfs).
+
+Besonderheiten
+  - Lohnabrechnungen: betrag = Auszahlungsbetrag (nicht Gesamtbrutto).
+  - Kartenterminal-Monatsabrechnung, Bank- und Zahlungsdienst-Abrechnung: betrag = Entgelte, nicht der Kartenumsatz.
+  - Strom-Jahresabrechnung: betrag = Nachzahlung (Gesamtkosten und Abschläge stehen ebenfalls im Text).
+  - Gutschrift des Barsortiments (Remission): Konto 3300, richtung nach Regel "ausgabe", betrag positiv.
+  - Eigene Gutschrift an einen Kunden und eigene Zahlungserinnerung: Konto 8300, richtung "einnahme".
+  - Mahnkosten/Verzugszinsen eines Lieferanten (Hauptforderung bezahlt): 4980, ust 0.
+  - Gaststättenbelege 2026: Speisen 7 %, Getränke 19 %; ust nach dem größeren Teil.
+  - Gemischte Lieferantenrechnungen: Barsortiment mit Kalendern (3300/7), Geschenkgroßhandel mit Büchlein (3400/19).
+  - Bücher für den Wiederverkauf = 3300; Fachbuch für die eigene Handbibliothek, Fachmagazin und Tageszeitung = 4940.
+  - Beitragsrechnung der privaten Krankenversicherung der Inhaberin, vom Geschäftskonto bezahlt = 1800 (ust 0).
+  - Paketdienst: Versandentgelte an ihn = 4910; eigene Rechnung über Paketshop-Vergütung an ihn = 8500.
+  - Steuerberater: Buchführung = 4955, betriebswirtschaftliche Beratung = 4950; Lohnbüro = 4955.
+  - Hotel/Bahn je nach Reisendem: Mitarbeiter = 4660, Inhaberin = 4670.
+  - Geschenke: bis 50 EUR je Empfänger = 4630, Präsentkorb 94,90 EUR = 4635.
+  - Anschaffungen: über 800 EUR netto = 0400/0410/0320; 250 bis 800 EUR netto selbstständig nutzbar = 0480.
+  - Auslandsfälle: Ausfuhr Schweiz/Norwegen (8120), innergemeinschaftliche Lieferungen AT/NL (8125),
+    Reverse Charge Irland (4600) und Niederlande (4980), Zahlungsdienst Luxemburg (4970).

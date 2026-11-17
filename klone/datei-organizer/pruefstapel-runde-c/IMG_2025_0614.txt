@@ -1,0 +1,117 @@
+[Scan Teil 1 von 4]
+MegaMrkt Beispil
+Verbrauchermarkt Mühlbrück
+Gewercpark 1
+34567 Mühlbrück om See
+
+EUR
+ANZUENDER 32ST                      2,49  B
+JOGHURT NATUR 00G                  3,56  
+   4 Sfk   0,B9
+KATZENFUTTER 12X85G                 5,49  B
+PPPTELLER 50ST                     3,49  8
+SFKT TROCKEN 0,75                   4,49  
+WASCHMITTEL 4OWL                    9,99  B
+SALAT EISBERG                       0,99  A
+ZUCKER 1G                          1,19  A
+TOILETTENPAPI l0X                 4,99  B
+TEE PFEFFERMINZ                     1,29  A
+BROTZEITPLATTE                     14,99  A
+SONNFBL.OEL 1L                    14,94  A
+   6 Stk x  2,49
+PAPRIKA MIX 500                    2,49  A
+PFAND KASTEN BIER                   3,10  8
+ERDBEEREN 500G                     20,94  A
+   6 Stk x  3,49
+[Scan Teil 2 von 4]
+ISTEE PFIRSICH 1,5L                ,19  B
+TOAST8ROT VOLLK.                    1,39  A
+BFHER ,3L 50ST                    2,9  B
+SPARERIB MARIN.                    8,99  A
+TOMATEN PASIFRT                    0,79  A
+LUMFNSTRAUSS                       7,99  A
+KOCHSCHINKEN 200G                   2,29  A
+FISCHSTAFBCHEN 0ST                 4,49  A
+MARMELADE FRDEER                   1,79  A
+SERVIETTEN 3LG 50ST                 1,99  B
+GURKE 5TUEK                        0,69  A
+SCHWEINFNACKFN MARINIERT           11,49  A
+MUFSLI KNUSPER                     11,56  A
+   4 Stk x  2,89
+QUARK 40% 500G                      1,49  A
+MINERALWASSER 12X1L                 5,49  A
+STEAK RIND 2T                     l2,99  A
+KAFFEEBOHNEN 1KG                   13,99  A
+PFAND 12X0,25                       3,30  B
+SAHNF 200ML                         0,9  A
+GRILLKAES 2ST                      2,79  A
+ALUFOLIE 30M                        ,79  B
+GOUDA JUNG SCHEIBEN                 3,98  A
+   2 Stk x  l,99
+[Scan Teil 3 von 4]
+KECHENROLL 4X                     3,49  B
+KARTOFFELN FK 2,SKG                 3,29  A
+SAHNESTEIF 3ER                      0,69  A
+BROETCHEN 10ER                      2,99  A
+KETHUP 500ML                       1,99  A
+COLA 61,SL                         S,94  B
+ZITRONEN NETZ                       1,49  A
+KARTOFFFLSALAT 1KG                  3,9  A
+HAEHCHEN8RUT 1KG                  9,89  A
+TEELICHER 50ST                     2,99  B
+MOEHREN 1KG                         1,19  A
+MOZZARELLA 125G                     5,10  A
+   6 5k x  0,85
+OLIVENOEL 0,75L                     7,99  A
+NU5SNOUGATCREME                     6,98  A
+   2 5tk x  3,49
+HONIG 50OG                          4,99  A
+MFHL TYPE 405 KG                   0,79  A
+AEPFEL EL5TAR 2KG                   3,99  A
+SCHOKOLADE VOLLMILCH                1,19  A
+BAUERNBROT 1KG                      ,49  A
+TRAUBEN HELL S00G                   2,79  A
+PFAD 6X0,25                        1,50  B
+EIER FRLAND 1OT                  3,29  A
+[Scan Teil 4 von 4]
+BRATWU5T GROB 1O5T                 6,99  A
+BUTTER 250G                         2,39  A
+EMMENTAER 400G                     4,49  A
+WEIS5WEIN HAL8TR.                   5,49  
+BATTERIEN AA BST                    5,99  B
+GUMMIBAERCHEN 3O0G                  1,29  A
+RINDERHCK 500G                    32,94  A
+   6 Stk x  5,49
+CRFLKS 750G                     2,4  A
+SALAMI AM STUECK                    3,9  A
+TORTFN8ODEN HELL                    1,89  A
+ZWBELN lKG                        ,29  A
+BER PILS 20O,5                   14,99  8
+MUELLBEUTEL 35L                     l,89  B
+LACH5FILET TK S0OG                  7,99  A
+5PUELMITTEL 900ML                   1,59  B
+H-MILCH 1,5% 1L                     2,18  A
+   2 Stk x  1,09
+SPINAT TK 750G                      1,59  A
+KAESEPLATE FES.                  12,99  A
+GRILKOHLE 1OKG                     8,99  8
+NUDELSALAT 1KG                      4,49  A
+KEKSF BUTTER                        1,49  A
+CHIPS PAPRIKA                       3,58  A
+   2 Stk x  1,79
+DUSCHGEL 25ML                      l,49  8
+--------------------------------------------
+SUMME                             412,12   
+Arnzahl Artikel: 112
+
+EC-KARTE KONTAKTLOS               41,12   
+
+MwSt   Satz     Neto     Steuer    Brutfo
+A      7,0%    291,09     20,38    3l1,47
+B     l9,0%     84,5B     1,7    100,65
+
+14.0.2025  09:18  Kasse 03  Bon 2209  Bed. 11
+
+Danke für Ihren Einkauf
+TSE-Trasaktion 58B013  5ig.-Zähler 1209988
+Kasse BSP-MM-03

@@ -1,0 +1,29 @@
+Beispielmarkt Online-Versand · Logistikallee 50 · 99960 Beispielhausen
+USt-IdNr. DE000000000
+
+RECHNUNG (E-Rechnung, XRechnung-Ausdruck)
+
+Rechnungsnummer:  BM-RE-2026-0337815
+Rechnungsdatum:   14.03.2026
+Bestell-Nr.:      000-1182734-5512098
+Kundennummer:     BMK-0711093
+Lieferdatum:      13.03.2026
+
+Rechnungsempfänger / Lieferanschrift:
+Markus Feldhaus, Mühlbachstraße 140, 99905 Musterhausen am Rhein
+
+Pos Art.-Nr.   Bezeichnung                          Menge  Einzel   Gesamt
+1   BM-447120  Kinder-Drehstuhl „Flitzi“, blau         1    89,99    89,99
+2   BM-310544  Bettwäsche-Set Weltraum 135x200         2    24,95    49,90
+3   BM-902211  Schreibtischunterlage, 60x40            1     9,99     9,99
+                                              Summe brutto        149,88 €
+                                    darin 19 % USt                 23,93 €
+
+Zahlungsart: Kauf auf Rechnung
+Bitte überweisen Sie den Rechnungsbetrag bis zum 28.03.2026 auf:
+Empfänger: Beispielmarkt Online-Versand
+IBAN DE00 0000 0000 0000 0000 00
+Verwendungszweck: BM-RE-2026-0337815
+
+Rücksendungen sind innerhalb von 30 Tagen ab Erhalt möglich.
+Vielen Dank für Ihren Einkauf!

@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "Darlehen Jahresauszug 2025.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Finanzen & Konten",
+   "absender": "Marschländer Volksbank eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Finanzen & Konten",
+   "absender": "Marschländer Volksbank eG",
+   "person": null,
+   "frist": "2026-12-15"
+  },
+  {
+   "datei": "Steuerbescheid Gemeinde.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinde Uhlenhorn",
+   "person": null,
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "Grundsteuer Aenderung Tiedemann.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinde Süderlohe",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Amtskasse Wiedmoor-Land",
+   "person": null,
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Rechnung Dach Hinrichsen.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dachdeckerei Hinrichsen & Sohn GmbH",
+   "person": null,
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "Angebot Fenster.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Tischlerei Jessen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Feuerstaettenbescheid.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bevollmächtigter Bezirksschornsteinfeger Olaf Martensen",
+   "person": null,
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "IMG_20250930_0002.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Schornsteinfegermeister Olaf Martensen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Zettel Briefkasten.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Schornsteinfegerbetrieb Martensen",
+   "person": null,
+   "frist": "2026-03-17"
+  },
+  {
+   "datei": "Wartungsvertrag Therme.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Heizung-Sanitär Lorenzen",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Lorenzen Notdienst.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Heizung-Sanitär Lorenzen",
+   "person": null,
+   "frist": "2025-02-07"
+  },
+  {
+   "datei": "Klaeranlage Protokoll 2025.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Abwassertechnik Wulff GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Baugenehmigung Carport.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Kreis Wiedmoor – Der Landrat – Untere Bauaufsichtsbehörde",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Grundbuch Loeschung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Amtsgericht Marschhaven – Grundbuchamt –",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Maler Erinnerung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Malerbetrieb Ketelsen",
+   "person": null,
+   "frist": "2025-09-12"
+  },
+  {
+   "datei": "Wasserbehoerde Dichtheit.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Kreis Wiedmoor – Untere Wasserbehörde",
+   "person": null,
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Strom 2025 Endabrechnung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Küstenwatt Energie GmbH",
+   "person": "Henning Brodersen",
+   "frist": "2026-02-20"
+  },
+  {
+   "datei": "Gas Abschlag neu.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Gemeindewerke Wiedmoor",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Wasser Abwasser 2025.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Wasserverband Norder-Wiedmoor",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Heizoel Lieferschein-Rechnung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Brennstoffhandel Asmussen KG",
+   "person": null,
+   "frist": "2025-09-19"
+  },
+  {
+   "datei": "Kuendigung Strom.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Henning Brodersen",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Auftragsbest Deichstrom.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Deichstrom eG",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Zaehlerkarte.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Netzgesellschaft Wiedmoor mbH",
+   "person": null,
+   "frist": "2025-12-12"
+  },
+  {
+   "datei": "Ihre Heizkosten - Post.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "WärmeWende Nord Beratungs-GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Abfall 2026.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Abfallwirtschaft Kreis Wiedmoor (AöR)",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "mahnung wasser.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Wasserverband Norder-Wiedmoor",
+   "person": null,
+   "frist": "2026-07-10"
+  },
+  {
+   "datei": "Brunnen Analyse.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Befund",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Institut für Wasser- und Umweltanalytik Marschhaven",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszug_Maerz.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Gemeindewerke Wiedmoor",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "PV Einspeisung 2025.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Netzgesellschaft Wiedmoor mbH",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Aufsitzmaeher.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Landtechnik Paulsen GmbH",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "bon_kettensaege.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Heimwerker-Kontor Marschhaven",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Eiche Genehmigung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Gemeinde Uhlenhorn – Der Bürgermeister",
+   "person": null,
+   "frist": "2026-02-28"
+  },
+  {
+   "datei": "Angebot Pflaster Auffahrt.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Garten- und Landschaftsbau Thode",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief Nachbar.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Korrespondenz",
+   "absender": "Familie Carstensen",
+   "person": null,
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "Wasser 2025.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Sielverband Süderloher Koog",
+   "person": null,
+   "frist": "2025-05-15"
+  },
+  {
+   "datei": "Baumschule.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Baumschule Petersen-Hof",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Vermessung Grenztermin.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Termin",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Öffentlich bestellter Vermessungsingenieur Dipl.-Ing. Rolf Hennings",
+   "person": null,
+   "frist": "2025-11-06"
+  },
+  {
+   "datei": "Rechnung WaMa.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Bahnsen GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Einkauf Samstag.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektronikhaus Wiedmoor",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Fwd Ihre Bestellung 4471-22.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Bürobedarf-Versand Lütt & Söhne GmbH",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Kuehlschrank Garantie plus.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Bahnsen GmbH",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "KV Geschirrspueler.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Nissen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Kundendienst Rechnung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Nissen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rueckruf Trockner.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Nordlicht Hausgeräte Vertriebs-GmbH",
+   "person": "Maren Brodersen",
+   "frist": "2025-08-31"
+  },
+  {
+   "datei": "Akkuschrauber abgelehnt.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Werkzeugwerk Halvorsen Service-Center",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Notebook Pruefbericht.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Befund",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "PC-Doktor Marschhaven",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Versicherung 2026.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Nordmark Versicherung a. G.",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Police Kfz neu Nordmark.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Nordmark Versicherung a. G.",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Hauptzollamt Kombi.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Marschhaven",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "HU Bericht Mai 26.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Prüfstelle Wiedmoor – Ing.-Büro Detlefsen",
+   "person": "Gerd Tiedemann",
+   "frist": "2026-06-22"
+  },
+  {
+   "datei": "Inspektion Kombi.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Clausen KG",
+   "person": "Henning Brodersen",
+   "frist": "2025-11-28"
+  },
+  {
+   "datei": "Anhoerung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kreis Wiedmoor – Der Landrat – Bußgeldstelle",
+   "person": "Ilse Tiedemann",
+   "frist": "2025-08-01"
+  },
+  {
+   "datei": "SMS Werkstatt.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Clausen KG",
+   "person": null,
+   "frist": "2026-04-14"
+  },
+  {
+   "datei": "Kuendigung Hansekontor.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Gerd Tiedemann",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Wildunfall Abrechnung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Nordmark Versicherung a. G.",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Kaufvertrag SUV.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Momme Ingwersen",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Krad Saison Police.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Hansekontor Assekuranz AG",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "zoll_motorrad.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Motorrad",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Marschhaven",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "moto_rechnung_mai.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "ZWEIRAD SIEVERS",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (7).txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Hansekontor Assekuranz AG",
+   "person": "Henning Brodersen",
+   "frist": "2026-05-04"
+  },
+  {
+   "datei": "HU faellig Krad.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Termin",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Kfz-Prüfstelle Wiedmoor – Ing.-Büro Detlefsen",
+   "person": "Henning Brodersen",
+   "frist": "2026-06-13"
+  },
+  {
+   "datei": "Winterlager Flyer.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "ZWEIRAD SIEVERS",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Gebaeude Nachtrag PV.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Nordmark Versicherung a. G.",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brandkasse Beitrag.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Wiedmoorer Brandgilde von 1791 VVaG",
+   "person": null,
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Wasserschaden Kueche Handwerker.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Nordmark Versicherung a. G.",
+   "person": "Maren Brodersen",
+   "frist": "2025-03-14"
+  },
+  {
+   "datei": "PHV Anpassung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Hansekontor Assekuranz AG",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "RS Vertrag beendet.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Justitia Nord Rechtsschutz AG",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Bescheid Gebaeude.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Finanzkontor Thaden & Partner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "giro_2025_10.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Marschländer Volksbank eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Tagesgeld Q4.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Wiedmoor",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schreiben Anwalt Dach.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Haus & Wohnung",
+   "absender": "Kreditschutz-Kontor Deichhörn Inkasso GmbH",
+   "person": "Gerd Tiedemann",
+   "frist": "2026-01-20"
+  },
+  {
+   "datei": "Gasrechnung_letzte.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "NordInkasso Forderungsservice GmbH",
+   "person": "Henning Brodersen",
+   "frist": "2025-06-27"
+  },
+  {
+   "datei": "inkasso helm.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Hanseatische Forderungskasse AG",
+   "person": "Henning Brodersen",
+   "frist": "2026-08-21"
+  },
+  {
+   "datei": "Entgelt Info Bank.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Wiedmoor",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Karte September.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Marschländer Volksbank eG",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "FSA Bestaetigung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Bausparkasse Nordstern AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Dispo.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Marschländer Volksbank eG",
+   "person": "Henning Brodersen",
+   "frist": "2026-07-31"
+  },
+  {
+   "datei": "ESt 2024 Bescheid.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Marschhaven",
+   "person": null,
+   "frist": "2025-09-22"
+  },
+  {
+   "datei": "FA Erinnerung Erklaerung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Marschhaven",
+   "person": null,
+   "frist": "2025-11-14"
+  },
+  {
+   "datei": "Perso Maren.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Amt Wiedmoor-Land – Einwohnermeldeamt",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Meldebesch.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Amt Wiedmoor-Land – Einwohnermeldeamt",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "LoHi Beitrag.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Lohnsteuerhilfe Westküste e. V.",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bon Baumarkt.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Heimwerker-Kontor Marschhaven",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Retoure Jacke.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Modeversand Fördeblick",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Sofa Rechnung.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Möbelhaus Rickertsen GmbH & Co. KG",
+   "person": null,
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "scan_0044.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Landhandel-Markt Kattenbüll",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Mahnung Versandhaus.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Küstenkind Versand GmbH",
+   "person": "Maren Brodersen",
+   "frist": "2026-10-02"
+  },
+  {
+   "datei": "KK Beitrag ab Januar.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landkrankenkasse Westküste",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Fenja Kind krank.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landkrankenkasse Westküste",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "KG Unterlagen Henning.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Landkrankenkasse Westküste",
+   "person": "Henning Brodersen",
+   "frist": "2025-11-28"
+  },
+  {
+   "datei": "Arztbrief Knie.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Orthopädische Gemeinschaftspraxis Dres. Lüders und Brandt",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "HKP Zahn.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnarztpraxis Dr. Wiebke Momsen",
+   "person": "Ilse Tiedemann",
+   "frist": "2025-07-11"
+  },
+  {
+   "datei": "Rentenanpassung 2025.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Deutsche Rentenversicherung Nordküste",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "fuer_Finanzamt.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zusatzversorgungskasse der Kommunen Nord",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Riester 2025 Maren.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Nordmark Lebensversicherung AG",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Abrechnung 03-2026.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Marschland Stahlbau GmbH",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Renteninfo Maren.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Deutsche Rentenversicherung Nordküste",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Kindergeld Jonte ab Aug.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Nord",
+   "person": "Jonte Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Reise Jonte Harzfahrt.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinschaftsschule am Sieltor",
+   "person": "Jonte Brodersen",
+   "frist": "2025-03-21"
+  },
+  {
+   "datei": "OGS Gebuehr Fenja.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Schulverband Uhlenhorn-Holtwarden",
+   "person": "Fenja Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Schulbesch Jonte.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gemeinschaftsschule am Sieltor",
+   "person": "Jonte Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Heiratsurkunde neu.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Kattenbüll",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Gesundheit Maren Studio.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Fit am Deich Fitness- und Gesundheitsstudio",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Zeitung Preis.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Wiedmoorer Tageblatt Verlagsgesellschaft mbH",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Handy 10-25.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Nordlicht Mobil GmbH",
+   "person": "Henning Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Kuendigung Internet.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Küstennetz Breitband GmbH",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Streamfix beendet.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Flimmerkiste Streaming GmbH",
+   "person": "Maren Brodersen",
+   "frist": null
+  },
+  {
+   "datei": "Erbschaft Tante Bescheid.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Marschhaven",
+   "person": "Ilse Tiedemann",
+   "frist": "2025-12-29"
+  },
+  {
+   "datei": "ZVR Eintragung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Zentrales Vorsorgeverzeichnis der Notarkammern",
+   "person": "Gerd Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Notar Testament Rg.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notar Dr. Hauke Feddersen",
+   "person": null,
+   "frist": "2026-03-06"
+  },
+  {
+   "datei": "Ferienhaus Sommer.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Ferienhausvermittlung Lüttsand",
+   "person": null,
+   "frist": "2026-06-01"
+  },
+  {
+   "datei": "Faehre.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Fährlinie Halligblick",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "VHS Kurs.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Volkshochschule Wiedmoor e. V.",
+   "person": "Ilse Tiedemann",
+   "frist": "2026-02-24"
+  },
+  {
+   "datei": "Brief von Hanne.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Hanne Wolters",
+   "person": "Ilse Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Einladung Goldene.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Elke und Uwe Brodersen",
+   "person": null,
+   "frist": "2026-08-15"
+  },
+  {
+   "datei": "Danksagung.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Familie Paulsen",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Karton 3 Dachboden Inhalt.txt",
+   "haushalt": "h-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Gerd Tiedemann",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Aktenvernichtung Nachweis.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Reißwolf-Dienst Wiedmoor GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "alte Wohnung erledigt.txt",
+   "haushalt": "h-brodersen",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Wohnungsbaugenossenschaft Marschhaven eG",
+   "person": null,
+   "frist": null
+  }
+ ]
+}

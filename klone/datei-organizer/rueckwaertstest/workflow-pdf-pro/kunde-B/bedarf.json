@@ -1,0 +1,43 @@
+{
+  "titel": "Behördenbriefe fotografieren, auf Russisch verstehen und Formulare ausfüllen",
+  "kunde": {"firma": "Familie Beispielow (privat)", "ansprechpartner": "Oleg Beispielow", "mail": "oleg@beispielow.example"},
+  "bereiche": {
+    "1": ["Behördenbriefe kommen auf Papier", "Kollegen fragen, was drinsteht", "Sätze einzeln in den Übersetzer im Browser tippen", "Briefe liegen lose, keine Ordnung"],
+    "2": ["Behördenbriefe lesen und verstehen", "Formulare ausfüllen", "Briefe aufbewahren und wiederfinden", "Ausdrucken für die Behörde"],
+    "3": [{"text": "Oleg (liest Deutsch schlecht)", "anzahl": 1}, {"text": "Ehefrau (liest kein Deutsch)", "anzahl": 1}, {"text": "Behörde (bekommt das ausgefüllte Formular)", "anzahl": 1}],
+    "4": ["Das dauert ewig", "Ich muss immer jemanden fragen", "Ich weiß nicht sicher, welcher Satz was bedeutet", "Briefe finde ich später nicht wieder"],
+    "5": ["Deutsch lese ich schlecht, meine Frau gar nicht", "Abtippen in den Übersetzer ist mühsam", "Formulare gibt es nur auf Deutsch"],
+    "6": [
+      {"text": "Brief mit dem Handy fotografieren, sauberes PDF daraus", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "geht schnell, kein Abtippen"}},
+      {"text": "Brief auf Russisch lesen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "versteh selbst, was drinsteht, muss keinen fragen"}},
+      {"text": "Sehen, welcher russische Satz zu welcher Stelle im Brief gehört", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "sicher sein, was gemeint ist"}},
+      {"text": "Formulare auf Russisch ausfüllen, am Ende steht es auf Deutsch drin", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "\"am liebsten\" – kein Kollege nötig"}},
+      {"text": "Alles in Ordnern ablegen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "damit ich es wiederfinde"}},
+      {"text": "Ausdrucken für die Behörde", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Behörde will Papier"}}
+    ],
+    "7": ["Brief kommt, ich fotografiere ihn und verstehe ihn sofort auf Russisch", "Meine Frau kann die Briefe auch lesen", "Formulare selbst ausfüllen und ausdrucken", "Alle Briefe in Ordnern wiederfinden"],
+    "8": [
+      "Das System muss aus einem Handyfoto ein sauberes PDF machen.",
+      "Das System muss einen deutschen Brief auf Russisch anzeigen.",
+      "Das System muss zeigen, welcher übersetzte Satz zu welcher Stelle im Original gehört.",
+      "Das System muss Formularfelder auf Russisch ausfüllen lassen und sie auf Deutsch ins Formular schreiben.",
+      "Das System muss Briefe in Ordnern ablegen.",
+      "Das System muss abgelegte Briefe wiederfinden lassen.",
+      "Das System muss das PDF ausdrucken können."
+    ],
+    "9": ["Keine Schulung, ich will es sofort benutzen", "Meine Frau soll es auch bedienen können"],
+    "10": ["Läuft auf älterem Android-Handy", "Muss schnell gehen"],
+    "11": ["Übersetzer im Browser", "Handykamera"],
+    "12": ["Drucker zum Ausdrucken"],
+    "13": ["Fotos von Behördenbriefen", "PDFs", "ausgefüllte Formulare", "Übersetzungen"],
+    "14": ["personenbezogene Daten: ja (Behördenbriefe der Familie)"],
+    "15": ["Budget-Rahmen: möglichst kostenlos, höchstens 20 €", "Termin: sofort", "wenig Zeit"],
+    "18": [
+      {"text": "Welchen Drucker gibt es zu Hause, wie kommt das PDF dorthin?", "wer": "Oleg", "bis": ""},
+      {"text": "Soll die Frau ein eigenes Handy nutzen oder dasselbe?", "wer": "Oleg", "bis": ""},
+      {"text": "Höchstens 20 € einmalig oder im Monat?", "wer": "Oleg", "bis": ""},
+      {"text": "Welches Android, wie alt genau ist das Handy?", "wer": "Oleg", "bis": ""},
+      {"text": "Darf etwas fürs Übersetzen ins Internet gehen?", "wer": "Oleg", "bis": ""}
+    ]
+  }
+}

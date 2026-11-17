@@ -1,0 +1,21 @@
+08.0326, 2127 Mail - Nachricht
+Bestätigung Ihrer Kündigung mit Rufnummernmitnahme
+Von: Funkwelle <service@funkwelle.example>
+An: nadine.hollerbusch@example.org
+Datum: Mi, 7. Okt 2026 16:40
+Betreff: Bestätigung Ihrer Kündigung mit Rufnummernmitnahme
+Hallo Nadine Hollerbusch,
+schade, dass Sie gehen. Hiermit bestätigen wir Ihre Kündigung:
+Kundennummer: FW-30418877
+Tarif: Funkwelle Smart M
+Rufnummer: 0000-417233
+Vertragsende: 31.10.2026
+Rufnummernmitnahme: angefordert vom neuen Anbieter (Beispiel-Glasfaser Musterbach)
+Portierungstermin: 02.11.2026, zwischen 6 und 10 Uhr
+Ihre Rufnummer wird am Portierungstag zum neuen Anbieter übertragen. Für kurze Zeit kann
+es sein, dass Sie nicht erreichbar sind. Die Gebühr für die Mitnahme (6,82 €) stellen
+wir mit der Schlussrechnung in Rechnung.
+Die Raten für Ihr Smartphone laufen bis zum Ende weiter (noch 7 Raten zu 8,00 €).
+Wir würden uns freuen, Sie irgendwann wieder bei uns zu begrüßen.
+Ihr Funkwelle-Team
+hips:/mail.exampieimsg/6173440 un

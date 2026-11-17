@@ -1,0 +1,34 @@
+# Studierendenwerk Beispielstadt – Amt für Ausbildungsförderung
+Studierendenwerk Beispielstadt – Amt für Ausbildungsförderung · Mensaplatz 1 · 45670 Musterhausen
+
+Herrn Tobias Reuter
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Förderungsnummer: 400 000 0521
+Datum: 04.05.2026
+
+# Merkblatt: Ihr Weiterförderungsantrag für Oktober 2026
+
+Sehr geehrter Herr Reuter,
+
+Ihr Bewilligungszeitraum endet am 30.09.2026. Damit die Zahlung ohne Unterbrechung weiterläuft, stellen Sie den Wiederholungsantrag bitte bis zum 30.06.2026.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 04.05.2026
+
+@spalten 2
+## Was Sie brauchen
+Formblatt 1, Einkommenserklärung der Eltern (Formblatt 3), Immatrikulationsbescheinigung, Kontoauszüge zum Vermögen.
+
+## Online beantragen
+Über das Antragsportal können Sie alle Formblätter elektronisch einreichen. Eine Unterschrift ist dann nicht nötig.
+
+## Vermögen
+Vermögen bis 15.000 € bleibt anrechnungsfrei. Maßgeblich ist der Tag der Antragstellung.
+
+## Nebenjob
+Einkommen bis zur Minijobgrenze wird nicht angerechnet.
+
+@ende

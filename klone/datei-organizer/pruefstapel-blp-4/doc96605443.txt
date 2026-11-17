@@ -1,0 +1,20 @@
+druckfalter.example Onlinedruck GmbH
+Rotationsweg 1, 97999 Mainbernheim-Nord
+Rechnung per E-Mail - kein Postversand
+
+Rechnungsnummer: DF-3300918-26
+Rechnungsdatum:  20.05.2026
+Auftragsnummer:  A-7714420
+Rechnungsempfänger: Buchhandlung Lindenblatt, F. Ansorge, Marktgasse 7, 37999 Wehrstedt
+
+Produkt                                               Netto
+Flyer DIN lang, 2.500 Stück, 135 g Bilderdruck,
+beidseitig 4/4-farbig, Motiv "Sommerlesefest 2026"    74,90
+Standardversand                                        4,90
+
+Zwischensumme            79,80
+Umsatzsteuer 19,00 %     15,16
+Gesamtsumme              94,96 EUR
+
+Zahlungsart: Lastschrift (bereits eingezogen)
+USt-IdNr.: DE000000049

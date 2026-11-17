@@ -1,0 +1,21 @@
+# Kinder- und Jugendarztpraxis Beispiel-Yilmaz
+Parkweg 3 · 04999 Musterstadt
+
+Frau
+Nora Feldkamp
+Kirchgasse 3
+04999 Musterstadt
+
+Patient: Emil Feldkamp, geb. 19.06.2016
+Datum: 22.10.2025
+
+# Befundbericht Allergietestung
+
+Pricktest vom 20.10.2025: deutliche Reaktion auf Gräserpollen (Quaddel 6 mm) und Birke (5 mm). Hausstaubmilbe negativ.
+
+Empfehlung: Antihistaminikum bei Bedarf in der Pollensaison, Vorstellung zur Hyposensibilisierung im Herbst 2026 erwägen.
+
+Kontrolltermin vor der Pollensaison: Dienstag, 03.03.2026, 15:20 Uhr.
+
+Mit freundlichen Grüßen
+@unterschrift
