@@ -42,6 +42,22 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **Bedeutungssuche verbessern – Befund aus Sage-Protokol (Klaus 17.11.: „prüf nach, ob wir den Kern übernehmen können“; nur gelesen,
+  nichts gebaut):** Sage hat genau das am Tablet Gesehene gemessen und gelöst. Quellen dort: `docs/LEHRE-EMBEDDING-MATCH-KALIBRIERUNG.md`
+  (zuerst lesen), `docs/components/04_match.md` (Bau 04.C/F/G/H), `docs/components/22_such_widget.md` (Abschnitt Vorfilter),
+  `docs/HYBRID-MATCH-EINBAU.md`, Code `src/modules/04_match.js` (MIT, eine Datei, `window.SbkimMatch`).
+  (1) **Ursache:** der rohe Cosinus von multilingual-e5-small hat einen hohen Boden – unverwandte deutsche Texte liegen im Mittel bei
+  rund 0,82 (Spanne 0,77–0,85). Eine feste Schwelle auf dem rohen Wert trennt nicht; der Wert ist eine **Rangfolge, kein Urteil**.
+  (2) **Zentrierter Cosinus:** Mittelwert-Vektor abziehen, neu normieren – dann liegt Unverwandtes um 0 und nur Verwandtes klar
+  darüber. Für freien Text nimmt Sage den Mittelwert aus dem **eigenen wachsenden Bestand** (ab 3 Texten), nicht eine feste Konstante.
+  (3) **Hybrid:** BM25 (Wörter) und Vektor über Reciprocal Rank Fusion verschmelzen (`queryLocal` mit `hybrid:true`) – ein genauer
+  Wort-Treffer steht oben, auch wenn sein Vektor-Wert niedrig ist; am Tablet dort bestätigt. (4) **Mehrere Formulierungen** einer
+  Frage über eine Synonym-Karte, Listen verschmelzen (`queryLocalMulti`). (5) Kontext-Vorspann je Schnipsel wurde gemessen und
+  **verworfen**. (6) Schnipsel einzeln vergleichen statt zu einem Vektor mitteln trennt besser als Mitteln.
+  **Vorschlag für hier (nicht gebaut):** `04_match.js` als Klon mit Pin hereinholen; das Rechnen der Vektoren bleibt beim Klon der
+  Familienakte (über `window.SbkimEmbedding.embedQuery` anschließen), der Korpus kommt aus dem Index. Die Schwelle von 0.3.9
+  (roh ≥ 0,84) ist nach dieser Lehre der falsche Hebel und fällt dann weg. Offen: Sage vergleicht je Eintrag einen Vektor, der Klon
+  der Familienakte führt Abschnitte je Unterlage in einer eigenen Datenbank – der Anschluss braucht die Vektoren von dort.
 - **0.3.9 nach dem ersten echten Lauf am Tablet (Klaus 17.11.: Modell geladen, Bedeutungssuche rechnet):** (1) die Schwelle 0,80
   ließ alle Unterlagen als „dem Sinn nach“ durch – jetzt Nähe ≥ 0,84 und höchstens 0,04 unter dem besten, höchstens fünf; weiter
   geschätzt. (2) Was die Wörter treffen, steht oben (deine Unterlagen, dann Beispiele); „Passt vielleicht dem Sinn nach“ ist ein
