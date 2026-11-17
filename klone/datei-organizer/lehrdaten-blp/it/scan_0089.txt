@@ -1,0 +1,12 @@
+Sparkasse Regnitz-Main
+Einzahlungsquittung SB-Automat           Filiale Bamberg Hafen
+
+Datum 07.01.2026  09:14     Vorgang 000417
+
+Bareinzahlung auf Konto
+Kettler Systemhaus  IBAN DE00 0000 0000 0000 0000 00
+Betrag                          3.000,00 EUR
+Einzahler: Marek Kettler
+
+Notiz auf Beleg: Privateinlage aus Ersparnissen zur Stärkung der
+Liquidität – keine Betriebseinnahme.

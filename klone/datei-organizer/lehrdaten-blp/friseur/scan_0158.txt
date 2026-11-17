@@ -1,0 +1,12 @@
+ladewerk.example – Beleg für Ihren Ladevorgang
+
+Ladepunkt: Northeim Rathausparkplatz, Säule 2 (AC 22 kW)
+Start 20.07.2026 12:12   Dauer 1:45 h
+Ladearte: Haarstudio Federleicht
+
+Geladene Encrgie   33,54 kWh
+Preis je kWh       0,59 EUR
+Betrag brutto      19,79 EUR
+davon USt 19 %     3,16 EUR
+Netto              16,63 EUR
+Abrechnung über hinterlete Firmenkreditkarte

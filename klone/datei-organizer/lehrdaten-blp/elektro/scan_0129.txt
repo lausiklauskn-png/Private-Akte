@@ -1,0 +1,13 @@
+PAYLINK Kartenakzeptanz GmbH – Haendlerabrechnung Oktober 2026
+VP-Nr. 600114 · Elektro Brandhuber                     03.11.2026
+
+Transaktionen gesamt: 141       Kartenumsatz: 11.204,80 EUR
+
+Disagio girocard                      19,60
+Disagio Kreditkarten                  44,35
+Transaktionsentgelte                   9,87
+Rueckbelastungsgebuehr (1 Chargeback) 15,00
+Terminalmiete                         14,90
+Netto                                103,72
+USt (auf steuerpfl. Anteile)           5,68
+Lastschriftbetrag                    109,40 EUR

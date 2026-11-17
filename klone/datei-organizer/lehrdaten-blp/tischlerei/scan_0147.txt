@@ -1,0 +1,15 @@
+bueroversand-direkt.example
+BVD Bürobedarf Versand GmbH · Lagerweg 30 · 21999 Elbmarsch
+
+RECHNUNG 26-B-771204                  Datum 13.03.2026                  Kunde 4417220
+Tischlerei Vosskamp · Mühlenkamp 14 · 32791 Welsede
+
+ 1  Toner schwarz für MFC 3140, XL                   2 St        79,90     159,80
+ 2  Toner-Set CMY                                    1 Set      189,00     189,00
+ 3  Etiketten 105x48 A4, 100 Blatt                   2 Pk        12,40      24,80
+ 4  Versandtaschen C4 Fenster 250 St                 1 Krt       21,50      21,50
+
+Warenwert netto                                          395,10
+19 % MwSt                                                75,07
+Rechnungsbetrag EUR                                      470,17
+Kauf auf Rechnung, zahlbar bis 27.03.2026. USt-IdNr. DE000004461

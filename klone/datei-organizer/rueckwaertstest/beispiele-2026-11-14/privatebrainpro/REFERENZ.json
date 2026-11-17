@@ -1,0 +1,417 @@
+{
+ "app": "Private Brain Pro",
+ "stand": {
+  "repo": "lausiklauskn-png/Privat-Brain-Pro",
+  "commit": "27b275f",
+  "datum": "2026-11-13"
+ },
+ "quellen": [
+  "CLAUDE.md",
+  "README.md",
+  "docs/ZIEL-FUNKTIONEN-DESIGNSTAND-2026-10-24.md",
+  "docs/PLAN_2026-11-12_MICROSOFT-KONTEN.md",
+  "Dateiliste docs/ (Titel)",
+  "git log origin/main"
+ ],
+ "merkmale": [
+  {
+   "id": "M01",
+   "art": "zweck",
+   "text": "Eigene Dateien, Bilder und Nachrichten werden in einem gemeinsamen privaten Wissensbestand gesammelt, damit man sie nach Inhalt und Bedeutung wiederfindet und das Original öffnen kann.",
+   "gewicht": "kern",
+   "beleg": "docs/ZIEL-FUNKTIONEN-DESIGNSTAND-2026-10-24.md"
+  },
+  {
+   "id": "M02",
+   "art": "zweck",
+   "text": "Die Originale bleiben unverändert; die App führt nur einen Katalog mit Steckbrief, Bedeutungsvektor und Verweis auf das Original (liest nur, schlägt vor, bewegt nichts).",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md › Was dieses Repo ist; ZIEL-FUNKTIONEN"
+  },
+  {
+   "id": "M03",
+   "art": "zweck",
+   "text": "Die Datenhoheit bleibt beim Nutzer: Katalog und Suche arbeiten lokal auf dem Gerät, offline nutzbar.",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Privat und offline arbeiten"
+  },
+  {
+   "id": "M04",
+   "art": "nutzer",
+   "text": "Zielgruppe sind Privatpersonen, die ihre Daten nicht großen Anbietern anvertrauen wollen (Positionierung: in Heimarbeit gebaut, kein Konzern dahinter).",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Was dieses Repo ist"
+  },
+  {
+   "id": "M05",
+   "art": "nutzer",
+   "text": "Die Bedienung richtet sich an Nicht-Programmierer: Knöpfe statt Befehle, kurze Erklärungen hinter Info-Symbolen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md › Netzweit; Sitzung 3 (ⓘ-Klapper)"
+  },
+  {
+   "id": "M06",
+   "art": "plattform",
+   "text": "Native Android-App (signierte APK, Updates über die installierte App ohne Deinstallation).",
+   "gewicht": "kern",
+   "beleg": "README.md; docs/ANDROID.md"
+  },
+  {
+   "id": "M07",
+   "art": "plattform",
+   "text": "Native Windows-App (x64-Setup, unsigniert) mit demselben Funktionskern wie Android.",
+   "gewicht": "kern",
+   "beleg": "docs/BAUSTAND-WINDOWS.md; README.md"
+  },
+  {
+   "id": "M08",
+   "art": "plattform",
+   "text": "Zusätzlich eine installierbare Web-App (PWA) mit den Möglichkeiten des Browsers; direkte Geräte-Mail und native Gerätefunktionen nur in Android/Windows.",
+   "gewicht": "wichtig",
+   "beleg": "README.md"
+  },
+  {
+   "id": "M09",
+   "art": "plattform",
+   "text": "Keine native iOS-, macOS- oder Linux-Ausgabe.",
+   "gewicht": "beiwerk",
+   "beleg": "README.md"
+  },
+  {
+   "id": "M10",
+   "art": "plattform",
+   "text": "Oberfläche in vier Sprachen (Deutsch, Englisch, Russisch, Polnisch) mit Hell/Dunkel und mehreren Farbthemen.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Sprache, Befehle, Design; README.md"
+  },
+  {
+   "id": "M11",
+   "art": "bereich",
+   "text": "Hauptbereiche: Suche als Startseite, Dateien hinzufügen, Explorer, Postfach (Mail) und Einstellungen, über eine direkte Navigation erreichbar.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md › Sprache, Befehle, Design; docs/BESCHRIFTUNGEN-UND-ORDNER.md"
+  },
+  {
+   "id": "M12",
+   "art": "funktion",
+   "text": "Dateien und ganze Ordner lassen sich einlesen; jede Datei wird einmal gelesen, mit Fingerabdruck versehen und in den Katalog aufgenommen.",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Inhalte sammeln"
+  },
+  {
+   "id": "M13",
+   "art": "funktion",
+   "text": "Gemeinsame Suche über alle Inhalte: Wortsuche, Suche im Inhalt und Filter (Art, Tags, Pfad).",
+   "gewicht": "kern",
+   "beleg": "ZIEL-FUNKTIONEN › Nach Inhalt und Bedeutung finden; docs/EXPLORER-SORTIEREN-UND-INHALT.md"
+  },
+  {
+   "id": "M14",
+   "art": "funktion",
+   "text": "Bedeutungssuche (semantisch) mit einem lokalen Sprachmodell, das der Nutzer einmal ausdrücklich herunterlädt; ohne Modell greift die Wortsuche.",
+   "gewicht": "kern",
+   "beleg": "docs/BEDEUTUNGSSUCHE-UND-LADEBALKEN.md"
+  },
+  {
+   "id": "M15",
+   "art": "funktion",
+   "text": "Optional ein größeres zweites Bedeutungsmodell nur für die Suche, mit Empfehlung aus einem Gerätecheck.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/BEDEUTUNGSSUCHE-ZWEITES-MODELL.md"
+  },
+  {
+   "id": "M16",
+   "art": "funktion",
+   "text": "Lokale Texterkennung (OCR) für Bilder und gescannte PDFs in DE/EN/RU/PL, ohne Übertragung der Dokumente.",
+   "gewicht": "wichtig",
+   "beleg": "docs/NATIVE-TEXTERKENNUNG.md"
+  },
+  {
+   "id": "M17",
+   "art": "funktion",
+   "text": "Bildbeschreibung: ein lokales Bildmodell und eigene Beschreibungen (Text oder Mikrofon) machen Bilder durchsuchbar.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md › Designumbau Sitzung 4"
+  },
+  {
+   "id": "M18",
+   "art": "funktion",
+   "text": "Explorer als Ordnerbaum (z. B. E-Mails › Absender › Mail › Anhänge), sortierbar, mit Bild-/PDF-Vorschauen.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md; docs/EXPLORER-SORTIEREN-UND-INHALT.md"
+  },
+  {
+   "id": "M19",
+   "art": "funktion",
+   "text": "Vorgeschlagene Themenansichten (Kategorien) ordnen Dateien virtuell, ohne sie zu verschieben.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KATEGORIEN-VORSCHLAG.md"
+  },
+  {
+   "id": "M20",
+   "art": "funktion",
+   "text": "Doppelte Dateien werden erkannt; zusätzliche Dateikopien lassen sich nach Inhaltsprüfung und Bestätigung bereinigen, mindestens eine Kopie bleibt.",
+   "gewicht": "wichtig",
+   "beleg": "README.md (.34); ZIEL-FUNKTIONEN"
+  },
+  {
+   "id": "M21",
+   "art": "funktion",
+   "text": "Original öffnen: native Importe speichern eine geprüfte Originalkopie; fehlende Originale lassen sich neu zuordnen, der Zustand (Original fehlt / ungeprüft) wird ehrlich angezeigt.",
+   "gewicht": "kern",
+   "beleg": "docs/ORIGINALE-LINKS-GMAIL.md; ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md"
+  },
+  {
+   "id": "M22",
+   "art": "funktion",
+   "text": "Integriertes Postfach mit echten Mailkonten über IMAP/SMTP direkt vom Gerät: lesen, schreiben, senden mit Anhang, Ordner, Entwürfe.",
+   "gewicht": "kern",
+   "beleg": "docs/NATIVE-MAIL-ARCHITEKTUR.md"
+  },
+  {
+   "id": "M23",
+   "art": "funktion",
+   "text": "Anbietervorlagen für Telekom, Hetzner, Google/Gmail (OAuth), WEB.DE, GMX, Yahoo und IONOS.",
+   "gewicht": "wichtig",
+   "beleg": "docs/MAIL-ANBIETER.md"
+  },
+  {
+   "id": "M24",
+   "art": "funktion",
+   "text": "„Alle Konten“: Kopfzeilen und Text aller Konten (12 Monate) werden zusammen indexiert, nach Absender gebündelt und durchsuchbar.",
+   "gewicht": "wichtig",
+   "beleg": "docs/ALLE-KONTEN-UND-ABSENDER.md"
+  },
+  {
+   "id": "M25",
+   "art": "funktion",
+   "text": "Mails werden in einer sicheren Originalansicht ohne Skripte dargestellt; Links öffnen nur auf ausdrücklichen Tipp im Browser.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Originalansicht; docs/ORIGINALE-LINKS-GMAIL.md"
+  },
+  {
+   "id": "M26",
+   "art": "funktion",
+   "text": "Aufräumen: Newsletter nach Ablaufdatum in den Papierkorb, Abmelden über List-Unsubscribe nur mit Bestätigung, Rückgängig möglich.",
+   "gewicht": "wichtig",
+   "beleg": "docs/AUFRAEUMEN-NEWSLETTER.md"
+  },
+  {
+   "id": "M27",
+   "art": "funktion",
+   "text": "Mail-Aktionen: Löschen in den Papierkorb des Anbieters, Wiederherstellen, Spam/Kein Spam, Verschieben in Anbieterordner, auch für viele Mails auf einmal.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md; CLAUDE.md (.24)"
+  },
+  {
+   "id": "M28",
+   "art": "funktion",
+   "text": "Automatische lokale Übersetzung empfangener Mails (DE/EN/RU/PL) unter dem Original.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/NATIVE-LOKALE-UEBERSETZUNG.md"
+  },
+  {
+   "id": "M29",
+   "art": "funktion",
+   "text": "KI beim Schreiben: Gegenlesen oder Entwurf per Mistral (EU) oder Kopieren für ein eigenes KI-Abo; Namen und Kennungen werden vorher verdeckt, mit Vorschau „Das sieht die KI“.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KI-BEIM-SCHREIBEN.md"
+  },
+  {
+   "id": "M30",
+   "art": "funktion",
+   "text": "Spracheingabe (Mikrofon) in Suche und Freitextfeldern, mit wählbarer Diktatsprache und unter Windows wählbarem Mikrofon.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/MIKROFON-LAMPE-DATEIWAHL.md; docs/MIKROFON-WAHL-WINDOWS.md"
+  },
+  {
+   "id": "M31",
+   "art": "funktion",
+   "text": "Die App empfängt Dateien und Text über „Teilen“ aus anderen Apps und nimmt sie wie normale Importe auf.",
+   "gewicht": "wichtig",
+   "beleg": "docs/TEILEN-EMPFANG.md"
+  },
+  {
+   "id": "M32",
+   "art": "funktion",
+   "text": "„Überall suchen“: eine Trefferliste aus eigenem Katalog, Tresorfächern anderer Pro-Apps und auf Wunsch dem Netz, mit Herkunftsangabe.",
+   "gewicht": "wichtig",
+   "beleg": "docs/UEBERALL-SUCHEN.md"
+  },
+  {
+   "id": "M33",
+   "art": "funktion",
+   "text": "Lange Arbeiten (Prüfen, Einordnen) laufen als Hintergrundaufgabe mit Mitteilung, Fortschritt und Abbrechen.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/HINTERGRUNDAUFGABE.md"
+  },
+  {
+   "id": "M34",
+   "art": "daten",
+   "text": "Eigener Speicherort auf Gerätespeicher oder SD-Karte, passwortverschlüsselt (AES-256-GCM, PBKDF2) für Mails, Anhänge, Originale und Katalogsicherung; auf neuem Gerät wiederherstellbar.",
+   "gewicht": "kern",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md"
+  },
+  {
+   "id": "M35",
+   "art": "daten",
+   "text": "Mail-Anhänge bis 1 GiB werden stückweise direkt in den verschlüsselten Speicherort geschrieben.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md"
+  },
+  {
+   "id": "M36",
+   "art": "daten",
+   "text": "Ersatzschlüssel: der Tresor-Schlüssel lässt sich in fünf Teile aufteilen, drei stellen ihn wieder her.",
+   "gewicht": "wichtig",
+   "beleg": "docs/TRESOR-ERSATZSCHLUESSEL.md"
+  },
+  {
+   "id": "M37",
+   "art": "daten",
+   "text": "Verschlüsselte Sicherung und Wiederherstellung des Katalogs; Wiederherstellen ergänzt nur, überschreibt nie.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md; ZIEL-FUNKTIONEN"
+  },
+  {
+   "id": "M38",
+   "art": "daten",
+   "text": "Kontozugangsdaten und Entwürfe liegen verschlüsselt im Gerätespeicher (Android-Keystore / Windows-DPAPI), Passwörter nur im nativen Dialog.",
+   "gewicht": "wichtig",
+   "beleg": "docs/NATIVE-MAIL-ARCHITEKTUR.md; CLAUDE.md › Native Mailarbeit"
+  },
+  {
+   "id": "M39",
+   "art": "daten",
+   "text": "Papierkorb des Explorers und „Ganzen Ordner leeren“ für Mail-Anhänge; gelöschte Anhänge sind in der Mail als gelöscht markiert.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/SPEICHERORT-UND-TRESOR.md; ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md"
+  },
+  {
+   "id": "M40",
+   "art": "sicherheit",
+   "text": "Prüfung beim Hinzufügen und auf Knopfdruck: jede Datei bekommt einen Befund (Anweisung an eine KI, versteckter Text, verdächtige Anhänge); Funde werden markiert, nicht entfernt.",
+   "gewicht": "kern",
+   "beleg": "CLAUDE.md (.25); docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md"
+  },
+  {
+   "id": "M41",
+   "art": "sicherheit",
+   "text": "Schutz-Prüfstelle gegen Viren, Spam und Betrug: Regeln ohne Netz, bekannte Schadlisten, Fingerabdruck-Abfrage bei VirusTotal nur auf Tipp, Übergabe an Virenscanner-App.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCHUTZ-VIREN-SPAM-BETRUG.md"
+  },
+  {
+   "id": "M42",
+   "art": "sicherheit",
+   "text": "Bevor etwas an eine KI geht, werden Bild-Metadaten entfernt und versteckter Text zugedeckt; bei Auffälligkeiten hält die App einmal an.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Reinigung und Prüfung vor der KI"
+  },
+  {
+   "id": "M43",
+   "art": "sicherheit",
+   "text": "Internetschalter der App: Netzverbindungen lassen sich mit einem Tipp trennen, eine Lampe zeigt den Zustand.",
+   "gewicht": "wichtig",
+   "beleg": "docs/KOMPAKTE-ANSICHT-UND-OFFLINE.md; docs/MIKROFON-LAMPE-DATEIWAHL.md"
+  },
+  {
+   "id": "M44",
+   "art": "sicherheit",
+   "text": "Cloud-Dienste (KI, OCR in der Cloud, VirusTotal) sind nur ausdrücklich nutzerausgelöst und mit eigenem Schlüssel; Standard ist lokal.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › Was hier leicht kaputtgeht; KI-BEIM-SCHREIBEN.md"
+  },
+  {
+   "id": "M45",
+   "art": "sicherheit",
+   "text": "Gesperrte Bereiche: Werkzeuge und Studio-Funktionen hinter Freischalt-Codes; Herausgeber-Studio nur über versteckten Zugang.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/WERKZEUGE-UND-FREISCHALTUNG.md"
+  },
+  {
+   "id": "M46",
+   "art": "schnittstelle",
+   "text": "Gemeinsamer Tresorordner aller Pro-Apps (ein Passwort, Fächer je App); Einrichten durch reine Speicherwahl.",
+   "gewicht": "kern",
+   "beleg": "docs/TRESORORDNER.md; docs/PRO-VERBUND-NATIV.md"
+  },
+  {
+   "id": "M47",
+   "art": "schnittstelle",
+   "text": "Pro-Verbund mit der Familienakte: bestätigte Hin- und Rückgaben über den Tresor, Mails mit Anhängen als unveränderte .eml in deren Eingang.",
+   "gewicht": "wichtig",
+   "beleg": "docs/PRO-VERBUND-NATIV.md; CLAUDE.md (Mail an die Familienakte)"
+  },
+  {
+   "id": "M48",
+   "art": "schnittstelle",
+   "text": "„An BookLedgerPro teilen“: Rechnungsmails gehen als .eml an die Buchhaltungs-App bzw. in deren Tresor-Eingang.",
+   "gewicht": "wichtig",
+   "beleg": "CLAUDE.md › An BookLedgerPro teilen; TRESORORDNER.md"
+  },
+  {
+   "id": "M49",
+   "art": "schnittstelle",
+   "text": "Werkzeuge aus dem Verbund im App-Menü: Pinnwand, Such-Tool, Workflow PDF Pro, Kim-Sync, Datei-Post, BookLedgerPro.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/WERKZEUGE-UND-FREISCHALTUNG.md; CLAUDE.md (.34)"
+  },
+  {
+   "id": "M50",
+   "art": "schnittstelle",
+   "text": "Optionaler Netzknoten (SBKIM/Mycel) mit Siegel: eigene Identität, server-lose Suche bei Geräten im Netz, Standard aus; Chef-PIN und Beitritts-Zettel für ein eigenes Firmennetz.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SIEGEL-UND-MYCEL.md; docs/UEBERALL-SUCHEN.md"
+  },
+  {
+   "id": "M51",
+   "art": "schnittstelle",
+   "text": "Antworten ins Netz geben nur Titel/Steckbrief, Ausschnitte nur im eigenen Netz auf Wunsch.",
+   "gewicht": "beiwerk",
+   "beleg": "docs/UEBERALL-SUCHEN.md"
+  },
+  {
+   "id": "M52",
+   "art": "schnittstelle",
+   "text": "Pro-App-Verbund-Karte als Übersicht in den Einstellungen.",
+   "gewicht": "beiwerk",
+   "beleg": "CLAUDE.md (Pro-App-Verbund als Vorschau)"
+  },
+  {
+   "id": "M53",
+   "art": "grenze",
+   "text": "Microsoft-/Outlook-Konten lassen sich noch nicht anmelden (nur Einrichtungsplan, OAuth-Registrierung fehlt).",
+   "gewicht": "wichtig",
+   "beleg": "docs/PLAN_2026-11-12_MICROSOFT-KONTEN.md"
+  },
+  {
+   "id": "M54",
+   "art": "grenze",
+   "text": "Die Schutzprüfung ist kein vollständiger Virenscanner; die App schreibt nie „virenfrei“.",
+   "gewicht": "wichtig",
+   "beleg": "docs/SCHUTZ-VIREN-SPAM-BETRUG.md; README.md"
+  },
+  {
+   "id": "M55",
+   "art": "grenze",
+   "text": "Kataloge und Bestände werden zusammengeführt (nach Fingerabdruck/Message-ID), Dateiinhalte werden nicht verschmolzen; eine frei benannte gemischte Akte gibt es nicht.",
+   "gewicht": "beiwerk",
+   "beleg": "ZIEL-FUNKTIONEN › Abgleich"
+  },
+  {
+   "id": "M56",
+   "art": "grenze",
+   "text": "Der Index „Alle Konten“ lädt keine Anhänge und speichert höchstens 8.000 Zeichen je Nachricht.",
+   "gewicht": "beiwerk",
+   "beleg": "ZIEL-FUNKTIONEN › Abgleich"
+  },
+  {
+   "id": "M57",
+   "art": "grenze",
+   "text": "Mailabruf, Modell-Erstdownload und Cloud-KI brauchen Netz; ein Suchindex ist keine vollständige Originalsicherung.",
+   "gewicht": "wichtig",
+   "beleg": "ZIEL-FUNKTIONEN › Privat und offline arbeiten"
+  }
+ ]
+}

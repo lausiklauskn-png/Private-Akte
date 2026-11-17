@@ -1,0 +1,142 @@
+{
+ "ordner": "pruefstapel-briefe-h",
+ "belege": 150,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null,
+   "fehlt": 0
+  },
+  {
+   "name": "ZWEITER",
+   "modell": "Claude-Agent B, eigenes Urteil",
+   "fehlt": 0
+  },
+  {
+   "name": "DRITTER",
+   "modell": "Codex (GPT-6)",
+   "fehlt": 0
+  }
+ ],
+ "felder": {
+  "bereich": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 144
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 144
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 138
+    }
+   ],
+   "fleissKappa": 0.9356798284795423,
+   "einstimmig": 138,
+   "strittig": []
+  },
+  "schriftstueck": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 147
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 142
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 139
+    }
+   ],
+   "fleissKappa": 0.943964590149088,
+   "einstimmig": 139,
+   "strittig": []
+  },
+  "absender": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 147
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 147
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 144
+    }
+   ],
+   "fleissKappa": 0.9731054267272293,
+   "einstimmig": 144,
+   "strittig": []
+  },
+  "person": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 148
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 148
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 147
+    }
+   ],
+   "fleissKappa": 0.9828322905539446,
+   "einstimmig": 147,
+   "strittig": [
+    {
+     "datei": "Feriendialyse.txt",
+     "stimmen": [
+      "marek nowicki",
+      null,
+      "beata nowicki"
+     ]
+    }
+   ]
+  },
+  "frist": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 148
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 138
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 140
+    }
+   ],
+   "fleissKappa": 0.9088438359864279,
+   "einstimmig": 138,
+   "strittig": []
+  }
+ }
+}

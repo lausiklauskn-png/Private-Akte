@@ -1,0 +1,14 @@
+BEISPIEL TANK APP
+
+Dein digitaler Kassenbon
+Station Beispielhafen-Süd
+Datum: 12.07.2025 09:05
+Bon-Nr.: T-5521-3390
+
+Artikel   Menge   Betrag
+Super E10 Säule 3 (Kraftrad)   13,42 l   23,88 EUR
+Kettenspray   1   9,99 EUR
+
+Summe: 33,87 EUR
+Bezahlt mit: PayPal
+Gespart mit der App: 1,02 EUR

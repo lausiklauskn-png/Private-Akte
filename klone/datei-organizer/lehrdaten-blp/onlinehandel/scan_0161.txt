@@ -1,0 +1,11 @@
+KARTENTERMINAL "ZahlFix" Payment GmbH
+Abrechnung April 2026 / Rechnung ZF-2604-0044712
+
+Händler: Teekontor Lindenblatt, Terminal-ID 60004412
+
+Kartenumsätze 3.118,40 EUR (207 Zahlungen)
+Disagio girocard 0,29 %, Kreditkarte 1,19 %         28,72
+Terminalmiete mobil                                   9,90
+Summe Entgelte netto                                 38,62
+(Disagio umsatzsteuerfrei; USt 19 % auf Terminalmiete 1,88)
+Einbehalt von der Auszahlung gesamt                  40,50 EUR

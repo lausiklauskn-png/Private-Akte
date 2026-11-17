@@ -1,0 +1,22 @@
+Beispielbank Musterhausen eG
+Schillerstraße 60 · 34567 Musterhausen
+
+Herr Tobias Wendelin
+Amselweg 14
+34567 Musterhausen
+
+Kreditkartenabrechnung Mai 2026
+Kontoinhaber: Tobias Wendelin
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 31.05.2026
+
+Alter Kontostand               2577,58 EUR
+02.05.  Dauerauftrag Miete                          -551,00
+06.05.  Lastschrift Versicherung                     -53,00
+10.05.  Gutschrift Lohn/Gehalt                      1206,00
+14.05.  Kartenzahlung Beispiel-Markt                 -66,00
+18.05.  Überweisung Gutschrift                        43,00
+22.05.  Lastschrift Beispielfunk Mobil               -40,00
+Neuer Kontostand               3116,58 EUR
+
+Der Rechnungsbetrag wird am 15. des Folgemonats von Ihrem Girokonto eingezogen.

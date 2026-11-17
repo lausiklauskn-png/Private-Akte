@@ -1,0 +1,10 @@
+Volksbank Welsede eG – Umsatzdetails Online-Banking (Ausdruck)
+
+Konto        DE00 0000 0000 0041 7001 00  Tischlerei Vosskamp
+Buchung      27.11.2026
+Art          Bareinzahlung am Automaten Filiale Marktplatz
+Text         EINZAHLUNG VOSSKAMP PRIVAT ZUR DECKUNG LOHNLAUF
+Betrag       +3.000,00 EUR
+Saldo danach 9.455,08 EUR
+
+Hinweis für Steuerbüro: Geld stammt vom privaten Sparbuch des Inhabers (Einlage)

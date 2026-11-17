@@ -1,0 +1,107 @@
+{
+ "app": "Prüfbereit ambulant",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Ambulante Pflegedienste können sich ehrlich selbst prüfen, wie die Qualitätsprüfung nach neuer QPR ambulant (seit 1.7.2026) ausfallen würde",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Nutzer: Pflegedienstleitung und QM-Beauftragte; zusätzlich Berater, die mehrere Dienste betreuen",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Probe-Stichprobe wie bei der echten Prüfung, mit Fragen aus den Qualitätsaspekten",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M04",
+   "text": "Bewertung je Aspekt in den Stufen A–D nach der Prüfanleitung",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Klienten nur mit pseudonymer Kennung (z. B. K-07), keine Klarnamen, keine Diagnosen",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M06",
+   "text": "Zeigt Lücken je Team bzw. Tour, ohne einzelne Mitarbeitende bloßzustellen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Maßnahmenliste mit Zuständigem und Frist aus den Befunden",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Wiederholung vierteljährlich mit Verlauf (besser/schlechter)",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Kurzmodus für die zwei Tage Vorlauf: was am Prüftag bereitliegen muss",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Ergebnisbericht als PDF für Leitung und Träger",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Läuft offline auf Tablet/PC, Daten auf dem Gerät",
+   "gewicht": "kern",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M12",
+   "text": "Fragenkatalog mit Stand/Fassung gekennzeichnet und aktualisierbar",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M13",
+   "text": "Berater-Lizenz für mehrere Dienste, Dienste getrennt",
+   "gewicht": "beiwerk",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M14",
+   "text": "Keine Pflegedokumentation, keine Kopie der Klientenakte",
+   "gewicht": "kern",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M15",
+   "text": "Kein Versprechen „Prüfung bestanden“, keine Rechtsberatung",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M16",
+   "text": "Kein Medizinprodukt: Organisation, keine Diagnose oder Therapieempfehlung",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Preis je Dienst monatlich oder jährlich",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  }
+ ]
+}

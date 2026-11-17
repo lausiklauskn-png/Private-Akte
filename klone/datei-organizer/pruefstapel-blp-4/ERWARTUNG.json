@@ -1,0 +1,1085 @@
+{
+ "betrieb": "Buchhandlung Lindenblatt",
+ "dateien": [
+  {
+   "datei": "2026-01-29 Scan 11.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "343,91",
+   "datum": "2026-01-29",
+   "ust": 19,
+   "aussteller": "Kassenrolle24 Handels UG (haftungsbeschränkt)"
+  },
+  {
+   "datei": "2026-03-12 Scan 51.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "642,60",
+   "datum": "2026-03-12",
+   "ust": 0,
+   "aussteller": "Altmark Sachversicherung a.G."
+  },
+  {
+   "datei": "2026-03-27 Scan 41.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "1.933,22",
+   "datum": "2026-03-27",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "2026-03-31 Foto 25.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "69,02",
+   "datum": "2026-03-31",
+   "ust": 19,
+   "aussteller": "Glas- und Gebäudereinigung Kowalke"
+  },
+  {
+   "datei": "2026-04-02 Scan 4.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "253,11",
+   "datum": "2026-04-02",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "2026-04-06 Foto 7.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "5.000,00",
+   "datum": "2026-04-06",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "2026-05-07 Scan 7.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "23,80",
+   "datum": "2026-05-07",
+   "ust": 19,
+   "aussteller": "Café Kornblume"
+  },
+  {
+   "datei": "2026-07-08 Foto 28.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "248,95",
+   "datum": "2026-07-08",
+   "ust": 7,
+   "aussteller": "Landkartenhaus Petzold KG"
+  },
+  {
+   "datei": "2026-09-16 eingang 7.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "1.549,50",
+   "datum": "2026-09-16",
+   "ust": 7,
+   "aussteller": "Barsortiment Hallweg & Brandis GmbH"
+  },
+  {
+   "datei": "2026-10-05 Scan 59.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "64,18",
+   "datum": "2026-10-05",
+   "ust": 19,
+   "aussteller": "Wesernetz Telekommunikation GmbH"
+  },
+  {
+   "datei": "Beleg (103).txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "21,40",
+   "datum": "2026-02-14",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Beleg (114).txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "280,84",
+   "datum": "2026-05-19",
+   "ust": 19,
+   "aussteller": "Schlüssel- und Sicherheitsdienst Vahrenkamp"
+  },
+  {
+   "datei": "Beleg (124).txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "178,50",
+   "datum": "2026-10-29",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Beleg (13).txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "58,50",
+   "datum": "2026-01-09",
+   "ust": 0,
+   "aussteller": "Landespost AG"
+  },
+  {
+   "datei": "Beleg (130).txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "113,05",
+   "datum": "2026-11-09",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Beleg (14).txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "64,90",
+   "datum": "2026-05-13",
+   "ust": 7,
+   "aussteller": "Fachbuchversand Paragraphenreiter"
+  },
+  {
+   "datei": "Beleg (144).txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "63,83",
+   "datum": "2026-11-12",
+   "ust": 19,
+   "aussteller": "BAUMARKT HAMMER & ZANGE"
+  },
+  {
+   "datei": "Beleg (156).txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "19,35",
+   "datum": "2026-04-16",
+   "ust": 19,
+   "aussteller": "Schreibwaren Köhn"
+  },
+  {
+   "datei": "Beleg (163).txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "287,40",
+   "datum": "2026-03-02",
+   "ust": 0,
+   "aussteller": "Industrie- und Handelskammer Wehrbergland"
+  },
+  {
+   "datei": "Beleg (171).txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "327,00",
+   "datum": "2026-01-27",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Beleg (185).txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "87,40",
+   "datum": "2026-02-26",
+   "ust": 7,
+   "aussteller": "Ratskeller Wehrstedt"
+  },
+  {
+   "datei": "Beleg (188).txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "150,00",
+   "datum": "2026-04-07",
+   "ust": 19,
+   "aussteller": "PrüfRing Fahrzeugüberwachung GmbH"
+  },
+  {
+   "datei": "Beleg (2).txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "180,00",
+   "datum": "2026-02-01",
+   "ust": 0,
+   "aussteller": "Wilhelm Brünjes"
+  },
+  {
+   "datei": "Beleg (3).txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "386,75",
+   "datum": "2026-01-08",
+   "ust": 0,
+   "aussteller": "Nordische Feuer Versicherung AG"
+  },
+  {
+   "datei": "Beleg (32).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "132,25",
+   "datum": "2026-04-22",
+   "ust": 7,
+   "aussteller": "edition kranichzug"
+  },
+  {
+   "datei": "Beleg (45).txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "243,96",
+   "datum": "2026-01-05",
+   "ust": 7,
+   "aussteller": "Fachverlag Buchhandelsbote GmbH"
+  },
+  {
+   "datei": "Beleg (52).txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "1.256,64",
+   "datum": "2026-11-18",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Beleg (72).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "923,07",
+   "datum": "2026-08-12",
+   "ust": 7,
+   "aussteller": "Schulbuchzentrum Ostfalen GmbH"
+  },
+  {
+   "datei": "Beleg (79).txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "196,31",
+   "datum": "2026-04-20",
+   "ust": 0,
+   "aussteller": "Berufsgenossenschaft Handel und Verteilung"
+  },
+  {
+   "datei": "Beleg (87).txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "420,00",
+   "datum": "2026-01-20",
+   "ust": 0,
+   "aussteller": "Verband Unabhängiger Sortimentsbuchhandlungen e.V."
+  },
+  {
+   "datei": "Beleg (95).txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "39,80",
+   "datum": "2026-06-17",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "CCF01052026_00020.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "49,00",
+   "datum": "2026-05-01",
+   "ust": 0,
+   "aussteller": "Boekstack B.V."
+  },
+  {
+   "datei": "CCF01112026_00017.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "23,46",
+   "datum": "2026-11-01",
+   "ust": 0,
+   "aussteller": "ZahlFix Europe S.à r.l."
+  },
+  {
+   "datei": "CCF03032026_00010.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "1.486,31",
+   "datum": "2026-03-03",
+   "ust": 19,
+   "aussteller": "TechnoMarkt Handels GmbH"
+  },
+  {
+   "datei": "CCF03112026_00016.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "354,79",
+   "datum": "2026-11-03",
+   "ust": 19,
+   "aussteller": "Paketpunkt Logistik GmbH"
+  },
+  {
+   "datei": "CCF10122026_00002.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "24,90",
+   "datum": "2026-12-10",
+   "ust": 19,
+   "aussteller": "Weinkontor Rebenstieg"
+  },
+  {
+   "datei": "CCF15042026_00037.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "103,15",
+   "datum": "2026-04-15",
+   "ust": 7,
+   "aussteller": "Stadtwerke Wehrstedt Eigenbetrieb"
+  },
+  {
+   "datei": "CCF16022026_00036.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "55,08",
+   "datum": "2026-02-16",
+   "ust": 0,
+   "aussteller": "Rundfunk-Beitragsservice der Landesanstalten"
+  },
+  {
+   "datei": "CCF21102026_00002.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "389,98",
+   "datum": "2026-10-21",
+   "ust": 19,
+   "aussteller": "Nordlicht Geschenkideen e.K."
+  },
+  {
+   "datei": "CCF22012026_00016.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "258,71",
+   "datum": "2026-01-22",
+   "ust": 19,
+   "aussteller": "Bürowelt Dreyer Versand GmbH"
+  },
+  {
+   "datei": "CCF22032026_00018.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "276,00",
+   "datum": "2026-03-22",
+   "ust": 7,
+   "aussteller": "Pension Am Auwald"
+  },
+  {
+   "datei": "CCF22092026_00039.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "764,00",
+   "datum": "2026-09-22",
+   "ust": 0,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "CCF24022026_00027.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "1.720,26",
+   "datum": "2026-02-24",
+   "ust": 19,
+   "aussteller": "Malermeister Henning Ruschmeyer"
+  },
+  {
+   "datei": "CCF24032026_00024.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "1.265,00",
+   "datum": "2026-03-24",
+   "ust": 0,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "CCF29062026_00001.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "538,00",
+   "datum": "2026-06-29",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "doc11124301.txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "5.783,40",
+   "datum": "2026-02-20",
+   "ust": 19,
+   "aussteller": "Ladenbau Wittkugel GmbH"
+  },
+  {
+   "datei": "doc25835540.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "465,89",
+   "datum": "2026-06-30",
+   "ust": 19,
+   "aussteller": "Sauberland Dienstleistungen GmbH"
+  },
+  {
+   "datei": "doc48100639.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "17,73",
+   "datum": "2026-08-03",
+   "ust": 19,
+   "aussteller": "Kartenwerk Zahlungssysteme GmbH"
+  },
+  {
+   "datei": "doc52975890.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "221,34",
+   "datum": "2026-03-13",
+   "ust": 19,
+   "aussteller": "Wehrstedter Wochenblatt Verlags-GmbH"
+  },
+  {
+   "datei": "doc53339667.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.796,90",
+   "datum": "2026-07-01",
+   "ust": 19,
+   "aussteller": "Grundstücksgemeinschaft Marktgasse 5-9 GbR"
+  },
+  {
+   "datei": "doc58076029.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "242,00",
+   "datum": "2026-10-18",
+   "ust": 7,
+   "aussteller": "Hotel Messeblick Frankfurt-Mainfeld"
+  },
+  {
+   "datei": "doc62305359.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "1.333,82",
+   "datum": "2026-01-14",
+   "ust": 7,
+   "aussteller": "Barsortiment Hallweg & Brandis GmbH"
+  },
+  {
+   "datei": "doc63503388.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "1.865,80",
+   "datum": "2026-05-28",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "doc71374891.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "333,20",
+   "datum": "2026-04-29",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "doc73377501.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "137,50",
+   "datum": "2026-10-24",
+   "ust": 7,
+   "aussteller": "Gasthaus Zur Alten Fähre"
+  },
+  {
+   "datei": "doc75479160.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "90,76",
+   "datum": "2026-07-17",
+   "ust": 19,
+   "aussteller": "Q-Star Autohof Leinetal"
+  },
+  {
+   "datei": "doc96605443.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "94,96",
+   "datum": "2026-05-20",
+   "ust": 19,
+   "aussteller": "druckfalter.example Onlinedruck GmbH"
+  },
+  {
+   "datei": "IMG_20260219_140943.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "409,60",
+   "datum": "2026-02-19",
+   "ust": 7,
+   "aussteller": "SILBERFADEN VERLAG GmbH"
+  },
+  {
+   "datei": "IMG_20260305_122242.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "354,06",
+   "datum": "2026-03-05",
+   "ust": 7,
+   "aussteller": "Kinderbuchverlag Moosglöckchen"
+  },
+  {
+   "datei": "IMG_20260430_123340.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "500,00",
+   "datum": "2026-04-30",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "IMG_20260504_143345.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "449,00",
+   "datum": "2026-05-04",
+   "ust": 19,
+   "aussteller": "Sitzwerk Ergonomie-Studio"
+  },
+  {
+   "datei": "IMG_20260622_104914.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "540,50",
+   "datum": "2026-06-22",
+   "ust": 19,
+   "aussteller": "Rechtsanwältin Dr. Katharina Voßkuhl"
+  },
+  {
+   "datei": "IMG_20260701_155224.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "131,70",
+   "datum": "2026-07-01",
+   "ust": 7,
+   "aussteller": "Tagblatt Medienhaus Wehrbergland GmbH & Co. KG"
+  },
+  {
+   "datei": "IMG_20260702_185902.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "264,42",
+   "datum": "2026-07-02",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "IMG_20260703_164353.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "293,04",
+   "datum": "2026-07-03",
+   "ust": 19,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "IMG_20261105_192245.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "518,84",
+   "datum": "2026-11-05",
+   "ust": 19,
+   "aussteller": "REIFEN QUAST"
+  },
+  {
+   "datei": "IMG_20261214_170202.txt",
+   "konto": "4635",
+   "richtung": "ausgabe",
+   "betrag": "94,90",
+   "datum": "2026-12-14",
+   "ust": 19,
+   "aussteller": "FEINKOST BRUNCKHORST"
+  },
+  {
+   "datei": "mail-anhang-10655.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "57,85",
+   "datum": "2026-06-01",
+   "ust": 0,
+   "aussteller": "Kartenwerk Zahlungssysteme GmbH"
+  },
+  {
+   "datei": "mail-anhang-11940.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "28,99",
+   "datum": "2026-06-08",
+   "ust": 19,
+   "aussteller": "Funkwerk Mobil GmbH"
+  },
+  {
+   "datei": "mail-anhang-20385.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "32,00",
+   "datum": "2026-06-12",
+   "ust": 7,
+   "aussteller": "Gärtnerei Immergrün"
+  },
+  {
+   "datei": "mail-anhang-36069.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "2.146,00",
+   "datum": "2026-05-06",
+   "ust": 0,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "mail-anhang-44966.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "62,97",
+   "datum": "2026-09-30",
+   "ust": 19,
+   "aussteller": "TechnoMarkt Wehrstedt"
+  },
+  {
+   "datei": "mail-anhang-4572.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "64,26",
+   "datum": "2026-10-30",
+   "ust": 19,
+   "aussteller": "Lohnkontor Wehrbergland GmbH"
+  },
+  {
+   "datei": "mail-anhang-49957.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "24,00",
+   "datum": "2026-04-11",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "mail-anhang-59333.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "84,00",
+   "datum": "2026-03-23",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "mail-anhang-67480.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "410,55",
+   "datum": "2026-09-25",
+   "ust": 19,
+   "aussteller": "Werbetechnik Hasenkamp"
+  },
+  {
+   "datei": "mail-anhang-6799.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "2.000,00",
+   "datum": "2026-01-12",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "mail-anhang-69613.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "145,00",
+   "datum": "2026-09-07",
+   "ust": 0,
+   "aussteller": "Bildungswerk des Sortimentsbuchhandels gGmbH"
+  },
+  {
+   "datei": "mail-anhang-70841.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "549,81",
+   "datum": "2026-05-11",
+   "ust": 7,
+   "aussteller": "Verlagsauslieferung Nordhafen GmbH"
+  },
+  {
+   "datei": "mail-anhang-72356.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "446,25",
+   "datum": "2026-11-16",
+   "ust": 19,
+   "aussteller": "Kähler & Stuckenberg Steuerberater PartG mbB"
+  },
+  {
+   "datei": "mail-anhang-72736.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "31,85",
+   "datum": "2026-03-31",
+   "ust": 0,
+   "aussteller": "Volksbank Wehrbergland eG"
+  },
+  {
+   "datei": "mail-anhang-83322.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "116,44",
+   "datum": "2026-07-14",
+   "ust": 19,
+   "aussteller": "Kassenrolle24 Handels UG (haftungsbeschränkt)"
+  },
+  {
+   "datei": "mail-anhang-85623.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "65,30",
+   "datum": "2026-12-05",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "mail-anhang-86474.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "14,65",
+   "datum": "2026-07-21",
+   "ust": 0,
+   "aussteller": "Lotto-Toto Kiosk Am Markt"
+  },
+  {
+   "datei": "mail-anhang-90290.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "214,20",
+   "datum": "2026-09-03",
+   "ust": 0,
+   "aussteller": "JuraSchutz Rechtsschutz-Versicherung AG"
+  },
+  {
+   "datei": "Scan 02.11.26 15-18.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "267,99",
+   "datum": "2026-11-02",
+   "ust": 19,
+   "aussteller": "Lichtblick Lesezubehör GmbH"
+  },
+  {
+   "datei": "Scan 03.06.26 08-15.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "214,00",
+   "datum": "2026-06-03",
+   "ust": 7,
+   "aussteller": "Barsortiment Hallweg & Brandis GmbH"
+  },
+  {
+   "datei": "Scan 08.04.26 08-14.txt",
+   "konto": "0320",
+   "richtung": "ausgabe",
+   "betrag": "14.900,00",
+   "datum": "2026-04-08",
+   "ust": 19,
+   "aussteller": "Autohaus Dörrenbach GmbH"
+  },
+  {
+   "datei": "Scan 09.06.26 17-59.txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "2.677,50",
+   "datum": "2026-06-09",
+   "ust": 19,
+   "aussteller": "Kassen-Systemhaus Ebbinghaus e.K."
+  },
+  {
+   "datei": "Scan 10.02.26 08-45.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "212,48",
+   "datum": "2026-02-10",
+   "ust": 19,
+   "aussteller": "Wehrbergland Energie GmbH"
+  },
+  {
+   "datei": "Scan 15.10.26 10-41.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "441,49",
+   "datum": "2026-10-15",
+   "ust": 19,
+   "aussteller": "Autohaus Dörrenbach GmbH"
+  },
+  {
+   "datei": "Scan 18.03.26 16-03.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "611,00",
+   "datum": "2026-03-18",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "Scan 26.01.26 08-08.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "102,34",
+   "datum": "2026-01-26",
+   "ust": 19,
+   "aussteller": "Kreislauf Dual Verpackungssystem GmbH"
+  },
+  {
+   "datei": "Scan 27.08.26 16-20.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "545,62",
+   "datum": "2026-08-27",
+   "ust": 19,
+   "aussteller": "Kalendermanufaktur Jahreslauf GmbH & Co. KG"
+  },
+  {
+   "datei": "scan_0192.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "553,50",
+   "datum": "2026-04-10",
+   "ust": 0,
+   "aussteller": "Nordische Feuer Versicherung AG"
+  },
+  {
+   "datei": "scan_1818.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "96,40",
+   "datum": "2026-03-09",
+   "ust": 7,
+   "aussteller": "Mittelland Bahn AG"
+  },
+  {
+   "datei": "scan_2238.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "107,60",
+   "datum": "2026-10-20",
+   "ust": null,
+   "aussteller": "Jonas Hartwig"
+  },
+  {
+   "datei": "scan_2429.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "498,61",
+   "datum": "2026-07-13",
+   "ust": 19,
+   "aussteller": "Kähler & Stuckenberg Steuerberater PartG mbB"
+  },
+  {
+   "datei": "scan_2894.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "12,90",
+   "datum": "2026-05-30",
+   "ust": 19,
+   "aussteller": "WASCHPARK BLITZBLANK"
+  },
+  {
+   "datei": "scan_3506.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "148,60",
+   "datum": "2026-09-09",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "scan_3636.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "266,56",
+   "datum": "2026-10-06",
+   "ust": 19,
+   "aussteller": "Würfelturm Spielwaren-Großhandel e.K."
+  },
+  {
+   "datei": "scan_4338.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "17,52",
+   "datum": "2026-08-19",
+   "ust": 19,
+   "aussteller": "Drogeriemarkt Blütenweiß"
+  },
+  {
+   "datei": "scan_5168.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "2.058,70",
+   "datum": "2026-08-25",
+   "ust": 19,
+   "aussteller": "Büromöbel Tecklenborg GmbH"
+  },
+  {
+   "datei": "scan_5630.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "70,41",
+   "datum": "2026-12-02",
+   "ust": 19,
+   "aussteller": "TANKSTELLE ROTECK"
+  },
+  {
+   "datei": "scan_6585.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "118,80",
+   "datum": "2026-10-02",
+   "ust": 7,
+   "aussteller": "Mittelland Bahn AG"
+  },
+  {
+   "datei": "scan_6723.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "120,00",
+   "datum": "2026-06-30",
+   "ust": 0,
+   "aussteller": "Pinnwall Ads Ltd."
+  },
+  {
+   "datei": "scan_7240.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "68,47",
+   "datum": "2026-04-24",
+   "ust": 19,
+   "aussteller": "TankHof Wehrstedt"
+  },
+  {
+   "datei": "scan_7986.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "28,48",
+   "datum": "2026-08-07",
+   "ust": 19,
+   "aussteller": "Autoteile Kessing"
+  },
+  {
+   "datei": "scan_8008.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "490,28",
+   "datum": "2026-09-11",
+   "ust": 19,
+   "aussteller": "Ladenbau Wittkugel GmbH"
+  },
+  {
+   "datei": "scan_8601.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "809,88",
+   "datum": "2026-10-28",
+   "ust": null,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "scan_9367.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "57,19",
+   "datum": "2026-02-05",
+   "ust": 19,
+   "aussteller": "Wesernetz Telekommunikation GmbH"
+  },
+  {
+   "datei": "SCN246981.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "420,78",
+   "datum": "2026-02-03",
+   "ust": 19,
+   "aussteller": "PAPETERIE FEDERKIEL GmbH"
+  },
+  {
+   "datei": "SCN259695.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "168,00",
+   "datum": "2026-09-01",
+   "ust": 19,
+   "aussteller": "Gasversorgung Oberwehr AG"
+  },
+  {
+   "datei": "SCN303523.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "186,40",
+   "datum": "2026-10-13",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "SCN308683.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.725,50",
+   "datum": "2026-01-02",
+   "ust": 19,
+   "aussteller": "Grundstücksgemeinschaft Marktgasse 5-9 GbR"
+  },
+  {
+   "datei": "SCN311983.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "404,60",
+   "datum": "2026-02-12",
+   "ust": 19,
+   "aussteller": "Akademie für Handelsmarketing Seebruch GmbH"
+  },
+  {
+   "datei": "SCN782505.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "8,42",
+   "datum": "2026-09-18",
+   "ust": 0,
+   "aussteller": "Kalendermanufaktur Jahreslauf GmbH & Co. KG"
+  },
+  {
+   "datei": "SCN890701.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "412,37",
+   "datum": "2026-07-28",
+   "ust": 0,
+   "aussteller": "Vitalis Krankenversicherung a.G."
+  },
+  {
+   "datei": "SCN923520.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "438,50",
+   "datum": "2026-08-04",
+   "ust": 0,
+   "aussteller": "Buchhandlung Lindenblatt"
+  },
+  {
+   "datei": "SCN943159.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "498,61",
+   "datum": "2026-04-14",
+   "ust": 19,
+   "aussteller": "Kähler & Stuckenberg Steuerberater PartG mbB"
+  }
+ ]
+}

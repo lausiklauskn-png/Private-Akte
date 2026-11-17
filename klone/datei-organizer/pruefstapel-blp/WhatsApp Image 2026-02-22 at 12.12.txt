@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Rademann Events GbR
+Schulstr. 15
+37998 Lindenstedt
+
+RECHNUNG
+Rechnungsnummer: KB-2026-225
+Datum 28.01.2026
+Lieferdatum: 28.01.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Brötchen gemischt, Stück   180      0,42      75,60
+  2  Laugenbrezeln               60      0,85      51,00
+
+Nettobetrag                                  126,60
+zzgl. 7 % USt                                8,86
+Gesamt                                       135,46 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7821 44
+USt-IdNr. DE000000458

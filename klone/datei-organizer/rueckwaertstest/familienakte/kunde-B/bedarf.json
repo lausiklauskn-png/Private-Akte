@@ -1,0 +1,29 @@
+{"titel": "Familienpapiere und Termine im Griff – nur mit dem Handy",
+ "kunde": {"firma": "Haushalt Beispiel (privat)", "ansprechpartner": "Jörg Beispiel", "mail": "joerg@beispiel.example"},
+ "bereiche": {
+  "1": ["Alles liegt im Schuhkarton", "Wichtiges fotografiere ich und schicke es mir per WhatsApp selbst", "Termine stehen im Handykalender, wenn ich dran denke"],
+  "2": ["Papiere ablegen und wiederfinden", "Termine und Fristen", "Elternbriefe aus der Schule", "Rechnungen und Garantien", "Auto (TÜV)"],
+  "3": [{"text": "Ich (Vater, alleinerziehend, Schichtarbeit)", "anzahl": 1}],
+  "4": ["Ich habe keinen Überblick", "Ich finde nichts wieder", "Termine erfahre ich zu spät", "Fotos gehen im WhatsApp-Verlauf unter"],
+  "5": ["Keine Ablage, nur der Schuhkarton", "Schichtdienst, wenig Zeit zum Sortieren", "Niemand erinnert mich an Fristen"],
+  "6": [
+   {"text": "Etwas schnell wiederfinden, notfalls per Sprache", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Suchen im Karton mehr"}},
+   {"text": "Fristen und Aufgaben mit Erinnerung", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nichts mehr zu spät erfahren"}},
+   {"text": "Einfach, ohne Schulung", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "ich nutze es auch wirklich"}},
+   {"text": "Garantien und Rechnungen mit Datum", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Garantie nicht verpassen"}}
+  ],
+  "7": ["Foto machen, fertig – später finde ich es wieder", "Erinnerungen klingeln, auch wenn das Programm zu ist", "Überblick über alle Papiere und Termine"],
+  "8": ["Das System muss ein Papier per Handyfoto aufnehmen können", "Das System muss Abgelegtes wiederfinden, auch per Spracheingabe", "Das System muss an Fristen und Aufgaben erinnern, auch wenn es geschlossen ist", "Das System muss bei Rechnungen und Garantien das Datum festhalten"],
+  "9": ["Keine Schulung, höchstens eine Stunde Einarbeitung"],
+  "10": ["Nur ein Android-Handy"],
+  "11": ["Handykalender", "WhatsApp (Fotos an mich selbst)"],
+  "12": [],
+  "13": ["Elternbriefe", "Rechnungen", "Garantiezettel", "TÜV-Bescheid", "Termine und Fristen"],
+  "14": ["personenbezogene Daten: ja (Familie, Tochter)"],
+  "15": ["Budget: wenig Geld, am liebsten kostenlos", "Einarbeitung höchstens eine Stunde"],
+  "18": [
+   {"text": "Soll der Handykalender mitspielen oder bleibt er getrennt?", "wer": "Jörg Beispiel", "bis": ""},
+   {"text": "Was passiert mit dem alten Schuhkarton – nachträglich abfotografieren?", "wer": "Jörg Beispiel", "bis": ""},
+   {"text": "Wie viel darf es höchstens kosten, wenn nicht kostenlos?", "wer": "Jörg Beispiel", "bis": ""}
+  ]
+ }}

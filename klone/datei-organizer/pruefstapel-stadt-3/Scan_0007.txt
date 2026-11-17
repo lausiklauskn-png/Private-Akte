@@ -1,0 +1,18 @@
+Logistikzentrum Beispiel-Nord GmbH  -  Entgeltabrechnung  02/2026
+Personal-Nr. LZ-20517      Y. Amrani      Steuerklasse III   Kinderfreibetr. 1,0    Konfession --
+
+Lohnart                        Menge     Betrag
+Stundenlohn                   151,50      2.121,00
+Nachtzuschlag 25%              38,00        133,00 (steuerfrei)
+Sonntagszuschlag 50%            8,00         56,00 (steuerfrei)
+Vermögenswirksame Leistung                   26,59
+Bruttoverdienst                           2.336,59
+Lohnsteuer                                  168,25
+Solidaritätszuschlag                          0,00
+Krankenversicherung (inkl. Zusatz)          192,70
+Rentenversicherung                          217,30
+Arbeitslosenvers.                            28,10
+Pflegeversicherung                           41,40
+Nettoverdienst                            1.688,84
+Auszahlung auf DE00 0000 0000 0000 0000 00 zum 27.02.2026
+Urlaubsanspruch Rest: 21,0 Tage

@@ -1,0 +1,19 @@
+Teekontor Lindenblatt  Salzgasse 14  21335 Lüneburg
+TAGESABSCHLUSS (Z-Bon) Nr. 0031
+Datum 07.02.2026   Kasse 1   Bedienerin: Ilka
+
+Anzahl Bons: 41
+
+Warengruppe Tee lose            276,90
+Warengruppe Gewürze             104,25
+Warengruppe Süßes/Kandis         31,20
+Warengruppe Zubehör              63,80
+---------------------------------------
+Umsatz gesamt brutto            476,15
+
+Steuer    Netto      MwSt      Brutto
+ 7 %      385,37     26,98     412,35
+19 %       53,61     10,19      63,80
+
+Zahlarten: Bar 298,15  Karte 178,00
+Kassenbestand geprüft - TSE-Signatur 0000-AA31

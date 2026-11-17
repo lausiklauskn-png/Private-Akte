@@ -1,0 +1,20 @@
+Steuerportal Beispielland – Übermittlungsprotokoll
+=================================================
+Ausdruck vom 27.03.2026 22:41
+
+Art der Erklärung:        Einkommensteuererklärung 2025
+                          mit Anlage G und Anlage EÜR
+Steuernummer:             00/000/41187
+Finanzamt:                Finanzamt Beispielstadt-Nord
+Steuerpflichtige:         Dimitrios Kalanteris und Sofia Kalanteri
+                          (Zusammenveranlagung)
+Übermittelt am:           27.03.2026 22:39:07
+Transferticket:           bsp7q2-xk41-0099-mmr3
+
+Status: Die Daten wurden erfolgreich übermittelt und vom Finanzamt
+        entgegengenommen.
+
+Hinweis: Belege sind nur auf Anforderung einzureichen.
+Dieses Protokoll ist keine Bestätigung über die inhaltliche Richtigkeit.
+
+Seite 1 von 1

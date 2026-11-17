@@ -1,0 +1,9 @@
+kleingeldkasse.example – mobiles Kartenlesegerät
+Auszahlungsbericht 2026-06-13
+
+Shop: Haarstudio Federleicht (Hausbesuche)
+Verkäufe brutto                 468,60
+abzgl. Gebühr 1,39 % je Zahlung  -7,81
+Auszahlung auf Bankkonto        460,79
+
+Beleg dient als Nachweis der einbehaltenen Transaktionsgebühren.

@@ -1,0 +1,304 @@
+<title>Ergebnis-Überblick Sortier-Kern</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Aufbau: Kacheln oben springen zum Ergebnis; Tipp auf die Überschrift eines Ergebnisses springt zurück. */
+:root{--grund:#f5f7f6;--flaeche:#ffffff;--text:#16211f;--leise:#5b6b68;--linie:#d7dedc;--akzent:#0d6b63;--gut:#1f8a4c;--mittel:#b7791f;--schwach:#b3372f;--balken:#e3e9e7;
+  --schrift:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--grund:#101615;--flaeche:#182120;--text:#e8efed;--leise:#9db0ac;--linie:#2c3937;--akzent:#4fc3b7;--gut:#5fd08a;--mittel:#e0a94a;--schwach:#f0776d;--balken:#26312f;color-scheme:dark}}
+:root[data-theme="dark"]{--grund:#101615;--flaeche:#182120;--text:#e8efed;--leise:#9db0ac;--linie:#2c3937;--akzent:#4fc3b7;--gut:#5fd08a;--mittel:#e0a94a;--schwach:#f0776d;--balken:#26312f;color-scheme:dark}
+body{background:var(--grund);color:var(--text);font-family:var(--schrift);font-size:15px;line-height:1.45;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.rahmen{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+h1{font-size:1.5rem;margin:0;text-wrap:balance}
+h2{font-size:1.05rem;margin:0}
+p{margin:0}
+.leise{color:var(--leise);font-size:.88rem}
+.kacheln{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.kachel{display:flex;flex-direction:column;gap:4px;text-align:left;background:var(--flaeche);border:1px solid var(--linie);border-radius:8px;padding:10px 12px;color:inherit;font:inherit;cursor:pointer;text-decoration:none;min-width:0}
+.kachel:hover,.kachel:focus-visible{border-color:var(--akzent);outline:none}
+.kachel b{font-size:1.35rem;font-variant-numeric:tabular-nums;color:var(--akzent)}
+.kachel span{font-size:.82rem;color:var(--leise)}
+section{background:var(--flaeche);border:1px solid var(--linie);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;scroll-margin-top:12px;min-width:0}
+.kopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px;background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;width:100%}
+.kopf:focus-visible{outline:2px solid var(--akzent);outline-offset:3px}
+.kopf i{font-style:normal;font-size:.8rem;color:var(--akzent);white-space:nowrap}
+.tab{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.9rem}
+th,td{padding:5px 8px;border-bottom:1px solid var(--linie);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+th{font-weight:600;color:var(--leise);font-size:.8rem}
+.b{display:inline-block;width:64px;height:7px;background:var(--balken);border-radius:4px;vertical-align:middle;margin-left:6px;overflow:hidden}
+.b u{display:block;height:100%;background:var(--akzent)}
+.g{color:var(--gut);font-weight:600}.m{color:var(--mittel);font-weight:600}.s{color:var(--schwach);font-weight:600}
+ul,ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:4px}
+.marke{display:inline-block;font-size:.72rem;border:1px solid var(--linie);border-radius:999px;padding:1px 8px;color:var(--leise);margin-left:6px}
+
+details.ast{border-left:2px solid var(--linie);margin-left:6px;padding-left:12px}
+details.ast>summary{cursor:pointer;padding:4px 0;list-style:none;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+details.ast>summary::-webkit-details-marker{display:none}
+details.ast>summary::before{content:"+";color:var(--akzent);font-weight:600;width:.8em}
+details.ast[open]>summary::before{content:"–"}
+details.ast>summary b{font-variant-numeric:tabular-nums;color:var(--akzent)}
+details.ast>p{margin:2px 0 8px 1.3em;color:var(--leise);font-size:.88rem}
+details.ast>.tab,details.ast>ul{margin:2px 0 8px 1.3em;font-size:.88rem;color:var(--leise)}
+.baum{display:flex;flex-direction:column;gap:2px}
+details.wie{font-size:.88rem;color:var(--leise)}
+details.wie>summary{cursor:pointer;color:var(--akzent)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+
+<div class="rahmen">
+<header id="oben">
+  <h1>Ergebnis-Überblick: Sortier-Kern und Lauf „Vermieterin“</h1>
+  <p class="leise">Stand 13.11.2026 · alle Unterlagen erfunden · Soll = Mehrheit von drei Einordnern (Autor, Claude-Agent, Codex), 2026 vorläufig zwei · Kachel tippen springt zum Ergebnis, Überschrift tippen springt zurück</p>
+</header>
+
+<nav class="kacheln" aria-label="Ergebnisse">
+  <a class="kachel" href="#kern"><b>57→87 %</b><span>Kern alt → neu, Bereich</span></a>
+  <a class="kachel" href="#fa"><b>51→86 %</b><span>Familienakte Frist, mit Kern</span></a>
+  <a class="kachel" href="#fristen"><b>63→83 %</b><span>Frist bis Erinnerung</span></a>
+  <a class="kachel" href="#v25"><b>80 %</b><span>Vermieterin 2025, Bereich</span></a>
+  <a class="kachel" href="#v26"><b>70→76</b><span>2026 mit Gemerktem (von 91)</span></a>
+  <a class="kachel" href="#blp"><b>53→75 %</b><span>BookLedgerPro Konto</span></a>
+  <a class="kachel" href="#bank"><b>84 %</b><span>Kontoauszug gescannt lesbar</span></a>
+  <a class="kachel" href="#ocr"><b>1,9 s</b><span>Texterkennung je Seite</span></a>
+  <a class="kachel" href="#pb"><b>13/22</b><span>Private Brain Pro, Art</span></a>
+  <a class="kachel" href="#codex"><b>0,84–0,99</b><span>Einigkeit mit Codex (Kappa)</span></a>
+  <a class="kachel" href="#mess"><b>42 + 1</b><span>Messvorgang: Agenten + Codex</span></a>
+  <a class="kachel" href="#stand"><b>Stand</b><span>ausgegeben / Entwurf</span></a>
+  <a class="kachel" href="#empfehlung"><b>Weiter</b><span>Empfehlung</span></a>
+</nav>
+
+<section id="kurz">
+  <h2>Kurz</h2>
+  <ul>
+    <li>Der neue Kern ist an vier fremden Stapeln in allen Feldern gesichert besser.</li>
+    <li>In der Familienakte bringt er den Bereich von 38–57 % auf 77–87 %, die Frist von 51 % auf 86 %.</li>
+    <li>Die Texterkennung kostet kaum Treffer; schwach sind Art des Schreibens, Konto bei Vermietung, Kontoauszug als PDF.</li>
+    <li>Einfaches Merken „Absender → Bereich“ ist im Folgejahr nicht gesichert besser.</li>
+  </ul>
+</section>
+
+<section id="kern">
+  <button class="kopf" type="button"><h2>Datei-Organizer: Kern alt → neu</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Feld</th><th>Blindtest 2</th><th>A Gegend</th><th>B Lebenslagen</th><th>H Schwerbeh.</th></tr>
+    <tr><td>Bereich</td><td>72 → <span class="g">87</span></td><td>57 → <span class="g">81</span></td><td>61 → <span class="m">76</span></td><td>67 → <span class="m">77</span></td></tr>
+    <tr><td>Art</td><td>64 → <span class="g">83</span></td><td>55 → <span class="g">81</span></td><td>53 → <span class="g">81</span></td><td>48 → <span class="m">73</span></td></tr>
+    <tr><td>Absender</td><td>72 → <span class="g">95</span></td><td>67 → <span class="g">93</span></td><td>74 → <span class="g">94</span></td><td>71 → <span class="g">93</span></td></tr>
+    <tr><td>Person</td><td>61 → <span class="g">92</span></td><td>62 → <span class="g">90</span></td><td>54 → <span class="m">72</span></td><td>67 → <span class="g">89</span></td></tr>
+    <tr><td>Frist</td><td>50 → <span class="g">91</span></td><td>61 → <span class="g">89</span></td><td>58 → <span class="g">91</span></td><td>62 → <span class="g">99</span></td></tr>
+  </table></div>
+  <p class="leise">Prozent richtig, je 150 Schriftstücke, alle Unterschiede gesichert.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Zwei eingefrorene Stände des Kerns am selben fremden Stapel; Soll = Mehrheit von drei Einordnern.</p></details>
+</section>
+
+<section id="fa">
+  <button class="kopf" type="button"><h2>Familienakte: bisher → mit Kern <span class="marke">eingebaut, nicht ausgegeben</span></h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Bereich richtig</th><th>Verm. 2025</th><th>2026</th><th>Blindtest 2</th><th>A</th><th>B</th><th>H</th></tr>
+    <tr><td>bisher</td><td>51/93</td><td>52/91</td><td>73/150</td><td>60/150</td><td>57/150</td><td>69/150</td></tr>
+    <tr><td>mit Kern</td><td class="g">74</td><td class="g">70</td><td class="g">130</td><td class="g">121</td><td class="g">114</td><td class="g">115</td></tr>
+  </table></div>
+  <div class="tab"><table>
+    <tr><th>Frist (288 mit, 498 ohne)</th><th>richtig</th><th>fälschlich eine</th></tr>
+    <tr><td>bisher</td><td>147 = 51 %</td><td>30</td></tr>
+    <tr><td>mit Kern</td><td class="g">247 = 86 %</td><td>35</td></tr>
+  </table></div>
+  <p class="leise">Dateiname allein richtig: 175 von 344.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Die Familienakte bekam jedes Stück als PDF-Name mit gelesenem Text, einmal ohne und einmal mit dem eingebauten Kern.</p></details>
+</section>
+
+<section id="fristen">
+  <button class="kopf" type="button"><h2>Fristen: vom Scan bis zur geplanten Erinnerung</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Vermieterin, gescannt</th><th>bisher</th><th>mit Kern</th></tr>
+    <tr><td>2025 (40 Fristen)</td><td>25 = 63 %</td><td class="g">33 = 83 %</td></tr>
+    <tr><td>2026 (41 Fristen)</td><td>26 = 63 %</td><td class="g">32 = 78 %</td></tr>
+    <tr><td>fälschlich eine Frist 2025 / 2026</td><td>5/53 · 5/52</td><td class="m">10/53 · 7/52</td></tr>
+  </table></div>
+  <p class="leise">Glocke am Gerät: nicht gemessen.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Gescanntes Stück → Texterkennung → Frist erkennen → Aufgabe → geplante Erinnerung (7 Tage und 1 Tag vorher).</p></details>
+</section>
+
+<section id="v25">
+  <button class="kopf" type="button"><h2>Vermieterin 2025 <span class="marke">drei Einordner</span></h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>Text</th><th>gescannt</th></tr>
+    <tr><td>Organizer Bereich</td><td>80 %<span class="b"><u style="width:80%"></u></span></td><td>80 %<span class="b"><u style="width:80%"></u></span></td></tr>
+    <tr><td>Organizer Art</td><td>81 %<span class="b"><u style="width:81%"></u></span></td><td>83 %<span class="b"><u style="width:83%"></u></span></td></tr>
+    <tr><td>Organizer Absender</td><td>87 %<span class="b"><u style="width:87%"></u></span></td><td>84 %<span class="b"><u style="width:84%"></u></span></td></tr>
+    <tr><td>Organizer Frist</td><td>82 %<span class="b"><u style="width:82%"></u></span></td><td>82 %<span class="b"><u style="width:82%"></u></span></td></tr>
+    <tr><td>BookLedgerPro Betrag</td><td>84 %<span class="b"><u style="width:84%"></u></span></td><td>82 %<span class="b"><u style="width:82%"></u></span></td></tr>
+    <tr><td>BookLedgerPro Datum</td><td>96 %<span class="b"><u style="width:96%"></u></span></td><td>91 %<span class="b"><u style="width:91%"></u></span></td></tr>
+    <tr><td>BookLedgerPro Steuersatz</td><td>100 %<span class="b"><u style="width:100%"></u></span></td><td>100 %<span class="b"><u style="width:100%"></u></span></td></tr>
+    <tr><td>BookLedgerPro Konto</td><td class="s">62 %<span class="b"><u style="width:62%"></u></span></td><td class="s">62 %<span class="b"><u style="width:62%"></u></span></td></tr>
+  </table></div>
+  <p class="leise">93 Schriftstücke, 45 Belege. Person nicht wertbar (ein Haushaltsmitglied).</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Ein erfundenes Jahr einer Privatvermieterin; jedes Stück als Text und als gescannte Seite.</p></details>
+</section>
+
+<section id="v26">
+  <button class="kopf" type="button"><h2>Vermieterin 2026 <span class="marke">vorläufig, zwei Einordner</span></h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>Text</th><th>gescannt</th></tr>
+    <tr><td>Organizer Bereich</td><td>77 %</td><td>76 %</td></tr>
+    <tr><td>Organizer Art</td><td class="s">68 %</td><td class="s">68 %</td></tr>
+    <tr><td>Organizer Absender</td><td class="g">98 %</td><td class="m">79 %</td></tr>
+    <tr><td>Organizer Frist</td><td>84 %</td><td>83 %</td></tr>
+  </table></div>
+  <div class="tab"><table>
+    <tr><th>Mit Gemerktem aus 2025</th><th>ohne</th><th>mit</th><th>besser / schlechter</th><th>gesichert</th></tr>
+    <tr><td>Bereich (Text)</td><td>70/91</td><td>76/91</td><td>11 / 5</td><td class="m">nein</td></tr>
+    <tr><td>Bereich (gescannt)</td><td>69/91</td><td>76/91</td><td>11 / 4</td><td class="m">nein</td></tr>
+    <tr><td>Konto der Belege</td><td>25/36</td><td>26/36</td><td>3 / 2</td><td class="m">nein</td></tr>
+    <tr><td>Umsätze ohne Beleg, falsch zugeordnet</td><td>18/133</td><td>18/133</td><td>–</td><td class="m">nein</td></tr>
+  </table></div>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Derselbe Haushalt ein Jahr später mit geänderten Werten; „Gemerktes“ = bestätigte Zuordnungen aus 2025.</p></details>
+</section>
+
+<section id="blp">
+  <button class="kopf" type="button"><h2>BookLedgerPro: Belegerkennung <span class="marke">0.1.15 ausgegeben</span></h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Feld (Betriebsbelege, drei Einordner)</th><th>vorher</th><th>jetzt</th></tr>
+    <tr><td>Konto, ohne Firmennamen</td><td>53 %</td><td class="g">75 %</td></tr>
+    <tr><td>Konto, mit Firmennamen</td><td>66 %</td><td class="g">79 %</td></tr>
+    <tr><td>Datum</td><td>73 %</td><td class="g">97 %</td></tr>
+    <tr><td>Steuersatz</td><td>66 %</td><td class="g">96 %</td></tr>
+    <tr><td>Konto, Belege eines anderen Systems</td><td>–</td><td class="s">58–60 %</td></tr>
+    <tr><td>Konto, Privatvermietung</td><td>–</td><td class="s">62 %</td></tr>
+    <tr><td>Aussteller: BookLedgerPro / Kern</td><td>44 %</td><td>84 % (Kern)</td></tr>
+  </table></div>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Vier fremde Belegstapel verschiedener Betriebe; Konto gegen die Mehrheit der Einordner.</p></details>
+</section>
+
+<section id="bank">
+  <button class="kopf" type="button"><h2>Kontoauszüge</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>2025</th><th>2026</th></tr>
+    <tr><td>Umsatz nach dem Scannen vollständig lesbar</td><td>187/223 = 84 %</td><td>203/240 = 85 %</td></tr>
+    <tr><td>Rechnungsnummer lesbar</td><td>43/43</td><td>49/52</td></tr>
+    <tr><td>Auszug als PDF einlesen</td><td class="s">kann keine App</td><td class="s">kann keine App</td></tr>
+    <tr><td>Als Bankdatei (MT940): Umsatz → Beleg richtig</td><td class="g">51/51</td><td>23/33 (vorläufig)</td></tr>
+    <tr><td>Umsatz ohne Beleg, fälschlich zugeordnet</td><td class="m">22/171</td><td class="m">18/133</td></tr>
+    <tr><td>Rechnungsnummer vom Beleg lesen</td><td class="s">kann BookLedgerPro nicht</td><td class="s">–</td></tr>
+  </table></div>
+  <details class="wie"><summary>Wie gemessen?</summary><p>12 Auszüge je Jahr; geprüft, ob jeder Umsatz nach dem Scannen vollständig dasteht und ob er dem richtigen Beleg zugeordnet wird.</p></details>
+</section>
+
+<section id="ocr">
+  <button class="kopf" type="button"><h2>Texterkennung und Zeit</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>Wert</th></tr>
+    <tr><td>Wortfehler Schriftstücke · Belege · Auszüge (2025)</td><td>4,6 % · 7,8 % · 4,5 %</td></tr>
+    <tr><td>Texterkennung je Seite</td><td>rund 1,9 s</td></tr>
+    <tr><td>1000 Seiten</td><td>rund 32 min</td></tr>
+    <tr><td>Sortieren, Beleg lesen, Abgleich je Stück</td><td>unter 10 ms</td></tr>
+  </table></div>
+  <p class="leise">Rechner der Sitzung (4 Kerne); Tablet nicht gemessen.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Seiten gesetzt (jede fünfte als Handyfoto), gelesen mit der Texterkennung aus dem Workflow-PDF-Teil der Familienakte.</p></details>
+</section>
+
+<section id="pb">
+  <button class="kopf" type="button"><h2>Private Brain Pro</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>2025</th><th>2026</th></tr>
+    <tr><td>Rechnung / Vertrag / Angebot richtig</td><td>13/22</td><td>15/19</td></tr>
+    <tr><td>andere Art fälschlich als eine der drei</td><td>17/71</td><td>15/73</td></tr>
+    <tr><td>nur „Dokument“ (Dateityp)</td><td>56/93</td><td>–</td></tr>
+  </table></div>
+  <p class="leise">Kennt Dokumentarten, keine Fächer. Bedeutungssuche nicht gemessen.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Der Kategorie-Vorschlag von Private Brain Pro, unverändert aufgerufen, gegen die Art des Solls.</p></details>
+</section>
+
+<section id="codex">
+  <button class="kopf" type="button"><h2>Zusammenarbeit mit Codex</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>Was</th><th>Wert</th></tr>
+    <tr><td>Aufträge über den Briefkasten, geliefert</td><td>000–009 (010 offen)</td></tr>
+    <tr><td>Einigkeit der drei Einordner, Briefe (Kappa je Feld)</td><td>0,84–0,99</td></tr>
+    <tr><td>Einigkeit Vermieterin 2025: Bereich · Art · Absender · Frist</td><td>0,92 · 0,96 · 0,89 · 0,92</td></tr>
+    <tr><td>Einigkeit beim Konto der Betriebsbelege</td><td>0,95</td></tr>
+    <tr><td>Kreuztest Konto: Claude-System an eigenen / an Codex-Belegen</td><td>79 % / <span class="s">60 %</span></td></tr>
+    <tr><td>Kreuztest Konto: Codex-System an eigenen / an Claude-Belegen</td><td>72 % / <span class="s">32 %</span></td></tr>
+    <tr><td>Mindestens eines der beiden Systeme richtig (Codex-Belege)</td><td>107/120</td></tr>
+  </table></div>
+  <p class="leise">Jedes System ist an den Unterlagen des anderen deutlich schwächer.</p>
+  <details class="wie"><summary>Wie gemessen?</summary><p>Codex liest nur den Briefkasten-Ordner, ordnet unabhängig ein und legt das Ergebnis auf seinem eigenen Zweig ab.</p></details>
+</section>
+
+<section id="mess">
+  <button class="kopf" type="button"><h2>Messvorgang: wer, was, wie viel</h2><i>↑ Überblick</i></button>
+  <p class="leise">Ast antippen: klappt auf und sagt, welche Aufgabe er hatte.</p>
+  <div class="baum">
+<details class="ast"><summary><span>Zeitraum</span><b>12.11. 07:46 – 13.11. ≈ 12:30 UTC</b></summary><p>Ein Sitzungsfenster von rund 29 Stunden; nachts liefen Agenten, Messläufe und Ausgaben ohne Klaus. Aktive Zeit nicht gemessen.</p></details>
+<details class="ast"><summary><span>Beteiligte</span><b>4 Rollen</b></summary><p>Auftrag und Entscheidungen, Hauptsitzung, Agenten ohne Einblick, zweites KI-System.</p><details class="ast"><summary><span>Klaus</span><b>Auftrag</b></summary><p>Gibt Ziel, Fachregel (acht Punkte Ja) und Freigaben; entscheidet über Ausgaben.</p></details>
+<details class="ast"><summary><span>Claude-Hauptsitzung</span><b>1</b></summary><p>Legt Regeln vorab fest, friert ein, baut Werkzeuge, misst einmal, berichtet. Schreibt selbst keine Prüfunterlagen und kein Soll.</p></details>
+<details class="ast"><summary><span>Claude-Agenten</span><b>42 Aufträge</b></summary><p>Jeder mit eigenem, leerem Gedächtnis und nur seinem Auftrag.</p><details class="ast"><summary><span>Stapel-Autoren</span><b>11</b></summary><p>Schreiben erfundene Prüfunterlagen samt Soll, ohne App, Lehrdaten oder alte Stapel zu kennen.</p><details class="ast"><summary><span>Briefstapel „unabhängig“</span><b>1 Agent</b></summary><p>Erfindet 7 norddeutsche Haushalte und 150 Schriftstücke.</p></details><details class="ast"><summary><span>Briefstapel „Blindtest 2“</span><b>1 Agent</b></summary><p>7 Haushalte in erfundenen Orten, 150 Schriftstücke, dazu Handyfoto-Dateinamen.</p></details><details class="ast"><summary><span>Briefstapel „Gegend“</span><b>1 Agent</b></summary><p>7 ländliche Haushalte in Bayern, Sachsen, Saarland: Nebenerwerbslandwirt, Grenzgänger, Witwe, Hofumbau.</p></details><details class="ast"><summary><span>Briefstapel „Lebenslagen“</span><b>1 Agent</b></summary><p>Zuwanderung, Pflegeheim, Scheidung, Privatinsolvenz, Nachlass, Hausbau, Beamtenhaushalt.</p></details><details class="ast"><summary><span>Briefstapel „Schwerbehinderung“</span><b>1 Agent</b></summary><p>7 Haushalte mit schwerbehindertem oder chronisch krankem Mitglied.</p></details><details class="ast"><summary><span>Belegstapel 1–4</span><b>4 Agenten</b></summary><p>Je ein Agent spielt die Buchhaltung eines anderen kleinen Betriebs (u. a. Blumenwerkstatt, Buchhandlung) und schreibt 120 Belege.</p></details><details class="ast"><summary><span>Vermieterin 2025</span><b>1 Agent</b></summary><p>Spielt die Privatvermieterin ein ganzes Jahr: Post, Belege, 12 Kontoauszüge.</p></details><details class="ast"><summary><span>Vermieterin 2026</span><b>1 Agent</b></summary><p>Kennt nur die Stammdaten, nicht die Stücke von 2025; schreibt das Folgejahr mit geänderten Werten.</p></details></details>
+<details class="ast"><summary><span>Lehrdaten-Autoren</span><b>14</b></summary><p>Schreiben erfundene Lehrdaten. Sehen keinen Prüfstapel.</p><details class="ast"><summary><span>Belege</span><b>8 Agenten</b></summary><p>Je einer für Elektro, Friseur, Imbiss, IT, Kfz, Onlinehandel, Physio, Tischlerei – je rund 200 Belege.</p></details><details class="ast"><summary><span>Briefe</span><b>6 Agenten</b></summary><p>Je einer für alleinstehend, Familie, Hausbesitzer, jung, Rentner, selbstständig – je 120 Schriftstücke.</p></details></details>
+<details class="ast"><summary><span>Zweite Einordner</span><b>12</b></summary><p>Ordnen einen Stapel nach eigenem Urteil ein, ohne das Soll des Autors zu sehen.</p><details class="ast"><summary><span>Briefstapel</span><b>6 Agenten</b></summary><p>Je einer für die 5 Briefstapel; beim ersten Stapel später ein weiterer.</p></details><details class="ast"><summary><span>Belegstapel</span><b>4 Agenten</b></summary><p>Je einer; ordnet Konto, Betrag, Datum, Steuersatz zu.</p></details><details class="ast"><summary><span>Vermieterin</span><b>2 Agenten</b></summary><p>Je einer für 2025 und 2026; Schriftstücke, Belege und Umsätze.</p></details></details>
+<details class="ast"><summary><span>Sonstige</span><b>5</b></summary><p>Bestandsaufnahme der Belegleser, Ausführen eines fremden Bauplans, Regeln für Absender/Frist/Person, zwei Fehlersuchen in der Prüfung.</p></details>
+</details>
+<details class="ast"><summary><span>Codex (GPT-6)</span><b>10 Aufträge geliefert, 1 offen</b></summary><p>Dritter, unabhängiger Einordner über den Briefkasten; liest nur den Auftragsordner. Dazu ein eigener Gegenlauf mit eigenen Agenten und eigenem System.</p></details>
+</details>
+<details class="ast"><summary><span>Unterlagen (alle erfunden)</span><b>rund 4 600 Stücke</b></summary><p>Lehrdaten und Prüfstapel sind streng getrennt.</p><details class="ast"><summary><span>Lehrdaten Briefe</span><b>720</b></summary><p>6 Haushaltsarten × 120 Schriftstücke.</p></details>
+<details class="ast"><summary><span>Lehrdaten Belege</span><b>1 600</b></summary><p>8 Gewerbe × 200 Belege.</p></details>
+<details class="ast"><summary><span>Prüfstapel Briefe</span><b>750 · 35 Haushalte</b></summary><p>5 Stapel × 150 Schriftstücke, je 7 Haushalte.</p><details class="ast"><summary><span>Paare mit Kindern</span><b>11</b></summary><p>5 mit zwei Kindern, 6 mit einem Kind.</p></details><details class="ast"><summary><span>Alleinerziehende</span><b>4</b></summary><p>3 mit einem Kind, 1 mit zwei Kindern.</p></details><details class="ast"><summary><span>Paare ohne Kind</span><b>11</b></summary><p>Darunter Rentnerpaare und zwei Männer als Paar.</p></details><details class="ast"><summary><span>Einzelpersonen</span><b>7</b></summary><p>Darunter Witwen und Alleinstehende im Beruf.</p></details><details class="ast"><summary><span>Eltern mit erwachsenem Kind</span><b>2</b></summary><p>Im Stapel Schwerbehinderung.</p></details><details class="ast"><summary><span>Nicht dabei</span><b>0</b></summary><p>Keine Familie mit drei oder mehr Kindern in den Prüfstapeln; nur der Generator hat eine mit drei.</p></details></details>
+<details class="ast"><summary><span>Prüfstapel Belege</span><b>480</b></summary><p>4 Stapel × 120 Belege, je ein anderer Betrieb.</p></details>
+<details class="ast"><summary><span>Vermieterin 2025 + 2026</span><b>187 Schriftstücke · 90 Belege · 24 Auszüge · 463 Umsätze</b></summary><p>Ein Haus, zwei Jahre; alle Stücke zusätzlich als gescannte Seiten (301 Stücke) durch die Texterkennung.</p><details class="ast"><summary><span>Vermieterin</span><b>1 Person</b></summary><p>Rentnerin mit Witwenrente, wohnt im eigenen Haus, ein Pkw.</p></details><details class="ast"><summary><span>1. OG links</span><b>Paar, 1 Kind</b></summary><p>Mieterfamilie über beide Jahre.</p></details><details class="ast"><summary><span>1. OG rechts</span><b>Paar, 2 Kinder</b></summary><p>Mieterfamilie über beide Jahre.</p></details><details class="ast"><summary><span>Dachgeschoss</span><b>Mieterwechsel</b></summary><p>Paar mit Kind bis Juni 2025; ab August 2025 neues Paar mit Kind, 2026 ein zweites Kind.</p></details></details>
+<details class="ast"><summary><span>Codex-Stapel</span><b>120 Belege</b></summary><p>Von Codex-Agenten geschrieben; dient dem Kreuztest.</p></details>
+<details class="ast"><summary><span>Generator-Haushalte</span><b>10 · 678 Dateien</b></summary><p>Frühe Übungsdaten, kein Nachweis: Familie mit 3 Kindern, alleinerziehend, Einzelperson, Bürgergeld, Professorin, Handwerker, Rentnerpaar, App-Entwickler, Boutique, Studentin.</p></details>
+</details>
+<details class="ast"><summary><span>Messungen</span><b>je einmal</b></summary><p>Jeder Stapel wird genau einmal gegen den eingefrorenen Stand gemessen.</p><details class="ast"><summary><span>Blindtests Belege</span><b>4</b></summary><p>Betrag, Datum, Steuersatz, Konto – alt gegen neu.</p></details>
+<details class="ast"><summary><span>Blindtests Briefe</span><b>5</b></summary><p>Bereich, Art, Absender, Person, Frist – alt gegen neu; der erste noch mit einem Einordner.</p></details>
+<details class="ast"><summary><span>Kreuztest</span><b>1</b></summary><p>Claude-System an Codex-Belegen und umgekehrt.</p></details>
+<details class="ast"><summary><span>Vermieterin</span><b>2 Jahre × Text und gescannt</b></summary><p>Sortierung, Belege, Kontoauszüge, Fristenkette, Private Brain Pro, Merken mit/ohne.</p></details>
+<details class="ast"><summary><span>Einbau Familienakte</span><b>6 Stapel · 784 Stücke</b></summary><p>Familienakte bisher gegen mit Kern, vor und nach dem Einbau.</p></details>
+</details>
+<details class="ast"><summary><span>Einigkeit der Einordner</span><b>Vermieterin</b></summary><p>Wie oft dieselbe Antwort, je Feld.</p><div class="tab"><table>
+ <tr><th>Feld</th><th>2025 Autor = Zweiter</th><th>2025 alle drei gleich</th><th>2026 Autor = Zweiter</th></tr>
+ <tr><td>Bereich</td><td>90/93</td><td>84/93</td><td>91/94</td></tr>
+ <tr><td>Art</td><td>90/93</td><td>88/93</td><td>92/94</td></tr>
+ <tr><td>Absender</td><td>80/93</td><td>78/93</td><td>84/94</td></tr>
+ <tr><td>Frist</td><td>90/93</td><td>85/93</td><td>93/94</td></tr>
+ <tr><td>Person</td><td class="s">64/93</td><td class="s">52/93</td><td class="s">43/94</td></tr>
+ <tr><td>Konto (45 Belege)</td><td>37/45</td><td>34/45</td><td>–</td></tr>
+</table></div></details>
+<details class="ast"><summary><span>Commits</span><b>135</b></summary><p>Datei-Organizer 83 · Familienakte 41 · BookLedger Basic 4 · BookLedgerPro 3 · Sage-Protokoll 3 · KimHub 1.</p></details>
+<details class="ast"><summary><span>Unterwegs geändert oder berichtigt</span><b>9</b></summary><p>Alles im Bericht benannt.</p><ul><li>Einigkeit beim Bereich zuerst falsch gerechnet (21 gegen 18 Fächer) – berichtigt.</li><li>Abstimmwert 92 % war ein Leck (schon an Prüfdaten gelernt) – Schalter eingebaut.</li><li>Wortmodell überstimmte gute Regeln – Schwelle und Bedingungen gesetzt.</li><li>Vergleich Familienakte als Textdatei war zu hart (14 %) – als PDF 55–57 %.</li><li>Messwerkzeug Kontoauszüge brach beim ersten Aufruf ab – berichtigt, dann einmal gemessen.</li><li>Zwei Bedienproben hingen am Datum bzw. am Zeitpunkt – berichtigt.</li><li>Auftrag 2026: zwei klärende Sätze zur Frist nachgereicht.</li><li>Nach dem Einbau: Schutzklasse nie herabsetzen, „Korrespondenz“ überstimmt nichts.</li><li>Probe „Dateieingang“: Erwartungen an die Fachregel angepasst.</li></ul></details>
+<details class="ast"><summary><span>Was die Aussage begrenzt</span><b>4</b></summary><p>Gilt für alles oben.</p><ul><li>Alle Unterlagen sind erfunden und von KI-Agenten geschrieben.</li><li>Die meisten Einordner sind Claude-Agenten; nur Codex ist ein anderes System.</li><li>Gescannte Seiten sind gesetzt, keine echten Scans; nichts am Gerät.</li><li>Vermieterin: ein einziger Haushalt; 2026 erst mit zwei Einordnern.</li></ul></details>
+  </div>
+</section>
+
+<section id="stand">
+  <button class="kopf" type="button"><h2>Stand</h2><i>↑ Überblick</i></button>
+  <div class="tab"><table>
+    <tr><th>App</th><th>Stand</th></tr>
+    <tr><td>Datei-Organizer 0.2.0</td><td class="g">ausgeliefert (Web-App)</td></tr>
+    <tr><td>BookLedgerPro 0.1.15, Basic nachgezogen</td><td class="g">ausgegeben</td></tr>
+    <tr><td>Familienakte mit Kern</td><td class="m">Entwurf, nicht ausgegeben</td></tr>
+    <tr><td>Private Brain Pro, Workflow PDF Pro</td><td>unverändert</td></tr>
+    <tr><td>Nicht gemessen</td><td>echte Unterlagen · Geräte · Suche über die Knoten</td></tr>
+  </table></div>
+</section>
+
+<section id="empfehlung">
+  <button class="kopf" type="button"><h2>Empfehlung: Stück für Stück</h2><i>↑ Überblick</i></button>
+  <ol>
+    <li><b>Familienakte mit dem Kern ausgeben</b> (nächste Fassung 2.28.66), danach am Gerät prüfen.</li>
+    <li>Jahr 2026 mit Codex abschließen; ein frischer Stapel nach dem Einbau (anderer Lebenslauf).</li>
+    <li>Fristen: „falsch und sicher“ senken – jede verpasste oder falsche Frist einzeln durchgehen.</li>
+    <li>Absender und Titel der Familienakte aus dem Kern (87 % gegen 35 %).</li>
+    <li>Art des Schreibens nachschärfen (2026 nur 68 %).</li>
+    <li>BookLedgerPro: Konten für Privatvermietung, Kontoauszug als PDF lesen, Rechnungsnummer lesen; Aussteller aus dem Kern.</li>
+    <li>Merken nach Sache statt nur nach Absender – erst als Vorschau.</li>
+    <li>Calculate und Workflow Needs in die Prüfreihe aufnehmen.</li>
+    <li>Kleine Stichprobe echter Unterlagen auf dem eigenen Gerät – nur Zahlen verlassen das Gerät.</li>
+  </ol>
+</section>
+</div>
+
+<script>
+// Überschrift eines Ergebnisses antippen: zurück zum Überblick.
+document.querySelectorAll(".kopf").forEach(function (k) { k.addEventListener("click", function () { document.getElementById("oben").scrollIntoView({ behavior: "smooth" }); }); });
+document.querySelectorAll(".kachel").forEach(function (a) { a.addEventListener("click", function (e) { var z = document.querySelector(a.getAttribute("href")); if (z) { e.preventDefault(); z.scrollIntoView({ behavior: "smooth" }); } }); });
+</script>

@@ -1,0 +1,43 @@
+Image too small to scale!! (1x36 vs min width of 3)
+Line cannot be recognized!!
+Image too small to scale!! (2x36 vs min width of 3)
+Line cannot be recognized!!
+Image too small to scale!! (2x36 vs min width of 3)
+Line cannot be recognized!!
+200 Schriftstücke aus 1 Ordner(n), Soll: SOLL.json
+
+== bereich ==
+  neu  157/200 = 78.5 % (72–84 %) · falsch und sicher 17 · falsch und offen 26 · Fach oder Zweitfach 165
+  alt  156/200 = 78.0 % (72–83 %) · falsch und sicher 20 · falsch und offen 24 · Fach oder Zweitfach 169
+  McNemar: nur alt richtig 8, nur neu richtig 9, p=1.000
+
+== schriftstueck ==
+  neu  146/200 = 73.0 % (66–79 %) · falsch und sicher 19 · falsch und offen 35
+  alt  132/200 = 66.0 % (59–72 %) · falsch und sicher 29 · falsch und offen 39
+  McNemar: nur alt richtig 12, nur neu richtig 26, p=0.034
+
+== absender ==
+  neu  118/199 = 59.3 % (52–66 %) · falsch und sicher 21 · falsch und offen 60
+  alt  112/199 = 56.3 % (49–63 %) · falsch und sicher 18 · falsch und offen 69
+  McNemar: nur alt richtig 0, nur neu richtig 6, p=0.031
+
+== person ==
+  neu  130/177 = 73.4 % (66–79 %) · falsch und sicher 4 · falsch und offen 43
+  alt  130/177 = 73.4 % (66–79 %) · falsch und sicher 4 · falsch und offen 43
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== frist ==
+  neu  167/200 = 83.5 % (78–88 %) · falsch und sicher 7 · falsch und offen 26
+  alt  164/200 = 82.0 % (76–87 %) · falsch und sicher 7 · falsch und offen 29
+  McNemar: nur alt richtig 1, nur neu richtig 4, p=0.375
+
+Lesegüte je Form: {"pdf-scan/schlecht":{"n":36,"wortfehler":0.341,"gefunden":0.853},"foto/gut":{"n":30,"wortfehler":0.479,"gefunden":0.954},"pdf-scan/gut":{"n":37,"wortfehler":0.422,"gefunden":0.965},"foto/schlecht":{"n":30,"wortfehler":0.741,"gefunden":0.454},"pdf-scan/mittel":{"n":37,"wortfehler":0.345,"gefunden":0.964},"foto/mittel":{"n":30,"wortfehler":0.445,"gefunden":0.867}}
+Lesen oder Einordnen: {"gut gelesen":{"n":157,"bereich":83,"schriftstueck":78,"absender":68,"person":76,"frist":90},"schlecht gelesen":{"n":43,"bereich":60,"schriftstueck":53,"absender":28,"person":63,"frist":58}}
+
+Je Form/Güte (neu):
+  foto/gut           n=30 bereich 73 % · schriftstueck 83 % · absender 66 % · person 80 % · frist 93 %
+  foto/mittel        n=30 bereich 77 % · schriftstueck 83 % · absender 30 % · person 57 % · frist 73 %
+  foto/schlecht      n=30 bereich 53 % · schriftstueck 37 % · absender 23 % · person 60 % · frist 67 %
+  pdf-scan/gut       n=37 bereich 86 % · schriftstueck 76 % · absender 89 % · person 84 % · frist 86 %
+  pdf-scan/mittel    n=37 bereich 86 % · schriftstueck 76 % · absender 62 % · person 81 % · frist 97 %
+  pdf-scan/schlecht  n=36 bereich 89 % · schriftstueck 81 % · absender 75 % · person 75 % · frist 81 %

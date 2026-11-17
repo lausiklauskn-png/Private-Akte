@@ -1,0 +1,16 @@
+Elbmarsch Sparbank                                    Kontoauszug 10/2026  Blatt 1/1
+Gemeinschaftskonto Torben Pahlke und Silke Pahlke
+IBAN DE00 0000 0000 0000 0081 30   BIC ELBMXXXX00
+
+Datum    Wert     Vorgang                                         Betrag EUR
+                  Alter Kontostand vom 30.09.2026                   1.284,17 +
+01.10.   01.10.   Lastschrift Wohnbau Moewenhof eG Miete 10/26        980,00 -
+01.10.   01.10.   Gutschrift Familienkasse Nordkueste KG             510,00 +
+02.10.   02.10.   Lastschrift Stadtwerke Brakenhude Abschlag          142,00 -
+05.10.   05.10.   Kartenzahlung Frischmarkt Kranich                    63,41 -
+15.10.   15.10.   Dauerauftrag Sparplan Lene                           25,00 -
+29.10.   29.10.   Gutschrift HARMS + PETERSEN Lohn 10/26            2.280,29 +
+30.10.   30.10.   Gutschrift Kontorhaus Praxis Lohn S. Pahlke       1.410,55 +
+                  Neuer Kontostand vom 31.10.2026                   4.274,60 +
+
+Bitte prüfen Sie die Buchungen. Einwendungen sind innerhalb von sechs Wochen zu erheben.

@@ -1,0 +1,22 @@
+Technikhaus Beispielbyte
+
+Herrn Tim Hartmann
+Mühlgasse 4
+23458 Neudorf-Beispiel
+
+Rechnungsnummer: BB-25-77120
+Kundennummer: 33091
+Datum: 20.08.2025
+
+Rechnung
+
+Artikel                                               Menge   EUR
+Notebook Beispielbook 15, Serien-Nr. BBK15-7710233    1       549,00
+Garantieverlängerung auf 3 Jahre                      1       49,00
+Maus kabellos                                         1       14,99
+Gesamt inkl. 19 % MwSt                                        612,99
+bezahlt per Girocard                                          612,99
+
+Garantie: 2 Jahre gesetzlich, verlängert auf 3 Jahre bis 19.08.2028. Damit die Verlängerung gilt, registrieren Sie das Gerät bitte bis zum 19.09.2025 unter Angabe der Seriennummer im Kundenportal. Bitte bewahren Sie diese Rechnung als Garantienachweis auf. Rückgabe unbenutzter Ware innerhalb von 14 Tagen in der Originalverpackung.
+
+Vielen Dank für Ihren Einkauf

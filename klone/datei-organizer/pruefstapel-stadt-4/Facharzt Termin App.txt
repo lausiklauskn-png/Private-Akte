@@ -1,0 +1,4 @@
+[Krankenkassen-App - Termin-Info]
+Überweisung zur Endokrinologie von Hausarztpraxis Dr. Beispiel-Lindner ausgestellt (14.10.2026).
+Termin: Di, 27.10.2026, 14:15 Uhr, Praxis für Innere Medizin Beispiel.
+Mitbringen: Überweisung, aktuelle Laborwerte (Auftrags-Nr. L-0009120). Bei Verhinderung bitte 48 Stunden vorher absagen.

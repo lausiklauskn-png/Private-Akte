@@ -1,0 +1,9 @@
+belegfix.example - Die Online-Buchhaltung
+Rechnung BF-2026-04-0044712 · 01.04.2026
+
+Teekontor Lindenblatt · Tarif "Buchhaltung Plus" (Belegerfassung, UStVA-Übermittlung,
+Bankabgleich) · Abrechnungszeitraum April 2026
+
+Monatsbeitrag netto 19,90 EUR
+19 % USt 3,78 EUR
+Gesamt 23,68 EUR - Abbuchung per SEPA

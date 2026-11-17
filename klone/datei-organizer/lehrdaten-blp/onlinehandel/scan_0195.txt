@@ -1,0 +1,16 @@
+Marktplatz HANDGEMACHT.EXAMPLE - Verkäuferabrechnung
+Shop: Teekontor Lindenblatt (Verkäufer-ID 880412)
+Abrechnungszeitraum 01.06.2026 - 30.06.2026
+
+Verkäufe im Zeitraum: 93 Bestellungen
+
+Umsätze Lebensmittel (Tee, Gewürze) 7 %      1.846,20
+Umsätze Zubehör/Geschenkartikel 19 %           402,50
+Vom Käufer gezahlte Versandkosten               0,00 (im Preis enthalten)
+-------------------------------------------------------
+Summe Ihrer Verkaufserlöse brutto            2.248,70 EUR
+
+Auszahlung auf IBAN DE00 0000 **** am 03.07.2026: 2.248,70 EUR
+Gebühren werden separat in Rechnung gestellt.
+
+Hinweis: Diese Übersicht dient als Nachweis Ihrer Erlöse.

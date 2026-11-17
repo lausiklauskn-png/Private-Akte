@@ -1,0 +1,95 @@
+{
+ "ordner": [
+  "laeufe/m501",
+  "laeufe/m502",
+  "laeufe/m503",
+  "laeufe/m504",
+  "laeufe/m505",
+  "laeufe/m506",
+  "laeufe/m507",
+  "laeufe/m508",
+  "laeufe/m509",
+  "laeufe/m510",
+  "laeufe/m511",
+  "laeufe/m512",
+  "laeufe/m513",
+  "laeufe/m514",
+  "laeufe/m515",
+  "laeufe/m516",
+  "laeufe/m517",
+  "laeufe/m518",
+  "laeufe/m519",
+  "laeufe/m520",
+  "laeufe/m521",
+  "laeufe/m522",
+  "laeufe/m523",
+  "laeufe/m524",
+  "laeufe/m525"
+ ],
+ "quelldateien": 50000,
+ "block": 50,
+ "merken": "arbeit",
+ "stufen": [
+  {
+   "menge": 1000,
+   "dateien": 1010,
+   "ms": {
+    "lesen": 3674,
+    "merken": 81,
+    "doppelt": 21,
+    "siebe": 312
+   },
+   "gesamtS": 4.1,
+   "msJe1000": {
+    "lesen": 3674,
+    "merken": 81,
+    "doppelt": 21,
+    "siebe": 312
+   },
+   "heapSpitzeMB": 139,
+   "schreibvorgaenge": 19,
+   "geschriebenMB": 8.6
+  },
+  {
+   "menge": 5000,
+   "dateien": 5057,
+   "ms": {
+    "lesen": 16937,
+    "merken": 1529,
+    "doppelt": 53,
+    "siebe": 956
+   },
+   "gesamtS": 19.5,
+   "msJe1000": {
+    "lesen": 3387,
+    "merken": 306,
+    "doppelt": 11,
+    "siebe": 191
+   },
+   "heapSpitzeMB": 406,
+   "schreibvorgaenge": 104,
+   "geschriebenMB": 49.4
+  },
+  {
+   "menge": 20000,
+   "dateien": 20222,
+   "ms": {
+    "lesen": 69754,
+    "merken": 24705,
+    "doppelt": 243,
+    "siebe": 3229
+   },
+   "gesamtS": 98,
+   "msJe1000": {
+    "lesen": 3488,
+    "merken": 1235,
+    "doppelt": 12,
+    "siebe": 161
+   },
+   "heapSpitzeMB": 1432,
+   "schreibvorgaenge": 419,
+   "geschriebenMB": 195.1
+  }
+ ],
+ "fassung": "vorher"
+}

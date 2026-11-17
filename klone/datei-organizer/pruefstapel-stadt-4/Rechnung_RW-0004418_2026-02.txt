@@ -1,0 +1,23 @@
+Rheinwelle Beispiel Glasfaser und Mobilfunk
+Ihre Rechnung Februar 2026
+
+Kunden-Nr.:      RW-0004418
+Rechnungs-Nr.:   RW26-02-0918374
+Rechnungsdatum:  03.02.2026
+Leistungszeitraum: 01.02.2026 – 28.02.2026
+
+Markus Feldhaus
+Mühlbachstraße 140
+99905 Musterhausen am Rhein
+
+Pos  Leistung                                  Betrag
+1    Rheinwelle Glasfaser 500 (Aktionspreis)   34,99 €
+2    Festnetz-Flat (inklusive)                   0,00 €
+3    Router Rheinwelle Box 7 (Miete)              0,00 €
+     Summe (inkl. 19 % USt 5,59 €)              34,99 €
+
+Der Betrag wird am 10.02.2026 per SEPA-Lastschrift
+von Ihrem Konto IBAN DE00 0000 0000 0000 0000 00 eingezogen.
+Gläubiger-ID DE00ZZZ00000000000, Mandatsreferenz RW-M-0004418.
+
+Ihre Einzelverbindungsübersicht finden Sie im Kundenportal.

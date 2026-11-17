@@ -1,0 +1,10 @@
+GRILLSTUBE HARTWIG * KORNMARKT 7 * WESENRODE
+Z-ABSCHLAG 0102            Sa 04.04.2026 23:12
+(OSTERFEUER-AUSSCHANK, Bierwagen + Stehtische)
+
+ WG2 GETRAENKE 19%            1.486,50
+ WG3 SPEISEN VERZEHR ORT 19%    958,00
+ ---------------------------------
+ TAGESSUMME                   2.444,50
+ MWST 19%   390,30   NETTO 2.054,20
+ BAR 2.210,50   EC 234,00

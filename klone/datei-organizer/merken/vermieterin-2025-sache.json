@@ -1,0 +1,312 @@
+{
+ "quelle": "pruefstapel-vermieterin",
+ "sacheBereich": {
+  "rentenversicherungmittelland": {
+   "Rente, Arbeit & Sozialversicherung": "Rente, Arbeit & Sozialversicherung"
+  },
+  "wasserverbandoberewupse": {
+   "Energie & Versorgung": "Energie & Versorgung"
+  },
+  "stadtsellenbruck": {
+   "Haus & Wohnung": "Haus & Wohnung",
+   "Garten & Grundstück": "Garten & Grundstück"
+  },
+  "abfallwirtschaftsbetrieblandkreiswendelsburg": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "mittellandkrankenkassemkk": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "wupsetalerversicherung": {
+   "Auto & Mobilität": "Auto & Mobilität",
+   "Versicherungen": "Haus & Wohnung"
+  },
+  "fideliasachversicherung": {
+   "Versicherungen": "Versicherungen"
+  },
+  "hauswartservicebrinkmeier": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "landeshypomittelland": {
+   "Finanzen & Konten": "Finanzen & Konten"
+  },
+  "mirelapetrovic": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "hausarztpraxisdrmedalmutreschke": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "landfrauenvereinsellenbruck": {
+   "Reisen & Freizeit": "Reisen & Freizeit"
+  },
+  "raiffeisenundburgerbanksellenbruck": {
+   "Finanzen & Konten": "Finanzen & Konten"
+  },
+  "stadtwerkewendelsburg": {
+   "Energie & Versorgung": "Energie & Versorgung"
+  },
+  "medizinischerdienstmittelland": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "gartenundlandschaftspflegetiedemann": {
+   "Garten & Grundstück": "Garten & Grundstück"
+  },
+  "lohnsteuerhilfemittelland": {
+   "Steuern & Behörden": "Steuern & Behörden"
+  },
+  "telviakommunikation": {
+   "Verträge & Abonnements": "Verträge & Abonnements"
+  },
+  "jonas": {
+   "Korrespondenz": "Korrespondenz"
+  },
+  "mittellandpflegekasse": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "uwekallweit": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "hannelorewiebusch": {
+   "Haus & Wohnung": "Haus & Wohnung",
+   "Verträge & Abonnements": "Verträge & Abonnements",
+   "Finanzen & Konten": "Finanzen & Konten"
+  },
+  "hauptzollamtwendelsburg": {
+   "Auto & Mobilität": "Auto & Mobilität"
+  },
+  "augenzentrumwendelsburg": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "draganpetrovic": {
+   "Korrespondenz": "Haus & Wohnung"
+  },
+  "jensundkatrinscholten": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "zahnarztpraxisdrmeddentkarstenbrommel": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "justararechtsschutzversicherung": {
+   "Versicherungen": "Versicherungen"
+  },
+  "elektrohausmertens": {
+   "Technik, Geräte & Reparaturen": "Technik, Geräte & Reparaturen"
+  },
+  "markususabinebrandtner": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "lindenapotheke": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "selinaydemir": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "reisediensthollmann": {
+   "Reisen & Freizeit": "Reisen & Freizeit"
+  },
+  "heizungsanitardroge": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "stadtsellenbruckburgerburo": {
+   "Steuern & Behörden": "Steuern & Behörden"
+  },
+  "creditasforderungsmanagement": {
+   "Finanzen & Konten": "Finanzen & Konten"
+  },
+  "wendelsburgertageblatt": {
+   "Verträge & Abonnements": "Verträge & Abonnements"
+  },
+  "henningdroge": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "autohausreimers": {
+   "Auto & Mobilität": "Auto & Mobilität"
+  },
+  "baumarkthagedorn": {
+   "Garten & Grundstück": "Garten & Grundstück"
+  },
+  "finanzamtwendelsburg": {
+   "Steuern & Behörden": "Steuern & Behörden"
+  },
+  "katrinscholten": {
+   "Korrespondenz": "Haus & Wohnung"
+  },
+  "gebaudediensteahlerskramp": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "drfriederikealsleben": {
+   "Erbschaft, Vollmachten & Vorsorge": "Erbschaft, Vollmachten & Vorsorge"
+  },
+  "landkreiswendelsburgkreiskasse": {
+   "Haus & Wohnung": "Haus & Wohnung"
+  },
+  "luthkirchengemeindestmariensellenbruck": {
+   "Familie & persönliche Dokumente": "Familie & persönliche Dokumente"
+  },
+  "orthopadischepraxisdrmedvolkmarthieen": {
+   "Gesundheit & Pflege": "Gesundheit & Pflege"
+  },
+  "frischmarktjessen": {
+   "Einkäufe, Rechnungen & Garantien": "Einkäufe, Rechnungen & Garantien"
+  },
+  "gartnereiblutenzauber": {
+   "Einkäufe, Rechnungen & Garantien": "Einkäufe, Rechnungen & Garantien"
+  }
+ },
+ "absenderEinig": {
+  "rentenversicherungmittelland": "Rente, Arbeit & Sozialversicherung",
+  "wasserverbandoberewupse": "Energie & Versorgung",
+  "abfallwirtschaftsbetrieblandkreiswendelsburg": "Haus & Wohnung",
+  "mittellandkrankenkassemkk": "Gesundheit & Pflege",
+  "fideliasachversicherung": "Versicherungen",
+  "hauswartservicebrinkmeier": "Haus & Wohnung",
+  "landeshypomittelland": "Finanzen & Konten",
+  "mirelapetrovic": "Haus & Wohnung",
+  "hausarztpraxisdrmedalmutreschke": "Gesundheit & Pflege",
+  "landfrauenvereinsellenbruck": "Reisen & Freizeit",
+  "raiffeisenundburgerbanksellenbruck": "Finanzen & Konten",
+  "stadtwerkewendelsburg": "Energie & Versorgung",
+  "medizinischerdienstmittelland": "Gesundheit & Pflege",
+  "gartenundlandschaftspflegetiedemann": "Garten & Grundstück",
+  "telviakommunikation": "Verträge & Abonnements",
+  "jonas": "Korrespondenz",
+  "mittellandpflegekasse": "Gesundheit & Pflege",
+  "uwekallweit": "Haus & Wohnung",
+  "hauptzollamtwendelsburg": "Auto & Mobilität",
+  "augenzentrumwendelsburg": "Gesundheit & Pflege",
+  "draganpetrovic": "Haus & Wohnung",
+  "jensundkatrinscholten": "Haus & Wohnung",
+  "zahnarztpraxisdrmeddentkarstenbrommel": "Gesundheit & Pflege",
+  "justararechtsschutzversicherung": "Versicherungen",
+  "elektrohausmertens": "Technik, Geräte & Reparaturen",
+  "markususabinebrandtner": "Haus & Wohnung",
+  "lindenapotheke": "Gesundheit & Pflege",
+  "selinaydemir": "Haus & Wohnung",
+  "reisediensthollmann": "Reisen & Freizeit",
+  "heizungsanitardroge": "Haus & Wohnung",
+  "stadtsellenbruckburgerburo": "Steuern & Behörden",
+  "creditasforderungsmanagement": "Finanzen & Konten",
+  "wendelsburgertageblatt": "Verträge & Abonnements",
+  "henningdroge": "Haus & Wohnung",
+  "autohausreimers": "Auto & Mobilität",
+  "baumarkthagedorn": "Garten & Grundstück",
+  "finanzamtwendelsburg": "Steuern & Behörden",
+  "katrinscholten": "Haus & Wohnung",
+  "gebaudediensteahlerskramp": "Haus & Wohnung",
+  "drfriederikealsleben": "Erbschaft, Vollmachten & Vorsorge",
+  "landkreiswendelsburgkreiskasse": "Haus & Wohnung",
+  "luthkirchengemeindestmariensellenbruck": "Familie & persönliche Dokumente",
+  "orthopadischepraxisdrmedvolkmarthieen": "Gesundheit & Pflege",
+  "frischmarktjessen": "Einkäufe, Rechnungen & Garantien",
+  "gartnereiblutenzauber": "Einkäufe, Rechnungen & Garantien"
+ },
+ "absenderBereich": {
+  "rentenversicherungmittelland": "Rente, Arbeit & Sozialversicherung",
+  "wasserverbandoberewupse": "Energie & Versorgung",
+  "abfallwirtschaftsbetrieblandkreiswendelsburg": "Haus & Wohnung",
+  "mittellandkrankenkassemkk": "Gesundheit & Pflege",
+  "wupsetalerversicherung": "Haus & Wohnung",
+  "fideliasachversicherung": "Versicherungen",
+  "hauswartservicebrinkmeier": "Haus & Wohnung",
+  "landeshypomittelland": "Finanzen & Konten",
+  "mirelapetrovic": "Haus & Wohnung",
+  "hausarztpraxisdrmedalmutreschke": "Gesundheit & Pflege",
+  "landfrauenvereinsellenbruck": "Reisen & Freizeit",
+  "raiffeisenundburgerbanksellenbruck": "Finanzen & Konten",
+  "stadtwerkewendelsburg": "Energie & Versorgung",
+  "medizinischerdienstmittelland": "Gesundheit & Pflege",
+  "gartenundlandschaftspflegetiedemann": "Garten & Grundstück",
+  "lohnsteuerhilfemittelland": "Steuern & Behörden",
+  "telviakommunikation": "Verträge & Abonnements",
+  "jonas": "Korrespondenz",
+  "mittellandpflegekasse": "Gesundheit & Pflege",
+  "uwekallweit": "Haus & Wohnung",
+  "hannelorewiebusch": "Haus & Wohnung",
+  "hauptzollamtwendelsburg": "Auto & Mobilität",
+  "augenzentrumwendelsburg": "Gesundheit & Pflege",
+  "draganpetrovic": "Haus & Wohnung",
+  "jensundkatrinscholten": "Haus & Wohnung",
+  "zahnarztpraxisdrmeddentkarstenbrommel": "Gesundheit & Pflege",
+  "justararechtsschutzversicherung": "Versicherungen",
+  "elektrohausmertens": "Technik, Geräte & Reparaturen",
+  "markususabinebrandtner": "Haus & Wohnung",
+  "lindenapotheke": "Gesundheit & Pflege",
+  "selinaydemir": "Haus & Wohnung",
+  "reisediensthollmann": "Reisen & Freizeit",
+  "heizungsanitardroge": "Haus & Wohnung",
+  "stadtsellenbruckburgerburo": "Steuern & Behörden",
+  "creditasforderungsmanagement": "Finanzen & Konten",
+  "wendelsburgertageblatt": "Verträge & Abonnements",
+  "henningdroge": "Haus & Wohnung",
+  "autohausreimers": "Auto & Mobilität",
+  "baumarkthagedorn": "Garten & Grundstück",
+  "finanzamtwendelsburg": "Steuern & Behörden",
+  "katrinscholten": "Haus & Wohnung",
+  "gebaudediensteahlerskramp": "Haus & Wohnung",
+  "drfriederikealsleben": "Erbschaft, Vollmachten & Vorsorge",
+  "landkreiswendelsburgkreiskasse": "Haus & Wohnung",
+  "luthkirchengemeindestmariensellenbruck": "Familie & persönliche Dokumente",
+  "orthopadischepraxisdrmedvolkmarthieen": "Gesundheit & Pflege",
+  "frischmarktjessen": "Einkäufe, Rechnungen & Garantien",
+  "gartnereiblutenzauber": "Einkäufe, Rechnungen & Garantien"
+ },
+ "ausstellerKonto": {
+  "hauswartservicebrinkmeier": "4250",
+  "dachdeckereihinnerkvoss": "4260",
+  "gartenundlandschaftspflegetiedemann": "4980",
+  "stadtwerkewendelsburg": "4240",
+  "uwekallweit": "4260",
+  "hannelorewiebusch": "8400",
+  "postagentursellenbruck": "4910",
+  "papiertinteluders": "4930",
+  "wupsetalerversicherung": "4360",
+  "wendelsburgertageblatt": "4600",
+  "wohnfinder24": "4600",
+  "heizungsanitardroge": "4260",
+  "gebaudediensteahlerskramp": "4250",
+  "warmemaabrechnungsdienst": "4980",
+  "schlossriegelhartwig": "4260",
+  "malerbetriebkowalczyk": "4260",
+  "elektrosievers": "4260",
+  "lindenapotheke": "1800",
+  "buchhandlungleselust": "4940",
+  "wupsetalbahn": "4670",
+  "raiffeisenundburgerbanksellenbruck": "4970",
+  "abfallwirtschaftsbetrieblandkreiswendelsburg": "4980",
+  "gartnereiblutenzauber": "4630",
+  "telviakommunikation": "4920",
+  "fliesenhandelostermann": "4260",
+  "tankhofsellenbruck": "1800"
+ },
+ "gegenparteiOhneBeleg": [
+  "petrovicdragan",
+  "fideliasachversicherung",
+  "landeshypomittelland",
+  "frischmarktjessensellenbrueck",
+  "rentenversicherungmittelland",
+  "wasserverbandoberewupse",
+  "stadtkassesellenbrueck",
+  "finanzamtwendelsburg",
+  "landfrauenvereinsellenbrueck",
+  "elektrohausmertenssellenbrueck",
+  "bundeskassekfzsteuerhzawendelsburg",
+  "justararechtsschutzversicherung",
+  "zahnarztpraxisdrbroemmel",
+  "petrovicmirela",
+  "reisediensthollmann",
+  "jonaswiebusch",
+  "stadtsellenbrueckbuergerbuero",
+  "hannelorewiebusch",
+  "lohnsteuerhilfemittelland",
+  "emreaydemir",
+  "aydemirselinuemre",
+  "autohausreimers",
+  "mittellandpflegekasse",
+  "notarindrfriederikealsleben",
+  "kreiskassewendelsburg",
+  "kirchenamtwendelsburg",
+  "schuhhausdierkingwendelsburg",
+  "thomaswiebusch",
+  "gaertnereibluetenzaubersellenbrueck"
+ ]
+}

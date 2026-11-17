@@ -1,0 +1,15 @@
+Haarstudio Federleicht
+Kassenbericht Woche 14/2026 (Mo–Sa)
+erstellt 17.08.2026 aus dem Kassensystem
+
+Warengruppe                     Brutto
+Dienstleistung Damen         1.664,28
+Dienstleistung Herren        672,11
+Farbe/Chemie                 544,09
+Verkauf Produkte             320,05
+                             ---------
+Wochenumsatz 19 %            3.200,53
+enthaltene Umsatzsteuer      511,01
+Nettoerlös                   2.689,52
+
+Stornos: 1    Gutscheine eingelöst: 3

@@ -1,0 +1,22 @@
+KIOSK BEISPIEL SPÄTI
+Kastanienallee 1, 45678 Musterhausen
+Tel. 00000 000000
+UST-ID DE000000000
+
+Mate 0,5 l
+  2 x 1,80        3,60 A
+Pfand
+  2 x 0,25        0,50 A
+Chips Paprika                    2,49 B
+Zeitung Beispiel Anzeiger        2,30 B
+------------------------------------
+SUMME EUR                     8,89
+Bar gegeben                    8,89
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   3,45   0,65   4,10
+B 7 %   4,48   0,31   4,79
+
+17.01.2026 23:19  Bon 6607  Kasse 1
+TSE-Signatur 1539077011
+Vielen Dank für Ihren Einkauf!

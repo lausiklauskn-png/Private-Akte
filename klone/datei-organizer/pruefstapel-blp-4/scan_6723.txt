@@ -1,0 +1,23 @@
+Pinnwall Ads Ltd.
+4 Harbour Quay, Dublin 2, D02 XX00, Ireland
+VAT Reg. No. IE0000000XX
+
+Invoice / Rechnung  PW-2026-06-5539102
+Invoice date: 30.06.2026
+Billing period: 01.06.2026 - 30.06.2026
+
+Bill to:
+Buchhandlung Lindenblatt, Friederike Ansorge
+Marktgasse 7, 37999 Wehrstedt, Germany
+VAT ID: DE000000000
+
+Campaign                                     Impressions      Amount
+"Sommerlesefest - Reichweite Region"              18.420       82,00 EUR
+"Neu im Antiquariat - Beitrag bewerben"            9.105       38,00 EUR
+
+Subtotal                                                      120,00 EUR
+VAT 0 %                                                         0,00 EUR
+Total charged to card ending 0026                             120,00 EUR
+
+Reverse charge: The recipient is liable for VAT (Steuerschuldnerschaft des
+Leistungsempfängers, § 13b UStG / Art. 196 Directive 2006/112/EC).

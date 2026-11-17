@@ -1,0 +1,28 @@
+# Hausverwaltung Beispiel-Krämer
+Am Markt 4 · 04999 Musterstadt
+
+Frau
+Nora Feldkamp
+Kirchgasse 3
+04999 Musterstadt
+
+Objekt: Kirchgasse 3, 2. OG
+Mieternummer: KG3-05
+Datum: 15.07.2025
+
+# Betriebskostenabrechnung 2024
+
+|Kostenart|Ihr Anteil|
+|Heizung|684,20 EUR|
+|Wasser|241,00 EUR|
+|Grundsteuer|118,40 EUR|
+|Müll|96,30 EUR|
+|Treppenhausreinigung|88,00 EUR|
+|Summe|1.227,90 EUR|
+|Vorauszahlungen|1.080,00 EUR|
+|Nachzahlung|147,90 EUR|
+
+Bitte überweisen Sie die Nachzahlung bis 15.08.2025.
+
+Mit freundlichen Grüßen
+@unterschrift

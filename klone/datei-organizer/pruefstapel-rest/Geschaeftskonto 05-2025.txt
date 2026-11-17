@@ -1,0 +1,21 @@
+Beispiel Volksbank Musterstadt eG
+
+Nora Feldkamp – Geschäftskonto
+
+Kontoauszug Nr. 5/2025
+Zeitraum: 01.05.2025 – 31.05.2025
+IBAN: DE00 0000 0000 0000 0000 00
+
+Buchungstag   Vorgang   Betrag EUR
+05.05.   Honorar Agentur Beispielblau RE 2025-031   +2380,00
+12.05.   Finanzamt UStVA 04/2025   -512,40
+15.05.   KSK Beitrag   -428,17
+21.05.   Druckhaus Beispiel KG DB-25-0912   -354,62
+28.05.   Honorar Verlag Beispiel RE 2025-034   +1190,00
+30.05.   Übertrag Privatkonto   -1800,00
+
+Alter Kontostand: 3.208,10 EUR
+Neuer Kontostand: 3.682,91 EUR
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Beispiel Volksbank Musterstadt eG · BIC BSPLDE00XXX · Amtsgericht Beispielstadt HRB 00000

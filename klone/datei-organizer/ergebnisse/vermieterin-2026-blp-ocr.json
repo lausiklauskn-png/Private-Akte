@@ -1,0 +1,268 @@
+{
+ "eigenerName": "Hannelore Wiebusch",
+ "blp": "/home/user/lausiklauskn-png/bookledgerpro",
+ "vergleich": {
+  "betrag": {
+   "n": 45,
+   "blp": 41,
+   "kern": 36,
+   "nurBlp": 6,
+   "nurKern": 1
+  },
+  "datum": {
+   "n": 45,
+   "blp": 43,
+   "kern": 38,
+   "nurBlp": 6,
+   "nurKern": 1
+  },
+  "aussteller": {
+   "n": 45,
+   "blp": 20,
+   "kern": 39,
+   "nurBlp": 0,
+   "nurKern": 19
+  }
+ },
+ "ordner": "pruefstapel-vermieterin-2026-ocr/belege",
+ "belege": 45,
+ "felder": {
+  "betrag": {
+   "n": 45,
+   "ok": 41
+  },
+  "datum": {
+   "n": 45,
+   "ok": 43
+  },
+  "ust": {
+   "n": 43,
+   "ok": 43
+  },
+  "richtung": {
+   "n": 45,
+   "ok": 41
+  },
+  "konto": {
+   "n": 45,
+   "ok": 29
+  }
+ },
+ "wilson": {
+  "betrag": [
+   0.792661488316343,
+   0.9648894518657969
+  ],
+  "datum": [
+   0.8517222081611939,
+   0.9877261309595557
+  ],
+  "ust": [
+   0.9179874299767729,
+   1
+  ],
+  "richtung": [
+   0.792661488316343,
+   0.9648894518657969
+  ],
+  "konto": [
+   0.49835546011952203,
+   0.7678110864309596
+  ]
+ },
+ "uebereinstimmung": {
+  "n": 45,
+  "gleich": 0.8,
+  "kappa": 0.7680412371134021
+ },
+ "kontoEinig": {
+  "n": 36,
+  "ok": 24
+ },
+ "verwechslung": {
+  "4980→4260": 1,
+  "4980→4980": 6,
+  "4250→4250": 1,
+  "4250→8400": 1,
+  "4240→4240": 3,
+  "4260→4260": 8,
+  "4260→4240": 2,
+  "4980→0480": 1,
+  "4260→4210": 1,
+  "4260→4980": 1,
+  "4930→4930": 1,
+  "4910→4910": 1,
+  "4940→4940": 1,
+  "4380→4950": 1,
+  "4940→4210": 1,
+  "4980→4380": 2,
+  "4670→4670": 1,
+  "4530→4530": 3,
+  "8120→8400": 2,
+  "8120→4210": 1,
+  "4500→8400": 1,
+  "4970→4970": 1,
+  "4250→4260": 1,
+  "4360→4360": 1,
+  "4920→4920": 1,
+  "4600→4600": 1
+ },
+ "fehler": [
+  {
+   "datei": "Brinkmeier R 26-014 Januar.txt",
+   "feld": "konto",
+   "ist": "4260",
+   "soll": "4980"
+  },
+  {
+   "datei": "AK-26-1127 April.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "AK-26-1127 April.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4250"
+  },
+  {
+   "datei": "SW Abschlagsplan Erdgas 2026.txt",
+   "feld": "datum",
+   "ist": "2026-02-02",
+   "soll": "2026-02-03"
+  },
+  {
+   "datei": "SW Gutschrift Allgemeinstrom 2025.txt",
+   "feld": "betrag",
+   "ist": 39563,
+   "soll": "12,36"
+  },
+  {
+   "datei": "SW Gutschrift Allgemeinstrom 2025.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Kallweit Rechnung 2026-0298.txt",
+   "feld": "datum",
+   "ist": "2026-08-26",
+   "soll": "2026-08-27"
+  },
+  {
+   "datei": "Woehlke AR-2026-118 Abschlag.txt",
+   "feld": "betrag",
+   "ist": 456000,
+   "soll": "2.170,56"
+  },
+  {
+   "datei": "Woehlke AR-2026-118 Abschlag.txt",
+   "feld": "konto",
+   "ist": "4240",
+   "soll": "4260"
+  },
+  {
+   "datei": "Woehlke Schlussrechnung SR-2026-164.txt",
+   "feld": "betrag",
+   "ist": 542640,
+   "soll": "3.255,84"
+  },
+  {
+   "datei": "Woehlke Schlussrechnung SR-2026-164.txt",
+   "feld": "konto",
+   "ist": "4240",
+   "soll": "4260"
+  },
+  {
+   "datei": "Tiedemann RE 2026 0087.txt",
+   "feld": "konto",
+   "ist": "0480",
+   "soll": "4980"
+  },
+  {
+   "datei": "Notdienst Meentzen N-26-0412.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4260"
+  },
+  {
+   "datei": "Hagedorn Bon 13-01.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "HuG Beitrag 2026.txt",
+   "feld": "konto",
+   "ist": "4950",
+   "soll": "4380"
+  },
+  {
+   "datei": "HuG Quittung Mietspiegel.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4940"
+  },
+  {
+   "datei": "Waermemass Rechnung 60-118-2026.txt",
+   "feld": "konto",
+   "ist": "4380",
+   "soll": "4980"
+  },
+  {
+   "datei": "Rechnung 1-2026 Stellplatz Woelk.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "8120"
+  },
+  {
+   "datei": "Quittung bar Petrovic 30.04.txt",
+   "feld": "betrag",
+   "ist": 118000,
+   "soll": "200,00"
+  },
+  {
+   "datei": "Quittung bar Petrovic 30.04.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Quittung bar Petrovic 30.04.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "8120"
+  },
+  {
+   "datei": "Rechnung 2-2026 Schluessel Aydemir.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "8120"
+  },
+  {
+   "datei": "Eigenbeleg Fahrten 2026.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "Eigenbeleg Fahrten 2026.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4500"
+  },
+  {
+   "datei": "Flink Dachrinne 2026-211.txt",
+   "feld": "konto",
+   "ist": "4260",
+   "soll": "4250"
+  },
+  {
+   "datei": "Kuhlmann Rauchmelder.txt",
+   "feld": "konto",
+   "ist": "4380",
+   "soll": "4980"
+  }
+ ]
+}

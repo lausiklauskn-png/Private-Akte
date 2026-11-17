@@ -1,0 +1,6 @@
+Abrechnung Regulierung SCH-26-000000, Datum 22.07.2026
+Rechnung Kfz-Meisterbetrieb Beispiel Hansen   3.260,60 EUR brutto
+./. Selbstbeteiligung                          -300,00
+Überweisung an Werkstatt                        2.960,60
+Wertminderung an Sie                              300,00 (IBAN DE00 0000 0000 0000 0000 00)
+Der Schaden ist damit abgeschlossen.

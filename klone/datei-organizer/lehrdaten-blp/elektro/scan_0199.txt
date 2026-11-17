@@ -1,0 +1,13 @@
+Lohn- und Gehaltsabrechnung                        Abrechnungsmonat April 2026
+Arbeitgeber: Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos
+
+Arbeitnehmerin: Brandhuber, Helga (Buero/Verkauf, Teilzeit 20 Std./Woche)
+Personalnummer 001      Steuerklasse 5
+
+Gehalt                              1.650,00
+Brutto gesamt                       1.650,00
+- Lohnsteuer                          148,33
+- Kirchensteuer                        11,87
+- Sozialversicherunq AN               346,91
+= Nettogehalt                       1.142,89
+Zahlung: Ueberweisung 29.04.2026

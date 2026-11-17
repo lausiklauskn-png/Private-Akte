@@ -1,0 +1,20 @@
+beschlag-kontor24.example
+Beschläge für Handwerk und Industrie                Rechnung
+Kontor Beschlagtechnik GmbH, Hafenweg 7, 28999 Wesermünde
+
+Rechnungsnummer   BK-7718203
+Rechnungsdatum    19.02.2026
+Kundennummer      5501220
+Lieferadresse     Tischlerei Vosskamp, Mühlenkamp 14, 32791 Welsede
+
+80 St. Topfband 110° Clip mit Dämpfung à 2,35   188,00
+24 Paar Vollauszug 500 mm 40 kg Softclose à 13,90   333,60
+30 St. Möbelgriff Edelstahl gebürstet BA 160 à 4,20   126,00
+60 St. Sockelverstellfuß 100 mm à 0,79   47,40
+Versandkosten (ab 250 EUR frei)   0,00
+
+Zwischensumme netto   695,00
+Umsatzsteuer 19%      132,05
+GESAMT                827,05 EUR
+Bezahlt per SEPA-Lastschrift. Vielen Dank für Ihren Einkauf!
+USt-ID DE000000388 · Amtsgericht Wesermünde HRB 00771

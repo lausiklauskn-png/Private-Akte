@@ -1,0 +1,13 @@
+Rechnung
+Hydraulik-Shop Engelbrecht UG
+Speditiorisstr. 8, 47051 Duisfeld, USt-ID DE000000036
+Rechnungs-Nr. 2026-30417     Bestelldatum 21.04.2026     Versand 22.04.2026
+Käufer: Kfz-Technik Brandhorst, 37199 Wolmershagen
+
+Qty   Description                          Unit price     Amount
+1     Getriebebeber hydraulisch 500 kg, fahrbar     379,00     379,00
+
+Subtotal                                           379,00
+VAT 19%                                             72,01
+Total EUR                                          451,01
+Versandkosten: frei. Bezahlt per Überweisung.

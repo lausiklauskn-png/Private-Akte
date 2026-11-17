@@ -1,0 +1,1504 @@
+{
+ "dateien": [
+  {
+   "datei": "20261006_103512.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnarztpraxis Kerstin Möllenbeck",
+   "person": "Sabine Brandauer",
+   "frist": "2026-11-05"
+  },
+  {
+   "datei": "Apotheke Zuzahlung Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "LÖWEN-APOTHEKE WIESENFELD",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Arztbrief Kardiologie Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kreisklinikum Oberstetten – Klinik für Innere Medizin",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Aurelia Leistungsabrechnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Lebensversicherung Aurelia AG",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "BAföG Bescheid neu.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studierendenwerk Kranbachtal – Amt für Ausbildungsförderung",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "BAföG Weiterförderung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studierendenwerk Kranbachtal – Amt für Ausbildungsförderung",
+   "person": "Lena Brandauer",
+   "frist": "2026-09-30"
+  },
+  {
+   "datei": "Bausparvertrag Erben.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Bausparkasse Lindenhof AG",
+   "person": "Thomas Brandauer",
+   "frist": "2026-07-31"
+  },
+  {
+   "datei": "Beileid Familie Röder.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Hannelore und Kurt Röder",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Bestattungsauftrag Frommelt.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Bestattungshaus Frommelt",
+   "person": "Thomas Brandauer",
+   "frist": "2026-03-27"
+  },
+  {
+   "datei": "Blitzfon Vertrag Lena.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Blitzfon GmbH",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Dachrinne Pfaff Rechnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dachdeckerei Lorenz Pfaff",
+   "person": null,
+   "frist": "2026-10-05"
+  },
+  {
+   "datei": "Danksagung Entwurf.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Sabine Brandauer",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Dokument (1).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Abfallwirtschaftsbetrieb Kranbachtal",
+   "person": null,
+   "frist": "2026-03-01"
+  },
+  {
+   "datei": "Dokument (12).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Creditia Inkasso GmbH",
+   "person": "Thomas Brandauer",
+   "frist": "2026-07-10"
+  },
+  {
+   "datei": "Dokument (14).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Ordnungsamt",
+   "person": "Sabine Brandauer",
+   "frist": "2026-10-18"
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Lernstudio Pfiffikus",
+   "person": "Jonas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (5).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Schützengesellschaft Wiesenfeld 1872 e.V.",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (7).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Ilse Dorn",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (9).txt",
+   "haushalt": "fam",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Lernstudio Pfiffikus",
+   "person": "Jonas Brandauer",
+   "frist": "2026-10-16"
+  },
+  {
+   "datei": "Eingewöhnung Kita Pusteblume.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kita Pusteblume",
+   "person": "Mia Brandauer",
+   "frist": "2026-08-10"
+  },
+  {
+   "datei": "Einkommensteuerbescheid 2025.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Oberstetten",
+   "person": null,
+   "frist": "2026-08-24"
+  },
+  {
+   "datei": "Elternsprechtag November.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": "2026-11-19"
+  },
+  {
+   "datei": "Entrümpelung Angebot.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Entrümpelung Schäfer & Sohn",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Erbschaftsteuer Aufforderung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Oberstetten – Erbschaftsteuerstelle",
+   "person": "Thomas Brandauer",
+   "frist": "2026-09-15"
+  },
+  {
+   "datei": "Erbschein.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Oberstetten",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Ferienfreizeit Jonas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Evangelisches Jugendwerk Kranbachtal",
+   "person": "Jonas Brandauer",
+   "frist": "2026-06-30"
+  },
+  {
+   "datei": "Ferienhaus Ostsee Buchung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Ferienhausvermittlung Küstenwind",
+   "person": null,
+   "frist": "2026-05-30"
+  },
+  {
+   "datei": "FitLine Mahnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "FitLine Wiesenfeld",
+   "person": "Thomas Brandauer",
+   "frist": "2026-05-28"
+  },
+  {
+   "datei": "FlimmerBox Preisänderung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "FlimmerBox",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Friedhof Grabstelle Gebühr.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Stadt Wiesenfeld – Friedhofsverwaltung",
+   "person": "Thomas Brandauer",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Gehaltsabrechnung Oktober 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Kessler Verpackungen GmbH",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Gerichtskosten Erbschein.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Landesjustizkasse Mittelland",
+   "person": "Thomas Brandauer",
+   "frist": "2026-07-08"
+  },
+  {
+   "datei": "Grundbuch Berichtigung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Amtsgericht Oberstetten – Grundbuchamt",
+   "person": "Thomas Brandauer",
+   "frist": "2026-10-30"
+  },
+  {
+   "datei": "Grundsteuer 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Steueramt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Haftpflicht Umstellung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Wiesentaler Versicherungsverein a.G.",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Halbjahreszeugnis Jonas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Halbwaisenrente Lena Nachweis.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitte-Land",
+   "person": "Lena Brandauer",
+   "frist": "2026-05-31"
+  },
+  {
+   "datei": "Handy Reparatur Jonas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "SMARTFIX WIESENFELD",
+   "person": "Jonas Brandauer",
+   "frist": "2026-10-06"
+  },
+  {
+   "datei": "Hausnotruf Vertrag Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Hausnotruf Lindenhilfe e.V.",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Hausrat Beitrag 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Wiesentaler Versicherungsverein a.G.",
+   "person": null,
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Heimbesichtigung Abendsonne.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Haus Abendsonne Pflegeheim gGmbH",
+   "person": "Gertrud Halbig",
+   "frist": "2026-05-21"
+  },
+  {
+   "datei": "Heimvertrag Lindenhain.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Am Lindenhain",
+   "person": "Gertrud Halbig",
+   "frist": "2026-09-04"
+  },
+  {
+   "datei": "Heizungswartung Termin.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Haustechnik Brettschneider GmbH",
+   "person": null,
+   "frist": "2026-10-14"
+  },
+  {
+   "datei": "Hochzeit Einladung Fiedler.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Nadine und Marco Fiedler",
+   "person": "Sabine Brandauer",
+   "frist": "2026-08-15"
+  },
+  {
+   "datei": "IMG-20260801-WA0004.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Jonas",
+   "person": "Jonas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260121_1702.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "TECHNIKHAUS RAMBOLD",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260218_0733.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "GesundPlus Krankenkasse",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260305_1744.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "DROGERIE LINDNER",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260324_1915.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Kolleginnen und Kollegen der Kessler Verpackungen GmbH",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260414_0822.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": "2026-04-24"
+  },
+  {
+   "datei": "IMG_20260617_0930.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitte-Land",
+   "person": "Mia Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260715_1130.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ambulanter Pflegedienst Sonnenschein",
+   "person": "Gertrud Halbig",
+   "frist": "2026-07-23"
+  },
+  {
+   "datei": "IMG_20260721_2210.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Blitzfon GmbH",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260914_1603.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Grünpflege Kowalski",
+   "person": null,
+   "frist": "2026-09-30"
+  },
+  {
+   "datei": "IMG_20261013_1640.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Steinbrecher",
+   "person": "Sabine Brandauer",
+   "frist": "2026-10-23"
+  },
+  {
+   "datei": "IMG_20261102_1210.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "FRISCHEMARKT HAGEDORN",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20261109_0802.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wiesenfeld",
+   "person": "Sabine Brandauer",
+   "frist": "2026-11-30"
+  },
+  {
+   "datei": "Immatrikulationsbescheinigung SoSe 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hochschule Kranbachtal",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kaufvertrag Kawasaki.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Dennis Hartwig",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kfz Umschreibung Termin.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Landratsamt Kranbachtal – Kfz-Zulassungsstelle",
+   "person": "Sabine Brandauer",
+   "frist": "2026-04-23"
+  },
+  {
+   "datei": "Kfz Versicherung Touran neu.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Mobilis Versicherung AG",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kfz-Steuer Bescheid Touran.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Oberstetten",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kieferorthopädie Rechnung Q1.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kieferorthopädische Praxis Dr. Ruth Weidenhammer",
+   "person": "Jonas Brandauer",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Kinderbett Möbelwelt.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "MÖBELWELT KRANBACHTAL",
+   "person": "Mia Brandauer",
+   "frist": "2026-08-07"
+  },
+  {
+   "datei": "Kita Ermäßigung Unterlagen.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Fachbereich Jugend und Bildung",
+   "person": "Mia Brandauer",
+   "frist": "2026-05-21"
+  },
+  {
+   "datei": "Kita Gebühren 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Fachbereich Jugend und Bildung",
+   "person": "Mia Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Klassenfahrt 7b Anmeldung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "Klassenfahrt Abrechnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszug Juni 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Kranbachtal",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Handy Thomas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Sabine Brandauer",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Wohnung Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Sabine Brandauer",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Laptop Lena Rechnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Bytehafen Online GmbH",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Lebensversicherung Leistungsantrag.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Sabine Brandauer",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Lindenhain Aufnahme Termine.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Am Lindenhain",
+   "person": "Gertrud Halbig",
+   "frist": "2026-09-24"
+  },
+  {
+   "datei": "Lindenhain Rechnung Oktober.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Am Lindenhain",
+   "person": "Gertrud Halbig",
+   "frist": "2026-10-15"
+  },
+  {
+   "datei": "Lindwurm BKK Mitgliedschaft Lena.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Lindwurm BKK",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Lohnabrechnung Januar.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Kessler Verpackungen GmbH",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Merkur Direktbank Nachlass.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Merkur Direktbank AG",
+   "person": "Thomas Brandauer",
+   "frist": "2026-05-31"
+  },
+  {
+   "datei": "Merkur Kontoauflösung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Merkur Direktbank AG",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Mia Kita Ermäßigung Bescheid.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Fachbereich Jugend und Bildung",
+   "person": "Mia Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Mobilis Kinderunfall Angebot.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Mobilis Versicherung AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Motorrad Abmeldung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Landratsamt Kranbachtal – Kfz-Zulassungsstelle",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Motorrad Versicherung 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Mobilis Versicherung AG",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Nachlassgericht Testamentseröffnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Oberstetten",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Nebenkosten 2025 Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsbaugenossenschaft Lindenhain eG",
+   "person": "Gertrud Halbig",
+   "frist": "2026-07-31"
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kita Pusteblume",
+   "person": "Mia Brandauer",
+   "frist": "2026-11-24"
+  },
+  {
+   "datei": "Notar Kostenrechnung.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notariat Dr. Ingrid Fellner",
+   "person": "Gertrud Halbig",
+   "frist": "2026-03-13"
+  },
+  {
+   "datei": "Passtermin Mia.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Wiesenfeld – Bürgerbüro",
+   "person": "Mia Brandauer",
+   "frist": "2026-06-03"
+  },
+  {
+   "datei": "Pflegedienst Rechnung Mai.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ambulanter Pflegedienst Sonnenschein",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad 4 Bescheid.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kranbachtal Gesundheitskasse – Pflegekasse",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad Gertrud Bescheid.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kranbachtal Gesundheitskasse – Pflegekasse",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Rasenmäher Rechnung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "GARTENCENTER GRÜNWERK",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Rechtsschutz Kündigung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Sabine Brandauer",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung Mama 2026.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitte-Land",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Rundfunkbeitrag Ummeldung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Rundfunkbeitrag Servicestelle Mittelland",
+   "person": "Sabine Brandauer",
+   "frist": "2026-05-29"
+  },
+  {
+   "datei": "Scan 3.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kranbachtal Gesundheitskasse – Pflegekasse",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0003.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Kranbachtal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Scan_0005.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Bausparkasse Lindenhof AG",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0011.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Zweckverband Wasser Kranbachtal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Scan_0015.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Ambulanter Pflegedienst Sonnenschein",
+   "person": "Gertrud Halbig",
+   "frist": "2026-02-20"
+  },
+  {
+   "datei": "Scan_0019.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "GesundPlus Krankenkasse",
+   "person": "Lena Brandauer",
+   "frist": "2026-03-15"
+  },
+  {
+   "datei": "Scan_0023.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Bestattungshaus Frommelt",
+   "person": "Thomas Brandauer",
+   "frist": "2026-04-19"
+  },
+  {
+   "datei": "Scan_0024.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Lebensversicherung Aurelia AG",
+   "person": "Thomas Brandauer",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Scan_0027.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Oberstetten – Nachlassgericht",
+   "person": "Thomas Brandauer",
+   "frist": "2026-05-15"
+  },
+  {
+   "datei": "Scan_0029.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "FunkWelle Mobil GmbH",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0031.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitte-Land",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0034.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Mobilis Versicherung AG",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0039.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Wiesenfeld – Steueramt",
+   "person": null,
+   "frist": "2026-07-31"
+  },
+  {
+   "datei": "Scan_0041.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Dienst Mittelland",
+   "person": "Gertrud Halbig",
+   "frist": "2026-07-14"
+  },
+  {
+   "datei": "Scan_0044.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studierendenwerk Kranbachtal – Amt für Ausbildungsförderung",
+   "person": "Lena Brandauer",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "Scan_0048.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kieferorthopädische Praxis Dr. Ruth Weidenhammer",
+   "person": "Jonas Brandauer",
+   "frist": "2026-05-27"
+  },
+  {
+   "datei": "Scan_0052.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Gemeinschaftspraxis Dr. Bader & Dr. Yilmaz",
+   "person": "Gertrud Halbig",
+   "frist": "2026-09-02"
+  },
+  {
+   "datei": "Scan_0056.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Kranbachtal",
+   "person": "Lena Brandauer",
+   "frist": "2026-07-31"
+  },
+  {
+   "datei": "Scan_0060.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Kranbachtal",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0063.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Oberstetten",
+   "person": null,
+   "frist": "2026-07-02"
+  },
+  {
+   "datei": "Scan_0066.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "FitLine Wiesenfeld",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0071.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Am Lindenhain",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0077.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Justitia Rechtsschutz AG",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0081.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Modehaus Brenner",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0085.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Oberstetten – Erbschaftsteuerstelle",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Scan_0088.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Technische Prüfstelle Kranbachtal",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Schornsteinfeger Feuerstättenschau.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bezirksschornsteinfegermeister Uwe Kleinschmidt",
+   "person": null,
+   "frist": "2026-03-24"
+  },
+  {
+   "datei": "Schulbuch Eigenanteil.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesamtschule am Kranbach",
+   "person": "Jonas Brandauer",
+   "frist": "2026-07-10"
+  },
+  {
+   "datei": "Semesterbeitrag WiSe 2026.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hochschule Kranbachtal – Studierendensekretariat",
+   "person": "Lena Brandauer",
+   "frist": "2026-08-15"
+  },
+  {
+   "datei": "Seniorenstift Warteliste.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Seniorenstift Am Lindenhain",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Sozialamt Hilfe zur Pflege.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Landratsamt Kranbachtal – Sozialamt",
+   "person": "Gertrud Halbig",
+   "frist": "2026-10-16"
+  },
+  {
+   "datei": "Sparkasse Kontoumschreibung Termin.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Sparkasse Kranbachtal",
+   "person": "Sabine Brandauer",
+   "frist": "2026-04-28"
+  },
+  {
+   "datei": "Stadtwerke Vertragsübernahme.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wiesenfeld",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Steinmetz Grabstein Anzahlung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Steinmetzbetrieb Gerold Wanke",
+   "person": "Thomas Brandauer",
+   "frist": "2026-10-31"
+  },
+  {
+   "datei": "Sterbeurkunde Thomas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Erbschaft, Vollmachten & Vorsorge",
+   "absender": "Standesamt Wiesenfeld",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Steuer-ID Lena.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Zentralamt für Steuern",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Steuerklasse Witwe.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Oberstetten",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "TSV Austritt Thomas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "TSV Wiesenfeld 1908 e.V.",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "TSV Jahreshauptversammlung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "TSV Wiesenfeld 1908 e.V.",
+   "person": "Thomas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "TSV Jugend Beitrag Jonas.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "TSV Wiesenfeld 1908 e.V.",
+   "person": "Jonas Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "U7a Bescheinigung Mia.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinder- und Jugendarztpraxis Dr. Felix Ortlepp",
+   "person": "Mia Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "U7a Einladung Mia.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinder- und Jugendarztpraxis Dr. Felix Ortlepp",
+   "person": "Mia Brandauer",
+   "frist": "2026-06-18"
+  },
+  {
+   "datei": "Unbenannt.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hautarztpraxis Dr. Corinna Hessel",
+   "person": "Lena Brandauer",
+   "frist": "2026-09-20"
+  },
+  {
+   "datei": "Voltaris Wechselbonus.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "VOLTARIS ENERGIE GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Vorsorgevollmacht Mama.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notariat Dr. Ingrid Fellner",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Waschmaschine Garantie Techniker.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Termin",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Technikhaus Rambold",
+   "person": null,
+   "frist": "2026-08-27"
+  },
+  {
+   "datei": "Werbung Grünwerk Frühjahr.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "GARTENCENTER GRÜNWERK",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Werkstudentin Abrechnung Mai.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Elektro Siegrist GmbH",
+   "person": "Lena Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "Witwenrente Unterlagen.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Mitte-Land",
+   "person": "Sabine Brandauer",
+   "frist": "2026-05-08"
+  },
+  {
+   "datei": "Wohnungsabnahme Termin.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsbaugenossenschaft Lindenhain eG",
+   "person": "Gertrud Halbig",
+   "frist": "2026-12-18"
+  },
+  {
+   "datei": "Zahnspange Jonas Kostenplan.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kieferorthopädische Praxis Dr. Ruth Weidenhammer",
+   "person": "Jonas Brandauer",
+   "frist": "2026-02-06"
+  },
+  {
+   "datei": "Zeitung Abo Umschreibung.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Kranbachtaler Tageblatt",
+   "person": "Sabine Brandauer",
+   "frist": null
+  },
+  {
+   "datei": "doc00412.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Raiffeisenkasse Kranbachtal eG",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "scan0001.txt",
+   "haushalt": "oma",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Kranbachtal Gesundheitskasse",
+   "person": "Gertrud Halbig",
+   "frist": null
+  },
+  {
+   "datei": "Änderungsvertrag Arbeitszeit.txt",
+   "haushalt": "fam",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Kessler Verpackungen GmbH",
+   "person": "Sabine Brandauer",
+   "frist": "2026-08-14"
+  }
+ ]
+}

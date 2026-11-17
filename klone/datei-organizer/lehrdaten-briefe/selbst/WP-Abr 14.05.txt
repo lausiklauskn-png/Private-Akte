@@ -1,0 +1,17 @@
+Kontora Direktbank AG                          Mainhafen, 14.05.2025
+WERTPAPIERABRECHNUNG – KAUF
+Depot 7044 219 03   Tiedemann, Maren           Auftrag 25-05-883104
+
+Stück 150   Mittelhess. Wasserwerke AG Inhaber-Aktien   WKN MHW771
+Handelsplatz: Börse Mainhafen    Ausführung 14.05.2025 10:14:07
+Kurs 22,84 EUR
+Kurswert                                 3.426,00 EUR
+Provision                                    9,90 EUR
+Börsenentgelt                                2,35 EUR
+Ausmachender Betrag                      3.438,25 EUR -
+
+Valuta 16.05.2025 zu Lasten Verrechnungskonto DE58 5009 9933 0070 4421 90
+Verwahrart: Girosammelverwahrung
+Kapitalertragsteuer: nicht angefallen.
+
+Diese Abrechnung wird nicht unterschrieben.

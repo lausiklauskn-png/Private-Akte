@@ -1,0 +1,9 @@
+{"bausteine": [
+ {"katalog": "neu", "name": "Probeprüfung: Klienten-Stichprobe (nur Nummern) ziehen, Prüffragen je Qualitätsbereich durchgehen, Bewertung je Bereich nach dem Bewertungsschema der Prüfer", "groesse": "gross", "deckt": ["B-18", "B-27", "B-28", "B-10", "B-11", "B-24", "B-42"], "faktoren": ["offline", "druck"]},
+ {"katalog": "neu", "name": "Fragenkatalog als versionierte Datei mit Stand der Prüfregeln; Aktualisierung einspielen, alte Durchläufe behalten ihren Fragenstand", "groesse": "mittel", "deckt": ["B-20", "B-33", "B-17"], "faktoren": ["server"]},
+ {"katalog": "auftrag", "name": "Maßnahmenliste aus den Bewertungen: Maßnahme, zuständig (Rolle/Team), Termin, Stand; überfällige hervorgehoben", "groesse": "mittel", "deckt": ["B-19", "B-29", "B-06"], "faktoren": ["offline"]},
+ {"katalog": "neu", "name": "Quartalsvergleich der Probeprüfungen je Bereich und je Team (nie je Person), Verlauf über die Durchläufe", "groesse": "mittel", "deckt": ["B-21", "B-30", "B-23", "B-32", "B-14", "B-26", "B-45"], "faktoren": ["offline"]},
+ {"katalog": "liste", "name": "Bereitlege-Liste für die zwei Tage vor der angekündigten Prüfung, abhakbar und druckbar", "groesse": "klein", "deckt": ["B-22", "B-31", "B-12", "B-25", "B-47"], "faktoren": ["druck"]},
+ {"katalog": "tresor", "name": "Verschlüsselte Ablage der Durchläufe auf dem Gerät mit automatischer Sicherung, Abgleich Tablet und Büro-PC", "groesse": "mittel", "deckt": ["B-43", "B-44", "B-37", "B-38"], "faktoren": ["offline"]},
+ {"katalog": "lizenz", "name": "Monatliches Abo mit Freischaltung inkl. Fragen-Aktualisierungen", "groesse": "klein", "deckt": ["B-46"], "faktoren": []}
+]}

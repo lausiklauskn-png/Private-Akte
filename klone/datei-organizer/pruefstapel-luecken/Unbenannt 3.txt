@@ -1,0 +1,20 @@
+LANDKREIS MUSTERKREIS
+Kfz-Zulassungsstelle Außenstelle Musterhausen
+Kassenautomat 2
+
+Quittung Nr. 26-ZUL-003318
+Datum: 31.10.2026  Uhrzeit: 11:27
+
+Vorgang: Ausgabe Feinstaubplakette
+Kennzeichen: BSP-EP 903
+Schadstoffgruppe: 4 (grün)
+
+Gebühr Plakette (GebOSt Nr. 254-Bsp)     5,10 EUR
+-------------------------------------------
+Summe                                    5,10 EUR
+Gegeben EC-Karte                         5,10 EUR
+Rückgeld                                 0,00 EUR
+
+Terminal-ID 00000000  Beleg 004411
+Vielen Dank für Ihren Besuch.
+Bitte bewahren Sie diese Quittung auf.

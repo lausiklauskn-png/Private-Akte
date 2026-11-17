@@ -1,0 +1,26 @@
+200 Schriftstücke aus 1 Ordner(n), Soll: SOLL.json
+
+== bereich ==
+  neu  157/200 = 78.5 % (72–84 %) · falsch und sicher 18 · falsch und offen 25 · Fach oder Zweitfach 172
+  alt  157/200 = 78.5 % (72–84 %) · falsch und sicher 18 · falsch und offen 25 · Fach oder Zweitfach 172
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== schriftstueck ==
+  neu  150/200 = 75.0 % (69–80 %) · falsch und sicher 23 · falsch und offen 27
+  alt  150/200 = 75.0 % (69–80 %) · falsch und sicher 23 · falsch und offen 27
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== absender ==
+  neu  149/198 = 75.3 % (69–81 %) · falsch und sicher 20 · falsch und offen 29
+  alt  150/198 = 75.8 % (69–81 %) · falsch und sicher 20 · falsch und offen 28
+  McNemar: nur alt richtig 1, nur neu richtig 0, p=1.000
+
+== person ==
+  neu  132/171 = 77.2 % (70–83 %) · falsch und sicher 4 · falsch und offen 35
+  alt  132/171 = 77.2 % (70–83 %) · falsch und sicher 4 · falsch und offen 35
+  McNemar: nur alt richtig 0, nur neu richtig 0, p=1.000
+
+== frist ==
+  neu  188/200 = 94.0 % (90–97 %) · falsch und sicher 6 · falsch und offen 6
+  alt  187/200 = 93.5 % (89–96 %) · falsch und sicher 6 · falsch und offen 7
+  McNemar: nur alt richtig 0, nur neu richtig 1, p=1.000

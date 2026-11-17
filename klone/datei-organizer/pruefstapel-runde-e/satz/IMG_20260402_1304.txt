@@ -1,0 +1,145 @@
+@bon
+FRISCHKAUF EXEMPEL
+Mühlenstraße 50, 56789 Probedorf
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+BUTTER 250G                      2,39 B
+H-MILCH 1,5% 1L
+  2 x 0,99        1,98 B
+APFELSAFT 1L AKTION
+  3 x 0,90        2,70 A
+ZWIEBELN 2KG
+  3 x 1,79        5,37 B
+GEWÜRZ PAPRIKA
+  2 x 1,29        2,58 B
+ZITRONEN NETZ                    1,49 B
+ZAHNPASTA
+  3 x 0,99        2,97 A
+ESSIG
+  2 x 0,95        1,90 B
+AUFBACKBRÖTCHEN 10ER             1,69 B
+KNOBLAUCH                        0,69 B
+BIER 6X0,33
+  2 x 4,49        8,98 A
+PFAND
+  2 x 0,48        0,96 A
+WEICHSPÜLER AKTION
+  2 x 1,25        2,50 A
+KERZEN                           2,49 A
+JOGHURT NATUR 500G               0,89 B
+OLIVENÖL
+  2 x 6,99        13,98 B
+BRÜHE GEKÖRNT
+  2 x 1,99        3,98 B
+TOASTBROT                        1,29 B
+KOCHSCHINKEN                     2,29 B
+TEELICHTER 50                    2,99 A
+TEE PFEFFERMINZ
+  2 x 1,19        2,38 B
+CHIPS                            1,79 B
+BLUMEN STRAUSS                   4,99 B
+FRISCHMILCH 3,8%
+  2 x 1,19        2,38 B
+ALUFOLIE
+  2 x 1,99        3,98 A
+GEWÜRZ PAPRIKA                   1,29 B
+HACKFLEISCH GEM 500G             4,99 B
+GURKE                            0,79 B
+HÄHNCHENBRUSTFILET               6,49 B
+RABATT 20% HÄHNCHENBRUSTF       -1,30 B
+FRISCHMILCH 3,8%                 1,19 B
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+BLUMEN STRAUSS
+  2 x 4,99        9,98 B
+JOGHURT NATUR 500G
+  2 x 0,89        1,78 B
+GRILLKOHLE                       4,99 A
+AVOCADO
+  2 x 1,29        2,58 B
+KATZENFUTTER 12X                 5,49 A
+RABATT 20% KATZENFUTTER 1       -1,10 A
+MINERALWASSER 6X1,5L             1,74 A
+PFAND                            1,50 A
+HONIG
+  2 x 3,99        7,98 B
+GUMMIBÄRCHEN                     0,99 B
+CORNFLAKES                       1,99 B
+TOMATEN PASSIERT                 0,69 B
+ERBSEN TK                        1,29 B
+BIRNEN                           2,49 B
+KARTOFFELN FEST 2,5KG
+  2 x 3,49        6,98 B
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+FRISCHMILCH 3,8%                 1,19 B
+FISCHSTÄBCHEN TK
+  3 x 2,49        7,47 B
+GURKE                            0,79 B
+BRATWURST 6ER                    3,99 B
+DUSCHGEL                         1,25 A
+PENNE 500G                       0,99 B
+KATZENFUTTER 12X
+  2 x 5,49        10,98 A
+INGWER                           0,89 B
+SONNENBLUMENÖL
+  2 x 2,29        4,58 B
+FRUCHTJOGHURT 4X
+  2 x 1,79        3,58 B
+CORNFLAKES                       1,99 B
+WEICHSPÜLER
+  2 x 1,79        3,58 A
+TEE PFEFFERMINZ
+  2 x 1,19        2,38 B
+COLA 1,5L AKTION                 0,97 A
+PFAND                            0,25 A
+SPÜLMITTEL
+  2 x 0,95        1,90 A
+SPAGHETTI 500G                   0,99 B
+KARTOFFELN FEST 2,5KG
+  3 x 3,49        10,47 B
+MÜLLBEUTEL
+  2 x 1,79        3,58 A
+MAIS DOSE                        0,89 B
+ZAHNPASTA
+  2 x 0,99        1,98 A
+ZUCCHINI
+  2 x 0,99        1,98 B
+BRATWURST 6ER                    3,99 B
+REIS LANGKORN 1KG
+  2 x 1,79        3,58 B
+OLIVENÖL                         6,99 B
+KATZENFUTTER 12X                 5,49 A
+KAROTTEN 2KG AKTION
+  3 x 1,39        4,17 B
+QUARK MAGER
+  2 x 0,79        1,58 B
+DUSCHGEL                         1,25 A
+TRAUBEN HELL                     2,79 B
+RABATT 20% TRAUBEN HELL         -0,56 B
+KAKAOPULVER                      2,49 B
+FEUCHTTÜCHER
+  2 x 1,49        2,98 A
+KAFFEE GEMAHLEN 500G
+  2 x 5,99        11,98 B
+NUSS-NOUGAT-CREME AKTION
+  3 x 2,09        6,27 B
+------------------------------------
+ZWISCHENSUMME                 269,68
+LEERGUTBON 0000425              -1,25 A
+COUPON WOCHENENDE              -3,00 A
+====================================
+SUMME EUR                     265,43
+GIROCARD                     265,43
+POSTEN: 82
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|58,95|11,20|70,15|
+|B 7 %|182,50|12,78|195,28|
+
+02.04.2026 16:30  BON 4059  KASSE 4  BED. 69
+TSE-TRANSAKTION 17170  SIGNATUR-ZÄHLER 622666
+START 16:30:02  ENDE 16:30:25
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

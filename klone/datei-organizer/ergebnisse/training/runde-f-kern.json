@@ -1,0 +1,144 @@
+{
+ "ordner": [
+  "pruefstapel-runde-f"
+ ],
+ "felder": {
+  "bereich": {
+   "neu": {
+    "ok": 116,
+    "n": 150,
+    "spanne": [
+     0.6999966119167443,
+     0.8330191653502627
+    ],
+    "falschSicher": 12,
+    "offen": 22,
+    "mitZweitfach": 124
+   },
+   "alt": {
+    "ok": 114,
+    "n": 150,
+    "spanne": [
+     0.6857071477257108,
+     0.8213078599185155
+    ],
+    "falschSicher": 14,
+    "offen": 22,
+    "mitZweitfach": 122
+   },
+   "mcnemar": {
+    "nurAltRichtig": 8,
+    "nurNeuRichtig": 10,
+    "p": 0.8145294189453125
+   }
+  },
+  "schriftstueck": {
+   "neu": {
+    "ok": 124,
+    "n": 150,
+    "spanne": [
+     0.7581386789428641,
+     0.8788801768152663
+    ],
+    "falschSicher": 9,
+    "offen": 17
+   },
+   "alt": {
+    "ok": 123,
+    "n": 150,
+    "spanne": [
+     0.7507753195800668,
+     0.8732431513666732
+    ],
+    "falschSicher": 12,
+    "offen": 15
+   },
+   "mcnemar": {
+    "nurAltRichtig": 6,
+    "nurNeuRichtig": 7,
+    "p": 1
+   }
+  },
+  "absender": {
+   "neu": {
+    "ok": 132,
+    "n": 150,
+    "spanne": [
+     0.8182903386460476,
+     0.9227315956032063
+    ],
+    "falschSicher": 14,
+    "offen": 4
+   },
+   "alt": {
+    "ok": 132,
+    "n": 150,
+    "spanne": [
+     0.8182903386460476,
+     0.9227315956032063
+    ],
+    "falschSicher": 14,
+    "offen": 4
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "person": {
+   "neu": {
+    "ok": 108,
+    "n": 112,
+    "spanne": [
+     0.9117520412990205,
+     0.9860256137057446
+    ],
+    "falschSicher": 0,
+    "offen": 4
+   },
+   "alt": {
+    "ok": 108,
+    "n": 112,
+    "spanne": [
+     0.9117520412990205,
+     0.9860256137057446
+    ],
+    "falschSicher": 0,
+    "offen": 4
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "frist": {
+   "neu": {
+    "ok": 146,
+    "n": 150,
+    "spanne": [
+     0.9334450938998244,
+     0.9895822277088953
+    ],
+    "falschSicher": 1,
+    "offen": 3
+   },
+   "alt": {
+    "ok": 147,
+    "n": 150,
+    "spanne": [
+     0.9428523341357583,
+     0.9931753722843516
+    ],
+    "falschSicher": 1,
+    "offen": 2
+   },
+   "mcnemar": {
+    "nurAltRichtig": 1,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  }
+ }
+}

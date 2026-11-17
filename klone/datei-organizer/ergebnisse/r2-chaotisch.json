@@ -1,0 +1,106 @@
+{
+ "ordner": "/tmp/claude-0/-home-user/60903395-d850-557c-93be-429a97e424d9/scratchpad/runden/r2",
+ "dateien": 705,
+ "organizer": {
+  "schriftstueck": {
+   "n": 675,
+   "ok": 601,
+   "falschSicher": 29,
+   "offen": 45
+  },
+  "kategorie": {
+   "n": 675,
+   "ok": 618,
+   "falschSicher": 36,
+   "offen": 21
+  },
+  "absender": {
+   "n": 660,
+   "ok": 640,
+   "falschSicher": 9,
+   "offen": 11
+  },
+  "person": {
+   "n": 582,
+   "ok": 581,
+   "falschSicher": 1,
+   "offen": 0
+  },
+  "frist": {
+   "n": 217,
+   "ok": 212,
+   "falschSicher": 0,
+   "offen": 5
+  },
+  "betrag": {
+   "n": 68,
+   "ok": 56,
+   "falschSicher": 8,
+   "offen": 4
+  }
+ },
+ "familienakte": {
+  "kat": {
+   "n": 665,
+   "ok": 374
+  },
+  "abs": {
+   "n": 660,
+   "ok": 522
+  },
+  "pruef": 675
+ },
+ "bookledgerpro": {
+  "betrag": {
+   "n": 68,
+   "ok": 56
+  },
+  "datum": {
+   "n": 68,
+   "ok": 66
+  }
+ },
+ "offenDateien": 207,
+ "jeHaushalt": {
+  "familie-petersen": {
+   "n": 95,
+   "ok": 92
+  },
+  "alleinerziehend-brodersen": {
+   "n": 62,
+   "ok": 59
+  },
+  "einzelperson-clausen": {
+   "n": 59,
+   "ok": 52
+  },
+  "arbeitslos-lorenzen": {
+   "n": 52,
+   "ok": 48
+  },
+  "professorin-asmussen": {
+   "n": 59,
+   "ok": 54
+  },
+  "selbststaendig-thomsen": {
+   "n": 62,
+   "ok": 58
+  },
+  "rentner-jessen": {
+   "n": 55,
+   "ok": 54
+  },
+  "entwickler-fleetmann": {
+   "n": 75,
+   "ok": 69
+  },
+  "boutique-hafenrose": {
+   "n": 86,
+   "ok": 66
+  },
+  "studentin-ketelsen": {
+   "n": 60,
+   "ok": 56
+  }
+ }
+}

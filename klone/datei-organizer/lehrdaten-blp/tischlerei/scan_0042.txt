@@ -1,0 +1,16 @@
+Rechnung / Invoice                       holzdirekt-nord.example
+ND Holzdirekt Nord GmbH, Speicherstr. 2, 24999 Fördeby
+
+Rechnungsnr.: ND-2026-55102     Bestellnr.: 9003318     Datum: 06.10.2026
+Rechnungsadresse: Tischlerei Vosskamp, Mühlenkamp 14, DE-32791 Welsede
+
+Artikel
+14 Stk Akustikpaneel Eiche Lamelle auf Filz 2400x600 à 49,90   698,60
+2 Pk Montageschrauben schwarz 35 mm 200er à 5,40   10,80
+Speditionsversand Palette   79,00
+
+Gesamtsumme (netto)  788,40 €
+zzgl. 19% USt        149,80 €
+Gesamtsumme (brutto) 938,20 €
+Bereits bezahlt via Vorkasse/Überweisung am 05.10.2026.
+Geschäftsführung: Svenja Detlefsen · USt-IdNr.: DE000001258

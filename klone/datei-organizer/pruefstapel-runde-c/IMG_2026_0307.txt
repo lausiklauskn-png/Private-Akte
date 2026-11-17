@@ -1,0 +1,57 @@
+Grünkorb Markt Beispiel App
+Digitaler Kassenbon (eBon)
+Exportiert aus der App am 07.03.2026
+
+Grünkorb Markt Beispiel
+Markt Mühlbrück-Süd
+Am Bahndamm 9, 34567 Mühlbrück am See
+
+Kundenkarte: **** 0918
+Einkauf vom 07.03.2026 um 11:05 Uhr
+
+Artikel                         Betrag  MwSt
+Salami Am Stueck                    3,89  A
+Spareribs Marin.                    8,99  A
+Zucker 1Kg                          1,19  A
+Katzenfutter 12X85G                 5,49  B
+Sahnesteif 3Er                      0,69  A
+Salat Eisberg                       0,99  A
+Orangensaft 1L                      1,99  A
+Kaffeebohnen 1Kg                   13,99  A
+4 x Bier Pils 20X0,5               59,96  B
+4 x Eier Freiland 10St             13,16  A
+Bratwurst Grob 10St                 6,99  A
+Kochschinken 200G                   2,29  A
+Muellbeutel 35L                     1,89  B
+Gouda Jung Scheiben                 1,99  A
+Waschmittel 40Wl                    9,99  B
+2 x Zwiebeln 1Kg                    2,58  A
+Pfand 6X0,25                        1,50  B
+Steak Rind 2St                     12,99  A
+Nudelsalat 1Kg                      4,49  A
+2 x Pappteller 50St                 6,98  B
+Nudeln Spirelli 500G                0,99  A
+Tortenboden Hell                    1,89  A
+Anzuender 32St                      2,49  B
+Sonnenbl.Oel 1L                     2,49  A
+2 x Kaffee Gemahlen 500G           13,98  A
+Mozzarella 125G                     0,85  A
+Quark 40% 500G                      1,49  A
+Fischstaebchen 30St                 4,49  A
+Schokolade Vollmilch                1,19  A
+Baguette Knoblauch                  1,49  A
+4 x Chips Paprika                   7,16  A
+Treue-Coupon 3 EUR                 -3,00   
+--------------------------------------------
+Gesamtsumme                       197,54   
+Bezahlt mit girocard              197,54   
+
+Gesammelte Bonuspunkte: 197
+Ihr Punktestand: 858
+
+Markt 0412  Kasse 1  Beleg 33019
+TSE-Signatur gespeichert, Seriennummer 0c88f12d
+Transaktion 2881904  Start 11:01:12  Ende 11:05:58
+
+Kein Papierbon gedruckt. Diesen eBon finden Sie 24 Monate in der App unter Meine Einkäufe.
+Pfandbons werden in der App nicht angezeigt.

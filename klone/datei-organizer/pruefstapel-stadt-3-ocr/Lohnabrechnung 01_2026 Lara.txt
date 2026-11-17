@@ -1,0 +1,42 @@
+Frischmarkt Beispiel GmbH & Co. KG - Personalabrechnung
+‚Altmarkt 2, 00103 Beispielstadt-Nord
+Verdienstabrechnung Januar 2026 Personal-Nr. 41187
+Frau Lara Feingold Filiale 0388 Weidenfeld
+Campusweg 9, WG 4 Eintritt 01.11.2025
+00104 Beispielstadt-Nord Beschäftigungsart: geringfügig (Minijob)
+Steuerklasse: Pauschal
+KV: Beispielkrankenkasse (privat familienvers. nein)
+
+Lohnart Menge Satz Betrag
+
+Stundenlohn 40,50 h 13,90 562,95
+
+Sonntagszuschlag 50 % 4,00 h 6,95 27,80 (steuerfrei)
+Era RA ner 0 Rn Ser ee
+Gesamtbrutto 590,75
+
+davon RV-pflichtig 562,95
+
+Rentenversicherung AN-Anteil 3,6 % -20,27
+
+Pauschalsteuer (trägt Arbeitgeber) 0,00
+
+= ORTES EEE TAN SER NER N ENRRNERSERR Ge Bene N
+
+Nettoverdienst 570,48
+
+Auszahlung 570,48
+
+Überweisung auf DE00 0000 0000 0000 0000 00 am 30.01.2026
+
+Hinweis der Personalabteilung: Sie sind rentenversicherungspflichtig. Möchten Sie
+
+sich befreien lassen, reichen Sie bitte den beigefügten Antrag ein.
+
+Zn We a En
+
+Fischmarkt Beispiel GmbH & Co. KG - Personalabrechn@epchäfsführung: M. Muster Bankverbindung: Beispielbank Nord
+
+Sitz: Beispieistadt-Nord UStIdN.: DE000597538 IBAN DEOO 0000 0000 0000 0000 00
+
+Registergericht: Amtsgericht Beispielstadt HRB 80939 BIC BEISDEXXXX

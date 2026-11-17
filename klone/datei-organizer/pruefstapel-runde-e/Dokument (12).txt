@@ -1,0 +1,29 @@
+Zahnarztpraxis Dr. Muster
+Zahnarztpraxis Dr. Muster · Zahnweg 3 · 67890 Exempelheim
+
+Herrn Heinrich Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Patient: Heinrich Vogelsang
+Datum: 20.01.2026
+
+Rechnung Zahnersatz – Eigenanteil
+
+Sehr geehrter Herr Vogelsang,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Zahnärztliches Honorar laut HKP   1   1.420,00 €   1.420,00 €
+2   Material- und Laborkosten   1   1.440,00 €   1.440,00 €
+3   Festzuschuss Krankenkasse   1   -1.212,00 €   -1.212,00 €
+
+Rechnungsbetrag: 1.648,00 €
+Heilbehandlung, umsatzsteuerfrei.
+
+Bitte überweisen Sie den Betrag von 1.648,00 € bis zum 20.02.2026 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Zahnarztpraxis Dr. Muster
+Zahnarztpraxis Dr. Muster · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

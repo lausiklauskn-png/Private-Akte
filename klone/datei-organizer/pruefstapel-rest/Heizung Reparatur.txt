@@ -1,0 +1,23 @@
+Haustechnik Beispiel-Gruber
+Werkstr. 4 · 84999 Beispielhausen
+
+Familie
+Martin und Sabine Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Rechnung: 2021-418
+Datum: 06.12.2021
+
+Rechnung Notdienst Ölheizung
+
+Pos.   Leistung   Menge   Betrag
+1   Notdienstpauschale Samstag   1   95,00 EUR
+2   Arbeitszeit Monteur   2,5 Std.   172,50 EUR
+3   Zündelektrode   1   38,90 EUR
+4   Ölfilter   1   21,40 EUR
+   Gesamt inkl. 19 % MwSt.      390,49 EUR
+
+Zahlungsziel: 20.12.2021.
+
+Mit freundlichen Grüßen

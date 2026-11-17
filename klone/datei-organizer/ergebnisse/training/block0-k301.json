@@ -1,0 +1,1491 @@
+{
+ "ordner": "laeufe/k301",
+ "dateien": 2068,
+ "organizer": {
+  "schriftstueck": {
+   "n": 1990,
+   "ok": 1825,
+   "falschSicher": 54,
+   "offen": 111
+  },
+  "kategorie": {
+   "n": 1990,
+   "ok": 1685,
+   "falschSicher": 36,
+   "offen": 269
+  },
+  "absender": {
+   "n": 1952,
+   "ok": 1608,
+   "falschSicher": 132,
+   "offen": 212
+  },
+  "person": {
+   "n": 1656,
+   "ok": 1536,
+   "falschSicher": 5,
+   "offen": 115
+  },
+  "frist": {
+   "n": 567,
+   "ok": 504,
+   "falschSicher": 1,
+   "offen": 62
+  },
+  "betrag": {
+   "n": 258,
+   "ok": 188,
+   "falschSicher": 55,
+   "offen": 15
+  }
+ },
+ "familienakte": {
+  "kat": {
+   "n": 0,
+   "ok": 0
+  },
+  "abs": {
+   "n": 0,
+   "ok": 0
+  },
+  "pruef": 0
+ },
+ "bookledgerpro": {
+  "betrag": {
+   "n": 0,
+   "ok": 0
+  },
+  "datum": {
+   "n": 0,
+   "ok": 0
+  }
+ },
+ "offenDateien": 1258,
+ "jeHaushalt": {
+  "familie-petersen": {
+   "n": 94,
+   "ok": 82
+  },
+  "alleinerziehend-brodersen": {
+   "n": 69,
+   "ok": 56
+  },
+  "einzelperson-clausen": {
+   "n": 67,
+   "ok": 57
+  },
+  "arbeitslos-lorenzen": {
+   "n": 57,
+   "ok": 47
+  },
+  "professorin-asmussen": {
+   "n": 66,
+   "ok": 50
+  },
+  "selbststaendig-thomsen": {
+   "n": 64,
+   "ok": 53
+  },
+  "rentner-jessen": {
+   "n": 62,
+   "ok": 57
+  },
+  "entwickler-fleetmann": {
+   "n": 78,
+   "ok": 57
+  },
+  "boutique-hafenrose": {
+   "n": 88,
+   "ok": 62
+  },
+  "studentin-ketelsen": {
+   "n": 72,
+   "ok": 62
+  },
+  "mehrgenerationen-hansen": {
+   "n": 97,
+   "ok": 90
+  },
+  "pflegefamilie-mommsen": {
+   "n": 84,
+   "ok": 71
+  },
+  "patchwork-carstensen-wulf": {
+   "n": 89,
+   "ok": 80
+  },
+  "wg-hafenstrasse": {
+   "n": 85,
+   "ok": 76
+  },
+  "selbststaendig-physio-ahrens": {
+   "n": 66,
+   "ok": 54
+  },
+  "taxiunternehmer-oezdemir": {
+   "n": 92,
+   "ok": 74
+  },
+  "alleinerziehend-vater-friedrichsen": {
+   "n": 79,
+   "ok": 70
+  },
+  "rentnerin-allein-paulsen": {
+   "n": 45,
+   "ok": 36
+  },
+  "paar-ohne-kinder-voss": {
+   "n": 85,
+   "ok": 71
+  },
+  "buergergeld-familie-schulz": {
+   "n": 82,
+   "ok": 76
+  },
+  "beamtenpaar-lorenz": {
+   "n": 68,
+   "ok": 59
+  },
+  "student-azubi-geschwister-petersen": {
+   "n": 72,
+   "ok": 66
+  },
+  "pflegebeduerftig-mueller": {
+   "n": 65,
+   "ok": 56
+  },
+  "landwirt-claussen": {
+   "n": 87,
+   "ok": 71
+  },
+  "zugezogen-nowak": {
+   "n": 76,
+   "ok": 67
+  },
+  "kuenstler-dreyer": {
+   "n": 77,
+   "ok": 61
+  }
+ },
+ "nutzer": {
+  "profil": "kein Lernen",
+  "antworten": 0,
+  "falscheAntworten": 0
+ },
+ "gehalt": {
+  "zeitraum": {
+   "n": 217,
+   "ok": 190
+  },
+  "brutto": {
+   "n": 217,
+   "ok": 176
+  },
+  "netto": {
+   "n": 217,
+   "ok": 189
+  },
+  "auszahlung": {
+   "n": 217,
+   "ok": 182
+  },
+  "lohnsteuer": {
+   "n": 217,
+   "ok": 184
+  },
+  "steuerklasse": {
+   "n": 217,
+   "ok": 169
+  },
+  "steuerId": {
+   "n": 217,
+   "ok": 183
+  },
+  "svNummer": {
+   "n": 217,
+   "ok": 173
+  },
+  "krankenkasse": {
+   "n": 217,
+   "ok": 185
+  }
+ },
+ "jeHaushaltFeld": {
+  "familie-petersen": {
+   "schriftstueck": {
+    "n": 95,
+    "ok": 87,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 94,
+    "ok": 82,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 93,
+    "ok": 74,
+    "falschSicher": 7
+   },
+   "person": {
+    "n": 78,
+    "ok": 70,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 25,
+    "ok": 20,
+    "falschSicher": 0
+   },
+   "offen": 74,
+   "dateien": 95,
+   "betrag": {
+    "n": 14,
+    "ok": 7,
+    "falschSicher": 5
+   }
+  },
+  "alleinerziehend-brodersen": {
+   "schriftstueck": {
+    "n": 70,
+    "ok": 66,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 69,
+    "ok": 56,
+    "falschSicher": 3
+   },
+   "absender": {
+    "n": 68,
+    "ok": 51,
+    "falschSicher": 8
+   },
+   "person": {
+    "n": 59,
+    "ok": 54,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 20,
+    "ok": 16,
+    "falschSicher": 0
+   },
+   "offen": 25,
+   "dateien": 70,
+   "betrag": {
+    "n": 8,
+    "ok": 5,
+    "falschSicher": 2
+   }
+  },
+  "einzelperson-clausen": {
+   "schriftstueck": {
+    "n": 68,
+    "ok": 64,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 67,
+    "ok": 57,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 66,
+    "ok": 53,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 52,
+    "ok": 52,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 15,
+    "ok": 14,
+    "falschSicher": 0
+   },
+   "offen": 28,
+   "dateien": 68,
+   "betrag": {
+    "n": 13,
+    "ok": 9,
+    "falschSicher": 3
+   }
+  },
+  "arbeitslos-lorenzen": {
+   "schriftstueck": {
+    "n": 58,
+    "ok": 57,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 57,
+    "ok": 47,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 56,
+    "ok": 47,
+    "falschSicher": 4
+   },
+   "person": {
+    "n": 45,
+    "ok": 45,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 23,
+    "ok": 22,
+    "falschSicher": 0
+   },
+   "offen": 21,
+   "dateien": 58,
+   "betrag": {
+    "n": 10,
+    "ok": 9,
+    "falschSicher": 1
+   }
+  },
+  "professorin-asmussen": {
+   "schriftstueck": {
+    "n": 66,
+    "ok": 59,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 66,
+    "ok": 50,
+    "falschSicher": 4
+   },
+   "absender": {
+    "n": 65,
+    "ok": 53,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 52,
+    "ok": 52,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 20,
+    "ok": 19,
+    "falschSicher": 0
+   },
+   "offen": 23,
+   "dateien": 66,
+   "betrag": {
+    "n": 11,
+    "ok": 10,
+    "falschSicher": 1
+   }
+  },
+  "selbststaendig-thomsen": {
+   "schriftstueck": {
+    "n": 65,
+    "ok": 59,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 64,
+    "ok": 53,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 63,
+    "ok": 50,
+    "falschSicher": 7
+   },
+   "person": {
+    "n": 51,
+    "ok": 48,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 23,
+    "ok": 20,
+    "falschSicher": 0
+   },
+   "offen": 48,
+   "dateien": 65,
+   "betrag": {
+    "n": 11,
+    "ok": 10,
+    "falschSicher": 1
+   }
+  },
+  "rentner-jessen": {
+   "schriftstueck": {
+    "n": 63,
+    "ok": 62,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 62,
+    "ok": 57,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 61,
+    "ok": 56,
+    "falschSicher": 3
+   },
+   "person": {
+    "n": 51,
+    "ok": 46,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 24,
+    "ok": 21,
+    "falschSicher": 0
+   },
+   "offen": 43,
+   "dateien": 63,
+   "betrag": {
+    "n": 9,
+    "ok": 5,
+    "falschSicher": 3
+   }
+  },
+  "entwickler-fleetmann": {
+   "schriftstueck": {
+    "n": 79,
+    "ok": 69,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 78,
+    "ok": 57,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 77,
+    "ok": 61,
+    "falschSicher": 8
+   },
+   "person": {
+    "n": 69,
+    "ok": 68,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 21,
+    "ok": 19,
+    "falschSicher": 0
+   },
+   "offen": 37,
+   "dateien": 79,
+   "betrag": {
+    "n": 7,
+    "ok": 4,
+    "falschSicher": 3
+   }
+  },
+  "boutique-hafenrose": {
+   "schriftstueck": {
+    "n": 89,
+    "ok": 82,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 88,
+    "ok": 62,
+    "falschSicher": 4
+   },
+   "absender": {
+    "n": 87,
+    "ok": 75,
+    "falschSicher": 2
+   },
+   "person": {
+    "n": 72,
+    "ok": 63,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 27,
+    "ok": 21,
+    "falschSicher": 1
+   },
+   "offen": 72,
+   "dateien": 89,
+   "betrag": {
+    "n": 13,
+    "ok": 10,
+    "falschSicher": 2
+   }
+  },
+  "studentin-ketelsen": {
+   "schriftstueck": {
+    "n": 73,
+    "ok": 64,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 72,
+    "ok": 62,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 72,
+    "ok": 60,
+    "falschSicher": 3
+   },
+   "person": {
+    "n": 60,
+    "ok": 60,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 17,
+    "ok": 14,
+    "falschSicher": 0
+   },
+   "offen": 25,
+   "dateien": 73,
+   "betrag": {
+    "n": 10,
+    "ok": 7,
+    "falschSicher": 2
+   }
+  },
+  "mehrgenerationen-hansen": {
+   "schriftstueck": {
+    "n": 98,
+    "ok": 92,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 97,
+    "ok": 90,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 97,
+    "ok": 87,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 84,
+    "ok": 76,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 25,
+    "ok": 23,
+    "falschSicher": 0
+   },
+   "offen": 46,
+   "dateien": 98,
+   "betrag": {
+    "n": 12,
+    "ok": 9,
+    "falschSicher": 3
+   }
+  },
+  "pflegefamilie-mommsen": {
+   "schriftstueck": {
+    "n": 85,
+    "ok": 76,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 84,
+    "ok": 71,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 84,
+    "ok": 71,
+    "falschSicher": 7
+   },
+   "person": {
+    "n": 73,
+    "ok": 66,
+    "falschSicher": 2
+   },
+   "frist": {
+    "n": 20,
+    "ok": 19,
+    "falschSicher": 0
+   },
+   "offen": 66,
+   "dateien": 85,
+   "betrag": {
+    "n": 9,
+    "ok": 8,
+    "falschSicher": 1
+   }
+  },
+  "patchwork-carstensen-wulf": {
+   "schriftstueck": {
+    "n": 90,
+    "ok": 78,
+    "falschSicher": 5
+   },
+   "kategorie": {
+    "n": 89,
+    "ok": 80,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 89,
+    "ok": 69,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 77,
+    "ok": 69,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 24,
+    "ok": 21,
+    "falschSicher": 0
+   },
+   "offen": 68,
+   "dateien": 90,
+   "betrag": {
+    "n": 10,
+    "ok": 7,
+    "falschSicher": 2
+   }
+  },
+  "wg-hafenstrasse": {
+   "schriftstueck": {
+    "n": 86,
+    "ok": 79,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 85,
+    "ok": 76,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 85,
+    "ok": 75,
+    "falschSicher": 7
+   },
+   "person": {
+    "n": 77,
+    "ok": 71,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 16,
+    "ok": 16,
+    "falschSicher": 0
+   },
+   "offen": 74,
+   "dateien": 86,
+   "betrag": {
+    "n": 7,
+    "ok": 5,
+    "falschSicher": 2
+   }
+  },
+  "selbststaendig-physio-ahrens": {
+   "schriftstueck": {
+    "n": 67,
+    "ok": 58,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 66,
+    "ok": 54,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 66,
+    "ok": 53,
+    "falschSicher": 3
+   },
+   "person": {
+    "n": 57,
+    "ok": 51,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 25,
+    "ok": 23,
+    "falschSicher": 0
+   },
+   "offen": 52,
+   "dateien": 67,
+   "betrag": {
+    "n": 8,
+    "ok": 3,
+    "falschSicher": 3
+   }
+  },
+  "taxiunternehmer-oezdemir": {
+   "schriftstueck": {
+    "n": 93,
+    "ok": 81,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 92,
+    "ok": 74,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 91,
+    "ok": 70,
+    "falschSicher": 8
+   },
+   "person": {
+    "n": 81,
+    "ok": 66,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 31,
+    "ok": 23,
+    "falschSicher": 0
+   },
+   "offen": 64,
+   "dateien": 93,
+   "betrag": {
+    "n": 8,
+    "ok": 6,
+    "falschSicher": 1
+   }
+  },
+  "alleinerziehend-vater-friedrichsen": {
+   "schriftstueck": {
+    "n": 80,
+    "ok": 77,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 79,
+    "ok": 70,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 79,
+    "ok": 68,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 64,
+    "ok": 61,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 24,
+    "ok": 24,
+    "falschSicher": 0
+   },
+   "offen": 26,
+   "dateien": 80,
+   "betrag": {
+    "n": 14,
+    "ok": 12,
+    "falschSicher": 1
+   }
+  },
+  "rentnerin-allein-paulsen": {
+   "schriftstueck": {
+    "n": 46,
+    "ok": 46,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 45,
+    "ok": 36,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 44,
+    "ok": 39,
+    "falschSicher": 1
+   },
+   "person": {
+    "n": 35,
+    "ok": 35,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 14,
+    "ok": 12,
+    "falschSicher": 0
+   },
+   "offen": 11,
+   "dateien": 46,
+   "betrag": {
+    "n": 7,
+    "ok": 5,
+    "falschSicher": 2
+   }
+  },
+  "paar-ohne-kinder-voss": {
+   "schriftstueck": {
+    "n": 85,
+    "ok": 77,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 85,
+    "ok": 71,
+    "falschSicher": 4
+   },
+   "absender": {
+    "n": 84,
+    "ok": 74,
+    "falschSicher": 3
+   },
+   "person": {
+    "n": 72,
+    "ok": 66,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 22,
+    "ok": 19,
+    "falschSicher": 0
+   },
+   "offen": 72,
+   "dateien": 85,
+   "betrag": {
+    "n": 11,
+    "ok": 8,
+    "falschSicher": 2
+   }
+  },
+  "buergergeld-familie-schulz": {
+   "schriftstueck": {
+    "n": 83,
+    "ok": 76,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 82,
+    "ok": 76,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 82,
+    "ok": 71,
+    "falschSicher": 2
+   },
+   "person": {
+    "n": 71,
+    "ok": 68,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 25,
+    "ok": 24,
+    "falschSicher": 0
+   },
+   "offen": 64,
+   "dateien": 83,
+   "betrag": {
+    "n": 9,
+    "ok": 7,
+    "falschSicher": 2
+   }
+  },
+  "beamtenpaar-lorenz": {
+   "schriftstueck": {
+    "n": 69,
+    "ok": 63,
+    "falschSicher": 2
+   },
+   "kategorie": {
+    "n": 68,
+    "ok": 59,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 68,
+    "ok": 58,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 57,
+    "ok": 55,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 20,
+    "ok": 20,
+    "falschSicher": 0
+   },
+   "offen": 51,
+   "dateien": 69,
+   "betrag": {
+    "n": 10,
+    "ok": 9,
+    "falschSicher": 1
+   }
+  },
+  "student-azubi-geschwister-petersen": {
+   "schriftstueck": {
+    "n": 73,
+    "ok": 70,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 72,
+    "ok": 66,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 72,
+    "ok": 57,
+    "falschSicher": 4
+   },
+   "person": {
+    "n": 63,
+    "ok": 62,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 15,
+    "ok": 13,
+    "falschSicher": 0
+   },
+   "offen": 58,
+   "dateien": 73,
+   "betrag": {
+    "n": 8,
+    "ok": 6,
+    "falschSicher": 2
+   }
+  },
+  "pflegebeduerftig-mueller": {
+   "schriftstueck": {
+    "n": 66,
+    "ok": 62,
+    "falschSicher": 1
+   },
+   "kategorie": {
+    "n": 65,
+    "ok": 56,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 64,
+    "ok": 55,
+    "falschSicher": 4
+   },
+   "person": {
+    "n": 51,
+    "ok": 45,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 24,
+    "ok": 23,
+    "falschSicher": 0
+   },
+   "offen": 44,
+   "dateien": 66,
+   "betrag": {
+    "n": 11,
+    "ok": 9,
+    "falschSicher": 2
+   }
+  },
+  "landwirt-claussen": {
+   "schriftstueck": {
+    "n": 88,
+    "ok": 82,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 87,
+    "ok": 71,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 86,
+    "ok": 59,
+    "falschSicher": 9
+   },
+   "person": {
+    "n": 74,
+    "ok": 64,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 27,
+    "ok": 21,
+    "falschSicher": 0
+   },
+   "offen": 60,
+   "dateien": 88,
+   "betrag": {
+    "n": 10,
+    "ok": 5,
+    "falschSicher": 3
+   }
+  },
+  "zugezogen-nowak": {
+   "schriftstueck": {
+    "n": 77,
+    "ok": 68,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 76,
+    "ok": 67,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 76,
+    "ok": 61,
+    "falschSicher": 4
+   },
+   "person": {
+    "n": 67,
+    "ok": 59,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 18,
+    "ok": 16,
+    "falschSicher": 0
+   },
+   "offen": 65,
+   "dateien": 77,
+   "betrag": {
+    "n": 7,
+    "ok": 4,
+    "falschSicher": 3
+   }
+  },
+  "kuenstler-dreyer": {
+   "schriftstueck": {
+    "n": 78,
+    "ok": 71,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 77,
+    "ok": 61,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 77,
+    "ok": 61,
+    "falschSicher": 6
+   },
+   "person": {
+    "n": 64,
+    "ok": 64,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 22,
+    "ok": 21,
+    "falschSicher": 0
+   },
+   "offen": 41,
+   "dateien": 78,
+   "betrag": {
+    "n": 11,
+    "ok": 9,
+    "falschSicher": 2
+   }
+  }
+ },
+ "jeArt": {
+  "Rechnung": {
+   "n": 521,
+   "ok": 401
+  },
+  "Abrechnung": {
+   "n": 286,
+   "ok": 266
+  },
+  "Kontoauszug": {
+   "n": 56,
+   "ok": 54
+  },
+  "Vertrag": {
+   "n": 138,
+   "ok": 99
+  },
+  "Mahnung": {
+   "n": 18,
+   "ok": 11
+  },
+  "Befund": {
+   "n": 52,
+   "ok": 52
+  },
+  "Termin": {
+   "n": 98,
+   "ok": 75
+  },
+  "Brief": {
+   "n": 164,
+   "ok": 147
+  },
+  "Bescheid": {
+   "n": 152,
+   "ok": 136
+  },
+  "Bescheinigung": {
+   "n": 120,
+   "ok": 109
+  },
+  "Kassenbon": {
+   "n": 258,
+   "ok": 237
+  },
+  "Angebot/Werbung": {
+   "n": 38,
+   "ok": 28
+  },
+  "Aufforderung": {
+   "n": 55,
+   "ok": 39
+  },
+  "Foto": {
+   "n": 2,
+   "ok": 0
+  },
+  "Kündigung": {
+   "n": 8,
+   "ok": 7
+  }
+ },
+ "jeForm": {
+  "pdf-scan/schlecht": {
+   "n": 142,
+   "textGelesen": 131,
+   "schriftstueck": {
+    "n": 142,
+    "ok": 87,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 142,
+    "ok": 69,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 142,
+    "ok": 28,
+    "falschSicher": 28
+   },
+   "person": {
+    "n": 141,
+    "ok": 77,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 55,
+    "ok": 26,
+    "falschSicher": 0
+   }
+  },
+  "pdf-scan/gut": {
+   "n": 199,
+   "textGelesen": 198,
+   "schriftstueck": {
+    "n": 199,
+    "ok": 186,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 199,
+    "ok": 179,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 199,
+    "ok": 158,
+    "falschSicher": 21
+   },
+   "person": {
+    "n": 196,
+    "ok": 187,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 68,
+    "ok": 68,
+    "falschSicher": 0
+   }
+  },
+  "pdf-text": {
+   "n": 486,
+   "textGelesen": 486,
+   "schriftstueck": {
+    "n": 486,
+    "ok": 453,
+    "falschSicher": 22
+   },
+   "kategorie": {
+    "n": 486,
+    "ok": 433,
+    "falschSicher": 7
+   },
+   "absender": {
+    "n": 486,
+    "ok": 459,
+    "falschSicher": 27
+   },
+   "person": {
+    "n": 449,
+    "ok": 447,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 155,
+    "ok": 155,
+    "falschSicher": 0
+   },
+   "betrag": {
+    "n": 29,
+    "ok": 29,
+    "falschSicher": 0
+   }
+  },
+  "foto/schlecht": {
+   "n": 55,
+   "textGelesen": 55,
+   "schriftstueck": {
+    "n": 55,
+    "ok": 50,
+    "falschSicher": 4
+   },
+   "kategorie": {
+    "n": 55,
+    "ok": 50,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 55,
+    "ok": 27,
+    "falschSicher": 5
+   },
+   "person": {
+    "n": 55,
+    "ok": 42,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 19,
+    "ok": 10,
+    "falschSicher": 1
+   }
+  },
+  "pdf-scan/mittel": {
+   "n": 225,
+   "textGelesen": 222,
+   "schriftstueck": {
+    "n": 225,
+    "ok": 196,
+    "falschSicher": 7
+   },
+   "kategorie": {
+    "n": 225,
+    "ok": 194,
+    "falschSicher": 3
+   },
+   "absender": {
+    "n": 225,
+    "ok": 158,
+    "falschSicher": 33
+   },
+   "person": {
+    "n": 224,
+    "ok": 207,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 86,
+    "ok": 79,
+    "falschSicher": 0
+   }
+  },
+  "einfach": {
+   "n": 186,
+   "textGelesen": 186,
+   "schriftstueck": {
+    "n": 186,
+    "ok": 171,
+    "falschSicher": 6
+   },
+   "kategorie": {
+    "n": 186,
+    "ok": 157,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 186,
+    "ok": 181,
+    "falschSicher": 3
+   },
+   "person": {
+    "n": 185,
+    "ok": 184,
+    "falschSicher": 0
+   },
+   "frist": {
+    "n": 70,
+    "ok": 70,
+    "falschSicher": 0
+   }
+  },
+  "foto/mittel": {
+   "n": 88,
+   "textGelesen": 88,
+   "schriftstueck": {
+    "n": 88,
+    "ok": 84,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 88,
+    "ok": 73,
+    "falschSicher": 2
+   },
+   "absender": {
+    "n": 88,
+    "ok": 57,
+    "falschSicher": 4
+   },
+   "person": {
+    "n": 85,
+    "ok": 82,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 32,
+    "ok": 26,
+    "falschSicher": 0
+   }
+  },
+  "foto/gut": {
+   "n": 78,
+   "textGelesen": 78,
+   "schriftstueck": {
+    "n": 78,
+    "ok": 72,
+    "falschSicher": 3
+   },
+   "kategorie": {
+    "n": 78,
+    "ok": 68,
+    "falschSicher": 1
+   },
+   "absender": {
+    "n": 78,
+    "ok": 54,
+    "falschSicher": 11
+   },
+   "person": {
+    "n": 78,
+    "ok": 76,
+    "falschSicher": 1
+   },
+   "frist": {
+    "n": 23,
+    "ok": 23,
+    "falschSicher": 0
+   }
+  },
+  "bildschirm": {
+   "n": 41,
+   "textGelesen": 41,
+   "schriftstueck": {
+    "n": 41,
+    "ok": 41,
+    "falschSicher": 0
+   },
+   "kategorie": {
+    "n": 41,
+    "ok": 34,
+    "falschSicher": 0
+   },
+   "absender": {
+    "n": 41,
+    "ok": 41,
+    "falschSicher": 0
+   },
+   "betrag": {
+    "n": 18,
+    "ok": 16,
+    "falschSicher": 0
+   },
+   "person": {
+    "n": 23,
+    "ok": 19,
+    "falschSicher": 0
+   }
+  }
+ },
+ "ocrGuete": {
+  "pdf-scan/schlecht": {
+   "n": 142,
+   "wortfehler": 0.781,
+   "gefunden": 0.37
+  },
+  "pdf-scan/gut": {
+   "n": 199,
+   "wortfehler": 0.362,
+   "gefunden": 0.952
+  },
+  "foto/schlecht": {
+   "n": 55,
+   "wortfehler": 0.646,
+   "gefunden": 0.557
+  },
+  "pdf-scan/mittel": {
+   "n": 225,
+   "wortfehler": 0.468,
+   "gefunden": 0.875
+  },
+  "foto/mittel": {
+   "n": 88,
+   "wortfehler": 0.469,
+   "gefunden": 0.778
+  },
+  "foto/gut": {
+   "n": 78,
+   "wortfehler": 0.433,
+   "gefunden": 0.883
+  },
+  "bildschirm": {
+   "n": 41,
+   "wortfehler": 0.193,
+   "gefunden": 0.886
+  }
+ },
+ "leser": {
+  "ocrBilder": 14,
+  "ocrMs": 9002,
+  "ausCache": 569,
+  "scanPdf": 566,
+  "haenger": 0,
+  "seitenFehler": 0
+ },
+ "doppelt": {
+  "n": 52,
+  "ok": 52,
+  "falsch": 0
+ },
+ "leer": {
+  "n": 26,
+  "ok": 26
+ },
+ "anhang": {
+  "n": 21,
+  "ok": 21
+ },
+ "blpKonto": {
+  "n": 0,
+  "blp": 0
+ }
+}

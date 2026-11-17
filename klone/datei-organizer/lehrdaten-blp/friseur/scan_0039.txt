@@ -1,0 +1,11 @@
+webbaukasten.example – Rechnung 655164070
+Leistungszeitraum Juni 2026 · ausgestellt 2026-02-14
+
+Kunde: Merle Osterkamp, Haarstudio Federleicht
+
+Paket „Salon-Homepage Plus“ inkl. Online-Terminbutton,
+Domain haarstudio-federleicht.example
+
+Monatspreis netto    26,00 EUR
+MwSt 19 %            4,94 EUR
+Abbuchungsbetrag     30,94 EUR

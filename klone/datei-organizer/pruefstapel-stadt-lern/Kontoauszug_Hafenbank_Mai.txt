@@ -1,0 +1,9 @@
+Hafenbank Beispielhafen eG                       Kontoauszug 5/2026
+Konto DE00 0000 0000 0000 0000 00  Heinrich und Gerda Brakmann
+Alter Saldo                         2.114,50
+03.05. Rente DRV Beispielnord      +1.986,20
+05.05. Miete/Nebenkosten            -  0,00
+07.05. Pflegedienst Leuchtfeuer     -  312,00
+12.05. Stadtwerke Abschlag          -   96,00
+15.05. Beispielkasse Nord           -  168,40
+Neuer Saldo                         3.524,30 EUR

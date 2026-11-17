@@ -1,0 +1,12 @@
+# Beispiel Haushaltsgeräte GmbH
+
+GARANTIEKARTE
+
+Gerät: Kaffeeautomat Beispiel KA 300
+Serien-Nr.: KA300-88412
+Kaufdatum: 24.12.2003
+Händler: Elektro-Fachmarkt Beispiel, Musterau
+
+Wir gewähren 24 Monate Garantie ab Kaufdatum.
+
+@stempel Elektro-Fachmarkt Beispiel Musterau

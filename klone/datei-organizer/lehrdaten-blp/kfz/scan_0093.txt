@@ -1,0 +1,11 @@
+LOHN- UND GEHALTSABRECHNUNG                         Abrechnungsmonat: 04/2026
+erstellt durch Lohnbüro für: Kfz-Technik Brandhorst · 37199 Wolmershagen
+
+Personal-Nr. 0003 | Marvin Özturk · Kfz-Mechatroniker (Geselle) | Eintritt 01.08.2019 | StKl 3 | Kinderfreibetr. 1,0
+
+LA 100  Gebalt                     2.980,00
+---- Brutto gcsamt                 2.980,00
+---- gesetzl. Abzüge Steuer        268,41
+---- gesetzl. Abzüge Sozialvers.   616,86
+==== Netto                         2.094,73
+==== Auszahlurigsbetrag             2.094,73  (Bank)

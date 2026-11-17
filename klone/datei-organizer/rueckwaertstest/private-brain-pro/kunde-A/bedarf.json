@@ -1,0 +1,35 @@
+{"titel": "Private Unterlagen und Mails an einem Ort finden – ohne Cloud",
+ "kunde": {"firma": "Haushalt Beispiel-Hofmann", "ansprechpartner": "Renate Beispiel-Hofmann", "mail": "renate@beispiel-hofmann.example"},
+ "bereiche": {
+  "1": ["Mails auf drei Konten", "Mail-Programm am PC und Mail-App am Handy", "eingescannte und abfotografierte Briefe", "Fotos vom Handy in der Fotos-App", "PDFs in Ordnern auf dem PC", "USB-Stick als Sicherung"],
+  "2": ["Haushaltsunterlagen ablegen und wiederfinden", "Nachlass des Mannes verwalten", "Mails lesen und schreiben"],
+  "3": [{"text": "Renate Beispiel-Hofmann (einzige Nutzerin)", "anzahl": 1}],
+  "4": ["Ich weiß nur ungefähr, worum es ging, nicht wie die Datei heißt", "Alles liegt verstreut auf mehreren Geräten und Konten", "In abfotografierten Briefen steht kein suchbarer Text", "Ich muss erst suchen, wo ich suchen kann", "Angst vor gefälschten Rechnungen und Anhängen"],
+  "5": ["Unterlagen kommen über viele Wege rein (Mail, Scan, Handyfoto, PC)", "Suche geht nur über Dateinamen", "Fotos und Scans enthalten nur ein Bild, keinen Text"],
+  "6": [
+   {"text": "In ein Feld schreiben, was ich meine, und es kommt – auch mit anderen Worten als im Brief", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nicht mehr ewig suchen, z. B. 'das Schreiben wegen der Dachrinne'"}},
+   {"text": "Auch abfotografierte Briefe durchsuchen können", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "alte Briefe werden überhaupt erst auffindbar"}},
+   {"text": "Unterlagen bleiben bei mir auf meinen Geräten, auch ohne Internet", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nichts in eine Cloud"}},
+   {"text": "Originale werden nicht verändert oder verschoben, aber vom Suchergebnis aus geöffnet", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "meine Ordnung bleibt, wie sie ist"}},
+   {"text": "Mails lesen und schreiben im selben Programm wie die Dokumentsuche", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nicht zwischen Programmen hin und her"}},
+   {"text": "Verschlüsselt mit Passwort auf Tablet bzw. Speicherkarte", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Sicherheit, falls Gerät verloren geht"}},
+   {"text": "Bei einem neuen Gerät wiederherstellbar", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nichts geht verloren"}},
+   {"text": "Hinweis, wenn eine Rechnung oder ein Anhang komisch ist – ohne selbst zu löschen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Schutz vor Betrug"}},
+   {"text": "Ganze Ordner auf einmal hineingeben", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nicht Datei für Datei"}}
+  ],
+  "7": ["Ein Suchfeld für alles: Mails, Briefe, Fotos, PDFs", "Übersichtlich, ich muss nicht erst suchen, wo ich suchen kann", "Alles bleibt bei mir und ist sicher"],
+  "8": ["Das System muss Suchanfragen nach Bedeutung beantworten, nicht nur nach Dateinamen", "Das System muss Text aus abfotografierten und eingescannten Briefen lesbar machen", "Das System muss ohne Internet funktionieren", "Das System muss die Originale unverändert lassen und sie aus dem Suchergebnis öffnen", "Das System muss Mails von drei Konten lesen und Mails schreiben können", "Das System muss ganze Ordner auf einmal aufnehmen", "Das System muss auffällige Rechnungen und Anhänge melden, ohne etwas zu löschen", "Das System muss die Daten mit Passwort verschlüsselt speichern", "Das System muss sich auf einem neuen Gerät wiederherstellen lassen"],
+  "9": ["Einrichtung an einem Nachmittag", "Kurze Einweisung für mich allein"],
+  "10": ["Android-Tablet", "Android-Handy", "Windows-PC", "offline nutzbar", "Speicherkarte am Tablet"],
+  "11": ["Mail-Programm am PC", "Mail-App am Handy", "Ordner auf dem PC", "USB-Stick", "Fotos-App"],
+  "12": ["drei Mailkonten", "Fotos vom Handy", "PDF-Ordner auf dem PC"],
+  "13": ["Mails mit Anhängen", "eingescannte Briefe", "abfotografierte Briefe", "Fotos", "PDFs", "Unterlagen zum Nachlass"],
+  "14": ["personenbezogene Daten: ja", "keine Cloud", "Verschlüsselung mit Passwort", "nichts automatisch löschen"],
+  "15": ["Budget-Rahmen: einmalig bis 80 €", "Einrichtung an einem Nachmittag"],
+  "18": [
+   {"text": "Welcher Mailanbieter steckt hinter den drei Konten?", "wer": "Kundin", "bis": ""},
+   {"text": "Wie viele Unterlagen sind es ungefähr?", "wer": "Kundin", "bis": ""},
+   {"text": "Soll auf allen drei Geräten gesucht werden oder hauptsächlich auf dem Tablet?", "wer": "Kundin", "bis": ""},
+   {"text": "Was passiert mit dem USB-Stick als Sicherung – bleibt er?", "wer": "Kundin", "bis": ""}
+  ]
+ }}

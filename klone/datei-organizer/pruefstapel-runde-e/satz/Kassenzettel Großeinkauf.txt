@@ -1,0 +1,132 @@
+@bon
+BEISPIEL-MARKT
+Filiale 0731, Kurparkstraße 8, 67890 Exempelheim
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+BABYBREI GLAS AKTION
+  2 x 0,76        1,52 B
+HAFERFLOCKEN
+  2 x 0,89        1,78 B
+TRAUBEN HELL                     2,79 B
+HONIG
+  2 x 3,99        7,98 B
+GRILLKOHLE                       4,99 A
+TOASTBROT                        1,29 B
+GOUDA SCHEIBEN                   1,99 B
+KEKSE BUTTER
+  2 x 1,39        2,78 B
+ORANGENSAFT 1L
+  2 x 1,79        3,58 A
+H-MILCH 1,5% 1L
+  2 x 0,99        1,98 B
+FRUCHTJOGHURT 4X
+  3 x 1,79        5,37 B
+GOUDA SCHEIBEN                   1,99 B
+FRISCHMILCH 3,8%                 1,19 B
+ZUCKER 1KG
+  3 x 0,99        2,97 B
+COLA 1,5L                        1,39 A
+PFAND                            0,25 A
+RABATT 20% COLA 1,5L            -0,28 A
+PIZZA SALAMI TK                  2,79 B
+GRILLKOHLE AKTION                3,49 A
+ROTWEIN
+  2 x 3,99        7,98 A
+RABATT 20% ROTWEIN              -1,60 A
+POMMES TK 1KG
+  2 x 1,99        3,98 B
+FEUCHTTÜCHER
+  3 x 1,49        4,47 A
+SENF
+  2 x 0,79        1,58 B
+SALAT EISBERG                    1,19 B
+RABATT 20% SALAT EISBERG        -0,24 B
+AUFBACKBRÖTCHEN 10ER
+  2 x 1,69        3,38 B
+ÄPFEL ELSTAR 1KG                 2,99 B
+SALZSTANGEN                      0,89 B
+PENNE 500G
+  2 x 0,99        1,98 B
+KAKAOPULVER
+  2 x 2,49        4,98 B
+KEKSE BUTTER                     1,39 B
+EMMENTALER GERIEBEN
+  3 x 1,89        5,67 B
+TEE PFEFFERMINZ
+  2 x 1,19        2,38 B
+ALUFOLIE                         1,99 A
+DEO                              1,95 A
+RABATT 20% DEO                  -0,39 A
+GEWÜRZ PAPRIKA                   1,29 B
+APFELSAFT 1L
+  2 x 1,29        2,58 A
+FRISCHKÄSE                       1,29 B
+WEICHSPÜLER
+  2 x 1,79        3,58 A
+ESSIG                            0,95 B
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+DUSCHGEL
+  3 x 1,25        3,75 A
+BATTERIEN AA 8ER                 4,49 A
+ZAHNPASTA
+  2 x 0,99        1,98 A
+GURKE                            0,79 B
+CORNFLAKES
+  3 x 1,99        5,97 B
+RABATT 20% CORNFLAKES           -1,19 B
+SPINAT TK 750G                   1,49 B
+ERDBEERKONFITÜRE
+  2 x 1,79        3,58 B
+WEICHSPÜLER
+  2 x 1,79        3,58 A
+ROTWEIN                          3,99 A
+GEWÜRZ PAPRIKA                   1,29 B
+HACKFLEISCH GEM 500G AKTION      3,49 B
+TOILETTENPAPIER 8ER              3,99 A
+EIER BODENH. 10ER
+  2 x 2,69        5,38 B
+MÜLLBEUTEL
+  2 x 1,79        3,58 A
+BATTERIEN AA 8ER                 4,49 A
+SALAMI AUFSCHNITT AKTION
+  2 x 1,32        2,64 B
+ZUCKER 1KG
+  2 x 0,99        1,98 B
+PENNE 500G
+  3 x 0,99        2,97 B
+KAFFEE GEMAHLEN 500G             5,99 B
+KOCHSCHINKEN                     2,29 B
+NUSS-NOUGAT-CREME                2,99 B
+BLUMEN STRAUSS
+  2 x 4,99        9,98 B
+ROTWEIN                          3,99 A
+KOCHSCHINKEN                     2,29 B
+BRATWURST 6ER                    3,99 B
+ÄPFEL ELSTAR 1KG
+  2 x 2,99        5,98 B
+SCHOKOLADE VOLLMILCH
+  2 x 1,19        2,38 B
+KARTOFFELN FEST 2,5KG            3,49 B
+BIRNEN AKTION                    1,74 B
+BRATWURST 6ER
+  3 x 3,99        11,97 B
+WAAGE: BANANEN 1,236 KG X 1,49     1,84 B
+------------------------------------
+ZWISCHENSUMME                 225,04
+LEERGUTBON 0000666              -2,25 A
+====================================
+SUMME EUR                     222,79
+BAR                     222,79
+POSTEN: 75
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|55,10|10,47|65,57|
+|B 7 %|146,93|10,29|157,22|
+
+22.12.2025 09:48  BON 8713  KASSE 8  BED. 70
+TSE-TRANSAKTION 35598  SIGNATUR-ZÄHLER 513611
+START 09:48:02  ENDE 09:48:44
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

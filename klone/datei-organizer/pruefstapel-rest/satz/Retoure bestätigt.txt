@@ -1,0 +1,17 @@
+# BEISPIEL-SHOP APP
+
+BENACHRICHTIGUNG
+
+Neue Nachricht
+
+BESTELLNR.: 302-4471182-01
+ARTIKEL: Winterjacke Gr. M, Farbe Petrol
+ERSTATTUNG: 129,95 EUR
+AUF: Kreditkarte **** 0000
+DATUM: 19.11.2025
+
+# Deine Rücksendung ist angekommen
+
+Die Erstattung erfolgt innerhalb von 3–5 Werktagen.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

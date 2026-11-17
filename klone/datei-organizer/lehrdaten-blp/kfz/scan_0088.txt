@@ -1,0 +1,24 @@
+Kfz-Technik Brandhorst
+Inh. Henrik Brandhorst · Kfz-Meisterbetrieb · Teile & Reifen
+Ziegeleiweg 14 · 37199 Wolmershagen
+Tel. 05500 000 41-0 · werkstatt@brandhorst-kfz.example
+USt-IdNr. DE000000000 · St.-Nr. 00/000/00000
+
+KFZ Hinterleitner GmbH
+Gewerbestraße 4
+A-5020 Salzach
+Österreich
+UID-Nr. ATU00000000
+
+RECHNUNG Nr. 2026-0075                                   Datum: 17.02.2026
+Lieferung von Fahrzeugteilen nach Österreich (Paketdienst, Sendungsnr. 0000 0000 0001)
+
+Pos  Bezeichnung                               Menge    E-Preis     Gesamt
+1    Zweimassenschwungrad                         2 Stk    365,00     730,00
+2    Kupplungssatz 3-teilig                       2 Stk    178,00     356,00
+Rechnungsbetrag                                  1.086,00
+
+Steuerfrele innergemeinschaftliche Lieferung gem. § 4 Nr. 1b i.V.m. § 6a UStG.
+Unserc USt-IdNr.: DE000000000 – Ihre UID: ATU00000000
+Bankverbindung: Volksbank Wolmershagen eG · IBAN DE00 0000 0000 0000 0000 00
+Kfz-Technik Brandhorst · Inhaber Henrik Brandhorst · Mitglied der Kfz-Innung

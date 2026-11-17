@@ -1,0 +1,28 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Kantine Werk Ost / Fa. Morgenroth Metallbau
+Industriestr. 40
+37996 Molkenrode
+
+Rechnung
+Rechnungsnummer: KB-2026-114
+Rechnunqsdatum: 23.06.2026
+Leistungsdatum: 21.06.2026
+Kunden-Nr.: K806
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Leihgebühr Kaffeevollautomat Monat     1    120,00     120,00
+  2  Wartungspauschale            1     35,00      35,00
+
+Nettobetrag                                  155,00
+zzgl. 19 % USt                               29,45
+Gesamt                                       184,45 EUR
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 5942 21
+USt-IdNr. DE000000589

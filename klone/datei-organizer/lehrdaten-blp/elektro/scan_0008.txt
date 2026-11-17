@@ -1,0 +1,18 @@
+Ladepunkt Systeme Brunnhofer GmbH
+Technologiepark 12, 85000 Auenstadt
+www.ladepunkt-brunnhofer.example
+
+Rechnung  R-2026-01944            Auenstadt, 16.04.2026
+Kunde: Elektro Brandhuber (K-3318)
+
+Bezeichnung                                   Stk   Netto/Stk   Netto ges.
+Wallbox "eDock 11" 11 kW mit 5 m Kabel         2     489,00      978,00
+Standfuss Edelstahl fuer eDock                 1     129,00      129,00
+Lastmanagement-Modul LM-2                      1      93,00       93,00
+
+Gesamt netto                       1.200,00 €
+MwSt. (19%)                        228,00 €
+Rechnungsbetraq                    1.428,00 €
+
+Die Ware ist zum Wiederverkauf / Einbau beim Endkunden bestimmt.
+Zahlung: 14 Tage netto auf DE00 0000 0000 0000 0019 44

@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "UVG Bescheid Jonas.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Unterhaltsvorschusskasse",
+   "person": "Jonas Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "scan_0012.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Unterhaltsvorschusskasse",
+   "person": "Lina Kowalke",
+   "frist": "2025-09-15"
+  },
+  {
+   "datei": "Familienkasse.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Ruhr-Mitte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bescheid Stadtkasse Abgaben.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Fachbereich Kindertagesbetreuung",
+   "person": "Jonas Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Klassenfahrt Lina.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule an der Halde",
+   "person": "Lina Kowalke",
+   "frist": "2026-03-06"
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule an der Halde",
+   "person": "Lina Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Elternsprechtag.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "S. Ortmann",
+   "person": "Lina Kowalke",
+   "frist": "2025-11-18"
+  },
+  {
+   "datei": "Jobcenter Mittagessen.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Jobcenter Wattenbruch",
+   "person": "Lina Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Geburtsurkunde Jonas Abschrift.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Wattenbruch",
+   "person": "Jonas Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "KiZ.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Ruhr-Mitte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Beistand Unterhalt.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Beistandschaften",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "IMG_20260114_0002.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Gesundheitsamt",
+   "person": "Jonas Kowalke",
+   "frist": "2026-02-03"
+  },
+  {
+   "datei": "Fussball Beitrag 2025.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "SV Glückauf Wattenbruch 1921 e.V.",
+   "person": "Jonas Kowalke",
+   "frist": "2025-02-28"
+  },
+  {
+   "datei": "Pflegegrad Mutter.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse bei der Emscher-Krankenkasse",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "MD Termin.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Begutachtungsdienst Westfalen-Ruhr",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-02-25"
+  },
+  {
+   "datei": "Brief Pflegekasse Juli.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse bei der Emscher-Krankenkasse",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-08-31"
+  },
+  {
+   "datei": "Verhinderungspflege Erstattung.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegekasse bei der Emscher-Krankenkasse",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "RE Sonnenhang 10-2025.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegedienst Sonnenhang GmbH",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Geraet Rechnung Mai.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Sanitätshaus Krückemeier",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-06-06"
+  },
+  {
+   "datei": "Entlassbrief Mama.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "St.-Barbara-Klinikum Wattenbruch",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Labor.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Gemeinschaftspraxis Dr. Hülsmann / Vogt",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "U9 Jonas.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinder- und Jugendarztpraxis Dr. Sommerkamp",
+   "person": "Jonas Kowalke",
+   "frist": "2025-10-09"
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "HNO-Praxis am Wasserturm",
+   "person": "Lina Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Kinderkrank Februar.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Stahl & Schiene",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Mitgliedsbesch BKK.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Stahl & Schiene",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Befreiungskarte 2025.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Emscher-Krankenkasse",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Beitrag ab Januar.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Emscher-Krankenkasse",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Versorgungsamt Feststellung.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kreis Emscherland",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Sozialamt HzP.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Amt für Soziales und Wohnen",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszüge Sparkasse.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Amt für Soziales und Wohnen",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-09-05"
+  },
+  {
+   "datei": "Bon Apotheke.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Glückauf-Apotheke",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "KFO Plan Lina.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Fachpraxis für Kieferorthopädie Dr. Lohoff",
+   "person": "Lina Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Bewilligung JC 2024.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Wattenbruch",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Einladung 14.11.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Wattenbruch",
+   "person": "Dennis Kowalke",
+   "frist": "2024-11-14"
+  },
+  {
+   "datei": "jc_unterlagen_fehlen.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Wattenbruch",
+   "person": "Dennis Kowalke",
+   "frist": "2024-11-22"
+  },
+  {
+   "datei": "Lohn 2025-05.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Logistik Hellweg GmbH",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung 2025.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Rhein-Ruhr",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Rente Mutter 2024.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Rentenversicherung Rhein-Ruhr",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Pflegeperson RV 2024.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Pflegekasse bei der Emscher-Krankenkasse",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Steuer Zulage 2024.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Bergische Vorsorge Lebensversicherung AG",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Zeitungen austragen.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Dennis Kowalke",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Wohngeld Bescheid 2025.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Wohngeldstelle",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "scan_0057.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Wohngeldstelle",
+   "person": "Dennis Kowalke",
+   "frist": "2025-03-28"
+  },
+  {
+   "datei": "Mieterhöhung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgesellschaft Emscherblick mbH",
+   "person": "Dennis Kowalke",
+   "frist": "2025-12-31"
+  },
+  {
+   "datei": "Nebenkosten 2024.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgesellschaft Emscherblick mbH",
+   "person": null,
+   "frist": "2025-08-15"
+  },
+  {
+   "datei": "Mietvertrag Kokereipark.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Niggemann & Sohn",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Rauchmelder.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Niggemann & Sohn",
+   "person": null,
+   "frist": "2025-11-12"
+  },
+  {
+   "datei": "Tacke Miete Oktober.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Niggemann & Sohn",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "Garage Grundbesitzabgaben 2025.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Steueramt",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-02-15"
+  },
+  {
+   "datei": "Strom Jahresrechnung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wattenbruch GmbH",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "letzte Mahnung Strom.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wattenbruch GmbH",
+   "person": "Dennis Kowalke",
+   "frist": "2024-10-11"
+  },
+  {
+   "datei": "Gaspreis.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Wattenbruch GmbH",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Zaehler ablesen!!.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Emscher Netz GmbH",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-12-19"
+  },
+  {
+   "datei": "Stromvertrag wichtig.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Rhein-Volt Energie AG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Pacht 2025 Garten.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein Am Zechengrund e.V.",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-03-31"
+  },
+  {
+   "datei": "Verein Termine.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Termin",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein Am Zechengrund e.V.",
+   "person": "Marlies Brandhorst",
+   "frist": "2026-03-14"
+  },
+  {
+   "datei": "Akkumäher.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Bau- und Gartenmarkt Grüne Schüppe",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Hecke Abmahnung.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingärtnerverein Am Zechengrund e.V.",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "bon_0911.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Frischemarkt Klüngel",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schule Lina Hefte.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Schreibwaren Pröpper",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bon Samstag.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Bäckerei Stutenkerl",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bestellung Kinderschuhe.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Kleinfuß Versand GmbH",
+   "person": null,
+   "frist": "2025-10-14"
+  },
+  {
+   "datei": "Retoure.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Wäschehaus Lindhorst",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Zahlungserinnerung Schuhe.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Kleinfuß Versand GmbH",
+   "person": null,
+   "frist": "2025-11-04"
+  },
+  {
+   "datei": "Waschmaschine.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Hohmann",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "TV Bon.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "TechnikHalle Wattenbruch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bestellung 4471.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "bürokiste24",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "KVA Display.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Handy-Doktor am Bahnhof",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Handyvertrag.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Funkwerk Mobil GmbH",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Fit.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "FitKolonie Wattenbruch",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Zeitung.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Wattenbrucher Anzeiger",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (7).txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Flimmerkiste",
+   "person": "Dennis Kowalke",
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Abo 60plus kündigen.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Marlies Brandhorst",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Vertrag Anschluss.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Ruhrkabel Netz GmbH",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Auszug 2025-03.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Ruhrtal-Bank eG",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Auszug Mama 07.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Ruhrtal-Bank eG",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Versandhaus.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Creditas Forderungsservice GmbH",
+   "person": "Dennis Kowalke",
+   "frist": "2026-01-23"
+  },
+  {
+   "datei": "funkwerk.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "KSP Lünemann Rechtsanwälte",
+   "person": "Dennis Kowalke",
+   "frist": "2024-08-30"
+  },
+  {
+   "datei": "scan_0102.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "medicollect Abrechnungs- und Inkasso GmbH",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-07-11"
+  },
+  {
+   "datei": "Inkasso Stadtwerke.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Revier-Inkasso Hagedorn & Partner",
+   "person": "Dennis Kowalke",
+   "frist": "2024-12-06"
+  },
+  {
+   "datei": "Termin SB.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Schuldner- und Insolvenzberatung der Diakonie Emscherland",
+   "person": "Dennis Kowalke",
+   "frist": "2024-12-10"
+  },
+  {
+   "datei": "P-Konto Bescheinigung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Schuldner- und Insolvenzberatung der Diakonie Emscherland",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Dispo.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Ruhrtal-Bank eG",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "PHV Police.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Westmark Versicherung a.G.",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Hausrat Beitrag.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Westmark Versicherung a.G.",
+   "person": "Marlies Brandhorst",
+   "frist": "2026-01-15"
+  },
+  {
+   "datei": "Sterbekasse Stand.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Sterbekasse Bergmannstreue VVaG",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Wasserschaden Wohnung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Westmark Versicherung a.G.",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "RS kündigen.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Marlies Brandhorst",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Wattenbruch",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Meldebescheinigung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Bürgerbüro Mitte",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Ausweis Mutti.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Bürgerbüro Mitte",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "FA Erinnerung.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Wattenbruch",
+   "person": "Marlies Brandhorst",
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "Wahl.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Wattenbruch – Wahlamt",
+   "person": "Hedwig Brandhorst",
+   "frist": "2025-09-14"
+  },
+  {
+   "datei": "KFZ Beitrag 2026.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Rheinland Direkt Versicherung AG",
+   "person": "Dennis Kowalke",
+   "frist": "2026-01-02"
+  },
+  {
+   "datei": "Versicherungsschein neu.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Westmark Versicherung a.G.",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Zoll.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Ruhr-Ost",
+   "person": "Dennis Kowalke",
+   "frist": "2025-06-23"
+  },
+  {
+   "datei": "TÜV neu.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Meisterbetrieb Olschewski",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Angebot Bremse u Zahnriemen.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Kfz-Meisterbetrieb Olschewski",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Moped Versicherung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Rheinland Direkt Versicherung AG",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Reifen hinten.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Kalthoff",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Kaufvertrag Rheda.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Dennis Kowalke",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "RD Kraftrad Ende.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Rheinland Direkt Versicherung AG",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Vorsorgeregister.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Zentrales Vorsorgeregister der Notarkammern",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Tante Elfriede Finanzamt.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Emscherfeld",
+   "person": "Marlies Brandhorst",
+   "frist": "2026-03-09"
+  },
+  {
+   "datei": "Nachlassgericht.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Emscherfeld",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Betreuungsverein.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Betreuungsverein Lebensabend e.V.",
+   "person": "Marlies Brandhorst",
+   "frist": "2024-03-21"
+  },
+  {
+   "datei": "Vollmacht Bank.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Finanzen & Konten",
+   "absender": "Ruhrtal-Bank eG",
+   "person": "Hedwig Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Herberge Herbst.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Jugendgästehaus Möhnebucht",
+   "person": null,
+   "frist": "2025-09-12"
+  },
+  {
+   "datei": "Seniorenfahrt.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisedienst Püttmann",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Tierpark.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Tierpark Emscheraue",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Reiseprospekt.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisedienst Püttmann",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief Mama Januar.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Gisela Kowalke",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Zettel Flur.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Ayşe Çelik",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Erbe Rolf.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Rolf Brandhorst",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Urlaub Nordsee.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Deine Christa",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Danke Blumen.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Wilfried Kaczmarek",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Geburtstag Mia.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Termin",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Sandra Wittkowski",
+   "person": "Lina Kowalke",
+   "frist": "2026-02-07"
+  },
+  {
+   "datei": "Altakten Steuerberater.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Steuerkanzlei Voßkuhle & Rehbein",
+   "person": "Marlies Brandhorst",
+   "frist": null
+  },
+  {
+   "datei": "Vernichtung.txt",
+   "haushalt": "h-kowalke",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Reißwolf Revier Aktenvernichtung",
+   "person": "Dennis Kowalke",
+   "frist": null
+  },
+  {
+   "datei": "Stadtarchiv Antwort.txt",
+   "haushalt": "h-brandhorst",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Stadtarchiv Wattenbruch",
+   "person": null,
+   "frist": null
+  }
+ ]
+}

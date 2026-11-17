@@ -1,0 +1,12 @@
+PAYTERM Kartenakzeptanz GmbH – Monatsabrechnung Händlerentgelte
+Händler-ID 000417220 · Kfz-Technik Brandhorst · Terminal TID 60004417
+Abrechnungsmonat Mai 2026 · Belegdatum 02.06.2026
+
+Kartenumsätze girocard 86 Trx      9.412,30  x 0,25 %      23,53
+Kartenumsätze Kreditkarte 14 Trx   2.180,90  x 1,10 %      23,99
+Transaktionsentgelt 100 x 0,07                              7,00
+Terminalmiete inkl. SIM                                    14,90
+Summe Entgelte netto                                       69,42
+USt 19 % (nur auf Terminalmiete 14,90)                      2,83
+Belastung                                                  72,25 EUR
+Die Kartenumsätze wurden ungekürzt gutgeschrieben; Entgelte werden separat eingezogen.

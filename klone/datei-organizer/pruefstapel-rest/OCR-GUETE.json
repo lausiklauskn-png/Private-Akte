@@ -1,0 +1,2222 @@
+{
+ "zusammen": {
+  "foto/schlecht": {
+   "n": 18,
+   "wortfehler": 0.672,
+   "gefunden": 0.432
+  },
+  "zwei-in-einem-scan": {
+   "n": 15,
+   "wortfehler": 0.882,
+   "gefunden": 0.817
+  },
+  "foto/mittel": {
+   "n": 23,
+   "wortfehler": 0.285,
+   "gefunden": 0.859
+  },
+  "pdf-scan/mittel": {
+   "n": 39,
+   "wortfehler": 0.232,
+   "gefunden": 0.919
+  },
+  "pdf-scan/gut": {
+   "n": 30,
+   "wortfehler": 0.175,
+   "gefunden": 0.986
+  },
+  "pdf-scan/schlecht": {
+   "n": 25,
+   "wortfehler": 0.734,
+   "gefunden": 0.381
+  },
+  "foto/gut": {
+   "n": 11,
+   "wortfehler": 0.143,
+   "gefunden": 0.969
+  },
+  "bildschirm": {
+   "n": 5,
+   "wortfehler": 0.061,
+   "gefunden": 1
+  }
+ },
+ "lesenOderEinordnen": {
+  "gut gelesen": {
+   "n": 122,
+   "bereich": 81,
+   "schriftstueck": 71,
+   "absender": 48,
+   "person": 75,
+   "frist": 88
+  },
+  "schlecht gelesen": {
+   "n": 44,
+   "bereich": 55,
+   "schriftstueck": 43,
+   "absender": 16,
+   "person": 39,
+   "frist": 66
+  }
+ },
+ "dateien": [
+  {
+   "datei": "scan_0007.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.7878787878787878,
+   "gefunden": 0.2727272727272727,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "BAfoeG_Postfach_Nachricht.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "BAfoeG_Erinnerung_2025.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.3076923076923077,
+   "gefunden": 0.9615384615384616,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Meldebestaetigung Lena.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.3275862068965517,
+   "gefunden": 0.9482758620689655,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Mietvertrag_Hafergasse.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.34710743801652894,
+   "gefunden": 0.9834710743801653,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Vertragszusammenfassung_Mobil.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.7714285714285715,
+   "gefunden": 0.2857142857142857,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "KFZ Vers 2022.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.12941176470588237,
+   "gefunden": 0.8941176470588236,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Beitragsrechnung_KFZ_2023.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.3411764705882353,
+   "gefunden": 0.7647058823529411,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "scan_0112.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.4,
+   "gefunden": 0.8470588235294118,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "kfzsteuer.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.5714285714285714,
+   "gefunden": 0.9523809523809523,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Werkstatt Termin.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 1,
+   "gefunden": 0,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Rechnung neu.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.38202247191011235,
+   "gefunden": 0.9550561797752809,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Grundsteuer 2025.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.39344262295081966,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Zweckverband Abrechnung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.2571428571428571,
+   "gefunden": 0.9571428571428572,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Stromabrechnung 2022.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.25806451612903225,
+   "gefunden": 0.9032258064516129,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Heizöl.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.07407407407407407,
+   "gefunden": 0.9444444444444444,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rasentraktor Kaufbeleg.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.3448275862068966,
+   "gefunden": 0.9137931034482759,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kita Bescheid Paul.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.926829268292683,
+   "gefunden": 0.14634146341463414,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Elternbrief Klassenfahrt.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.1095890410958904,
+   "gefunden": 0.9726027397260274,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Einladung Gesundheitsamt.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Recall U7.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.12280701754385964,
+   "gefunden": 0.9824561403508771,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Steuerbescheid 2023.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.6910569105691057,
+   "gefunden": 0.4959349593495935,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Lohn 03-2025.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.058823529411764705,
+   "gefunden": 0.9558823529411765,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kontoauszug 06_2024.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.03409090909090909,
+   "gefunden": 0.9772727272727273,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Unfallversicherung Kinder.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.2558139534883721,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rückmeldung SoSe.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "IMG_20250412_1803.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.27,
+   "gefunden": 0.95,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "bon garten.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.06818181818181818,
+   "gefunden": 0.9318181818181818,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Apotheke Bon.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.30952380952380953,
+   "gefunden": 0.7380952380952381,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Elterngeld.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.45323741007194246,
+   "gefunden": 0.9784172661870504,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Standesamt Paul.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.40625,
+   "gefunden": 0.84375,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Inkasso Schreiben.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.4883720930232558,
+   "gefunden": 0.9534883720930233,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kündigung Fitwerk.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.7727272727272727,
+   "gefunden": 0.22727272727272727,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Konto_Lena_Okt.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.2625,
+   "gefunden": 0.8625,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rundfunk Anmeldung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.04838709677419355,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Waschmaschine Rechnung.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.3148148148148148,
+   "gefunden": 0.9629629629629629,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Heizung Reparatur.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.33962264150943394,
+   "gefunden": 0.9811320754716981,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Sturm 2019.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.015151515151515152,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Wahlbenachrichtigung.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.96,
+   "gefunden": 0.08,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "ALG Bewilligung 2001.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.3949579831932773,
+   "gefunden": 0.9663865546218487,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "GEZ 2001.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "LVA Kontenklaerung.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.5352112676056338,
+   "gefunden": 0.6056338028169014,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Renteninformation 2004.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.20689655172413793,
+   "gefunden": 0.9655172413793104,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Lohnsteuerkarte 2003.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.3269230769230769,
+   "gefunden": 0.9615384615384616,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Stadtwerke 2001.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.8450704225352113,
+   "gefunden": 0.23943661971830985,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "sparkasse 03-2001.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.14864864864864866,
+   "gefunden": 0.8783783783783784,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Lohnabrechnung Feb 2001.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.8852459016393442,
+   "gefunden": 0.11475409836065574,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Telefonrechnung 2002.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.208955223880597,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "KFZ 2005.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.40816326530612246,
+   "gefunden": 0.9387755102040817,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "scan_0033.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.42857142857142855,
+   "gefunden": 0.8571428571428571,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kfz Abmeldung 2024.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.7945205479452054,
+   "gefunden": 0.4657534246575342,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "ESt Bescheid 2005.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.8181818181818182,
+   "gefunden": 0.3939393939393939,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Arbeitsamt Aufhebung.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 0.9833333333333333,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Lebensversicherung Standmitteilung 2007.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 1,
+   "gefunden": 0,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Hausrat Kündigung 2008.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 0.8936170212765957,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Nebenkosten 2004.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.34285714285714286,
+   "gefunden": 0.9428571428571428,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Mieterhöhung 2009.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.16176470588235295,
+   "gefunden": 0.9117647058823529,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "BK Abrechnung 2024.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.06451612903225806,
+   "gefunden": 0.967741935483871,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Praxisgebühr Quittung.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.34615384615384615,
+   "gefunden": 0.7692307692307693,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Fernseher Garantie.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.05084745762711865,
+   "gefunden": 0.9491525423728814,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Busreise Gardasee.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.42424242424242425,
+   "gefunden": 0.8484848484848485,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Rentenauskunft 2012.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.225,
+   "gefunden": 0.9875,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Personalausweis abholen.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.09375,
+   "gefunden": 0.90625,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Brief Heinz 2008.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.045454545454545456,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Bausparvertrag Aufloesung DM.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.9387755102040817,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Euro Merkblatt.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9491525423728814,
+   "gefunden": 0.15254237288135594,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Garantiekarte Kaffeemaschine.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.5483870967741935,
+   "gefunden": 0.9354838709677419,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Wohngeld 2012.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.9333333333333333,
+   "gefunden": 0.08888888888888889,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Sterbegeld 2002 Gewerkschaft.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.2558139534883721,
+   "gefunden": 0.9767441860465116,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Zahnarzt HKP 2009.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.3469387755102041,
+   "gefunden": 0.9183673469387755,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Sparkasse Werbung 2005.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.8809523809523809,
+   "gefunden": 0.14285714285714285,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Pflegegrad Bescheid.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.4573643410852713,
+   "gefunden": 0.9922480620155039,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "MD Termin.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.1111111111111111,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Pflegedienst Rechnung Okt.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.4153846153846154,
+   "gefunden": 0.7538461538461538,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "ZVR Bestätigung.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.41025641025641024,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Erbschein Ingrid.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.18,
+   "gefunden": 0.98,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Finanzamt Erbschaft.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9523809523809523,
+   "gefunden": 0.09523809523809523,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Witwerrente Bescheid.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.5403726708074534,
+   "gefunden": 0.7950310559006211,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rentenanpassung 2025.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.4262295081967213,
+   "gefunden": 0.9180327868852459,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rentenbezugsmitteilung.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.2857142857142857,
+   "gefunden": 0.9591836734693877,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Hausnotruf Vertrag.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9473684210526315,
+   "gefunden": 0.07017543859649122,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Seniorenreise Werbung.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9347826086956522,
+   "gefunden": 0.10869565217391304,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Apotheke 0312.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.023809523809523808,
+   "gefunden": 0.9761904761904762,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Mail Thomas Testament.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 1,
+   "gefunden": 0,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "LV Auszahlung 2025.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.05172413793103448,
+   "gefunden": 0.9827586206896551,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "ELSTER_Nachricht_Bescheid.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.8313253012048193,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "TK-Beispiel App Mitteilung.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.0784313725490196,
+   "gefunden": 0.9215686274509803,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kontoauszug_2026-01.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.9318181818181818,
+   "gefunden": 0.10227272727272728,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "App_KraftradVers_2023.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.07352941176470588,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Benachrichtigung Motorrad 2024.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.07352941176470588,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kraftradsteuer.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.6846846846846847,
+   "gefunden": 0.4594594594594595,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Inspektion Motorrad.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.28378378378378377,
+   "gefunden": 0.8513513513513513,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Saisonkennzeichen Antrag.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.21568627450980393,
+   "gefunden": 0.8823529411764706,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Arbeitseinsatz KGV.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.02564102564102564,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Stadtwerke Abschlag Portal.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.037037037037037035,
+   "gefunden": 0.9814814814814815,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Mobilfunk Rechnung App.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.04,
+   "gefunden": 0.96,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Streaming Preis.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.22448979591836735,
+   "gefunden": 0.8775510204081632,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Retoure bestätigt.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.08695652173913043,
+   "gefunden": 0.9347826086956522,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Laptop Rechnung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.20512820512820512,
+   "gefunden": 0.9487179487179487,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Haftpflicht Portal.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.1206896551724138,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Rechtsschutz Beitragsanpassung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.1388888888888889,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "NK-Abrechnung Mieterportal.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Indexmiete.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.125,
+   "gefunden": 0.9285714285714286,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Termin Bürgeramt.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.02,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Doctolib-artig Termin.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Laborbefund Portal.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.045454545454545456,
+   "gefunden": 0.9848484848484849,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Flug Buchung.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.64,
+   "gefunden": 0.9,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Hotel Lissabon.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.08695652173913043,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Verwarnungsgeld.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.20754716981132076,
+   "gefunden": 0.8490566037735849,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Kfz Versicherung App Auto.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 0.9795918367346939,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Fitness App Vertrag.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.19607843137254902,
+   "gefunden": 0.8627450980392157,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Supermarkt App Bon.txt",
+   "form": "bildschirm",
+   "wortfehler": 0.05555555555555555,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Drogerie eBon.txt",
+   "form": "bildschirm",
+   "wortfehler": 0.061224489795918366,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Tankstelle App.txt",
+   "form": "bildschirm",
+   "wortfehler": 0.07142857142857142,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Einkauf Samstag.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.29545454545454547,
+   "gefunden": 0.9090909090909091,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Bauspar Jahresauszug Portal.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.8823529411764706,
+   "gefunden": 0.3333333333333333,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "BAföG Darlehen 2012.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.625,
+   "gefunden": 0.5288461538461539,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "BAföG getilgt 2015.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.34210526315789475,
+   "gefunden": 0.9473684210526315,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Motorrad Schaden Portal.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.15625,
+   "gefunden": 0.953125,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Hausrat Portal.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.2,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Waschmaschine Reparatur.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.3333333333333333,
+   "gefunden": 0.8888888888888888,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Ablesetermin.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9318181818181818,
+   "gefunden": 0.11363636363636363,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Inkasso Mobilfunk 2014.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.1746031746031746,
+   "gefunden": 0.9682539682539683,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Neue Nachricht Krankenkasse.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.1935483870967742,
+   "gefunden": 0.8709677419354839,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "ELSTER UStVA Q2 2024.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.08064516129032258,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Uebertragungsprotokoll_UStVA_2025.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.9354838709677419,
+   "gefunden": 0.12903225806451613,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Erinnerung USt-Erklärung.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.9710144927536232,
+   "gefunden": 0.2318840579710145,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "KSK Bescheid 2023.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.7870370370370371,
+   "gefunden": 0.32407407407407407,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "KSK Meldung.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 1,
+   "gefunden": 0,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "UVG Bescheid 2023.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.5074626865671642,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "UVG Überprüfung.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.034482758620689655,
+   "gefunden": 0.9827586206896551,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "IMG_20260112_UVG.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.2553191489361702,
+   "gefunden": 0.851063829787234,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Familienkasse Nachricht.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.9807692307692307,
+   "gefunden": 0.038461538461538464,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kita Beitrag 2021.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.20512820512820512,
+   "gefunden": 0.9487179487179487,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Elternbrief Wandertag.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.24561403508771928,
+   "gefunden": 0.9824561403508771,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Anmeldung Gymnasium.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Druckerei Rechnung.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.20987654320987653,
+   "gefunden": 0.8271604938271605,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Grafiktablett.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.723404255319149,
+   "gefunden": 0.46808510638297873,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "bon baecker.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.023255813953488372,
+   "gefunden": 0.9767441860465116,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Schreibwaren Schulstart.txt",
+   "form": "foto/gut",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "IMG_4471.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.21428571428571427,
+   "gefunden": 0.8333333333333334,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Druckerpatronen Bon.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.023255813953488372,
+   "gefunden": 0.9767441860465116,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "dm 2.txt",
+   "form": "foto/gut",
+   "wortfehler": 0,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Wocheneinkauf Großmarkt.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.29301075268817206,
+   "gefunden": 0.8440860215053764,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "scan_bon_lang_0001.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.95,
+   "gefunden": 0.56,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "IMG_20260221_1012.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.4529616724738676,
+   "gefunden": 0.7874564459930313,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "eBon Bio.txt",
+   "form": "bildschirm",
+   "wortfehler": 0.05660377358490566,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Baumarkt App Bon.txt",
+   "form": "bildschirm",
+   "wortfehler": 0.0625,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Krankenkasse Beitrag.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.29347826086956524,
+   "gefunden": 0.9782608695652174,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Kinderarzt Emil Befund.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.2857142857142857,
+   "gefunden": 0.9682539682539683,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Wohngeld Bescheid.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.8828125,
+   "gefunden": 0.1953125,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Nebenkosten 2024 Kirchgasse.txt",
+   "form": "foto/schlecht",
+   "wortfehler": 0.9032258064516129,
+   "gefunden": 0.14516129032258066,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Strom Jahresrechnung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.21818181818181817,
+   "gefunden": 0.9818181818181818,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Musikschule Mahnung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.21818181818181817,
+   "gefunden": 0.9818181818181818,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "AW Logo Entwurf.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.06557377049180328,
+   "gefunden": 0.9508196721311475,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Fahrrad Reparatur.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.1,
+   "gefunden": 0.98,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Fragebogen steuerliche Erfassung.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.18461538461538463,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Berufshaftpflicht Police.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.7638888888888888,
+   "gefunden": 0.3472222222222222,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": true,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Sorgerechtsverfügung Notar.txt",
+   "form": "foto/mittel",
+   "wortfehler": 0.18072289156626506,
+   "gefunden": 0.927710843373494,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": true,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Hundesteuer.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.4406779661016949,
+   "gefunden": 0.9322033898305084,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Ablesekarte Strom.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 1,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Schulanmeldung Mia.txt",
+   "form": "pdf-scan/schlecht",
+   "wortfehler": 0.6530612244897959,
+   "gefunden": 0.3673469387755102,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  },
+  {
+   "datei": "Statistik Haushaltsbefragung.txt",
+   "form": "pdf-scan/gut",
+   "wortfehler": 0.1509433962264151,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": true,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Beratungseinsatz Nachweis.txt",
+   "form": "pdf-scan/mittel",
+   "wortfehler": 0.4852941176470588,
+   "gefunden": 0.6029411764705882,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": true,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Versorgungsamt Rückfrage.txt",
+   "form": "foto/gut",
+   "wortfehler": 0.02,
+   "gefunden": 1,
+   "richtig": {
+    "bereich": true,
+    "schriftstueck": false,
+    "absender": false,
+    "person": true,
+    "frist": true
+   }
+  },
+  {
+   "datei": "Bewohnerparken Verlängerung.txt",
+   "form": "zwei-in-einem-scan",
+   "wortfehler": 0.9365079365079365,
+   "gefunden": 0.3492063492063492,
+   "richtig": {
+    "bereich": false,
+    "schriftstueck": false,
+    "absender": false,
+    "person": false,
+    "frist": false
+   }
+  }
+ ]
+}

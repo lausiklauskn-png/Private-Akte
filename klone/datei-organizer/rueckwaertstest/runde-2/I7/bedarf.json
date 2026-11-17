@@ -1,0 +1,36 @@
+{"titel": "Wareneinsatz jede Woche im Blick, Küche und Getränke getrennt",
+ "kunde": {"firma": "Gasthaus Zum Beispielkrug", "ansprechpartner": "Bernd Mustermann", "mail": "inhaber@beispielkrug.example"},
+ "bereiche": {
+  "1": ["Lieferscheine und Rechnungen liegen in einer Kiste, manche kommen per Mail", "Den Wareneinsatz erfahre ich erst vom Steuerberater, Wochen später", "Umsatz steckt in der Kasse, die Daten kann ich dort herausholen"],
+  "2": ["Wareneinkauf bei den Lieferanten", "Lieferscheine und Rechnungen sammeln und prüfen", "Wareneinsatz im Verhältnis zum Umsatz überwachen"],
+  "3": [{"text": "Inhaber", "anzahl": 1}, {"text": "Köche (sollen möglichst nichts zusätzlich eintragen müssen)", "anzahl": 4}, {"text": "Steuerberater (liefert heute die Zahlen, spät)", "anzahl": 1}],
+  "4": ["Ich sehe zu spät, was mich die Ware kostet", "Preiserhöhungen der Lieferanten kommen in kleinen Schritten und fallen nicht auf – beim Fleisch war die Marge weg", "Ich vermute größere Portionen und Schwund, kann aber nichts beweisen", "Belege sind durcheinander: handschriftlich, Teillieferungen, Gutschriften"],
+  "5": ["Belege werden nicht zeitnah ausgewertet, nur am Ende vom Steuerberater", "Keine Übersicht über Einkaufspreise je Artikel und Lieferant", "Rezeptprogramme verlangen alles aufs Gramm, dafür fehlt die Zeit"],
+  "6": [
+   {"text": "Jede Woche sehen, wie viel Prozent vom Umsatz für Ware draufgeht, Küche und Getränke getrennt", "prio": "muss", "nutzen": {"stundenMonat": 4, "euroMonat": null, "text": "Ich merke früh, wenn der Wareneinsatz aus dem Ruder läuft, nicht erst Wochen später"}, "handeln": "selbst"},
+   {"text": "Warnung, wenn ein Artikel bei einem Lieferanten deutlich teurer wird", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Schleichende Preiserhöhungen fallen sofort auf, die Marge bleibt"}, "handeln": "vorschlagen"},
+   {"text": "Lieferscheine und Rechnungen aus Papier und Mail einlesen, ohne alles abzutippen", "prio": "muss", "nutzen": {"stundenMonat": 3, "euroMonat": null, "text": "Keine Zettelwirtschaft mehr in der Kiste"}, "handeln": "vorschlagen"},
+   {"text": "Umsatz aus der Kasse übernehmen", "prio": "muss", "nutzen": {"stundenMonat": 1, "euroMonat": null, "text": "Umsatz muss ich nicht von Hand eintragen"}, "handeln": "selbst"},
+   {"text": "Für fünf, sechs Hauptgerichte grob eintragen, was drin ist, und sehen, was ein Teller kostet", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ein Gefühl dafür, ob Portionen oder Schwund das Problem sind"}, "handeln": "egal"}
+  ],
+  "7": ["Jeden Montag eine Zahl: Wareneinsatz in Prozent, Küche und Getränke getrennt", "Preissprünge bei Lieferanten fallen sofort auf", "Belege sind erfasst, ohne großen Aufwand"],
+  "8": [
+   "Das System muss Lieferscheine und Rechnungen per Foto oder aus Mail-Anhängen einlesen",
+   "Das System muss bei unsicher gelesenen Belegen nachfragen statt zu raten",
+   "Das System muss Teillieferungen und Gutschriften richtig verrechnen",
+   "Das System muss Einkaufspreise je Artikel und Lieferant über die Zeit merken",
+   "Das System muss warnen, wenn ein Artikel deutlich teurer wird als zuletzt",
+   "Das System muss den Umsatz aus der Kasse übernehmen, Küche und Getränke getrennt",
+   "Das System muss jede Woche den Wareneinsatz in Prozent vom Umsatz zeigen, Küche und Getränke getrennt"
+  ],
+  "9": ["Belege landen künftig sofort im Programm statt in der Kiste", "Die Köche sollen nichts Zusätzliches eintragen müssen"],
+  "10": ["Android-Handy zum Fotografieren der Lieferscheine", "Alter Windows-PC im Büro"],
+  "11": ["Kassensystem, aus dem man die Umsatzdaten exportieren kann", "Steuerberater macht die Buchhaltung"],
+  "12": ["Export der Kassendaten einlesen", "Rechnungen aus dem Mail-Postfach"],
+  "13": ["Einkaufspreise, Lieferanten, Mengen", "Umsätze aus der Kasse"],
+  "14": ["personenbezogene Daten: nein", "Einkaufspreise und Umsätze sind vertraulich und dürfen nicht weitergegeben oder verkauft werden"],
+  "15": ["Budget-Rahmen: um die 50 Euro im Monat, wenn am Anfang sichtbar ist, dass es etwas bringt", "Muss mit wenig Zeitaufwand laufen"],
+  "18": [{"text": "Welches Kassensystem genau und in welchem Format der Export kommt", "wer": "Kunde", "bis": ""}, {"text": "Wie Küche und Getränke in den Kassendaten getrennt sind", "wer": "Kunde", "bis": ""}]
+ },
+ "rahmen": {"geraete": ["android", "windows"], "offline": "nein", "eigene": [], "eigeneText": "", "datenort": ["geraet", "ordner"], "sicherung": ["verschluesselt", "allein"], "budgetEuro": null},
+ "nicht": ["Keine neue Kasse", "Keine Buchhaltung", "Kein Bestellsystem", "Keine monatliche Inventur", "Keine Rezepturen aufs Gramm genau", "Einkaufspreise und Umsätze nicht an Dritte weitergeben oder verkaufen"]}

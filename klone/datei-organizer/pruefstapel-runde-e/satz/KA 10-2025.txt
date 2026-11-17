@@ -1,0 +1,53 @@
+# Beispielbank Beispielstadt eG
+Bankplatz 1 · 34567 Beispielstadt
+
+Kontoauszug
+Gemeinschaftskonto Markus und Sabine Brandtner
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 3/2025 · Blatt 1 von 1 · Zeitraum 01.10.2025 – 31.10.2025
+
+Familie Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Alter Kontostand vom 01.10.2025: 2.140,18 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.10.|01.10.|Gehalt 10/2025 Elektro Beispiel GmbH|+3.184,22|
+|01.10.|01.10.|Bezüge 10/2025 Kreisverwaltung Beispiel|+1.422,80|
+|02.10.|02.10.|Darlehen 000 4471 22 Rate|-905,00|
+|02.10.|02.10.|Lastschrift Muster Drogerie|-27,95|
+|03.10.|03.10.|Kartenzahlung Frischkauf Exempel|-85,11|
+|04.10.|04.10.|Bargeldauszahlung Geldautomat|-147,00|
+|05.10.|05.10.|Kita Sonnenkäfer Elternbeitrag Mia|-155,00|
+|05.10.|05.10.|Kartenzahlung Discount Probe|-46,58|
+|05.10.|05.10.|Kartenzahlung Discount Probe|-36,09|
+|06.10.|06.10.|Kindergeld FK 123FK000417|+765,00|
+|07.10.|07.10.|Kartenzahlung Bäckerei Beispielkorn|-6,41|
+|09.10.|09.10.|Kartenzahlung Bäckerei Beispielkorn|-11,93|
+|11.10.|11.10.|Kartenzahlung Discount Probe|-29,43|
+|12.10.|12.10.|Lastschrift Muster Drogerie|-31,28|
+|12.10.|12.10.|Kartenzahlung Bäckerei Beispielkorn|-6,20|
+|15.10.|15.10.|Abschlag Strom Stadtwerke Beispielstadt|-118,00|
+|15.10.|15.10.|Grundsteuer Q4 Gemeinde Beispielstadt|-113,16|
+|19.10.|19.10.|Lastschrift Beispiel-Markt Filiale 0412|-94,92|
+|20.10.|20.10.|Beispiel Versicherung AG Kfz|-59,21|
+|21.10.|21.10.|Kartenzahlung Discount Probe|-31,18|
+|22.10.|22.10.|Bargeldauszahlung Geldautomat|-147,69|
+|24.10.|24.10.|Kartenzahlung Discount Probe|-37,80|
+|24.10.|24.10.|Kartenzahlung Discount Probe|-9,67|
+|25.10.|25.10.|Lastschrift Beispiel-Markt Filiale 0412|-54,96|
+|25.10.|25.10.|Kartenzahlung Discount Probe|-56,84|
+|26.10.|26.10.|Kartenzahlung Frischkauf Exempel|-82,80|
+|26.10.|26.10.|Kartenzahlung Discount Probe|-26,27|
+|26.10.|26.10.|Kartenzahlung Frischkauf Exempel|-41,42|
+|27.10.|27.10.|Kartenzahlung Discount Probe|-57,49|
+|28.10.|28.10.|Dauerauftrag Sparen Tagesgeld|-300,00|
+|28.10.|28.10.|Kartenzahlung Bäckerei Beispielkorn|-9,48|
+|30.10.|30.10.|Beitrag TSV Beispielstadt|-48,00|
+|30.10.|30.10.|Kartenzahlung Bäckerei Beispielkorn|-8,17|
+
+Neuer Kontostand vom 31.10.2025: 4.727,16 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispielbank Beispielstadt eG · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

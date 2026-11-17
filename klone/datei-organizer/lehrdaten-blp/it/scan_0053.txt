@@ -1,0 +1,10 @@
+Sparkasse Regnitz-Main · Umsatzdetail (Online-Banking-Ausdruck)
+
+Konto:            Geschäftsgiro Kettler Systemhaus
+Buchungsdatum:    03.11.2026
+Umsatzart:        Überweisungsgutschrift
+Zahlungspflichtiger: Kettler, Marek – Tagesgeld privat
+Verwendungszweck: Privafeinlage, Ausgleicb Kontokorrent
+Betrag:           1.500,00 EUR Haben
+
+Gedrvckt am 04.11.2026 um 08:02 Uhr

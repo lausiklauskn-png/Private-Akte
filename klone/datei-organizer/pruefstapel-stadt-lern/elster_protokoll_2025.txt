@@ -1,0 +1,24 @@
+Übertragungsprotokoll
+Einkommensteuererklärung 2025
+
+Ihre Daten wurden erfolgreich übermittelt am 21.03.2026 um 22:47 Uhr.
+Transferticket: et0123abcd4567beispiel000
+
+Steuernummer:         99/000/00000
+Finanzamt:            Finanzamt Beispielhafen (9999)
+Veranlagungsart:      Zusammenveranlagung
+Steuerpflichtige Person A: Jonas Kranbeck
+Steuerpflichtige Person B: Svenja Kranbeck
+
+Übermittelte Anlagen:
+  Hauptvordruck (ESt 1 A)
+  Anlage N (Person A)
+  Anlage N (Person B)
+  Anlage Kind (3x)
+  Anlage Vorsorgeaufwand
+  Anlage Haushaltsnahe Aufwendungen
+
+Belege sind nur auf Anforderung des Finanzamtes einzureichen.
+Bitte bewahren Sie dieses Protokoll zusammen mit Ihren Unterlagen auf.
+
+Ausdruck aus: Mein Beispiel-ELSTER (Portal) · Seite 1 von 1

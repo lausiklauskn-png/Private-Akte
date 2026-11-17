@@ -1,0 +1,19 @@
+@bon
+TANKSTELLE BEISPIEL FREIE FAHRT
+Ringstraße 90, 34567 Beispielstadt
+Tel. 00000 000000
+UST-ID DE000000000
+
+Diesel Säule 4  48,21 l x 1,689    81,43 A
+Scheibenfrostschutz 5 l          9,99 A
+------------------------------------
+SUMME EUR                    91,42
+Mastercard                      91,42
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|76,82|14,60|91,42|
+
+BSP-MB 412 · km 121.004
+19.12.2025 18:31  Bon 4979  Kasse 4
+TSE-Signatur 3861600893
+Vielen Dank für Ihren Einkauf!

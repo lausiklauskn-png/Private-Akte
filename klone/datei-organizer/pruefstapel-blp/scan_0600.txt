@@ -1,0 +1,23 @@
+Eierhof Wiesmeyer
+Bahnhofstr. 67, 37999 Tannweiler
+Tel. 0000 60155
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+RECHNUNG
+Rechnunqsnummer: RE46451
+Rechnungsdatum: 3. September 2026
+
+Pos  Bezeichnung                       Betrag
+  1  Eier Freiland L, 90 St.             260,01
+  2  Eier Bodenhaltung M, 180 St.        423,72
+
+Zahlbetrag: 683,73 EUR
+Im Betrag sind 7 % USt (44,73 EUR) enthalten.
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2658 16
+USt-IdNr. DE000000111

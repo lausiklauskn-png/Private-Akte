@@ -1,0 +1,9 @@
+{"bausteine": [
+ {"katalog": "schnitt", "name": "Einlesen der offenen Kontobewegungen je Mandant aus dem CSV-Export des Kanzleiprogramms (Datum, Betrag, Empfänger, Buchungsnummer)", "groesse": "mittel", "deckt": ["B-25", "B-37", "B-38"], "faktoren": ["server"]},
+ {"katalog": "datei", "name": "Mandanten-Seite im Handy-Browser über persönlichen, schwer zu erratenden Link mit Ablaufdatum (ohne Anmeldung, ohne App), zeigt nur die eigenen offenen Posten", "groesse": "gross", "deckt": ["B-17", "B-19", "B-26"], "faktoren": ["server"]},
+ {"katalog": "neu", "name": "Antwort je Posten: Foto aufnehmen oder Datei hochladen, „war privat“, „kommt später“; Belege verschlüsselt auf Server in Deutschland", "groesse": "mittel", "deckt": ["B-18", "B-27"], "faktoren": ["server"]},
+ {"katalog": "kalender", "name": "Automatische Erinnerung per Mail an Mandanten mit offenen Posten (Abstand einstellbar, höchstens drei Mal)", "groesse": "klein", "deckt": ["B-20", "B-28"], "faktoren": ["server"]},
+ {"katalog": "liste", "name": "Kanzlei-Übersicht am Windows-PC im Browser: je Mandant offen/beantwortet/teilweise, letzte Antwort", "groesse": "mittel", "deckt": ["B-22", "B-29"], "faktoren": ["nutzer"]},
+ {"katalog": "schnitt", "name": "Rückgabe: Belege als Dateien mit Buchungsbezug im Dateinamen plus CSV-Liste der Antworten zum Import ins Kanzleiprogramm", "groesse": "mittel", "deckt": ["B-21", "B-30", "B-37"], "faktoren": []},
+ {"katalog": "tresor", "name": "Löschfrist: Posten, Belege und Links werden nach Übernahme bzw. fester Frist automatisch gelöscht, Löschprotokoll ohne Inhalte", "groesse": "klein", "deckt": ["B-23", "B-31", "B-40"], "faktoren": ["server"]}
+]}

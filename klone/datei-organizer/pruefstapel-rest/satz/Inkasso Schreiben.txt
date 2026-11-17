@@ -1,0 +1,28 @@
+# Beispiel Inkasso Service GmbH
+Forderungsallee 13 · 10999 Beispielberlin
+
+Frau
+Lena Weidinger
+Hafergasse 17
+93999 Beispielstadt
+
+Unser Zeichen: INK-26-004471
+Auftraggeber: FitWerk Beispielstadt GmbH
+Datum: 23.02.2026
+
+# Forderung aus Mitgliedsvertrag
+
+Sehr geehrte Frau Weidinger,
+
+unsere Auftraggeberin hat uns mit dem Einzug folgender Forderung beauftragt:
+
+|Posten|Betrag|
+|Mitgliedsbeiträge 11/2025–12/2025|59,80 EUR|
+|Rücklastschriftgebühren|12,00 EUR|
+|Inkassokosten|48,00 EUR|
+|Gesamt|119,80 EUR|
+
+Zahlen Sie den Gesamtbetrag bis 09.03.2026, um weitere Kosten zu vermeiden. Bestreiten Sie die Forderung, teilen Sie uns dies bitte schriftlich mit.
+
+Mit freundlichen Grüßen
+@unterschrift

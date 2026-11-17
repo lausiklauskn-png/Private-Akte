@@ -1,0 +1,14 @@
+tresorbox.example – Online-Backup für Unternehmen
+Tresorbox Datendienste GmbH, Technologiepark 3, 33100 Paderborn
+
+Reseller-Abrechnung (Gutschrift)        Beleg GS-0026117     01.07.2026
+Empfänger: Kettler Systemhaus, Bamberg
+
+Monat      Kunden   Speicherumsatz   Satz   Provision
+Mai 2026     7         642,33        15 %      96,35
+Juni 2026    9         941,33        15 %     141,20
+                                              --------
+Provision gesamt netto                        237,55
+Umsatzsteuer 19 %                             45,13
+Gutschriftsbetrag                             282,68
+Überweisung erfolgt zum 10.07.2026 auf das hinterlegte Konto.

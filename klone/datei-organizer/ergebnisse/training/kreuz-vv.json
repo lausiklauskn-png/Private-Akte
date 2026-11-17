@@ -1,0 +1,258 @@
+{
+ "ordner": [
+  "pruefstapel-rest"
+ ],
+ "felder": {
+  "bereich": {
+   "neu": {
+    "ok": 140,
+    "n": 200,
+    "spanne": [
+     0.6332080400667355,
+     0.759253557565936
+    ],
+    "falschSicher": 7,
+    "offen": 53,
+    "mitZweitfach": 152
+   }
+  },
+  "schriftstueck": {
+   "neu": {
+    "ok": 132,
+    "n": 200,
+    "spanne": [
+     0.5918836703220929,
+     0.7220856077840445
+    ],
+    "falschSicher": 11,
+    "offen": 57
+   }
+  },
+  "absender": {
+   "neu": {
+    "ok": 24,
+    "n": 200,
+    "spanne": [
+     0.08197935023887545,
+     0.17234361425904846
+    ],
+    "falschSicher": 31,
+    "offen": 145
+   }
+  },
+  "person": {
+   "neu": {
+    "ok": 101,
+    "n": 147,
+    "spanne": [
+     0.6081596062928911,
+     0.756461294042295
+    ],
+    "falschSicher": 0,
+    "offen": 46
+   }
+  },
+  "frist": {
+   "neu": {
+    "ok": 162,
+    "n": 200,
+    "spanne": [
+     0.7499864142552062,
+     0.8583290620754351
+    ],
+    "falschSicher": 2,
+    "offen": 36
+   }
+  }
+ },
+ "jeForm": {
+  "foto/mittel": {
+   "n": 27,
+   "bereich": {
+    "n": 27,
+    "ok": 18
+   },
+   "schriftstueck": {
+    "n": 27,
+    "ok": 11
+   },
+   "absender": {
+    "n": 27,
+    "ok": 0
+   },
+   "person": {
+    "n": 27,
+    "ok": 15
+   },
+   "frist": {
+    "n": 27,
+    "ok": 16
+   }
+  },
+  "pdf-scan/mittel": {
+   "n": 40,
+   "bereich": {
+    "n": 40,
+    "ok": 36
+   },
+   "schriftstueck": {
+    "n": 40,
+    "ok": 33
+   },
+   "absender": {
+    "n": 40,
+    "ok": 4
+   },
+   "person": {
+    "n": 40,
+    "ok": 31
+   },
+   "frist": {
+    "n": 40,
+    "ok": 35
+   }
+  },
+  "foto/schlecht": {
+   "n": 26,
+   "bereich": {
+    "n": 26,
+    "ok": 9
+   },
+   "schriftstueck": {
+    "n": 26,
+    "ok": 6
+   },
+   "absender": {
+    "n": 26,
+    "ok": 0
+   },
+   "person": {
+    "n": 26,
+    "ok": 16
+   },
+   "frist": {
+    "n": 26,
+    "ok": 18
+   }
+  },
+  "pdf-scan/gut": {
+   "n": 40,
+   "bereich": {
+    "n": 40,
+    "ok": 31
+   },
+   "schriftstueck": {
+    "n": 40,
+    "ok": 33
+   },
+   "absender": {
+    "n": 40,
+    "ok": 16
+   },
+   "person": {
+    "n": 40,
+    "ok": 33
+   },
+   "frist": {
+    "n": 40,
+    "ok": 38
+   }
+  },
+  "foto/gut": {
+   "n": 27,
+   "bereich": {
+    "n": 27,
+    "ok": 18
+   },
+   "schriftstueck": {
+    "n": 27,
+    "ok": 21
+   },
+   "absender": {
+    "n": 27,
+    "ok": 0
+   },
+   "person": {
+    "n": 27,
+    "ok": 22
+   },
+   "frist": {
+    "n": 27,
+    "ok": 23
+   }
+  },
+  "pdf-scan/schlecht": {
+   "n": 40,
+   "bereich": {
+    "n": 40,
+    "ok": 28
+   },
+   "schriftstueck": {
+    "n": 40,
+    "ok": 28
+   },
+   "absender": {
+    "n": 40,
+    "ok": 4
+   },
+   "person": {
+    "n": 40,
+    "ok": 28
+   },
+   "frist": {
+    "n": 40,
+    "ok": 32
+   }
+  }
+ },
+ "ocrGuete": {
+  "foto/mittel": {
+   "n": 27,
+   "wortfehler": 0.923,
+   "gefunden": 0.72
+  },
+  "pdf-scan/mittel": {
+   "n": 40,
+   "wortfehler": 0.445,
+   "gefunden": 0.86
+  },
+  "foto/schlecht": {
+   "n": 26,
+   "wortfehler": 1,
+   "gefunden": 0.303
+  },
+  "pdf-scan/gut": {
+   "n": 40,
+   "wortfehler": 0.246,
+   "gefunden": 0.959
+  },
+  "foto/gut": {
+   "n": 27,
+   "wortfehler": 0.619,
+   "gefunden": 0.814
+  },
+  "pdf-scan/schlecht": {
+   "n": 40,
+   "wortfehler": 0.731,
+   "gefunden": 0.712
+  }
+ },
+ "lesenOderEinordnen": {
+  "gut gelesen": {
+   "n": 119,
+   "bereich": 79,
+   "schriftstueck": 79,
+   "absender": 18,
+   "person": 84,
+   "frist": 87
+  },
+  "schlecht gelesen": {
+   "n": 81,
+   "bereich": 57,
+   "schriftstueck": 47,
+   "absender": 2,
+   "person": 56,
+   "frist": 73
+  }
+ }
+}

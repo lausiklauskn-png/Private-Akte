@@ -1,0 +1,29 @@
+Von: bestellung@plakette-beispielgruen.example
+An: t.quellmann@familie-quellmann.example
+Datum: Mo, 03.11.2026 19:22
+Betreff: Ihre Bestellung 2026-PL-558120 – Rechnung und Versandbestätigung
+
+Hallo Tobias Quellmann,
+
+vielen Dank für Ihre Bestellung bei Plakettenstelle Beispiel-Grün GmbH.
+Ihre Umweltplakette ist unterwegs.
+
+RECHNUNG Nr. R-2026-558120          Rechnungsdatum: 03.11.2026
+Kunden-Nr.: 71294
+
+Pos  Artikel                                   Menge   Betrag
+1    Umweltplakette grün (Schadstoffgr. 4)       1      5,04 EUR
+     für Kennzeichen BSP-TQ 412
+2    Versand Großbrief                            1      1,68 EUR
+                                         Netto           6,72 EUR
+                                         MwSt. 19 %      1,28 EUR
+                                         Gesamt          8,00 EUR
+
+Bezahlt per Kreditkarte (**** 0000) am 03.11.2026 – kein weiterer Betrag offen.
+
+Bitte kleben Sie die Plakette innen an die Windschutzscheibe, rechts unten.
+Die Plakette ist nicht übertragbar und gilt nur für das eingetragene
+Kennzeichen.
+
+Plakettenstelle Beispiel-Grün GmbH · Amtsgericht Beispielstadt HRB 00000
+Geschäftsführung: Erika Mustergrün

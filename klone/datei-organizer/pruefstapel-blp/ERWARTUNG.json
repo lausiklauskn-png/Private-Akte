@@ -1,0 +1,1084 @@
+{
+ "dateien": [
+  {
+   "datei": "Kopie von scan_0059.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "20,12",
+   "datum": "2026-09-01",
+   "ust": 7,
+   "aussteller": "FRISCHMARKT Pöhler"
+  },
+  {
+   "datei": "Scan 30.2.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "7.889,70",
+   "datum": "2026-05-28",
+   "ust": 19,
+   "aussteller": "Gastro-Einrichtung Steinfurt GmbH"
+  },
+  {
+   "datei": "Kopie von scan_0069.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "514,79",
+   "datum": "2026-04-16",
+   "ust": 19,
+   "aussteller": "Glanzwerk Gebäudereinigung"
+  },
+  {
+   "datei": "bon 50.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "511,70",
+   "datum": "2026-08-09",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "bon 23.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "464,10",
+   "datum": "2026-01-22",
+   "ust": 19,
+   "aussteller": "Akademie für Backkunst Riedtal"
+  },
+  {
+   "datei": "RE_89273.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "288,46",
+   "datum": "2026-03-28",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "WhatsApp Image 2026-04-14 at 17.33.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "182,33",
+   "datum": "2026-10-12",
+   "ust": 7,
+   "aussteller": "Kaffeerösterei Haselbrunn"
+  },
+  {
+   "datei": "quittung41.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "199,02",
+   "datum": "2026-04-13",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "WhatsApp Image 2026-03-06 at 8.36.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "1.059,65",
+   "datum": "2026-05-21",
+   "ust": 19,
+   "aussteller": "Stadtwerke Lindenstedt GmbH"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-10 at 13.19.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "162,21",
+   "datum": "2026-02-22",
+   "ust": 7,
+   "aussteller": "Obsthof Talmann"
+  },
+  {
+   "datei": "RE_29523.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "58,85",
+   "datum": "2026-08-15",
+   "ust": 7,
+   "aussteller": "Fachbuchhandlung Seitenweise"
+  },
+  {
+   "datei": "Neues Dokument.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "74,90",
+   "datum": "2026-04-01",
+   "ust": 7,
+   "aussteller": "Riedtal-Bahn AG"
+  },
+  {
+   "datei": "Rechnung (5).txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "111,86",
+   "datum": "2026-06-03",
+   "ust": 19,
+   "aussteller": "Reifen Schaller"
+  },
+  {
+   "datei": "scan_0682.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "152,48",
+   "datum": "2026-05-25",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "Kopie von scan_0012.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "73,60",
+   "datum": "2026-08-10",
+   "ust": 19,
+   "aussteller": "Café Uferlicht"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-27 at 12.24.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "81,87",
+   "datum": "2026-01-08",
+   "ust": 19,
+   "aussteller": "Büroversand Ostrander GmbH"
+  },
+  {
+   "datei": "Dokument6.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "487,90",
+   "datum": "2026-01-15",
+   "ust": 0,
+   "aussteller": "Hansea Allgemeine Versicherung AG"
+  },
+  {
+   "datei": "scan_0621.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "537,93",
+   "datum": "2026-07-07",
+   "ust": 19,
+   "aussteller": "Gasversorgung Riedtal AG"
+  },
+  {
+   "datei": "rechnung.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "167,10",
+   "datum": "2026-02-20",
+   "ust": 19,
+   "aussteller": "Berufsmode Weißkittel"
+  },
+  {
+   "datei": "Dokument38.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "56,18",
+   "datum": "2026-01-07",
+   "ust": 7,
+   "aussteller": "Kaffeerösterei Haselbrunn"
+  },
+  {
+   "datei": "IMG_3676.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "89,70",
+   "datum": "2026-10-10",
+   "ust": 19,
+   "aussteller": "Feinkost Hollerbusch"
+  },
+  {
+   "datei": "Dokument34.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "47,98",
+   "datum": "2026-05-27",
+   "ust": 19,
+   "aussteller": "PAPETERIE KALMUS"
+  },
+  {
+   "datei": "20260817_608.txt",
+   "konto": "0320",
+   "richtung": "ausgabe",
+   "betrag": "26.049,10",
+   "datum": "2026-09-17",
+   "ust": 19,
+   "aussteller": "Autohaus Rottner GmbH"
+  },
+  {
+   "datei": "beleg.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "610,47",
+   "datum": "2026-04-06",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "IMG_4284.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "9,00",
+   "datum": "2026-03-18",
+   "ust": 19,
+   "aussteller": "Parkraum Bahnhof Molkenrode"
+  },
+  {
+   "datei": "20260325_891.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "38,40",
+   "datum": "2026-05-14",
+   "ust": 7,
+   "aussteller": "Riedtal-Bahn AG"
+  },
+  {
+   "datei": "Scan 15.6.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "22,49",
+   "datum": "2026-04-01",
+   "ust": 19,
+   "aussteller": "Verpackung Rehberg GmbH"
+  },
+  {
+   "datei": "Kopie von scan_0005.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "511,70",
+   "datum": "2026-02-22",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "bon 37.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "184,45",
+   "datum": "2026-06-23",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "PDF_export_137.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "1.090,00",
+   "datum": "2026-06-17",
+   "ust": 0,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "20260918_682.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "80,50",
+   "datum": "2026-03-01",
+   "ust": 19,
+   "aussteller": "Gasthaus Zum Krummen Ast"
+  },
+  {
+   "datei": "RE_33600.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "399,84",
+   "datum": "2026-07-10",
+   "ust": 19,
+   "aussteller": "Steuerberatung Thiemann & Kolleg:innen"
+  },
+  {
+   "datei": "RE_24449.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "88,17",
+   "datum": "2026-01-02",
+   "ust": 7,
+   "aussteller": "Mehlhaus Göbel GmbH"
+  },
+  {
+   "datei": "WhatsApp Image 2026-02-22 at 12.12.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "135,46",
+   "datum": "2026-01-28",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "scan_0864.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "2.850,00",
+   "datum": "2026-03-28",
+   "ust": null,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "PDF_export_103.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "410,55",
+   "datum": "2026-03-22",
+   "ust": 19,
+   "aussteller": "Glanzwerk Gebäudereinigung"
+  },
+  {
+   "datei": "20260914_597.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "300,00",
+   "datum": "2026-09-08",
+   "ust": null,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "PDF_export_54.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "476,00",
+   "datum": "2026-08-19",
+   "ust": 19,
+   "aussteller": "Rechtsanwältin Dr. Sabine Kerkhoff"
+  },
+  {
+   "datei": "Kopie von scan_0057.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "153,51",
+   "datum": "2026-10-25",
+   "ust": 19,
+   "aussteller": "Schilderwerk Kolbe"
+  },
+  {
+   "datei": "Dokument25.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "53,37",
+   "datum": "2026-09-05",
+   "ust": 19,
+   "aussteller": "Riedtal Netz Kommunikation GmbH"
+  },
+  {
+   "datei": "quittung20.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "184,45",
+   "datum": "2026-07-09",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "quittung24.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "84,90",
+   "datum": "2026-09-21",
+   "ust": 19,
+   "aussteller": "STERNOEL Station Wendelsau"
+  },
+  {
+   "datei": "Kopie von scan_0090.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "430,19",
+   "datum": "2026-10-06",
+   "ust": 19,
+   "aussteller": "Verpackung Rehberg GmbH"
+  },
+  {
+   "datei": "PDF_export_194.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "114,01",
+   "datum": "2026-06-03",
+   "ust": null,
+   "aussteller": "PayFlux Terminal Services GmbH"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-02 at 20.21.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "6,50",
+   "datum": "2026-02-09",
+   "ust": 19,
+   "aussteller": "City-Parken Haselbrunn GmbH"
+  },
+  {
+   "datei": "quittung2.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "412,50",
+   "datum": "2026-04-08",
+   "ust": 0,
+   "aussteller": "Handwerkskammer Riedtal-Süd"
+  },
+  {
+   "datei": "WhatsApp Image 2026-05-07 at 13.20.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "399,84",
+   "datum": "2026-04-10",
+   "ust": 19,
+   "aussteller": "Steuerberatung Thiemann & Kolleg:innen"
+  },
+  {
+   "datei": "bon 45.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.725,50",
+   "datum": "2026-05-01",
+   "ust": 19,
+   "aussteller": "Grundstücksverwaltung Morlang GbR"
+  },
+  {
+   "datei": "20260721_775.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "581,91",
+   "datum": "2026-03-05",
+   "ust": 19,
+   "aussteller": "Büromöbel Hartwig GmbH"
+  },
+  {
+   "datei": "Dokument7.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.725,50",
+   "datum": "2026-02-01",
+   "ust": 19,
+   "aussteller": "Grundstücksverwaltung Morlang GbR"
+  },
+  {
+   "datei": "IMG_9342.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "612,40",
+   "datum": "2026-01-02",
+   "ust": 0,
+   "aussteller": "Hansea Allgemeine Versicherung AG"
+  },
+  {
+   "datei": "WhatsApp Image 2026-08-10 at 11.57.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "86,28",
+   "datum": "2026-03-27",
+   "ust": 19,
+   "aussteller": "WERKHAUS Baumarkt Dorne"
+  },
+  {
+   "datei": "Rechnung (4).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "616,32",
+   "datum": "2026-05-02",
+   "ust": 7,
+   "aussteller": "Molkerei Frischhof Lanzer eG"
+  },
+  {
+   "datei": "Scan 1.3.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "53,37",
+   "datum": "2026-02-05",
+   "ust": 19,
+   "aussteller": "Riedtal Netz Kommunikation GmbH"
+  },
+  {
+   "datei": "WhatsApp Image 2026-07-22 at 17.32.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "252,52",
+   "datum": "2026-03-12",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "quittung19.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "95,23",
+   "datum": "2026-04-02",
+   "ust": 7,
+   "aussteller": "Hotel Am Kongresspark"
+  },
+  {
+   "datei": "quittung8.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "254,66",
+   "datum": "2026-02-06",
+   "ust": 19,
+   "aussteller": "Haselbrunner Bote Verlag"
+  },
+  {
+   "datei": "20260718_394.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "52,36",
+   "datum": "2026-04-28",
+   "ust": 19,
+   "aussteller": "Büroversand Ostrander GmbH"
+  },
+  {
+   "datei": "Rechnung (6).txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "345,10",
+   "datum": "2026-10-05",
+   "ust": 19,
+   "aussteller": "Seminarhaus Lerngut GmbH"
+  },
+  {
+   "datei": "PDF_export_85.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "1.120,35",
+   "datum": "2026-03-15",
+   "ust": 0,
+   "aussteller": "Betriebsschutz Versicherung AG"
+  },
+  {
+   "datei": "IMG_3791.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "800,00",
+   "datum": "2026-05-12",
+   "ust": 0,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "20260313_346.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "186,00",
+   "datum": "2026-03-12",
+   "ust": 0,
+   "aussteller": "Industrie- und Handelskammer Riedtal"
+  },
+  {
+   "datei": "Rechnung (7).txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "49,99",
+   "datum": "2026-04-18",
+   "ust": 19,
+   "aussteller": "Tankpunkt Kremsried"
+  },
+  {
+   "datei": "scan_0408.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "588,00",
+   "datum": "2026-01-09",
+   "ust": 0,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "bon 33.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "42,60",
+   "datum": "2026-02-23",
+   "ust": 19,
+   "aussteller": "Paketdienst Flinkgut GmbH"
+  },
+  {
+   "datei": "Scan 20.7.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "2.500,00",
+   "datum": "2026-09-05",
+   "ust": null,
+   "aussteller": "Volksbank Ried-Tal eG"
+  },
+  {
+   "datei": "PDF_export_40.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "8,55",
+   "datum": "2026-04-21",
+   "ust": 0,
+   "aussteller": "POSTFILIALE im Schreibwarenladen"
+  },
+  {
+   "datei": "Rechnung (1).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "380,92",
+   "datum": "2026-05-18",
+   "ust": 7,
+   "aussteller": "Großhandel Kremsried KG"
+  },
+  {
+   "datei": "quittung17.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "75,84",
+   "datum": "2026-10-13",
+   "ust": 19,
+   "aussteller": "Tankpunkt Kremsried"
+  },
+  {
+   "datei": "RE_82284.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "53,20",
+   "datum": "2026-03-22",
+   "ust": 19,
+   "aussteller": "Bistro Kranich"
+  },
+  {
+   "datei": "beleg_57.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "283,82",
+   "datum": "2026-02-11",
+   "ust": 19,
+   "aussteller": "Kfz-Meisterbetrieb Jaspers"
+  },
+  {
+   "datei": "RE_45627.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "117,45",
+   "datum": "2026-09-03",
+   "ust": null,
+   "aussteller": "PayFlux Terminal Services GmbH"
+  },
+  {
+   "datei": "IMG_5890.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "12,00",
+   "datum": "2026-03-14",
+   "ust": 19,
+   "aussteller": "Parkraum Bahnhof Molkenrode"
+  },
+  {
+   "datei": "Scan 21.6.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "29,50",
+   "datum": "2026-01-31",
+   "ust": 0,
+   "aussteller": "Volksbank Ried-Tal eG"
+  },
+  {
+   "datei": "scan_0173.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "353,85",
+   "datum": "2026-08-05",
+   "ust": 19,
+   "aussteller": "Autohaus Rottner GmbH"
+  },
+  {
+   "datei": "Kopie von scan_0043.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "43,22",
+   "datum": "2026-09-18",
+   "ust": null,
+   "aussteller": "FRISCHMARKT Pöhler"
+  },
+  {
+   "datei": "PDF_export_99.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "152,06",
+   "datum": "2026-03-03",
+   "ust": null,
+   "aussteller": "PayFlux Terminal Services GmbH"
+  },
+  {
+   "datei": "bon 7.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "99,96",
+   "datum": "2026-01-22",
+   "ust": 19,
+   "aussteller": "Getränke Lomann OHG"
+  },
+  {
+   "datei": "Dokument24.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "89,70",
+   "datum": "2026-10-11",
+   "ust": 19,
+   "aussteller": "Feinkost Hollerbusch"
+  },
+  {
+   "datei": "quittung34.txt",
+   "konto": "4635",
+   "richtung": "ausgabe",
+   "betrag": "93,50",
+   "datum": "2026-10-12",
+   "ust": 19,
+   "aussteller": "Weinhandel Kellerbogen"
+  },
+  {
+   "datei": "RE_63383.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "135,46",
+   "datum": "2026-01-01",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "beleg_23.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "13,10",
+   "datum": "2026-10-15",
+   "ust": 0,
+   "aussteller": "POSTFILIALE im Schreibwarenladen"
+  },
+  {
+   "datei": "20260722_434.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "46,80",
+   "datum": "2026-07-23",
+   "ust": 7,
+   "aussteller": "Riedtal-Bahn AG"
+  },
+  {
+   "datei": "scan_0600.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "683,73",
+   "datum": "2026-09-03",
+   "ust": 7,
+   "aussteller": "Eierhof Wiesmeyer"
+  },
+  {
+   "datei": "RE_77255.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "20,04",
+   "datum": "2026-08-12",
+   "ust": 19,
+   "aussteller": "PAPETERIE KALMUS"
+  },
+  {
+   "datei": "Kopie von scan_0034.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "985,00",
+   "datum": "2026-01-28",
+   "ust": 0,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "WhatsApp Image 2026-10-15 at 12.51.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "57,51",
+   "datum": "2026-05-05",
+   "ust": 19,
+   "aussteller": "Riedtal Netz Kommunikation GmbH"
+  },
+  {
+   "datei": "RE_29830.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "252,52",
+   "datum": "2026-08-28",
+   "ust": 7,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "IMG_3835.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "332,01",
+   "datum": "2026-09-22",
+   "ust": 19,
+   "aussteller": "Druckerei Schwarzweiß"
+  },
+  {
+   "datei": "scan_0511.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "34,27",
+   "datum": "2026-10-13",
+   "ust": 19,
+   "aussteller": "Großhandel Kremsried KG"
+  },
+  {
+   "datei": "Scan 4.8.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "20,53",
+   "datum": "2026-07-28",
+   "ust": 19,
+   "aussteller": "FRISCHMARKT Pöhler"
+  },
+  {
+   "datei": "20260718_388.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "387,13",
+   "datum": "2026-03-08",
+   "ust": 7,
+   "aussteller": "Eierhof Wiesmeyer"
+  },
+  {
+   "datei": "20260421_560.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "612,85",
+   "datum": "2026-01-19",
+   "ust": 19,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "Scan 13.9.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "238,15",
+   "datum": "2026-07-05",
+   "ust": 0,
+   "aussteller": "Lindenstedter Kraftfahrt-Versicherungsverein a.G."
+  },
+  {
+   "datei": "20260517_740.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "309,40",
+   "datum": "2026-09-06",
+   "ust": 19,
+   "aussteller": "Pixelweide Online-Marketing"
+  },
+  {
+   "datei": "bon 39.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "61,60",
+   "datum": "2026-03-06",
+   "ust": 19,
+   "aussteller": "Trattoria Lino Ventri"
+  },
+  {
+   "datei": "beleg_62.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "745,31",
+   "datum": "2026-03-09",
+   "ust": 19,
+   "aussteller": "Stadtwerke Lindenstedt GmbH"
+  },
+  {
+   "datei": "Scan 15.12.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "38,08",
+   "datum": "2026-02-09",
+   "ust": 19,
+   "aussteller": "Großhandel Kremsried KG"
+  },
+  {
+   "datei": "RE_13323.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "710,91",
+   "datum": "2026-02-06",
+   "ust": 19,
+   "aussteller": "Malerbetrieb Ostwald & Sohn"
+  },
+  {
+   "datei": "Dokument4.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "234,31",
+   "datum": "2026-06-23",
+   "ust": 19,
+   "aussteller": "Verpackung Rehberg GmbH"
+  },
+  {
+   "datei": "quittung52.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "176,34",
+   "datum": "2026-07-27",
+   "ust": 7,
+   "aussteller": "Mehlhaus Göbel GmbH"
+  },
+  {
+   "datei": "PDF_export_101.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "76,86",
+   "datum": "2026-07-13",
+   "ust": 19,
+   "aussteller": "WERKHAUS Baumarkt Dorne"
+  },
+  {
+   "datei": "Dokument40.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "157,08",
+   "datum": "2026-02-14",
+   "ust": 19,
+   "aussteller": "Druckerei Schwarzweiß"
+  },
+  {
+   "datei": "Scan 14.1.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "23,10",
+   "datum": "2026-07-18",
+   "ust": 7,
+   "aussteller": "FRISCHMARKT Pöhler"
+  },
+  {
+   "datei": "PDF_export_22.txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "23.621,50",
+   "datum": "2026-02-19",
+   "ust": 19,
+   "aussteller": "Bäckereitechnik Ofenmeister GmbH"
+  },
+  {
+   "datei": "Kopie von scan_0001.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.725,50",
+   "datum": "2026-08-01",
+   "ust": 19,
+   "aussteller": "Grundstücksverwaltung Morlang GbR"
+  },
+  {
+   "datei": "20260123_861.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "410,55",
+   "datum": "2026-09-27",
+   "ust": 19,
+   "aussteller": "Glanzwerk Gebäudereinigung"
+  },
+  {
+   "datei": "scan_0972.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "295,12",
+   "datum": "2026-07-26",
+   "ust": 19,
+   "aussteller": "Sanitär Brückmann Meisterbetrieb"
+  },
+  {
+   "datei": "RE_32509.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "36,82",
+   "datum": "2026-04-30",
+   "ust": 0,
+   "aussteller": "Volksbank Ried-Tal eG"
+  },
+  {
+   "datei": "20260819_291.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "65,89",
+   "datum": "2026-10-17",
+   "ust": 19,
+   "aussteller": "STERNOEL Station Wendelsau"
+  },
+  {
+   "datei": "Kopie von scan_0067.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "34,27",
+   "datum": "2026-07-01",
+   "ust": 19,
+   "aussteller": "Getränke Lomann OHG"
+  },
+  {
+   "datei": "scan_0146.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "35,26",
+   "datum": "2026-07-31",
+   "ust": 0,
+   "aussteller": "Volksbank Ried-Tal eG"
+  },
+  {
+   "datei": "Scan 12.4.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "831,81",
+   "datum": "2026-06-24",
+   "ust": 19,
+   "aussteller": "Elektro Funkenflug"
+  },
+  {
+   "datei": "scan_0642.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "85,41",
+   "datum": "2026-01-14",
+   "ust": 19,
+   "aussteller": "Tankpunkt Kremsried"
+  },
+  {
+   "datei": "PDF_export_200.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "66,70",
+   "datum": "2026-08-22",
+   "ust": 19,
+   "aussteller": "Brauhaus Molkenrode"
+  },
+  {
+   "datei": "bon 24.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "61,67",
+   "datum": "2026-07-28",
+   "ust": 19,
+   "aussteller": "PAPETERIE KALMUS"
+  },
+  {
+   "datei": "scan_0331.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "82,10",
+   "datum": "2026-06-08",
+   "ust": 19,
+   "aussteller": "Landgasthof Wiesengrund"
+  },
+  {
+   "datei": "Kopie von scan_0071.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "196,88",
+   "datum": "2026-05-19",
+   "ust": 7,
+   "aussteller": "Molkerei Frischhof Lanzer eG"
+  },
+  {
+   "datei": "beleg_65.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "1.620,00",
+   "datum": "2026-08-28",
+   "ust": null,
+   "aussteller": "Café-Bäckerei Kornblume"
+  },
+  {
+   "datei": "PDF_export_185.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "91,09",
+   "datum": "2026-06-11",
+   "ust": 19,
+   "aussteller": "Autohof Molkenrode A00"
+  }
+ ]
+}

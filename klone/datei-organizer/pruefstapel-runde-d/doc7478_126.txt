@@ -1,0 +1,10 @@
+NEUE NACHRICHT
+Kundenportal Beispiel Zahlungsdienst Online
+
+Ihre Auszahlung ist eingegangen
+
+Auszahlung 1.120,45 EUR
+Verkäufe der Woche 44
+
+Nachricht-ID 388350
+Diese Nachricht wurde automatisch gesendet. Bitte nicht antworten.

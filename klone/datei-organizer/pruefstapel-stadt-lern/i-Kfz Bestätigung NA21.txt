@@ -1,0 +1,17 @@
+Ausdruck internetbasierte Fahrzeugzulassung (i-Kfz)
+Landkreis Beispielland – Kfz-Zulassungsstelle
+
+Vorgangsnummer:     KFZ-118219
+Eingang:            07.07.2026 21:13
+Art des Vorgangs:   Adressänderung (Umzug innerhalb des Zulassungsbezirks)
+Kennzeichen:        BSP-NA 21
+Halterin:           Ahlers, Nele
+Neue Anschrift:     Kiebitzring 5, 29999 Beispielhafen
+
+Status:             ABGESCHLOSSEN
+Gebühr:             10,20 EUR, bezahlt per Online-Zahlung
+
+Hinweis: Die Änderung wird an das Kraftfahrt-Bundesamt und an Ihren
+Versicherer gemeldet. Die geänderte Zulassungsbescheinigung Teil I
+wird Ihnen per Post zugesandt. Bis zum Eingang führen Sie diesen
+Ausdruck zusammen mit der bisherigen Bescheinigung mit.

@@ -1,0 +1,25 @@
+Stadtwerke Lindenstedt GmbH
+Kirchplatz 47, 37995 Wendelsau
+Kundenservice 0000 300
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnunq Strom
+Rechnungsnummer: 9925591
+Rechnungsdatum: 09.03.2026
+Verbrauchsstelle: Mühlgasse 7, Zähler-Nr. 0717408
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Arbeitspreis Strom 2117 kWh à 0,2890     1    611,81     611,81
+  2  Grundpreis Monat             1     14,50      14,50
+
+Nettobetrag                                  626,31
+zzgl. 19 % USt                              119,00
+SUMME EUR                                    745,31 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 4919 25
+USt-IdNr. DE000000938

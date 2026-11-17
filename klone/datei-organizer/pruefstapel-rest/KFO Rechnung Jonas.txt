@@ -1,0 +1,25 @@
+Kieferorthopädie Dr. Beispiel
+Lindenstr. 9 · 84999 Beispielhausen
+
+Herrn
+Martin Weidinger
+Lindenhof 4
+84999 Beispielhausen
+
+Patient: Jonas Weidinger
+Rechnungsnummer: KFO-25-0719
+Datum: 29.07.2025
+
+Privatrechnung (Mehrleistungen)
+
+Sehr geehrter Herr Weidinger, für Ihren Sohn Jonas berechnen wir folgende Leistungen, die nicht von der Krankenkasse übernommen werden:
+
+Datum   GOZ   Leistung   Betrag
+03.07.2025   6100   Brackets Keramik, ästhetisch   312,00 EUR
+03.07.2025   2197   Adhäsive Befestigung   96,40 EUR
+17.07.2025   6140   Kontrolle Behandlungsgerät   38,20 EUR
+      Summe   446,60 EUR
+
+Bitte überweisen Sie den Betrag innerhalb von 30 Tagen, spätestens bis 29.08.2025.
+
+Mit freundlichen Grüßen

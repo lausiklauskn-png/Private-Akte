@@ -1,0 +1,9 @@
+Sparkasse Musterhausen-Beispiel      Kontoauszug 6/2026
+Konto IBAN DE00 0000 0000 0000 0000 00   Thomas und Sabine Brückmann
+Alter Saldo 2.318,44
+02.06. Gymnasium am Beispielrhein Kursfahrt Anzahlung L. Brückmann  -150,00
+05.06. Stadtwerke Abschlag                                          -118,00
+10.06. Lohn Chemiewerk                                            +3.121,88
+15.06. Lastschrift Turnverein                                        -22,00
+30.06. Zinsen                                                         +0,34
+Neuer Saldo 5.150,66 EUR

@@ -1,0 +1,14 @@
+From: service@musterkarte.example
+To: g.pfeilsticker@mail.example
+Date: Tue, 30 Jun 2026 18:04:09 +0200
+Subject: Ihre neue Kreditkartenabrechnung steht bereit
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Guten Tag Herr Pfeilsticker,
+
+Ihre Abrechnung für Juni 2026 liegt im Online-Postfach. Neuer Saldo: 667,03 EUR.
+Der Einzug erfolgt am 20.07.2026. Dies ist eine automatisch erzeugte Nachricht, bitte nicht antworten.
+Wir erinnern Sie: Bitte geben Sie Ihre PIN niemals weiter.
+
+Ihr Musterkarte Kreditkarten-Service

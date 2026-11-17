@@ -1,0 +1,14 @@
+Sparkasse Musterhausen-Beispiel
+Kontoauszug Nr. 2/2026    Konto IBAN DE00 0000 0000 0000 0000 00
+Kontoinhaberin: Hildegard Pfeiffenberg (Vollmacht: Walter Pfeiffenberg)
+
+Alter Saldo                          1.204,10 EUR
+03.02. Seniorenstift Beispielhof Heimentgelt 01/26   -2.870,00
+03.02. Pflegekasse Leistungsbetrag                   +2.005,00
+05.02. Rente Deutsche Rentenversicherung              +1.318,45
+10.02. Apotheke am Markt                                -23,15
+15.02. Walter Pfeiffenberg Zuzahlung Heim              +600,00
+28.02. Kontoführung                                      -4,90
+Neuer Saldo                          1.206,50 EUR
+
+Bitte prüfen Sie diesen Auszug. Einwendungen innerhalb von 6 Wochen.

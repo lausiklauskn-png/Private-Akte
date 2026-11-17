@@ -1,0 +1,15 @@
+Online-Banking - Beispiel-Raiffbank Musterbach eG - Kontoauszug 05/2026
+> Beispiel-Raiffbank Musterbach eG - Kontoauszug 05/2026
+Übersicht Konten & Karten Umsätze Postfach Service Abmelden
+|
+| Konto DEOO 0000 0000 0000 0000 00 Thomas und Sabine Kieselmayr
+!
+1
+i 02.05. Finanzamt Beispielkreis Erstattung ESt 2025 +1.287,00
+| 02.05. Gehalt Beispiel-Maschinenbau (Thomas) +3.140,22
+| 05.05. Miete/Baudarlehen Lindenhang -1.050,00
+| 10.05. Beispiel-Kfz-Versicherung -88,40
+| 15.05. Lastschrift Schulkantine Beispiel-Gymnasium -31,50
+| 28.05. Gehalt Sabine Kieselmayr +1.020,00
+| Saldo 31.05.2026 4.612,95 H
+https//banking.example/umsaetze 1/1

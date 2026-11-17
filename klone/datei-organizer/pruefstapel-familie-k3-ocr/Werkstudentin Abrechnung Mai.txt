@@ -1,0 +1,19 @@
+Elektro Siegrist GmbH - Lohnbuchhaltung - Am Stellwerk 4 - 37990 Oberstetten
+Entgeltabrechnung Mai 2026
+
+Frau Lena Brandauer Pers.-Nr. 4471 Werkstudentin (20 Std./Woche)
+Steuerklasse | Steuer-ID 00 111 222 333 Krankenkasse Lindwurm BKK
+Stundenlohn 14,50 EUR x 80 Std. 1.160,00
+
+Gesamtbrutto 1.160,00
+
+Lohnsteuer 0,00
+
+Rentenversicherung (9,3 %) -107,88
+
+KV/PV/AV (Werkstudentenprivileg) 0,00
+
+Netto 1.052,12
+
+Auszahlung am 29.05.2026 auf IBAN DE00 2405 0000 0034 5678 90
+

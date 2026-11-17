@@ -1,0 +1,10 @@
+SPARKASSE BEISPIELSTADT-NORD   Kontoauszug Nr. 8/2026   Konto DE00 0000 0000 0000 0000 00
+Grillstube Beispiel-Eck, Inh. D. Kalanteris
+
+alter Kontostand                         3.114,07 H
+03.08.  Gutschrift Kartenzahlungen         1.846,30 H
+05.08.  Lastschrift Gastro-Großhandel     -1.204,18 S
+10.08.  Überweisung Kostas Kalanteris (Lohn Aug.)   -520,00 S
+14.08.  Beitragsabbuchung Knappschaft Minijob        -  166,40 S
+20.08.  Dauerauftrag Pacht Nordring 115    -1.100,00 S
+neuer Kontostand                          1.970,79 H

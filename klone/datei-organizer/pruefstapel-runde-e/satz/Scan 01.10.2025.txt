@@ -1,0 +1,39 @@
+# Pflegekasse der Beispiel Gesundheitskasse
+Pflegekasse der Beispiel Gesundheitskasse · Am Kassenplatz 2 · 34510 Beispielstadt
+
+Frau Gertrud Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Versichertennummer: B000000000
+Datum: 01.10.2025
+
+# Ihre Leistungen bei Pflegegrad 2 im Überblick
+
+Sehr geehrte Frau Brandtner,
+
+zu Ihrem Pflegegrad haben wir Ihnen die wichtigsten Leistungen zusammengestellt. Bitte reichen Sie Rechnungen für den Entlastungsbetrag zeitnah ein.
+
+@seite
+Hinweise zu Ihrem Schreiben vom 01.10.2025
+
+@spalten 3
+## Pflegegeld
+347,00 € monatlich, wenn die Pflege durch Angehörige erfolgt. Pflichtberatungsbesuche halbjährlich.
+
+## Pflegesachleistung
+Bis zu 796,00 € monatlich für einen zugelassenen Pflegedienst. Kombination mit Pflegegeld möglich.
+
+## Entlastungsbetrag
+131,00 € monatlich für Alltagshilfen. Nicht genutzte Beträge können bis zum 30. Juni des Folgejahres abgerufen werden.
+
+## Verhinderungspflege
+Bis zu sechs Wochen im Jahr, wenn die Pflegeperson verhindert ist.
+
+## Hilfsmittel
+Pflegehilfsmittel zum Verbrauch bis 42,00 € monatlich, z. B. Handschuhe und Desinfektion.
+
+## Wohnraumanpassung
+Zuschuss bis 4.180,00 € je Maßnahme, etwa für ein bodengleiches Bad.
+
+@ende

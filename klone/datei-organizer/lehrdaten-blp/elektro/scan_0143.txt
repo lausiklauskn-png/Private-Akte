@@ -1,0 +1,13 @@
+REISEKOSTENABRECHNUNG Arbeitnehmer                     Elektro Brandhuber
+
+Name: Lechner, Tobias           Zeitraum: 09.–13.03.2026
+Reiseziel/Anlass: Chiemhausen, Montage Kurklinik (auswaertige Taetigkeit)
+
+Verpflegunqsmehraufwand:
+  09.03. Anreisetag                       14,00
+  10.–12.03. 3 Tage à 24 Std.   3 x 28,00 84,00
+  13.03. Abreisetag                       14,00
+  Kuerzung Fruehstueck 4 x 5,60          -22,40
+Summe Erstattung                          89,60 EUR
+Fahrt im Firmenfahrzeug (keine Erstattung).
+Ausgezahlt mit Lohn Maerz.   Unterschrift AN: Lechner    genehmigt: Brandhuber

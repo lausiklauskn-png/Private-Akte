@@ -1,0 +1,29 @@
+Zahnarztpraxis Dr. Helga Beispiel-Zahn
+
+Praxis Dr. Beispiel-Zahn · Marktstr. 2 · 34567 Musterfelde
+
+Frau Sabine Kesselring
+Lindenweg 12
+34567 Musterfelde
+
+Patientennummer: 4410
+Rechnungsnummer: Z-25-1187
+Datum: 01.07.2025
+
+Rechnung über Eigenanteil Zahnersatz
+
+Sehr geehrte Frau Kesselring,
+
+für die Versorgung mit einer Keramikkrone (Zahn 26) berechnen wir nach Abzug des Festzuschusses Ihrer Krankenkasse:
+
+Gesamtkosten laut Heil- und Kostenplan  1.012,40 EUR
+Festzuschuss Beispiel Ersatzkasse (mit Bonus 70 %)  -411,26 EUR
+Ihr Eigenanteil  601,14 EUR
+
+Bitte überweisen Sie den Betrag binnen 30 Tagen nach Rechnungsdatum.
+
+Mit freundlichen Grüßen
+Ihr Praxisteam
+
+----------------------------------------
+IBAN DE00 0000 0000 0000 0000 00

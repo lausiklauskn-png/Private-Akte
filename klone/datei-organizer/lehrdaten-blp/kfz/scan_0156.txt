@@ -1,0 +1,27 @@
+Kfz-Technik Brandhorst
+Inh. Henrik Brandhorst · Kfz-Meisterbetrieb · Teile & Reifen
+Ziegeleiweg 14 · 37199 Wolmershagen
+Tel. 05500 000 41-0 · werkstatt@brandhorst-kfz.example
+USt-IdNr. DE000000000 · St.-Nr. 00/000/00000
+
+Herrn
+Gerrit Voskuhl
+Schäferkamp 17
+37199 Wolmershagen
+
+RECHNUNG Nr. 2026-0530                                   Datum: 18.11.2026
+Transporter Kasten L2H2 · WOH-GV 000 · Einbau Anhängevorrichtung
+
+Pos  Bezeichnung                               Menge    E-Preis     Gesamt
+1    Anhängerkupplung abnehmbar                   1 Stk    298,00     298,00
+2    E-Satz 13-polig                              1 Stk    129,00     129,00
+3    Montage und Codierung                        3 Std     82,00     246,00
+4    Eintragung/Abnahme nicht erforderlich (ABE)     1          0,00       0,00
+
+Nettobetrag                                        673,00
+zzgl. 19 % MwSt                                    127,87
+Rechnungsbetrag                                    800,87
+
+Vielen Dank für Ihren Auftrag.
+Bankverbindung: Volksbank Wolmershagen eG · IBAN DE00 0000 0000 0000 0000 00
+Kfz-Technik Brandhorst · Inhaber Henrik Brandhorst · Mitglied der Kfz-Innung

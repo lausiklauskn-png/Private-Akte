@@ -1,0 +1,24 @@
+Obsthof Talmann
+Industriestr. 7, 37996 Molkenrode
+Tel. 0000 92322
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rg.-Nr. 2026-75432
+Rechnungsdatum: 22. Februar 2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Äpfel Boskoop 12 kg Kiste     3     19,20      57,60
+  2  Zwetschgen 10 kg             4     23,50      94,00
+
+Nettobetrag                                  151,60
+zzgl. 7 % USt                               10,61
+Zu zahlen                                    162,21 EUR
+
+Bitte überweisen Sie den Betrag bis 8. März 2026 unter Angabe der Rechnungsnummer.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7384 97
+USt-IdNr. DE000000367

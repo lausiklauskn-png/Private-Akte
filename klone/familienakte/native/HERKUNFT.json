@@ -1,0 +1,278 @@
+{
+  "_": "Byte-gleich übernommene Bausteine aus anderen Repos von Klaus. Nie hier abwandeln; dort pflegen und neu kopieren (node tools/herkunft-pruefen.mjs prüft die SHA-256).",
+  "dateien": {
+    "public/native/native-network.js": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "native/native-network.js",
+      "commit": "b0a28ddfb57f7efb285099f7b58f18433037f663",
+      "sha256": "5c0fc2ea29a97ed75ee2c9ca10ada135e7a3173cf1442d82ac6055fbbd7232e6",
+      "zweck": "App-Internetschalter: fetch/XMLHttpRequest/WebSocket-Hülle, APP_OFFLINE, data-app-offline, Ereignis pb:network"
+    },
+    "public/native/installieren.js": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "assets/installieren.js",
+      "commit": "b0a28ddfb57f7efb285099f7b58f18433037f663",
+      "sha256": "e0644084e2e72773608633190a3e5ed287f93d88f438e7473f03c765c7f873c3",
+      "zweck": "Knopf „Installieren“ (Kanon aus Sage-Protokol): als installierte App weg, sonst Browser-Dialog oder Erklärung"
+    },
+    "public/sbkim/01_storage.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/01_storage.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "5a5a4bf64dfcc107da7ed70fb755d7db5cce7d80e963b3e2fbc2004537747820",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/02_spore.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/02_spore.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "0cbf0664e2a79f1301c03e52f7ac0030d4b2961f03b97b38e8634827a52353c5",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/03_embedding.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/03_embedding.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "2e31baa09a2959c95efff8eecd224e8343e75695b4b293aa35209d8f96d1f3b5",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/04_match.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/04_match.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "721eecc3c0d6ea4c259259e6071215ec1cd16f1c43c87b42ce9e72e9a0b5e41c",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/05b_nostr_relay.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/05b_nostr_relay.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "37eee5b196b3efad57131edd1cc3c0ee23acb97b5ca40740d6a0771db4b4a421",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/noble-secp256k1.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/noble-secp256k1.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "8f3879ca422c4fdfe7ca0361688636fa7cc550a59bd94d512ed6ec79aa3d55d1",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/23_rendezvous.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/23_rendezvous.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "5aa8262638eeaf70f5e5563592a730f240a95ed80daf41a4df5d7d51824afb74",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/23_rendezvous_ui.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/23_rendezvous_ui.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "66b2c6b95d27e35cb3b9697a5edc3250dfb50eb960375f9a68ab696ab05b82d2",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "public/sbkim/05_anastomose.js": {
+      "repo": "lausiklauskn-png/Sage-Protokol",
+      "pfad": "src/modules/05_anastomose.js",
+      "commit": "c199dbdcabda38ed803d6076ce94395024cfd60d",
+      "sha256": "255ac79aeb3b0203e92f0cebd0a905e47c488b43efe18f41332a7d35520bbf23",
+      "zweck": "SBKIM-Kanon (Mycel), Schublade familienakte"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Json.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Json.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "478353b515e25550a3e3899943359d2074cf16a4e60a8eb6761f83a979598369",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Ersatzschluessel.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Ersatzschluessel.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "552a39ca0e82a3690beb6ab53bc09528881a4a696964b7675fc9ddfda5bfbcff",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Eintrag.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Eintrag.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "62cef80a1bfcf792e33f3de0a43e929b9010dc7314fc698e0e58f5dbf31be9a3",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Umzug.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Umzug.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "9150aea15a9313bd3e9462478f1146452d45de1d54ca296c0735cf9c8f425497",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Fach.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Fach.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "022f71bad24be105a0686ab0aca879098ff83d87d17ebc12f6adbcf028f09e15",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/TresorOrdner.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/TresorOrdner.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "bf5785b819194bd77c280e06379ea89c5bfde28c9fda1658d638ddec3cd97436",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/DateiAblage.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/DateiAblage.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "12914d32621406d08f91c95417a5bedafbf261af71d95e61742f839441225593",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/VaultCrypto.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/VaultCrypto.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "ba8d5328acbedfe1780babcac45351c29664adf7430ba01ba646b21ba64962d2",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Ablage.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Ablage.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "dd9795665dfe8d2146ff189edd672ba7ec8932ceeebc4867d389aa43910a24cf",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/SafAblage.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/SafAblage.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "1d87189452772b9b66b368a40a633588b99735e8a500266511cc953759a5ba67",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/test/java/de/familyprojekt/tresor/TresorOrdnerTest.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/test/java/de/familyprojekt/tresor/TresorOrdnerTest.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "f442c413b89f6928d3a0770da96abc29c3b8ac97230b9810beacbc71dd618ab3",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Uebergaben.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Uebergaben.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "a7d959aabb68940109d2092c291ef97b0fde9db50c6c6d39ae95b34d426162c0",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "public/native/pro-bedienung.js": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "native/pro-bedienung.js",
+      "commit": "97d3cd3e96e7e60e2e6f30df8d2640ca7d46c0f8",
+      "sha256": "32f9221fb62d4f2263dcb564d5c3d376f0492d9f016dce50c687541520bb7a01",
+      "zweck": "Schriftgröße „A··A“ wie in Workflow PDF Pro (Leitfaden § 1.8, 85–150 %, gemerkt); gemeinsame Bedien-Bausteine Fassung 7"
+    },
+    "public/native/pro-bedienung.css": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "native/pro-bedienung.css",
+      "commit": "97d3cd3e96e7e60e2e6f30df8d2640ca7d46c0f8",
+      "sha256": "cd2b3e6307a3c68fdc828f59d5e950085268678463a027ced64562100e2b67d5",
+      "zweck": "Form der gemeinsamen Bedien-Bausteine (Schriftgröße-Knopf)"
+    },
+    "public/native/pro-geraet.js": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "native/pro-geraet.js",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "b18c26f8d0bd755c6a4fe5a8948e8457f7d9ed73b69dac938f8c9bab1326f710",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "public/native/meaning-models.json": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "tools/native/meaning-models.json",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "5234209c91c06b7511059fb3858ca10787ebc93cebf673b628b31d820c550cb4",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "public/native/semantic-model.json": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "tools/native/semantic-model.json",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "a12421e3b89a2a95ba94088ad0e8101fd1c87cebe68d21520c637d93be7c5311",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "android/app/src/main/java/de/familyprojekt/privatebrain/pro/SemanticModel.java": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/privatebrain/pro/SemanticModel.java",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "69ec4f1c1d4262d98cdf3d4a4f03e65bbe54705a9f4ce6f383dc8f2255cd59e6",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "android/app/src/main/java/de/familyprojekt/privatebrain/pro/ProDevicePlugin.java": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/privatebrain/pro/ProDevicePlugin.java",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "e6a6c42eae995cc7816dff0bec029010f1d1b8609aaf6e5c97e4ad98a5afb5bd",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "windows/java/de/familyprojekt/privatebrain/pro/DesktopGeraet.java": {
+      "repo": "lausiklauskn-png/Privat-Brain-Pro",
+      "pfad": "windows/engine/src/DesktopGeraet.java",
+      "commit": "326dc3d4ba1c709c0f818247e01bfb383c063ad3",
+      "sha256": "7828b7a4d0f0e8953b4efced02a4218866c5087d01cca2e0012f301b2de97ead",
+      "zweck": "Vorhandene Geräteprüfung, fortsetzbarer Modell-Download und feste Modellquellen; eigene Adapter getrennt"
+    },
+    "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/ProFilesPlugin.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/ProFilesPlugin.java",
+      "commit": "1ea49db1eb9b23969f051030247a56472e528d3b",
+      "sha256": "eb9b39e1fdd365e988ebd09d2e836bda393be2eeb565242737d04e2b8a2b84e7",
+      "zweck": "Bewährte Android-Dateiausgabe mit Tickets, Systemdialog und Rückleseprüfung; Family-Adapter daneben"
+    },
+    "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/PluginWorker.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/PluginWorker.java",
+      "commit": "1ea49db1eb9b23969f051030247a56472e528d3b",
+      "sha256": "bb04e811f48f252f86f79412e76ec5458abd6cde1e2cd2347a1398a588256999",
+      "zweck": "Bewährte Android-Dateiausgabe mit Tickets, Systemdialog und Rückleseprüfung; Family-Adapter daneben"
+    },
+    "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/PdfPrintAdapter.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/workflowpdf/pro/PdfPrintAdapter.java",
+      "commit": "1ea49db1eb9b23969f051030247a56472e528d3b",
+      "sha256": "d08f4a82d06976e43609c293cd40f20bbc4af21671f57df1b4bc4006cd10f92b",
+      "zweck": "Bewährte Android-Dateiausgabe mit Tickets, Systemdialog und Rückleseprüfung; Family-Adapter daneben"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Hauptordner.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Hauptordner.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "33659f33e5f914ad6bf9ec033e2b811330dd81b69316ae0ac1abacfa3838afcb",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/UnterAblage.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/UnterAblage.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "f8d6142aee6e668d607a2852b333a8a7db6e1abaa62843d1e36725b8f221f5ab",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/test/java/de/familyprojekt/tresor/HauptordnerTest.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/test/java/de/familyprojekt/tresor/HauptordnerTest.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "cab590eb8a067f1ed36162f42c4fb42371e9480d93858a863db0ce9ec057e2d2",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "android/app/src/main/java/de/familyprojekt/tresor/Profile.java": {
+      "repo": "lausiklauskn-png/Workflow-PDF-Pro",
+      "pfad": "android/app/src/main/java/de/familyprojekt/tresor/Profile.java",
+      "commit": "3cd95971c0bb1fc92a2e81a385110d624986fda3",
+      "sha256": "dd898cc87ef31ce19dd39c1e727451e7beb05bcfa8f7153d4ebf32fdf4e51fba",
+      "zweck": "Gemeinsamer Pro-Tresor, kanonisches Java-Paket und Originalprobe"
+    },
+    "public/pseudo/pseudodoc.svg": {
+      "repo": "lausiklauskn-png/PseudoDoc",
+      "pfad": "src/public/pseudodoc.svg",
+      "commit": "f1c7261b7435fdb53e2222e261a53a7423a64ba8",
+      "sha256": "c576ae1b244583b015e190aeba733dbb50dd9edf352c310a29365c5de0492039",
+      "zweck": "Zeichen des Pseudo-Fensters, aus PseudoDoc (Klaus 14.11.2026); nie hier ändern"
+    }
+  }
+}

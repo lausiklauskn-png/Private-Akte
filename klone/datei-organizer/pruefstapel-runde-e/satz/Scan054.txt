@@ -1,0 +1,39 @@
+# Hauptzollamt Beispielhafen
+Hauptzollamt Beispielhafen · Zollweg 5 · 20000 Beispielhafen
+
+Herrn Markus Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Steuernummer: KFZ 0000 0412
+Fahrzeug: Kombi, Diesel, 1.968 cm³, 139 g/km CO2
+Datum: 22.08.2025
+
+# Kraftfahrzeugsteuerbescheid für das Fahrzeug BSP-MB 412
+
+Sehr geehrter Herr Brandtner,
+
+für das oben genannte Fahrzeug wird die Kraftfahrzeugsteuer ab dem 01.09.2025 auf jährlich 286,00 € festgesetzt.
+
+|Bemessungsgrundlage|Steuersatz|Betrag|
+|Hubraum 20 je angefangene 100 cm³|9,50 €|190,00 €|
+|CO2-Ausstoß über 95 g/km|gestaffelt|96,00 €|
+
+
+Die Steuer wird jährlich im Voraus per Lastschrift eingezogen.
+
+Mit freundlichen Grüßen
+@unterschrift
+Hauptzollamt Beispielhafen
+@seite
+Hauptzollamt Beispielhafen · Seite 2 · Kraftfahrzeugsteuerbescheid für das Fahrzeug BSP-MB 412
+
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei der oben genannten Stelle einzulegen.
+
+Die Frist ist auch gewahrt, wenn der Widerspruch rechtzeitig bei einer anderen zuständigen Behörde eingeht. Ein Widerspruch hat keine aufschiebende Wirkung, soweit gesetzlich nichts anderes bestimmt ist.
+
+
+
+## Hinweise zum Datenschutz
+Ihre Daten werden ausschließlich zur Bearbeitung Ihres Anliegens verarbeitet. Weitere Informationen erhalten Sie auf Anfrage oder auf unserer Internetseite unter dem Stichwort Datenschutz.

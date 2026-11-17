@@ -1,0 +1,21 @@
+{"bewerter":1,"wertung":{
+"M01":"getroffen","M02":"getroffen","M03":"getroffen","M04":"teilweise","M05":"fehlt",
+"M06":"getroffen","M07":"teilweise","M08":"teilweise","M09":"verkehrt","M10":"teilweise",
+"M11":"teilweise","M12":"teilweise","M13":"teilweise","M14":"teilweise","M15":"teilweise",
+"M16":"teilweise","M17":"fehlt","M18":"teilweise","M19":"teilweise","M20":"teilweise",
+"M21":"teilweise","M22":"teilweise","M23":"teilweise","M24":"teilweise","M25":"fehlt",
+"M26":"fehlt","M27":"getroffen","M28":"teilweise","M29":"teilweise","M30":"teilweise",
+"M31":"fehlt","M32":"verkehrt","M33":"getroffen","M34":"getroffen","M35":"getroffen",
+"M36":"getroffen","M37":"teilweise","M38":"teilweise","M39":"fehlt","M40":"teilweise",
+"M41":"teilweise","M42":"fehlt","M43":"fehlt","M44":"teilweise","M45":"getroffen",
+"M46":"getroffen","M47":"teilweise","M48":"getroffen","M49":"teilweise","M50":"fehlt",
+"M51":"fehlt","M52":"verkehrt","M53":"teilweise","M54":"fehlt","M55":"fehlt","M56":"teilweise"},
+"zusaetze":[
+"Die Browser-Web-App wird abgelöst und nicht weiterentwickelt (Annahme); in der Referenz bleibt die PWA eine gleichgestellte Fassung (verkehrt zu M08/M09)",
+"Dauerhafte Signatur auch für die Windows-App (Referenz: Windows-Installer unsigniert, M52)",
+"Erste Einrichtung erzwingt Ordnerwahl und Passwort, alles nur im gewählten Ordner statt im App-Speicher (gegen M32: interne Arbeitsablage ohne Ordnerwahl)",
+"Kundenkontext Büro mit Inhaberin und zwei Mitarbeiterinnen; offene Frage nach Mehrbenutzer/eigenen Geräten (O-01)",
+"Ausführlicher Abschnitt zu Widersprüchen in Stunden, Summen, Fristen und Fassungsnummer des Auftrags",
+"Offene Fragen: Handy-Unterstützung, Übersetzungssprachen, Bedeutung des eigenen Netzes, Verwahrung der Ersatzschlüssel-Teile",
+"Bauschritt-Reihenfolge (K-03 zuerst) und Zuordnung zu K-/B-Bausteinen"
+]}

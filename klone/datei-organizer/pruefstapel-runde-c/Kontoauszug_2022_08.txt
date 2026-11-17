@@ -1,0 +1,18 @@
+Beispielbank eG
+Kontoauszug Nr. 6/2022  Geschäftskonto Tischlerei Kesselring
+IBAN DE00 0000 0000 0000 0000 00  Datum 31.08.2022  Blatt 1/1
+
+Buchung  Wert  Vorgang  Betrag EUR
+01.08.  01.08.  Gutschrift Fam. Ott Rechnung 2022-014  4.380,00
+03.08.  03.08.  Lastschrift Holzhandel Beispielforst  -1.912,44
+05.08.  05.08.  Miete Werkstatt Lindenweg 12a  -450,00
+10.08.  10.08.  Finanzamt Musterfelde USt 07/2022  -611,20
+15.08.  15.08.  Kfz-Versicherung BSP-KT 77  -88,40
+22.08.  22.08.  Gutschrift Bäckerei Beispielkorn Ladenbau  7.140,00
+29.08.  29.08.  Kontoführung  -12,90
+31.08.  31.08.  Privatentnahme  -2.500,00
+
+Alter Kontostand  3.215,77 EUR
+Neuer Kontostand  9.160,83 EUR
+
+Bitte prüfen Sie die Buchungen. Einwendungen sind innerhalb von sechs Wochen zu erheben.

@@ -1,0 +1,55 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Lieferscheine und Rechnungen liegen in einer Kiste, manche kommen per Mail
+B-02 [Bereich 1 Ausgangssituation (IST)] Den Wareneinsatz erfahre ich erst vom Steuerberater, Wochen später
+B-03 [Bereich 1 Ausgangssituation (IST)] Umsatz steckt in der Kasse, die Daten kann ich dort herausholen
+B-04 [Bereich 2 Betroffener Prozess] Wareneinkauf bei den Lieferanten
+B-05 [Bereich 2 Betroffener Prozess] Lieferscheine und Rechnungen sammeln und prüfen
+B-06 [Bereich 2 Betroffener Prozess] Wareneinsatz im Verhältnis zum Umsatz überwachen
+B-07 [Bereich 3 Nutzer / Beteiligte] Inhaber
+B-08 [Bereich 3 Nutzer / Beteiligte] Köche (sollen möglichst nichts zusätzlich eintragen müssen)
+B-09 [Bereich 3 Nutzer / Beteiligte] Steuerberater (liefert heute die Zahlen, spät)
+B-10 [Bereich 4 Problem / Schwachstelle] Ich sehe zu spät, was mich die Ware kostet
+B-11 [Bereich 4 Problem / Schwachstelle] Preiserhöhungen der Lieferanten kommen in kleinen Schritten und fallen nicht auf – beim Fleisch war die Marge weg
+B-12 [Bereich 4 Problem / Schwachstelle] Ich vermute größere Portionen und Schwund, kann aber nichts beweisen
+B-13 [Bereich 4 Problem / Schwachstelle] Belege sind durcheinander: handschriftlich, Teillieferungen, Gutschriften
+B-14 [Bereich 5 Ursache] Belege werden nicht zeitnah ausgewertet, nur am Ende vom Steuerberater
+B-15 [Bereich 5 Ursache] Keine Übersicht über Einkaufspreise je Artikel und Lieferant
+B-16 [Bereich 5 Ursache] Rezeptprogramme verlangen alles aufs Gramm, dafür fehlt die Zeit
+B-17 [Bereich 6 Bedarf] Jede Woche sehen, wie viel Prozent vom Umsatz für Ware draufgeht, Küche und Getränke getrennt (muss)
+B-18 [Bereich 6 Bedarf] Warnung, wenn ein Artikel bei einem Lieferanten deutlich teurer wird (muss)
+B-19 [Bereich 6 Bedarf] Lieferscheine und Rechnungen aus Papier und Mail einlesen, ohne alles abzutippen (muss)
+B-20 [Bereich 6 Bedarf] Umsatz aus der Kasse übernehmen (muss)
+B-21 [Bereich 6 Bedarf] Für fünf, sechs Hauptgerichte grob eintragen, was drin ist, und sehen, was ein Teller kostet (kann)
+B-22 [Bereich 7 Ziel (SOLL)] Jeden Montag eine Zahl: Wareneinsatz in Prozent, Küche und Getränke getrennt
+B-23 [Bereich 7 Ziel (SOLL)] Preissprünge bei Lieferanten fallen sofort auf
+B-24 [Bereich 7 Ziel (SOLL)] Belege sind erfasst, ohne großen Aufwand
+B-25 [Bereich 8 Funktionaler Bedarf] Das System muss Lieferscheine und Rechnungen per Foto oder aus Mail-Anhängen einlesen
+B-26 [Bereich 8 Funktionaler Bedarf] Das System muss bei unsicher gelesenen Belegen nachfragen statt zu raten
+B-27 [Bereich 8 Funktionaler Bedarf] Das System muss Teillieferungen und Gutschriften richtig verrechnen
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss Einkaufspreise je Artikel und Lieferant über die Zeit merken
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss warnen, wenn ein Artikel deutlich teurer wird als zuletzt
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss den Umsatz aus der Kasse übernehmen, Küche und Getränke getrennt
+B-31 [Bereich 8 Funktionaler Bedarf] Das System muss jede Woche den Wareneinsatz in Prozent vom Umsatz zeigen, Küche und Getränke getrennt
+B-32 [Bereich 9 Organisatorischer Bedarf] Belege landen künftig sofort im Programm statt in der Kiste
+B-33 [Bereich 9 Organisatorischer Bedarf] Die Köche sollen nichts Zusätzliches eintragen müssen
+B-34 [Bereich 10 Technischer Bedarf] Android-Handy zum Fotografieren der Lieferscheine
+B-35 [Bereich 10 Technischer Bedarf] Alter Windows-PC im Büro
+B-36 [Bereich 11 Bestehende Systeme] Kassensystem, aus dem man die Umsatzdaten exportieren kann
+B-37 [Bereich 11 Bestehende Systeme] Steuerberater macht die Buchhaltung
+B-38 [Bereich 12 Schnittstellen] Export der Kassendaten einlesen
+B-39 [Bereich 12 Schnittstellen] Rechnungen aus dem Mail-Postfach
+B-40 [Bereich 13 Daten] Einkaufspreise, Lieferanten, Mengen
+B-41 [Bereich 13 Daten] Umsätze aus der Kasse
+B-42 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: nein
+B-43 [Bereich 14 Datenschutz / Sicherheit] Einkaufspreise und Umsätze sind vertraulich und dürfen nicht weitergegeben oder verkauft werden
+B-44 [Bereich 15 Rahmenbedingungen] Budget-Rahmen: um die 50 Euro im Monat, wenn am Anfang sichtbar ist, dass es etwas bringt
+B-45 [Bereich 15 Rahmenbedingungen] Muss mit wenig Zeitaufwand laufen
+O-01 [Bereich 18 Offene Punkte] Welches Kassensystem genau und in welchem Format der Export kommt
+O-02 [Bereich 18 Offene Punkte] Wie Küche und Getränke in den Kassendaten getrennt sind
+N-01 [nicht gewünscht] Keine neue Kasse
+N-02 [nicht gewünscht] Keine Buchhaltung
+N-03 [nicht gewünscht] Kein Bestellsystem
+N-04 [nicht gewünscht] Keine monatliche Inventur
+N-05 [nicht gewünscht] Keine Rezepturen aufs Gramm genau
+N-06 [nicht gewünscht] Einkaufspreise und Umsätze nicht an Dritte weitergeben oder verkaufen
+Ausgefüllt: 18 von 18 Bereichen

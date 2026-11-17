@@ -1,0 +1,8 @@
+Sparkasse Leinetal · Sammelüberweisung ausgeführt am 23.05.2026
+Auftraggeber: Haarstudio Federleicht
+
+1  Brandner, Jule    Gehalt Oktober 2026          1.781,52
+2  Aksoy, Deniz      Ausbildungsverg.           641,35
+--------------------------------------------------
+Summe der Aufträge: 2          Gesamt  2.422,87 EUR
+TAN-Verfahren pushTAN, Auftrag angenommen

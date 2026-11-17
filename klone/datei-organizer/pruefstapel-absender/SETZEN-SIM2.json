@@ -1,0 +1,2479 @@
+{
+ "Abfallgebühren.txt": {
+  "datei": "Abfallgebühren.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "stempel",
+   "handschrift",
+   "lochung"
+  ]
+ },
+ "Abschlag Strom WG.txt": {
+  "datei": "Abschlag Strom WG.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Anliegerbeitrag.txt": {
+  "datei": "Anliegerbeitrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "kontrastarm"
+  ]
+ },
+ "Anzeiger Abo.txt": {
+  "datei": "Anzeiger Abo.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "handschrift"
+  ]
+ },
+ "Arbeitseinsatz.txt": {
+  "datei": "Arbeitseinsatz.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Augenarzt.txt": {
+  "datei": "Augenarzt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "graustufen"
+  ]
+ },
+ "Ausbildungsvergütung Mai.txt": {
+  "datei": "Ausbildungsvergütung Mai.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Auszug Ayla Aug.txt": {
+  "datei": "Auszug Ayla Aug.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Auszug Juli.txt": {
+  "datei": "Auszug Juli.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Autoversicherung.txt": {
+  "datei": "Autoversicherung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "BG Holz Beitrag.txt": {
+  "datei": "BG Holz Beitrag.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "BK Abrechnung WG.txt": {
+  "datei": "BK Abrechnung WG.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "kaffeefleck",
+   "durchscheinen",
+   "kontrastarm"
+  ]
+ },
+ "BU Anpassung.txt": {
+  "datei": "BU Anpassung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Bafög Bescheid Malte.txt": {
+  "datei": "Bafög Bescheid Malte.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Baudarlehen Jahresauszug.txt": {
+  "datei": "Baudarlehen Jahresauszug.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Baumarkt Bon Farbe.txt": {
+  "datei": "Baumarkt Bon Farbe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+flachbett",
+   "handschrift"
+  ]
+ },
+ "Baumarkt Saatgut.txt": {
+  "datei": "Baumarkt Saatgut.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "thermopapier",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Baumfällung.txt": {
+  "datei": "Baumfällung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "durchscheinen",
+   "kontrastarm"
+  ]
+ },
+ "Befund Allergietest Lina.txt": {
+  "datei": "Befund Allergietest Lina.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Befund Knie Pit.txt": {
+  "datei": "Befund Knie Pit.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "Befund Mia Ohren.txt": {
+  "datei": "Befund Mia Ohren.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Belege anfordern StB.txt": {
+  "datei": "Belege anfordern StB.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "handschrift",
+   "lochung"
+  ]
+ },
+ "Bestellung Ayla Rechnung.txt": {
+  "datei": "Bestellung Ayla Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "stempel",
+   "lochung",
+   "kontrastarm"
+  ]
+ },
+ "Bestellung Kinderjacken.txt": {
+  "datei": "Bestellung Kinderjacken.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Betreuungsverein Info.txt": {
+  "datei": "Betreuungsverein Info.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Betriebsarzt.txt": {
+  "datei": "Betriebsarzt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Blutwerte Gerhard.txt": {
+  "datei": "Blutwerte Gerhard.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "kaffeefleck",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Bon Waschmaschine.txt": {
+  "datei": "Bon Waschmaschine.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+flachbett"
+  ]
+ },
+ "Bon Wocheneinkauf.txt": {
+  "datei": "Bon Wocheneinkauf.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+flachbett"
+  ]
+ },
+ "Brief Jule.txt": {
+  "datei": "Brief Jule.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "handschrift",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Brief Lea Kaution.txt": {
+  "datei": "Brief Lea Kaution.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "handschrift",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Brief Oma Hedwig.txt": {
+  "datei": "Brief Oma Hedwig.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "stempel",
+   "durchscheinen",
+   "graustufen"
+  ]
+ },
+ "Busreise Harz.txt": {
+  "datei": "Busreise Harz.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "DRV Handwerker.txt": {
+  "datei": "DRV Handwerker.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Dachrinne Rechnung.txt": {
+  "datei": "Dachrinne Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Danke Karte Kundin.txt": {
+  "datei": "Danke Karte Kundin.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "stempel",
+   "handschrift",
+   "durchscheinen",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Dispo Info.txt": {
+  "datei": "Dispo Info.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "ESt Bescheid 2025.txt": {
+  "datei": "ESt Bescheid 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "ESt Bescheid Dana 2025.txt": {
+  "datei": "ESt Bescheid Dana 2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "ESt Vorauszahlung.txt": {
+  "datei": "ESt Vorauszahlung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "lochung",
+   "kontrastarm"
+  ]
+ },
+ "Elternabend 3b.txt": {
+  "datei": "Elternabend 3b.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "handschrift",
+   "kaffeefleck"
+  ]
+ },
+ "Ende Familienversicherung.txt": {
+  "datei": "Ende Familienversicherung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "handschrift",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Erbschaftsteuer Erklärung.txt": {
+  "datei": "Erbschaftsteuer Erklärung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Examen Zeugnis 2012.txt": {
+  "datei": "Examen Zeugnis 2012.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "FA Aufforderung Erklärung.txt": {
+  "datei": "FA Aufforderung Erklärung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Fahrpreisnacherhebung.txt": {
+  "datei": "Fahrpreisnacherhebung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Fahrrad Reparatur.txt": {
+  "datei": "Fahrrad Reparatur.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "graustufen"
+  ]
+ },
+ "Familientarif Mobil.txt": {
+  "datei": "Familientarif Mobil.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "Ferienhaus Dänemark.txt": {
+  "datei": "Ferienhaus Dänemark.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Fernbus Hamburg.txt": {
+  "datei": "Fernbus Hamburg.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "stempel",
+   "handschrift",
+   "kaffeefleck",
+   "graustufen"
+  ]
+ },
+ "Fernseher Bon.txt": {
+  "datei": "Fernseher Bon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+einzug",
+   "graustufen"
+  ]
+ },
+ "Festival Tickets.txt": {
+  "datei": "Festival Tickets.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Feuerstättenschau.txt": {
+  "datei": "Feuerstättenschau.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Fitness gekündigt.txt": {
+  "datei": "Fitness gekündigt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Flug Lissabon.txt": {
+  "datei": "Flug Lissabon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "Fortbildung Einladung.txt": {
+  "datei": "Fortbildung Einladung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke"
+  ]
+ },
+ "Freistellungsauftrag.txt": {
+  "datei": "Freistellungsauftrag.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Gartentag Hof.txt": {
+  "datei": "Gartentag Hof.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Gas Jahresabrechnung.txt": {
+  "datei": "Gas Jahresabrechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Gehalt Okt.txt": {
+  "datei": "Gehalt Okt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "handschrift"
+  ]
+ },
+ "Geschirrspüler Reparatur.txt": {
+  "datei": "Geschirrspüler Reparatur.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Grundsteuer 2026.txt": {
+  "datei": "Grundsteuer 2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Grundsteuer Falkenhain.txt": {
+  "datei": "Grundsteuer Falkenhain.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "graustufen"
+  ]
+ },
+ "HU Erinnerung.txt": {
+  "datei": "HU Erinnerung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "stempel"
+  ]
+ },
+ "HWK Beitrag.txt": {
+  "datei": "HWK Beitrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "Haftpflicht Dana Police.txt": {
+  "datei": "Haftpflicht Dana Police.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Haftpflicht Pit.txt": {
+  "datei": "Haftpflicht Pit.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Haftpflicht Rechnung.txt": {
+  "datei": "Haftpflicht Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "kaffeefleck",
+   "graustufen"
+  ]
+ },
+ "Handy Kündigung 2019.txt": {
+  "datei": "Handy Kündigung 2019.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Handy Rechnung Juli Dana.txt": {
+  "datei": "Handy Rechnung Juli Dana.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "graustufen"
+  ]
+ },
+ "Hausrat Police neu.txt": {
+  "datei": "Hausrat Police neu.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "Hausrat WG Rechnung.txt": {
+  "datei": "Hausrat WG Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug"
+  ]
+ },
+ "Heckenschnitt.txt": {
+  "datei": "Heckenschnitt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "handschrift",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Heizöl.txt": {
+  "datei": "Heizöl.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Hörgerät KV.txt": {
+  "datei": "Hörgerät KV.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "Immabescheinigung Pit.txt": {
+  "datei": "Immabescheinigung Pit.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Inkasso Drucker.txt": {
+  "datei": "Inkasso Drucker.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Inkasso Handy alt.txt": {
+  "datei": "Inkasso Handy alt.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Inspektion Rechnung Autohaus.txt": {
+  "datei": "Inspektion Rechnung Autohaus.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug"
+  ]
+ },
+ "Internet Vertrag.txt": {
+  "datei": "Internet Vertrag.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "handschrift",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Internetrechnung Juni.txt": {
+  "datei": "Internetrechnung Juni.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Jahressteuerbescheinigung 2025.txt": {
+  "datei": "Jahressteuerbescheinigung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "KFO Kostenplan.txt": {
+  "datei": "KFO Kostenplan.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "stempel"
+  ]
+ },
+ "KFO Ole Rechnung.txt": {
+  "datei": "KFO Ole Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "KFZ-Steuer GR.txt": {
+  "datei": "KFZ-Steuer GR.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "KK Beitrag Ilse.txt": {
+  "datei": "KK Beitrag Ilse.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "handschrift",
+   "lochung"
+  ]
+ },
+ "KK Mehrfachbeschäftigung.txt": {
+  "datei": "KK Mehrfachbeschäftigung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "KK Svenja Bescheinigung.txt": {
+  "datei": "KK Svenja Bescheinigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "lochung"
+  ]
+ },
+ "KV Student Pit.txt": {
+  "datei": "KV Student Pit.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "lochung"
+  ]
+ },
+ "KVA Handy Display.txt": {
+  "datei": "KVA Handy Display.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug"
+  ]
+ },
+ "Kfz Versicherung 2026.txt": {
+  "datei": "Kfz Versicherung 2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "handschrift",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Kfz-Steuer Mareike.txt": {
+  "datei": "Kfz-Steuer Mareike.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kindergeld Lina.txt": {
+  "datei": "Kindergeld Lina.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kindergeld Änderung.txt": {
+  "datei": "Kindergeld Änderung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "handschrift",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kitabeitrag Bescheid 2026.txt": {
+  "datei": "Kitabeitrag Bescheid 2026.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Klassenfahrt Ole.txt": {
+  "datei": "Klassenfahrt Ole.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kontoauszug 03-2026.txt": {
+  "datei": "Kontoauszug 03-2026.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "durchscheinen",
+   "kontrastarm"
+  ]
+ },
+ "Kontoauszug Geschäft.txt": {
+  "datei": "Kontoauszug Geschäft.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "handschrift",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Kontoauszug Juni.txt": {
+  "datei": "Kontoauszug Juni.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kontoeröffnung Malte.txt": {
+  "datei": "Kontoeröffnung Malte.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Konzertkarten.txt": {
+  "datei": "Konzertkarten.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "handschrift",
+   "durchscheinen",
+   "graustufen"
+  ]
+ },
+ "Kraftradsteuer.txt": {
+  "datei": "Kraftradsteuer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "stempel"
+  ]
+ },
+ "Krankenkasse freiwillig.txt": {
+  "datei": "Krankenkasse freiwillig.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Kreditkarte Abrechnung Mai.txt": {
+  "datei": "Kreditkarte Abrechnung Mai.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "stempel",
+   "lochung"
+  ]
+ },
+ "Kündigung Festnetz bestätigt.txt": {
+  "datei": "Kündigung Festnetz bestätigt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "graustufen"
+  ]
+ },
+ "Laptop Pit Reparatur.txt": {
+  "datei": "Laptop Pit Reparatur.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Laptop Rechnung.txt": {
+  "datei": "Laptop Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Leasing Transporter.txt": {
+  "datei": "Leasing Transporter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke"
+  ]
+ },
+ "Lebensversicherung Ablauf.txt": {
+  "datei": "Lebensversicherung Ablauf.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Lohi Beitrag.txt": {
+  "datei": "Lohi Beitrag.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Lohn 04-2026 TW.txt": {
+  "datei": "Lohn 04-2026 TW.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Lärm Hausverwaltung.txt": {
+  "datei": "Lärm Hausverwaltung.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Meisterbrief 2009.txt": {
+  "datei": "Meisterbrief 2009.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Meldebestätigung Ayla.txt": {
+  "datei": "Meldebestätigung Ayla.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Meldebestätigung.txt": {
+  "datei": "Meldebestätigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Mieterhöhung.txt": {
+  "datei": "Mieterhöhung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "graustufen"
+  ]
+ },
+ "Minijob Vertrag Cafe.txt": {
+  "datei": "Minijob Vertrag Cafe.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Mitteilung Rentenbezüge 2025.txt": {
+  "datei": "Mitteilung Rentenbezüge 2025.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Monatskarte Ayla.txt": {
+  "datei": "Monatskarte Ayla.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Motorrad Police.txt": {
+  "datei": "Motorrad Police.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Motorrad Werkstatt Rechnung.txt": {
+  "datei": "Motorrad Werkstatt Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "kontrastarm"
+  ]
+ },
+ "Musikschule Lina.txt": {
+  "datei": "Musikschule Lina.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "lochung"
+  ]
+ },
+ "NK Abrechnung 2025.txt": {
+  "datei": "NK Abrechnung 2025.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Nachtrag Mietvertrag.txt": {
+  "datei": "Nachtrag Mietvertrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Nebenkosten 2025 Dana.txt": {
+  "datei": "Nebenkosten 2025 Dana.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "graustufen"
+  ]
+ },
+ "Notar Termin Vollmacht.txt": {
+  "datei": "Notar Termin Vollmacht.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "handschrift"
+  ]
+ },
+ "Ostsee Buchung.txt": {
+  "datei": "Ostsee Buchung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "PC Kauf Garantie.txt": {
+  "datei": "PC Kauf Garantie.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Pacht Kleingarten.txt": {
+  "datei": "Pacht Kleingarten.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "lochung",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Perso abholen.txt": {
+  "datei": "Perso abholen.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "lochung"
+  ]
+ },
+ "Pflegedienst Rechnung März.txt": {
+  "datei": "Pflegedienst Rechnung März.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "graustufen"
+  ]
+ },
+ "Pflegegrad Bescheid.txt": {
+  "datei": "Pflegegrad Bescheid.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Physio Termine.txt": {
+  "datei": "Physio Termine.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Prospekt Küche.txt": {
+  "datei": "Prospekt Küche.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Rasenmäher Bon Gartencenter.txt": {
+  "datei": "Rasenmäher Bon Gartencenter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+flachbett",
+   "handschrift"
+  ]
+ },
+ "Rauchmelder.txt": {
+  "datei": "Rauchmelder.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "kaffeefleck",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Rechnung Mopedwerkstatt.txt": {
+  "datei": "Rechnung Mopedwerkstatt.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "Rechtsschutz Beitrag.txt": {
+  "datei": "Rechtsschutz Beitrag.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "Reitverein Mia.txt": {
+  "datei": "Reitverein Mia.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Rentenanpassung Gerhard.txt": {
+  "datei": "Rentenanpassung Gerhard.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "stempel",
+   "lochung",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Renteninfo Tobias.txt": {
+  "datei": "Renteninfo Tobias.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Rundfunk Befreiung Malte.txt": {
+  "datei": "Rundfunk Befreiung Malte.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Rundfunk Zahlungsaufforderung.txt": {
+  "datei": "Rundfunk Zahlungsaufforderung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Rückmeldung WS.txt": {
+  "datei": "Rückmeldung WS.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "durchscheinen",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Rücksendung Gutschrift.txt": {
+  "datei": "Rücksendung Gutschrift.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "einzug",
+   "knicke",
+   "handschrift",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Saisonkennzeichen Motorrad.txt": {
+  "datei": "Saisonkennzeichen Motorrad.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke"
+  ]
+ },
+ "Schlussrechnung alter Strom.txt": {
+  "datei": "Schlussrechnung alter Strom.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "lochung",
+   "kaffeefleck",
+   "durchscheinen",
+   "graustufen"
+  ]
+ },
+ "Schornsteinfeger Rechnung.txt": {
+  "datei": "Schornsteinfeger Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke"
+  ]
+ },
+ "Smartphone Malte.txt": {
+  "datei": "Smartphone Malte.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "graustufen"
+  ]
+ },
+ "Sparbrief 1995.txt": {
+  "datei": "Sparbrief 1995.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "Steuer Krad.txt": {
+  "datei": "Steuer Krad.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Steuerberater Rechnung.txt": {
+  "datei": "Steuerberater Rechnung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Steuerbescheid Ayla.txt": {
+  "datei": "Steuerbescheid Ayla.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Strom Vertragsbestätigung.txt": {
+  "datei": "Strom Vertragsbestätigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Tanken Bon.txt": {
+  "datei": "Tanken Bon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+einzug",
+   "graustufen"
+  ]
+ },
+ "Teichpumpe Rechnung.txt": {
+  "datei": "Teichpumpe Rechnung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "knicke",
+   "lochung",
+   "graustufen"
+  ]
+ },
+ "Testament Hinterlegung.txt": {
+  "datei": "Testament Hinterlegung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke"
+  ]
+ },
+ "Testamentseröffnung Walter.txt": {
+  "datei": "Testamentseröffnung Walter.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "U9 Jonas Termin.txt": {
+  "datei": "U9 Jonas Termin.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "USt Vorauszahlung.txt": {
+  "datei": "USt Vorauszahlung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "stempel",
+   "lochung"
+  ]
+ },
+ "Unfallversicherung Kinder.txt": {
+  "datei": "Unfallversicherung Kinder.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "Versicherung Transporter.txt": {
+  "datei": "Versicherung Transporter.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "Verwarnung Blitzer.txt": {
+  "datei": "Verwarnung Blitzer.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Vollmacht Mama.txt": {
+  "datei": "Vollmacht Mama.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "durchscheinen",
+   "graustufen"
+  ]
+ },
+ "Wasser Gebühren.txt": {
+  "datei": "Wasser Gebühren.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Werkstatt Bremsen.txt": {
+  "datei": "Werkstatt Bremsen.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Werkstudent Vertrag.txt": {
+  "datei": "Werkstudent Vertrag.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Wohngebäude Versicherung.txt": {
+  "datei": "Wohngebäude Versicherung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "fax",
+   "stempel",
+   "graustufen"
+  ]
+ },
+ "Wärmepumpe Angebot.txt": {
+  "datei": "Wärmepumpe Angebot.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "lochung",
+   "kaffeefleck",
+   "graustufen"
+  ]
+ },
+ "Zahlungserinnerung Wohnideen.txt": {
+  "datei": "Zahlungserinnerung Wohnideen.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Zahnarzt Ayla Termin.txt": {
+  "datei": "Zahnarzt Ayla Termin.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Zahnarzt Füllung.txt": {
+  "datei": "Zahnarzt Füllung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "lochung",
+   "durchscheinen",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "Zeitung Kündigung.txt": {
+  "datei": "Zeitung Kündigung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "flachbett",
+   "graustufen"
+  ]
+ },
+ "Zeugnis Mia Halbjahr.txt": {
+  "datei": "Zeugnis Mia Halbjahr.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Zeugnis Tobias 2004 alt.txt": {
+  "datei": "Zeugnis Tobias 2004 alt.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "handschrift",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Zwischenprüfung Ayla.txt": {
+  "datei": "Zwischenprüfung Ayla.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "einzug",
+   "handschrift",
+   "durchscheinen"
+  ]
+ },
+ "Zählerkarte Wasser.txt": {
+  "datei": "Zählerkarte Wasser.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "apotheke bon.txt": {
+  "datei": "apotheke bon.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kassenbon",
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "thermopapier",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "bafög unterlagen pit.txt": {
+  "datei": "bafög unterlagen pit.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "beispielflix.txt": {
+  "datei": "beispielflix.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "lochung"
+  ]
+ },
+ "brief oma malte.txt": {
+  "datei": "brief oma malte.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "drogerie bon.txt": {
+  "datei": "drogerie bon.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kassenbon",
+   "thermopapier+einzug",
+   "handschrift"
+  ]
+ },
+ "fitbeispiel preis.txt": {
+  "datei": "fitbeispiel preis.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "stempel",
+   "handschrift",
+   "lochung",
+   "kontrastarm",
+   "graustufen"
+  ]
+ },
+ "handyrechnung mai.txt": {
+  "datei": "handyrechnung mai.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "inkasso schreiben.txt": {
+  "datei": "inkasso schreiben.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "karte von paul.txt": {
+  "datei": "karte von paul.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "kopie-der-kopie",
+   "knicke",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "kfz steuer.txt": {
+  "datei": "kfz steuer.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "kita essensgeld feb.txt": {
+  "datei": "kita essensgeld feb.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "handschrift",
+   "schatten",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "minijob meldung.txt": {
+  "datei": "minijob meldung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "notar vorsorgevollmacht.txt": {
+  "datei": "notar vorsorgevollmacht.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "graustufen"
+  ]
+ },
+ "pizza flyer.txt": {
+  "datei": "pizza flyer.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "prospekt elektro.txt": {
+  "datei": "prospekt elektro.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "flachbett"
+  ]
+ },
+ "rentenanpassung ilse.txt": {
+  "datei": "rentenanpassung ilse.jpg",
+  "form": "foto",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "handschrift",
+   "glanzlicht",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "saisonstart werbung.txt": {
+  "datei": "saisonstart werbung.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "mittel",
+  "fehlerbilder": [
+   "fax",
+   "stempel",
+   "handschrift",
+   "graustufen"
+  ]
+ },
+ "scan0004.txt": {
+  "datei": "scan0004.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "flachbett",
+   "knicke",
+   "handschrift",
+   "kontrastarm"
+  ]
+ },
+ "streaming musik.txt": {
+  "datei": "streaming musik.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "treppenlift werbung.txt": {
+  "datei": "treppenlift werbung.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "stempel",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "tsv beitrag lina.txt": {
+  "datei": "tsv beitrag lina.jpg",
+  "form": "foto",
+  "qualitaet": "schlecht",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "stempel",
+   "schatten",
+   "glanzlicht",
+   "verwackelt",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "zahnarzt rechnung tobias.txt": {
+  "datei": "zahnarzt rechnung tobias.jpg",
+  "form": "foto",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "handyfoto",
+   "perspektive",
+   "papierwoelbung",
+   "knicke",
+   "licht-verlauf",
+   "farbstich",
+   "unschaerfe"
+  ]
+ },
+ "Änderungsvertrag Stunden.txt": {
+  "datei": "Änderungsvertrag Stunden.pdf",
+  "form": "pdf-scan",
+  "qualitaet": "gut",
+  "fehlerbilder": [
+   "einzug",
+   "lochung",
+   "graustufen"
+  ]
+ }
+}

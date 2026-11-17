@@ -1,0 +1,6 @@
+Leuchtturm Lebensversicherung Beispiel - Nachlassabrechnung
+Vertrag LV 123 456 789, Versicherter: Heinrich Brakmann (verstorben 12.09.2026)
+Garantierte Leistung 18.400,00 EUR
+Überschussanteile 1.236,40 EUR
+Auszahlung gesamt 19.636,40 EUR an die Erbengemeinschaft, IBAN DE00 0000 0000 0000 0000 00
+Datum der Anweisung: 08.12.2026

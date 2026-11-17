@@ -1,0 +1,16 @@
+KASSENABSCHLUSS (Z-Bon)       Kfz-Technik Brandhorst
+Ziegeleiweg 14 · 37199 Wolmershagen
+Z-Nr. 0142        Geschäftstag 23.05.2026       Druck 18:07
+
+Warengruppe                     Anz.     Umsatz brutto
+Teileverkauf Theke                11           318,40
+Reifen / Räder                     2           264,00
+Zubehör, Pflege                    9            96,35
+Kleinreparatur sofort              3           147,00
+-----------------------------------------------------
+Tagesumsatz 19 % brutto                       825,75
+darin USt 19 %                                 131,84
+Nettoumsatz                                    693,91
+
+Zahlarten: Bar 301,35 / girocard 524,40
+Storno 0 · Kassendifferenz 0,00 · unterschr. H. Brandhorst

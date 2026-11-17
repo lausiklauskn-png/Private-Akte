@@ -1,0 +1,29 @@
+Klinikum Beispielstadt
+Klinik für Kardiologie · Chefarzt Prof. Dr. Jan Beispiel-Roth
+Klinikallee 1 · 31200 Beispielstadt
+
+Herrn Dr. med. Kurt Beispiel
+Facharzt für Allgemeinmedizin
+Marktplatz 6 · 31234 Altbachingen
+
+nachrichtlich: Herrn Erwin Wendeloh, Lindenweg 7, 31234 Altbachingen
+
+Patient: Erwin Wendeloh, geb. 05.11.1941
+Fallnummer: 21-0884512
+Datum: 23.11.2021
+
+Arztbrief über die ambulante Untersuchung am 22.11.2021
+
+Sehr geehrter Herr Kollege,
+
+wir berichten über Ihren Patienten, der sich wegen Belastungsdyspnoe und gelegentlichem Herzstolpern vorstellte.
+
+Diagnosen: Vorhofflimmern, paroxysmal. Arterielle Hypertonie. Leichtgradige Mitralklappeninsuffizienz.
+
+Befund: Echokardiographie mit erhaltener Pumpfunktion, EF 55 Prozent. Im Langzeit-EKG Episoden von Vorhofflimmern bis 40 Minuten. Belastungs-EKG bis 75 Watt ohne Ischämiezeichen.
+
+Empfehlung: Beginn einer oralen Antikoagulation, Fortführung der antihypertensiven Therapie. Kontrolle in sechs Monaten bei Ihnen, bei Beschwerden jederzeit Wiedervorstellung.
+
+Mit kollegialen Grüßen
+
+Dr. med. Sina Beispiel-Fries, Oberärztin

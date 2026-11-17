@@ -1,0 +1,44 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "teilweise",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "fehlt",
+  "M08": "teilweise",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "getroffen",
+  "M12": "fehlt",
+  "M13": "getroffen",
+  "M14": "getroffen",
+  "M15": "fehlt",
+  "M16": "getroffen",
+  "M17": "teilweise",
+  "M18": "teilweise",
+  "M19": "fehlt",
+  "M20": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Plan richtet sich an eine einzelne Anwaltskanzlei mit vier Personen; Praxen, Pflegedienste und Vertrieb über IT-Dienstleister/Berater fehlen.",
+  "M04": "Namen, Anschriften, Daten, IBAN, Telefon, E-Mail, Aktenzeichen ja; Steuer-ID und Versichertennummer fehlen.",
+  "M07": "Es gibt Vorschau und Bestätigung, aber keine automatische Nachprüfung des verdeckten Texts auf übrig gebliebenen Klartext mit Anhalten.",
+  "M08": "Nur eine Mandantenliste mit Namen; eigene Liste für Ortsbegriffe/andere Begriffe nur als offene Frage O-01.",
+  "M12": "Keine Browser-Erweiterung vorgesehen.",
+  "M15": "Plan sieht gar kein Protokoll vor; ein Nachweis mit Art und Anzahl fehlt.",
+  "M17": "‚Pseudonymisierung ist keine Anonymisierung‘ genannt, aber nicht, dass Pseudonyme personenbezogen bleiben und kein AV-Vertrag ersetzt wird.",
+  "M18": "Mandantenliste nur per verschlüsselter Exportdatei verteilbar; keine zentrale Regelvorgabe für Muster und Listen.",
+  "M19": "Kein anonymes Zählen abgefangener Fälle.",
+  "M20": "Kein Preismodell je Nutzer/Monat, nur Budgetfrage des Kunden."
+ },
+ "zusaetze": [
+  "Direkte API-Anbindung an mehrere KI-Anbieter mit eigenem Schlüssel",
+  "Druckbares Vorzeigeblatt für Kammer und Mandanten",
+  "Einrichtung auf vier PCs, Einweisung und Büro-Regel als Ausdruck",
+  "Warnung bei von der KI veränderten Platzhaltern",
+  "Verdecken von Beträgen"
+ ]
+}

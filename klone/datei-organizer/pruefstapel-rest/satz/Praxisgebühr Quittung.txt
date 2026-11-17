@@ -1,0 +1,12 @@
+# Dr. med. Beispiel-Krause
+Allgemeinmedizin · Kirchstraße 4 · 37999 Musterau
+
+QUITTUNG PRAXISGEBÜHR
+
+Patient: Pfannschmidt, Gerhard
+Quartal: II/2004
+Betrag: 10,00 Euro
+erhalten am: 13.04.2004
+
+@stempel Praxis Dr. Beispiel-Krause
+@unterschrift

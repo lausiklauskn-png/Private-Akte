@@ -1,0 +1,8 @@
+{"bausteine":[
+{"katalog":"scan","name":"Dokumente scannen und PDF-Formulare ausfüllen, auch aus Mail-Anhängen übernommen","groesse":"mittel","deckt":["B-20","B-29","B-30"],"faktoren":["offline","druck"]},
+{"katalog":"datei","name":"Übergabe zwischen den Programmen über den gemeinsamen Ordner mit Empfangsbestätigung des Zielprogramms","groesse":"mittel","deckt":["B-17","B-32"],"faktoren":["offline"]},
+{"katalog":"schnitt","name":"Übergabe gescannter Rechnungen an das bestehende Buchhaltungsprogramm","groesse":"klein","deckt":["B-19","B-31"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Verschlüsselte Ablage auf der SD-Karte mit einem Passwort für alle Programme","groesse":"mittel","deckt":["B-21","B-33"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Netzsperre: Rückfrage vor jedem Weg ins Internet, sonst bleibt alles auf dem Gerät","groesse":"klein","deckt":["B-18","B-34"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Übersetzung englischer Krankenkassen-Formulare auf dem Gerät","groesse":"mittel","deckt":["B-22","B-35"],"faktoren":["offline","sprachen"]}
+]}

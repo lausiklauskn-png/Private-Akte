@@ -1,0 +1,10 @@
+beleg-pilot.example – Online-Buchhaltung & Belegscanner
+Belegpilot GmbH, Datenstr. 9, 80999 Isarbrück
+
+Rechnung BP-2026-441722 vom 03.01.2026
+Tischlerei Vosskamp
+
+Jahreslizenz Buchhaltungssoftware „Belegpilot Handwerk“ 2026 (12 x 16,50)     198,00
+Schnittstelle Steuerberater-Export (jährlich)                                  29,00
+Netto 227,00 EUR · 19 % USt 43,13 EUR · Summe 270,13 EUR
+Abbuchung per SEPA 10.01.2026 · USt-IdNr. DE000004572

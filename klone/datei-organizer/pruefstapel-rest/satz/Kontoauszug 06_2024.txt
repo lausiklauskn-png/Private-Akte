@@ -1,0 +1,21 @@
+# Raiffeisenbank Beispieltal eG
+
+Martin und Sabine Weidinger
+
+Kontoauszug Nr. 6/2024
+Zeitraum: 01.06.2024 – 30.06.2024
+IBAN: DE00 0000 0000 0000 0000 00
+
+|Buchungstag|Vorgang|Betrag EUR|
+|03.06.|Lastschrift Gemeinde Beispielhausen Kita|-208,00|
+|03.06.|Lastschrift Beispielenergie Abschlag|-205,00|
+|05.06.|Gutschrift Familienkasse Kindergeld|+1000,00|
+|14.06.|Überweisung Autohaus Beispiel-Moser R-24-3381|-371,40|
+|28.06.|Gehalt Beispiel Agrartechnik|+2901,77|
+|28.06.|Dauerauftrag Lena Taschengeld|-150,00|
+
+Alter Kontostand: 2.814,22 EUR
+Neuer Kontostand: 5.781,59 EUR
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+@fuss Raiffeisenbank Beispieltal eG · BIC BSPLDE00XXX · Amtsgericht Beispielstadt HRB 00000

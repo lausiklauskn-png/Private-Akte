@@ -1,0 +1,38 @@
+# Hausverwaltung Beispiel Immobilien GmbH
+Domplatz 2 · 93999 Beispielstadt
+
+Frau
+Lena Weidinger
+Studierendenwohnheim Campusweg 9, Zi. 214
+93999 Beispielstadt
+
+Objekt: Hafergasse 17, 2. OG links
+Datum: 12.03.2025
+
+# Mietvertrag über Wohnraum
+
+§ 1 Mietsache: Zimmer in Wohngemeinschaft, ca. 16 m², Mitbenutzung von Küche und Bad.
+
+§ 2 Mietzeit: Das Mietverhältnis beginnt am 01.04.2025 und läuft auf unbestimmte Zeit.
+
+§ 3 Miete: Grundmiete 310,00 EUR, Vorauszahlung Betriebskosten 70,00 EUR, zusammen 380,00 EUR monatlich, zahlbar bis zum dritten Werktag.
+
+§ 4 Kaution: 930,00 EUR, zahlbar in drei Raten; die erste Rate (310,00 EUR) ist bis 28.03.2025 zu überweisen.
+
+Mieterin und Vermieterin unterschreiben zweifach.
+
+Beispielstadt, den 12.03.2025
+@unterschrift
+@seite
+Hausordnung (Anlage zum Mietvertrag)
+@spalten 3
+## Ruhezeiten
+Von 22 bis 6 Uhr ist Zimmerlautstärke einzuhalten.
+
+## Treppenhaus
+Die Reinigung erfolgt im wöchentlichen Wechsel nach Plan.
+
+## Müll
+Bitte trennen Sie Bio, Papier und Verpackung.
+
+@ende

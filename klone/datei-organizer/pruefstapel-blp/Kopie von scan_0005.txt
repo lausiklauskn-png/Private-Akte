@@ -1,0 +1,28 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Gemeindeverwaltung Tannweiler
+Rathausplatz 1
+37999 Tannweiler
+
+Rechnung
+Rechnunqsnummer: KB-2026-121
+Rechnungsdatum: 22. Februar 2026
+Leistungsdatum: 18.02.2026
+Kunden-Nr.: K283
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Frühstücksbuffet vor Ort, Personen    25     14,80     370,00
+  2  Aufbau/Abbau                 1     60,00      60,00
+
+Nettobetrag                                  430,00
+zzgl. 19 % USt                               81,70
+Endbetrag                                    511,70 EUR
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 9330 17
+USt-IdNr. DE000000558

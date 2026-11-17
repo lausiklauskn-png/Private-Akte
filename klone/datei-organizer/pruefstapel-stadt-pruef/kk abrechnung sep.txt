@@ -1,0 +1,11 @@
+BEISPIEL-KREDITKARTEN-SERVICE
+Abrechnung 09/2026 · Karte **** 0000 · Karteninhaber Can Kranewitt
+Abrechnungsnr. KK-000000
+
+03.09. Mensa Beispiel-Uni                    4,80
+07.09. Fachbuch Beispielversand             39,90
+12.09. Streamingdienst                       9,99
+19.09. WORLDTRAVEL ONLINE LTD              249,00
+25.09. Tankstelle Beispiel                  41,16
+Umsatzsumme                                344,85
+Zahlung per Lastschrift am 28.09.2026 von DE00 0000 0000 0000 0000 00

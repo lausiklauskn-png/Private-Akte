@@ -1,0 +1,37 @@
+{"titel": "Formulare und Scans für die Praxis, verbunden mit den vorhandenen Programmen",
+ "kunde": {"firma": "Physiotherapie Beispielhaus", "ansprechpartner": "Dr. Ines Beispielhaus", "mail": "praxis@beispielhaus.example"},
+ "bereiche": {
+  "1": ["Dateien schicke ich mir selbst per Mail", "Drei Programme desselben Herstellers: Buchhaltung, Familienunterlagen, Mails und Notizen", "Für Formulare und Scans gibt es kein Programm"],
+  "2": ["Belege scannen und in die Buchhaltung bringen", "Formulare aus Mail-Anhängen ausfüllen", "Formulare der Krankenkassen bearbeiten", "Dokumente zwischen den Programmen weitergeben"],
+  "3": [{"text": "Inhaberin (Physiotherapeutin)", "anzahl": 1}, {"text": "Angestellte", "anzahl": 2}],
+  "4": ["Selbst-Mails sind unsicher", "Unübersichtlich, ich finde Dateien schwer wieder", "Ich weiß nicht sicher, ob eine Datei angekommen ist", "Englische Kassenformulare verstehe ich nicht ohne Weiteres"],
+  "5": ["Das Programm für Formulare und Scans fehlt", "Die Programme reichen sich nichts direkt weiter", "Kein gemeinsamer geschützter Ablageort"],
+  "6": [
+   {"text": "Übergabe zwischen den Programmen mit Bestätigung, dass es angekommen ist", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Keine Selbst-Mails mehr, Gewissheit statt Suchen"}},
+   {"text": "Nichts geht ungefragt ins Internet, Patientendaten bleiben bei mir", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Datenschutz für Patientendaten"}},
+   {"text": "Gescannte Rechnungen kommen in der Buchhaltung an", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein doppeltes Weiterleiten"}},
+   {"text": "Mail-Anhänge hier ausfüllen können", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Formulare ohne Umweg erledigen"}},
+   {"text": "Alles in einem verschlüsselten Ordner auf der SD-Karte mit einem Passwort", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ein Ort, ein Passwort, Übersicht"}},
+   {"text": "Englische Formulare der Krankenkasse eines Patienten übersetzen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Formulare selbst verstehen"}},
+   {"text": "Echte App fürs iPhone der Angestellten", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Angestellte können mitarbeiten"}},
+   {"text": "Automatischer Abgleich aller Geräte über ein Online-Konto", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Überall derselbe Stand"}},
+   {"text": "Formulare mit rechtsgültiger elektronischer Unterschrift direkt an die Kasse senden", "prio": "kann", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Kein Ausdrucken und Verschicken"}}
+  ],
+  "7": ["Keine Dateien mehr per Mail an mich selbst", "Scans und Formulare landen sicher im richtigen Programm", "Ich sehe, dass das andere Programm es bekommen hat"],
+  "8": ["Das System muss Dokumente scannen können", "Das System muss Formulare ausfüllen können, auch aus Mail-Anhängen", "Das System muss gescannte Rechnungen an die Buchhaltung übergeben", "Das System muss anzeigen, ob das andere Programm etwas wirklich bekommen hat", "Das System muss in einem verschlüsselten Ordner auf der SD-Karte ablegen", "Das System muss vor jedem Weg ins Internet fragen", "Das System muss englische Formulare übersetzen können"],
+  "9": ["Angestellte sollen damit arbeiten können"],
+  "10": ["Android-Tablet", "Windows-Laptop", "iPhones der Angestellten", "SD-Karte im Tablet als Ablage", "Muss ohne Internet gehen"],
+  "11": ["Buchhaltungsprogramm", "Programm für Familienunterlagen", "Programm für Mails und Notizen", "alle vom selben kleinen Hersteller"],
+  "12": ["Zur Buchhaltung (gescannte Rechnungen)", "Vom Mail-Programm (Anhänge)", "Gemeinsamer verschlüsselter Ordner aller Programme"],
+  "13": ["Rechnungen und Belege", "Formulare der Krankenkassen, auch englische", "Mail-Anhänge", "Patientendaten"],
+  "14": ["personenbezogene Daten: ja", "Gesundheitsdaten von Patienten", "Verschlüsselt, ein Passwort", "Nichts ungefragt ins Internet"],
+  "15": ["Budget-Rahmen: bis 200 € im Jahr"],
+  "18": [
+   {"text": "Ist eine echte iPhone-App im Rahmen von 200 € im Jahr möglich?", "wer": "Betrieb", "bis": ""},
+   {"text": "Online-Konto für den Abgleich: verträgt sich das mit „nichts ungefragt ins Internet“?", "wer": "Kundin und Betrieb", "bis": ""},
+   {"text": "Rechtsgültige elektronische Unterschrift und Versand an die Kasse: welche Vorgaben gelten?", "wer": "Kundin (Krankenkasse fragen)", "bis": ""},
+   {"text": "Übersetzen der Formulare: darf dafür etwas ins Internet?", "wer": "Kundin", "bis": ""},
+   {"text": "Wie viele Scans und Formulare im Monat? Zeitersparnis nicht beziffert", "wer": "Kundin", "bis": ""},
+   {"text": "Arbeiten die Angestellten mit Patientenformularen, welche Rechte sollen sie haben?", "wer": "Kundin", "bis": ""}
+  ]
+ }}

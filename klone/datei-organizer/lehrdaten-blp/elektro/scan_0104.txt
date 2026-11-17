@@ -1,0 +1,13 @@
+bueroversand-suedost.example
+Rechnung 26-774120          Bestelldatum 02.03.2026   Rechnungsdatum 03.03.2026
+
+Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos    Kd.-Nr. 300417
+
+Art.-Nr.  Bezeichnung                                  Menge   Netto
+T-4411    Toner schwarz fuer OfficeJet (kompatibel)       2    78,00
+E-1020    Etiketten 70x36 mm, 100 Blatt                   1    12,50
+B-0098    Rechnungsbuch/Quittungsblock A5 2-fach          4     9,60
+S-7700    Kugelschreiber blau 50er Pack                   1     9,90
+
+Warenwert netto 110,00 – USt 19 % 20,90 – Rechnungsbetraq 130,90 EUR
+Lieferung versandkostenfrei ab 59 EUR.

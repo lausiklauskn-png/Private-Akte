@@ -1,0 +1,38 @@
+# Deutsche Rentenversicherung Beispielland
+DRV Beispielland · Rentenplatz 3 · 30999 Musterhannover
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versicherungsnummer: 00 140354 B 512
+Datum: 08.01.2024
+
+# Rentenbescheid – große Witwerrente
+
+Sehr geehrter Herr Pfannschmidt,
+
+auf Ihren Antrag erhalten Sie ab 01.12.2023 große Witwerrente aus der Versicherung Ihrer verstorbenen Ehefrau Ingrid Pfannschmidt.
+
+Im Sterbevierteljahr (bis 29.02.2024) wird die Rente in voller Höhe gezahlt: 812,40 EUR monatlich. Ab 01.03.2024 wird Ihr eigenes Einkommen angerechnet.
+
+Bitte senden Sie uns die beigefügte Erklärung zum Einkommen (Vordruck R0660) bis 15.02.2024 zurück.
+
+Mit freundlichen Grüßen
+@unterschrift
+@seite
+Anlage 1: Berechnung
+|Position|Betrag|
+|Rente aus Versicherung der Verstorbenen|1.477,10 EUR|
+|Rentenartfaktor 0,55|812,40 EUR|
+|Einkommensanrechnung ab 03/2024|-401,22 EUR|
+|Zahlbetrag ab 03/2024|411,18 EUR|
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei der DRV Beispielland, Rentenplatz 3, 30999 Musterhannover, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

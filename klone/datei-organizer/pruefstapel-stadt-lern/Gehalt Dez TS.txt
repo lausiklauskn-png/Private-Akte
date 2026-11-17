@@ -1,0 +1,13 @@
+Stadtwerke Beispielhafen – Personalabteilung · Werkstraße 1 · 29999 Beispielhafen
+
+Entgeltabrechnung Dezember 2026
+Personalnummer 0000-TS      Tobias Siemsen, Kiebitzring 5, 29999 Beispielhafen
+Steuerklasse IV, Kinderfreibetrag 0, Konfession –
+
+Tabellenentgelt E11 Stufe 3                4.510,00 EUR
+Jahressonderzahlung                        3.160,00 EUR
+Brutto                                     7.670,00 EUR
+Lohnsteuer / Soli                         -1.712,40 EUR
+Kranken-, Pflege-, Renten-, Arbeitslosenversicherung   -1.521,10 EUR
+Netto                                      4.436,50 EUR
+Auszahlung auf IBAN DE00 0000 0000 0000 0000 00 am 30.12.2026

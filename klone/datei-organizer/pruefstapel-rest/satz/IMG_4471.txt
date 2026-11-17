@@ -1,0 +1,19 @@
+@bon
+FAHRRAD BEISPIEL-STERN
+Bahnhofstr. 12
+
+Kasse 2  Bon 4711
+
+Schlauch 24 Zoll            6,90 B
+Flickzeug                   3,50 B
+Klingel Kinder              4,95 B
+------------------------------------
+SUMME EUR                    15,35
+Gegeben BAR                  20,00
+Rueckgeld                     4,65
+
+A 7%  Netto 0,00  MwSt 0,00
+B 19% Netto 12,90  MwSt 2,45
+
+17.04.2024  17:05
+Vielen Dank fuer Ihren Einkauf

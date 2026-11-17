@@ -1,0 +1,27 @@
+Kassenprofi Oelkers GmbH
+Kassensysteme · Waagen · Service
+Ringstraße 30, 34000 Niederaue
+
+Blumenwerkstatt Harkort
+Inh. Mareike Harkort
+Kirchgasse 7
+37299 Weidenrode
+
+
+RECHNUNG
+Rechnungs-Nr.: KR-118204        Datum: 08.01.2026
+Leistungsdatum: 05.01.2026
+Fällig: 22.01.2026
+
+Pos  Bezeichnung                        Menge   Einzelpreis    Gesamt
+----------------------------------------------------------------------
+1    Touchkasse 'Tresa 15' mit TSE-Modu     1 Stk   1.290,00   1.290,00
+2    Bondrucker Thermo 80 mm                1 Stk     219,00     219,00
+3    Kassenlade Metall                      1 Stk      89,00      89,00
+4    Einrichtung Artikelstamm, Einweisu  3,00 Std.     79,00     237,00
+----------------------------------------------------------------------
+                                             Nettobetrag     1.835,00
+                                          zzgl. 19 % USt       348,65
+                                     Rechnungsbetrag EUR     2.183,65
+
+Kassenprofi Oelkers GmbH · USt-IdNr. DE000000000 · IBAN DE00 0000 0000 0000 0000 00

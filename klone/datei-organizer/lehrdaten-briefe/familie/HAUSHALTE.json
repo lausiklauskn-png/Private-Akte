@@ -1,0 +1,69 @@
+{
+ "haushalte": [
+  {
+   "id": "h-brandl",
+   "name": "Familie Brandl",
+   "personen": [
+    {
+     "vorname": "Tobias",
+     "name": "Brandl",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Miriam",
+     "name": "Brandl",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Brandl",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Lea",
+     "name": "Brandl",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "Kombi KRF-TB 412",
+    "Motorrad KRF-B 77"
+   ]
+  },
+  {
+   "id": "h-haas",
+   "name": "Familie Haas",
+   "personen": [
+    {
+     "vorname": "Dominik",
+     "name": "Haas",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Aylin",
+     "name": "Haas",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Nora",
+     "name": "Haas",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Emil",
+     "name": "Haas",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Mats",
+     "name": "Haas",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "Van KRF-AH 219",
+    "Motorroller KRF-D 5"
+   ]
+  }
+ ]
+}

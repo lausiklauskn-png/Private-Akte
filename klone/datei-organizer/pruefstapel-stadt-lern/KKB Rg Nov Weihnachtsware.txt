@@ -1,0 +1,15 @@
+Großhandel Kontorkaffee Beispiel · Lagerallee 7 · 29900 Beispielstadt
+
+Petersens Kram & Kaffee, Inken Petersen
+Fischmarkt 7, 29999 Beispielhafen
+Kundennummer KKB-0000     Rechnung 26-11-0453     Datum: 16.11.2026
+
+  20 kg Röstkaffee „Hafenröstung“            298,00 EUR
+  48 x Lebkuchendose Leuchtturm              172,80 EUR
+  12 x Geschenkkorb leer, groß                54,00 EUR
+  Netto                                      524,80 EUR
+  USt. 7 % auf 298,00                         20,86 EUR
+  USt. 19 % auf 226,80                        43,09 EUR
+  Brutto                                     588,75 EUR
+
+Zahlbar bis 30.11.2026 ohne Abzug. Steuernummer des Lieferanten: 99/000/99999

@@ -1,0 +1,261 @@
+package de.familyprojekt.familienakte;
+
+import de.familyprojekt.tresor.*;
+import java.awt.GraphicsEnvironment;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
+import java.util.*;
+import javax.swing.*;
+
+/** Lokale Windows-Brücke zum unveränderten Java-Kanon. Keine installierte Java-Laufzeit nötig:
+ * Installer bündelt eine eigene Laufzeit. Ein Prozess je App; Schlüssel leben nur bis Sperren/Ende.
+ * JSON-Zeilen über private stdin/stdout-Pipes, keine TCP-Ports, keine Kennwörter im WebView. */
+public final class ProTresorEngine implements Closeable {
+    public interface Dialoge {
+        Path ordner() throws IOException;
+        char[] kennwort() throws IOException;
+        default Path ausgabe(String name) throws IOException { throw new IOException("FA_AUSGABE_DIALOG"); }
+        /** P5: frei gewählter Ordner für die Vollsicherung (getrennt vom Pro-Tresor). */
+        default Path sicherungsordner(String titel) throws IOException { throw new IOException("FA_ORDNER_DIALOG"); }
+    }
+    private final FamilyFolders ordnerWege = new FamilyFolders();
+    private FamilyNetz netz;
+    private final Path einstellungen;
+    private final Dialoge dialoge;
+    private Path ort;
+    private String id;
+    private ProTresorAdapter adapter;
+    private boolean konfigurationBeschaedigt;
+
+    public ProTresorEngine(Path einstellungen, Dialoge dialoge) throws IOException {
+        FamilyFolders.datenOrdner(einstellungen.toAbsolutePath().getParent());
+        this.einstellungen = einstellungen.toAbsolutePath().normalize(); this.dialoge = dialoge;
+        if (Files.exists(einstellungen)) {
+            try {
+                if (Files.size(einstellungen) > 256 * 1024) throw new IOException();
+                Map<String, Object> m = Json.objekt(Files.readString(einstellungen));
+                ort = Path.of(Json.text(m, "ort")); id = Json.text(m, "id");
+                if (!ort.isAbsolute() || id.isEmpty()) throw new IOException();
+            } catch (Exception e) { konfigurationBeschaedigt = true; ort = null; id = null; }
+        } else if (Files.isDirectory(this.einstellungen.getParent())) {
+            try (var files = Files.list(this.einstellungen.getParent())) {
+                konfigurationBeschaedigt = files.anyMatch(p -> p.getFileName().toString().startsWith(einstellungen.getFileName() + ".beschaedigt-"));
+            }
+        }
+    }
+    private static Map<String, Object> antwort(String status, String id, Path ort) {
+        Map<String, Object> m = new LinkedHashMap<>(); m.put("status", status); m.put("uebergaben", true);
+        if (id != null) m.put("id", id);
+        if (ort != null) m.put("ort", ort.toString());
+        return m;
+    }
+    private DateiAblage ablage(Path p, String erwartet) throws IOException {
+        if (p == null || !Files.isDirectory(p)) throw new IOException("FA_TRESOR_NICHT_ERREICHBAR");
+        DateiAblage a = new DateiAblage(p.toFile());
+        if (!TresorOrdner.vorhanden(a)) {
+            // Unterordner eines Tresors (z. B. „Tresorordner“ oder „Familienakte“) eigens benennen; nichts anlegen.
+            Path eltern = p.getParent();
+            boolean elternIstTresor = eltern != null && Files.isRegularFile(eltern.resolve(TresorOrdner.KOPF));
+            ProTresorAdapter.tresorOrdnerPruefen(a, p.getFileName() == null ? "" : p.getFileName().toString(), elternIstTresor);
+        }
+        if (erwartet != null && !erwartet.equals(TresorOrdner.kennung(a))) throw new IOException("FA_TRESOR_FREMDE_KENNUNG");
+        if (a.gibtEs(Umzug.VERMERK)) throw new IOException("FA_TRESOR_UMGEZOGEN");
+        return a;
+    }
+    private Map<String, Object> zustand() {
+        if (konfigurationBeschaedigt) {
+            Map<String, Object> m = antwort("nicht_erreichbar", null, null);
+            m.put("code", "FA_TRESOR_ZUSTAND_BESCHAEDIGT"); return m;
+        }
+        if (ort == null) return antwort("getrennt", null, null);
+        try { ablage(ort, id); return antwort(adapter == null ? "gesperrt" : "offen", id, ort); }
+        catch (IOException e) {
+            close();
+            Map<String, Object> m = antwort("nicht_erreichbar", id, ort);
+            String code = e.getMessage();
+            m.put("code", code != null && code.matches("[A-Z0-9_]+") ? code : "FA_TRESOR_NICHT_ERREICHBAR");
+            return m;
+        }
+    }
+    private Map<String, Object> verbinden(boolean waehlen) throws IOException {
+        if (!waehlen && konfigurationBeschaedigt) throw new IOException("FA_TRESOR_ZUSTAND_BESCHAEDIGT");
+        Path neu = waehlen ? dialoge.ordner() : ort;
+        if (neu == null) throw new IOException("FA_TRESOR_ABGEBROCHEN");
+        neu = neu.toAbsolutePath().normalize();
+        DateiAblage a = ablage(neu, waehlen ? null : id);
+        String neuId = TresorOrdner.kennung(a);
+        char[] geheim = dialoge.kennwort();
+        if (geheim == null) throw new IOException("FA_TRESOR_ABGEBROCHEN");
+        ProTresorAdapter offen;
+        try { offen = ProTresorAdapter.oeffnen(a, neuId, java.nio.CharBuffer.wrap(geheim)); }
+        finally { Arrays.fill(geheim, '\0'); }
+        try {
+            Files.createDirectories(einstellungen.getParent());
+            Path vorlaeufig = Files.createTempFile(einstellungen.getParent(), "pro-tresor-", ".json");
+            try {
+                Map<String, Object> m = new LinkedHashMap<>(); m.put("ort", neu.toString()); m.put("id", neuId);
+                Files.writeString(vorlaeufig, Json.schreiben(m), StandardCharsets.UTF_8);
+                Path sicherung = null;
+                if (konfigurationBeschaedigt && Files.exists(einstellungen)) {
+                    sicherung = einstellungen.resolveSibling(einstellungen.getFileName() + ".beschaedigt-" + UUID.randomUUID());
+                    Files.move(einstellungen, sicherung, StandardCopyOption.ATOMIC_MOVE);
+                }
+                try { Files.move(vorlaeufig, einstellungen, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING); }
+                catch (IOException fehler) {
+                    if (sicherung != null && !Files.exists(einstellungen)) {
+                        try { Files.move(sicherung, einstellungen, StandardCopyOption.ATOMIC_MOVE); }
+                        catch (IOException rueckweg) { fehler.addSuppressed(rueckweg); }
+                    }
+                    throw fehler;
+                }
+            } finally { Files.deleteIfExists(vorlaeufig); }
+        } catch (IOException e) { offen.close(); throw new IOException("FA_TRESOR_ORT_NICHT_GESPEICHERT"); }
+        close(); ort = neu; id = neuId; adapter = offen; konfigurationBeschaedigt = false;
+        return zustand();
+    }
+    private ProTresorAdapter offen(Map<String, Object> m) throws IOException {
+        if (adapter == null) throw new IOException("FA_TRESOR_GESPERRT");
+        if (!adapter.kennung().equals(Json.text(m, "vaultId"))) throw new IOException("FA_TRESOR_FREMDE_KENNUNG");
+        ablage(ort, id);
+        return adapter;
+    }
+    public synchronized Object aufruf(Map<String, Object> m) throws IOException {
+        String aktion = Json.text(m, "aktion");
+        if (FamilyFolders.aktion(aktion)) return ordnerWege.aufruf(m, dialoge);
+        if (FamilyNetz.aktion(aktion)) { if (netz == null) netz = new FamilyNetz(FamilyFolders.datenOrdner()); return netz.aufruf(m); }
+        switch (aktion) {
+            case "dateiExportieren": return FamilyFileOutput.save(m, dialoge);
+            case "zustand": return zustand();
+            case "verbinden": return verbinden(true);
+            case "entsperren": return verbinden(false);
+            case "sperren": close(); return zustand();
+            case "speichern": {
+                ProTresorAdapter p = offen(m);
+                String data = Json.text(m, "data");
+                if (data.length() > ((ProTresorAdapter.MAX_BYTES + 2L) / 3) * 4) throw new IOException("FA_DOKUMENT_ZU_GROSS");
+                byte[] bytes;
+                try { bytes = Base64.getDecoder().decode(data); } catch (IllegalArgumentException e) { throw new IOException("FA_DOKUMENT_UNGUELTIG"); }
+                Eintrag e = p.ablegen(Json.text(m, "documentId"), Json.text(m, "name"), Json.text(m, "mime"), Json.zahl(m, "date"), new ByteArrayInputStream(bytes), Json.textOder(m, "auszug", ""));
+                Map<String, Object> out = new LinkedHashMap<>(); out.put("entryId", e.id); out.put("vaultId", p.kennung()); out.put("sha256", e.sha256); out.put("size", e.groesse);
+                return out;
+            }
+            case "lesen": {
+                byte[] bytes = offen(m).lesen(Json.text(m, "entryId"));
+                Map<String, Object> out = new LinkedHashMap<>(); out.put("data", Base64.getEncoder().encodeToString(bytes)); return out;
+            }
+            case "uebergabeEingang": return Map.of("items",offen(m).uebergabeEingang());
+            case "uebergabeLesen": {
+                ProTresorAdapter p=offen(m); String entryId=Json.text(m,"entryId");
+                return Map.of("vertrag",p.uebergabeBeschreibung(entryId),"data",Base64.getEncoder().encodeToString(p.uebergabeLesen(entryId)));
+            }
+            case "uebergabeQuittieren": {
+                offen(m).uebergabeQuittieren(Json.text(m,"entryId"),Json.text(m,"sha256"));
+                return Map.of("stand","im-eingang");
+            }
+            case "uebergabeStand": return Map.of("bestaetigt",offen(m).uebergabeStand(Json.text(m,"ziel"),Json.text(m,"entryId")));
+            case "uebergabeSenden": {
+                ProTresorAdapter p=offen(m); String data=Json.text(m,"data");
+                if(data.length()>((ProTresorAdapter.MAX_BYTES+2L)/3)*4) throw new IOException("FA_DOKUMENT_ZU_GROSS");
+                byte[] bytes;
+                try { bytes=Base64.getDecoder().decode(data); } catch(IllegalArgumentException e) { throw new IOException("FA_DOKUMENT_UNGUELTIG"); }
+                Eintrag e=p.uebergabeSenden(Json.text(m,"ziel"),Json.text(m,"transferId"),Json.text(m,"documentId"),Json.textOder(m,"bezug",""),Json.text(m,"name"),Json.text(m,"mime"),new ByteArrayInputStream(bytes));
+                return Map.of("vaultId",p.kennung(),"entryId",e.id,"sha256",e.sha256,"size",e.groesse,"stand","weitergegeben");
+            }
+            // Stufe C (Plan Pseudonymisieren): Profile für die Maske im gemeinsamen Fach „profile“.
+            case "profilLesen": return Map.of("items",offen(m).profilLesen());
+            case "profilSchreiben": {
+                ProTresorAdapter p=offen(m); Eintrag e=p.profilSchreiben(Json.text(m,"text"));
+                return Map.of("vaultId",p.kennung(),"entryId",e.id,"sha256",e.sha256,"size",e.groesse);
+            }
+            default: throw new IOException("FA_TRESOR_AKTION_UNGUELTIG");
+        }
+    }
+    @Override public synchronized void close() { if (adapter != null) adapter.close(); adapter = null; }
+    /** Beim Beenden auch halbe Sicherungs- und Ausgabedateien entfernen. */
+    void ende() { close(); ordnerWege.schliessen(); }
+
+    private static final class WindowsDialoge implements Dialoge {
+        private void fenster(Runnable aktion) throws IOException {
+            if (GraphicsEnvironment.isHeadless()) throw new IOException("FA_TRESOR_DIALOG_NICHT_VERFUEGBAR");
+            try { SwingUtilities.invokeAndWait(aktion); }
+            catch (Exception e) { throw new IOException("FA_TRESOR_DIALOG_NICHT_VERFUEGBAR"); }
+        }
+        public Path ordner() throws IOException {
+            Path[] gewaehlt = new Path[1];
+            fenster(() -> {
+                JFileChooser chooser = new JFileChooser(); chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                chooser.setDialogTitle("Vorhandenen gemeinsamen Pro-Tresor wählen");
+                if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) gewaehlt[0] = chooser.getSelectedFile().toPath();
+            });
+            return gewaehlt[0];
+        }
+        public Path sicherungsordner(String titel) throws IOException {
+            Path[] gewaehlt = new Path[1];
+            fenster(() -> {
+                JFileChooser chooser = new JFileChooser(); chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                chooser.setDialogTitle(titel == null || titel.isBlank() ? "Ordner wählen" : titel.substring(0, Math.min(120, titel.length())));
+                if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) gewaehlt[0] = chooser.getSelectedFile().toPath();
+            });
+            return gewaehlt[0];
+        }
+        public Path ausgabe(String name) throws IOException {
+            Path[] chosen = new Path[1];
+            fenster(() -> {
+                JFileChooser chooser = new JFileChooser();
+                chooser.setDialogTitle("Familienakte-Datei speichern");
+                chooser.setSelectedFile(new File(name));
+                if (chooser.showSaveDialog(null) != JFileChooser.APPROVE_OPTION) return;
+                File file = chooser.getSelectedFile();
+                if (file.exists() && JOptionPane.showConfirmDialog(null, "Die ausgewählte Datei ersetzen?", "Datei vorhanden", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) return;
+                chosen[0] = file.toPath();
+            });
+            return chosen[0];
+        }
+        public char[] kennwort() throws IOException {
+            char[][] geheim = new char[1][];
+            fenster(() -> {
+                JPasswordField feld = new JPasswordField(24);
+                int wahl = JOptionPane.showConfirmDialog(null, feld, "Pro-Tresor entsperren", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+                if (wahl == JOptionPane.OK_OPTION) geheim[0] = feld.getPassword();
+                feld.setText("");
+            });
+            return geheim[0];
+        }
+    }
+    private static String zeile(Reader reader) throws IOException {
+        StringBuilder s = new StringBuilder(); int c;
+        while ((c = reader.read()) != -1 && c != '\n') {
+            if (s.length() >= 30 * 1024 * 1024) throw new IOException("FA_DOKUMENT_ZU_GROSS");
+            s.append((char)c);
+        }
+        return c == -1 && s.length() == 0 ? null : s.toString();
+    }
+    static void bedienen(ProTresorEngine engine, Reader in, PrintWriter out) throws IOException {
+            String line;
+            while ((line = zeile(in)) != null) {
+                Map<String, Object> response = new LinkedHashMap<>();
+                try { response.put("ok", engine.aufruf(Json.objekt(line))); }
+                catch (Exception e) {
+                    String code = e.getMessage();
+                    response.put("error", code != null && code.matches("[A-Z0-9_]+") ? code : "FA_TRESOR_NICHT_ERREICHBAR");
+                }
+                out.println(Json.schreiben(response));
+            }
+    }
+    public static void main(String[] args) throws Exception {
+        if (args.length != 1) return;
+        System.setProperty("apple.awt.application.name", "Familienakte Pro");
+        if (!GraphicsEnvironment.isHeadless()) {
+            try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); }
+            catch (Exception optionalesAussehen) { /* Standard-Swing bleibt benutzbar. */ }
+        }
+        try (ProTresorEngine engine = new ProTresorEngine(Path.of(args[0]), new WindowsDialoge());
+             Reader in = new BufferedReader(new InputStreamReader(System.in, StandardCharsets.UTF_8));
+             PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out, StandardCharsets.UTF_8), true)) {
+            try { bedienen(engine, in, out); } finally { engine.ende(); }
+        }
+        // Swing bleibt sonst auch nach dem Schließen der privaten Pipe als eigener Prozess stehen.
+        System.exit(0);
+    }
+}

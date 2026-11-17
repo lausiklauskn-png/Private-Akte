@@ -1,0 +1,15 @@
+MINIRECHNER.DIREKT
+ein Angebot der Voss & Tamm Computerhandel GmbH, Hafencity 9, 20457 Hamburg
+
+Rechnungsnummer   VT-2026-05-0193
+Rechnungsdatum    06.05.2026
+Kunde             Kettler Systemhaus (Wiederverkäufer)
+
+Bezeichnung                                 Anz.  Stückpreis  Summe
+Mini-PC Ryzen 5 / 16 GB / 500 GB, o. BS      8     329,00     2.632,00
+
+Nettobetrag        2.632,00
+Mehrwertsteuer 19% 500,08
+Zu zahlen          3.132,08 EUR
+
+Versand: Spedition, frei Haus ab 500 EUR. Seriennummern siehe Anlage.

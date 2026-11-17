@@ -1,0 +1,11 @@
+SUPERMARKT FRISCHKAI BEISPIEL
+Hafenstraße 50
+03.11.2026 17:41  Kasse 2
+Vollkornbrot            2,49
+Milch 1,5%  2x          2,58
+Kartoffeln 2,5kg        3,29
+Zahnpasta               1,95
+SUMME                  10,31
+BAR                    20,00
+Rückgeld                9,69
+Vielen Dank für Ihren Einkauf!

@@ -1,0 +1,28 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Kindertagesstätte Sonnenhügel e.V.
+Hügelweg 2
+37999 Tannweiler
+
+Rechnung
+Rg.-Nr. KB-2026-135
+Rechnunqsdatum: 19.01.2026
+Leistungsdatum: 16.01.2026
+Kunden-Nr.: K693
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Kaffeebuffet Vor-Ort-Bewirtung 40 Pers.    40      9,50     380,00
+  2  Barista-Service Std.         3     45,00     135,00
+
+Nettobetrag                                  515,00
+zzgl. 19 % USt                               97,85
+Zahlbetrag                                   612,85 EUR
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 4407 89
+USt-IdNr. DE000000485

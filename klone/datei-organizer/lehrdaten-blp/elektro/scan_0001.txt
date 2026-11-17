@@ -1,0 +1,18 @@
+PAYLINK Kartenakzeptanz GmbH
+Haendlerabrechnung Kartenterminal        Monat: April 2026
+Vertragspartner-Nr. 600114     Terminal-ID 55001144     Datum 04.05.2026
+
+Elektro Brandhuber, Ladengeschaeft Altenmoos
+
+Umsaetze girocard     96 Trx      6.842,10
+Umsaetze Kreditkarte  31 Trx      3.115,40
+Kartenumsatz gesamt               9.957,50  (bereits taeglich ausgezahlt)
+
+Entgelte:
+  girocard 0,25 %                           17,11
+  Kreditkarte 1,19 %                        37,07
+  Transaktionsentgelt 127 x 0,07             8,89
+  Terminalmiete inkl. SIM                   14,90
+  Summe Entgelte netto                      77,97
+  Umsatzsteuer 19 % (nur auf Terminalmiete)  2,83
+  Abbuchungsbetrag                          80,80 EUR

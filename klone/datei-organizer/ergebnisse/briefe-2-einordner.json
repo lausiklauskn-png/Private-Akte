@@ -1,0 +1,133 @@
+{
+ "ordner": "pruefstapel-briefe-2",
+ "belege": 150,
+ "einordner": [
+  {
+   "name": "Erster (Stapel-Autor)",
+   "modell": null,
+   "fehlt": 0
+  },
+  {
+   "name": "ZWEITER",
+   "modell": "Claude-Agent B, eigenes Urteil",
+   "fehlt": 0
+  },
+  {
+   "name": "DRITTER",
+   "modell": "Codex (GPT-6)",
+   "fehlt": 0
+  }
+ ],
+ "felder": {
+  "bereich": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 149
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 148
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 147
+    }
+   ],
+   "fleissKappa": 0.9855607251724692,
+   "einstimmig": 147,
+   "strittig": []
+  },
+  "schriftstueck": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 147
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 146
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 147
+    }
+   ],
+   "fleissKappa": 0.975526719383926,
+   "einstimmig": 145,
+   "strittig": []
+  },
+  "absender": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 148
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 149
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 147
+    }
+   ],
+   "fleissKappa": 0.9865586044844479,
+   "einstimmig": 147,
+   "strittig": []
+  },
+  "person": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 143
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 142
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 149
+    }
+   ],
+   "fleissKappa": 0.9601893218914497,
+   "einstimmig": 142,
+   "strittig": []
+  },
+  "frist": {
+   "paare": [
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "ZWEITER",
+     "gleich": 145
+    },
+    {
+     "a": "Erster (Stapel-Autor)",
+     "b": "DRITTER",
+     "gleich": 131
+    },
+    {
+     "a": "ZWEITER",
+     "b": "DRITTER",
+     "gleich": 134
+    }
+   ],
+   "fleissKappa": 0.8442933513261011,
+   "einstimmig": 130,
+   "strittig": []
+  }
+ }
+}

@@ -1,0 +1,1085 @@
+{
+ "betrieb": "Blumenwerkstatt Harkort",
+ "dateien": [
+  {
+   "datei": "CCF_001226.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "14,12",
+   "datum": "2026-09-30",
+   "ust": 19,
+   "aussteller": "FREIE TANKE Kaltenborn"
+  },
+  {
+   "datei": "CCF_001238.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "135,95",
+   "datum": "2026-05-31",
+   "ust": 0,
+   "aussteller": "Clickmeadow Ads Ireland Ltd."
+  },
+  {
+   "datei": "CCF_001258.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "49,30",
+   "datum": "2026-11-03",
+   "ust": 19,
+   "aussteller": "DEKO-SPEICHER"
+  },
+  {
+   "datei": "CCF_001271.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "776,99",
+   "datum": "2026-05-11",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "CCF_001287.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "321,30",
+   "datum": "2026-03-31",
+   "ust": 19,
+   "aussteller": "Glanzwerk Gebäudeservice Dierksen"
+  },
+  {
+   "datei": "CCF_001299.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "18,90",
+   "datum": "2026-03-06",
+   "ust": 19,
+   "aussteller": "WASCHSTRASSE BLITZBLANK"
+  },
+  {
+   "datei": "CCF_001314.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "1.329,83",
+   "datum": "2026-02-05",
+   "ust": 19,
+   "aussteller": "Malerbetrieb Rautenkranz"
+  },
+  {
+   "datei": "CCF_001330.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "113,88",
+   "datum": "2026-04-16",
+   "ust": 19,
+   "aussteller": "druckbogen.example – Onlinedruckerei Pfeffer GmbH"
+  },
+  {
+   "datei": "CCF_001342.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "1.231,00",
+   "datum": "2026-05-14",
+   "ust": 0,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "CCF_001358.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "29,20",
+   "datum": "2026-02-03",
+   "ust": 0,
+   "aussteller": "PayNord Zahlungssysteme GmbH"
+  },
+  {
+   "datei": "CCF_001370.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "1.500,00",
+   "datum": "2026-08-03",
+   "ust": null,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "CCF_001381.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "766,36",
+   "datum": "2026-07-09",
+   "ust": 19,
+   "aussteller": "Keramikwerkstatt Ohlendorf"
+  },
+  {
+   "datei": "CCF_001395.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "314,00",
+   "datum": "2026-01-29",
+   "ust": 7,
+   "aussteller": "Messehotel Dreikönig"
+  },
+  {
+   "datei": "CCF_001412.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "393,50",
+   "datum": "2026-06-03",
+   "ust": 0,
+   "aussteller": "Bloemenhandel Van der Kroog B.V."
+  },
+  {
+   "datei": "CCF_001430.txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "38,00",
+   "datum": "2026-03-02",
+   "ust": 0,
+   "aussteller": "Bloomdesk Software Inc."
+  },
+  {
+   "datei": "CCF_001444.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "70,20",
+   "datum": "2026-02-02",
+   "ust": 0,
+   "aussteller": "Gelbe Brief- und Paketgesellschaft mbH"
+  },
+  {
+   "datei": "CCF_001460.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "465,47",
+   "datum": "2026-01-27",
+   "ust": 19,
+   "aussteller": "Floristenbedarf Kettwiger GmbH"
+  },
+  {
+   "datei": "CCF_001470.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "65,30",
+   "datum": "2026-10-13",
+   "ust": 7,
+   "aussteller": "Café-Restaurant Orangerie im Schlosspark"
+  },
+  {
+   "datei": "CCF_001483.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "272,21",
+   "datum": "2026-04-06",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "CCF_001496.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "114,60",
+   "datum": "2026-03-18",
+   "ust": 0,
+   "aussteller": "Nordhang Versicherung AG"
+  },
+  {
+   "datei": "Dokument (104).txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "518,36",
+   "datum": "2026-05-28",
+   "ust": 19,
+   "aussteller": "Kfz-Meisterwerkstatt Jeschonnek"
+  },
+  {
+   "datei": "Dokument (121).txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "217,00",
+   "datum": "2026-03-09",
+   "ust": 7,
+   "aussteller": "Hotel Speicherblick GmbH"
+  },
+  {
+   "datei": "Dokument (132).txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "95,00",
+   "datum": "2025-12-15",
+   "ust": 0,
+   "aussteller": "Hinrich Mackensen"
+  },
+  {
+   "datei": "Dokument (144).txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "76,80",
+   "datum": "2026-03-26",
+   "ust": 7,
+   "aussteller": "Gasthaus Zur Alten Schmiede"
+  },
+  {
+   "datei": "Dokument (156).txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "426,00",
+   "datum": "2026-01-22",
+   "ust": 0,
+   "aussteller": "Landkreis Werratal – Abfallwirtschaftsbetrieb"
+  },
+  {
+   "datei": "Dokument (166).txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "378,30",
+   "datum": "2026-04-10",
+   "ust": 19,
+   "aussteller": "Berufsmoden Hanneken"
+  },
+  {
+   "datei": "Dokument (180).txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "678,30",
+   "datum": "2026-10-29",
+   "ust": 19,
+   "aussteller": "Kfz-Meisterwerkstatt Jeschonnek"
+  },
+  {
+   "datei": "Dokument (190).txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "480,76",
+   "datum": "2026-04-08",
+   "ust": 19,
+   "aussteller": "Steuerkanzlei Wohlgemuth & Rahe"
+  },
+  {
+   "datei": "Dokument (201).txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "3.370,08",
+   "datum": "2026-05-19",
+   "ust": 19,
+   "aussteller": "Tischlerei Sandvoss"
+  },
+  {
+   "datei": "Dokument (212).txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "611,66",
+   "datum": "2026-10-08",
+   "ust": 19,
+   "aussteller": "Steuerkanzlei Wohlgemuth & Rahe"
+  },
+  {
+   "datei": "Dokument (227).txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "982,49",
+   "datum": "2026-06-25",
+   "ust": null,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "Dokument (237).txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "115,99",
+   "datum": "2026-02-28",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "Dokument (247).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "418,37",
+   "datum": "2026-04-28",
+   "ust": 7,
+   "aussteller": "Gärtnerei Tomschke"
+  },
+  {
+   "datei": "Dokument (258).txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "528,48",
+   "datum": "2026-04-14",
+   "ust": 19,
+   "aussteller": "Rolfsmeier Verpackungen e.K."
+  },
+  {
+   "datei": "Dokument (270).txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "6,98",
+   "datum": "2026-06-16",
+   "ust": 19,
+   "aussteller": "Autohof Rastplatz Leinetal"
+  },
+  {
+   "datei": "Dokument (47).txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "770,00",
+   "datum": "2026-09-01",
+   "ust": 0,
+   "aussteller": "Industrie- und Handelskammer Werra-Leinebergland"
+  },
+  {
+   "datei": "Dokument (55).txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "390,55",
+   "datum": "2026-01-12",
+   "ust": 7,
+   "aussteller": "Blumengroßmarkt Niederaue eG"
+  },
+  {
+   "datei": "Dokument (70).txt",
+   "konto": "0400",
+   "richtung": "ausgabe",
+   "betrag": "9.182,04",
+   "datum": "2026-04-02",
+   "ust": 19,
+   "aussteller": "Kältetechnik Wiborg GmbH"
+  },
+  {
+   "datei": "Dokument (82).txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "238,77",
+   "datum": "2026-05-21",
+   "ust": 19,
+   "aussteller": "Büroversand Kliemannek GmbH"
+  },
+  {
+   "datei": "Dokument (92).txt",
+   "konto": "4980",
+   "richtung": "ausgabe",
+   "betrag": "18,36",
+   "datum": "2026-05-04",
+   "ust": 0,
+   "aussteller": "Rundfunkbeitragsservice der Landesanstalten"
+  },
+  {
+   "datei": "IMG_20260214_175448.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "267,75",
+   "datum": "2026-02-06",
+   "ust": 19,
+   "aussteller": "Weidenroder Anzeiger Verlags-GmbH"
+  },
+  {
+   "datei": "IMG_20260307_130725.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "54,90",
+   "datum": "2026-02-27",
+   "ust": 7,
+   "aussteller": "Mittelland Bahn AG"
+  },
+  {
+   "datei": "IMG_20260307_140510.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "299,88",
+   "datum": "2026-03-05",
+   "ust": 19,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20260310_083040.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "42,49",
+   "datum": "2026-03-04",
+   "ust": 19,
+   "aussteller": "Telnova Deutschland GmbH"
+  },
+  {
+   "datei": "IMG_20260311_120935.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "97,62",
+   "datum": "2026-03-09",
+   "ust": 0,
+   "aussteller": "Industrie- und Handelskammer Werra-Leinebergland"
+  },
+  {
+   "datei": "IMG_20260315_121100.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "329,00",
+   "datum": "2026-03-12",
+   "ust": 19,
+   "aussteller": "TECHNIKLAND Elektromarkt"
+  },
+  {
+   "datei": "IMG_20260327_195745.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "1.090,00",
+   "datum": "2026-03-19",
+   "ust": 0,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20260509_093039.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "560,05",
+   "datum": "2026-05-07",
+   "ust": 7,
+   "aussteller": "Blumengroßmarkt Niederaue eG"
+  },
+  {
+   "datei": "IMG_20260604_121819.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "56,49",
+   "datum": "2026-06-02",
+   "ust": 0,
+   "aussteller": "PayNord Zahlungssysteme GmbH"
+  },
+  {
+   "datei": "IMG_20260612_145843.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "67,90",
+   "datum": "2026-06-05",
+   "ust": 7,
+   "aussteller": "Buchhandlung Lesezeichen"
+  },
+  {
+   "datei": "IMG_20260624_182223.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "508,95",
+   "datum": "2026-06-15",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20260803_150113.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "728,28",
+   "datum": "2026-07-30",
+   "ust": 19,
+   "aussteller": "Betriebsberatung Handwerk & Handel – Dipl.-Kfm. Ansgar Tiedtke"
+  },
+  {
+   "datei": "IMG_20260811_133219.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "39,90",
+   "datum": "2026-08-05",
+   "ust": 19,
+   "aussteller": "Telnova Deutschland GmbH"
+  },
+  {
+   "datei": "IMG_20260827_100138.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "95,44",
+   "datum": "2026-08-18",
+   "ust": 7,
+   "aussteller": "FLORA-CASH Abholmarkt"
+  },
+  {
+   "datei": "IMG_20260829_072421.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "296,31",
+   "datum": "2026-08-24",
+   "ust": 19,
+   "aussteller": "Ladenkompass Akademie – Inh. Dr. Henrike Stöver"
+  },
+  {
+   "datei": "IMG_20260830_135537.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "578,34",
+   "datum": "2026-08-26",
+   "ust": 19,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20260913_080947.txt",
+   "konto": "8125",
+   "richtung": "einnahme",
+   "betrag": "1.288,00",
+   "datum": "2026-09-10",
+   "ust": 0,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20261112_082900.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "1.213,80",
+   "datum": "2026-11-11",
+   "ust": 19,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "IMG_20261112_151324.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "859,40",
+   "datum": "2026-11-06",
+   "ust": 0,
+   "aussteller": "Nordhang Versicherung AG"
+  },
+  {
+   "datei": "IMG_20261114_145643.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "31,28",
+   "datum": "2026-11-10",
+   "ust": 0,
+   "aussteller": "Gelbe Brief- und Paketgesellschaft mbH"
+  },
+  {
+   "datei": "SCN260122-8.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "87,90",
+   "datum": "2026-01-19",
+   "ust": 7,
+   "aussteller": "Mittelland Bahn AG"
+  },
+  {
+   "datei": "SCN260123-4.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "258,00",
+   "datum": "2026-01-15",
+   "ust": 0,
+   "aussteller": "Fachverband Deutscher Blumenbinder e.V. – Landesgruppe Mitte"
+  },
+  {
+   "datei": "SCN260216-3.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "830,11",
+   "datum": "2026-02-11",
+   "ust": 7,
+   "aussteller": "Blumengroßmarkt Niederaue eG"
+  },
+  {
+   "datei": "SCN260226-5.txt",
+   "konto": "4120",
+   "richtung": "ausgabe",
+   "betrag": "1.833,06",
+   "datum": "2026-02-25",
+   "ust": null,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "SCN260228-7.txt",
+   "konto": "0320",
+   "richtung": "ausgabe",
+   "betrag": "23.055,06",
+   "datum": "2026-02-20",
+   "ust": 19,
+   "aussteller": "Autohaus Brenneke & Söhne GmbH"
+  },
+  {
+   "datei": "SCN260306-3.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "250,00",
+   "datum": "2026-03-02",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "SCN260326-3.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "271,78",
+   "datum": "2026-03-24",
+   "ust": 7,
+   "aussteller": "Gärtnerei Tomschke"
+  },
+  {
+   "datei": "SCN260403-8.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "97,32",
+   "datum": "2026-03-31",
+   "ust": 0,
+   "aussteller": "Sparkasse Weidenrode"
+  },
+  {
+   "datei": "SCN260407-9.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "51,60",
+   "datum": "2026-04-01",
+   "ust": 7,
+   "aussteller": "SCHOKOLADERIE Feinherb"
+  },
+  {
+   "datei": "SCN260424-5.txt",
+   "konto": "4380",
+   "richtung": "ausgabe",
+   "betrag": "427,35",
+   "datum": "2026-04-20",
+   "ust": 0,
+   "aussteller": "Berufsgenossenschaft Handel und Gartenbau"
+  },
+  {
+   "datei": "SCN260429-8.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "300,00",
+   "datum": "2026-04-27",
+   "ust": 19,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "SCN260505-3.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "11,00",
+   "datum": "2026-05-05",
+   "ust": 19,
+   "aussteller": "Parkraum Göttersen GmbH"
+  },
+  {
+   "datei": "SCN260607-9.txt",
+   "konto": "4910",
+   "richtung": "ausgabe",
+   "betrag": "190,05",
+   "datum": "2026-06-02",
+   "ust": 19,
+   "aussteller": "PaketExpress Mitte GmbH"
+  },
+  {
+   "datei": "SCN260708-2.txt",
+   "konto": "8400",
+   "richtung": "einnahme",
+   "betrag": "969,96",
+   "datum": "2026-06-30",
+   "ust": 19,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "SCN260708-9.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "2.400,00",
+   "datum": "2026-07-01",
+   "ust": null,
+   "aussteller": "Sparkasse Weidenrode"
+  },
+  {
+   "datei": "SCN260718-7.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "384,86",
+   "datum": "2026-07-14",
+   "ust": 7,
+   "aussteller": "Stadtwerke Weidenrode GmbH"
+  },
+  {
+   "datei": "SCN260729-9.txt",
+   "konto": "4650",
+   "richtung": "ausgabe",
+   "betrag": "150,20",
+   "datum": "2026-07-23",
+   "ust": 19,
+   "aussteller": "Ristorante Da Ettore"
+  },
+  {
+   "datei": "SCN260907-8.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.618,40",
+   "datum": "2026-09-01",
+   "ust": 19,
+   "aussteller": "Grundstücksverwaltung Achterberg GbR"
+  },
+  {
+   "datei": "SCN260910-6.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "4.263,77",
+   "datum": "2026-09-03",
+   "ust": 19,
+   "aussteller": "Tischlerei Sandvoss"
+  },
+  {
+   "datei": "SCN261021-3.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "473,99",
+   "datum": "2026-10-20",
+   "ust": 19,
+   "aussteller": "TECHNIKLAND Elektromarkt"
+  },
+  {
+   "datei": "doc04454.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "200,00",
+   "datum": "2026-10-05",
+   "ust": 19,
+   "aussteller": "Erdgas Leine-Werra Vertrieb GmbH"
+  },
+  {
+   "datei": "doc04559.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "75,00",
+   "datum": "2026-09-25",
+   "ust": 0,
+   "aussteller": "Nordhang Versicherung AG"
+  },
+  {
+   "datei": "doc04634.txt",
+   "konto": "4360",
+   "richtung": "ausgabe",
+   "betrag": "490,28",
+   "datum": "2025-12-08",
+   "ust": 0,
+   "aussteller": "Nordhang Versicherung AG"
+  },
+  {
+   "datei": "doc04748.txt",
+   "konto": "4920",
+   "richtung": "ausgabe",
+   "betrag": "28,99",
+   "datum": "2026-11-02",
+   "ust": 19,
+   "aussteller": "funkwelle mobil GmbH"
+  },
+  {
+   "datei": "doc04890.txt",
+   "konto": "4940",
+   "richtung": "ausgabe",
+   "betrag": "120,00",
+   "datum": "2026-01-07",
+   "ust": 7,
+   "aussteller": "Grünstil Fachverlag GmbH"
+  },
+  {
+   "datei": "doc04983.txt",
+   "konto": "4630",
+   "richtung": "ausgabe",
+   "betrag": "68,40",
+   "datum": "2025-12-17",
+   "ust": 19,
+   "aussteller": "Weinkontor Steigerwald"
+  },
+  {
+   "datei": "doc05029.txt",
+   "konto": "4240",
+   "richtung": "ausgabe",
+   "betrag": "207,70",
+   "datum": "2026-02-17",
+   "ust": 19,
+   "aussteller": "Stadtwerke Weidenrode GmbH"
+  },
+  {
+   "datei": "doc05134.txt",
+   "konto": "0480",
+   "richtung": "ausgabe",
+   "betrag": "328,90",
+   "datum": "2026-06-22",
+   "ust": 19,
+   "aussteller": "werkzeugkiste24 – Hartung Onlinehandel GmbH"
+  },
+  {
+   "datei": "doc05212.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "500,01",
+   "datum": "2026-01-30",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "doc05301.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "259,96",
+   "datum": "2026-06-05",
+   "ust": 19,
+   "aussteller": "Blumenbote Vermittlungsring GmbH"
+  },
+  {
+   "datei": "doc05366.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "21,82",
+   "datum": "2026-04-09",
+   "ust": 19,
+   "aussteller": "TANKPUNKT Weidenrode"
+  },
+  {
+   "datei": "doc05456.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "904,15",
+   "datum": "2026-10-30",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "doc05520.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "158,00",
+   "datum": "2026-06-09",
+   "ust": 19,
+   "aussteller": "Schlüssel- und Schließdienst Hebbeler"
+  },
+  {
+   "datei": "doc05608.txt",
+   "konto": "4260",
+   "richtung": "ausgabe",
+   "betrag": "2.142,00",
+   "datum": "2026-08-10",
+   "ust": 19,
+   "aussteller": "Elektro Vahlbruch GmbH & Co. KG"
+  },
+  {
+   "datei": "doc05708.txt",
+   "konto": "8500",
+   "richtung": "einnahme",
+   "betrag": "176,48",
+   "datum": "2026-03-06",
+   "ust": 19,
+   "aussteller": "Blumenbote Vermittlungsring GmbH"
+  },
+  {
+   "datei": "doc05796.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "35,73",
+   "datum": "2026-11-09",
+   "ust": 19,
+   "aussteller": "Schreibwarenhaus Tegeler"
+  },
+  {
+   "datei": "doc05877.txt",
+   "konto": "4670",
+   "richtung": "ausgabe",
+   "betrag": "16,80",
+   "datum": "2026-01-27",
+   "ust": 7,
+   "aussteller": "Funk-Taxi Rheinmünde eG"
+  },
+  {
+   "datei": "doc05969.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "523,48",
+   "datum": "2026-03-03",
+   "ust": 19,
+   "aussteller": "Rolfsmeier Verpackungen e.K."
+  },
+  {
+   "datei": "doc06050.txt",
+   "konto": "4500",
+   "richtung": "ausgabe",
+   "betrag": "149,00",
+   "datum": "2026-09-22",
+   "ust": 19,
+   "aussteller": "Prüfstelle Nordmitte GmbH"
+  },
+  {
+   "datei": "doc06103.txt",
+   "konto": "4945",
+   "richtung": "ausgabe",
+   "betrag": "458,00",
+   "datum": "2026-02-12",
+   "ust": 0,
+   "aussteller": "Floristmeisterschule Burg Hohnstedt gGmbH"
+  },
+  {
+   "datei": "scan_0213.txt",
+   "konto": "4660",
+   "richtung": "ausgabe",
+   "betrag": "66,00",
+   "datum": "2026-03-12",
+   "ust": null,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "scan_0227.txt",
+   "konto": "4635",
+   "richtung": "ausgabe",
+   "betrag": "144,84",
+   "datum": "2026-06-26",
+   "ust": 7,
+   "aussteller": "Feinkost Almenräder"
+  },
+  {
+   "datei": "scan_0242.txt",
+   "konto": "4600",
+   "richtung": "ausgabe",
+   "betrag": "370,00",
+   "datum": "2026-09-08",
+   "ust": 0,
+   "aussteller": "Paula Wittkugel – Grafik & Illustration"
+  },
+  {
+   "datei": "scan_0259.txt",
+   "konto": "1890",
+   "richtung": "einnahme",
+   "betrag": "5.000,00",
+   "datum": "2026-01-05",
+   "ust": null,
+   "aussteller": "Sparkasse Weidenrode"
+  },
+  {
+   "datei": "scan_0273.txt",
+   "konto": "4530",
+   "richtung": "ausgabe",
+   "betrag": "7,89",
+   "datum": "2026-01-20",
+   "ust": 19,
+   "aussteller": "TANKPUNKT Weidenrode"
+  },
+  {
+   "datei": "scan_0289.txt",
+   "konto": "8120",
+   "richtung": "einnahme",
+   "betrag": "1.578,00",
+   "datum": "2026-10-19",
+   "ust": 0,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "scan_0303.txt",
+   "konto": "3400",
+   "richtung": "einnahme",
+   "betrag": "56,94",
+   "datum": "2026-02-09",
+   "ust": 19,
+   "aussteller": "Floristenbedarf Kettwiger GmbH"
+  },
+  {
+   "datei": "scan_0316.txt",
+   "konto": "4930",
+   "richtung": "ausgabe",
+   "betrag": "59,30",
+   "datum": "2026-01-14",
+   "ust": 19,
+   "aussteller": "Schreibwarenhaus Tegeler"
+  },
+  {
+   "datei": "scan_0331.txt",
+   "konto": "4250",
+   "richtung": "ausgabe",
+   "betrag": "147,00",
+   "datum": "2026-05-08",
+   "ust": 0,
+   "aussteller": "Fensterputz Liesel Quade"
+  },
+  {
+   "datei": "scan_0344.txt",
+   "konto": "4950",
+   "richtung": "ausgabe",
+   "betrag": "413,64",
+   "datum": "2026-04-22",
+   "ust": 19,
+   "aussteller": "Rechtsanwälte Dr. Imholz & Kessebohm PartG mbB"
+  },
+  {
+   "datei": "scan_0362.txt",
+   "konto": "4210",
+   "richtung": "ausgabe",
+   "betrag": "1.618,40",
+   "datum": "2026-01-02",
+   "ust": 19,
+   "aussteller": "Grundstücksverwaltung Achterberg GbR"
+  },
+  {
+   "datei": "scan_0374.txt",
+   "konto": "4955",
+   "richtung": "ausgabe",
+   "betrag": "628,32",
+   "datum": "2026-07-07",
+   "ust": 19,
+   "aussteller": "Steuerkanzlei Wohlgemuth & Rahe"
+  },
+  {
+   "datei": "scan_0382.txt",
+   "konto": "1800",
+   "richtung": "ausgabe",
+   "betrag": "800,00",
+   "datum": "2026-03-31",
+   "ust": null,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "scan_0398.txt",
+   "konto": "0410",
+   "richtung": "ausgabe",
+   "betrag": "2.183,65",
+   "datum": "2026-01-08",
+   "ust": 19,
+   "aussteller": "Kassenprofi Oelkers GmbH"
+  },
+  {
+   "datei": "scan_0415.txt",
+   "konto": "4970",
+   "richtung": "ausgabe",
+   "betrag": "63,90",
+   "datum": "2026-07-01",
+   "ust": 19,
+   "aussteller": "PayNord Zahlungssysteme GmbH"
+  },
+  {
+   "datei": "scan_0432.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "144,99",
+   "datum": "2026-07-31",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "scan_0446.txt",
+   "konto": "8300",
+   "richtung": "einnahme",
+   "betrag": "703,20",
+   "datum": "2026-05-09",
+   "ust": 7,
+   "aussteller": "Blumenwerkstatt Harkort"
+  },
+  {
+   "datei": "scan_0464.txt",
+   "konto": "4540",
+   "richtung": "ausgabe",
+   "betrag": "771,15",
+   "datum": "2026-02-23",
+   "ust": 0,
+   "aussteller": "Nordhang Versicherung AG"
+  },
+  {
+   "datei": "scan_0474.txt",
+   "konto": "3300",
+   "richtung": "ausgabe",
+   "betrag": "453,15",
+   "datum": "2026-09-15",
+   "ust": 7,
+   "aussteller": "Staudenhof Ellerbrink GbR"
+  },
+  {
+   "datei": "scan_0487.txt",
+   "konto": "3400",
+   "richtung": "ausgabe",
+   "betrag": "680,44",
+   "datum": "2026-10-06",
+   "ust": 19,
+   "aussteller": "Floristenbedarf Kettwiger GmbH"
+  }
+ ]
+}

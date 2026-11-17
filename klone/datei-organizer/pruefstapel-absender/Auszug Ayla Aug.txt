@@ -1,0 +1,21 @@
+Beispielbank Musterhausen eG
+Schillerstraße 60 · 34567 Musterhausen
+
+Frau Ayla Brenner
+c/o WG Lindenstraße 8
+Lindenstraße 8
+56789 Beispielstadt
+
+Kontoauszug 8/2026
+Kontoinhaber: Ayla Brenner
+IBAN DE00 0000 0000 0000 0000 00
+Erstellt am 31. August 2026
+
+Alter Kontostand               2940,95 EUR
+02.08.  Lastschrift Stadtwerke Abschlag             -125,00
+06.08.  Lastschrift Versicherung                     -46,00
+10.08.  Gutschrift Lohn/Gehalt                      2116,00
+14.08.  Kartenzahlung Beispiel-Markt                -113,00
+18.08.  Dauerauftrag Miete                          -474,00
+22.08.  Überweisung Gutschrift                       288,00
+Neuer Kontostand               4586,95 EUR

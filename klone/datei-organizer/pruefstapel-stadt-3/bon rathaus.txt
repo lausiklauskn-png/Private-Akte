@@ -1,0 +1,19 @@
+   BEZIRKSAMT BEISPIELSTADT-NORD
+        Stadtkasse / Bürgeramt
+     Rathausplatz 1, 00110 Bsp.-Nord
+--------------------------------------
+Beleg-Nr. 0711-26-004512
+Datum 23.04.2026   Zeit 10:52
+Arbeitsplatz BA-07
+
+Personalausweis (unter 24 J.)   22,80
+  Antragsteller: Kalanteris, Nikos
+Vorgang BA-2026-17345
+--------------------------------------
+SUMME EUR                        22,80
+girocard                         22,80
+--------------------------------------
+Terminal 00000011  TA-Nr 003318
+Kartenzahlung erfolgt
+  Bitte Beleg aufbewahren.
+  Abholung nach SMS-Benachrichtigung.

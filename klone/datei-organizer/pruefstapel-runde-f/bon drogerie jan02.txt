@@ -1,0 +1,14 @@
+BEISPIEL-DROGERIEMARKT FILIALE 0815
+BEISPIELSTADT
+11.01.2002  16:42
+----------------------------
+FILMENTW. 24 BILDER     5,95
+WINDELN GR.5            9,49
+ZAHNPASTA               1,29
+----------------------------
+SUMME EUR              16,73
+SUMME DM               32,72
+BAR EUR                20,00
+RUECKGELD EUR           3,27
+Umrechnungskurs 1 EUR = 1,95583 DM
+VIELEN DANK FUER IHREN EINKAUF

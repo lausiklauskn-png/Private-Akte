@@ -1,0 +1,31 @@
+# Beispielnetz Breitband AG
+Beispielnetz Breitband AG · Glasfaserstraße 2 · 45678 Musterhausen
+
+Frau Aylin Demir
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Vertragsnummer: BN-0000-7701
+Datum: 01.12.2025
+
+# Rechnung Dezember 2025 – Internet Kastanienallee 7
+
+Sehr geehrte Frau Demir,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Glasfaser 250 Mbit/s|1|37,81 €|37,81 €|
+|2|WLAN-Router Miete|1|4,20 €|4,20 €|
+|3|Rufnummernmitnahme|1|0,00 €|0,00 €|
+
+Nettobetrag: 42,01 €
+zzgl. 19 % MwSt.: 7,98 €
+Rechnungsbetrag: 49,99 €
+
+Der Betrag wird in den nächsten Tagen von Ihrem Konto per Lastschrift eingezogen.
+
+Mit freundlichen Grüßen
+Beispielnetz Breitband AG
+@fuss Beispielnetz Breitband AG · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

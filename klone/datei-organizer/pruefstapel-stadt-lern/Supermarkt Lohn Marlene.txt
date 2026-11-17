@@ -1,0 +1,3 @@
+Supermarkt Frischkai Beispiel - Lohnabrechnung März 2026
+Personalnummer 0233, Frau Marlene Ostwald, Verkäuferin Teilzeit 20 Std.
+Brutto 1.285,00; Abzüge SV 258,29; Lohnsteuer 31,00; Netto 995,71 EUR. Mutterschutz ab 10.04.2026 beachtet.

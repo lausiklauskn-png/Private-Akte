@@ -1,0 +1,8 @@
+{"bausteine":[
+{"katalog":"scan","name":"Briefe per Handykamera aufnehmen, Texterkennung, Ablage-Vorschlag nach Person und Thema zum Bestätigen","groesse":"mittel","deckt":["B-25","B-27","B-28","B-37","B-38","B-40","B-45"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Fristen aus erkanntem Brieftext lesen und als Vorschlag anbieten","groesse":"mittel","deckt":["B-24","B-39"],"faktoren":["offline"]},
+{"katalog":"liste","name":"Termin- und Fristenliste je Person mit Tagesansicht „heute fällig“","groesse":"mittel","deckt":["B-24","B-31","B-41","B-42"],"faktoren":["offline"]},
+{"katalog":"suche","name":"Offline-Suche über alle Unterlagen mit Alltagswörtern, Person, Thema und Monat","groesse":"mittel","deckt":["B-25","B-43"],"faktoren":["offline"]},
+{"katalog":"kipruef","name":"Antwortentwurf mit KI, vorher Namen und Diagnosen lokal verdecken, Versand nur nach Okay","groesse":"mittel","deckt":["B-29","B-44","B-45"],"faktoren":["ki","offline"]},
+{"katalog":"neu","name":"Lokale verschlüsselte Datenhaltung auf Handy/PC ohne fremde Cloud, mit regelmäßiger Sicherung und Erinnerung bei Fehlschlag","groesse":"mittel","deckt":["B-26","B-30","B-46"],"faktoren":["offline"]}
+]}

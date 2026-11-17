@@ -1,0 +1,27 @@
+Klinikum Mühlbrück Beispiel
+Klinik für Unfallchirurgie und Orthopädie
+Seeweg 40 · 34567 Mühlbrück am See
+
+Herrn Erwin Wendeloh
+Am Kirschberg 12
+34567 Mühlbrück am See
+
+Patient: Erwin Wendeloh, geb. 05.11.1941
+Aufenthalt: 02.10.2023 bis 18.10.2023
+Datum: 19.10.2023
+
+Entlassungsbrief
+
+Sehr geehrter Herr Wendeloh,
+
+wir berichten über Ihren stationären Aufenthalt nach einem Sturz im häuslichen Badezimmer.
+
+Diagnosen: Pertrochantäre Femurfraktur rechts. Bekanntes Vorhofflimmern unter Antikoagulation. Pflegegrad 2.
+
+Therapie: Operative Versorgung mit Marknagel am 03.10.2023, komplikationsloser Verlauf. Mobilisation mit Rollator auf Stationsebene.
+
+Weiteres Vorgehen: Vollbelastung erlaubt. Physiotherapie zweimal wöchentlich. Wir empfehlen eine Überprüfung des Pflegegrades. Wiedervorstellung in unserer Ambulanz am 14.11.2023 um 9:00 Uhr mit Röntgenkontrolle, bitte Überweisung mitbringen.
+
+Mit freundlichen Grüßen
+
+Dr. med. Holger Beispiel-Kranz, Oberarzt

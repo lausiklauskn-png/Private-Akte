@@ -1,0 +1,62 @@
+Kaufhalle Sonnental App
+Digitaler Kassenbon (eBon)
+Exportiert aus der App am 23.11.2024
+
+Kaufhalle Sonnental Beispiel
+Markt Talheim
+Gewerbestraße 12, 45678 Talheim-Beispiel
+
+Kundenkarte: **** 2207
+Einkauf vom 23.11.2024 um 10:14 Uhr
+
+Artikel                         Betrag  MwSt
+Kaffee Gemahlen 500G                6,99  A
+Kaeseplatte Fest.                  12,99  A
+Toilettenpapier 10X                 4,99  B
+4 x Mozzarella 125G                 3,40  A
+Zahnpasta                           0,95  B
+Pommes Tk 2,5Kg                     3,99  A
+Haehnchenbrust 1Kg                  9,89  A
+Sekt Trocken 0,75                   4,49  B
+Broetchen 10Er                      2,99  A
+Spinat Tk 750G                      1,59  A
+Schweinenacken Mariniert           11,49  A
+Moehren 1Kg                         1,19  A
+Bauernbrot 1Kg                      3,49  A
+Nudelsalat 1Kg                      4,49  A
+Paprika Mix 500G                    2,49  A
+Toastbrot Vollk.                    1,39  A
+Kekse Butter                        1,49  A
+Muellbeutel 35L                     1,89  B
+Maiskolben 2St                      1,99  A
+Katzenfutter 12X85G                 5,49  B
+2 x Tee Pfefferminz                 2,58  A
+Grillkohle 10Kg                     8,99  B
+3 x Lachsfilet Tk 500G             23,97  A
+Olivenoel 0,75L                     7,99  A
+Pappteller 50St                     3,49  B
+Sahnesteif 3Er                      0,69  A
+Duschgel 250Ml                      1,49  B
+2 x Spuelmittel 900Ml               3,18  B
+Aepfel Elstar 2Kg                   3,99  A
+Tomaten Rispe                       2,79  A
+Spareribs Marin.                    8,99  A
+Shampoo 300Ml                       2,29  B
+Geschirrtabs 60St                   7,99  B
+Emmentaler 400G                     4,49  A
+Joghurt Natur 500G                  0,89  A
+Marmelade Erdbeer                   1,79  A
+App-Coupon Kaffee -20 %            -1,40   
+--------------------------------------------
+Gesamtsumme                       171,87   
+Bezahlt mit girocard              171,87   
+
+Gesammelte Bonuspunkte: 342
+Ihr Punktestand: 3534
+
+Filiale 118  Kasse 2  Bon 61230
+TSE: Seriennr. 3be51d09  Trans.-Nr. 2201744  Sig.-Zähler 5509112
+Beginn 2024-11-23 10:02:51  Ende 2024-11-23 10:14:19
+
+Sie haben den Papierbon abgewählt. Danke, dass Sie Papier sparen.
+Dieser eBon gilt als Kaufbeleg für Umtausch und Gewährleistung.

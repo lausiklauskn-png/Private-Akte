@@ -1,0 +1,79 @@
+Kreisbank Talgau eG KONTOAUSZUG
+Marktplatz 1 - 79995 Talstadt - BIC TALGDEOOXXX Nr. 12/2026 Blatt 1/1
+Martina und Stefan Brenner
+Ahornstraße 12, 79997 Neudorf
+Girokonto Privat Plus IBAN DEOO 6005 0000 0123 4567 89
+Zeitraum 01.12.2026 bis 31.12.2026
+Bu-Tag Wert Vorgang / Verwendungszweck Soll EUR Haben EUR
+alter Kontostand vom 30.11.2026 6.309,00 H
+01.12. 01.12. Gutschrift 1.000,00
+Anna und Tim Vogel
+MIETE DEZEMBER 26 WOHNUNG 0G
+LINDENWEG 7 DAUERAUFTRAG
+01.12. 01.12. Dauerauftrag 50,00
+Bausparkasse Südtal AG
+Sparrate BSV 55 120 778
+Dauerauftrag
+02.12. 02.12. Gutschrift 1.040,00
+Jonas Kessler
+Miete Dezember 2026
+Whg EG Lindenweg 7 KM 780 NK 260
+03.12. 03.12. SEPA-Lastschrift 29,99
+FunkNetz Mobil GmbH
+Mobilfunk Kd 77120943 Rg 12/2026
+Mandat FNM-77120943
+07.12. 07.12. Gutschrift 55,00
+Ngozi Okafor
+RE 2026 G2 Garage Dezember
+08.12. 08.12. Überweisung 249,00
+Elektro Kaiser e.K.
+R26120412 Kd 61223
+09.12. 08.12. Kartenzahlung 88,40
+FRISCHMARKT NEUDORF
+girocard Kartenzahlung 08.12.2026
+Terminal 6611xx22
+10.12. 10.12. SEPA-Lastschrift 12,99
+Kinoflat Online Ltd.
+Abo Premium 12.2026
+Kd-Nr. KF-0099812
+14.12. 14.12. Auszahlung Geldautomat 200,00
+GA Kreisbank Talgau Neudorf
+GA-Nr. 3301 12.12. 10:12 Uhr
+15.12. 15.12. Bareinzahlung 360,00
+Bareinzahlung
+Einzahlung Garagenmiete bar
+Garage 1 Quittungen G61-2026-03/-04
+15.12. 15.12. SEPA-Lastschrift 85,00
+Stadtwerke Erlenbach
+Abschlag Wasser 12.2026
+VK 8 004 3317
+15.12. 15.12. SEPA-Lastschrift 95,00
+Talgau Energie GmbH
+Abschlag WaermeStrom 12/2026
+VK 4009 2211 95 Lindenweg 7
+15.12. 15.12. SEPA-Lastschrift 18,00
+Talgau Energie GmbH
+Abschlag Strom 12/2026
+
+VK 4009 2211 03 Allgemeinstrom
+18.12. 17.12. Kartenzahlung 84,60
+SPIELWAREN HOPP TALSTADT
+girocard 17.12.2026
+21.12. 18.12. Kartenzahlung 31,20
+DROGERIE MEYERHOF
+girocard 18.12.2026
+23.12. 22.12. Kartenzahlung 52515
+NETTOMARKT TALSTADT
+girocard 22.12.2026 Terminal 6711xx05
+31.12. 31.12. Abschluss/Entgelt 6,90
+Kreisbank Talgau eG
+Kontoführungsentgelt 12/2026
+Kontomodell Privat Plus
+31.12. 31.12. SEPA-Lastschrift 1.150,00
+Lindgau Hypothekenbank AG
+Rate Darl. 7700331822
+Zins+Tilgung 12/2026
+neuer Kontostand vom 31.12.2026 6.610,77 H
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Dispositionskredit 3.000,00 EUR, Sollzins 11,25 % p.a. H = Haben, S = Soll
+

@@ -1,0 +1,22 @@
+Sparkasse Beispieltal
+Kontoauszug 12/2021   Blatt 1 von 1
+
+Thomas Wendeloh und Sabine Wendeloh
+Lindenweg 7, 31234 Altbachingen
+Girokonto  IBAN DE00 0000 0000 0000 0000 00
+
+Buchung   Wert      Vorgang                                   Betrag EUR
+01.12.    01.12.    Miete Dezember Hausverwaltung Pfeiffer    -980,00
+01.12.    01.12.    Beispiel Haustechnik GmbH Gehalt 11/21     2.702,58
+02.12.    02.12.    Familienkasse Kindergeld KG 123FK456789    657,00
+06.12.    06.12.    FrischMarkt Beispiel Kartenzahlung        -86,34
+15.12.    15.12.    Stadtwerke Altbachingen Abschlag Strom    -134,00
+15.12.    15.12.    Hanse Beispiel Versicherung HP-445120      -5,70
+20.12.    20.12.    Spielwaren Beispiel Kartenzahlung         -119,95
+28.12.    28.12.    Gehalt S. Wendeloh Gemeinde Altbachingen   1.244,10
+30.12.    30.12.    Kontoführungsentgelt                      -7,90
+
+Alter Kontostand vom 30.11.2021     1.873,22 €
+Neuer Kontostand vom 31.12.2021     5.143,01 €
+
+Bitte prüfen Sie die Buchungen. Einwendungen gegen den Rechnungsabschluss sind innerhalb von sechs Wochen nach Zugang zu erheben.

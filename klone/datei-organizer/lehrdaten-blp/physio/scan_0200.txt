@@ -1,0 +1,15 @@
+digitalwelt.example  –  Rechnung
+Verkäufer: Digitalwelt Online GmbH, Lagerstr. 1, 04347 Leipzig, USt-IdNr. DE000000000
+
+Rechnungsnummer: DW-DE-26-3391877       Rechnungsdatum: 19.05.2026
+Bestellnummer:   302-0000000-0000000
+
+Rechnungsadresse: Physiotherapie & Massagepraxis Lindenhof, Friederike Albrecht-Dörr, Kastanienweg 14, 37287 Wehrstedt
+
+Artikel                                              Anz.  Preis (netto)  USt.   Summe
+Tablet "Tab S9 FE" 10,9 Zoll 128 GB WiFi grau          1      419,33      19 %   499,00
+(für digitale Befund-/Trainingsdokumentation)
+
+Zwischensumme ohne USt.  419,33 EUR
+USt. gesamt               79,67 EUR
+Gesamtbetrag             499,00 EUR      Zahlungsart: Firmenkreditkarte

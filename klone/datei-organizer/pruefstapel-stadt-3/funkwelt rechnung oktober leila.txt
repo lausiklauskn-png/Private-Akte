@@ -1,0 +1,27 @@
+Von: Funkwelt Beispiel Mobilfunk <rechnung@funkwelt.example>
+An: leila.amrani@post.example
+Datum: 05.10.2026 06:12
+Betreff: Ihre Rechnung Oktober 2026 ist da
+
+Hallo Leila Amrani,
+
+Ihre aktuelle Rechnung liegt im Kundenportal für Sie bereit.
+
+Kunden-Nr.:        FW-M-30417725
+Rechnungs-Nr.:     R-2026-10-0918843
+Rechnungsdatum:    05.10.2026
+Tarif:             Funkwelt Familie M (2 Karten)
+
+Grundgebühr Hauptkarte 0000-1771234          19,99 EUR
+Grundgebühr Zusatzkarte 0000-1771235 (Samir)  9,99 EUR
+Auslandsoption Marokko (Paket 120 Min.)       4,99 EUR
+Drittanbieter: keine                          0,00 EUR
+Rechnungsbetrag inkl. 19 % USt               34,97 EUR
+
+Der Betrag wird ab dem 12.10.2026 von Ihrem Konto mit der Endung ...4417
+abgebucht (Mandatsreferenz FWM-30417725-01).
+
+Tipp: Mit der Funkwelt-App behalten Sie Ihr Datenvolumen immer im Blick.
+
+Ihr Funkwelt-Team
+Dies ist eine automatisch erstellte E-Mail. Bitte antworten Sie nicht darauf.

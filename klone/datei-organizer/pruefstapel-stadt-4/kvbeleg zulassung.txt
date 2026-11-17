@@ -1,0 +1,17 @@
+KREISVERWALTUNG BEISPIELKREIS
+Straßenverkehrsamt – Kasse 2
+Kreishausstraße 10, 99910 Beispielkreisstadt
+
+Beleg 2026-08-13 / 0482          13.08.2026 10:41
+Vorgang KFZ-0026518
+
+Kennz. BSP-DL 2040E
+Umschreibung Halterwechsel           27,10 EUR
+Änderung Anschrift ZB I               0,00 EUR
+Plakettenprüfung HU                   0,50 EUR
+--------------------------------------------
+GEBÜHR GESAMT                        27,60 EUR
+girocard                             27,60 EUR
+
+Halterin neu: Okonkwo, Amara
+Kfz-Steuer wird vom Hauptzollamt neu festgesetzt (E-Fahrzeug befreit bis 31.12.2030).

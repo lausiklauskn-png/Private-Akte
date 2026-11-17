@@ -1,0 +1,7 @@
+{"bausteine":[
+{"katalog":"scan","name":"PDF-Formular ausfüllen: Ausfüllstellen automatisch erkennen, vorhandene Einträge erhalten, Felder hinzufügen/verschieben; Ausgabe fest, ausfüllbar und als leere Vorlage; Drucken","groesse":"gross","deckt":["B-19","B-20","B-29","B-30","B-31","B-32","B-33","B-34","B-35"],"faktoren":["offline","druck"]},
+{"katalog":"scan","name":"Scanner aus Handyfotos: Ecken erkennen, gerade rücken, A4-Scan-Aussehen, PDF erzeugen; viele Bilder und ganze Ordner auf einmal","groesse":"gross","deckt":["B-21","B-36","B-37","B-38"],"faktoren":["offline","druck"]},
+{"katalog":"neu","name":"Verschlüsselte Ablage auf dem Gerät mit Passwort im selbst gewählten Ordner; Ordner je Kunde, Vorlagen kopieren","groesse":"mittel","deckt":["B-22","B-23","B-39","B-40"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Sicherungsdatei erstellen und zusammenführend wiederherstellen, ohne Neueres zu überschreiben","groesse":"klein","deckt":["B-24","B-41"],"faktoren":["offline"]},
+{"katalog":"neu","name":"Native App-Hülle für Android-Handy und Windows-PC (Installation, Dateizugriff, Teilen)","groesse":"gross","deckt":["B-25"],"faktoren":["offline"]}
+]}

@@ -1,0 +1,10 @@
+STROMLADEN.EXAMPLE - Ladevorgang Rechnung
+Rechnungsnr. CH-2610-000771   Datum 06.10.2026
+
+Kunde: Teekontor Lindenblatt (Ladekarte ****4412)
+Ladepunkt: Lüneburg, Parkhaus Am Graalwall, Säule 3 (AC 22 kW)
+Start 06.10.2026 08:55, Dauer 2:14 h, geladene Energie 31,24 kWh à 0,59 EUR
+
+Betrag brutto 18,43 EUR
+enthaltene USt 19 %: 2,94 EUR, netto 15,49 EUR
+Fahrzeug: Elektro-Kastenwagen LG-TL 000E

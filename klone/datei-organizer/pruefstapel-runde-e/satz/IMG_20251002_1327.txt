@@ -1,0 +1,33 @@
+# Beispiel-Elektronik Onlineshop
+Beispiel-Elektronik Onlineshop · Chipweg 8 · 85000 Beispielingolstadt
+
+Herrn Tobias Reuter
+c/o WG Demir/Reuter/Wolf
+Kastanienallee 7
+45678 Musterhausen
+
+Bestellnummer: BE-4418-27
+Datum: 02.10.2025
+
+# Rechnung 2025-1002-4418 – Notebook
+
+Sehr geehrter Herr Reuter,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Notebook Beispiel Book 14, 16 GB, 512 GB SSD|1|699,00 €|699,00 €|
+|2|Schutzhülle 14 Zoll|1|19,99 €|19,99 €|
+|3|USB-C-Hub|1|29,99 €|29,99 €|
+
+Nettobetrag: 748,98 €
+zzgl. 19 % MwSt.: 142,31 €
+Rechnungsbetrag: 891,29 €
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Die gesetzliche Gewährleistung beträgt 2 Jahre, die Herstellergarantie 3 Jahre (Studentenaktion, Registrierung erforderlich).
+
+Mit freundlichen Grüßen
+Beispiel-Elektronik Onlineshop
+@fuss Beispiel-Elektronik Onlineshop · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

@@ -1,0 +1,19 @@
+Kartenwerk Payment Services GmbH
+Terminalstraße 5 · 60990 Mainhausen
+USt-IdNr. DE000000000
+
+Händler: Radwerk Tidemann, Kornspeicherweg 14, 26999 Wesselhaven
+Vertrags-Nr. 7700412 · Terminal-ID 61000077
+
+Entgeltabrechnung Kartenakzeptanz Juli 2026                Nr. KA-0726-7700412
+Abrechnungsdatum: 03.08.2026
+
+Kartenumsatz Girocard/Kreditkarte gesamt      15.309,80 EUR
+Transaktionsentgelt 0,89 % vom Umsatz         136,26 EUR
+Servicepauschale Terminal                     12,90 EUR
+
+Nettoentgelt                      149,16 EUR
+Umsatzsteucr 19 %                 28,34 EUR
+Gesamt                            177,50 EUR
+
+Der Betrag wurde mit Ihren Kartenumsätzen verrechnet. Keine Zahlung erforderlich.

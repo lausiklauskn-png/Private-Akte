@@ -1,0 +1,15 @@
+BEISPIELENERGIE SÜDOST GMBH
+
+ABLESEKARTE – BITTE TEILEN SIE UNS IHREN ZÄHLERSTAND MIT
+
+VERTRAGSKONTO: 300471128
+ZÄHLER-NR.: 1ESY0000000
+ABLESEZEITRAUM: 01.12.–10.12.2025
+ZÄHLERSTAND: |__|__|__|__|__| kWh
+ABLESEDATUM: __.__.2025
+
+[ ] Online gemeldet
+[ ] Zähler wurde getauscht
+
+Bitte melden Sie den Stand bis spätestens 10.12.2025 per Karte, online oder in der App. Ohne Meldung schätzen wir den Verbrauch.
+

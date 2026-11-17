@@ -1,0 +1,19 @@
+Stadtsparkasse Lindenrath                      Kontoauszug 11/2025  Blatt 1/1
+Giro Start (U27)   IBAN DE61 3995 0000 0047 2231 08   BIC SSLIDE3XXXX
+Brandis, Jule
+
+Buchung Wert   Vorgang                                           Betrag EUR
+                                        alter Kontostand vom 31.10.  212,37 +
+03.11. 03.11.  DAUERAUFTRAG WG-Konto Kastanienweg Miete+NK        395,00 -
+03.11. 03.11.  LASTSCHRIFT Telvio Mobil GmbH KdNr 70341188          14,99 -
+05.11. 05.11.  KARTENZAHLUNG Frischemarkt Tenbrink 04.11.           23,18 -
+07.11. 07.11.  GUTSCHRIFT Fam.kasse Westmark KG 318FK207744        255,00 +
+10.11. 10.11.  KARTENZAHLUNG Radstation Suedbahnhof                 46,90 -
+14.11. 14.11.  LASTSCHRIFT Flimmerbox Streaming                      9,99 -
+17.11. 17.11.  GELDAUTOMAT Mensaplatz                               40,00 -
+21.11. 21.11.  GUTSCHRIFT Cafe Ringelnatter Lohn 10/25             268,00 +
+28.11. 28.11.  GUTSCHRIFT Stud.werk Lindenrath BAfoeG 10+11/25    1348,00 +
+28.11. 28.11.  UEBERTRAG Tagesgeld                                 500,00 -
+                                        neuer Kontostand vom 30.11. 1053,31 +
+
+Dispositionsrahmen: 0,00 EUR. Bitte Einwendungen binnen 6 Wochen erheben.

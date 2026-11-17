@@ -1,0 +1,24 @@
+Entgeltabrechnung für März 2026                         erstellt am 27.03.2026
+
+Arbeitgeber:  Buchhandlung Lindenblatt, Inh. Friederike Ansorge, Marktgasse 7, 37999 Wehrstedt
+Arbeitnehmer: Jonas Hartwig, Buchhändler, Pers.-Nr. 002, Eintritt 01.09.2019
+              Krankenkasse: Bergland BKK - SV-Nr. 00 000000 H 000
+
+Bezüge
+  Gehalt (38,5 Std./Woche)            2.850,00
+  Gesamtbrutto                        2.850,00
+
+Abzüge
+  Lohnsteuer (StKl. I)                  312,58
+  Solidaritätszuschlag                    0,00
+  Kirchensteuer                           0,00
+  Krankenversicherung AN                233,70
+  Rentenversicherung AN                 265,05
+  Arbeitslosenversicherung AN            37,05
+  Pflegeversicherung AN                  68,40
+
+  Nettoverdienst                      1.933,22
+  Auszahlungsbetrag                   1.933,22 EUR
+
+Überweisung auf IBAN DE00 0000 0000 0002 0000 02 zum Monatsende.
+Resturlaub: 21 Tage. Diese Abrechnung wurde maschinell erstellt.

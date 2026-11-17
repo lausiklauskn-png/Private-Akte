@@ -1,0 +1,34 @@
+{
+  "fassung": "0.4.13",
+  "datum": "2026-11-16",
+  "freigabe": "Klaus 16.11.2026: „Ja, kannst du zusammenführen und veröffentlichen.“ / „erst einmal die Datei Organizer veröffentlichen“",
+  "inhalt": "Ordner-Seite mit einer Fläche (Antippen oder Hineinziehen), Arbeitsordner hinter dem Zahnrad, „Neue Kategorie erstellen“ (Listeneintrag und Knopf), Prüfliste: jedes Feld in jedem Sieb änderbar, Fassung und Fähnchen links im Kopf, Vorschau der Original-PDF im Steckbrief (auch nach Neustart), Update-Fähnchen prüft öfter, Landkarte auf dem Stand (#56, #57)",
+  "android": {
+    "commit": "79e546c718bd4c010b43bac3a50267dba781e9e0",
+    "lauf": 43933651627,
+    "datei": "Datei-Organizer-Pro-0.4.13.apk",
+    "versionCode": 53,
+    "groesse": 72127288,
+    "sha256": "ec7a5e0b2573e585a00bb4f1ed5fc7636a8cc9fb76a24132b11f87ea343c7eec",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.13",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.13.apk",
+    "geprueft": "Release-Lauf grün (erster Start hielt an, weil der Prüflauf auf main noch lief; zweiter Start grün); Release-Datei aus der Sitzung geladen, Größe und SHA-256 gleich .apk.json"
+  },
+  "windows": {
+    "commit": "79e546c718bd4c010b43bac3a50267dba781e9e0",
+    "lauf": 43934877194,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.13-x64-setup.exe",
+    "groesse": 87293242,
+    "sha256": "2b413a7c45445d99f4c728bebe4bc114f59aabe4fe604d21c6773720b7b05b07",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.13-x64-setup.exe",
+    "geprueft": "Release-Lauf grün im ersten Versuch (nach dem Android-Lauf gestartet); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.12)"
+  },
+  "basic": {
+    "commit": "79e546c718bd4c010b43bac3a50267dba781e9e0",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_geprueft": "Nicht am Gerät: neue Ordner-Seite, Zahnrad, neue Kategorie, Ändern in der Prüfliste, PDF-Vorschau am Tablet, Fassung links im Kopf, Update-Fähnchen; Update-Server aus der Sitzung nicht abrufbar."
+}

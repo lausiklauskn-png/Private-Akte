@@ -1,0 +1,22 @@
+Fahrrad Beispiel-Stern
+Bahnhofstr. 12 · 04999 Musterstadt
+
+Frau
+Nora Feldkamp
+Kirchgasse 3
+04999 Musterstadt
+
+Rechnung: FS-25-311
+Datum: 29.03.2025
+
+Rechnung Reparatur Lastenrad
+
+Pos.   Leistung   Menge   Betrag
+1   Frühjahrsinspektion Lastenrad   1   69,00 EUR
+2   Bremsbeläge Scheibenbremse   2   37,80 EUR
+3   Kette   1   29,90 EUR
+4   Montage   0,5 Std.   30,00 EUR
+   Gesamt inkl. MwSt.      166,70 EUR
+
+Bar bezahlt. Danke!
+

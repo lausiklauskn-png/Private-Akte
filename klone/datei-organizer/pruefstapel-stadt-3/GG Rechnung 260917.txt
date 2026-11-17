@@ -1,0 +1,29 @@
+GASTRO-GROSSHANDEL BEISPIEL-MARKT
+Gewerbepark 55 · 00127 Beispielstadt-Nord · Tel. 0000-90 90 0 · Mo–Sa ab 5 Uhr
+USt-IdNr. DE000000000
+
+Grillstube Beispiel-Eck
+Dimitrios Kalanteris
+Nordring 115
+00105 Beispielstadt-Nord
+
+Kunden-Nr. GG-30514                 Rechnung Nr. 260917-0442
+Rechnungsdatum 18.09.2026           Lieferung frei Haus am 18.09.2026, Tour 4
+
+Art.-Nr.   Bezeichnung                         Menge   Einh.   Preis     Betrag  USt
+100223     Gyrosspieß Schwein/Pute 10 kg        6      Stk    64,90    389,40   7%
+100518     Hähnchenbrustfilet TK 2,5 kg        8      Btl    17,80    142,40   7%
+220011     Pommes frites TK 10 kg              10      Krt    15,40    154,00   7%
+220094     Pita-Brot 20 Stk                    12      Pkg     4,95     59,40   7%
+310045     Tzatziki Eimer 5 kg                  4      Eim    18,60     74,40   7%
+410007     Frittieröl 25 l                      3      Kan    52,90    158,70   19%
+510120     Servietten 1/4 Falz 1.000 St         2      Pkg     9,80     19,60   19%
+510301     Menüboxen 3-geteilt 200 Stk          3      Krt    27,50     82,50   19%
+                                                          Summe netto    1.080,40
+                                                          USt 7 %   57,74
+                                                          USt 19 %  49,96
+                                                          Rechnungsbetrag 1.188,10
+
+Zahlungsbedingung: 14 Tage netto. Zahlbar bis 02.10.2026.
+Bankverbindung: IBAN DE00 0000 0000 0000 0000 00 · Bitte Rechnungsnummer angeben.
+Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.

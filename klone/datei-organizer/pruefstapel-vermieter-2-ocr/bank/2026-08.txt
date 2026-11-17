@@ -1,0 +1,94 @@
+Kreisbank Talgau eG KONTOAUSZUG
+Marktplatz 1 - 79995 Talstadt : BIC TALGDEOOXXX Nr. 08/2026 Blatt 1/2
+Martina und Stefan Brenner
+Ahornstraße 12, 79997 Neudorf
+Girokonto Privat Plus IBAN DE00 6005 0000 0123 4567 89
+Zeitraum 01.08.2026 bis 31.08.2026
+Bu-Tag Wert Vorgang / Verwendungszweck Soll EUR Haben EUR
+alter Kontostand vom 31.07.2026 923,34 H
+03.08. 03.08. Gutschrift 1.000,00
+Anna und Tim Vogel
+MIETE AUGUST 26 WOHNUNG 0G
+LINDENWEG 7 DAUERAUFTRAG
+03.08. 03.08. Gutschrift 1.040,00
+Jonas Kessler
+Miete August 2026
+Whg EG Lindenweg 7 KM 780 NK 260
+03.08. 03.08. Dauerauftrag 50,00
+Bausparkasse Südtal AG
+Sparrate BSV 55 120 778
+Dauerauftrag
+03.08. 03.08. SEPA-Lastschrift 29,99
+FunkNetz Mobil GmbH
+Mobilfunk Kd 77120943 Rg 08/2026
+Mandat FNM-77120943
+05.08. 05.08. Gutschrift 55,00
+Ngozi Okafor
+RE 2026 G2 Garage August
+10.08. 08.08. Kartenzahlung 44,83
+FRISCHMARKT NEUDORF
+girocard Kartenzahlung 08.08.2026
+Terminal 6611xx22
+10.08. 10.08. SEPA-Lastschrift 12,99
+Kinoflat Online Ltd.
+Abo Premium 08.2026
+Kd-Nr. KF-0099812
+12.08. 12.08. Auszahlung Geldautomat 200,00
+GA Kreisbank Talgau Neudorf
+GA-Nr. 3301 12.08. 10:18 Uhr
+17.08. 17.08. SEPA-Lastschrift 153,10
+Gemeinde Erlenbach
+Kassenz. 4.1102.077318.6
+Grundbesitzabgaben 3. Rate 2026
+17.08. 17.08. SEPA-Lastschrift 85,00
+Stadtwerke Erlenbach
+Abschlag Wasser 08.2026
+VK 8 004 3317
+17.08. 17.08. SEPA-Lastschrift 210,00
+Talgau Energie GmbH
+Abschlag Erdgas 08/2026
+VK 4009 2211 77 Lindenweg 7
+Übertrag auf Blatt 2 2.232,43 H
+0
+Kreisbank Talgau eG KONTOAUSZUG
+Marktplatz 1 : 79995 Talstadt : BIC TALGDEOOXXX Nr. 08/2026 Blatt 2/2
+
+Martina und Stefan Brenner
+Ahornstraße 12, 79997 Neudorf
+Girokonto Privat Plus IBAN DE00 6005 0000 0123 4567 89
+Zeitraum 01.08.2026 bis 31.08.2026
+Bu-Tag Wert Vorgang / Verwendungszweck Soll EUR Haben EUR
+Übertrag von Blatt 1 2.232,43 H
+17.08. 17.08. SEPA-Lastschrift 18,00
+Talgau Energie GmbH
+Abschlag Strom 08/2026
+VK 4009 2211 03 Allgemeinstrom
+19.08. 18.08. Kartenzahlung 21,05
+DROGERIE MEYERHOF
+girocard 18.08.2026
+24.08. 22.08. Kartenzahlung 36,18
+NETTOMARKT TALSTADT
+girocard 22.08.2026 Terminal 6711xx05
+25.08. 25.08. Überweisung 345,10
+Torbau Klee
+TK26-077 Garage 1 Lindenweg
+26.08. 26.08. Gutschrift 10.000,00
+Martina und Stefan Brenner
+Umbuchung von Tagesgeld
+Heizung Lindenweg
+28.08. 28.08. Überweisung 9.000,00
+Waermetechnik Sommer GmbH
+Abschlagsrg AR 26/0881
+Auftrag AU-2026-0233
+31.08. 31.08, Abschluss/Entgelt 6,90
+Kreisbank Talgau eG
+Kontoführungsentgelt 08/2026
+Kontomodell Privat Plus
+31.08. 31.08. SEPA-Lastschrift 1.150,00
+Lindgau Hypothekenbank AG
+Rate Darl. 7700331822
+Zins+Tilgung 08/2026
+neuer Kontostand vom 31.08.2026 1.655,20 H
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Dispositionskredit 3.000,00 EUR, Sollzins 11,25 % p.a. H = Haben, S = Soll
+

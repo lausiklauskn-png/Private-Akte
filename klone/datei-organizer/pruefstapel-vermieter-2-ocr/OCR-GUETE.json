@@ -1,0 +1,503 @@
+{
+ "stuecke": 62,
+ "wortfehlerAnteil": 0.05445127093121311,
+ "zeichenfehlerAnteil": 0.07378987425027797,
+ "dateien": [
+  {
+   "datei": "bank/2026-01.txt",
+   "seiten": 2,
+   "woerter": 302,
+   "wortfehler": 9,
+   "zeichen": 2413,
+   "zeichenfehler": 183
+  },
+  {
+   "datei": "bank/2026-02.txt",
+   "seiten": 2,
+   "woerter": 417,
+   "wortfehler": 15,
+   "zeichen": 3395,
+   "zeichenfehler": 362
+  },
+  {
+   "datei": "bank/2026-03.txt",
+   "seiten": 2,
+   "woerter": 310,
+   "wortfehler": 10,
+   "zeichen": 2493,
+   "zeichenfehler": 185
+  },
+  {
+   "datei": "bank/2026-04.txt",
+   "seiten": 2,
+   "woerter": 418,
+   "wortfehler": 17,
+   "zeichen": 3382,
+   "zeichenfehler": 366
+  },
+  {
+   "datei": "bank/2026-05.txt",
+   "seiten": 2,
+   "woerter": 414,
+   "wortfehler": 19,
+   "zeichen": 3369,
+   "zeichenfehler": 367
+  },
+  {
+   "datei": "bank/2026-06.txt",
+   "seiten": 2,
+   "woerter": 435,
+   "wortfehler": 20,
+   "zeichen": 3460,
+   "zeichenfehler": 370
+  },
+  {
+   "datei": "bank/2026-07.txt",
+   "seiten": 2,
+   "woerter": 388,
+   "wortfehler": 16,
+   "zeichen": 3120,
+   "zeichenfehler": 365
+  },
+  {
+   "datei": "bank/2026-08.txt",
+   "seiten": 2,
+   "woerter": 389,
+   "wortfehler": 13,
+   "zeichen": 3152,
+   "zeichenfehler": 360
+  },
+  {
+   "datei": "bank/2026-09.txt",
+   "seiten": 2,
+   "woerter": 289,
+   "wortfehler": 7,
+   "zeichen": 2298,
+   "zeichenfehler": 181
+  },
+  {
+   "datei": "bank/2026-10.txt",
+   "seiten": 2,
+   "woerter": 398,
+   "wortfehler": 17,
+   "zeichen": 3212,
+   "zeichenfehler": 367
+  },
+  {
+   "datei": "bank/2026-11.txt",
+   "seiten": 2,
+   "woerter": 407,
+   "wortfehler": 16,
+   "zeichen": 3298,
+   "zeichenfehler": 363
+  },
+  {
+   "datei": "bank/2026-12.txt",
+   "seiten": 2,
+   "woerter": 312,
+   "wortfehler": 9,
+   "zeichen": 2486,
+   "zeichenfehler": 183
+  },
+  {
+   "datei": "belege/Download.txt",
+   "seiten": 1,
+   "woerter": 68,
+   "wortfehler": 4,
+   "zeichen": 549,
+   "zeichenfehler": 73
+  },
+  {
+   "datei": "belege/Heizung_Schlussrechnung.txt",
+   "seiten": 1,
+   "woerter": 134,
+   "wortfehler": 13,
+   "zeichen": 1043,
+   "zeichenfehler": 86
+  },
+  {
+   "datei": "belege/IMG_20260318_0941.txt",
+   "seiten": 1,
+   "woerter": 89,
+   "wortfehler": 6,
+   "zeichen": 644,
+   "zeichenfehler": 14
+  },
+  {
+   "datei": "belege/IMG_20260321_1104.txt",
+   "seiten": 1,
+   "woerter": 52,
+   "wortfehler": 7,
+   "zeichen": 350,
+   "zeichenfehler": 46
+  },
+  {
+   "datei": "belege/IMG_20260620_1530.txt",
+   "seiten": 1,
+   "woerter": 41,
+   "wortfehler": 2,
+   "zeichen": 302,
+   "zeichenfehler": 45
+  },
+  {
+   "datei": "belege/IMG_20261028_1712.txt",
+   "seiten": 1,
+   "woerter": 73,
+   "wortfehler": 5,
+   "zeichen": 465,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/NK-Abrechnung_2025_EG.txt",
+   "seiten": 1,
+   "woerter": 138,
+   "wortfehler": 11,
+   "zeichen": 1022,
+   "zeichenfehler": 77
+  },
+  {
+   "datei": "belege/NK-Abrechnung_2025_OG.txt",
+   "seiten": 1,
+   "woerter": 131,
+   "wortfehler": 12,
+   "zeichen": 932,
+   "zeichenfehler": 77
+  },
+  {
+   "datei": "belege/PDF_Anhang_2.txt",
+   "seiten": 1,
+   "woerter": 79,
+   "wortfehler": 3,
+   "zeichen": 582,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "belege/anzeige_wochenblatt.txt",
+   "seiten": 1,
+   "woerter": 71,
+   "wortfehler": 2,
+   "zeichen": 491,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "belege/bon_0321.txt",
+   "seiten": 1,
+   "woerter": 29,
+   "wortfehler": 4,
+   "zeichen": 255,
+   "zeichenfehler": 51
+  },
+  {
+   "datei": "belege/bon_baumarkt_0509.txt",
+   "seiten": 1,
+   "woerter": 74,
+   "wortfehler": 14,
+   "zeichen": 486,
+   "zeichenfehler": 54
+  },
+  {
+   "datei": "belege/buchhandlung_bon.txt",
+   "seiten": 1,
+   "woerter": 35,
+   "wortfehler": 4,
+   "zeichen": 258,
+   "zeichenfehler": 44
+  },
+  {
+   "datei": "belege/darlehen_tilgungsplan_2026.txt",
+   "seiten": 1,
+   "woerter": 97,
+   "wortfehler": 9,
+   "zeichen": 721,
+   "zeichenfehler": 11
+  },
+  {
+   "datei": "belege/dokument(4).txt",
+   "seiten": 1,
+   "woerter": 101,
+   "wortfehler": 3,
+   "zeichen": 741,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/dokument.txt",
+   "seiten": 1,
+   "woerter": 55,
+   "wortfehler": 4,
+   "zeichen": 393,
+   "zeichenfehler": 25
+  },
+  {
+   "datei": "belege/energieberatung_falk.txt",
+   "seiten": 1,
+   "woerter": 75,
+   "wortfehler": 3,
+   "zeichen": 575,
+   "zeichenfehler": 10
+  },
+  {
+   "datei": "belege/garage2_rechnung_2026.txt",
+   "seiten": 1,
+   "woerter": 78,
+   "wortfehler": 4,
+   "zeichen": 516,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/garagentor_reparatur.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 5,
+   "zeichen": 484,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/gartenpflege_fruehjahr.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 5,
+   "zeichen": 497,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/gas_schlussrechnung.txt",
+   "seiten": 1,
+   "woerter": 98,
+   "wortfehler": 7,
+   "zeichen": 705,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/grundbesitzabgaben_2026.txt",
+   "seiten": 1,
+   "woerter": 102,
+   "wortfehler": 7,
+   "zeichen": 822,
+   "zeichenfehler": 70
+  },
+  {
+   "datei": "belege/haftpflicht_hausbesitzer_2026.txt",
+   "seiten": 1,
+   "woerter": 63,
+   "wortfehler": 2,
+   "zeichen": 460,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "belege/hausverwaltung_2026_Q3.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 5,
+   "zeichen": 602,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/hausverwaltung_2026_Q4.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 5,
+   "zeichen": 602,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/hv_q1.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 6,
+   "zeichen": 602,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/kassenbon_supermarkt.txt",
+   "seiten": 1,
+   "woerter": 65,
+   "wortfehler": 13,
+   "zeichen": 402,
+   "zeichenfehler": 53
+  },
+  {
+   "datei": "belege/kostennote_sander.txt",
+   "seiten": 1,
+   "woerter": 83,
+   "wortfehler": 2,
+   "zeichen": 591,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "belege/maler_OG.txt",
+   "seiten": 1,
+   "woerter": 113,
+   "wortfehler": 10,
+   "zeichen": 739,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "belege/mitgliedsbeitrag_verein.txt",
+   "seiten": 1,
+   "woerter": 56,
+   "wortfehler": 1,
+   "zeichen": 459,
+   "zeichenfehler": 1
+  },
+  {
+   "datei": "belege/neu_1.txt",
+   "seiten": 1,
+   "woerter": 84,
+   "wortfehler": 4,
+   "zeichen": 673,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/optiker.txt",
+   "seiten": 1,
+   "woerter": 46,
+   "wortfehler": 3,
+   "zeichen": 318,
+   "zeichenfehler": 4
+  },
+  {
+   "datei": "belege/quittung_garage1_Q1.txt",
+   "seiten": 1,
+   "woerter": 55,
+   "wortfehler": 0,
+   "zeichen": 390,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "belege/quittung_garage1_Q2.txt",
+   "seiten": 1,
+   "woerter": 55,
+   "wortfehler": 0,
+   "zeichen": 389,
+   "zeichenfehler": 0
+  },
+  {
+   "datei": "belege/quittung_garage1_Q4.txt",
+   "seiten": 1,
+   "woerter": 55,
+   "wortfehler": 7,
+   "zeichen": 395,
+   "zeichenfehler": 32
+  },
+  {
+   "datei": "belege/rauchmelder_wartung.txt",
+   "seiten": 1,
+   "woerter": 68,
+   "wortfehler": 12,
+   "zeichen": 469,
+   "zeichenfehler": 10
+  },
+  {
+   "datei": "belege/rechnung(1).txt",
+   "seiten": 1,
+   "woerter": 60,
+   "wortfehler": 2,
+   "zeichen": 432,
+   "zeichenfehler": 2
+  },
+  {
+   "datei": "belege/rechnung(2).txt",
+   "seiten": 1,
+   "woerter": 59,
+   "wortfehler": 5,
+   "zeichen": 440,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/sanitaer_weidner_EG.txt",
+   "seiten": 1,
+   "woerter": 77,
+   "wortfehler": 4,
+   "zeichen": 494,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "belege/scan_0003.txt",
+   "seiten": 1,
+   "woerter": 87,
+   "wortfehler": 4,
+   "zeichen": 779,
+   "zeichenfehler": 59
+  },
+  {
+   "datei": "belege/scan_0004.txt",
+   "seiten": 1,
+   "woerter": 96,
+   "wortfehler": 10,
+   "zeichen": 653,
+   "zeichenfehler": 8
+  },
+  {
+   "datei": "belege/scan_0007.txt",
+   "seiten": 1,
+   "woerter": 80,
+   "wortfehler": 3,
+   "zeichen": 602,
+   "zeichenfehler": 3
+  },
+  {
+   "datei": "belege/scan_0011.txt",
+   "seiten": 1,
+   "woerter": 69,
+   "wortfehler": 5,
+   "zeichen": 535,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/scan_0016.txt",
+   "seiten": 1,
+   "woerter": 62,
+   "wortfehler": 4,
+   "zeichen": 438,
+   "zeichenfehler": 6
+  },
+  {
+   "datei": "belege/scan_0019.txt",
+   "seiten": 1,
+   "woerter": 87,
+   "wortfehler": 11,
+   "zeichen": 621,
+   "zeichenfehler": 18
+  },
+  {
+   "datei": "belege/stadtwerke_wasser_2025.txt",
+   "seiten": 1,
+   "woerter": 108,
+   "wortfehler": 11,
+   "zeichen": 769,
+   "zeichenfehler": 19
+  },
+  {
+   "datei": "belege/steuerbuero_2025.txt",
+   "seiten": 1,
+   "woerter": 93,
+   "wortfehler": 6,
+   "zeichen": 695,
+   "zeichenfehler": 12
+  },
+  {
+   "datei": "belege/tankbeleg.txt",
+   "seiten": 1,
+   "woerter": 36,
+   "wortfehler": 6,
+   "zeichen": 261,
+   "zeichenfehler": 48
+  },
+  {
+   "datei": "belege/unbenannt.txt",
+   "seiten": 1,
+   "woerter": 70,
+   "wortfehler": 4,
+   "zeichen": 483,
+   "zeichenfehler": 5
+  },
+  {
+   "datei": "belege/waermetechnik_sommer_abschlag.txt",
+   "seiten": 1,
+   "woerter": 81,
+   "wortfehler": 5,
+   "zeichen": 653,
+   "zeichenfehler": 5
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+Amtsgericht Beispielkreisstadt – Nachlassgericht
+Gerichtskasse
+Gerichtsplatz 3, 99990 Beispielkreisstadt
+
+KOSTENRECHNUNG
+Kassenzeichen: 000000000000
+Geschäftsnummer: VI 000/26
+
+Kostenschuldnerin: Gertrud Wiesnegger, Obere Dorfstraße 27,
+                   99998 Musterbach-Kleeweiler
+
+Datum: 20.08.2026
+
+Pos.  Gegenstand                               Wert          Betrag
+1     Eröffnung einer Verfügung von Todes
+      wegen (Festgebühr)                                     100,00 €
+2     Verfahren über den Antrag auf
+      Erteilung eines Erbscheins               186.000 €     537,00 €
+3     Abnahme der eidesstattlichen
+      Versicherung                             186.000 €     537,00 €
+4     Auslagen (Zustellung, Ablichtungen)                     18,50 €
+---------------------------------------------------------------------
+Summe                                                      1.192,50 €
+
+Der Betrag ist sofort fällig. Bitte zahlen Sie bis 10.09.2026 unter
+Angabe des Kassenzeichens auf
+IBAN DE00 0000 0000 0000 0000 00 (Landesjustizkasse Beispiel).
+
+Der Erbschein wird erst nach Zahlungseingang erteilt.
+
+Gegen diese Kostenrechnung ist die Erinnerung zulässig.

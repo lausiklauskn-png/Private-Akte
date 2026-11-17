@@ -1,0 +1,32 @@
+Muster Drogerie App – Dein digitaler Kassenbon
+
+Muster Drogerie, Bahnhofstraße 22, 45678 Musterhausen
+Einkauf vom 06.12.2025 um 13:15 Uhr
+Kundenkarte **** 1878
+
+Artikel   Menge   Preis
+Taschentücher   1   1,49 € A
+Alufolie   1   1,99 € A
+Tierfutter Hund   1   3,99 € A
+Küchenrolle 4Er   1   2,49 € A
+Katzenfutter 12X   1   5,49 € A
+Müllbeutel   1   1,79 € A
+Apfelsaft 1L   1   1,29 € A
+Deo   1   1,95 € A
+Zahnpasta   1   0,99 € A
+
+App-Coupon Zahnpasta: -0,50 €
+
+Zwischensumme: 21,47 €
+Du hast gespart: 0,50 €
+Gesamtsumme: 20,97 €
+Bezahlt mit: Mobiles Bezahlen
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   18,04   3,43   21,47
+B 7 %   -0,47   -0,03   -0,50
+
+Gesammelte Punkte: 20  ·  Punktestand: 519
+Bon-ID: 159266572293  ·  Kasse 6  ·  TSE-Signatur gekürzt 28343795
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

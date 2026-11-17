@@ -1,0 +1,20 @@
+Kfz-Werkstatt Beispiel-Schraubhof · Inh. Gerd Beispielschmied
+Werkstattweg 9, 99999 Musterbach
+
+Verdienstabrechnung Februar 2026
+Personal-Nr. 07      Herrn Felix Hagedorner, Bahnhofstraße 21, 99999 Musterbach
+Beschäftigungsart: geringfügig entlohnt (Minijob)
+Steuerklasse: pauschal      RV-Pflicht: befreit auf Antrag
+
+Bezüge                         Std.     Satz       Betrag
+Stundenlohn                   38,5    13,90 €    535,15 €
+--------------------------------------------------------
+Gesamtbrutto                                      535,15 €
+Steuer/Sozialversicherung AN                        0,00 €
+Nettoverdienst                                    535,15 €
+Auszahlung auf DE00 0000 0000 0000 0000 00        535,15 €
+
+Arbeitgeberanteile (nur zur Info): Pauschalen KV/RV/St. werden vom AG getragen.
+
+Jahressumme bis Februar: 1.040,15 €
+Bitte Stundenzettel für März bis 31.03. im Büro abgeben!

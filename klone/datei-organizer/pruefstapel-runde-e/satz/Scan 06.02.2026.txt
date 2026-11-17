@@ -1,0 +1,32 @@
+# Steuerberatung Beispiel & Partner
+Steuerberatung Beispiel & Partner · Bilanzweg 6 · 56789 Probedorf
+
+Frau Nicole Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Mandant: Nicole und Daniel Hartwig, Haarwerk Hartwig
+Datum: 06.02.2026
+
+# Honorarrechnung – Jahresabschluss und Steuererklärungen 2025
+
+Sehr geehrte Frau Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Einnahmenüberschussrechnung 2025 (StBVV § 25)|1|612,00 €|612,00 €|
+|2|Einkommensteuererklärung (StBVV § 24)|1|398,00 €|398,00 €|
+|3|Umsatzsteuer-Jahreserklärung|1|186,00 €|186,00 €|
+|4|Gewerbesteuererklärung|1|98,00 €|98,00 €|
+|5|Auslagenpauschale|1|20,00 €|20,00 €|
+
+Nettobetrag: 1.314,00 €
+zzgl. 19 % MwSt.: 249,66 €
+Rechnungsbetrag: 1.563,66 €
+
+Bitte überweisen Sie den Betrag von 1.563,66 € bis zum 06.03.2026 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Steuerberatung Beispiel & Partner
+@fuss Steuerberatung Beispiel & Partner · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

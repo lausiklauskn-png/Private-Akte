@@ -1,0 +1,26 @@
+Beispiel Pensionskasse VVaG
+Beispiel Pensionskasse VVaG · Pensionsallee 1 · 50000 Musterköln
+
+Herrn Heinrich Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Rentenabrechnung / Zahlungsmitteilung November 2025
+
+Versorgungsnummer: PK-00-0731
+Krankenkasse: Beispiel Gesundheitskasse
+Steuer-ID: 00 000 000 000
+
+Lohnart   Bezeichnung   Betrag
+100   Betriebsrente aus Versorgungszusage Beispiel Stahl AG   325,00 €
+   Gesamtbrutto   325,00 €
+
+Abzug   Betrag
+Krankenversicherung (voller Satz abzgl. Freibetrag)   23,56 €
+Pflegeversicherung   11,70 €
+Lohnsteuer   13,00 €
+
+Gesetzliches Netto: 276,74 €
+Auszahlungsbetrag: 276,74 € auf IBAN DE00 0000 0000 0000 0000 00
+
+Beispiel Pensionskasse VVaG · Lohnbuchhaltung · Bei Rückfragen bitte Personalnummer angeben

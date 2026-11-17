@@ -1,0 +1,20 @@
+ELKATEC Elektrogroßhandel GmbH & Co. KG
+Niederlassung Rottfelden · Industriestr. 41 · 84513 Rottfelden
+
+Elektro Brandhuber
+Mühlgasse 14
+84577 Altenmoos                              Kd.-Nr. 104417
+
+RECHNUNG 26-0048812            Datum 14.01.2026
+Lieferschein 7741209 vom 13.01.2026   Kommission: BV Aigner
+
+Pos Art.-Nr.   Bezeichnung                         Menge  E-Preis   Gesamt
+1   NYM-J3x15  Mantelleitung NYM-J 3x1,5 100m Rg   6 Rg    58,90   353,40
+2   NYM-J5x25  Mantelleitung NYM-J 5x2,5 50m Rg    2 Rg    84,30   168,60
+3   UP-D60     Geraetedose UP winddicht 60mm       100 St    0,42    42,00
+4   WAGO221-3  Verbindungsklemme 3-Leiter 50er     4 Pk    17,50    70,00
+
+Warenwert netto                                             634,00
+zzgl. 19 % MwSt                                             120,46
+Rechnungsbetrag EUR                                         754,46
+Zahlbar 10 Tage 2 % Skonto, 30 Tage netto. IBAN DE00 0000 0000 0000 0041 17

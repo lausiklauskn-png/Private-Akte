@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "ESt-Bescheid 2024.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": null,
+   "frist": "2025-09-22"
+  },
+  {
+   "datei": "scan_0012.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": null,
+   "frist": "2026-03-10"
+  },
+  {
+   "datei": "Brückner Rechnung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Steuerkanzlei Brückner & Saal",
+   "person": null,
+   "frist": "2025-07-18"
+  },
+  {
+   "datei": "Unterlagen nachreichen.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": "Maren Tiedemann",
+   "frist": "2025-06-30"
+  },
+  {
+   "datei": "AW Jahresgespräch.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Steuerbüro Wendelin Paff",
+   "person": "Gregor Hallbach",
+   "frist": "2026-01-21"
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Bürgerbüro.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Lindenroth – Bürgerbüro",
+   "person": "Gregor Hallbach",
+   "frist": "2026-02-03"
+  },
+  {
+   "datei": "Meldebesch.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Magistrat der Stadt Lindenroth",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "FA Erinnerung.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": "Gregor Hallbach",
+   "frist": "2025-12-29"
+  },
+  {
+   "datei": "abgabe erklärung.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenroth",
+   "person": "Gregor Hallbach",
+   "frist": "2025-10-15"
+  },
+  {
+   "datei": "Kontoauszug 08-2025.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Lindenrother Bank eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Karte Sept.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kontora Direktbank AG",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Depot 2025.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kontora Direktbank AG",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "JStB_2024_7044219.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Kontora Direktbank AG",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Möbel letzte Aufforderung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Credisol Forderungsmanagement GmbH",
+   "person": "Maren Tiedemann",
+   "frist": "2025-11-14"
+  },
+  {
+   "datei": "Rechnung Zahnarzt.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Inkassobüro Rauhfeld & Partner",
+   "person": "Gregor Hallbach",
+   "frist": "2026-03-06"
+  },
+  {
+   "datei": "handy.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Solvanta Inkasso AG",
+   "person": "Gregor Hallbach",
+   "frist": "2025-05-09"
+  },
+  {
+   "datei": "Strom alt.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Kanzlei Dr. Übelacker Forderungseinzug",
+   "person": "Felix Odenthal",
+   "frist": "2024-10-25"
+  },
+  {
+   "datei": "auszug_2025_011.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Lahn-Ohm Bank eG",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Bank Preise.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Lindenrother Bank eG",
+   "person": null,
+   "frist": "2026-02-28"
+  },
+  {
+   "datei": "Wichtige Info Depot.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kontora Direktbank AG",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "WP-Abr 14.05.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kontora Direktbank AG",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "BU Nachtrag.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Nordlicht Lebensversicherung AG",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Nordlicht Erhöhung 2026.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Nordlicht Lebensversicherung AG",
+   "person": "Maren Tiedemann",
+   "frist": "2026-02-28"
+  },
+  {
+   "datei": "PHV 2026.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Fahrrad Schaden.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Justitia Rechtsschutz-Versicherung AG",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Ihr Vertrag läuft aus.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Finanzkontor Wäldchen",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Mahnung Haftpfl.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Gregor Hallbach",
+   "frist": "2025-03-07"
+  },
+  {
+   "datei": "LV Stand 2025.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Nordlicht Lebensversicherung AG",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Valdora Erstattung Mai.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Valdora Krankenversicherung a.G.",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "BAP 2026.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Versicherungen",
+   "absender": "Valdora Krankenversicherung a.G.",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Dr Avramidis.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Orthopädische Praxis Dr. med. Nikos Avramidis",
+   "person": "Maren Tiedemann",
+   "frist": "2025-06-02"
+  },
+  {
+   "datei": "labor 0325.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Laborgemeinschaft Lahn-Ohm",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Sturz Motorrad Mai.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Radiologie am Schlossberg",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "BKK Beitrag ab Jan.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Bergland Krankenkasse",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Krankengeld.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Bergland Krankenkasse",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Kita.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Bergland Krankenkasse",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "HKP Sommerlath.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnarztpraxis Dr. Ilka Sommerlath",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "U9.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kinderarztpraxis Regenbogen",
+   "person": "Ida Odenthal",
+   "frist": "2025-04-29"
+  },
+  {
+   "datei": "VW Beitrag 2026.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Versorgungswerk der Planerkammer Hessen-Mitte",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszug Dezember.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Versorgungswerk der Planerkammer Hessen-Mitte",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Renteninfo Felix.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Hessen-Mitte",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zentrale Zulagenstelle für Altersvorsorge",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "HWK 2025.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Handwerkskammer Lahn-Vogelsberg",
+   "person": "Gregor Hallbach",
+   "frist": "2025-04-30"
+  },
+  {
+   "datei": "Gehalt 10_25.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Hessenrohr Anlagenbau GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Urlaub Sommer.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Hessenrohr Anlagenbau GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Kammerbeitrag Planer.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Planerkammer Hessen-Mitte",
+   "person": "Maren Tiedemann",
+   "frist": "2026-03-15"
+  },
+  {
+   "datei": "Leasing Elvano.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Elvano Leasing GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Kfz Beitrag 2026.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Steuer 2025.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Lahnfurt",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Reitz Inspektion.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Reitz & Söhne GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Anhörung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Regierungspräsidium Mittelhessen – Zentrale Bußgeldstelle",
+   "person": "Felix Odenthal",
+   "frist": "2025-07-07"
+  },
+  {
+   "datei": "HU Transporter.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "PKW-Prüfdienst Mittelhessen GmbH",
+   "person": "Gregor Hallbach",
+   "frist": "2025-09-11"
+  },
+  {
+   "datei": "Wechsel Norvik.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Merkuria Autoversicherung AG",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "km-Abrechnung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Elvano Leasing GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Sicherungsschein.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Police Krad.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Scan_20260213.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Gregor Hallbach",
+   "frist": "2026-03-01"
+  },
+  {
+   "datei": "Zoll Krad.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Motorrad",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Lahnfurt",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Kümmel Nov.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Kümmel",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "HU-Bericht.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "PKW-Prüfdienst Mittelhessen GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Rückruf Tavaro.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Tavaro Motorrad Deutschland GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "TK Regulierung.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Assekuranz Hohe Rhön VVaG",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Frühjahr Krad.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Kümmel",
+   "person": "Gregor Hallbach",
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "Angebot Corsa 1100.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Motorradhaus Lahnfurt GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Fitness Kündigung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Vitalwerk Lindenroth",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Tagblatt.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Lindenrother Tagblatt Verlagsgesellschaft mbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Telvio Vertrag Maren.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Telvio Mobilfunk GmbH",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Jobticket.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsverbund Lahn-Vogelsberg",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "MC Beitrag.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Motorrad",
+   "absender": "Motorradfreunde Ohmtal e.V.",
+   "person": "Gregor Hallbach",
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "kuendigung sportkanal.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Gregor Hallbach",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Ihr Vertrag.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Ohmnetz Breitband GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Telvio 1. Mahnung.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Telvio Mobilfunk GmbH",
+   "person": "Gregor Hallbach",
+   "frist": "2025-02-03"
+  },
+  {
+   "datei": "Flug Vilamar.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Azurflug Reiseportal GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Motorrad Tour Alpen.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Gasthof Zum Hirschen",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Miete.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Nordseeglück Ferienhausvermittlung ApS",
+   "person": null,
+   "frist": "2026-05-22"
+  },
+  {
+   "datei": "Storno Südtirol.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisebüro Fernblick",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Fähre.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Tyrrhenia Fährlinien S.p.A.",
+   "person": "Gregor Hallbach",
+   "frist": "2026-06-12"
+  },
+  {
+   "datei": "Konzert.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Kartenhaus Mittelhessen",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "IMG_4417.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Camping Seeblick Auertal-Süd",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Nebenkosten 2024.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Lahnblick eG",
+   "person": null,
+   "frist": "2025-08-31"
+  },
+  {
+   "datei": "Lahnblick Schreiben.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Lahnblick eG",
+   "person": null,
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Grundbesitzabgaben 2026.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Magistrat der Stadt Lindenroth",
+   "person": "Gregor Hallbach",
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "Schornsteinfeger.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bevollmächtigter Bezirksschornsteinfeger Armin Rußwurm",
+   "person": "Gregor Hallbach",
+   "frist": "2026-10-31"
+  },
+  {
+   "datei": "Dach Rechnung Pfeffer.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dachdeckerei Pfeffer GmbH",
+   "person": "Gregor Hallbach",
+   "frist": "2025-05-02"
+  },
+  {
+   "datei": "Stadtwerke Jahr.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Lindenroth GmbH",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Gas Abschlag neu.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Gasversorgung Vogelsberg-West GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Wasser 2025.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Zweckverband Wasser und Abwasser Ohmtal",
+   "person": "Gregor Hallbach",
+   "frist": "2026-03-02"
+  },
+  {
+   "datei": "Zählerkarte.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Lindenroth GmbH",
+   "person": null,
+   "frist": "2026-01-09"
+  },
+  {
+   "datei": "Rasenmäher.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Landhandel-Markt Oberau",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Ordnungsamt Hecke.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Stadt Lindenroth – Ordnungsamt",
+   "person": "Gregor Hallbach",
+   "frist": "2025-10-20"
+  },
+  {
+   "datei": "Pacht Bleichwiese.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Magistrat der Stadt Lindenroth",
+   "person": "Maren Tiedemann",
+   "frist": "2026-02-01"
+  },
+  {
+   "datei": "Angebot Walnuss.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Baumpflege Grünspecht",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "bon baumarkt.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Baustoff-Zentrum Oberau",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Bestellung 7741.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Zwergenschuh Versand GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Retoure.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Zwergenschuh Versand GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Wohnwerk Erinnerung.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Wohnwerk Nordhang Versand GmbH",
+   "person": "Maren Tiedemann",
+   "frist": "2025-09-02"
+  },
+  {
+   "datei": "drogerie_bon_scan.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Drogerie Lindenblatt",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Waschmaschine.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Hartung",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Drucker Beleg.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Bürotechnik Scharf GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "KVA Laptop.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "PC-Werkstatt Bitfeld",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Garantie TV.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektro Hartung",
+   "person": "Felix Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Handy Display.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "PC-Werkstatt Bitfeld",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Kundendienst GS.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Termin",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Elektro Hartung",
+   "person": null,
+   "frist": "2025-11-06"
+  },
+  {
+   "datei": "Kindergeld.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Hessen-Mitte",
+   "person": "Ida Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Sonnenhügel Bescheid.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Magistrat der Stadt Lindenroth",
+   "person": "Ida Odenthal",
+   "frist": null
+  },
+  {
+   "datei": "Schule.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Grundschule am Mühlbach",
+   "person": "Ida Odenthal",
+   "frist": "2025-10-08"
+  },
+  {
+   "datei": "Abschrift Standesamt.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Lindenroth",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "ErbSt.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Lahnfurt – Erbschaftsteuerstelle",
+   "person": "Gregor Hallbach",
+   "frist": "2025-07-07"
+  },
+  {
+   "datei": "Bank.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Lahn-Ohm Bank eG",
+   "person": "Gregor Hallbach",
+   "frist": "2024-11-29"
+  },
+  {
+   "datei": "Notar Seibel.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notar Dr. Henning Seibel",
+   "person": "Gregor Hallbach",
+   "frist": "2025-11-18"
+  },
+  {
+   "datei": "ZVR Eintrag.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Bundesregister für Vorsorgeverfügungen",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "Brief Tante Gerda.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Gerda Tiedemann",
+   "person": "Maren Tiedemann",
+   "frist": null
+  },
+  {
+   "datei": "scan_0044.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Jannik Althaus",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Zettel Fr Dornbusch.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Elfriede Dornbusch",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Vernichtung Protokoll.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Aktenwolf Mittelhessen GmbH",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Rückgabe Altbelege.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Steuerkanzlei Brückner & Saal",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Karton 3 Inhalt.txt",
+   "haushalt": "h-hallbach",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Gregor Hallbach",
+   "person": "Gregor Hallbach",
+   "frist": null
+  },
+  {
+   "datei": "Lahnblick 35a.txt",
+   "haushalt": "h-odenthal-tiedemann",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Wohnungsgenossenschaft Lahnblick eG",
+   "person": null,
+   "frist": null
+  }
+ ]
+}

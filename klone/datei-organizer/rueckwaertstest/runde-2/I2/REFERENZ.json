@@ -1,0 +1,119 @@
+{
+ "app": "KI-Kompetenz-Mappe für Berater",
+ "merkmale": [
+  {
+   "id": "M01",
+   "text": "Werkzeug für Berater, die viele kleine Betriebe beim sicheren KI-Einsatz und bei der KI-Kompetenzpflicht (Art. 4 KI-VO) betreuen",
+   "gewicht": "kern",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M02",
+   "text": "Nutzer: selbstständige KI-Trainer, IT-Dienstleister, externe Datenschutzbeauftragte; Endkunden 5–100 Personen",
+   "gewicht": "wichtig",
+   "gruppe": "nutzer"
+  },
+  {
+   "id": "M03",
+   "text": "Mandantenfähig: viele Betriebe getrennt verwalten, je Betrieb eigene Akte",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M04",
+   "text": "Übersicht mit Ampel über alle Betriebe: was ist fällig, was fehlt",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M05",
+   "text": "Je Betrieb eine Werkzeugliste mit drei Stufen: erlaubt / nur ohne Personendaten / verboten, jede Änderung datiert",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M06",
+   "text": "Branchenvorlagen (Praxis mit Schweigepflicht, Kanzlei, Handwerk) einmal pflegen und auf viele Betriebe verteilen",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M07",
+   "text": "Schulungsbausteine 15–45 Minuten nach Rolle und Branche zusammenstellen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M08",
+   "text": "Teilnahme in der Schulung erfassen, auch offline am Tablet des Beraters; Bestätigung per Handy-Link optional",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M09",
+   "text": "Kurzer Wissenstest nach dem Baustein",
+   "gewicht": "beiwerk",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M10",
+   "text": "Datiertes Nachweisblatt je Betrieb als PDF auf Knopfdruck, mit Logo des Beraters",
+   "gewicht": "kern",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M11",
+   "text": "Wiedervorlage: Werkzeugliste alle 6 Monate prüfen, Folgeschulungen",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M12",
+   "text": "Mitarbeitende bestätigen die Regeln mit einem Tipp; Bestätigung datiert",
+   "gewicht": "wichtig",
+   "gruppe": "funktion"
+  },
+  {
+   "id": "M13",
+   "text": "Daten des Beraters lokal oder im eigenen Ordner, je Mandant getrennt verschlüsselt, Export jederzeit",
+   "gewicht": "kern",
+   "gruppe": "daten"
+  },
+  {
+   "id": "M14",
+   "text": "PC/Tablet für den Berater, Handy für Teilnehmende ohne App-Installation",
+   "gewicht": "wichtig",
+   "gruppe": "plattform"
+  },
+  {
+   "id": "M15",
+   "text": "Keine Rechtsgutachten, keine Risikoklassifizierung von Hochrisiko-KI",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M16",
+   "text": "Keine Bewertung einzelner Mitarbeitender für den Chef, keine Überwachung von Bildschirmen",
+   "gewicht": "wichtig",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M17",
+   "text": "Kein Lernplattform-Ersatz für Konzerne (kein SCORM-Zwang)",
+   "gewicht": "beiwerk",
+   "gruppe": "grenze"
+  },
+  {
+   "id": "M18",
+   "text": "Abo für Berater gestaffelt nach Mandantenzahl, optional mit eigenem Logo (White-Label)",
+   "gewicht": "beiwerk",
+   "gruppe": "zweck"
+  },
+  {
+   "id": "M19",
+   "text": "Übernimmt Zählwerte aus einem Datenschutz-Vorfilter vor KI als Nachweis",
+   "gewicht": "beiwerk",
+   "gruppe": "schnittstelle"
+  }
+ ]
+}

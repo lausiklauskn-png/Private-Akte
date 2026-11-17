@@ -1,0 +1,34 @@
+{
+  "fassung": "0.4.12",
+  "datum": "2026-11-16",
+  "freigabe": "Klaus 16.11.2026: „Ja, kannst du zusammenführen und veröffentlichen.“",
+  "inhalt": "Discovery nach dem Gerätetest 0.4.11: Leiste des Intro-Videos antippbar (Lautstärke, Vollbild, Spulen), Übersicht behält ihr Baum-Bild, Knopf „Intro abspielen“/„Intro anhalten“, Rückweg aus 3D heißt „Übersicht“, Start immer mit der Übersicht, 3D-Hinweis ohne Begründung (#55)",
+  "android": {
+    "commit": "b3517cccb7461836445b75b86964c8e231f704e1",
+    "lauf": 43830528268,
+    "datei": "Datei-Organizer-Pro-0.4.12.apk",
+    "versionCode": 52,
+    "groesse": 72127288,
+    "sha256": "e3532c3be8fca1c1348ad7f4be109dbc779efe6e73e7d9eb0984b0ebf07d545b",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.12",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.12.apk",
+    "geprueft": "Release-Lauf grün; Release-Datei aus der Sitzung geladen, Größe und SHA-256 gleich .apk.json"
+  },
+  "windows": {
+    "commit": "b3517cccb7461836445b75b86964c8e231f704e1",
+    "lauf": 43831504145,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.12-x64-setup.exe",
+    "groesse": 87291066,
+    "sha256": "d9bebb29a78b5f34ecacf361c8329568e85170482f0775cd67b1ae6a1a974f1d",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.12-x64-setup.exe",
+    "geprueft": "Release-Lauf grün im ersten Versuch (nach dem Android-Lauf gestartet); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.11)"
+  },
+  "basic": {
+    "commit": "b3517cccb7461836445b75b86964c8e231f704e1",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_geprueft": "Nicht am Gerät: Leiste des Intro-Videos, Übersicht nach Stadtwechsel, Start mit der Übersicht; Update-Server aus der Sitzung nicht abrufbar. Klaus 16.11.: Update über den Knopf lief, das Update-Fähnchen erschien aber nicht von selbst (offen)."
+}

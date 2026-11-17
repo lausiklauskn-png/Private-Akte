@@ -1,0 +1,30 @@
+Hausgeräte-Service Beispiel-Lenz
+Kundendienst für alle Marken · Hafenstraße 12 · 34567 Mühlbrück am See
+
+Familie Wendeloh
+Am Kirschberg 12
+34567 Mühlbrück am See
+
+Rechnungsnummer: 2024-0219
+Gerät: Geschirrspüler GS 60 Beispiel, Kauf 2019
+Datum: 21.02.2024
+
+Rechnung Reparatur Geschirrspüler
+
+Sehr geehrte Familie Wendeloh,
+
+am 20.02.2024 haben wir bei Ihnen folgende Arbeiten ausgeführt: Fehler E24, Pumpe blockiert durch Glassplitter, Laugenpumpe ersetzt, Sieb gereinigt, Probelauf ohne Befund.
+
+Anfahrt                       39,00
+Arbeitszeit 45 Min.            67,50
+Laugenpumpe Ersatzteil         58,90
+Netto                         165,40
+USt 19 %                       31,43
+Gesamt                        196,83
+
+Die Herstellergarantie des Geräts ist abgelaufen. Auf das eingebaute Ersatzteil gewähren wir 12 Monate Garantie. Bitte überweisen Sie den Betrag bis zum 06.03.2024.
+
+Mit freundlichen Grüßen
+
+
+Beispiel-Lenz e.K. · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

@@ -1,0 +1,13 @@
+Filiale Beispielheim
+Rathausplatz 68
+------------------------------------
+Zuzahlung Rezept 1              5,00
+Zuzahlung Rezept 2              5,00
+Augentropfen Beispiel-Hyal      9,95
+------------------------------------
+SUMME EUR                      19,95
+EC-Karte
+
+03.03.2026 09:13  Kasse 5  Bon 6064
+
+Vielen Dank für Ihren Einkauf bei Löwen-Apotheke Beispielheim!

@@ -1,0 +1,52 @@
+MODUL 25 PSEUDONYM Generation 2 bereit, Sorten: SCHLUESSEL+MAIL+IBAN+BETRAG+RECHNUNG+TELEFON+DATUM + NAME aus Liste
+B-01 [Bereich 1 Ausgangssituation (IST)] Wir schicken den Mandanten Excel-Listen mit den offenen Kontobewegungen per Mail und telefonieren hinterher.
+B-02 [Bereich 1 Ausgangssituation (IST)] Antworten kommen in Stücken: per Mail, per Post, als Foto per Messenger.
+B-03 [Bereich 1 Ausgangssituation (IST)] Das Online-Portal unseres Kanzleiprogramms nutzt etwa die Hälfte der Mandanten nicht (Anmeldung, App, Vertrag sind zu viel).
+B-04 [Bereich 2 Betroffener Prozess] Belege zu Kontobewegungen ohne Beleg bei den Mandanten anfordern und einsammeln (Buchhaltung)
+B-05 [Bereich 2 Betroffener Prozess] Kundenkontakt mit den Mandanten: nachfragen, erinnern
+B-06 [Bereich 3 Nutzer / Beteiligte] Inhaberin (Steuerberaterin)
+B-07 [Bereich 3 Nutzer / Beteiligte] Mitarbeiter der Kanzlei
+B-08 [Bereich 3 Nutzer / Beteiligte] Mandanten: kleine Handwerker, Läden, Freiberufler, ältere Vermieter
+B-09 [Bereich 4 Problem / Schwachstelle] Zeitverlust: wir laufen fehlenden Belegen hinterher, das Buchen selbst geht schnell.
+B-10 [Bereich 4 Problem / Schwachstelle] Viele Mandanten haben jeden Monat 15, 20, manchmal 40 Kontobewegungen ohne Beleg.
+B-11 [Bereich 4 Problem / Schwachstelle] Antworten kommen verstreut über Mail, Post und Messenger und müssen von Hand den Buchungen zugeordnet werden.
+B-12 [Bereich 4 Problem / Schwachstelle] Fehlende Übersicht, welcher Mandant geantwortet hat und welcher nicht.
+B-13 [Bereich 4 Problem / Schwachstelle] Meine Leute müssen jeden Mandanten mehrmals anschreiben oder anrufen.
+B-14 [Bereich 5 Ursache] Das Portal ist für viele Mandanten zu kompliziert, besonders für ältere.
+B-15 [Bereich 5 Ursache] Excel-Listen per Mail sind für die Mandanten unübersichtlich, sie antworten nicht je Posten.
+B-16 [Bereich 5 Ursache] Es gibt keine automatische Erinnerung.
+B-17 [Bereich 6 Bedarf] Jeder Mandant sieht genau seine eigenen offenen Posten auf dem Handy, ohne Anmeldung und ohne App. (muss)
+B-18 [Bereich 6 Bedarf] Der Mandant kann je Posten schnell antworten: Foto vom Beleg, „war privat“, „kommt später“. (muss)
+B-19 [Bereich 6 Bedarf] Kein Fremder darf die Posten oder Belege eines Mandanten sehen. (muss)
+B-20 [Bereich 6 Bedarf] Die Mandanten werden selbst erinnert, wenn sie nicht antworten. (muss)
+B-21 [Bereich 6 Bedarf] Die Belege kommen passend zu den Buchungen zurück, damit wir sie nur noch übernehmen. (muss)
+B-22 [Bereich 6 Bedarf] Auf einen Blick sehen, welcher Mandant geantwortet hat und welcher nicht. (soll)
+B-23 [Bereich 6 Bedarf] Die Daten verschwinden danach wieder. (muss)
+B-24 [Bereich 7 Ziel (SOLL)] Jeder Mandant beantwortet seine offenen Posten selbst auf dem Handy, die Kanzlei übernimmt die Belege fertig zugeordnet und spart jede Woche ein paar Stunden Telefonieren.
+B-25 [Bereich 8 Funktionaler Bedarf] Das System muss die offenen Kontobewegungen je Mandant aus einer Liste der Kanzlei übernehmen.
+B-26 [Bereich 8 Funktionaler Bedarf] Das System muss jedem Mandanten einen eigenen Zugang ohne Anmeldung geben, den nur er öffnen kann.
+B-27 [Bereich 8 Funktionaler Bedarf] Das System muss je offenem Posten die Antworten „Foto/Beleg hochladen“, „war privat“ und „kommt später“ anbieten.
+B-28 [Bereich 8 Funktionaler Bedarf] Das System muss Mandanten, die nicht geantwortet haben, selbstständig erinnern.
+B-29 [Bereich 8 Funktionaler Bedarf] Das System muss der Kanzlei zeigen, welcher Mandant geantwortet hat und welcher nicht.
+B-30 [Bereich 8 Funktionaler Bedarf] Das System muss die Belege den Buchungen zugeordnet an die Kanzlei zurückgeben.
+B-31 [Bereich 8 Funktionaler Bedarf] Das System muss die Daten nach Abschluss wieder löschen.
+B-32 [Bereich 9 Organisatorischer Bedarf] Festlegen, wer in der Kanzlei die Listen hochlädt und die Antworten übernimmt.
+B-33 [Bereich 9 Organisatorischer Bedarf] Kurze Einweisung für die Mitarbeiter; die Mandanten sollen ohne Erklärung zurechtkommen.
+B-34 [Bereich 10 Technischer Bedarf] Kanzlei an Windows-PCs, Mandanten fast alle mit Handy.
+B-35 [Bereich 10 Technischer Bedarf] Server in Deutschland.
+B-36 [Bereich 11 Bestehende Systeme] Unser Kanzleiprogramm mit Online-Portal für Mandanten; es bleibt das Hauptprogramm.
+B-37 [Bereich 12 Schnittstellen] Offene Posten aus dem Kanzleiprogramm hinein, Belege passend zu den Buchungen wieder hinaus ins Kanzleiprogramm.
+B-38 [Bereich 13 Daten] Kontobewegungen (Datum, Betrag, Empfänger) und Belegfotos bzw. PDFs der Mandanten.
+B-39 [Bereich 14 Datenschutz / Sicherheit] personenbezogene Daten: ja
+B-40 [Bereich 14 Datenschutz / Sicherheit] Steuerliche Schweigepflicht, Daten nur auf Servern in Deutschland, danach löschen.
+B-41 [Bereich 15 Rahmenbedingungen] Budget-Rahmen: 60 bis 130 Euro im Monat
+B-42 [Bereich 15 Rahmenbedingungen] Kein weiteres großes Portal.
+O-01 [Bereich 18 Offene Punkte] Wie genau kommen die offenen Posten aus dem Kanzleiprogramm heraus und die Belege wieder hinein?
+O-02 [Bereich 18 Offene Punkte] Nach wie vielen Tagen werden die Daten gelöscht?
+O-03 [Bereich 18 Offene Punkte] Wie oft und auf welchem Weg wird erinnert (Mail, SMS)?
+N-01 [nicht gewünscht] nicht buchen
+N-02 [nicht gewünscht] nicht kontieren
+N-03 [nicht gewünscht] den Mandanten keine Steuertipps geben
+N-04 [nicht gewünscht] kein weiteres großes Portal, das Kanzleiprogramm bleibt
+N-05 [nicht gewünscht] keine Anmeldung oder App für Mandanten
+Ausgefüllt: 18 von 18 Bereichen

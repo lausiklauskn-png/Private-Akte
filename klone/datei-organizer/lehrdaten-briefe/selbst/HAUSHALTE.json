@@ -1,0 +1,43 @@
+{
+ "haushalte": [
+  {
+   "id": "h-odenthal-tiedemann",
+   "name": "Odenthal/Tiedemann",
+   "personen": [
+    {
+     "vorname": "Maren",
+     "name": "Tiedemann",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Felix",
+     "name": "Odenthal",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Ida",
+     "name": "Odenthal",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "Elvano Tura 1.5 Kombi (Leasing), LIR-MO 318"
+   ]
+  },
+  {
+   "id": "h-hallbach",
+   "name": "Hallbach",
+   "personen": [
+    {
+     "vorname": "Gregor",
+     "name": "Hallbach",
+     "anrede": "Herr"
+    }
+   ],
+   "fahrzeuge": [
+    "Motorrad Tavaro Strada 850, LIR-GH 85 (Saison 03–10)",
+    "Norvik Cargo Kastenwagen, LIR-HB 204"
+   ]
+  }
+ ]
+}

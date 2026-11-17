@@ -1,0 +1,22 @@
+Hafenlotsen Software GmbH                          Lohn-/Gehaltsabrechnung
+Hafenspitze 4, 28990 Brakenhude                    Oktober 2026
+
+Mitarbeiter: Deniz Baştürk               Personalnummer: 1044
+Eintrittsdatum: 01.03.2021               Steuerklasse 4 / KFB 0,5 / RK ev? nein
+
+GEHALT                                    5.200,00
+Bonus Q3                                    600,00
+Sachbezug Jobrad (0,25 %)                    11,25
+                                          --------
+BRUTTO                                    5.811,25
+LSt                                      1.098,58
+SolZ                                         0,00
+KV                                         492,57
+PV                                         102,30
+RV                                         540,45
+AV                                          75,55
+                                          --------
+NETTO                                     3.501,80
+Abzug Jobrad Leasingrate                    -65,30
+Abzug Sachbezug                             -11,25
+AUSZAHLUNG                                3.425,25

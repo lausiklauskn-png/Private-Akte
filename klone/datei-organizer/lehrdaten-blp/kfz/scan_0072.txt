@@ -1,0 +1,8 @@
+STROMTANKE am Rathaus – Stadtwerke Wolmershagen AöR
+Ladebeleg Nr. LS-26-088412
+Ladepunkt DE*SWW*E0417*2      Start 03.10.2026 08:12  Ende 09:41
+Fahrzeug/Karte: Ladekarte Kfz-Technik Brandhorst (E-Kleinwagen WOH-KB 45E)
+
+Geladene Energie   31,6 kWh x 0,49 EUR         15,48
+davon USt 19 %                                   2,47
+Abrechnung über Ladekarten-Sammelrechnung

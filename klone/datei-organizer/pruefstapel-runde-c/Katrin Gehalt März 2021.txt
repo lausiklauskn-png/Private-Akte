@@ -1,0 +1,25 @@
+Praxis für Physiotherapie Beispiel-Vogt
+Lohnbüro · Kurpark 3 · 45690 Brunnwald
+
+Frau
+Katrin Sommerfeld
+Rosenhof 9
+45690 Brunnwald
+
+Entgeltabrechnung März 2021
+Pers.-Nr. 017   StKl II   Kinderfreibeträge 0,5   Krankenkasse IKK Beispiel Süd
+
+Bezüge                        Stunden   Betrag
+Grundgehalt Teilzeit 30 Std             2.280,00
+Zuschlag Hausbesuche          6         60,00
+Gesamtbrutto                            2.340,00
+
+Lohnsteuer                              126,25
+Solidaritätszuschlag                    0,00
+Kranken- und Pflegeversicherung         231,08
+Rentenversicherung                      217,62
+Arbeitslosenversicherung                28,08
+Netto                                   1.736,97
+Auszahlung an IBAN DE00 0000 0000 0000 0000 00   1.736,97
+
+Resturlaub 2021: 27 Tage

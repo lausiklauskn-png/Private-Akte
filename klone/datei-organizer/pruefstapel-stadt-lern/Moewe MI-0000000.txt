@@ -1,0 +1,23 @@
+Möwe Inkasso Beispiel GmbH · Forderungsgasse 9 · 29900 Beispielstadt
+
+Herrn Lukas Behrend
+Speicherstraße 41, 3. OG
+29999 Beispielhafen
+
+Aktenzeichen MI-0000000                 Datum: 05.06.2026
+Auftraggeber: Kistenkram Beispiel Versand, Bestellnummer KK-000-0000000 (Notebook)
+
+Zahlungsaufforderung
+
+Sehr geehrter Herr Behrend,
+unsere Mandantin hat uns mit der Einziehung folgender Forderung beauftragt:
+
+  Hauptforderung                      749,00 EUR
+  Mahngebühr der Mandantin              5,00 EUR
+  Inkassokosten                        58,50 EUR
+  Gesamt                              812,50 EUR
+
+Bitte zahlen Sie bis 19.06.2026 oder melden Sie sich für eine Ratenzahlung.
+Andernfalls leiten wir das gerichtliche Mahnverfahren ein.
+
+Möwe Inkasso Beispiel GmbH

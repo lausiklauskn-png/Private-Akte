@@ -1,0 +1,15 @@
+# DRV ONLINEDIENSTE (BEISPIEL)
+
+NEUE NACHRICHT IN IHREM POSTFACH
+
+Neue Nachricht
+
+VSNR: 00 000000 X 000
+DOKUMENT: RENTENINFORMATION
+DATUM: 08.07.2025
+
+# Ihre Renteninformation 2025
+
+Regelaltersrente bei gleichbleibenden Beiträgen ab 01.05.2057: 1.988,40 EUR monatlich. Bisher erreichte Anwartschaft: 642,10 EUR.
+
+Diese Nachricht wurde automatisch erstellt. Bitte antworten Sie nicht auf diese Nachricht.

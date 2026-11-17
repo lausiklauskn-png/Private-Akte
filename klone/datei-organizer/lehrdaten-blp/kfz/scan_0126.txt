@@ -1,0 +1,19 @@
+Motorbuch-Vertrieb Sandkamp GmbH
+Fachverlag & Auslieferung
+Verlagsallee 1 · 70173 Stuttberg
+
+Buchhandels-/Wiederverkäuferrechnung Nr. 300418
+Kunde: Kfz-Technik Brandhorst (Shop), Ziegeleiweg 14, 37199 Wolmershagen
+Datum 17.02.2026
+
+Pos  Bezeichnung                               Menge    E-Preis     Gesamt
+1    Reparaturanleitung "So wird's repariert" Bd. 112     5 Ex      17,20      86,00
+2    Oldtimer-Schrauberhandbuch Käfer & Co.       3 Ex      21,40      64,20
+3    Straßenatlas Deutschland/Europa 2026/27      6 Ex       9,30      55,80
+
+Nettobetrag                                        206,00
+zzgl. 7 % MwSt                                      14,42
+Rechnungsbetrag                                    220,42
+
+Rabatt 35 % auf Ladenpreis bereits abgezogen. Remission nach Absprache.
+USt-IdNr. DE000000017

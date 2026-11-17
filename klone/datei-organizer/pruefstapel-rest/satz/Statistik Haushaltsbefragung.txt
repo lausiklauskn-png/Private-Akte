@@ -1,0 +1,15 @@
+# LANDESAMT FÜR STATISTIK BEISPIELLAND
+
+MIKROZENSUS 2025 (BEISPIEL) – AUSKUNFTSPFLICHTIGE HAUSHALTSBEFRAGUNG
+
+Haushalts-Nr.: MZ-25-118-0441
+Anschrift: Lindenhof 4, 84999 Beispielhausen
+Online-Kennung: XXXX-XXXX
+Antwort bis: 20.05.2025
+
+[ ] Ich melde online
+[ ] Ich wünsche einen Papierfragebogen
+[ ] Ich wünsche ein Telefoninterview
+
+Ihr Haushalt wurde zufällig ausgewählt. Die Auskunft ist gesetzlich vorgeschrieben. Bitte antworten Sie bis 20.05.2025.
+

@@ -1,0 +1,43 @@
+@appbon
+Probe Plus – Dein digitaler Kassenbon
+
+Discount Probe, Bahnhofstraße 70, 34567 Beispielstadt
+Einkauf vom 24.01.2026 um 16:22 Uhr
+Kundenkarte **** 2864
+
+|Artikel|Menge|Preis|
+|Senf|2|1,58 € B|
+|Schmand|2|1,58 € B|
+|Salzstangen|1|0,89 € B|
+|Reis Langkorn 1Kg|1|1,79 € B|
+|Feuchttücher|1|1,49 € A|
+|Fischstäbchen Tk|1|2,49 € B|
+|Eier Bodenh. 10Er|2|5,38 € B|
+|Ingwer|1|0,89 € B|
+|Cornflakes|2|3,98 € B|
+|Brühe Gekörnt|1|1,99 € B|
+|Feuchttücher|1|1,49 € A|
+|Batterien Aa 8Er|1|4,49 € A|
+|Gefrierbeutel|1|1,29 € A|
+|Bananen|1|1,49 € B|
+|Babybrei Glas|1|1,09 € B|
+|Chips|1|1,79 € B|
+|Chips|2|3,58 € B|
+|Spaghetti 500G|1|0,99 € B|
+
+App-Coupon Salzstangen: -0,50 €
+App-Coupon Chips: -0,80 €
+App-Coupon Coupon: -1,00 €
+
+Zwischensumme: 38,27 €
+Du hast gespart: 2,30 €
+Gesamtsumme: 35,97 €
+Bezahlt mit: Girocard (kontaktlos)
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|7,36|1,40|8,76|
+|B 7 %|25,43|1,78|27,21|
+
+Bon-ID: 853741684579  ·  Kasse 1  ·  TSE-Signatur gekürzt 12150980
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

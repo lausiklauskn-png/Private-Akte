@@ -1,0 +1,3 @@
+Testdaten „Haushalte“ – alles erfunden (Startwert 1).
+8 Haushalte, 697 Dateien, durcheinander abgelegt.
+Neu bauen: node scripts/haushalte-bauen.mjs <startwert>

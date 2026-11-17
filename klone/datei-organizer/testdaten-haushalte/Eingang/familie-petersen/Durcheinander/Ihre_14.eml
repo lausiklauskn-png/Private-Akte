@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: maren.petersen@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Mon, 08 Dec 2025 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Hallo Maren Petersen,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-19993721
+Rechnungsbetrag: 88,58 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

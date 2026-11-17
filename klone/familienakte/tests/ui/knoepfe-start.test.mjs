@@ -1,0 +1,258 @@
+// Startseite, Kopf- und Fußzeile: Suche, Diktat, Drucken, Ausloggen, Objekt-Cockpit, Erinnerung erfassen,
+// Dokumenteneingang-Kacheln, Beispieldaten entfernen/laden.
+import { startApp, launchBrowser, DESKTOP, ready, check, step, soll, summary, collectErrors, footer } from "./_harness.mjs";
+import { demoUmschalten } from "./_demo.mjs";
+import { speechStub, windowStub, directoryPickerStub, schliesseDialoge, bekannt, verdecktVon } from "./_stubs.mjs";
+
+const app = await startApp();
+const browser = await launchBrowser();
+try {
+  const context = await browser.newContext(DESKTOP);
+  const page = await context.newPage();
+  page.setDefaultTimeout(8000);
+  await page.addInitScript(speechStub("Zeige mir den Mietvertrag"));
+  await page.addInitScript(windowStub);
+  await page.addInitScript(directoryPickerStub);
+  const errors = collectErrors(page);
+  await step("Start mit Beispieldaten", async () => { await page.goto(app.base, { waitUntil: "networkidle" }); await ready(page); });
+
+  // --- Kopfzeile ---
+  // 2.28.39 (Vorschau neugestaltung Punkt 2): kein Drucker mehr im Kopf; gedruckt wird über Menü › „Seite drucken“ (am PC Strg+P).
+  await step("Kein Drucker im Kopf; Menü › „Seite drucken“ ruft window.print()", async () => {
+    if (await page.locator(".header-actions .drucken-knopf").count()) return false;
+    const vorher = page.viewportSize(); await page.setViewportSize({ width: 390, height: 844 });
+    try {
+      await page.locator(".mobile-menu-button").click();
+      await page.locator(".mobile-menu-extra button", { hasText: "Seite drucken" }).click();
+      return (await page.evaluate(() => window.__gedruckt)) === 1;
+    } finally { await page.setViewportSize(vorher); }
+  });
+  await step("Markenknopf „FAMILIENAKTE“ führt zur Startseite", async () => {
+    await footer(page, "Hilfe"); await page.locator(".site-brand").click();
+    return page.url().endsWith("#startseite") && (await page.locator(".breadcrumb .pfad > button").allTextContents()).join("") === "Startseite";
+  });
+  // Klaus 09.11.: Ausloggen = App schließen. Im Browser darf die Seite ihren Tab nicht schließen – Abmeldeseite statt Neuladen.
+  await step("Ausloggen im Browser zeigt die Abmeldeseite; „Wieder öffnen“ lädt neu", async () => {
+    await page.locator(".logout-button").click();
+    const seite = page.locator("[data-abgemeldet]"); await seite.waitFor({ timeout: 5000 });
+    const text = await seite.innerText();
+    await seite.locator("[data-wieder-oeffnen]").click();
+    await page.waitForLoadState("load"); await ready(page);
+    return soll(/Abgemeldet/.test(text) && (await page.evaluate(() => window.__gedruckt)) === 0, text); // frisches Fenster-Objekt = neu geladen
+  });
+
+  // --- Suche ---
+  const suche = page.locator(".global-search input");
+  await step("Suche: „Krankenkasse“ zeigt Treffer und „Verstanden als:“", async () => {
+    await suche.fill("Zeige mir meine Krankenkasse-Schreiben");
+    await page.waitForSelector(".search-results");
+    const verstanden = await page.locator(".search-interpretation").count();
+    const treffer = await page.locator(".search-results article").count();
+    return verstanden === 1 && treffer > 0 ? `Verstanden-als: ja, Treffer: ${treffer}` : false;
+  });
+  await step("Suche: Treffer öffnen springt zur Seite", async () => { await page.locator(".search-results article > button").first().click(); return (await page.locator(".search-results").count()) === 0; });
+  await step("Suche: „Zusammenhang öffnen“ führt ins Cockpit", async () => {
+    await suche.fill("Waschmaschine"); await page.waitForSelector(".search-results");
+    const link = page.locator(".context-open-link").first();
+    if (!(await link.count())) return "kein Treffer mit Zusammenhang";
+    await link.click(); return (await page.locator(".breadcrumb").innerText()).includes("Cockpit");
+  });
+  await step("Suche: Unsinn ergibt ehrliche Leermeldung", async () => { await suche.fill("xyzqq-nichts"); await page.waitForSelector(".search-results"); return (await page.locator(".search-results .empty-state").count()) === 1; });
+  await step("Suche löschen (✕) leert das Feld", async () => { await page.locator(".search-clear").click(); return (await suche.inputValue()) === "" && (await page.locator(".search-results").count()) === 0; });
+  // Seit dem Internetschalter (PR #10) ist das Browser-Diktat bei „Internet aus“ gesperrt (die Erkennung läuft beim
+  // Browser-Hersteller). Die Probe prüft die Sperre und schaltet dann für die Diktat-Schritte ein.
+  await step("Diktat bei Internet aus: Mikrofon gesperrt, Schalter an gibt es frei", async () => {
+    const mic = page.locator('.global-search .dictation-button');
+    if (!(await mic.isDisabled())) return false;
+    await page.click(".netz-schalter"); await page.waitForSelector('.netz-schalter[data-netz="an"]');
+    await page.waitForFunction(() => !document.querySelector(".global-search .dictation-button")?.disabled);
+    return true;
+  });
+  await step("Diktat in der Suche: Mikrofon setzt den erkannten Text ein", async () => {
+    const mic = page.locator('.global-search .dictation-button');
+    if (await mic.isDisabled()) return false;
+    await mic.click();
+    await page.waitForFunction(() => document.querySelector(".global-search input").value.includes("Mietvertrag"));
+    await page.locator(".global-search .dictation-button").click().catch(() => {});
+    return true;
+  });
+  await step("Diktat: Tippen beendet das laufende Diktat", async () => {
+    await page.locator('.global-search .dictation-button').click();
+    await page.waitForSelector('.global-search .dictation-button.listening', { timeout: 3000 }).catch(() => {});
+    await suche.fill("Miete");
+    await page.waitForTimeout(300);
+    return (await page.locator('.global-search .dictation-button.listening').count()) === 0;
+  });
+  await suche.fill("");
+
+  // --- Hilfe: Beispielfragen setzen die Suche ---
+  await step("Hilfe: Beispielfrage „Rechnung der Waschmaschine“ startet die Suche", async () => {
+    await footer(page, "Hilfe");
+    // Seit 05.11.2026 startet „Wie suche ich etwas?“ zugeklappt (Klaus): erst aufklappen, dann tippen.
+    const zu = page.locator("details.help-suche"); if (!(await zu.evaluate((d) => d.open))) await zu.locator("summary").click();
+    await page.locator("button", { hasText: "Rechnung der Waschmaschine" }).first().click();
+    return (await suche.inputValue()).includes("Waschmaschine") && (await page.locator(".search-results").count()) === 1;
+  });
+  await suche.fill(""); await page.locator(".site-brand").click();
+
+  // --- Objekt-Cockpit / Aktionen ---
+  await step("Objekt-Cockpit-Kachel führt ins Cockpit", async () => { await page.locator("button", { hasText: "Aktive Objekte" }).first().click(); return (await page.locator(".breadcrumb").innerText()).includes("Cockpit"); });
+  await page.locator(".site-brand").click();
+  await step("„Arbeitsübersicht öffnen“ führt ins Cockpit", async () => { await page.locator("button", { hasText: "Arbeitsübersicht öffnen" }).first().click(); return (await page.locator(".breadcrumb").innerText()).includes("Cockpit"); });
+  await page.locator(".site-brand").click();
+  await step("ⓘ „erklären“ öffnet und schließt den Hinweis", async () => {
+    await page.locator('button[aria-label="Zuletzt wichtig erklären"]').click();
+    const offen = (await page.locator(".start-info-panel").count()) === 1;
+    await page.locator(".start-info-panel .info-close").click();
+    return offen && (await page.locator(".start-info-panel").count()) === 0;
+  });
+  await step("Überfälliger Termin auf der Startseite öffnet das Cockpit", async () => { await page.locator("button", { hasText: "Antrag auf Teilzeit" }).first().click(); return (await page.locator(".breadcrumb").innerText()).includes("Cockpit"); });
+  await page.locator(".site-brand").click();
+  await step("„Neue Unterlage ablegen“ (Statuskachel) öffnet den Ablage-Dialog", async () => {
+    await page.locator("button", { hasText: "Neue Unterlage ablegen. Status" }).first().click().catch(async () => page.locator('button[aria-label^="Neue Unterlage ablegen"]').first().click());
+    const offen = (await page.locator(".modal").count()) >= 1;
+    await page.locator('.modal button[aria-label="Fenster schließen"]').last().click().catch(() => {});
+    return offen;
+  });
+  await step("„Abgleich durchführen“ meldet Ergebnis ohne Fehler", async () => {
+    await schliesseDialoge(page);
+    await page.locator('button[aria-label^="Abgleich durchführen"], button:has-text("Abgleich durchführen. Status")').first().click();
+    await page.waitForTimeout(800);
+    const modal = await page.locator(".modal").count();
+    const text = modal ? await page.locator(".modal").last().innerText() : "";
+    await schliesseDialoge(page);
+    return modal ? `öffnet Dialog: ${text.split("\n")[0].slice(0, 50)}` : "ohne Dialog";
+  });
+
+  // --- Dokumenteneingang-Kacheln ---
+  await step("„Datei auswählen“ öffnet die Dateiauswahl (Datei-Eingang vorhanden)", async () => {
+    await schliesseDialoge(page); await page.locator(".site-brand").click();
+    const [chooser] = await Promise.all([page.waitForEvent("filechooser", { timeout: 4000 }), page.locator("button", { hasText: "Datei auswählen" }).first().click()]);
+    return !!chooser;
+  });
+  // Seit 2.28.10 (Klaus 2026-11-01: „‚Dokument fotografieren‘ öffnet den Klon“): die ganze App Workflow PDF mit offenem Scanner.
+  await step("„Fotofunktion öffnen“ öffnet Workflow PDF mit dem Scanner, ✕ schließt ihn", async () => {
+    await page.locator("button", { hasText: "Fotofunktion öffnen" }).first().click();
+    const klon = page.frameLocator("[data-wfpdf-rahmen]");
+    await klon.locator(".scan[role=dialog]").waitFor({ timeout: 30000 });
+    await klon.locator(".scan [data-schliessen]").click();
+    await klon.locator(".scan[role=dialog]").waitFor({ state: "detached", timeout: 5000 });
+    await page.locator(".site-brand").click();
+    return true;
+  });
+  await step("„Ordner auswählen“ (Eingangsordner) nimmt den gewählten Ordner an", async () => {
+    await page.evaluate(() => { window.__naechsterOrdner = "Posteingang-Probe"; });
+    await page.locator("button", { hasText: "Ordner auswählen" }).first().click();
+    await page.waitForTimeout(600);
+    return (await page.locator("text=Posteingang-Probe").count()) > 0;
+  });
+  await step("„OneDrive-Ordner prüfen“ ohne Verbindung führt ins Sicherheitscenter", async () => {
+    await page.locator("button", { hasText: "OneDrive-Ordner prüfen" }).first().click();
+    await page.waitForTimeout(400);
+    const crumb = await page.locator(".breadcrumb").innerText();
+    return crumb.includes("Sicherheit") || (await page.locator(".notice").count()) > 0;
+  });
+  await page.locator(".site-brand").click();
+
+  // --- Erinnerung erfassen ---
+  await step("Erinnerung: Diktat füllt das Feld", async () => {
+    const mic = page.locator('.memory-text .dictation-button');
+    // Die gerade neu eingehängte Seite prüft die Mikrofonfreigabe im Effekt.
+    // click wartet wie eine Benutzeraktion auf den bedienbaren Knopf und
+    // scheitert weiterhin, wenn er dauerhaft gesperrt bleibt.
+    await mic.click(); await page.waitForFunction(() => (document.querySelector(".memory-text textarea") || {}).value?.includes("Mietvertrag"));
+    await page.locator('.memory-text .dictation-button').click().catch(() => {});
+    return true;
+  });
+  await step("Tagebuch: „Noch einen erfassen“ legt einen Entwurf zur Seite und leert das Feld", async () => {
+    await page.locator(".memory-text textarea").fill("Der Elektriker war heute da. Die zweite Lampe flackert weiterhin.");
+    await page.locator("button", { hasText: "Noch einen erfassen" }).click();
+    await page.waitForFunction(() => (document.querySelector(".memory-text textarea") || {}).value === "", null, { timeout: 5000 });
+    // C (09.11.): der Zähler steht nur noch auf der Tagebuch-Seite.
+    return (await page.locator("main [data-zaehler-entwuerfe]").count()) === 0;
+  });
+  await step("Erinnerung: „Eintrag prüfen“ bei mehreren Entwürfen führt zur Warteschlange im Tagebuch", async () => {
+    await page.locator(".memory-text textarea").fill("Fiete hat heute seine Hausaufgaben allein gemacht.");
+    await page.locator("button", { hasText: "Eintrag prüfen" }).click();
+    await page.waitForTimeout(600);
+    return (await page.locator(".breadcrumb").innerText()).includes("Tagebuch");
+  });
+  await step("Tagebuch: „Prüfen“ öffnet die Prüfung, „Bestätigt speichern“ speichert den Eintrag", async () => {
+    await page.locator("#memory-draft-queue button.text-link", { hasText: "Prüfen" }).first().click();
+    await page.waitForSelector(".modal");
+    const dialog = page.locator(".modal").last();
+    if ((await dialog.locator("button", { hasText: "Nicht verknüpfen" }).count()) > 0) await dialog.locator("button", { hasText: "Nicht verknüpfen" }).click();
+    await dialog.getByLabel("Ja, diesen Eintrag lokal speichern", { exact: false }).check();
+    await dialog.locator("button", { hasText: "Bestätigt speichern" }).click();
+    await page.locator(".memory-completion").waitFor();
+    const abschluss = await page.locator(".modal").last().innerText().catch(() => "");
+    await schliesseDialoge(page);
+    return abschluss ? `Abschlussdialog: ${abschluss.split("\n")[0].slice(0, 60)}` : false;
+  });
+  await step("Erinnerung: fehlgeschlagenes und doppeltes Schließen bleibt ein wiederholbarer Vorgang", async () => {
+    await page.locator("#memory-draft-queue button.text-link", { hasText: "Prüfen" }).first().click();
+    const m = page.locator(".memory-review"); await m.waitFor();
+    await page.evaluate(() => {
+      const original = FileSystemFileHandle.prototype.createWritable;
+      window.__registerWrites = 0; window.__rejectRegisterWrite = true;
+      window.__restoreRegisterWrite = () => { FileSystemFileHandle.prototype.createWritable = original; };
+      FileSystemFileHandle.prototype.createWritable = async function(...args) {
+        if (this.name === "Familienakte_Register.json") {
+          window.__registerWrites++;
+          if (window.__rejectRegisterWrite) throw new DOMException("Erfundene Schreibsperre", "NotAllowedError");
+          if (window.__holdRegisterWrite) await new Promise(resolve => { window.__releaseRegisterWrite = resolve; });
+        }
+        return original.apply(this, args);
+      };
+    });
+    try {
+      await m.getByRole("button", { name: "Zur Warteschlange", exact: true }).click();
+      await m.locator(".form-error").waitFor();
+      if (!(await m.locator(".form-error").innerText()).includes("Register")) return false;
+      await page.evaluate(() => { window.__rejectRegisterWrite = false; window.__registerWrites = 0; window.__holdRegisterWrite = true; });
+      await m.getByRole("button", { name: "Schließen", exact: true }).evaluate(button => {
+        button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+        button.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+      });
+      await page.waitForFunction(() => Boolean(window.__releaseRegisterWrite));
+      const locked = await m.getByRole("button", { name: "Schließen", exact: true }).isDisabled()
+        && await m.getByRole("button", { name: "Zur Warteschlange", exact: true }).isDisabled();
+      await page.evaluate(() => { window.__holdRegisterWrite = false; window.__releaseRegisterWrite(); });
+      await m.waitFor({ state: "detached" });
+      return locked && (await page.evaluate(() => window.__registerWrites)) === 1;
+    } finally { await page.evaluate(() => { window.__releaseRegisterWrite?.(); window.__restoreRegisterWrite(); }); }
+  });
+  await step("Erinnerung: „Fotos oder Videos“ öffnet die Dateiauswahl", async () => {
+    await schliesseDialoge(page); await page.locator(".site-brand").click();
+    const [chooser] = await Promise.all([page.waitForEvent("filechooser", { timeout: 4000 }), page.locator("[data-tagebuch-foto]").first().click()]);
+    return !!chooser;
+  });
+  await step("„Zum Tagebuch“ führt zum Tagebuch", async () => { await page.locator("[data-zum-tagebuch]").first().click(); return (await page.locator(".breadcrumb").innerText()).includes("Tagebuch"); });
+  await page.locator(".site-brand").click();
+
+  // --- Beispieldaten ---
+  // Klaus 11.11.: „− Bsp.-Akten“ entfernt ohne Rückfrage (nur Beispiele, nie eigene Einträge).
+  await step("„− Bsp.-Akten“ oben ist mit der Maus erreichbar und entfernt die Beispielfamilie ohne Rückfrage", async () => {
+    await schliesseDialoge(page); await page.locator(".site-brand").click();
+    await page.evaluate(() => window.scrollTo(0, 0));
+    const knopf = page.locator("[data-bsp-weg]");
+    const darueber = await verdecktVon(page, knopf);
+    if (!darueber.startsWith("button")) bekannt("„− Bsp.-Akten“ ist mit der Maus nicht erreichbar", `darüber liegt ${darueber} (Zierkreis .family-hero:after); Tastatur (Tab + Enter) geht`);
+    await knopf.focus(); await page.keyboard.press("Enter");
+    await page.waitForSelector(".sample-data-notice", { state: "detached", timeout: 30000 });
+    await page.waitForTimeout(500);
+    return (await page.locator("text=Bsp.-Akten entfernt").count()) > 0 || (await page.locator(".sample-data-notice").count()) === 0;
+  });
+  await step("Eigene Erinnerung bleibt nach dem Entfernen erhalten", async () => {
+    await footer(page, "Tagebuch");
+    return (await page.locator("text=Elektriker war heute da").count()) > 0 || (await page.locator("text=Hausaufgaben allein").count()) > 0;
+  });
+  // P7 (Klaus 07.11.): Hier liegen eigene Einträge in der Akte; dann arbeitet die Demo an einer Kopie davon.
+  await step("„Demo starten“ (oben in der Hilfe) arbeitet bei eigenen Daten an einer Kopie", async () => {
+    await demoUmschalten(page, true);
+    await page.locator('.demo-knopf-schalter[data-demo-kopie="ja"]').waitFor({ state: "attached", timeout: 60000 });
+    return true;
+  });
+  check(errors.length === 0, "Keine Seitenfehler", errors.join(" | "));
+} finally { await browser.close(); await app.stop(); }
+process.exit(summary("Knöpfe Startseite"));

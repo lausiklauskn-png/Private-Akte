@@ -1,0 +1,13 @@
+Elbmarsch Sparbank - Geschäftskonto
+Kontoinhaber: Tischlerei Grube, Malte Grube
+IBAN DE00 0000 0000 0000 7712 00          Auszug 10/2026
+
+Buchung  Valuta  Verwendungszweck                                     Betrag
+01.10.   01.10.  Miete Werkstatt Werkhof 2 Okt                       -1.150,00
+06.10.   06.10.  Eingang Re 2026-118 Küche Familie Steenbock         +8.420,00
+10.10.   10.10.  Holzkontor Lueders Re 26-7710                       -2.311,40
+10.10.   10.10.  Finanzamt USt-VZ III/26                             -4.377,72
+15.10.   15.10.  Lohn Geselle M. Jürs                                -2.140,18
+15.10.   15.10.  Ausbildungsverguetung                                 -980,00
+28.10.   28.10.  Eingang Re 2026-121 Einbauschrank                   +3.180,00
+Kontostand 31.10.2026                                                 +6.204,51

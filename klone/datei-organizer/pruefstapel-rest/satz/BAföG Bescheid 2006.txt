@@ -1,0 +1,27 @@
+# Studentenwerk Musterstadt – Amt für Ausbildungsförderung
+
+Frau
+Nora Feldkamp
+Studentenwohnheim Am Park 2, Zi. 118
+04999 Musterstadt
+
+Förderungsnummer: 4410-06-1177
+Datum: 24.10.2006
+
+# Bescheid über Ausbildungsförderung
+
+Für den Bewilligungszeitraum 10/2006 bis 09/2007 (Studiengang Kommunikationsdesign) werden monatlich 466,00 Euro bewilligt, davon die Hälfte als Darlehen.
+
+Bitte beachten Sie, daß Einkünfte aus Nebentätigkeiten über 350 Euro monatlich anzugeben sind.
+
+Mit freundlichen Grüßen
+@unterschrift
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei dem Studentenwerk Musterstadt, Am Park 1, 04999 Musterstadt, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, daß ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

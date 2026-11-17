@@ -1,0 +1,33 @@
+Beispielversand GmbH
+Beispielversand GmbH · Paketallee 100 · 90000 Beispielnürnberg
+
+Familie Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kundennummer: BV-5512200
+Zahlart: Kauf auf Rechnung
+Datum: 22.08.2025
+
+Rechnung zu Ihrer Bestellung 3021-77810
+
+Guten Tag Familie Brandtner,
+
+vielen Dank für Ihre Bestellung. Folgende Artikel wurden geliefert:
+
+Pos.   Bezeichnung   Menge   Einzelpreis   Gesamt
+1   Schulranzen-Set Beispiel Ergo, blau   1   189,95 €   189,95 €
+2   Federmäppchen gefüllt   1   24,99 €   24,99 €
+3   Turnbeutel   1   9,99 €   9,99 €
+4   Kinder-Regenjacke Gr. 104   1   34,95 €   34,95 €
+5   Versand   1   4,95 €   4,95 €
+
+Nettobetrag: 264,83 €
+zzgl. 19 % MwSt.: 50,32 €
+Rechnungsbetrag: 315,15 €
+
+Bitte überweisen Sie den Betrag von 315,15 € bis zum 05.09.2025 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Beispielversand GmbH
+Beispielversand GmbH · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

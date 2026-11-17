@@ -1,0 +1,39 @@
+Unabhängiger Prüfstapel – 150 erfundene Haushaltsschriftstücke
+================================================================
+
+Zweck: das Sortierprogramm fair messen. Der Stapel wurde OHNE Blick in den Programmcode,
+die vorhandenen Testdaten, Ergebnisse oder Pläne geschrieben (nicht gelesen: lib/, src/,
+scripts/, testdaten*/, ergebnisse/, docs/ sowie andere Repos). Gelesen bzw. geschrieben
+wurde nur dieser Ordner.
+
+Vorgehen
+- Erfundener Stadtstaat mit der Stadt "Brakenhude" (Stadtteile Sieldeich, Bargkamp, Lohbek …),
+  erfundene Behörden (Bezirksämter, Finanzämter, Landesrentenanstalt Küste, Familienkasse
+  Nordküste, Hauptzollamt Brakenhude, Jobcenter Brakenhude-Mitte …), erfundene Firmen,
+  Ärzte, Vereine, Shops. IBANs nur mit Nullen, Kennzeichen beginnen mit "XY-".
+- 7 Haushalte (HAUSHALTE.json): Familie mit Kindern (Pahlke), Alleinerziehende (Wiechmann),
+  Rentnerpaar mit Haus/Garten/Erbfall (Ottens), Selbstständiger Tischler + angestellte
+  Partnerin mit Motorrad (Grube/Rehders), Studentin (Sörensen), arbeitslos mit Krankheit,
+  Reha und Schwerbehinderung (Klüver), Angestellte mit Eigenheim, Garten und Baby (Baştürk).
+- Jedes Schriftstück als Text, wie er nach der Texterkennung aussähe: Briefe mit und ohne
+  Briefkopf/Rücksendezeile, mit und ohne "Betreff", verschiedene Datumsformate, Lohnzettel
+  in eigenen Layouts, Kassenbons, E-Mails mit From:/Subject:-Zeilen, einige Tippfehler,
+  einige irreführende Betreffzeilen und Dateinamen (z. B. "rechnung.txt" ist eine
+  Zahlungserinnerung, "Wichtige Info zu Ihrem Vertrag.txt" ist Werbung).
+- Die Texte wurden von Hand in kleinen Python-Listen (außerhalb des Repos) geschrieben und
+  mit einem eigenen Skript als .txt-Dateien und ERWARTUNG.json ausgegeben.
+
+Erwartung (ERWARTUNG.json)
+- schriftstueck/kategorie: so, wie eine sorgfältige Sachbearbeiterin ablegen würde,
+  festgelegt vor und unabhängig von jeder Software. Grenzfälle wurden so entschieden:
+  Kfz-Versicherung, Tankbelege, Fahrrad -> Auto & Mobilität; Kindergeld/Kita/Studium ->
+  Familie & persönliche Dokumente; Krankenkasse/Pflegekasse/Reha/Schwerbehinderung ->
+  Gesundheit & Pflege (Beitragsbescheide für Selbstständige -> Arbeit & Sozialversicherung);
+  Lohnsteuerbescheinigung, Grundsteuer, BAföG, Wohngeld, Rundfunkbeitrag -> Steuern & Behörden;
+  Apothekenbons -> Gesundheit & Pflege; Rechnungen für Geräte mit Garantie -> Rechnungen &
+  Garantien bzw. Technik. Andere Ablagen sind in solchen Fällen vertretbar.
+- absender: Name so, wie er im Dokument steht.
+- person: betroffene Person ("Familie <Name>" bei Schreiben an die Familie/Eheleute,
+  leer bei Kassenbons ohne Namen).
+- frist: im Dokument genanntes Zahlungs-, Antwort- oder Termindatum (YYYY-MM-DD), sonst leer.
+  Bezugsdatum der Briefe: Herbst 2026 (heute 12.11.2026).

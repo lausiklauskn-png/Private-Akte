@@ -1,0 +1,22 @@
+# Beispiel Kraftfahrt Versicherung AG
+Versicherungsplatz 3 · 50999 Musterköln
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versicherungsschein-Nr.: KF-118-0052271
+Kennzeichen: BSP-GP 52
+Datum: 08.07.2024
+
+# Vertragsende wegen Außerbetriebsetzung
+
+Sehr geehrter Herr Pfannschmidt,
+
+die Zulassungsstelle hat uns die Außerbetriebsetzung Ihres Fahrzeugs zum 28.06.2024 gemeldet. Ihr Vertrag endet zu diesem Tag.
+
+Zuviel gezahlten Beitrag von 186,40 EUR erstatten wir auf Ihr Konto. Ihre Schadenfreiheitsklasse SF 35 bleibt sieben Jahre für Sie reserviert.
+
+Mit freundlichen Grüßen
+@unterschrift

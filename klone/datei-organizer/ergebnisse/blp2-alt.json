@@ -1,0 +1,1359 @@
+{
+ "eigenerName": null,
+ "blp": "/home/user/lausiklauskn-png/bookledgerpro",
+ "vergleich": {
+  "betrag": {
+   "n": 120,
+   "blp": 116,
+   "kern": 60,
+   "nurBlp": 58,
+   "nurKern": 2
+  },
+  "datum": {
+   "n": 120,
+   "blp": 88,
+   "kern": 109,
+   "nurBlp": 9,
+   "nurKern": 30
+  },
+  "aussteller": {
+   "n": 120,
+   "blp": 109,
+   "kern": 84,
+   "nurBlp": 27,
+   "nurKern": 2
+  }
+ },
+ "ordner": "pruefstapel-blp-2",
+ "belege": 120,
+ "felder": {
+  "betrag": {
+   "n": 120,
+   "ok": 116
+  },
+  "datum": {
+   "n": 120,
+   "ok": 88
+  },
+  "ust": {
+   "n": 111,
+   "ok": 77
+  },
+  "richtung": {
+   "n": 120,
+   "ok": 96
+  },
+  "konto": {
+   "n": 120,
+   "ok": 9
+  }
+ },
+ "wilson": {
+  "betrag": [
+   0.9174184205147198,
+   0.9869626598330794
+  ],
+  "datum": [
+   0.6478739437150142,
+   0.8043165964588853
+  ],
+  "ust": [
+   0.6026578744023888,
+   0.7717709040193678
+  ],
+  "richtung": [
+   0.7196316465662729,
+   0.8617561908001696
+  ],
+  "konto": [
+   0.039956662006448734,
+   0.13641056839109136
+  ]
+ },
+ "uebereinstimmung": null,
+ "kontoEinig": {
+  "n": 0,
+  "ok": 0
+ },
+ "verwechslung": {
+  "3400→4980": 9,
+  "3300→4980": 3,
+  "3300→3400": 1,
+  "8400→4980": 9,
+  "8300→4980": 1,
+  "8300→3400": 1,
+  "8300→4940": 1,
+  "8125→4980": 2,
+  "8120→4980": 2,
+  "8500→4980": 3,
+  "4970→8400": 3,
+  "4970→4980": 2,
+  "4210→4210": 2,
+  "4210→4980": 1,
+  "4240→4980": 4,
+  "4250→4980": 3,
+  "4260→4980": 3,
+  "4360→4980": 3,
+  "4540→4980": 2,
+  "4500→4980": 5,
+  "4530→4980": 6,
+  "4380→4980": 3,
+  "4920→4980": 3,
+  "4910→4980": 3,
+  "4600→4980": 5,
+  "4630→4980": 2,
+  "4635→4980": 2,
+  "4650→4980": 3,
+  "4670→4980": 3,
+  "4660→4980": 2,
+  "4945→4980": 2,
+  "4940→4940": 1,
+  "4940→4980": 1,
+  "4955→4980": 1,
+  "4955→4120": 1,
+  "4950→4980": 2,
+  "4930→4980": 2,
+  "4930→4930": 1,
+  "0480→4980": 2,
+  "0320→4980": 1,
+  "0400→4980": 1,
+  "0410→4980": 2,
+  "4120→4120": 2,
+  "1800→4980": 3,
+  "1890→4980": 2,
+  "4980→4980": 3,
+  "4980→4210": 1
+ },
+ "fehler": [
+  {
+   "datei": "RE-260114-0871_hinrichsen.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "scan_0007.txt",
+   "feld": "datum",
+   "ist": "2026-02-17",
+   "soll": "2026-02-03"
+  },
+  {
+   "datei": "scan_0007.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "scan_0007.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "Rechnung Talvo TB-118204 (2).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "lichtwerk_maerz.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-03-24"
+  },
+  {
+   "datei": "lichtwerk_maerz.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "elbkette 40077.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "EN-2026-03381.pdf.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "doc00031_ocr.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "doc00031_ocr.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "Ohlsen_Rg1407.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "vosskamp kinderräder sept.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-02"
+  },
+  {
+   "datei": "vosskamp kinderräder sept.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3400"
+  },
+  {
+   "datei": "kuestenkarten_KK-2260218.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "Buchgrossh. B-774120.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-04-08"
+  },
+  {
+   "datei": "Buchgrossh. B-774120.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 7
+  },
+  {
+   "datei": "Buchgrossh. B-774120.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "SK-05-3317.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "3300"
+  },
+  {
+   "datei": "IMG_4471_karten_nachbestellung.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "3300"
+  },
+  {
+   "datei": "AR_2026-0019_aalderks.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "AR_2026-0019_aalderks.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "Ausgangsrechnung 2026-0041.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-02-12"
+  },
+  {
+   "datei": "Ausgangsrechnung 2026-0041.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "Ausgangsrechnung 2026-0041.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Ausgangsrechnung 2026-0041.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "verkauf_wilmsen_trekkingrad.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "verkauf_wilmsen_trekkingrad.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "kasse_004417.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "kasse_004417.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "2026-0118 Harmsen.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "2026-0118 Harmsen.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "Rg_Stadtbuecherei_0152.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-06-19"
+  },
+  {
+   "datei": "Rg_Stadtbuecherei_0152.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Rg_Stadtbuecherei_0152.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "0171-ricklefs-citybike.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "0171-ricklefs-citybike.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "scan0214.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "scan0214.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "scan0214.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "Rechnung 2026-0263 (Kopie).txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Rechnung 2026-0263 (Kopie).txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8400"
+  },
+  {
+   "datei": "AR-0058_touristinfo_karten.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "AR-0058_touristinfo_karten.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8300"
+  },
+  {
+   "datei": "bon 005102.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "bon 005102.txt",
+   "feld": "konto",
+   "ist": "3400",
+   "soll": "8300"
+  },
+  {
+   "datei": "foerderverein_buecher_2026-0239.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-14"
+  },
+  {
+   "datei": "foerderverein_buecher_2026-0239.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 7
+  },
+  {
+   "datei": "foerderverein_buecher_2026-0239.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "foerderverein_buecher_2026-0239.txt",
+   "feld": "konto",
+   "ist": "4940",
+   "soll": "8300"
+  },
+  {
+   "datei": "0101_NL_waddenkant.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "0101_NL_waddenkant.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8125"
+  },
+  {
+   "datei": "rechnung-dk-2026-0203.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "rechnung-dk-2026-0203.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8125"
+  },
+  {
+   "datei": "Export CH Leuenbacher 0127.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Export CH Leuenbacher 0127.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8120"
+  },
+  {
+   "datei": "scan_export_norwegen.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-23"
+  },
+  {
+   "datei": "scan_export_norwegen.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "scan_export_norwegen.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8120"
+  },
+  {
+   "datei": "provision_velolease_Q1.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "provision_velolease_Q1.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8500"
+  },
+  {
+   "datei": "Gutschrift P-778120.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-06-30"
+  },
+  {
+   "datei": "Gutschrift P-778120.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "Gutschrift P-778120.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8500"
+  },
+  {
+   "datei": "velolease q3 provisionsabr.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "velolease q3 provisionsabr.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "8500"
+  },
+  {
+   "datei": "kartenabrechnung_jan.txt",
+   "feld": "betrag",
+   "ist": 612450,
+   "soll": "67,41"
+  },
+  {
+   "datei": "kartenabrechnung_jan.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "kartenabrechnung_jan.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4970"
+  },
+  {
+   "datei": "KA-0426.txt",
+   "feld": "betrag",
+   "ist": 1184030,
+   "soll": "118,28"
+  },
+  {
+   "datei": "KA-0426.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "KA-0426.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4970"
+  },
+  {
+   "datei": "terminal gebühren juli scan.txt",
+   "feld": "betrag",
+   "ist": 1530980,
+   "soll": "177,50"
+  },
+  {
+   "datei": "terminal gebühren juli scan.txt",
+   "feld": "richtung",
+   "ist": "einnahme",
+   "soll": "ausgabe"
+  },
+  {
+   "datei": "terminal gebühren juli scan.txt",
+   "feld": "konto",
+   "ist": "8400",
+   "soll": "4970"
+  },
+  {
+   "datei": "bank_entgelte_I-2026.txt",
+   "feld": "datum",
+   "ist": "2026-01-01",
+   "soll": "2026-03-31"
+  },
+  {
+   "datei": "bank_entgelte_I-2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "Kontoabschluss Entgelte Q3.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4970"
+  },
+  {
+   "datei": "Mietrechnung_M-2026-06.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-06-01"
+  },
+  {
+   "datei": "garage lager q2.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4210"
+  },
+  {
+   "datei": "stadtwerke_abschlag_strom_01.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "Gas Jahresabrechnung 2025.txt",
+   "feld": "betrag",
+   "ist": 270492,
+   "soll": "304,92"
+  },
+  {
+   "datei": "Gas Jahresabrechnung 2025.txt",
+   "feld": "datum",
+   "ist": "2025-01-01",
+   "soll": "2026-02-20"
+  },
+  {
+   "datei": "Gas Jahresabrechnung 2025.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "wasserverband_2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "sw_abschlag_0926.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4240"
+  },
+  {
+   "datei": "blitzblank märz.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "BB-2608-141_reinigung.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-08-31"
+  },
+  {
+   "datei": "BB-2608-141_reinigung.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "BB-2608-141_reinigung.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  },
+  {
+   "datei": "Feddersen_2026-0093.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "IMG_20260529_baumarkt.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "rolltor reparatur TG-11872.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-10-13"
+  },
+  {
+   "datei": "rolltor reparatur TG-11872.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "rolltor reparatur TG-11872.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4260"
+  },
+  {
+   "datei": "friesenschild_BH_2026.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "friesenschild_BH_2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4360"
+  },
+  {
+   "datei": "Inhaltsversicherung Beitrag.txt",
+   "feld": "datum",
+   "ist": "2026-01-01",
+   "soll": "2026-01-05"
+  },
+  {
+   "datei": "Inhaltsversicherung Beitrag.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "Inhaltsversicherung Beitrag.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4360"
+  },
+  {
+   "datei": "scan_elektronikvers.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "scan_elektronikvers.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4360"
+  },
+  {
+   "datei": "kfz versicherung 2026.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "kfz versicherung 2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4540"
+  },
+  {
+   "datei": "Nachtrag_KF-12.550.031.txt",
+   "feld": "datum",
+   "ist": "2026-08-18",
+   "soll": "2026-08-20"
+  },
+  {
+   "datei": "Nachtrag_KF-12.550.031.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 0
+  },
+  {
+   "datei": "Nachtrag_KF-12.550.031.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4540"
+  },
+  {
+   "datei": "werkstatt_bremsen_feb.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "HU AU quittung.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "reifen poppinga.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-04-02"
+  },
+  {
+   "datei": "reifen poppinga.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "W-260717-11.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "W-260717-11.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "autoglas_AG-2077.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4500"
+  },
+  {
+   "datei": "tanken_190126.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "tanken_190126.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "IMG_0305_tankbon.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "IMG_0305_tankbon.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "tankhof juni.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "tankhof juni.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "2026-09-09_tank.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "2026-09-09_tank.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "parkhaus_messe.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "parkschein kurpromenade.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 0
+  },
+  {
+   "datei": "parkschein kurpromenade.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4530"
+  },
+  {
+   "datei": "HWK Beitragsbescheid 2026.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 0
+  },
+  {
+   "datei": "HWK Beitragsbescheid 2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4380"
+  },
+  {
+   "datei": "innung_beitrag.txt",
+   "feld": "datum",
+   "ist": "2026-02-15",
+   "soll": "2026-01-12"
+  },
+  {
+   "datei": "innung_beitrag.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 0
+  },
+  {
+   "datei": "innung_beitrag.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4380"
+  },
+  {
+   "datei": "gewerbeverein 2026-061.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 0
+  },
+  {
+   "datei": "gewerbeverein 2026-061.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4380"
+  },
+  {
+   "datei": "kuestennetz_0126.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4920"
+  },
+  {
+   "datei": "Telefonrechnung Mai.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-06-04"
+  },
+  {
+   "datei": "Telefonrechnung Mai.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4920"
+  },
+  {
+   "datei": "mobilfunk-2026-07.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4920"
+  },
+  {
+   "datei": "porto_quittung_feb.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "paketwelle sammelrg mai.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "PW-0926.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-09-18"
+  },
+  {
+   "datei": "PW-0926.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "PW-0926.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4910"
+  },
+  {
+   "datei": "anzeiger_fruehjahrscheck.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "Druckerei Papierboot PB-3390.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-04-07"
+  },
+  {
+   "datei": "Druckerei Papierboot PB-3390.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "Druckerei Papierboot PB-3390.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "werbetechnik_schaufenster.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "klickmarkt_2026-07.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "weinkontor geschenke.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4630"
+  },
+  {
+   "datei": "siefkes_praesent_1182.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4630"
+  },
+  {
+   "datei": "präsentkorb gross 1240.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-06-24"
+  },
+  {
+   "datei": "präsentkorb gross 1240.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "präsentkorb gross 1240.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4635"
+  },
+  {
+   "datei": "gutschein_wellness_geschenk.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 0
+  },
+  {
+   "datei": "gutschein_wellness_geschenk.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4635"
+  },
+  {
+   "datei": "bewirtung_altes_siel.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 7
+  },
+  {
+   "datei": "bewirtung_altes_siel.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "IMG_0618_ladiga.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 7
+  },
+  {
+   "datei": "IMG_0618_ladiga.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "hafenbar_bewirtungsbeleg.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4650"
+  },
+  {
+   "datei": "bahnticket_messe_tidemann.txt",
+   "feld": "datum",
+   "ist": "2026-03-17",
+   "soll": "2026-03-16"
+  },
+  {
+   "datei": "bahnticket_messe_tidemann.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "hotel kontorhaus H-26-03344.txt",
+   "feld": "ust",
+   "ist": 19,
+   "soll": 7
+  },
+  {
+   "datei": "hotel kontorhaus H-26-03344.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "reisekosten_tidemann_haendlertag.txt",
+   "feld": "datum",
+   "ist": "2026-09-24",
+   "soll": "2026-09-25"
+  },
+  {
+   "datei": "reisekosten_tidemann_haendlertag.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4670"
+  },
+  {
+   "datei": "RK Brandsen Mai 2026.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4660"
+  },
+  {
+   "datei": "gaestehaus_soerupfeld_brandsen.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4660"
+  },
+  {
+   "datei": "seminar_e-antrieb_AK-0177.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4945"
+  },
+  {
+   "datei": "BZ-26-4410 lehrgang.txt",
+   "feld": "datum",
+   "ist": "2026-10-22",
+   "soll": "2026-10-08"
+  },
+  {
+   "datei": "BZ-26-4410 lehrgang.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "BZ-26-4410 lehrgang.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4945"
+  },
+  {
+   "datei": "buchhandlung fachbücher.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4940"
+  },
+  {
+   "datei": "stb_fibu_Q1.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4955"
+  },
+  {
+   "datei": "Steuerkanzlei 2026-01102.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-10-09"
+  },
+  {
+   "datei": "Steuerkanzlei 2026-01102.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "Steuerkanzlei 2026-01102.txt",
+   "feld": "konto",
+   "ist": "4120",
+   "soll": "4955"
+  },
+  {
+   "datei": "RA Brodersen 0061.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4950"
+  },
+  {
+   "datei": "kanzlei_agb_pruefung.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-07-30"
+  },
+  {
+   "datei": "kanzlei_agb_pruefung.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "kanzlei_agb_pruefung.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4950"
+  },
+  {
+   "datei": "bon_schreibwaren_0901.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4930"
+  },
+  {
+   "datei": "meenken august.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4930"
+  },
+  {
+   "datei": "IMG_20260303_akkuschrauber.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0480"
+  },
+  {
+   "datei": "toenjes montagestaender.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0480"
+  },
+  {
+   "datei": "Kaufvertrag_Kombi_GW-2026-0718.txt",
+   "feld": "datum",
+   "ist": "2026-08-18",
+   "soll": "2026-08-17"
+  },
+  {
+   "datei": "Kaufvertrag_Kombi_GW-2026-0718.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0320"
+  },
+  {
+   "datei": "WB-260223-102 maschinen.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0400"
+  },
+  {
+   "datei": "ladenbau LB-2026-014.txt",
+   "feld": "datum",
+   "ist": "2026-01-26",
+   "soll": "2026-01-28"
+  },
+  {
+   "datei": "ladenbau LB-2026-014.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "ladenbau LB-2026-014.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0410"
+  },
+  {
+   "datei": "kassensystem_KT-0420.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "0410"
+  },
+  {
+   "datei": "Entgeltabrechnung Juli Brandsen.txt",
+   "feld": "datum",
+   "ist": "2021-04-01",
+   "soll": "2026-07-29"
+  },
+  {
+   "datei": "eigenbeleg privatentnahme feb.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1800"
+  },
+  {
+   "datei": "ueberweisung_privat_mai.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-05-29"
+  },
+  {
+   "datei": "ueberweisung_privat_mai.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1800"
+  },
+  {
+   "datei": "scan_zettel_0109.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1800"
+  },
+  {
+   "datei": "einzahlung privateinlage.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "einzahlung privateinlage.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1890"
+  },
+  {
+   "datei": "EB-2026-19 einlage.txt",
+   "feld": "datum",
+   "ist": null,
+   "soll": "2026-08-14"
+  },
+  {
+   "datei": "EB-2026-19 einlage.txt",
+   "feld": "richtung",
+   "ist": "ausgabe",
+   "soll": "einnahme"
+  },
+  {
+   "datei": "EB-2026-19 einlage.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "1890"
+  },
+  {
+   "datei": "werkbuch_lizenz_2026.txt",
+   "feld": "ust",
+   "ist": null,
+   "soll": 19
+  },
+  {
+   "datei": "werkbuch_lizenz_2026.txt",
+   "feld": "konto",
+   "ist": "4210",
+   "soll": "4980"
+  },
+  {
+   "datei": "sponsoring_bande_tus.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4600"
+  },
+  {
+   "datei": "drogerie reinigungsmittel.txt",
+   "feld": "konto",
+   "ist": "4980",
+   "soll": "4250"
+  }
+ ]
+}

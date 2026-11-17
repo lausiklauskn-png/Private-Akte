@@ -1,0 +1,35 @@
+{
+  "fassung": "0.4.6",
+  "datum": "2026-11-15",
+  "freigabe": "Klaus 15.11.2026: „0.4.6 veröffentlichen“",
+  "inhalt": "Discovery: Fernrohr-Knopf im Kopf öffnet die animierte Erklärung, wie der Sortier-Kern trainiert wurde (3D-Baum der Test-Welten, Kreislauf in sechs Glaskugeln – auch als Film mit Ladebalken –, drei Kurzfilme, 13 Tonspuren); am Tablet/Handy immer nur eine 3D-Fläche geladen (#42)",
+  "android": {
+    "commit": "f36f8a3ca3ff704d87ab7ca2211791fa0812f4e2",
+    "lauf": 43735720040,
+    "datei": "Datei-Organizer-Pro-0.4.6.apk",
+    "versionCode": 46,
+    "groesse": 16321178,
+    "sha256": "d9e683e5be1844cb188dd27e497139d34b2eaa9e412da3cd23b31d7cc7161109",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.6",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.6.apk",
+    "geprueft": "Release-Lauf grün (Emulator, Überinstallation, Feed unterschrieben, Download vom Update-Server von außen per SHA-256 im Lauf); Release-Datei aus der Sitzung geladen, SHA-256 gleich .sha256 und .apk.json; Discovery-Dateien liegen in der APK"
+  },
+  "windows": {
+    "commit": "f36f8a3ca3ff704d87ab7ca2211791fa0812f4e2",
+    "lauf": 43735733108,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.6-x64-setup.exe",
+    "groesse": 31018398,
+    "sha256": "39461b999d3999fc688e07dfb21e90db2420d2de5e66d0408e675633e4bab146",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.6-x64-setup.exe",
+    "geprueft": "Release-Lauf grün (Auslieferungsbau installiert, gestartet, entfernt; Feed unterschrieben; Download vom Update-Server von außen per SHA-256 im Lauf); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.5)"
+  },
+  "basic": {
+    "commit": "f36f8a3ca3ff704d87ab7ca2211791fa0812f4e2",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Merge-Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_enthalten": "Schilder blenden sich hinter einer vorderen Stadt aus (#43) – kam nach dem Ausgabestand, in den Apps erst mit der nächsten Fassung",
+  "nicht_geprueft": "Discovery in der Android-/Windows-Hülle nicht gestartet (nur im Browser, von Klaus am Galaxy Tab S6 als Artefakt bestätigt); kein echter Windows-PC; Update-Server aus der Sitzung nicht abrufbar"
+}

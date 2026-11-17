@@ -1,0 +1,10 @@
+Recbnung                                  foto-versand-hansa.example
+Rechnungsnr. FV-2026-338120               Datum 13.08.2026
+
+Besteller: Teekontor Lindenblatt, Marit Sandvoss, Salzgasse 14, 21335 Lüneburg
+
+Menge 1   Fotostudio-Set Produktfotografie: Lichtzelt 80 cm, 2 LED-Flächenleuchten,
+          Stativ, Hlntergründe (ein Set, nur zusammen nutzbar)       379,00
+
+Summe netto 379,00 EUR | USt 19 % 72,01 EUR | Rechnungsbetrag 451,01 EUR
+Zahlart: Kauf auf Rechnung, fällig am 27.08.2026

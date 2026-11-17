@@ -1,0 +1,710 @@
+{
+ "ereignisse": [
+  {
+   "monat": "2026-01",
+   "haushalt": "h1",
+   "person": "Jonas Kranbeck",
+   "was": "Lohnsteuerbescheinigung 2025 und Lohnabrechnung Januar mit Tariferhöhung",
+   "stellen": [
+    "Beispielwerft Nordhafen GmbH"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Sturz im Bad, Krankenhausaufenthalt, Entlassbrief",
+   "stellen": [
+    "Klinikum Beispielhafen",
+    "Praxis Dr. med. Beispiel-Lohse (Allgemeinmedizin)"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h5",
+   "person": "Inken Petersen",
+   "was": "Umsatzsteuer-Voranmeldung Dezember, Belege an Steuerbüro",
+   "stellen": [
+    "Finanzamt Beispielhafen",
+    "Steuerbüro Beispiel & Partner",
+    "Großhandel Kontorkaffee Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Semesterbeitrag Sommersemester und Rückmeldung",
+   "stellen": [
+    "Hochschule Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Baugenehmigung erteilt, Gebührenbescheid",
+   "stellen": [
+    "Stadt Beispielhafen – Bauordnungsamt"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Weiterbewilligungsantrag Bürgergeld, Nachweise angefordert",
+   "stellen": [
+    "Jobcenter Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Antrag auf Pflegegrad, Begutachtungstermin angekündigt",
+   "stellen": [
+    "Pflegekasse bei der Beispielkasse Nord",
+    "Pflegedienst Leuchtfeuer Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h1",
+   "person": "Lene Kranbeck",
+   "was": "Elternbrief Klassenfahrt an die Ostsee, Anzahlung",
+   "stellen": [
+    "Gymnasium Kaiserdeich Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h1",
+   "person": "",
+   "was": "Grundsteuerbescheid 2026 nach neuer Bewertung",
+   "stellen": [
+    "Stadt Beispielhafen – Steueramt (Grundsteuer, Hundesteuer)"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h4",
+   "person": "Nele Ahlers",
+   "was": "Baufinanzierung: erster Abruf Darlehen, Bereitstellungszinsen",
+   "stellen": [
+    "Nordküsten Sparkasse Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h6",
+   "person": "Paula Fehrs",
+   "was": "Nebenkostenabrechnung 2025 der WG mit Nachzahlung",
+   "stellen": [
+    "Hausverwaltung Kaimauer Beispiel GmbH"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h5",
+   "person": "Arne Petersen",
+   "was": "Kfz-Steuerbescheid nach Fahrzeugwechsel",
+   "stellen": [
+    "Finanzamt Beispielhafen",
+    "Autohaus Deichblick Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Mutterschaftsgeld und Bescheinigung Geburtstermin",
+   "stellen": [
+    "Beispielkasse Nord (Krankenkasse)",
+    "Praxis Dr. med. Beispiel-Lohse (Allgemeinmedizin)",
+    "Supermarkt Frischkai Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Bescheid Pflegegrad 3, Pflegevertrag mit Pflegedienst",
+   "stellen": [
+    "Pflegekasse bei der Beispielkasse Nord",
+    "Pflegedienst Leuchtfeuer Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h1",
+   "person": "Svenja Kranbeck",
+   "was": "Steuererklärung 2025 abgegeben, Belege gesammelt",
+   "stellen": [
+    "Finanzamt Beispielhafen",
+    "Eigene Notizen und Mails"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Online-Bestellung Laptop, Rechnung übersehen",
+   "stellen": [
+    "Kistenkram Beispiel Versand (Onlinehändler)"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Abschlagsrechnung Elektroinstallation Neubau",
+   "stellen": [
+    "Elektro Kielholz Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h5",
+   "person": "Inken Petersen",
+   "was": "Ladenversicherung: Beitragserhöhung und Inhaltsversicherung",
+   "stellen": [
+    "Beispielwind Versicherung AG"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h1",
+   "person": "Mats Kranbeck",
+   "was": "Zahnarzt: Kontrolle und Heil- und Kostenplan Zahnspange",
+   "stellen": [
+    "Zahnarztpraxis Beispiel-Holm",
+    "Beispielkasse Nord (Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "h2",
+   "person": "Finn Ostwald",
+   "was": "Einladung Kindergeburtstag und Schuleingangsuntersuchung Nachtermin",
+   "stellen": [
+    "Verwandte und Nachbarn (Privatpost)",
+    "Grundschule am Leuchtturm Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Zahlungserinnerung zur Laptop-Rechnung",
+   "stellen": [
+    "Kistenkram Beispiel Versand (Onlinehändler)"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h3",
+   "person": "Gerda Brakmann",
+   "was": "Antrag Entlastungsbetrag, Rechnung Verhinderungspflege",
+   "stellen": [
+    "Pflegekasse bei der Beispielkasse Nord",
+    "Pflegedienst Leuchtfeuer Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h1",
+   "person": "Jonas Kranbeck",
+   "was": "Kfz-Versicherung: Schadenmeldung nach Parkrempler",
+   "stellen": [
+    "Beispielwind Versicherung AG",
+    "Autohaus Deichblick Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h4",
+   "person": "Nele Ahlers",
+   "was": "Dachdecker: Angebot, Auftrag und Rechnung Dacheindeckung",
+   "stellen": [
+    "Dach & Fach Beispiel Bau GmbH"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h5",
+   "person": "",
+   "was": "Mieterhöhung für den Laden und Wohnung angekündigt",
+   "stellen": [
+    "Wohnungsgenossenschaft Beispielhafen eG"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Änderung Bürgergeld wegen Mutterschutz, Mehrbedarf Schwangerschaft",
+   "stellen": [
+    "Jobcenter Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Rentenanpassung 2026 Mitteilung",
+   "stellen": [
+    "Deutsche Rentenversicherung Beispielnord"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h2",
+   "person": "Tilda Ostwald",
+   "was": "Geburt Tilda: Geburtsurkunde, Anmeldung, Kindergeldantrag",
+   "stellen": [
+    "Stadt Beispielhafen – Standesamt",
+    "Stadt Beispielhafen – Bürgeramt",
+    "Familienkasse Beispielnord",
+    "Beispielkasse Nord (Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Mahnung mit Gebühren zur Laptop-Rechnung",
+   "stellen": [
+    "Kistenkram Beispiel Versand (Onlinehändler)"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h1",
+   "person": "",
+   "was": "Steuerbescheid 2025 mit Erstattung",
+   "stellen": [
+    "Finanzamt Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h5",
+   "person": "Jule Petersen",
+   "was": "Elternabend Oberstufe, Kursmappe Abiturprüfungen",
+   "stellen": [
+    "Gymnasium Kaiserdeich Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Rechnung Sanitärinstallation und Mängelanzeige",
+   "stellen": [
+    "Sanitär Strandgut Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h3",
+   "person": "Claudia Brakmann-Ruge",
+   "was": "Vorsorgevollmacht beglaubigt, Schreiben an Bank",
+   "stellen": [
+    "Hafenbank Beispielhafen eG",
+    "Amtsgericht Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "h1",
+   "person": "Ida Kranbeck",
+   "was": "Kita: Gebührenbescheid neu, Sommerfest-Einladung",
+   "stellen": [
+    "Kita Seesternchen Beispiel",
+    "Verwandte und Nachbarn (Privatpost)"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Inkassoschreiben zur offenen Laptop-Rechnung, Ratenzahlung vereinbart",
+   "stellen": [
+    "Möwe Inkasso Beispiel GmbH",
+    "Kistenkram Beispiel Versand (Onlinehändler)"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Elterngeldantrag und Bescheid",
+   "stellen": [
+    "Elterngeldstelle Landkreis Beispielland",
+    "Supermarkt Frischkai Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h4",
+   "person": "Nele Ahlers",
+   "was": "Umzug in den Neubau: Ummeldung, Stromvertrag, Internet umziehen",
+   "stellen": [
+    "Stadt Beispielhafen – Bürgeramt",
+    "Stadtwerke Beispielhafen",
+    "Wellenfunk Beispiel Mobilfunk & Internet"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Hörgerät verordnet, Kostenvoranschlag",
+   "stellen": [
+    "Praxis Dr. med. Beispiel-Lohse (Allgemeinmedizin)",
+    "Beispielkasse Nord (Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h5",
+   "person": "Inken Petersen",
+   "was": "Betriebsprüfung angekündigt",
+   "stellen": [
+    "Finanzamt Beispielhafen",
+    "Steuerbüro Beispiel & Partner"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "h1",
+   "person": "Lene Kranbeck",
+   "was": "Zeugnis und Rechnung Klassenfahrt Restbetrag",
+   "stellen": [
+    "Gymnasium Kaiserdeich Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Kfz-Ummeldung nach Umzug, neue Fahrzeugpapiere",
+   "stellen": [
+    "Landkreis Beispielland – Kfz-Zulassungsstelle",
+    "Beispielwind Versicherung AG"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Wohnraumanpassung Bad: Zuschuss Pflegekasse und Handwerkerrechnung",
+   "stellen": [
+    "Pflegekasse bei der Beispielkasse Nord",
+    "Sanitär Strandgut Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h6",
+   "person": "Emre Yıldırım-Beispiel",
+   "was": "Ausbildungsvergütung, Lohnabrechnung, Auszug angekündigt",
+   "stellen": [
+    "Hafenlager Beispiel Logistik GmbH",
+    "Hausverwaltung Kaimauer Beispiel GmbH"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h1",
+   "person": "Svenja Kranbeck",
+   "was": "Jobwechsel zu einer Pflegeeinrichtung, Kündigung und neuer Vertrag",
+   "stellen": [
+    "Beispielkasse Nord (Krankenkasse)",
+    "Eigene Notizen und Mails"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h2",
+   "person": "Finn Ostwald",
+   "was": "Einschulung Bruder, Material- und Kopiergeld",
+   "stellen": [
+    "Grundschule am Leuchtturm Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "h5",
+   "person": "",
+   "was": "Stromabrechnung Laden mit hoher Nachzahlung, neue Abschläge",
+   "stellen": [
+    "Stadtwerke Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Nebenjob: Arbeitsvertrag Minijob und Bescheinigung für BAföG-Ersatz",
+   "stellen": [
+    "Hafenlager Beispiel Logistik GmbH",
+    "Hochschule Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h3",
+   "person": "Gerda Brakmann",
+   "was": "Krankenhaus wegen Lungenentzündung, Laborbefunde",
+   "stellen": [
+    "Klinikum Beispielhafen",
+    "Labor Nordbeispiel"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h1",
+   "person": "Jonas Kranbeck",
+   "was": "Autowerkstatt: Inspektion und HU-Bericht",
+   "stellen": [
+    "Autohaus Deichblick Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h4",
+   "person": "Nele Ahlers",
+   "was": "Schlussrechnung Bauunternehmen, Abnahmeprotokoll",
+   "stellen": [
+    "Dach & Fach Beispiel Bau GmbH",
+    "Nordküsten Sparkasse Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h5",
+   "person": "Ole Petersen",
+   "was": "Sportverein: Beitragsrechnung und Turniereinladung",
+   "stellen": [
+    "TuS Beispielhafen von 1900 e. V."
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Rundfunkbeitrag: Befreiung beantragt",
+   "stellen": [
+    "Beitragsservice Rundfunk Beispielland",
+    "Jobcenter Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h3",
+   "person": "Heinrich Brakmann",
+   "was": "Tod von Heinrich Brakmann; Sterbeurkunde, Kündigungen",
+   "stellen": [
+    "Stadt Beispielhafen – Standesamt",
+    "Deutsche Rentenversicherung Beispielnord",
+    "Hafenbank Beispielhafen eG",
+    "Beispielkasse Nord (Krankenkasse)"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h6",
+   "person": "Paula Fehrs",
+   "was": "Neuer Mobilfunkvertrag, Kündigung des alten",
+   "stellen": [
+    "Wellenfunk Beispiel Mobilfunk & Internet"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h1",
+   "person": "Mats Kranbeck",
+   "was": "Kinderarzt: U-Untersuchung, Impfempfehlung",
+   "stellen": [
+    "Kinderarztpraxis Dr. Muster-Wendt"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h5",
+   "person": "Inken Petersen",
+   "was": "Prüfungsbericht Betriebsprüfung, Nachzahlung",
+   "stellen": [
+    "Finanzamt Beispielhafen",
+    "Steuerbüro Beispiel & Partner"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Grundsteuer neues Grundstück, Hausratversicherung neu",
+   "stellen": [
+    "Stadt Beispielhafen – Steueramt (Grundsteuer, Hundesteuer)",
+    "Beispielwind Versicherung AG"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h3",
+   "person": "Gerda Brakmann",
+   "was": "Erbschaft: Testamentseröffnung, Erbschein, Witwenrente beantragt",
+   "stellen": [
+    "Amtsgericht Beispielhafen",
+    "Deutsche Rentenversicherung Beispielnord",
+    "Leuchtturm Lebensversicherung Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Kita-Platz für Tilda zugesagt, Betreuungsvertrag",
+   "stellen": [
+    "Kita Seesternchen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Letzte Rate an Inkasso, Erledigungsbestätigung",
+   "stellen": [
+    "Möwe Inkasso Beispiel GmbH"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h1",
+   "person": "",
+   "was": "Mitteilung Wohnungsgenossenschaft Modernisierung Fenster",
+   "stellen": [
+    "Wohnungsgenossenschaft Beispielhafen eG"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h5",
+   "person": "Arne Petersen",
+   "was": "Kreditkartenabrechnung mit unklarer Buchung, Reklamation",
+   "stellen": [
+    "Beispiel Kreditkarten AG"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "h4",
+   "person": "Nele Ahlers",
+   "was": "Schwangerschaft: Mutterpass, Mitteilung an Arbeitgeber",
+   "stellen": [
+    "Praxis Dr. med. Beispiel-Lohse (Allgemeinmedizin)",
+    "Eigene Notizen und Mails"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h3",
+   "person": "Gerda Brakmann",
+   "was": "Pflegegrad-Höherstufung beantragt, Sozialamt Hilfe zur Pflege",
+   "stellen": [
+    "Pflegekasse bei der Beispielkasse Nord",
+    "Landkreis Beispielland – Sozialamt / Pflege",
+    "Pflegedienst Leuchtfeuer Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h1",
+   "person": "Jonas Kranbeck",
+   "was": "Kündigungsschutz-Info: Kurzarbeit auf der Werft",
+   "stellen": [
+    "Beispielwerft Nordhafen GmbH",
+    "Agentur für Arbeit Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h6",
+   "person": "Lukas Behrend",
+   "was": "Rückmeldung Wintersemester, Werbung Reiseangebot",
+   "stellen": [
+    "Hochschule Beispielhafen",
+    "Glücksreisen Beispiel (Werbung)"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h5",
+   "person": "Inken Petersen",
+   "was": "Weihnachtsware: Großhandelsrechnungen, Kassenbons",
+   "stellen": [
+    "Großhandel Kontorkaffee Beispiel",
+    "Möbelhafen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "h2",
+   "person": "Marlene Ostwald",
+   "was": "Jobcenter: Einladung zum Gespräch, Mietkosten-Prüfung",
+   "stellen": [
+    "Jobcenter Beispielhafen"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h3",
+   "person": "Claudia Brakmann-Ruge",
+   "was": "Kontoauflösung Vater, Nachlassabrechnung Lebensversicherung",
+   "stellen": [
+    "Hafenbank Beispielhafen eG",
+    "Leuchtturm Lebensversicherung Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h1",
+   "person": "",
+   "was": "Jahresabrechnung Strom und Gas, Weihnachtskarten",
+   "stellen": [
+    "Stadtwerke Beispielhafen",
+    "Verwandte und Nachbarn (Privatpost)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h4",
+   "person": "Tobias Siemsen",
+   "was": "Arbeitgeberwechsel abgelehnt, Gehaltsmitteilung; Möbelkauf Kinderzimmer",
+   "stellen": [
+    "Stadtwerke Beispielhafen",
+    "Möbelhafen Beispiel"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h5",
+   "person": "",
+   "was": "Kfz-Versicherung Ladenwagen Beitragsrechnung 2027",
+   "stellen": [
+    "Beispielwind Versicherung AG"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "h6",
+   "person": "Paula Fehrs",
+   "was": "WG-Nebenkostenvorauszahlung angepasst, eigene Notiz Putzplan",
+   "stellen": [
+    "Hausverwaltung Kaimauer Beispiel GmbH",
+    "Eigene Notizen und Mails"
+   ]
+  }
+ ]
+}

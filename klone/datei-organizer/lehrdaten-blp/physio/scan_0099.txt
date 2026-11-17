@@ -1,0 +1,9 @@
+Volksbank Wehrstedt eG                      Kontoauszug 9/2026  Blatt 4
+Geschäftsgirokonto   Physiotherapie & Massagepraxis Lindenhof
+
+Buchungstag  Wert        Text                                        Betrag EUR
+24.09.2026   24.09.2026  ENTGELT AUSLANDSZAHLUNGSVERKEHR                 12,50 -
+                         Zahlungseingang CHF aus der Schweiz
+                         (Physiotherapie Engadin GmbH)
+                         Bearbeitungsentgelt + Kurssicherung
+                         Ref. AZV-2609-00417

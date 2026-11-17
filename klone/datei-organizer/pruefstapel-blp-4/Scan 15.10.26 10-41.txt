@@ -1,0 +1,20 @@
+Autohaus Dörrenbach GmbH - Werkstatt - Oberwehrer Landstraße 55 - 37999 Wehrstedt
+
+Werkstattrechnung 26-W-10388        Rechnungsdatum 15.10.2026
+Auftrag vom 14.10.2026              Annahme: Fr. Jeschke
+
+Halter: Buchhandlung Lindenblatt, F. Ansorge
+Fahrzeug: Lasta Tourer 1.6 D   Kennz.: WEH-LB 26   km-Stand: 52.870
+
+01 Inspektion nach Herstellervorgabe (Arbeitswerte)       168,00
+02 Motoröl 5W-30, 4,5 l                                    73,80
+03 Ölfilter, Luftfilter, Innenraumfilter                   61,30
+04 Bremsflüssigkeit wechseln                               59,00
+05 Kleinteile / Entsorgung                                  8,90
+                                                        --------
+   Summe Arbeit und Teile netto                           371,00
+   MwSt. 19 %                                              70,49
+   Rechnungsbetrag                                        441,49
+
+Nächster Service in 20.000 km oder 12 Monaten. Altteile wurden entsorgt.
+Zahlbar bei Abholung. USt-IdNr. DE000000040

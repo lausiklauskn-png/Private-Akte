@@ -1,0 +1,19 @@
+From: Wolkenreise.de <buchung@wolkenreise.example>
+To: deniz.basturk@postfach.example
+Subject: Buchungsbestätigung und Rechnung - Buchungscode WR7XQ4
+
+Hallo Deniz Baştürk,
+
+Ihre Reise ist gebucht!
+
+Flug Brakenhude -> Antalya   Sa 03.04.2027  06:10 - 11:25
+Flug Antalya -> Brakenhude   Sa 17.04.2027  12:40 - 16:05
+Reisende: Deniz Baştürk, Yasemin Baştürk, Elif Baştürk (Kleinkind)
+
+Flugpreis 2 Erw.                       612,00 €
+Kleinkind ohne Sitzplatz                 49,00 €
+Aufgabegepäck 2 x 23 kg                  80,00 €
+Servicegebühr                            19,90 €
+Gesamtpreis                             760,90 €   bezahlt per Kreditkarte
+
+Bitte prüfen Sie Ihre Reisedokumente: Elif benötigt einen eigenen Kinderreisepass.

@@ -1,0 +1,32 @@
+Bundesamt für Beispielverkehr
+Fahreignungsregister (FAER-Beispiel)
+24999 Beispielhafen
+
+Herrn
+Tobias Quellmann
+Ahornweg 7
+12345 Beispielstadt
+
+Ihr Antrag vom 27.10.2026 (Online-Antrag mit eID)
+Geschäftszeichen: FAER-A-2026-4471209           Datum: 04.11.2026
+
+Auskunft aus dem Fahreignungsregister
+gemäß § 30 Abs. 8 Straßenverkehrsgesetz
+
+Zu Ihrer Person, Tobias Quellmann, geboren am 14.03.1984 in Beispielstadt,
+sind zum Stichtag 03.11.2026 folgende Eintragungen gespeichert:
+
+Lfd. 1
+Entscheidung: Bußgeldbescheid, Rechtskraft 22.02.2025
+Behörde: Stadt Musterhausen – Bußgeldstelle (erfunden)
+Tat: Überschreitung der zulässigen Höchstgeschwindigkeit innerorts um 22 km/h
+Bewertung: 1 Punkt   Tilgung voraussichtlich: 22.08.2027
+
+Punktestand gesamt: 1 Punkt
+Maßnahmenstufe: keine (Vormerkung)
+
+Hinweis: Bußgeldverfahren, die noch nicht rechtskräftig abgeschlossen
+sind, erscheinen in dieser Auskunft nicht.
+
+Diese Auskunft ist gebührenfrei. Sie wurde maschinell erstellt und ist
+ohne Unterschrift gültig.

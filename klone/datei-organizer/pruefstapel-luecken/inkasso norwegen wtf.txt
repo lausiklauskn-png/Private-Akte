@@ -1,0 +1,39 @@
+EURO-BEISPIEL INKASSO GmbH
+Forderungsmanagement im Auftrag europäischer Mautbetreiber
+Musterallee 100 · 20999 Musterhafen
+
+Herrn Tobias Quellmann
+Ahornweg 7
+12345 Beispielstadt
+
+Unser Zeichen: EBI-5521-0730-NO          Datum: 06.11.2026
+
+ZAHLUNGSAUFFORDERUNG
+
+Gläubiger: Vegmaut Eksempel AS (Norwegen, erfunden)
+Grund: Nicht bezahlte automatische Maut (AutoPASS-Beispiel)
+Fahrzeug: BSP-TQ 412
+Passagen: 14.07.2026 Bomstasjon „Eksempelfjord“, 16.07.2026 „Fjelltunnel Bsp.“
+
+Hauptforderung (umgerechnet 2 × NOK)         41,80 EUR
+Mahngebühren des Gläubigers                  15,00 EUR
+Inkassovergütung (§ 13e RDG)                 36,00 EUR
+Auslagenpauschale                             7,20 EUR
+------------------------------------------------------
+Offener Gesamtbetrag                        100,00 EUR
+
+Sehr geehrter Herr Quellmann,
+
+trotz Rechnung und Zahlungserinnerung des Mautbetreibers haben Sie die
+oben genannte Forderung nicht beglichen. Wir wurden mit der Einziehung
+beauftragt.
+
+Bitte überweisen Sie den Gesamtbetrag bis spätestens 27.11.2026 auf:
+IBAN DE00 0000 0000 0000 0000 00 · Verwendungszweck EBI-5521-0730-NO
+
+Sollten Sie die Forderung bestreiten, teilen Sie uns dies bitte
+schriftlich mit Begründung innerhalb der genannten Frist mit.
+
+Mit freundlichen Grüßen
+Euro-Beispiel Inkasso GmbH – Abteilung Maut
+Registriert im Rechtsdienstleistungsregister (Beispiel-Nr. 0000)

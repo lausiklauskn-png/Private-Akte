@@ -1,0 +1,35 @@
+{
+  "fassung": "0.4.7",
+  "datum": "2026-11-15",
+  "freigabe": "Klaus 15.11.2026: „0.4.7 mit den Änderungen veröffentlichen“",
+  "inhalt": "Discovery: in der Führung läuft der Kreislauf-Film im Rahmen der Stadt; Tonspuren der Führung werden vorab geladen (Vorlesung stockte); Untertitel ab Werk aus mit eigenem Knopf; Leistungsprüfung für die 3D-Kugeln mit Rückfall auf den Film; Schilder blenden sich hinter einer vorderen Stadt aus; Rückweg „‹ Zurück“ (#43, #44)",
+  "android": {
+    "commit": "dfcceaa338ef82ca68a76350897491601e02cc26",
+    "lauf": 43741529454,
+    "datei": "Datei-Organizer-Pro-0.4.7.apk",
+    "versionCode": 47,
+    "groesse": 16321178,
+    "sha256": "5fd03f026774743e3ffdb9d3769390a8bb28ba554180a13e04df2dd3f6d022e4",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.7",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.7.apk",
+    "geprueft": "Release-Lauf grün (Emulator, Überinstallation, Feed unterschrieben, Download vom Update-Server von außen per SHA-256 im Lauf); Release-Datei aus der Sitzung geladen, SHA-256 gleich .sha256 und .apk.json; Discovery-Dateien liegen in der APK"
+  },
+  "windows": {
+    "commit": "dfcceaa338ef82ca68a76350897491601e02cc26",
+    "lauf": 43741150828,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.7-x64-setup.exe",
+    "groesse": 31017932,
+    "sha256": "df35132dde349eeb3f0dfefdb1db413a9992434938e31da86a5ff04cf509fbbb",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.7-x64-setup.exe",
+    "geprueft": "Release-Lauf grün (Auslieferungsbau installiert, gestartet, entfernt; Feed unterschrieben; Download vom Update-Server von außen per SHA-256 im Lauf); Größe und SHA-256 aus dem Lauf, nicht selbst nachgerechnet",
+    "hinweis": "Installer unsigniert (wie 0.4.6)"
+  },
+  "basic": {
+    "commit": "dfcceaa338ef82ca68a76350897491601e02cc26",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Merge-Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_enthalten": "Kurzfilme wie ein Video und Briefträger am Boden (#45, Fassung 0.4.8) – kamen nach dem Ausgabestand",
+  "nicht_geprueft": "Discovery in der Windows-Hülle nicht gestartet; in der Android-App von Klaus am Galaxy Tab S6 benutzt (0.4.6: Führung, Film), 0.4.7 dort noch ohne Rückmeldung; Klang nicht angehört; Update-Server aus der Sitzung nicht abrufbar"
+}

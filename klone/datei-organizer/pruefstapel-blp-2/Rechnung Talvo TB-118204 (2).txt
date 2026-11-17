@@ -1,0 +1,25 @@
+Talvo Bikes Vertriebs GmbH
+Werftstraße 3
+25980 Nordholmsiel
+USt-IdNr. DE000000000
+
+Radwerk Tidemann
+Inh. Maren Tidemann
+Kornspeicherweg 14
+26999 Wesselhaven
+
+Rechnung Nr. TB-118204                      Datum: 09.03.2026
+Ihre Bestellung vom 27.02.2026, Händler-Nr. H-2291
+
+Pos  Bezeichnung                              Menge   Einzelpreis      Gesamt
+1    Trekkingrad Talvo Route 5 Herren RH 55       2        619,00    1.238,00
+2    Trekkingrad Talvo Route 5 Damen RH 50        1        619,00      619,00
+3    Citybike Talvo Hafen 7-Gang                  2        445,00      890,00
+4    Frachtpauschale Fahrräder                    1         65,00       65,00
+------------------------------------------------------------------------------
+Nettobetrag                                                   2.812,00 EUR
+zzgl. 19 % USt                                                  534,28 EUR
+Endbetrag                                                     3.346,28 EUR
+
+Die Ware bleibt bis zur vollständigen Bezahlung unser Eigentum.
+Zahlungsziel: 14 Tage netto. IBAN DE00 0000 0000 0000 0000 00

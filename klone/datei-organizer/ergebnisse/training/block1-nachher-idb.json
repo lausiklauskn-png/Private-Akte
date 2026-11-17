@@ -1,0 +1,120 @@
+{
+ "ordner": [
+  "laeufe/m501",
+  "laeufe/m502",
+  "laeufe/m503",
+  "laeufe/m504",
+  "laeufe/m505",
+  "laeufe/m506",
+  "laeufe/m507",
+  "laeufe/m508",
+  "laeufe/m509",
+  "laeufe/m510",
+  "laeufe/m511",
+  "laeufe/m512",
+  "laeufe/m513",
+  "laeufe/m514",
+  "laeufe/m515",
+  "laeufe/m516",
+  "laeufe/m517",
+  "laeufe/m518",
+  "laeufe/m519",
+  "laeufe/m520",
+  "laeufe/m521",
+  "laeufe/m522",
+  "laeufe/m523",
+  "laeufe/m524",
+  "laeufe/m525"
+ ],
+ "quelldateien": 50000,
+ "block": 50,
+ "merken": "idb",
+ "stufen": [
+  {
+   "menge": 1000,
+   "dateien": 1010,
+   "ms": {
+    "lesen": 4586,
+    "merken": 43,
+    "doppelt": 24,
+    "siebe": 324
+   },
+   "gesamtS": 5,
+   "msJe1000": {
+    "lesen": 4586,
+    "merken": 43,
+    "doppelt": 24,
+    "siebe": 324
+   },
+   "heapSpitzeMB": 130,
+   "schreibvorgaenge": 57,
+   "geschriebenMB": 0
+  },
+  {
+   "menge": 5000,
+   "dateien": 5057,
+   "ms": {
+    "lesen": 19702,
+    "merken": 230,
+    "doppelt": 51,
+    "siebe": 961
+   },
+   "gesamtS": 21,
+   "msJe1000": {
+    "lesen": 3940,
+    "merken": 46,
+    "doppelt": 10,
+    "siebe": 192
+   },
+   "heapSpitzeMB": 207,
+   "schreibvorgaenge": 302,
+   "geschriebenMB": 0
+  },
+  {
+   "menge": 20000,
+   "dateien": 20222,
+   "ms": {
+    "lesen": 82747,
+    "merken": 1049,
+    "doppelt": 254,
+    "siebe": 3474
+   },
+   "gesamtS": 87.6,
+   "msJe1000": {
+    "lesen": 4137,
+    "merken": 52,
+    "doppelt": 13,
+    "siebe": 174
+   },
+   "heapSpitzeMB": 535,
+   "schreibvorgaenge": 1217,
+   "geschriebenMB": 0
+  },
+  {
+   "menge": 50000,
+   "dateien": 50553,
+   "ms": {
+    "lesen": 208666,
+    "merken": 2972,
+    "doppelt": 659,
+    "siebe": 7739
+   },
+   "gesamtS": 220.1,
+   "msJe1000": {
+    "lesen": 4173,
+    "merken": 59,
+    "doppelt": 13,
+    "siebe": 155
+   },
+   "heapSpitzeMB": 1248,
+   "schreibvorgaenge": 3046,
+   "geschriebenMB": 0
+  }
+ ],
+ "fassung": "nachher",
+ "abbruch": {
+  "bei": 0.6,
+  "gleichesErgebnis": true,
+  "dateien": 50553
+ }
+}

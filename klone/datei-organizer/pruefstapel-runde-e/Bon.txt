@@ -1,0 +1,20 @@
+FAHRRADLADEN BEISPIEL BIKES
+Ringweg 14, 45678 Musterhausen
+Tel. 00000 000000
+UST-ID DE000000000
+
+Schlauch 28 Zoll SV
+  2 x 6,90        13,80 A
+Flickzeug                        3,50 A
+Kettenöl                         7,95 A
+Rücklicht Akku                  19,90 A
+------------------------------------
+SUMME EUR                    45,15
+Girocard                      45,15
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   37,94   7,21   45,15
+
+30.09.2025 12:26  Bon 3428  Kasse 1
+TSE-Signatur 7105176147
+Vielen Dank für Ihren Einkauf!

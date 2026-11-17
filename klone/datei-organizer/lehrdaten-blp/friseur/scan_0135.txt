@@ -1,0 +1,10 @@
+belegpilot.example – Online-Buchhaltung
+Rechnung BP-89027874 vom 2026-07-08
+
+Account: Haarstudio Federleicht
+Tarif „Solo Plus“: Belegerfassung, Bankabgleich, DATEV-Export
+für den Steuerberater, Abrechnungsmonat August
+
+Netto        19,73 EUR
+USt 19 %     3,75 EUR
+Brutto       23,48 EUR

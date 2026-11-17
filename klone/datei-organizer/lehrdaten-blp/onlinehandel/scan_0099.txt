@@ -1,0 +1,10 @@
+shop-akademie.example - Online-Kurse für Händler
+Rechnung Nr. SA-26-044812    Datum 11.03.2026
+
+Kunde: Teekontor Lindenblatt
+
+Onlinekurs "Suchmaschinenoptimierung für kleine Shops" (8 Module, Zugang 12 Monate)
+Kursgebühr netto      149,00
++ 19 % MwSt            28,31
+Rechnungsbetrag       177,31 EUR
+Zahlung per Kreditkarte erhalten.

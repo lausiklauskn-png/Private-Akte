@@ -1,0 +1,29 @@
+# Beispiel-Apotheke am Kurpark
+Beispiel-Apotheke am Kurpark · Kurpark 1 · 67890 Exempelheim
+
+Herrn Heinrich Vogelsang
+Am Kurpark 22
+67890 Exempelheim
+
+Kundenkarte: AP-2208
+Datum: 09.01.2026
+
+# Quittungsbeleg Zuzahlungen 2025 für Ihre Steuererklärung
+
+Sehr geehrter Herr Vogelsang,
+
+im Jahr 2025 haben Sie in unserer Apotheke folgende Zuzahlungen und Eigenanteile geleistet:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Zuzahlungen Rezepte Januar bis Juni|1|62,40 €|62,40 €|
+|2|Zuzahlungen Rezepte Juli bis Dezember|1|21,30 €|21,30 €|
+|3|Rezeptfreie Arzneimittel auf grünem Rezept|1|48,75 €|48,75 €|
+
+Rechnungsbetrag: 132,45 €
+Beträge inkl. gesetzlicher MwSt.
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Mit freundlichen Grüßen
+Beispiel-Apotheke am Kurpark
+@fuss Beispiel-Apotheke am Kurpark · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

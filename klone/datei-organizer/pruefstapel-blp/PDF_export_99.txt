@@ -1,0 +1,17 @@
+PayFlux Terminal Services GmbH
+Kassenweg 3, 37998 Lindenstedt
+
+Händler: Café-Bäckerei Kornblume, Mühlgasse 7, 37999 Tannweiler
+Händler-ID 00032491
+
+Monatsabrechnung Februar 2026
+Abrechnungsdatum: 2026-03-03
+
+Transaktionsentgelt girocard (750 x 0,06)      45,00
+Disagio Kreditkarten (umsatzsteuerfrei)        83,38
+Terminalmiete (zzgl. 19 % USt)                 19,90
+USt 19 % auf Terminalmiete                      3,78
+------------------------------------------------
+Summe                                  152,06
+
+Der Betrag wird mit Ihren Auszahlungen verrechnet.

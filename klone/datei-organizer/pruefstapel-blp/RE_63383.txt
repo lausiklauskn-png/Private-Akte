@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Gemeindeverwaltung Tannweiler
+Rathausplatz 1
+37999 Tannweiler
+
+Rechnung
+Rechnungsnummer: KB-2026-205
+Rechnungsdatum: 1. Januar 2026
+Lieferdatum: 01.01.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Brötchen gemischt, Stück   180      0,42      75,60
+  2  Laugenbrezeln               60      0,85      51,00
+
+Nettobetrag                                  126,60
+zzgl. 7 % USt                                8,86
+Zahlbetrag                                   135,46 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 7579 26
+USt-IdNr. DE000000536

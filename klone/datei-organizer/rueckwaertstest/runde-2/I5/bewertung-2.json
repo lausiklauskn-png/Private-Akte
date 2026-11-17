@@ -1,0 +1,39 @@
+{
+ "bewerter": 2,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "teilweise",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "fehlt",
+  "M08": "teilweise",
+  "M09": "getroffen",
+  "M10": "fehlt",
+  "M11": "teilweise",
+  "M12": "getroffen",
+  "M13": "teilweise",
+  "M14": "getroffen",
+  "M15": "getroffen",
+  "M16": "getroffen",
+  "M17": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Kanzlei ist Auftraggeber; dass Mandanten nichts zahlen und ein Abo vorliegt, steht nicht da.",
+  "M04": "Kurzlebiger Link ohne Anmeldung per Mail ja; PIN-Schutz nur als offene Frage, SMS nicht vorgesehen.",
+  "M07": "Keine Sortierung nach Betrag, größte zuerst.",
+  "M08": "Automatische Erinnerung ja, aber Abstand einstellbar statt 3 und 7 Tage; Unterdrückung doppelter Anfragen nicht beschrieben.",
+  "M10": "Belegprüfung von Betrag und Datum ausdrücklich nicht gebaut („keine Texterkennung/Belegprüfung“).",
+  "M11": "Offen/teilweise/beantwortet ja; Zustand „überfällig“ fehlt.",
+  "M13": "Server in Deutschland und Löschung nach Übernahme/Frist ja; Frist (30 Tage) offen (O-02).",
+  "M17": "Kein Preismodell."
+ },
+ "zusaetze": [
+  "Kanzlei-Anmeldung mit Rollen",
+  "Löschprotokoll ohne Inhalte",
+  "Link nur als Hash gespeichert, Begrenzung von Abrufversuchen",
+  "Sicherungen mit kurzer Aufbewahrung wegen Löschfrist",
+  "Mailversand über EU-Versanddienst"
+ ]
+}

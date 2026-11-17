@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "BAföG Bescheid WiSe25.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studierendenwerk Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "AW_ Ihr Antrag - fehlende Unterlagen.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Studierendenwerk Lindenrath",
+   "person": "Jule Brandis",
+   "frist": "2025-10-17"
+  },
+  {
+   "datei": "immabesch_ws2526.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Universität Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Rückmeldung SoSe 26.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Universität Lindenrath",
+   "person": "Jule Brandis",
+   "frist": "2026-02-15"
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zentrales Prüfungsamt",
+   "person": "Jule Brandis",
+   "frist": "2026-02-03"
+  },
+  {
+   "datei": "Familienkasse Nachweis.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Westmark",
+   "person": "Jule Brandis",
+   "frist": "2025-11-28"
+  },
+  {
+   "datei": "IHK Zeugnis Kopie.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Industrie- und Handelskammer Westmark zu Lindenrath",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Geburtsurkunde Gebühr.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Hohenwerth",
+   "person": "Jule Brandis",
+   "frist": "2025-07-25"
+  },
+  {
+   "datei": "Mahnung Bücher.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Universitätsbibliothek Lindenrath",
+   "person": "Jule Brandis",
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "stipendium absage.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hedwig-Tolksdorf-Stiftung",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Fwd Zeugnisausgabe.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Berufskolleg am Hafenbecken",
+   "person": "Malte Kessing",
+   "frist": "2025-02-14"
+  },
+  {
+   "datei": "auszug_2025_011.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Stadtsparkasse Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Kontoauszug_Nr008_DE77.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Rheinufer Direktbank AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "fitnessstudio beitrag.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Certus Forderungsmanagement GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-10-09"
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "PARATUS Inkasso & Recht GmbH",
+   "person": "Jule Brandis",
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Zahnarzt.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Rechtsanwälte Quast & Bienhüls PartG mbB",
+   "person": "Malte Kessing",
+   "frist": "2026-03-12"
+  },
+  {
+   "datei": "Stromrechnung alt.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Energie & Versorgung",
+   "absender": "Debitoria Inkasso AG",
+   "person": "Jule Brandis",
+   "frist": "2024-11-15"
+  },
+  {
+   "datei": "Dispo Vertrag.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Rheinufer Direktbank AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Info Kontomodell.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Stadtsparkasse Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Ratenplan certus unterschrieben.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Certus Forderungsmanagement GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-11-03"
+  },
+  {
+   "datei": "Police PHV.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Concordia Westmark Versicherung a. G.",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "hausrat_2026.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Concordia Westmark Versicherung a. G.",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Ihr Vertrag - wichtige Information.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Sekurion Vorsorge AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Schaden Laptop Nora.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Concordia Westmark Versicherung a. G.",
+   "person": "Jule Brandis",
+   "frist": "2025-05-23"
+  },
+  {
+   "datei": "rs kuendigung best.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Justizia Rechtsschutz-Versicherungs-AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2025.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenrath-Hafen",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Meldebescheinigung.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Lindenrath - Bürgeramt Süd",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Abholung Perso.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Bürgeramt Lindenrath-Hafen",
+   "person": "Malte Kessing",
+   "frist": "2026-01-22"
+  },
+  {
+   "datei": "Steuer-ID Schreiben.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Zentralstelle für Steuerkennzahlen",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "FA Erinnerung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Lindenrath-Hafen",
+   "person": "Malte Kessing",
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "IMG_20250311_bon.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadtkasse Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Mietvertrag Kastanienweg.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Dröge & Pahl GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Nebenkosten 2024.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Hausverwaltung Dröge & Pahl GmbH",
+   "person": null,
+   "frist": "2025-10-20"
+  },
+  {
+   "datei": "Mieterhöhung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Westmark eG",
+   "person": "Malte Kessing",
+   "frist": "2026-08-31"
+  },
+  {
+   "datei": "scan0007_miete.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Immobilienbüro Vosskuhl",
+   "person": "Malte Kessing",
+   "frist": "2025-07-18"
+  },
+  {
+   "datei": "Ablesung Rauchmelder Aushang.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "THERMODAT MESSDIENST GMBH",
+   "person": null,
+   "frist": "2025-12-09"
+  },
+  {
+   "datei": "Kaution Abrechnung Kohlenhafen.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Immobilienbüro Vosskuhl",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Bescheid Hohenwerth Flurstück.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Hohenwerth - Steueramt",
+   "person": "Jule Brandis",
+   "frist": "2026-02-16"
+  },
+  {
+   "datei": "Kündigung Zimmer best.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Immobilienbüro Vosskuhl",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "anmeldung buergeramt.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Westmark eG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Strom Jahresabrechnung WG.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Lindenrath Energie GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Abschlag neu.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Lindenrath Energie GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Vertragsbestätigung Strom Hüttenstr.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Voltana Energie Vertrieb GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Zählerstand melden!!.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Westmark Netz GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-12-19"
+  },
+  {
+   "datei": "Preisanpassung 2026.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Lindenrath Energie GmbH",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "voltana zahlungserinnerung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Voltana Energie Vertrieb GmbH",
+   "person": "Malte Kessing",
+   "frist": "2026-02-20"
+  },
+  {
+   "datei": "Beet 14 Jahresbeitrag.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Stadtacker Lindenrath-Süd e. V.",
+   "person": "Jule Brandis",
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "Rechnung_GW-118420.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Grünwerk Gartentechnik Versand GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Mietergarten Hecke.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Westmark eG",
+   "person": "Malte Kessing",
+   "frist": "2026-04-30"
+  },
+  {
+   "datei": "20250503_112744.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Gärtnerei Hülsdonk",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "bon tenbrink.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "FRISCHEMARKT TENBRINK",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Kassenzettel Foto.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "WOHNKONTOR HAFENHALLE",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Bestellung 7720418.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Kaufallee Marktplatz GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Retoure eingegangen.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Kaufallee Marktplatz GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "ZE Sportversand.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Sportversand Berghaus GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-12-01"
+  },
+  {
+   "datei": "Sofa Rechnung Lieferung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Polsterwelt Rhein-Lippe GmbH & Co. KG",
+   "person": "Malte Kessing",
+   "frist": "2025-10-10"
+  },
+  {
+   "datei": "Zahlungsaufforderung Klarino.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Klarino Zahlungsdienste AG",
+   "person": "Jule Brandis",
+   "frist": "2025-04-10"
+  },
+  {
+   "datei": "Letzte Mahnung Ihr Warenkorb.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Sportversand Berghaus GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "NWGK Bescheinigung Uni.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Nordwest Gesundheitskasse",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Beitrag ab April.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Nordwest Gesundheitskasse",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Krankengeld.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Hafen & Handel",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "BKK Zusatzbeitrag.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "BKK Hafen & Handel",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Rente Fragebogen.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Nordwest Gesundheitskasse",
+   "person": "Jule Brandis",
+   "frist": "2026-01-30"
+  },
+  {
+   "datei": "Befund Derma.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Hautarztpraxis Dr. med. Svenja Aldag",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "MRT Knie.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Radiologie am Kaiserwall",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung PZR Füllung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Dentalabrechnung Westmark GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-11-13"
+  },
+  {
+   "datei": "Erinnerung Physio.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Physio am Südbahnhof",
+   "person": "Jule Brandis",
+   "frist": "2025-09-16"
+  },
+  {
+   "datei": "Arbeitsvertrag Brinkhaus.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Brinkhaus Logistiksysteme GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Entgelt_2025_10.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Brinkhaus Logistiksysteme GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "JC Bewilligung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Lindenrath",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Jobcenter Unterlagen bis.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Lindenrath",
+   "person": "Malte Kessing",
+   "frist": "2025-07-21"
+  },
+  {
+   "datei": "Aufhebung + Erstattung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Lindenrath",
+   "person": "Malte Kessing",
+   "frist": "2025-10-15"
+  },
+  {
+   "datei": "Einladung 14.04.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Termin",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Jobcenter Lindenrath",
+   "person": "Malte Kessing",
+   "frist": "2025-04-14"
+  },
+  {
+   "datei": "Werkstudi Vertrag.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Planungsbüro Kordt + Seibel PartG",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Cafe.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Café Ringelnatter",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Renteninfo 2026.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenversicherung Westmark",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Zulage Riester.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Sekurion Vorsorge AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Kfz Police Piccolo.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Rhenus-Allgemeine Versicherung AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Rhenus Beitrag 2027.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Rhenus-Allgemeine Versicherung AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Steuerbescheid 2025.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Lindenrath",
+   "person": "Malte Kessing",
+   "frist": "2025-11-28"
+  },
+  {
+   "datei": "Radversicherung.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Velosafe Assekuranz GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Radstation Rechnung.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Radstation Südbahnhof",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "HU Termin.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autoservice Pollmeier",
+   "person": "Malte Kessing",
+   "frist": "2026-05-06"
+  },
+  {
+   "datei": "Police Tavaro Saison.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Rhenus-Allgemeine Versicherung AG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Tavaro.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Motorrad",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Lindenrath",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "zweirad heitkamp inspektion.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad Heitkamp",
+   "person": "Malte Kessing",
+   "frist": "2025-04-11"
+  },
+  {
+   "datei": "Versicherung Mahnung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Rhenus-Allgemeine Versicherung AG",
+   "person": "Malte Kessing",
+   "frist": "2026-04-29"
+  },
+  {
+   "datei": "Laptop Rechnung Garantie.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Campus Computer Lindenrath GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Waschmaschine WG.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektrohaus Schmeing",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "KVA Display.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "HANDYDOKTOR HAFENMEILE",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "RMA Kopfhörer.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Tonwerk Audio Service",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "kassenbon.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "TECHNIKMARKT VOLTA",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Telvio Vertragsbestätigung.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Telvio Mobil GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Handy Technik.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Telvio Mobil GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Flimmerbox Preis.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Flimmerbox Streaming GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "KraftRaum Mitgliedsvertrag.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "KraftRaum Fitness GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Kraftraum Kündigung ok.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "KraftRaum Fitness GmbH",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "VLW Abo Upgrade.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsverbund Lindenrath-Westmark GmbH",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "VLW Rücklastschrift.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsverbund Lindenrath-Westmark GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-07-25"
+  },
+  {
+   "datei": "Probeabo Kurier.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Lindenrather Kurier",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Technikertermin Glasfaser.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Termin",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Westkabel Breitband GmbH",
+   "person": "Malte Kessing",
+   "frist": "2025-09-18"
+  },
+  {
+   "datei": "stadtflitzer 2026-03.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "StadtFlitzer Carsharing Lindenrath eG",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Dein Abo läuft aus.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Klangwolke Music",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Nachlassgericht Oma.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Hohenwerth",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Bescheid.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Rheinau-Mitte",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Vollmacht Register.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Zentrales Vorsorgeregister der Notarkammer Westmark",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Notar 12.03.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notarin Dr. Friederike Lammers",
+   "person": "Jule Brandis",
+   "frist": "2026-03-12"
+  },
+  {
+   "datei": "Ticket Elbhaven.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Westmark-Bahn Fernverkehr",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Hostel Lissara.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Hostel Azulejo Lissara",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Festivalticket.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Haldenglühen Festival UG (haftungsbeschränkt)",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "Flugänderung.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Aerolinea Sol y Mar",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "boulderhalle.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "BLOCKWERK BOULDERHALLE",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Brief Oma Grete abgetippt.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Oma Grete",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Re Umzug Samstag.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Deniz",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "wg von früher.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Fenja",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Abitreffen.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Orga-Team Abschluss 2020",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "ABLAGE 2024 erledigt.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Jule",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Scanprotokoll Altakten.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Papierlos Scanservice Lindenrath",
+   "person": "Malte Kessing",
+   "frist": null
+  },
+  {
+   "datei": "alt_wohnheim_kaution_erl.txt",
+   "haushalt": "h-brandis-wg",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Studierendenwerk Lindenrath",
+   "person": "Jule Brandis",
+   "frist": null
+  },
+  {
+   "datei": "Kellerkiste Liste.txt",
+   "haushalt": "h-kessing",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Malte",
+   "person": "Malte Kessing",
+   "frist": null
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "haushalte": [
+  {
+   "id": "h-kowalke",
+   "name": "Kowalke",
+   "personen": [
+    {
+     "vorname": "Dennis",
+     "name": "Kowalke",
+     "anrede": "Herr"
+    },
+    {
+     "vorname": "Lina",
+     "name": "Kowalke",
+     "anrede": "Kind"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Kowalke",
+     "anrede": "Kind"
+    }
+   ],
+   "fahrzeuge": [
+    "Pkw Tavero Lux Kombi, WTB-DK 417",
+    "Motorrad Rheda RS 650, WTB-K 92 (Saison 04–10, verkauft 09/2025)"
+   ]
+  },
+  {
+   "id": "h-brandhorst",
+   "name": "Brandhorst",
+   "personen": [
+    {
+     "vorname": "Marlies",
+     "name": "Brandhorst",
+     "anrede": "Frau"
+    },
+    {
+     "vorname": "Hedwig",
+     "name": "Brandhorst",
+     "anrede": "Frau"
+    }
+   ],
+   "fahrzeuge": [
+    "Pkw Mirella Uno 1.2, WTB-MB 2031"
+   ]
+  }
+ ]
+}

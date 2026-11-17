@@ -1,0 +1,50 @@
+Probe Plus – Dein digitaler Kassenbon
+
+Discount Probe, Ringweg 3, 45678 Musterhausen
+Einkauf vom 07.03.2026 um 19:40 Uhr
+Kundenkarte **** 2814
+
+Artikel   Menge   Preis
+Duschgel   1   1,25 € A
+Zitronen Netz   1   1,49 € B
+Bananen   1   1,49 € B
+Windeln Gr.5   1   8,99 € A
+Bratwurst 6Er   1   3,99 € B
+Tomaten Passiert   2   1,38 € B
+Windeln Gr.5   1   8,99 € A
+H-Milch 1,5% 1L   2   1,98 € B
+Spülmaschinentabs 40   1   4,99 € A
+Brokkoli   1   1,69 € B
+Teelichter 50   1   2,99 € A
+Avocado   2   2,58 € B
+Frischmilch 3,8%   1   1,19 € B
+Tomaten Rispe   1   2,49 € B
+Nuss-Nougat-Creme   2   5,98 € B
+Schmand   2   1,58 € B
+Champignons 400G   2   4,38 € B
+Mais Dose   1   0,89 € B
+Birnen   1   2,49 € B
+Vollkornbrot   1   1,89 € B
+Quark Mager   1   0,79 € B
+Karotten 2Kg   1   1,99 € B
+Spinat Tk 750G   1   1,49 € B
+Zucker 1Kg   2   1,98 € B
+Zahnpasta   2   1,98 € A
+Feuchttücher   2   2,98 € A
+Sonnenblumenöl   1   2,29 € B
+
+App-Coupon Sonnenblumenöl: -0,50 €
+App-Coupon Tomaten Rispe: -0,50 €
+
+Zwischensumme: 76,20 €
+Du hast gespart: 1,00 €
+Gesamtsumme: 75,20 €
+Bezahlt mit: Kreditkarte
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   27,03   5,14   32,17
+B 7 %   40,21   2,82   43,03
+
+Bon-ID: 557220183245  ·  Kasse 8  ·  TSE-Signatur gekürzt 23488349
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

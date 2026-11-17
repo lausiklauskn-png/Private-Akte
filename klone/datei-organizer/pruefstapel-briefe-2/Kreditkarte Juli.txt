@@ -1,0 +1,20 @@
+Raiffeisenbank Aichtal eG                 Kreditkartenabrechnung
+Karte Classic  xxxx xxxx xxxx 4471        Abrechnung vom 28.07.2025
+Karteninhaberin Katrin Pöschl             Verfügungsrahmen 1.500 EUR
+
+Datum    Umsatz                                          Betrag EUR
+02.07.   Bahnhofsbuchhandlung Isarstadt                     12,99
+05.07.   Campingplatz Seeleitn, Anzahlung                   60,00
+11.07.   Schuhhaus Stiegler Oberaichkirchen                 89,95
+14.07.   Online-Ticket Freibad Saisonkarte Jgdl.            45,00
+19.07.   Musikversand Notenblatt, Fremdwährung
+         18,40 CHF Kurs 0,9412                              19,55
+         Auslandseinsatzentgelt 1,75 %                       0,34
+23.07.   Tankhof Lechner                                    61,20
+25.07.   Gutschrift Schuhhaus Stiegler (Umtausch)          -20,00
+
+Neuer Saldo                                                269,03
+Der Betrag wird am 04.08.2025 von Ihrem Girokonto
+DE.. .... 4712 30 eingezogen.
+
+Bitte prüfen Sie die Umsätze. Reklamationen innerhalb von 6 Wochen.

@@ -1,0 +1,24 @@
+PC-Doktor Marschhaven · Inh. T. Feddersen · Kleine Kirchstr. 4 · Tel 04999 55 010
+
+Prüfbericht zum Auftrag 26-0217           abgegeben 03.03.26 / fertig 05.03.26
+
+Kunde: H. Brodersen, Uhlenhorn
+Gerät: Notebook 15,6", ca. 5 Jahre alt, mit Netzteil, ohne Tasche
+
+Kundenangabe: geht nach 10 Min. einfach aus, Lüfter heult.
+
+Festgestellt:
+- Kühlkörper u. Lüfter komplett mit Staub/Tierhaaren zugesetzt
+- CPU-Temperatur im Leerlauf 91 °C, Notabschaltung bei 105 °C
+- Wärmeleitpaste ausgehärtet
+- SSD: SMART-Werte in Ordnung (Restlebensdauer 88 %)
+- Akku: Kapazität nur noch 41 % der Nennkapazität, gewölbt ist er nicht
+- Arbeitsspeicher 2 Durchläufe fehlerfrei
+
+Durchgeführt: Gerät geöffnet, gereinigt, neue Paste. Danach Leerlauf
+46 °C, unter Volllast 78 °C, 2 Std. Dauertest ohne Abschaltung.
+
+Empfehlung: Akku mittelfristig tauschen (ca. 69 EUR), Datensicherung
+einrichten – es gibt bisher keine!
+
+Pauschale Reinigung/Diagnose 49,00 EUR – bezahlt bei Abholung.

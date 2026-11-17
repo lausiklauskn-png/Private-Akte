@@ -1,0 +1,14 @@
+WERKZEUG-HALLE Dierksmeier
+Profi-Werkzeug für Kfz und Industrie
+Am Bauhof 2, 37081 Bergfelden
+
+Rechnung/Lieferschein 60-11872            04.02.2026
+Kunde 30155  Kfz-Technik Brandhorst
+
+001;Akku-Schlagschrauber 1/2 Zoll 18V, 1.000 Nm, 2 Akkus + Lader im Koffer;1;ST;429,00;429,00
+
+NETTO:                                             429,00
+UST 19%:                                            81,51
+BRUTTO:                                            510,51
+
+USt-IdNr. DE000000035 · Zahlbar sofort

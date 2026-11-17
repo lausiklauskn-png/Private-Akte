@@ -1,0 +1,31 @@
+{"titel": "KI-Programme sicher nutzen, ohne dass Mandantendaten hinausgehen",
+ "kunde": {"firma": "Kanzlei Beispiel Familien- und Mietrecht", "ansprechpartner": "Ruth Beispielfrau", "mail": "kanzlei@kanzlei-beispiel.example"},
+ "bereiche": {
+  "1": ["KI-Programme im Internet werden kaum genutzt; wenn ich es ausprobiere, schwärze ich vorher von Hand", "Die Auszubildende kopiert Texte unbearbeitet in KI-Programme, teils am eigenen Handy", "Schriftsätze und Mails schreiben wir selbst in Word bzw. Outlook am Windows-PC"],
+  "2": ["Entwurf von Schriftsätzen und Mails", "Umgang mit Mandantendaten (Dokumente, Kundenkontakt)"],
+  "3": [{"text": "Inhaberin (Rechtsanwältin)", "anzahl": 1}, {"text": "Weitere Anwältin", "anzahl": 1}, {"text": "Rechtsanwaltsfachangestellte", "anzahl": 1}, {"text": "Auszubildende", "anzahl": 1}],
+  "4": ["Von Hand schwärzen dauert länger, als den Text selbst zu schreiben", "Beim Schwärzen übersehe ich trotzdem etwas", "Mandantendaten (Namen, Kinder, Gehälter, Adressen, Kontonummern) können ungeschützt bei fremden Firmen landen", "Wir können der Kammer oder Mandanten nicht zeigen, dass wir aufpassen"],
+  "5": ["Es gibt kein Werkzeug, das Namen und Zahlen vor dem Senden automatisch unkenntlich macht", "Ein Verbot wird umgangen, weil die KI im Alltag nützlich ist"],
+  "6": [
+   {"text": "Namen, Zahlen, Adressen und Kontonummern vor dem Senden an eine KI automatisch unkenntlich machen", "prio": "muss", "nutzen": {"stundenMonat": 8, "euroMonat": null, "text": "kein Schwärzen von Hand, Schweigepflicht gewahrt"}, "handeln": "vorschlagen"},
+   {"text": "Die Antwort der KI hinterher wieder mit den echten Namen und Zahlen anzeigen", "prio": "muss", "nutzen": {"stundenMonat": 4, "euroMonat": null, "text": "Antwort direkt weiterverwenden"}, "handeln": "selbst"},
+   {"text": "Vor dem Senden genau sehen, was hinausgeht, und erst dann bestätigen", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nichts geht blind hinaus"}, "handeln": "vorschlagen"},
+   {"text": "Mandantennamen als Liste hinterlegen, damit sie sicher erkannt werden", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "weniger übersehene Namen"}, "handeln": "egal"},
+   {"text": "Frei wählen können, welches KI-Programm benutzt wird", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "keine Bindung an einen Anbieter"}, "handeln": "egal"},
+   {"text": "Etwas Vorzeigbares für Kammer oder Mandanten, dass wir aufpassen", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Vertrauen bei Kammer und Mandanten"}, "handeln": "egal"},
+   {"text": "Ein Weg, den auch die Auszubildende gern benutzt, statt am eigenen Handy", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Umgehen mehr"}, "handeln": "egal"}
+  ],
+  "7": ["Alle vier können KI-Programme für Entwürfe nutzen, ohne dass Mandantendaten erkennbar hinausgehen", "Schneller Entwürfe für Schriftsätze und Mails"],
+  "8": ["Das System muss Namen, Adressen, Kontonummern, Beträge und Telefonnummern im Text vor dem Senden durch Platzhalter ersetzen", "Das System muss eine hinterlegte Liste von Mandantennamen beim Erkennen berücksichtigen", "Das System muss vor dem Senden anzeigen, was genau hinausgeht, und erst nach Bestätigung senden", "Das System muss in der Antwort der KI die Platzhalter wieder durch die echten Angaben ersetzen", "Das System muss mit verschiedenen KI-Anbietern funktionieren", "Das System muss eine kurze Beschreibung liefern, die man der Kammer oder Mandanten zeigen kann"],
+  "9": ["Kurze Einweisung für alle vier", "Regel im Büro: KI nur über diesen Weg"],
+  "10": ["Windows-PCs im Büro, Browser Edge", "Einfache Installation, der IT-Dienstleister kommt nur einmal im Monat"],
+  "11": ["Windows-PCs mit Edge", "Word und Outlook"],
+  "12": [],
+  "13": ["Texte aus Akten: Namen, Kinder, Gehälter, Adressen, Kontonummern", "Liste der Mandantennamen"],
+  "14": ["personenbezogene Daten: ja", "Anwaltliche Schweigepflicht", "Kein Server dazwischen darf Texte mitlesen oder speichern", "Keine Überwachung der Mitarbeiterinnen, wer was eingegeben hat"],
+  "15": ["Budget-Rahmen (Angabe des Kunden): 40 bis 60 Euro im Monat für alle vier", "Keine Versprechen von hundertprozentiger Sicherheit"],
+  "18": [{"text": "Wie man mit Angaben umgeht, die nicht automatisch erkannt werden", "wer": "", "bis": ""}, {"text": "Laufende Kosten der KI-Anbieter selbst", "wer": "", "bis": ""}]
+ },
+ "rahmen": {"geraete": ["windows", "browser"], "offline": "nein", "eigene": [], "eigeneText": "", "datenort": ["geraet"], "sicherung": [], "budgetEuro": null},
+ "nicht": ["Kein Server dazwischen, der Texte mitliest oder speichert", "Keine Protokollierung, wer was eingegeben hat (keine Überwachung der Mitarbeiterinnen)", "Keine Bindung an einen einzigen KI-Anbieter", "Kein Versprechen hundertprozentiger Sicherheit", "Nicht auf dem Handy für Akten"]
+}

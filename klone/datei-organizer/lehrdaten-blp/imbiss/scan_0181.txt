@@ -1,0 +1,17 @@
+Molkerei-Frischdienst Hagenau eG
+Postfach 00 12, 34500 Hagenau
+
+Rechnung Nr. MF-2026-01477
+Datum: 06.02.2026   Kunden-Nr.: 7712
+
+Pos Bezeichnung                    Menge   Einzel   Gesamt
+1   Schmand 24% 5kg Eimer            2     13,90    27,80
+2   Gouda Scheiben 1kg               6      7,45    44,70
+3   Butter 250g                     20      1,89    37,80
+4   Krautsalat 5kg Eimer             3     11,20    33,60
+5   Kartoffelsalat Essig-Öl 5kg      2     12,60    25,20
+
+Nettobetrag   169,10
+USt 7 %       11,84
+Bruttobetrag  180,94
+Lastschrifteinzug zum 13.02.2026

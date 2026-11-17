@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Kindertagesstätte Sonnenhügel e.V.
+Hügelweg 2
+37999 Tannweiler
+
+Rechnung
+Rechnunqsnummer: KB-2026-215
+Rechnungsdatum: 28.08.26
+Lieferdatum: 28.08.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Torten zum Mitnehmen, Stück     6     28,00     168,00
+  2  Blechkuchen Streusel, Blech     2     34,00      68,00
+
+Nettobetrag                                  236,00
+zzgl. 7 % USt                               16,52
+Gesamtbetrag                                 252,52 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Der Betrag wird per SEPA-Lastschrift von Ihrem Konto eingezogen.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 2815 81
+USt-IdNr. DE000000505

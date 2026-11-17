@@ -1,0 +1,19 @@
+BEISPIEL DROGERIEMARKT
+Kirchgasse 20
+
+Kasse 2  Bon 4711
+
+Kinderzahnpasta             1,45 B
+Duschgel Kids               1,95 B
+Taschentuecher              1,25 B
+Haarspangen                 2,95 B
+------------------------------------
+SUMME EUR                     7,60
+Gegeben BAR                  10,00
+Rueckgeld                     2,40
+
+A 7%  Netto 0,00  MwSt 0,00
+B 19% Netto 6,39  MwSt 1,21
+
+03.10.2024  10:44
+Vielen Dank fuer Ihren Einkauf

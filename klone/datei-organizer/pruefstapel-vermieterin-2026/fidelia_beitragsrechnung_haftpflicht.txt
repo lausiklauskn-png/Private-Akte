@@ -1,0 +1,26 @@
+FIDELIA Sachversicherung AG
+Kundenservice · 20990 Hafenstadt · service@fidelia-sach.example
+
+Hannelore Wiebusch
+Lindenhofweg 14
+31999 Sellenbrück
+
+Kundennummer 0027-55-813                               Hafenstadt, 5. Januar 2026
+
+Beitragsrechnung 2026
+
+Vertrag           Sparte                               Zeitraum            Beitrag
+PH 00.660.412     Privathaftpflicht Single 60plus      01.01.-31.12.2026    86,84 EUR
+HG 00.660.413     Haus- und Grundbesitzerhaftpflicht   01.01.-31.12.2026   163,20 EUR
+                  (Lindenhofweg 14, 4 Wohneinheiten)
+                                                                          ----------
+Gesamt inkl. 19 % Versicherungsteuer                                       250,04 EUR
+
+Wir buchen den Betrag zum 15.01.2026 von Ihrem bekannten Konto ab
+(Gläubiger-ID DE00ZZZ00000044170, Mandat FID-0027-55-813).
+
+Ihre Verträge verlängern sich jeweils um ein Jahr, wenn sie nicht drei Monate
+vor Ablauf gekündigt werden.
+
+Freundliche Grüße
+FIDELIA Sachversicherung AG

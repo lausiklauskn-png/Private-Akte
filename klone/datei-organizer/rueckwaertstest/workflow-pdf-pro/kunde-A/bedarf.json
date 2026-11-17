@@ -1,0 +1,47 @@
+{"titel": "Formulare ausfüllen und Briefe scannen als App auf Handy und PC",
+ "kunde": {"firma": "Schreibbüro Beispielmann", "ansprechpartner": "Renate Beispielmann", "mail": "renate@schreibbuero-beispiel.example"},
+ "bereiche": {
+  "1": ["PDF-Formulare werden ausgedruckt und mit der Hand ausgefüllt", "Ausgefülltes wird am alten Flachbettscanner eingescannt", "Ergebnis geht per E-Mail raus", "Papierbriefe werden mit dem Handy fotografiert", "Zum Ausfüllen eine kostenlose Formularseite im Browser"],
+  "2": ["Anträge, Vereinsformulare und Briefe für Nachbarn und Vereine ausfüllen", "Briefe und Unterlagen einscannen und als PDF weitergeben", "Unterlagen je Kunde ablegen"],
+  "3": [{"text": "Inhaberin (arbeitet allein)", "anzahl": 1}, {"text": "Kunden: Nachbarn und Vereine (bekommen das Ergebnis)", "anzahl": null}, {"text": "Empfänger der Formulare (Ämter, Vereine)", "anzahl": null}],
+  "4": ["Drucken, Handschrift, Scannen kostet jede Woche viel Zeit", "Handyfotos sind schief, mit Tischkante – niemand will sie so annehmen", "Die Formularseite läuft nur im Browser, nicht als App auf Handy und PC", "Ausfüllstellen muss man erst einrichten"],
+  "5": ["Kein Werkzeug, das Fotos zu ordentlichen A4-Scans macht", "Die Lieblings-Formularseite gibt es nur im Browser", "Alter Flachbettscanner als einziger Weg zum sauberen Scan"],
+  "6": [
+   {"text": "Formular öffnen und gleich losschreiben, ohne Ausfüllstellen selbst einzurichten", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "kein Drucken und Handschreiben mehr"}},
+   {"text": "Ergebnis fest zum Abschicken, weiter ausfüllbar für andere, leer zum Wiederverwenden; ausdrucken", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "eine Datei für jeden Zweck"}},
+   {"text": "Briefe abfotografieren, sieht aus wie ein ordentlicher A4-Scan als PDF; viele Bilder und ganze Ordner auf einmal", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Empfänger nehmen es an, Flachbettscanner entfällt"}},
+   {"text": "Alles bleibt auf dem Gerät, verschlüsselt mit Passwort, in einem selbst gewählten Ordner", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Unterlagen fremder Leute sind geschützt"}},
+   {"text": "Ordner für jeden Kunden, Vorlagen kopieren", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "Ordnung, wiederkehrende Formulare schneller"}},
+   {"text": "Gelegentlich eine Sicherungsdatei, Verlorenes wiederherstellen ohne Neueres zu verlieren", "prio": "soll", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "nichts geht verloren"}},
+   {"text": "Als richtige App auf Android-Handy und Windows-PC", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "arbeiten am Gerät, das gerade da ist"}}
+  ],
+  "7": ["Formulare direkt am Handy oder PC ausfüllen und verschicken", "Fotografierte Briefe sehen aus wie saubere Scans", "Alles geordnet je Kunde, sicher auf dem eigenen Gerät"],
+  "8": [
+   "Das System muss ein PDF-Formular öffnen und die Stellen zum Ausfüllen selbst erkennen",
+   "Das System muss schon eingetragene Angaben im Formular erhalten",
+   "Das System muss fehlende Ausfüllstellen hinzufügen und falsch sitzende verschieben lassen",
+   "Das System muss ein fertiges PDF ausgeben, das niemand mehr ändern kann",
+   "Das System muss ein PDF ausgeben, das andere noch weiter ausfüllen können",
+   "Das System muss ein leeres Formular zum Wiederverwenden ausgeben",
+   "Das System muss ausdrucken können",
+   "Das System muss Handyfotos von Briefen gerade rücken und auf A4-Scan-Aussehen bringen",
+   "Das System muss daraus ein PDF machen",
+   "Das System muss viele Bilder und ganze Ordner auf einmal aufnehmen",
+   "Das System muss Ordner je Kunde anlegen",
+   "Das System muss Vorlagen kopieren",
+   "Das System muss eine Sicherungsdatei erstellen und daraus wiederherstellen, ohne Neueres zu überschreiben"
+  ],
+  "9": ["Einarbeitung an einem Nachmittag, ohne Schulung", "Kein Konto anlegen"],
+  "10": ["Android-Handy", "Windows-10-PC", "Läuft ohne Internet / ohne Cloud", "Speicherort selbst wählbar"],
+  "11": ["Kostenlose Formularseite im Browser", "Altes Flachbettgerät zum Scannen", "E-Mail-Programm", "Drucker"],
+  "12": ["Ergebnis per E-Mail verschicken", "Drucker"],
+  "13": ["PDF-Formulare (Anträge, Vereinsformulare)", "Fotos von Papierbriefen", "Ausgefüllte Formulare je Kunde", "Vorlagen", "Sicherungsdatei"],
+  "14": ["personenbezogene Daten: ja", "Unterlagen fremder Leute – nichts in einer fremden Cloud", "Mit Passwort verschlüsselt", "Kein Konto"],
+  "15": ["Budget-Rahmen: bis 50 € einmalig, kein Abo", "Einarbeitung: ein Nachmittag", "Geräte: Android-Handy, Windows 10"],
+  "18": [
+   {"text": "Wie viele Formulare und Briefe pro Woche genau?", "wer": "Renate Beispielmann", "bis": ""},
+   {"text": "Wie oft soll die Sicherungsdatei entstehen und wo liegt sie?", "wer": "Renate Beispielmann", "bis": ""},
+   {"text": "Sollen Handy und PC dieselben Unterlagen sehen, und wie kommen sie hinüber?", "wer": "Renate Beispielmann", "bis": ""},
+   {"text": "Zeitersparnis in Stunden pro Monat nicht beziffert", "wer": "Renate Beispielmann", "bis": ""}
+  ]
+ }}

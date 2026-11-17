@@ -1,0 +1,9 @@
+profi-gastro-shop.example · Rechnung 5500981 · 26.02.2026
+Lieferadresse = Rechnungsadresse: Teekontor Lindenblatt, Inh. Marit Sandvoss, Salzgasse 14, 21335 Lüneburg
+
+Bestellte Artikel:
+1 × Heißwasserspender Edelstahl 10 Liter mit Temperaturwahl 70-100 °C
+    (Verkostungstheke)                                        289,90 netto
+
+Zwischensumme 289,90 €, MwSt (19 %) 55,08 €, Gesamtsumme 344,98 €
+Bezahlt per Sofortüberweisung.

@@ -1,0 +1,10 @@
+Sparkasse Weidenrode                         Auftragsbestätigung Online-Banking
+----------------------------------------------------------------------
+Auftraggeber   Blumenwerkstatt Harkort, Geschäftsgirokonto
+               IBAN DE00 0000 0000 0000 0000 00
+Empfänger      Mareike Harkort (privat)
+               IBAN DE00 0000 0000 0000 0009 99
+Betrag         2.400,00 EUR
+Verwendung     Privatentnahme Juli 2026
+Ausführung     01.07.2026        erfasst 30.06.2026 21:14
+TAN-Verfahren  pushTAN        Status: ausgeführt

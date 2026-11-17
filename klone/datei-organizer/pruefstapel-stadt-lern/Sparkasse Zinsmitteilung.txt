@@ -1,0 +1,3 @@
+Mitteilung über die Zinsbindung
+Darlehen 0000000000, Nominal 240.000 EUR, Sollzins 3,45 % p.a. fest bis 30.06.2036, Tilgung 2 % anfänglich, Rate monatlich 1.098,00 EUR ab 01.09.2026.
+Die erste Rate wird am 01.09.2026 per Lastschrift eingezogen.

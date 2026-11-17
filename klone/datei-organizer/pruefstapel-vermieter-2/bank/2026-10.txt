@@ -1,0 +1,106 @@
+Kreisbank Talgau eG                                                        KONTOAUSZUG
+Marktplatz 1 · 79995 Talstadt · BIC TALGDE00XXX                 Nr. 10/2026  Blatt 1/2
+
+Martina und Stefan Brenner
+Ahornstraße 12, 79997 Neudorf
+
+Girokonto Privat Plus    IBAN DE00 6005 0000 0123 4567 89
+Zeitraum 01.10.2026 bis 31.10.2026
+
+Bu-Tag Wert   Vorgang / Verwendungszweck                        Soll EUR     Haben EUR
+--------------------------------------------------------------------------------------
+              alter Kontostand vom 30.09.2026                               1.685,80 H
+
+01.10. 01.10. Gutschrift                                                      1.000,00
+              Anna und Tim Vogel
+              MIETE OKTOBER 26 WOHNUNG OG
+              LINDENWEG 7 DAUERAUFTRAG
+01.10. 01.10. Dauerauftrag                                         50,00              
+              Bausparkasse Südtal AG
+              Sparrate BSV 55 120 778
+              Dauerauftrag
+02.10. 02.10. Gutschrift                                                      1.040,00
+              Jonas Kessler
+              Miete Oktober 2026
+              Whg EG Lindenweg 7 KM 780 NK 260
+05.10. 05.10. Gutschrift                                                         55,00
+              Ngozi Okafor
+              RE 2026 G2 Garage Oktober
+05.10. 05.10. SEPA-Lastschrift                                     29,99              
+              FunkNetz Mobil GmbH
+              Mobilfunk Kd 77120943 Rg 10/2026
+              Mandat FNM-77120943
+07.10. 07.10. Gutschrift                                                     19.000,00
+              Martina und Stefan Brenner
+              Umbuchung von Tagesgeld
+              Schlussrechnung Heizung
+09.10. 08.10. Kartenzahlung                                        51,77              
+              FRISCHMARKT NEUDORF
+              girocard Kartenzahlung 08.10.2026
+              Terminal 6611xx22
+09.10. 09.10. Überweisung                                      18.370,00              
+              Waermetechnik Sommer GmbH
+              RE 2026 0934 Schlussrg.
+              Kd 10577 Waermepumpe Lindenweg 7
+12.10. 12.10. Auszahlung Geldautomat                              200,00              
+              GA Kreisbank Talgau Neudorf
+              GA-Nr. 3301 12.10. 10:10 Uhr
+12.10. 12.10. SEPA-Lastschrift                                     12,99              
+              Kinoflat Online Ltd.
+              Abo Premium 10.2026
+              Kd-Nr. KF-0099812
+13.10. 13.10. Gutschrift                                                        122,10
+              Talgau Energie GmbH
+              Guthaben Schlussrechnung SR-2026-GA-77810
+              VK 4009 2211 77
+--------------------------------------------------------------------------------------
+              Übertrag auf Blatt 2                                          4.188,15 H
+
+Kreisbank Talgau eG                                                        KONTOAUSZUG
+Marktplatz 1 · 79995 Talstadt · BIC TALGDE00XXX                 Nr. 10/2026  Blatt 2/2
+
+Martina und Stefan Brenner
+Ahornstraße 12, 79997 Neudorf
+
+Girokonto Privat Plus    IBAN DE00 6005 0000 0123 4567 89
+Zeitraum 01.10.2026 bis 31.10.2026
+
+Bu-Tag Wert   Vorgang / Verwendungszweck                        Soll EUR     Haben EUR
+--------------------------------------------------------------------------------------
+              Übertrag von Blatt 1                                          4.188,15 H
+
+15.10. 15.10. SEPA-Lastschrift                                    107,10              
+              Ritter Hausverwaltung GmbH
+              RGNR 2026HV1009 VV-118
+              Verwaltung OG Q4/26
+15.10. 15.10. SEPA-Lastschrift                                     85,00              
+              Stadtwerke Erlenbach
+              Abschlag Wasser 10.2026
+              VK 8 004 3317
+15.10. 15.10. SEPA-Lastschrift                                     95,00              
+              Talgau Energie GmbH
+              Abschlag WaermeStrom 10/2026
+              VK 4009 2211 95 Lindenweg 7
+15.10. 15.10. SEPA-Lastschrift                                     18,00              
+              Talgau Energie GmbH
+              Abschlag Strom 10/2026
+              VK 4009 2211 03 Allgemeinstrom
+19.10. 18.10. Kartenzahlung                                        23,90              
+              DROGERIE MEYERHOF
+              girocard 18.10.2026
+23.10. 22.10. Kartenzahlung                                        39,60              
+              NETTOMARKT TALSTADT
+              girocard 22.10.2026 Terminal 6711xx05
+30.10. 30.10. Abschluss/Entgelt                                     6,90              
+              Kreisbank Talgau eG
+              Kontoführungsentgelt 10/2026
+              Kontomodell Privat Plus
+30.10. 30.10. SEPA-Lastschrift                                  1.150,00              
+              Lindgau Hypothekenbank AG
+              Rate Darl. 7700331822
+              Zins+Tilgung 10/2026
+--------------------------------------------------------------------------------------
+              neuer Kontostand vom 31.10.2026                               2.662,65 H
+
+Bitte prüfen Sie Ihren Kontoauszug. Einwendungen sind innerhalb von sechs Wochen zu erheben.
+Dispositionskredit 3.000,00 EUR, Sollzins 11,25 % p.a.   H = Haben, S = Soll

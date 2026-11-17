@@ -1,0 +1,16 @@
+From: Versandhandel Beispiel GmbH <service@versandhandelbei.beispiel.invalid>
+To: lena.ketelsen@beispiel.invalid
+Subject: Ihre Bestellung wurde versandt
+Date: Wed, 02 Sep 2026 10:00:00 GMT
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Sehr geehrte Frau Ketelsen,
+
+Ihre Bestellung ist unterwegs.
+Bestellnummer: B-53887523
+Rechnungsbetrag: 107,04 €
+
+Viele Grüße
+Versandhandel Beispiel GmbH

@@ -1,0 +1,23 @@
+Café-Bäckerei Kornblume · Inh. Jana Wellbrock · Mühlgasse 7 · 37999 Tannweiler
+
+Abrechnung der Brutto/Netto-Bezüge für August 2026
+Erstellt am 28. August 2026
+
+Personal-Nr. 002   Lea Fröhlich
+Tätigkeit: Verkäuferin (Teilzeit)
+Steuerklasse 1   Krankenkasse: Riedtal BKK
+
+Bezeichnung                   Betrag
+Gehalt                        1.620,00
+Gesamtbrutto                  1.620,00
+
+Lohnsteuer                    129,60
+Solidaritätszuschlag          0,00
+KV-Beitrag AN                 141,75
+RV-Beitrag AN                 150,66
+AV-Beitrag AN                 21,06
+PV-Beitrag AN                 29,16
+
+Nettobezüge                   1.147,77
+Auszahlungsbetrag             1.147,77
+Überweisung an IBAN DE00 0000 0000 0000 9506 96

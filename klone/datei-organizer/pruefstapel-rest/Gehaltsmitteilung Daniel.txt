@@ -1,0 +1,19 @@
+Beispiel Ingenieurbüro Nordlicht GmbH
+
+ABRECHNUNG DER BRUTTO/NETTO-BEZÜGE FÜR JANUAR 2026
+
+Personalnummer: 0031
+Name: Daniel Lenz
+Steuerklasse: IV
+
+Bezeichnung   Betrag
+Gehalt   5.100,00
+Dienstrad Leasing Umwandlung   -62,00
+Gesamtbrutto   5.038,00
+Lohnsteuer   -781,08
+KV   -426,46
+RV   -468,53
+AV   -65,49
+PV   -85,65
+Netto   3.210,79
+Auszahlung   3.210,79

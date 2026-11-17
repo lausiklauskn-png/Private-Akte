@@ -1,0 +1,28 @@
+Elektro Fuchsbau Beispiel
+Fachhandel und Kundendienst · Hauptstraße 44 · 45678 Talheim-Beispiel
+
+Herrn Markus Rebmann
+Ahornstraße 5
+45678 Talheim-Beispiel
+
+Rechnungsnummer: FB-24-3302
+Gerät: WM 8 Beispiel, Seriennr. WM8-22-004471, gekauft 14.05.2022
+Datum: 08.11.2024
+
+Reparaturrechnung
+
+Sehr geehrter Herr Rebmann,
+
+am 06.11.2024 haben wir Ihre Waschmaschine repariert: Zulaufschlauch mit Aquastop gerissen, Schlauch und Magnetventil ersetzt, Dichtheitsprüfung.
+
+Anfahrt                     35,00
+Arbeitslohn 1 Std.          78,00
+Aquastop-Schlauch           42,50
+Magnetventil                31,90
+Netto                      187,40
+USt 19 %                    35,61
+Gesamt                     223,01
+
+Die gesetzliche Gewährleistung ist seit Mai 2024 abgelaufen; die Herstellergarantie umfasst nur den Motor. Bitte überweisen Sie den Betrag bis zum 30.11.2024. Eine Kopie für Ihre Hausratversicherung liegt bei.
+
+Ihr Fuchsbau-Team

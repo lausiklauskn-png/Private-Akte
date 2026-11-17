@@ -1,0 +1,38 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "teilweise",
+  "M03": "getroffen",
+  "M04": "teilweise",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "fehlt",
+  "M08": "teilweise",
+  "M09": "getroffen",
+  "M10": "fehlt",
+  "M11": "getroffen",
+  "M12": "getroffen",
+  "M13": "teilweise",
+  "M14": "getroffen",
+  "M15": "getroffen",
+  "M16": "getroffen",
+  "M17": "fehlt"
+ },
+ "begruendung": {
+  "M02": "Kanzlei ist Auftraggeber; Abo-Modell und ‚Mandanten zahlen nichts‘ nicht festgehalten.",
+  "M04": "Kurzlebiger Link ohne Anmeldung per Mail ja; PIN fehlt (nur offene Frage), SMS ausdrücklich nicht.",
+  "M07": "Keine Ordnung der Zeilen nach Betrag.",
+  "M08": "Automatische Erinnerung mit einstellbarem Abstand ja; feste 3/7 Tage und Unterdrückung doppelter Anfragen an den Mandanten fehlen.",
+  "M10": "Plan schließt Texterkennung/Belegprüfung ausdrücklich aus; kein Abgleich Betrag/Datum.",
+  "M13": "Server in Deutschland und Löschung nach Übernahme/Frist ja; 30-Tage-Grenze offen (O-02).",
+  "M17": "Kein Preismodell nach Mandantenzahl."
+ },
+ "zusaetze": [
+  "Kanzlei-Anmeldung mit Rollen",
+  "Löschprotokoll ohne Inhalte",
+  "Verschlüsselte Ablage und Sicherung mit kurzer Aufbewahrung",
+  "Link sperren/erneuern, Begrenzung der Abrufversuche",
+  "Mehrere Dateien je Posten"
+ ]
+}

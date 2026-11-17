@@ -1,0 +1,22 @@
+# Beispiel Kraftfahrt Versicherung AG
+Versicherungsplatz 3 · 50999 Musterköln
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Versicherungsschein-Nr.: KF-118-0052271
+Amtl. Kennzeichen: BSP-GP 52
+Datum: 17.11.2008
+
+# Beitragsrechnung Kraftfahrtversicherung
+
+Sehr geehrter Herr Pfannschmidt,
+
+Beitrag 2009: 398,10 EUR (SF 25, 30 %).
+
+Die Abbuchung erfolgt zum 01.01. wie gewohnt.
+
+Mit freundlichem Gruß
+@unterschrift

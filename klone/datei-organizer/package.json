@@ -1,0 +1,38 @@
+{
+  "name": "datei-organizer",
+  "private": true,
+  "version": "0.4.14",
+  "type": "module",
+  "description": "Dateien in einen Ordner legen – der Datei-Organizer sortiert sie Sieb für Sieb und zeigt sie als Baum.",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "probe:kern": "node scripts/run-kern-tests.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/vendor-nachziehen.mjs --pruefen && node scripts/maske-nachziehen.mjs --pruefen && node scripts/run-pseudo-tests.mjs && node scripts/landkarte-bauen.mjs --pruefen && node scripts/run-kern-tests.mjs && node scripts/kern-js.mjs --pruefen && tsc --noEmit && vite build",
+    "probe:ui": "node tests/ui-probe.mjs",
+    "build:native": "node tools/native/prepare-web.mjs",
+    "sync:android": "node tools/native/prepare-web.mjs && cap sync android",
+    "test:native": "node tools/native/test-native.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/core": "8.5.3",
+    "lucide-react": "1.31.0",
+    "pdfjs-dist": "4.10.38",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.5.3",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "tesseract.js": "^5.1.1",
+    "typescript": "5.9.3",
+    "vite": "6.4.1"
+  }
+}

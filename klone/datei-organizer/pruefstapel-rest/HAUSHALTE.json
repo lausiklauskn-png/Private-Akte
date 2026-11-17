@@ -1,0 +1,126 @@
+{
+ "haushalte": [
+  {
+   "id": "r-landfamilie",
+   "titel": "Landfamilie mit vier Kindern",
+   "name": "Familie Weidinger",
+   "anschrift": "Lindenhof 4, 84999 Beispielhausen",
+   "personen": [
+    {
+     "vorname": "Martin",
+     "name": "Weidinger",
+     "anrede": "Herr",
+     "rolle": "Vater"
+    },
+    {
+     "vorname": "Sabine",
+     "name": "Weidinger",
+     "anrede": "Frau",
+     "rolle": "Mutter"
+    },
+    {
+     "vorname": "Lena",
+     "name": "Weidinger",
+     "anrede": "Frau",
+     "rolle": "Tochter, 19, Studentin (seit 2024 in Beispielstadt, 2025 Umzug in die Hafergasse 17)"
+    },
+    {
+     "vorname": "Jonas",
+     "name": "Weidinger",
+     "anrede": "Kind",
+     "rolle": "Sohn, 13"
+    },
+    {
+     "vorname": "Mia",
+     "name": "Weidinger",
+     "anrede": "Kind",
+     "rolle": "Tochter, 6"
+    },
+    {
+     "vorname": "Paul",
+     "name": "Weidinger",
+     "anrede": "Kind",
+     "rolle": "Sohn, 2"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-MW 412",
+    "BSP-SW 88"
+   ]
+  },
+  {
+   "id": "r-witwer",
+   "titel": "Witwer, 74",
+   "name": "Gerhard Pfannschmidt",
+   "anschrift": "Am Mühlbach 7, 37999 Musterau",
+   "personen": [
+    {
+     "vorname": "Gerhard",
+     "name": "Pfannschmidt",
+     "anrede": "Herr",
+     "rolle": "Witwer, Rentner"
+    },
+    {
+     "vorname": "Ingrid",
+     "name": "Pfannschmidt",
+     "anrede": "Frau",
+     "rolle": "Ehefrau, verstorben 2023"
+    },
+    {
+     "vorname": "Thomas",
+     "name": "Pfannschmidt",
+     "anrede": "Herr",
+     "rolle": "Sohn, Bevollmächtigter (eigener Haushalt)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-GP 52"
+   ]
+  },
+  {
+   "id": "r-paar-portal",
+   "titel": "Berufstätiges Paar ohne Kinder, Portal-Post",
+   "name": "Lenz / Okafor-Lenz",
+   "anschrift": "Hafenweg 12, 22999 Beispielhafen",
+   "personen": [
+    {
+     "vorname": "Daniel",
+     "name": "Lenz",
+     "anrede": "Herr",
+     "rolle": "Partner, Ingenieur, Motorradfahrer"
+    },
+    {
+     "vorname": "Julia",
+     "name": "Okafor-Lenz",
+     "anrede": "Frau",
+     "rolle": "Partnerin, Logistik (bis 2015 Julia Okafor)"
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-DL 77",
+    "BSP-JL 310"
+   ]
+  },
+  {
+   "id": "r-selbststaendig-alleinerziehend",
+   "titel": "Selbstständige Grafikerin, alleinerziehend",
+   "name": "Nora Feldkamp",
+   "anschrift": "Kirchgasse 3, 04999 Musterstadt",
+   "personen": [
+    {
+     "vorname": "Nora",
+     "name": "Feldkamp",
+     "anrede": "Frau",
+     "rolle": "Grafikerin, selbstständig, alleinerziehend"
+    },
+    {
+     "vorname": "Emil",
+     "name": "Feldkamp",
+     "anrede": "Kind",
+     "rolle": "Sohn, 10"
+    }
+   ],
+   "fahrzeuge": []
+  }
+ ]
+}

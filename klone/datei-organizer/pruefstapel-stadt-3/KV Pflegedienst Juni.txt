@@ -1,0 +1,14 @@
+Pflegedienst Beispiel-Hand · Kostenvoranschlag (nach Bescheid Pflegegrad 3)
+Klienten-Nr. PD-118    Datum: 22.06.2026
+
+Voraussichtliche monatliche Leistungen ab 01.07.2026:
+ Körperpflege (täglich 1x morgens, 3x/Woche abends) ....... 624,00 EUR
+ Hilfen bei der Ernährung ............................... 148,50 EUR
+ Hauswirtschaft (2x/Woche) .............................. 186,00 EUR
+ Pflegerischer Betreuungsdienst (Entlastungsbetrag) ....  131,00 EUR
+ ---------------------------------------------------------------------
+ Summe .................................................. 1.089,50 EUR
+ Pflegesachleistungen Pflegegrad 3 (Budget) ............. 1.497,00 EUR
+ Eigenanteil voraussichtlich ............................   0,00 EUR
+
+Dieser Kostenvoranschlag ist unverbindlich; abgerechnet wird nach tatsächlichem Aufwand.

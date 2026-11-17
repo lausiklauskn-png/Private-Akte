@@ -1,0 +1,21 @@
+ENTGELTABRECHNUNG                                      Monat: Januar 2026
+Arbeitgeber: Physiotherapie & Massagepraxis Lindenhof, Kastanienweg 14, 37287 Wehrstedt
+Personal-Nr. 0001   Svenja Kortmann, Birkenallee 9, 37287 Wehrstedt
+Eintritt 01.09.2022 · St.-Kl. I · Ki.Frbtr. 0,0 · ev · Tätigkeit: Physiotherapeutin (30 Std./Wo.)
+
+Lohnart  Bezeichnung                              Betrag EUR
+1000     Gehalt                                    2.650,00
+         Gesamtbrutto                              2.650,00
+
+Gesetzliche Abzüge
+         Lohnsteuer                                  253,16
+         Kirchensteuer                                22,78
+         KV-Beitrag AN                               215,98
+         RV-Beitrag AN                               246,45
+         AV-Beitrag AN                                34,45
+         PV-Beitrag AN                                63,60
+         Nettoverdienst                            1.813,58
+
+Auszahlungsbetrag                                  1.813,58
+Überweisung auf IBAN DE00 0000 0000 0000 0000 00
+erstellt durch: Kanzlei Rüppel & Thöne, Lohnbüro

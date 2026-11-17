@@ -1,0 +1,24 @@
+Glanzwerk Gebäudereinigung
+Meisterbetrieb
+Gewerbering 35, 37995 Wendelsau
+
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+
+Rechnung
+Rg.-Nr. GW888-26
+Rechnungsdatum: 2026-09-27
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Unterhaltsreinigung Gastraum, monatl.     1    280,00     280,00
+  2  Glasreinigung Schaufenster     1     65,00      65,00
+
+Nettobetrag                                  345,00
+zzgl. 19 % USt                               65,55
+Gesamtbetrag                                 410,55 EUR
+
+Zahlbar innerhalb von 14 Tagen ohne Abzug.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 8091 14
+USt-IdNr. DE000000741

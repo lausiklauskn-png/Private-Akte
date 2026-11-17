@@ -1,0 +1,144 @@
+{
+ "ordner": [
+  "pruefstapel-runde-d"
+ ],
+ "felder": {
+  "bereich": {
+   "neu": {
+    "ok": 122,
+    "n": 150,
+    "spanne": [
+     0.7434413916324496,
+     0.8675766945029
+    ],
+    "falschSicher": 8,
+    "offen": 20,
+    "mitZweitfach": 127
+   },
+   "alt": {
+    "ok": 116,
+    "n": 150,
+    "spanne": [
+     0.6999966119167443,
+     0.8330191653502627
+    ],
+    "falschSicher": 13,
+    "offen": 21,
+    "mitZweitfach": 121
+   },
+   "mcnemar": {
+    "nurAltRichtig": 4,
+    "nurNeuRichtig": 10,
+    "p": 0.1795654296875
+   }
+  },
+  "schriftstueck": {
+   "neu": {
+    "ok": 116,
+    "n": 150,
+    "spanne": [
+     0.6999966119167443,
+     0.8330191653502627
+    ],
+    "falschSicher": 5,
+    "offen": 29
+   },
+   "alt": {
+    "ok": 123,
+    "n": 150,
+    "spanne": [
+     0.7507753195800668,
+     0.8732431513666732
+    ],
+    "falschSicher": 5,
+    "offen": 22
+   },
+   "mcnemar": {
+    "nurAltRichtig": 7,
+    "nurNeuRichtig": 0,
+    "p": 0.015625
+   }
+  },
+  "absender": {
+   "neu": {
+    "ok": 81,
+    "n": 150,
+    "spanne": [
+     0.46023676745464287,
+     0.6177655414136997
+    ],
+    "falschSicher": 21,
+    "offen": 48
+   },
+   "alt": {
+    "ok": 81,
+    "n": 150,
+    "spanne": [
+     0.46023676745464287,
+     0.6177655414136997
+    ],
+    "falschSicher": 21,
+    "offen": 48
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "person": {
+   "neu": {
+    "ok": 96,
+    "n": 101,
+    "spanne": [
+     0.8893042659293906,
+     0.9786718046380176
+    ],
+    "falschSicher": 2,
+    "offen": 3
+   },
+   "alt": {
+    "ok": 96,
+    "n": 101,
+    "spanne": [
+     0.8893042659293906,
+     0.9786718046380176
+    ],
+    "falschSicher": 2,
+    "offen": 3
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  },
+  "frist": {
+   "neu": {
+    "ok": 136,
+    "n": 150,
+    "spanne": [
+     0.8494348221544131,
+     0.9435886513404023
+    ],
+    "falschSicher": 1,
+    "offen": 13
+   },
+   "alt": {
+    "ok": 136,
+    "n": 150,
+    "spanne": [
+     0.8494348221544131,
+     0.9435886513404023
+    ],
+    "falschSicher": 1,
+    "offen": 13
+   },
+   "mcnemar": {
+    "nurAltRichtig": 0,
+    "nurNeuRichtig": 0,
+    "p": 1
+   }
+  }
+ }
+}

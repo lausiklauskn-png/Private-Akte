@@ -1,0 +1,110 @@
+{
+ "Stapel 4 (Claude)": {
+  "belege": 120,
+  "einordner": 3,
+  "Claude-System mit Namen": {
+   "ok": 95,
+   "n": 120,
+   "spanne": [
+    0.7105215895553653,
+    0.8547165856620093
+   ],
+   "fehlt": 0
+  },
+  "Claude-System ohne Namen": {
+   "ok": 90,
+   "n": 120,
+   "spanne": [
+    0.6655869783172575,
+    0.8189028861547777
+   ],
+   "fehlt": 0
+  },
+  "Codex-System mit Namen": {
+   "ok": 39,
+   "n": 120,
+   "spanne": [
+    0.24775726408835433,
+    0.41309983078122114
+   ],
+   "fehlt": 0
+  },
+  "Codex-System ohne Namen": {
+   "ok": 33,
+   "n": 120,
+   "spanne": [
+    0.2030277984147616,
+    0.3609313235604068
+   ],
+   "fehlt": 0
+  },
+  "McNemar mit Namen": {
+   "nurClaude": 59,
+   "nurCodex": 3,
+   "beideRichtig": 36,
+   "mindestensEins": 98,
+   "p": 1.724922288337538e-14
+  },
+  "McNemar ohne Namen": {
+   "nurClaude": 59,
+   "nurCodex": 2,
+   "beideRichtig": 31,
+   "mindestensEins": 92,
+   "p": 1.6410484082740595e-15
+  }
+ },
+ "Codex-Stapel": {
+  "belege": 120,
+  "einordner": 1,
+  "Claude-System mit Namen": {
+   "ok": 72,
+   "n": 120,
+   "spanne": [
+    0.5105585981828253,
+    0.6832373476059888
+   ],
+   "fehlt": 0
+  },
+  "Claude-System ohne Namen": {
+   "ok": 69,
+   "n": 120,
+   "spanne": [
+    0.4855758824815893,
+    0.6597710768600213
+   ],
+   "fehlt": 0
+  },
+  "Codex-System mit Namen": {
+   "ok": 87,
+   "n": 120,
+   "spanne": [
+    0.6390686764395932,
+    0.7969722015852385
+   ],
+   "fehlt": 0
+  },
+  "Codex-System ohne Namen": {
+   "ok": 86,
+   "n": 120,
+   "spanne": [
+    0.6302963078582111,
+    0.7895949080175528
+   ],
+   "fehlt": 0
+  },
+  "McNemar mit Namen": {
+   "nurClaude": 20,
+   "nurCodex": 35,
+   "beideRichtig": 52,
+   "mindestensEins": 107,
+   "p": 0.058064146792409066
+  },
+  "McNemar ohne Namen": {
+   "nurClaude": 14,
+   "nurCodex": 31,
+   "beideRichtig": 55,
+   "mindestensEins": 100,
+   "p": 0.016094360031274846
+  }
+ }
+}

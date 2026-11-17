@@ -1,0 +1,11 @@
+grünstrom-direkt.example                Rechnung 0339835
+Ökostrom für Gewerbe
+
+Haarstudio Federleicht · Marktgasse 7 · 37154 Northeim
+Rechnungsmonat August 2026 (monatliche Abrechnung nach Smart-Meter)
+
+Verbrauch 606 kWh
+Energie, Netz, Umlagen netto    184,60 €
+Umsatzsteuer 19 %               35,07 €
+Rechnungsbetrag                 219,67 €
+Erstellt am 21.10.2026 – wird per SEPA eingezogen

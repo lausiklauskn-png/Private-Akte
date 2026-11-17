@@ -1,0 +1,128 @@
+@bon
+DISCOUNT PROBE
+Bahnhofstraße 70, 34567 Beispielstadt
+Mo-Sa 7-22 Uhr
+St.-Nr. 000/000/00000
+
+EUR
+OLIVENÖL                         6,99 B
+GRILLKOHLE
+  2 x 4,99        9,98 A
+MEHL TYPE 405
+  2 x 0,79        1,58 B
+SCHMAND
+  2 x 0,79        1,58 B
+KERZEN
+  2 x 2,49        4,98 A
+HACKFLEISCH GEM 500G             4,99 B
+PIZZA SALAMI TK                  2,79 B
+TEELICHTER 50                    2,99 A
+TASCHENTÜCHER                    1,49 A
+THUNFISCH
+  2 x 1,49        2,98 B
+SPAGHETTI 500G
+  2 x 0,99        1,98 B
+TEE PFEFFERMINZ AKTION           0,83 B
+BRÜHE GEKÖRNT
+  3 x 1,99        5,97 B
+AUFBACKBRÖTCHEN 10ER
+  2 x 1,69        3,38 B
+APFELSAFT 1L                     1,29 A
+SALZ
+  2 x 0,49        0,98 B
+SPINAT TK 750G
+  2 x 1,49        2,98 B
+TOILETTENPAPIER 8ER
+  3 x 3,99        11,97 A
+FISCHSTÄBCHEN TK
+  3 x 2,49        7,47 B
+GRILLKOHLE                       4,99 A
+ÄPFEL ELSTAR 1KG
+  2 x 2,99        5,98 B
+VOLLKORNBROT
+  2 x 1,89        3,78 B
+KIDNEYBOHNEN                     0,79 B
+BRATWURST 6ER
+  2 x 3,99        7,98 B
+TOMATEN PASSIERT
+  2 x 0,69        1,38 B
+HÄHNCHENBRUSTFILET               6,49 B
+CHIPS
+  3 x 1,79        5,37 B
+SCHMAND                          0,79 B
+RABATT 20% SCHMAND              -0,16 B
+GEFRIERBEUTEL
+  2 x 1,29        2,58 A
+BIRNEN
+  2 x 2,49        4,98 B
+KEKSE BUTTER                     1,39 B
+VOLLKORNBROT
+  3 x 1,89        5,67 B
+OLIVENÖL
+  2 x 6,99        13,98 B
+KIDNEYBOHNEN                     0,79 B
+MOZZARELLA
+  3 x 0,89        2,67 B
+GEWÜRZ PAPRIKA
+  3 x 1,29        3,87 B
+EMMENTALER GERIEBEN
+  3 x 1,89        5,67 B
+MOZZARELLA
+  2 x 0,89        1,78 B
+H-MILCH 1,5% 1L                  0,99 B
+ERBSEN TK                        1,29 B
+GOUDA SCHEIBEN AKTION
+  3 x 1,39        4,17 B
+CHAMPIGNONS 400G
+  2 x 2,19        4,38 B
+MAIS DOSE                        0,89 B
+SENF AKTION
+  2 x 0,55        1,10 B
+TASCHENTÜCHER AKTION
+  2 x 1,04        2,08 A
+KARTOFFELN FEST 2,5KG            3,49 B
+ERDBEERKONFITÜRE                 1,79 B
+SPAGHETTI 500G                   0,99 B
+INGWER AKTION
+  2 x 0,62        1,24 B
+HONIG                            3,99 B
+KARTOFFELN FEST 2,5KG            3,49 B
+PIZZA SALAMI TK                  2,79 B
+SHAMPOO                          1,65 A
+BRATWURST 6ER
+  2 x 3,99        7,98 B
+MINERALWASSER 6X1,5L             1,74 A
+PFAND                            1,50 A
+RABATT 20% MINERALWASSER        -0,35 A
+ZUCKER 1KG
+  2 x 0,99        1,98 B
+TIERFUTTER HUND                  3,99 A
+ERDBEERKONFITÜRE
+  3 x 1,79        5,37 B
+ORANGENSAFT 1L                   1,79 A
+KEKSE BUTTER                     1,39 B
+KARTOFFELN FEST 2,5KG
+  2 x 3,49        6,98 B
+WASCHMITTEL 20WL
+  2 x 5,99        11,98 A
+MINERALWASSER 6X1,5L
+  3 x 1,74        5,22 A
+PFAND
+  3 x 1,50        4,50 A
+AVOCADO                          1,29 B
+------------------------------------
+ZWISCHENSUMME                 247,66
+LEERGUTBON 0000594              -3,10 A
+====================================
+SUMME EUR                     244,56
+GIROCARD                     244,56
+POSTEN: 67
+
+|MwSt|Netto|Steuer|Brutto|
+|A 19 %|59,89|11,38|71,27|
+|B 7 %|161,95|11,34|173,29|
+
+23.05.2026 11:20  BON 4643  KASSE 5  BED. 31
+TSE-TRANSAKTION 69606  SIGNATUR-ZÄHLER 228140
+START 11:20:02  ENDE 11:20:30
+Umtausch nur mit Bon. Vielen Dank für Ihren Einkauf!

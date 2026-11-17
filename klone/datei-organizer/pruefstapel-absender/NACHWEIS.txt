@@ -1,0 +1,12 @@
+HAUPTFELD Absender gesetzt: 59/200 = 29.5 % → 98 = 49.0 % (nur alt 0, nur neu 39, p = 3.6e-12)
+  Bootstrap nach Absender (137 Blöcke): Gewinn in Stück 95-%-Bereich [25, 54], Anteil ≤ 0: 0
+NEBENFELDER (Holm-Bonferroni, je Feld: gesichert schlechter?)
+  Text     absender       166/200 = 83.0 % → 170 = 85.0 % (nur alt 0, nur neu 4, p = 0.13) · Holm-Grenze 0.0056 → kein gesicherter Unterschied
+  gesetzt  bereich        156/200 = 78.0 % → 157 = 78.5 % (nur alt 0, nur neu 1, p = 1.0) · Holm-Grenze 0.0063 → kein gesicherter Unterschied
+  gesetzt  schriftstueck  130/200 = 65.0 % → 130 = 65.0 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.0071 → kein gesicherter Unterschied
+  gesetzt  person         116/128 = 90.6 % → 116 = 90.6 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.0083 → kein gesicherter Unterschied
+  gesetzt  frist          177/200 = 88.5 % → 177 = 88.5 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.010 → kein gesicherter Unterschied
+  Text     bereich        170/200 = 85.0 % → 171 = 85.5 % (nur alt 0, nur neu 1, p = 1.0) · Holm-Grenze 0.013 → kein gesicherter Unterschied
+  Text     schriftstueck  147/200 = 73.5 % → 147 = 73.5 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.017 → kein gesicherter Unterschied
+  Text     person         127/128 = 99.2 % → 127 = 99.2 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.025 → kein gesicherter Unterschied
+  Text     frist          194/200 = 97.0 % → 194 = 97.0 % (nur alt 0, nur neu 0, p = 1.0) · Holm-Grenze 0.050 → kein gesicherter Unterschied

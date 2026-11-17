@@ -1,0 +1,22 @@
+# Modehaus Beispiel Versand GmbH
+Versandweg 7 · 33999 Beispielfeld
+
+Frau
+Lena Weidinger
+Hafergasse 17
+93999 Beispielstadt
+
+Kundennummer: 77188410
+Rechnung: 4400917
+Datum: 10.11.2025
+
+# Zahlungserinnerung
+
+Liebe Lena Weidinger,
+
+sicher haben Sie es nur übersehen: Unsere Rechnung 4400917 vom 13.10.2025 über 89,97 EUR ist noch offen.
+
+Bitte überweisen Sie den Betrag bis 24.11.2025.
+
+Mit freundlichen Grüßen
+@unterschrift

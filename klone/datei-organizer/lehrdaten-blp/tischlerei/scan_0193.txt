@@ -1,0 +1,16 @@
+werkzeugprofi-online.example            Rechnung 4000771203
+WPO Handels GmbH · Logistikpark 12 · 34999 Fuldabrück-Ost
+
+Lieferanschrift/Rechnungsanschrift:
+Tischlerei Vosskamp, Mühlenkamp 14, 32791 Welsede
+Bestelldatum 08.09.2026 · Rechnungsdatum 09.09.2026 · Zahlart: Rechnungskauf
+
+Art.-Nr.   Beschreibung                                         Anz.   Belrag
+770412     Schraubenkompressor leise 7,5 bar, 270 l Kessel,      1    1.349,00
+           400 V, inkl. Kältetrockner (Speditionsware)
+           Versand                                                       0,00
+
+Nettosumme  1.349,00 EUR
+USt 19 %      256,31 EUR
+Gesaml      1.605,31 EUR
+Zahlbar bis 23.09.2026 · IBAN DE00 0000 0000 0900 7712 03 · USt-IdNr. DE000001918

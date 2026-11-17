@@ -1,0 +1,59 @@
+{
+ "stapel": "pruefstapel-blp-2",
+ "alt": "a705ed5",
+ "neu": "a443d87",
+ "vergleich": {
+  "ohne Namen / konto": {
+   "alt": {
+    "n": 120,
+    "ok": 9
+   },
+   "neu": {
+    "n": 120,
+    "ok": 74
+   },
+   "nurNeuRichtig": 68,
+   "nurAltRichtig": 3,
+   "p": 5.057803134644878e-17
+  },
+  "ohne Namen / richtung": {
+   "alt": {
+    "n": 120,
+    "ok": 96
+   },
+   "neu": {
+    "n": 120,
+    "ok": 101
+   },
+   "nurNeuRichtig": 5,
+   "nurAltRichtig": 0,
+   "p": 0.0625
+  },
+  "mit Namen / konto": {
+   "alt": {
+    "n": 120,
+    "ok": 9
+   },
+   "neu": {
+    "n": 120,
+    "ok": 89
+   },
+   "nurNeuRichtig": 83,
+   "nurAltRichtig": 3,
+   "p": 2.7421554294015713e-21
+  },
+  "mit Namen / richtung": {
+   "alt": {
+    "n": 120,
+    "ok": 96
+   },
+   "neu": {
+    "n": 120,
+    "ok": 115
+   },
+   "nurNeuRichtig": 21,
+   "nurAltRichtig": 2,
+   "p": 0.00006604194641113281
+  }
+ }
+}

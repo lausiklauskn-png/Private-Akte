@@ -1,0 +1,29 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Kanzlei Fenske & Partner
+Am Anger 9
+37995 Wendelsau
+
+RECHNUNG
+Rechnunqsnummer: KB-2026-210
+Rechnungsdatum: 2026-05-25
+Lieferdatum: 25.05.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Brot Kornblume 1 kg         20      4,20      84,00
+  2  Dinkelvollkorn 750 g        15      3,90      58,50
+
+Nettobetrag                                  142,50
+zzgl. 7 % USt                                9,98
+Gesamt                                       152,48 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 3031 90
+USt-IdNr. DE000000923

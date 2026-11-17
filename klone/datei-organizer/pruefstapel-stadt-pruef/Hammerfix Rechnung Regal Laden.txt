@@ -1,0 +1,20 @@
+BEISPIEL-BAUMARKT HAMMERFIX
+Gewerbering 12 · 99990 Beispielkreisstadt
+Profi-Theke · USt-IdNr. DE000000000
+
+Rechnung (Kassenrechnung)
+Nr. HF-K-2026-118833                              Datum: 18.07.2026
+Kunde: Tannreiters Beispiel-Hofladen, Petra Tannreiter, Marktplatz 5, 99999 Musterbach
+Kundenkarte 4410227
+
+Art.-Nr.   Bezeichnung                          Menge     Preis      Betrag
+331204     Schwerlastregal verzinkt 180x90x45     2      79,90      159,80
+331210     Fachboden Holz zusätzl.                4      12,49       49,96
+502117     Kabelbinder 200 St.                    1       4,99        4,99
+770031     Kreidetafel-Aufsteller A1              1      49,00       49,00
+                                                      Summe netto   221,62
+                                                      19 % MwSt      42,11
+                                                      Summe brutto  263,73
+
+Bezahlt: EC-Karte, 18.07.2026 09:12    – Betrag beglichen –
+Rückgabe innerhalb 30 Tagen mit Beleg.

@@ -1,0 +1,25 @@
+# Stadt Musterau – Wohngeldstelle
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Aktenzeichen: WG 12/4471
+Datum: 20.02.2012
+
+# Ablehnung Ihres Wohngeldantrags
+
+Ihr Antrag auf Mietzuschuß vom 12.01.2012 wird abgelehnt, da das Gesamteinkommen die Höchstgrenze für einen Zwei-Personen-Haushalt übersteigt.
+
+Im Auftrag
+@unterschrift
+@seite
+@spalten 2
+## Rechtsbehelfsbelehrung
+Gegen diesen Bescheid kann innerhalb eines Monats nach Bekanntgabe Widerspruch erhoben werden. Der Widerspruch ist schriftlich oder zur Niederschrift bei der Stadt Musterau, Rathaus, 37999 Musterau, einzulegen.
+
+## Hinweise
+Bitte beachten Sie, dass ein Widerspruch die Pflicht zur Zahlung nicht aufhebt. Änderungen Ihrer Verhältnisse teilen Sie uns bitte unverzüglich mit.
+
+@ende

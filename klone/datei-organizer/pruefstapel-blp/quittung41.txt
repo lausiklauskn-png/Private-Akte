@@ -1,0 +1,28 @@
+Café-Bäckerei Kornblume
+Inh. Jana Wellbrock
+Mühlgasse 7, 37999 Tannweiler
+Tel. 0000 776655 · info@kornblume.invalid
+St.-Nr. 000/111/22222 · USt-IdNr. DE000000101
+
+Hotel Tannenblick GmbH
+Waldweg 3
+37997 Haselbrunn
+
+Rechnung
+Rechnunqsnummer: KB-2026-220
+Datum 13.04.2026
+Lieferdatum: 13.04.2026
+
+Pos  Bezeichnung               Menge   Einzel     Gesamt
+  1  Kuchenlieferung Wochenabo (Abholung)     4     46,50     186,00
+
+Nettobetrag                                  186,00
+zzgl. 7 % USt                               13,02
+Gesamtbetrag                                 199,02 EUR
+
+Lieferung von Backwaren zum Mitnehmen (ermäßigter Steuersatz 7 %).
+
+Zahlungsziel: 30 Tage netto.
+
+Bankverbindung: IBAN DE00 0000 0000 0000 1426 37
+USt-IdNr. DE000000728

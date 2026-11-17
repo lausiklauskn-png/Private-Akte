@@ -1,0 +1,29 @@
+MVZ Labor Aulachtal                         Einsender: Hausarztpraxis
+Befundbericht                               Dres. Schwämmle / Yilmaz
+
+Patient: Brandl, Tobias    geb. 22.10.1986    m
+Auftrag 250311-0418        Entnahme 11.03.2025 07:35  nüchtern
+Eingang 11.03.2025 11:02   Ausgang 12.03.2025
+
+Untersuchung            Ergebnis    Einheit    Referenz
+Kleines Blutbild
+ Leukozyten             6,8         /nl        4,0 – 10,0
+ Hämoglobin             15,1        g/dl       13,5 – 17,5
+ Thrombozyten           244         /nl        150 – 370
+Klinische Chemie
+ Glukose nü.            104      +  mg/dl      70 – 99
+ HbA1c                  5,6         %          < 5,7
+ Cholesterin ges.       238      +  mg/dl      < 200
+ LDL-Cholesterin        162      +  mg/dl      < 115
+ HDL-Cholesterin        44          mg/dl      > 40
+ Triglyceride           188      +  mg/dl      < 150
+ GPT (ALT)              52       +  U/l        < 50
+ Gamma-GT               58          U/l        < 60
+ Kreatinin              0,94        mg/dl      0,7 – 1,2
+ TSH basal              1,62        mU/l       0,27 – 4,2
+ Harnsäure              6,9         mg/dl      3,4 – 7,0
+
+Kommentar: Grenzwertige Nüchternglukose, Dyslipidämie. Kontrolle nach
+Lebensstilintervention in 3–6 Monaten empfohlen.
+
+Validiert: Dr. med. P. Rapp, FA für Laboratoriumsmedizin

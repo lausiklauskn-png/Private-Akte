@@ -1,0 +1,11 @@
+{
+ "quelle": "Meine-Familienakte (lib/maske.ts, lib/ki-auftrag.ts, lib/namensmuster.ts, public/native/25_pseudonym.js)",
+ "commit": "471f018",
+ "gezogen": "2026-11-14",
+ "dateien": {
+  "lib/maske/maske.ts": "42287948ea24e99f05e1ab1757c82e1f094ae217d0e2307fbcbfe2154ecc78bb",
+  "lib/maske/ki-auftrag.ts": "daae3d910f8192464d0a39cca1650c4a1c776062b4fba92649ff87d3e8866881",
+  "lib/maske/namensmuster.ts": "fb513b6bb087720d13d64687c66932f44771ace8c6c3af54af94394cb8349530",
+  "src/public/vendor/maske/25_pseudonym.js": "8c3092babee80b8fce2c6607cc4c8ced4bbef4addf31a5f0f3de6ba5c92c2ad7"
+ }
+}

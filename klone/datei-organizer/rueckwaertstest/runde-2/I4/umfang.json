@@ -1,0 +1,9 @@
+{"bausteine": [
+ {"katalog": "dateipruef", "name": "Abrechnungs-PDFs vom Büro-Laufwerk einlesen (ganzer Ordner eines Jahres, Textebene, nur lesend, Original unverändert)", "groesse": "mittel", "deckt": ["B-27", "B-22", "B-34", "B-42", "B-38"], "faktoren": ["offline"]},
+ {"katalog": "neu", "name": "Prüfregeln Nebenkosten: nicht umlagefähige Positionen, Verteilerschlüssel-Summe, Abrechnungszeitraum und Abrechnungsfrist; Ergebnis rot/gelb/„bitte prüfen“, nie grün bei Unsicherheit, Hinweis statt Rechtsrat", "groesse": "gross", "deckt": ["B-17", "B-19", "B-28", "B-29", "B-30"], "faktoren": ["offline"]},
+ {"katalog": "neu", "name": "Sonderregeln je Mietvertrag/Objekt hinterlegen (abweichende Umlage), die die Prüfregeln überschreiben", "groesse": "mittel", "deckt": ["B-20", "B-32", "B-45"], "faktoren": ["offline"]},
+ {"katalog": "neu", "name": "Vorjahresvergleich je Einheit und Position mit Ausreißer-Markierung (Vorjahres-PDFs aus demselben Ordner)", "groesse": "mittel", "deckt": ["B-21", "B-33", "B-44"], "faktoren": ["offline"]},
+ {"katalog": "liste", "name": "Befundliste je Abrechnung und Gesamtübersicht: rot/gelb/„bitte prüfen“ mit Seite und Zeile der Fundstelle, abhaken durch die Buchhalterin, als PDF druckbar", "groesse": "mittel", "deckt": ["B-18", "B-31", "B-35"], "faktoren": ["offline", "druck", "nutzer"]},
+ {"katalog": "plattform", "name": "Windows-App für die Büro-PCs, alle Daten nur lokal/auf dem Laufwerk, keine Cloud, keine KI", "groesse": "klein", "deckt": ["B-37", "B-47"], "faktoren": []},
+ {"katalog": "lizenz", "name": "Freischaltung: Bestandslizenz Verwaltung und günstige Kleinlizenz für bis zu zwei Wohnungen", "groesse": "klein", "deckt": ["B-23"], "faktoren": []}
+]}

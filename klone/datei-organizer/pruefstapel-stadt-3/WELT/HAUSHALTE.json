@@ -1,0 +1,207 @@
+{
+ "haushalte": [
+  {
+   "id": "h-amrani",
+   "titel": "Familie mit Wurzeln im Ausland, Eltern in Schichtarbeit, drei Kinder",
+   "name": "Familie Amrani",
+   "anschrift": "Lindenhöhe-Ring 14, 00101 Beispielstadt-Nord (Stadtteil Lindenhöhe)",
+   "personen": [
+    {
+     "vorname": "Youssef",
+     "name": "Amrani",
+     "anrede": "Herr",
+     "rolle": "Vater, Lagerarbeiter im Schichtdienst, Niederlassungserlaubnis",
+     "geburtsjahr": 1984
+    },
+    {
+     "vorname": "Leila",
+     "name": "Amrani",
+     "anrede": "Frau",
+     "rolle": "Mutter, Pflegehelferin im Schichtdienst, Aufenthaltserlaubnis",
+     "geburtsjahr": 1987
+    },
+    {
+     "vorname": "Samir",
+     "name": "Amrani",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gesamtschule",
+     "geburtsjahr": 2013
+    },
+    {
+     "vorname": "Nour",
+     "name": "Amrani",
+     "anrede": "Kind",
+     "rolle": "Tochter, Grundschule",
+     "geburtsjahr": 2017
+    },
+    {
+     "vorname": "Adam",
+     "name": "Amrani",
+     "anrede": "Kind",
+     "rolle": "Sohn, Kita",
+     "geburtsjahr": 2022
+    },
+    {
+     "vorname": "Fatima",
+     "name": "Amrani",
+     "anrede": "Frau",
+     "rolle": "Großmutter, Familiennachzug, Visum/Aufenthaltstitel",
+     "geburtsjahr": 1958
+    },
+    {
+     "vorname": "Abdelkader",
+     "name": "Amrani",
+     "anrede": "Herr",
+     "rolle": "Großvater, Familiennachzug",
+     "geburtsjahr": 1955
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-AM 214"
+   ]
+  },
+  {
+   "id": "h-wendebach",
+   "titel": "Alleinerziehender Vater mit Kleinkind",
+   "name": "Jonas Wendebach",
+   "anschrift": "Hafenkante 3a, 00102 Beispielstadt-Nord (Stadtteil Hafenviertel)",
+   "personen": [
+    {
+     "vorname": "Jonas",
+     "name": "Wendebach",
+     "anrede": "Herr",
+     "rolle": "Vater, Koch in Elternzeit/Teilzeit",
+     "geburtsjahr": 1991
+    },
+    {
+     "vorname": "Mila",
+     "name": "Wendebach",
+     "anrede": "Kind",
+     "rolle": "Tochter, Kleinkind",
+     "geburtsjahr": 2024
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-JW 77"
+   ]
+  },
+  {
+   "id": "h-krummbeck",
+   "titel": "Ältere Witwe im Mietshaus mit Pflegegrad",
+   "name": "Hildegard Krummbeck",
+   "anschrift": "Altmarktgasse 22, 3. OG links, 00103 Beispielstadt-Nord (Stadtteil Altmarkt)",
+   "personen": [
+    {
+     "vorname": "Hildegard",
+     "name": "Krummbeck",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, verwitwet, Pflegegrad 2",
+     "geburtsjahr": 1938
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h-wg-feingold",
+   "titel": "Zwei Studentinnen mit Minijobs",
+   "name": "WG Feingold/Ortaköy-Brandt",
+   "anschrift": "Campusweg 9, WG 4, 00104 Beispielstadt-Nord (Stadtteil Weidenfeld)",
+   "personen": [
+    {
+     "vorname": "Lara",
+     "name": "Feingold",
+     "anrede": "Frau",
+     "rolle": "Studentin Lehramt, Minijob im Supermarkt",
+     "geburtsjahr": 2003
+    },
+    {
+     "vorname": "Selin",
+     "name": "Ortaköy-Brandt",
+     "anrede": "Frau",
+     "rolle": "Studentin Informatik, Minijob in der Gastronomie",
+     "geburtsjahr": 2004
+    }
+   ],
+   "fahrzeuge": []
+  },
+  {
+   "id": "h-kalanteris",
+   "titel": "Paar mit eigenem Imbiss (Gewerbe)",
+   "name": "Familie Kalanteris",
+   "anschrift": "Nordring 117, 00105 Beispielstadt-Nord (Stadtteil Nordring); Imbiss „Grillstube Beispiel-Eck“, Nordring 115",
+   "personen": [
+    {
+     "vorname": "Dimitrios",
+     "name": "Kalanteris",
+     "anrede": "Herr",
+     "rolle": "Inhaber Imbiss, Gewerbetreibender",
+     "geburtsjahr": 1979
+    },
+    {
+     "vorname": "Sofia",
+     "name": "Kalanteri",
+     "anrede": "Frau",
+     "rolle": "Mitinhaberin, Buchhaltung des Imbiss",
+     "geburtsjahr": 1982
+    },
+    {
+     "vorname": "Nikos",
+     "name": "Kalanteris",
+     "anrede": "Kind",
+     "rolle": "Sohn, Gesamtschule",
+     "geburtsjahr": 2009
+    },
+    {
+     "vorname": "Eleni",
+     "name": "Kalanteri",
+     "anrede": "Kind",
+     "rolle": "Tochter, Grundschule/Übergang",
+     "geburtsjahr": 2015
+    },
+    {
+     "vorname": "Maria",
+     "name": "Kalanteri",
+     "anrede": "Frau",
+     "rolle": "Großmutter, wohnt mit im Haus",
+     "geburtsjahr": 1950
+    },
+    {
+     "vorname": "Kostas",
+     "name": "Kalanteris",
+     "anrede": "Herr",
+     "rolle": "Neffe, Aushilfe im Imbiss, Student",
+     "geburtsjahr": 2001
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-KI 501"
+   ]
+  },
+  {
+   "id": "h-pfeilsticker",
+   "titel": "Rentner-Ehepaar mit Wohnmobil und Motorrad",
+   "name": "Eheleute Pfeilsticker",
+   "anschrift": "Am Weidenteich 5, 00106 Beispielstadt-Nord (Stadtteil Weidenfeld)",
+   "personen": [
+    {
+     "vorname": "Gerhard",
+     "name": "Pfeilsticker",
+     "anrede": "Herr",
+     "rolle": "Rentner, früher Bauleiter",
+     "geburtsjahr": 1953
+    },
+    {
+     "vorname": "Ursula",
+     "name": "Pfeilsticker",
+     "anrede": "Frau",
+     "rolle": "Rentnerin, früher Schulsekretärin",
+     "geburtsjahr": 1955
+    }
+   ],
+   "fahrzeuge": [
+    "BSP-GP 1953",
+    "BSP-GP 55"
+   ]
+  }
+ ]
+}

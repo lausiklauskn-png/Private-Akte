@@ -1,0 +1,33 @@
+# Beispiel Sparkasse Musterhausen
+Sparkassenstraße 2 · 45678 Musterhausen
+
+Kontoauszug
+Gemeinschaftskonto WG-Kasse Demir/Reuter/Wolf
+IBAN DE00 0000 0000 0000 0000 00 · BIC BEISDEXXXXX
+Auszug Nr. 10/2026 · Blatt 1 von 1 · Zeitraum 01.01.2026 – 31.01.2026
+
+WG Kastanienallee 7
+Kastanienallee 7
+45678 Musterhausen
+
+Alter Kontostand vom 01.01.2026: 312,40 EUR
+
+|Buchungstag|Valuta|Vorgang / Verwendungszweck|Betrag EUR|
+|01.01.|01.01.|Einzahlung Aylin Demir WG-Kasse|+40,00|
+|01.01.|01.01.|Einzahlung Tobias Reuter WG-Kasse|+40,00|
+|02.01.|02.01.|Einzahlung Konstantin Wolf WG-Kasse|+40,00|
+|02.01.|02.01.|Kartenzahlung Discount Probe|-8,89|
+|09.01.|09.01.|Schlüsseldienst Beispiel Rg Türöffnung|-268,00|
+|09.01.|09.01.|Kartenzahlung Bäckerei Beispielkorn|-11,03|
+|09.01.|09.01.|Kartenzahlung Bäckerei Beispielkorn|-13,18|
+|10.01.|10.01.|Bargeldauszahlung Geldautomat|-126,36|
+|19.01.|19.01.|Lastschrift Beispiel-Markt Filiale 0412|-38,94|
+|20.01.|20.01.|Muster Drogerie Putzmittel|-24,35|
+|20.01.|20.01.|Lastschrift Muster Drogerie|-32,66|
+|20.01.|20.01.|Lastschrift Beispiel-Markt Filiale 0412|-41,64|
+|22.01.|22.01.|Kartenzahlung Bäckerei Beispielkorn|-13,84|
+
+Neuer Kontostand vom 31.01.2026: -146,49 EUR
+
+Bitte erheben Sie Einwendungen gegen einzelne Buchungen unverzüglich. Guthaben sind als Einlagen nach Maßgabe des Einlagensicherungsgesetzes entschädigungsfähig.
+@fuss Beispiel Sparkasse Musterhausen · Sitz Beispielstadt · Registergericht Amtsgericht Beispielstadt GnR 000

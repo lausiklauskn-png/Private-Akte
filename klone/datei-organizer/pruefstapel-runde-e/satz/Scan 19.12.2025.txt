@@ -1,0 +1,28 @@
+# Fahrschule Beispiel Profi-Akademie
+Fahrschule Beispiel Profi-Akademie · Lenkradweg 2 · 56789 Probedorf
+
+Herrn Daniel Hartwig
+Mühlenstraße 3
+56789 Probedorf
+
+Teilnehmer: Daniel Hartwig
+Datum: 19.12.2025
+
+# Rechnung Weiterbildung Berufskraftfahrer Modul 3
+
+Sehr geehrter Herr Hartwig,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Modul 3 Sozialvorschriften, 7 Std.|1|135,00 €|135,00 €|
+|2|Schulungsunterlagen|1|15,00 €|15,00 €|
+
+Rechnungsbetrag: 150,00 €
+Umsatzsteuerfrei nach § 4 Nr. 21 UStG.
+
+Bitte überweisen Sie den Betrag von 150,00 € bis zum 20.01.2026 unter Angabe der Rechnungsnummer auf unser Konto.
+
+Mit freundlichen Grüßen
+Fahrschule Beispiel Profi-Akademie
+@fuss Fahrschule Beispiel Profi-Akademie · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000

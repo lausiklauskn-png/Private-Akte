@@ -1,0 +1,31 @@
+Ausdruck aus Mein ELSTER – Bescheiddaten (Datenabruf vom 21.05.2026)
+-----------------------------------------------------------------------
+Finanzamt Musterhausen-Beispiel                        Steuernummer 000/318/0031x
+Steuerweg 1, 99900 Musterhausen am Rhein                Datum 19.05.2026
+
+Herrn Florian Wiesbeck, Rebhangstraße 31, 99903 Musterhausen am Rhein
+Empfangsbevollmächtigt: Steuerberatung Beispiel Hartmann
+
+Bescheid für 2025 über Einkommensteuer, Solidaritätszuschlag und Kirchensteuer
+
+Festsetzung                       Einkommensteuer   Soli    Kirchenst. r.k.
+festgesetzt werden                    14.212,00 €   0,00 €    1.278,08 €
+ab Steuerabzug vom Lohn               15.688,00 €   0,00 €    1.411,92 €
+verbleibende Beträge                  -1.476,00 €   0,00 €     -133,84 €
+
+Erstattung insgesamt: 1.609,84 €
+Der Betrag wird auf das Konto IBAN DE00 0000 0000 0000 0000 00 überwiesen.
+
+Ermittlung des zu versteuernden Einkommens (Auszug)
+Einkünfte aus nichtselbständiger Arbeit          58.904 €
+  Werbungskosten anerkannt                        2.391 € (beantragt 3.020 €)
+Einkünfte aus Vermietung und Verpachtung          3.112 €
+Gesamtbetrag der Einkünfte                       61.625 €
+zu versteuerndes Einkommen                       56.880 €
+
+Erläuterungen
+Die Tagespauschale für die häusliche Tätigkeit wurde nur für 20 Tage gewährt, an
+denen keine Fahrt zur ersten Tätigkeitsstätte erfolgte. Der Erhaltungsaufwand für
+die Einliegerwohnung wurde in voller Höhe berücksichtigt.
+
+Rechtsbehelfsbelehrung: Einspruch ist innerhalb eines Monats nach Bekanntgabe zulässig.

@@ -1,0 +1,36 @@
+{
+ "bewerter": 1,
+ "wertung": {
+  "M01": "getroffen",
+  "M02": "getroffen",
+  "M03": "getroffen",
+  "M04": "getroffen",
+  "M05": "getroffen",
+  "M06": "getroffen",
+  "M07": "getroffen",
+  "M08": "fehlt",
+  "M09": "getroffen",
+  "M10": "getroffen",
+  "M11": "fehlt",
+  "M12": "teilweise",
+  "M13": "getroffen",
+  "M14": "getroffen",
+  "M15": "teilweise",
+  "M16": "getroffen",
+  "M17": "fehlt"
+ },
+ "begruendung": {
+  "M08": "Keine Top-10-Kostentreiber.",
+  "M11": "Keine Anfangsauswertung der letzten 3 Monate.",
+  "M12": "Lieferanten-/Artikel-Wiedererkennung über Namen und Artikelnummer, aber kein Zusammenführen unterschiedlicher Schreibweisen, das aus Korrekturen lernt.",
+  "M15": "Näherung ohne Inventur nur als Frage F1 an den Kunden, nicht als offener Hinweis in der App.",
+  "M17": "Kein Preismodell je Standort, keine Probezeit mit Rückblick."
+ },
+ "zusaetze": [
+  "Mail-Abruf per IMAP",
+  "Summenprobe Positionen gegen Belegsumme",
+  "Verschlüsselte automatische Sicherung",
+  "Vollständigkeitsanzeige ‚unvollständig‘ im Wochenbericht",
+  "Android- und Windows-Hülle"
+ ]
+}

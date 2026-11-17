@@ -1,0 +1,17 @@
+Sonnleitner Elektro-Fachgroßhandel  ·  Hafenweg 3  ·  84028 Lindach an der Isen
+
+Rechnung Nr. 2260-41877                 Lindach, den 08.04.2026
+Kundennummer 20311                      Sachbearb.: Fr. Obermeier
+
+Elektro Brandhuber, Mühlgasse 14, 84577 Altenmoos
+Objekt: Arztpraxis Dr. Seidl, Netzwerk
+
+  305 m  Datenkabel Cat.7 S/FTP Duplex, Trommel         0,92 /m     280,60
+   24 St Keystone-Modul Cat.6A geschirmt                4,35        104,40
+    1 St Patchfeld 24 Port 19" unbestueckt             31,00         31,00
+   12 St Datendose 2-fach UP Keystone leer              3,50         42,00
+
+Zwischensumme                                                    458,00
++ 19 % Mehrwertsteuer                                            87,02
+= Rechnungssumme                                                 545,02
+Skonto 2 % bei Zahlung bis 18.04.2026

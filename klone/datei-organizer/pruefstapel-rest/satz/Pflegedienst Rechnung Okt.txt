@@ -1,0 +1,26 @@
+# Ambulanter Pflegedienst Beispiel-Herz
+Pflegeweg 2 · 37999 Musterau
+
+Herrn
+Gerhard Pfannschmidt
+Am Mühlbach 7
+37999 Musterau
+
+Rechnung: PD-2510-118
+Zeitraum: Oktober 2025
+Datum: 05.11.2025
+
+# Rechnung Entlastungsleistungen
+
+|Datum|Leistung|Std.|Betrag|
+|07.10.|Hauswirtschaftliche Hilfe|2|78,00 EUR|
+|14.10.|Hauswirtschaftliche Hilfe|2|78,00 EUR|
+|21.10.|Begleitung Arztbesuch|1,5|58,50 EUR|
+||Summe||214,50 EUR|
+||Entlastungsbetrag Pflegekasse||-131,00 EUR|
+||Ihr Anteil||83,50 EUR|
+
+Ihr Anteil wird per Lastschrift eingezogen.
+
+Mit freundlichen Grüßen
+@unterschrift

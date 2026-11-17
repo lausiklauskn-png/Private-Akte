@@ -1,0 +1,16 @@
+From: Zeichenbrett Cloud <billing@zeichenbrett.example>
+To: info@tischlerei-grube.example
+Subject: Ihr Abonnement wurde verlängert – Rechnung ZB-2026-77120
+
+Hallo Malte Grube,
+
+Ihr Jahresabonnement "Zeichenbrett Pro (Holz & Möbel)" wurde automatisch verlängert.
+
+Rechnungsnummer: ZB-2026-77120
+Zeitraum: 15.11.2026 - 14.11.2027
+1 Lizenz Zeichenbrett Pro                 588,00 EUR
+USt 19 %                                  111,72 EUR
+Gesamt                                    699,72 EUR
+
+Der Betrag wurde von Ihrer hinterlegten Kreditkarte abgebucht.
+Kündigen können Sie jederzeit zum Ende der Laufzeit in Ihrem Kundenkonto.

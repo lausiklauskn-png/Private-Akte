@@ -1,0 +1,28 @@
+Mein-Beispiel-Steuerportal – Ausdruck vom 09.01.2026, 21:47 Uhr
+================================================================
+
+ÜBERMITTLUNGSPROTOKOLL
+Umsatzsteuer-Voranmeldung 2025 – Zeitraum: Dezember 2025
+
+Empfangendes Finanzamt:   Finanzamt Beispielkreis
+Steuernummer:             000/000/00000
+Unternehmer/in:           Tannreiter, Petra
+                          Tannreiters Beispiel-Hofladen
+                          Marktplatz 5, 99999 Musterbach
+
+Transferticket:           bsp0000aa00000000000
+Eingang beim Portal:      09.01.2026 21:46:58
+
+Kz 81  Steuerpfl. Umsätze 19 %              4.218,00
+Kz 86  Steuerpfl. Umsätze 7 %              11.906,00
+       Umsatzsteuer                         1.634,84
+Kz 66  Vorsteuerbeträge                       982,17
+Kz 83  Verbleibende Umsatzsteuer-
+       Vorauszahlung                          652,67
+
+Hinweis: Eine Lastschrift ist nicht erteilt. Die Vorauszahlung ist am
+10.02.2026 fällig (Dauerfristverlängerung). Bitte überweisen Sie den Betrag
+fristgerecht unter Angabe der Steuernummer und „USt 12/25“.
+
+Dieses Protokoll ist kein Steuerbescheid.
+Seite 1/1

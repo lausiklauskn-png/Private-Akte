@@ -1,0 +1,1204 @@
+{
+ "dateien": [
+  {
+   "datei": "Familienkasse Jonas.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Familienkasse Dornwalde",
+   "person": "Jonas Lindner",
+   "frist": null
+  },
+  {
+   "datei": "scan_0012.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Oberschule „Am Wipperbogen“ Krummenhain",
+   "person": "Jonas Lindner",
+   "frist": "2025-02-13"
+  },
+  {
+   "datei": "Steuer Nachweis Amt.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Amt für Ausbildungsförderung",
+   "person": "Jonas Lindner",
+   "frist": "2025-10-24"
+  },
+  {
+   "datei": "Lehrvertrag_Tischlerei.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Tischlerei Wendisch & Sohn",
+   "person": "Jonas Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Urkunde Standesamt.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": null,
+   "absender": "Standesamt Krummenhain",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schulbesch. J..txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Familie & persönliche Dokumente",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Berufliches Schulzentrum Dornwalde",
+   "person": "Jonas Lindner",
+   "frist": null
+  },
+  {
+   "datei": "KA_2025_03.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Dornwalder Land",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Auszug Nr 7.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Genossenschaftsbank Wipperaue eG",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Dokument (3).txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Konzepta Forderungsmanagement GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-11-21"
+  },
+  {
+   "datei": "Guenter Handy.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Verträge & Abonnements",
+   "absender": "Brömme & Kollegen Rechtsanwälte",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-07-04"
+  },
+  {
+   "datei": "Zahnarzt Horst.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Kanzlei Ohlendorf Inkasso- und Rechtsdienstleistungen",
+   "person": "Horst Lindner",
+   "frist": "2026-02-10"
+  },
+  {
+   "datei": "Festgeld läuft aus.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Dornwalder Land",
+   "person": "Renate Lindner",
+   "frist": "2025-05-30"
+  },
+  {
+   "datei": "Karte Abrechnung Sept.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Kreissparkasse Dornwalder Land",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "wichtig Konto.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Finanzen & Konten",
+   "zweitfach": null,
+   "absender": "Genossenschaftsbank Wipperaue eG",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Haftpflicht 26.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Nordsaale Versicherungsverein a.G.",
+   "person": "Horst Lindner",
+   "frist": "2026-01-15"
+  },
+  {
+   "datei": "Hausrat neu Whg.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Elbtal Versicherung AG",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "unfall kündigung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Elbtal Versicherung AG",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Schaden Wasser.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Elbtal Versicherung AG",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Rente Info.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Versicherungen",
+   "zweitfach": null,
+   "absender": "Vorsorgewerk Abendruh",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "ESt 2024.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Dornwalde",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "FA Erklärung abgeben.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Dornwalde",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "Ausweis.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Krummenhain – Bürgerbüro",
+   "person": "Renate Lindner",
+   "frist": "2025-06-12"
+  },
+  {
+   "datei": "Meldebesch.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Krummenhain – Bürgerbüro",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "img_20251120_0001.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Finanzamt Dornwalde",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-12-01"
+  },
+  {
+   "datei": "Wahl.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "zweitfach": null,
+   "absender": "Stadt Krummenhain – Der Wahlleiter",
+   "person": "Horst Lindner",
+   "frist": "2026-03-08"
+  },
+  {
+   "datei": "Steuerbescheid 2025.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Stadt Krummenhain – Steueramt",
+   "person": null,
+   "frist": "2025-08-15"
+  },
+  {
+   "datei": "BK-Abrechnung 2024.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Aufbau Krummenhain eG",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-09-30"
+  },
+  {
+   "datei": "Fenster WG.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Wohnungsgenossenschaft Aufbau Krummenhain eG",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2026-01-31"
+  },
+  {
+   "datei": "Schornsteinfeger.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Bezirksschornsteinfeger Uwe Pätzold",
+   "person": null,
+   "frist": "2026-03-31"
+  },
+  {
+   "datei": "Angebot Dach.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Dachdeckermeister Ronny Graupner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "RE-2025-1187.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Haus & Wohnung",
+   "zweitfach": null,
+   "absender": "Heizung-Sanitär Klotzsche GmbH",
+   "person": null,
+   "frist": "2025-10-20"
+  },
+  {
+   "datei": "Strom 2024_2025.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krummenhain GmbH",
+   "person": null,
+   "frist": "2025-07-14"
+  },
+  {
+   "datei": "Brief Stadtwerke.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Brief",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krummenhain GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Wasser Abwasser.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Zweckverband Wasser und Abwasser Wipperaue",
+   "person": null,
+   "frist": "2026-02-27"
+  },
+  {
+   "datei": "Karte Zähler.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krummenhain GmbH",
+   "person": null,
+   "frist": "2025-06-06"
+  },
+  {
+   "datei": "Post 14.02..txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Ostwind Energie Direkt",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Mahng. Abschlag.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "zweitfach": null,
+   "absender": "Stadtwerke Krummenhain GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-05-26"
+  },
+  {
+   "datei": "Garten Jahresrechnung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingartenverein Sonnenhang e.V.",
+   "person": "Horst Lindner",
+   "frist": "2025-03-31"
+  },
+  {
+   "datei": "Einladung MV.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingartenverein Sonnenhang e.V.",
+   "person": null,
+   "frist": "2026-03-21"
+  },
+  {
+   "datei": "Brief Vorstand Hecke.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingartenverein Sonnenhang e.V.",
+   "person": "Horst Lindner",
+   "frist": "2025-10-31"
+  },
+  {
+   "datei": "Rasenmäher.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Motorgeräte Hänsel",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "scan0044.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Baumarkt Hobbyland",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Parzelle.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kleingartenverein Sonnenhang e.V.",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-11-08"
+  },
+  {
+   "datei": "Wertermittlung P9.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Garten & Grundstück",
+   "zweitfach": null,
+   "absender": "Kreisverband der Gartenfreunde Dornwalde e.V.",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "bon kunze.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "FRISCHEMARKT KUNZE",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Schuhe Renate.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Schuhhaus Leuschner",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Lunetta Rechnung Aug.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Wäscheversand Lunetta GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-08-26"
+  },
+  {
+   "datei": "Fwd Ihre Rücksendung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Modeversand Elsterkind",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Sessel Erinnerung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Möbelhaus Wipperpark",
+   "person": "Horst Lindner",
+   "frist": "2025-12-12"
+  },
+  {
+   "datei": "Prospekt.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "zweitfach": null,
+   "absender": "Möbelhaus Wipperpark",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Pflegegrad Bescheid.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Pflegekasse bei der Wipperland Krankenkasse",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "MD kommt.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Medizinischer Dienst Elbe-Wipper",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2026-01-20"
+  },
+  {
+   "datei": "KK Beitrag.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Wipperland Krankenkasse",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Befreiung 2026.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Wipperland Krankenkasse",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Kur Ostsee Bewilligung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Wipperland Krankenkasse",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Entlassbrief H.L..txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kreisklinikum Dornwalde gGmbH",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Krankenhaus 90 Euro.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Kreisklinikum Dornwalde gGmbH",
+   "person": "Horst Lindner",
+   "frist": "2025-07-21"
+  },
+  {
+   "datei": "Labor Frau B.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Praxis Dipl.-Med. Hannelore Wuttke",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Augen OP Termin.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Augenzentrum Dornwalde",
+   "person": "Renate Lindner",
+   "frist": "2026-02-18"
+  },
+  {
+   "datei": "Zahnarzt R.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Zahnarztpraxis Dr. Benno Kliemt",
+   "person": "Renate Lindner",
+   "frist": "2025-04-30"
+  },
+  {
+   "datei": "Pflegevertrag Marlies.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegedienst Schwester Marlies GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "pd_abr_0925.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Pflegedienst Schwester Marlies GmbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "apotheke.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Linden-Apotheke Krummenhain",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Rechnung Radiologie.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "zweitfach": null,
+   "absender": "Radiologische Gemeinschaftspraxis am Klinikum",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Rentenanpassung 2025.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenanstalt Elbe-Wipper",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Witwenrente.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenanstalt Elbe-Wipper",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Finanzamt Bescheinigung 2024.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Rentenanstalt Elbe-Wipper",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "zvk_2025-01.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Zusatzversorgungskasse der Glasindustrie Ost",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Betriebsrente Horst.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Versorgungswerk Maschinenbau Mitte e.V.",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "RV fehlende Unterlagen.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenanstalt Elbe-Wipper",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-04-22"
+  },
+  {
+   "datei": "Abrechnung Zeitung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Zustellgesellschaft Dornwalder Land mbH",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Kündigung Austräger.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Zustellgesellschaft Dornwalder Land mbH",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "scan_0031.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "zweitfach": null,
+   "absender": "Rentenanstalt Elbe-Wipper",
+   "person": "Renate Lindner",
+   "frist": "2025-03-31"
+  },
+  {
+   "datei": "Versicherung 2026.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Elbtal Versicherung AG",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Bestätigung Elbtal Auto.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Elbtal Versicherung AG",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Zoll Bescheid.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Hauptzollamt Dornwalde",
+   "person": "Horst Lindner",
+   "frist": "2026-01-12"
+  },
+  {
+   "datei": "Brückner Inspektion.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Brückner",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "HU fällig.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Brückner",
+   "person": "Horst Lindner",
+   "frist": "2025-06-17"
+  },
+  {
+   "datei": "Kaufvertrag PKW.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": null,
+   "absender": "Autohaus Brückner",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Elbtal Parkschaden.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Auto & Mobilität",
+   "zweitfach": "Versicherungen",
+   "absender": "Elbtal Versicherung AG",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Police ZT 250.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Motorrad",
+   "zweitfach": "Versicherungen",
+   "absender": "Nordsaale Versicherungsverein a.G.",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Zweirad Rechnung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Zweirad-Werkstatt Lothar Kießling",
+   "person": "Horst Lindner",
+   "frist": "2025-05-09"
+  },
+  {
+   "datei": "HU Motorrad 2025.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Kfz-Prüfstelle Dornwalde",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "AW  Ihre ZT noch zu haben.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Motorrad",
+   "zweitfach": null,
+   "absender": "Mirko Dähnert",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Einkauf Elektrohaus.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektrohaus Petzold",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "img_0457.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Kassenbon",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "ELEKTROHAUS PETZOLD",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "KVA Spüler.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Hausgeräte-Kundendienst Scharfenberg",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Tablet eingeschickt.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Servicepartner Mitte – Reparaturzentrum",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Bestellung 4471-0092.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": "Einkäufe, Rechnungen & Garantien",
+   "absender": "bürowelt-direkt",
+   "person": "Jonas Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Sat Reparatur.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Technik, Geräte & Reparaturen",
+   "zweitfach": null,
+   "absender": "Elektrohaus Petzold",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-12-05"
+  },
+  {
+   "datei": "Tageblatt.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Brief",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": null,
+   "absender": "Dornwalder Tageblatt",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Handy Rechnung Oktober.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Technik, Geräte & Reparaturen",
+   "absender": "Telvano Mobil GmbH",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Abo 63.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Auto & Mobilität",
+   "absender": "Verkehrsgesellschaft Dornwalder Land mbH",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Vitalstudio.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Vitalstudio Reha-Fit",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "flimmo zahlung.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Reisen & Freizeit",
+   "absender": "Flimmo Plus",
+   "person": "Horst Lindner",
+   "frist": "2026-01-19"
+  },
+  {
+   "datei": "Steuerjahr 2025.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Lohnsteuerhilfe Elbe-Wipper e.V.",
+   "person": null,
+   "frist": "2026-02-28"
+  },
+  {
+   "datei": "Notrufknopf.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "zweitfach": "Gesundheit & Pflege",
+   "absender": "Rettungsverein Wipperaue – Hausnotruf",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Erbschein.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Amtsgericht Dornwalde",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Notar Termin.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notar Dr. Friedhelm Zaunick",
+   "person": null,
+   "frist": "2025-05-27"
+  },
+  {
+   "datei": "Kostenrechnung Zaunick.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Notar Dr. Friedhelm Zaunick",
+   "person": null,
+   "frist": "2025-06-20"
+  },
+  {
+   "datei": "Finanzamt Bescheid Mai.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Elbstadt-Süd",
+   "person": "Renate Lindner",
+   "frist": "2025-06-16"
+  },
+  {
+   "datei": "FA Fragebogen.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Steuern & Behörden",
+   "absender": "Finanzamt Elbstadt-Süd",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-08-29"
+  },
+  {
+   "datei": "Girokonto Günter.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": "Finanzen & Konten",
+   "absender": "Genossenschaftsbank Wipperaue eG",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-04-30"
+  },
+  {
+   "datei": "ZVR Karte Renate.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Zentrales Vorsorgeregister der Notarkammern",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Pietät Rechnung.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Bestattungshaus Pietät Krummenhain",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-04-11"
+  },
+  {
+   "datei": "WG Bruder Manfred.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge",
+   "zweitfach": null,
+   "absender": "Manfred Pietzsch",
+   "person": "Renate Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Tischendorf Harz.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Busreisen Tischendorf",
+   "person": null,
+   "frist": "2025-08-22"
+  },
+  {
+   "datei": "Reservierung Bernsteinblick.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Kurhotel Bernsteinblick",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Storno.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Busreisen Tischendorf",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Seniorenclub Programm.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Seniorenclub Lebensabend e.V.",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Chor.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Termin",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Volkschor Wipperlerchen Krummenhain",
+   "person": "Ingeborg Brettschneider",
+   "frist": "2025-12-13"
+  },
+  {
+   "datei": "Kur Ostsee 2026.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Reisen & Freizeit",
+   "zweitfach": null,
+   "absender": "Reisebüro Fernblick",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Brief Hannelore.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Hannelore Jentzsch",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  },
+  {
+   "datei": "Fwd Weihnachten.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Steffen Lindner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Stadt Schreiben Sept.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Stadt Krummenhain – Der Bürgermeister",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Klassentreffen.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Termin",
+   "kategorie": "Korrespondenz",
+   "zweitfach": null,
+   "absender": "Brigitte Mälzer",
+   "person": "Renate Lindner",
+   "frist": "2026-05-16"
+  },
+  {
+   "datei": "Kreisarchiv.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Kreisarchiv Dornwalder Land",
+   "person": "Horst Lindner",
+   "frist": null
+  },
+  {
+   "datei": "Karton 3 Dachboden.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Horst Lindner",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Zertifikat.txt",
+   "haushalt": "h-lindner",
+   "schriftstueck": "Bescheinigung",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Aktenvernichtung Rehnert",
+   "person": null,
+   "frist": null
+  },
+  {
+   "datei": "Begleitschreiben Scans.txt",
+   "haushalt": "h-brettschneider",
+   "schriftstueck": "Brief",
+   "kategorie": "Archiv",
+   "zweitfach": null,
+   "absender": "Kopierstube Morgenroth",
+   "person": "Ingeborg Brettschneider",
+   "frist": null
+  }
+ ]
+}

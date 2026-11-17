@@ -1,0 +1,97 @@
+{
+  "titel": "Überblick über meine Kunden bei KI-Schulungen und erlaubten Programmen",
+  "kunde": {"firma": "Digitalberatung Beispiel", "ansprechpartner": "Petra Musterfrau", "mail": "petra@digitalberatung.example"},
+  "bereiche": {
+    "1": [
+      "Je Kunde ein Ordner mit Word-Dateien",
+      "Teilnahme an Schulungen in einer Excel-Liste",
+      "Fragen der Kunden („Dürfen wir Programm X benutzen?“) kommen per E-Mail",
+      "Liste der erlaubten Programme je Kunde, die keiner pflegt"
+    ],
+    "2": [
+      "Kurze Workshops zum EU-KI-Gesetz vor Ort bei den Kunden",
+      "Nachweis, wer teilgenommen hat und was gelernt wurde",
+      "Pflege der Liste erlaubter Programme je Kunde",
+      "Wiederholung bzw. Nachschauen nach einem halben Jahr"
+    ],
+    "3": [
+      {"text": "Ich als Beraterin (allein)", "anzahl": 1},
+      {"text": "Kunden: Arztpraxen, zwei Steuerbüros, Handwerker, ein Verein", "anzahl": 30},
+      {"text": "Mitarbeiter der Kunden, die an den Schulungen teilnehmen", "anzahl": 0}
+    ],
+    "4": [
+      "Wenn ein Kunde fragt „Was haben wir schon gemacht?“, suche ich eine halbe Stunde",
+      "Die Liste der erlaubten Programme stimmt nach drei Monaten nicht mehr",
+      "Kein Überblick, wo bei welchem Kunden etwas fällig ist oder fehlt",
+      "Vorlagen werden für jede Praxis neu kopiert"
+    ],
+    "5": [
+      "Alles liegt verstreut in Word, Excel und Mails",
+      "Keiner fühlt sich für die Programm-Liste zuständig, ich auch nicht",
+      "Es gibt keine Erinnerung an Fristen"
+    ],
+    "6": [
+      {"text": "Ein Blick auf alle Kunden: was erledigt ist, was fällig ist, was fehlt", "prio": "muss", "nutzen": {"stundenMonat": 3, "euroMonat": null, "text": "kein Suchen mehr, wenn ein Kunde fragt"}, "handeln": "egal"},
+      {"text": "Teilnahme in der Schulung direkt auf dem Tablet abhaken, auch ohne WLAN", "prio": "muss", "nutzen": {"stundenMonat": 2, "euroMonat": null, "text": "keine Excel-Liste mehr nachtragen"}, "handeln": "egal"},
+      {"text": "Ein Nachweisblatt für den Kunden mit Datum, wer was gelernt hat, mit meinem Namen und Logo", "prio": "muss", "nutzen": {"stundenMonat": 2, "euroMonat": null, "text": "Blatt nicht mehr von Hand zusammenbauen"}, "handeln": "selbst"},
+      {"text": "Erinnerung, wenn bei einem Kunden ein halbes Jahr um ist", "prio": "muss", "nutzen": {"stundenMonat": 1, "euroMonat": null, "text": "nichts mehr vergessen"}, "handeln": "vorschlagen"},
+      {"text": "Liste der erlaubten Programme je Kunde, die aktuell bleibt", "prio": "soll", "nutzen": {"stundenMonat": 1, "euroMonat": null, "text": "Fragen schneller beantworten"}, "handeln": "vorschlagen"},
+      {"text": "Eine Vorlage für Arztpraxen einmal gut machen und bei allen Praxen nutzen, ohne sie zu kopieren", "prio": "soll", "nutzen": {"stundenMonat": 1, "euroMonat": null, "text": "nicht zehnmal dasselbe pflegen"}, "handeln": "egal"},
+      {"text": "Daten jederzeit herausholen können, je Kunde", "prio": "muss", "nutzen": {"stundenMonat": null, "euroMonat": null, "text": "ich bleibe unabhängig"}, "handeln": "selbst"}
+    ],
+    "7": [
+      "Auf Nachfrage eines Kunden in wenigen Minuten sagen können, was schon gemacht wurde",
+      "Pro Kunde etwa eine Stunde im Quartal sparen"
+    ],
+    "8": [
+      "Das System muss alle Kunden in einer Übersicht zeigen, mit erledigt, fällig und fehlend",
+      "Das System muss je Kunde die Schulungen mit Datum, Thema und Teilnehmern festhalten",
+      "Das System muss die Teilnahme auf dem Tablet ohne Internet abhaken lassen",
+      "Das System muss ein Teilnahmeblatt mit Datum, Inhalten, meinem Namen und Logo zum Drucken bzw. als PDF erstellen",
+      "Das System muss mich erinnern, wenn bei einem Kunden ein halbes Jahr seit der letzten Schulung um ist",
+      "Das System muss je Kunde eine Liste erlaubter Programme mit Stand-Datum führen",
+      "Das System muss Vorlagen (z. B. für Arztpraxen) einmal führen und bei mehreren Kunden verwenden",
+      "Das System muss die Daten je Kunde getrennt halten und vollständig exportieren können"
+    ],
+    "9": [
+      "Ich pflege es allein, es muss also schnell gehen"
+    ],
+    "10": [
+      "Laptop mit Windows, Tablet für unterwegs, Handy",
+      "In Praxen oft kein WLAN für Gäste"
+    ],
+    "11": [
+      "Word, Excel, E-Mail"
+    ],
+    "12": [],
+    "13": [
+      "Kundenstamm, Schulungen, Teilnehmerlisten, erlaubte Programme, Vorlagen",
+      "Getrennt je Kunde"
+    ],
+    "14": [
+      "personenbezogene Daten: ja (Namen der Teilnehmer)",
+      "Daten der Kunden sollen bei mir bleiben"
+    ],
+    "15": [
+      "Budget-Rahmen: 50 bis 130 Euro im Monat, wenn ich pro Kunde eine Stunde im Quartal spare"
+    ],
+    "18": [
+      {"text": "Ob die Erinnerung auch aufs Handy kommen soll", "wer": "", "bis": ""},
+      {"text": "Wie genau „was gelernt“ auf dem Blatt aussehen soll", "wer": "", "bis": ""}
+    ]
+  },
+  "rahmen": {
+    "geraete": ["windows", "tablet", "android"],
+    "offline": "unterwegs",
+    "eigene": [],
+    "eigeneText": "",
+    "datenort": ["geraet", "ordner"],
+    "sicherung": ["selbst"],
+    "budgetEuro": null
+  },
+  "nicht": [
+    "keine Noten oder Bewertungen einzelner Mitarbeiter an den Chef",
+    "keine Rechtsgutachten, und das Programm soll nicht so tun, als ob",
+    "keine Kundendaten bei fremden Anbietern"
+  ]
+}

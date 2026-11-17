@@ -1,0 +1,22 @@
+# Stadt Musterau
+
+LOHNSTEUERKARTE 2003
+
+Gemeinde: Musterau  AGS 03 9 99 999
+Finanzamt: Musterau  Nr. 2216
+
+Name: Pfannschmidt, Gerhard
+Geb.: 12.05.1952
+Anschrift: Am Mühlbach 7, 37999 Musterau
+
+Steuerklasse: III
+Kinderfreibeträge: 0,5
+Kirchensteuerabzug: ev
+
+@stempel Stadt Musterau Einwohnermeldeamt
+@seite
+|Zeitraum|Bruttoarbeitslohn|Lohnsteuer|
+|01.03.–31.12.|24.880,00 EUR|2.112,00 EUR|
+
+Bescheinigung des Arbeitgebers: Maschinenfabrik Beispiel GmbH
+@stempel Maschinenfabrik Beispiel GmbH

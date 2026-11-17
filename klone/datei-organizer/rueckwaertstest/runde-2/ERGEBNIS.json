@@ -1,0 +1,295 @@
+{
+ "I1": {
+  "app": "KI-Schleuse",
+  "kern": {
+   "anzahl": 9,
+   "quote": 83,
+   "bewerter1": 83,
+   "bewerter2": 83,
+   "einig": 100,
+   "fehlt": [
+    "M07 Prüft vor dem Senden den verdeckten Text noch einmal auf übrig gebliebenen Klartext und hält dann an"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M04 Erkennt deutsche Muster: Personennamen, Anschriften, Geburtsdaten, IBAN, Steuer-ID, Versichertennummer, Aktenzeichen, Telefon, E-Mail"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 7,
+   "quote": 64,
+   "bewerter1": 64,
+   "bewerter2": 64,
+   "einig": 100,
+   "fehlt": [
+    "M15 Nachweisprotokoll nur mit Art und Anzahl verdeckter Angaben, nie mit Inhalten"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M02 Zielgruppe: kleine Kanzleien, Steuerbüros, Praxen, Pflegedienste (2–50 Personen), auch über IT-Dienstleister, Datenschutzbeauftragte und KI-Berater vertrieben",
+    "M08 Nimmt eigene Listen auf (Mandanten-, Patienten-, Kundennamen, Ortsbegriffe), die immer verdeckt werden",
+    "M17 Verspricht keine vollständige Anonymisierung; sagt, dass Pseudonyme personenbezogen bleiben und kein Auftragsverarbeitungsvertrag ersetzt wird"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Direkte API-Anbindung an mehrere KI-Anbieter mit eigenem Schlüssel",
+   "Druckbares Vorzeigeblatt für Kammer und Mandanten",
+   "Einrichtung auf vier PCs, Einweisung und Büro-Regel als Ausdruck",
+   "Warnung bei von der KI veränderten Platzhaltern",
+   "Verdecken von Beträgen",
+   "Optionale direkte API-Anbindung an mehrere KI-Anbieter mit eigenem Schlüssel",
+   "Vorzeigeblatt als Druckansicht für Kammer und Mandanten",
+   "Einrichtung und Einweisung auf vier PCs mit Büro-Regel"
+  ]
+ },
+ "I2": {
+  "app": "KI-Kompetenz-Mappe für Berater",
+  "kern": {
+   "anzahl": 8,
+   "quote": 81,
+   "bewerter1": 81,
+   "bewerter2": 88,
+   "einig": 88,
+   "fehlt": [],
+   "verkehrt": [],
+   "teilweise": [
+    "M05 Je Betrieb eine Werkzeugliste mit drei Stufen: erlaubt / nur ohne Personendaten / verboten, jede Änderung datiert",
+    "M08 Teilnahme in der Schulung erfassen, auch offline am Tablet des Beraters; Bestätigung per Handy-Link optional",
+    "M13 Daten des Beraters lokal oder im eigenen Ordner, je Mandant getrennt verschlüsselt, Export jederzeit"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 7,
+   "quote": 64,
+   "bewerter1": 64,
+   "bewerter2": 64,
+   "einig": 100,
+   "fehlt": [
+    "M12 Mitarbeitende bestätigen die Regeln mit einem Tipp; Bestätigung datiert"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M02 Nutzer: selbstständige KI-Trainer, IT-Dienstleister, externe Datenschutzbeauftragte; Endkunden 5–100 Personen",
+    "M07 Schulungsbausteine 15–45 Minuten nach Rolle und Branche zusammenstellen",
+    "M14 PC/Tablet für den Berater, Handy für Teilnehmende ohne App-Installation"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Android- und Windows-Hüllen",
+   "Zeitleiste ‚Was haben wir schon gemacht?‘ je Kunde",
+   "Sicherung mit Zusammenführen beim Wiedereinlesen",
+   "Suche über Kunden, Schulungen, Teilnehmer, Programme",
+   "Möglicher CSV-Import der alten Excel-Teilnahmeliste",
+   "Native Android- und Windows-Hüllen",
+   "Zeitleiste „Was haben wir schon gemacht?“ je Kunde",
+   "Sicherung mit Wiedereinlesen ohne Überschreiben"
+  ]
+ },
+ "I3": {
+  "app": "Anlagenpass",
+  "kern": {
+   "anzahl": 9,
+   "quote": 83,
+   "bewerter1": 83,
+   "bewerter2": 89,
+   "einig": 89,
+   "fehlt": [
+    "M04 QR-Aufkleber je Anlage; Scannen öffnet die Anlage mit Historie und offenen Mängeln"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M07 Fälligkeiten je Anlage und Vertrag; Liste „überfällig / bald fällig“"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 8,
+   "quote": 75,
+   "bewerter1": 75,
+   "bewerter2": 75,
+   "einig": 100,
+   "fehlt": [
+    "M18 Garantiert keine normgerechte Prüfung; Vorlagen ersetzen keine Fachkunde"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M02 Nutzer: Büro und Monteure in Betrieben mit 3–30 Leuten (Heizung, Wärmepumpe, Lüftung, Trinkwasser, E-Check/DGUV V3)",
+    "M16 Kundendaten nur so weit nötig; Speicherung im eigenen Ordner/Gerät oder EU-Server mit AV-Vertrag"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Eigener Betriebsserver für Abgleich und Terminseite",
+   "Einmalige Excel-Übernahme mit Spaltenzuordnung",
+   "Automatische Sicherung",
+   "Rollen und Benutzer-/Geräteverwaltung",
+   "Konfliktliste beim Abgleich",
+   "Kleiner Betriebsserver für Abgleich und Terminseite",
+   "Rollen Inhaber/Büro/Monteur/Azubi mit Rechten"
+  ]
+ },
+ "I4": {
+  "app": "Nebenkosten-Prüfer (Vermieterseite)",
+  "kern": {
+   "anzahl": 8,
+   "quote": 94,
+   "bewerter1": 94,
+   "bewerter2": 94,
+   "einig": 100,
+   "fehlt": [],
+   "verkehrt": [],
+   "teilweise": [
+    "M03 Liest die fertige Abrechnung als PDF, unabhängig davon, mit welchem Programm sie erstellt wurde"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 8,
+   "quote": 81,
+   "bewerter1": 81,
+   "bewerter2": 81,
+   "einig": 100,
+   "fehlt": [
+    "M07 Prüft Heizkosten-Verbrauchsanteil 50–70 % und Leerstand"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M17 Versendet nichts automatisch, kein Mieterportal, keine Buchhaltung"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Abhak- und Freigabe-Ablauf Buchhalterin/Verwalter mit Mehrnutzer-Sperrhinweis",
+   "Prüfsumme der Original-PDFs zwischen Läufen",
+   "Offline-Lizenzprüfung per Lizenzdatei",
+   "PDF-Ansicht mit Sprung zur Fundstelle",
+   "Druck/PDF-Export der Befundliste",
+   "Abhaken durch Buchhalterin und Freigabe durch Verwalter",
+   "Mehrnutzer-Arbeitsstand auf Laufwerk mit Sperrhinweis",
+   "Prüfsumme je Original-PDF"
+  ]
+ },
+ "I5": {
+  "app": "Belegjäger",
+  "kern": {
+   "anzahl": 8,
+   "quote": 88,
+   "bewerter1": 88,
+   "bewerter2": 88,
+   "einig": 100,
+   "fehlt": [],
+   "verkehrt": [],
+   "teilweise": [
+    "M04 Erzeugt je Mandant einen kurzlebigen Link ohne Anmeldung, geschützt mit PIN, per SMS oder E-Mail",
+    "M13 Daten auf dem Server in Deutschland nur bis zur Abholung, Löschung spätestens nach 30 Tagen"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 7,
+   "quote": 64,
+   "bewerter1": 71,
+   "bewerter2": 64,
+   "einig": 86,
+   "fehlt": [
+    "M10 Prüft auf dem Foto, ob Betrag und Datum zum Umsatz passen, und markiert Abweichungen"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M02 Käufer ist die Steuerkanzlei (Abo); Mandanten zahlen nichts",
+    "M08 Erinnert selbst nach 3 und 7 Tagen; doppelte Anfragen werden unterdrückt",
+    "M11 Übersicht der Kanzlei: je Mandant offen / beantwortet / überfällig"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Kanzlei-Anmeldung mit Rollen",
+   "Löschprotokoll ohne Inhalte",
+   "Verschlüsselte Ablage und Sicherung mit kurzer Aufbewahrung",
+   "Link sperren/erneuern, Begrenzung der Abrufversuche",
+   "Mehrere Dateien je Posten",
+   "Link nur als Hash gespeichert, Begrenzung von Abrufversuchen",
+   "Sicherungen mit kurzer Aufbewahrung wegen Löschfrist",
+   "Mailversand über EU-Versanddienst"
+  ]
+ },
+ "I6": {
+  "app": "Prüfbereit ambulant",
+  "kern": {
+   "anzahl": 8,
+   "quote": 94,
+   "bewerter1": 94,
+   "bewerter2": 94,
+   "einig": 100,
+   "fehlt": [],
+   "verkehrt": [],
+   "teilweise": [
+    "M04 Bewertung je Aspekt in den Stufen A–D nach der Prüfanleitung"
+   ]
+  },
+  "wichtig": {
+   "anzahl": 7,
+   "quote": 71,
+   "bewerter1": 79,
+   "bewerter2": 71,
+   "einig": 86,
+   "fehlt": [
+    "M16 Kein Medizinprodukt: Organisation, keine Diagnose oder Therapieempfehlung"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M02 Nutzer: Pflegedienstleitung und QM-Beauftragte; zusätzlich Berater, die mehrere Dienste betreuen",
+    "M15 Kein Versprechen „Prüfung bestanden“, keine Rechtsberatung"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Abgleich Tablet ↔ PC mit Konfliktanzeige",
+   "Automatische verschlüsselte Sicherung",
+   "Server für Freischaltung/Abo",
+   "Zufällige Ziehung der Stichprobe aus Nummernliste",
+   "Startseite mit Stand auf einen Blick",
+   "Eigener Server für Katalog-Updates, Freischaltung und ggf. Abgleich",
+   "Daten bleiben nach Abo-Ablauf lesbar und exportierbar"
+  ]
+ },
+ "I7": {
+  "app": "Wareneinsatz-Wächter",
+  "kern": {
+   "anzahl": 9,
+   "quote": 100,
+   "bewerter1": 100,
+   "bewerter2": 100,
+   "einig": 100,
+   "fehlt": [],
+   "verkehrt": [],
+   "teilweise": []
+  },
+  "wichtig": {
+   "anzahl": 7,
+   "quote": 57,
+   "bewerter1": 57,
+   "bewerter2": 57,
+   "einig": 100,
+   "fehlt": [
+    "M08 Top-10-Kostentreiber der Woche/des Monats",
+    "M11 Beim Start Auswertung der letzten 3 Monate aus vorhandenen Belegen"
+   ],
+   "verkehrt": [],
+   "teilweise": [
+    "M12 Gleiche Artikel unterschiedlicher Schreibweise zusammenführen (lernt aus Korrekturen)",
+    "M15 Sagt offen, dass es ohne Inventur eine Näherung ist"
+   ]
+  },
+  "bestanden": true,
+  "zusaetze": [
+   "Mail-Abruf per IMAP",
+   "Summenprobe Positionen gegen Belegsumme",
+   "Verschlüsselte automatische Sicherung",
+   "Vollständigkeitsanzeige ‚unvollständig‘ im Wochenbericht",
+   "Android- und Windows-Hülle",
+   "IMAP-Mail-Abruf aus dem Postfach",
+   "Tellerkalkulation für 5–6 Gerichte",
+   "Vollständigkeitshinweis „unvollständig“ im Wochenbericht"
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+Steuerberatung Hagedorn & Kollegen - Lohnbüro
+LOHNJOURNAL  Mandant 10422 Teekontor Lindenblatt   Abrechnungsmonat 03/2026
+
+PersNr  Name                  Brutto     Steuern    SV-AN     Netto
+002     Thormählen, Ilka     1.180,00    102,63     242,49    834,88
+003     Aushilfe (Minijob)
+        Brüning, Malte         320,00      0,00       0,00    320,00
+---------------------------------------------------------------------
+Summe Bruttolöhne und -gehälter           1.500,00
+
+Auszahlungen an Arbeitnehmer gesamt       1.154,88
+(Arbeitgeberanteile siehe Beitragsnachweis, gesondert)

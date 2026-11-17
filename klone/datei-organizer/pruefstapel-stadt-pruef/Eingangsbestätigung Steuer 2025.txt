@@ -1,0 +1,21 @@
+Mein-Beispiel-Steuerportal
+-----------------------------------------------
+Ihre Erklärung wurde erfolgreich übermittelt.
+
+Art:            Einkommensteuererklärung 2025
+                (Zusammenveranlagung)
+Steuerpflichtige: Thomas Kieselmayr / Sabine Kieselmayr
+Finanzamt:      Finanzamt Beispielkreis
+Steuernummer:   000/000/00000
+Datum/Uhrzeit:  22.03.2026 / 19:12:04
+Ordnungsbegriff: 0000000000000
+
+Übermittelte Anlagen: Hauptvordruck, Anlage N (2x), Anlage Kind (3x),
+Anlage Vorsorgeaufwand, Anlage Haushaltsnahe Aufwendungen
+
+Belege werden nur auf Anforderung nachgereicht.
+
+Hinweis: Bitte heben Sie dieses Protokoll auf. Der Bescheid wird Ihnen
+in Papierform zugeschickt und zusätzlich elektronisch bereitgestellt.
+-----------------------------------------------
+Druckansicht – Seite 1

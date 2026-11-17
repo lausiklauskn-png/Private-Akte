@@ -1,0 +1,127 @@
+[Scan Teil 1 von 3]
+KAUFHALLE SONNENTAL BEISPIEL
+Markt Talheirn
+Gewcrbestraße 12
+45678 Talheim-8eispiel
+www.kaufhalle-sonnental.example
+
+EUR
+ZWIEBELN KG                        1,29  
+ZUCKER 1KG                          1,l9  A
+ZTRONN NETZ                       l,49  A
+BANANEN LOSE                        5,1  A
+   3 Stk x  1,87
+PAPRIKA MX 500G                   l4,94  A
+   6 Stk x  2,49
+NUDELN 5PIRELL 500G                0,99  A
+GUMMIBAERCHEN 30OG                  1,29  A
+PIZZA SALAMI TK                     4,9  A
+   2 Stk x  2,49
+UECHENROLLE 4X                     3,49  B
+QUARK 40% 50OG                      1,49  A
+GRILLKAESE 2ST                      2,79  A
+UDELSALAT 1KG                      4,49  A
+MINERALWASSER 12XlL                 5,49  A
+DSCHGFL 250L                      1,49  B
+POMME TK 2,5KG                     3,99  A
+KEKSF 8UTTFR                        1,49  A
+TRAUBN HELL 500G                   2,79  A
+FISCHSTAEBCHEN 3OST                 4,49  A
+SCHOOLADE VOLLMILCH                1,19  A
+TORTENBODEN HELL                    1,89  A
+BECHER 0,3L 5OST                    2,99  B
+SEKT TROCKEN 0,75                   4,4  
+TOILETTENPAPIER 10X                 4,99  B
+ZAHNPASTA                           0,95  B
+BUTER 250G                         2,39  A
+GOUDA JUNG SCHEIBEN                 1,99  A
+[Scan Teil 2 von 3]
+APFELSCHRLE 6X1,5L                 ,74  A
+JGHURT NATU SO0G                  2,67  
+   3 Stk x  0,89
+BIER PILS 20X0,5                   14,99  B
+OLIVENOEL 0,75L                     7,99  
+TOMATEN PASSIERT                    0,79  A
+5AHNE 200ML                         0,79  A
+ALUFOLIE 30M                        2,79  
+MAISKOLBEN 2ST                      1,99  A
+REIS LANGKORN 1KG                   3,58  A
+   2 Sfk x  1,79
+SENF MITTELSCHARF                   0,89  A
+SCHWEINENACKEN MARINIERT           11,49  A
+GRILKOHLE 1OKG                     8,99  B
+PFAND 12X0,25                       3,30  B
+MARMELADE FRDBEER                   3,58  A
+   2 Stk   1,79
+CORNFLAKES 750                     ,49  A
+TEELICHTER 50ST                     2,99  B
+NUSSNOUGATCREME                     3,49  A
+STEAK RND 2ST                     12,99  A
+WASCHMITTEL 4WL                    9,99  B
+WEISSWEIN HALBTR.                   5,49  B
+CHIPS PAPRIKA                       1,79  A
+ANZUENDER 325T                      2,49  8
+APPTELLER 50ST                     3,49  8
+BRATWURST GROB 10ST                 ,99  A
+PFAND 6X0,25                        l,50  B
+KAFFEEBOHNEN 1KG                   13,99  A
+MOZZARELLA 12G                     1,7  A
+   2 Sfk x  0,85
+5PUELMITTEL 90OML                   1,59  B
+EIER FREILAND 10ST                  3,29  A
+KATZNFUTTER 12X85G                16,47  B
+   3 Stk x  5,49
+MUE5LI KNU5PER                      5,7B  A
+[Scan Teil 3 von 3]
+   2 Stk x  2,89
+HAEHNCHENBRUST 1KG                  9,89  A
+TOASTBROT VOLLK.                    1,39  A
+PFAND KASTFN BIER                   3,1  B
+KARTOFFELSALA 1KG                  3,99  A
+H-ILCH 1,5% 1L                     2,8  A
+   2 Stk x  1,09
+SONNENBL.OEL lL                     2,49  A
+CLA 6X1,L                        23,76  B
+   4 Stk x  5,94
+ROTWEIN TOCKEN                    23,96  B
+   4 Stk x  5,99
+KAFFEE GEMAHLEN 500G                6,99  A
+SCHIRRTA8S 60ST                   7,99  B
+SERVIETTEN 3LG 50ST                 3,98  B
+   2 Stk x  1,99
+BROTZFITPLATTE                     l4,99  A
+AEFEL ELSTAR 2KG                   3,99  A
+SPINAT TK 750G                      1,59  A
+ORANGENSAFT lL                      1,99  A
+SALAMI AM STUECK                   l1,67  A
+   3 Stk x  3,89
+MOEREN 1KG                         1,19  A
+LACHSFIET TK 500G                  7,99  A
+BTTFRIEN AA ST                    S,9  B
+TEE PFEFFERMINZ                     1,29  A
+BLUMEN5TRAUSS                       7,99  A
+SPARERIBS MARN.                    8,99  A
+MUFLLBFUTEL 35                     7,56  B
+   4 Sfk x  1,89
+EMMENTALE 400G                     4,49  A
+KAESEPLATTE FEST.                  1,99  A
+SALAT EI5BERG                       0,99  A
+SALZSTANGEN 20G                    O,99  A
+5HAMPOO 00ML                       2,29  B
+GURKE STUECK                        0,69  A
+--------------------------------------------
+SUMME                             437,15   
+Anzahl Artikel: 11
+
+KREDITKARTE                       437,15   
+
+MwSt   Satz     Netto     Sfcuer    Brutto
+A      7,0%    248,64     17,40    266,0
+B     19,0%    143,79     27,3    171,11
+
+15.06.2023  17:31  Kasse 4  Beleg 9881  Bed. 7
+
+Danke! Ihre Kaufhalle Sonnental
+SE-Seriennr. f00ab77  Transakfion 77120  Zähler 4410093
+Belegbeginn 17:12:O  Belegende 17:31:02
+Pfndbons werdcn nur ln dieser Filiale angernommen

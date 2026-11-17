@@ -1,0 +1,687 @@
+{
+ "hinweis": "Soll-Werte für die Probe; leere Felder werden nicht gemessen.",
+ "dateien": [
+  {
+   "pfad": "Eingang/Downloads/Rechnung_2026-01.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-01-29",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0001.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-02-26",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Downloads/Rechnung_2026-03.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-03-24",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0002.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-04-28",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Downloads/Rechnung_2026-05.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-05-26",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0003.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-06-23",
+   "nummer": "KD-40 1187"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0004.pdf",
+   "schriftstueck": "Mahnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-11-19"
+  },
+  {
+   "pfad": "Eingang/Downloads/Zaehlerstand_Aufforderung.pdf",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Herr Beispiel",
+   "frist": "2026-11-15"
+  },
+  {
+   "pfad": "Eingang/alt/2025/Versicherungsschein_Hausrat.pdf",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2025/Beitrag_2025.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel",
+   "frist": "2025-10-15"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0005.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel",
+   "frist": "2026-10-15"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0006.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Finanzamt Beispielstadt",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Steuerbescheid_2023.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Finanzamt Beispielstadt",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Dokument(3).pdf",
+   "schriftstueck": "Aufforderung",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Bürgeramt Beispielstadt",
+   "betrifft": "Herr Beispiel",
+   "frist": "2026-11-20"
+  },
+  {
+   "pfad": "Eingang/Downloads/Laborwerte_Oktober.pdf",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Labor Beispielstadt GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0007.pdf",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Praxis Dr. med. Anna Muster",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Rechnung_Zahnarzt.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Zahnarztpraxis Dr. Beispiel",
+   "betrifft": "Frau Beispiel",
+   "frist": "2026-09-03"
+  },
+  {
+   "pfad": "Eingang/alt/2025/Krankenkasse_Mitgliedschaft.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "BKK Beispiel Krankenkasse",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Rechnung_Werkstatt.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "absender": "Autohaus Brummwerk GmbH",
+   "betrifft": "Herr Beispiel",
+   "frist": "2026-10-30",
+   "nummer": "BSP-FA 12"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0008.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Auto & Mobilität",
+   "absender": "Autohaus Brummwerk GmbH",
+   "betrifft": "Herr Beispiel",
+   "frist": "2026-12-04"
+  },
+  {
+   "pfad": "Eingang/Downloads/Kontoauszug_2026-08.pdf",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Kontoauszug_2026-09.pdf",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Kontoauszug_2026-10.pdf",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Einladung_Elternabend.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Familie & persönliche Dokumente",
+   "absender": "Schule am Beispielpark",
+   "betrifft": "Mattis Beispiel",
+   "frist": "2026-11-24"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Dokument(4).pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Familie & persönliche Dokumente",
+   "absender": "Schule am Beispielpark",
+   "betrifft": "Mattis Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Vertragsbestaetigung_Mobilfunk.pdf",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0009.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0010.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0011.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Kuendigung_Fitness.pdf",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Fitnesshaus Beispiel GmbH",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2025/Nebenkostenabrechnung_2024.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "absender": "Hausverwaltung Beispiel GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0012.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Haus & Wohnung",
+   "absender": "Hausverwaltung Beispiel GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-12-03"
+  },
+  {
+   "pfad": "Eingang/Downloads/Gehalt_2026-08.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Gehalt_2026-09.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Gehalt_2026-10.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Renteninformation.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Rentenversicherung Beispiel",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Downloads/Bestellung_4711.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Elektromarkt Beispiel GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Prospekt_1.pdf",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Möbelhaus Beispiel GmbH"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Prospekt_2.pdf",
+   "schriftstueck": "Angebot/Werbung",
+   "kategorie": "Einkäufe, Rechnungen & Garantien",
+   "absender": "Möbelhaus Beispiel GmbH"
+  },
+  {
+   "pfad": "Eingang/Downloads/Reisebestaetigung.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Reisen & Freizeit",
+   "absender": "Reisebüro Beispiel GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0013.pdf",
+   "schriftstueck": "Unklar"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Unbenannt.pdf",
+   "schriftstueck": "Unklar"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Termin_Zahnarzt.eml",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Zahnarztpraxis Dr. Beispiel",
+   "betrifft": "Frau Beispiel",
+   "frist": "2026-11-18"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Ihre_Rechnung_November.eml",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Ihre_Rechnung_November.eml › Rechnung_11-2026.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-11-15"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Fotos_vom_Schaden.eml",
+   "kategorie": "Versicherungen",
+   "absender": "Ole Beispiel"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Newsletter.eml",
+   "schriftstueck": "Angebot/Werbung",
+   "absender": "Möbelhaus Beispiel"
+  },
+  {
+   "pfad": "Eingang/Mail-Anhaenge/Laborbefund_weitergeleitet.eml",
+   "schriftstueck": "Befund",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Praxis Dr. med. Anna Muster",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Kuendigung_Entwurf.docx",
+   "schriftstueck": "Kündigung",
+   "kategorie": "Verträge & Abonnements"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Vollmacht_Entwurf.docx",
+   "kategorie": "Erbschaft, Vollmachten & Vorsorge"
+  },
+  {
+   "pfad": "Eingang/Notizen/Einkaufsliste.txt",
+   "schriftstueck": "Unklar"
+  },
+  {
+   "pfad": "Eingang/Notizen/Passwoerter_NICHT_HIER.txt",
+   "schriftstueck": "Unklar"
+  },
+  {
+   "pfad": "Eingang/Notizen/Termine.ics"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261014_081233.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "Kennzeichen BSP-FA 12 im Bild (Texterkennung später)"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261015_174501.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261102_090010.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "Zählerstand im Bild"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261102_090120.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Handy/WhatsApp/Media/IMG-20261030-WA0003.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "Kassenbon mit Garantie"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261020_174501.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "abfotografiertes Schreiben (Texterkennung später)"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20260805_120000.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Bilder/Garten/beet_mai.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Bilder/Familie/Geburtstag_Mattis.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20261011_210500.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "Schaden für die Versicherung"
+  },
+  {
+   "pfad": "Eingang/Handy/DCIM/Camera/IMG_20260901_101010.jpg",
+   "schriftstueck": "Foto",
+   "notiz": "Typenschild mit Seriennummer"
+  },
+  {
+   "pfad": "Eingang/Bilder/ohne_Daten.jpg",
+   "schriftstueck": "Foto"
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Rechnung_2026-01 (Kopie).pdf",
+   "doppelt": true
+  },
+  {
+   "pfad": "Eingang/Scanner/Kopie von scan_0004.pdf",
+   "doppelt": true
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Rechnung_Oktober.pdf.exe",
+   "auffaellig": true
+  },
+  {
+   "pfad": "Eingang/Durcheinander/Lebenslauf.pdf",
+   "auffaellig": true
+  },
+  {
+   "pfad": "Eingang/Durcheinander/rechnung.js",
+   "auffaellig": true
+  },
+  {
+   "pfad": "Eingang/alt/2025/Jahresabrechnung_Strom_2024.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0014.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0015.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2026/Änderung_der_Entgelte.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0016.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Praxis Dr. med. Anna Muster",
+   "betrifft": "Frau Beispiel",
+   "frist": "2026-11-21"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0017.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "BKK Beispiel Krankenkasse",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2025/Arbeitsvertrag_Änderung.pdf",
+   "schriftstueck": "Vertrag",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0018.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Rentenversicherung Beispiel",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/Scanner/scan_0019.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Bürgeramt Beispielstadt",
+   "betrifft": "Herr Beispiel",
+   "frist": "2026-11-22"
+  },
+  {
+   "pfad": "Eingang/alt/2026/Rechnung_Reise_Beispielinsel.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Reisen & Freizeit",
+   "absender": "Reisebüro Beispiel GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2026-07-16"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Dokument_1.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2023-01-19"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Beispiel-Versicherung_2023_2.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel",
+   "frist": "2023-02-20"
+  },
+  {
+   "pfad": "Eingang/alt/2023/scan 3.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel",
+   "frist": "2023-03-21"
+  },
+  {
+   "pfad": "Eingang/alt/2023/IMG_20230004.pdf",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Dokument_5.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Zahnarztpraxis_2023_6.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Zahnarztpraxis Dr. Beispiel",
+   "betrifft": "Frau Beispiel",
+   "frist": "2023-06-24"
+  },
+  {
+   "pfad": "Eingang/alt/2023/scan 7.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Praxis Dr. med. Anna Muster",
+   "betrifft": "Herr Beispiel",
+   "frist": "2023-07-21"
+  },
+  {
+   "pfad": "Eingang/alt/2023/IMG_20230008.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "absender": "Hausverwaltung Beispiel GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Dokument_9.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Finanzamt Beispielstadt",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2023/Autohaus_2023_10.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "absender": "Autohaus Brummwerk GmbH",
+   "betrifft": "Herr Beispiel",
+   "frist": "2023-10-28"
+  },
+  {
+   "pfad": "Eingang/alt/2023/scan 11.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "BKK Beispiel Krankenkasse",
+   "betrifft": "Frau Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/IMG_20240012.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Energie & Versorgung",
+   "absender": "Stadtwerke Beispielstadt GmbH",
+   "betrifft": "Familie Beispiel",
+   "frist": "2024-12-30"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Dokument_13.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Versicherungen",
+   "absender": "Beispiel-Versicherung AG",
+   "betrifft": "Frau Beispiel",
+   "frist": "2024-01-31"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Mobilfunk_2024_14.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Verträge & Abonnements",
+   "absender": "Mobilfunk Beispiel GmbH",
+   "betrifft": "Frau Beispiel",
+   "frist": "2024-03-03"
+  },
+  {
+   "pfad": "Eingang/alt/2024/scan 15.pdf",
+   "schriftstueck": "Kontoauszug",
+   "kategorie": "Finanzen & Konten",
+   "absender": "Beispielbank eG",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/IMG_20240016.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Rente, Arbeit & Sozialversicherung",
+   "absender": "Beispiel Technik GmbH",
+   "betrifft": "Herr Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Dokument_17.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Zahnarztpraxis Dr. Beispiel",
+   "betrifft": "Frau Beispiel",
+   "frist": "2024-06-04"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Praxis_2024_18.pdf",
+   "schriftstueck": "Termin",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "Praxis Dr. med. Anna Muster",
+   "betrifft": "Herr Beispiel",
+   "frist": "2024-07-02"
+  },
+  {
+   "pfad": "Eingang/alt/2024/scan 19.pdf",
+   "schriftstueck": "Abrechnung",
+   "kategorie": "Haus & Wohnung",
+   "absender": "Hausverwaltung Beispiel GmbH",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/IMG_20240020.pdf",
+   "schriftstueck": "Bescheid",
+   "kategorie": "Steuern & Behörden",
+   "absender": "Finanzamt Beispielstadt",
+   "betrifft": "Familie Beispiel"
+  },
+  {
+   "pfad": "Eingang/alt/2024/Dokument_21.pdf",
+   "schriftstueck": "Rechnung",
+   "kategorie": "Auto & Mobilität",
+   "absender": "Autohaus Brummwerk GmbH",
+   "betrifft": "Herr Beispiel",
+   "frist": "2024-09-19"
+  },
+  {
+   "pfad": "Eingang/alt/2024/BKK_2024_22.pdf",
+   "schriftstueck": "Brief",
+   "kategorie": "Gesundheit & Pflege",
+   "absender": "BKK Beispiel Krankenkasse",
+   "betrifft": "Frau Beispiel"
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{"bausteine":[
+{"katalog":"scan","name":"Papier per Handyfoto aufnehmen und als Dokument ablegen (Android)","groesse":"mittel","deckt":["B-24"],"faktoren":["offline"]},
+{"katalog":"suche","name":"Abgelegte Dokumente offline durchsuchen, mit Spracheingabe im Suchfeld","groesse":"mittel","deckt":["B-17","B-25"],"faktoren":["offline"]},
+{"katalog":"liste","name":"Fristen und Aufgaben mit Erinnerung über Android-Benachrichtigung, auch bei geschlossener App","groesse":"mittel","deckt":["B-18","B-26"],"faktoren":["offline"]},
+{"katalog":"liste","name":"Rechnungen und Garantien mit Kaufdatum und Garantieende erfassen","groesse":"klein","deckt":["B-20","B-27"],"faktoren":["offline"]}
+]}

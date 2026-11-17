@@ -1,0 +1,705 @@
+{
+ "ereignisse": [
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-kieselmayr",
+   "person": "",
+   "was": "Jahresabrechnung Strom und Wasser 2025 mit neuen Abschlägen",
+   "stellen": [
+    "Beispiel-Stadtwerke Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Sturz zu Hause, Krankenhausaufenthalt",
+   "stellen": [
+    "Kreisklinik Beispielkreis",
+    "Hausarztpraxis Dr. med. Beispiel-Lenz"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Antrag Unterhaltsvorschuss und Kinderzuschlag",
+   "stellen": [
+    "Landratsamt Beispielkreis – Sozialamt",
+    "Familienkasse Beispielregion"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "",
+   "was": "Beitragsbescheid Rundfunkbeitrag für die WG-Wohnung",
+   "stellen": [
+    "Beispiel-Beitragsservice Rundfunk"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-tannreiter",
+   "person": "Petra Tannreiter",
+   "was": "Umsatzsteuer-Voranmeldung Dezember und Jahresmeldung Minijob",
+   "stellen": [
+    "Finanzamt Beispielkreis",
+    "Beispiel-Lohnbüro Kieferle"
+   ]
+  },
+  {
+   "monat": "2026-01",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Grundsteuerbescheid für das Baugrundstück",
+   "stellen": [
+    "Gemeindeverwaltung Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Antrag auf Pflegegrad, Begutachtungstermin",
+   "stellen": [
+    "Beispiel-Pflegekasse bei der Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Kostenvoranschlag ambulante Pflege und Pflegevertrag",
+   "stellen": [
+    "Ambulanter Pflegedienst Beispiel-Fürsorge"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-kieselmayr",
+   "person": "Mia Kieselmayr",
+   "was": "Elternbrief Skilager der 7. Klasse mit Kostenbeitrag",
+   "stellen": [
+    "Beispiel-Gymnasium Beispielkreisstadt"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Jonas Lindenbrecht",
+   "was": "Baugenehmigung erteilt, Gebührenbescheid",
+   "stellen": [
+    "Landratsamt Beispielkreis – Bauamt"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Baufinanzierung: Darlehensvertrag und Bausparvertrag zugeteilt",
+   "stellen": [
+    "Beispiel-Raiffbank Musterbach eG",
+    "Beispiel-Bausparkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Felix Hagedorner",
+   "was": "Lohnabrechnung Minijob Werkstatt und Stundenzettel",
+   "stellen": [
+    "Kfz-Werkstatt Beispiel-Schraubhof"
+   ]
+  },
+  {
+   "monat": "2026-02",
+   "haushalt": "hh-hollerbusch",
+   "person": "Emil Hollerbusch",
+   "was": "Zahnarzttermin und Heil- und Kostenplan Zahnspange",
+   "stellen": [
+    "Zahnarztpraxis Beispiel-Weißgerber",
+    "Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Bescheid Pflegegrad 3, Pflegegeld und Sachleistung",
+   "stellen": [
+    "Beispiel-Pflegekasse bei der Beispiel-Krankenkasse Süd",
+    "Ambulanter Pflegedienst Beispiel-Fürsorge"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-kieselmayr",
+   "person": "Thomas Kieselmayr",
+   "was": "Einkommensteuererklärung 2025 eingereicht, Belege gesammelt",
+   "stellen": [
+    "Finanzamt Beispielkreis",
+    "Beispiel-Maschinenbau Musterbach GmbH"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Handyrechnung vergessen, Zahlungserinnerung",
+   "stellen": [
+    "Beispiel-Mobilfunk Funkwelle"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-tannreiter",
+   "person": "Klaus-Dieter Tannreiter",
+   "was": "Hauptuntersuchung Lieferwagen, Reparaturrechnung",
+   "stellen": [
+    "Kfz-Werkstatt Beispiel-Schraubhof",
+    "Musterbacher Beispiel-Kfz-Versicherung"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Jana Möllbach",
+   "was": "Mieterhöhung nach Modernisierung angekündigt",
+   "stellen": [
+    "Vermieter Alois Beispielhuber (privat)"
+   ]
+  },
+  {
+   "monat": "2026-03",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Abschlagsrechnung Rohbau, erste Rate",
+   "stellen": [
+    "Beispiel-Bau Hinterbühl GmbH",
+    "Beispiel-Raiffbank Musterbach eG"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Mahnung Mobilfunk, Sperrandrohung",
+   "stellen": [
+    "Beispiel-Mobilfunk Funkwelle"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Umbau Badezimmer: Antrag Zuschuss wohnumfeldverbessernde Maßnahme",
+   "stellen": [
+    "Beispiel-Pflegekasse bei der Beispiel-Krankenkasse Süd",
+    "Beispiel-Bau Hinterbühl GmbH"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-kieselmayr",
+   "person": "Ben Kieselmayr",
+   "was": "Kindergartenbeitrag neu berechnet, Bescheid",
+   "stellen": [
+    "Gemeindeverwaltung Musterbach",
+    "Kindergarten Beispiel-Regenbogen"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-tannreiter",
+   "person": "Petra Tannreiter",
+   "was": "Prüfung Lebensmittelhygiene im Hofladen, Gebührenbescheid",
+   "stellen": [
+    "Landratsamt Beispielkreis – Bauamt"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Can Kranewitt",
+   "was": "BAföG-ähnlicher Studienkredit: Kontoauszug und Zinsmitteilung",
+   "stellen": [
+    "Beispielkasse Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-04",
+   "haushalt": "hh-kieselmayr",
+   "person": "Sabine Kieselmayr",
+   "was": "Hausratversicherung: Wasserschaden in der Küche gemeldet",
+   "stellen": [
+    "Beispiel-Versicherung Allgemeine AG"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Forderung an Inkasso abgegeben, Ratenzahlung vereinbart",
+   "stellen": [
+    "Beispiel-Inkasso GmbH",
+    "Beispiel-Mobilfunk Funkwelle"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Rentenanpassung zum Juli, Mitteilung",
+   "stellen": [
+    "Deutsche Beispiel-Rentenversicherung Süd"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-kieselmayr",
+   "person": "",
+   "was": "Steuerbescheid 2025 mit Erstattung",
+   "stellen": [
+    "Finanzamt Beispielkreis",
+    "Beispiel-Raiffbank Musterbach eG"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Lea Fohlmann",
+   "was": "Elektroinstallation Neubau, Angebot und Auftragsbestätigung",
+   "stellen": [
+    "Elektro Beispiel-Funkenstein"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-tannreiter",
+   "person": "Sophie Tannreiter",
+   "was": "Abiturprüfung, Zeugnis und Bewerbung Ausbildungsplatz",
+   "stellen": [
+    "Beispiel-Gymnasium Beispielkreisstadt"
+   ]
+  },
+  {
+   "monat": "2026-05",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Felix Hagedorner",
+   "was": "Unfall mit dem Fahrrad, Arztbericht und Haftpflicht der Gegenseite",
+   "stellen": [
+    "Hausarztpraxis Dr. med. Beispiel-Lenz",
+    "Beispiel-Versicherung Allgemeine AG"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Umzug in den Neubau, Ummeldung beim Einwohnermeldeamt",
+   "stellen": [
+    "Gemeindeverwaltung Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Jonas Lindenbrecht",
+   "was": "Kfz-Ummeldung auf neue Anschrift",
+   "stellen": [
+    "Landratsamt Beispielkreis – Kfz-Zulassung",
+    "Musterbacher Beispiel-Kfz-Versicherung"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Stromvertrag Neubau und Glasfaseranschluss bestellt",
+   "stellen": [
+    "Beispiel-Energie Südland AG",
+    "Beispiel-Glasfaser Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Kündigung alte Mietwohnung, Kautionsabrechnung",
+   "stellen": [
+    "Beispiel-Hausverwaltung Talblick"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Verordnung Rollator und Pflegebett, Kostenübernahme",
+   "stellen": [
+    "Hausarztpraxis Dr. med. Beispiel-Lenz",
+    "Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-kieselmayr",
+   "person": "Lukas Kieselmayr",
+   "was": "Übertrittszeugnis und Schulanmeldung weiterführende Schule",
+   "stellen": [
+    "Grundschule Musterbach",
+    "Beispiel-Gymnasium Beispielkreisstadt"
+   ]
+  },
+  {
+   "monat": "2026-06",
+   "haushalt": "hh-hollerbusch",
+   "person": "Lina Hollerbusch",
+   "was": "Eingewöhnung Krippe, Betreuungsvertrag",
+   "stellen": [
+    "Kindergarten Beispiel-Regenbogen",
+    "Gemeindeverwaltung Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-wiesnegger",
+   "person": "Herbert Wiesnegger",
+   "was": "Tod von Herbert Wiesnegger, Sterbeurkunde",
+   "stellen": [
+    "Standesamt Musterbach",
+    "Hausarztpraxis Dr. med. Beispiel-Lenz"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Witwenrente beantragt, Rentenservice informiert",
+   "stellen": [
+    "Deutsche Beispiel-Rentenversicherung Süd"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-wiesnegger",
+   "person": "Monika Brandlechner-Beispiel",
+   "was": "Pflegevertrag beendet, Schlussrechnung Pflegedienst",
+   "stellen": [
+    "Ambulanter Pflegedienst Beispiel-Fürsorge",
+    "Beispiel-Pflegekasse bei der Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-kieselmayr",
+   "person": "",
+   "was": "Sommerferien: Rechnung Ferienbetreuung und Musikfreizeit",
+   "stellen": [
+    "Musikschule Beispiel-Klangwerk"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-tannreiter",
+   "person": "Petra Tannreiter",
+   "was": "Kassenbons und Lieferantenrechnungen zweites Quartal",
+   "stellen": [
+    "Beispiel-Markt Musterbach",
+    "Beispiel-Baumarkt Hammerfix"
+   ]
+  },
+  {
+   "monat": "2026-07",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Jana Möllbach",
+   "was": "Ausbildungsvergütung, Lohnsteuerbescheinigung angefordert",
+   "stellen": [
+    "Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Erbschein beantragt, Eröffnung Testament",
+   "stellen": [
+    "Amtsgericht Beispielkreisstadt – Nachlassgericht",
+    "Notariat Beispiel-Siegelmann"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Konten umschreiben und Lebensversicherung auszahlen",
+   "stellen": [
+    "Beispiel-Raiffbank Musterbach eG",
+    "Beispiel-Lebensversicherung aG"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Fahrzeug abmelden und Versicherung kündigen",
+   "stellen": [
+    "Landratsamt Beispielkreis – Kfz-Zulassung",
+    "Musterbacher Beispiel-Kfz-Versicherung"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Felix Hagedorner",
+   "was": "Jobwechsel: neuer Nebenjob im Versandlager, Kündigung Werkstatt",
+   "stellen": [
+    "Kfz-Werkstatt Beispiel-Schraubhof",
+    "Beispiel-Versandhaus Paketfix"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-hollerbusch",
+   "person": "Emil Hollerbusch",
+   "was": "Einschulung Klasse 2, Materialliste und Busfahrkarte",
+   "stellen": [
+    "Grundschule Musterbach",
+    "Gemeindeverwaltung Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-08",
+   "haushalt": "hh-lindenbrecht",
+   "person": "",
+   "was": "Schlussrechnung Bau mit Mängelliste",
+   "stellen": [
+    "Beispiel-Bau Hinterbühl GmbH"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-tannreiter",
+   "person": "Sophie Tannreiter",
+   "was": "Ausbildungsbeginn, Kindergeld weiter beantragt",
+   "stellen": [
+    "Familienkasse Beispielregion"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-kieselmayr",
+   "person": "Thomas Kieselmayr",
+   "was": "Arbeitgeberwechsel, Aufhebungsvertrag und Arbeitslosmeldung vorsorglich",
+   "stellen": [
+    "Beispiel-Maschinenbau Musterbach GmbH",
+    "Agentur für Arbeit Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Bürgergeld-Aufstockung, Weiterbewilligungsantrag",
+   "stellen": [
+    "Jobcenter Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Can Kranewitt",
+   "was": "Kreditkartenabrechnung mit unbekannter Abbuchung, Reklamation",
+   "stellen": [
+    "Beispiel-Kreditkarten-Service"
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Nachbarin bringt Kondolenzkarte und Einladung zum Seniorenkaffee",
+   "stellen": [
+    "Nachbarin Erna Beispielwirth (privat)",
+    "Freiwillige Feuerwehr Musterbach – Förderverein e. V."
+   ]
+  },
+  {
+   "monat": "2026-09",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Lea Fohlmann",
+   "was": "Geburtsvorsorge, Mutterpass-Termine und Laborbefund",
+   "stellen": [
+    "Hausarztpraxis Dr. med. Beispiel-Lenz",
+    "Beispiel-Labor Südkreis"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "hh-kieselmayr",
+   "person": "Thomas Kieselmayr",
+   "was": "Neuer Arbeitsvertrag, Abmeldung bei der Agentur",
+   "stellen": [
+    "Agentur für Arbeit Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "",
+   "was": "Nebenkostenabrechnung 2025 mit Nachzahlung",
+   "stellen": [
+    "Vermieter Alois Beispielhuber (privat)",
+    "Beispiel-Stadtwerke Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "hh-tannreiter",
+   "person": "Klaus-Dieter Tannreiter",
+   "was": "Mitgliedsbeitrag Sportverein und Feuerwehr-Förderverein",
+   "stellen": [
+    "Sportverein Beispiel-Musterbach 1920 e. V.",
+    "Freiwillige Feuerwehr Musterbach – Förderverein e. V."
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "hh-hollerbusch",
+   "person": "Nadine Hollerbusch",
+   "was": "Mobilfunkvertrag gewechselt, Rufnummernmitnahme",
+   "stellen": [
+    "Beispiel-Mobilfunk Funkwelle",
+    "Beispiel-Glasfaser Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-10",
+   "haushalt": "hh-kieselmayr",
+   "person": "Mia Kieselmayr",
+   "was": "Zahnspange, Rechnung Kieferorthopädie Anteil",
+   "stellen": [
+    "Zahnarztpraxis Beispiel-Weißgerber",
+    "Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Lea Fohlmann",
+   "was": "Geburt eines Kindes, Geburtsurkunde und Kindergeldantrag",
+   "stellen": [
+    "Standesamt Musterbach",
+    "Familienkasse Beispielregion"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Lea Fohlmann",
+   "was": "Elterngeld und Familienversicherung des Kindes",
+   "stellen": [
+    "Landratsamt Beispielkreis – Sozialamt",
+    "Beispiel-Krankenkasse Süd"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-tannreiter",
+   "person": "Petra Tannreiter",
+   "was": "Steuerberater-Unterlagen und Vorauszahlungsbescheid Einkommensteuer",
+   "stellen": [
+    "Finanzamt Beispielkreis",
+    "Beispiel-Lohnbüro Kieferle"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Felix Hagedorner",
+   "was": "Bestellung zurückgeschickt, Gutschrift bleibt aus, Mahnung",
+   "stellen": [
+    "Beispiel-Versandhaus Paketfix",
+    "Beispiel-Inkasso GmbH"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Erbschaftsteuererklärung angefordert",
+   "stellen": [
+    "Finanzamt Beispielkreis",
+    "Notariat Beispiel-Siegelmann"
+   ]
+  },
+  {
+   "monat": "2026-11",
+   "haushalt": "hh-kieselmayr",
+   "person": "",
+   "was": "Werbeprospekt Möbelhaus mit Gutschein, Kinderzimmerplanung",
+   "stellen": [
+    "Beispiel-Möbelhaus Wohnreich (Werbung)"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-kieselmayr",
+   "person": "",
+   "was": "Kfz-Versicherung Beitragsanpassung und Wechsel",
+   "stellen": [
+    "Musterbacher Beispiel-Kfz-Versicherung",
+    "Beispiel-Versicherung Allgemeine AG"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-hollerbusch",
+   "person": "",
+   "was": "Weihnachtsfeier Kita mit Einladung, Spendenquittung Feuerwehr",
+   "stellen": [
+    "Kindergarten Beispiel-Regenbogen",
+    "Freiwillige Feuerwehr Musterbach – Förderverein e. V."
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-wiesnegger",
+   "person": "Gertrud Wiesnegger",
+   "was": "Jahresmitteilung Rentenversicherung und Steuerbescheinigung Bank",
+   "stellen": [
+    "Deutsche Beispiel-Rentenversicherung Süd",
+    "Beispielkasse Beispielkreis"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-wg-hagedorner",
+   "person": "Jana Möllbach",
+   "was": "Auszug aus der WG, Kündigung und Übergabeprotokoll",
+   "stellen": [
+    "Vermieter Alois Beispielhuber (privat)",
+    "Gemeindeverwaltung Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-lindenbrecht",
+   "person": "Jonas Lindenbrecht",
+   "was": "Grundsteuer neu nach Bezug, Müllgebühren und Wasserzähler",
+   "stellen": [
+    "Gemeindeverwaltung Musterbach",
+    "Beispiel-Stadtwerke Musterbach"
+   ]
+  },
+  {
+   "monat": "2026-12",
+   "haushalt": "hh-tannreiter",
+   "person": "Sophie Tannreiter",
+   "was": "Musikschul-Abschlusskonzert, Abmeldung und letzte Rechnung",
+   "stellen": [
+    "Musikschule Beispiel-Klangwerk"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+Von: Support Nova Beispiel Neobank <service@nova-neobank.example>
+An: amara.okonkwo@mail.example
+Datum: Mi, 25 Feb 2026 10:14:08 +0100
+Betreff: Ihre Reklamation zur Kartenzahlung vom 14.02. [Ticket NB-00000000]
+Anhänge: Formular_Reklamation.pdf (112 KB)
+
+Hallo Amara Okonkwo,
+
+danke für Ihre Nachricht. Wir haben die Abbuchung über 89,00 EUR
+(GLOBALPAY*7731) vorläufig für Sie gesperrt und prüfen den Fall.
+
+Damit wir die Rückbuchung anstoßen können, senden Sie uns bitte das
+ausgefüllte Formular im Anhang (Ich habe diese Zahlung nicht autorisiert)
+bis zum 13.03.2026 zurück. Sonst müssen wir den Fall schließen.
+
+Viele Grüße
+Ihr Nova-Team
+Kunden-ID NB-00000000

@@ -1,0 +1,58 @@
+Beispiel-Markt App – Dein digitaler Kassenbon
+
+Beispiel-Markt Filiale 0412, Ringstraße 40, 34567 Beispielstadt
+Einkauf vom 18.10.2025 um 11:04 Uhr
+Kundenkarte **** 6376
+
+Artikel   Menge   Preis
+Tee Pfefferminz   1   1,19 € B
+Quark Mager   1   0,79 € B
+Shampoo   1   1,65 € A
+Zitronen Netz   2   2,98 € B
+Nuss-Nougat-Creme   1   2,99 € B
+Gurke   1   0,79 € B
+Zahnpasta   1   0,99 € A
+Zwiebeln 2Kg   1   1,79 € B
+Frischkäse   2   2,58 € B
+Mehl Type 405   1   0,79 € B
+Mineralwasser 6X1,5L   1   1,74 € A
+Pfand   1   1,50 € A
+Blumen Strauss   2   9,98 € B
+Kekse Butter   1   1,39 € B
+Spinat Tk 750G   1   1,49 € B
+Frischmilch 3,8%   1   1,19 € B
+Ingwer   1   0,89 € B
+Aufbackbrötchen 10Er   2   3,38 € B
+Cornflakes   1   1,99 € B
+Kerzen   1   2,49 € A
+Ketchup   1   1,89 € B
+Duschgel   1   1,25 € A
+Knoblauch   1   0,69 € B
+Hackfleisch Gem 500G   2   9,98 € B
+Katzenfutter 12X   2   10,98 € A
+Penne 500G   1   0,99 € B
+Duschgel   1   1,25 € A
+Kochschinken   1   2,29 € B
+Ingwer   2   1,78 € B
+Shampoo   2   3,30 € A
+Tierfutter Hund   1   3,99 € A
+Olivenöl   2   13,98 € B
+Mozzarella   1   0,89 € B
+Mehl Type 405   1   0,79 € B
+Haferflocken   1   0,89 € B
+
+App-Coupon Zitronen Netz: -1,00 €
+
+Zwischensumme: 97,52 €
+Du hast gespart: 1,00 €
+Gesamtsumme: 96,52 €
+Bezahlt mit: Girocard (kontaktlos)
+
+MwSt   Netto   Steuer   Brutto
+A 19 %   24,49   4,65   29,14
+B 7 %   62,97   4,41   67,38
+
+Gesammelte Punkte: 96  ·  Punktestand: 1141
+Bon-ID: 307097695463  ·  Kasse 8  ·  TSE-Signatur gekürzt 98330330
+Diesen Bon findest du jederzeit in der App unter Konto > Meine Einkäufe.
+Für Umtausch und Garantie gilt der digitale Bon wie ein Papierbon.

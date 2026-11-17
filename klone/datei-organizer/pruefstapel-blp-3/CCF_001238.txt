@@ -1,0 +1,28 @@
+Clickmeadow Ads Ireland Ltd.
+1 Harbour Quay, Dublin 2, Ireland
+VAT IE0000000AA
+
+Bill to:
+Blumenwerkstatt Harkort
+Inh. Mareike Harkort
+Kirchgasse 7
+37299 Weidenrode
+Germany
+
+INVOICE IE-ADS-004412077
+Invoice date: 31. Mai 2026
+Billing period: 1 May 2026 – 31 May 2026
+Customer VAT ID: DE000000000
+
+Description                               Qty      Amount
+Online advertising, campaign 'Muttertag     1       84,20
+Online advertising, campaign 'Hochzeit 2    1       51,75
+
+Subtotal EUR 135,95
+VAT 0 % (reverse charge) EUR 0,00
+Total due EUR 135,95
+
+Services subject to the reverse charge – VAT to be accounted for by the recipient
+(Steuerschuldnerschaft des Leistungsempfängers, § 13b UStG).
+
+Paid by card ending 0000.

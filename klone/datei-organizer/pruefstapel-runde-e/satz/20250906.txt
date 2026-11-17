@@ -1,0 +1,34 @@
+# Elektro Großmarkt Beispiel
+Elektro Großmarkt Beispiel · Gewerbepark 4 · 34560 Beispielstadt
+
+Frau Sabine Brandtner
+Lindenweg 14
+34567 Beispielstadt
+
+Kundennummer: EG-990122
+Zahlungsart: EC-Karte
+Datum: 06.09.2025
+
+# Rechnung 40-118277 – Waschmaschine
+
+Sehr geehrte Frau Brandtner,
+
+für die erbrachten Leistungen berechnen wir Ihnen:
+
+|Pos.|Bezeichnung|Menge|Einzelpreis|Gesamt|
+|1|Waschmaschine Beispiel WM 9 kg, Seriennr. X00000|1|549,00 €|549,00 €|
+|2|Lieferung und Anschluss|1|49,00 €|49,00 €|
+|3|Altgeräte-Mitnahme|1|0,00 €|0,00 €|
+|4|Garantieverlängerung auf 5 Jahre|1|79,00 €|79,00 €|
+
+Nettobetrag: 677,00 €
+zzgl. 19 % MwSt.: 128,63 €
+Rechnungsbetrag: 805,63 €
+
+Der Betrag wurde bereits bezahlt. Vielen Dank für Ihren Einkauf.
+
+Garantie: 2 Jahre Herstellergarantie ab Kaufdatum, verlängert auf 5 Jahre. Bitte bewahren Sie diese Rechnung als Garantienachweis auf.
+
+Mit freundlichen Grüßen
+Elektro Großmarkt Beispiel
+@fuss Elektro Großmarkt Beispiel · IBAN DE00 0000 0000 0000 0000 00 · USt-IdNr. DE000000000
