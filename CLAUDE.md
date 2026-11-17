@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.7)
+## Stand (17.11.2026, Vorschau 0.4.8)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,19 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.8 Ordner aus dem Datei-Organizer übernehmen (Klaus 17.11.: große Mengen werden im Datei-Organizer gelesen, sortiert und
+  angelernt – dort bleibt das Nacharbeiten; einzelne Stücke direkt in der Akte; ein Sortier-Kern):** „Importieren“ › „Ordner in
+  die Akte legen“. `organizer` in `src/tresor.ts`: Ordner wählen, `organizer-index.json` lesen – Einordnung über die unveränderte
+  `lib/organizer-uebernahme.ts` des Klons (Bereich, Art, Hinweis, Doppelte, Gesperrtes; eigene Bereiche nur „von dir“/„gelernt“),
+  dazu hier aus demselben Index **Datum** und der dort **gelesene Text** (wird `textAuszug`, die Akte liest dann nicht noch einmal;
+  fehlt er, liest sie selbst). Fenster mit Haken und Bereich je Datei, Doppeltes bleibt im Ordner, Gesperrtes mit Warnung; ohne Index
+  ein einfacher Stapel nach „Sonstiges“. Nur Dateien direkt im Ordner; schon Vorhandenes zählt als „waren schon da“.
+  **Befund im Klon @ `bcd48a4`:** der Index trägt je Datei Steckbrief, `text` (bis 20.000 Zeichen, Haken „Erkannten Text mitgeben“)
+  und `abschnitte`; Scan-PDFs liest der Organizer nur auf den ersten **2 Seiten** (`SCAN_SEITEN`, reicht zum Sortieren, nicht für die
+  Suche im ganzen Scan); die Lage der Zeilen steht nicht im Index. **Nicht gebaut:** die Oberfläche des Datei-Organizers ist nicht
+  in der Privaten Akte – der grüne Knopf „Dateien hineingeben“ zeigt weiter das Beispiel; Absender/Frist/Betrag stehen nur in der
+  Notiz; Bereich-Vorschlag aus dem Sortier-Kern beim einzelnen Ablegen. Probe mit gestelltem Ordner grün (216); mit einem echten
+  Ordner aus dem Organizer und am Tablet ungeprüft.
 - **0.4.7 Leser in der Akte (Schritt 2; Klaus 17.11.):** Tipp auf einen Treffer mit Seitenzahl öffnet das PDF im Fenster auf
   dieser Seite (`fLeser` in `app.js`, pdf.js des Klons über `T().pdf`), die Inhaltswörter der Frage gelb markiert (Lage aus der
   Textebene, Breite nach Zeichenzahl geschätzt). Suchfeld für Wörter in dieser Unterlage, „‹ Fund“/„Fund ›“ springt zwischen den

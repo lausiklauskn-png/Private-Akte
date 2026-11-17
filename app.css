@@ -254,3 +254,11 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .leserblatt canvas{display:block}
 .lesermarken{position:absolute;inset:0;pointer-events:none}
 .lesermarken i{position:absolute;background:#ffe45c;opacity:.5;border-radius:2px;mix-blend-mode:multiply}
+
+.ordliste{max-height:52svh;overflow:auto}
+.ordzeile{display:flex;gap:10px;align-items:center;padding:8px 10px;border-bottom:1px solid var(--line)}
+.ordzeile .mitte{flex:1;min-width:0}
+.ordzeile strong{display:block;font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ordzeile small{color:var(--muted);font-size:12px}
+.ordzeile .warn{color:var(--red);font-weight:600}
+.feld.schmal{width:auto;max-width:42%;flex:none;padding:6px 8px;font-size:13px}

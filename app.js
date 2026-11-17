@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.8', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -584,6 +584,35 @@ function fEcht(id){
    ${/\.pdf$/i.test(d.originalName) ? `<button class="knopf voll" data-a="leser" data-id="${esc(d.id)}">Lesen und darin suchen</button><div class="reihe"><button class="knopf hell" data-a="echt-oeffnen" data-id="${esc(d.id)}">Im Browser öffnen</button></div>` : `<button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>`}
    <div class="reihe"><button class="knopf hell" data-a="echt-raus" data-id="${esc(d.id)}">Aus der Akte nehmen</button></div>`);
 }
+/* ---------- Ordner in die Akte legen (Klaus 17.11.): ein im Datei-Organizer sortierter Ordner kommt mit seiner Einordnung herein ---------- */
+const ord = { ordner:'', index:false, grund:'', stuecke:[], laeuft:false };
+function fOrdner(){
+  const holen = ord.stuecke.filter(x => !x.doppelt), doppelt = ord.stuecke.length - holen.length, wahl = echtBereiche();
+  const zeile = x => `<label class="ordzeile"><input type="checkbox" class="haken" name="d" value="${esc(x.name)}" checked aria-label="${esc(x.name)} übernehmen">
+    <span class="mitte"><strong>${esc(x.name)}</strong><small style="white-space:normal">${[x.art, x.datum ? echtDatum(x.datum) : '', echtGroesse(x.groesse), x.text ? 'Text gelesen' : ''].filter(Boolean).map(esc).join(' · ')}${x.warnung ? `<br><b class="warn">${esc(x.warnung)}</b>` : ''}</small></span>
+    <select class="feld schmal" name="b" data-name="${esc(x.name)}" aria-label="Bereich für ${esc(x.name)}">${[...new Set([x.bereich, ...wahl].filter(Boolean))].map(b => `<option ${b === (x.bereich || 'Sonstiges') ? 'selected' : ''}>${esc(b)}</option>`).join('')}</select></label>`;
+  fenster(`${fk('Ordner in die Akte legen', esc(ord.ordner))}
+   <p class="hinweis">${ord.index ? 'Die Einordnung kommt aus dem Datei-Organizer. Du kannst den Bereich je Datei ändern oder Dateien abwählen.' : `In diesem Ordner liegt keine Einordnung aus dem Datei-Organizer${ord.grund ? ' (' + esc(ord.grund) + ')' : ''}. Die Dateien kommen nach „Sonstiges“, wenn du nichts anderes wählst.`}${doppelt ? ` ${doppelt} doppelte ${doppelt === 1 ? 'Datei bleibt' : 'Dateien bleiben'} im Ordner.` : ''}</p>
+   ${holen.length ? `<form data-form="ordner"><div class="liste ordliste">${holen.map(zeile).join('')}</div>
+    <p class="lesestand" id="ord-stand"></p>
+    <div class="reihe"><button class="knopf gruen" type="submit">${holen.length} ${holen.length === 1 ? 'Datei' : 'Dateien'} in die Akte legen</button><button class="knopf hell" type="button" data-a="zu">Abbrechen</button></div></form>`
+   : '<p class="leer">In diesem Ordner liegt nichts zum Übernehmen.</p>'}`, 'leser');
+}
+A['ordner-import'] = async () => {
+  try { const r = await T().organizer.waehlen(); Object.assign(ord, r); fOrdner(); }
+  catch (err) { if (!(err && err.name === 'AbortError')) toast(fehlerText(err)); }
+};
+document.addEventListener('submit', async ev => { const f = ev.target; if (f.dataset.form !== 'ordner') return; ev.preventDefault();
+  if (ord.laeuft) return; const an = new Set([...f.querySelectorAll('input[name=d]:checked')].map(i => i.value));
+  const auswahl = [...f.querySelectorAll('select[name=b]')].filter(sel => an.has(sel.dataset.name)).map(sel => ({name:sel.dataset.name, bereich:echtBereich(sel.value)}));
+  if (!auswahl.length) { toast('Keine Datei gewählt.'); return; }
+  ord.laeuft = true; const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true;
+  try {
+    const r = await T().organizer.uebernehmen(auswahl, (fertig, gesamt, name) => { const o = $('ord-stand'); if (o) o.textContent = name ? `Datei ${fertig + 1} von ${gesamt}: ${name}` : ''; });
+    zu(); await echtLaden();
+    toast(`${r.abgelegt} ${r.abgelegt === 1 ? 'Datei liegt' : 'Dateien liegen'} in der Akte.${r.schonDa ? ` ${r.schonDa} waren schon da.` : ''}${r.fehler.length ? ` Nicht geklappt: ${r.fehler[0]}${r.fehler.length > 1 ? ' und ' + (r.fehler.length - 1) + ' weitere' : ''}.` : ''}`);
+  } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { ord.laeuft = false; }
+});
 /* ---------- Leser (Klaus 17.11.): das PDF in der Akte lesen, auf der Seite der Fundstelle, Wörter markiert, darin suchen ---------- */
 const les = { id:null, pdf:null, seite:1, seiten:0, woerter:[], text:null, fund:[], lauf:0, auftrag:null };
 const lesWoerter = q => (T().inhaltsWoerter(q).length ? T().inhaltsWoerter(q) : q.split(/\s+/).filter(Boolean)).map(w => w.toLowerCase());
@@ -690,6 +719,7 @@ function fImportWahl(){
   const z = (a, i, t, u, aus) => `<button class="zeile" data-a="${a}" ${aus ? 'disabled' : ''}><span class="art">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small style="white-space:normal">${u}</small></span>${ic('weiter')}</button>`;
   fenster(`${fk('Importieren','Etwas in die Akte holen.')}<div class="liste">
    ${z('echt-neu','datei','Datei in die Akte legen','eine Datei vom Gerät – sie liegt danach unter „Deine Unterlagen“', !bereit)}
+   ${z('ordner-import','ordner','Ordner in die Akte legen', kann ? 'viele Dateien auf einmal – mit der Einordnung aus dem Datei-Organizer, wenn sie im Ordner liegt' : 'geht in Chrome oder Edge', !kann || !bereit)}
    ${z('sich-import','schild','Backup einlesen', kann ? 'einen Backup-Ordner wählen – was schon da ist, wird nicht überschrieben' : 'geht in Chrome oder Edge', !kann)}
   </div>`);
 }
