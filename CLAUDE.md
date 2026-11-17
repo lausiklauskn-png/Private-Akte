@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.7)
+## Stand (17.11.2026, Vorschau 0.3.8)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -55,6 +55,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   geschätzt. PDFs werden noch nicht gelesen (`src/pdf-ersatz.ts` ersetzt beim Bau den React-Import des Klons), sie zählen mit Titel,
   Bereich, Notiz. Die Größe „rund 140 MB“ ist geschätzt (Pins nennen sie für die kleine Stufe nicht). Die Datenschutzerklärung nennt
   das Laden von fremden Servern noch nicht (Klaus: zum Schluss).
+  0.3.8: der Ladebalken nennt, von welchem Server gerade geladen wird (Klaus: erst der eigene Server, sonst Hugging Face – so steht
+  es in den Pins; die Bibliothek kommt von jsDelivr, nicht vom eigenen Server). Am Tablet bestätigt (0.3.7): das Laden läuft an.
   **Zurück:** Android-/Browser-/Maus-Zurück geht in der App einen Schritt zurück (Fenster, Menü, Suche, Bereich, Ansicht); am Anfang
   bleibt die App offen und sagt es, erst ein zweites Zurück binnen 2,5 s verlässt sie (`zur…` am Ende von `app.js`). Nicht am Gerät.
 - **0.3.6 Suche, erster Schritt (Klaus 17.11.: eine Suchleiste, Mikrofon, X, nichts Zusätzliches hinter „Finden“):** das Suchfeld hat

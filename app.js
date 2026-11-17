@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.8', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -720,7 +720,7 @@ const BED_FEHLER = { APP_OFFLINE:'Das Internet ist ausgeschaltet.', MODEL_CHECKS
 function bedZeile(){
   if (!T() || !T().bedeutung.moeglich() || bed.geladen === null) return '';
   if (bed.phase === 'laden') { const p = Math.min(100, Math.round(100 * bed.fertig / (bed.gesamt || 1)));
-    return `<div class="bedzeile" role="status"><span>Lädt das Sprachmodell … ${mb(bed.fertig)} von rund ${mb(bed.gesamt)}</span><progress max="100" value="${p}"></progress><button class="knopf hell klein" data-a="bed-stopp">Abbrechen</button></div>`; }
+    return `<div class="bedzeile" role="status"><span>Lädt das Sprachmodell … ${mb(bed.fertig)} von rund ${mb(bed.gesamt)}${bed.quelle ? ` · von ${esc(bed.quelle)}` : ''}</span><progress max="100" value="${p}"></progress><button class="knopf hell klein" data-a="bed-stopp">Abbrechen</button></div>`; }
   if (bed.phase === 'lesen') return `<div class="bedzeile" role="status"><span>Liest deine Unterlagen …${bed.gesamt ? ` ${bed.fertig} von ${bed.gesamt}` : ''}</span><progress ${bed.gesamt ? `max="${bed.gesamt}" value="${bed.fertig}"` : ''}></progress></div>`;
   if (bed.fehler) return `<div class="bedzeile fehler" role="status"><span>${esc(bed.fehler)}</span><button class="knopf hell klein" data-a="bed-ja">Noch einmal</button><button class="knopf hell klein" data-a="bed-nein">Schließen</button></div>`;
   if (bed.geladen) return bed.sucht ? `<div class="bedzeile still" role="status"><span>Sucht auch nach Bedeutung …</span></div>` : '';
@@ -742,7 +742,7 @@ A['bed-ja'] = async () => {
   if (bed.phase) return; bed.fehler = ''; bed.phase = 'laden'; bed.fertig = 0; bed.gesamt = 139e6; bedZeigen();
   try {
     await T().bedeutung.laden();
-    for (;;) { const z = await T().bedeutung.zustand(); bed.fertig = z.fertig; bed.gesamt = z.gesamt; bedZeigen();
+    for (;;) { const z = await T().bedeutung.zustand(); bed.fertig = z.fertig; bed.gesamt = z.gesamt; bed.quelle = z.quelle || ''; bedZeigen();
       if (z.geladen) break; if (z.fehler || !z.laeuft) throw new Error(z.fehler || 'MODEL_DOWNLOAD');
       await new Promise(r => setTimeout(r, 400)); }
     bed.geladen = true; bed.phase = 'lesen'; bed.fertig = 0; bed.gesamt = 0; bedZeigen();
