@@ -22,11 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-<<<<<<< HEAD
 ## Stand (17.11.2026, Vorschau 0.4.2)
-=======
-## Stand (17.11.2026, Vorschau 0.4.1)
->>>>>>> origin/main
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -46,7 +42,6 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
-<<<<<<< HEAD
 - **0.4.2 PDFs werden gelesen (Klaus 17.11. am Tablet: Wörter aus dem Inhalt der Bonushefte fanden nichts):** `src/pdf-ersatz.ts`
   lädt jetzt die PDF-Bibliothek des Klons (`klone/familienakte/public/vendor/pdfjs`, auch im Offline-Vorrat) statt abzubrechen; das
   Lesen selbst ist `readMeaningCorpus` des Klons (Textebene, höchstens 60 Seiten; Scans ohne Textebene liefern nichts, OCR nicht
@@ -62,8 +57,6 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Inhalts-Sampling**, die Karte ist öffentlich. Die Suche im Rezeptbuch ist `queryLocal` über die einzelnen Einträge – das hat die
   Private Akte seit 0.4.0. Klaus' Idee (pseudonymisieren, großes Sprachmodell, wieder einpflegen): ein Sprachmodell liefert keine
   passenden Vektoren, wohl aber Text (Stichwörter, Kurzfassung, Fragen), den das Gerät selbst einbettet – nicht gebaut, nicht entschieden.
-=======
->>>>>>> origin/main
 - **0.4.1 nach Klaus' Bildern vom Tablet (17.11., 0.4.0 mit echtem Modell, drei eigene Unterlagen):** (1) Fremdes kam „dem Sinn
   nach“ auf 0,11 und 0,16 (dieselbe Notiz bei „September Gehaltsabrechnung“ und „Zählerstand Nebenkostenabrechnung“) – untere
   Grenze jetzt **0,2** statt 0,1. Ein wirklich passender Sinn-Treffer war auf den Bildern nicht dabei; die Grenze „mindestens halb so

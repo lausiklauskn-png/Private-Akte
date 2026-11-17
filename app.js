@@ -1,11 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-<<<<<<< HEAD
 const FASSUNG = '0.4.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
-=======
-const FASSUNG = '0.4.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
->>>>>>> origin/main
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -206,13 +202,9 @@ function treffer(){
   // um 0, darum zählt erst, was klar darüber liegt und mindestens halb so nah ist wie das Beste. Untere Grenze 0,2: am Tablet
   // (0.4.0, drei Unterlagen) kam Fremdes auf 0,11 und 0,16. Die zweite Grenze ist weiter geschätzt, die Zahl steht an der Zeile. Ist der Bestand für einen Mittelwert zu
   // klein, gibt es keine Nähe; dann die ersten drei der Rangliste, ohne Zahl.
-<<<<<<< HEAD
   // Im Text gefunden: alle Inhaltswörter der Frage stehen im gelesenen Inhalt (auch im PDF) – das ist ein Wort-Treffer und steht oben.
   const imText = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => h.imText && !ids.includes(h.id)).map(h => echt.liste.find(d => d.id === h.id)).filter(Boolean) : [];
   const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id) && !h.imText) : [];
-=======
-  const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id)) : [];
->>>>>>> origin/main
   const roh = rang.some(h => h.naehe !== null) ? (n => n.filter(h => h.naehe >= 0.2 && h.naehe >= n[0].naehe / 2).slice(0, 5))(rang.filter(h => h.naehe !== null).sort((a, b) => b.naehe - a.naehe)) : rang.slice(0, 3);
   const sinn = roh.map(h => ({d:echt.liste.find(d => d.id === h.id), h})).filter(x => x.d);
   if (!t.length && !e.length && !imText.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
