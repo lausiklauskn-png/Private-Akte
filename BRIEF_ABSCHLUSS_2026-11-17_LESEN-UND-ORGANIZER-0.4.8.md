@@ -62,18 +62,41 @@ Kamera oben über Workflow PDF.
 **Familienbüro:** nicht auf diesem Weg. Entschieden (siehe `CLAUDE.md`): eigene App, AGPL-3.0 wegen ONLYOFFICE, kommt nicht in
 diese App; die Private Akte ruft es höchstens auf. Das Repo wurde in dieser Sitzung nicht angesehen.
 
+## Vollmacht und Arbeitsweise für die Nachfolgesitzung (Klaus 17.11.2026, abends, im Chat)
+
+- **Generalvollmacht für diesen Auftrag:** zusammenführen (PRs anlegen und gleich auf `main` bringen, in der Privaten Akte und im
+  Repo Datei-Organizer), Repos in die Sitzung holen (Datei-Organizer, Workflow-PDF, bei Bedarf weitere von Klaus), und offene
+  Fragen **selbst entscheiden** – nicht zurückfragen. Entschieden wird nach den Vorlagen in diesem Brief und in `CLAUDE.md`
+  (Vorbild Workflow PDF in der Familienakte: Klon unverändert, eine Brücke, eine Farbdatei, eine erlaubte Abweichung). Jede
+  eigene Entscheidung kurz in `CLAUDE.md` festhalten (was, warum), damit Klaus sie morgen nachlesen kann.
+- **Ziel bis morgen früh:** die beiden Punkte sind in der Privaten Akte eingebaut und laufen als Web-App (PWA): (1) der
+  Datei-Organizer als Klon im Rahmen hinter dem grünen Knopf, mit Übergabe an die Akte; (2) Workflow PDF als Klon im Rahmen.
+  Klaus sieht es sich morgen früh am Tablet an. Erst alles als PWA; eine APK kommt später, wenn der grobe Kern steht.
+- **Durcharbeiten, sparsam:** ohne Zwischenfragen und ohne Zwischenberichte bis zum Ende arbeiten. **Eine Ausgabe im Chat, am
+  Ende:** was eingebaut ist, was geprüft ist und wie, was nicht geklappt hat, was Klaus am Tablet tun soll. Wenig lesen: nur die im
+  Brief genannten Dateien und was der Bau wirklich braucht; große Ordner nicht durchsuchen, Ausgaben von Befehlen kurz halten.
+- **Fassung:** am Ende steht eine größere Fassung, **0.5.0**. Geprüfte Zwischenstände dürfen vorher als 0.4.9, 0.4.10 … auf
+  `main` (dann ist auch bei einem Abbruch nichts verloren); der Stand, den Klaus morgen ansieht, heißt 0.5.0.
+- **Reihenfolge bei knapper Zeit:** zuerst der Datei-Organizer im Rahmen mit Brücke, dann die Übergabe an die Akte, dann
+  Workflow PDF im Rahmen, dann die Farben, zuletzt die Verbesserungen im Repo Datei-Organizer (Scan-PDFs ganz lesen, Lage der
+  Zeilen, Übergabe-Stelle) mit Nachziehen des Klons. Was nicht fertig wird, steht ehrlich in der Ausgabe und in `CLAUDE.md`.
+- **Was die Vollmacht nicht aufhebt:** die festen Regeln aus `CLAUDE.md` – Klone nie von Hand ändern (nur über
+  `tools/klon-nachziehen.mjs`), keine Schlüssel, Passwörter oder echten Unterlagen im Repo oder Chat, Familienbüro bleibt eine
+  eigene App. Keine Ausgabe von APK oder Windows-Paketen, weder hier noch im Datei-Organizer oder in der Familienakte – dafür
+  gilt weiter Klaus' eigenes Wort. Nichts als geprüft melden, was nicht gelaufen ist.
+
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst CLAUDE.md, dann BRIEF_ABSCHLUSS_2026-11-17_LESEN-UND-ORGANIZER-0.4.8.md und
-docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md. Hole dazu das Repo Datei-Organizer (dort CLAUDE.md lesen), bei Bedarf Workflow-PDF.
-Frage mich zuerst nach meiner Rückmeldung vom Tablet zu 0.4.6–0.4.8 (Leser, Beleg-Foto, Ordner KFZ aus dem Datei-Organizer).
-Dann der Auftrag aus dem Brief: den Datei-Organizer als Klon im Rahmen in die Private Akte bringen, nach dem Vorbild von
-Workflow PDF in der Familienakte (Klon unverändert, eine Brücke, eine Farbdatei, eine erlaubte Abweichung in der Startseite).
-Reihenfolge: Klon auf 0.4.13 ziehen, Organizer im Rahmen hinter dem grünen Knopf, Farben, direkte Übergabe an die Akte.
-Die Verbesserungen am Datei-Organizer (Scan-PDFs ganz lesen, Lage der Zeilen im Index, Übergabe-Stelle) im Repo Datei-Organizer
-bauen und als Klon nachziehen. Für Workflow PDF erst einen Vorschlag machen. Familienbüro bleibt eine eigene App.
-Jeder Schritt: Fassung erhöhen (FASSUNG in app.js, VERSION in sw.js, ?v= dreimal in index.html), npm run bau falls src/ geändert
-ist, Probe mit python3 -m http.server 8765 und node tests/probe.cjs, dann PR und gleich zusammenführen.
-docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md still mitführen.
+Lies im Repo Private-Akte zuerst CLAUDE.md, dann BRIEF_ABSCHLUSS_2026-11-17_LESEN-UND-ORGANIZER-0.4.8.md (dort besonders
+„Auftrag der nächsten Sitzung“ und „Vollmacht und Arbeitsweise“). Hole dazu die Repos Datei-Organizer und Workflow-PDF.
+Du hast für diesen Auftrag meine Generalvollmacht: zusammenführen, Repos hereinholen, Fragen selbst entscheiden – immer nach
+den Vorlagen im Brief (Vorbild: Workflow PDF in der Familienakte). Frag mich nichts, arbeite bis zum Ende durch.
+Ziel bis morgen früh: der Datei-Organizer und Workflow PDF laufen als Klone im Rahmen in der Privaten Akte (PWA), der
+Organizer mit Übergabe an die Akte; Endstand Fassung 0.5.0 auf main. Reihenfolge und Grenzen stehen im Brief.
+Arbeite tokensparend: wenig lesen, kurze Befehlsausgaben, keine Zwischenberichte. Nur eine Ausgabe im Chat, am Ende:
+was eingebaut ist, was wie geprüft wurde, was nicht geklappt hat, was ich am Tablet tun soll.
+Je Schritt wie gewohnt: Fassung erhöhen (FASSUNG in app.js, VERSION in sw.js, ?v= dreimal in index.html), npm run bau falls
+src/ geändert ist, Probe mit python3 -m http.server 8765 und node tests/probe.cjs, PR und gleich zusammenführen.
+CLAUDE.md und docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md mitführen, am Ende ein neuer Abschlussbrief.
 ```
