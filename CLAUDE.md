@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.5)
+## Stand (17.11.2026, Vorschau 0.3.6)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,17 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.6 Suche, erster Schritt (Klaus 17.11.: eine Suchleiste, Mikrofon, X, nichts Zusätzliches hinter „Finden“):** das Suchfeld hat
+  ein **X** (löscht Eingabe und Treffer) und ein **Mikrofon** (Diktat des Klons, `lib/browser-dictation.ts`; noch einmal tippen
+  beendet und sucht; nur wo der Browser Spracherkennung hat). „Finden“ sucht jetzt in den echten Unterlagen mit der Wortsuche des
+  Klons (`lib/family-search.ts`, `family-search-text.ts`: Alltagswörter, Monate, Daten, UND) – Treffer „Deine Unterlagen“ oben,
+  Beispiele darunter. Gesucht wird in Titel, Dateiname, Bereich, Notiz; **nicht im Inhalt der Datei** (beim Ablegen wird hier noch
+  kein Text gelesen). Brücke: `suchen`, `diktat` in `src/tresor.ts`. Mikrofon nicht am Gerät geprüft (Probe hat kein Mikrofon).
+  **Zweiter Schritt, noch nicht gebaut: Bedeutungssuche** hinter demselben „Finden“, ohne eigenen Knopf (Klaus). Dafür aus dem
+  Klon: `app/browser-modelle.ts` (Laden mit Fortschritt in Bytes, Prüfsummen), `private-meaning-runtime.ts`, `-index.ts`,
+  `-corpus.ts`, Worker `public/native/familienakte-meaning-worker.js`, Pins `meaning-models.json`. Zu klären: das Modell muss
+  einmal geladen werden (kleinste Stufe multilingual-e5-small, dazu rund 20 MB Bibliothek; Größe der kleinen Stufe steht nicht in
+  den Pins) – das braucht einmal Klaus' Ja im Suchfeld samt Ladebalken; Quelle zuerst family-projekt.de, sonst Hugging Face.
 - **0.3.5 Backup-Ordner heißt „Privatakte_Backup_<Datum>_<Uhrzeit>“ (Klaus 17.11.: von der Familienakte unterscheidbar; Ortszeit):**
   `src/tresor.ts` legt diesen Ordner am gewählten Ort an und lässt den Klon hineinschreiben – darin liegt unverändert
   „Familienakte_Vollsicherung_…“, damit die Familienakte dasselbe Backup lesen kann (dort den Ordner „Privatakte_Backup_…“ wählen).

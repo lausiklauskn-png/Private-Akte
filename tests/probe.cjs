@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.3.5 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.3.6 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -35,6 +35,9 @@ const { chromium } = require('playwright');
     await p.waitForFunction(() => document.querySelectorAll('#echt [data-a=echt-auf]').length===2); soll((await p.locator('#echt').innerText()).includes('Motorboot'), 'eigener Bereich an der Unterlage');
     soll(await p.evaluate(() => echtBereiche().includes('Motorboot') && echtBereich(' motorBOOT ')==='Motorboot' && echtBereich('Segelboot')==='Segelboot' && echtBereich('Haus und Wohnung')==='Haus & Wohnung'), 'eigener Bereich steht zur Auswahl, andere Schreibweise ergibt denselben');
     await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.herausnehmen((await t.liste()).find(d => d.category==='Motorboot').id); }); await p.reload(); await p.waitForSelector('#echt [data-a=echt-auf]');
+    // Suche: Wortsuche der Familienakte über die echten Unterlagen, X löscht
+    await p.fill('.suche input','Probe'); soll(await p.locator('[data-a=suche-leer]').isVisible(), 'X erscheint beim Tippen'); await p.keyboard.press('Enter'); soll((await p.locator('#echt-treffer .zeile').count())>=1, 'Suche findet die echte Unterlage'); await klick('#echt-treffer .zeile'); soll((await text()).includes('in der Akte auf diesem Gerät'), 'Treffer öffnet die echte Unterlage'); await klick('[data-a=zu]');
+    await klick('[data-a=suche-leer]'); soll((await p.inputValue('.suche input'))==='' && (await p.locator('#echt-treffer').count())===0 && !(await p.locator('[data-a=suche-leer]').isVisible()), 'X löscht die Eingabe und die Treffer');
     // Tresor exportieren (verschlüsselter Ordner am gewählten Ort), Speicher des Browsers leeren, wieder importieren
     const kopf = async a => { if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? `.menue [data-a=${a}]` : `.kopfknoepfe [data-a=${a}]`); }; const sicherungAuf = () => kopf('export');
     await sicherungAuf(); soll((await text()).includes('1 Unterlage'), 'Sicherung zählt die echte Unterlage'); soll((await p.locator('#letzter-export').innerText()).includes('Noch kein Backup') || name==='pc', 'vor dem ersten Export: noch kein Ordner'); soll((await text()).includes('Backup erstellen') || name==='pc', 'erstes Mal: Tresor als Ordner anlegen'); await klick('[data-a=sich-export]');

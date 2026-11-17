@@ -21,6 +21,9 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A6 | Einlesen in dieselbe Akte meldet „Zusammengeführt: 0 neu, 0 Dateien hereingeholt“. Richtig, aber ohne Erklärung. | Noch nicht angepasst. | Meldung beim Zusammenführen prüfen: sagt sie, dass schon alles da war? |
 | A7 | Der Browser zeigte trotz Hard Reload die alte Fassung („Browser sind schwarze Löcher“). | 0.3.2: App-Dateien werden beim Server nachgefragt, die Fassungsmarke ist ein Knopf („Neue Fassung · antippen“). Am Tablet bestätigt. | Die Familienakte hat das Update-Fähnchen; prüfen, ob die PWA dort dasselbe Problem mit dem Zwischenspeicher hat. |
 
+| A8 | Suche: nur eine Suchleiste, mit Mikrofon und X; kein eigener Knopf für die Bedeutungssuche – sie soll verdeckt hinter „Finden“ arbeiten, und wenn sie keinen Zusammenhang findet, greifen die Wörter. | 0.3.6: X und Mikrofon im Suchfeld, „Finden“ sucht mit der Wortsuche der Familienakte in den echten Unterlagen. Bedeutungssuche folgt als zweiter Schritt hinter demselben Knopf. | Dort ist die Bedeutungssuche ein eigener Bereich mit eigenen Schaltern; prüfen, ob sie hinter der einen Suche verschwinden kann. |
+| A9 | Gesucht wird hier nur in Titel, Dateiname, Bereich und Notiz, nicht im Inhalt – beim Ablegen wird noch kein Text gelesen. | Noch nicht angepasst (kommt mit dem Eingang aus dem Klon). | – |
+
 ## B. Vereinfachungen der Hülle
 
 | Nr. | Was Klaus wollte | Was hier gemacht wurde | Für die Familienakte |

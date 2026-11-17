@@ -4,6 +4,9 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
   sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
+import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText } from "../klone/familienakte/lib/family-search.ts";
+import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
+import { createDictationSession, speechConstructor, microphoneBlockedReason } from "../klone/familienakte/lib/browser-dictation.ts";
 
 const tresor = {
   bereiche: [...FAMILY_CATEGORIES],
@@ -62,5 +65,20 @@ const sicherung = {
   /** Liest die geprüfte Sicherung ein. Leere Akte: alles kommt herein. Volle Akte: zusammenführen, bei Widerspruch bleibt die Fassung hier. */
   async importieren(zugang?: Zugang, revision?: number) { if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen."); return sicherungEinlesen(importOrdner, await browserVault(), {}, revision, zugang); },
 };
-const alles = { ...tresor, sicherung };
+// Suche: die Wortsuche der Familienakte (Alltagswörter, Monate, Daten, UND), unverändert. Gibt die Kennungen der Treffer zurück,
+// beste zuerst. Gesucht wird in Titel, Dateiname, Bereich, Notiz und – falls gespeichert – im Textauszug.
+type Suchbar = { id: string; originalName: string; category?: string | null; documentDate?: string | null; notes?: string | null; titel?: string | null };
+function suchen(frage: string, liste: Suchbar[]) {
+  const deutung = interpretFamilySearchQuery(frage);
+  if (!hasFamilySearchContent(deutung)) return [] as string[];
+  return liste.map((d) => ({ id: d.id, punkte: scoreFamilySearchText(`${d.titel || ""} ${familyDocumentSearchText(d)}`, deutung, [d.documentDate]) }))
+    .filter((t) => t.punkte > 0).sort((a, b) => b.punkte - a.punkte).map((t) => t.id);
+}
+// Sprechen: das Diktat der Familienakte (Spracherkennung des Browsers), unverändert. Nichts wird aufgenommen oder gespeichert.
+const diktat = {
+  moeglich: () => !microphoneBlockedReason() && Boolean(speechConstructor(window as never)),
+  sitzung: (r: { text: (t: string) => void; zustand: (an: boolean) => void; hinweis: (t: string, fehler: boolean) => void }) =>
+    createDictationSession({ constructor: () => speechConstructor(window as never), online: () => navigator.onLine, onText: r.text, onState: r.zustand, onHint: r.hinweis }),
+};
+const alles = { ...tresor, sicherung, suchen, diktat };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;
