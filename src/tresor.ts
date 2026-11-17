@@ -7,6 +7,7 @@ import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.t
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
 import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen, pdfSeitenText } from "./text-lesen.ts";
 import { loadPdfJs } from "./pdf-ersatz.ts";
+import { organizerUebernahme, organizerSchluessel, ORGANIZER_INDEX, ORGANIZER_INDEX_MAX } from "../klone/familienakte/lib/organizer-uebernahme.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -82,6 +83,54 @@ const sicherung = {
   async importPruefen(zugang?: Zugang) { if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen."); return sicherungProben(importOrdner, await browserVault(), zugang); },
   /** Liest die geprüfte Sicherung ein. Leere Akte: alles kommt herein. Volle Akte: zusammenführen, bei Widerspruch bleibt die Fassung hier. */
   async importieren(zugang?: Zugang, revision?: number) { if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen."); return sicherungEinlesen(importOrdner, await browserVault(), {}, revision, zugang); },
+};
+// Ordner aus dem Datei-Organizer (Klaus 17.11.: große Mengen werden dort gelesen, sortiert und angelernt, die Akte übernimmt den
+// fertigen Ordner). Die Einordnung liest die Familienakte unverändert (lib/organizer-uebernahme.ts: Bereich, Art, Hinweis, Doppelte,
+// Gesperrtes). Zusätzlich hier aus demselben Index: Datum und der dort gelesene Text – er wird der Textauszug der Unterlage, damit
+// die Akte nicht noch einmal lesen muss. Nur Dateien direkt im Ordner. Ohne Index ist es ein einfacher Stapel ohne Einordnung.
+type OrdnerStueck = { name: string; groesse: number; bereich: string; neuerBereich: boolean; art: string; datum: string | null; hinweis: string; warnung: string; doppelt: boolean; text: string };
+let organizerOrdner: { handle: FileSystemDirectoryHandle; stuecke: OrdnerStueck[] } | null = null;
+const organizer = {
+  async waehlen() {
+    const handle = await chooseExportDestination("Welcher Ordner soll in die Akte?");
+    const dateien: File[] = []; let indexText: string | null = null;
+    for await (const e of (handle as unknown as { values: () => AsyncIterable<{ kind: string; name: string; getFile: () => Promise<File> }> }).values()) {
+      if (e.kind !== "file" || e.name.startsWith(".")) continue;
+      const f = await e.getFile();
+      if (e.name === ORGANIZER_INDEX) { if (f.size <= ORGANIZER_INDEX_MAX) indexText = await f.text(); } else dateien.push(f);
+    }
+    const liste = dateien.map((f) => ({ name: f.name, size: f.size }));
+    const u = indexText ? organizerUebernahme(indexText, liste, [...FAMILY_CATEGORIES]) : null;
+    const roh = new Map<string, { datum?: unknown; text?: unknown }>();
+    if (u?.ok && indexText) for (const e of (JSON.parse(indexText) as { dateien: Array<{ pfad?: unknown; groesse?: unknown; datum?: unknown; text?: unknown }> }).dateien)
+      if (e && typeof e.pfad === "string" && typeof e.groesse === "number") roh.set(organizerSchluessel({ name: e.pfad, size: e.groesse }), e);
+    const fest = new Set(FAMILY_CATEGORIES.map((b) => b.toLocaleLowerCase("de")));
+    const stuecke = liste.sort((a, b) => a.name.localeCompare(b.name, "de")).map((f): OrdnerStueck => {
+      const k = organizerSchluessel(f), v = u?.vorschlaege.get(k), r = roh.get(k), d = typeof r?.datum === "string" && /^\d{4}-\d{2}-\d{2}/.test(r.datum) ? r.datum.slice(0, 10) : null;
+      const bereich = v?.vorschlag.lebensbereich || "";
+      return { name: f.name, groesse: f.size, bereich, neuerBereich: !!bereich && !fest.has(bereich.toLocaleLowerCase("de")), art: v?.vorschlag.dokumentart || "", datum: d,
+        hinweis: v?.vorschlag.hinweis || "", warnung: v?.hinweis || "", doppelt: !!u?.doppelt.has(k), text: typeof r?.text === "string" ? r.text.slice(0, 20000) : "" };
+    });
+    organizerOrdner = { handle, stuecke };
+    return { ordner: handle.name, index: !!u?.ok, grund: indexText ? u?.grund || "" : "", stuecke: stuecke.map(({ text, ...s }) => ({ ...s, text: text.length > 0 })) };
+  },
+  /** Legt die genannten Dateien ab (Bereich je Datei wie übergeben). Fehlt der Text aus dem Organizer, liest die Akte selbst. */
+  async uebernehmen(auswahl: Array<{ name: string; bereich: string }>, fortschritt?: (fertig: number, gesamt: number, name: string) => void) {
+    if (!organizerOrdner) throw new Error("Bitte zuerst den Ordner wählen.");
+    const aus = { abgelegt: 0, schonDa: 0, fehler: [] as string[] };
+    for (const [i, w] of auswahl.entries()) {
+      fortschritt?.(i, auswahl.length, w.name);
+      const s = organizerOrdner.stuecke.find((x) => x.name === w.name); if (!s) continue;
+      try {
+        const datei = await (await organizerOrdner.handle.getFileHandle(s.name)).getFile();
+        let text = s.text; if (!text && (istBild(datei) || istPdf(datei))) { try { text = (await textLesen(datei)).text; } catch { text = ""; } }
+        await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: s.hinweis ? `Aus dem Datei-Organizer – ${s.hinweis}`.slice(0, 1000) : null, titel: null, textAuszug: text || null });
+        aus.abgelegt++;
+      } catch (e) { const m = e instanceof Error ? e.message : String(e); if (/Dublette|schon abgelegt/.test(m)) aus.schonDa++; else aus.fehler.push(`${s.name}: ${m}`); }
+    }
+    fortschritt?.(auswahl.length, auswahl.length, "");
+    return aus;
+  },
 };
 // Suche: die Wortsuche der Familienakte (Alltagswörter, Monate, Daten, UND), unverändert. Gibt die Kennungen der Treffer zurück,
 // beste zuerst. Gesucht wird in Titel, Dateiname, Bereich, Notiz und – falls gespeichert – im Textauszug.
@@ -253,5 +302,5 @@ const bedeutung = {
   /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
   zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
 };
-const alles = { ...tresor, sicherung, suchen, teilWoerter, diktat, bedeutung };
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

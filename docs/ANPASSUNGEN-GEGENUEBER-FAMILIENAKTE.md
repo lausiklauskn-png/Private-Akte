@@ -34,6 +34,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A18 | Fotos von Belegen sollen über ihren Inhalt gefunden werden, ohne Umweg über Workflow PDF; keine Texterkennung über einen KI-Dienst. | 0.4.3: beim Ablegen wird der Text gelesen (PDF-Textebene, sonst Tesseract auf dem Gerät) und als Auszug gespeichert. | Der Klon kann den Textauszug nur beim Ablegen setzen, nicht nachträglich – für „erst ablegen, dann im Hintergrund lesen“ (Plan Bilder) fehlt dort eine Funktion. |
 | A19 | Es war nicht zu sehen, ob die Suche den Inhalt der Unterlagen überhaupt gelesen hat. | 0.4.3: unter den Treffern „Inhalt gelesen bei x von y Unterlagen“. | Prüfen, ob die Bedeutungssuche dort sagt, wie viele Unterlagen nur mit ihren Angaben zählen. |
 | A20 | Die Suche findet ein vielseitiges Heft, aber nicht die Stelle darin. | 0.4.6: unter dem Treffer der Ausschnitt mit der Seite. 0.4.7: Leser in der Akte öffnet die Seite, Wörter markiert, Suche im Dokument. | Dort zeigt die Bedeutungssuche die Unterlage, nicht die Stelle – prüfen. |
+| A21 | Große Mengen sollen im Datei-Organizer sortiert und angelernt werden und dann als Ordner in die Akte kommen. | 0.4.8: „Ordner in die Akte legen“ – ein Fenster mit allen Dateien, Bereich je Datei änderbar, ein Knopf legt alle ab; Datum und gelesener Text kommen aus dem Index mit. | Dort geht jede Datei einzeln durch das Prüf-Fenster, und Datum und Text des Organizers werden nicht übernommen (nur Bereich, Art, Hinweis) – prüfen. |
 
 ## B. Vereinfachungen der Hülle
 

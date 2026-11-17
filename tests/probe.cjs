@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.7 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.8 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -82,6 +82,24 @@ const { chromium } = require('playwright');
       await t.herausnehmen(d.id); return { art:g.art, text:g.text, wort, auszug:auszug.length };
     });
     soll(ocrProbe.art === 'erkannt' && /Fahrradladen/.test(ocrProbe.text) && ocrProbe.wort && ocrProbe.auszug > 10, 'Texterkennung liest ein Foto, die Wortsuche findet es über den Inhalt (' + JSON.stringify(ocrProbe) + ')');
+    // Ordner aus dem Datei-Organizer: Einordnung, Datum und Text kommen aus dem Index, Doppeltes bleibt draußen
+    const ordProbe = await p.evaluate(async () => {
+      const t = window.PrivateAkteTresor, wurzel = await navigator.storage.getDirectory(), o = await wurzel.getDirectoryHandle('probe-organizer', {create:true});
+      const schreib = async (n, inhalt) => { const w = await (await o.getFileHandle(n, {create:true})).createWritable(); await w.write(inhalt); await w.close(); return (await (await o.getFileHandle(n)).getFile()).size; };
+      const a = await schreib('Strom-Abschlag.txt', 'Abschlag Strom'), b = await schreib('Strom-Kopie.txt', 'Abschlag Strom Kopie'), c = await schreib('Ohne-Eintrag.txt', 'nichts');
+      await schreib('organizer-index.json', JSON.stringify({format:'datei-organizer-index', fassung:1, dateien:[
+        {pfad:'Strom-Abschlag.txt', groesse:a, pruefstand:'frei', kategorie:'Haus & Wohnung', schriftstueck:'Rechnung', datum:'2026-03-04', absender:'Stadtwerke Beispiel', sicherheit:{kategorie:'von dir'}, text:'Ihr neuer Abschlag beträgt 84 Euro. Zählernummer Beispiel.'},
+        {pfad:'Strom-Kopie.txt', groesse:b, pruefstand:'doppelt', doppeltVon:'Strom-Abschlag.txt', kategorie:'Haus & Wohnung', sicherheit:{}}]}));
+      const alt = window.showDirectoryPicker; window.showDirectoryPicker = async () => o;
+      try {
+        const r = await t.organizer.waehlen(), s = r.stuecke.find(x => x.name === 'Strom-Abschlag.txt'), k = r.stuecke.find(x => x.name === 'Strom-Kopie.txt');
+        const e = await t.organizer.uebernehmen(r.stuecke.filter(x => !x.doppelt).map(x => ({name:x.name, bereich:x.bereich || 'Sonstiges'})));
+        const liste = await t.liste(), d = liste.find(x => x.originalName === 'Strom-Abschlag.txt'), wort = d ? t.suchen('Zählernummer', liste).includes(d.id) : false;
+        for (const x of liste) if (/^(Strom-|Ohne-)/.test(x.originalName)) await t.herausnehmen(x.id);
+        return { index:r.index, bereich:s && s.bereich, datum:s && s.datum, art:s && s.art, text:s && s.text, doppelt:k && k.doppelt, abgelegt:e.abgelegt, fehler:e.fehler, kat:d && d.category, tag:d && d.documentDate, wort };
+      } finally { window.showDirectoryPicker = alt; await wurzel.removeEntry('probe-organizer', {recursive:true}); }
+    });
+    soll(ordProbe.index && ordProbe.bereich === 'Haus & Wohnung' && ordProbe.datum === '2026-03-04' && ordProbe.art === 'Rechnung' && ordProbe.text && ordProbe.doppelt && ordProbe.abgelegt === 2 && ordProbe.kat === 'Haus & Wohnung' && ordProbe.wort, 'Ordner aus dem Datei-Organizer: Bereich, Datum und Text kommen mit, Doppeltes bleibt draußen (' + JSON.stringify(ordProbe) + ')');
     // Leser: das PDF in der Akte öffnen, auf der Seite der Fundstelle, die Wörter markiert, darin suchen
     const leserProbe = await p.evaluate(async () => {
       const t = window.PrivateAkteTresor, seite = (n, wort) => `BT /F1 14 Tf 20 100 Td (${wort}) Tj ET`;
@@ -119,7 +137,7 @@ const { chromium } = require('playwright');
     await sicherungAuf(); soll(/Letztes Backup: \d\d\.\d\d\.\d{4}/.test(await p.locator('#letzter-export').innerText()) && (await p.locator('#letzter-export').innerText()).includes('probe-ziel-'+name), 'Sicherung nennt, wann und wohin zuletzt exportiert wurde'); await klick('[data-a=zu]');
     await p.evaluate(async () => { const w = await navigator.storage.getDirectory(); for await (const [n] of w.entries()) if (!n.startsWith('probe-ziel-')) await w.removeEntry(n, {recursive:true}); for (const k of Object.keys(localStorage)) if (k !== 'private-akte-letzter-export') localStorage.removeItem(k); });
     await p.reload(); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Speicher des Browsers geleert: Tresor leer');
-    await kopf('import'); soll((await p.locator('.fenster .zeile').count())===2 && (await text()).includes('Datei in die Akte legen') && (await text()).includes('Backup einlesen'), 'Importieren: Datei oder Backup'); await klick('[data-a=sich-import]'); await p.waitForSelector('[data-form=import]'); soll((await text()).includes('Privatakte_Backup_') && !(await text()).includes('Familienakte_Vollsicherung_'), 'Import nennt das gefundene Backup unter dem Namen Privatakte');
+    await kopf('import'); soll((await p.locator('.fenster .zeile').count())===3 && (await text()).includes('Datei in die Akte legen') && (await text()).includes('Ordner in die Akte legen') && (await text()).includes('Backup einlesen'), 'Importieren: Datei, Ordner oder Backup'); await klick('[data-a=sich-import]'); await p.waitForSelector('[data-form=import]'); soll((await text()).includes('Privatakte_Backup_') && !(await text()).includes('Familienakte_Vollsicherung_'), 'Import nennt das gefundene Backup unter dem Namen Privatakte');
     await p.fill('[name=passwort]','Falsches-Passwort-123'); await klick('[data-form=import] button[type=submit]'); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('passt nicht'), null, {timeout:60000}); soll(true, 'falsches Passwort wird abgewiesen');
     await p.fill('[name=passwort]','Erfundenes-Probe-Passwort-1'); await klick('[data-form=import] button[type=submit]'); await p.waitForSelector('#echt [data-a=echt-auf]', {timeout:60000});
     soll((await p.locator('#echt').innerText()).includes(`Probe-Unterlage ${name}`), 'nach dem Import wieder da');
