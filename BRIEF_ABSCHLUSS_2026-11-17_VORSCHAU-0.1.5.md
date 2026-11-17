@@ -112,7 +112,9 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 - **Umbenennung in „Tools“ ist gemacht** (0.1.5): Baum, Eingang „Aus den Tools“, Fenstertitel, Hilfe, README;
   Kasten 3 heißt „Tools · die Werkzeugstätten im Bild“. Der Bildtext des Baums beschreibt weiter das Bild (Städte).
   Im Code heißen die Namen weiter `STAEDTE`/`fStadt`. Die „erste Aufgabe“ im vorigen Abschnitt ist damit erledigt.
-- PR #3 auf `main` zusammengeführt (enthält PR #2). Probe 92 Prüfungen, keine Fehler.
+- **PR #3 ist noch nicht zusammengeführt** (Klaus zuletzt: das machen wir in der nächsten Sitzung, damit es etwas
+  zum Anfassen gibt). Erster Schritt dort: PR #3 auf `main` zusammenführen (enthält PR #2), GitHub Pages prüfen
+  oder einschalten, Adresse aufrufen. Probe 92 Prüfungen, keine Fehler.
 
 ## Noch zu entscheiden
 
@@ -136,8 +138,10 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte auf main zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md und README.md
-(Vorschau 0.1.5; PR #2 und #3 sind darin aufgegangen – von main starten, nicht von einem alten Zweig).
+Lies im Repo Private-Akte auf dem Zweig ccr-500c05b9-21sx0s (PR #3, Vorschau 0.1.5, enthält PR #2) zuerst
+BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md und README.md. Führe PR #3 auf main zusammen, prüfe, ob GitHub
+Pages eingeschaltet ist, und rufe https://lausiklauskn-png.github.io/Private-Akte/ auf – ich will die
+Vorschau am Handy anfassen können. Danach von main weiterarbeiten.
 Besprich mit mir den Bau: Reihenfolge aus dem Abschnitt „Vorgabe für den Bau“ (dieselbe Mechanik wie die
 Familienakte, damit ein Abgleich möglich bleibt), Web-App oder gleich Android, Einstellungen (Tooltips,
 Tresor einrichten). Gleiche vorher PR #1 (Gerüst, Klon-Werkzeug) damit ab. Datenschutzerklärung zum Schluss.
