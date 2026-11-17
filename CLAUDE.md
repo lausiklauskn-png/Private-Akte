@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.8)
+## Stand (17.11.2026, Vorschau 0.3.9)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.9 nach dem ersten echten Lauf am Tablet (Klaus 17.11.: Modell geladen, Bedeutungssuche rechnet):** (1) die Schwelle 0,80
+  ließ alle Unterlagen als „dem Sinn nach“ durch – jetzt Nähe ≥ 0,84 und höchstens 0,04 unter dem besten, höchstens fünf; weiter
+  geschätzt. (2) Was die Wörter treffen, steht oben (deine Unterlagen, dann Beispiele); „Passt vielleicht dem Sinn nach“ ist ein
+  eigener Abschnitt ganz unten, nach Nähe sortiert, mit der Zahl an der Zeile („dem Sinn nach · 8,5“ = Nähe mal zehn, wie Klaus sie
+  aus der Familienakte kennt) – daran sieht man auch, ob Wort- oder Bedeutungssuche gefunden hat. (3) Passt ein Wort nicht
+  („Gehaltsabrechnung September“), wird gezeigt, was die meisten Wörter trifft, mit dem Hinweis „nicht alle Wörter passen“ –
+  bei den Beispielen (`suche`) und bei den echten Unterlagen (`echtSuche`, Wort für Wort über die Suche des Klons).
 - **0.3.7 Bedeutungssuche hinter „Finden“ und Zurück (Klaus 17.11.):** kein eigener Knopf. Nach jedem „Finden“ steht unter der
   Suchleiste „Auch nach Bedeutung suchen? … (rund 140 MB) · Ja / Nein“, solange das Sprachmodell nicht geladen ist. **Nein** blendet
   die Zeile bis zum nächsten „Finden“ aus (kein „nicht mehr fragen“; später in den Einstellungen wieder einschaltbar – Einstellungen
