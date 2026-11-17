@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.2.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -175,8 +175,7 @@ const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a h
 
 /* ---------- Ansichten ---------- */
 function sucheFeld(){
-  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button class="knopf" type="submit">Finden</button></form>
-  <div class="chips">Zum Beispiel: ${['Alles zur Nebenkostenabrechnung','Garantie Waschmaschine','Meine Gesundheitsunterlagen'].map(c => `<button class="chip" data-a="frage" data-q="${c}">${c}</button>`).join('')}</div>`;
+  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button class="knopf" type="submit">Finden</button></form>`;
 }
 function treffer(){
   const t = suche(s.frage);
@@ -189,8 +188,7 @@ const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
 function vStart(){
   const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
-  return `<h1 class="titel">Was möchtest du finden?</h1><p class="unter">Hineinlegen, finden, herausgeben. Mehr macht die Akte nicht.</p>
-  ${sucheFeld()}
+  return `<h1 class="titel nurpc">Was möchtest du finden?</h1>${sucheFeld()}
   ${s.frage ? treffer() : `
   ${echtAbschnitt()}
   <div class="abschnitt"><h2>Fällig <span>${termine.length} Termine und Fristen</span></h2><div class="liste">${termineSortiert().slice(0,3).map(terminZeile).join('')}</div></div>
@@ -433,11 +431,11 @@ const A = {
    <label class="schalter"><input type="checkbox" data-tippwahl ${s.tipps?'checked':''}> Tooltips an den Knöpfen anzeigen</label>
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
- sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
+ sicherung: () => { menueZu(); fSicherung(); },
  viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
  'sort-mehr': () => { organizer = [...organizer, ...ORGANIZER_NEU().map(o => ({...o, titel:o.titel+' (neu)'}))]; stadtNeu(); toast('Vier Dateien hineingegeben (Beispiel). Der Helfer hat geraten.'); },
  notiz: () => { menueZu(); fNotiz(); },
- sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
+ sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
  kalender: () => { menueZu(); s.zuDoc = null; fStadt('kal'); },
  stadt: e => { if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
@@ -565,6 +563,71 @@ document.addEventListener('submit', async ev => {
     echt.datei = null; zu(); await echtLaden(); toast(`„${echtTitel(d)}“ liegt in ${d.category}.`);
   } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { echt.laeuft = false; }
 });
+
+/* ---------- Tresor exportieren / importieren: die Vollsicherung der Familienakte (verschlüsselter Ordner an einem gewählten Ort) ---------- */
+const sich = { art:null, notfallblatt:'', ordner:'' };
+const zugangFehler = e => /PASSWORT_FALSCH/.test(e && e.message) ? 'Das Passwort oder der Notfallschlüssel passt nicht zu dieser Sicherung.' : /PASSWORT_FEHLT/.test(e && e.message) ? 'Diese Sicherung ist verschlüsselt. Bitte das Passwort eintragen.' : e && e.name === 'AbortError' ? '' : fehlerText(e);
+function fSicherung(){
+  const kann = T() && T().sicherung.ordnerWaehlbar(), n = (echt.liste || []).length;
+  fenster(`${fk('Tresor sichern','Exportieren legt alles als verschlüsselten Ordner dorthin, wo du willst. Importieren holt es wieder herein.')}
+   <div class="liste"><div class="zeile"><span class="mitte"><strong>Im Tresor dieses Geräts</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div></div>
+   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Tresor exportieren</button><button class="knopf hell" data-a="sich-import">Tresor importieren</button></div>
+   <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig exportieren – auf das Gerät, eine SD-Karte oder einen Stick.</p>`
+   : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Exportieren und Importieren geht in Chrome oder Edge.</p>`}`);
+}
+function fExport(){
+  const m = T().sicherung.passwortMindestens;
+  fenster(`${fk('Tresor exportieren','Ein Ordner mit Datum, mit deinem Passwort verschlüsselt.')}
+   <form class="felder" data-form="export">
+    <label>Passwort (mindestens ${m} Zeichen) <input class="feld" type="password" name="p1" required minlength="${m}" autocomplete="new-password"></label>
+    <label>Passwort wiederholen <input class="feld" type="password" name="p2" required minlength="${m}" autocomplete="new-password"></label>
+    <button class="knopf gruen voll" type="submit">Ordner wählen und exportieren ${ic('pfeil')}</button>
+   </form>
+   <p class="hinweis">Ohne Passwort kommt niemand hinein – auch du nicht. Danach bekommst du einen Notfallschlüssel für den Fall, dass du es vergisst.</p>`);
+}
+function fImport(){
+  const a = sich.art;
+  fenster(`${fk('Tresor importieren', esc(a.name) + (a.erstellt ? ' · vom ' + echtDatum(a.erstellt) : ''))}
+   <form class="felder" data-form="import">
+    ${a.verschluesselt ? `<label>Passwort <input class="feld" type="password" name="passwort" autocomplete="current-password"></label>
+    <label>oder Notfallschlüssel <input class="feld" name="notfall" autocomplete="off" placeholder="nur wenn das Passwort fehlt"></label>` : '<p class="hinweis">Diese Sicherung ist nicht verschlüsselt.</p>'}
+    <button class="knopf gruen voll" type="submit">Prüfen und hereinholen ${ic('pfeil')}</button>
+   </form>
+   <p class="hinweis">Erst wird jede Datei geprüft, dann hereingeholt. Was schon im Tresor liegt, wird nicht überschrieben.</p>`);
+}
+Object.assign(A, {
+ 'sich-export': fExport,
+ 'sich-import': async () => { try { sich.art = await T().sicherung.importWaehlen(); fImport(); } catch (err) { const m = zugangFehler(err); if (m) toast(m); } },
+ 'sich-blatt': () => { const a = document.createElement('a'), url = URL.createObjectURL(new Blob([sich.notfallblatt], {type:'text/plain'}));
+   a.href = url; a.download = `Notfallblatt_${sich.ordner}.txt`; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); }
+});
+document.addEventListener('submit', async ev => {
+  const f = ev.target, art = f.dataset.form; if (art !== 'export' && art !== 'import') return; ev.preventDefault();
+  if (echt.laeuft) return; const knopf = f.querySelector('button[type=submit]');
+  if (art === 'export') {
+    const p = f.p1.value, falsch = p !== f.p2.value ? 'Die beiden Passwörter sind nicht gleich.' : T().sicherung.passwortPruefen(p);
+    if (falsch) { toast(falsch); return; }
+    echt.laeuft = true; knopf.disabled = true;
+    try {
+      const r = await T().sicherung.exportieren(p, `Private Akte ${FASSUNG}`); sich.notfallblatt = r.notfallblatt || ''; sich.ordner = r.ordner;
+      fenster(`${fk('Exportiert','verschlüsselt · ' + r.dateien + (r.dateien===1?' Datei':' Dateien'))}
+       <dl class="angaben"><dt>Ort</dt><dd>${esc(r.ziel)}</dd><dt>Ordner</dt><dd>${esc(r.ordner)}</dd><dt>Stand</dt><dd>${echtDatum(r.erstellt)}</dd></dl>
+       <div class="blatt"><small>Notfallschlüssel · öffnet diese Sicherung auch ohne Passwort</small><b id="notfall">${esc(r.notfall || '')}</b></div>
+       <div class="reihe"><button class="knopf" data-a="sich-blatt">Notfallblatt speichern</button><button class="knopf hell" data-a="zu">Fertig</button></div>
+       <p class="hinweis">Das Notfallblatt ausdrucken und zu den wichtigen Papieren legen – nicht zur Sicherung.</p>`);
+    } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
+  } else {
+    const zugang = f.passwort && f.passwort.value ? {passwort:f.passwort.value} : f.notfall && f.notfall.value.trim() ? {notfall:f.notfall.value.trim()} : undefined;
+    echt.laeuft = true; knopf.disabled = true;
+    try {
+      const probe = await T().sicherung.importPruefen(zugang);
+      if (!probe.ok) { knopf.disabled = false; toast('Die Sicherung ist nicht in Ordnung: ' + probe.fehler.slice(0,2).join(' · ')); return; }
+      const r = await T().sicherung.importieren(zugang, probe.zusammen ? probe.zusammen.revision : undefined);
+      zu(); await echtLaden();
+      toast(r.zusammengefuehrt ? `Zusammengeführt: ${r.zusammengefuehrt.neu} neu, ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'} hereingeholt.` : `Hereingeholt: ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'}.`);
+    } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
+  }
+});
 function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden();
@@ -583,6 +646,9 @@ document.addEventListener('pointerover', ev => { if (!s.tipps || ev.pointerType 
 document.addEventListener('pointerout', ev => { if (ev.target.closest('[data-tipp]')) tippWeg(); });
 document.addEventListener('focusin', ev => { const e = ev.target.closest('[data-tipp]'); if (s.tipps && e && e.matches(':focus-visible')) tippZeigen(e); });
 document.addEventListener('focusout', tippWeg);
+/* Textfelder wachsen mit dem Text (getippt oder gesprochen); der Griff unten rechts zum Ziehen bleibt. */
+function feldWachsen(f){ if (CSS.supports('field-sizing','content')) return; f.style.height = 'auto'; f.style.height = Math.min(f.scrollHeight + 2, innerHeight * .6) + 'px'; }
+document.addEventListener('input', ev => { if (ev.target.matches('textarea.feld')) feldWachsen(ev.target); });
 document.addEventListener('pointerdown', tippWeg);
 addEventListener('scroll', tippWeg, true);
 document.addEventListener('change', ev => { if (ev.target.matches('[data-tippwahl]')) { s.tipps = ev.target.checked; toast(s.tipps ? 'Tooltips sind an.' : 'Tooltips sind aus.'); } });

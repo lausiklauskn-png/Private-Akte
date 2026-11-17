@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.2.0)
+## Stand (17.11.2026, Vorschau 0.3.0)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -37,8 +37,16 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 313 MB). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
 - **Offen bei Klaus:** Familienbüro in der App (Vorschau) oder nur aufrufen (unten „Entschieden“); Portemonnaie offen oder gleich im Tresor.
-- **Als Nächstes (Klaus 17.11.):** „Tresor exportieren / importieren“ – Sicherung als Datei mit Datum auf den Speicher des Handys oder
-  eine beliebige SD-Karte und von dort wieder herein, mit der Sicherung der Familienakte (kein eigenes Format).
+- **Tresor exportieren / importieren (0.3.0, Klaus 17.11.):** Schild-Knopf „Sicherung“. Export = `writeFullFamilyBackup` des Klons mit
+  Passwort (mindestens 10 Zeichen, PBKDF2 600.000 Runden) in einen gewählten Ordner, Notfallschlüssel und Notfallblatt; Import =
+  `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
+  überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
+  Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **Oberfläche (Klaus 17.11.):** Knöpfe, Suchfeld, Zeilen und Felder flacher; Textfelder wachsen mit dem Text; Startseite ohne Erklärsatz
+  und ohne Beispiel-Suchen, Überschrift „Was möchtest du finden?“ nur in der breiten Ansicht.
+- **Als Nächstes (Klaus 17.11.):** Die Suche soll eine Bedeutungssuche werden (Embedding-Modell wird geladen, dafür ein Ladebalken) –
+  aus der Familienakte übernehmen (`app/private-meaning-*.ts`, `app/browser-modelle.ts`), nicht neu schreiben. Danach der Eingang
+  (Text lesen, Bereich/Absender/Frist vorschlagen) aus dem Klon.
 - Probe: `python3 -m http.server 8765` im Repo-Ordner, dann `node tests/probe.cjs` (Ordner `p/` am Aufrufort anlegen).
 
 ## Feste Regeln
