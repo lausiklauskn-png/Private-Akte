@@ -5,7 +5,7 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
-import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen } from "./text-lesen.ts";
+import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen, pdfSeitenText } from "./text-lesen.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
@@ -156,6 +156,48 @@ async function korpusBauen(stand: string, fortschritt?: (fertig: number, gesamt:
   korpus = { stand, abschnitte, mitte, unterlagen: gelesen.documents.filter((d) => d.id.startsWith("d:")).length, ohneInhalt: gelesen.metadataOnly };
   return korpus;
 }
+/** Ausschnitt um das erste Wort der Frage im Abschnitt (rund 180 Zeichen); steht keines darin, die Mitte des Abschnitts. */
+/** Wo die Wörter der Frage am engsten beieinander stehen: Anfang und Spanne dieser Stelle (null = keines der Wörter steht darin). */
+function engsteStelle(abschnitt: string, woerter: string[]) {
+  const klein = abschnitt.toLowerCase();
+  const orte = woerter.map((w) => { const aus: number[] = [], k = w.toLowerCase(); for (let i = klein.indexOf(k); i >= 0 && aus.length < 200; i = klein.indexOf(k, i + 1)) aus.push(i); return aus; }).filter((o) => o.length);
+  if (!orte.length) return null;
+  let best = { von: orte[0][0], spanne: Infinity };
+  for (const anker of orte.reduce((a, b) => (b.length < a.length ? b : a))) {
+    const naechste = orte.map((o) => o.reduce((x, y) => (Math.abs(y - anker) < Math.abs(x - anker) ? y : x)));
+    const von = Math.min(...naechste), spanne = Math.max(...naechste) - von;
+    if (spanne < best.spanne) best = { von, spanne };
+  }
+  return best;
+}
+function ausschnitt(abschnitt: string, woerter: string[]) {
+  const eng = engsteStelle(abschnitt, woerter);
+  const mitte = eng ? eng.von : Math.floor(abschnitt.length / 2);
+  let von = Math.max(0, mitte - 70), bis = Math.min(abschnitt.length, mitte + 110);
+  if (von > 0) { const l = abschnitt.indexOf(" ", von); if (l >= 0 && l < mitte) von = l + 1; }
+  if (bis < abschnitt.length) { const l = abschnitt.lastIndexOf(" ", bis); if (l > mitte) bis = l; }
+  return (von > 0 ? "… " : "") + abschnitt.slice(von, bis).trim() + (bis < abschnitt.length ? " …" : "");
+}
+// Seiten eines PDF als Text (klein, Leerraum vereinheitlicht), je Unterlage einmal gelesen – nur um die Seite einer Fundstelle zu finden.
+const seiten = new Map<string, Promise<string[] | null>>();
+const glatt = (s: string) => s.normalize("NFC").toLowerCase().replace(/\s+/g, " ").trim();
+function seitenVon(id: string) {
+  let da = seiten.get(id);
+  if (!da) { da = (async () => {
+    const datei = await readLocalDocumentFile(await browserVault(), id); if (!istPdf(datei)) return null;
+    return (await pdfSeitenText(datei)).map(glatt);
+  })(); seiten.set(id, da); da.catch(() => seiten.delete(id)); }
+  return da;
+}
+function seiteFinden(liste: string[] | null, stelle: string) {
+  if (!liste) return null;
+  const kern = glatt(stelle.replace(/…/g, " "));
+  for (const [von, laenge] of [[0, 60], [Math.floor(kern.length / 3), 40], [0, 25], [Math.floor(kern.length / 2), 25]] as Array<[number, number]>) {
+    const probe = kern.slice(von, von + laenge); if (probe.length < 12) continue;
+    const n = liste.findIndex((s) => s.includes(probe)); if (n >= 0) return n + 1;
+  }
+  return null;
+}
 const bedeutung = {
   moeglich: () => browserModelleMoeglich(),
   /** Liegt das Modell geprüft auf dem Gerät? Dazu der Stand eines laufenden Ladens in Bytes. */
@@ -176,15 +218,25 @@ const bedeutung = {
     const frageVec = k.mitte ? await rechnen("query: " + text) : null;
     // imText: alle Inhaltswörter der Frage stehen in einem Abschnitt der Unterlage (auch im gelesenen PDF) – ein Wort-Treffer im Inhalt.
     const woerter = teilWoerter(text).map(normalizeFamilySearch).filter(Boolean);
+    const rohWoerter = teilWoerter(text);
     const steht = (abschnitt: string) => { const n = normalizeFamilySearch(abschnitt); return woerter.length > 0 && woerter.every((w) => n.includes(w)); };
-    const je = new Map<string, { id: string; naehe: number | null; roh: number; wort: boolean; imText: boolean }>();
+    // Fundstelle: der Abschnitt, in dem die Wörter stehen – sonst der dem Sinn nach nächste. Daraus ein Ausschnitt und die Seite.
+    const je = new Map<string, { id: string; naehe: number | null; roh: number; wort: boolean; imText: boolean; ort: string; ortNaehe: number; stelle?: string; seite?: number | null }>();
     for (const t of rang) {
       const a = k.abschnitte.find((x) => x.label === t.label); if (!a) continue;
       const naehe = frageVec && k.mitte ? zentriert(frageVec, a.passageVec, k.mitte) : null, da = je.get(a.id);
-      if (!da) je.set(a.id, { id: a.id, naehe, roh: t.score, wort: t.bm25 > 0, imText: steht(a.text) });
-      else { da.imText ||= steht(a.text); da.roh = Math.max(da.roh, t.score); da.wort ||= t.bm25 > 0; if (naehe !== null) da.naehe = Math.max(da.naehe ?? -1, naehe); }
+      // Rang der Fundstelle: Abschnitte mit allen Wörtern zuerst, darunter der, in dem sie am engsten stehen; sonst die Nähe.
+      const hier = steht(a.text), guete = hier ? 3 - Math.min(1, (engsteStelle(a.text, rohWoerter)?.spanne ?? 1600) / 1600) : naehe ?? -1;
+      if (!da) je.set(a.id, { id: a.id, naehe, roh: t.score, wort: t.bm25 > 0, imText: hier, ort: a.text, ortNaehe: guete });
+      else { if (guete > da.ortNaehe) { da.ort = a.text; da.ortNaehe = guete; }
+        da.imText ||= hier; da.roh = Math.max(da.roh, t.score); da.wort ||= t.bm25 > 0; if (naehe !== null) da.naehe = Math.max(da.naehe ?? -1, naehe); }
     }
-    return [...je.values()];
+    for (const e of je.values()) {
+      if (!e.imText && (e.naehe ?? -1) < 0.1) continue;
+      e.stelle = ausschnitt(e.ort, rohWoerter);
+      try { e.seite = seiteFinden(await seitenVon(e.id), e.stelle); } catch { e.seite = null; }
+    }
+    return [...je.values()].map(({ ort, ortNaehe, ...rest }) => rest);
   },
   /** Was zuletzt gelesen wurde: Zahl der Unterlagen, wie viele davon ohne lesbaren Inhalt (nur Titel, Bereich, Notiz), Abschnitte. */
   /** Was gerade geschieht, solange gelesen oder gerechnet wird (leer = nichts). */

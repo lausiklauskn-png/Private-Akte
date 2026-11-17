@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.5 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.6 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -67,7 +67,7 @@ const { chromium } = require('playwright');
       await t.ablegen(new File([pdf], 'Heft.pdf', {type:'application/pdf'}), {bereich:'Sonstiges', datum:null, titel:null, notiz:null});
       const liste = await t.liste(), h = await t.bedeutung.suchen('Kaution Wohnung', 'probe-stand'), kuchen = liste.find(d => d.originalName.startsWith('Rezept')), miete = liste.find(d => d.originalName.startsWith('Mietvertrag'));
       const heft = (await t.liste()).find(d => d.originalName === 'Heft.pdf'), hp = (await t.bedeutung.suchen('Laminat Wolltuch', 'probe-stand')).find(x => x.id === heft.id), hf = (await t.bedeutung.suchen('Kaution Wohnung', 'probe-stand')).find(x => x.id === heft.id);
-      const aus = { pdf:!!(hp && hp.imText), pdfFremd:!!(hf && hf.imText), n:h.length, erster:h[0] && h[0].id === miete.id, wort:h[0] && h[0].wort, nah:h[0] && h[0].naehe, fremd:(h.find(x => x.id === kuchen.id) || {}).naehe, roh:(h.find(x => x.id === kuchen.id) || {}).roh };
+      const aus = { stelle:hp && hp.stelle, seite:hp && hp.seite, pdf:!!(hp && hp.imText), pdfFremd:!!(hf && hf.imText), n:h.length, erster:h[0] && h[0].id === miete.id, wort:h[0] && h[0].wort, nah:h[0] && h[0].naehe, fremd:(h.find(x => x.id === kuchen.id) || {}).naehe, roh:(h.find(x => x.id === kuchen.id) || {}).roh };
       t.bedeutung.zurProbe(null); for (const d of liste) if (/^(Rezept|Mietvertrag|Impfpass|Heft)/.test(d.originalName)) await t.herausnehmen(d.id);
       return aus;
     });
@@ -83,6 +83,7 @@ const { chromium } = require('playwright');
     });
     soll(ocrProbe.art === 'erkannt' && /Fahrradladen/.test(ocrProbe.text) && ocrProbe.wort && ocrProbe.auszug > 10, 'Texterkennung liest ein Foto, die Wortsuche findet es über den Inhalt (' + JSON.stringify(ocrProbe) + ')');
     soll(sinnProbe.pdf && !sinnProbe.pdfFremd, 'PDF wird gelesen: Wörter aus dem Inhalt finden die Unterlage (' + JSON.stringify(sinnProbe) + ')');
+    soll(/Wolltuch/.test(sinnProbe.stelle || '') && sinnProbe.seite === 1, 'Fundstelle: Ausschnitt mit dem Wort und die Seite');
     soll(sinnProbe.erster && sinnProbe.wort, 'Sage-Rangliste: die Unterlage mit den Wörtern der Frage steht vorn'); soll(sinnProbe.nah > 0.3 && sinnProbe.fremd < sinnProbe.nah / 2 && sinnProbe.roh > 0.8, 'zentrierte Nähe trennt: passend klar vorn, fremd höchstens halb so nah – obwohl der rohe Wert beim Fremden über 0,8 liegt (' + JSON.stringify(sinnProbe) + ')');
     await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; echtLaden(); }); await klick('[data-a=suche-leer]'); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1');
 

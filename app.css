@@ -242,3 +242,5 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .bedzeile.still{background:none;border:0;padding:4px 2px;color:var(--muted)}.bedzeile.fehler{background:var(--ambersoft);border-color:color-mix(in srgb,var(--amber) 30%,transparent)}
 
 .lesestand{margin:10px 2px 0;font-size:12.5px;color:var(--grau,#667);}
+
+.zeile small.stelle{white-space:normal;overflow:visible;margin-top:4px;color:var(--text,#223);font-size:12.5px;line-height:1.35}
