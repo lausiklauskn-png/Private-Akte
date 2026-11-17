@@ -25,7 +25,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 ## Stand (17.11.2026, Vorschau 0.4.8)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_LESEN-UND-ORGANIZER-0.4.8.md` (aktuell, mit Startauftrag für die Sitzung „Klone im Rahmen“); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
