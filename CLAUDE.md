@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.1)
+## Stand (17.11.2026, Vorschau 0.3.2)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.2 (Klaus: der Browser zeigt trotz Hard Reload die alte Fassung):** der Worker fragt App-Dateien jetzt beim Server nach
+  (`cache:'no-cache'`, Pages hält sie sonst 10 Minuten), `sw.js` wird nie aus dem Zwischenspeicher geprüft (`updateViaCache:'none'`,
+  beim Start und beim Zurückkommen), die Fassungsmarke im Kopf ist ein Knopf: Tipp sieht nach und lädt neu; liegt eine neue Fassung
+  bereit, steht dort „Neue Fassung · antippen“ (kein Neuladen von selbst, damit keine Eingabe verloren geht). `?v=` steht in
+  `index.html` dreimal. Nicht am Gerät; wirkt erst, wenn 0.3.2 einmal geladen ist.
 - **0.3.1 (Klaus am Tablet: Export gemacht, Ordner nicht wiedergefunden):** das Fenster „Tresor sichern“ nennt, wann und in welchen
   Ordner zuletzt exportiert wurde (Merker im Browser; der Browser gibt nur den Namen des gewählten Ordners her, keinen Pfad).
   „Haus und Wohnung“ = „Haus & Wohnung“ (`bereichKern`). Am Tablet bestätigt: Ablegen, eigene Bereiche, Ordnerwahl beim Export.
