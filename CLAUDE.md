@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.3)
+## Stand (17.11.2026, Vorschau 0.3.4)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.4 Importieren / Exportieren wie im Rezeptbuch (Klaus 17.11.; ersetzt die Wörter von 0.3.3 und den Schild-Knopf):**
+  Klaus: „Datei hineinlegen“ unter „Was möchtest du finden?“ irritiert (hineinlegen ist nicht finden, und wohin?), „Tresor
+  exportieren“ sagt nicht, dass es ein Backup ist. Jetzt oben rechts zwei Strich-Knöpfe: **Importieren** (grüner Pfeil nach unten;
+  Fenster mit „Datei in die Akte legen“ und „Backup einlesen“) und **Exportieren** (roter Pfeil nach oben; Fenster „Sichern &
+  Exportieren“ mit „Backup erstellen“). Der Knopf „Datei hineinlegen“ auf der Startseite und der Schild-Knopf sind weg; der grüne
+  runde Knopf „Dateien hineingeben“ bleibt der Datei-Organizer (Klaus: das ist logisch). An den Knöpfen steht nicht mehr „Tresor“,
+  sondern „Akte“ (was in der App liegt) und „Backup“ (die Kopie als Ordner); „Tresor“ nur noch in „Wo liegt was?“. Am Handy liegen
+  beide hinter „⋯“ (oben in der Liste). Das Datei-Feld `#echt-datei` steht jetzt in `index.html`. Nicht am Gerät.
 - **0.3.3 (Klaus am Tablet: „Tresor exportieren“ war beim ersten Mal irreführend – für ihn entsteht der Tresor erst mit dem Ordner):**
   solange von diesem Browser aus noch nie exportiert wurde, heißt es im Fenster „Tresor sichern“: „Noch kein Ordner angelegt“,
   Knöpfe „Tresor als Ordner anlegen“ und „Vorhandenen Tresor importieren“, Hinweis, dass der Ordner eine Sicherung ist. Danach

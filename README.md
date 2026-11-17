@@ -15,7 +15,7 @@ Alles andere ist Beispiel – erfundene Daten, kein echtes Programm wird geöffn
 ## Was die Vorschau zeigt
 
 - Werkzeugleiste oben (runde farbige Knöpfe, Namen als Tooltip mit der Maus, abschaltbar hinter „?“): Bon fotografieren (Portemonnaie), PDF scannen (Workflow PDF im Familienbüro),
-  Importieren (grün), Exportieren (rot), Notiz, Kalender; dazu Drucken, Farbpalette,
+  Dateien hineingeben (Datei-Organizer), Notiz, Kalender; rechts Importieren (grüner Pfeil) und Exportieren (roter Pfeil); dazu Drucken, Farbpalette,
   Sicherung, Hilfe – am Handy hinter „⋯“.
 - Tools: Familienbüro (Schreiben, Tabellen, Folien, Workflow PDF), Portemonnaie mit „An BookLedgerPro geben“
   (Weg nach außen), Datei-Organizer, Private Brain (E-Mail), Kalender.

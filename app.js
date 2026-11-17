@@ -25,7 +25,7 @@ const P = {
  scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M3 12h18"/>',
  stift:'<path d="M4 20h4L20 8l-4-4L4 16Z"/>', sort:'<path d="M4 6h16M7 12h10M10 18h4"/>',
  ordner:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v6m-3-3 3 3 3-3"/>',
- hinaus:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 17v-6m-3 3 3-3 3 3"/>',
+ importpfeil:'<path d="M12 4v11m-4-4 4 4 4-4M5 19h14"/>', exportpfeil:'<path d="M12 15V4m-4 4 4-4 4 4M5 19h14"/>',
  notiz:'<path d="M5 3h14v14l-4 4H5Z"/><path d="M15 21v-4h4M8 8h8M8 12h6"/>',
  kalender:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4M8 14h3v3H8Z"/>',
  tabelle:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16M15 4v16"/>',
@@ -156,18 +156,17 @@ function maske(text){
 const WERK = [
  ['bon-start','kamera','Bon fotografieren','geld','öffnet das Portemonnaie'],
  ['scan','scan','PDF scannen','pdf','Foto zu PDF – öffnet Workflow PDF im Familienbüro'],
- ['import','ordner','Importieren','sort','Datei in die Akte legen oder Backup einlesen'],
- ['export','hinaus','Exportieren','rot','Backup erstellen – die ganze Akte als verschlüsselter Ordner'],
+ ['viele','ordner','Dateien hineingeben','sort','ganze Dateien oder Ordner – öffnet den Datei-Organizer'],
  ['notiz','notiz','Notiz','akte','schreiben oder sprechen, von Hand zuordnen'],
  ['kalender','kalender','Kalender','kal','Termine und Fristen']
 ];
-const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],rot:['#e5484d','#a01c22'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
-const MEHR = [['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['hilfe','','Hilfe']];
+const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
+const MEHR = [['import','importpfeil','Importieren','Datei in die Akte legen oder Backup einlesen'],['export','exportpfeil','Exportieren','Backup erstellen – die ganze Akte als verschlüsselter Ordner'],['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['hilfe','','Hilfe']];
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · Basic`;
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
-  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
-    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
+  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
+    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Importieren, Exportieren, Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
 function navZeigen(){
   const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
@@ -221,7 +220,7 @@ function woLiegtWas(){
   const st = STAEDTE.map(w => `<button class="wostadt" style="--farbe:${w.a}" data-a="stadt" data-id="${w.id}">${w.name}</button>`).join('');
   return `<div class="abschnitt" id="wo-liegt-was"><h2>Wo liegt was? <span>ein Speicher für alles – der Tresor</span></h2>
   <div class="wo">
-   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Importieren, Notiz, Kalender. Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
+   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender – und Importieren (grüner Pfeil). Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
    <i class="wopfeil" aria-hidden="true"></i>
    <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
     ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
@@ -423,8 +422,9 @@ const A = {
  'druck-seite': () => drucken(null),
  'druck-doc': e => drucken(docs.find(d => d.id == e.dataset.id)),
  hilfe: () => { menueZu(); fenster(`${fk('So funktioniert die Private Akte')}<ul style="padding-left:18px;margin:0;display:grid;gap:8px">
-   <li><b>Hereinbringen:</b> die Leiste oben – Bon fotografieren, PDF scannen, Importieren (grün), Notiz, Kalender.</li>
-   <li><b>Sichern:</b> Exportieren (rot) erstellt ein Backup – die ganze Akte als verschlüsselter Ordner. Importieren liest es wieder ein.</li>
+   <li><b>Hereinbringen:</b> die Leiste oben – Bon fotografieren, PDF scannen, Dateien hineingeben, Notiz, Kalender.</li>
+   <li><b>Importieren</b> (grüner Pfeil nach unten): eine Datei in die Akte legen oder ein Backup einlesen.</li>
+   <li><b>Exportieren</b> (roter Pfeil nach oben): ein Backup erstellen – die ganze Akte als verschlüsselter Ordner.</li>
    <li><b>Finden:</b> die Suche oder die sechs Bereiche.</li>
    <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst das Tool; bearbeitet wird eine Kopie.</li>
    <li><b>Zur Akte:</b> das Ergebnis liegt als neue Fassung am alten Platz. Das Original bleibt.</li>
@@ -524,7 +524,7 @@ function echtAbschnitt(){
   const l = echt.liste;
   const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
     : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
-    : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben der grüne Knopf „Importieren“ legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
+    : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
     : l.map(d => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 m-ok">echt</span>${ic('weiter')}</button>`).join('');
   return `<div class="abschnitt" id="echt" data-bereit="${l === null ? 0 : 1}"><h2>Deine Unterlagen <span>echt · auf diesem Gerät gespeichert</span></h2><div class="liste">${innen}</div></div>`;
 }
@@ -539,7 +539,7 @@ function fEchtNeu(datei){
     <label>Datum der Unterlage <input class="feld" type="date" name="datum"></label>
     <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
    </form>
-   <p class="hinweis">Die Datei kommt in die Akte: sie liegt im Speicher dieses Browsers auf diesem Gerät und verlässt es nicht. Einen Ordner dazu gibt es erst mit einem Backup (roter Knopf „Exportieren“).</p>`}`);
+   <p class="hinweis">Die Datei kommt in die Akte: sie liegt im Speicher dieses Browsers auf diesem Gerät und verlässt es nicht. Einen Ordner dazu gibt es erst mit einem Backup (oben „Exportieren“, roter Pfeil).</p>`}`);
 }
 function fEcht(id){
   const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
@@ -584,17 +584,16 @@ function fSicherung(){
   fenster(`${fk('Sichern & Exportieren','Ein Backup ist die ganze Akte als verschlüsselter Ordner – dort, wo du willst.')}
    <div class="liste"><div class="zeile"><span class="mitte"><strong>In der Akte auf diesem Gerät</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div>
    ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Letztes Backup: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch kein Backup</strong><small>die Akte liegt nur im Speicher des Browsers</small></span></div>`)(letzterExport())}</div>
-   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">${ic('hinaus')} Backup erstellen</button></div>
-   <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig ein Backup erstellen – auf das Gerät, eine SD-Karte oder einen Stick. Einlesen geht über den grünen Knopf „Importieren“.</p>`
+   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Backup erstellen</button></div>
+   <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig ein Backup erstellen – auf das Gerät, eine SD-Karte oder einen Stick. Einlesen geht über „Importieren“.</p>`
    : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Ein Backup geht in Chrome oder Edge.</p>`}`);
 }
 function fImportWahl(){
   const kann = T() && T().sicherung.ordnerWaehlbar(), bereit = echt.liste !== null && !echt.fehler;
   const z = (a, i, t, u, aus) => `<button class="zeile" data-a="${a}" ${aus ? 'disabled' : ''}><span class="art">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small style="white-space:normal">${u}</small></span>${ic('weiter')}</button>`;
   fenster(`${fk('Importieren','Etwas in die Akte holen.')}<div class="liste">
-   ${z('echt-neu','ordner','Datei in die Akte legen','eine Datei vom Gerät – sie liegt danach unter „Deine Unterlagen“', !bereit)}
+   ${z('echt-neu','datei','Datei in die Akte legen','eine Datei vom Gerät – sie liegt danach unter „Deine Unterlagen“', !bereit)}
    ${z('sich-import','schild','Backup einlesen', kann ? 'einen Backup-Ordner wählen – was schon da ist, wird nicht überschrieben' : 'geht in Chrome oder Edge', !kann)}
-   ${z('viele','sort','Viele Dateien vorsortieren','Beispiel – öffnet den Datei-Organizer')}
   </div>`);
 }
 function fExport(){
@@ -618,7 +617,7 @@ function fImport(){
    <p class="hinweis">Erst wird jede Datei geprüft, dann hereingeholt. Was schon in der Akte liegt, wird nicht überschrieben.</p>`);
 }
 Object.assign(A, {
- 'sich-export': fExport, import: fImportWahl, export: fSicherung,
+ 'sich-export': fExport, import: () => { menueZu(); fImportWahl(); }, export: () => { menueZu(); fSicherung(); },
  'sich-import': async () => { try { sich.art = await T().sicherung.importWaehlen(); fImport(); } catch (err) { const m = zugangFehler(err); if (m) toast(m); } },
  'sich-blatt': () => { const a = document.createElement('a'), url = URL.createObjectURL(new Blob([sich.notfallblatt], {type:'text/plain'}));
    a.href = url; a.download = `Notfallblatt_${sich.ordner}.txt`; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); }
