@@ -8,6 +8,7 @@ const { chromium } = require('playwright');
     const p = await b.newPage({ viewport:{width:w,height:h} });
     p.on('console', m => { if (m.type()==='error' && !/net::ERR_FAILED/.test(m.text())) fehler.push(name+' console: '+m.text()); }); // ERR_FAILED: die Probe sperrt die Modell-Quellen mit Absicht
     p.on('pageerror', e => fehler.push(name+' fehler: '+e.message));
+    p.on('response', r => { if (r.status() === 404) fehler.push(name+' 404: '+r.url()); });
     await p.addInitScript(name => { window.showDirectoryPicker = async () => (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name, {create:true}); }, name);
     await p.goto('http://localhost:8765/'); await p.waitForSelector('.werk');
     const breit = async wo => soll(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name+' quer scrollbar bei '+wo);
@@ -15,7 +16,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.8 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.5.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -158,7 +159,7 @@ const { chromium } = require('playwright');
     await klick('.fenster [data-a=farbe]'); await p.screenshot({path:`p/${name}-4-farbe.png`}); await klick('[data-farbe=koralle]'); soll(await p.evaluate(() => document.querySelector('.fenster.ast').style.getPropertyValue('--k1'))==='#f9c9ad','Stadtfarbe Koralle');
     // Büro
     await klick('.astnav [data-id=buero]'); soll((await p.locator('.kachel.gross').count())===4,'vier Kacheln'); soll((await text()).includes('Workflow PDF'),'Kachel Workflow PDF'); await p.screenshot({path:`p/${name}-5-buero.png`});
-    await klick('.astnav.teil [data-teil=pdf]'); await klick('.fenster [data-a=scan]'); soll((await text()).includes('Neuer Scan'),'Scan'); await klick('[data-a=scan-zur-akte]'); soll((await text()).includes('Scan vom 17.11.2026'),'Scan im Eingang'); await breit('eingang'); await p.screenshot({path:`p/${name}-6-eingang.png`});
+    await klick('.astnav.teil [data-teil=pdf]'); await p.evaluate(() => { s.scan = true; fStadt('buero', [], 'pdf'); }); soll((await text()).includes('Neuer Scan') && (await p.locator('.fenster [data-a=wfpdf]').count())===1,'Scan (Beispiel) und Knopf Workflow PDF öffnen'); await klick('[data-a=scan-zur-akte]'); soll((await text()).includes('Scan vom 17.11.2026'),'Scan im Eingang'); await breit('eingang'); await p.screenshot({path:`p/${name}-6-eingang.png`});
     // Bearbeiten mit aus dem Eingang -> Pseudo
     await klick('[data-a=mit][data-neu="201"]'); soll((await p.locator('[data-a=mit-wahl]').count())===6,'sechs Wege'); await p.screenshot({path:`p/${name}-7-mit.png`});
     await klick('[data-womit=pseudo]'); soll((await text()).includes('⟦STELLE-1⟧') && (await text()).includes('⟦NUMMER-1⟧'),'Pseudo'); await p.screenshot({path:`p/${name}-8-pseudo.png`}); await klick('[data-a=pseudo-sicht]'); soll((await text()).includes('A123456789'),'Original'); await klick('[data-a=zu]');
@@ -172,7 +173,7 @@ const { chromium } = require('playwright');
     await klick('.werk[data-a=notiz]'); await klick('[data-a=sprechen]'); await p.fill('[name=titel]','Anruf Hausverwaltung'); await p.selectOption('[data-form=notiz] [name=bereich]','wohnen'); await p.fill('[name=vorgang]','Nebenkosten 2025'); await p.check('[name=termin]'); await p.screenshot({path:`p/${name}-11-notiz.png`}); await klick('[data-form=notiz] [type=submit]');
     soll((await text()).includes('Termin zu „Anruf Hausverwaltung“'),'Kalender zur Notiz'); await klick('[data-form=termin] [type=submit]'); soll((await p.locator('.fenster .liste .zeile').count())===4,'vier Termine'); await p.screenshot({path:`p/${name}-12-kalender.png`}); await klick('[data-a=zu]');
     // Organizer
-    await klick('.werk[data-a=viele]'); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
+    await p.evaluate(() => { if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); }); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
     // Mail
     await klick('.schild[data-id=mail]'); await klick('[data-a=mail-ki]'); soll((await text()).includes('⟦STELLE-1⟧'),'Mail an KI'); await klick('[data-a=zu]');
     // Suche + Mappe
@@ -182,6 +183,53 @@ const { chromium } = require('playwright');
     // Drucken-Fenster, Hilfe, Fuß
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=drucken]' : '.kopfknoepfe [data-a=drucken]'); soll((await text()).includes('Einzelne Unterlage'),'Drucken'); await klick('[data-a=zu]');
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=hilfe]' : '.kopfknoepfe [data-a=hilfe]'); await p.screenshot({path:`p/${name}-14-hilfe.png`}); soll((await p.locator('.fenster a[href="./rechtliches.html"]').count())===1,'Hilfe-Link'); await klick('[data-a=zu]');
+    // ---------- Klone im Rahmen ----------
+    await klick('.nav [data-zu=start]');
+    // Datei-Organizer hinter dem grünen Knopf: echter Klon, eigener Speicher, kein eigener Worker, Übergabe an die Akte
+    await klick('.werk[data-a=viele]'); await p.waitForSelector('#rahmen');
+    const org = p.frameLocator('#rahmen'); await org.locator('[data-testordner]').waitFor({timeout:30000});
+    await breit('Organizer im Rahmen'); await p.screenshot({path:`p/${name}-20-organizer.png`});
+    const of = p.frames().find(f => /rahmen\/datei-organizer|datei-organizer\/app\/~rahmen/.test(f.url()));
+    const orgLage = await of.evaluate(async () => ({ marke:document.documentElement.dataset.paEingebettet, rahmen:!!window.DO_RAHMEN, navy:getComputedStyle(document.documentElement).getPropertyValue('--navy').trim(), sw:(await navigator.serviceWorker.getRegistrations()).length, basis:document.baseURI.includes('/klone/datei-organizer/app/'), titel:document.title }));
+    soll(orgLage.marke === '1' && orgLage.rahmen && orgLage.sw === 0 && orgLage.basis && /Datei-Organizer/.test(orgLage.titel) && /107c41|pa-b/.test(orgLage.navy), 'Organizer im Rahmen: Brücke, Farben, kein Worker (' + JSON.stringify(orgLage) + ')');
+    if (name === 'pc') {
+      await org.locator('[data-testordner]').click();
+      await of.waitForFunction(() => !document.querySelector('[data-ladebalken]') && /Testordner/.test(document.body.innerText) && document.querySelectorAll('[data-ordner-pill]').length > 0, null, {timeout:180000});
+      await p.waitForTimeout(1500);
+      const dbs = await of.evaluate(async () => { localStorage.setItem('do-probe', '1'); const echt = Object.keys(localStorage).filter(k => /probe/.test(k)); localStorage.removeItem('do-probe'); return { namen:(await indexedDB.databases()).map(d => d.name), echt }; });
+      soll(dbs.namen.includes('PrivateAkteOrganizer1') && !dbs.namen.includes('DateiOrganizer1') && dbs.echt.includes('pa_do-probe') && !dbs.echt.includes('do-probe'), 'Organizer im Rahmen: eigener Speicher (' + JSON.stringify(dbs) + ')');
+      await of.evaluate(() => { location.hash = 'akte'; }); await org.locator('[data-uebergeben]').click();
+      await p.waitForSelector('.fenster form[data-form=ordner]', {timeout:60000});
+      const zeilen = await p.locator('.fenster .ordzeile').count(), mitBereich = await p.evaluate(() => [...document.querySelectorAll('.fenster select[name=b]')].filter(x => x.value && x.value !== 'Sonstiges').length);
+      soll(zeilen > 50 && mitBereich > 20 && (await p.locator('#rahmen').count()) === 1, `Übergabe: Fenster „Ordner in die Akte legen“ über dem Rahmen, ${zeilen} Dateien, ${mitBereich} mit Bereich`);
+      await p.screenshot({path:`p/${name}-21-uebergabe.png`});
+      const gewaehlt = await p.evaluate(() => { const h = [...document.querySelectorAll('.fenster input[name=d]')]; const pdf = h.filter(x => /\.pdf$/i.test(x.value)).slice(0, 2).map(x => x.value); h.forEach(x => { x.checked = pdf.includes(x.value); }); return pdf; });
+      await klick('.fenster form[data-form=ordner] [type=submit]'); await p.waitForFunction(() => !document.querySelector('.fenster form[data-form=ordner]'), null, {timeout:120000});
+      const drin = await p.evaluate(async namen => { const t = window.PrivateAkteTresor, l = await t.liste(), da = l.filter(x => namen.some(n => n.endsWith(x.originalName))); const r = { n:da.length, bereich:da.map(x => x.category), text:da.some(x => (x.textAuszug || x.textHint || '').length > 20) }; for (const x of da) await t.herausnehmen(x.id); return r; }, gewaehlt);
+      soll(gewaehlt.length === 2 && drin.n === 2, 'Übergabe: zwei gewählte Dateien liegen in der Akte (' + JSON.stringify(drin) + ')');
+      soll(((await of.evaluate(() => document.querySelector('[data-uebergabe] [data-meldung]')?.innerText || '')).includes('bereit')), 'Übergabe: der Organizer zeigt die Antwort der Akte');
+    }
+    await klick('[data-a=rahmen-zu]'); soll((await p.locator('#rahmen').count()) === 0, 'Rahmen geht mit „‹ Akte“ zu');
+    // Workflow PDF im Rahmen: Scanner über den roten Knopf, „Teilen“ legt in die Akte, Unterlage aus der Akte öffnen
+    await klick('.werk[data-a=scan]'); await p.waitForSelector('#rahmen');
+    let wf = null; for (let i = 0; i < 100 && !wf; i++) { wf = p.frames().find(f => /rahmen\/workflow-pdf|workflow-pdf\/~rahmen/.test(f.url())); if (!wf) await p.waitForTimeout(100); }
+    await wf.waitForFunction(() => window.__wfpdf && window.WFP && WFP.DB && WFP.Scanner, null, {timeout:60000});
+    await p.waitForTimeout(1500); await breit('Workflow PDF im Rahmen'); await p.screenshot({path:`p/${name}-22-wfpdf-scan.png`});
+    const wfLage = await wf.evaluate(async () => ({ marke:document.documentElement.dataset.paEingebettet, sw:(await navigator.serviceWorker.getRegistrations()).length, dbs:(await indexedDB.databases()).map(d => d.name), rot:getComputedStyle(document.documentElement).getPropertyValue('--rot-d').trim(), netz:!!document.querySelector('script[src*="sbkim-init"]'), inst:getComputedStyle(document.getElementById('btnInstall')).display, scanner:!!document.querySelector('.scan, #scanner, [class*=scan-]') }));
+    soll(wfLage.marke === '1' && wfLage.sw === 0 && wfLage.dbs.includes('PrivateAkteWFPDF1') && !wfLage.dbs.includes('WorkflohPDF1') && !wfLage.netz && wfLage.inst === 'none' && wfLage.scanner, 'Workflow PDF im Rahmen: Brücke, eigene Bibliothek, kein Worker, kein Mycel, Scanner offen (' + JSON.stringify(wfLage) + ')');
+    const PDF = '%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 400 200]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 44>>stream\nBT /F1 18 Tf 40 100 Td (Probe Rahmen) Tj ET\nendstream endobj\n5 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>endobj\ntrailer<</Root 1 0 R>>\n%%EOF';
+    const geteilt = await wf.evaluate(async ([pdf, name]) => { try { await navigator.share({files:[new File([pdf], `Probe-Teilen-${name}.pdf`, {type:'application/pdf'})]}); return 'ok'; } catch (e) { return String(e.message); } }, [PDF, name]);
+    const inAkte = await p.evaluate(async name => { const t = window.PrivateAkteTresor, d = (await t.liste()).find(x => x.originalName === `Probe-Teilen-${name}.pdf`); return d ? d.id : ''; }, name);
+    soll(geteilt === 'ok' && !!inAkte, 'Workflow PDF: „Teilen“ legt die Datei in die Akte (' + geteilt + ')');
+    await klick('[data-a=rahmen-zu]');
+    if (inAkte) {
+      await p.evaluate(id => fEcht(id), inAkte); await klick('.fenster [data-a=echt-wfpdf]'); await p.waitForSelector('#rahmen');
+      let w2 = null; for (let i = 0; i < 100 && !w2; i++) { w2 = p.frames().find(f => /rahmen\/workflow-pdf|workflow-pdf\/~rahmen/.test(f.url())); if (!w2) await p.waitForTimeout(100); }
+      const offen = await w2.waitForFunction(name => window.__wfpdf && __wfpdf.S && __wfpdf.S.doc && __wfpdf.S.doc.name === `Probe-Teilen-${name}`, name, {timeout:60000}).then(() => true, () => false);
+      soll(offen, 'Workflow PDF: Unterlage aus der Akte ist im Editor offen'); await p.screenshot({path:`p/${name}-23-wfpdf-offen.png`});
+      await w2.evaluate(async () => { for (const d of await WFP.DB.all('docs')) { await WFP.DB.del('files', d.id); await WFP.DB.del('docs', d.id); } }).catch(() => {});
+      await klick('[data-a=rahmen-zu]'); await p.evaluate(id => window.PrivateAkteTresor.herausnehmen(id), inAkte);
+    }
     soll((await p.locator('.fuss a').count())===4,'Fuß-Links');
     await p.goto('http://localhost:8765/rechtliches.html'); soll((await text()).includes('Impressum'),'rechtliches'); await breit('rechtliches');
     await p.close();

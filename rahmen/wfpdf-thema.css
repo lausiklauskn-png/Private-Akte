@@ -1,0 +1,5 @@
+/* rahmen/wfpdf-thema.css — Farben der Privaten Akte über dem Klon von Workflow PDF (Klaus 17.11.2026: Workflow PDF rötlich).
+   Letztes Stylesheet in rahmen/workflow-pdf.html; der Klon ist byte-gleich. Das Rot wird das Rot des Tools in der Akte.
+   Ausgeblendet wie in der Familienakte: Mycel-Leiste, Installieren, ⟳ (die Fassung kommt mit der Privaten Akte), „Im Netz antworten“. */
+:root{ --rot:var(--pa-a,#d2475b); --rot-d:var(--pa-b,#9b1f38); --rot-h:#fbe9ec; --grund:#f8fafd; }
+.netzleiste,#btnInstall,#stInstall,#btnNeu,[data-netz-antworten]{display:none!important}

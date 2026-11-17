@@ -1,0 +1,9 @@
+/* rahmen/organizer-thema.css — Farben der Privaten Akte über dem Klon des Datei-Organizers (Klaus 17.11.2026: Aufbau und Design
+   kommen mit, nur die Farben werden angepasst). Letztes Stylesheet in rahmen/organizer.html; der Klon ist byte-gleich.
+   Das Blau des Organizers wird das Grün seines Tools in der Akte; --pa-a/--pa-b setzt die Brücke aus der Farbpalette der Akte. */
+:root{
+  --navy:var(--pa-b,#107c41); --navy-2:var(--pa-a,#2bb673); --teal:var(--pa-b,#107c41); --teal-soft:#e9f7ef; --blue-soft:#eef8f2;
+  --canvas:#f8fafd; --line:#dbe6ee; --baum:#9cc9b0;
+}
+/* Gehört zur Akte, nicht zum Klon: Aktualisieren und Installieren (die Fassung kommt mit der Privaten Akte). */
+[data-installieren]{display:none!important}

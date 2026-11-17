@@ -262,3 +262,12 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .ordzeile small{color:var(--muted);font-size:12px}
 .ordzeile .warn{color:var(--red);font-weight:600}
 .feld.schmal{width:auto;max-width:42%;flex:none;padding:6px 8px;font-size:13px}
+
+/* Klone im Rahmen (0.5.0): Datei-Organizer und Workflow PDF füllen den Schirm, oben eine flache Leiste mit dem Rückweg. */
+#rahmenort:empty{display:none}
+.rahmenfenster{position:fixed;inset:0;z-index:19;display:flex;flex-direction:column;background:#f8fafd;color:var(--ink)}
+.rahmenfenster .fkopf{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0;padding:calc(6px + env(safe-area-inset-top)) 12px 6px;color:var(--schrift);background:linear-gradient(90deg,var(--k1),var(--k2) 55%,var(--k3));border-bottom:1px solid var(--line)}
+.rahmenfenster .fkopf h2{margin:0;font-size:15px;color:var(--schrift);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;min-width:0}
+.rahmenfenster .fkopf h2 small{font-weight:400;font-size:12px;opacity:.8}
+.rahmenfenster iframe{flex:1;width:100%;border:0;background:#fff;min-height:0}
+@media(max-width:520px){.rahmenfenster .fkopf h2 small{display:none}}

@@ -22,10 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.8)
+## Stand (17.11.2026 nachts, Vorschau 0.5.0)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_LESEN-UND-ORGANIZER-0.4.8.md` (aktuell, mit Startauftrag für die Sitzung „Klone im Rahmen“); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -33,8 +33,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `bcd48a4`. `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
-- **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 313 MB). Besser: Pages auf „GitHub Actions“ umstellen
+- `klone/datei-organizer/` – Datei-Organizer @ `f9822b7` (0.4.14 mit Übergabe-Stelle). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+  `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
+- **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
 - **Offen bei Klaus:** Familienbüro in der App (Vorschau) oder nur aufrufen (unten „Entschieden“); Portemonnaie offen oder gleich im Tresor.
 - **Tresor exportieren / importieren (0.3.0, Klaus 17.11.):** Schild-Knopf „Sicherung“. Export = `writeFullFamilyBackup` des Klons mit
@@ -42,6 +43,42 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.0 Klone im Rahmen: Datei-Organizer und Workflow PDF laufen in der Privaten Akte (Klaus 17.11. abends, Generalvollmacht
+  für diese Sitzung; Vorbild: Workflow PDF in der Familienakte).** Der grüne Knopf „Dateien hineingeben“ (und „Datei-Organizer“
+  im Baum) öffnet den echten Datei-Organizer, der rote Knopf „PDF scannen“ den Scanner von Workflow PDF, „Workflow PDF öffnen“
+  (Familienbüro › Workflow PDF) das ganze Programm; an einer PDF- oder Bild-Unterlage steht „Mit Workflow PDF bearbeiten“.
+  **Bauweise:** die Klone bleiben byte-gleich. Je Klon eine erzeugte Startseite unter `rahmen/<Pfad im Klon>/index.html`
+  (`tools/rahmen-bauen.mjs`, in `npm run bau` und `bau:pruefen`): Brücke der Akte als erstes Skript, `<base>` auf den Klon,
+  Farbdatei als letztes Stylesheet; bei Workflow PDF ohne Worker-Anmeldung und ohne Mycel-Knoten (wie in der Familienakte).
+  Die Brücke stellt die Adresse der Seite ohne Neuladen auf `klone/<Pfad>/~rahmen` um – der Klon sucht einen Teil seiner Dateien
+  über `location.href` (Scanner, Texterkennung, Prüfkern); `<base>` allein gab 404, die Umstellung allein auch (der Browser lädt
+  vorab). Die Seite liegt darum spiegelbildlich zum Klon, damit `<base>` vorher und nachher auf denselben Ordner zeigt.
+  **Brücken** (`rahmen/organizer-bruecke.js`, `rahmen/wfpdf-bruecke.js`): eigener Speicher (nachgesehen im Organizer: Datenbank
+  `DateiOrganizer1` → `PrivateAkteOrganizer1`, Merker `do-…`/`do_…`/`datei-organizer-…` → `pa_…`; Workflow PDF: `WorkflohPDF1` →
+  `PrivateAkteWFPDF1`, `wfpdf_*` → `pa_wfpdf_*`), kein eigener Service Worker, nur eigene Vorräte sichtbar. Lädt im Rahmen doch
+  einmal die Startseite eines Klons ohne Brücke (Neuladen, Link), leitet der Worker der Akte um und das Rahmen-Fenster lädt neu.
+  **Übergabe Organizer → Akte:** Seite „Familienakte“ im Organizer, Karte „An die Private Akte übergeben“ (Stelle im Repo
+  Datei-Organizer gebaut: `src/rahmen.ts`, `window.DO_RAHMEN`, PR #64 dort) – Index und Originale kommen als Nachricht, die Akte
+  zeigt das Fenster von 0.4.8 über dem Rahmen (`organizer.ausStapel` in `src/tresor.ts`, `fOrdner`); auch Dateien aus Unterordnern.
+  **Workflow PDF → Akte:** „Teilen“ im Klon legt die Datei in die Akte (Bereich „Sonstiges“, Text vorher gelesen), ein Scan über
+  den roten Knopf geht nach „PDF erstellen“ von selbst hinein. **Akte → Workflow PDF:** die Unterlage wird als Kopie in die
+  Bibliothek des Klons gelegt und geöffnet; das Ergebnis kommt über „Teilen“ als **neue** Unterlage zurück (ersetzt nichts).
+  **Farben:** `rahmen/organizer-thema.css` (Blau des Organizers → Grün seines Tools), `rahmen/wfpdf-thema.css` (Rot des Tools;
+  Installieren, ⟳, Mycel-Leiste ausgeblendet). Das Rahmen-Fenster hat einen eigenen Ort (`#rahmenort`), „‹ Akte“ oder Zurück schließt.
+  Der Worker legt die Klon-Dateien beim Gebrauch in den Vorrat (Filme nicht).
+  **Eigene Entscheidungen der Sitzung (Vollmacht):** (1) eigener Klon von Workflow PDF auf dem neuesten Stand statt des Klons in
+  der Familienakte – der trägt deren Brücke und ist drei Wochen älter; kostet 35 MB. (2) Startseiten unter `rahmen/` statt einer
+  Kopie der Klone (die Familienakte kopiert; hier wären es 110 MB doppelt). (3) Übergabe-Stelle im Organizer gebaut statt über
+  die Brücke in sein Inneres zu greifen; ohne Rahmen ändert sich dort nichts. (4) Die Beispiel-Fenster „Datei-Organizer“ und
+  „Neuer Scan“ sind nicht mehr über Knöpfe erreichbar (Code bleibt für die Probe). (5) Aus Workflow PDF Abgelegtes kommt ohne
+  Rückfrage nach „Sonstiges“. (6) Gleich 0.5.0, kein Zwischenstand 0.4.9 auf `main`.
+  **Grenzen / nicht gebaut:** die Farbpalette der Akte wirkt nicht in den Klonen (die Brücken nehmen `?a=&b=` schon an);
+  der Organizer nennt im Fuß und in der Hilfe weiter die Familienakte (Text des Klons); Scan-PDFs liest der Organizer weiter
+  nur auf 2 Seiten, die Lage der Zeilen steht nicht im Index (beides im Repo Datei-Organizer offen); kein Bereich-Vorschlag für
+  Abgelegtes aus Workflow PDF; Discovery-Filme des Organizers laufen nur mit Netz. Probe 234 grün (22 neu: beide Klone im Rahmen,
+  eigener Speicher, kein Worker, Testordner einlesen → Übergabe → zwei Dateien in der Akte, Teilen aus Workflow PDF, Unterlage
+  aus der Akte im Editor; dazu von Hand: Neuladen im Rahmen kommt mit Brücke wieder). **Am Tablet, mit echter Kamera, mit einem
+  echten Ordner und über GitHub Pages ungeprüft.**
 - **0.4.8 Ordner aus dem Datei-Organizer übernehmen (Klaus 17.11.: große Mengen werden im Datei-Organizer gelesen, sortiert und
   angelernt – dort bleibt das Nacharbeiten; einzelne Stücke direkt in der Akte; ein Sortier-Kern):** „Importieren“ › „Ordner in
   die Akte legen“. `organizer` in `src/tresor.ts`: Ordner wählen, `organizer-index.json` lesen – Einordnung über die unveränderte
@@ -51,8 +88,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   ein einfacher Stapel nach „Sonstiges“. Nur Dateien direkt im Ordner; schon Vorhandenes zählt als „waren schon da“.
   **Befund im Klon @ `bcd48a4`:** der Index trägt je Datei Steckbrief, `text` (bis 20.000 Zeichen, Haken „Erkannten Text mitgeben“)
   und `abschnitte`; Scan-PDFs liest der Organizer nur auf den ersten **2 Seiten** (`SCAN_SEITEN`, reicht zum Sortieren, nicht für die
-  Suche im ganzen Scan); die Lage der Zeilen steht nicht im Index. **Nicht gebaut:** die Oberfläche des Datei-Organizers ist nicht
-  in der Privaten Akte – der grüne Knopf „Dateien hineingeben“ zeigt weiter das Beispiel; Absender/Frist/Betrag stehen nur in der
+  Suche im ganzen Scan); die Lage der Zeilen steht nicht im Index. **Nicht gebaut (Stand 0.4.8; seit 0.5.0 ist der Organizer im Rahmen da):** Absender/Frist/Betrag stehen nur in der
   Notiz; Bereich-Vorschlag aus dem Sortier-Kern beim einzelnen Ablegen. Probe mit gestelltem Ordner grün (216); mit einem echten
   Ordner aus dem Organizer und am Tablet ungeprüft.
 - **0.4.7 Leser in der Akte (Schritt 2; Klaus 17.11.):** Tipp auf einen Treffer mit Seitenzahl öffnet das PDF im Fenster auf

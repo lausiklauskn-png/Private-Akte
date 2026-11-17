@@ -21,6 +21,7 @@ import { ArbeitSpeicher, arbeitAnzeige, arbeitFehler, arbeitFrei, arbeitGemerkt,
 import { OrdnerSeite, SortierenSeite, FindenSeite, VerlaufSeite, AkteSeite, HilfeSeite } from "./seiten.tsx";
 import { LandkarteSeite } from "./landkarte.tsx";
 import { installHoeren, installMoeglich, installieren } from "./installieren.ts";
+import { rahmen } from "./rahmen.ts";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
 export const FASSUNG = "0.4.14";
@@ -430,6 +431,23 @@ function useOrganizer() {
     return a ? new Blob([a.daten as BlobPart]) : null;
   }, [quelleArt, ordnerName]);
 
+  // Im Rahmen einer anderen App (src/rahmen.ts): der sortierte Stapel geht samt Index und Originalen direkt an die Hülle.
+  // Gesperrtes und Doppeltes gibt der Organizer nicht weiter; Anhänge aus Mails reisen als eigene Dateien mit.
+  const uebergeben = useCallback(async (mitText: boolean) => {
+    const r = rahmen(); if (!r) return;
+    try {
+      const paket: Array<{ pfad: string; datei: File }> = [], fehlen: string[] = [];
+      for (const d of dateien) {
+        if (d.auffaellig || d.doppeltVon) continue;
+        const b = await original(d.pfad).catch(() => null);
+        if (b) paket.push({ pfad: d.pfad, datei: new File([b], d.name, { lastModified: d.geaendert || Date.now() }) }); else fehlen.push(d.pfad);
+      }
+      if (!paket.length) { setMeldung({ text: fehlen.length ? "Die Originale sind nicht mehr erreichbar. Bitte den Ordner noch einmal wählen." : "Nichts zum Übergeben.", art: "fehler" }); return; }
+      const a = await r.uebergeben({ ordner: ordnerName || "Datei-Organizer", index: indexText(mitText), dateien: paket, fehlen });
+      setMeldung(a.ok ? { text: a.text || `${paket.length} ${paket.length === 1 ? "Datei" : "Dateien"} an die ${r.name} übergeben.${fehlen.length ? ` ${fehlen.length} nicht erreichbar.` : ""}` } : { text: a.text || "Die Übergabe wurde nicht angenommen.", art: "fehler" });
+    } catch (e) { setMeldung({ text: `Übergabe nicht möglich: ${(e as Error).message}`, art: "fehler" }); }
+  }, [dateien, indexText, original, ordnerName]);
+
   const neuBeginnen = useCallback(async () => {
     await loeschen(); stapel.current = []; originale.current.clear(); setAngefangen(null);
     setDateien([]); setStufe(0); setVerlauf([]); setRegeln([]); setOrdnerName(""); setQuelleArt(""); setQuelle(null); setMeldung({ text: "Alles zurückgesetzt. Die Originale im Ordner sind unverändert." });
@@ -468,7 +486,7 @@ function useOrganizer() {
     setMeldung({ text: `${was || (n === 1 ? "1 Datei" : `${n} Dateien`)} aus dem Organizer genommen. ${n === 1 ? "Das Original ist" : "Die Originale sind"} unverändert. „Zurück“ auf der Seite Sortieren holt sie wieder.` });
   }, [dateien, stufe]);
 
-  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, rueckgaengig, nummern, indexSichern, indexText, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
+  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, rueckgaengig, nummern, indexSichern, indexText, uebergeben, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
 }
 
 async function einlesenTeile(bytes: Uint8Array, pfad: string) {

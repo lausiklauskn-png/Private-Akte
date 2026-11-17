@@ -13,6 +13,7 @@ import { deutsch, kurzfassung, INDEX_DATEI } from "../lib/index-format.ts";
 import { Ablaufbild, FesterBaum, Info, OrdnerBaum, Seitentitel, type Schritt } from "./ui.tsx";
 import { ausAuswahl, nativGemerkt, nativPlattform, nativVergessen, nativSpeichernMoeglich, nativWaehlen, nativWieder, nativerOrdner, ordnerWaehlen, ordnerWahlMoeglich, testOrdner, type GemerkterOrdner } from "./quellen.ts";
 import { heute, Ladebalken, type AppZustand, type FindenZiel, type SeitenId } from "./app.tsx";
+import { rahmen } from "./rahmen.ts";
 import { druckZielSetzen, druckZielWeg } from "./drucken.ts";
 import { fotoAufbereiten, scanDatei, scanFreigeben, scanSpeichern, type ScanSeite } from "./scan.ts";
 import { ARBEIT, arbeitAnzeige, arbeitFrei, arbeitMoeglich, leistungText, mbText, TEXT_IM_SPEICHER } from "./arbeit.ts";
@@ -584,6 +585,18 @@ export function AkteSeite({ z, gehe }: P) {
       "Die Familienakte holt Kopien (Sicherheit › Cloud-Ordner hereinholen) und ordnet sie danach zu.",
       "Gesperrte und doppelte Dateien gibt der Organizer nicht weiter.",
     ]} mehr={<FesterBaum label="Weg der Dateien" wurzel={{ titel: "Datei-Organizer (Ordner)", unter: "Originale bleiben", kinder: [{ titel: INDEX_DATEI, unter: "Sortierung" }, { titel: "Familienakte", unter: "holt Kopien, ordnet zu" }] }}/>}/>}/>
+    {rahmen() && <section className="card" data-uebergabe>
+      <div className="card-heading"><h2>An die {rahmen()!.name} übergeben</h2><Info titel="Direkte Übergabe" punkte={[
+        "Der sortierte Stapel geht mit seiner Einordnung direkt hinüber – ohne Ordnerwahl.",
+        "Dort wählst du noch einmal, was hineinkommt, und kannst den Bereich je Datei ändern.",
+        "Gesperrte und doppelte Dateien gibt der Organizer nicht weiter.",
+        "Die Originale bleiben, wo sie sind.",
+      ]}/></div>
+      <div className="button-row" style={{ marginTop: 12 }}>
+        <button type="button" className="button primary" disabled={!z.dateien.some((d) => !gesperrt(d))} onClick={() => z.uebergeben(mitText)} data-uebergeben><Share2 size={18}/>An die {rahmen()!.name} übergeben</button>
+      </div>
+      <Meldung z={z} gehe={gehe}/>
+    </section>}
     <section className="card" data-archivnummern>
       <div className="card-heading"><h2>Archivnummern</h2><Info titel="Archivnummer" punkte={[
         "Für Papier im Ordner: Nummer auf das Blatt schreiben, dann findet man es wieder.",
@@ -608,7 +621,7 @@ export function AkteSeite({ z, gehe }: P) {
       <div className="button-row" style={{ marginTop: 12 }}>
         <button type="button" className="button primary" disabled={!z.dateien.length} onClick={() => z.indexSichern(mitText)} data-index-sichern><Download size={18}/>{z.quelle?.schreiben ? "In den Ordner schreiben" : nativSpeichernMoeglich() ? "Speichern unter …" : "Herunterladen"}</button>
       </div>
-      <Meldung z={z} gehe={gehe}/>
+      {!rahmen() && <Meldung z={z} gehe={gehe}/>}
     </section>
     <LeerenKarte z={z} gehe={gehe}/>
   </>;

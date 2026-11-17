@@ -35,6 +35,9 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A19 | Es war nicht zu sehen, ob die Suche den Inhalt der Unterlagen überhaupt gelesen hat. | 0.4.3: unter den Treffern „Inhalt gelesen bei x von y Unterlagen“. | Prüfen, ob die Bedeutungssuche dort sagt, wie viele Unterlagen nur mit ihren Angaben zählen. |
 | A20 | Die Suche findet ein vielseitiges Heft, aber nicht die Stelle darin. | 0.4.6: unter dem Treffer der Ausschnitt mit der Seite. 0.4.7: Leser in der Akte öffnet die Seite, Wörter markiert, Suche im Dokument. | Dort zeigt die Bedeutungssuche die Unterlage, nicht die Stelle – prüfen. |
 | A21 | Große Mengen sollen im Datei-Organizer sortiert und angelernt werden und dann als Ordner in die Akte kommen. | 0.4.8: „Ordner in die Akte legen“ – ein Fenster mit allen Dateien, Bereich je Datei änderbar, ein Knopf legt alle ab; Datum und gelesener Text kommen aus dem Index mit. | Dort geht jede Datei einzeln durch das Prüf-Fenster, und Datum und Text des Organizers werden nicht übernommen (nur Bereich, Art, Hinweis) – prüfen. |
+| A22 | Der Datei-Organizer und Workflow PDF sollen in der Akte laufen, nicht nur daneben. | 0.5.0: beide als Klone im Rahmen. Anders als in der Familienakte wird der Klon nicht kopiert und seine `index.html` nicht im Klon geändert: die Startseite mit Brücke liegt unter `rahmen/`, der Klon bleibt ganz byte-gleich (ein Pin für alles). Die Brücke stellt die Adresse auf den Klon um, weil Workflow PDF Dateien über `location.href` sucht. |
+| A23 | Vom Organizer in die Akte ohne Umweg über einen Ordner. | 0.5.0: Karte „An die Private Akte übergeben“ im Organizer (Stelle `window.DO_RAHMEN` dort); die Familienakte holt den Ordner bisher nur über die Ordnerwahl. Auch Dateien aus Unterordnern kommen mit. |
+| A24 | Workflow PDF: Ergebnis zurück in die Akte. | 0.5.0: „Teilen“ legt ab, ohne Arbeitsraum und ohne Ersetzen der Quelle (die Familienakte bindet die Arbeitsdatei an ihre Quelle und ersetzt sie). Hier entsteht eine neue Unterlage in „Sonstiges“. |
 
 ## B. Vereinfachungen der Hülle
 
@@ -60,3 +63,5 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 - Der Tresor als wirklich gewählter Ordner (kann der Klon, „Ordner wählen“) – dann gäbe es „Tresor anlegen“ wirklich.
 - Einzelne Unterlage exportieren (bisher nur das ganze Backup).
 - Am Handy liegen Importieren/Exportieren hinter „⋯“.
+- Klone im Rahmen (0.5.0): Farbpalette der Akte in den Klonen; Bereich-Vorschlag für Abgelegtes aus Workflow PDF; Rückgabe an
+  die Quelle statt neuer Unterlage; Wörter „Familienakte“ im Organizer.

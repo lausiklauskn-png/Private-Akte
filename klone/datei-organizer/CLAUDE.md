@@ -9,6 +9,17 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (17.11.2026 nachts): Betrieb im Rahmen der Privaten Akte (Übergabe-Stelle)
+
+- **Im Rahmen einer anderen App** (Klaus 17.11.: der Organizer läuft als Klon in der Privaten Akte; Generalvollmacht für die Sitzung
+  „Klone im Rahmen“): `src/rahmen.ts`. Setzt die Hülle vor dem Start `window.DO_RAHMEN = { name, uebergeben(paket) }` (ihre Brücke ist
+  das erste Skript der Seite), meldet die App **keinen eigenen Service Worker** an, und auf der Seite „Familienakte“ steht zuerst die
+  Karte **„An die <Name> übergeben“** (`[data-uebergabe]`, `[data-uebergeben]`): `uebergeben` in `src/app.tsx` gibt den Index als Text
+  (`organizer-index.json`, mit oder ohne erkannten Text) und die Originale als `File` an die Hülle – ohne Ordnerwahl; Gesperrtes und
+  Doppeltes bleibt zurück, nicht mehr erreichbare Originale werden gezählt (`fehlen`). Ohne `DO_RAHMEN` (Web-App, Android, Windows)
+  ändert sich nichts. Kern (`lib/`) unverändert. Vorrat v35. UI-Probe 156 (6 neu). Die Private Akte zieht den Klon nach.
+  **Nicht gebaut (aus dem Brief der Privaten Akte):** Scan-PDFs über die ersten 2 Seiten hinaus lesen (`SCAN_SEITEN`), Lage der Zeilen im Index.
+
 ## Stand (17.11.2026): Foto / Scan in der Web-App (Basic) – nicht in APK/Windows, erst nach Klaus' Prüfung
 
 - **Foto / Scan (Klaus 17.11.: Dokumente, Rechnungen, Kassenbons mit der Handykamera; „erst einmal in der PWA-Version, dann wird das geprüft“,

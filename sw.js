@@ -1,14 +1,16 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
-const VERSION = '0.4.8';
+const VERSION = '0.5.0';
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
 const DATEIEN = [
-  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'native/familienakte-meaning-worker.js', 'klone/familienakte/public/vendor/pdfjs/pdf.min.js', 'klone/familienakte/public/vendor/pdfjs/pdf.worker.min.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
+  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'rahmen/datei-organizer/app/index.html', 'rahmen/organizer-bruecke.js', 'rahmen/organizer-thema.css', 'rahmen/workflow-pdf/index.html', 'rahmen/wfpdf-bruecke.js', 'rahmen/wfpdf-thema.css', 'native/familienakte-meaning-worker.js', 'klone/familienakte/public/vendor/pdfjs/pdf.min.js', 'klone/familienakte/public/vendor/pdfjs/pdf.worker.min.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
   'icons/favicon-32.png', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png',
   'bilder/baum.jpg', 'bilder/zur-akte.mp4', 'bilder/logo-basic-rund.png', 'bilder/logo-pro-rund.png'
 ].map(pfad => new URL(pfad, ROOT).href);
+const KLONE = ['/klone/datei-organizer/app/', '/klone/workflow-pdf/'];
+const STARTSEITEN = [['klone/datei-organizer/app/', 'rahmen/datei-organizer/app/index.html'], ['klone/workflow-pdf/', 'rahmen/workflow-pdf/index.html']];
 const schluessel = request => { const url = new URL(request.url); url.search = ''; url.hash = ''; return url.pathname.endsWith('/index.html') ? url.href.slice(0, -10) : url.href; };
 
 self.addEventListener('install', event => {
@@ -32,6 +34,8 @@ async function ausschnitt(request, antwort) {
 self.addEventListener('fetch', event => {
   const request = event.request, url = new URL(request.url);
   if (request.method !== 'GET' || url.origin !== ROOT.origin || !url.pathname.startsWith(ROOT.pathname) || url.pathname.endsWith('/sw.js')) return;
+  /* Die Startseite eines Klons selbst wird nie gezeigt (sie hätte keine Brücke): statt ihrer kommt die Seite im Rahmen. */
+  if (request.mode === 'navigate') { const klon = STARTSEITEN.find(([pfad]) => url.pathname === ROOT.pathname + pfad || url.pathname === ROOT.pathname + pfad + 'index.html' || url.pathname === ROOT.pathname + pfad + '~rahmen'); if (klon) { event.respondWith(Response.redirect(new URL(klon[1], ROOT).href, 302)); return; } }
   event.respondWith((async () => {
     const cache = await caches.open(CACHE), key = schluessel(request);
     if (request.headers.has('range')) { const da = await cache.match(key); return da ? ausschnitt(request, da) : fetch(request); }
@@ -39,7 +43,8 @@ self.addEventListener('fetch', event => {
       /* no-cache: beim Server nachfragen statt den Zwischenspeicher des Browsers zu nehmen (Pages hält ihn 10 Minuten). */
       const frisch = await fetch(request.mode === 'navigate' ? request.url : request, {cache:'no-cache'});
       /* Die Texterkennung (rund 5,5 MB) kommt beim ersten Gebrauch in den Vorrat, nicht schon beim Installieren. */
-      if (frisch.ok && (DATEIEN.includes(key) || key.includes('/vendor/tesseract/'))) cache.put(key, frisch.clone());
+      /* Die Klone im Rahmen (Datei-Organizer, Workflow PDF) kommen ebenso beim Gebrauch in den Vorrat; ihre Filme nicht (zu groß). */
+      if (frisch.ok && frisch.status === 200 && (DATEIEN.includes(key) || key.includes('/vendor/tesseract/') || (KLONE.some(k => key.includes(k)) && !/\.(mp4|webm)$/.test(key)))) cache.put(key, frisch.clone());
       return frisch;
     } catch (fehler) {
       const da = await cache.match(key);

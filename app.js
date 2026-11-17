@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.8', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -172,7 +172,7 @@ function maske(text){
 /* ---------- Kopf und Navigation ---------- */
 const WERK = [
  ['bon-start','kamera','Bon fotografieren','geld','öffnet das Portemonnaie'],
- ['scan','scan','PDF scannen','pdf','Foto zu PDF – öffnet Workflow PDF im Familienbüro'],
+ ['scan','scan','PDF scannen','pdf','Foto zu PDF – öffnet den Scanner von Workflow PDF'],
  ['viele','ordner','Dateien hineingeben','sort','ganze Dateien oder Ordner – öffnet den Datei-Organizer'],
  ['notiz','notiz','Notiz','akte','schreiben oder sprechen, von Hand zuordnen'],
  ['kalender','kalender','Kalender','kal','Termine und Fristen']
@@ -367,7 +367,7 @@ function buero(){
   const zurAkte = ds.length ? `<button class="knopf gruen voll" data-a="zurueck" data-docs="${ds.map(d => d.id).join(',')}">Zur Akte ${ic('pfeil')}</button>` : '';
   let eigen = '';
   if (t === 'pdf') eigen = (s.scan ? `<div class="blatt" style="margin-bottom:8px"><small>Neuer Scan · 1 Seite · Foto zu PDF</small><b>Scan vom ${datum(HEUTE)}</b>Die Kamera hat die Seite aufgenommen, gerade gerückt und als PDF gespeichert (Beispiel).<div class="reihe"><button class="knopf gruen klein" data-a="scan-zur-akte">Zur Akte ${ic('pfeil')}</button><button class="knopf hell klein" data-a="scan">Noch eine Seite</button></div></div>` : '') + blaetter
-    + (!s.scan && !ds.length ? `<p class="leer">Gerade liegt hier nichts. „PDF scannen“ macht aus einem Foto ein PDF.</p>` : '') + zurAkte + `<div class="reihe"><button class="knopf rot" data-a="scan">${ic('scan')} PDF scannen</button></div>`;
+    + (!s.scan && !ds.length ? `<p class="leer">Gerade liegt hier nichts. „Workflow PDF öffnen“ zeigt das echte Programm, „PDF scannen“ macht aus einem Foto ein PDF.</p>` : '') + zurAkte + `<div class="reihe"><button class="knopf rot" data-a="wfpdf">${ic('pdf')} Workflow PDF öffnen</button><button class="knopf hell" data-a="scan">${ic('scan')} PDF scannen</button></div>`;
   else if (t === 'text') eigen = blaetter + (ds.length ? '' : '<p class="leer">Gerade liegt hier kein Text.</p>') + zurAkte + `<div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Neuer Brief" data-art="DOCX">${ic('plus')} Neuer Brief</button></div>`;
   else if (t === 'tab') eigen = `<div class="mock">${['Monat','Strom','Wasser','Heizung','Januar','62,00','18,40','95,00','Februar','58,50','17,90','91,20','März','55,10','18,10','74,60'].map(z => `<span>${z}</span>`).join('')}</div><div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Verbrauch 2026" data-art="XLSX">Zur Akte ${ic('pfeil')}</button></div>`;
   else eigen = `<div class="folie"><div><b style="font-size:18px">Unser Umzug</b><br><small>Folie 1 von 3 · Beispiel</small></div></div><div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Folien Umzug" data-art="PPTX">Zur Akte ${ic('pfeil')}</button></div>`;
@@ -468,12 +468,14 @@ const A = {
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
  sicherung: () => { menueZu(); fSicherung(); },
- viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
- 'sort-mehr': () => { organizer = [...organizer, ...ORGANIZER_NEU().map(o => ({...o, titel:o.titel+' (neu)'}))]; stadtNeu(); toast('Vier Dateien hineingegeben (Beispiel). Der Helfer hat geraten.'); },
+ viele: () => { menueZu(); fRahmen('organizer'); },
+ wfpdf: () => { menueZu(); fRahmen('wfpdf'); },
+ 'rahmen-zu': () => rahmenZu(),
+ 'sort-mehr': () => fRahmen('organizer'),
  notiz: () => { menueZu(); fNotiz(); },
  sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
  kalender: () => { menueZu(); s.zuDoc = null; fStadt('kal'); },
- stadt: e => { if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
+ stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
  mit: fMit,
  'mit-wahl': e => {
@@ -508,7 +510,7 @@ const A = {
    const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿'+zeilen], {type:'text/csv'})); a.download = 'portemonnaie-2026-11.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
    geld.gegeben = true; stadtNeu(); toast('Der November liegt als Datei für BookLedgerPro bereit (Beispieldaten). Die Buchhaltung bleibt draußen.'); },
  'hinaus-info': () => { fStadt('geld'); toast('Der Weg nach außen: „An BookLedgerPro geben“ unten im Portemonnaie.'); },
- scan: () => { menueZu(); s.scan = true; fStadt('buero', [], 'pdf'); toast('Seite aufgenommen und als PDF gespeichert (Beispiel).'); },
+ scan: () => { menueZu(); fRahmen('wfpdf', 'scan=1&von=PrivateAkte'); },
  'scan-zur-akte': () => { s.scan = false; neuInEingang('Scan vom '+datum(HEUTE),'PDF','ich','Sonstiges','Workflow PDF'); },
  'neu-buero': e => neuInEingang(e.dataset.titel, e.dataset.art, 'ich', 'Sonstiges', 'Familienbüro'),
  kopie: () => toast('Eine Kopie liegt in deinen Downloads (Beispiel). Das Original bleibt in der Akte.'),
@@ -582,6 +584,7 @@ function fEcht(id){
   fenster(`${fk(esc(echtTitel(d)), esc(d.category))}
    <dl class="angaben"><dt>Datei</dt><dd>${esc(d.originalName)} · ${echtGroesse(d.sizeBytes)}</dd>${d.documentDate ? `<dt>Datum</dt><dd>${echtDatum(d.documentDate)}</dd>` : ''}<dt>Abgelegt</dt><dd>${echtDatum(d.addedAt)}</dd><dt>Liegt</dt><dd>in der Akte auf diesem Gerät</dd></dl>
    ${/\.pdf$/i.test(d.originalName) ? `<button class="knopf voll" data-a="leser" data-id="${esc(d.id)}">Lesen und darin suchen</button><div class="reihe"><button class="knopf hell" data-a="echt-oeffnen" data-id="${esc(d.id)}">Im Browser öffnen</button></div>` : `<button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>`}
+   ${/\.(pdf|png|jpe?g|webp)$/i.test(d.originalName) ? `<div class="reihe"><button class="knopf hell" data-a="echt-wfpdf" data-id="${esc(d.id)}">${ic('pdf')} Mit Workflow PDF bearbeiten</button></div>` : ''}
    <div class="reihe"><button class="knopf hell" data-a="echt-raus" data-id="${esc(d.id)}">Aus der Akte nehmen</button></div>`);
 }
 /* ---------- Ordner in die Akte legen (Klaus 17.11.): ein im Datei-Organizer sortierter Ordner kommt mit seiner Einordnung herein ---------- */
@@ -880,8 +883,62 @@ A['bed-ja'] = async () => {
 /* ---------- Zurück (Klaus 17.11.): der Zurück-Knopf von Android, Browser oder Maus geht in der App einen Schritt zurück –
    erst das offene Fenster, dann das Menü, die Suche, der Bereich, die Ansicht. Erst am Anfang und beim zweiten Zurück
    kurz hintereinander verlässt man die App. Die App legt dafür je Schritt einen Eintrag in den Verlauf des Browsers. ---------- */
+/* ---------- Klone im Rahmen (0.5.0, Klaus 17.11.): Datei-Organizer und Workflow PDF laufen unverändert in einem Rahmen ----------
+   Die Seiten liegen unter rahmen/ (tools/rahmen-bauen.mjs): Brücke der Akte als erstes Skript, <base> auf den Klon, Farbdatei.
+   Der Rahmen hat einen eigenen Ort (#rahmenort), damit ein Fenster der Akte (z. B. „Ordner in die Akte legen“) darüber aufgehen
+   kann, ohne dass der Klon neu lädt. Nachrichten nur vom eigenen Ursprung und nur aus dem offenen Rahmen. */
+const RAHMEN = {
+ organizer:{name:'Datei-Organizer', unter:'Dateien sortieren, dann an die Akte übergeben', seite:'datei-organizer/app/index.html', stil:farbStilFest(['#aee2cc','#cdeede','#e4f3d6'],'#0f4a43','#107c41','#e4f1eb')},
+ wfpdf:{name:'Workflow PDF', unter:'Scannen, ausfüllen, bearbeiten – „Teilen“ legt in die Akte', seite:'workflow-pdf/index.html', stil:farbStilFest(['#f6c3cb','#fbdde1','#fdeef0'],'#6b1226','#9b1f38','#f8e6e9')}
+};
+function farbStilFest(k, schrift, akz, fl){ return `--k1:${k[0]};--k2:${k[1]};--k3:${k[2]};--schrift:${schrift};--akz:${akz};--fl:${fl}`; }
+const rahmen = { was:null, wartet:null };
+function fRahmen(was, frage = '', dateien = null){
+  const r = RAHMEN[was]; zu(); rahmen.was = was; rahmen.wartet = dateien;
+  $('rahmenort').innerHTML = `<div class="rahmenfenster" style="${r.stil}" role="dialog" aria-modal="true" aria-label="${r.name}">
+   <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
+   <iframe id="rahmen" title="${r.name}" allow="camera; microphone; clipboard-write; web-share; fullscreen"></iframe></div>`;
+  /* Lädt im Rahmen je die ungepatchte Startseite des Klons (Neuladen, Link „zurück zur App“), kommt gleich wieder die Seite mit Brücke. */
+  const f = $('rahmen'), adresse = `./rahmen/${r.seite}?v=${FASSUNG}${frage ? '&' + frage : ''}`;
+  f.addEventListener('load', () => { try { const w = f.contentWindow; if (!w.document.documentElement.dataset.paEingebettet && /(~rahmen|\/|\/index\.html)$/.test(w.location.pathname)) f.src = `./rahmen/${r.seite}?v=${FASSUNG}`; } catch { /* fremde Seite: bleibt */ } });
+  f.src = adresse;
+}
+function rahmenZu(){ $('rahmenort').innerHTML = ''; rahmen.was = null; rahmen.wartet = null; echtLaden().then(() => { if (s.ansicht === 'start') mainZeigen(); }).catch(() => {}); }
+A['echt-wfpdf'] = async e => {
+  try { const d = (echt.liste || []).find(x => x.id === e.dataset.id), datei = await T().datei(e.dataset.id); fRahmen('wfpdf', '', [new File([datei], (d && d.originalName) || datei.name, {type:datei.type, lastModified:datei.lastModified})]); }
+  catch (err) { toast(fehlerText(err)); }
+};
+addEventListener('message', async ev => {
+  const f = $('rahmen'); if (!f || ev.origin !== location.origin || ev.source !== f.contentWindow) return;
+  const d = ev.data || {}, antwort = m => { try { f.contentWindow.postMessage(m, location.origin); } catch { /* Rahmen ist schon zu */ } };
+  if (d.typ === 'pa-wfpdf-bereit' && rahmen.wartet) { const dateien = rahmen.wartet; rahmen.wartet = null; antwort({typ:'pa-wfpdf-oeffnen', id:'akte', dateien}); return; }
+  if (d.typ === 'pa-organizer-uebergabe') {
+    try {
+      if (typeof d.index !== 'string' || !Array.isArray(d.dateien) || !d.dateien.length) throw new Error('Die Übergabe ist leer.');
+      const r = T().organizer.ausStapel(String(d.ordner || 'Datei-Organizer'), d.index, d.dateien);
+      Object.assign(ord, r); antwort({typ:'pa-organizer-angenommen', id:d.id, ok:true, text:`${r.stuecke.length} ${r.stuecke.length === 1 ? 'Datei liegt' : 'Dateien liegen'} zur Auswahl in der Privaten Akte bereit.`});
+      fOrdner();
+    } catch (err) { antwort({typ:'pa-organizer-angenommen', id:d.id, ok:false, text:fehlerText(err)}); toast(fehlerText(err)); }
+    return;
+  }
+  if (d.typ === 'pa-wfpdf-ablegen') {
+    /* Aus Workflow PDF („Teilen“ oder fertiger Scan): gleich ablegen, Text vorher lesen; Bereich „Sonstiges“, später änderbar ist er nicht – steht in CLAUDE.md. */
+    try {
+      const dateien = (Array.isArray(d.dateien) ? d.dateien : []).filter(x => x instanceof File); if (!dateien.length) throw new Error('Keine Datei angekommen.');
+      let neu = 0, da = 0;
+      for (const datei of dateien) {
+        let text = ''; if (T().textLesbar(datei)) { try { text = (await T().textLesen(datei)).text; } catch { text = ''; } }
+        try { await T().ablegen(datei, {bereich:'Sonstiges', datum:null, titel:null, notiz:d.quelle === 'scan' ? 'Scan aus Workflow PDF' : 'Aus Workflow PDF', text}); neu++; }
+        catch (err) { if (/Dublette|schon abgelegt/.test(fehlerText(err) + (err && err.message || ''))) da++; else throw err; }
+      }
+      await echtLaden();
+      const t = neu ? `${neu === 1 ? '„' + dateien[0].name + '“ liegt' : neu + ' Dateien liegen'} jetzt in der Privaten Akte (Sonstiges).` : 'Lag schon in der Privaten Akte.';
+      antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:true, text:t}); toast(t);
+    } catch (err) { antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:false, text:fehlerText(err)}); toast(fehlerText(err)); }
+  }
+});
 const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
-const zurTiefe = () => ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
+const zurTiefe = () => ($('rahmenort').innerHTML ? 1 : 0) + ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
 function zurAbgleich(){
   if (!zur.wache) return; const t = zurTiefe();
   if (t > zur.tiefe) { for (; zur.tiefe < t; zur.tiefe++) history.pushState({pa:zur.tiefe + 1}, ''); }
@@ -900,6 +957,7 @@ addEventListener('popstate', () => {
   zur.tiefe--;
   if ($('fensterort').innerHTML) zu();
   else if ($('menueort').innerHTML) menueZu();
+  else if ($('rahmenort').innerHTML) rahmenZu();
   else if (s.frage) { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeigen(); }
   else if (s.bereich) { s.bereich = null; zeigen(); }
   else { s.ansicht = 'start'; zeigen(); scrollTo(0,0); }
