@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -219,7 +219,7 @@ function woLiegtWas(){
   const st = STAEDTE.map(w => `<button class="wostadt" style="--farbe:${w.a}" data-a="stadt" data-id="${w.id}">${w.name}</button>`).join('');
   return `<div class="abschnitt" id="wo-liegt-was"><h2>Wo liegt was? <span>ein Speicher für alles – der Tresor</span></h2>
   <div class="wo">
-   <div class="wokasten"><h3>1 · Herein</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender. Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
+   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender. Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
    <i class="wopfeil" aria-hidden="true"></i>
    <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
     ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
@@ -229,7 +229,7 @@ function woLiegtWas(){
     ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
     <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
    <i class="wopfeil beide" aria-hidden="true"></i>
-   <div class="wokasten"><h3>3 · Die Städte <small>haben keinen eigenen Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Eine Stadt holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
+   <div class="wokasten"><h3>3 · Werkzeugstätte <small>hat keinen eigenen Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Ein Werkzeug holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
   </div>
   <div class="wo unten">
    <button class="wokasten klein" data-a="sicherung"><h3>Sicherung</h3><p>Eine Kopie des ganzen Tresors an einem zweiten Ort. Ein Speicher heißt: eine Sicherung reicht.</p></button>
