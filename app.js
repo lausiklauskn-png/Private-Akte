@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -124,7 +124,7 @@ const mails = [
 ];
 const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
-const s = { ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, sammelknopf:true, offen:null, teil:'start', scan:false, zuDoc:null };
+const s = { ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
 
 /* ---------- Helfer ---------- */
 let toastZeit;
@@ -159,18 +159,16 @@ const WERK = [
  ['kalender','kalender','Kalender','kal','Termine und Fristen']
 ];
 const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
-const MEHR = [['drucken','drucker','Drucken'],['landkarte','karte','Landkarte'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
+const MEHR = [['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · Basic`;
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" title="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}"><i>${ic(i)}</i>${t}</button>`).join('');
   $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" title="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
-    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Landkarte, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
+    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
 function navZeigen(){
-  const NAV = [['start','Start'],['akten','Akten'],...(s.sammelknopf?[['ablegen','Ablegen']]:[]),['eingang','Eingang'],['baum','Baum']];
-  $('nav').innerHTML = NAV.map(([id,t]) => id === 'ablegen'
-    ? `<button class="ablegen" data-a="ablegen">${ic('plus')}<span>Ablegen</span></button>`
-    : `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
+  const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
+  $('nav').innerHTML = NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
 }
 const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a href="./rechtliches.html#impressum">Impressum</a><a href="./rechtliches.html#datenschutz">Datenschutz</a><a href="./rechtliches.html#haftung">Haftungsausschluss</a><a href="./rechtliches.html#lizenz">Lizenz</a></footer>`;
 
@@ -216,10 +214,33 @@ function vEingang(){
 function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? termine.length : docs.filter(d => d.bei===id).length; }
 function schild(w){ const [x,y] = w.ort, n = blaetter(w.id), was = w.id==='kal' ? (n===1?' Termin':' Termine') : w.id==='geld' ? ' Posten' : w.id==='mail' ? (n===1?' Mail':' Mails') : (n===1?' Datei':' Dateien');
   return `<button class="schild" style="left:${x}%;top:${y}%;--farbe:${w.a}" data-a="stadt" data-id="${w.id}"><b>${w.name}</b><small>${n ? n+was : 'bereit'}</small></button>`; }
+function woLiegtWas(){
+  const zl = (a, attr, t, u, n) => `<button class="wozeile" data-a="${a}" ${attr}><span><b>${t}</b><small>${u}</small></span><em>${n}</em></button>`;
+  const st = STAEDTE.map(w => `<button class="wostadt" style="--farbe:${w.a}" data-a="stadt" data-id="${w.id}">${w.name}</button>`).join('');
+  return `<div class="abschnitt" id="wo-liegt-was"><h2>Wo liegt was? <span>ein Speicher für alles – der Tresor</span></h2>
+  <div class="wo">
+   <div class="wokasten"><h3>1 · Herein</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender. Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
+   <i class="wopfeil" aria-hidden="true"></i>
+   <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
+    ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
+    ${zl('geh','data-zu="eingang"','Eingang','Neues, bis du den Vorschlag bestätigst',eingang.neu.length)}
+    ${zl('stadt','data-id="kal"','Termine und Fristen','gehören zur Unterlage oder Notiz',termine.length)}
+    ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',geld.posten.length)}
+    ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
+    <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
+   <i class="wopfeil beide" aria-hidden="true"></i>
+   <div class="wokasten"><h3>3 · Die Städte <small>haben keinen eigenen Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Eine Stadt holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
+  </div>
+  <div class="wo unten">
+   <button class="wokasten klein" data-a="sicherung"><h3>Sicherung</h3><p>Eine Kopie des ganzen Tresors an einem zweiten Ort. Ein Speicher heißt: eine Sicherung reicht.</p></button>
+   <button class="wokasten klein aussen" data-a="hinaus-info"><h3>Nach außen</h3><p>Nur ein Weg: das Portemonnaie gibt den Monat als Datei an BookLedgerPro. Sonst verlässt nichts den Tresor.</p></button>
+  </div>
+  <p class="hinweis">So ist die App gedacht. In dieser Vorschau ist der Tresor nur gezeigt – gespeichert wird nichts. Die Zahlen sind die Beispiele von eben.</p></div>`;
+}
 function vBaum(){
   const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video><span class="baumtext">Die Helfer tragen die Dateien in die Akte.</span>` : '';
   s.reisen = 0;
-  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Städte – jede Stadt ist ein Programm.</p>
+  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Städte – jede Stadt ist ein Programm. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
   <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
    <svg class="wege" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 84 C9 90 5 93 0 95" fill="none" stroke="#ffe7ad" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/></svg>
    <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
@@ -232,6 +253,7 @@ function vBaum(){
    <div class="karte"><b>Gestrichelter Weg = nach außen.</b> Das Portemonnaie gibt den Monat als Datei an BookLedgerPro. Die Buchhaltung selbst bleibt draußen.</div>
    <div class="karte" style="grid-column:1/-1"><b>Der neue Ast mit den Kränen = ein neues Programm.</b> Hier ist der Kalender eingezogen. Eine neue Stadt ändert nichts an der Halle und nichts an den anderen Städten.</div>
   </div>
+  ${woLiegtWas()}
   <p class="hinweis">Tippe ein Schild an. Das Bild stammt aus der Discovery-Seite des Datei-Organizers.</p>${fuss()}`;
 }
 
@@ -367,8 +389,7 @@ function kalender(){
 /* ---------- Menüs: Mehr, Farbpalette, Drucken ---------- */
 function menue(html, klasse=''){ $('menueort').innerHTML = `<div class="menue ${klasse}" data-a="menue-aussen"><div role="menu">${html}</div></div>`; }
 function fMehr(){
-  menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join('')
-   + `<hr><h3>Zum Entscheiden</h3><button role="menuitemcheckbox" aria-checked="${s.sammelknopf}" data-a="sammelknopf"><span class="tupfer" style="--a:#19a59d;--b:#087f7a">${ic('plus')}</span>Sammelknopf „Ablegen“ ${s.sammelknopf?'ausblenden':'zeigen'}</button>`);
+  menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join(''));
 }
 function fFarbe(wo){
   const aktuell = farbwahl[wo] || 'auto', name = wo === 'akte' ? 'die Akte' : stadt(wo).name;
@@ -385,17 +406,6 @@ function drucken(d){
   zu(); menueZu(); setTimeout(() => window.print(), 50);
 }
 addEventListener('afterprint', () => document.body.classList.remove('druck-einzel'));
-function fAblegen(){
-  const z = (a, i, t, u) => `<button class="zeile" data-a="${a}"><span class="art">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small>${u}</small></span>${ic('weiter')}</button>`;
-  fenster(`${fk('Ablegen','Was möchtest du hineinlegen?')}<div class="liste">
-   ${z('bon-start','kamera','Bon fotografieren','ins Portemonnaie, der Bon liegt in der Akte')}
-   ${z('scan','scan','PDF scannen','Foto zu PDF, öffnet Workflow PDF')}
-   ${z('foto','kamera','Foto: Unterlage','ein Bild direkt in den Eingang')}
-   ${z('datei','datei','Eine Datei','vom Gerät, mit Vorschlag in den Eingang')}
-   ${z('viele','ordner','Dateien hineingeben','viele Dateien oder Ordner, öffnet den Datei-Organizer')}
-   ${z('notiz','notiz','Notiz','schreiben oder sprechen, von Hand zuordnen')}
-  </div><p class="hinweis">Dieselben Wege wie in der Leiste oben, an einer Stelle gesammelt.</p>`);
-}
 function neuInEingang(titel, art, vorschlag, vorgang, quelle){
   eingang.neu.unshift({id:++nr,titel,art,vorschlag,vorgang,quelle,text:'Neu hereingekommen (Beispiel).'});
   zu(); s.ansicht = 'eingang'; zeigen(); toast('Liegt im Eingang. Der Vorschlag wartet auf dein „Stimmt“.');
@@ -410,10 +420,9 @@ const A = {
  doc: e => fDoc(e.dataset.id),
  zu, 'zu-aussen': (e, ev) => { if (ev.target === e) zu(); }, 'menue-aussen': (e, ev) => { if (ev.target === e) menueZu(); },
  mehr: fMehr,
- landkarte: e => A.geh({dataset:{zu:'baum'}}),
+ wo: (e, ev) => { ev.preventDefault(); document.getElementById('wo-liegt-was').scrollIntoView({behavior:'smooth'}); },
  farbe: e => fFarbe(e.dataset.ort || 'akte'),
  'farbe-wahl': e => { const wo = e.dataset.ort; farbwahl[wo] = e.dataset.farbe; menueZu(); if (wo === 'akte') farbeAkte(); else fStadt(wo); },
- sammelknopf: () => { s.sammelknopf = !s.sammelknopf; menueZu(); navZeigen(); toast(s.sammelknopf ? 'Der Sammelknopf „Ablegen“ ist wieder da.' : 'Ohne Sammelknopf: Hereingebracht wird über die Leiste oben.'); },
  drucken: () => { menueZu(); fDrucken(); },
  'druck-seite': () => drucken(null),
  'druck-doc': e => drucken(docs.find(d => d.id == e.dataset.id)),
@@ -422,13 +431,12 @@ const A = {
    <li><b>Finden:</b> die Suche oder die sechs Bereiche.</li>
    <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst die Stadt; bearbeitet wird eine Kopie.</li>
    <li><b>Zur Akte:</b> das Ergebnis liegt als neue Fassung am alten Platz. Das Original bleibt.</li>
-   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Städte.</li>
+   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Städte. Darunter „Wo liegt was?“: ein Tresor für alles.</li>
    <li><b>Farbpalette:</b> der bunte runde Knopf. Jedes Programm merkt sich seine eigene Farbe.</li></ul>
    <div class="logos"><figure><img src="./bilder/logo-basic-rund.png" alt="Zeichen der Basic-Fassung auf Weiß">Basic<br>diese Web-App</figure><figure><img src="./bilder/logo-pro-rund.png" alt="Zeichen der Pro-Fassung mit buntem Rand">Pro<br>bunter Rand</figure></div>
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
  sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
- ablegen: fAblegen,
  foto: () => neuInEingang('Foto vom '+datum(HEUTE),'JPG','ich','Sonstiges','Foto'),
  datei: () => neuInEingang('Schreiben der Versicherung','PDF','kauf','Auto','Datei'),
  viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
