@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.4.6 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.4.7 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -82,6 +82,17 @@ const { chromium } = require('playwright');
       await t.herausnehmen(d.id); return { art:g.art, text:g.text, wort, auszug:auszug.length };
     });
     soll(ocrProbe.art === 'erkannt' && /Fahrradladen/.test(ocrProbe.text) && ocrProbe.wort && ocrProbe.auszug > 10, 'Texterkennung liest ein Foto, die Wortsuche findet es über den Inhalt (' + JSON.stringify(ocrProbe) + ')');
+    // Leser: das PDF in der Akte öffnen, auf der Seite der Fundstelle, die Wörter markiert, darin suchen
+    const leserProbe = await p.evaluate(async () => {
+      const t = window.PrivateAkteTresor, seite = (n, wort) => `BT /F1 14 Tf 20 100 Td (${wort}) Tj ET`;
+      const pdf = '%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R 6 0 R]/Count 2>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 400 200]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 60>>stream\nBT /F1 14 Tf 20 100 Td (Erste Seite ohne das gesuchte Wort) Tj ET\nendstream endobj\n5 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>endobj\n6 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 400 200]/Contents 7 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n7 0 obj<</Length 60>>stream\nBT /F1 14 Tf 20 100 Td (Hier steht Schmierseife im Text) Tj ET\nendstream endobj\ntrailer<</Root 1 0 R>>\n%%EOF';
+      const d = await t.ablegen(new File([pdf], 'Leseheft.pdf', {type:'application/pdf'}), {bereich:'Sonstiges', datum:null, titel:null, notiz:null}); await echtLaden();
+      await fLeser(d.id, 1, ''); const f = document.querySelector('.lesersuche'); f.q.value = 'Schmierseife'; f.requestSubmit();
+      for (let i = 0; i < 60 && !(document.querySelector('.lesermarken i') && document.getElementById('leser-ort').textContent.startsWith('Seite 2')); i++) await new Promise(r => setTimeout(r, 100));
+      const aus = { ort:document.getElementById('leser-ort').textContent, fund:document.getElementById('leser-fund').textContent, marken:+(document.querySelector('.lesermarken') || {dataset:{zahl:0}}).dataset.zahl };
+      zu(); await t.herausnehmen(d.id); await echtLaden(); return aus;
+    });
+    soll(leserProbe.ort === 'Seite 2 von 2' && leserProbe.marken === 1 && /auf 1 Seite gefunden/.test(leserProbe.fund), 'Leser: Suche springt zur Seite mit dem Wort und markiert es (' + JSON.stringify(leserProbe) + ')');
     soll(sinnProbe.pdf && !sinnProbe.pdfFremd, 'PDF wird gelesen: Wörter aus dem Inhalt finden die Unterlage (' + JSON.stringify(sinnProbe) + ')');
     soll(/Wolltuch/.test(sinnProbe.stelle || '') && sinnProbe.seite === 1, 'Fundstelle: Ausschnitt mit dem Wort und die Seite');
     soll(sinnProbe.erster && sinnProbe.wort, 'Sage-Rangliste: die Unterlage mit den Wörtern der Frage steht vorn'); soll(sinnProbe.nah > 0.3 && sinnProbe.fremd < sinnProbe.nah / 2 && sinnProbe.roh > 0.8, 'zentrierte Nähe trennt: passend klar vorn, fremd höchstens halb so nah – obwohl der rohe Wert beim Fremden über 0,8 liegt (' + JSON.stringify(sinnProbe) + ')');
