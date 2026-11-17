@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#c9e2f7">
+<meta name="description" content="Private Akte: eine App für alle Unterlagen. In der Mitte die Akte, an den Ästen die Programme.">
+<meta name="robots" content="noindex">
+<title>Private Akte</title>
+<link rel="icon" href="./favicon.ico" sizes="any">
+<link rel="icon" href="./icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./app.css?v=0.1.5">
+<script defer src="./app.js?v=0.1.5"></script>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="kopf" id="kopf">
+    <img class="logo" src="./bilder/logo-basic-rund.png" alt="" width="40" height="40">
+    <span class="name"><strong>Private Akte</strong><span class="fassung" id="fassung" title="Fassung dieser Vorschau"></span></span>
+    <div class="werkleiste" id="werkleiste" role="toolbar" aria-label="Etwas hereinbringen"></div>
+    <div class="kopfknoepfe" id="kopfknoepfe"></div>
+  </header>
+  <nav class="nav" id="nav" aria-label="Bereiche"></nav>
+  <main id="main"></main>
+</div>
+<div id="fensterort"></div>
+<div id="menueort"></div>
+<div id="tipp" class="tipp" role="tooltip" hidden></div>
+<div id="druck" aria-hidden="true"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:20px">Für die Private Akte bitte JavaScript aktivieren. <a href="./rechtliches.html">Impressum, Datenschutz, Haftung &amp; Lizenz</a></p></noscript>
+</body>
+</html>

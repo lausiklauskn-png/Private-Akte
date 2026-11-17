@@ -1,0 +1,521 @@
+'use strict';
+/* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
+const FASSUNG = '0.1.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const $ = id => document.getElementById(id);
+const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
+const datum = d => d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
+const P = {
+ start:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+ akten:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
+ eingang:'<path d="M4 4h16l2 11v5H2v-5ZM2 15h6l2 3h4l2-3h6M12 5v7m-3-3 3 3 3-3"/>',
+ baum:'<rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/>',
+ plus:'<path d="M12 5v14M5 12h14"/>', lupe:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/>',
+ zu:'<path d="m6 6 12 12M6 18 18 6"/>', pfeil:'<path d="M4 12h16m-6-6 6 6-6 6"/>', weiter:'<path d="m9 5 7 7-7 7"/>',
+ herz:'<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/>',
+ person:'<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+ koffer:'<rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V3h8v4M3 13h18"/>',
+ haus:'<path d="m2 10 10-8 10 8M5 8v13h14V8M9 21v-8h6v8"/>',
+ kiste:'<path d="m12 2 9 5v10l-9 5-9-5V7ZM3 7l9 5 9-5M12 12v10"/>',
+ geld:'<path d="M20 7V4H5a3 3 0 0 0 0 6h16v10H5a3 3 0 0 1-3-3V7M21 11h-6v6h6"/>',
+ kamera:'<path d="M4 7h3l2-3h6l2 3h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="4"/>',
+ datei:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/>',
+ pdf:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 17v-4h1.2a1.2 1.2 0 0 1 0 2.400H8m4.500 1.600v-4h.8a2 2 0 0 1 0 4Zm4 0v-4h2m-2 2h1.500"/>',
+ scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M3 12h18"/>',
+ stift:'<path d="M4 20h4L20 8l-4-4L4 16Z"/>', sort:'<path d="M4 6h16M7 12h10M10 18h4"/>',
+ ordner:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v6m-3-3 3 3 3-3"/>',
+ notiz:'<path d="M5 3h14v14l-4 4H5Z"/><path d="M15 21v-4h4M8 8h8M8 12h6"/>',
+ kalender:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4M8 14h3v3H8Z"/>',
+ tabelle:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16M15 4v16"/>',
+ folie:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4m-4 0h8M8 12l3-3 2 2 3-3"/>',
+ drucker:'<path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7" rx="1"/>',
+ karte:'<path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3ZM9 3v15m6-12v15"/>',
+ schild:'<path d="M12 2 4 5v6c0 5 3.400 9.300 8 11 4.600-1.700 8-6 8-11V5Z"/><path d="m8.500 12 2.500 2.500 4.500-5"/>',
+ mehr:'<circle cx="5" cy="12" r="1.400"/><circle cx="12" cy="12" r="1.400"/><circle cx="19" cy="12" r="1.400"/>',
+ maske:'<path d="M3 6c3 0 5-1 9-1s6 1 9 1c0 7-3 12-9 12S3 13 3 6Z"/><path d="M7 10h3m4 0h3"/>',
+ mikro:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+ mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+ hinaus:'<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'
+};
+const ic = n => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${P[n]||P.datei}</svg>`;
+
+/* ---------- Farben: Wasserfarben des Familienbüros (lib/onlyoffice/farbpalette.ts) ---------- */
+const FARBEN = {
+ blau:{de:'Wasserblau',k:['#a9cff2','#c9e2f7','#dcedf5'],schrift:'#0b3154',akz:'#2f6ea8',fl:'#e4eef7'},
+ gruen:{de:'Wassergrün',k:['#aee2cc','#cdeede','#e4f3d6'],schrift:'#0f4a43',akz:'#087f7a',fl:'#e4f1eb'},
+ gelb:{de:'Helles Gelb',k:['#f7e3a0','#fbeec4','#fdf5dc'],schrift:'#5a4310',akz:'#916612',fl:'#f5efdc'},
+ koralle:{de:'Koralle',k:['#f9c9ad','#fbdcc8','#fdebd9'],schrift:'#6b2a12',akz:'#c2562b',fl:'#f6e9e1'},
+ /* nur über „Wie die Kachel“: eigene Farbe der Akte und des Kalenders */
+ see:{k:['#a8dde0','#c8ebec','#e0f3f0'],schrift:'#0b3154',akz:'#0b6f7a',fl:'#e2f1f1'},
+ flieder:{k:['#cfc4f0','#e0d8f6','#eee9fa'],schrift:'#35215f',akz:'#6a45a8',fl:'#ece7f8'},
+ kraeftig:{de:'Kräftig',k:['#0b3154','#164f7d','#087f7a'],schrift:'#ffffff',akz:'#0b3154',fl:'#dfeaf3'}
+};
+const WAHL = [['auto','Wie die Kachel'],['blau','Wasserblau'],['gruen','Wassergrün'],['gelb','Helles Gelb'],['koralle','Koralle'],['kraeftig','Kräftig']];
+const KACHEL = {akte:'see',buero:'blau',geld:'gelb',sort:'gruen',mail:'koralle',kal:'flieder'};
+const farbwahl = {};                                   // je Programm gemerkt (nur für diese Sitzung)
+const farbe = ort => FARBEN[(farbwahl[ort] && farbwahl[ort] !== 'auto') ? farbwahl[ort] : KACHEL[ort]];
+const farbStil = ort => { const f = farbe(ort); return `--k1:${f.k[0]};--k2:${f.k[1]};--k3:${f.k[2]};--schrift:${f.schrift};--akz:${f.akz};--fl:${f.fl}`; };
+function farbeAkte(){ document.documentElement.style.cssText = farbStil('akte'); document.querySelector('meta[name=theme-color]').content = farbe('akte').k[1]; }
+
+/* ---------- Beispieldaten (alles erfunden) ---------- */
+const BEREICHE = [
+ {id:'ich',name:'Persönliches',icon:'person',a:'#6f8fe0',b:'#33519c'},
+ {id:'gesund',name:'Gesundheit',icon:'herz',a:'#e2596b',b:'#9b1f38'},
+ {id:'arbeit',name:'Arbeit',icon:'koffer',a:'#3f8fe0',b:'#185abd'},
+ {id:'wohnen',name:'Wohnen',icon:'haus',a:'#f0b93a',b:'#b77a0c'},
+ {id:'kauf',name:'Käufe & Fahrzeug',icon:'kiste',a:'#2bb673',b:'#107c41'},
+ {id:'geld',name:'Geld & Belege',icon:'geld',a:'#9a7bd6',b:'#5b3aa6'}
+];
+const bereich = id => BEREICHE.find(b => b.id === id);
+const bereichWahl = (wert, attr, vorschlag=true) => `<select class="feld" ${attr} aria-label="Bereich" style="flex:1 1 120px">${wert?'':'<option value="">Bereich wählen …</option>'}${BEREICHE.map(b => `<option value="${b.id}" ${b.id===wert?'selected':''}>${b.name}${vorschlag&&b.id===wert?' (Vorschlag)':''}</option>`).join('')}</select>`;
+/* Städte am Baum = Programme in derselben App */
+const STAEDTE = [
+ {id:'buero',name:'Familienbüro',tut:'Schreiben, Tabellen, Folien und Workflow PDF',icon:'stift',a:'#3f8fe0',b:'#185abd',ort:[84,23]},
+ {id:'geld',name:'Portemonnaie',tut:'Bon fotografieren, Einnahmen, Ausgaben, was bleibt übrig',icon:'geld',a:'#f0b93a',b:'#b77a0c',ort:[13,84]},
+ {id:'sort',name:'Datei-Organizer',tut:'Viele Dateien auf einmal vorsortieren',icon:'sort',a:'#2bb673',b:'#107c41',ort:[16,36]},
+ {id:'mail',name:'Private Brain',tut:'E-Mails mit Anlagen hereinholen',icon:'mail',a:'#f08a4b',b:'#c43e1c',ort:[80,84]},
+ {id:'kal',name:'Kalender',tut:'Termine und Fristen',icon:'kalender',a:'#9a7bd6',b:'#5b3aa6',ort:[64,47]}
+];
+const stadt = id => STAEDTE.find(w => w.id === id);
+const TEILE = [
+ {id:'text',name:'Schreiben',icon:'stift',a:'#3f8fe0',b:'#185abd',tut:'Briefe und Texte'},
+ {id:'tab',name:'Tabellen',icon:'tabelle',a:'#2bb673',b:'#107c41',tut:'Listen und Rechnen'},
+ {id:'folie',name:'Folien',icon:'folie',a:'#f08a4b',b:'#c43e1c',tut:'Zeigen und Vortragen'},
+ {id:'pdf',name:'Workflow PDF',icon:'pdf',a:'#e2596b',b:'#9b1f38',tut:'Scannen, PDF bearbeiten, ausfüllen'}
+];
+const teil = id => TEILE.find(t => t.id === id);
+const inArbeit = d => d.bei === 'buero' ? teil(d.teil).name : stadt(d.bei).name;
+let nr = 100;
+const docs = [
+ {id:1,titel:'Nebenkostenabrechnung 2025',art:'PDF',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'12.11.2026',herkunft:'Workflow PDF',text:'Hausverwaltung Beispiel. Abrechnungszeitraum 01.01.–31.12.2025. Nachzahlung 184,20 €. Widerspruch bis 12.12.2026 möglich.'},
+ {id:2,titel:'Zählerstände zur Abrechnung',art:'JPG',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'03.01.2026',herkunft:'Foto',text:'Foto der Zähler Strom, Wasser, Heizung am 31.12.2025.'},
+ {id:3,titel:'Anfrage zur Belegeinsicht',art:'DOCX',bereich:'wohnen',vorgang:'Nebenkosten 2025',datum:'14.11.2026',herkunft:'Familienbüro · Schreiben',text:'Brief an die Hausverwaltung Beispiel: Bitte um Einsicht in die Belege der Nebenkostenabrechnung.'},
+ {id:4,titel:'Mietvertrag',art:'PDF',bereich:'wohnen',vorgang:'Mietvertrag',datum:'01.04.2019',herkunft:'Datei',text:'Mietvertrag Wohnung, Beginn 01.04.2019, Kaltmiete und Nebenkostenvorauszahlung.'},
+ {id:5,titel:'Garantie Waschmaschine',art:'PDF',bereich:'kauf',vorgang:'Waschmaschine',datum:'20.03.2025',herkunft:'Datei',text:'Garantieurkunde Waschmaschine, Kauf 20.03.2025, Garantie zwei Jahre bis 20.03.2027.'},
+ {id:6,titel:'Kaufbeleg Waschmaschine',art:'BELEG',bereich:'kauf',vorgang:'Waschmaschine',datum:'20.03.2025',herkunft:'Foto',text:'Kassenbon Elektromarkt Beispiel, Waschmaschine 499,00 €.'},
+ {id:7,titel:'Fahrzeugschein',art:'JPG',bereich:'kauf',vorgang:'Auto',datum:'02.06.2022',herkunft:'Foto',text:'Zulassungsbescheinigung Teil I, Hauptuntersuchung fällig 06/2027.'},
+ {id:8,titel:'Arztbrief Hausarzt',art:'PDF',bereich:'gesund',vorgang:'Vorsorge 2026',datum:'18.09.2026',herkunft:'Datei',text:'Hausarztpraxis Beispiel. Arztbrief zur Vorsorgeuntersuchung, Versichertennummer A123456789, Befund unauffällig, Kontrolle in zwölf Monaten.'},
+ {id:9,titel:'Impfpass',art:'JPG',bereich:'gesund',vorgang:'Impfungen',datum:'05.02.2024',herkunft:'Foto',text:'Impfausweis, letzte Auffrischung 02/2024.'},
+ {id:10,titel:'Gehaltsabrechnung Oktober 2026',art:'PDF',bereich:'arbeit',vorgang:'Gehalt 2026',datum:'30.10.2026',herkunft:'Datei',text:'Entgeltabrechnung Oktober 2026, Brutto, Netto, Auszahlung.'},
+ {id:11,titel:'Personalausweis (Kopie)',art:'JPG',bereich:'ich',vorgang:'Ausweise',datum:'11.08.2023',herkunft:'Foto',text:'Kopie Personalausweis, gültig bis 08/2033.'},
+ {id:12,titel:'Steuerbescheid 2025',art:'PDF',bereich:'geld',vorgang:'Steuer 2025',datum:'22.10.2026',herkunft:'Datei',text:'Finanzamt Beispiel. Einkommensteuerbescheid 2025, Steuer-ID 12 345 678 901, Erstattung 312,00 €. Einspruch bis 25.11.2026.'}
+].map(d => ({fassung:1,bei:null,teil:null,...d}));
+const termine = [
+ {titel:'Einspruch Steuerbescheid',am:new Date(2026,10,25),art:'Frist',doc:12},
+ {titel:'Widerspruch Nebenkosten',am:new Date(2026,11,12),art:'Frist',doc:1},
+ {titel:'Zählerablesung',am:new Date(2026,10,27),art:'Termin',doc:null}
+];
+const tage = t => Math.round((t.am - HEUTE) / 864e5);
+const eingang = { neu:[
+ {id:201,titel:'Brief der Krankenkasse',art:'PDF',vorschlag:'gesund',vorgang:'Krankenkasse',quelle:'Datei-Organizer',text:'Krankenkasse Beispiel. Schreiben zum Beitrag ab Januar, Versichertennummer A123456789.'},
+ {id:202,titel:'Rechnung Autowerkstatt',art:'PDF',vorschlag:'kauf',vorgang:'Auto',quelle:'Workflow PDF',text:'Autowerkstatt Beispiel. Rechnung Inspektion, 268,40 €.'}
+], zurueck:[] };
+const ORGANIZER_NEU = () => [
+ {titel:'Stromabrechnung 2025',art:'PDF',vorschlag:'wohnen',vorgang:'Strom',sicher:true},
+ {titel:'Lohnsteuerbescheinigung 2025',art:'PDF',vorschlag:'arbeit',vorgang:'Gehalt 2025',sicher:true},
+ {titel:'Rezept Apotheke',art:'JPG',vorschlag:'gesund',vorgang:'Vorsorge 2026',sicher:true},
+ {titel:'Unbekanntes Schreiben',art:'PDF',vorschlag:'ich',vorgang:'Sonstiges',sicher:false}
+];
+let organizer = ORGANIZER_NEU();
+const mails = [
+ {von:'Hausverwaltung Beispiel',betreff:'Termin zur Zählerablesung',anlage:'Ablesetermin.pdf',vorschlag:'wohnen',vorgang:'Nebenkosten 2025'},
+ {von:'Krankenkasse Beispiel',betreff:'Ihr Beitrag ab Januar',anlage:'Beitragsbescheid.pdf',vorschlag:'gesund',vorgang:'Krankenkasse'},
+ {von:'Autowerkstatt Beispiel',betreff:'Kostenvoranschlag',anlage:'Kostenvoranschlag.pdf',vorschlag:'kauf',vorgang:'Auto'}
+];
+const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
+const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
+const s = { tipps:true, ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
+
+/* ---------- Helfer ---------- */
+let toastZeit;
+function toast(t){ $('toast').textContent = t; clearTimeout(toastZeit); toastZeit = setTimeout(() => $('toast').textContent = '', 5200); }
+const ort = d => `${bereich(d.bereich).name} / ${d.vorgang}`;
+const SYN = {unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
+function suche(frage){
+  const w = frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
+  if (!w.length) return [];
+  return docs.filter(d => { const heu = (d.titel+' '+ort(d)+' '+d.text+' '+d.art).toLowerCase(); return w.every(x => heu.includes(x)); });
+}
+function neuesDoc(a){ const d = {id:++nr,datum:datum(HEUTE),fassung:1,bei:null,teil:null,...a}; docs.push(d); return d; }
+function docZeile(d, {haken=false}={}){
+  const m = d.bei ? `<span class="marke2 m-arbeit">in Arbeit: ${esc(inArbeit(d))}</span>` : d.fassung > 1 ? `<span class="marke2 m-ok">Fassung ${d.fassung}</span>` : '';
+  return `<div class="zeile">${haken?`<input type="checkbox" class="haken" data-wahl="${d.id}" ${s.wahl.has(d.id)?'checked':''} aria-label="${esc(d.titel)} auswählen">`:''}
+   <button class="zeile" style="padding:0;border:0" data-a="doc" data-id="${d.id}"><span class="art ${d.art}">${d.art}</span><span class="mitte"><strong>${esc(d.titel)}</strong><small>${esc(ort(d))} · ${d.datum}</small></span>${m}${ic('weiter')}</button></div>`;
+}
+/* Maske für die Vorschau: Stellen und Nummern werden zu Platzhaltern, Beträge und Daten bleiben lesbar. */
+function maske(text){
+  const z = new Map(), n = {};
+  const neu = (art, w) => { if (!z.has(w)) { n[art] = (n[art]||0) + 1; z.set(w, `⟦${art}-${n[art]}⟧`); } return z.get(w); };
+  const aus = text.replace(/[A-ZÄÖÜ][a-zäöüß]+ Beispiel/g, w => neu('STELLE', w)).replace(/\b[A-Z]\d{9}\b|\b\d{2} \d{3} \d{3} \d{3}\b/g, w => neu('NUMMER', w));
+  return {text:aus, zahl:z.size};
+}
+
+/* ---------- Kopf und Navigation ---------- */
+const WERK = [
+ ['bon-start','kamera','Bon fotografieren','geld','öffnet das Portemonnaie'],
+ ['scan','scan','PDF scannen','pdf','Foto zu PDF – öffnet Workflow PDF im Familienbüro'],
+ ['viele','ordner','Dateien hineingeben','sort','ganze Dateien oder Ordner – öffnet den Datei-Organizer'],
+ ['notiz','notiz','Notiz','akte','schreiben oder sprechen, von Hand zuordnen'],
+ ['kalender','kalender','Kalender','kal','Termine und Fristen']
+];
+const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
+const MEHR = [['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['sicherung','schild','Sicherung'],['hilfe','','Hilfe']];
+function kopfZeigen(){
+  $('fassung').textContent = `${FASSUNG} · Basic`;
+  $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
+  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}">${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
+    + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Drucken, Farbpalette, Sicherung, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
+}
+function navZeigen(){
+  const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
+  $('nav').innerHTML = NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
+}
+const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a href="./rechtliches.html#impressum">Impressum</a><a href="./rechtliches.html#datenschutz">Datenschutz</a><a href="./rechtliches.html#haftung">Haftungsausschluss</a><a href="./rechtliches.html#lizenz">Lizenz</a></footer>`;
+
+/* ---------- Ansichten ---------- */
+function sucheFeld(){
+  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button class="knopf" type="submit">Finden</button></form>
+  <div class="chips">Zum Beispiel: ${['Alles zur Nebenkostenabrechnung','Garantie Waschmaschine','Meine Gesundheitsunterlagen'].map(c => `<button class="chip" data-a="frage" data-q="${c}">${c}</button>`).join('')}</div>`;
+}
+function treffer(){
+  const t = suche(s.frage);
+  if (!t.length) return `<div class="abschnitt"><div class="liste"><p class="leer">Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.</p></div></div>`;
+  const b = new Set(t.map(d=>d.bereich)).size;
+  return `<div class="abschnitt"><h2>${t.length} ${t.length===1?'Unterlage':'Unterlagen'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span></h2>
+   <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>`;
+}
+const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
+const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
+function vStart(){
+  const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
+  return `<h1 class="titel">Was möchtest du finden?</h1><p class="unter">Hineinlegen, finden, herausgeben. Mehr macht die Akte nicht.</p>
+  ${sucheFeld()}
+  ${s.frage ? treffer() : `
+  <div class="abschnitt"><h2>Fällig <span>${termine.length} Termine und Fristen</span></h2><div class="liste">${termineSortiert().slice(0,3).map(terminZeile).join('')}</div></div>
+  <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln sechs">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
+  <div class="abschnitt"><h2>Zuletzt abgelegt</h2><div class="liste">${zuletzt.map(d => docZeile(d)).join('')}</div></div>`}
+  <p class="hinweis">Vorschau ${FASSUNG} · Alle Unterlagen sind erfunden. Nichts wird gespeichert.</p>${fuss()}`;
+}
+function vAkten(){
+  if (!s.bereich) return `<h1 class="titel">Akten</h1><p class="unter">Dieselben sechs Bereiche wie auf der Startseite.</p>
+   <div class="abschnitt"><div class="liste">${BEREICHE.map(b => { const d = docs.filter(x => x.bereich===b.id); return `<button class="zeile" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig" style="--a:${b.a};--b:${b.b}">${ic(b.icon)}</span><span class="mitte"><strong>${b.name}</strong><small>${[...new Set(d.map(x=>x.vorgang))].join(' · ')||'noch leer'}</small></span><span class="marke2 m-grau">${d.length}</span>${ic('weiter')}</button>`; }).join('')}</div></div>${fuss()}`;
+  const b = bereich(s.bereich), d = docs.filter(x => x.bereich===b.id), vorg = [...new Set(d.map(x => x.vorgang))];
+  return `<button class="chip" data-a="bereich" data-id="">‹ Alle Bereiche</button><h1 class="titel" style="margin-top:10px">${b.name}</h1><p class="unter">${d.length} Unterlagen in ${vorg.length} ${vorg.length===1?'Vorgang':'Vorgängen'}</p>
+   ${vorg.map(v => `<div class="abschnitt"><h2>${esc(v)}</h2><div class="liste">${d.filter(x => x.vorgang===v).map(x => docZeile(x)).join('')}</div></div>`).join('')}${fuss()}`;
+}
+function vEingang(){
+  const z = eingang.zurueck, n = eingang.neu;
+  return `<h1 class="titel">Eingang</h1><p class="unter">Geprüft wird nur, was wirklich neu ist.</p>
+  <div class="abschnitt"><h2>Neu <span>Vorschlag bestätigen, ändern oder gleich weiterarbeiten</span></h2><div class="liste">${n.length ? n.map(e => `<div class="zeile" style="flex-wrap:wrap"><span class="art ${e.art}">${e.art}</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>aus: ${esc(e.quelle)}</small></span>
+    <span class="unten">${bereichWahl(e.vorschlag, `data-vorschlag="${e.id}"`)}<button class="knopf gruen klein" data-a="bestaetigen" data-id="${e.id}">Stimmt</button><button class="knopf hell klein" data-a="mit" data-neu="${e.id}">Bearbeiten mit</button></span></div>`).join('') : '<p class="leer">Nichts zu prüfen.</p>'}</div></div>
+  <div class="abschnitt"><h2>Aus den Tools <span>schon abgelegt, nur zur Kenntnis</span></h2><div class="liste">${z.length ? z.map(e => `<button class="zeile" data-a="doc" data-id="${e.doc}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">✓</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>${esc(e.text)}</small></span>${ic('weiter')}</button>`).join('') : `<p class="leer">Noch nichts zurückgekommen. Öffne eine Unterlage und tippe auf „Bearbeiten mit“.</p>`}</div></div>${fuss()}`;
+}
+/* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
+function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? termine.length : docs.filter(d => d.bei===id).length; }
+function schild(w){ const [x,y] = w.ort, n = blaetter(w.id), was = w.id==='kal' ? (n===1?' Termin':' Termine') : w.id==='geld' ? ' Posten' : w.id==='mail' ? (n===1?' Mail':' Mails') : (n===1?' Datei':' Dateien');
+  return `<button class="schild" style="left:${x}%;top:${y}%;--farbe:${w.a}" data-a="stadt" data-id="${w.id}"><b>${w.name}</b><small>${n ? n+was : 'bereit'}</small></button>`; }
+function woLiegtWas(){
+  const zl = (a, attr, t, u, n) => `<button class="wozeile" data-a="${a}" ${attr}><span><b>${t}</b><small>${u}</small></span><em>${n}</em></button>`;
+  const st = STAEDTE.map(w => `<button class="wostadt" style="--farbe:${w.a}" data-a="stadt" data-id="${w.id}">${w.name}</button>`).join('');
+  return `<div class="abschnitt" id="wo-liegt-was"><h2>Wo liegt was? <span>ein Speicher für alles – der Tresor</span></h2>
+  <div class="wo">
+   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender. Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
+   <i class="wopfeil" aria-hidden="true"></i>
+   <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
+    ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
+    ${zl('geh','data-zu="eingang"','Eingang','Neues, bis du den Vorschlag bestätigst',eingang.neu.length)}
+    ${zl('stadt','data-id="kal"','Termine und Fristen','gehören zur Unterlage oder Notiz',termine.length)}
+    ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',geld.posten.length)}
+    ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
+    <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
+   <i class="wopfeil beide" aria-hidden="true"></i>
+   <div class="wokasten"><h3>3 · Tools <small>die Werkzeugstätten im Bild · kein eigener Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Ein Werkzeug holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
+  </div>
+  <div class="wo unten">
+   <button class="wokasten klein" data-a="sicherung"><h3>Sicherung</h3><p>Eine Kopie des ganzen Tresors an einem zweiten Ort. Ein Speicher heißt: eine Sicherung reicht.</p></button>
+   <button class="wokasten klein aussen" data-a="hinaus-info"><h3>Nach außen</h3><p>Nur ein Weg: das Portemonnaie gibt den Monat als Datei an BookLedgerPro. Sonst verlässt nichts den Tresor.</p></button>
+  </div>
+  <p class="hinweis">So ist die App gedacht. In dieser Vorschau ist der Tresor nur gezeigt – gespeichert wird nichts. Die Zahlen sind die Beispiele von eben.</p></div>`;
+}
+function vBaum(){
+  const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video>` : '';
+  s.reisen = 0;
+  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Tools. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
+  <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
+   <svg class="wege" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 84 C9 90 5 93 0 95" fill="none" stroke="#ffe7ad" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/></svg>
+   <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
+   ${STAEDTE.map(schild).join('')}
+   <button class="schild aussen" style="left:0;top:93%" data-a="hinaus-info"><b>→ BookLedgerPro</b><small>Weg nach außen</small></button>${film}</div></div>
+  ${woLiegtWas()}
+  <p class="hinweis">Tippe ein Schild an. Das Bild stammt aus der Discovery-Seite des Datei-Organizers.</p>${fuss()}`;
+}
+
+/* ---------- Fenster ---------- */
+function fenster(html, klasse='', stil=''){ $('fensterort').innerHTML = `<div class="schleier" data-a="zu-aussen"><div class="fenster ${klasse}" ${stil?`style="${stil}"`:''} role="dialog" aria-modal="true">${html}</div></div>`; }
+function zu(){ $('fensterort').innerHTML = ''; s.offen = null; }
+function menueZu(){ $('menueort').innerHTML = ''; }
+const fk = (t, u='', extra='') => `<div class="fkopf"><h2>${t}${u?`<small>${u}</small>`:''}</h2>${extra}<button class="rund" data-a="zu" aria-label="Schließen">${ic('zu')}</button></div>`;
+function fDoc(id){
+  const d = docs.find(x => x.id == id); if (!d) return;
+  const knopf = d.bei
+    ? `<button class="knopf gruen voll" data-a="stadt" data-id="${d.bei}" data-teil="${d.teil||''}">Weiter in ${esc(inArbeit(d))} ${ic('pfeil')}</button>`
+    : `<button class="knopf voll" data-a="mit" data-doc="${d.id}">${ic('stift')} Bearbeiten mit …</button>`;
+  fenster(`${fk(esc(d.titel), esc(ort(d)))}
+   <div class="blatt"><small>${d.art} · Vorschau</small><b>${esc(d.titel)}</b>${esc(d.text)}${d.fassung>1?'<p style="margin-top:8px"><span class="mark">Markierung aus der Bearbeitung</span></p>':''}</div>
+   <dl class="angaben"><dt>Abgelegt</dt><dd>${d.datum}</dd><dt>Herkunft</dt><dd>${esc(d.herkunft)}</dd><dt>Fassung</dt><dd>${d.fassung}${d.fassung>1?' (ältere bleiben erhalten)':''}</dd>${d.bei?`<dt>Zustand</dt><dd><span class="marke2 m-arbeit">Kopie in Arbeit: ${esc(inArbeit(d))}</span></dd>`:''}</dl>
+   ${knopf}<div class="reihe"><button class="knopf hell" data-a="kopie">Kopie herausholen</button><button class="knopf hell" data-a="teilen">Teilen</button><button class="knopf hell" data-a="druck-doc" data-id="${d.id}">${ic('drucker')} Drucken</button></div>`);
+}
+/* „Bearbeiten mit“: an jeder Unterlage, jedem Foto, jeder Notiz – auch an dem, was gerade hereinkommt */
+const MIT = [
+ ['text','stift','Familienbüro · Schreiben','einen Brief oder Text dazu schreiben',['#3f8fe0','#185abd']],
+ ['pdf','pdf','Workflow PDF','markieren, ausfüllen, zusammenfügen (im Familienbüro)',['#e2596b','#9b1f38']],
+ ['geld','geld','Portemonnaie','als Ausgabe oder Einnahme eintragen',['#f0b93a','#b77a0c']],
+ ['sort','sort','Datei-Organizer','neu zuordnen lassen',['#2bb673','#107c41']],
+ ['kal','kalender','Kalender','einen Termin oder eine Frist dazu anlegen',['#9a7bd6','#5b3aa6']],
+ ['pseudo','maske','Pseudonymisieren · An KI','Namen und Nummern verdecken, dann erst weitergeben',['#1aa59d','#0b5a66']]
+];
+function fMit(e){
+  const was = e.dataset.neu ? eingang.neu.find(x => x.id == e.dataset.neu) : docs.find(x => x.id == e.dataset.doc);
+  const wo = e.dataset.neu ? `data-neu="${was.id}"` : `data-doc="${was.id}"`;
+  fenster(`${fk('Bearbeiten mit', esc(was.titel))}
+   <p class="unter" style="margin-bottom:10px">${e.dataset.neu ? 'Die Sache gilt als in der Akte angekommen (mit dem gewählten Bereich).' : 'Das Original bleibt in der Akte.'} Bearbeitet wird eine Kopie im Tool.</p>
+   <div class="liste">${MIT.map(([id,i,t,u,f]) => `<button class="zeile" data-a="mit-wahl" data-womit="${id}" ${wo}><span class="tupfer eckig" style="--a:${f[0]};--b:${f[1]}">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small>${u}</small></span>${ic('weiter')}</button>`).join('')}</div>`);
+}
+function ablegenAusEingang(id){
+  const i = eingang.neu.findIndex(x => x.id == id), x = eingang.neu[i]; eingang.neu.splice(i,1);
+  return neuesDoc({id:x.id,titel:x.titel,art:x.art,bereich:x.vorschlag,vorgang:x.vorgang,herkunft:x.quelle,text:x.text||x.titel});
+}
+function fPseudo(d, original=false){
+  s.pseudo = d;
+  const m = maske(d.text), sicht = original ? esc(d.text) : esc(m.text).replace(/⟦[^⟧]+⟧/g, p => `<span class="platz">${p}</span>`);
+  fenster(`${fk('Pseudonymisieren', esc(d.titel))}
+   <div class="schritte"><span>1 Zur KI</span><span>2 Zurück</span></div>
+   <div class="blatt"><small>${original ? 'Original' : 'Das sieht die KI · ⟦PSEUDONYMISIERT v1⟧'}</small><b>${esc(d.titel)}</b>${sicht}</div>
+   <p class="hinweis" style="text-align:left;margin-top:8px">${m.zahl} ${m.zahl===1?'Stelle':'Stellen'} verdeckt. Beträge und Daten bleiben lesbar. Die Zuordnung bleibt auf dem Gerät.</p>
+   <div class="reihe"><button class="knopf" data-a="pseudo-kopie">Fassung kopieren</button><button class="knopf hell" data-a="pseudo-sicht" data-original="${original?'':'1'}">${original?'KI sieht':'Original'} zeigen</button><button class="knopf hell" data-a="pseudo-zurueck">Antwort zurückführen</button></div>
+   <p class="hinweis">Beispiel. In der echten App arbeitet hier die Maske aus der Familienakte; eine KI ist nicht angeschlossen.</p>`);
+}
+function fNotiz(text=''){
+  fenster(`${fk('Notiz','Schreiben oder sprechen. Du ordnest sie selbst zu.')}
+   <form class="felder" data-form="notiz">
+    <textarea class="feld" name="text" placeholder="Was möchtest du festhalten?" aria-label="Notiz" required>${esc(text)}</textarea>
+    <div class="reihe" style="margin:0"><button type="button" class="knopf hell klein" data-a="sprechen">${ic('mikro')} Sprechen</button></div>
+    <label>Was ist es? <input class="feld" name="titel" placeholder="zum Beispiel: Anruf bei der Hausverwaltung" required></label>
+    <label>Bereich ${bereichWahl('', 'name="bereich" required', false)}</label>
+    <label>Vorgang <input class="feld" name="vorgang" placeholder="zum Beispiel: Nebenkosten 2025" list="vorgaenge"></label>
+    <datalist id="vorgaenge">${[...new Set(docs.map(d => d.vorgang))].map(v => `<option value="${esc(v)}">`).join('')}</datalist>
+    <label><span><input type="checkbox" name="termin" class="haken" style="vertical-align:middle"> Gleich einen Termin dazu anlegen</span></label>
+    <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
+   </form>
+   <p class="hinweis">Kein Helfer: Die Zuordnung machst du von Hand.</p>`);
+}
+
+/* ---------- Die Städte ---------- */
+function fStadt(wid, ids=[], teilId){
+  const w = stadt(wid);
+  ids = ids.map(Number).filter(Boolean);
+  if (wid === 'buero') { if (teilId) s.teil = teilId; else if (!ids.length && s.offen !== 'buero') s.teil = 'start'; }
+  ids.forEach(i => { const d = docs.find(x => x.id === i); if (d) { d.bei = wid; d.teil = wid === 'buero' ? s.teil : null; } });
+  s.offen = wid;
+  const inhalt = ({buero, geld:portemonnaie, sort:sortierer, mail:post, kal:kalender})[wid]();
+  const astnav = `<div class="astnav" aria-label="Zwischen den Programmen wechseln"><button data-a="geh" data-zu="start">‹ Akte</button><button data-a="geh" data-zu="baum">Baum</button>${STAEDTE.map(x => `<button data-a="stadt" data-id="${x.id}" ${x.id===wid?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>`;
+  fenster(fk(esc(w.name), `Tool in der Privaten Akte · ${esc(w.tut)}`, `<button class="rund farbknopf" data-a="farbe" data-ort="${wid}" aria-label="Farbpalette für ${esc(w.name)}" title="Farbpalette"></button>`) + astnav + `<div id="astinhalt">${inhalt}</div>`, 'ast', farbStil(wid));
+  navZeigen(); mainZeigen();
+}
+const stadtNeu = () => { if (s.offen) fStadt(s.offen); };
+function buero(){
+  const t = s.teil, da = id => docs.filter(d => d.bei === 'buero' && d.teil === id);
+  const leiste = `<div class="astnav teil" aria-label="Programme im Familienbüro"><button data-a="teil" data-teil="start" ${t==='start'?'aria-current="true"':''}>Übersicht</button>${TEILE.map(x => `<button data-a="teil" data-teil="${x.id}" ${t===x.id?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>`;
+  if (t === 'start') return leiste + `<div class="kacheln" style="grid-template-columns:repeat(2,1fr)">${TEILE.map(x => { const n = da(x.id).length; return `<button class="kachel gross" style="--a:${x.a};--b:${x.b}" data-a="teil" data-teil="${x.id}"><span class="tupfer">${ic(x.icon)}</span><span><strong>${x.name}</strong><small>${n ? n+' in Arbeit' : x.tut}</small></span></button>`; }).join('')}</div>
+    <p class="hinweis">Vier Kacheln wie im Familienbüro. Die PDF-Kachel heißt hier „Workflow PDF“, damit klar ist, was sich öffnet.</p>`;
+  const x = teil(t), ds = da(t);
+  const blaetter = ds.map(d => `<div class="blatt" style="margin-bottom:8px"><small>Kopie · Fassung ${d.fassung} · ${esc(ort(d))}</small><b>${esc(d.titel)}</b>${esc(d.text)}<p style="margin-top:8px"><span class="mark">${t==='pdf'?'Hier wurde etwas markiert (Beispiel)':'Hier wurde weitergeschrieben (Beispiel)'}</span></p></div>`).join('');
+  const zurAkte = ds.length ? `<button class="knopf gruen voll" data-a="zurueck" data-docs="${ds.map(d => d.id).join(',')}">Zur Akte ${ic('pfeil')}</button>` : '';
+  let eigen = '';
+  if (t === 'pdf') eigen = (s.scan ? `<div class="blatt" style="margin-bottom:8px"><small>Neuer Scan · 1 Seite · Foto zu PDF</small><b>Scan vom ${datum(HEUTE)}</b>Die Kamera hat die Seite aufgenommen, gerade gerückt und als PDF gespeichert (Beispiel).<div class="reihe"><button class="knopf gruen klein" data-a="scan-zur-akte">Zur Akte ${ic('pfeil')}</button><button class="knopf hell klein" data-a="scan">Noch eine Seite</button></div></div>` : '') + blaetter
+    + (!s.scan && !ds.length ? `<p class="leer">Gerade liegt hier nichts. „PDF scannen“ macht aus einem Foto ein PDF.</p>` : '') + zurAkte + `<div class="reihe"><button class="knopf rot" data-a="scan">${ic('scan')} PDF scannen</button></div>`;
+  else if (t === 'text') eigen = blaetter + (ds.length ? '' : '<p class="leer">Gerade liegt hier kein Text.</p>') + zurAkte + `<div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Neuer Brief" data-art="DOCX">${ic('plus')} Neuer Brief</button></div>`;
+  else if (t === 'tab') eigen = `<div class="mock">${['Monat','Strom','Wasser','Heizung','Januar','62,00','18,40','95,00','Februar','58,50','17,90','91,20','März','55,10','18,10','74,60'].map(z => `<span>${z}</span>`).join('')}</div><div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Verbrauch 2026" data-art="XLSX">Zur Akte ${ic('pfeil')}</button></div>`;
+  else eigen = `<div class="folie"><div><b style="font-size:18px">Unser Umzug</b><br><small>Folie 1 von 3 · Beispiel</small></div></div><div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Folien Umzug" data-art="PPTX">Zur Akte ${ic('pfeil')}</button></div>`;
+  return leiste + `<div class="reihe" style="margin:0 0 10px"><span class="tupfer eckig" style="--a:${x.a};--b:${x.b}">${ic(x.icon)}</span><b>${x.name}</b><small style="color:var(--muted)">${x.tut}</small></div>${eigen}<p class="hinweis">Nur eine Beispielansicht. Hier wird nichts wirklich bearbeitet.</p>`;
+}
+function portemonnaie(){
+  const rest = geld.posten.reduce((a,p) => a + p.b, 0), aus = geld.posten.filter(p => p.b < 0).reduce((a,p) => a - p.b, 0), ein = geld.posten.filter(p => p.b > 0).reduce((a,p) => a + p.b, 0);
+  return `<p class="unter">Kein Buchhaltungsprogramm. Nur: was kam herein, was ging hinaus, wofür, was bleibt.</p>
+   <div class="karte" style="margin:10px 0"><small style="color:var(--muted)">Übrig im November</small><div class="geld">${euro(rest)}</div><small style="color:var(--muted)">Einnahmen ${euro(ein)} · Ausgaben ${euro(aus)}</small></div>
+   <button class="knopf gruen voll" data-a="bon">${ic('kamera')} Bon fotografieren</button>
+   <form class="reihe" data-form="posten"><input class="feld" name="t" value="${esc(geld.vor)}" placeholder="Was?" aria-label="Was" style="flex:2 1 110px"><input class="feld" name="w" placeholder="Wofür?" aria-label="Wofür" style="flex:2 1 110px"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 80px"><button class="knopf hell klein" name="art" value="ein">+ Einnahme</button><button class="knopf hell klein" name="art" value="aus">− Ausgabe</button></form>
+   <div class="liste" style="margin-top:12px">${[...geld.posten].reverse().map(p => `<div class="zeile"><span class="mitte"><strong>${esc(p.t)}</strong><small>wofür: ${esc(p.w||'–')}${p.bon?' · Bon liegt in der Akte':''}</small></span><span class="${p.b<0?'minus':'plus'}">${p.b<0?'−':'+'} ${euro(Math.abs(p.b))}</span></div>`).join('')}</div>
+   <div class="karte" style="margin-top:12px"><b>Weg nach außen</b><p style="font-size:13px;color:var(--muted);margin:4px 0 10px">Der Monat geht als Datei an BookLedgerPro. Die Buchhaltung selbst bleibt draußen.${geld.gegeben?' <span class="marke2 m-ok">November übergeben</span>':''}</p>
+    <button class="knopf hell voll" data-a="an-bookledger">${ic('hinaus')} An BookLedgerPro geben</button></div>
+   <p class="hinweis">Die Monatsübersicht liegt immer als Kopie in der Akte (Geld &amp; Belege / Ausgaben 2026).</p>`;
+}
+function geldInAkte(){
+  const rest = geld.posten.reduce((a,p) => a + p.b, 0), text = `Monatsübersicht aus dem Portemonnaie. ${geld.posten.length} Posten. Übrig: ${euro(rest)}.`;
+  const d = docs.find(x => x.id === geld.docId);
+  if (d) d.text = text; else geld.docId = neuesDoc({titel:'Portemonnaie November 2026',art:'BELEG',bereich:'geld',vorgang:'Ausgaben 2026',herkunft:'Portemonnaie',text}).id;
+}
+function sortierer(){
+  return `<p class="unter">Du gibst Dateien oder ganze Ordner hinein. Die Zuordnung passiert hier: ein Helfer rät, du berichtigst, er lernt daraus. In die Akte kommt nur das Ergebnis.</p>
+   <div class="schritte"><span>raten</span><span>berichtigen</span><span>lernen</span></div>
+   <div class="liste" style="margin-top:10px">${organizer.length ? organizer.map((o,i) => `<div class="zeile" style="flex-wrap:wrap"><span class="art ${o.art}">${o.art}</span><span class="mitte"><strong>${esc(o.titel)}</strong><small>→ ${bereich(o.vorschlag).name} / ${esc(o.vorgang)}</small></span>${o.sicher?'<span class="marke2 m-ok">bestätigt</span>':`<span class="unten">${bereichWahl(o.vorschlag, `data-osort="${i}"`, false)}<button class="knopf gruen klein" data-a="osort" data-i="${i}">Stimmt</button></span>`}</div>`).join('') : '<p class="leer">Alles ist in der Akte.</p>'}</div>
+   <div class="reihe"><button class="knopf gruen" style="flex:1" data-a="sort-zur-akte" ${organizer.length?'':'disabled'}>Zur Akte ${ic('pfeil')}</button><button class="knopf hell" data-a="sort-mehr">${ic('ordner')} Dateien hineingeben</button></div>`;
+}
+function post(){
+  return `<p class="unter">Holt E-Mails mit Anlagen. Der Helfer schlägt vor, wohin die Anlage gehört. Du schickst sie zur Akte – oder gibst sie verdeckt an eine KI.</p>
+   <div class="liste" style="margin-top:10px">${mails.length ? mails.map((m,i) => `<div class="zeile" style="flex-wrap:wrap"><span class="art PDF">PDF</span><span class="mitte"><strong>${esc(m.betreff)}</strong><small>von ${esc(m.von)} · Anlage: ${esc(m.anlage)}</small></span>
+     <span class="unten">${bereichWahl(m.vorschlag, `data-mail="${i}"`)}<button class="knopf gruen klein" data-a="mail-zur-akte" data-i="${i}">Zur Akte</button><button class="knopf hell klein" data-a="mail-ki" data-i="${i}">${ic('maske')} An KI</button></span></div>`).join('') : '<p class="leer">Alle Anlagen sind in der Akte.</p>'}</div>
+   <p class="hinweis">Beispiel. Es ist kein Postfach angeschlossen.</p>`;
+}
+function kalender(){
+  const zu = s.zuDoc ? docs.find(d => d.id === s.zuDoc) : null;
+  return `<p class="unter">Termine und Fristen. Eine Notiz oder Unterlage bekommt ihren Termin von hier oder über „Bearbeiten mit“.</p>
+   <div class="liste" style="margin-top:10px">${termineSortiert().map(terminZeile).join('')}</div>
+   <form class="karte felder" style="margin-top:12px" data-form="termin"><b>${zu ? 'Termin zu „'+esc(zu.titel)+'“' : 'Neuer Termin'}</b>
+    <label>Was? <input class="feld" name="titel" required value="${zu ? esc(zu.titel) : ''}"></label>
+    <div class="reihe" style="margin:0"><label style="flex:1 1 130px">Wann? <input class="feld" type="date" name="am" required min="2026-11-17" value="2026-11-24"></label><label style="flex:1 1 110px">Art <select class="feld" name="art"><option>Termin</option><option>Frist</option></select></label></div>
+    <label>Gehört zu <select class="feld" name="doc"><option value="">keiner Unterlage</option>${docs.map(d => `<option value="${d.id}" ${zu&&zu.id===d.id?'selected':''}>${esc(d.titel)}</option>`).join('')}</select></label>
+    <button class="knopf voll" type="submit">${ic('plus')} Eintragen</button></form>
+   <p class="hinweis">Erinnerung: noch offen (Glocke wie in der Familienakte oder Gerätekalender). Hier wird nichts erinnert.</p>`;
+}
+
+/* ---------- Menüs: Mehr, Farbpalette, Drucken ---------- */
+function menue(html, klasse=''){ $('menueort').innerHTML = `<div class="menue ${klasse}" data-a="menue-aussen"><div role="menu">${html}</div></div>`; }
+function fMehr(){
+  menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join('')
+);
+}
+function fFarbe(wo){
+  const aktuell = farbwahl[wo] || 'auto', name = wo === 'akte' ? 'die Akte' : stadt(wo).name;
+  menue(`<h3>Farbe für ${esc(name)}</h3>` + WAHL.map(([id,t]) => { const f = FARBEN[id === 'auto' ? KACHEL[wo] : id]; return `<button role="menuitemradio" aria-checked="${aktuell===id}" data-a="farbe-wahl" data-ort="${wo}" data-farbe="${id}"><span class="fleck" style="background:linear-gradient(135deg,${f.k[0]},${f.k[2]})"></span>${t}</button>`; }).join('')
+   + `<h3>Jedes Programm merkt sich seine eigene Farbe.</h3>`);
+}
+function fDrucken(){
+  fenster(`${fk('Drucken')}<div class="liste"><button class="zeile" data-a="druck-seite"><span class="art">${ic('drucker')}</span><span class="mitte"><strong>Diese Seite</strong><small>so, wie sie gerade zu sehen ist</small></span>${ic('weiter')}</button></div>
+   <div class="abschnitt"><h2>Einzelne Unterlage</h2><div class="liste">${[...docs].sort((a,b) => b.id - a.id).map(d => `<button class="zeile" data-a="druck-doc" data-id="${d.id}"><span class="art ${d.art}">${d.art}</span><span class="mitte"><strong>${esc(d.titel)}</strong><small>${esc(ort(d))}</small></span>${ic('drucker')}</button>`).join('')}</div></div>`);
+}
+function drucken(d){
+  document.body.classList.toggle('druck-einzel', !!d);
+  $('druck').innerHTML = d ? `<h1>${esc(d.titel)}</h1><p>${esc(d.text)}</p><dl><dt>Ablage</dt><dd>${esc(ort(d))}</dd><dt>Abgelegt</dt><dd>${d.datum}</dd><dt>Fassung</dt><dd>${d.fassung}</dd><dt>Herkunft</dt><dd>${esc(d.herkunft)}</dd></dl><p><small>${NAME} ${FASSUNG} · Beispielunterlage, erfunden</small></p>` : '';
+  zu(); menueZu(); setTimeout(() => window.print(), 50);
+}
+addEventListener('afterprint', () => document.body.classList.remove('druck-einzel'));
+function neuInEingang(titel, art, vorschlag, vorgang, quelle){
+  eingang.neu.unshift({id:++nr,titel,art,vorschlag,vorgang,quelle,text:'Neu hereingekommen (Beispiel).'});
+  zu(); s.ansicht = 'eingang'; zeigen(); toast('Liegt im Eingang. Der Vorschlag wartet auf dein „Stimmt“.');
+}
+function zurAkteFilm(n){ s.reisen = n; zu(); s.ansicht = 'baum'; s.frage = ''; zeigen(); scrollTo(0,0); }
+
+/* ---------- Aktionen ---------- */
+const A = {
+ geh: e => { s.ansicht = e.dataset.zu; s.bereich = null; s.frage = ''; s.wahl.clear(); zu(); menueZu(); zeigen(); scrollTo(0,0); },
+ bereich: e => { s.ansicht = 'akten'; s.bereich = e.dataset.id || null; zeigen(); scrollTo(0,0); },
+ frage: e => { s.frage = e.dataset.q; s.ansicht = 'start'; s.wahl.clear(); zeigen(); },
+ doc: e => fDoc(e.dataset.id),
+ zu, 'zu-aussen': (e, ev) => { if (ev.target === e) zu(); }, 'menue-aussen': (e, ev) => { if (ev.target === e) menueZu(); },
+ mehr: fMehr,
+ wo: (e, ev) => { ev.preventDefault(); document.getElementById('wo-liegt-was').scrollIntoView({behavior:'smooth'}); },
+ farbe: e => fFarbe(e.dataset.ort || 'akte'),
+ 'farbe-wahl': e => { const wo = e.dataset.ort; farbwahl[wo] = e.dataset.farbe; menueZu(); if (wo === 'akte') farbeAkte(); else fStadt(wo); },
+ drucken: () => { menueZu(); fDrucken(); },
+ 'druck-seite': () => drucken(null),
+ 'druck-doc': e => drucken(docs.find(d => d.id == e.dataset.id)),
+ hilfe: () => { menueZu(); fenster(`${fk('So funktioniert die Private Akte')}<ul style="padding-left:18px;margin:0;display:grid;gap:8px">
+   <li><b>Hereinbringen:</b> die Leiste oben – Bon fotografieren, PDF scannen, Dateien hineingeben, Notiz, Kalender.</li>
+   <li><b>Finden:</b> die Suche oder die sechs Bereiche.</li>
+   <li><b>Bearbeiten mit:</b> an jeder Unterlage, jedem Foto, jeder Notiz. Du wählst das Tool; bearbeitet wird eine Kopie.</li>
+   <li><b>Zur Akte:</b> das Ergebnis liegt als neue Fassung am alten Platz. Das Original bleibt.</li>
+   <li><b>Der Baum:</b> die Landkarte der App – in der Mitte die Akte, an den Ästen die Tools. Darunter „Wo liegt was?“: ein Tresor für alles.</li>
+   <li><b>Farbpalette:</b> der bunte runde Knopf. Jedes Programm merkt sich seine eigene Farbe.</li></ul>
+   <div class="logos"><figure><img src="./bilder/logo-basic-rund.png" alt="Zeichen der Basic-Fassung auf Weiß">Basic<br>diese Web-App</figure><figure><img src="./bilder/logo-pro-rund.png" alt="Zeichen der Pro-Fassung mit buntem Rand">Pro<br>bunter Rand</figure></div>
+   <label class="schalter"><input type="checkbox" data-tippwahl ${s.tipps?'checked':''}> Tooltips an den Knöpfen anzeigen</label>
+   <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
+   <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
+ sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
+ viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
+ 'sort-mehr': () => { organizer = [...organizer, ...ORGANIZER_NEU().map(o => ({...o, titel:o.titel+' (neu)'}))]; stadtNeu(); toast('Vier Dateien hineingegeben (Beispiel). Der Helfer hat geraten.'); },
+ notiz: () => { menueZu(); fNotiz(); },
+ sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
+ kalender: () => { menueZu(); s.zuDoc = null; fStadt('kal'); },
+ stadt: e => { if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
+ teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
+ mit: fMit,
+ 'mit-wahl': e => {
+   const neu = !!e.dataset.neu, d = neu ? ablegenAusEingang(e.dataset.neu) : docs.find(x => x.id == e.dataset.doc), womit = e.dataset.womit;
+   if (neu) { zeigen(); }
+   if (womit === 'text' || womit === 'pdf') fStadt('buero', [d.id], womit);
+   else if (womit === 'geld') { geld.vor = d.titel; fStadt('geld'); geld.vor = ''; }
+   else if (womit === 'sort') { organizer.unshift({titel:d.titel,art:d.art,vorschlag:d.bereich,vorgang:d.vorgang,sicher:false,doc:d.id}); fStadt('sort'); }
+   else if (womit === 'kal') { s.zuDoc = d.id; fStadt('kal'); }
+   else fPseudo(d);
+   toast(neu ? `In der Akte angekommen: ${ort(d)}. Bearbeitet wird eine Kopie.` : 'Das Original bleibt in der Akte. Bearbeitet wird eine Kopie.');
+ },
+ 'pseudo-sicht': e => fPseudo(s.pseudo, !!e.dataset.original),
+ 'pseudo-kopie': async () => { const t = '⟦PSEUDONYMISIERT v1⟧\n' + maske(s.pseudo.text).text; try { await navigator.clipboard.writeText(t); toast('Die verdeckte Fassung liegt in der Zwischenablage.'); } catch { toast('Kopieren ist hier nicht erlaubt. Die Fassung steht oben zum Markieren.'); } },
+ 'pseudo-zurueck': () => toast('Die Antwort der KI bekäme hier ihre echten Namen und Nummern zurück (Beispiel).'),
+ 'mail-ki': e => { const m = mails[+e.dataset.i]; fPseudo({id:0,titel:m.betreff,text:`E-Mail von ${m.von}. Betreff: ${m.betreff}. Anlage: ${m.anlage}. Kundennummer K123456789.`}); },
+ bestaetigen: e => { const d = ablegenAusEingang(e.dataset.id); zeigen(); toast(`Abgelegt in ${ort(d)}.`); },
+ mappe: () => fStadt('buero', [...s.wahl], 'pdf'),
+ zurueck: e => { const ids = e.dataset.docs.split(',').map(Number);
+   ids.forEach(i => { const d = docs.find(x => x.id === i), wo = inArbeit(d); d.bei = null; d.teil = null; d.fassung++; eingang.zurueck.unshift({doc:d.id,titel:d.titel,text:`Fassung ${d.fassung} aus ${wo} · liegt in ${ort(d)}`}); });
+   s.wahl.clear(); zurAkteFilm(ids.length);
+   toast(ids.length === 1 ? `Liegt als Fassung ${docs.find(x => x.id === ids[0]).fassung} am alten Platz. Ohne Rückfrage.` : `${ids.length} Unterlagen liegen als neue Fassung an ihrem Platz.`); },
+ 'sort-zur-akte': () => { const offen = organizer.filter(o => !o.sicher); if (offen.length) return toast(`Noch ${offen.length} unsicher. Bitte erst „Stimmt“ oder berichtigen.`);
+   const n = organizer.length; organizer.forEach(o => { const alt = o.doc && docs.find(d => d.id === o.doc); if (alt) { alt.bereich = o.vorschlag; alt.vorgang = o.vorgang; } else neuesDoc({titel:o.titel,art:o.art,bereich:o.vorschlag,vorgang:o.vorgang,herkunft:'Datei-Organizer',text:o.titel}); });
+   organizer = []; zurAkteFilm(n); toast(`${n} Dateien sind in der Akte, jede an ihrem Platz.`); },
+ 'mail-zur-akte': e => { const m = mails.splice(+e.dataset.i,1)[0]; neuesDoc({titel:m.anlage.replace('.pdf',''),art:'PDF',bereich:m.vorschlag,vorgang:m.vorgang,herkunft:'Private Brain',text:`Anlage aus der E-Mail „${m.betreff}“ von ${m.von}.`}); stadtNeu(); toast(`Liegt in ${bereich(m.vorschlag).name} / ${m.vorgang}.`); },
+ osort: e => { organizer[+e.dataset.i].sicher = true; stadtNeu(); toast('Gemerkt. Der Helfer lernt aus deiner Berichtigung.'); },
+ bon: () => { const [t,b] = bons[geld.bonNr++ % bons.length]; geld.posten.push({t,b,w:'Einkauf',bon:true}); neuesDoc({titel:'Bon '+t,art:'BELEG',bereich:'geld',vorgang:'Ausgaben 2026',herkunft:'Portemonnaie',text:`Kassenbon ${t}, ${euro(-b)}.`}); geldInAkte(); stadtNeu(); toast(`${euro(-b)} abgezogen. Der Bon liegt in der Akte.`); },
+ 'bon-start': () => { menueZu(); fStadt('geld'); A.bon(); },
+ 'an-bookledger': () => {
+   const zeilen = ['Datum;Was;Wofuer;Betrag', ...geld.posten.map(p => `${datum(HEUTE)};${p.t};${p.w||''};${p.b.toFixed(2).replace('.',',')}`)].join('\r\n');
+   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿'+zeilen], {type:'text/csv'})); a.download = 'portemonnaie-2026-11.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+   geld.gegeben = true; stadtNeu(); toast('Der November liegt als Datei für BookLedgerPro bereit (Beispieldaten). Die Buchhaltung bleibt draußen.'); },
+ 'hinaus-info': () => { fStadt('geld'); toast('Der Weg nach außen: „An BookLedgerPro geben“ unten im Portemonnaie.'); },
+ scan: () => { menueZu(); s.scan = true; fStadt('buero', [], 'pdf'); toast('Seite aufgenommen und als PDF gespeichert (Beispiel).'); },
+ 'scan-zur-akte': () => { s.scan = false; neuInEingang('Scan vom '+datum(HEUTE),'PDF','ich','Sonstiges','Workflow PDF'); },
+ 'neu-buero': e => neuInEingang(e.dataset.titel, e.dataset.art, 'ich', 'Sonstiges', 'Familienbüro'),
+ kopie: () => toast('Eine Kopie liegt in deinen Downloads (Beispiel). Das Original bleibt in der Akte.'),
+ teilen: () => toast('Hier öffnet sich das Teilen-Fenster des Geräts (Beispiel).')
+};
+document.addEventListener('click', ev => { const e = ev.target.closest('[data-a]'); if (e && A[e.dataset.a]) A[e.dataset.a](e, ev); });
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape') { if ($('menueort').innerHTML) menueZu(); else zu(); } });
+document.addEventListener('change', ev => {
+  const t = ev.target;
+  if (t.dataset.wahl) { const i = +t.dataset.wahl; t.checked ? s.wahl.add(i) : s.wahl.delete(i); zeigen(); }
+  if (t.dataset.mail) mails[+t.dataset.mail].vorschlag = t.value;
+  if (t.dataset.osort) organizer[+t.dataset.osort].vorschlag = t.value;
+  if (t.dataset.vorschlag) eingang.neu.find(x => x.id == t.dataset.vorschlag).vorschlag = t.value;
+});
+document.addEventListener('submit', ev => {
+  ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
+  if (f.dataset.form === 'suche') { s.frage = f.q.value.trim(); s.wahl.clear(); zeigen(); }
+  if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
+  if (f.dataset.form === 'notiz') {
+    const d = neuesDoc({titel:f.titel.value.trim(),art:'NOTIZ',bereich:f.bereich.value,vorgang:f.vorgang.value.trim()||'Notizen',herkunft:'Notiz, von Hand zugeordnet',text:f.text.value.trim()});
+    if (f.termin.checked) { s.zuDoc = d.id; fStadt('kal'); } else { zu(); s.ansicht = 'akten'; s.bereich = d.bereich; zeigen(); }
+    toast(`Die Notiz liegt in ${ort(d)}.`);
+  }
+  if (f.dataset.form === 'termin') { const [j,m,t] = f.am.value.split('-').map(Number); termine.push({titel:f.titel.value.trim(),am:new Date(j,m-1,t),art:f.art.value,doc:+f.doc.value||null}); s.zuDoc = null; stadtNeu(); toast('Eingetragen. Der Termin steht auch auf der Startseite unter „Fällig“.'); }
+});
+function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
+function zeigen(){ navZeigen(); mainZeigen(); }
+farbeAkte(); kopfZeigen(); zeigen();
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
+
+/* ---------- Tooltips: Maus oder Stift über einem Knopf, ohne Klick; abschaltbar in der Hilfe ---------- */
+let tippZeit;
+function tippWeg(){ clearTimeout(tippZeit); $('tipp').hidden = true; }
+function tippZeigen(e){
+  const el = $('tipp'); el.innerHTML = `<b>${esc(e.dataset.tipp)}</b>${e.dataset.tipp2 ? `<small>${esc(e.dataset.tipp2)}</small>` : ''}`; el.hidden = false;
+  const r = e.getBoundingClientRect(), b = el.getBoundingClientRect();
+  el.style.left = Math.max(8, Math.min(innerWidth - b.width - 8, r.left + r.width/2 - b.width/2)) + 'px';
+  el.style.top = (r.bottom + 8 + b.height > innerHeight ? r.top - b.height - 8 : r.bottom + 8) + 'px';
+}
+document.addEventListener('pointerover', ev => { if (!s.tipps || ev.pointerType === 'touch') return; const e = ev.target.closest('[data-tipp]'); if (!e) return; clearTimeout(tippZeit); tippZeit = setTimeout(() => tippZeigen(e), 400); });
+document.addEventListener('pointerout', ev => { if (ev.target.closest('[data-tipp]')) tippWeg(); });
+document.addEventListener('focusin', ev => { const e = ev.target.closest('[data-tipp]'); if (s.tipps && e && e.matches(':focus-visible')) tippZeigen(e); });
+document.addEventListener('focusout', tippWeg);
+document.addEventListener('pointerdown', tippWeg);
+addEventListener('scroll', tippWeg, true);
+document.addEventListener('change', ev => { if (ev.target.matches('[data-tippwahl]')) { s.tipps = ev.target.checked; toast(s.tipps ? 'Tooltips sind an.' : 'Tooltips sind aus.'); } });
