@@ -13,12 +13,11 @@ const { chromium } = require('playwright');
     const klick = async sel => { await p.locator(sel).first().click(); };
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
-    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe');
-    soll((await text()).includes('0.1.1 · Basic'), 'Fassung beim Namen');
+    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
+    soll((await text()).includes('0.1.2 · Basic'), 'Fassung beim Namen');
     if (name==='handy') { soll(await p.locator('[data-a=mehr]').isVisible(), 'Mehr-Knopf'); soll(!(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible()), 'Drucken hinter Mehr');
-      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue [data-a=landkarte]').count())===0,'keine Landkarte im Menü'); await klick('.menue'); }
+      await klick('[data-a=mehr]'); await p.screenshot({path:`p/${name}-2-mehr.png`}); soll((await p.locator('.menue button').count())===4,'vier Einträge hinter Mehr'); await p.keyboard.press('Escape'); }
     else soll(await p.locator('.kopfknoepfe [data-a=drucken]').isVisible(), 'Drucken sichtbar am PC');
-    soll((await p.locator('.nav .ablegen').count())===0,'kein Sammelknopf'); soll((await p.locator('.nav [data-zu=baum]').count())===1,'Baum in der Navigation'); soll((await p.locator('.werk[data-a=kalender], .werk[data-a^=kal]').count())===1,'Kalender in der Leiste');
     // Bon
     await klick('.werk[data-a=bon-start]'); soll((await text()).includes('An BookLedgerPro geben'), 'Portemonnaie mit BookLedger'); await p.screenshot({path:`p/${name}-3-geld.png`});
     const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename()==='portemonnaie-2026-11.csv','CSV'); soll((await text()).includes('November übergeben'),'übergeben');
@@ -35,8 +34,8 @@ const { chromium } = require('playwright');
     await klick('.nav [data-zu=akten]'); await klick('[data-a=bereich][data-id=wohnen]'); await klick('[data-a=doc][data-id="1"]'); await klick('.fenster [data-a=mit]'); await klick('[data-womit=pdf]'); soll((await text()).includes('Hier wurde etwas markiert'),'Kopie im PDF'); await klick('[data-a=zurueck]');
     soll((await p.locator('video.baumfilm').count())===1,'Film'); await p.waitForTimeout(600); await p.screenshot({path:`p/${name}-9-baum-film.png`});
     await p.evaluate(() => document.querySelector('video')?.remove()); await breit('baum'); await p.screenshot({path:`p/${name}-10-baum.png`});
-    soll((await p.locator('.schild').count())===7,'Schilder'); 
-    soll((await p.locator('.wokasten.tresor').count())===1,'ein Tresor'); soll((await p.locator('.wozeile').count())===5,'fünf Fächer im Tresor'); soll((await p.locator('.wostadt').count())===5,'fünf Städte ohne Speicher'); soll((await text()).includes('der einzige Speicher'),'Wo liegt was'); await p.locator('#wo-liegt-was').scrollIntoViewIfNeeded(); await breit('wo liegt was'); await p.screenshot({path:`p/${name}-10b-wo.png`, fullPage:true});
+    soll((await p.locator('.schild').count())===7,'Schilder');
+    soll((await p.locator('.wokasten.tresor').count())===1,'ein Tresor'); soll((await p.locator('.wozeile').count())===5,'fünf Fächer im Tresor'); soll((await p.locator('.wostadt').count())===5,'fünf Städte ohne Speicher'); soll((await text()).includes('der einzige Speicher'),'Wo liegt was'); await p.locator('#wo-liegt-was').scrollIntoViewIfNeeded(); await breit('wo liegt was'); await p.screenshot({path:`p/${name}-10b-wo.png`, fullPage:true}); 
     // Notiz mit Termin
     await klick('.werk[data-a=notiz]'); await klick('[data-a=sprechen]'); await p.fill('[name=titel]','Anruf Hausverwaltung'); await p.selectOption('[data-form=notiz] [name=bereich]','wohnen'); await p.fill('[name=vorgang]','Nebenkosten 2025'); await p.check('[name=termin]'); await p.screenshot({path:`p/${name}-11-notiz.png`}); await klick('[data-form=notiz] [type=submit]');
     soll((await text()).includes('Termin zu „Anruf Hausverwaltung“'),'Kalender zur Notiz'); await klick('[data-form=termin] [type=submit]'); soll((await p.locator('.fenster .liste .zeile').count())===4,'vier Termine'); await p.screenshot({path:`p/${name}-12-kalender.png`}); await klick('[data-a=zu]');

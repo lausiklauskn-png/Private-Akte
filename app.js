@@ -1,6 +1,6 @@
 'use strict';
 /* Private Akte – Vorschau. Alles ist Beispiel: erfundene Daten, nichts wird gespeichert, kein echtes Programm wird geöffnet. */
-const FASSUNG = '0.1.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.1.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -389,7 +389,8 @@ function kalender(){
 /* ---------- Menüs: Mehr, Farbpalette, Drucken ---------- */
 function menue(html, klasse=''){ $('menueort').innerHTML = `<div class="menue ${klasse}" data-a="menue-aussen"><div role="menu">${html}</div></div>`; }
 function fMehr(){
-  menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join(''));
+  menue(MEHR.map(([a,i,t]) => `<button role="menuitem" data-a="${a}" data-ort="akte">${a==='farbe'?'<span class="fleck farbknopf" style="display:grid;place-items:center"></span>':`<span class="tupfer" style="--a:#1aa59d;--b:#0b5a66">${i?ic(i):'?'}</span>`}${t}</button>`).join('')
+);
 }
 function fFarbe(wo){
   const aktuell = farbwahl[wo] || 'auto', name = wo === 'akte' ? 'die Akte' : stadt(wo).name;
@@ -437,8 +438,6 @@ const A = {
    <p style="font-size:13.5px"><a href="./rechtliches.html">Impressum, Datenschutz, Haftungsausschluss, Lizenz &amp; Copyright</a></p>
    <p class="hinweis">Vorschau ${FASSUNG}. Alles ist ein Beispiel, nichts wird gespeichert.</p>`); },
  sicherung: () => { menueZu(); fenster(`${fk('Sicherung','Eine App: ein Speicherort, eine Sicherung.')}<div class="liste"><div class="zeile"><span class="mitte"><strong>Tresor</strong><small>eingerichtet (Beispiel)</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Letzte Sicherung</strong><small>heute, zweiter Ort</small></span><span class="marke2 m-ok">in Ordnung</span></div><div class="zeile"><span class="mitte"><strong>Papierkorb</strong><small>leer</small></span></div></div><p class="hinweis">Nur angedeutet. Diese Vorschau speichert und sichert nichts.</p>`); },
- foto: () => neuInEingang('Foto vom '+datum(HEUTE),'JPG','ich','Sonstiges','Foto'),
- datei: () => neuInEingang('Schreiben der Versicherung','PDF','kauf','Auto','Datei'),
  viele: () => { menueZu(); if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); },
  'sort-mehr': () => { organizer = [...organizer, ...ORGANIZER_NEU().map(o => ({...o, titel:o.titel+' (neu)'}))]; stadtNeu(); toast('Vier Dateien hineingegeben (Beispiel). Der Helfer hat geraten.'); },
  notiz: () => { menueZu(); fNotiz(); },

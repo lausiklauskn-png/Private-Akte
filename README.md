@@ -4,7 +4,7 @@ Eine App für alle Unterlagen: in der Mitte die Akte, an den Ästen die Programm
 
 Web-App: https://lausiklauskn-png.github.io/Private-Akte/
 
-**Stand: Vorschau 0.1.1 (17.11.2026).** Alles ist Beispiel – erfundene Daten, nichts wird gespeichert,
+**Stand: Vorschau 0.1.2 (17.11.2026).** Alles ist Beispiel – erfundene Daten, nichts wird gespeichert,
 kein echtes Programm wird geöffnet, keine KI, kein Postfach, kein Kalender-Konto ist angeschlossen.
 
 ## Was die Vorschau zeigt
