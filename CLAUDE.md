@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.0)
+## Stand (17.11.2026, Vorschau 0.3.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.1 (Klaus am Tablet: Export gemacht, Ordner nicht wiedergefunden):** das Fenster „Tresor sichern“ nennt, wann und in welchen
+  Ordner zuletzt exportiert wurde (Merker im Browser; der Browser gibt nur den Namen des gewählten Ordners her, keinen Pfad).
+  „Haus und Wohnung“ = „Haus & Wohnung“ (`bereichKern`). Am Tablet bestätigt: Ablegen, eigene Bereiche, Ordnerwahl beim Export.
 - **Oberfläche (Klaus 17.11.):** Knöpfe, Suchfeld, Zeilen und Felder flacher; Textfelder wachsen mit dem Text; Startseite ohne Erklärsatz
   und ohne Beispiel-Suchen, Überschrift „Was möchtest du finden?“ nur in der breiten Ansicht.
 - **Bereiche (Klaus 17.11.):** die 18 festen der Familienakte, dazu eigene – wie dort ist ein eigener Bereich ein frei eingetragener

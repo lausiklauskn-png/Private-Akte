@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -510,7 +510,8 @@ const fehlerText = e => (e && e.message) || 'Das hat nicht geklappt.';
 /* Bereiche wie in der Familienakte: die festen, dazu eigene. Ein eigener Bereich ist ein frei eingetragener Name und entsteht mit der
    ersten Unterlage, die ihn trägt. Gleicher Name in anderer Schreibweise = der vorhandene Bereich, kein zweiter. */
 const echtBereiche = () => [...new Set([...T().bereiche, ...(echt.liste || []).map(d => d.category)])];
-function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = b.toLowerCase(); return echtBereiche().find(x => x.toLowerCase() === k) || b; }
+const bereichKern = b => b.toLowerCase().replace(/&/g, ' und ').replace(/\s+/g, ' ').trim();
+function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = bereichKern(b); return echtBereiche().find(x => bereichKern(x) === k) || b; }
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
@@ -571,11 +572,16 @@ document.addEventListener('submit', async ev => {
 
 /* ---------- Tresor exportieren / importieren: die Vollsicherung der Familienakte (verschlüsselter Ordner an einem gewählten Ort) ---------- */
 const sich = { art:null, notfallblatt:'', ordner:'' };
+/* Wohin zuletzt exportiert wurde – nur zum Wiederfinden gemerkt (der Browser nennt den Namen des gewählten Ordners, nicht den ganzen Pfad). */
+const EXPORT_MERKER = 'private-akte-letzter-export';
+const letzterExport = () => { try { return JSON.parse(localStorage.getItem(EXPORT_MERKER) || 'null'); } catch { return null; } };
+const uhr = iso => new Date(iso).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
 const zugangFehler = e => /PASSWORT_FALSCH/.test(e && e.message) ? 'Das Passwort oder der Notfallschlüssel passt nicht zu dieser Sicherung.' : /PASSWORT_FEHLT/.test(e && e.message) ? 'Diese Sicherung ist verschlüsselt. Bitte das Passwort eintragen.' : e && e.name === 'AbortError' ? '' : fehlerText(e);
 function fSicherung(){
   const kann = T() && T().sicherung.ordnerWaehlbar(), n = (echt.liste || []).length;
   fenster(`${fk('Tresor sichern','Exportieren legt alles als verschlüsselten Ordner dorthin, wo du willst. Importieren holt es wieder herein.')}
-   <div class="liste"><div class="zeile"><span class="mitte"><strong>Im Tresor dieses Geräts</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div></div>
+   <div class="liste"><div class="zeile"><span class="mitte"><strong>Im Tresor dieses Geräts</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div>
+   ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Zuletzt exportiert: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch nie exportiert</strong><small>von diesem Browser aus</small></span></div>`)(letzterExport())}</div>
    ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Tresor exportieren</button><button class="knopf hell" data-a="sich-import">Tresor importieren</button></div>
    <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig exportieren – auf das Gerät, eine SD-Karte oder einen Stick.</p>`
    : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Exportieren und Importieren geht in Chrome oder Edge.</p>`}`);
@@ -615,11 +621,12 @@ document.addEventListener('submit', async ev => {
     echt.laeuft = true; knopf.disabled = true;
     try {
       const r = await T().sicherung.exportieren(p, `Private Akte ${FASSUNG}`); sich.notfallblatt = r.notfallblatt || ''; sich.ordner = r.ordner;
+      try { localStorage.setItem(EXPORT_MERKER, JSON.stringify({ziel:r.ziel, ordner:r.ordner, erstellt:r.erstellt, dateien:r.dateien})); } catch { /* nur eine Merkhilfe */ }
       fenster(`${fk('Exportiert','verschlüsselt · ' + r.dateien + (r.dateien===1?' Datei':' Dateien'))}
-       <dl class="angaben"><dt>Ort</dt><dd>${esc(r.ziel)}</dd><dt>Ordner</dt><dd>${esc(r.ordner)}</dd><dt>Stand</dt><dd>${echtDatum(r.erstellt)}</dd></dl>
+       <dl class="angaben"><dt>Gewählt</dt><dd>${esc(r.ziel)}</dd><dt>Darin neu</dt><dd style="overflow-wrap:anywhere">${esc(r.ordner)}</dd><dt>Stand</dt><dd>${echtDatum(r.erstellt)}</dd></dl>
        <div class="blatt"><small>Notfallschlüssel · öffnet diese Sicherung auch ohne Passwort</small><b id="notfall">${esc(r.notfall || '')}</b></div>
        <div class="reihe"><button class="knopf" data-a="sich-blatt">Notfallblatt speichern</button><button class="knopf hell" data-a="zu">Fertig</button></div>
-       <p class="hinweis">Das Notfallblatt ausdrucken und zu den wichtigen Papieren legen – nicht zur Sicherung.</p>`);
+       <p class="hinweis">Du findest die Sicherung in der Dateien-App: im gewählten Ordner „${esc(r.ziel)}“ liegt der neue Ordner. Das Notfallblatt ausdrucken und zu den wichtigen Papieren legen – nicht zur Sicherung.</p>`);
     } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
   } else {
     const zugang = f.passwort && f.passwort.value ? {passwort:f.passwort.value} : f.notfall && f.notfall.value.trim() ? {notfall:f.notfall.value.trim()} : undefined;
