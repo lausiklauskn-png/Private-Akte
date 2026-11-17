@@ -10,11 +10,12 @@ Vorgänger: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`. Stand und Regeln: `C
 - **0.2.0 (PR #4, auf `main`):** Gerüst aus PR #1 hereingeholt (Klone, Klon-Werkzeug, Regeln). „Deine Unterlagen“: echte Ablage im
   Tresor der Familienakte über `src/tresor.ts` → `tresor.js` (`npm run bau`).
 - **0.3.0:** Tresor exportieren / importieren (verschlüsselter Ordner an gewähltem Ort, Notfallschlüssel), Oberfläche flacher,
-  Textfelder wachsen mit, Startseite ohne Erklärsatz und Beispiele (Überschrift nur breit).
+  Textfelder wachsen mit, Startseite ohne Erklärsatz und Beispiele (Überschrift nur breit), eigene Bereiche beim Ablegen
+  (auswählen oder eintippen, wie in der Familienakte).
 
 ## Geprüft und nicht geprüft
 
-- `tests/probe.cjs`, 390 px und 1280 px: 136 Prüfungen, 0 Fehler. Darin: hineinlegen, Dublette, Neuladen, Export, Speicher des
+- `tests/probe.cjs`, 390 px und 1280 px: 142 Prüfungen, 0 Fehler. Darin: hineinlegen, Dublette, Neuladen, Export, Speicher des
   Browsers leeren, falsches Passwort, Import, Datei kommt unverändert zurück. Die Ordnerwahl ist in der Probe gestellt (Ordner im
   Browser-Speicher), nicht der echte Dialog.
 - **Nicht am Gerät.** Ob Chrome am Handy/Tablet die Ordnerwahl (auch SD-Karte) anbietet, ist offen; ohne sie zeigt das Fenster einen Hinweis.

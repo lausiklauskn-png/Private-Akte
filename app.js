@@ -507,6 +507,10 @@ const echtArt = d => { const e = (d.originalName.split('.').pop() || '').toUpper
 const echtGroesse = n => n < 1024 ? n + ' B' : n < 1048576 ? Math.round(n/1024) + ' KB' : (n/1048576).toFixed(1).replace('.',',') + ' MB';
 const echtDatum = iso => iso ? datum(new Date(iso.length === 10 ? iso + 'T12:00:00' : iso)) : '';
 const fehlerText = e => (e && e.message) || 'Das hat nicht geklappt.';
+/* Bereiche wie in der Familienakte: die festen, dazu eigene. Ein eigener Bereich ist ein frei eingetragener Name und entsteht mit der
+   ersten Unterlage, die ihn trägt. Gleicher Name in anderer Schreibweise = der vorhandene Bereich, kein zweiter. */
+const echtBereiche = () => [...new Set([...T().bereiche, ...(echt.liste || []).map(d => d.category)])];
+function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = b.toLowerCase(); return echtBereiche().find(x => x.toLowerCase() === k) || b; }
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
@@ -527,7 +531,8 @@ function fEchtNeu(datei){
   fenster(`${fk('In die Akte legen', esc(datei.name) + ' · ' + echtGroesse(datei.size))}
    ${zuGross ? `<p class="leer">Die Datei ist größer als ${echtGroesse(T().hoechstBytes)}. So große Dateien nimmt der Tresor nicht.</p>` : `<form class="felder" data-form="echt">
     <label>Was ist es? <input class="feld" name="titel" value="${esc(datei.name.replace(/\.[^.]+$/, ''))}" required maxlength="200"></label>
-    <label>Bereich <select class="feld" name="bereich" required><option value="">Bereich wählen …</option>${T().bereiche.map(b => `<option>${esc(b)}</option>`).join('')}</select></label>
+    <label>Bereich – auswählen oder einen eigenen eintippen <input class="feld" name="bereich" list="echt-bereiche" required maxlength="60" autocomplete="off" placeholder="zum Beispiel: Haus &amp; Wohnung"></label>
+    <datalist id="echt-bereiche">${echtBereiche().map(b => `<option value="${esc(b)}">`).join('')}</datalist>
     <label>Datum der Unterlage <input class="feld" type="date" name="datum"></label>
     <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
    </form>
@@ -559,7 +564,7 @@ document.addEventListener('submit', async ev => {
   if (echt.laeuft || !echt.datei) return; echt.laeuft = true;
   const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true;
   try {
-    const d = await T().ablegen(echt.datei, {bereich:f.bereich.value, datum:f.datum.value || null, titel:f.titel.value.trim(), notiz:null});
+    const d = await T().ablegen(echt.datei, {bereich:echtBereich(f.bereich.value), datum:f.datum.value || null, titel:f.titel.value.trim(), notiz:null});
     echt.datei = null; zu(); await echtLaden(); toast(`„${echtTitel(d)}“ liegt in ${d.category}.`);
   } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { echt.laeuft = false; }
 });

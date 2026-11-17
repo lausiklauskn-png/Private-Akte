@@ -44,6 +44,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
 - **Oberfläche (Klaus 17.11.):** Knöpfe, Suchfeld, Zeilen und Felder flacher; Textfelder wachsen mit dem Text; Startseite ohne Erklärsatz
   und ohne Beispiel-Suchen, Überschrift „Was möchtest du finden?“ nur in der breiten Ansicht.
+- **Bereiche (Klaus 17.11.):** die 18 festen der Familienakte, dazu eigene – wie dort ist ein eigener Bereich ein frei eingetragener
+  Name an der Unterlage (`category`), er entsteht mit dem Ablegen; andere Schreibweise = derselbe Bereich (`echtBereich` in `app.js`).
+  Noch offen: eigene Kategorien aus dem Datei-Organizer kommen erst mit der Übernahme des Index (`lib/organizer-uebernahme.ts` im Klon)
+  herein; die sechs Kacheln „Bereiche“ der Startseite sind weiter Beispiele.
 - **Als Nächstes (Klaus 17.11.):** Die Suche soll eine Bedeutungssuche werden (Embedding-Modell wird geladen, dafür ein Ladebalken) –
   aus der Familienakte übernehmen (`app/private-meaning-*.ts`, `app/browser-modelle.ts`), nicht neu schreiben. Danach der Eingang
   (Text lesen, Bereich/Absender/Frist vorschlagen) aus dem Klon.
