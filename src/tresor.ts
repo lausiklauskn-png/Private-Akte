@@ -8,7 +8,8 @@ import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchTe
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
 import { MeaningRuntime, MEANING_MODELS, browserModelleEinhaengen } from "../klone/familienakte/app/private-meaning-runtime.ts";
-import { buildMeaningIndex, searchMeaningIndex, type MeaningDocument } from "../klone/familienakte/app/private-meaning-index.ts";
+import { meaningSections } from "../klone/familienakte/app/private-meaning-index.ts";
+import "../klone/sage-protokol/src/modules/04_match.js"; // registriert window.SbkimMatch (Sage-Protokol Modul 04, unverändert)
 import { readMeaningCorpus } from "../klone/familienakte/app/private-meaning-corpus.ts";
 import { createDictationSession, speechConstructor, microphoneBlockedReason } from "../klone/familienakte/lib/browser-dictation.ts";
 
@@ -84,23 +85,60 @@ const diktat = {
   sitzung: (r: { text: (t: string) => void; zustand: (an: boolean) => void; hinweis: (t: string, fehler: boolean) => void }) =>
     createDictationSession({ constructor: () => speechConstructor(window as never), online: () => navigator.onLine, onText: r.text, onState: r.zustand, onHint: r.hinweis }),
 };
-// Bedeutungssuche: Lader, Rechen-Worker, Index und Korpus der Familienakte, unverändert. Kleinste Stufe (multilingual-e5-small).
-// Das Modell wird nur auf ausdrücklichen Wunsch geladen (Klaus 17.11.: einmal, beim ersten „Finden“) und liegt dann im
-// Speicher des Browsers; gerechnet wird auf dem Gerät. PDFs zählen vorerst nur mit Titel, Bereich und Notiz (src/pdf-ersatz.ts).
+// Bedeutungssuche. Laden und Rechnen: Lader und Rechen-Worker der Familienakte, unverändert (kleinste Stufe multilingual-e5-small,
+// nur auf ausdrücklichen Wunsch geladen, gerechnet wird auf dem Gerät). Lesen der Unterlagen und Teilen in Abschnitte: ebenfalls
+// die Familienakte (readMeaningCorpus, meaningSections). Das Finden selbst folgt Sage-Protokol (Klaus 17.11.; dort gemessen,
+// docs/LEHRE-EMBEDDING-MATCH-KALIBRIERUNG.md): der rohe Cosinus liegt auch bei Fremdem um 0,82 und ist nur eine Rangfolge. Darum
+//   1. Wörter und Bedeutung in einer Rangliste – Sage Modul 04 queryLocal mit hybrid:true (BM25 + Vektor, Reciprocal Rank Fusion);
+//   2. zentrierter Cosinus – der Mittelwert aller Abschnitte des eigenen Bestands wird abgezogen (ab drei Abschnitten), dann liegt
+//      Fremdes um 0 und nur Verwandtes klar darüber. Kein fester Riegel auf dem rohen Wert.
+// PDFs zählen vorerst nur mit Titel, Bereich und Notiz (src/pdf-ersatz.ts).
 const STUFE = "klein" as const;
 // Die Pins nennen für die kleine Stufe keine Dateigrößen; für den Ladebalken: Bibliothek rund 20 MB + Modell rund 119 MB.
 const GESCHAETZT = 139_000_000;
 const MODELL = { id: MEANING_MODELS[STUFE].id, revision: MEANING_MODELS[STUFE].revision, dim: MEANING_MODELS[STUFE].dim };
-let eingehaengt = false, laufzeit: MeaningRuntime | null = null;
-let korpus: { stand: string; scope: string; documents: MeaningDocument[] } | null = null;
+type Rechner = (text: string) => Promise<Float32Array>;
+type Abschnitt = { label: string; text: string; passageVec: Float32Array; id: string };
+type SageTreffer = { label: string; score: number; bm25: number; fused: number };
+const sage = () => (window as unknown as { SbkimMatch: { queryLocal: (text: string, k: number, o: { corpus: Abschnitt[]; hybrid: boolean }) => Promise<SageTreffer[]> } }).SbkimMatch;
+let eingehaengt = false, laufzeit: MeaningRuntime | null = null, ersatz: Rechner | null = null;
+let korpus: { stand: string; abschnitte: Abschnitt[]; mitte: Float32Array | null } | null = null;
 const einhaengen = () => { if (!eingehaengt) { browserModelleEinhaengen(browserModelle as never); eingehaengt = true; } };
-const rechnen = (text: string, model: typeof MODELL) => (laufzeit ||= new MeaningRuntime()).embed(text, model);
-/** Liest die Unterlagen und rechnet, was neu ist (schon Gerechnetes bleibt). `stand` = Kennung der Liste, damit nach neuem Ablegen neu gelesen wird. */
-async function indexBauen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) {
-  const handle = await browserVault(), scope = (await getVaultSummary(handle)).vaultId;
-  const gelesen = await readMeaningCorpus(handle, () => {});
-  await buildMeaningIndex({ scope, model: MODELL, read: async () => gelesen.documents, currentScope: () => scope, embed: rechnen, progress: fortschritt });
-  korpus = { stand, scope, documents: gelesen.documents };
+const rechnen: Rechner = (text) => ersatz ? ersatz(text) : (laufzeit ||= new MeaningRuntime()).embed(text, MODELL);
+// Sage Modul 04 holt den Vektor der Frage über window.SbkimEmbedding.embedQuery; hier liefert ihn der Rechner der Familienakte
+// (e5 verlangt „query: “ vor der Frage und „passage: “ vor dem Text – dieselbe Regel wie in beiden Quellen).
+(window as unknown as { SbkimEmbedding: { embedQuery: Rechner } }).SbkimEmbedding = { embedQuery: (text) => rechnen("query: " + text) };
+
+// Gerechnete Abschnitte bleiben im Speicher des Browsers (eigene kleine Datenbank), damit nur Neues gerechnet wird.
+const VEKTOR_DB = "PrivateAkteSuche1";
+const vektorDb = () => new Promise<IDBDatabase>((ja, nein) => { const r = indexedDB.open(VEKTOR_DB, 1); r.onupgradeneeded = () => r.result.createObjectStore("vektoren"); r.onsuccess = () => ja(r.result); r.onerror = () => nein(r.error); });
+const fingerabdruck = async (text: string) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(MODELL.revision + "\n" + text)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+async function vektorZu(text: string): Promise<Float32Array> {
+  const key = await fingerabdruck(text), db = await vektorDb();
+  try {
+    const da = await new Promise<unknown>((ja, nein) => { const r = db.transaction("vektoren").objectStore("vektoren").get(key); r.onsuccess = () => ja(r.result); r.onerror = () => nein(r.error); });
+    if (da instanceof Float32Array && da.length === MODELL.dim) return da;
+    const neu = await rechnen("passage: " + text);
+    await new Promise<void>((ja, nein) => { const t = db.transaction("vektoren", "readwrite"); t.objectStore("vektoren").put(neu, key); t.oncomplete = () => ja(); t.onerror = () => nein(t.error); });
+    return neu;
+  } finally { db.close(); }
+}
+const punkt = (a: Float32Array, b: Float32Array) => { let s = 0; for (let i = 0; i < a.length; i++) s += a[i] * b[i]; return s; };
+/** Zentrierter Cosinus nach der Sage-Lehre: Mittelwert abziehen, dann Cosinus. */
+function zentriert(a: Float32Array, b: Float32Array, mitte: Float32Array) {
+  const wa = a.map((v, i) => v - mitte[i]), wb = b.map((v, i) => v - mitte[i]), n = Math.sqrt(punkt(wa, wa) * punkt(wb, wb));
+  return n > 0 ? punkt(wa, wb) / n : 0;
+}
+/** Liest die Unterlagen, teilt sie in Abschnitte und rechnet, was noch nicht gerechnet ist. `stand` = Kennung der Liste. */
+async function korpusBauen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) {
+  const gelesen = await readMeaningCorpus(await browserVault(), () => {});
+  const teile: Array<{ id: string; text: string; n: number }> = [];
+  for (const d of gelesen.documents) if (d.id.startsWith("d:")) meaningSections(d.text).texts.forEach((text, n) => teile.push({ id: d.id.slice(2), text, n }));
+  const abschnitte: Abschnitt[] = [];
+  for (const t of teile) { abschnitte.push({ label: `${t.id}#${t.n}`, id: t.id, text: t.text, passageVec: await vektorZu(t.text) }); fortschritt?.(abschnitte.length, teile.length); }
+  let mitte: Float32Array | null = null;
+  if (abschnitte.length >= 3) { mitte = new Float32Array(MODELL.dim); for (const a of abschnitte) for (let i = 0; i < mitte.length; i++) mitte[i] += a.passageVec[i] / abschnitte.length; }
+  korpus = { stand, abschnitte, mitte };
   return korpus;
 }
 const bedeutung = {
@@ -112,13 +150,26 @@ const bedeutung = {
   },
   async laden() { einhaengen(); await browserModelle.install({ stage: STUFE }); },
   async abbrechen() { einhaengen(); await browserModelle.cancel({ stage: STUFE }); },
-  async lesen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) { einhaengen(); await indexBauen(stand, fortschritt); },
-  /** Treffer dem Sinn nach: Kennungen der Unterlagen mit ihrer Nähe zur Frage (0 bis 1), beste zuerst. */
+  async lesen(stand: string, fortschritt?: (fertig: number, gesamt: number) => void) { einhaengen(); await korpusBauen(stand, fortschritt); },
+  /** Rangliste der Unterlagen zur Frage, beste zuerst (Sage: BM25 und Vektor verschmolzen). Je Unterlage: `naehe` = zentrierter
+   *  Cosinus ihres nächsten Abschnitts (null, solange der Bestand für einen Mittelwert zu klein ist), `roh` = roher Cosinus,
+   *  `wort` = ein Wort der Frage steht im Text. */
   async suchen(frage: string, stand: string) {
-    einhaengen(); const k = korpus && korpus.stand === stand ? korpus : await indexBauen(stand);
-    const r = await searchMeaningIndex({ scope: k.scope, documents: k.documents, query: frage.slice(0, 500), currentScope: () => k.scope, embed: rechnen });
-    return r.hits.filter((h) => h.id.startsWith("d:")).map((h) => ({ id: h.id.slice(2), naehe: h.score }));
+    einhaengen(); const k = korpus && korpus.stand === stand ? korpus : await korpusBauen(stand);
+    if (!k.abschnitte.length) return [];
+    const text = frage.slice(0, 500), rang = await sage().queryLocal(text, k.abschnitte.length, { corpus: k.abschnitte, hybrid: true });
+    const frageVec = k.mitte ? await rechnen("query: " + text) : null;
+    const je = new Map<string, { id: string; naehe: number | null; roh: number; wort: boolean }>();
+    for (const t of rang) {
+      const a = k.abschnitte.find((x) => x.label === t.label); if (!a) continue;
+      const naehe = frageVec && k.mitte ? zentriert(frageVec, a.passageVec, k.mitte) : null, da = je.get(a.id);
+      if (!da) je.set(a.id, { id: a.id, naehe, roh: t.score, wort: t.bm25 > 0 });
+      else { da.roh = Math.max(da.roh, t.score); da.wort ||= t.bm25 > 0; if (naehe !== null) da.naehe = Math.max(da.naehe ?? -1, naehe); }
+    }
+    return [...je.values()];
   },
+  /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
+  zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
 };
 const alles = { ...tresor, sicherung, suchen, diktat, bedeutung };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

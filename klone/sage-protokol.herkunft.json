@@ -1,0 +1,20 @@
+{
+ "name": "sage-protokol",
+ "quelle": "https://github.com/lausiklauskn-png/Sage-Protokol",
+ "commit": "4e62f909c300852e43b83283564dd8e94b3f9f4b",
+ "standVom": "2026-11-16T08:46:16+01:00",
+ "auswahl": [
+  "src/modules/04_match.js",
+  "LICENSE"
+ ],
+ "anzahl": 2,
+ "bytes": 108318,
+ "ordner": {
+  "(Dateien oben)": 1,
+  "src/": 1
+ },
+ "dateien": {
+  "LICENSE": "91e707ead369ceefa12d2cf020f3a947bdbcc40fb652cc168c7774b3790f2eef",
+  "src/modules/04_match.js": "721eecc3c0d6ea4c259259e6071215ec1cd16f1c43c87b42ce9e72e9a0b5e41c"
+ }
+}
