@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -578,21 +578,21 @@ const letzterExport = () => { try { return JSON.parse(localStorage.getItem(EXPOR
 const uhr = iso => new Date(iso).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'});
 const zugangFehler = e => /PASSWORT_FALSCH/.test(e && e.message) ? 'Das Passwort oder der Notfallschlüssel passt nicht zu dieser Sicherung.' : /PASSWORT_FEHLT/.test(e && e.message) ? 'Diese Sicherung ist verschlüsselt. Bitte das Passwort eintragen.' : e && e.name === 'AbortError' ? '' : fehlerText(e);
 function fSicherung(){
-  const kann = T() && T().sicherung.ordnerWaehlbar(), n = (echt.liste || []).length;
-  fenster(`${fk('Tresor sichern','Exportieren legt alles als verschlüsselten Ordner dorthin, wo du willst. Importieren holt es wieder herein.')}
+  const kann = T() && T().sicherung.ordnerWaehlbar(), n = (echt.liste || []).length, erstes = !letzterExport();
+  fenster(`${fk('Tresor sichern', erstes ? 'Der Tresor liegt bisher nur in dieser App. Lege ihn als verschlüsselten Ordner an – dort, wo du willst.' : 'Exportieren legt alles als verschlüsselten Ordner dorthin, wo du willst. Importieren holt es wieder herein.')}
    <div class="liste"><div class="zeile"><span class="mitte"><strong>Im Tresor dieses Geräts</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div>
-   ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Zuletzt exportiert: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch nie exportiert</strong><small>von diesem Browser aus</small></span></div>`)(letzterExport())}</div>
-   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Tresor exportieren</button><button class="knopf hell" data-a="sich-import">Tresor importieren</button></div>
-   <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig exportieren – auf das Gerät, eine SD-Karte oder einen Stick.</p>`
+   ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Zuletzt exportiert: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch kein Ordner angelegt</strong><small>der Tresor liegt nur im Speicher des Browsers</small></span></div>`)(letzterExport())}</div>
+   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">${erstes ? 'Tresor als Ordner anlegen' : 'Tresor exportieren'}</button><button class="knopf hell" data-a="sich-import">${erstes ? 'Vorhandenen Tresor importieren' : 'Tresor importieren'}</button></div>
+   <p class="hinweis">${erstes ? 'Der Ordner ist eine Sicherung: was du später hineinlegst, kommt mit dem nächsten Exportieren dazu. Importieren brauchst du nur, wenn es schon einen solchen Ordner gibt.' : 'Der Browser kann seinen Speicher leeren. Darum regelmäßig exportieren – auf das Gerät, eine SD-Karte oder einen Stick.'}</p>`
    : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Exportieren und Importieren geht in Chrome oder Edge.</p>`}`);
 }
 function fExport(){
-  const m = T().sicherung.passwortMindestens;
-  fenster(`${fk('Tresor exportieren','Ein Ordner mit Datum, mit deinem Passwort verschlüsselt.')}
+  const m = T().sicherung.passwortMindestens, erstes = !letzterExport();
+  fenster(`${fk(erstes ? 'Tresor als Ordner anlegen' : 'Tresor exportieren','Ein Ordner mit Datum, mit deinem Passwort verschlüsselt.')}
    <form class="felder" data-form="export">
     <label>Passwort (mindestens ${m} Zeichen) <input class="feld" type="password" name="p1" required minlength="${m}" autocomplete="new-password"></label>
     <label>Passwort wiederholen <input class="feld" type="password" name="p2" required minlength="${m}" autocomplete="new-password"></label>
-    <button class="knopf gruen voll" type="submit">Ordner wählen und exportieren ${ic('pfeil')}</button>
+    <button class="knopf gruen voll" type="submit">Ordner wählen und ${erstes ? 'anlegen' : 'exportieren'} ${ic('pfeil')}</button>
    </form>
    <p class="hinweis">Ohne Passwort kommt niemand hinein – auch du nicht. Danach bekommst du einen Notfallschlüssel für den Fall, dass du es vergisst.</p>`);
 }
