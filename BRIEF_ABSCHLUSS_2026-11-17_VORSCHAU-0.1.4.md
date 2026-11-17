@@ -90,6 +90,19 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
   damit abgleichen – in dieser Sitzung nicht gelesen.
 - Offen: zuerst Web-App oder gleich Android; welchen Stand Jens' Familienakte hat (nicht nachgesehen).
 
+## Letzte Entscheidungen dieser Sitzung (Klaus 17.11., abends)
+
+- **Die Programme heißen „Tools“** (nicht Städte, nicht Module; „Tools kennt jeder“). „Werkzeugstätte“ ist nur die
+  Erklärung in Verbindung mit dem Baumbild. **Noch nicht umbenannt:** in der App steht überall noch „Stadt/Städte“
+  (Unterzeile des Baums, Fenstertitel „Stadt in der Privaten Akte“, Eingang „Aus den Städten“, Hilfe, README);
+  im Kasten 3 von „Wo liegt was?“ steht „Werkzeugstätte“. Das ist die erste Aufgabe der nächsten Sitzung.
+- **Datenschutzerklärung zum Schluss** (Klaus) – nicht vor Schritt 1 wie oben vorgeschlagen, aber vor der ersten
+  Ausgabe, die wirklich speichert.
+- Abgleich mit der Vorgängersitzung (Zweig `ccr-1fe14ee1-n9882z`, PR #2): dort liegt nichts, was hier fehlt; ihr
+  Stand 0.1.1 ist in diesem Zweig (`ccr-500c05b9-21sx0s`, PR #3) vollständig enthalten. Klaus: was er dort besprochen
+  hat, ist dasselbe wie hier. **Weiterarbeiten auf dem Stand von PR #3**, nicht auf PR #2.
+- Klaus macht in der anderen Sitzung weiter.
+
 ## Noch zu entscheiden
 
 - Einstellungen: wo (unter „Baum“?), und was hinein kommt (Tooltips, Tresor einrichten).
@@ -112,13 +125,12 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.4.md und README.md.
-Ich fand die Vorschau zu kompliziert und habe den Überblick verloren. Frage mich zuerst, was mir am Handy
-zu viel war, und schlage vor, was gestrichen oder zusammengelegt wird (erst als Vorschau zeigen).
-Schon entschieden: kein Sammelknopf „Ablegen“, kein Knopf „Landkarte“, Kalender als Knopf und als Stadt,
-der Baum bleibt das Bild mit den Schildern (kein 3D-Baum). Eine Landkarte kommt vielleicht später wieder,
-dann als Ansicht der Baumstruktur der App. Neu in 0.1.3: runde Knöpfe mit Tooltips, Baum ohne Erklärkarten –
-frage mich nach den Einstellungen (Tooltips, Tresor einrichten) und ob die Knöpfe am Handy ohne Wort reichen.
-Bei jeder Änderung die Fassung erhöhen (FASSUNG in app.js, VERSION in sw.js, ?v= in index.html), mit
-tests/probe.cjs in Handy- und PC-Breite prüfen und einen Entwurfs-PR anlegen. Zusammenführen nur auf mein Wort.
+Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.4.md und README.md auf dem Zweig
+ccr-500c05b9-21sx0s (PR #3, Vorschau 0.1.4 – enthält PR #2 vollständig; hole diesen Stand in deinen Zweig).
+Erste Aufgabe: die Programme heißen „Tools“ – überall in der App, in der Hilfe und im README „Stadt/Städte“
+ersetzen; „Werkzeugstätte“ bleibt nur als Erklärung beim Baumbild. Fassung erhöhen (FASSUNG in app.js,
+VERSION in sw.js, ?v= zweimal in index.html), mit tests/probe.cjs in Handy- und PC-Breite prüfen.
+Danach mit mir den Bau besprechen: Reihenfolge aus dem Abschnitt „Vorgabe für den Bau“ (dieselbe Mechanik
+wie die Familienakte, damit ein Abgleich möglich bleibt), Web-App oder gleich Android, Einstellungen
+(Tooltips, Tresor einrichten). Datenschutzerklärung zum Schluss. Zusammenführen nur auf mein Wort.
 ```
