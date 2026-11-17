@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.3.6)
+## Stand (17.11.2026, Vorschau 0.3.7)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.5.md`.
@@ -42,6 +42,21 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.3.7 Bedeutungssuche hinter „Finden“ und Zurück (Klaus 17.11.):** kein eigener Knopf. Nach jedem „Finden“ steht unter der
+  Suchleiste „Auch nach Bedeutung suchen? … (rund 140 MB) · Ja / Nein“, solange das Sprachmodell nicht geladen ist. **Nein** blendet
+  die Zeile bis zum nächsten „Finden“ aus (kein „nicht mehr fragen“; später in den Einstellungen wieder einschaltbar – Einstellungen
+  gibt es noch nicht). **Ja** lädt mit Ladebalken (Bytes), prüft, liest die Unterlagen und sucht; danach zeigt „Finden“ erst die
+  Wort-Treffer und hängt an, was nur dem Sinn nach passt (Marke „dem Sinn nach“). Alles aus dem Klon über `src/tresor.ts`
+  (`bedeutung`): `browser-modelle.ts`, `private-meaning-runtime.ts`, `-index.ts`, `-corpus.ts`; der Worker liegt byte-gleich unter
+  `native/familienakte-meaning-worker.js` (`npm run bau` kopiert, `bau:pruefen` vergleicht). Kleinste Stufe multilingual-e5-small;
+  Quellen: family-projekt.de, sonst Hugging Face; Bibliothek jsDelivr, sonst unpkg. **Grenzen:** mit echtem Modell nie gelaufen
+  (die Sitzung erreicht die Quellen nicht; in der Familienakte laut deren Notizen ebenfalls nie echt geladen) – nur Ablauf, Fehlerweg
+  und Anzeige mit gestelltem Modell geprüft. Die Schwelle für „dem Sinn nach“ (Nähe ≥ 0,80 und höchstens 0,05 unter dem besten) ist
+  geschätzt. PDFs werden noch nicht gelesen (`src/pdf-ersatz.ts` ersetzt beim Bau den React-Import des Klons), sie zählen mit Titel,
+  Bereich, Notiz. Die Größe „rund 140 MB“ ist geschätzt (Pins nennen sie für die kleine Stufe nicht). Die Datenschutzerklärung nennt
+  das Laden von fremden Servern noch nicht (Klaus: zum Schluss).
+  **Zurück:** Android-/Browser-/Maus-Zurück geht in der App einen Schritt zurück (Fenster, Menü, Suche, Bereich, Ansicht); am Anfang
+  bleibt die App offen und sagt es, erst ein zweites Zurück binnen 2,5 s verlässt sie (`zur…` am Ende von `app.js`). Nicht am Gerät.
 - **0.3.6 Suche, erster Schritt (Klaus 17.11.: eine Suchleiste, Mikrofon, X, nichts Zusätzliches hinter „Finden“):** das Suchfeld hat
   ein **X** (löscht Eingabe und Treffer) und ein **Mikrofon** (Diktat des Klons, `lib/browser-dictation.ts`; noch einmal tippen
   beendet und sucht; nur wo der Browser Spracherkennung hat). „Finden“ sucht jetzt in den echten Unterlagen mit der Wortsuche des

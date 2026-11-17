@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.3.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.3.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -128,6 +128,8 @@ const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
 const s = { tipps:true, ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
 const sprech = { sitzung:null, an:false };
+/* Bedeutungssuche: geladen = Modell liegt geprüft auf dem Gerät; frage = ob die Zeile „Ja/Nein“ nach diesem „Finden“ zu sehen ist. */
+const bed = { geladen:null, frage:false, phase:'', fertig:0, gesamt:0, fehler:'', sucht:false, treffer:[], zu:'' };
 
 /* ---------- Helfer ---------- */
 let toastZeit;
@@ -181,9 +183,11 @@ function sucheFeld(){
 }
 function treffer(){
   const t = suche(s.frage), ids = T() && echt.liste ? T().suchen(s.frage, echt.liste) : [], e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
-  if (!t.length && !e.length) return `<div class="abschnitt"><div class="liste"><p class="leer">Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.</p></div></div>`;
-  const b = new Set(t.map(d=>d.bereich)).size;
-  return `${e.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length} ${e.length===1?'Treffer':'Treffer'} · echt</span></h2><div class="liste">${e.map(echtZeile).join('')}</div></div>` : ''}
+  // Dem Sinn nach: nur was die Wörter nicht schon gefunden haben. Schwelle geschätzt (e5 liegt auch bei Fremdem hoch), am Gerät nachstellen.
+  const sinn = bed.zu === s.frage && echt.liste ? bed.treffer.filter((h, n) => h.naehe >= 0.8 && h.naehe >= bed.treffer[0].naehe - 0.05 && !ids.includes(h.id)).slice(0, 10).map(h => echt.liste.find(d => d.id === h.id)).filter(Boolean) : [];
+  if (!t.length && !e.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
+  const b = new Set(t.map(d=>d.bereich)).size, n = e.length + sinn.length;
+  return `${n ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${n} Treffer${sinn.length ? ` · ${sinn.length} dem Sinn nach` : ''}</span></h2><div class="liste">${e.map(d => echtZeile(d)).join('')}${sinn.map(d => echtZeile(d, 'dem Sinn nach')).join('')}</div></div>` : ''}
    ${t.length ? `<div class="abschnitt"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span></h2>
    <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}`;
 }
@@ -192,7 +196,7 @@ const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
 function vStart(){
   const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
   return `<h1 class="titel nurpc">Was möchtest du finden?</h1>${sucheFeld()}
-  ${s.frage ? treffer() : `
+  ${s.frage ? `<div id="bedort">${bedZeile()}</div><div id="trefferort">${treffer()}</div>` : `
   ${echtAbschnitt()}
   <div class="abschnitt"><h2>Fällig <span>${termine.length} Termine und Fristen</span></h2><div class="liste">${termineSortiert().slice(0,3).map(terminZeile).join('')}</div></div>
   <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln sechs">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
@@ -494,7 +498,7 @@ document.addEventListener('change', ev => {
 });
 document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
-  if (f.dataset.form === 'suche') { s.frage = f.q.value.trim(); s.wahl.clear(); zeigen(); }
+  if (f.dataset.form === 'suche') { s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
   if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
   if (f.dataset.form === 'notiz') {
     const d = neuesDoc({titel:f.titel.value.trim(),art:'NOTIZ',bereich:f.bereich.value,vorgang:f.vorgang.value.trim()||'Notizen',herkunft:'Notiz, von Hand zugeordnet',text:f.text.value.trim()});
@@ -522,13 +526,13 @@ async function echtLaden(){
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
   if (s.ansicht === 'start' && !sprech.an) mainZeigen();
 }
-const echtZeile = d => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 m-ok">echt</span>${ic('weiter')}</button>`;
+const echtZeile = (d, marke = 'echt') => `<button class="zeile" data-a="echt-auf" data-id="${esc(d.id)}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small></span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
 function echtAbschnitt(){
   const l = echt.liste;
   const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
     : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
     : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
-    : l.map(echtZeile).join('');
+    : l.map(d => echtZeile(d)).join('');
   return `<div class="abschnitt" id="echt" data-bereit="${l === null ? 0 : 1}"><h2>Deine Unterlagen <span>echt · auf diesem Gerät gespeichert</span></h2><div class="liste">${innen}</div></div>`;
 }
 function fEchtNeu(datei){
@@ -655,7 +659,7 @@ document.addEventListener('submit', async ev => {
 });
 function mainZeigen(){ $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
-farbeAkte(); kopfZeigen(); zeigen(); echtLaden();
+farbeAkte(); kopfZeigen(); zeigen(); echtLaden(); bedPruefen();
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
    Übernimmt ein neuer Worker, zeigt die Fassungsmarke „neu“; neu geladen wird erst auf Tipp, damit keine Eingabe verloren geht. */
 let swReg = null;
@@ -706,3 +710,76 @@ A['suche-mikro'] = e => {
   sprech.an = true; sprech.sitzung.start(suchFeld() ? suchFeld().value : '', false);
 };
 document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; } });
+
+/* ---------- Bedeutungssuche hinter „Finden“ (Klaus 17.11.): kein eigener Knopf. Nach jedem „Finden“ fragt eine Zeile unter der
+   Suchleiste „Ja / Nein“, solange das Sprachmodell nicht geladen ist; „Nein“ blendet sie bis zum nächsten „Finden“ aus.
+   Geladen und gerechnet wird über tresor.js mit den Teilen der Familienakte. ---------- */
+const mb = n => Math.round(n / 1e6).toLocaleString('de-DE') + ' MB';
+const bedStand = () => (echt.liste || []).map(d => d.id + ':' + (d.updatedAt || d.addedAt || '')).join('|');
+const BED_FEHLER = { APP_OFFLINE:'Das Internet ist ausgeschaltet.', MODEL_CHECKSUM:'Eine geladene Datei war beschädigt. Bitte noch einmal.', CANCELLED:'' };
+function bedZeile(){
+  if (!T() || !T().bedeutung.moeglich() || bed.geladen === null) return '';
+  if (bed.phase === 'laden') { const p = Math.min(100, Math.round(100 * bed.fertig / (bed.gesamt || 1)));
+    return `<div class="bedzeile" role="status"><span>Lädt das Sprachmodell … ${mb(bed.fertig)} von rund ${mb(bed.gesamt)}</span><progress max="100" value="${p}"></progress><button class="knopf hell klein" data-a="bed-stopp">Abbrechen</button></div>`; }
+  if (bed.phase === 'lesen') return `<div class="bedzeile" role="status"><span>Liest deine Unterlagen …${bed.gesamt ? ` ${bed.fertig} von ${bed.gesamt}` : ''}</span><progress ${bed.gesamt ? `max="${bed.gesamt}" value="${bed.fertig}"` : ''}></progress></div>`;
+  if (bed.fehler) return `<div class="bedzeile fehler" role="status"><span>${esc(bed.fehler)}</span><button class="knopf hell klein" data-a="bed-ja">Noch einmal</button><button class="knopf hell klein" data-a="bed-nein">Schließen</button></div>`;
+  if (bed.geladen) return bed.sucht ? `<div class="bedzeile still" role="status"><span>Sucht auch nach Bedeutung …</span></div>` : '';
+  if (!bed.frage) return '';
+  return `<div class="bedzeile" id="bed-frage"><span><b>Auch nach Bedeutung suchen?</b> Dann findet „Finden“ auch, was nur dem Sinn nach passt. Dafür wird einmal ein Sprachmodell auf dieses Gerät geladen (rund 140 MB).</span><button class="knopf klein" data-a="bed-ja">Ja</button><button class="knopf hell klein" data-a="bed-nein">Nein</button></div>`;
+}
+function bedZeigen(){ const o = $('bedort'); if (o) o.innerHTML = bedZeile(); const t = $('trefferort'); if (t && s.frage) t.innerHTML = treffer(); }
+async function bedPruefen(){ try { if (T() && T().bedeutung.moeglich()) bed.geladen = (await T().bedeutung.zustand()).geladen; } catch (e) { bed.geladen = null; } bedZeigen(); }
+async function bedSuchen(){
+  const frage = s.frage; if (!frage || !bed.geladen || !T() || echt.liste === null) return;
+  bed.sucht = true; bedZeigen();
+  try { const h = await T().bedeutung.suchen(frage, bedStand()); bed.treffer = h; bed.zu = frage; }
+  catch (e) { bed.treffer = []; bed.zu = ''; bed.fehler = 'Die Suche nach Bedeutung hat nicht geklappt. Die Wörter gelten.'; }
+  finally { bed.sucht = false; if (s.frage === frage || !s.frage) bedZeigen(); }
+}
+A['bed-nein'] = () => { bed.frage = false; bed.fehler = ''; bedZeigen(); };
+A['bed-stopp'] = async () => { try { await T().bedeutung.abbrechen(); } catch (e) {} };
+A['bed-ja'] = async () => {
+  if (bed.phase) return; bed.fehler = ''; bed.phase = 'laden'; bed.fertig = 0; bed.gesamt = 139e6; bedZeigen();
+  try {
+    await T().bedeutung.laden();
+    for (;;) { const z = await T().bedeutung.zustand(); bed.fertig = z.fertig; bed.gesamt = z.gesamt; bedZeigen();
+      if (z.geladen) break; if (z.fehler || !z.laeuft) throw new Error(z.fehler || 'MODEL_DOWNLOAD');
+      await new Promise(r => setTimeout(r, 400)); }
+    bed.geladen = true; bed.phase = 'lesen'; bed.fertig = 0; bed.gesamt = 0; bedZeigen();
+    await T().bedeutung.lesen(bedStand(), (f, g) => { bed.fertig = f; bed.gesamt = g; bedZeigen(); });
+    bed.phase = ''; bed.frage = false; bedZeigen(); toast('Die Suche nach Bedeutung ist eingerichtet.'); bedSuchen();
+  } catch (e) {
+    const k = e && e.message; bed.phase = '';
+    bed.fehler = k === 'CANCELLED' ? '' : (BED_FEHLER[k] || (bed.geladen ? 'Das Lesen der Unterlagen hat nicht geklappt.' : 'Das Laden hat nicht geklappt. Besteht eine Internetverbindung?'));
+    bedZeigen();
+  }
+};
+
+/* ---------- Zurück (Klaus 17.11.): der Zurück-Knopf von Android, Browser oder Maus geht in der App einen Schritt zurück –
+   erst das offene Fenster, dann das Menü, die Suche, der Bereich, die Ansicht. Erst am Anfang und beim zweiten Zurück
+   kurz hintereinander verlässt man die App. Die App legt dafür je Schritt einen Eintrag in den Verlauf des Browsers. ---------- */
+const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
+const zurTiefe = () => ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
+function zurAbgleich(){
+  if (!zur.wache) return; const t = zurTiefe();
+  if (t > zur.tiefe) { for (; zur.tiefe < t; zur.tiefe++) history.pushState({pa:zur.tiefe + 1}, ''); }
+  else if (t < zur.tiefe) { const d = zur.tiefe - t; zur.tiefe = t; zur.still++; history.go(-d); }
+}
+/* Die Wache entsteht mit der ersten Berührung: Einträge ohne Zutun des Nutzers überspringt der Browser beim Zurück. */
+function zurWache(){ if (zur.wache) return; zur.wache = true; history.pushState({pa:0}, ''); zurAbgleich(); }
+addEventListener('pointerdown', zurWache, true); addEventListener('keydown', zurWache, true);
+addEventListener('popstate', () => {
+  if (zur.still) { zur.still--; return; }
+  if (!zur.wache) return;
+  if (zur.tiefe === 0) {
+    if (Date.now() - zur.zuletzt < 2500) { zur.wache = false; history.back(); return; }
+    zur.zuletzt = Date.now(); history.pushState({pa:0}, ''); toast('Du bist am Anfang. Noch einmal zurück verlässt die App.'); return;
+  }
+  zur.tiefe--;
+  if ($('fensterort').innerHTML) zu();
+  else if ($('menueort').innerHTML) menueZu();
+  else if (s.frage) { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeigen(); }
+  else if (s.bereich) { s.bereich = null; zeigen(); }
+  else { s.ansicht = 'start'; zeigen(); scrollTo(0,0); }
+});
+new MutationObserver(() => queueMicrotask(zurAbgleich)).observe(document.body, {childList:true, subtree:true});

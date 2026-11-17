@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
   const soll = (ok, was) => { n++; if (!ok) fehler.push('SOLL: ' + was); };
   for (const [name, w, h] of [['handy',390,800],['pc',1280,800]]) {
     const p = await b.newPage({ viewport:{width:w,height:h} });
-    p.on('console', m => { if (m.type()==='error') fehler.push(name+' console: '+m.text()); });
+    p.on('console', m => { if (m.type()==='error' && !/net::ERR_FAILED/.test(m.text())) fehler.push(name+' console: '+m.text()); }); // ERR_FAILED: die Probe sperrt die Modell-Quellen mit Absicht
     p.on('pageerror', e => fehler.push(name+' fehler: '+e.message));
     await p.addInitScript(name => { window.showDirectoryPicker = async () => (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name, {create:true}); }, name);
     await p.goto('http://localhost:8765/'); await p.waitForSelector('.werk');
@@ -15,7 +15,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.3.6 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.3.7 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -38,6 +38,19 @@ const { chromium } = require('playwright');
     // Suche: Wortsuche der Familienakte über die echten Unterlagen, X löscht
     await p.fill('.suche input','Probe'); soll(await p.locator('[data-a=suche-leer]').isVisible(), 'X erscheint beim Tippen'); await p.keyboard.press('Enter'); soll((await p.locator('#echt-treffer .zeile').count())>=1, 'Suche findet die echte Unterlage'); await klick('#echt-treffer .zeile'); soll((await text()).includes('in der Akte auf diesem Gerät'), 'Treffer öffnet die echte Unterlage'); await klick('[data-a=zu]');
     await klick('[data-a=suche-leer]'); soll((await p.inputValue('.suche input'))==='' && (await p.locator('#echt-treffer').count())===0 && !(await p.locator('[data-a=suche-leer]').isVisible()), 'X löscht die Eingabe und die Treffer');
+    // Bedeutungssuche: nach „Finden“ fragt eine Zeile Ja/Nein; Nein blendet sie bis zum nächsten „Finden“ aus; ohne Netz meldet Ja den Fehler
+    await p.waitForFunction(() => document.querySelector('.suche input')); await p.fill('.suche input','Probe'); await p.keyboard.press('Enter'); await p.waitForSelector('#bed-frage'); soll((await text()).includes('Auch nach Bedeutung suchen?'), 'nach Finden: Frage nach der Bedeutungssuche'); await breit('bedeutungsfrage'); await p.screenshot({path:`p/${name}-1d-bedeutung.png`});
+    await klick('[data-a=bed-nein]'); soll((await p.locator('#bed-frage').count())===0, 'Nein blendet die Frage aus'); await p.keyboard.press('Enter'); await p.locator('.suche input').press('Enter'); await p.waitForSelector('#bed-frage'); soll(true, 'beim nächsten Finden ist die Frage wieder da');
+    await p.route(/family-projekt\.de|huggingface\.co|jsdelivr\.net|unpkg\.com/, r => r.abort()); await klick('[data-a=bed-ja]'); await p.waitForSelector('.bedzeile.fehler', {timeout:30000}); soll((await text()).includes('Das Laden hat nicht geklappt'), 'ohne Netz: Laden meldet den Fehler, Wortsuche bleibt'); soll((await p.locator('#echt-treffer .zeile').count())>=1, 'Treffer der Wörter bleiben stehen'); await klick('[data-a=bed-nein]');
+    // Treffer dem Sinn nach (Modell gestellt): stehen hinter den Wort-Treffern, mit eigener Marke
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor, d = (await t.liste())[0]; t.bedeutung.suchen = async () => [{id:d.id, naehe:0.9}]; bed.geladen = true; });
+    await p.fill('.suche input','Zettel vom Arzt'); await p.keyboard.press('Enter'); await p.waitForSelector('#echt-treffer .m-arbeit'); soll((await p.locator('#echt-treffer').innerText()).includes('dem Sinn nach') && (await p.locator('#bed-frage').count())===0, 'Treffer dem Sinn nach, keine Frage mehr'); await p.screenshot({path:`p/${name}-1e-sinn.png`});
+    await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; }); await klick('[data-a=suche-leer]');
+    // Zurück: schließt erst das Fenster, dann die Ansicht; die Seite bleibt dieselbe
+    await klick('.nav [data-zu=baum]'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('.fenster'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('.fenster')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
+    await p.goBack(); await p.waitForSelector('#echt'); soll(p.url()==='http://localhost:8765/' && (await p.locator('.baumbild').count())===0, 'Zurück geht vom Baum zum Start');
+    await p.goBack(); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('Du bist am Anfang')); soll(p.url()==='http://localhost:8765/' && (await p.locator('.werk').count())===5, 'Zurück am Anfang: die App bleibt offen und sagt es');
+    await klick('.nav [data-zu=akten]'); await klick('.nav [data-zu=start]'); await p.goBack(); await p.waitForTimeout(300); soll((await p.locator('.werk').count())===5 && p.url()==='http://localhost:8765/', 'von Hand zurück zum Start: kein toter Schritt im Verlauf');
     // Tresor exportieren (verschlüsselter Ordner am gewählten Ort), Speicher des Browsers leeren, wieder importieren
     const kopf = async a => { if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? `.menue [data-a=${a}]` : `.kopfknoepfe [data-a=${a}]`); }; const sicherungAuf = () => kopf('export');
     await sicherungAuf(); soll((await text()).includes('1 Unterlage'), 'Sicherung zählt die echte Unterlage'); soll((await p.locator('#letzter-export').innerText()).includes('Noch kein Backup') || name==='pc', 'vor dem ersten Export: noch kein Ordner'); soll((await text()).includes('Backup erstellen') || name==='pc', 'erstes Mal: Tresor als Ordner anlegen'); await klick('[data-a=sich-export]');
