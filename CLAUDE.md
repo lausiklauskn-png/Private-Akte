@@ -81,8 +81,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 ## Feste Regeln
 
-- **`ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` mit jedem Schritt ergänzen** (Klaus 17.11.): was beim Ausprobieren auffällt und was hier
-  anders gemacht wird als in der Familienakte – Vorlage für deren spätere Überarbeitung. Klaus geht die App Schritt für Schritt durch.
+- **`docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` still mitführen** (Klaus 17.11.): eine Arbeitsdatei im Hintergrund wie diese hier. Bei jedem
+  Schritt von selbst ergänzen, was beim Ausprobieren auffällt und was hier anders gemacht wird als in der Familienakte – ohne Klaus
+  jedes Mal darauf hinzuweisen. Vorlage für die spätere Überarbeitung der Familienakte. Klaus geht die App Schritt für Schritt durch.
 
 - **Klone nie von Hand ändern.** Verbesserungen entstehen im Quell-Repo und kommen nur über
   `node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]` herein. Beim Hinzufügen `git add -f klone/` nehmen
