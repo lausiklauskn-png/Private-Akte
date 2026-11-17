@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -202,12 +202,14 @@ function treffer(){
   // um 0, darum zählt erst, was klar darüber liegt und mindestens halb so nah ist wie das Beste. Untere Grenze 0,2: am Tablet
   // (0.4.0, drei Unterlagen) kam Fremdes auf 0,11 und 0,16. Die zweite Grenze ist weiter geschätzt, die Zahl steht an der Zeile. Ist der Bestand für einen Mittelwert zu
   // klein, gibt es keine Nähe; dann die ersten drei der Rangliste, ohne Zahl.
-  const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id)) : [];
+  // Im Text gefunden: alle Inhaltswörter der Frage stehen im gelesenen Inhalt (auch im PDF) – das ist ein Wort-Treffer und steht oben.
+  const imText = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => h.imText && !ids.includes(h.id)).map(h => echt.liste.find(d => d.id === h.id)).filter(Boolean) : [];
+  const rang = bed.zu === s.frage && echt.liste ? bed.treffer.filter(h => !ids.includes(h.id) && !h.imText) : [];
   const roh = rang.some(h => h.naehe !== null) ? (n => n.filter(h => h.naehe >= 0.2 && h.naehe >= n[0].naehe / 2).slice(0, 5))(rang.filter(h => h.naehe !== null).sort((a, b) => b.naehe - a.naehe)) : rang.slice(0, 3);
   const sinn = roh.map(h => ({d:echt.liste.find(d => d.id === h.id), h})).filter(x => x.d);
-  if (!t.length && !e.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
+  if (!t.length && !e.length && !imText.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>`;
   const b = new Set(t.map(d=>d.bereich)).size, teil = '<span>nicht alle Wörter passen</span>';
-  return `${e.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length} Treffer</span>${es.teil ? teil : ''}</h2><div class="liste">${e.map(d => echtZeile(d)).join('')}</div></div>` : ''}
+  return `${e.length || imText.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length + imText.length} Treffer</span>${es.teil && e.length ? teil : ''}</h2><div class="liste">${e.map(d => echtZeile(d)).join('')}${imText.map(d => echtZeile(d, 'im Text gefunden')).join('')}</div></div>` : ''}
    ${t.length ? `<div class="abschnitt" id="beispiel-treffer"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span>${t.teil ? teil : ''}</h2>
    <div class="liste">${t.map(d => docZeile(d,{haken:true})).join('')}</div>${s.wahl.size?`<div class="leiste"><span>${s.wahl.size} gesammelt</span><button class="knopf" data-a="mappe">Mappe öffnen ${ic('pfeil')}</button></div>`:''}</div>` : ''}
    ${sinn.length ? `<div class="abschnitt" id="sinn-treffer"><h2>Passt vielleicht dem Sinn nach <span>deine Unterlagen · die Zahl ist die Nähe zur Frage, 0 heißt fremd</span></h2><div class="liste">${sinn.map(x => echtZeile(x.d, x.h.naehe === null ? 'dem Sinn nach' : 'dem Sinn nach · ' + x.h.naehe.toFixed(2).replace('.', ','))).join('')}</div></div>` : ''}`;

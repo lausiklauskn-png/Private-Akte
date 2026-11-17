@@ -100,7 +100,7 @@ const diktat = {
 //   1. Wörter und Bedeutung in einer Rangliste – Sage Modul 04 queryLocal mit hybrid:true (BM25 + Vektor, Reciprocal Rank Fusion);
 //   2. zentrierter Cosinus – der Mittelwert aller Abschnitte des eigenen Bestands wird abgezogen (ab drei Abschnitten), dann liegt
 //      Fremdes um 0 und nur Verwandtes klar darüber. Kein fester Riegel auf dem rohen Wert.
-// PDFs zählen vorerst nur mit Titel, Bereich und Notiz (src/pdf-ersatz.ts).
+// PDFs werden über ihre Textebene gelesen (src/pdf-ersatz.ts lädt die PDF-Bibliothek des Klons); Scans ohne Textebene nicht.
 const STUFE = "klein" as const;
 // Die Pins nennen für die kleine Stufe keine Dateigrößen; für den Ladebalken: Bibliothek rund 20 MB + Modell rund 119 MB.
 const GESCHAETZT = 139_000_000;
@@ -167,12 +167,15 @@ const bedeutung = {
     if (!k.abschnitte.length) return [];
     const text = frage.slice(0, 500), rang = await sage().queryLocal(text, k.abschnitte.length, { corpus: k.abschnitte, hybrid: true });
     const frageVec = k.mitte ? await rechnen("query: " + text) : null;
-    const je = new Map<string, { id: string; naehe: number | null; roh: number; wort: boolean }>();
+    // imText: alle Inhaltswörter der Frage stehen in einem Abschnitt der Unterlage (auch im gelesenen PDF) – ein Wort-Treffer im Inhalt.
+    const woerter = teilWoerter(text).map(normalizeFamilySearch).filter(Boolean);
+    const steht = (abschnitt: string) => { const n = normalizeFamilySearch(abschnitt); return woerter.length > 0 && woerter.every((w) => n.includes(w)); };
+    const je = new Map<string, { id: string; naehe: number | null; roh: number; wort: boolean; imText: boolean }>();
     for (const t of rang) {
       const a = k.abschnitte.find((x) => x.label === t.label); if (!a) continue;
       const naehe = frageVec && k.mitte ? zentriert(frageVec, a.passageVec, k.mitte) : null, da = je.get(a.id);
-      if (!da) je.set(a.id, { id: a.id, naehe, roh: t.score, wort: t.bm25 > 0 });
-      else { da.roh = Math.max(da.roh, t.score); da.wort ||= t.bm25 > 0; if (naehe !== null) da.naehe = Math.max(da.naehe ?? -1, naehe); }
+      if (!da) je.set(a.id, { id: a.id, naehe, roh: t.score, wort: t.bm25 > 0, imText: steht(a.text) });
+      else { da.imText ||= steht(a.text); da.roh = Math.max(da.roh, t.score); da.wort ||= t.bm25 > 0; if (naehe !== null) da.naehe = Math.max(da.naehe ?? -1, naehe); }
     }
     return [...je.values()];
   },

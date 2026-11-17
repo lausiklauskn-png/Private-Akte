@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026, Vorschau 0.4.1)
+## Stand (17.11.2026, Vorschau 0.4.2)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_SUCHE-0.4.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -42,6 +42,21 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.4.2 PDFs werden gelesen (Klaus 17.11. am Tablet: Wörter aus dem Inhalt der Bonushefte fanden nichts):** `src/pdf-ersatz.ts`
+  lädt jetzt die PDF-Bibliothek des Klons (`klone/familienakte/public/vendor/pdfjs`, auch im Offline-Vorrat) statt abzubrechen; das
+  Lesen selbst ist `readMeaningCorpus` des Klons (Textebene, höchstens 60 Seiten; Scans ohne Textebene liefern nichts, OCR nicht
+  gebaut). `bedeutung.suchen` meldet je Unterlage `imText` (alle Inhaltswörter der Frage stehen in einem Abschnitt); solche Treffer
+  stehen oben unter „Deine Unterlagen“ mit der Marke „im Text gefunden“. **Grenzen:** der Inhalt wird nur gelesen, wenn die
+  Bedeutungssuche eingeschaltet ist (Modell geladen) – ohne sie weiter nur Titel, Bereich, Notiz; ein gespeicherter Textauszug beim
+  Ablegen ist nicht gebaut. Das erste „Finden“ nach dem Update rechnet alle PDF-Abschnitte ohne Ladebalken (danach gemerkt).
+  Probe mit einem gestellten PDF grün; an Klaus' PDFs (7 MB) am Tablet ungeprüft.
+- **Inhaltsvektor / Mycel in Sage (Klaus 17.11.: „mach dich schlau“; nur gelesen):** `docs/MEILENSTEIN_VON_DER_HUELLE_ZUM_INHALT.md`,
+  `docs/components/03_embedding.md` (`embedContentVector`), `02_spore.md` (`regenerateOwnSpore`, `embeddingVersion`). Das ist **ein**
+  Vektor je App für die öffentliche Visitenkarte im Netz (Schwerpunkt aus bis zu 32 Schnipseln, neu gerechnet wenn der Inhalt wächst)
+  – er dient dem Finden von Apps untereinander, nicht der Suche in den eigenen Unterlagen. Für Tresore legt Sage fest: **kein
+  Inhalts-Sampling**, die Karte ist öffentlich. Die Suche im Rezeptbuch ist `queryLocal` über die einzelnen Einträge – das hat die
+  Private Akte seit 0.4.0. Klaus' Idee (pseudonymisieren, großes Sprachmodell, wieder einpflegen): ein Sprachmodell liefert keine
+  passenden Vektoren, wohl aber Text (Stichwörter, Kurzfassung, Fragen), den das Gerät selbst einbettet – nicht gebaut, nicht entschieden.
 - **0.4.1 nach Klaus' Bildern vom Tablet (17.11., 0.4.0 mit echtem Modell, drei eigene Unterlagen):** (1) Fremdes kam „dem Sinn
   nach“ auf 0,11 und 0,16 (dieselbe Notiz bei „September Gehaltsabrechnung“ und „Zählerstand Nebenkostenabrechnung“) – untere
   Grenze jetzt **0,2** statt 0,1. Ein wirklich passender Sinn-Treffer war auf den Bildern nicht dabei; die Grenze „mindestens halb so
