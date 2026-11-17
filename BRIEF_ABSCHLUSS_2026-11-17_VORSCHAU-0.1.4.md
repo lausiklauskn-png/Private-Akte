@@ -1,4 +1,4 @@
-# Abschlussbrief – Private Akte, Vorschau 0.1.3 (17.11.2026)
+# Abschlussbrief – Private Akte, Vorschau 0.1.4 (17.11.2026)
 
 Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Version 3 „Private Act“).
 
@@ -70,6 +70,15 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
   Wo er später eingerichtet wird (Einstellungen), ist offen.
 - Fassung 0.1.3; Probe `tests/probe.cjs` 90 Prüfungen, keine Fehler (390 px und 1280 px).
 
+## Nachtrag 0.1.4 (Klaus 17.11.)
+
+- „Wo liegt was?“: „Herein“ heißt jetzt **„Hinzufügen“**, „Die Städte“ heißt dort **„Werkzeugstätte“**. Tresor, Sicherung
+  und „Nach außen“ bleiben (Klaus: in Ordnung). Sonst heißen die Programme in der App weiter „Städte“ – ob überall
+  umbenannt wird, ist offen.
+- Klaus: die Vorschau ist damit geklärt; als Nächstes nur noch **Gedanken über den Bau** (was echt wird, in welcher
+  Reihenfolge).
+- Fassung 0.1.4; Probe `tests/probe.cjs` 92 Prüfungen, keine Fehler.
+
 ## Noch zu entscheiden
 
 - Einstellungen: wo (unter „Baum“?), und was hinein kommt (Tooltips, Tresor einrichten).
@@ -92,7 +101,7 @@ Grundlage: `BRIEF_SITZUNG_2026-11-17_PRIVATE-AKTE.md` im Repo FP-Idee-Center (Ve
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.3.md und README.md.
+Lies im Repo Private-Akte zuerst BRIEF_ABSCHLUSS_2026-11-17_VORSCHAU-0.1.4.md und README.md.
 Ich fand die Vorschau zu kompliziert und habe den Überblick verloren. Frage mich zuerst, was mir am Handy
 zu viel war, und schlage vor, was gestrichen oder zusammengelegt wird (erst als Vorschau zeigen).
 Schon entschieden: kein Sammelknopf „Ablegen“, kein Knopf „Landkarte“, Kalender als Knopf und als Stadt,
