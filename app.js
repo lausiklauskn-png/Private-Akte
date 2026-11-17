@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.4.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.4.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -135,7 +135,7 @@ const bed = { geladen:null, frage:false, phase:'', fertig:0, gesamt:0, fehler:''
 let toastZeit;
 function toast(t){ $('toast').textContent = t; clearTimeout(toastZeit); toastZeit = setTimeout(() => $('toast').textContent = '', 5200); }
 const ort = d => `${bereich(d.bereich).name} / ${d.vorgang}`;
-const SYN = {was:'',wie:'',wo:'',und:'',für:'',fürs:'',ein:'',eine:'',einen:'',dokumente:'',unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
+const SYN = {auf:'',aus:'',mit:'',von:'',vom:'',bei:'',nach:'',den:'',dem:'',des:'',einer:'',einem:'',oder:'',wann:'',welche:'',gibt:'',ist:'',sind:'',habe:'',hat:'',finde:'',was:'',wie:'',wo:'',und:'',für:'',fürs:'',ein:'',eine:'',einen:'',dokumente:'',unterlagen:'',alles:'',zur:'',zum:'',der:'',die:'',das:'',meine:'',mein:'',ich:'',brauche:'',nebenkostenabrechnung:'nebenkosten',gesundheitsunterlagen:'gesundheit',arzt:'gesundheit',wohnung:'wohnen',miete:'miet',auto:'auto',steuern:'steuer',notizen:'notiz'};
 const suchWoerter = frage => frage.toLowerCase().split(/[^a-zäöüß0-9]+/).map(x => x in SYN ? SYN[x] : x).filter(x => x.length > 2);
 /* Beispiele: erst alle Wörter; findet das nichts, zählt, wer die meisten Wörter trifft (Klaus 17.11.: „Gehaltsabrechnung September“
    soll wenigstens die Gehaltsabrechnung finden). Rückgabe: Treffer und ob nur ein Teil der Wörter passte. */
@@ -210,7 +210,7 @@ function treffer(){
   // Was die Suche gelesen hat (Klaus 17.11.: nicht zu sehen, ob der Inhalt der PDFs gelesen wurde)
   const g = bed.zu === s.frage && T() && T().bedeutung.gelesen ? T().bedeutung.gelesen() : null;
   const stand = g ? `<p class="lesestand" id="lesestand">Inhalt gelesen bei ${g.unterlagen - g.ohneInhalt} von ${g.unterlagen} Unterlagen${g.ohneInhalt ? ' – bei den übrigen zählen nur Titel, Bereich und Notiz' : ''}.</p>` : '';
-  if (!t.length && !e.length && !imText.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>${stand}`;
+  if (!t.length && !e.length && !imText.length && !sinn.length) return `<div class="abschnitt"><div class="liste"><p class="leer">${bed.sucht ? 'Die Wörter finden nichts. Die Suche nach Bedeutung läuft noch …' + (bed.lage ? ' ' + esc(bed.lage) + '.' : '') : `Nichts gefunden zu „${esc(s.frage)}“. Versuch ein anderes Wort.`}</p></div></div>${stand}`;
   const b = new Set(t.map(d=>d.bereich)).size, teil = '<span>nicht alle Wörter passen</span>';
   return `${e.length || imText.length ? `<div class="abschnitt" id="echt-treffer"><h2>Deine Unterlagen <span>${e.length + imText.length} Treffer</span>${es.teil && e.length ? teil : ''}</h2><div class="liste">${e.map(d => echtZeile(d)).join('')}${imText.map(d => echtZeile(d, 'im Text gefunden')).join('')}</div></div>` : ''}
    ${t.length ? `<div class="abschnitt" id="beispiel-treffer"><h2>${t.length} ${t.length===1?'Beispiel':'Beispiele'} <span>aus ${b} ${b===1?'Bereich':'Bereichen'} · anhaken zum Sammeln</span>${t.teil ? teil : ''}</h2>
@@ -756,7 +756,7 @@ function bedZeile(){
     return `<div class="bedzeile" role="status"><span>Lädt das Sprachmodell … ${mb(bed.fertig)} von rund ${mb(bed.gesamt)}${bed.quelle ? ` · von ${esc(bed.quelle)}` : ''}</span><progress max="100" value="${p}"></progress><button class="knopf hell klein" data-a="bed-stopp">Abbrechen</button></div>`; }
   if (bed.phase === 'lesen') return `<div class="bedzeile" role="status"><span>Liest deine Unterlagen …${bed.gesamt ? ` ${bed.fertig} von ${bed.gesamt}` : ''}</span><progress ${bed.gesamt ? `max="${bed.gesamt}" value="${bed.fertig}"` : ''}></progress></div>`;
   if (bed.fehler) return `<div class="bedzeile fehler" role="status"><span>${esc(bed.fehler)}</span><button class="knopf hell klein" data-a="bed-ja">Noch einmal</button><button class="knopf hell klein" data-a="bed-nein">Schließen</button></div>`;
-  if (bed.geladen) return bed.sucht ? `<div class="bedzeile still" role="status"><span>Sucht auch nach Bedeutung …</span></div>` : '';
+  if (bed.geladen) return bed.sucht ? `<div class="bedzeile still" role="status"><span>Sucht auch nach Bedeutung …${bed.lage ? ' ' + esc(bed.lage) : ''}</span></div>` : '';
   if (!bed.frage) return '';
   return `<div class="bedzeile" id="bed-frage"><span><b>Auch nach Bedeutung suchen?</b> Dann findet „Finden“ auch, was nur dem Sinn nach passt. Dafür wird einmal ein Sprachmodell auf dieses Gerät geladen (rund 140 MB).</span><button class="knopf klein" data-a="bed-ja">Ja</button><button class="knopf hell klein" data-a="bed-nein">Nein</button></div>`;
 }
@@ -765,9 +765,10 @@ async function bedPruefen(){ try { if (T() && T().bedeutung.moeglich()) bed.gela
 async function bedSuchen(){
   const frage = s.frage; if (!frage || !bed.geladen || !T() || echt.liste === null) return;
   bed.sucht = true; bedZeigen();
+  const takt = setInterval(() => { const l = T().bedeutung.lage ? T().bedeutung.lage() : ''; if (l !== bed.lage) { bed.lage = l; bedZeigen(); } }, 700);
   try { const h = await T().bedeutung.suchen(frage, bedStand()); bed.treffer = h; bed.zu = frage; }
   catch (e) { bed.treffer = []; bed.zu = ''; bed.fehler = 'Die Suche nach Bedeutung hat nicht geklappt. Die Wörter gelten.'; }
-  finally { bed.sucht = false; if (s.frage === frage || !s.frage) bedZeigen(); }
+  finally { clearInterval(takt); bed.lage = ''; bed.sucht = false; if (s.frage === frage || !s.frage) bedZeigen(); }
 }
 A['bed-nein'] = () => { bed.frage = false; bed.fehler = ''; bedZeigen(); };
 A['bed-stopp'] = async () => { try { await T().bedeutung.abbrechen(); } catch (e) {} };
