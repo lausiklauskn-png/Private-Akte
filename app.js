@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.8.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -420,33 +420,151 @@ function buero(){
 }
 /* Portemonnaie, echt (0.7.0): Geld rein / Geld raus, im Tresor (`T().geld`). Rechnen mit den Bausteinen aus BookLedgerPro (Klon mit Pin).
    Bon fotografieren: das Foto wird eine Unterlage, der Betrag wird vom Bon gelesen und nur vorgeschlagen. */
-const pm = { liste:null, monat:new Date().toISOString().slice(0, 7), bon:null, bonText:'', vorschlag:null, liest:false, gegeben:{} };
+const pm = { liste:null, monat:new Date().toISOString().slice(0, 7), bon:null, bonText:'', vorschlag:null, liest:false, gegeben:{},
+  fach:(() => { try { return localStorage.getItem('pa_pm_fach') || 'bargeld'; } catch { return 'bargeld'; } })(), konten:null, umsaetze:null, konto:'', lesen:null, kontoNeu:false };
 const MONATE = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
 const monatName = m => `${MONATE[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}`;
 const monatPlus = (m, n) => { const d = new Date(+m.slice(0, 4), +m.slice(5, 7) - 1 + n, 1); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`; };
-async function pmLaden(){ try { pm.liste = await T().geld.posten(); } catch (e) { pm.liste = []; toast(fehlerText(e)); } stadtNeu(); }
+async function pmLaden(){
+  try { [pm.liste, pm.konten, pm.umsaetze] = await Promise.all([T().geld.posten(), T().bank.konten(), T().bank.umsaetze()]); } catch (e) { pm.liste = pm.liste || []; pm.konten = pm.konten || []; pm.umsaetze = pm.umsaetze || []; toast(fehlerText(e)); }
+  if (!pm.konten.some(k => k.id === pm.konto)) pm.konto = pm.konten[0]?.id || '';
+  stadtNeu();
+}
+const VERFAHREN_NAME = { hand:'von Hand', csv:'CSV', camt:'CAMT', mt940:'MT940', pdf:'PDF', excel:'Excel' };
+const VERFAHREN_ANNEHMEN = { csv:'.csv,text/csv,text/plain', camt:'.xml,application/xml,text/xml', mt940:'.sta,.940,.mt940,.txt', pdf:'.pdf,application/pdf', excel:'.xlsx' };
+const ibanKurz = i => i ? '… ' + i.slice(-4) : '';
+function pmFachKopf(){
+  return `<div class="pm-monat"><button class="rund klein" data-a="pm-monat" data-n="-1" aria-label="Monat davor">‹</button><b>${monatName(pm.monat)}</b><button class="rund klein" data-a="pm-monat" data-n="1" aria-label="Nächster Monat">›</button></div>
+   <div class="reiter pm-faecher" role="tablist">${[['bargeld','Bargeld'],['bank','Bank'],['summe','Summe']].map(([f, n]) => `<button class="chip ${pm.fach === f ? 'an' : ''}" role="tab" aria-selected="${pm.fach === f}" data-a="pm-fach" data-f="${f}">${n}</button>`).join('')}</div>`;
+}
 function portemonnaie(){
   if (!T()) return '<p class="leer">Der Tresor ist in diesem Browser nicht geladen.</p>';
-  if (pm.liste === null) { pmLaden(); return '<p class="leer">Wird geöffnet …</p>'; }
+  if (pm.liste === null || pm.konten === null) { pmLaden(); return '<p class="leer">Wird geöffnet …</p>'; }
+  const weg = `<div class="karte" style="margin-top:12px"><b>Weg nach außen</b><p style="font-size:13px;color:var(--muted);margin:4px 0 10px">Der Monat geht als Datei an BookLedgerPro.${pm.gegeben[pm.monat] ? ` <span class="marke2 m-ok">${MONATE[+pm.monat.slice(5, 7) - 1]} übergeben</span>` : ''}</p>
+    <div class="reihe" style="margin:0"><button class="knopf pm-knopf" style="flex:2" data-a="an-bookledger">${ic('hinaus')} An BookLedgerPro geben</button><button class="knopf pm-knopf" style="flex:1" data-a="pm-tabelle">Als Tabelle</button></div></div>`;
+  return pmFachKopf() + (pm.fach === 'bank' ? pmBank() : pm.fach === 'summe' ? pmSumme() : pmBargeld()) + weg;
+}
+function pmBargeld(){
   const g = T().geld, b = g.bericht(pm.liste, pm.monat), heute = new Date().toISOString().slice(0, 10);
-  return `<div class="pm-monat"><button class="rund klein" data-a="pm-monat" data-n="-1" aria-label="Monat davor">‹</button><b>${monatName(pm.monat)}</b><button class="rund klein" data-a="pm-monat" data-n="1" aria-label="Nächster Monat">›</button></div>
-   <div class="karte" style="margin:8px 0"><small style="color:var(--muted)">Übrig</small><div class="geld" id="pm-rest">${g.euro(b.endbestand)}</div><small style="color:var(--muted)">im Monat: rein ${g.euro(b.summeEinnahmen)} · raus ${g.euro(b.summeAusgaben)}</small></div>
+  return `<div class="karte" style="margin:8px 0"><small style="color:var(--muted)">Übrig</small><div class="geld" id="pm-rest">${g.euro(b.endbestand)}</div><small style="color:var(--muted)">im Monat: rein ${g.euro(b.summeEinnahmen)} · raus ${g.euro(b.summeAusgaben)}</small></div>
    <label class="knopf pm-knopf voll" for="pm-bon">${ic('kamera')} ${pm.liest ? 'Bon wird gelesen …' : 'Bon fotografieren'}</label><input type="file" id="pm-bon" accept="image/*,application/pdf" capture="environment" hidden>
    ${pm.bon ? `<p class="lesestand" id="pm-bonzeile">Bon: ${esc(pm.bon.name)}${pm.vorschlag ? ' · erkannt ' + g.euro(pm.vorschlag) : ' · kein Betrag erkannt'} <button type="button" class="knopf hell klein" data-a="pm-bon-weg">Bon weg</button></p>` : ''}
    <form class="felder pm-form" data-form="posten"><div class="reihe" style="margin:0"><input class="feld" name="t" placeholder="Was?" aria-label="Was" style="flex:2 1 110px" value="${pm.bon ? 'Einkauf' : ''}"><input class="feld" name="w" placeholder="Wofür?" aria-label="Wofür" style="flex:2 1 110px"></div>
-    <div class="reihe" style="margin:0"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 90px" value="${pm.vorschlag ? esc(g.euro(pm.vorschlag).replace(' €', '')) : ''}"><input class="feld" type="date" name="am" value="${pm.monat === heute.slice(0, 7) ? heute : pm.monat + '-01'}" aria-label="Tag" style="flex:1 1 120px"></div>
+    <div class="reihe" style="margin:0"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 90px" value="${pm.vorschlag ? esc(g.euro(pm.vorschlag).replace(' €', '')) : ''}"><input class="feld" type="date" name="am" value="${pm.monat === heute.slice(0, 7) ? heute : pm.monat + '-01'}" aria-label="Tag" style="flex:1 1 120px">${pm.konten.length ? `<label class="pm-haken"><input type="checkbox" name="vk"> vom Konto</label>` : ''}</div>
     <div class="reihe" style="margin:0"><button class="knopf pm-knopf" name="art" value="aus" style="flex:1">− Ausgabe</button><button class="knopf pm-knopf" name="art" value="ein" style="flex:1">+ Einnahme</button></div></form>
-   <div class="liste" id="pm-liste" style="margin-top:12px">${b.zeilen.length ? [...b.zeilen].reverse().map(z => { const p = pm.liste.find(x => x.id === z.id) || {}; return `<div class="zeile"><span class="mitte"><strong>${esc(z.beschreibung)}</strong><small>${tagText(z.datum)}${p.wofuer ? ' · wofür: ' + esc(p.wofuer) : ''}${p.bon ? ' · Bon in der Akte' : ''}</small></span><span class="${z.ausgabe ? 'minus' : 'plus'}">${z.ausgabe ? '− ' + g.euro(z.ausgabe) : '+ ' + g.euro(z.einnahme)}</span>${p.bon ? `<button class="rund klein geist" data-a="echt-auf" data-id="${esc(p.bon)}" aria-label="Bon ansehen">${ic('datei')}</button>` : ''}<button class="rund klein geist" data-a="pm-weg" data-id="${esc(z.id)}" aria-label="Posten herausnehmen">${ic('zu')}</button></div>`; }).join('') : '<p class="leer">Noch nichts in diesem Monat.</p>'}</div>
-   <div class="karte" style="margin-top:12px"><b>Weg nach außen</b><p style="font-size:13px;color:var(--muted);margin:4px 0 10px">Der Monat geht als Datei an BookLedgerPro.${pm.gegeben[pm.monat] ? ` <span class="marke2 m-ok">${MONATE[+pm.monat.slice(5, 7) - 1]} übergeben</span>` : ''}</p>
-    <button class="knopf pm-knopf voll" data-a="an-bookledger">${ic('hinaus')} An BookLedgerPro geben</button></div>`;
+   <div class="liste" id="pm-liste" style="margin-top:12px">${b.zeilen.length ? [...b.zeilen].reverse().map(z => { const p = pm.liste.find(x => x.id === z.id) || {}; return `<div class="zeile"><span class="mitte"><strong>${esc(z.beschreibung)}</strong><small>${tagText(z.datum)}${p.wofuer ? ' · wofür: ' + esc(p.wofuer) : ''}${p.bon ? ' · Bon in der Akte' : ''}${p.vomKonto ? ' · vom Konto' : ''}</small></span><span class="${z.ausgabe ? 'minus' : 'plus'}">${z.ausgabe ? '− ' + g.euro(z.ausgabe) : '+ ' + g.euro(z.einnahme)}</span>${p.bon ? `<button class="rund klein geist" data-a="echt-auf" data-id="${esc(p.bon)}" aria-label="Bon ansehen">${ic('datei')}</button>` : ''}<button class="rund klein geist" data-a="pm-weg" data-id="${esc(z.id)}" aria-label="Posten herausnehmen">${ic('zu')}</button></div>`; }).join('') : '<p class="leer">Noch nichts in diesem Monat.</p>'}</div>`;
+}
+function pmKontoForm(k){
+  const v = k?.verfahren || 'hand';
+  return `<form class="felder pm-form karte" data-form="pm-konto" ${k ? `data-id="${esc(k.id)}"` : ''} style="margin:8px 0">
+    <div class="reihe" style="margin:0"><input class="feld" name="bank" placeholder="Bank" aria-label="Name der Bank" required maxlength="80" value="${esc(k?.bank || '')}" style="flex:1 1 140px"><input class="feld" name="name" placeholder="Girokonto" aria-label="Name des Kontos" maxlength="80" value="${esc(k?.name || '')}" style="flex:1 1 120px"></div>
+    <div class="reihe" style="margin:0"><input class="feld" name="iban" placeholder="IBAN (freiwillig)" aria-label="IBAN, freiwillig" maxlength="42" value="${esc(k?.iban || '')}" autocomplete="off" style="flex:2 1 180px"><input class="feld" name="anfang" inputmode="decimal" placeholder="Anfangssaldo" aria-label="Anfangssaldo" value="${k ? esc(T().geld.euro(k.anfangCent).replace(' €', '')) : ''}" style="flex:1 1 100px"></div>
+    <div class="reihe" style="margin:0"><select class="feld" name="verfahren" aria-label="Verfahren" style="flex:1 1 120px">${T().bank.VERFAHREN.map(x => `<option value="${x}" ${x === v ? 'selected' : ''}>${VERFAHREN_NAME[x]}</option>`).join('')}</select>
+    <button class="knopf pm-knopf" type="submit" style="flex:1">${k ? 'Speichern' : 'Konto anlegen'}</button>${pm.konten.length ? `<button class="knopf hell" type="button" data-a="pm-konto-zu">Abbrechen</button>` : ''}</div></form>`;
+}
+function pmLesenAnsicht(k){
+  const l = pm.lesen, g = T().geld;
+  if (l.art === 'tabelle' && !l.zeilen) {
+    const t = l.tabelle, kopf = t.kopf.length ? t.kopf : (t.beispiele[0] || []).map((_, i) => `Spalte ${i + 1}`), z = t.einstellung.zuordnung;
+    const r = T().bank.tabelleLesen(t.eingabe, t.einstellung), u = r.gelesen.umsaetze[0];
+    const wahl = (feld, name) => `<label class="pm-wahl">${name} <select class="feld" data-pm-feld="${feld}"><option value="-1">—</option>${kopf.map((x, i) => `<option value="${i}" ${z[feld] === i ? 'selected' : ''}>${esc(x || 'Spalte ' + (i + 1))}</option>`).join('')}</select></label>`;
+    return `<div class="karte pm-lesen" data-pm-lesen="tabelle" style="margin:8px 0"><b>${esc(l.datei.name)}</b> <span class="marke2 ${t.gemerkt ? 'm-ok' : 'm-arbeit'}">${t.gemerkt ? 'Spalten gemerkt' : 'Spalten prüfen'}</span>
+      <div class="reihe pm-wahlen">${wahl('datum', 'Datum')}${wahl('betrag', 'Betrag')}${wahl('soll', 'Soll')}${wahl('haben', 'Haben')}${wahl('sh', 'S/H')}${wahl('text', 'Text')}${wahl('gegen', 'Gegenseite')}${wahl('saldo', 'Saldo')}
+      <label class="pm-wahl">Datum als <select class="feld" data-pm-feld="datumsform">${T().bank.DATUMSFORMEN.map(x => `<option ${x === t.einstellung.datumsform ? 'selected' : ''}>${x}</option>`).join('')}</select></label>
+      <label class="pm-wahl">Komma <select class="feld" data-pm-feld="dezimal"><option ${t.einstellung.dezimal === ',' ? 'selected' : ''}>,</option><option ${t.einstellung.dezimal === '.' ? 'selected' : ''}>.</option></select></label></div>
+      <p class="lesestand">${u ? `${tagText(u.buchung || u.valuta)} · ${u.richtung === 'einnahme' ? '+' : '−'} ${g.euro(u.betragCent)} · ${esc((u.gegen || u.zweck || '').slice(0, 50))} · ${r.gelesen.umsaetze.length} Umsätze` : 'Keine Umsätze erkannt.'}</p>
+      ${r.fehler.length ? `<p class="rot">${r.fehler.includes('datum-fehlt') ? 'Spalte für das Datum fehlt.' : ''} ${r.fehler.includes('betrag-fehlt') ? 'Spalte für den Betrag fehlt.' : ''}</p>` : ''}
+      <div class="reihe" style="margin:0"><button class="knopf pm-knopf" style="flex:1" data-a="pm-tabelle-weiter" ${r.fehler.length || !u ? 'disabled' : ''}>Weiter</button><button class="knopf hell" data-a="pm-lesen-zu">Abbrechen</button></div></div>`;
+  }
+  const an = l.zeilen.filter(x => x.an).length, p = l.pruef, diff = p?.warnungen.find(w => w.code === 'saldo-differenz');
+  return `<div class="karte pm-lesen" data-pm-lesen="${l.art}" style="margin:8px 0"><b>${esc(l.datei.name)}</b> <span class="marke2 m-grau">${l.art === 'pdf' ? 'PDF' : l.art === 'tabelle' ? 'Tabelle' : esc(l.gelesen.format || '')}</span>
+    ${diff ? `<p class="rot" data-pm-saldo="falsch">Saldo geht nicht auf: ${g.euro(Math.abs(diff.differenzCent))} Unterschied.</p>` : p && p.saldoEndeCent != null ? `<p class="lesestand" data-pm-saldo="ok">Saldo stimmt: ${g.euro(p.saldoEndeCent)}</p>` : ''}
+    <div class="liste pm-vorschlag">${l.zeilen.map((x, i) => `<label class="zeile ${x.unsicher ? 'pm-unsicher' : ''}"><input type="checkbox" class="haken" data-pm-zeile="${i}" ${x.an ? 'checked' : ''}><span class="mitte">${l.art === 'pdf'
+      ? `<input class="feld" data-pm-text="${i}" value="${esc(x.zweck || x.gegen || '')}" aria-label="Text"><small>${tagText(x.buchung || x.valuta)}</small>`
+      : `<strong>${esc((x.zweck || x.gegen || '').slice(0, 80))}</strong><small>${tagText(x.buchung || x.valuta)}${x.gegen && x.zweck ? ' · ' + esc(x.gegen.slice(0, 40)) : ''}</small>`}</span>${l.art === 'pdf'
+      ? `<input class="feld pm-betrag" data-pm-betrag="${i}" inputmode="decimal" value="${x.richtung === 'einnahme' ? '' : '-'}${esc(g.euro(x.betragCent).replace(' €', ''))}" aria-label="Betrag">`
+      : `<span class="${x.richtung === 'einnahme' ? 'plus' : 'minus'}">${x.richtung === 'einnahme' ? '+' : '−'} ${g.euro(x.betragCent)}</span>`}</label>`).join('')}</div>
+    <div class="reihe" style="margin:0"><button class="knopf pm-knopf" style="flex:1" data-a="pm-uebernehmen" ${an ? '' : 'disabled'}>Übernehmen (${an})</button><button class="knopf hell" data-a="pm-lesen-zu">Abbrechen</button></div></div>`;
+}
+function pmBank(){
+  const g = T().geld;
+  if (!pm.konten.length || pm.kontoNeu === true) return pmKontoForm(null);
+  const k = pm.konten.find(x => x.id === pm.konto) || pm.konten[0];
+  if (pm.kontoNeu === 'aendern') return pmKontoForm(k);
+  const b = T().bank.bericht(k, pm.umsaetze, pm.monat), heute = new Date().toISOString().slice(0, 10);
+  const liste = pm.umsaetze.filter(u => u.konto === k.id && u.am.slice(0, 7) === pm.monat).reverse();
+  return `<div class="reiter pm-konten">${pm.konten.map(x => `<button class="chip ${x.id === k.id ? 'an' : ''}" data-a="pm-konto" data-id="${esc(x.id)}">${esc(x.bank)} · ${esc(x.name)}</button>`).join('')}<button class="chip" data-a="pm-konto-neu" aria-label="Konto anlegen">${ic('plus')}</button></div>
+   <div class="karte" style="margin:8px 0"><small style="color:var(--muted)">${esc(k.bank)} · ${esc(k.name)} ${ibanKurz(k.iban)}</small><div class="geld" id="pm-kontostand">${g.euro(b.endbestand)}</div><small style="color:var(--muted)">im Monat: rein ${g.euro(b.summeEinnahmen)} · raus ${g.euro(b.summeAusgaben)}</small>
+    <button class="rund klein geist" style="float:right;margin-top:-28px" data-a="pm-konto-aendern" aria-label="Konto ändern">${ic('stift')}</button></div>
+   ${pm.lesen ? pmLesenAnsicht(k) : `<label class="knopf pm-knopf voll" for="pm-auszug">${ic('runter')} Kontoauszug einlesen${k.verfahren !== 'hand' ? ' · ' + VERFAHREN_NAME[k.verfahren] : ''}</label><input type="file" id="pm-auszug" accept="${VERFAHREN_ANNEHMEN[k.verfahren] ? VERFAHREN_ANNEHMEN[k.verfahren] + ',' : ''}.csv,.xml,.sta,.940,.txt,.pdf,.xlsx" hidden>`}
+   <form class="felder pm-form" data-form="bank-hand"><div class="reihe" style="margin:0"><input class="feld" name="t" placeholder="Was?" aria-label="Was" style="flex:2 1 140px"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 90px"><input class="feld" type="date" name="am" value="${pm.monat === heute.slice(0, 7) ? heute : pm.monat + '-01'}" aria-label="Tag" style="flex:1 1 120px"></div>
+    <div class="reihe" style="margin:0"><button class="knopf pm-knopf" name="art" value="aus" style="flex:1">− Ausgabe</button><button class="knopf pm-knopf" name="art" value="ein" style="flex:1">+ Einnahme</button></div></form>
+   <div class="liste" id="pm-bankliste" style="margin-top:12px">${liste.length ? liste.map(u => `<div class="zeile"><span class="mitte"><strong>${esc(u.titel)}</strong><small>${tagText(u.am)}${u.gegen ? ' · ' + esc(u.gegen) : ''}${u.zurKasse ? ' · zur Kasse' : ''}${u.auszug ? ' · Auszug in der Akte' : ''}</small></span><span class="${u.cent < 0 ? 'minus' : 'plus'}">${u.cent < 0 ? '− ' + g.euro(-u.cent) : '+ ' + g.euro(u.cent)}</span>${u.cent < 0 ? `<button class="rund klein geist ${u.zurKasse ? 'an' : ''}" data-a="pm-zurkasse" data-id="${esc(u.id)}" data-an="${u.zurKasse ? 0 : 1}" aria-label="${u.zurKasse ? 'Nicht zur Kasse' : 'Barabhebung zur Kasse'}" aria-pressed="${u.zurKasse}">${ic('hinaus')}</button>` : ''}${u.auszug ? `<button class="rund klein geist" data-a="echt-auf" data-id="${esc(u.auszug)}" aria-label="Auszug ansehen">${ic('datei')}</button>` : ''}<button class="rund klein geist" data-a="pm-weg" data-id="${esc(u.id)}" aria-label="Umsatz herausnehmen">${ic('zu')}</button></div>`).join('') : '<p class="leer">Noch nichts in diesem Monat.</p>'}</div>`;
+}
+/** Monatsabschluss: je Fach Anfang, rein, raus, Ende; Summe ohne Geld, das nur zwischen Bank und Kasse wandert. */
+function pmAbschluss(){
+  const g = T().geld, zeilen = [], im = p => p.am.slice(0, 7) === pm.monat;
+  const bb = g.bericht(pm.liste, pm.monat), wandert = pm.liste.filter(p => im(p) && p.vomKonto).reduce((a, p) => a + Math.abs(p.cent), 0);
+  zeilen.push({ name:'Bargeld', anfang:bb.anfangsbestand, rein:bb.summeEinnahmen, raus:bb.summeAusgaben, ende:bb.endbestand, wRein:wandert, wRaus:0 });
+  for (const k of pm.konten) { const b = T().bank.bericht(k, pm.umsaetze, pm.monat); const wk = pm.umsaetze.filter(u => u.konto === k.id && im(u) && u.zurKasse).reduce((a, u) => a + Math.abs(u.cent), 0);
+    zeilen.push({ name:k.name, anfang:b.anfangsbestand, rein:b.summeEinnahmen, raus:b.summeAusgaben, ende:b.endbestand, wRein:0, wRaus:wk }); }
+  const sum = f => zeilen.reduce((a, z) => a + z[f], 0);
+  // Barabhebung steht doppelt (Bank raus, Bargeld rein): aus beiden Summen nehmen, was auf BEIDEN Seiten markiert ist (vom Konto / zur Kasse).
+  const doppelt = Math.min(sum('wRein'), sum('wRaus'));
+  const summe = { name:'Summe', anfang:sum('anfang'), rein:sum('rein') - doppelt, raus:sum('raus') - doppelt, ende:sum('ende') };
+  return { zeilen, summe, doppelt };
+}
+function pmSumme(){
+  const g = T().geld, a = pmAbschluss(), z = x => `<tr${x.name === 'Summe' ? ' class="pm-summe"' : ''}><th>${esc(x.name)}</th><td>${g.euro(x.anfang)}</td><td class="plus">${g.euro(x.rein)}</td><td class="minus">${g.euro(x.raus)}</td><td><b>${g.euro(x.ende)}</b></td></tr>`;
+  return `<div class="karte" style="margin:8px 0;overflow-x:auto"><table class="pm-tabelle" id="pm-abschluss"><thead><tr><th></th><th>Anfang</th><th>rein</th><th>raus</th><th>Ende</th></tr></thead><tbody>${a.zeilen.map(z).join('')}${z(a.summe)}</tbody></table></div>`;
 }
 async function pmPosten(f, art){
   const g = T().geld, cent = g.cent(f.b.value);
   if (!(cent > 0)) return toast('Bitte einen Betrag eintragen.');
-  try { await g.eintragen({titel:f.t.value.trim() || (art === 'ein' ? 'Einnahme' : 'Ausgabe'), cent, rein:art === 'ein', wofuer:f.w.value.trim(), am:f.am.value || new Date().toISOString().slice(0, 10), bon:pm.bon, bonText:pm.bonText});
+  try { await g.eintragen({titel:f.t.value.trim() || (art === 'ein' ? 'Einnahme' : 'Ausgabe'), cent, rein:art === 'ein', wofuer:f.w.value.trim(), am:f.am.value || new Date().toISOString().slice(0, 10), bon:pm.bon, bonText:pm.bonText, vomKonto:!!f.vk?.checked});
     const mitBon = !!pm.bon; pm.bon = null; pm.bonText = ''; pm.vorschlag = null; pm.monat = (f.am.value || pm.monat).slice(0, 7); await pmLaden(); if (mitBon) echtLaden();
     toast(`${art === 'ein' ? 'Eingetragen' : 'Abgezogen'}: ${g.euro(cent)}.${mitBon ? ' Der Bon liegt in der Akte.' : ''}`); } catch (e) { toast(fehlerText(e)); }
 }
+async function pmBankHand(f, art){
+  const g = T().geld, cent = g.cent(f.b.value);
+  if (!(cent > 0)) return toast('Bitte einen Betrag eintragen.');
+  try { await T().bank.eintragen(pm.konto, { titel:f.t.value.trim() || (art === 'ein' ? 'Gutschrift' : 'Lastschrift'), cent, rein:art === 'ein', am:f.am.value || new Date().toISOString().slice(0, 10) });
+    pm.monat = (f.am.value || pm.monat).slice(0, 7); await pmLaden(); toast(`${art === 'ein' ? 'Eingetragen' : 'Abgezogen'}: ${g.euro(cent)}.`); } catch (e) { toast(fehlerText(e)); }
+}
+async function pmKontoSpeichern(f){
+  const g = T().geld, anfang = f.anfang.value.trim() ? g.cent(f.anfang.value.replace(/^\+/, '')) : 0;
+  if (!Number.isInteger(anfang)) return toast('Anfangssaldo bitte als Betrag, z. B. 1.250,00 oder -80,00.');
+  const e = { bank:f.bank.value, name:f.name.value, iban:f.iban.value, anfangCent:anfang, verfahren:f.verfahren.value };
+  try { if (f.dataset.id) await T().bank.kontoAendern(f.dataset.id, e); else pm.konto = await T().bank.kontoAnlegen(e);
+    pm.kontoNeu = false; await pmLaden(); toast(f.dataset.id ? 'Konto gespeichert.' : 'Konto angelegt.'); } catch (err) { toast(fehlerText(err)); }
+}
+async function pmAuszugWahl(datei){
+  const k = pm.konten.find(x => x.id === pm.konto); if (!k || !datei) return;
+  try { const r = await T().bank.lesen(datei, k);
+    if (r.art === 'leer') { pm.lesen = null; stadtNeu(); return toast('In dieser Datei wurden keine Umsätze erkannt.'); }
+    pm.lesen = { datei, ...r, zeilen: r.gelesen ? r.gelesen.umsaetze.map(u => ({ ...u, an:true })) : null }; stadtNeu();
+  } catch (e) { toast(fehlerText(e)); }
+}
+async function pmUebernehmen(){
+  const k = pm.konten.find(x => x.id === pm.konto), l = pm.lesen; if (!k || !l) return;
+  const g = T().geld, zeilen = [];
+  for (const [i, x] of l.zeilen.entries()) {
+    if (!x.an) continue;
+    if (l.art === 'pdf') { const tx = document.querySelector(`[data-pm-text="${i}"]`), bx = document.querySelector(`[data-pm-betrag="${i}"]`);
+      const c = bx ? g.cent(bx.value.replace(/^[-−]/, '')) : x.betragCent, neg = bx ? /^\s*[-−]/.test(bx.value) : x.richtung === 'ausgabe';
+      if (!(c > 0)) return toast(`Zeile ${i + 1}: bitte einen Betrag eintragen.`);
+      zeilen.push({ ...x, zweck:tx ? tx.value.trim() : x.zweck, betragCent:c, richtung:neg ? 'ausgabe' : 'einnahme' }); }
+    else zeilen.push(x);
+  }
+  try { const r = await T().bank.uebernehmen(k, l.datei, zeilen, { einstellung: l.art === 'tabelle' ? l.tabelle.einstellung : undefined, saldoEndeCent: l.pruef?.saldoEndeCent ?? null });
+    pm.lesen = null; await pmLaden(); if (r.auszug) echtLaden();
+    toast(`${r.neu} ${r.neu === 1 ? 'Umsatz' : 'Umsätze'} übernommen${r.schon ? `, ${r.schon} waren schon da` : ''}.`); } catch (e) { toast(fehlerText(e)); }
+}
+document.addEventListener('change', ev => { const t = ev.target;
+  if (t.id === 'pm-auszug' && t.files[0]) pmAuszugWahl(t.files[0]);
+  if (t.dataset.pmFeld && pm.lesen?.tabelle) { const e = pm.lesen.tabelle.einstellung; if (['datumsform', 'dezimal'].includes(t.dataset.pmFeld)) e[t.dataset.pmFeld] = t.value; else e.zuordnung[t.dataset.pmFeld] = +t.value; stadtNeu(); }
+  if (t.dataset.pmZeile && pm.lesen?.zeilen) { pm.lesen.zeilen[+t.dataset.pmZeile].an = t.checked; const k = document.querySelector('[data-a="pm-uebernehmen"]'); if (k) { const n = pm.lesen.zeilen.filter(x => x.an).length; k.textContent = `Übernehmen (${n})`; k.disabled = !n; } }
+});
 document.addEventListener('change', async ev => { if (ev.target.id !== 'pm-bon' || !ev.target.files[0]) return; pm.bon = ev.target.files[0]; pm.vorschlag = null; pm.bonText = ''; pm.liest = true; stadtNeu();
   try { const r = await T().geld.bonLesen(pm.bon); pm.bonText = r.text || ''; pm.vorschlag = r.cent; } catch { /* dann ohne Vorschlag */ } pm.liest = false; stadtNeu(); });
 function sortierer(){
@@ -558,10 +676,22 @@ const A = {
  osort: e => { organizer[+e.dataset.i].sicher = true; stadtNeu(); toast('Gemerkt. Der Helfer lernt aus deiner Berichtigung.'); },
  'pm-monat': e => { pm.monat = monatPlus(pm.monat, +e.dataset.n); stadtNeu(); },
  'pm-bon-weg': () => { pm.bon = null; pm.vorschlag = null; pm.bonText = ''; stadtNeu(); },
- 'pm-weg': async e => { try { await T().geld.entfernen(e.dataset.id); await pmLaden(); toast('Posten herausgenommen.'); } catch (err) { toast(fehlerText(err)); } },
+ 'pm-weg': async e => { try { await T().geld.entfernen(e.dataset.id); await pmLaden(); toast(pm.fach === 'bank' ? 'Umsatz herausgenommen.' : 'Posten herausgenommen.'); } catch (err) { toast(fehlerText(err)); } },
+ 'pm-fach': e => { pm.fach = e.dataset.f; try { localStorage.setItem('pa_pm_fach', pm.fach); } catch { /* nur gemerkt, wenn möglich */ } stadtNeu(); },
+ 'pm-konto': e => { pm.konto = e.dataset.id; pm.lesen = null; stadtNeu(); },
+ 'pm-konto-neu': () => { pm.kontoNeu = true; pm.lesen = null; stadtNeu(); },
+ 'pm-konto-aendern': () => { pm.kontoNeu = 'aendern'; stadtNeu(); },
+ 'pm-konto-zu': () => { pm.kontoNeu = false; stadtNeu(); },
+ 'pm-lesen-zu': () => { pm.lesen = null; stadtNeu(); },
+ 'pm-tabelle-weiter': () => { const l = pm.lesen, r = T().bank.tabelleLesen(l.tabelle.eingabe, l.tabelle.einstellung); l.gelesen = r.gelesen; l.pruef = r.pruef; l.zeilen = r.gelesen.umsaetze.map(u => ({ ...u, an:true })); stadtNeu(); },
+ 'pm-uebernehmen': () => pmUebernehmen(),
+ 'pm-zurkasse': async e => { try { await T().bank.zurKasse(e.dataset.id, e.dataset.an === '1'); await pmLaden(); } catch (err) { toast(fehlerText(err)); } },
+ 'pm-tabelle': () => {
+   const zeilen = T().geld.csv(pm.liste || [], pm.monat), a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + zeilen], {type:'text/csv'})); a.download = `portemonnaie-${pm.monat}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); },
  'bon-start': () => { menueZu(); fStadt('geld'); },
  'an-bookledger': () => {
-   const zeilen = T().geld.csv(pm.liste || [], pm.monat), a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + zeilen], {type:'text/csv'})); a.download = `portemonnaie-${pm.monat}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+   const b = T().bank, datei = b.monatsdatei(pm.monat, pm.liste || [], pm.konten || [], pm.umsaetze || []), a = document.createElement('a');
+   a.href = URL.createObjectURL(new Blob([JSON.stringify(datei, null, 1)], {type:'application/json'})); a.download = b.monatsdateiName(pm.monat); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
    pm.gegeben[pm.monat] = true; stadtNeu(); toast(`${monatName(pm.monat)} liegt als Datei für BookLedgerPro bereit.`); },
  'hinaus-info': () => { fStadt('geld'); toast('Der Weg nach außen: „An BookLedgerPro geben“ unten im Portemonnaie.'); },
  scan: () => { menueZu(); fRahmen('wfpdf', 'scan=1&von=PrivateAkte'); },
@@ -583,6 +713,8 @@ document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
   if (f.dataset.form === 'suche') { if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
   if (f.dataset.form === 'posten') { pmPosten(f, art); }
+  if (f.dataset.form === 'bank-hand') { pmBankHand(f, art); }
+  if (f.dataset.form === 'pm-konto') { pmKontoSpeichern(f); }
 
 });
 
