@@ -57,6 +57,12 @@ darunter darf nicht neu geschrieben werden.
 - Familienbüro bleibt eine eigene App und kommt später.
 - Keine Ausgabe von APK oder Windows-Paketen.
 
+## Dazu ein kleiner Auftrag: Hinweistexte am Baum heraus (Klaus 18.11.2026)
+
+In der Ansicht „Baum“ die Erklärtexte unter dem Bild herausnehmen: den Hinweis „So ist die App gedacht …“, „In dieser Vorschau
+ist der Tresor nur angezeigt …“, den Satz zu den Zahlen („Die Zahlen sind …“) und „Tippe ein Schild an …“. Klaus: das ist auch so
+leicht zu ergründen. Der Baum und „Wo liegt was?“ selbst bleiben. Stelle in `app.js`: `vBaum()` und der Abschnitt darunter.
+
 ## Offen aus dem Test (klein, nebenbei mitnehmen, wenn es passt)
 
 - Im Editor von Workflow PDF leuchtet nach dem Scan „PDF ausgeben“ – das führt weg von der Akte.
