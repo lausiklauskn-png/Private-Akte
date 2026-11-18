@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (17.11.2026 nachts, Vorschau 0.5.0)
+## Stand (18.11.2026, Vorschau 0.5.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,22 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.1 nach Klaus' erstem Test am Tablet (18.11. vormittags, 0.5.0 über Pages: Organizer im Rahmen, Übergabe von 98 Dateien und
+  Scan über den roten Knopf liefen):** (1) **Fehler behoben:** bei der Übergabe standen alle Dateien auf „Familie & persönliche
+  Dokumente“ und wurden so abgelegt. Zwei Ursachen: die Übernahme des Klons nimmt nur Pfade ohne Schrägstrich (der Testordner und
+  jeder Ordner mit Unterordnern fiel durch) – `ausStapel` schreibt den Pfad jetzt für Index und Liste flach (∕ statt /), angezeigt
+  wird der echte Pfad; und ohne Vorschlag stand im Auswahlfeld der erste Bereich statt „Sonstiges“. Die Probe hatte das in 0.5.0
+  nicht gemerkt (sie zählte nur „nicht Sonstiges“); sie siebt jetzt ganz durch und verlangt mindestens fünf verschiedene Bereiche.
+  **Klaus' 98 Testdateien liegen noch falsch unter „Familie & persönliche Dokumente“** (erfundene Dateien; einzeln herausnehmen
+  oder Browserdaten leeren – ein Sammel-Löschen gibt es nicht). (2) **Startseite (Klaus: „scrollen bis zum geht nicht mehr“):**
+  „Deine Unterlagen“, „Fällig“ und „Zuletzt abgelegt“ sind Knöpfe zum Aufklappen, ab Werk zu, gemerkt (`klappTeil`, `pa_klapp`);
+  die Bereiche stehen in einer Zeile zum seitlichen Schieben. (3) **Sortierung von „Deine Unterlagen“** (Klaus: der neue Scan war
+  nicht zu finden): zuletzt abgelegt (ab Werk), Datum der Unterlage, Name, Größe, Bereich (`echtSortiert`, gemerkt `pa_sort`).
+  (4) **Bestätigung im Rahmen:** nach „PDF erstellen“ lag der Scan schon in der Akte, aber es war nichts zu sehen (die Meldung der
+  Akte lag unter dem Rahmen) – jetzt steht sie 12 s grün in der Leiste des Rahmens (`rahmenMelden`), mit „Zurück mit ‹ Akte“.
+  Probe 240 grün (6 neu). **Offen aus dem Test:** im Editor von Workflow PDF leuchtet nach dem Scan „PDF ausgeben“ – das führt
+  weg von der Akte (Klaus hätte es gedrückt); der Abschnitt „Eingang“ ist weiter Beispiel, echt Abgelegtes erscheint dort nicht;
+  „Deine Unterlagen“ aufgeklappt ist bei 100 Stück weiter eine lange Liste (kein Gruppieren nach Bereich, kein Blättern).
 - **0.5.0 Klone im Rahmen: Datei-Organizer und Workflow PDF laufen in der Privaten Akte (Klaus 17.11. abends, Generalvollmacht
   für diese Sitzung; Vorbild: Workflow PDF in der Familienakte).** Der grüne Knopf „Dateien hineingeben“ (und „Datei-Organizer“
   im Baum) öffnet den echten Datei-Organizer, der rote Knopf „PDF scannen“ den Scanner von Workflow PDF, „Workflow PDF öffnen“

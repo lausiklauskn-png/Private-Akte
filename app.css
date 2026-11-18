@@ -271,3 +271,17 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .rahmenfenster .fkopf h2 small{font-weight:400;font-size:12px;opacity:.8}
 .rahmenfenster iframe{flex:1;width:100%;border:0;background:#fff;min-height:0}
 @media(max-width:520px){.rahmenfenster .fkopf h2 small{display:none}}
+
+/* Startseite 0.5.1: Abschnitte als Knopf zum Aufklappen; Bereiche in einer Zeile, seitlich zu schieben. */
+details.klapp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--navy);font-size:14px;box-shadow:0 1px 3px #0b31540f}
+details.klapp>summary::-webkit-details-marker{display:none}
+details.klapp>summary span{font-weight:400;color:var(--muted);font-size:12.5px;flex:1}
+details.klapp>summary .icon{width:18px;height:18px;transition:transform .15s}
+details.klapp[open]>summary .icon{transform:rotate(90deg)}
+details.klapp[open]>summary{margin-bottom:8px}
+.kacheln.seitlich{display:flex;overflow-x:auto;gap:10px;padding-bottom:6px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.kacheln.seitlich .kachel{flex:0 0 auto;min-width:176px;scroll-snap-align:start}
+.rahmenmeldung{display:none;flex:1;min-width:0;font-size:13px;font-weight:600;padding:4px 10px;border-radius:10px;background:#e3f6ea;color:#0f5f3a;border:1px solid #9fd8b5}
+.rahmenmeldung.an{display:block}.rahmenmeldung.schlecht{background:#fde8e8;color:#8f252b;border-color:#f0b4b4}
+.toast{z-index:40}
+.sortzeile{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);padding:6px 10px}.sortzeile select{width:auto}

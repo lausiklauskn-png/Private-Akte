@@ -38,6 +38,9 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A22 | Der Datei-Organizer und Workflow PDF sollen in der Akte laufen, nicht nur daneben. | 0.5.0: beide als Klone im Rahmen. Anders als in der Familienakte wird der Klon nicht kopiert und seine `index.html` nicht im Klon geändert: die Startseite mit Brücke liegt unter `rahmen/`, der Klon bleibt ganz byte-gleich (ein Pin für alles). Die Brücke stellt die Adresse auf den Klon um, weil Workflow PDF Dateien über `location.href` sucht. |
 | A23 | Vom Organizer in die Akte ohne Umweg über einen Ordner. | 0.5.0: Karte „An die Private Akte übergeben“ im Organizer (Stelle `window.DO_RAHMEN` dort); die Familienakte holt den Ordner bisher nur über die Ordnerwahl. Auch Dateien aus Unterordnern kommen mit. |
 | A24 | Workflow PDF: Ergebnis zurück in die Akte. | 0.5.0: „Teilen“ legt ab, ohne Arbeitsraum und ohne Ersetzen der Quelle (die Familienakte bindet die Arbeitsdatei an ihre Quelle und ersetzt sie). Hier entsteht eine neue Unterlage in „Sonstiges“. |
+| A25 | Nach 98 übernommenen Dateien ist die Startseite endlos; ein neuer Scan ist darin nicht zu finden. | 0.5.1: Abschnitte der Startseite als Knöpfe zum Aufklappen, Bereiche seitlich; „Deine Unterlagen“ sortierbar, ab Werk das zuletzt Abgelegte oben. |
+| A26 | Die Übernahme aus dem Organizer nimmt nur Dateien direkt im Ordner – Unterordner kommen ohne Einordnung. | 0.5.1 (nur direkte Übergabe): Pfad flach geschrieben, dann greift die unveränderte Übernahme. In der Familienakte selbst bleibt die Grenze. |
+| A27 | Nach „PDF erstellen“ im Scanner sagt nichts, dass der Scan schon in der Akte liegt; „PDF ausgeben“ leuchtet. | 0.5.1: Bestätigung in der Leiste des Rahmens. Der leuchtende Knopf ist offen. |
 
 ## B. Vereinfachungen der Hülle
 

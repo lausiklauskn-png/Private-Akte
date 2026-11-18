@@ -9,6 +9,7 @@ const { chromium } = require('playwright');
     p.on('console', m => { if (m.type()==='error' && !/net::ERR_FAILED/.test(m.text())) fehler.push(name+' console: '+m.text()); }); // ERR_FAILED: die Probe sperrt die Modell-Quellen mit Absicht
     p.on('pageerror', e => fehler.push(name+' fehler: '+e.message));
     p.on('response', r => { if (r.status() === 404) fehler.push(name+' 404: '+r.url()); });
+    await p.addInitScript(() => { localStorage.setItem('pa_klapp', JSON.stringify({echt:1, faellig:1, zuletzt:1})); });
     await p.addInitScript(name => { window.showDirectoryPicker = async () => (await navigator.storage.getDirectory()).getDirectoryHandle('probe-ziel-'+name, {create:true}); }, name);
     await p.goto('http://localhost:8765/'); await p.waitForSelector('.werk');
     const breit = async wo => soll(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name+' quer scrollbar bei '+wo);
@@ -16,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.5.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.5.1 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -183,6 +184,18 @@ const { chromium } = require('playwright');
     // Drucken-Fenster, Hilfe, Fuß
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=drucken]' : '.kopfknoepfe [data-a=drucken]'); soll((await text()).includes('Einzelne Unterlage'),'Drucken'); await klick('[data-a=zu]');
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=hilfe]' : '.kopfknoepfe [data-a=hilfe]'); await p.screenshot({path:`p/${name}-14-hilfe.png`}); soll((await p.locator('.fenster a[href="./rechtliches.html"]').count())===1,'Hilfe-Link'); await klick('[data-a=zu]');
+    // Sortierung von „Deine Unterlagen“: ab Werk das zuletzt Abgelegte oben, umstellbar und gemerkt
+    { const sortProbe = await p.evaluate(async () => { const t = window.PrivateAkteTresor; const a = await t.ablegen(new File(['aaa aaa aaa aaa'], 'Zebra-Sortierprobe.txt', {type:'text/plain'}), {bereich:'Archiv', datum:'2020-01-01', titel:null, notiz:null}); await new Promise(r => setTimeout(r, 1100)); const b = await t.ablegen(new File(['b'], 'Anton-Sortierprobe.txt', {type:'text/plain'}), {bereich:'Archiv', datum:'2021-01-01', titel:null, notiz:null}); await echtLaden(); mainZeigen(); return [a.id, b.id]; });
+      const reihe = async () => p.evaluate(ids => [...document.querySelectorAll('#echt [data-id]')].map(x => x.dataset.id).filter(i => ids.includes(i)), sortProbe);
+      const r1 = await reihe(); await p.selectOption('#echt-sort', 'groesse'); const r2 = await reihe(); await p.selectOption('#echt-sort', 'name'); const r3 = await reihe(); await p.selectOption('#echt-sort', 'neu');
+      soll(r1[0] === sortProbe[1] && r2[0] === sortProbe[0] && r3[0] === sortProbe[1], 'Deine Unterlagen: zuletzt abgelegt oben, nach Größe und Name umstellbar (' + JSON.stringify([r1, r2, r3].map(r => r.map(i => sortProbe.indexOf(i)))) + ')');
+      await p.evaluate(async ids => { for (const i of ids) await window.PrivateAkteTresor.herausnehmen(i); await echtLaden(); mainZeigen(); }, sortProbe); }
+    // Startseite: Abschnitte sind ab Werk eingeklappt, ein Tipp klappt auf und wird gemerkt; Bereiche in einer Zeile
+    { const q = await b.newPage({ viewport:{width:w,height:h} }); await q.goto('http://localhost:8765/'); await q.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1');
+      const zu = await q.evaluate(() => [...document.querySelectorAll('details.klapp')].map(d => d.open)); await q.locator('#echt > summary').click(); await q.waitForFunction(() => /"echt":1/.test(localStorage.getItem('pa_klapp') || '')); await q.reload(); await q.waitForSelector('#echt');
+      const nach = await q.evaluate(() => ({ echt:document.querySelector('#echt').open, faellig:document.querySelector('[data-klapp=faellig]').open, zeile:getComputedStyle(document.querySelector('.kacheln.seitlich')).display }));
+      soll(zu.length === 3 && zu.every(x => !x) && nach.echt && !nach.faellig && nach.zeile === 'flex', 'Startseite: drei Abschnitte eingeklappt, Aufklappen wird gemerkt, Bereiche seitlich (' + JSON.stringify([zu, nach]) + ')');
+      await q.screenshot({path:`p/${name}-30-start-klapp.png`}); await q.evaluate(() => localStorage.setItem('pa_klapp', JSON.stringify({echt:1, faellig:1, zuletzt:1}))); await q.close(); }
     // ---------- Klone im Rahmen ----------
     await klick('.nav [data-zu=start]');
     // Datei-Organizer hinter dem grünen Knopf: echter Klon, eigener Speicher, kein eigener Worker, Übergabe an die Akte
@@ -198,10 +211,11 @@ const { chromium } = require('playwright');
       await p.waitForTimeout(1500);
       const dbs = await of.evaluate(async () => { localStorage.setItem('do-probe', '1'); const echt = Object.keys(localStorage).filter(k => /probe/.test(k)); localStorage.removeItem('do-probe'); return { namen:(await indexedDB.databases()).map(d => d.name), echt }; });
       soll(dbs.namen.includes('PrivateAkteOrganizer1') && !dbs.namen.includes('DateiOrganizer1') && dbs.echt.includes('pa_do-probe') && !dbs.echt.includes('do-probe'), 'Organizer im Rahmen: eigener Speicher (' + JSON.stringify(dbs) + ')');
+      await of.evaluate(() => { location.hash = 'sortieren'; }); for (let i = 0; i < 6; i++) { const k = org.locator('[data-durchsieben]'); if (await k.isDisabled().catch(() => true)) break; await k.click(); await p.waitForTimeout(700); }
       await of.evaluate(() => { location.hash = 'akte'; }); await org.locator('[data-uebergeben]').click();
       await p.waitForSelector('.fenster form[data-form=ordner]', {timeout:60000});
-      const zeilen = await p.locator('.fenster .ordzeile').count(), mitBereich = await p.evaluate(() => [...document.querySelectorAll('.fenster select[name=b]')].filter(x => x.value && x.value !== 'Sonstiges').length);
-      soll(zeilen > 50 && mitBereich > 20 && (await p.locator('#rahmen').count()) === 1, `Übergabe: Fenster „Ordner in die Akte legen“ über dem Rahmen, ${zeilen} Dateien, ${mitBereich} mit Bereich`);
+      const zeilen = await p.locator('.fenster .ordzeile').count(), mitBereich = await p.evaluate(() => [...document.querySelectorAll('.fenster select[name=b]')].filter(x => x.value && x.value !== 'Sonstiges').length), verschieden = await p.evaluate(() => new Set([...document.querySelectorAll('.fenster select[name=b]')].map(x => x.value)).size);
+      soll(zeilen > 50 && mitBereich > 20 && verschieden >= 5 && (await p.locator('#rahmen').count()) === 1, `Übergabe: Fenster „Ordner in die Akte legen“ über dem Rahmen, ${zeilen} Dateien, ${mitBereich} mit Bereich, ${verschieden} verschiedene Bereiche`);
       await p.screenshot({path:`p/${name}-21-uebergabe.png`});
       const gewaehlt = await p.evaluate(() => { const h = [...document.querySelectorAll('.fenster input[name=d]')]; const pdf = h.filter(x => /\.pdf$/i.test(x.value)).slice(0, 2).map(x => x.value); h.forEach(x => { x.checked = pdf.includes(x.value); }); return pdf; });
       await klick('.fenster form[data-form=ordner] [type=submit]'); await p.waitForFunction(() => !document.querySelector('.fenster form[data-form=ordner]'), null, {timeout:120000});
@@ -221,6 +235,7 @@ const { chromium } = require('playwright');
     const geteilt = await wf.evaluate(async ([pdf, name]) => { try { await navigator.share({files:[new File([pdf], `Probe-Teilen-${name}.pdf`, {type:'application/pdf'})]}); return 'ok'; } catch (e) { return String(e.message); } }, [PDF, name]);
     const inAkte = await p.evaluate(async name => { const t = window.PrivateAkteTresor, d = (await t.liste()).find(x => x.originalName === `Probe-Teilen-${name}.pdf`); return d ? d.id : ''; }, name);
     soll(geteilt === 'ok' && !!inAkte, 'Workflow PDF: „Teilen“ legt die Datei in die Akte (' + geteilt + ')');
+    soll(/liegt jetzt in der Privaten Akte/.test(await p.locator('#rahmen-meldung').innerText()) && await p.locator('#rahmen-meldung').isVisible(), 'Workflow PDF: Bestätigung steht sichtbar in der Leiste des Rahmens');
     await klick('[data-a=rahmen-zu]');
     if (inAkte) {
       await p.evaluate(id => fEcht(id), inAkte); await klick('.fenster [data-a=echt-wfpdf]'); await p.waitForSelector('#rahmen');
