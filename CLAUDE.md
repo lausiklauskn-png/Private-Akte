@@ -22,7 +22,17 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, 0.8.1)
+## Stand (18./19.11.2026, 0.9.0 – Pro-Akte)
+
+- **0.9.0 Private Akte Pro für Android und Windows (Klaus 18.11., Freibrief; PR #60; Brief `docs/BRIEF_ABSCHLUSS_2026-11-18_PRO-AKTE-0.9.0.md`):**
+  `android/` (Capacitor) und `windows/` (Tauri + Java-Engine) im selben Repo, Kennung `de.familyprojekt.privateakte`, Pro-Zeichen als Symbol
+  und Favicon; Web-Paket `tools/native/web-paket.mjs` (nur Laufzeit-Teile der Klone); Gerätezugriffe byte-gleich aus den Klonen über
+  `tools/native/klon-quellen.mjs` (nie abschreiben); Probe `node tools/native/test-native.mjs`. **Kopie an einem zweiten Ort** (Zweiter Ort der
+  Familienakte, verschlüsselt, von selbst aktuell; „Exportieren“ › „Kopie einrichten“), Downloads in der App über „Speichern unter“,
+  **Private Brain Pro als 1:1-Klon** `klone/privat-brain-pro` im Rahmen der App. Prüf-APK und Windows-Setup als CI-Downloads, nicht signiert,
+  nicht veröffentlicht. Offen: Signatur, Mail nativ, Workflow PDF Pro, mehrere Kopien (Brief). Fassung 0.9.0 gilt auch für die PWA.
+
+## Stand davor (18.11.2026, 0.8.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: **`docs/BRIEF_SITZUNG_2026-11-19_PRO-AKTE-ANDROID-WINDOWS.md` (nächste Sitzung: Pro-Akte für Android und Windows, mit Startauftrag)**; `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md`; Plansitzung Bank/Portemonnaie/BookLedgerPro: `docs/BRIEF_PLANSITZUNG_2026-11-19_BANK-PORTEMONNAIE-BOOKLEDGER.md`. **Zwei Pläne vom 18.11. abends** (zwei Sitzungen): `docs/PLAN_2026-11-18_PORTEMONNAIE-BANK-BOOKLEDGER.md` – Bank als Fach im Portemonnaie, Konto frei anlegen, Verfahren, Monatsdatei, **Bauauftrag (gilt)**; `docs/PLAN_2026-11-18_PORTEMONNAIE-PRIVATE-BRAIN-ABLAGE.md` – Akte = letzte 5 Jahre nach Datum der Unterlage, Ausweise/Urkunden/Verträge immer in der Akte, Private Brain = älter, gemeinsamer Kern verschlüsselt auf SD-Karte erlaubt (noch nicht gebaut); Klaus' eigene Bank: Openbank (die App bindet an keine Bank); ältere unter `docs/`.
