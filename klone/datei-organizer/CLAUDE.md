@@ -9,6 +9,16 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026 abends): 0.4.18 – Reihenfolge nach Datum, Ladeanzeige bei der Übergabe
+
+- **Finden (Klaus 18.11., Bild vom Tablet: „das zweite Mal draufklicken – Datum und Jahr in die andere Richtung“):** neben „Sortieren“ ein
+  Pfeil (`[data-sicht-richtung]`, „alt“/„neu“, gemerkt `do-finden-neu`): ordnet die Liste nach dem Datum der Datei (ohne Datum ans Ende) und
+  in „Datum (Jahr › Monat)“ Jahre und Monate (Monate nach dem Kalender – vorher standen sie nach dem Alphabet). Die Unterordner bleiben.
+  Nur Oberfläche (`src/seiten.tsx`), `lib/sichten.ts` unverändert.
+- **Übergabe an die Private Akte (Klaus 18.11.: „hat lange gedauert, kein Ladebalken“):** Ladeanzeige in der Übergabe-Karte und oben
+  („n von m Dateien für die Übergabe vorbereitet“, dann „Wird an die … übergeben …“), Knopf gesperrt, solange es läuft (Phase `uebergeben`).
+  Fassung 0.4.18 (Code 58, Vorrat v39), keine Ausgabe. UI-Probe 213 grün. Am Gerät ungeprüft.
+
 ## Stand (18.11.2026 abends): 0.4.17 – Leiste oben im Rahmen einklappbar, Verlauf aufgeräumt
 
 - **Klaus 18.11. (Organizer in der Privaten Akte): „die Navi-Leiste mit einem Klick einklappbar; im Handyformat nur das Flying Widget“.**

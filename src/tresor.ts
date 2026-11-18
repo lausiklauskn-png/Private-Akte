@@ -5,7 +5,7 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig, createLocalScheduleBundle } from "../klone/familienakte/app/local-vault.ts";
 import { saveLocalStammRecord, createLocalFamilyRelation, confirmLocalContextLink, dokumenteZuordnen, akteFuerAbgleich, akteNachAbgleichSchreiben } from "../klone/familienakte/app/local-vault.ts";
 import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
-import { createLocalFamilyRecord } from "../klone/familienakte/app/local-vault.ts";
+import { createLocalFamilyRecord, fileChecksum } from "../klone/familienakte/app/local-vault.ts";
 import { parseEuroToCents, formatEuro } from "../klone/bookledger/src/domain/money.js";
 import { kassenbericht } from "../klone/bookledger/src/domain/kassenbuch.js";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
@@ -224,16 +224,41 @@ const organizer = {
   /** Legt die genannten Dateien ab (Bereich je Datei wie übergeben). Fehlt der Text aus dem Organizer, liest die Akte selbst. */
   async uebernehmen(auswahl: Array<{ name: string; bereich: string }>, fortschritt?: (fertig: number, gesamt: number, name: string) => void) {
     if (!organizerOrdner) throw new Error("Bitte zuerst den Ordner wählen.");
-    const aus = { abgelegt: 0, schonDa: 0, fehler: [] as string[], ids: [] as string[] };
+    const aus = { abgelegt: 0, schonDa: 0, aktualisiert: 0, fehler: [] as string[], ids: [] as string[] };
+    // Schon in der Akte (Klaus 18.11., Bilder vom Tablet: nach der fehlerhaften Übergabe vom Vormittag blieb alles unter „Familie &
+    // persönliche Dokumente“, weil die zweite Übergabe die vorhandenen Dateien nur übersprang): der Organizer ist die Stelle, an der sortiert
+    // wird – seine Einordnung (Bereich, Datum, Art, Pfad, Absender, Person) geht auch an die vorhandene Unterlage. Gefunden wird sie über
+    // die Prüfsumme der Datei; geschrieben wird einmal am Ende über den Weg des Abgleichs (mit Stand-Prüfung).
+    const nachtragen = new Map<string, { bereich: string; datum: string | null; notiz: string }>();
+    let vorhanden: Array<{ id: string; checksum?: string | null; originalName: string; sizeBytes: number }> | null = null;
     for (const [i, w] of auswahl.entries()) {
       fortschritt?.(i, auswahl.length, w.name);
       const s = organizerOrdner.stuecke.find((x) => x.name === w.name); if (!s) continue;
       try {
         const datei = await organizerOrdner.hole(s.name);
         let text = s.text; if (!text && (istBild(datei) || istPdf(datei))) { try { text = (await textLesen(datei)).text; } catch { text = ""; } }
-        const neu = await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: s.hinweis ? `Aus dem Datei-Organizer – ${s.hinweis}`.slice(0, 1000) : null, titel: null, textAuszug: text || null });
-        aus.abgelegt++; aus.ids.push(neu.id);
-      } catch (e) { const m = e instanceof Error ? e.message : String(e); if (/Dublette|schon abgelegt/.test(m)) aus.schonDa++; else aus.fehler.push(`${s.name}: ${m}`); }
+        const notiz = `Aus dem Datei-Organizer – ${[s.art ? `Art: ${s.art}` : "", `Pfad: ${s.name.replace(/∕/g, "/")}`, s.hinweis].filter(Boolean).join(" · ")}`.slice(0, 1000);
+        try {
+          const neu = await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: notiz, titel: null, textAuszug: text || null });
+          aus.abgelegt++; aus.ids.push(neu.id);
+        } catch (e) {
+          const m = e instanceof Error ? e.message : String(e); if (!/Dublette|schon abgelegt/.test(m)) throw e;
+          aus.schonDa++;
+          vorhanden ||= (await listLocalDocuments(await browserVault())).filter((d) => !d.aussortiert);
+          const summe = await fileChecksum(datei).catch(() => null);
+          const da = vorhanden.find((d) => summe && d.checksum === summe) || vorhanden.find((d) => d.originalName === datei.name && d.sizeBytes === datei.size);
+          if (da) { nachtragen.set(da.id, { bereich: w.bereich || "Sonstiges", datum: s.datum, notiz }); aus.ids.push(da.id); }
+        }
+      } catch (e) { aus.fehler.push(`${s.name}: ${e instanceof Error ? e.message : String(e)}`); }
+    }
+    if (nachtragen.size) {
+      const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h), am = new Date().toISOString();
+      for (const d of (akte as unknown as { documents: Array<{ id: string; category: string; documentDate: string | null; notes: string | null; updatedAt?: string }> }).documents) {
+        const n = nachtragen.get(d.id); if (!n) continue;
+        const alt = String(d.notes || "").replace(/(^|\n)Aus dem Datei-Organizer – [^\n]*/g, "").trim();
+        d.category = n.bereich; if (n.datum) d.documentDate = n.datum; d.notes = [n.notiz, alt].filter(Boolean).join("\n").slice(0, 2000); d.updatedAt = am; aus.aktualisiert++;
+      }
+      await akteNachAbgleichSchreiben(h, akte, revision, "Einordnung aus dem Datei-Organizer", `${aus.aktualisiert} vorhandene Unterlagen nach der Übergabe neu eingeordnet (Bereich, Datum, Angaben).`);
     }
     fortschritt?.(auswahl.length, auswahl.length, "");
     return aus;

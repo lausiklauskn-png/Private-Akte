@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.1)
+## Stand (18.11.2026, Vorschau 0.7.2)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `edd8987` (0.4.17). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `e11a1a3` (0.4.18). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -46,6 +46,18 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.2 Ordnerbaum wie im Datei-Organizer, Richtung, Pfad, Einordnung nachtragen (Klaus 18.11., Bilder vom Tablet):**
+  (1) **Ordnerbaum** über „Deine Unterlagen“ jetzt zweistufig wie im Finden des Organizers (`echtBaum`, `echtUnter`): unter einem Bereich
+  die Art der Unterlage (Rechnung, Brief, Befund … – kommt seit 0.7.2 als „Art: …“ mit der Übergabe, sonst die Art der Datei), unter einem
+  Jahr die Monate (nach dem Kalender), unter Person/Absender/Dateiart der Bereich; Tipp auf eine Gruppe wählt sie und klappt ihre
+  Unterordner auf. (2) **Richtung:** Pfeil neben „Sortieren“ (`#echt-richtung`, gemerkt `pa_sort_ab`) dreht Liste und Jahre um.
+  (3) **Pfad** an jeder Zeile (`echtPfad`: „Pfad: …“ aus der Übergabe, sonst der Dateiname), gekürzt Anfang … Ende (`kurzPfad`), ganz in
+  der Hinweisblase mit der Maus (`data-immer`, auch bei abgeschalteten Tooltips); die Größe steht nur noch bei „Sortieren: Größe“.
+  (4) **Einordnung nachtragen (Befund an Klaus' Bildern: 102 Unterlagen blieben unter „Familie & persönliche Dokumente“, weil die
+  zweite Übergabe Vorhandenes nur übersprang):** `organizer.uebernehmen` findet vorhandene Unterlagen über die Prüfsumme und setzt
+  Bereich, Datum und die Angaben des Organizers (Art, Pfad, Absender, Person …) – einmal am Ende über `akteFuerAbgleich`/
+  `akteNachAbgleichSchreiben`; die Meldung sagt es. **Datei-Organizer 0.4.18** (dort PR #68): Pfeil für die Richtung nach Datum im Finden,
+  Monate nach dem Kalender, Ladeanzeige bei „An die Private Akte übergeben“. Probe 429 grün, Organizer-Probe 213 grün. Am Tablet ungeprüft.
 - **0.7.1 Private Brain, Portemonnaie, Familienbüro (Klaus 18.11., Freibrief; Portemonnaie „gleich im Tresor“, Familienbüro „nur aufrufen“):**
   **Private Brain:** die Stadt öffnet im Rahmen die echte, veröffentlichte Web-App unter ihrer eigenen Adresse (`RAHMEN.brain`,
   `../Privat-Brain-Pro/`), unverändert. Kein Klon: die Web-Seite entsteht dort erst durch `build:web`, ein Klon Datei für Datei liefe

@@ -1,7 +1,7 @@
 import { innenKurz } from "../lib/innen.ts";
 import { ausZiehen } from "./quellen.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Archive, Camera, Check, Download, File, FileImage, FileText, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Mail, Pencil, Plus, Eye, RotateCcw, Search, Settings, Share2, Trash2, Upload, ShieldAlert, Smartphone, Monitor, Undo2, X } from "lucide-react";
+import { Archive, Camera, Check, Download, File, FileImage, FileText, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Mail, Pencil, Plus, Eye, RotateCcw, Search, Settings, Share2, Trash2, Upload, ShieldAlert, Smartphone, Monitor, Undo2, X, ArrowDown, ArrowUp } from "lucide-react";
 import type { Datei, FeldName } from "../lib/typen.ts";
 import { STUFEN, offeneFelder, gesperrt, istUnsicher } from "../lib/siebe.ts";
 import { SICHTEN, baum, dateienUnter, suche, type BaumKnoten } from "../lib/sichten.ts";
@@ -493,6 +493,7 @@ function Steckbrief({ z, d }: { z: AppZustand; d: Datei }) {
   </section>;
 }
 
+const MONATE_NR = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 export function FindenSeite({ z, gehe, ziel }: P) {
   const moeglich = SICHTEN.filter((s) => s.ab <= Math.max(z.stufe, 0));
   const [sichtId, setSichtId] = useState("ordnung");
@@ -500,7 +501,21 @@ export function FindenSeite({ z, gehe, ziel }: P) {
   const [frage, setFrage] = useState("");
   const [knoten, setKnoten] = useState<BaumKnoten | null>(null);
   const [gewaehlt, setGewaehlt] = useState<string>("");
-  const wurzel = useMemo(() => baum(z.dateien, sicht, heute()), [z.dateien, sicht]);
+  // Reihenfolge nach Datum (0.4.18, Klaus 18.11.: „das zweite Mal draufklicken – Datum und Jahr in die andere Richtung“): der Pfeil neben
+  // „Sortieren“ stellt um zwischen älteste und neueste zuerst. Er ordnet die Liste nach dem Datum der Datei und in „Datum (Jahr › Monat)“
+  // die Jahre und Monate (Monate nach dem Kalender, nicht nach dem Alphabet). Die Unterordner bleiben stehen. Gemerkt `do-finden-neu`.
+  const [neuZuerst, setNeuZuerst] = useState(() => { try { return localStorage.getItem("do-finden-neu") === "1"; } catch { return false; } });
+  const richtung = () => setNeuZuerst((v) => { try { localStorage.setItem("do-finden-neu", v ? "0" : "1"); } catch { /* gilt bis zum Neuladen */ } return !v; });
+  const wurzel = useMemo(() => {
+    const w = baum(z.dateien, sicht, heute());
+    if (sicht.id !== "datum") return w;
+    const rang = (t: string) => /^\d{4}$/.test(t) ? Number(t) : MONATE_NR.indexOf(t) >= 0 ? MONATE_NR.indexOf(t) : null;
+    const ordne = (k: BaumKnoten): BaumKnoten => {
+      const mit = k.kinder.filter((c) => rang(c.titel) !== null).sort((a, b) => (neuZuerst ? -1 : 1) * (rang(a.titel)! - rang(b.titel)!));
+      return { ...k, kinder: [...k.kinder.filter((c) => rang(c.titel) === null && c.titel.startsWith("⚠")), ...mit, ...k.kinder.filter((c) => rang(c.titel) === null && !c.titel.startsWith("⚠"))].map(ordne) };
+    };
+    return ordne(w);
+  }, [z.dateien, sicht, neuZuerst]);
   useEffect(() => { setKnoten(null); }, [sicht.id]);
   const nachPfad = useMemo(() => new Map(z.dateien.map((d) => [d.pfad, d])), [z.dateien]);
   // Der gewählte Ordner wird bei jeder Änderung aus dem neuen Baum geholt (sonst zeigte die Liste nach „Stift“ noch den alten Stand).
@@ -512,8 +527,10 @@ export function FindenSeite({ z, gehe, ziel }: P) {
   const liste = useMemo(() => {
     if (frage.trim()) return suche(z.dateien, frage);
     const k = aktuell || wurzel;
-    return dateienUnter(k).map((p) => nachPfad.get(p)!).filter(Boolean);
-  }, [frage, aktuell, wurzel, z.dateien, nachPfad]);
+    const l = dateienUnter(k).map((p) => nachPfad.get(p)!).filter(Boolean);
+    const tag = (d: Datei) => d.felder.datum?.wert || "";
+    return [...l].sort((a, b) => !tag(a) === !tag(b) ? (neuZuerst ? tag(b).localeCompare(tag(a)) : tag(a).localeCompare(tag(b))) : tag(a) ? -1 : 1);
+  }, [frage, aktuell, wurzel, z.dateien, nachPfad, neuZuerst]);
   const datei = gewaehlt ? nachPfad.get(gewaehlt) : undefined;
   const [stiftBei, setStiftBei] = useState("");
   // Sprung vom Dashboard: Sicht wählen, dann den Ordner im Baum (Titel, erste passende Ebene).
@@ -532,6 +549,7 @@ export function FindenSeite({ z, gehe, ziel }: P) {
     <div className="werkzeug-leiste">
       <label className="suchfeld"><Search size={17}/><input type="search" placeholder="Suchen: Name, Absender, Nummer, Text …" value={frage} onChange={(e) => setFrage(e.target.value)} aria-label="Suchen" data-suche/></label>
       <label className="sicht-wahl"><span className="leise" data-sicht-wort>Sortieren</span><select value={sicht.id} onChange={(e) => setSichtId(e.target.value)} data-sicht>{moeglich.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}</select></label>
+      <button type="button" className="text-link nur-symbol" onClick={richtung} aria-label={neuZuerst ? "Neueste zuerst – antippen: älteste zuerst" : "Älteste zuerst – antippen: neueste zuerst"} title={neuZuerst ? "Neueste zuerst" : "Älteste zuerst"} data-sicht-richtung={neuZuerst ? "neu" : "alt"}>{neuZuerst ? <ArrowDown size={18}/> : <ArrowUp size={18}/>}</button>
     </div>
     <div className="explorer" style={{ marginTop: 14 }}>
       <section className="card"><OrdnerBaum wurzel={wurzel} gewaehlt={knoten?.id || "alle"} waehlen={(k) => { setKnoten(k); setFrage(""); }} label={`Baum: ${sicht.name}`}/></section>
@@ -627,8 +645,9 @@ export function AkteSeite({ z, gehe }: P) {
         "Die Originale bleiben, wo sie sind.",
       ]}/></div>
       <div className="button-row" style={{ marginTop: 12 }}>
-        <button type="button" className="button primary" disabled={!z.dateien.some((d) => !gesperrt(d))} onClick={() => z.uebergeben(mitText)} data-uebergeben><Share2 size={18}/>An die {rahmen()!.name} übergeben</button>
+        <button type="button" className="button primary" disabled={!z.dateien.some((d) => !gesperrt(d)) || z.fortschritt?.phase === "uebergeben"} onClick={() => z.uebergeben(mitText)} data-uebergeben><Share2 size={18}/>An die {rahmen()!.name} übergeben</button>
       </div>
+      {z.fortschritt?.phase === "uebergeben" && <Ladebalken f={z.fortschritt}/>}
       <Meldung z={z} gehe={gehe}/>
     </section>}
     <section className="card" data-archivnummern>
