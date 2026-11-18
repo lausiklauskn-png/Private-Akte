@@ -1,0 +1,1075 @@
+**Generalprüfung 1.0.53 → 1.0.54 (Klaus 16.11.2026, PR #150; zehn Rollen, 80 Befunde, alle gegengeprüft; **1.0.54 veröffentlicht Android + Windows**, Nachweis `docs/VEROEFFENTLICHUNG-1.0.54.md`, nicht erneut auslösen; nächste 1.0.55; nicht am Gerät; **nächste Sitzung: Einfachheit E1–E15** nach `BRIEF_SITZUNG_2026-11-16_EINFACHHEIT-E1-E15.md`, Befunde `docs/design/generalpruefung-1.0.53/befunde.json`):** Einlesen mit Warteschlange (später gewählte Dateien warten, „Abbrechen“ nimmt auch sie heraus), späte Modell-Antwort holt nach × keine alten Treffer zurück, Trefferzeile/-karte in DE/EN/RU/PL (`SEARCH_T` in `index.html`), „auch gesucht als“ nur noch bei Nicht-Wörtern. Mail: Postfach steht mit gespeichertem Konto von selbst da (nach „Postfach schließen“ bis zum nächsten Start nicht), „Gesendet.“ mit Weg zurück, Stern/Gelesen lassen die Mail offen, geöffnete Mail mit einem Tipp in den Papierkorb, „An BookLedgerPro“ merkt „schon abgelegt“, Ausgang zeigt die Begleitdatei bei ihrer Mail. Kopf am Handy: Pfeile am Rand der Hauptleiste (Klaus: Pfeil bleibt, keine Symbol-Leiste), Update-Fähnchen bis 640 px unter dem Namen. Kategorien: Kachel und Liste zählen gleich, zweite Kategorie ersetzt die erste (`gruppePasst` in `assets/workspace.js`). Einstellungen nach Themen in vier Sprachen, „Zurück“ erst zu „Alle Themen“; Tresor gesperrt: „Entsperren“ ist Hauptknopf. Proben neu `test-gp-kopfleiste`, `test-gp-kategorien`, `test-gp-einstellungen`. Lehren: `git stash` nie in parallelen Arbeitskopien (gemeinsamer Stapel); liegengebliebene Arbeitskopien unter `.claude/worktrees/` machen `tools/sbkim-beschreibung.mjs` rot. Offen: Aufbau-Punkte E1–E15 (Klaus' Antworten im Sitzungsbrief: „Teilen“, „Pro-Tresor“, Startseite „Was möchtest du tun?“ mit Bubbles). Version **1.0.54**/54, Cache v98.
+
+**Gerätetest 1.0.52 → 1.0.53 (Klaus 16.11.2026, PR #148; Ja zu V1–V8, Vorschau `docs/design/geraetetest-1.0.52/vorschau.html`; **1.0.53 veröffentlicht Android + Windows**, Nachweis `docs/VEROEFFENTLICHUNG-1.0.53.md`, nicht erneut auslösen; nächste 1.0.54; nicht am Gerät):** Startseite: eine Suche, eine Trefferliste – Lupe und × im Feld, Reihe „Bildbeschreibung · Bedeutung · Überall“ (Quellen am Pfeil, Treffer anderer Pro-Apps unter der Liste), Filter mit Namen, alles 32 px flach auch am Tablet (`native/native-ueberall.js`). Suche zieht getrennt Diktiertes zusammen (`PBSuchFrage.zusammen`, Probe `tools/test-such-klaus.mjs`). Modell startet nicht mehr beim Öffnen, erst bei „Bedeutung“ (`PBSemantic.wanted`). ⓘ überall anfangs zu. Hinzufügen: eine Ablagefläche, ein ⓘ, „Gerade hinzugefügt“. Dateien: Vorschlag zeigt die gemeinten Dateien, „+ Kategorie“. Kategorien: Kachel „+ Neuer Ordner“. Mail: Liste/Absender bei Suche, „Nichts aufzuräumen“, „Link öffnen ↗“, Mail sofort und Anhänge danach, **„An Familienakte“ in der Mail-Liste mit Vorsortierung** (Begleitdatei als zweite Tresor-Übergabe; Gegenstück Familienakte PR #199, kommt dort mit 2.28.71 – die gibt die Datei-Organizer-Sitzung aus). Einlesen steht in der gemeinsamen Ladezeile. Abgleich mit anderen Sitzungen: `BRIEF_ABGLEICH_2026-11-16_PRIVATE-BRAIN-PRO.md` auf main der Familienakte. Lehre: im Behälter bricht `build:web` bei der OCR-Beschaffung ab, bevor es `tool-icons`, OCR-Dateien und Modell-Pins kopiert – ohne Nachzug sind `test-help`/`test-design-26` hier rot, obwohl der Stand stimmt. Version **1.0.53**/53.
+
+**Abschluss 16.11.2026:** [Abschlussbrief](BRIEF_ABSCHLUSS_2026-11-16_GERAETETEST-1.0.51-1.0.52.md); nächste Sitzung nach [Gerätetest-Plan 1.0.52](BRIEF_SITZUNG_2026-11-16_GERAETETEST-1.0.52.md) (25 Punkte, Vorschau V1–V7). Warte-Zeile nur nach Tipp (PR #147) auf main, nicht veröffentlicht.
+
+**Gerätetest 1.0.51 → 1.0.52 (Klaus 15.11.2026, PR #144; **1.0.52 veröffentlicht Android + Windows**, Nachweis `docs/VEROEFFENTLICHUNG-1.0.52.md`, nicht erneut auslösen; nächste 1.0.53; nicht am Gerät):** Suche erste Seite wartet höchstens 0,4 s aufs Modell, sonst Wortsuche zuerst und Bedeutung nachgereicht (`renderResults`); „Alle Konten“ öffnet eine Mail ganz beim Anbieter (gespeicherter Text nur als Rückfall); `openRemote` lädt nach Kontowechsel frisch, findet über Message-ID; Ladeanzeige überall: Geräteaufrufe über 0,5 s zeigen kreisende Punkte, `PBActivity.start({percent})` mit Prozent und Balken (`native/native-activity.js`, Windows-Brücke meldet Aufrufe). Version **1.0.52**/52.
+
+**Suche mit Sortier-Kern, eigene Kategorien, Einstellungen nach Themen, Tresor-Hilfe (Klaus 15.11.2026, PR #142; **1.0.51 veröffentlicht Android + Windows**, Nachweis `docs/VEROEFFENTLICHUNG-1.0.51.md`, nicht erneut auslösen; nächste 1.0.52; nicht am Gerät):** Sortier-Kern des Datei-Organizers byte-gleich mit Pin (`assets/sortierkern/`, nur über `tools/sortierkern-nachziehen.mjs`, nie von Hand; `--pruefen` in `npm test`), Einordnung je Eintrag `rec.kern` (`assets/sortierkern-anschluss.js`). Ein Suchfeld für alles im Explorer (`assets/such-frage.js`: Füllwörter, Einzahl/Mehrzahl, Kästchen, Sortierung nach Absender/Bereich/Art, Bedeutung darunter), eigene Kategorien (`assets/eigene-kategorien.js`), Begleitdatei für die Familienakte (`assets/familienakte-begleitung.js`, über den Tresor noch nicht). Einstellungen nach Themen (`assets/einstellungen-themen.js`; in Playwright nur mit `pb_einstellungen_themen=an`), SBKIM statt Mycel in eigenen Texten, Tresor-Hilfe (`native/native-tresor-hilfe.js`, `ProVault.diagnose`, `tresorEinrichten` mit `reparatur`). Mail öffnet auch ohne erreichbaren Speicherort. Such-Proben 50 Fragen: alt 8/20 → neu 43. [Abschlussbrief](BRIEF_ABSCHLUSS_2026-11-15_SUCHE-SORTIERKERN-TRESORHILFE.md).
+
+**🔬 Regel: Forschung nur in Kimhub (Klaus 2026-10-31):** jeder Forschungseintrag (Sitzungs-Befunde, Messungen, Stunden-Auswertungen, Forschungsnotizen) kommt nach Kimhub `forschung/messungen/`; in diesem Repo werden keine Forschungseinträge geführt und keine Forschungsdateien angelegt. Öffentliche Forschungsaufgaben stehen in Sage-Protokol.
+
+**Versionsnummer lädt direkt (Klaus 2026-11-13/14; 1.0.50 veröffentlicht Android + Windows, Nachweis `docs/VEROEFFENTLICHUNG-1.0.50.md`, nicht erneut auslösen):** Tipp auf „v1.0.xx“ oder das Fähnchen prüft, lädt die APK der geprüften Veröffentlichung, prüft sie (Größe, SHA-256, Paket, Zertifikat, versionCode) und öffnet Androids Installieren-Fenster (#138); die Versionsnummer öffnet nicht mehr die Einstellungen (dafür das Zahnrad). Version **1.0.50**/50 (Windows gleich, Updateprobe 1.0.41 → 1.0.50).
+
+**Update-Fähnchen (Klaus 2026-11-13; 1.0.49 veröffentlicht Android + Windows, Nachweis `docs/VEROEFFENTLICHUNG-1.0.49.md`):** neben „v1.0.xx“ im Kopf erscheint von selbst das Fähnchen „Update X.Y.Z“ (`#pbUpdateFahne`, `native/native.js`), sobald `ProUpdates.check` ein Update meldet; Tipp → Einstellungen mit „Neu: …“ und dem Herunterladen-Knopf. Still geprüft wird beim Start, beim Zurückholen der App und höchstens stündlich (nach Fehler 5 Minuten); ist der Internetschalter der App getrennt oder sein Stand unbekannt, geht kein Abruf hinaus; ohne Netz, bei Fehler, Entwicklungs- oder aktueller Fassung nichts. Benannte Änderung: bis 1.0.48 lief keine Updateprüfung ohne Tipp. Version **1.0.49**/49 (Windows-Updateprobe 1.0.41 → 1.0.49). Probe `test-update-fahne` 27 · Gegenprobe von Hand 6/6. PWA ohne Fähnchen (kein `ProUpdates`; Pages-Generationen unberührt). Nicht am Gerät.
+
+**Pro-App-Verbund als Vorschau (Klaus 2026-11-09, Zweig, nicht veröffentlicht):** Einstellungen → Kasten „Pro-App-Verbund (Vorschau)“ (ⓘ, Knopf „Karte ansehen“, nur App, `native/native-verbund-karte.js`) öffnet `assets/pro-verbund.html` im Vollbild-Rahmen (Dialog mit iframe; Schließen, Esc und Android-Zurück über `native-navigation.js`). Die Karte ist **byte-1:1 aus BookLedgerPro** (Pin `assets/pro-verbund.herkunft.json`, Drift-Guard) – nie hier ändern, dort pflegen und neu kopieren. Proben `test-verbund-karte` 11 · Gegenprobe 3/3. Nicht am Gerät.
+
+**Mail an die Familienakte (Klaus 2026-11-09, Zweig, nicht veröffentlicht):** geöffnete Mail → „An Familienakte teilen“ legt die unveränderte `.eml` mit Anhängen über den gemeinsamen Pro-Tresor (`familienakte-uebergabe/1`, Fach `eingang-familienakte`, ≤ 20 MiB) ab; gesperrt → erst fragen, ohne Tresor → Teilen-Auswahl. Datei-Fenster „An Pro-App …“ schickt bei Mails die `.eml` statt `.txt`. Neue Brückenmethode `ProMail.original` (Android/Windows), Teilen-Name nach Betreff. Proben `test-pro-verbund` 42 · `test-mail-device` 84 · Gegenprobe 9/9. [Details](docs/PRO-VERBUND-NATIV.md#mail-mit-anhängen-an-die-familienakte-klaus-2026-11-09-zweig-nicht-veröffentlicht). Nicht am Gerät.
+
+**Tresor einrichten – nur Speicher wählen (Klaus 2026-11-04, Entwurf, nicht veröffentlicht):** `ProVault.tresorEinrichten` (Android): Speicher wählen → Tresor finden oder Hauptordner anlegen → ein Passwort für Tresor und Ablage „Private Brain“ darin. Vault arbeitet ab einem Ordner innerhalb der Freigabe, `ProTresorordner` merkt `wurzel`. Zieht eine schon eingerichtete Ablage nie still um. [Details](docs/TRESORORDNER.md#tresor-einrichten--nur-speicher-wählen-klaus-2026-11-04-zweig-nicht-veröffentlicht). Probe `test-tresor-ein-schritt` 20.
+
+**Android 1.0.45 veröffentlicht 2026-11-04 (Klaus 2026-11-03: „Ja zu 1 und 2“, Tablet-Testfassung, nur Android):** [APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.45/Private-Brain-Pro-1.0.45.apk), Code 45, Quelle main `7d6035f4118f2a2918f3c80b37c4c384d2a49015` (PR #127), Release-Lauf 41746092281 (signiertes Update, Veröffentlichung), 61.068.501 B, SHA-256 `fbed7652e094c9e57e1ee895e14bf49d5bda19593502a4e263cf996e36b8d1b7`, unabhängig geladen und gleich `SHA256SUMS`. Windows bleibt bei 1.0.44 (nur Metadaten/Updateprobe nachgezogen). [Nachweis](docs/VEROEFFENTLICHUNG-1.0.45.md). Nicht erneut auslösen; Tablet nicht gemessen.
+
+**Aktueller Stand, 2026-11-02:** Android und Windows **1.0.44 veröffentlicht**, einschließlich
+freiwilligem Familienakte-Pro-Verbund. Tatsächliche installierte App-Paare auf beiden
+Plattformen, signiertes Android-Update und öffentliche Downloads geprüft.
+[Nachweis und Links](docs/PRO-VERBUND-VEROEFFENTLICHUNG-1.0.44.md). Keine erneute Veröffentlichung
+dieser Versionen. Persönliche Geräte und Scanner folgen im Nutzertest.
+
+**Pro-Umbau 14, Sitzung A2 (Klaus 2026-10-31: „Herr Meier am Ende wird nicht gefunden“):** Netz-Korpus (`window.__CB_getCorpus` in `index.html`) gab Vektoren als Liste und Einträge ohne Vektor weiter — Modul 04 warf bei **jeder** Netzfrage, die App antwortete anderen nie. Jetzt nur Einträge mit Vektor als `Float32Array`; der Katalog merkt sich auch das **Ende** langer Texte (`ende`, 600 Zeichen; Mails aus `mailBody`), der Vergleichstext trägt Anfang und Ende; nach dem Einschalten liest Modul 04 den Katalog live (`modules/rendezvous-init.js`). Probe `tools/native/test-netzbrief.mjs` 9 · Gegenprobe 3/3. Ältere Dateien ohne gemerktes Ende: neu einlesen. Nicht am Gerät.
+
+**Pro-Umbau 14 A3 (Klaus 2026-10-31, Antworten 1, 2):** Tresor-Paket mit neun Fächern (neu „Private Brain V3“, „Familienakte“, „Eingang-Familienakte“, inzwischen auch `eingang-private-brain` „Eingang-Private-Brain“ – Korrektur 2026-11-03, vorher stand hier „acht“; Quelle Workflow PDF Pro #49, hier nachgezogen); Bedien-Bausteine **Fassung 7**: `pro-ueberall.js` Fassung 3 sucht auch in den neuen Fächern (fällt bei Apps mit älterem Paket still weg). Proben `test-pro-bedienung` 64 · `test-ueberall` 18 · `test-chefcode` 46 · `test-tresorordner` 38. Nicht am Gerät.
+
+**Pro-Umbau 14, Sitzung A (Klaus 2026-10-31): Chef getrennt, Quelle hier.** `native/pro-chefcode.js` Fassung 2 (Bedien-Bausteine **Fassung 6**): Chef-PIN (6–12 Ziffern, nur PBKDF2-Prüfwert im Speicher der App), gesperrt nur Zustand und „Entsperren“; Mitarbeiter treten mit dem Beitritts-Zettel `CHEF1-…` bei, sehen den Code nie, ändern nur mit Chef-PIN. Version **1.0.44**/44 (Windows-Updateprobe 1.0.41 → 1.0.44). Probe `test-chefcode` 46 · Gegenprobe `gegenprobe-chefcode` 8/8. Nicht am Gerät, nicht veröffentlicht. [Details](docs/UEBERALL-SUCHEN.md#chef-getrennt-chef-pin-und-beitritts-zettel-pro-umbau-14-2026-10-31).
+
+**Pro-Umbau 13 (Klaus 2026-10-30): Chefcode, Quelle hier.** `native/pro-chefcode.js` (Bedien-Bausteine **Fassung 5**, byte-gleich nach WPP und BLP): ein Kasten „Chefcode“ in den Einstellungen (nach dem Mycel-Kasten, `native/native-chefcode.js`) — gleicher Code = eigenes Netz über Modul 23 (`saveNetwork`/`applyNetwork`, byte-1:1), mindestens 12 Zeichen, Feld danach leer, Wechsel gilt sofort. `pro-ueberall.js` Fassung 2 (`gruppe`, `nachSuche`). Probe `test-chefcode` 20 · Gegenprobe 3/3. Nicht am Gerät, nicht veröffentlicht. [Details](docs/UEBERALL-SUCHEN.md#chefcode-pro-umbau-13-2026-10-30).
+
+**Pro-Umbau 12 (Klaus 2026-10-30): „Überall suchen“ als gemeinsamer Baustein, Quelle hier.** `native/pro-ueberall.js`/`.css` (Bedien-Bausteine Fassung 4, byte-gleich nach Workflow PDF Pro): eine Liste mit Herkunft — diese App (Katalog), Tresorordner-Fächer der anderen Pro-Apps (`ProVault.tresorFach`, nur Zeilen, nur offen), Netz über Modul 23 nur mit Haken. Dazu Schriftgröße „A··A“ (`ProBedienung.schriftKnopf`, hier im ☰-Menü, weil der Kopf am Handy voll ist) und `setTextZoom(100)`. Version **1.0.43**/43 (Windows-Updateprobe 1.0.41 → 1.0.43). Proben `test-pro-bedienung` 63 · `test-ueberall` 18 · `test-tresorordner` 38 · Gegenprobe 5/5. Nicht am Gerät, nicht veröffentlicht. [Details](docs/UEBERALL-SUCHEN.md).
+
+**Pro-Umbau 5, Schritt 2 (Klaus 2026-10-28): zweites Bedeutungs-Modell nur für die Suche in der App.** Stufe Mittel (e5-base) /
+Groß (e5-large) in den Einstellungen mit Empfehlung aus dem Gerätecheck, Laden per Schalter (`ProMeaning`, Android + Windows, eigene Ordner
+`meaning-*`, Pins `tools/native/meaning-models.json`), „Einordnen“ nur auf Tipp als Hintergrundaufgabe, Werte getrennt (IndexedDB
+`pb_meaning_v1`); die Suche nutzt sie nur, wenn alles eingeordnet ist, sonst Modul 03. Mycel/Siegel/Modul 03 unverändert (e5-small).
+Proben `test-meaning` 34 · Gegenprobe 12/12 · Engine 110. Echtes Modell in der App und am Gerät nicht gemessen. [Details](docs/BEDEUTUNGSSUCHE-ZWEITES-MODELL.md).
+
+**Pro-Umbau 4 (Klaus 2026-10-28): Hintergrundaufgabe für alle Pro-Apps, Quelle hier.** `native/pro-hintergrund.js` + Android-Dienst
+`de.familyprojekt.hintergrund` (Vordergrund-Dienst „dataSync“ mit Mitteilung, Stand, „Abbrechen“, WebView-Vorrang), gepinnt mit den
+Bedien-Bausteinen (Fassung 2, `native/pro-bedienung-herkunft.json` → `pfade`), byte-gleich nach Workflow PDF Pro und BookLedgerPro
+(`tools/native/bedienung-nachziehen.mjs`). Hier melden „Alle prüfen“ und Einordnen sich an. Nie `stopService`; Erlaubnis-Frage nur aus
+einem Tipp. Proben `test-pro-bedienung` 33 · `test-hintergrund` 9. Windows-Angaben auf 1.0.42 nachgezogen (main war rot: #109 hatte nur
+Android gesetzt; Updateprobe jetzt 1.0.41 → 1.0.42). Nicht am Gerät. [Details](docs/HINTERGRUNDAUFGABE.md). **#111:** Mikrofon nur an Suche/Freitext, Gerätecheck vor dem Modell-Laden (`native/pro-geraet.js`, Fassung 3), Lernlauf zweites Bedeutungs-Modell (`tools/native/meaning-models.json`, noch nicht verdrahtet). Abschluss und Brief: BookLedgerPro `BRIEF_ABSCHLUSS_2026-10-28_PRO-UMBAU-4.md`, `BRIEF_SITZUNG_PRO-UMBAU-5.md`.
+
+**Designumbau in Sitzungen (Klaus 2026-10-26):** zehn Punkte für alle sechs Varianten (Pro + V3, je Android/Windows/PWA), [Sammlung und Sitzungsplan](docs/design/aenderungen-2026-10-26/SAMMLUNG.md). **Sitzung 1 erledigt** (Zählerzeile, Mail-Ordnerleiste, Doppelte kurz, Zustand/Speicher, Workflow PDF frei): [Abschluss](docs/design/aenderungen-2026-10-26/ABSCHLUSS-SITZUNG-01.md). **Sitzung 2 erledigt** (Explorer-Leiste: Ansichtswahl ⌂ ▾ mit PDF, Suche, „D ↓“, ohne ↑; Anordnungs-Knopf in Explorer/Postfach/Kategorien; Dateizeilen flach): [Abschluss](docs/design/aenderungen-2026-10-26/ABSCHLUSS-SITZUNG-02.md). Gemeinsame Datei `native/pb-arrange.js`/`.css`, byte-gleich in V3 `assets/`. **Sitzung 3 erledigt** (ⓘ-Klapper überall, anfangs offen und gemerkt; Schutz-Texte hinter ⓘ; Tresor-Inhalt im Tresor-Block): [Abschluss](docs/design/aenderungen-2026-10-26/ABSCHLUSS-SITZUNG-03.md). `native/native-help.js`, `help-layout.css` und `native-protect.js` sind jetzt in beiden Repos byte-gleich. **Nachtrag: keine Emojis, nirgends** – Strichgrafiken, Wächter in `test-design-26` (Klaus: „kein Bilderbuch“). Sitzungen 2/3 + Nachtrag sind auf main (Pro PR #88, V3 PR #23, übernommen 2026-10-26; PWA über Pages, keine App-Releases): [Abschlussbrief](BRIEF_ABSCHLUSS_2026-10-26_SITZUNGEN-02-03.md). **Sitzung 4 erledigt** (Bildbeschreibung: Bildmodell nativ in Android/Windows mit Fingerabdrücken, gemessen 256 MB Download und 1,2 GB Arbeitsspeicher im Prüfrechner, nicht Tablet; Feld „Bildbeschreibung“ mit eigenen Worten per Text/Mikrofon an jedem Bild; Schalter in der Suche; Workflow-PDF 1.1.3 und Workflow-PDF-Pro 1.0.5 nachgezogen): [Abschluss](docs/design/aenderungen-2026-10-26/ABSCHLUSS-SITZUNG-04.md), [Forschung](https://github.com/lausiklauskn-png/Kimhub/blob/main/forschung/messungen/privat-brain-pro-designumbau-sitzung-04-2026-10-26.md); PRs Pro #89, V3 #24, Workflow-PDF #134, Workflow-PDF-Pro #26 **auf main übernommen 2026-10-26 (Klaus' Wort)**; PWAs über Pages, **keine App-Releases** (Android/Windows nicht ausgelöst). Gemeinsam byte-gleich: `native/pb-bildbeschreibung.js`/`.css` (V3 `assets/`). **Sitzung 5 erledigt** (3D-Knöpfe: Übersichts- und Kategorie-Kacheln ohne Streifen, Tönung aus dem Thema, Glanz, Neigung ≤ 3°, still bei „weniger Bewegung“, kleiner und gemessen lesbar in allen Themen; Kategorien: „Vorschau ansehen“ und der echte Zielordner nach dem Kopieren als Baum unter den Knöpfen statt im Fenster, ⓘ-Satz Übersicht ↔ Explorer ↔ Kategorien): [Abschluss](docs/design/aenderungen-2026-10-26/ABSCHLUSS-SITZUNG-05.md), [Forschung](https://github.com/lausiklauskn-png/Kimhub/blob/main/forschung/messungen/privat-brain-pro-designumbau-sitzung-05-2026-10-26.md). Gemeinsam byte-gleich: `native/pb-3d.js`/`.css`, `native/pb-zielordner.js`/`.css` (V3 `assets/`, Cache v97). PRs Pro #92, V3 #26 **auf main übernommen und veröffentlicht 2026-10-26 (Klaus' Wort): Pro 1.0.39, V3 3.0.0-preview.8, je Android + Windows, PWAs über Pages, Geschenk für Jens Fassung 24** – [Veröffentlichung](docs/design/aenderungen-2026-10-26/VEROEFFENTLICHUNG-SITZUNG-05.md), [Abschlussbrief des Abends](BRIEF_ABSCHLUSS_2026-10-26_SITZUNG-05-VEROEFFENTLICHUNG.md) (auch Workflow PDF Pro 1.0.5; Geschenk-Artefakt bewusst auf Fassung 24 belassen). Lehre: die Kontrast-Probe las `color(srgb …)` als Schwarz (blind), jetzt behoben. **Nächste: Sitzung 6** (6b Zielordner echt bearbeiten): [Brief](BRIEF_SITZUNG-06_ZIELORDNER-BEARBEITEN.md). Sitzungen fortlaufend nummerieren, nichts ohne Klaus' Wort veröffentlichen.
+
+**1.0.41 veröffentlicht 2026-10-27 (Klaus' Wort „veröffentliche 1.0.41 für Windows und Android“, mit Tresorordner D2):** [Android-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.41/Private-Brain-Pro-1.0.41.apk) · [Windows-Setup](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/windows-v1.0.41/Private-Brain-Pro-Windows-1.0.41-x64-setup.exe). Enthält die Modell-Führung (gelbe Lampe, PR #101) und Tresorordner D2 (PR #102), Version PR #103. Quelle main `c4d0c5fdec8a80b7c4b821ad0593c4c1a0278c29`, main-CI Android 40589834114 / Windows 40589834102, Release-Läufe Windows 40592142031 (Updateprobe 1.0.40 → 1.0.41) und Android 40592146491 (signiertes Update). APK 60.972.919 B, SHA-256 `92a2dd1b418dedf5c33c4d6db8472d59f414cf0a10da6c07ffb6df01341ac2d2`, Code 41; Setup 101.184.564 B, SHA-256 `1becda0823e54f7a692f36bc15e149ee8ba48db0fc12eb2de604c01e2c297f62`. Beide unabhängig geladen, gleich `SHA256SUMS`; `native-semantic.js` in der APK bytegleich mit main. Nicht erneut auslösen.
+
+**Gelbe Lampe/Siegel-Identität geklärt (Klaus 2026-10-27):** Mycel und Andock-Assistent rufen Modul 03 direkt; ohne in den Einstellungen geladenes Modell (jede App eigener Speicher) scheiterten sie. Jetzt fragt `native-semantic.js` beim ausgelösten Schritt „Jetzt laden?“, lädt mit Fortschritt und macht weiter; Hintergrund nur klare Meldung. Modul 03 byte-1:1. `test-semantic-guard.mjs` 10. [Befund](docs/MODELL-FEHLT-MYCEL-SIEGEL.md). Veröffentlicht in 1.0.41. **Plan 2026-10-27 (Klaus, nichts bauen ohne sein Wort):** Analyse-Werkzeug ohne Netz und ohne Dateiinhalte, Modelle je Rechner nach Messung nachladen (Whisper-Diktat bis groß, größere Embedding-Modelle), offener Fehler gelbe Lampe/Siegel-Identität, Vorsortierung beim Hochladen, lokale KI mit Auftragsfeld: [Plan](docs/PLAN_2026-10-27_ANALYSE-MODELLE-SORTIERUNG-KI.md). **Mikrofonwahl auch für Android und PWA (Klaus 2026-10-27):** Android leitet per Audio-Weiche (`setCommunicationDevice`/SCO, nur `MODIFY_AUDIO_SETTINGS`, weiter keine Aufnahme, keine Mikrofon-Berechtigung), PWA reicht in Chrome/Edge ab 135 das Mikrofon als Audiospur an die Spracherkennung, ältere Browser sagen es klar. `test-microphone.mjs` 30. Am Tablet zu prüfen. **Android 1.0.40 veröffentlicht 2026-10-27 (Klaus' Wort „damit ich das am Tablet prüfen kann“):** [APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.40/Private-Brain-Pro-1.0.40.apk), PR #99, Quelle `595cd754d4df2f54271a841b320d23f8e258d2da`, main-CI Android 40567456817 / Windows 40567456855, Release-Lauf 40569926227 (signiertes Update 1.0.39 → 1.0.40), APK 60.935.065 B, SHA-256 `c247297c65b93c8c3b115435c738df6f9212fd8f73fd58aacc152102b2215a04`, Code 40, Zertifikat `362ee70d…74fa80`; unabhängig geladen, gleich `SHA256SUMS`, `native-microphone.js` in der APK bytegleich. PWA mit Mikrofonwahl über Pages (pages-deploy auf `595cd75` grün). Nicht erneut auslösen. **Mikrofon fürs Diktat wählbar (Windows, Klaus 2026-10-27):** Windows-Fassung hörte immer auf das jeweilige Windows-Standardmikrofon, das Windows selbst wechselt (z. B. Bluetooth-Headset). Jetzt Einstellungen → Diktatsprache → „Mikrofon fürs Diktat“: festes Gerät (SAPI `SetInput`), Verbindungsart aus dem Namen als Hinweis, kein stiller Rückfall, Sprechfenster nennt das Mikrofon. `native/native-microphone.js`, `ProSpeech.inputs`, Probe `test-microphone.mjs` (16). Android/PWA unverändert. Nicht an echter Hardware gemessen; V3 noch nicht nachgezogen. [Details](docs/MIKROFON-WAHL-WINDOWS.md). **Windows 1.0.40 veröffentlicht 2026-10-27 (Klaus' Wort):** [Setup](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/windows-v1.0.40/Private-Brain-Pro-Windows-1.0.40-x64-setup.exe), PR #97, Quelle `aae5013dabd8251051a8d731104dc64fba723b98`, Abnahme 40531337324 (Updateprobe 1.0.39 → 1.0.40), Release-Lauf 40541743653, 101.191.212 B, SHA-256 `a11d4f177b924f765f204b895a5bec91b9025ee70197e1f58d790bb8e2c62546`, unabhängig geladen und gleich `SHA256SUMS`. Android-Lauf auf main: Versuch 1 rot an der Mycel-Probe „Verbinden fail-soft offline“ (gleicher Inhalt im PR grün), Versuch 2 grün. Android bleibt veröffentlicht bei 1.0.39 (versionName 1.0.40 nur wegen gleicher Metadaten). Nicht erneut auslösen.
+
+**1.0.39 veröffentlicht (2026-10-26, Claude, Sitzung 5):** [Android-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.39/Private-Brain-Pro-1.0.39.apk) · [Windows-Setup](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/windows-v1.0.39/Private-Brain-Pro-Windows-1.0.39-x64-setup.exe) · [PWA](https://lausiklauskn-png.github.io/Privat-Brain-Pro/). **Veröffentlicht 2026-10-26 (Klaus' Wort: „übernimm die PRs, übertrag sie in die anderen Varianten und ins Geschenk“):** Pro 1.0.39 Android (Lauf 40371549303, APK 60.926.381 B, SHA-256 `c776d549ac84a31351445c73c4f68dd94ac3a63af8d0cddb90a607d55f3a1a8c`, Code 39, signiertes Update 1.0.38 → 1.0.39) und Windows (Lauf 40371555575, Setup 101.205.944 B, SHA-256 `3a579d3fca546ef3544d163e966b192c45c4170cb0de2b4d78ccce7ec670440d`), Quelle `e3f5c1190fc68a287c89b7665ab1c94cf9289e7b`; V3 3.0.0-preview.8 Android (Lauf 40373235903, APK 49.714.329 B, SHA-256 `89df481e2027803d7d8826d0d688155a36d1e090f9c123079e975f64d4c257cf`) und Windows (Lauf 40371604897, Setup 91.425.392 B, SHA-256 `80e2381c906729913de12cfc1c137bcc446478a05de6c5a419d58188df7b188d`), Quelle `969ed38ae66e09c2262ff45a302d28a7fbb14f87`. Alle vier Downloads unabhängig geladen, Größe und SHA-256 gleich `SHA256SUMS`. PWAs über Pages. Geschenk für Jens Fassung 26 (`https://claude.ai/artifact/XPEQpCH7axafiTRB7y1RB7`, Quelle `docs/geschenk/geschenk-jens.html`; **Klaus 2026-10-26: nur Kurzfassung** – je App ein Satz wofür, Knöpfe Browser/Android/Windows, ein Tipp-Block, Filme; keine Verbesserungs- oder „Neu“-Listen, keine Wiederholungen, keine Emojis). Windows-Updateprobe jetzt 1.0.38 → 1.0.39. Diese Veröffentlichung ist erledigt; nicht erneut auslösen.
+
+**1.0.38 veröffentlicht (2026-10-25):** Film-Knopf neben dem Zahnrad, nur mit dem Anleitungsvideo (`assets/filme.js` byte-gleich mit V3, `native/native-filme.js`, Probe `test-filme.mjs`); [Abschluss im V3-Repo](https://github.com/lausiklauskn-png/Privat-Brain-Pro-V3/blob/main/BRIEF_ABSCHLUSS_2026-10-25_FILME-GESCHENK-KIMSYNC.md).
+
+# Private Brain Pro — Sitzungs-Anker
+
+**Gemeinsamer Tresorordner, Schritt D2 (Klaus 2026-10-27):** Einzug in den Ordner aller Pro-Apps — Knopf im Kasten „Speicherort und
+Verschlüsselung“, Ordner über „Private Brain“ (auch eine Kopie zur Probe, geprüft über die Kennung), Inhaltsverzeichnis aus dem Katalog,
+„An BookLedgerPro teilen“ legt auf Wunsch die .eml ins Fach „Eingang-BookLedgerPro“. Paket `de.familyprojekt.tresor` byte-gleich aus
+Workflow PDF Pro (`tools/native/tresor-nachziehen.mjs`, nie von Hand). Nicht am Gerät gemessen. [Bedienung, Proben, Grenzen](docs/TRESORORDNER.md).
+
+**📒 „An BookLedgerPro teilen" (Klaus 2026-10-26, Claude):** in jeder geöffneten Mail neben „Original teilen / sichern" ein eigener
+Knopf (`assets/live-mail.js`, Schlüssel `bookledger`, DE/EN/RU/PL; nativ Liniensymbol „share" in `native-toolbar.js`). Pro-App:
+derselbe enge `openOriginal`-Weg (ACTION_SEND `message/rfc822` über den FileProvider, Android-Auswahl zeigt die installierte
+BookLedgerPro-PWA). Web/PWA: Web Share mit der `.eml`-Datei; ohne Web Share wird die `.eml` gespeichert und der Weg genannt.
+BookLedgerPro legt die Mail als Beleg ab und liest Rechnungs-Anhänge aus (BookLedgerPro PR #358, `docs/MAIL-TEILEN.md` dort).
+Gemessen: `test-mail-device` 81 · `e2e-live-mail` 37 · `test-compact-controls` 60. Cache v92. ⚠ Kein Tablet, keine echte
+Teilen-Auswahl; `npm run build:web` scheitert im Behälter an der OCR-Beschaffung (Node 24, Netz) — Proben gegen das kopierte `www/`.
+Keine Veröffentlichung; der Knopf kommt mit der nächsten Version auf Klaus' Wort.
+
+Android und Windows **1.0.37** sowie die gebaute PWA sind veröffentlicht (25.10.2026); PR #85 übernommen.
+[Android-Update-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.37/Private-Brain-Pro-1.0.37.apk) · [Windows-x64-Setup](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/windows-v1.0.37/Private-Brain-Pro-Windows-1.0.37-x64-setup.exe) · [PWA öffnen / installieren](https://lausiklauskn-png.github.io/Privat-Brain-Pro/).
+Gemeinsame unveränderliche Appquelle `015c9a1266a64f44a1896ead56349094c64e2f9a`. Die kompakte Oberfläche steht
+bereits im ausgelieferten HTML; gespeicherte Farben und Eingabesprache gelten
+vor dem ersten sichtbaren Aufbau. Die Laufzeit übernimmt dieselben Bedienelemente.
+Die PWA behält ihre Installationsidentität und verwendet isolierte, vollständig
+geprüfte Offline-Dateigenerationen. Es gibt keinen Ladevorhang und keine Löschung
+von Katalog, Konten, Originalen oder fremden App-Caches.
+13 reguläre main-Checks; die Anforderung erfolgte separat auf geprüften Dispatcherbranches (13 tatsächliche Sourcechecks; bestätigter Legacy-Übergang); zwei Windows-Veröffentlichungschecks sind getrennt gebunden.
+[60 native Fälle](https://github.com/lausiklauskn-png/Privat-Brain-Pro/actions/runs/40222186336/job/121255957083) ohne Fehler/Skips und
+[38 Start-/Laufzeitübernahmeprüfungen](https://github.com/lausiklauskn-png/Privat-Brain-Pro/actions/runs/40222186336/job/121255956911) erfolgreich.
+Android: signierte Updateprobe mit Seed/Baseline/Verify, Code 37, ursprüngliche Kennung/Signatur;
+Release `40225104221`, 18.674.232 Bytes, SHA-256 `ce013e4693101983fe12f0d5d4c41bc4e1a98d49250709815af64d0859664d98`.
+Windows: echte installierte Übernahme 1.0.36 → 1.0.37 einschließlich Originalen,
+PBV1-Sicherung, DPAPI und Entsperren; Release `40224745892`,
+58.666.944 Bytes, SHA-256 `8452d322b2ebbbc8ef9de11ab548a61f0e129d94503354812db1abdc4ca4b71a`. Setup weiterhin unsigniert.
+Beide öffentlichen Downloads unabhängig geprüft. Vier öffentliche PWA-Dateien
+wurden im tatsächlichen [Pages-Job](https://github.com/lausiklauskn-png/Privat-Brain-Pro/actions/runs/40222186331/job/121258534134) ohne Anmeldung gegen den geprüften
+Bau verglichen; Generation `691368c910961ae3ab643606eb096bfea4237047063a79ee4bfae8110ac19a44`. Das ist ein öffentlicher
+CI-Bytecheck und kein behaupteter lokaler Download vom hier gesperrten Pages-Host.
+[Umfang und Grenzen](docs/design/umbau-2026-10-24/STARTDARSTELLUNG-37.md),
+[Android-Beleg](docs/design/umbau-2026-10-24/android-1.0.37-pruefung.json),
+[Windows-Beleg](docs/design/umbau-2026-10-24/windows-1.0.37-pruefung.json),
+[PWA-Beleg](docs/design/umbau-2026-10-24/pwa-1.0.37-pruefung.json).
+Physisches Samsung DeX/Tab S6 und reale Gerätegeschwindigkeit bleiben ungemessen.
+Diese Veröffentlichungen sind abgeschlossen und dürfen nicht erneut ausgelöst werden.
+Der bestehende Freibrief für weitere beauftragte Arbeit gilt weiter.
+
+## Vorherige Veröffentlichung: 1.0.36
+
+Android und Windows 1.0.36 sind öffentlich verfügbar (25.10.2026); PR #82 übernommen.
+[Android-Update-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.36/Private-Brain-Pro-1.0.36.apk) · [Windows-x64-Setup](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/windows-v1.0.36/Private-Brain-Pro-Windows-1.0.36-x64-setup.exe).
+Gemeinsame Quelle `a1bd98f40b0186c5a9a148dbd04d19979e6262c4`. Suche, Explorer und Kategorien verwenden dieselben
+hashbasierten Bild-/PDF-Miniaturen und denselben Originalstatus. Eine gespeicherte
+Miniatur ist kein Beleg für eine vollständige Datei; tatsächliche Doppelmeldungen
+entfallen. Der bekannte Dateiinhalt wird beim Wiederimport erneut gespeichert.
+Alle elf fachlichen main-Prüfungen und der getrennte Windows-Anforderungscheck
+sind erfolgreich; 60 native Fälle ohne Fehler/Skips.
+Android-VersionCode 36, bisherige Paketkennung und ursprünglicher Signierer erhalten.
+Android: signiertes Update .35 → 1.0.36 mit Seed/Baseline/Verify erfolgreich,
+Release `40196553168`, 18.671.196 Bytes, SHA-256 `e32b9975c8c3b67749d182b79c618b92bc1741240d67e1ba3743aab9cbdaa9ad`.
+Windows: echte Überinstallation .29 → 1.0.36 mit gleichem Datenpfad, Originalbytes,
+Einstellungen, PBV1-Sicherung und Entsperren nach Kaltstart erfolgreich;
+Release `40196030462`, 58.666.597 Bytes, SHA-256 `138bf5e8b4635e12bd87c70148c54539684c36fc130b7693913c8e4397bde091`.
+Der Windows-Installer ist wie bisher unsigniert; der Auslieferungsbau besitzt
+keinen Prüfzugang. Beide öffentlichen Downloads wurden unabhängig geprüft.
+[Bedienung und Grenzen](docs/design/umbau-2026-10-24/ERGEBNISSE-36.md),
+[Android-Nachweis](docs/design/umbau-2026-10-24/android-1.0.36-pruefung.json),
+[Windows-Nachweis](docs/design/umbau-2026-10-24/windows-1.0.36-pruefung.json).
+Physisches Samsung DeX/Tab S6 und reale Reaktionszeiten bleiben ungemessen.
+Beide Veröffentlichungen sind erledigt; diese Version nicht erneut auslösen.
+Der bestehende Freibrief für weitere beauftragte Arbeit bleibt erhalten.
+
+## Frühere Veröffentlichungen
+
+Android .35 ist veröffentlicht (25.10.2026): [Update-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.35/Private-Brain-Pro-1.0.0-preview.35.apk),
+VersionCode 35, Quelle `d5635b7af9614757b36e3157023d5b68008ddb7a`, PR #81 übernommen.
+Suchintro vollständig entfernt; lokale Bild-/PDF-Vorschauen, kompakte Typ-/Tag-/
+Pfadzeile und vollständiger Pfad per Hover/Fokus/Tippen. Wiederholte Herkunfts-
+und Fehlstatus entfallen; Schutz und tatsächliche Öffnungsverfügbarkeit bleiben.
+Maus/DeX behält bei allen Fensterbreiten und Orientierungen 32-Pixel-Steuerungen,
+Touch-only 44 Pixel. Zusätzliche Ablagekopien lassen sich im gespeicherten Ordner
+nach Zugriffsprüfung wieder einschalten; App-Originalkopien bleiben getrennt.
+Vorschauen verändern Originale und gespeicherten Suchtext nicht und starten keine OCR.
+Alle elf Prüfungen desselben main-Quellstands erfolgreich: Android `40170769470`,
+Windows `40170769501`, Signierung `40170769520`, Pages `40170769001`.
+60 native Fälle ohne Fehler/Skips, Job `121100956974`; Release `40171548476`
+mit signiertem Update .34 → .35, Seed/Baseline/Verify und Veröffentlichung erfolgreich.
+Öffentlicher Download unabhängig geprüft: 18.667.332 Bytes,
+SHA-256 `59f0c3793e8bb0f5c2920de9250562e2445f31a36515740ecd96887fae5d067b`.
+[Bedienung](docs/design/umbau-2026-10-24/ERGEBNISSE-35.md),
+[Download- und Quellnachweis](docs/design/umbau-2026-10-24/android-preview35-pruefung.json).
+Veröffentlichung erledigt; nicht erneut auslösen. Physisches Samsung DeX/Tab S6
+und reale Reaktionszeiten bleiben ungemessen; Windows-Download bleibt .29.
+Der vorhandene Freibrief gilt weiter; keine erneute Merge-/Release-Freigabe verlangen.
+
+Android .34 ist veröffentlicht (24.10.2026): [Update-APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.34/Private-Brain-Pro-1.0.0-preview.34.apk),
+VersionCode 34, Quelle `1fe0f684ec3b6c7e645c55387ec698f8e96204fb`, PR #80 übernommen.
+Kompakte Suche mit einem Bedeutungsschalter, sieben direkte Hauptwege,
+Farbpalette und Sprachcode; echte Einstellungen stehen vor gewöhnlichen
+Erklärungen hinter Linien-i. Flachere Maus-/DeX-Steuerungen, 44-Pixel-Ziele für
+Touch/Hochformat, kompakte Importhilfe und ein gemeinsames Sortiermenü.
+Android ab Version 10 kann nach neuer Ordnerfreigabe, SHA-256-Inhaltsprüfung und
+konkreter Bestätigung Dateikopien bereinigen; mindestens eine unmittelbar erneut
+geprüfte Kopie bleibt erhalten. Katalogverweise und App-Originalkopien bleiben
+getrennt. Der physische Löschweg fehlt unter Windows.
+Vier Werkzeugzugänge hinter der vorhandenen Freigabe: natives Workflow PDF Pro mit festem Paket
+und ausdrücklichem Installationsweg, Kim-Sync, Datei-Post und BookLedgerPro im Browser.
+Menüsperre schützt App-Zugänge, keine externen Programme/Webseiten. Studio-AES/
+Schnorr unverändert; öffentlicher Herausgeber-Schlüssel fehlt weiterhin,
+Käufergerätefreischaltung offen. Externe HTTPS-Proben waren durch Netzrichtlinie
+blockiert; keine aktuelle Erreichbarkeit behaupten. Lokale OCR aus .33 bleibt
+enthalten; V3-Repo und geschützte Module bleiben erhalten.
+Alle elf main-Prüfungen erfolgreich: Android `40141502607`, Windows
+`40141502613`, Signierung `40141502616`, Pages `40141502059`.
+60 native Fälle ohne Fehler/Skips, nativer Job `121014024355`.
+Release `40142276521` erfolgreich; signiertes Update .33 → .34 mit Seed/Baseline/Verify
+bestanden. Öffentlicher Download unabhängig geprüft: 18.655.798 Bytes,
+SHA-256 `0c71eb60fd5a5a607189df2adeb7fdde1c616617a19315b6da3c1e164cfda0b6`.
+[Bedienung](docs/design/umbau-2026-10-24/SUCHE-34.md), [Werkzeuggrenzen](docs/design/umbau-2026-10-24/WERKZEUGE-34.md),
+[Download- und Quellnachweis](docs/design/umbau-2026-10-24/android-preview34-pruefung.json).
+Veröffentlichung erledigt; nicht erneut auslösen. Physisches Samsung DeX/Tab S6
+und reale Reaktionszeiten sind nicht gemessen. Windows-Download bleibt .29.
+Der dokumentierte Freibrief für die beauftragte Umsetzung gilt weiterhin;
+keine neue Merge-/Release-Freigabe verlangen.
+
+**Android .33 veröffentlicht (24.10.2026):** [APK als Update](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.33/Private-Brain-Pro-1.0.0-preview.33.apk),
+Quelle `457b20e08193a8383761ab2542dcd145f6f34b56`, PR #79 und Release `40123045873` vollständig erfolgreich.
+Echte lokale OCR für Bilder und Scan-PDFs, DE/EN/RU/PL für Suche und Prüfung;
+kyrillische Stichwortsuche und bewusstes „Erneut prüfen“ vorhandener Originale.
+Keine Cloudübertragung, kein Pflicht-Erstdownload der OCR und keine automatische
+Massenverarbeitung. Unsichere/ungelesene Bereiche bleiben ehrlich gekennzeichnet.
+Android-/Windows-main, Signierung und Pages grün; 56 native Tests ohne Fehler/Skips,
+einschließlich tatsächlicher OCR bei gesperrten Netzwerkladewegen. Signiertes
+Update .32 → .33 bestanden. Öffentliche APK unabhängig geprüft: 18.618.467 Bytes,
+SHA-256 `56020cf2e362d1b575ebd7472b9d9d10af5a1330b03b8390c3378e1534e3e5ab`. 39 OCR-Dateien,
+29 Lizenztexte und 22 geschützte Module geprüft; Lizenz-/Quellnachweis enthalten.
+[Bedienung](docs/NATIVE-TEXTERKENNUNG.md), [Prüfnachweis](docs/design/umbau-2026-10-24/android-preview33-pruefung.json).
+Nicht erneut veröffentlichen. Physisches Tab S6/DeX und reale Reaktionszeiten
+sind nicht gemessen; Windows-Download bleibt .29. Freibrief gilt weiterhin.
+
+**Android .32 veröffentlicht (24.10.2026):** [APK als Update](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.32/Private-Brain-Pro-1.0.0-preview.32.apk),
+Quelle `a4a2cd69a3caa7ad3c1a9eb332c7137504eb4608`, PR #78 und Release `40117059939` vollständig erfolgreich.
+Konsistente Liniensymbole und Mailtitelzeile, verschiebbare Datei-/Mailbereiche,
+Info-Erklärungen und sofortige Wartepunkte. PDF-Bridgekopien entfallen für
+verfügbare Originale; Öffnen/Teilen besitzt eine unabhängige native Warteschlange.
+Android-/Windows-main und Signierung grün, 55 native Tests ohne Fehler/Skips,
+signiertes Update .31 → .32 bestanden. Öffentliche APK unabhängig geprüft:
+7.529.379 Bytes, SHA-256 `632aada11ed73f61618e737c3743768b2d4884c762ab1ea7f384c5e305c747b5`.
+[Bedienung](docs/design/umbau-2026-10-24/NACHBESSERUNGEN-32.md),
+[Prüfnachweis](docs/design/umbau-2026-10-24/android-preview32-pruefung.json).
+Nicht erneut veröffentlichen. Keine physische Tab-S6-/DeX-Messung behaupten;
+Windows-Download bleibt .29, gemeinsamer Quellstand ist geprüft.
+
+**Android .31 veröffentlicht (24.10.2026):** [APK als Update](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.31/Private-Brain-Pro-1.0.0-preview.31.apk),
+Quelle `5c3cd2115a5abbf3d5daa50b126182f4d360001d`, Release `40107514450` vollständig grün.
+Signiertes Update .30 → .31, echte automatische Offlineübersetzung und 54 native
+Tests bestanden. Öffentlicher Download unabhängig geprüft: 7.512.142 Bytes,
+SHA-256 `ba0f5a9bab788c1aac1b209f550811b00bb8bf86746791643e291f813bbd56b7`.
+[Bedienung](docs/NATIVE-LOKALE-UEBERSETZUNG.md), [Prüfnachweis](docs/design/umbau-2026-10-24/android-preview31-pruefung.json).
+Die Veröffentlichung ist erledigt; nicht erneut auslösen. Echter Samsung-DeX-Test
+steht aus. Windows-Download bleibt .29; gemeinsamer Quellstand ist geprüft.
+
+**Erweiterter .31-Auftrag:** Samsung Galaxy DeX unter Android und automatische
+Hochformatansicht auch auf Tablets; Eingabe-/Diktatsprache unabhängig wählen,
+Mikrofone an gewöhnlichen Texteingaben und automatische lokale Mailübersetzung
+unter dem Original (DE/EN/RU/PL). Bestehende Verdeckung für ausdrücklich gewählte
+Cloudwege erhalten. [Auftrag und Nachweise](docs/design/umbau-2026-10-24/ERWEITERUNGEN-NATIVE-BEDIENUNG.md),
+[lokale Übersetzung](docs/NATIVE-LOKALE-UEBERSETZUNG.md). In PR #77 umgesetzt und
+als .31 mit ursprünglicher Signatur veröffentlicht. Freibrief gilt.
+
+**Eigenständige Fortsetzung für Android .31 (24.10.2026):** Originalverfügbarkeit
+und Prüfbericht getrennt, ausdrücklich begrenzte Mailtextprüfung, historische
+Befunde bei Lesefehlern erhalten und Speicherfehler sichtbar. Klaus hat die
+Weiterarbeit ohne sein Zutun erneut beauftragt. [Bedienung und Grenzen](docs/design/umbau-2026-10-24/STATUS-ORIGINALE-PRUEFUNG.md).
+Dieser Schritt ist ebenfalls in .31 enthalten; aktueller Download oben.
+
+**Android .30 veröffentlicht (24.10.2026):** [APK als Update](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.30/Private-Brain-Pro-1.0.0-preview.30.apk),
+Quelle `a81d33ba2048ff6ea646a79f7a311c1e9661e1b7`, Release-Lauf `40094110986` vollständig grün.
+Android-/Windows-main und Signierung grün; signiertes Update .28 → .30 bestanden.
+Öffentliche APK unabhängig geladen: 7.461.797 Bytes, SHA-256 `15f75701de03e3c70fb65132ec7c0e029e09266efe7c0eb988b4f4ab99dd1b88`.
+Vier Themen, klare Liniensymbole, kompakte Navigation, Senden oben und Cc/Bcc klappbar.
+Windows bleibt veröffentlicht bei .29; sein gemeinsamer neuer Quellstand ist geprüft.
+Die [weiteren Funktionsvorschläge](docs/design/umbau-2026-10-24/README.md) sind vorbereitet, nicht als eingebaute Sammlung behaupten.
+
+**Aktueller Freibrief (Klaus 2026-10-24): Designumbau umsetzen, PRs/Commits selbstständig übernehmen,
+Repo aktualisieren und die native Android-App als signierte Update-APK mit direktem Link veröffentlichen.**
+Erster App-Schritt für .30: vier Themen, ruhige native Oberfläche, vier Hauptwege,
+klare Symbole, Senden oben, Cc/Bcc klappbar, Katalogaktion sichtbar. Paket/Signatur erhalten.
+[Umbau und weitere Vorschläge](docs/design/umbau-2026-10-24/README.md).
+Keine erneute Merge-/Release-Freigabe für diesen Auftrag verlangen; Prüfungen und Updateprobe abschließen.
+Vier erste Designrichtungen positiv bewertet, noch kein einzelnes Thema gewählt. **Outlook ist Anregung, keine Kopiervorlage.**
+[Kurzer Ziel-/Funktionsabgleich und Designstand](docs/ZIEL-FUNKTIONEN-DESIGNSTAND-2026-10-24.md).
+[Designbrief](BRIEF_NACHFOLGE_2026-10-24_DESIGN.md) mit Ist-Bildern (`docs/design/ist-2026-10-24/`) und Referenzen.
+
+**Videos 2026-10-23 abends:** Siegel im Kopf korrigiert (★ in der Kugel, kein Wort „SIEGEL“, PR #73), Werbefilm und
+Handbuchvideo neu aufgenommen. FP Video (#23) zeigt nur Full HD: Werbefilm quer + hochkant, Handbuch quer ♪1/♪2, Handbuch
+hochkant (Uplifting). Geschenkseite kompakt, nur Querformat (Version 10). [Film](docs/film/README.md), [Handbuch](docs/handbuchvideo/README.md).
+
+**Übergabe 2026-10-23:** Geschenkbox für Jens nur mit Private Brain Pro und Workflow PDF Pro (Android + Windows,
+ohne iOS/PWA) und drei Filmen, `https://claude.ai/artifact/XPEQpCH7axafiTRB7y1RB7`, Quelle `docs/geschenk/geschenk-jens.html`.
+Desktop-OAuth-Client „Private Brain Pro Windows“ im Projekt `privat-brain-pro` angelegt. [Brief](BRIEF_UEBERGABE_2026-10-23_GESCHENK.md).
+
+**Windows .29 veröffentlicht (23.10.2026):** PR #69 und die enthaltenen Korrekturen
+aus #67 sind übernommen. [Windows-Release](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/tag/windows-v1.0.0-preview.29),
+Quelle `7e6fbfd821c6c105661ff638045f6b41e1ffb75b`, Release 39920396303 grün;
+Windows-main 39918739441 und Android-main 39918739332 vollständig grün.
+Installer SHA-256 `55d5728a4623e079ac0303442c6ff94fe77c35621f1c935c0342d1cfeab52e97`,
+48.562.317 Bytes, öffentlicher Download geprüft. Anleitung, feste Downloadpfade
+und manuelles Ergänzen des Geschenk-ZIPs: [Übergabe an Claude Code](docs/GESCHENKPAKET-WINDOWS.md).
+Keine App-Daten von Klaus ins Geschenk kopieren. Android bleibt veröffentlicht bei .28.
+
+**Windows-Freigabe 23.10.2026:** Klaus beauftragt die Übernahme von PR #69 mit
+allen nötigen Voraussetzungen und die Veröffentlichung zum Herunterladen für
+ein Geschenkpaket durch Claude Code. #69 enthält die gemeinsamen Korrekturen
+aus #67. Windows- und Android-Abnahme auf `079433d` vollständig grün
+(39885843960 / 39885843963). Anleitung und feste Downloadpfade:
+[Geschenkpaket für Windows](docs/GESCHENKPAKET-WINDOWS.md). Die Veröffentlichung
+verlangt erneut beide grünen main-Ketten; kein Android-Release zusätzlich auslösen.
+
+**Aktueller Auftrag 23.10.2026:** Klaus beauftragt die erneute Prüfung der
+veröffentlichten V28, Fehlerkorrekturen und eine zusätzliche Windows-Version.
+`AGENTS.md` und `docs/BAUSTAND-WINDOWS.md` sind der aktuelle Anker. Die Windows-
+Erweiterung baut auf der veröffentlichten V28 mit den geprüften Korrekturen auf.
+
+**Vorschau .28 veröffentlicht (2026-10-22), in der App „v1.0.28“.** [APK .28](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v1.0.0-preview.28/Private-Brain-Pro-1.0.0-preview.28.apk) über die vorhandene App installieren; daneben `.aab`.
+PR #66, VersionCode 28, Tag `v1.0.0-preview.28`, Quelle main `8dae28113f7fa19a4446406f492e0c307c4ef0cb` (Main-CI 39857714825: native-smoke grün). Release-Lauf 39859560733: Signatur, Updateprobe .27 → .28, Veröffentlichung.
+APK SHA-256 `a8a4de0e…d424a647` (7.446.584 Bytes), AAB `dcd69685…6055641b9` (7.267.253 Bytes), unabhängig geladen, gleich SHA256SUMS.
+Geschenk- und Updateseite auf .28 umgestellt. Tablet nicht gemessen.
+
+**Inhalt .28 (Klaus 2026-10-22):** Explorer als echter Ordnerbaum (E-Mails › Absender ›
+Mail › Anhänge, jede Datei einmal; Handy eine Ebene mit Pfad, breit Baum ▸/▾ mit ⊟), ehrlicher Prüfstand („⊘ Original
+fehlt · nicht prüfbar“, Zeile über alle Dateien, „Originale suchen“), Prüfbericht in einfachen Worten. Mail: Löschen in
+den Papierkorb des Anbieters, ♻ Wiederherstellen, ✓ Kein Spam, Spam in den Spam-Ordner, Zahlen vom Server (STATUS),
+Anbieter-Ordner unter „▸ Weitere Ordner“ (`MailEngine.moveTo`, Java nur in CI gebaut). ☰-Menü mit eigenen App-Symbolen
+(`native/tool-icons/`). Freischalt-Kasten schlicht; **Herausgeber-Studio erst nach langem Druck (1,5 s) auf „© 2026“
+unten in den Einstellungen**, wie bei den anderen Studios; Käuferfeld „Pseudonym“. Version **v1.0.28** klein neben dem Namen (`versionName` 1.0.0-preview.28,
+Code 28). [Ordnerbaum/Prüfstand/Papierkorb](docs/ORDNERBAUM-PRUEFSTAND-PAPIERKORB.md),
+[Werkzeuge](docs/WERKZEUGE-UND-FREISCHALTUNG.md).
+
+**Vorschau .27 veröffentlicht (2026-10-22).** [APK .27](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.27/Private-Brain-Pro-0.1.0-preview.27.apk) über die vorhandene App installieren; daneben `.aab`.
+PR #64, VersionCode 27, Quelle main `7530505d08f8409498972061e4a66295993340ad` (Main-CI 39807480053 Versuch 2 grün inkl. native-smoke; Versuch 1 hing in „Browser-Engine installieren“ für WebKit). Release-Lauf 39818777974: Signatur, Updateprobe .26 → .27, Veröffentlichung.
+APK SHA-256 `8011f622…5bc52a9c` (7.375.750 Bytes), AAB `dde15fd6…00744481b` (7.195.337 Bytes), gleich SHA256SUMS.
+Enthält: 🧠 Passwort-Probe und 🧩 Ersatzschlüssel fürs Studio. Tablet nicht gemessen. Lehre: ein Neustart der Main-CI setzt
+`native-smoke` zurück, der Release-Gate verlangt es grün; erst nach dem Neustart-Lauf veröffentlichen.
+Geschenkseite für Jens mit allen Apps: `https://claude.ai/artifact/XPEQpCH7axafiTRB7y1RB7`. Nächste Sitzung: [Windows](BRIEF_NACHFOLGE_2026-10-22_WINDOWS.md).
+
+**Vorschau .26 veröffentlicht (2026-10-22).** [APK .26](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.26/Private-Brain-Pro-0.1.0-preview.26.apk) über die vorhandene App installieren; daneben `.aab`.
+PR #63, VersionCode 26, Quelle main `e21b286ff9773580505fd4665f7405ede67a6855` (Main-CI 39801158046 grün inkl. native-smoke). Release-Lauf 39803351849: Signatur, Updateprobe .25 → .26, Veröffentlichung.
+APK SHA-256 `824497dd…af4de30b` (7.372.114 Bytes), AAB `24757fe7…dd937c4ca` (7.191.695 Bytes), gleich SHA256SUMS.
+Enthält: ☰ Werkzeuge (Pinnwand, Such-Tool), Freischalt-Codes mit Herausgeber-Studio, neues hellgraues Logo. Tablet nicht gemessen.
+
+**🧠 Passwort-Probe und 🧩 Ersatzschlüssel fürs Studio (Klaus 2026-10-22, für .27):** etwa alle 28 Tage fragt die App
+auf Klaus' Gerät nach dem Studio-Passwort (nur prüfen, nichts ins Netz); „Jetzt zur Probe eingeben“ im Studio. Der
+Studio-Schlüssel lässt sich in 5 Teile `JT3v5-…` teilen (JasonLib), 3 holen ihn mit neuem Passwort zurück, nur passend
+zum vorhandenen Schlüssel. Klaus' Termux-Tresore (`pbpro-`/`wfpdf-freigabe-neu.age`, age -p, neu verschlüsselt
+2026-10-22, offene Kopien entfernt) bewahren `PB_SIGNING_UNLOCK`/`WF_PDF_SIGNING_UNLOCK`; nie neu erzeugen.
+[Details](docs/WERKZEUGE-UND-FREISCHALTUNG.md#herausgeber-studio-nur-klaus).
+
+**Vorschau .25 veröffentlicht (2026-10-22).** [APK .25](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.25/Private-Brain-Pro-0.1.0-preview.25.apk) über die vorhandene App installieren; daneben `.aab`.
+PR #60–#62, VersionCode 25, Quelle main `edf76aa70d30a98ba5bbfdc327544dd7b2264378` (Main-CI grün inkl. native-smoke). Release-Lauf 39773902642: Signatur, Updateprobe .24 → .25, Veröffentlichung.
+APK SHA-256 `09e37ee1…b985b4a735` (6.220.958 Bytes), AAB `b26970bb…58754e7d` (6.034.985 Bytes), gleich SHA256SUMS.
+Enthält: Prüfung beim Hinzufügen mit Befund je Datei, Marken, „Alle prüfen“, Mail-Anhänge im Speicherort geprüft
+(`native/native-check.js`), pdf.js unter `vendor/pdfjs/`, Explorer nach Art, Originale wiederfinden, 🎤 in Textfeldern,
+Google-Vision-Knöpfe, Diagnose versteckt (7 Tipps auf die Versionszeile). Text in Bildern noch ungeprüft. Tablet nicht gemessen.
+
+**Logo neu (Klaus 2026-10-22, für .26):** wie Workflow PDF Pro: außen hellgrau `#a3a6ad`, zur Mitte weicher heller
+Verlauf, ohne gemalten Rahmen; 3D-Motiv unverändert. Vorlage `artwork/private-brain-pro-grey.png`, gebaut von
+`tools/native/icon/make-pro-icon.py` aus `private-brain-pro-light.png`; Größen über `export-pro-icons.mjs`. Adaptives Icon:
+Hintergrund `#a3a6ad`, Vordergrund `inset 13%`. Grenze: feiner heller Glasrand (1–2 px) um die Kugeln.
+
+**🧰 Werkzeuge und 🔑 Freischalt-Codes (Klaus 2026-10-22, nach .25):** ☰ → Werkzeuge; Pinnwand (Kimboard) und Such-Tool
+(Kimseek) laufen im App-Fenster, Dateien daraus gehen ins Einlesen. Freigabe je Käufer per signiertem Code aus dem
+Herausgeber-Studio; Klaus' öffentlicher Schlüssel fehlt noch in `native/license-keys.json`. Tools nur über
+`tools/native/vendor-apps.mjs` kopieren, nie in `apps/` von Hand ändern. [Details](docs/WERKZEUGE-UND-FREISCHALTUNG.md).
+
+**Vorschau .24 veröffentlicht (2026-10-22).** [APK .24](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.24/Private-Brain-Pro-0.1.0-preview.24.apk) über die vorhandene App installieren, nicht deinstallieren; daneben `.aab` für Google Play.
+PR #58, VersionCode 24, Quelle main `18a2edc38c42b4562c169603437cc4e5e8dcec22` (Main-CI 39711900162 grün inkl. native-smoke). Release-Lauf 39714226568: Signatur, Updateprobe .23 → .24, Veröffentlichung.
+APK SHA-256 `ac255ddd…caf8d21f` (5.791.582 Bytes), AAB `f10fe265…293548fe` (5.605.275 Bytes), beide gleich SHA256SUMS. Neu: Links „Mistral-/Google-Schlüssel holen“ neben dem KI-Schlüssel (`native/native-keys.js`). Tablet nicht gemessen.
+
+**Klaus' Test .23 am Tablet (2026-10-22), Reparaturen für .24:** Modell laden klappt am Tablet. 🎤: die WebView meldet
+`webkitSpeechRecognition`, verweigert es aber („Mikrofon nicht verfügbar oder abgelehnt“) → in der App immer Androids
+Sprachfenster (`native-speech.js`). Mehrere Mails löschen/verschieben dauerte Minuten (je Mail eine Anmeldung) → ein
+Aufruf, eine Verbindung (`MailEngine.actions`, Route `messages/batch/action`, je 200). „Bedeutungssuche“ führt, solange
+das Modell fehlt, direkt zum Schalter in den Einstellungen. Gmail: „Löschen“ verschiebt in den Ordner mit `\\Trash`
+(Gmails Papierkorb); ob Klaus' 50 Mails dort liegen, ist am Gerät noch zu sehen. Probe-IMAP-Server kann kein MOVE:
+Sammel-Verschieben nur im Browser-Test geprüft.
+
+**Vorschau .23 veröffentlicht (2026-10-21).** [APK .23](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.23/Private-Brain-Pro-0.1.0-preview.23.apk) über die vorhandene App installieren, nicht deinstallieren; daneben `Private-Brain-Pro-0.1.0-preview.23.aab` für Google Play.
+PR #56, VersionCode 23, Quelle main `8ee68c64ada630f63d7ca450be16faf265e87e2b` (Main-CI 39661901310 grün inkl. native-smoke mit echtem Modell-Download und Offline-Start). Release-Lauf 39664148878: Signatur, Updateprobe .22 → .23, Veröffentlichung.
+APK SHA-256 `bc4d52ad…cf19be3` (5.788.208 Bytes), AAB `97aeddaa…1dda5192` (5.601.799 Bytes), beide gleich SHA256SUMS. Tablet nicht gemessen.
+
+**Bedeutungs-Modell per Schalter, App Bundle (Klaus 2026-10-21, für .23):** Einstellungen → „🧠 Modell für die
+Bedeutungssuche“ lädt ~155 MB nativ in den App-Speicher (zuerst `family-projekt.de/models/`, sonst Hugging Face;
+Bibliothek jsDelivr/unpkg; jede Datei per SHA-256 aus `semantic-model.json`), Weitermachen nach Abbruch, Entfernen.
+`SemanticModel`, `ProSemanticPlugin`, `native/native-semantic.js`; Modul 03 byte-1:1 über `/models/`. Endet die WebView,
+öffnet die App neu und startet das Modell nicht von selbst wieder. Jeder Release trägt zusätzlich ein signiertes
+App Bundle `.aab` (gleiches Zertifikat wie die APK, Paket `…pro.preview`) für Google Play.
+[Details](docs/BEDEUTUNGSSUCHE-UND-LADEBALKEN.md#stand-für-23-laden-per-schalter-klaus-2026-10-21).
+
+**🤖 KI beim Schreiben (Klaus 2026-10-21, für .23):** Im Schreiben-Fenster gegenlesen oder Entwurf schreiben lassen,
+per Mistral-Schlüssel (EU) oder Kopieren fürs eigene Abo. Vorher verdeckt Modul 25 neuen Text, Zitat und Betreff, dazu
+Namen aus An/Cc/Bcc und Zitatzeilen, Telefon mit Leerzeichen und alles, was Klaus festlegt (Liste, Vorschläge, markierter
+Text). Vorschau „Das sieht die KI“, Halt bei KI-Anweisung, Rückweg mit Rückgängig. `native/native-mail-ai.js`.
+[Details](docs/KI-BEIM-SCHREIBEN.md).
+
+**Bedeutungs-Modell fest in der App, Ladebalken in Schritten (Klaus 2026-10-21, für .22):** Das Modell lud in der
+Pro-App nie (CSP sperrte jsDelivr). Jetzt bringt der Bau e5-small (118 MB) und transformers.js 2.17.2 mit
+(`tools/native/fetch-semantic-model.mjs`, Fingerabdrücke in `semantic-model.json`, auf GitHub streng);
+`BundledLibrary` beantwortet Modul 03s jsDelivr-Adresse aus dem APK, Modul 03 bleibt byte-1:1. Einlesen zeigt den Stand
+innerhalb einer Datei (`PBImportStep`). **In .22 noch aus** (`enabled: false`): im Emulator stürzte die App beim Laden des Modells ab; Lösung für .23. [Details](docs/BEDEUTUNGSSUCHE-UND-LADEBALKEN.md).
+
+**Teilen an Private Brain Pro (Klaus 2026-10-21, für .22):** Die App steht in Androids Teilen-Liste
+(`ACTION_SEND`/`SEND_MULTIPLE`, `ProSharePlugin`, `ShareInbox`, `native/native-share.js`). Geteilte Dateien gehen
+durch denselben Import wie „Dateien hinzufügen“ (`signBatch`, 80 MB je Datei, Mail-Exporte bis 200 MB), Text ohne
+Datei wird eine Textdatei. Nur `content://` der sendenden App. Tablet nicht gemessen. [Details](docs/TEILEN-EMPFANG.md).
+
+**Vorschau .22 veröffentlicht (2026-10-21).** [APK .22](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.22/Private-Brain-Pro-0.1.0-preview.22.apk) über die vorhandene App installieren, nicht deinstallieren.
+Enthält PR #54 (Teilen, Ladebalken in Schritten, KI beim Schreiben), VersionCode 22, Quelle main `64046085730fa56992678e1c5091e2382f360465` (Main-CI 39640944240 grün inkl. native-smoke).
+Release-Lauf 39643202428 erfolgreich: Signatur, Updateprobe .21 → .22, Veröffentlichung. Unabhängiger Download: SHA-256 `479abec09a686d9ec46231ec60ea21754054e4f301559b2d2a67aac4e5bd3fa5`, 5.774.747 Bytes, gleich SHA256SUMS.
+Bedeutungs-Modell **nicht** enthalten (aus; für .23: Laden per Schalter aus der App, zuerst Klaus' Server, sonst Hugging Face, plus Absturz klären). Tablet nicht gemessen.
+
+**Vorschau .21 veröffentlicht (2026-10-21).** [APK .21](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.21/Private-Brain-Pro-0.1.0-preview.21.apk) über die vorhandene App installieren, nicht deinstallieren.
+Enthält PR #53 (Newsletter abmelden, Internet-Lampe, Android-Spracheingabe, ein „Datei auswählen“), VersionCode 21, Quelle main `114989a05e37a7261fbd88a98a97fbdeea29686d` (Main-CI 39627948087 grün inkl. native-smoke).
+Release-Lauf 39630287203 (workflow_dispatch, auf Klaus' Bitte) erfolgreich: Signatur, Updateprobe .20 → .21, Veröffentlichung.
+Unabhängiger Download: SHA-256 `552fa8d53a026cc339ee1fb4074aaed04d611ae1d15008e333e329d770a98b38`, 5.759.643 Bytes, gleich SHA256SUMS. Teilen an Private Brain Pro **nicht** enthalten (.22). Tablet nicht gemessen.
+
+**Vorschau .20 veröffentlicht (2026-10-21).** [APK .20](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.20/Private-Brain-Pro-0.1.0-preview.20.apk) über die vorhandene App installieren, nicht deinstallieren.
+Enthält PR #48–#52 (Alle Konten, Aufräumen, Explorer ↕/Inhalt, Kategorien, flache Knöpfe, rundes Siegel mit Mycel), VersionCode 20, Quelle main `ca2e4dccf39599b65f4de70848ef8bc6595f0e07` (Main-CI 39609980272 grün inkl. native-smoke).
+Release-Lauf 39613483028 (workflow_dispatch mit `source_commit`, von dieser Claude-Sitzung auf Klaus' ausdrückliche Bitte gestartet; der Tag-Push war gesperrt) erfolgreich: Signatur, Updateprobe .19 → .20, Veröffentlichung.
+Unabhängiger Download: SHA-256 `936649e6faa6eb23af07ed2fa7b5cdef4e884d13f0de68fcb3b1eca2a5c33d14`, 5.749.114 Bytes, gleich SHA256SUMS. Newsletter-Abmelden (PR #53) **nicht** enthalten. Tablet nicht gemessen.
+
+**Mikrofon, Internet-Lampe, Dateiwahl (Klaus 2026-10-21):** 🎤 in der Suche nutzt in der Pro-App das Sprach-Fenster von
+Android (`ProSpeechPlugin`, `native/native-speech.js`), nur der erkannte Text kommt zurück. Kleine Lampe oben vor ← → ☰:
+grün = Internet erlaubt, rot = getrennt, Tippen schaltet, Hinweis beim Darüberfahren; Menü-Schalter bleibt. Siegel-Start
+jetzt 152 px vom Rand (unberührter .20-Startplatz rückt mit). „Original erneut auswählen“ zeigt nur einen Knopf.
+405 beim Teilen an Workflow PDF liegt beim Empfänger → Codex-Brief. [Details](docs/MIKROFON-LAMPE-DATEIWAHL.md).
+
+**Newsletter abmelden (Klaus 2026-10-21):** unsichtbares `List-Unsubscribe` (+ RFC 8058 One-Click) wird gelesen; in „🧹 Aufräumen“ ⚡ direkt, ✉ Abmelde-Mail **nur nach Bestätigung**, 🌐 Webseite. Selbst abmelden nur mit Freigabe und nur ⚡ für „Ist Werbung“-Absender; bei Betrugsverdacht nie. [Details](docs/AUFRAEUMEN-NEWSLETTER.md#newsletter-abmelden-klaus-2026-10-21).
+
+**Siegel und Mycel (Klaus 2026-10-21):** nur der **runde Siegel-Knopf** schwebt (Modul 17, byte-1:1), am Knopf
+ziehen, oben an der Kopfleiste rastet er ein (`data-sbkim-leiste`), ✕ blendet aus, Rückweg in Einstellungen. Das
+**Mycel** ist das Kanon-Fenster `23_rendezvous_ui.js` (byte-1:1, gepinnt) statt `net-widget.js` und öffnet sich **aus
+dem Siegel-Fenster** (eigene Pille ausgeblendet, „nicht so viel Platz verschwenden“). Lampen nicht angezeigt. Glue
+`native/native-mycel.js`, Probe `tools/native/test-mycel.mjs`. Eigene Identität „Private Brain Pro“ noch offen.
+[Bedienung, Abweichungen, Grenzen](docs/SIEGEL-UND-MYCEL.md).
+
+**Knöpfe flach halten (Klaus 2026-10-21):** „flach wie bei Notion, aber nicht ganz so flach, gut lesbar“ – damit
+Mails und Dokumente Platz haben, auch am Handy. **Überall** in der Pro-App etwa 28 px, ohne Schatten; unsichtbare
+Tippfläche 7 px darüber/darunter (hinter Nachbarn), beim Antippen wächst der Knopf (×1,12). Symbole statt Wörter, wo
+allgemein bekannt: Lupe, Zahnrad, ☰ fürs App-Menü, ⟳ fürs Aktualisieren. Neue Knöpfe nicht größer bauen. [Details](docs/EXPLORER-SORTIEREN-UND-INHALT.md#flache-knöpfe-klaus-2026-10-21).
+
+**Ordnen, Sortieren, Suchen (2026-10-21): Plan freigegeben, Grundlage + A1–A4 gebaut, noch keine Vorschau.**
+A4: Kategorien per Vorschlag im Explorer (nur Ansicht): [Kategorien](docs/KATEGORIEN-VORSCHLAG.md).
+A3: Explorer neueste oben, ↕, „🔎 auch im Inhalt“: [Explorer](docs/EXPLORER-SORTIEREN-UND-INHALT.md).
+Nachfolge: [Brief](docs/BRIEF_2026-10-21_nachfolge-ordnen-sortieren-suchen.md). Klaus: GitHub-Kommentare nicht beobachten; CI selbst prüfen.
+A2 „🧹 Aufräumen“: Newsletter nach Ablaufdatum, Papierkorb des Anbieters + Rückgängig (`locate` über Message-ID),
+Freigabe je Absender, Stern/„Ist wichtig“/zurückgeholte Mails nie automatisch: [Aufräumen](docs/AUFRAEUMEN-NEWSLETTER.md).
+Mail → „👥 Alle Konten“: Kopfzeilen und Text aller Konten (12 Monate, keine Anhänge, nur lesen),
+Überschreiben statt Doppeln über `Message-ID`, unsichere Zwillinge in „Doppelte“, Bündel nach
+Absender (↕), Wortsuche über alle Konten; automatisch beim Öffnen und alle 30 Minuten.
+`MailIndex`/`index`/`indexText`, `native/native-mail-index.js`. Echte Konten/Tablet nicht gemessen.
+Nächste Abschnitte A5 (Scanner-Übergabe) und A6:
+[Plan](docs/PLAN_2026-10-21_ordnen-sortieren-suchen.md), [Bedienung/Grenzen](docs/ALLE-KONTEN-UND-ABSENDER.md).
+
+**Vorschau .19 veröffentlicht (2026-10-21), Nachfolgeversion von .18.**
+[APK .19](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.19/Private-Brain-Pro-0.1.0-preview.19.apk) über die vorhandene App installieren, nicht deinstallieren.
+Tag `v0.1.0-preview.19` exakt auf main-Commit `418ff2eeced686af8145aecd2d5e82a746a25f18`, VersionCode 19. Enthält PR #44 (Schutz-Prüfstelle) und PR #46 (Versionsnummer), einschließlich der Reparaturen aus .18.
+Vollständige Main-CI 39570196725 einschließlich native-smoke grün: 46 Android-Fälle ohne Fehler/Überspringen, 34 Schutz-Simulationen und 18 Ersatzschlüssel-Gegenproben. Release 39575223652: Signatur/Metadaten 119138967179, signiertes Update **.18 → .19** 119141943511 und Veröffentlichung 119142938424 erfolgreich. Daten, Sprache, Offline-Kaltstart, Speicherort-Einstellung und Android-Ordnerauswahl erhalten/geprüft.
+Öffentlicher Download im Release-Job mit `cmp` bytegleich zum signierten Artefakt. Zusätzlicher unabhängiger Download stimmt in SHA-256 und Größe mit SHA256SUMS und GitHub-Assetdaten überein; die ausgelieferten Dateien `native-protect.js` und `native-recovery.js` stimmen bytegleich mit der Quelle überein.
+SHA-256: `b5851f24eee940078f1cd5805e64e0eb5482ab4d3cdf8e3d83f216ffef6d6604` (5.667.836 Bytes). Originalsignierer ausschließlich in Actions; `PB_SIGNING_UNLOCK` behalten. PWA und geschützte Module unverändert.
+Die Schutz-Prüfstelle ist enthalten, bleibt aber ein begrenzter Schutz anhand von Regeln/Listen. Echte Anbieterzugänge und Klaus' Tablet wurden nicht getestet; die dokumentierten Anbieter-/Lizenzgrenzen bleiben bestehen.
+[Bedienung und Grenzen](docs/SCHUTZ-VIREN-SPAM-BETRUG.md), [Prüfstand](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-19--2026-10-21).
+
+**Vorschau .18 veröffentlicht (2026-10-21): Ersatzschlüssel repariert.**
+[APK .18](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.18/Private-Brain-Pro-0.1.0-preview.18.apk) über die vorhandene App installieren, nicht deinstallieren.
+Unterer Tresor: echte Android-Dateisicherung der fünf Anteile; Einrichtung erst nach erfolgreichem Export und Bestätigung. Abbruch/Fehler, Passwortwechsel und verspätete Antworten nach Schließen abgesichert. Drei Anteile stellen dessen Passwort wieder her, nicht das getrennte Tablet-/SD-Speicherort-Passwort.
+Quelle/Tag `090503e1b4115e0e9bea07359d637b47de0e10e6` (`v0.1.0-preview.18`, Code 18); vollständige Quell-CI 39508996409 mit 41 Android-Fällen und Identitätsprüfung 39508996281 grün. Release 39510666137: signiertes .17→.18-Update 118933109306 und Veröffentlichung 118933930393 erfolgreich.
+SHA-256: `6258bbb6d340b0e2404ff02c294bf011f4824b2cbfea5b6487ed8c102f803fa9` (5.637.591 Bytes). Der Release-Job hat den öffentlichen APK-Download mit `cmp` bytegleich zum signierten Artefakt geprüft. Der zusätzliche unabhängige Download stimmt in SHA-256 und Größe mit den veröffentlichten Prüfsummen und GitHub-Assetdaten überein.
+Release-Werkzeuge von `235c7b124267e06e3d16fdb550d22cb7c147e2f6` (PR #45, CI 39508757517 mit tatsächlichen Activity-Neustarts in allen drei Phasen). Enthalten: Export-, VaultCode- und Navigationsreparatur; PR #44 **nicht** in dieser APK. Zum .18-Release blieb die Schutzfunktion auf main vorbereitet. PWA/geschützte Module und Originalsignierer unverändert.
+[Bedienung/Prüfgrenzen](docs/TRESOR-ERSATZSCHLUESSEL.md), [Release-Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-18--2026-10-21). Keine Messung an Klaus' Tablet. `PB_SIGNING_UNLOCK` behalten.
+
+**Bauabschnitt 5 in Vorschau .19 veröffentlicht (2026-10-21): Schutz vor Viren, Spam, Betrug.**
+Prüfstelle `native/native-protect.js` (`PBSchutz`) mit Einschüben: Regeln für Spam/Betrug
+(ohne Netz), MalwareBazaar-/URLhaus-Listen (abuse.ch, persönlicher Auth-Key), VirusTotal
+nur Fingerabdruck auf Tipp, Übergabe an Virenscanner-App. Listen, Stand und Schlüssel
+**nur** verschlüsselt im Speicherort-Ordner unter `Schutzlisten/` mit lesbaren Namen,
+nie im App-Speicher (`Protection`/`ProtectionList`/`ProProtectPlugin`). Automatisch alle
+12 h, Gesamtliste nur im WLAN, Internetschalter beachtet. Nie „virenfrei“ schreiben.
+Anbieter nicht erreichbar gemessen, Lizenz für Verkauf offen, Tablet nicht gemessen.
+[Bedienung, Grenzen, Nachweise](docs/SCHUTZ-VIREN-SPAM-BETRUG.md).
+
+**Vorschau .17 veröffentlicht (2026-10-20).**
+[APK .17](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.17/Private-Brain-Pro-0.1.0-preview.17.apk)
+über die vorhandene .16 installieren, nicht deinstallieren. Unveränderter Tag
+`v0.1.0-preview.17` auf `39e8fae98671870962e70d5263416acd21502e37`;
+vollständige Main-CI 39482528010 und Identitätsprüfung 39482529491 grün.
+Release 39484440521, Versuch 2: signiertes Update .16 → .17 (Job 118867063256)
+mit Daten, Sprache, Offline-Kaltstart, Speicherort-Einstellung und Android-Ordnerauswahl
+bestanden; Veröffentlichung 118868309640 erfolgreich. Öffentlicher Download mit
+`cmp` bytegleich zum ursprünglichen signierten Artefakt geprüft (5.634.429 Bytes).
+SHA-256: `859c0b16c3517527a21deff909767e572603f7818e2c5ce9e8424dfa3ade097c`.
+Der erste Versuch scheiterte schon beim .16-Start an einem WebView-Antworttimeout;
+unveränderte APKs und Probe bestanden im Diagnoselauf 39491051454 und im Release-Wiederanlauf.
+Keine belegte tiefere Ursache und kein geänderter App-Code; keine Prüfung abgeschwächt.
+Originalsignierer bleibt ausschließlich verschlüsselt auf main; Freigabe nur in Actions.
+Die alten vier Signier-Secrets sind nach Release und Downloadprüfung zur Löschung
+freigegeben, wurden von dieser Sitzung aber nicht gelöscht. `PB_SIGNING_UNLOCK` behalten.
+[Prüfstand](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-17--2026-10-20),
+[Release-Ablauf](docs/VEROEFFENTLICHEN.md), [Signierung](docs/SIGNIERUNG-UND-GITHUB.md).
+PWA und geschützte Drift-Guard-Module unverändert. Noch keine Messung an Klaus' Tablet.
+
+**Bauabschnitt 1 (Vorschau .17, 2026-10-20): eigener Speicherort mit Passwort.**
+Einstellungen → „🔐 Speicherort und Verschlüsselung“: Tablet oder SD-Karte über die
+Android-Ordnerauswahl, Passwort nur im nativen Dialog (PBKDF2 600k → AES-256-GCM,
+Format PBV1, `VaultCrypto`/`Vault`/`ProVaultPlugin`, Seite `native/native-vault.js`).
+Mail-Anhänge bis 1 GiB je Datei werden von Android stückweise in `Anhänge/` gestreamt,
+nie durch die WebView; geöffnete Mails, Konten/Entwürfe, Originale und Katalogsicherung
+liegen verschlüsselt im Ordner; „Vorhandenen Ordner öffnen“ stellt auf neuem Gerät
+wieder her (nur ergänzen, nie überschreiben). Explorer „📎 Mail-Anhänge“ mit „Ganzen
+Ordner leeren“ → Mails zeigen „Anhang gelöscht“. Ohne Speicherort bleibt .16-Verhalten.
+Prüfen im Ordner, VirusTotal, Senden großer Anhänge, Passwortwechsel: noch offen.
+Am Tablet nicht gemessen. [Bedienung, Format, Grenzen, Nachweise](docs/SPEICHERORT-UND-TRESOR.md).
+
+**Private Brain Pro .16 veröffentlicht:** kleinere Navigationsnamen stehen direkt
+rechts neben den Symbolen, auch auf dem Handy. Alle acht Ansichten bleiben sichtbar;
+bei wenig Platz oder größerer Schrift verteilen sie sich auf flache Zeilen. Suche,
+Zähler und Filter sind kompakter; beide Suchmodi passen vollständig in schmale
+Fenster. Keine animierten Buttonbreiten beim Fensterwechsel. Tooltips, Zahnrad,
+Statuslampen, Ordnerauswahl und App-Internetschalter bleiben erhalten.
+[APK .16](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.16/Private-Brain-Pro-0.1.0-preview.16.apk) über die vorhandene App installieren, nicht deinstallieren.
+Anwendungscommit `0b7fef62a989be4200c1372df8c229ae7253d6c8` (PR31), Quelle `4d668e9ef122060f9b1d96deab52f6515ae4b61e`;
+vollständige CI 39443580790 und 39443590674 bestanden: 319 native
+Browser-Gegenproben plus je 101 in Firefox/WebKit, 37 Android-Fälle ohne
+Fehler/Überspringen, Web-/Mail-Suiten, Unit, Build und Lint. Signiertes Update
+.15 → .16 39443727118 mit erhaltener Sprache, Offline-Kaltstart und erneutem
+Einschalten sowie wiederholter Android-Ordnerauswahl bestanden. Veröffentlichung
+39445984706; öffentlicher Download bytegleich geprüft.
+[Bedienung/Grenzen](docs/BESCHRIFTUNGEN-UND-ORDNER.md),
+[Bilder](docs/design/compact16/README.md),
+[Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-16--2026-10-20).
+Plattformen: Oberflächentests in Chromium, Firefox und WebKit unter Linux;
+keine echten iOS-/Windows-/macOS-/Samsung-/DeX-Gerätetests. Installierbar ist
+weiterhin Android. Native iOS-/Desktop-Ausgaben und deren Geräteadapter fehlen.
+Die unabhängige PWA bleibt unberührt. Google-Konto/Client nicht neu registrieren.
+Der getrennte Speicher-/Quarantäne-/Modell-Auftrag bleibt offen.
+
+**Private Brain Pro .15 veröffentlicht:** kurze Namen in der Navigation, sichtbare
+Tooltips, kleinere anklickbare Dashboard-Kacheln und ein echtes Zahnrad.
+Alle acht Ansichten bleiben direkt sichtbar, auf dem Handy in zwei flachen Zeilen.
+Android-Ordnerauswahl bleibt nach „Nicht mehr zeigen“, Abbrechen und Neustart
+bedienbar. Neue zusätzliche Ablagekopien werden geprüft und überschreiben keine
+vorhandenen Dateien; alte Originalkopien/Katalogeinträge bleiben beim Wechsel.
+Die großen Hinweisboxen stehen klein unter dem Einwurf. Der Mail-Ladehinweis
+unterscheidet Abruf, Ansicht und tatsächliche Regelprüfung; kein vollständiger
+Virenscanner. [APK .15](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.15/Private-Brain-Pro-0.1.0-preview.15.apk) über die bestehende App installieren, nicht deinstallieren.
+Anwendungscommit `161e9156d46b9b36007cedc322881d124f802ed2` (PR29), vollständige CI 39436653702
+mit 275 Browser- und 37 Android-Fällen bestanden. Signiertes Update .14 → .15
+39437954389 einschließlich echter Android-Ordnerauswahl nach ausgeblendetem
+Hinweis, Offline-Kaltstart und erneutem Einschalten bestanden. Veröffentlichung
+39438829136, öffentlicher Download bytegleich geprüft.
+[Bedienung/Grenzen](docs/BESCHRIFTUNGEN-UND-ORDNER.md),
+[Bilder](docs/design/compact15/README.md),
+[Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-15--2026-10-20).
+Die Zusatzablage ist noch keine passwortverschlüsselte externe Ablage. Keine
+automatische Ordnersynchronisierung; Wechsel gilt für zukünftige Kopien.
+Der getrennte Speicher-/Quarantäne-/Modell-Auftrag bleibt offen. Mailfunktion am
+Gerät wurde vom Nutzer bereits bestätigt; keine neue Google-Registrierung nötig.
+
+**Private Brain Pro .14 veröffentlicht:** kompakte Symbolleisten und echter
+App-Internetschalter im App-Menü, in beide Richtungen und nach Neustart erhalten.
+[APK .14](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.14/Private-Brain-Pro-0.1.0-preview.14.apk) über die vorhandene App installieren, nicht deinstallieren.
+Anwendungscommit `31a27eeba707cad4f4752ceccfd3c0e0b49a50e1` (PR27), vollständige CI 39425363587
+mit 231 Browser- und 34 Android-Fällen erfolgreich. Signiertes Update .13 → .14
+39425723720 einschließlich Offline-Kaltstart und erneutem Einschalten bestanden.
+Veröffentlichung 39427132118, öffentlicher Download bytegleich geprüft.
+[Bedienung](docs/KOMPAKTE-ANSICHT-UND-OFFLINE.md),
+[Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-14--2026-10-20).
+
+**Neuer Stand .14:** Kompakte Symbolleisten nach Outlook-Vorbild, auch in der
+Handyansicht. Offline-Informationshinweis entfernt. Echten App-Internetschalter im
+App-Menü in beide Richtungen implementiert; Konten/Entwürfe und Betriebssystemnetz
+unverändert lassen, niemals automatisch Mails erneut senden. Details und Grenzen:
+[Kompakte Ansicht und Offline](docs/KOMPAKTE-ANSICHT-UND-OFFLINE.md).
+
+**Private Brain Pro .13 veröffentlicht**, ohne „Test“ im Appnamen.
+[APK .13](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.13/Private-Brain-Pro-0.1.0-preview.13.apk) über die bestehende App installieren, nicht deinstallieren.
+Anwendungscommit `a5440d3bb01977a762f4e40ab2c170a8f14c37e6` (PR24), vollständige CI 39415063064
+mit 31 Android-Fällen erfolgreich; signiertes Update .12 → .13 39415186477
+mit Pro-Namen, erhaltener Spracheinstellung und Rückwegen bestanden.
+Veröffentlichung 39416838139, öffentlicher Download bytegleich geprüft.
+Google-Branding bereits Pro laut Nutzerbildern; vorhandener Client und Testnutzer
+bleiben gültig. [Name und Google](docs/APP-NAME.md),
+[Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-version-13--2026-10-20).
+
+**Nutzerauftrag ab Version .13:** App sichtbar **Private Brain Pro**, ohne „Test“.
+Paketkennung und Signatur unverändert lassen, bestehende App aktualisieren.
+Google-Branding heißt laut Bildern bereits Pro; keine neue Registrierung nötig.
+Google-Testnutzerstatus nicht automatisch auf Produktion umstellen.
+[Name, Installation und Google](docs/APP-NAME.md).
+
+**Vorheriger Stand, 2026-10-20: Vorschau .12 mit sieben Anbietervorlagen veröffentlicht.**
+.12 enthält sieben native Vorlagen und erhält die Googlemail-/Kontowechsel-Reparatur
+aus .11. 31 native Fälle und signiertes Update .11→.12 bestanden.
+Der Nutzer hat ein gespeichertes Google-Konto und eigene Serverordner gezeigt;
+Nachrichtenabruf und Versand am Gerät sind weiterhin offen. Nicht pauschal ein
+neues Google-Projekt oder Konto anlegen lassen. Neu: WEB.DE, GMX, Yahoo und IONOS
+sind als native Vorlagen verfügbar; Microsoft mangels eigener Registrierung zunächst
+nur vorbereiten, ohne Passwortlogin oder behauptete fertige Verbindung.
+[Anbietervorlagen/Microsoft](docs/MAIL-ANBIETER.md),
+[Google-Diagnose](docs/GMAIL-RUECKGABE-DIAGNOSE.md),
+[Prüfstand](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-vorschau-12--2026-10-20),
+[Übergabe](BRIEF_NACHFOLGE_2026-10-20_gmail.md). Ältere Zwischenstände unten historisch.
+
+**Nächster Auftrag (2026-10-20):** eigener Speicherort (SD-Karte/Tablet, Passwort-verschlüsselt), Quarantäne für Mail-Anhänge bis 1 GB, Bedeutungssuche mit Modell im APK, Sicherheitspaket, Mycel/Siegel nach aktuellem Kanon (oben verankern, minimieren, ausblenden) mit eigener Identität, Vorbereitung Viren-/Spam-/Scam-Schutz (Scanner-Schnittstelle) — Stand .16 abgeglichen — [Brief](docs/BRIEF_2026-10-20_speicherort-quarantaene-suche-sicherheit.md). Nutzer 2026-10-20: Mailabruf und -versand funktionieren am Gerät in jede Richtung, auch mit Anhang.
+
+**Kurz-Verfassung.** Netzweites steht in **Sage-Protokol**; hier steht nur, was eine
+Sitzung wissen muss, **bevor** sie hier etwas anfasst.
+
+## Veröffentlichter Pro-Verbund, 2026-11-02
+
+Der Nutzer hat den Verbund mit Familienakte einschließlich Windows, geprüfter
+Main-Übernahmen und Updates freigegeben. Der Gesamtauftrag wird im Familienakte-Repository
+protokolliert; das Geschenk entsteht erst nach dem Bau. Erster abgesicherter PB-Abschnitt:
+[Teileingang und Prüfgrenzen](docs/PRO-VERBUND-EINGANG.md). Fehlgeschlagene Importe
+bleiben erhalten, Quittung erst nach Katalogabschluss und frisch geprüften
+Originalbytes. Keine Änderung von Appkennung oder Datenbanknamen.
+
+Der übernommene Abschnitt verbindet den gemeinsamen Tresor unabhängig von der eigenen
+Ablage, mit quittiertem Hin-/Rückweg und erhaltenen Sicherungsquittungen auf Android
+und Windows: [Umfang und Prüfgrenzen](docs/PRO-VERBUND-NATIV.md).
+**Private Brain Pro 1.0.44 ist auf beiden Plattformen veröffentlicht.**
+Main-Prüfungen, signiertes Android-Update und tatsächliche App-Paare mit Familienakte
+bestanden. [Veröffentlichung, Downloads und Grenzen](docs/PRO-VERBUND-VEROEFFENTLICHUNG-1.0.44.md).
+Die historischen Versionsangaben oben werden dadurch ergänzt. Diese Veröffentlichungen
+nicht erneut auslösen; persönliche Geräte folgen im Nutzertest.
+
+## Was dieses Repo ist
+
+**Private Brain** ist Klaus' **fokussiertes Zusammenführungs-Repo** (Entscheid 2026-07-16):
+hier läuft alles zusammen, was ein **privates, offline betriebenes „zweites Gehirn"** ausmacht.
+
+- **Die Box / der private Raum:** eine offline-fähige PWA, durch die man einmal **alle eigenen
+  Daten** (Mails, Dokumente, Fotos, Notizen) laufen lässt. Sie liest jede Datei **einmal**,
+  **signiert** sie, behält nur einen winzigen **Bedeutungs-Katalog** (Vektor + Steckbrief +
+  Zeiger aufs Original) und lässt die **Originale unangetastet**. Danach: **semantische,
+  kombinierende Suche** über gemischte Daten. Drei Vertrauens-Säulen: *liest nur · schlägt vor ·
+  bewegt nichts.*
+- **Herkunft:** das lauffähige Fundament ist **byte-kopiert aus Company-Brain** (v0.1) und für
+  die **Privatperson** umgewidmet. Company-Brain und alle anderen Repos **bleiben unangetastet** —
+  nur Private Brain wird gebündelt/gebaut.
+- **Zugleich ein SBKIM-Endknoten:** eigene Identität, DB-Schublade `sbkim_privatbrain`,
+  optionale server-lose Verbindung (Modul 23), Standard **aus** (offline-first).
+- **Positionierung:** *„kein großes Unternehmen dahinter, in Heimarbeit gebaut"* — der
+  Vertrauens-Keil für Menschen, die den großen Namen (Microsoft & Co.) nicht mehr trauen.
+
+## Sprache, Befehle, Design
+
+Seit dem Umbau vom 2026-10-19 sind Suche (Startseite), Dateien hinzufügen und Explorer
+die drei Hauptseiten. Gemeinsame Navigation und lokale Kopienablage stehen in
+`assets/workspace.js`/`.css`. Das bestehende Design und die vier Sprachen bleiben
+verbindlich. Kopien werden nur nach Wahl eines lokalen Ablageordners geschrieben;
+Browser ohne Ordner-API dürfen keinen dauerhaften Gerätezugriff vortäuschen.
+Details und Prüfgrenzen: `docs/BRIEF_2026-10-19_suche-ablage-explorer.md`.
+
+Das ergänzende **Postfach** verwendet den Sende-Prüfer-Aufbau in
+`assets/mail-workspace.js`/`.css`. Modul 25 und die neuen Anhang-/Format-/HTML-Prüfer
+sind bytegleich kopiert und gepinnt; nie hier abwandeln. Lokale Ordner sind keine
+IMAP-Ordner, Export ist kein Versand, Vormerken kein Senden. Die zusätzliche optionale
+Anbindung in `assets/live-mail.js`/`mail-service/` spricht dagegen echte IMAP-/SMTP-Server
+über einen privaten HTTPS-Dienst an (Hetzner, Telekom). Sie ist opt-in, ohne Konten
+standardmäßig getrennt; Kontozugangsdaten niemals in Git, localStorage oder Logs.
+Betrieb und Grenzen: `docs/MAIL-DIENST.md`. Nach unklarem Versandresultat niemals
+automatisch wiederholen; die serverseitige Kennung bleibt dauerhaft gespeichert. Beim KI-Weg nur den
+verdeckten Text und ausschließlich den Schlüssel des ausgewählten Anbieters
+weitergeben; die Zuordnung bleibt lokal. Gegenprobe:
+`python3 tools/gegenprobe-mail-workspace.py` (nur Wegwerfkopien).
+
+- Doku auf **Deutsch**, Code-Bezeichner auf **Englisch**. Datum `YYYY-MM-DD`.
+- **UI-Sprachen:** Deutsch · English · Русский · Polski (DE/EN/RU/PL).
+
+```bash
+npm install     # einmalig: playwright-core (Chromium ist im Environment vorhanden)
+npm test        # Beweis: Drift-Guard (8 Module byte-1:1) + 6 headless e2e-Suiten
+npm run serve   # python3 -m http.server 8000  → http://localhost:8000/
+```
+
+## Design-Vorgabe (Klaus 2026-07-16)
+
+- **Optik angelehnt an das Warenwirtschafts-Dashboard** von Perfect-Skin-Fashion
+  (`warehouse.html`) + die Design-Sprache von Alis-Moderaum: dunkle Karten, KPI-Kacheln
+  (`.tile`, Regenbogen-Kante), Emoji-Tab-Leiste, Status-Pills, `data-theme` am `<html>`.
+- **Nur** Hell/Dunkel-Umschalter (zwei Themes) **+ Hard-Reload-Knopf** — kein weiterer
+  Design-Umbau ohne Auftrag.
+- **Warenwirtschaft als Ordnungs-Metapher:** jede Datei = ein „Artikel" (Pfad, Kategorie,
+  Status neu/gepflegt/archiviert, Tags), jede Sortier-/Pflege-Aktion = ein **Journal**-Eintrag.
+
+## Was hier leicht kaputtgeht
+
+- **Kopieren, nicht klonen.** Die byte-1:1 übernommenen Module
+  (`modules/01,02,03,04,05,05b,23,noble-secp256k1`) werden **nicht abgewandelt** — der
+  Drift-Guard (`tools/drift-guard.mjs`, Teil von `npm test`) wacht per SHA-256.
+  Reift ein Modul, wird es **in Sage gepflegt und neu kopiert**. App-eigener Klebstoff
+  (`rendezvous-init.js`, `index.html`) ist frei.
+- **DB-Suffix `privatbrain` nie ändern** — geteilter Origin auf GitHub Pages, sonst
+  kollidiert der Datenbestand mit Geschwister-Apps.
+- **Der Gerätename** wird vom app-eigenen Glue ins Verbinden-Panel gehängt — hier
+  `rendezvous-init.js`, **nie** in eine byte-kopierte Panel-Datei.
+  Regel: [NETZWEIT § 2](https://github.com/lausiklauskn-png/Sage-Protokol/blob/main/docs/NETZWEIT.md).
+- **Echte Krypto.** AES-256-GCM / PBKDF2-SHA256 600k (WebCrypto), Ed25519
+  (`node:crypto`). Das semantische Modell ist bis zu Klaus' Browser-Lauf klar als
+  Stub markiert, wo nötig.
+- **Offline.** Keine CDNs, keine Laufzeit-Abhängigkeiten im Browser. Fremde Origins
+  (bewusst freigeschaltete EU-KI) nur nutzer-ausgelöst.
+
+## Stufen-Fahrplan (Klaus 2026-07-16, alle bestätigt)
+
+| Stufe | Was | Stand |
+|---|---|---|
+| 0 | Fundament aus Company-Brain kopiert + umgewidmet + Dashboard-Optik + DE/EN/RU/PL + Hell/Dunkel + Hard-Reload | in Arbeit |
+| 1 | Verschlüsselung des Katalogs/privater Texte (JasonLib-Tresor / Modul 20) | geplant |
+| 2 | **Mail-Import** (Gmail-Takeout `.mbox`/`.eml`, offline) — der Unterschied zu NAS | geplant |
+| 3 | Bild-Verstehen-Stufe (Bild→Text→Sinn, Late-Fusion; Florence-2 via Transformers.js) | geplant |
+| 4 | Kombinierende Mehrschritt-Suche (Urlaub → ähnliche Orte → Reisebüro-Angebot) | geplant |
+| 5 | Selbstlernende Sortierung aus Korrekturen (Classification-by-Retrieval, kein Training) | geplant |
+| 6 | Optionale Freunde-Verbindung server-los (Modul 23, Default aus) | geplant |
+| 7 | Später: echte Offline-Box (lokales Relais + lokales Modell + lokaler Richter-Slot) | geplant |
+
+## Test & Ehrlichkeit über den Zustand
+
+- **Headless `npm test`** bestätigt die Motor-Logik — unser Beweis.
+- Die **App** ist erst „grün", wenn **Klaus sie im Browser angesehen** hat. Solange das
+  aussteht: ehrlich **„ungeprüft, wartet auf Klaus' Browser-Lauf"**.
+- **Hard-Reload** nach jedem Pull — Service-Worker und HTTP-Cache sind hartnäckig.
+- **Plan-vor-Code:** erst Pflichtlektüre, dann ein kurzer Plan an Klaus, bevor größere
+  Bauten starten. Gibt Klaus ausdrücklich einen Freibrief, entfällt das im
+  freigegebenen Umfang. **Keine stillen Workarounds.**
+
+## Branch
+
+Entwicklung auf dem **für die Sitzung vorgegebenen Branch** (steht im ersten Prompt).
+Ein Commit pro abgegrenzter Aufgabe, sprechende Nachricht auf Deutsch.
+
+> Bis 2026-08-22 stand hier ein fest verdrahteter Branch-Name aus einer alten
+> Sitzung. Er stand gegen den Branch, den die Sitzung tatsächlich vorgegeben
+> bekommt — wer der Datei folgte, pushte ins Leere.
+
+---
+
+## 🌐 DAS MYCEL-FENSTER SPRICHT DEUTSCH UND ENGLISCH (Klaus 2026-09-16)
+
+Klaus: *„Private Brain soll zweisprachig werden … der Zweisprach-Modus für Mycel
+und für das Siegel."*
+
+**Das Siegel war schon zweisprachig.** `modules/16_siegel.js` ist byte-1:1 aus Sage
+und trägt seit dem Modul-15/16-Rollout eine eigene `TEXTE.en` — ebenso 15 und 17.
+Nachgemessen, nicht angenommen:
+
+| Modul | byte-1:1 mit Sage | eigene EN-Tabelle |
+|---|---|---|
+| 15 Membran · 16 Siegel · 17 Widget | ✔ | ✔ |
+| 23 Rendezvous | ✔ | — (trägt keine Anzeigetexte) |
+
+**Offen war das Mycel-Fenster** — `modules/net-widget.js`, 838 Zeilen app-eigener
+Klebstoff, **null** Übersetzungs-Treffer. Es trägt jetzt dieselbe Mechanik:
+schlüssellos, der deutsche Satz IST der Schlüssel, **98 Einträge**.
+
+⚠ **WARUM EINE EIGENE TABELLE.** Die Kanon-Module sind byte-1:1-Kopien, ihre `TEXTE`
+sind modul-intern. Modul 16 hat aus demselben Grund eine eigene. Dieses Fenster ist
+app-eigen — seine Sätze gehören ihm.
+
+### ⚠ DER FUND, AUF DEN ES ANKAM: das Panel wird beim LADEN gebaut, nicht beim Öffnen
+
+`T()` wirkt in dem Augenblick, in dem ein Text **entsteht**. Wer danach die Sprache
+umschaltet, bekommt die alten Sätze. **Gemessen im echten Browser:** mit
+`<html lang="en">` nach dem Laden stand das Fenster **vollständig auf Deutsch** —
+obwohl Tabelle und `T()` tadellos waren.
+
+⚠ **EIN WÄCHTER AUF DIE TABELLE HÄTTE DAS NICHT GESEHEN.** Er liest den Quelltext;
+hier ging es um den Schirm. Gefunden hat es die **Browser-Hälfte** der Probe.
+
+**Was jetzt gilt:** ein `MutationObserver` auf `<html lang>` mountet das Fenster über
+**dieselbe** `mountFlying()` neu. Ein zweiter Nachtrage-Weg wäre eine zweite Fassung
+derselben Beschriftungen, und zwei Fassungen laufen auseinander. Getippte Frage und
+Gerätename werden gerettet; Auf/Zu, Lage und Erklär-Zustand liegen im `localStorage`,
+die Verbindung lebt in Modul 23 — nichts davon wird angefasst.
+
+### ⚠ UND DIE RETTUNG HAT PROMPT EINEN DEUTSCHEN SATZ ZURÜCKGEHOLT
+
+Die gerettete Statuszeile ist selbst übersetzt. Wörtlich hinübergereicht stand
+„Noch nicht verbunden." mitten in der englischen Oberfläche — **genau die halb
+übersetzte Tafel**, gegen die alles hier gebaut ist. Gefangen hat es der Wächter
+„KEIN deutscher Tabellen-Satz bleibt stehen", nicht das Nachdenken. Sie wird jetzt
+erst **nach Deutsch normalisiert** (`nachDeutsch()`) und dann neu übersetzt — das
+trägt **beide** Richtungen.
+
+⚠ **BENANNTE GRENZE:** eine Zeile aus Bruchstücken **und** einem Knoten-Namen
+(`✓ Antwort von „Kimboard" — siehe unten.`) steht in keiner Tabelle und behält ihren
+Wortlaut bis zur nächsten Aktion. Sie zu zerlegen hieße raten.
+
+⚠ **BENANNTE GRENZE: die App kennt VIER Sprachen, der Kanon zwei.** Bei `lang="ru"`
+und `lang="pl"` fällt das Fenster — wie Modul 15 und 16 — fail-soft auf **Deutsch**
+zurück, nicht auf Englisch. Das ist die Entscheidung des Kanons; sie hier anders zu
+treffen hieße, dass das Fenster etwas anderes spricht als das Siegel daneben.
+**In beide Richtungen bewacht.**
+
+### ⚠ Zwei Fehler im eigenen WERKZEUG, keiner im Code
+
+| Was | warum es nichts maß |
+|---|---|
+| `[^,]*` im Umschließ-Muster | **die Klasse überspringt Zeilenumbrüche.** Ein gieriger Treffer verschluckte mehrere Zeilen und übersprang die Stellen darin — 14 Beschriftungen blieben unübersetzt, darunter der ganze Erklär-Absatz des Fensters. Gefangen hat es der Verwaisten-Wächter |
+| die Anker-Prüfung der Gegenprobe | sie zählte den Anker **nach** dem Eingriff. Ein Ersatztext darf den Anker enthalten (Einfügungen tun das) — zwei tadellose Fälle meldeten sich als „toter Anker". Gemessen wird jetzt, **ob sich die Datei wirklich geändert hat** (PWA-Toolpoint-Lehre) |
+
+### Geprüft
+
+```bash
+node tools/e2e-netwidget-sprache.mjs          # echter Browser, DE · EN · EN→DE · RU
+bash tools/gegenprobe-netwidget-sprache.sh    # Wegwerf-Kopie, node_modules verwiesen
+```
+
+Zuletzt gemessen (2026-09-16): **17 grün · 0 rot** · Gegenprobe **9 gefangen ·
+0 durchgerutscht · 0 aus falschem Grund · 0 tote Anker**. Beide Rückgabewerte
+**direkt** gelesen, nicht hinter einer Pipe.
+
+✅ **`npm test` LÄUFT SEIT DEM 2026-10-13 WIEDER BIS ZUM ENDE.** Hier stand:
+*„`tools/e2e-siegel.mjs` hat vier vorbestehende Rote (Andock-Wizard-Injektion) … die
+Kette hängt an `&&`, deshalb laufen die drei Proben dahinter gar nicht."*
+
+**Die Ursache lag in der Probe, nicht im Code.** Seit A18 (#87, 2026-09-14) legt der
+Kanon-Wizard (`assets/sbkim-andock-wizard.js`) seine Elemente als `sbkim-si-*` an.
+#87 hat in der Probe nur das Präfix der vier Schritte (`sbwiz-`) nachgezogen; die fünf
+Element-Kennungen (`pb-ident-open`, `pb-semantik-block`, `pb-semantik-resign`,
+`pb-schutz-block`, `pb-ident-wizard`) blieben stehen. Der Wizard war da, die Probe sah
+ihn nicht. *Ein Umzug macht jeden Wächter tot, der auf die alte Stelle zeigt.*
+
+Gemessen: `e2e-siegel` **16 bestanden · 0 fehlgeschlagen**. Von Hand gegengeprüft in
+einer Wegwerf-Kopie: ohne die Wizard-Zeile werden genau die vier Zeilen rot, ohne den
+Semantik-Block nur dessen eine. `npm test` gibt **0** zurück; die drei Pinnwand-Proben
+laufen mit (57 · 21 · 15 grün) — direkt gelesen, nicht hinter einer Pipe.
+
+⚠ **Cache-Bump:** `net-widget.js` steht im Vorrat von `sw.js` → `CACHE` v63 → **v64**,
+**gegen `origin/main` geprüft**, nicht gegen die eigene Datei (NETZWEIT § 3a: zwei
+Sitzungen haben schon einmal dieselbe Nummer vergeben).
+
+## Netzweit — gilt in jedem Repo, steht in Sage
+
+Freibrief zum Selbst-Mergen · Gerätename im Verbinden-Panel · frisch von
+`origin/main` vor jeder Arbeit · Ton (Klaus ist kein Programmierer: Deutsch,
+Einzelschritte, keine Terminal-Kommandos wo ein Knopf reicht) · kein PII ·
+Ehrlichkeit: **[`Sage-Protokol/docs/NETZWEIT.md`](https://github.com/lausiklauskn-png/Sage-Protokol/blob/main/docs/NETZWEIT.md)**
+
+Verbindliche Verträge: **[`INTERFACES.md`](https://github.com/lausiklauskn-png/Sage-Protokol/blob/main/docs/INTERFACES.md)**. Die Fallen beim
+Abzweigen und Veröffentlichen: **[`LEHREN.md`](https://github.com/lausiklauskn-png/Sage-Protokol/blob/main/docs/LEHREN.md)**.
+
+```bash
+git fetch origin --quiet && git checkout -B <branch> origin/main
+git push -u origin refs/heads/<branch>:refs/heads/<branch>
+git diff --stat origin/main origin/<branch>     # leer = der PR wäre leer
+```
+
+> Die alte Fassung dieser Datei steht vollständig in
+> [`docs/archiv/CLAUDE-2026-08-22.md`](docs/archiv/CLAUDE-2026-08-22.md).
+
+
+## 🛡 Prüfliste vor dem KI-Richter (Sage Bau 04.J, 2026-10-14)
+
+Modul 04 kommt neu aus dem Kanon (Sage #1082). Der Richter prüft die Suchfrage und jede fremde Antwort mit der Prüfliste (`pruefer-mail.js`). Fehlt die Liste, läuft er nicht. Eine Antwort, in der eine Anweisung an eine KI steht, geht nicht an die KI. Sie bekommt „gefahr“ und `ausgeschlossen: "ki-anweisung"`.
+`modules/pruefer-mail.js` ist neu. Die Datei ist byte-1:1 und im Drift-Guard gepinnt; `index.html` lädt sie direkt nach 04, und sie steht im Vorrat. Gemessen: `npm test` Rückgabe 0; im Browser ist `prueflisteGeladen` true. ✅ Das Mycel-Fenster ist seit Sitzung 2 gemessen (Abschnitt unten). Hier stand: *„Im Code nachgesehen, nicht im Browser gefahren: das Mycel-Fenster zeigt einen ausgeschlossenen Treffer mit ⚠️ (sicherheit „gefahr“) und der Begründung.“* Cache v70. Am Tablet nicht gemessen.
+
+## 🧽 Reinigung und Prüfung vor der KI (Klaus 2026-10-14, Sitzung 2 von 4)
+
+Vorbild sind Workflow PDF #112/#113 und die Rezeptbücher (Klaus' Antworten dort: „Seiten als Bild“, „einmal anhalten“).
+Privat-Brain hat **vier eigene KI-Wege**. Bis hierher ging dort alles ungeprüft hinaus:
+
+| Weg | vorher | jetzt |
+|---|---|---|
+| 🖼 Bild-Beschreibung (Mistral pixtral) · Mistral OCR · Google Vision | ein Foto bis 1024 px ging als **Original** hinaus, samt EXIF/GPS | immer **neu gezeichnet** (`KiReinigung.bildOhneMeta`); klappt das nicht, geht **nichts** hinaus |
+| PDF ohne Textebene → Mistral OCR (beim Einlesen) | das **ganze PDF roh** | Seiten mit pdf.js gezeichnet (300 dpi), versteckter Text in der Kopie zugedeckt, Bilder hinaus; **einmal anhalten je Einlese-Lauf** („Ohne ihn senden“/„Abbrechen“), Vermerk `kiEntfernt` am Eintrag |
+| 🔗 KI zu einer Datei (Mistral Chat) | Datei-Text ungeprüft | PDF-Text aus pdf.js **ohne** versteckte Stücke (Halt „Versteckten Text gefunden“); Anweisung an eine KI im Text → **einmal anhalten** („Trotzdem senden“/„Abbrechen“); Systemkanal nennt den Text DATEN |
+| 📌 Pinnwand-Richter (Fragen/Antworten von Fremden) | ungeprüft | Block `RICHTER-PRÜFUNG` wie Kimboard #150: ohne Liste kein Richter, Frage mit Anweisung wird nicht gesendet, Antwort mit Anweisung steht mit „⚠ nicht an die KI“ da |
+
+Dazu im **Mycel-Fenster**: ein Treffer, den Modul 04 ausschließt, steht jetzt ausdrücklich mit „⚠ nicht an die KI“ und Begründung da (vorher nur ⚠️), DE/EN in der Tabelle.
+
+- `modules/reinigung.js` ist **byte-1:1 aus Workflow PDF** (`assets/reinigung.js`, gepinnt im Drift-Guard). `modules/ki-reinigung.js` ist app-eigener Klebstoff und steht **identisch in Company-Brain** — dort pflegen heißt hier nachziehen.
+- pdf.js kommt von `/Workflow-PDF/vendor/pdfjs/` (dieselbe Adresse wie bei den Rezeptbüchern). Lädt es nicht, geht kein PDF an Mistral OCR, und das 🔗-Fenster sagt „versteckter Text im PDF wurde nicht geprüft“.
+- ⚠ **Benannte Grenzen:** nur die ersten 10 Seiten · Text über einem Foto/über sichtbarer Schrift bleibt · schräger Text wird nicht beurteilt · die Prüfliste sucht feste Wendungen · Halt-Texte nur DE/EN (RU/PL zeigen Deutsch) · der Mail-Import hat keinen eigenen KI-Weg (seine Anhänge gehen durch denselben `readContent`).
+- Probe `tools/e2e-ki-reinigung.mjs` (in `npm test`, KI gestellt, braucht den Workflow-PDF-Klon, `WFPDF_KLON`; ohne → Rückgabe 2) · Gegenprobe `node tools/gegenprobe-ki-reinigung.mjs` (Wegwerf-Kopie; `NUR_ANKER=1`, `NUR_FALL=…`).
+- ⚠ Beim Bau gefunden, nicht im Code, sondern in der Probe: ein PDF aus pdf-lib liest der eigene Extraktor nicht — es ging deshalb beim Einlesen an die Texterkennung, und der Halt wartete auf einen Tipp. Das ist richtiges Verhalten; die Probe liest das PDF für den 🔗-Fall ohne Schlüssel ein.
+- Gemessen 2026-10-14: `e2e-ki-reinigung` **42 grün · 0 ROT**, `npm test` Rückgabe 0. Gegenprobe (15 Fälle, Wegwerf-Kopie): erster voller Lauf **14 gefangen · 1 durchgerutscht** — „Pinnwand schickt alle Antworten“. Der Wächter dazu las nur den Quelltext, und die Zeile `gesendet.map(…)` blieb bei der Sabotage stehen: **blind**. Ersetzt durch einen Aufruf von `judgeView` in Node mit gestelltem Richter; der Fall danach einzeln: **gefangen**. Company-Brains eigene Verdrahtung: 5 Fälle von Hand in einer Kopie, **5 gefangen**.
+- ⚠ Nicht gemessen: am Tablet, mit echten Dokumenten, mit echter KI.
+- Cache v71.
+
+### ✅ „Versteckter Text im Seitenbild zugedeckt“ ist bewacht (Sitzung 5, 2026-10-14)
+
+Hier stand als benannte Grenze: *„kein Gegenprobe-Fall für „versteckter Text wird im Seitenbild zugedeckt“ (weißer Text auf Weiß sieht zugedeckt gleich aus).“* Der Satz stimmt für weißen Text. Gemessen wird deshalb an der **winzigen, dunklen** Schrift (1 pt schwarz) aus Fall B: im Seitenbild, das an Mistral OCR geht, zählt die Probe an genau deren Stelle die dunklen Bildpunkte. Ein Selbst-Riegel zeichnet dieselbe Seite ohne Zudecken; dort müssen es mehr als 3 sein, sonst misst die Zeile nichts.
+Gemessen: ohne Zudecken 19 dunkle Bildpunkte, gesendet 0. Gegenprobe-Fall `B: versteckter Text bleibt im Seitenbild` nimmt `R.zudecken` weg und wird **gefangen** (gesendet 20). `e2e-ki-reinigung` 44 grün · 0 ROT. Weißer Text auf Weiß bleibt so unmessbar wie vorher; das ist jetzt eine Grenze der Messung, nicht mehr eine Lücke im Schutz.
+
+## ⬇ Installieren-Knopf (2026-10-18, Klaus: „unter Einstellungen, Installier-Button hinten“)
+
+`assets/installieren.js` ist byte-1:1 aus Sage-Protokol (SHA-256 `e0644084…c3`) — nie hier abwandeln. Der Knopf steht im
+Reiter ⚙️ Einstellungen im letzten Kasten `#install-box` hinten (`data-in`); als installierte App verschwinden Knopf und
+Kasten. Überschrift und Satz tragen `installH`/`installP` (DE, EN; RU und PL fallen auf Deutsch zurück). ⚠ `data-i18n`
+nie an den Kasten selbst: `applyI18n` setzt `innerHTML` und nähme den Knopf weg. Der Knopf spricht DE/EN nach `<html lang>`.
+Im Vorrat (`?v=1`), Cache v82. Gemessen im Browser: sichtbar als letztes Element (auch nach Umschalten auf EN), als App weg,
+Meldung lesbar, `getInstallabilityErrors` leer, App-Id `/index.html` (kein `id` im Manifest). `npm test` grün (mit
+`WFPDF_KLON`). Am Tablet nicht gemessen.
+
+## ⬇ Installieren auch oben in der Kopfleiste (Klaus 2026-10-18)
+
+Klaus: *„da, wo der Installationsbutton in den Einstellungen zu finden ist, vermutet keiner, dass er die App installieren
+kann … setze den Installationsbutton oben in die Navi-Leiste zusätzlich.“* Dieselbe Datei `assets/installieren.js`
+(unverändert, Sage `e0644084…c3`) setzt jetzt zwei Knöpfe: `data-vor="install-platz"` in der Kopfleiste vor 🌙 und
+weiter `data-in="#install-box"` in den Einstellungen. Als installierte App sind beide weg.
+`#install-platz` (gleiche Klasse `iconbtn`, unsichtbar) hält den Platz frei, bis der Knopf davor steht; danach und als App
+blendet CSS ihn aus. Bis 760 px nur ⬇ (Name im title/aria-label), bis 400 px rückt `.tools` enger (gap 5 px, Sprachknöpfe
+6 px, Symbolknöpfe 34 px). Gemessen im Browser (Kopfhöhe vorher → nachher): 320 px 251 → 241 · 360 px 205 → 202 ·
+412 px 205 → 205 · 1280 px 75 → 75, kein Querlaufen, CLS wie vorher; als App beide weg; Tipp ohne Angebot → Meldung
+(Kontrast 4,9); `getInstallabilityErrors` leer. Ohne die enge Leiste bekam 360 px eine zweite Reihe (205 → 251).
+Cache `private-brain-v83`. `npm test` grün (mit `WFPDF_KLON`). ⚠ Am Tablet nicht gemessen.
+
+## Pro-App: Stand 2026-10-19
+
+Dieses Repository ist jetzt **Privat-Brain-Pro**, die unabhängig kopierte Grundlage
+für die native App. Die vorherigen Abschnitte dokumentieren das geerbte Webprojekt;
+die PWA im anderen Repository bleibt unangetastet. Android/Capacitor-Konfiguration
+liegt unter `android/` und `capacitor.config.json`; `npm run sync:android` erzeugt
+nur das explizit ausgewählte öffentliche Webpaket. Details: `docs/ANDROID.md`.
+Geschützte Module bleiben unverändert. Native Brücken nur für notwendige, eng
+begrenzte Operationen und nur für den lokalen App-Ursprung zulassen.
+
+Freibrief des Nutzers gilt: selbstständig implementieren, prüfen, committen und bei
+erfolgreichen relevanten Prüfungen zusammenführen. Nicht nach einer bloßen
+Ankündigung stoppen; nur konkrete externe Voraussetzungen erfordern seine Aktion.
+Kein eigener Desktop-PC beim Nutzer voraussetzen. Keine Geheimnisse oder
+Signierschlüssel in Git oder Chat; Produktion und Vorschau getrennt signieren.
+
+
+## Helles Pro-Icon (Nutzerwunsch 2026-10-19)
+
+Der Nutzer hat ausdrücklich eine helle Pro-Variante des Icons beauftragt: glänzende
+3D-Bubbles und Leuchtverbindungen beibehalten, grauen Hintergrund durch helles
+Elfenbein ersetzen. Das betrifft Header-, App- und Installationsicons ausschließlich
+in diesem Pro-Repository. Die ältere Regel „Original-Icons nie überschreiben“ wird
+für diese gewünschte Pro-Ableitung entsprechend konkretisiert; die PWA bleibt
+unverändert. Vorlage: `artwork/private-brain-pro-light.png`, technische Größenexporte
+über `node tools/native/export-pro-icons.mjs`. Adaptive Android-Icons verwenden
+auch außerhalb des Motivs den hellen Hintergrund. Bestehenden Hell-/Dunkelmodus
+der Oberfläche weiterhin erhalten.
+
+## Native Mailarbeit für Vorschau .4 (2026-10-19)
+
+`ProMail` ist der enge Android-Adapter, `native/native-mail.js` bindet ihn vor dem
+bestehenden `assets/live-mail.js` ein. Passwörter nur im nativen Dialog; keine
+Dienst-Token für direkte Geräteverbindungen. Konten/Entwürfe/Versandnachweise
+AES-GCM/Keystore, keine stillen Ersatzschlüssel. Unklaren SMTP-Ausgang niemals
+automatisch wiederholen. Die .2-APK hat noch den alten Serverdialog. Stand und
+Prüfgrenzen: `docs/NATIVE-MAIL-ARCHITEKTUR.md`, `docs/PRUEFSTAND-ANDROID.md`.
+
+## Veröffentlicht: direkte Geräte-Mail in Vorschau .4
+
+PR #3 ist zusammengeführt, App-Quellstand a3f6051d8946c411449936bf59a1c86e12435fdc.
+Test-APK v0.1.0-preview.4 ist öffentlich; kein Dienst-Token/Termux für native Mail.
+Vollständige CI 39323175775 und signierte Updateprobe 39324803227 bestanden.
+Telekom-Anmeldung und Abruf sind inzwischen vom Nutzer bestätigt. Details und
+Prüfsumme: `docs/PRUEFSTAND-ANDROID.md`. Vorschau-Schlüssel außerhalb von Git;
+Langzeitbackup/Produktion weiterhin gesondert absichern, keine Geheimnisse erfragen.
+
+
+## Originalansicht und Fensterfläche (Nutzerwunsch 2026-10-19)
+
+Der Nutzer bestätigt direkte Telekom-Anmeldung und Nachrichtenabruf in .4.
+In .5: Original-HTML/CID-Bilder getrennt von Katalogtext, ausschließlich im
+skriptfreien Sandbox-Frame mit eigener CSP. Original-MIME und Keystoreformat
+bleiben unverändert. Keine `allow-scripts`-/`allow-same-origin`-Freigaben für Mail.
+Externe HTTPS-Bilder auf ausdrücklichen Nutzerwunsch sichtbar, abschaltbar.
+Das native Fensterlayout füllt alle Seiten ohne 1040-px-Grenze. Postfach und
+Explorer besitzen scrollbare Bereiche wie Sende-Pruefer; OS-Fensterknöpfe bleiben.
+Kontowerkzeuge im Menü „Weitere Aktionen“, rechtliche Fußtexte in Einstellungen.
+Schutzmodule/Original-PWA unverändert. Prüfnachweise: docs/design/mail-preview5/.
+
+
+## Veröffentlicht: Vorschau .5
+
+Signierte Originalansicht-/Fensterlayout-APK v0.1.0-preview.5 ist öffentlich.
+Quellstand 3ce818c0c4f02813ec925b665d55a3743af051b0, derselbe Git-Baum wie
+vollständig geprüfter f327154c8d8e78214858bc131c85097053500828. CI 39331444809:
+10 Android-Fälle ohne Fehler/Überspringen. Signierte .4→.5-Updateprobe und Upload
+39332888607 erfolgreich; direkter Download HTTP 200 und SHA256 geprüft.
+Bestehende App aktualisieren, nicht deinstallieren. Echter Telekom-Abruf bestätigt;
+neue HTML-Ansicht und Update mit gespeicherten Konten durch Nutzer noch prüfen.
+
+
+## Verbindliches gemeinsames Postfach (2026-10-20)
+
+Nutzer: Die lokale Ansicht ist auch nach Aktivierung eines Kontos verbindlich.
+Standardnamen/Symbole/Reihenfolge, Titel und Primärknöpfe werden gemeinsam über
+PBMailUI gepflegt. `native-mail-folders.js` ordnet ausschließlich die Darstellung
+zu; IMAP-Pfade nie übersetzen/umbenennen. Keine Löschrechte aus Anzeigenamen
+ableiten. Postausgang = gespeicherte Geräte-Versandversuche, Entwürfe zusätzlich
+lokal; kein unklarer Neuversand. Datenformat/Keystore unverändert. Details unter
+docs/design/mail-preview6/. Geschützte Module/Original-PWA weiterhin unverändert.
+
+
+Vorschau .6 am 2026-10-20 veröffentlicht: gemeinsames Postfach vor/nach Kontoaktivierung,
+72 native Mail-Bedienproben und 10 Android-Tests bestanden.
+Signierte Updateprobe .5 → .6 und öffentlicher Download geprüft;
+[Prüfnachweis](docs/PRUEFSTAND-ANDROID.md),
+[APK](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.6/Private-Brain-Pro-0.1.0-preview.6.apk).
+Über die bestehende Test-App installieren, nicht deinstallieren.
+
+## Verlässlicher Rückweg aus Dateien (2026-10-20)
+
+Native Dateiöffnung nie über `window.open(blobURL)` im Hauptfenster. Die interne
+Dateiansicht und History liegen in `native/native-navigation.js`; AndroidX-Zurück
+ruft denselben Weg auf. Mindestens zwölf Datei-/Seiten-Rückschritte prüfen.
+Explorerzustand beim Zurück erhalten; Eingabe-Backspace nicht abfangen. PDF/Office
+nur ausdrücklich über den engen ProFiles-FileProvider-Weg öffnen; kein beliebiger
+Dateipfad, keine Originaländerung. Konten, Datenformate und PWA unverändert.
+Details: docs/RUECKNAVIGATION.md.
+
+
+Vorschau .7 veröffentlicht: Rückweg aus Bildern/Dateien, 22 Navigationsproben und
+11 Android-Tests einschließlich zwölf echter Rückschritte bestanden. Vollständige
+CI 39342179484, signierte Updateprobe .6 → .7 mit sichtbarem und Android-Zurück
+39343904505 erfolgreich; öffentlicher APK-Download geprüft.
+[APK .7](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.7/Private-Brain-Pro-0.1.0-preview.7.apk).
+Bestehende App aktualisieren, nicht deinstallieren. Grenzen/Nachweise in
+`docs/RUECKNAVIGATION.md` und `docs/PRUEFSTAND-ANDROID.md`.
+
+## Nächste Sitzung: Google/Gmail (2026-10-20)
+
+Arbeitsauftrag und tatsächlicher Stand stehen in
+[BRIEF_NACHFOLGE_2026-10-20_gmail.md](BRIEF_NACHFOLGE_2026-10-20_gmail.md).
+Gmail/OAuth ist noch nicht implementiert. Neben Telekom/Hetzner ergänzen;
+Postfachgestaltung, Original-Mails, Rücknavigation und bestehende Konten erhalten.
+
+Zusätzlicher Auftrag derselben Folgesitzung: Nutzer bestätigt Bildvergrößerung
+und Zurück, meldet aber bei „Original öffnen“: „Original nicht erreichbar (Ordner
+nicht verbunden). Der Katalog-Eintrag bleibt.“ Diagnose/Behebung und dauerhaften
+Originalzugriff prüfen; Vorschau nicht als Original ausgeben. Im Nachfolgebrief
+ergänzt. Gmail-Auftrag bleibt bestehen; Fehler bislang nicht behoben.
+
+Weiterer Folgeauftrag: Links aus E-Mails öffnen nach Nutzerrückmeldung nicht im
+Browser. Sichere ausdrückliche Browserübergabe prüfen/implementieren, ohne die
+Mail-Sandbox oder Skriptsperre aufzuheben. Details im Nachfolgebrief. Insgesamt
+drei Aufträge: Originalbilder, Mail-Links, Gmail; Reparaturen noch offen.
+
+
+## Fortschreibung 2026-10-20: Arbeiten an Vorschau .8
+
+Die drei Folgeaufträge sind jetzt in Implementierung: dauerhafte native Originalkopien
+mit Wiederzuordnung älterer Dateien, explizite Browserübergabe aus Text-/HTML-Mail
+und native Gmail-Autorisierung/XOAUTH2. Aktuelle Architektur, Grenzen und nötige
+Google-Cloud-Konfiguration: [docs/ORIGINALE-LINKS-GMAIL.md](docs/ORIGINALE-LINKS-GMAIL.md).
+Frühere „noch nicht implementiert“-Aussagen beschreiben den Ausgangsstand.
+Noch keine echte Google-Anmeldung oder neue veröffentlichte APK behaupten; erst
+aktuelle CI-/Release-Nachweise prüfen. Bestehende Konten und die PWA erhalten.
+
+## Vorschau .8 veröffentlicht (2026-10-20)
+
+App-Quellstand `484b5dde3d0ad0a488f2a003f098f59069ed0867`, PR #14.
+CI 39351614148: 19 Android-Tests und sämtliche Web-/Mailprüfungen bestanden.
+Signiertes Update .7 → .8: 39352342121; Veröffentlichung: 39352837471.
+Öffentlicher APK-Download bytegleich geprüft. Details/Prüfsumme:
+[docs/PRUEFSTAND-ANDROID.md](docs/PRUEFSTAND-ANDROID.md).
+
+Native Originalkopien und Wiederzuordnung älterer fehlender Originale implementiert.
+Mail-Links verwenden registrierte Brokeradressen und echte Benutzergesten; nur dafür
+`allow-top-navigation-by-user-activation`, keine Skript-/Origin-/Popup-Freigabe.
+Gmail-Autorisierung/XOAUTH2 implementiert; echte Anmeldung mangels eigenem
+Google-Cloud-Projekt noch unbestätigt. Projekt/OAuth-Client jetzt mit Nutzer einrichten;
+keine Geheimnisse im Chat anfordern. Der parallele Kontrolllauf 39351619966 zeigte
+einmal ein fehlendes JavaScript-Abbruchsignal im Google-Dialog; Versuch 2 besteht
+alle 19 Fälle. Ursache nicht nachgewiesen, am Tablet zusätzlich prüfen. Siehe Prüfstand und Nachfolgebrief, keine vollständige
+Gmail-Funktionsgleichheit behaupten. PWA und geschützte Module unverändert.
+
+## Googlemail und Kontowechsel — Vorschau .11 veröffentlicht
+
+Neuester Gerätebefund: Google-Konto gespeichert, danach null/items-Fehler;
+Testnachricht weiterhin unversandt. Googlemail-Schreibweise bei Systemkontenauswahl
+und bestätigter Wiederanmeldung erhalten, kanonische Domain nur für Vergleich/Cache/
+XOAUTH2-Benutzernamen. Nur ausdrückliches Abbrechen der Kontomaske darf im JS-Adapter
+null liefern. Keine alten Nachrichten/UIDs/Zähler unter einem anderen Konto zeigen.
+Lokale Entwürfe und unklare Versandversuche nicht automatisch senden oder neu anlegen.
+Details: [Google-Diagnose](docs/GMAIL-RUECKGABE-DIAGNOSE.md).
+
+
+Vorschau .11 veröffentlicht: Anwendungscommit `83cb8e3c7072c2af2c5d5e0e5f9b329464be9796`,
+CI 39364267954 mit 28 nativen Fällen ohne Fehler/Überspringen, signiertes Update
+.10 → .11 39364425049, Veröffentlichung 39365299765. Öffentlicher Download bytegleich.
+[APK .11](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.11/Private-Brain-Pro-0.1.0-preview.11.apk).
+Über bestehende Installation aktualisieren. Nächster echter Geräteversuch:
+vorhandenes Googlemail-Konto erneut freigeben, Abruf und ausdrücklich ausgelösten
+Versand prüfen. Google-Cloud-Projekt/Client bereits eingerichtet; akzeptierten
+Gmail-Testnutzereintrag bestehen lassen. Konto nicht entfernen, nicht automatisch
+neu senden. Aktueller [Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-vorschau-11--2026-10-20).
+
+## Erweiterte Anbieterauswahl — Vorschau .12 veröffentlicht
+
+Auf Nutzerauftrag sind WEB.DE, GMX, Yahoo und 1&1/IONOS als native Vorlagen ergänzt.
+Telekom, Hetzner und Google/Googlemail bleiben erhalten. Microsoft hat laut Nutzer
+noch keine eigene Entra-Registrierung; zunächst weitere Anbieter und Microsoft-
+Vorbereitung bestätigt. Microsoft-Auswahl öffnet nur einen Einrichtungsplan und
+verbindet kein Konto. Kein Microsoft-Passwortweg vortäuschen. Zentrale Vorlagen,
+Prüfgrenzen und konkrete nächste OAuth-Schritte: [MAIL-ANBIETER](docs/MAIL-ANBIETER.md).
+
+
+Vorschau .12 veröffentlicht: Anwendungscommit `4fb2a9a3f2be196fb259cc43a2f77c1f7ab4cf7e`,
+CI 39412237956/39412342209 mit 31 nativen Fällen erfolgreich; signiertes Update
+.11 → .12 39413230433, Veröffentlichung 39413729351, öffentlicher Download bytegleich.
+Die zuerst am Knopf-Großtext gescheiterte Probe 39412634782 betraf nur den Prüfer;
+dessen Vergleich wurde korrigiert, dieselbe APK erneut vollständig geprüft.
+[APK .12](https://github.com/lausiklauskn-png/Privat-Brain-Pro/releases/download/v0.1.0-preview.12/Private-Brain-Pro-0.1.0-preview.12.apk),
+[Nachweis](docs/PRUEFSTAND-ANDROID.md#veröffentlichte-vorschau-12--2026-10-20).
+Über bestehende App aktualisieren. Für Microsoft gilt weiterhin: Registrierung
+und anschließende OAuth-/STARTTLS-Integration fehlen; nur Einrichtungsplan aktiv.

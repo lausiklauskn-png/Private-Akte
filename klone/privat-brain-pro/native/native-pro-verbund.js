@@ -1,0 +1,279 @@
+/* Voluntary transfers, one existing common vault, ordinary Private Brain import and durable receipts. */
+(() => {
+'use strict';
+const api=window.Capacitor?.Plugins?.ProVault;if(typeof api?.tresorUebergabe!=='function')return;
+const APP='private-brain',APPS=['familienakte','workflow-pdf-pro',APP,'bookledgerpro'],MAX=20*1024*1024;
+const names={'familienakte':'Familienakte Pro','workflow-pdf-pro':'Workflow PDF Pro','private-brain':'Private Brain Pro','bookledgerpro':'BookLedgerPro'};
+const W={
+ de:['Zusammenarbeit mit Pro-Apps','Freiwillig verbinden: Nur ausgewählte Dateien gehen an die andere App. Die ursprüngliche Datei bleibt erhalten.','Pro-Tresor verbinden …','Anderen Ordner wählen …','Entsperren …','Sperren','Nicht verbunden','Verbunden: ','Gesperrt: ','Ordner nicht erreichbar: ','Eingang prüfen und übernehmen','Bestätigungen prüfen','Noch offen','Weitergegeben – Übernahme offen','Im Eingang der Ziel-App','An Pro-App …','Datei weitergeben','Ziel-App','Weitergeben','Abbrechen','Übergabe nicht abgeschlossen. Quelle und offene Übergabe bleiben erhalten.','Keine passende Datei oder höchstens 20 MiB überschritten.','Die Übergabedaten passen nicht zur Datei.','Diese Kennung gehört bereits zu einer anderen Fassung.','Bitte den zugehörigen Pro-Tresor entsperren.','Im Eingang aufgenommen: {n}. Offen: {f}.','Eigene Ablage zusätzlich einziehen','Ausgang','Datei: ','Eingang prüfen','Keine offenen Übergaben.'],
+ en:['Work with Pro apps','Connect optionally: Only selected files go to the other app. The original file is preserved.','Connect Pro vault …','Choose another folder …','Unlock …','Lock','Not connected','Connected: ','Locked: ','Folder unavailable: ','Check and import inbox','Check confirmations','Pending','Passed on – awaiting acceptance','In the target app’s inbox','To Pro app …','Pass on file','Target app','Pass on','Cancel','Transfer not completed. Source and pending transfer are preserved.','Unsupported file or more than 20 MiB.','The transfer data does not match the file.','This identifier already belongs to a different version.','Unlock the matching Pro vault.','Imported: {n}. Still pending: {f}.','Also register own storage','Outbox','File: ','Check inbox','No pending transfers.'],
+ ru:['Совместная работа Pro-приложений','Подключение добровольное: передаются только выбранные файлы. Оригинал сохраняется.','Подключить Pro-сейф …','Выбрать другую папку …','Разблокировать …','Заблокировать','Не подключено','Подключено: ','Заблокировано: ','Папка недоступна: ','Проверить и принять входящие','Проверить подтверждения','Ожидает','Передано — принятие не подтверждено','Во входящих приложения','В Pro-приложение …','Передать файл','Приложение-получатель','Передать','Отмена','Передача не завершена. Источник и ожидающая передача сохранены.','Неподходящий файл или больше 20 МиБ.','Данные передачи не соответствуют файлу.','Эта метка уже относится к другой версии.','Разблокируйте соответствующий Pro-сейф.','Принято: {n}. Ожидает: {f}.','Также подключить своё хранилище','Исходящие','Файл: ','Проверить входящие','Ожидающих передач нет.'],
+ pl:['Współpraca aplikacji Pro','Połączenie dobrowolne: przekazywane są tylko wybrane pliki. Oryginał pozostaje.','Połącz sejf Pro …','Wybierz inny folder …','Odblokuj …','Zablokuj','Nie połączono','Połączono: ','Zablokowano: ','Folder niedostępny: ','Sprawdź i przyjmij pliki','Sprawdź potwierdzenia','Oczekuje','Przekazano — oczekuje na przyjęcie','W skrzynce aplikacji docelowej','Do aplikacji Pro …','Przekaż plik','Aplikacja docelowa','Przekaż','Anuluj','Nie ukończono przekazania. Źródło i oczekujące przekazanie pozostają.','Nieobsługiwany plik lub ponad 20 MiB.','Dane przekazania nie pasują do pliku.','Ten identyfikator należy już do innej wersji.','Odblokuj właściwy sejf Pro.','Przyjęto: {n}. Oczekuje: {f}.','Dodatkowo zarejestruj własny magazyn','Wysłane','Plik: ','Sprawdź skrzynkę','Brak oczekujących przekazań.']
+};
+const extra={de:['Schließen','Erneut weitergeben'],en:['Close','Pass on again'],ru:['Закрыть','Передать снова'],pl:['Zamknij','Przekaż ponownie']};
+const more=i=>(extra[document.documentElement.lang]||extra.de)[i];
+/* Mail an die Familienakte (Klaus 2026-11-09): die unveränderte .eml mit allen Anhängen über den gemeinsamen Pro-Tresor
+   ins Fach „Eingang-Familienakte“; die Familienakte löst die Anhänge dort auf Knopfdruck heraus. */
+const MAIL={
+ de:{titel:'An Familienakte',gesperrt:'Der Pro-Tresor ist gesperrt. Entsperren und die Mail mit Anhängen in den Eingang der Familienakte legen?',entsperren:'Entsperren und weitergeben',teilen:'Normal teilen',abbrechen:'Abbrechen',gesendet:'Mail mit Anhängen an die Familienakte weitergegeben. Dort unter „Pro-Eingang prüfen“ aufnehmen.',ohne:'Kein Pro-Tresor verbunden – die Mail wird normal geteilt; dort Familienakte wählen.',gross:'Die Mail ist größer als 20 MiB und kann nicht über den Pro-Tresor gehen. Bitte normal teilen.',mitSortierung:'Die Vorsortierung (Bereich, Art, Hinweis) ging mit.',ohneSortierung:'Mail übergeben, Vorsortierung nicht. Die Mail liegt mit Anhängen im Eingang der Familienakte; dort bitte selbst einordnen.',gesperrtListe:'Der Pro-Tresor ist gesperrt. Entsperren und die gewählten Mails mit Anhängen in den Eingang der Familienakte legen?',unerreichbar:'Der Ordner des Pro-Tresors ist gerade nicht erreichbar. Nichts wurde übergeben.',unerreichbarFrage:'Der Ordner des Pro-Tresors ist gerade nicht erreichbar (zum Beispiel SD-Karte nicht eingesteckt). Nichts wurde übergeben. Die Mail stattdessen normal teilen?',mitVorsortierung:'mit Vorsortierung'},
+ en:{titel:'To Familienakte',gesperrt:'The Pro vault is locked. Unlock it and put the email with its attachments into the Familienakte inbox?',entsperren:'Unlock and pass on',teilen:'Share normally',abbrechen:'Cancel',gesendet:'Email with attachments passed on to Familienakte. Accept it there under “Check Pro inbox”.',ohne:'No Pro vault connected – the email is shared normally; choose Familienakte there.',gross:'The email is larger than 20 MiB and cannot go through the Pro vault. Please share it normally.',mitSortierung:'The pre-sorting (area, type, note) went along.',ohneSortierung:'Email passed on, pre-sorting not. The email with its attachments is in the Familienakte inbox; please file it there yourself.',gesperrtListe:'The Pro vault is locked. Unlock it and put the chosen emails with their attachments into the Familienakte inbox?',unerreichbar:'The Pro vault folder cannot be reached right now. Nothing was passed on.',unerreichbarFrage:'The Pro vault folder cannot be reached right now (for example the SD card is not inserted). Nothing was passed on. Share the email normally instead?',mitVorsortierung:'with pre-sorting'},
+ ru:{titel:'В Familienakte',gesperrt:'Сейф Pro заблокирован. Разблокировать и положить письмо с вложениями во входящие Familienakte?',entsperren:'Разблокировать и передать',teilen:'Обычная передача',abbrechen:'Отмена',gesendet:'Письмо с вложениями передано в Familienakte. Примите его там через «Проверить входящие Pro».',ohne:'Сейф Pro не подключён – письмо передаётся обычным способом; выберите там Familienakte.',gross:'Письмо больше 20 МиБ и не может пройти через сейф Pro. Передайте его обычным способом.',mitSortierung:'Предварительная сортировка (область, вид, примечание) передана вместе с письмом.',ohneSortierung:'Письмо передано, предварительная сортировка — нет. Письмо с вложениями лежит во входящих Familienakte; разложите его там сами.',gesperrtListe:'Сейф Pro заблокирован. Разблокировать и положить выбранные письма с вложениями во входящие Familienakte?',unerreichbar:'Папка сейфа Pro сейчас недоступна. Ничего не передано.',unerreichbarFrage:'Папка сейфа Pro сейчас недоступна (например, не вставлена SD-карта). Ничего не передано. Передать письмо обычным способом?',mitVorsortierung:'с предварительной сортировкой'},
+ pl:{titel:'Do Familienakte',gesperrt:'Sejf Pro jest zablokowany. Odblokować i włożyć wiadomość z załącznikami do skrzynki Familienakte?',entsperren:'Odblokuj i przekaż',teilen:'Udostępnij zwykle',abbrechen:'Anuluj',gesendet:'Wiadomość z załącznikami przekazano do Familienakte. Przyjmij ją tam w „Sprawdź skrzynkę Pro”.',ohne:'Brak połączonego sejfu Pro – wiadomość zostanie udostępniona zwykle; wybierz tam Familienakte.',gross:'Wiadomość ma ponad 20 MiB i nie może przejść przez sejf Pro. Udostępnij ją zwykle.',mitSortierung:'Wstępne sortowanie (obszar, rodzaj, uwaga) przekazano razem z wiadomością.',ohneSortierung:'Wiadomość przekazano, wstępnego sortowania nie. Wiadomość z załącznikami jest w skrzynce Familienakte; przyporządkuj ją tam samodzielnie.',gesperrtListe:'Sejf Pro jest zablokowany. Odblokować i włożyć wybrane wiadomości z załącznikami do skrzynki Familienakte?',unerreichbar:'Folder sejfu Pro jest teraz niedostępny. Nic nie przekazano.',unerreichbarFrage:'Folder sejfu Pro jest teraz niedostępny (na przykład karta SD nie jest włożona). Nic nie przekazano. Udostępnić wiadomość zwykle?',mitVorsortierung:'ze wstępnym sortowaniem'}
+};
+const mt=k=>(MAIL[document.documentElement.lang]||MAIL.de)[k];
+const ausB64=v=>Uint8Array.from(atob(v),c=>c.charCodeAt(0));
+const emlDatei=name=>((String(name||'mail').replace(/\.eml$/i,'').replace(/[\\/:*?"<>|\x00-\x1f]/g,'_').trim().slice(0,80))||'mail')+'.eml';
+/* „Tresor einrichten – nur Speicher wählen“ (Klaus 2026-11-04): nur in der Android-App mit ProVault.tresorEinrichten. */
+const EIN={
+ de:{knopf:'Tresor einrichten – nur Speicher wählen …',info:'Speicher wählen (Gerät oder SD-Karte). Private Brain Pro findet den Tresor darin oder legt einen Hauptordner an. Ein Passwort für Tresor und Ablage.',fertig:'Tresor eingerichtet: ',TRESOR_ORDNER_UNTERORDNER:'Das ist ein Ordner im Tresor. Bitte den Speicher selbst wählen (Gerät oder SD-Karte). Nichts wurde verändert.',TRESOR_ORDNER_MEHRERE:'In diesem Speicher liegen mehrere Tresore. Bitte den richtigen Tresor-Ordner selbst wählen. Nichts wurde verändert.',TRESOR_NAME_BELEGT:'Ein Ordner mit diesem Namen liegt schon da und ist nicht leer. Bitte anderen Namen. Nichts wurde verändert.',VAULT_ANDERER_ORT:'Die Ablage von Private Brain Pro ist schon an einem anderen Ort eingerichtet. Sie zieht nicht still um. Nichts wurde verändert.',VAULT_FOLDER_IN_USE:'Im Tresor liegt ein Ordner „Private Brain“ mit fremden Dateien. Nichts wurde verändert.',TRESOR_ORDNER_FREMDER_TRESOR:'„Private Brain“ in diesem Tresor gehört nicht zu Private Brain Pro. Nichts wurde verändert.',TRESOR_ABLAGE_PASSWORT_ANDERS:'Das Passwort öffnet den Tresor, aber nicht die Ablage „Private Brain“ darin (älterer Stand mit eigenem Passwort). Nichts wurde verändert.'},
+ en:{knopf:'Set up vault – just choose storage …',info:'Choose storage (device or SD card). Private Brain Pro finds the vault there or creates a main folder. One password for vault and storage.',fertig:'Vault set up: ',TRESOR_ORDNER_UNTERORDNER:'This is a folder inside the vault. Please choose the storage itself (device or SD card). Nothing was changed.',TRESOR_ORDNER_MEHRERE:'This storage holds several vaults. Please choose the right vault folder yourself. Nothing was changed.',TRESOR_NAME_BELEGT:'A folder with this name already exists and is not empty. Please choose another name. Nothing was changed.',VAULT_ANDERER_ORT:'Private Brain Pro’s storage is already set up elsewhere. It does not move silently. Nothing was changed.',VAULT_FOLDER_IN_USE:'The vault contains a folder “Private Brain” with other files. Nothing was changed.',TRESOR_ORDNER_FREMDER_TRESOR:'“Private Brain” in this vault does not belong to Private Brain Pro. Nothing was changed.',TRESOR_ABLAGE_PASSWORT_ANDERS:'The password opens the vault but not the “Private Brain” storage inside (older state with its own password). Nothing was changed.'},
+ ru:{knopf:'Настроить сейф – только выбрать хранилище …',info:'Выберите хранилище (устройство или SD-карта). Private Brain Pro найдёт там сейф или создаст главную папку. Один пароль для сейфа и хранилища.',fertig:'Сейф настроен: ',TRESOR_ORDNER_UNTERORDNER:'Это папка внутри сейфа. Выберите само хранилище. Ничего не изменено.',TRESOR_ORDNER_MEHRERE:'В этом хранилище несколько сейфов. Выберите нужную папку сейфа. Ничего не изменено.',TRESOR_NAME_BELEGT:'Папка с этим именем уже есть и не пуста. Выберите другое имя. Ничего не изменено.',VAULT_ANDERER_ORT:'Хранилище Private Brain Pro уже настроено в другом месте и не переносится молча. Ничего не изменено.',VAULT_FOLDER_IN_USE:'В сейфе есть папка «Private Brain» с чужими файлами. Ничего не изменено.',TRESOR_ORDNER_FREMDER_TRESOR:'«Private Brain» в этом сейфе не принадлежит Private Brain Pro. Ничего не изменено.',TRESOR_ABLAGE_PASSWORT_ANDERS:'Пароль открывает сейф, но не хранилище «Private Brain» в нём. Ничего не изменено.'},
+ pl:{knopf:'Skonfiguruj sejf – wybierz tylko pamięć …',info:'Wybierz pamięć (urządzenie lub kartę SD). Private Brain Pro znajdzie tam sejf albo utworzy folder główny. Jedno hasło dla sejfu i miejsca zapisu.',fertig:'Sejf skonfigurowany: ',TRESOR_ORDNER_UNTERORDNER:'To folder wewnątrz sejfu. Wybierz samą pamięć. Nic nie zmieniono.',TRESOR_ORDNER_MEHRERE:'W tej pamięci jest kilka sejfów. Wybierz właściwy folder sejfu. Nic nie zmieniono.',TRESOR_NAME_BELEGT:'Folder o tej nazwie już istnieje i nie jest pusty. Wybierz inną nazwę. Nic nie zmieniono.',VAULT_ANDERER_ORT:'Miejsce zapisu Private Brain Pro jest już skonfigurowane gdzie indziej i nie przenosi się po cichu. Nic nie zmieniono.',VAULT_FOLDER_IN_USE:'W sejfie jest folder „Private Brain” z obcymi plikami. Nic nie zmieniono.',TRESOR_ORDNER_FREMDER_TRESOR:'„Private Brain” w tym sejfie nie należy do Private Brain Pro. Nic nie zmieniono.',TRESOR_ABLAGE_PASSWORT_ANDERS:'Hasło otwiera sejf, ale nie miejsce „Private Brain” w nim. Nic nie zmieniono.'}
+};
+const ein=k=>(EIN[document.documentElement.lang]||EIN.de)[k];
+const t=i=>(W[document.documentElement.lang]||W.de)[i],hash=async bytes=>sha256(bytes),textHash=value=>hash(new TextEncoder().encode(JSON.stringify(value)));
+const make=(tag,text)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;return e;};
+const options=()=>({language:document.documentElement.lang,dark:document.documentElement.dataset.theme==='dunkel'});
+let busy=false,panel,note='',renderGeneration=0;
+function contract(value,target){
+ if(!value||value.vertrag!=='familienakte-uebergabe/1'||!APPS.includes(value.quelle)||!APPS.includes(value.ziel)||value.ziel!==target||
+ !/^[A-Za-z0-9_.-]{1,160}$/.test(value.id||'')||['.','..'].includes(value.id)||!/^[A-Za-z0-9_.:-]{1,200}$/.test(value.dokumentId||'')||
+ typeof value.name!=='string'||!value.name.length||value.name.length>255||typeof value.mime!=='string'||value.mime.length>200||
+ !Number.isSafeInteger(value.groesse)||value.groesse<=0||value.groesse>MAX||!/^[a-f0-9]{64}$/.test(value.sha256||'')||
+ (value.bezug!==undefined&&!/^[A-Za-z0-9_.-]{1,160}$/.test(value.bezug)))throw Error(t(22));
+ return {vertrag:value.vertrag,id:value.id,quelle:value.quelle,ziel:value.ziel,dokumentId:value.dokumentId,name:value.name,mime:value.mime,groesse:value.groesse,sha256:value.sha256,...(value.bezug?{bezug:value.bezug}:{})};
+}
+async function active(id){const state=await api.tresorZustand({});if(!state.offen||!state.kennung||!state.uebergaben||id&&state.kennung!==id)throw Error(t(24));return state;}
+async function change(id,fn){
+ const database=db;return new Promise((resolve,reject)=>{const tx=database.transaction('proUebergaben','readwrite'),store=tx.objectStore('proUebergaben');let result,error;
+ tx.oncomplete=()=>{window.dispatchEvent(new Event('pb-pro-receipts'));resolve(result);};tx.onabort=()=>reject(error||tx.error||Error(t(20)));tx.onerror=()=>{};
+ store.get(id).onsuccess=e=>{try{if(db!==database)throw Error(t(24));result=fn(e.target.result);store.put(result);}catch(e){error=e;tx.abort();}};
+ });
+}
+const receipts=()=>idbGetAll('proUebergaben');
+async function reserve(kind,vaultId,m){
+ const id=kind+'-'+await textHash([vaultId,m.quelle,m.id]);
+ return change(id,old=>{if(old&&(JSON.stringify(old.vertrag)!==JSON.stringify(m)||old.vaultId!==vaultId))throw Error(t(23));return old||{id,kind,vaultId,vertrag:m,stand:'offen',date:Date.now()};});
+}
+async function receive(){
+ const z=await active(),items=(await api.tresorUebergabe({aktion:'eingang',vaultId:z.kennung})).items||[];let imported=0,failed=0;
+ for(const item of items){try{
+  if(item.fehler)throw Error(t(22));const m=contract(item.vertrag,APP),r=await reserve('eingang',z.kennung,m);
+  await active(z.kennung);
+  const native=await api.tresorUebergabe({aktion:'lesen',vaultId:z.kennung,entryId:item.entryId});
+  if(native.entryId!==item.entryId||native.originalHash!==m.sha256||JSON.stringify(contract(native.vertrag,APP))!==JSON.stringify(m))throw Error(t(22));
+  const stored=await PBOriginals.verifyStored(m.sha256,m.groesse),file=new File([stored],m.name,{type:m.mime});
+  const accepted=await signBatch([{file,path:m.name,dirId:null}],{durable:true});
+  if(accepted?.length!==1||accepted[0].index!==0||accepted[0].sha256!==m.sha256)throw Error(t(20));
+  await change(r.id,old=>{if(!old||JSON.stringify(old.vertrag)!==JSON.stringify(m))throw Error(t(23));return{...old,hashes:accepted[0].hashes,stand:'gespeichert'};});
+  await active(z.kennung);const ack=await api.tresorUebergabe({aktion:'quittieren',vaultId:z.kennung,entryId:item.entryId,sha256:m.sha256});if(ack?.stand!=='im-eingang')throw Error(t(20));imported++;
+ }catch{failed++;}}
+ note=items.length?t(25).replace('{n}',String(imported)).replace('{f}',String(failed)):t(30);return{imported,failed};
+}
+/* wahl.bezug: Kennung der Übergabe, zu der diese Datei gehört (Begleitdatei → Mail). wahl.einmal: was schon weitergegeben ist,
+   wird nicht noch einmal geschickt (Ergebnis mit schon:true). wahl.vorher: läuft vor dem Weitergeben; false → nichts geht hinaus. */
+async function send(file,recordHash,target,wahl={}){
+ const z=await active();if(!file||!file.size||file.size>MAX||!['familienakte','workflow-pdf-pro','bookledgerpro'].includes(target))throw Error(t(21));
+ const pdf=file.type==='application/pdf'||/\.pdf$/i.test(file.name),image=/^image\//.test(file.type);
+ if(target==='workflow-pdf-pro'&&!pdf&&!image||target==='bookledgerpro'&&!pdf&&!image&&!/\.eml$/i.test(file.name))throw Error(t(21));
+ const sha=await hash(await file.arrayBuffer()),history=(await receipts()).filter(r=>r.kind==='eingang'&&r.vaultId===z.kennung&&r.hashes?.includes(recordHash)).sort((a,b)=>b.date-a.date);
+ const bezug=wahl.bezug||history[0]?.vertrag.id,dokumentId=recordHash||sha;
+ const id='pb-'+await textHash([z.kennung,dokumentId,target,file.name,file.type,sha,bezug||'']);
+ const m=contract({vertrag:'familienakte-uebergabe/1',id,quelle:APP,ziel:target,dokumentId,name:file.name,mime:file.type,groesse:file.size,sha256:sha,...(bezug?{bezug}:{})},target);
+ if(wahl.einmal){const alt=(await receipts()).find(x=>x.kind==='ausgang'&&x.vaultId===z.kennung&&x.vertrag.id===m.id);if(alt?.entryId&&alt.stand!=='offen')return{...alt,schon:true};}
+ if(wahl.vorher&&!(await wahl.vorher()))return{ungeprueft:true};
+ const r=await reserve('ausgang',z.kennung,m);
+ await PBOriginals.storeItem({file,path:file.name,dirId:null});return deliver(r);
+}
+async function deliver(r){
+ const m=contract(r.vertrag,r.vertrag.ziel);await PBOriginals.verifyStored(m.sha256,m.groesse);await active(r.vaultId);
+ const result=await api.tresorUebergabe({aktion:'senden',vaultId:r.vaultId,vertrag:m});
+ if(!/^[A-Za-z0-9_.-]{1,160}$/.test(result?.id||'')||['.','..'].includes(result.id)||result.sha256!==m.sha256||result.groesse!==m.groesse||result.name!==m.name||result.art!==m.mime||result.schreiber!==APP)throw Error(t(22));
+ return change(r.id,old=>{if(!old||JSON.stringify(old.vertrag)!==JSON.stringify(m)||old.vaultId!==r.vaultId)throw Error(t(23));return{...old,entryId:result.id,stand:old.stand==='im-eingang'?'im-eingang':'weitergegeben'};});
+}
+async function confirm(){const z=await active();for(const r of await receipts()){
+ if(r.kind!=='ausgang'||r.vaultId!==z.kennung||!r.entryId||r.stand==='im-eingang')continue;
+ const result=await api.tresorUebergabe({aktion:'stand',vaultId:z.kennung,ziel:r.vertrag.ziel,entryId:r.entryId});
+ if(result?.bestaetigt===true)await change(r.id,old=>{if(old?.entryId!==r.entryId)throw Error(t(23));return{...old,stand:'im-eingang'};});
+}}
+async function work(fn){if(busy)return;busy=true;try{await render();await fn();}catch(error){note=t(20)+' '+String(error?.message||'');}finally{busy=false;await render().catch(()=>{});}}
+function button(host,label,fn){const b=make('button',label);b.type='button';b.disabled=busy;b.onclick=()=>void work(fn);host.append(b);return b;}
+async function render(){
+ const generation=++renderGeneration,host=document.querySelector('#vaultPlace');if(!host||typeof db==='undefined'||!db)return;
+ let z,own={},all;try{z=await api.tresorZustand({});if(z.offen)own=await api.state();all=await receipts();}catch{z={};all=[];note=t(20);}
+ if(generation!==renderGeneration)return;
+ if(!panel){panel=make('section');panel.id='pro-verbund';panel.className='note';host.append(panel);}
+ // Klaus 15.11.2026 (Punkt B): eine Reihe – Zustand, Knöpfe, seltene Knöpfe hinter „Mehr“, die Erklärung hinter dem i.
+ panel.replaceChildren(make('h4',t(0)));
+ const status=make('span',z.erreichbar===false?t(9)+(z.ordner||''):z.offen?t(7)+(z.ordner||''):z.gewaehlt?t(8)+(z.ordner||''):t(6));status.setAttribute('role','status');status.className='pv-zustand';
+ const zeile=make('div');zeile.className='pv-zeile';const row=make('div');row.className='btnrow';zeile.append(status,row);panel.append(zeile);
+ const mehr=make('details');mehr.className='pv-mehr';const mehrKopf=make('summary',({de:'Mehr',en:'More',ru:'Ещё',pl:'Więcej'})[document.documentElement.lang]||'Mehr');const mehrRow=make('div');mehrRow.className='btnrow';mehr.append(mehrKopf,mehrRow);
+ const info=make('details');info.className='pv-info';const infoKopf=make('summary','i');infoKopf.setAttribute('aria-label',t(0)+': '+(({de:'Erklärung',en:'Explanation',ru:'Пояснение',pl:'Wyjaśnienie'})[document.documentElement.lang]||'Erklärung'));info.append(infoKopf,make('p',t(1)+(window.PBOrdnerHinweis?' '+PBOrdnerHinweis.hinweis():'')));
+ const connect=async other=>{
+  // Gemeinsamer Tresor-Plan (Klaus 2026-11-03): falsch gewählter Ordner → klare Meldung statt Code.
+  try{const r=await api.tresorEinziehen({...options(),nurVerbinden:true,...(other?{neuWaehlen:true}:{})});if(!r?.abgebrochen)note='';}
+  catch(error){const text=window.PBOrdnerHinweis?.meldung(String(error?.code||error?.message||''));if(!text)throw error;note=text;}
+ };
+ // Ein Schritt (Klaus 2026-11-04): ohne verbundenen Tresor zuerst „nur Speicher wählen“; der alte Weg bleibt daneben.
+ if(!z.gewaehlt&&typeof api.tresorEinrichten==='function'){
+  const b=button(row,ein('knopf'),async()=>{
+   try{const r=await api.tresorEinrichten(options());if(r?.abgebrochen)return;note=ein('fertig')+(r?.pfad||r?.ordner||r?.hauptordner||'');await window.PBTresorordner?.aktualisieren(true);await window.PBVault?.refresh?.();}
+   catch(error){const code=String(error?.code||error?.message||'');const text=(EIN[document.documentElement.lang]||EIN.de)[code]||window.PBOrdnerHinweis?.meldung(code);if(!text)throw error;note=text;}
+  });
+  b.className='primary';b.dataset.tresorEinrichten='';b.title=ein('info');
+ }
+ if(!z.offen)button(row,z.gewaehlt?t(4):t(2),()=>connect(false));
+ if(z.gewaehlt)button(row,t(3),()=>connect(true));
+ if(z.offen){button(row,t(5),()=>api.tresorSperren({}));button(row,t(10),receive);button(mehrRow,t(11),confirm);
+ if(own.unlocked&&z.pruefung==='PASST'&&!z.eingezogen)button(mehrRow,t(26),async()=>{await api.tresorEinziehen(options());await window.PBTresorordner?.aktualisieren(true);});}
+ if(mehrRow.childElementCount)row.append(mehr);row.append(info);
+ const notice=make('p',note);notice.setAttribute('role','status');panel.append(notice);
+ const out=all.filter(r=>r.kind==='ausgang'&&r.vaultId===z.kennung);
+ // Generalprüfung 16.11.2026: die Begleitdatei der Vorsortierung („familienakte-uebergabe.json“) ist Technik und steht nicht
+ // mehr als eigene Zeile da. Sie gehört zu ihrer Mail („mit Vorsortierung“); „Erneut weitergeben“ der Mail schickt beide.
+ // Eine Begleitdatei ohne ihre Mail in dieser Liste bleibt als eigene Zeile stehen, damit nichts unerreichbar wird.
+ const BNAME=window.PBFamilienakteBegleitung?.NAME||'familienakte-uebergabe.json',mit=new Map();
+ for(const r of out)if(r.vertrag.name===BNAME&&r.vertrag.bezug&&out.some(x=>x!==r&&x.vertrag.id===r.vertrag.bezug&&x.vertrag.ziel===r.vertrag.ziel))mit.set(r.vertrag.bezug,[...(mit.get(r.vertrag.bezug)||[]),r]);
+ const eigen=new Set([...mit.values()].flat());
+ if(out.length){panel.append(make('h5',t(27)));const list=make('ul');for(const r of out){
+  if(eigen.has(r))continue;
+  const dazu=mit.get(r.vertrag.id)||[],fehlt=[r,...dazu].filter(x=>x.stand!=='im-eingang');
+  const li=make('li',r.vertrag.name+(dazu.length?' ('+mt('mitVorsortierung')+')':'')+' → '+names[r.vertrag.ziel]+': '+t(r.stand==='im-eingang'?14:r.stand==='weitergegeben'?13:12));li.style.overflowWrap='anywhere';
+  if(dazu.length)li.dataset.proMitSortierung=String(dazu.length);
+  if(z.offen&&fehlt.length)button(li,more(1),async()=>{for(const x of fehlt)await deliver(x);});
+  list.append(li);}panel.append(list);}
+}
+function choose(entry){
+ const dialog=make('dialog');dialog.className='live-dialog';dialog.append(make('h2',t(16)),make('p',t(28)+entry.name));
+ const label=make('label',t(17)),select=make('select');for(const id of ['familienakte','workflow-pdf-pro','bookledgerpro']){const option=make('option',names[id]);option.value=id;select.append(option);}label.append(select);dialog.append(label);
+ const status=make('p');status.setAttribute('role','status');dialog.append(status);
+ const go=make('button',t(18)),cancel=make('button',t(19));go.type=cancel.type='button';dialog.append(go,cancel);cancel.onclick=()=>dialog.close();
+ let sending=false;dialog.addEventListener('cancel',event=>{if(sending)event.preventDefault();});
+ go.onclick=async()=>{if(sending)return;const target=select.value;sending=true;go.disabled=select.disabled=cancel.disabled=true;try{let file=entry.file;if(!(file instanceof File)){const stored=await PBOriginals.verifyStored(file.pbOriginalHash,file.size);file=new File([stored],file.name,{type:file.type});}
+  if(target==='familienakte'){const eml=await mailEml(entry.recordHash);if(eml)file=eml;}
+  await send(file,entry.recordHash,target);status.textContent=t(13);cancel.textContent=more(0);await render();}
+ catch(error){status.textContent=t(20)+' '+String(error?.message||'');}finally{sending=false;go.disabled=select.disabled=cancel.disabled=false;}};
+ document.body.append(dialog);dialog.addEventListener('close',()=>dialog.remove(),{once:true});dialog.showModal();
+}
+/* Ein katalogisierter Mail-Eintrag zeigt im Datei-Fenster nur seinen Text (.txt). Für die Familienakte wird, wo es geht,
+   die echte .eml mit Anhängen genommen: zuerst vom Anbieter über die App, sonst die eingelesene .eml-Datei. */
+async function mailEml(hash){
+ const r=hash&&typeof CATALOG!=='undefined'?CATALOG.find(x=>x.hash===hash):null;if(!r||r.mailBody==null)return null;
+ const name=emlDatei(r.name),ref=r.mailRemote,device=window.PBMailDevice;
+ if(ref&&device?.original&&(!ref.base||ref.base===device.base)){try{const o=await device.original({account:ref.account,folder:ref.folder,validity:ref.validity,uid:ref.uid});if(o?.sourceBase64)return new File([ausB64(o.sourceBase64)],name,{type:'message/rfc822'});}catch{/* weiter mit der Ablage */}}
+ const src=r.localSource;
+ if(src?.originalHash&&/\.eml$/i.test(src.name||'')){try{const f=await PBOriginals.verifyStored(src.originalHash);return new File([f],name,{type:'message/rfc822'});}catch{/* weiter */}}
+ // Nur bei eingelesenen Dateien ist getRaw die ganze Quelle (bei Anbieter-Mails im Ordnermodus nur Kopf und Text).
+ if(!ref&&window.PBMail?.getRaw){try{const raw=await PBMail.getRaw(hash);if(raw)return new File([raw],name,{type:'message/rfc822'});}catch{/* .txt wie bisher */}}
+ return null;
+}
+/* liste: true = Mail-Liste (ohne „Normal teilen“); 'unerreichbar' = Ordner gewählt, aber gerade nicht da (Generalprüfung
+   16.11.2026: vorher hieß es „Kein Pro-Tresor verbunden“ und Androids Teilen-Liste ging sofort auf). Jetzt der richtige Satz,
+   und nichts geht ohne eigene Wahl hinaus. */
+function frageGesperrt(liste=false){
+ const weg=liste==='unerreichbar';
+ return new Promise(resolve=>{const dialog=make('dialog');dialog.className='live-dialog';dialog.dataset.mailFamilienakteFrage=weg?'unerreichbar':'';dialog.append(make('h2',mt('titel')),make('p',mt(weg?'unerreichbarFrage':liste?'gesperrtListe':'gesperrt')));let wahl=null;
+  for(const [key,value] of [...(weg?[]:[['entsperren','entsperren']]),...(liste===true?[]:[['teilen','teilen']]),['abbrechen',null]]){const b=make('button',mt(key));b.type='button';b.dataset.wahl=value||'';if(value==='entsperren')b.className='primary';b.onclick=()=>{wahl=value;dialog.close();};dialog.append(b);}
+  document.body.append(dialog);dialog.addEventListener('close',()=>{dialog.remove();resolve(wahl);},{once:true});dialog.showModal();});
+}
+/* Für die Mail-Liste (Klaus 16.11.2026): gibt es einen Pro-Tresor für Übergaben, und ist er offen? */
+async function familienakteTresor(){
+ try{const z=await api.tresorZustand({});return{vorhanden:Boolean(z?.gewaehlt&&z.uebergaben),offen:Boolean(z?.offen&&z.kennung&&z.uebergaben)};}catch{return{vorhanden:false,offen:false};}
+}
+/* Vor mehreren Mails einmal fragen, nicht je Mail. true = der Tresor ist offen. */
+async function familienakteOeffnen(){
+ let z=null;try{z=await api.tresorZustand({});}catch{return false;}
+ if(z?.offen&&z.kennung&&z.uebergaben)return true;
+ if(!(z?.gewaehlt&&z.uebergaben))return false;
+ if(z.erreichbar===false){alert(mt('unerreichbar'));return false;}
+ if(await frageGesperrt(true)!=='entsperren')return false;
+ try{const r=await api.tresorEinziehen({...options(),nurVerbinden:true});return Boolean(r&&!r.abgebrochen&&r.offen);}catch(error){alert(t(20)+' '+String(error?.message||''));return false;}
+}
+/* Vorsortierung (Klaus 16.11.2026): nach der Mail geht als zweite Übergabe die Begleitdatei „familienakte-uebergabe.json“ ins
+   selbe Fach – ein Eintrag mit Name und Prüfsumme der .eml und der Einordnung des Sortier-Kerns; „bezug“ trägt die Kennung der
+   Mail-Übergabe. Ohne Einordnung keine Begleitdatei. Ergebnis: 'ja' oder 'keine'; ein Fehler wird geworfen. */
+function mailEintrag(rec,meta,bytes){
+ let r=rec;
+ if(!r){
+  let kopf=meta.mail;
+  if(!kopf&&window.PBMail?.parseEml){try{const m=PBMail.parseEml(new TextDecoder().decode(bytes.subarray(0,262144)));kopf={from:m.from,subject:m.subject,date:m.date,text:m.body};}catch{/* ohne Kopf keine Einordnung */}}
+  if(!kopf)return null;
+  const text=String(kopf.text||'').slice(0,24000);
+  r={name:String(kopf.subject||meta.name||'mail'),ext:'eml',type:'message/rfc822',size:bytes.length,date:new Date(kopf.date||0).getTime()||0,
+   mail:{from:String(kopf.from||''),to:'',subject:String(kopf.subject||''),date:kopf.date||''},snippet:text.slice(0,600),mailBody:text};
+ }
+ if(r.kern&&!r.kern.fehler)return r;
+ try{return window.PBSortierkern?.felder?{...r,kern:PBSortierkern.felder(r,null)}:r.eigeneKategorie?r:null;}catch{return r.eigeneKategorie?r:null;}
+}
+async function begleitung(mail,rec,meta,bytes){
+ const B=window.PBFamilienakteBegleitung,m=mail.vertrag;if(!B)return'keine';
+ const r=mailEintrag(rec,meta,bytes);if(!r)return'keine';
+ const e=B.eintrag(r,m.name,m.sha256);if(!(e.lebensbereich||e.dokumentart||e.hinweis))return'keine';
+ const alt=(await receipts()).find(x=>x.kind==='ausgang'&&x.vaultId===mail.vaultId&&x.vertrag.ziel==='familienakte'&&x.vertrag.name===B.NAME&&x.vertrag.bezug===m.id);
+ if(alt){if(alt.entryId&&alt.stand!=='offen')return'ja';try{await deliver(alt);return'ja';}catch{/* neu bauen */}}
+ const b=B.begleitdatei([{r,name:m.name,sha256:m.sha256}]);if(!b)return'keine';
+ await send(new File([b.text],b.name,{type:'application/json'}),null,'familienakte',{bezug:m.id});return'ja';
+}
+/* meta.still (Mail-Liste): keine Meldungen und keine Fragen; der Tresor muss offen sein. Ergebnis dann in „ergebnis“:
+   'uebergeben' (mit begleit 'ja'|'nein'|'keine'), 'schon' (früher übergeben, nichts geschickt) oder 'fehler' (mit grund).
+   meta.pruefen läuft nur für Mails, die wirklich hinausgehen sollen; false → nichts geht hinaus. */
+async function mailAnFamilienakte(args,meta={}){
+ const device=window.PBMailDevice,name=emlDatei(meta.name),teilen=()=>device.openOriginal({...args,name}),still=meta.still===true;
+ let z=null;try{z=await api.tresorZustand({});}catch{/* ohne Tresor: teilen */}
+ if(!(z?.offen&&z.kennung&&z.uebergaben)){
+  if(still)return{ergebnis:'fehler',grund:'gesperrt'};
+  if(z?.gewaehlt&&z.uebergaben&&z.erreichbar!==false){
+   const wahl=await frageGesperrt();if(wahl==='teilen')return teilen();if(wahl!=='entsperren')return{abgebrochen:true};
+   try{const r=await api.tresorEinziehen({...options(),nurVerbinden:true});if(r?.abgebrochen||!r?.offen)return{abgebrochen:true};}catch(error){alert(t(20)+' '+String(error?.message||''));return{fehler:true};}
+  }else if(z?.gewaehlt&&z.uebergaben&&z.erreichbar===false){
+   // Tresor gewählt, Ordner gerade nicht erreichbar: erst fragen, wie in der Mail-Liste gesagt.
+   return await frageGesperrt('unerreichbar')==='teilen'?teilen():{abgebrochen:true};
+  }else{alert(mt('ohne'));return teilen();}
+ }
+ let geladen=false;
+ try{
+  let base64=typeof meta.sourceBase64==='string'?meta.sourceBase64:'';
+  if(!base64)base64=(await device.original(args))?.sourceBase64||'';
+  const bytes=ausB64(base64);if(!bytes.length)throw Error(t(21));
+  geladen=true;
+  if(bytes.length>MAX){if(!still)alert(mt('gross'));return{zuGross:true,ergebnis:'fehler',grund:'zuGross'};}
+  const rec=typeof CATALOG!=='undefined'?CATALOG.find(r=>r.mailRemote&&r.mailRemote.account===args.account&&r.mailRemote.folder===args.folder&&String(r.mailRemote.validity)===String(args.validity)&&r.mailRemote.uid===args.uid):null;
+  const result=await send(new File([bytes],name,{type:'message/rfc822'}),rec?.hash||null,'familienakte',still?{einmal:true,vorher:meta.pruefen}:{});
+  if(result.ungeprueft)return{ergebnis:'fehler',grund:'ungeprueft'};
+  if(result.schon)return{...result,ergebnis:'schon'};
+  // Scheitert nur die Begleitdatei, gilt die Mail trotzdem als übergeben – und das wird gesagt.
+  let begleit='keine';try{begleit=await begleitung(result,rec,meta,bytes);}catch{begleit='nein';}
+  if(!still)alert(begleit==='nein'?mt('ohneSortierung'):mt('gesendet')+(begleit==='ja'?' '+mt('mitSortierung'):''));
+  void render();return{...result,ergebnis:'uebergeben',begleit};
+ }catch(error){const code=String(error?.message||''),gross=/MESSAGE_TOO_LARGE/.test(code);if(!still)alert(gross?mt('gross'):t(20)+' '+code);return{fehler:true,ergebnis:'fehler',grund:gross?'zuGross':geladen?'fehler':'laden',meldung:code};}
+}
+function viewer(host,entry){let b=host.querySelector('[data-pro-transfer]');if(!b){b=make('button');b.type='button';b.dataset.proTransfer='';host.append(b);}b.textContent=t(15);b.hidden=!entry;b.onclick=()=>entry&&choose(entry);}
+// Backup contains only bounded receipts, never a vault key or original bytes. Merge all-or-nothing;
+// an existing local receipt is authoritative and a conflicting identity aborts restoration.
+async function restore(rows){
+ if(!Array.isArray(rows))throw Error(t(22));const checked=[];
+ for(const r of rows){
+  if(!r||!['eingang','ausgang'].includes(r.kind)||!/^[-A-Za-z0-9]{1,160}$/.test(r.vaultId||'')||!Number.isSafeInteger(r.date)||r.date<0)throw Error(t(22));
+  const m=contract(r.vertrag,r.kind==='eingang'?APP:r.vertrag?.ziel);
+  if(r.kind==='ausgang'&&(m.quelle!==APP||m.ziel===APP))throw Error(t(22));
+  const expected=r.kind+'-'+await textHash([r.vaultId,m.quelle,m.id]);
+  if(r.id!==expected||!(r.kind==='eingang'?['offen','gespeichert']:['offen','weitergegeben','im-eingang']).includes(r.stand)||
+   r.entryId!==undefined&&(!/^[A-Za-z0-9_.-]{1,160}$/.test(r.entryId)||['.','..'].includes(r.entryId))||
+   r.hashes!==undefined&&(!Array.isArray(r.hashes)||r.hashes.length>10000||r.hashes.some(h=>!/^[a-f0-9]{64}$/.test(h))))throw Error(t(22));
+  checked.push({id:expected,kind:r.kind,vaultId:r.vaultId,vertrag:m,stand:r.stand,date:r.date,...(r.hashes?{hashes:r.hashes}:{}),...(r.entryId?{entryId:r.entryId}:{})});
+ }
+ const database=db;await new Promise((resolve,reject)=>{
+  const tx=database.transaction('proUebergaben','readwrite'),store=tx.objectStore('proUebergaben');let error;
+  tx.oncomplete=resolve;tx.onabort=()=>reject(error||tx.error||Error(t(20)));tx.onerror=()=>{};
+  for(const r of checked)store.get(r.id).onsuccess=e=>{try{
+   const old=e.target.result;if(db!==database||old&&(JSON.stringify(old.vertrag)!==JSON.stringify(r.vertrag)||old.vaultId!==r.vaultId))throw Error(t(23));
+   if(!old)store.add(r);
+  }catch(e){error=e;tx.abort();}};
+ });
+ window.dispatchEvent(new Event('pb-pro-receipts'));
+}
+window.PBProVerbund={receive,send,confirm,render,viewer,contract,restore,receipts,mailAnFamilienakte,mailEml,familienakteTresor,familienakteOeffnen};
+new MutationObserver(()=>void render()).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+const start=()=>{if(typeof db!=='undefined'&&db&&document.querySelector('#vaultPlace'))void render();else setTimeout(start,300);};start();
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')void render();});
+})();

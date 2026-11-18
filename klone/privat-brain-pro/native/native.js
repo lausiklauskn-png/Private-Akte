@@ -1,0 +1,219 @@
+(async () => {
+  'use strict';
+  // Keep legal/site links reachable in Settings without a second page below the app window.
+  const settingsPage = document.querySelector('#panel-settings');
+  for (const node of document.querySelectorAll('.wrap>footer,body>.fp-badge-wrap')) settingsPage?.append(node);
+  const text = {
+    de: ['Private Brain Pro', 'Direkte Mailverbindung und dauerhafter Ordnerzugriff werden noch ergänzt.'],
+    en: ['Private Brain Pro', 'Direct mail and persistent folder access are still being added.'],
+    ru: ['Private Brain Pro', 'Прямая почта и постоянный доступ к папкам ещё разрабатываются.'],
+    pl: ['Private Brain Pro', 'Bezpośrednia poczta i trwały dostęp do folderów są w przygotowaniu.']
+  };
+  const status = document.querySelector('.native-status') || document.createElement('p');
+  status.className = 'native-status';
+  status.setAttribute('role', 'status');
+  const settings = document.querySelector('#install-box');
+  if (settings && !status.isConnected) settings.after(status);
+  let version = '';
+  let nativeMail = false;
+  let platform = 'android';
+  try {
+    const device = await window.Capacitor?.Plugins?.ProDevice?.getInfo();
+    if (device) { version = ` · ${device.versionName}`; nativeMail = device.nativeMail === true; platform = device.platform || platform; }
+  } catch { /* Browser smoke tests have no Android bridge. */ }
+  function render() {
+    const t = text[document.documentElement.lang] || text.de;
+    const mailNotice = {
+      de: 'Direkte Mailverbindung auf diesem Gerät. Ordnerauswahl über Android; Hintergrundabruf folgt noch.',
+      en: 'Direct mail on this device. Folder selection uses Android; background sync is still being added.',
+      ru: 'Прямая почта на устройстве. Выбор папок через Android; фоновая синхронизация ещё разрабатывается.',
+      pl: 'Bezpośrednia poczta na urządzeniu. Wybór folderów przez Android; synchronizacja w tle jest w przygotowaniu.'
+    };
+    if (platform === 'windows') Object.assign(mailNotice, {
+      de: 'Direkte Mailverbindung auf diesem Windows-Rechner. Hintergrundabruf folgt noch.',
+      en: 'Direct mail on this Windows computer. Background sync is still being added.',
+      ru: 'Прямая почта на этом компьютере Windows. Фоновая синхронизация ещё разрабатывается.',
+      pl: 'Bezpośrednia poczta na tym komputerze Windows. Synchronizacja w tle jest w przygotowaniu.'
+    });
+    status.textContent = `${t[0]}${window.PBVersionShown ? ' · ' + window.PBVersionShown : version}. ${nativeMail ? (mailNotice[document.documentElement.lang] || mailNotice.de) : t[1]}`;
+  }
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  render();
+  // Klaus 2026-10-22: "die App-Version muss immer sichtbar irgendwo stehen … gleich auf den ersten Seiten".
+  // Small, next to the name in the header on every page; a tap leads to "Auf Updates prüfen".
+  if (version) {
+    const name = version.slice(3).replace(/-debug$/, ''), tag = document.getElementById('pbVersion') || document.createElement('button');
+    // Klaus 2026-10-22: "eine echte App-Nummer … nicht Vorschau": 1.0.0-preview.28 reads as v1.0.28.
+    const m = /^(\d+)\.(\d+)\.\d+-preview\.(\d+)(?:-[a-z]+)?$/.exec(name);   // "-debug" builds read the same
+    const shown = 'v' + (m ? m[1] + '.' + m[2] + '.' + m[3] : name);
+    tag.type = 'button'; tag.className = 'pb-version'; tag.id = 'pbVersion'; tag.textContent = shown;
+    tag.title = tag.ariaLabel = 'Private Brain Pro ' + shown;
+    // Klaus 2026-11-13: die Versionsnummer öffnet nicht mehr die Einstellungen (dafür ist das Zahnrad da) – sie prüft und lädt ein Update direkt.
+    tag.onclick = () => { if (window.PBUpdateFahne?.direkt) { void window.PBUpdateFahne.direkt(); return; } window.PBWorkspace?.navigate?.('settings'); const b = document.getElementById('native-update-check'); b?.scrollIntoView({ block: 'center' }); b?.focus(); };
+    if (!tag.isConnected) document.querySelector('header .brand h1')?.append(' ', tag);
+    window.PBVersionShown = shown; render();
+  } else document.getElementById('pbVersion')?.remove();
+  // Klaus 2026-10-22: the diagnosis log stays in the app but is hidden; seven taps on the version line bring it back
+  // (and hide it again) when we need it to improve the app. It keeps recording either way.
+  const diagBox = document.getElementById('diagLog')?.closest('.note');
+  const diagShown = () => { try { return localStorage.getItem('pb_diag_visible') === '1'; } catch { return false; } };
+  const diagApply = () => { if (diagBox) diagBox.hidden = !diagShown(); };
+  diagApply();
+  let taps = 0, tapTimer = 0;
+  status.addEventListener('click', () => {
+    taps++; clearTimeout(tapTimer); tapTimer = setTimeout(() => { taps = 0; }, 2500);
+    if (taps < 7) return;
+    taps = 0;
+    try { localStorage.setItem('pb_diag_visible', diagShown() ? '0' : '1'); } catch { /* stays as it is */ }
+    diagApply();
+    const on = { de: '🔬 Analyse eingeblendet', en: '🔬 Diagnosis shown', ru: '🔬 Диагностика показана', pl: '🔬 Diagnostyka widoczna' };
+    const off = { de: '🔬 Analyse ausgeblendet', en: '🔬 Diagnosis hidden', ru: '🔬 Диагностика скрыта', pl: '🔬 Diagnostyka ukryta' };
+    const lang = document.documentElement.lang;
+    if (typeof window.toast === 'function') window.toast((diagShown() ? on : off)[lang] || (diagShown() ? on : off).de);
+    if (diagShown()) diagBox?.scrollIntoView({ block: 'center' });
+  });
+  if (nativeMail) {
+    const licenses = document.createElement('a');
+    licenses.href = 'assets/licenses/mail.html';
+    licenses.textContent = 'JavaMail / Activation / Google · Lizenzen / Licenses';
+    if(platform==='windows'){
+      licenses.href='windows/licenses.html';
+      const renderLicenses=()=>{licenses.textContent=({de:'Lizenzen der Windows-Version',en:'Windows version licenses',ru:'Лицензии версии Windows',pl:'Licencje wersji Windows'}[document.documentElement.lang]||'Windows version licenses');};
+      renderLicenses();new MutationObserver(renderLicenses).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+    }
+    status.after(licenses);
+  }
+
+  const updates = window.Capacitor?.Plugins?.ProUpdates;
+  if (!updates || !settings) return;
+  const words = {
+    de: ['Auf Updates prüfen', 'Prüft öffentliche GitHub-Veröffentlichungen. Dabei wird eine Verbindung zu GitHub aufgebaut.', 'Prüfung läuft …', 'Du verwendest die aktuelle verfügbare Version.', 'Neue App-Version: ', 'APK herunterladen', 'Updateprüfung derzeit nicht möglich. Prüfe deine Verbindung und versuche es später erneut.', 'Für diese Entwicklungsversion ist keine Updateprüfung verfügbar.', 'Der Download konnte nicht geöffnet werden. Bitte versuche es erneut.'],
+    en: ['Check for updates', 'Checks public GitHub releases. This connects to GitHub.', 'Checking …', 'You have the latest available version.', 'New app version: ', 'Download APK', 'Unable to check for updates. Check your connection and try again later.', 'Updates are unavailable for this development build.', 'Unable to open the download. Please try again.'],
+    ru: ['Проверить обновления', 'Проверяет общедоступные выпуски GitHub с подключением к GitHub.', 'Проверка …', 'Установлена последняя доступная версия.', 'Новая версия приложения: ', 'Скачать APK', 'Не удалось проверить обновления. Проверьте подключение и повторите позже.', 'Для этой версии для разработки проверка недоступна.', 'Не удалось открыть загрузку. Повторите попытку.'],
+    pl: ['Sprawdź aktualizacje', 'Sprawdza publiczne wydania GitHub. Łączy się przy tym z GitHub.', 'Sprawdzanie …', 'Używasz najnowszej dostępnej wersji.', 'Nowa wersja aplikacji: ', 'Pobierz APK', 'Nie można sprawdzić aktualizacji. Sprawdź połączenie i spróbuj później.', 'Ta wersja deweloperska nie obsługuje aktualizacji.', 'Nie można otworzyć pobierania. Spróbuj ponownie.']
+  };
+  const box = document.createElement('div');
+  box.className = 'native-updates note';
+  const check = document.createElement('button');
+  check.type = 'button';
+  check.id = 'native-update-check';
+  const download = document.createElement('button');
+  download.type = 'button';
+  download.id = 'native-update-download';
+  download.className = 'primary';
+  const message = document.createElement('p');
+  message.setAttribute('role', 'status');
+  message.setAttribute('aria-live', 'polite');
+  let state = 'idle', busy = false, latest = '';
+  function renderUpdates() {
+    const t = words[document.documentElement.lang] || words.de;
+    check.textContent = t[0];
+    check.disabled = busy;
+    download.textContent = window.Capacitor?.getPlatform?.()==='windows' ? ({de:'Windows-Installer herunterladen',en:'Download Windows installer',ru:'Скачать установщик Windows',pl:'Pobierz instalator Windows'}[document.documentElement.lang]||'Download Windows installer') : t[5];
+    download.hidden = state !== 'available' && state !== 'openError';
+    download.disabled = busy;
+    // Leitfaden § 6 (Klaus 2026-10-28): immer mit Version – „Du verwendest die aktuelle Version 1.0.41.“ / „Neu: 1.0.42 (du hast 1.0.41)“.
+    const ich = String(window.PBVersionShown || '').replace(/^v/, ''), P = window.ProBedienung;
+    if (P && ich && (state === 'current' || state === 'available')) { message.textContent = state === 'available' ? P.versionSatz(ich, latest.replace(/^v/, '')) : P.versionSatz(ich); return; }
+    message.textContent = state === 'available' ? t[4] + latest :
+      state==='offline'?({de:'Die App ist vom Internet getrennt. Internetzugriff im App-Menü wieder erlauben.',en:'The app is offline. Allow internet access in the app menu.',ru:'Приложение отключено от интернета. Разрешите доступ в меню.',pl:'Aplikacja jest odłączona od internetu. Zezwól na dostęp w menu.'}[document.documentElement.lang]||'App offline'):t[{idle:1, checking:2, current:3, error:6, unsupported:7, openError:8}[state]];
+  }
+  check.addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    state = 'checking';
+    renderUpdates();
+    try {
+      const result = await updates.check();
+      state = ['current', 'available', 'unsupported'].includes(result?.status) ? result.status : 'error';
+      latest = typeof result?.version === 'string' ? (/^(\d+)\.(\d+)\.\d+-preview\.(\d+)$/.test(result.version) && !result.version.startsWith('0.') ? 'v' + result.version.replace(/^(\d+)\.(\d+)\.\d+-preview\.(\d+)$/, '$1.$2.$3') : result.version) : '';
+    } catch (error) { state = error?.code==='APP_OFFLINE'?'offline':'error'; }
+    finally { busy = false; renderUpdates(); if (state === 'current' || state === 'available') { fahneVersion = state === 'available' ? latest : ''; renderFahne(); } }
+  });
+  download.addEventListener('click', async () => {
+    if (busy) return;
+    busy = true;
+    renderUpdates();
+    try { await updates.openDownload(); }
+    catch { state = 'openError'; }
+    finally { busy = false; renderUpdates(); }
+  });
+  box.append(check, download, message);
+  status.after(box);
+
+  // Update-Fähnchen (Klaus 2026-11-13): erscheint von selbst neben der Versionsnummer, sobald ein Update bereitsteht.
+  // Still geprüft wird beim Start, beim Zurückholen der App und höchstens stündlich – über denselben Weg wie der Knopf
+  // (ProUpdates.check). Ist der Internetschalter der App „getrennt“ oder sein Stand unbekannt, geht KEIN Abruf hinaus.
+  // Kein Netz, Fehler, Entwicklungsfassung oder aktuelle Fassung: kein Fähnchen und keine Meldung.
+  // Benannte Änderung: bis 1.0.48 lief nie eine Updateprüfung ohne Tipp.
+  const FAHNE_STUNDE = 60 * 60 * 1000, FAHNE_NACH_FEHLER = 5 * 60 * 1000;
+  const fahneWort = { de: ['Update', 'Update verfügbar: Version {v} – antippen'], en: ['Update', 'Update available: version {v} – tap to open'], ru: ['Обновление', 'Доступно обновление: версия {v} – нажмите'], pl: ['Aktualizacja', 'Dostępna aktualizacja: wersja {v} – dotknij'] };
+  const shownVersion = value => typeof value === 'string' ? (/^(\d+)\.(\d+)\.\d+-preview\.(\d+)$/.test(value) && !value.startsWith('0.') ? 'v' + value.replace(/^(\d+)\.(\d+)\.\d+-preview\.(\d+)$/, '$1.$2.$3') : value) : '';
+  let fahne = null, fahneVersion = '', fahneNext = 0, fahneBusy = false;
+  function renderFahne() {
+    const badge = document.getElementById('pbVersion');
+    if (!fahneVersion || !badge) { fahne?.remove(); fahne = null; return; }
+    if (!fahne) {
+      fahne = document.createElement('button');
+      fahne.type = 'button'; fahne.id = 'pbUpdateFahne'; fahne.className = 'pb-update-fahne';
+      fahne.addEventListener('click', () => void direkt());
+    }
+    const t = fahneWort[document.documentElement.lang] || fahneWort.de, number = fahneVersion.replace(/^v/, '');
+    fahne.textContent = t[0] + ' ' + number;
+    fahne.title = fahne.ariaLabel = t[1].replace('{v}', number);
+    fahne.dataset.version = number;
+    if (badge.nextElementSibling !== fahne) badge.after(' ', fahne);
+  }
+  async function stillPruefen(now = Date.now()) {
+    if (fahneBusy || now < fahneNext || document.visibilityState === 'hidden') return;
+    fahneBusy = true;
+    try {
+      const net = window.PBNetwork;
+      // Without the switch's confirmed state nothing leaves the app (native builds always carry PBNetwork).
+      if (net) { await net.initialized; if (net.offline || !net.ready) return; }
+      else if (window.Capacitor?.isNativePlatform?.()) return;
+      if (navigator.onLine === false) return;
+      fahneNext = now + FAHNE_NACH_FEHLER;
+      const result = await updates.check();
+      fahneNext = now + FAHNE_STUNDE;
+      fahneVersion = result?.status === 'available' ? shownVersion(result.version) : '';
+      renderFahne();
+    } catch { /* Still: ohne Netz oder bei einem Fehler bleibt alles, wie es ist. */ }
+    finally { fahneBusy = false; }
+  }
+  // Direkt laden (Klaus 2026-11-13: „nicht in den Einstellungen … direkt soll es geladen werden, genau wie bei Familienakte und
+  // BookLedgerPro“): Tipp auf Fähnchen oder Versionsnummer → prüfen (falls nötig) → ProUpdates.install → Androids Installieren-Fenster.
+  // Aktuell: kurze Meldung. Ohne install (Windows, ältere Hülle): der vorhandene Download. Nichts startet ohne Tipp.
+  const direktWort = {
+    de: ['Aktuelle Version {v}', 'Lädt {p} %', 'Erlaube „Apps installieren“ und tippe dann noch einmal auf das Update.', 'Update ließ sich nicht laden. Später noch einmal antippen.', 'Die App ist vom Internet getrennt. Internetzugriff im App-Menü wieder erlauben.'],
+    en: ['Current version {v}', 'Loading {p} %', 'Allow “Install apps”, then tap the update again.', 'The update could not be loaded. Tap again later.', 'The app is offline. Allow internet access in the app menu.'],
+    ru: ['Текущая версия {v}', 'Загрузка {p} %', 'Разрешите «Установку приложений» и нажмите обновление ещё раз.', 'Не удалось загрузить обновление. Нажмите позже ещё раз.', 'Приложение отключено от интернета. Разрешите доступ в меню.'],
+    pl: ['Aktualna wersja {v}', 'Pobieranie {p} %', 'Zezwól na „Instalowanie aplikacji” i dotknij aktualizacji ponownie.', 'Nie udało się pobrać aktualizacji. Spróbuj później.', 'Aplikacja jest odłączona od internetu. Zezwól na dostęp w menu.']
+  };
+  const melden = (i, v = '') => { const t = direktWort[document.documentElement.lang] || direktWort.de; const text = t[i].replace('{v}', v); if (typeof window.toast === 'function') window.toast(text, 5000); else { message.textContent = text; } };
+  let direktBusy = false;
+  async function direkt() {
+    if (direktBusy || busy) return;
+    direktBusy = true;
+    try {
+      if (!fahneVersion) {
+        const result = await updates.check();
+        fahneVersion = result?.status === 'available' ? shownVersion(result.version) : '';
+        fahneNext = Date.now() + FAHNE_STUNDE; renderFahne();
+        if (!fahneVersion) { melden(0, window.PBVersionShown || ''); return; }
+      }
+      if (typeof updates.install !== 'function') { await updates.openDownload(); return; }
+      const hoerer = await updates.addListener?.('stand', e => { const t = direktWort[document.documentElement.lang] || direktWort.de; if (fahne && e?.groesse) fahne.textContent = t[1].replace('{p}', String(Math.min(99, Math.floor(e.geladen * 100 / e.groesse)))); });
+      try { const aus = await updates.install(); if (aus?.erlaubnis) melden(2); }
+      finally { try { await hoerer?.remove?.(); } catch { /* egal */ } renderFahne(); }
+    } catch (error) { melden(error?.code === 'APP_OFFLINE' ? 4 : 3); }
+    finally { direktBusy = false; }
+  }
+  window.PBUpdateFahne = { pruefen: stillPruefen, direkt };
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') stillPruefen(); });
+  setInterval(stillPruefen, FAHNE_STUNDE);
+  stillPruefen();
+
+  new MutationObserver(() => { renderUpdates(); renderFahne(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+  renderUpdates();
+})();

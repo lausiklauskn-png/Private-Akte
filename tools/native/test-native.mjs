@@ -74,6 +74,9 @@ console.log('Start aus dem Paket (Wurzel wie https://localhost/, Capacitor geste
       await page.waitForTimeout(2500);
       soll('Startseite steht, Pro-Zeichen im Kopf', await page.evaluate(() => !!document.querySelector('img.logo[src*="logo-pro-rund"]') && document.body.innerText.length > 50));
       soll('keine Fehler in der Seite', fehler.length === 0, fehler.slice(0, 2).join(' | '));
+      const pb = await ctx.newPage(); const pbFehler = []; pb.on('pageerror', (e) => pbFehler.push(String(e)));
+      await pb.goto(`http://127.0.0.1:${srv.address().port}/klone/privat-brain-pro/index.html`); await pb.waitForTimeout(3000);
+      soll('Private Brain Pro (Klon 1:1) startet aus dem Paket', (await pb.evaluate(() => document.body.innerText)).includes('Private Brain') && !pbFehler.length, pbFehler.slice(0, 2).join(' | '));
     } finally { await browser.close(); srv.close(); }
   }
 }

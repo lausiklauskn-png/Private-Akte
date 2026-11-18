@@ -1,0 +1,137 @@
+{
+  "ProDevice": [
+    "getInfo",
+    "measure"
+  ],
+  "ProFiles": [
+    "saveRecoveryKeys",
+    "listOriginals",
+    "originalInfo",
+    "beginImport",
+    "appendImport",
+    "finishImport",
+    "abortImport",
+    "readOriginal",
+    "open",
+    "share",
+    "scan",
+    "openPdf",
+    "pdfPage",
+    "closePdf"
+  ],
+  "ProFolders": [
+    "state",
+    "pause",
+    "resume",
+    "chooseLibrary",
+    "chooseSource",
+    "readSource",
+    "finishSource",
+    "copyOriginal"
+  ],
+  "ProLinks": [
+    "prepare",
+    "open"
+  ],
+  "ProMail": [
+    "accounts",
+    "removeAccount",
+    "folders",
+    "createFolder",
+    "messages",
+    "index",
+    "locate",
+    "indexText",
+    "message",
+    "action",
+    "actions",
+    "unsubscribe",
+    "send",
+    "saveDraft",
+    "forgetMessage",
+    "saved",
+    "savedDraft",
+    "openOriginal",
+    "original",
+    "openAttachment",
+    "addAccount"
+  ],
+  "ProNetwork": [
+    "getState",
+    "setOffline"
+  ],
+  "ProProtect": [
+    "state",
+    "update",
+    "setAuto",
+    "checkHashes",
+    "checkUrls",
+    "virusTotal",
+    "setKey"
+  ],
+  "ProSemantic": [
+    "getState",
+    "install",
+    "cancel",
+    "remove",
+    "markLoading",
+    "markLoaded",
+    "clearCrash"
+  ],
+  "ProCaption": [
+    "getState",
+    "install",
+    "cancel",
+    "remove",
+    "markLoading",
+    "markLoaded",
+    "clearCrash"
+  ],
+  "ProMeaning": [
+    "getState",
+    "install",
+    "cancel",
+    "remove",
+    "markLoading",
+    "markLoaded",
+    "clearCrash"
+  ],
+  "ProShare": [
+    "pending",
+    "read",
+    "done"
+  ],
+  "ProSpeech": [
+    "listen",
+    "inputs"
+  ],
+  "ProUpdates": [
+    "check",
+    "openDownload"
+  ],
+  "ProVault": [
+    "state",
+    "volumes",
+    "choose",
+    "unlock",
+    "lock",
+    "migrate",
+    "backupMail",
+    "attachments",
+    "clearAttachments",
+    "readAttachment",
+    "openAttachment",
+    "catalogBegin",
+    "catalogAppend",
+    "catalogFinish",
+    "catalogAbort",
+    "catalogInfo",
+    "catalogRead",
+    "tresorZustand",
+    "tresorEinziehen",
+    "tresorSperren",
+    "tresorVerzeichnis",
+    "tresorFach",
+    "tresorUebergabe"
+  ]
+}

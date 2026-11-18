@@ -20,6 +20,7 @@ import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.t
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
 import { textLesen, textGemerkt, istBild, istPdf, leseLage, leseLageSetzen, pdfSeitenText } from "./text-lesen.ts";
 import { loadPdfJs } from "./pdf-ersatz.ts";
+import { zweiterOrtLesen, zweiterOrtEinrichten, zweiterOrtSichern, zweiterOrtBeenden, ortWaehlen, geraetKann } from "../klone/familienakte/app/zweiter-ort.ts";
 import { organizerUebernahme, organizerSchluessel, ORGANIZER_INDEX, ORGANIZER_INDEX_MAX } from "../klone/familienakte/lib/organizer-uebernahme.ts";
 import { familyDocumentSearchText } from "../klone/familienakte/lib/family-search-text.ts";
 import { browserModelle, browserModelleMoeglich } from "../klone/familienakte/app/browser-modelle.ts";
@@ -759,5 +760,21 @@ const bank = {
   },
   monatsdateiName,
 };
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank };
+// Kopie an einem zweiten Ort (Klaus 18.11., Pro-Akte: SD-Karte, Festplatte): der „Zweite Ort“ der Familienakte, unverändert –
+// verschlüsselt mit dem Passwort, von selbst auf den neuesten Stand, sobald sich etwas geändert hat (höchstens einmal am Tag, dazu
+// beim Öffnen der App und auf Tipp). Fehlt der Ort (Karte, Festplatte nicht da), läuft alles am Hauptort weiter. Einlesen geht
+// über „Backup einlesen“ (der Ordner der Kopie lässt sich direkt wählen).
+const kopie = {
+  kann: () => geraetKann().ordner,
+  async lesen() { const z = await zweiterOrtLesen(); return z ? { name: z.name, letzte: z.letzte, letzteGelungen: z.letzteGelungen, geraet: z.geraet?.letzte || null } : null; },
+  async einrichten(passwort: string, fassung: string) {
+    const handle = await ortWaehlen();
+    const r = await zweiterOrtEinrichten({ handle, verschluesselt: true, passwort, modus: "sichern", appVersion: fassung });
+    const lauf = await zweiterOrtSichern(await browserVault(), fassung, { auto: false });
+    return { name: r.ort.name, notfall: r.notfall, notfallblatt: r.notfall ? notfallblattText({ notfall: r.notfall, createdAt: new Date().toISOString(), ordner: r.ort.name, appVersion: fassung }) : null, lauf };
+  },
+  async sichern(fassung: string, auto: boolean) { return zweiterOrtSichern(await browserVault(), fassung, { auto }); },
+  beenden: () => zweiterOrtBeenden(),
+};
+const alles = { ...tresor, sicherung, kopie, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

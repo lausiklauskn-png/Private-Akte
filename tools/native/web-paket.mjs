@@ -17,6 +17,9 @@ export const KLONE = {
   'workflow-pdf': ['index.html', 'manifest.webmanifest', 'sw.js', 'version.json', 'assets', 'vendor', 'icons', 'sbkim', 'beispiele', 'impressum.html', 'sicherheit.html', 'LICENSE', 'RECHTE.md', 'THIRD_PARTY.md'],
   bookledger: ['src', 'LICENSE'],
   'sage-protokol': ['src', 'LICENSE'],
+  // Private Brain Pro 1:1 (Klaus 18.11.): die Web-Seite läuft Datei für Datei aus dem Klon (geprüft: index.html, modules/, assets/ …).
+  'privat-brain-pro': ['index.html', 'app-manifest.json', 'apps', 'artwork', 'assets', 'catalog-emblem.png', 'icon-192.png', 'icon-512.png', 'impressum.html',
+    'models', 'modules', 'pb-caption.js', 'sbkim', 'sicherheit.html', 'sw.js', 'vendor', 'LICENSE', 'RECHTE.md'],
 };
 export const NAME = 'Private Akte Pro';
 

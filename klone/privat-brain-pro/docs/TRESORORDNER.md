@@ -1,0 +1,86 @@
+# Tresorordner in Private Brain Pro (Schritt D2, Klaus 2026-10-27)
+
+Der gemeinsame Ordner aller Pro-Apps (Private Brain Pro, Workflow PDF Pro, BookLedgerPro) mit **einem Passwort** und **einem
+Ersatzschlüssel**. Die Ordnerschicht ist das Paket `de.familyprojekt.tresor`, gepflegt in **Workflow PDF Pro** (Format und Regeln:
+`Workflow-PDF-Pro/docs/TRESORORDNER.md`), hier byte-gleich kopiert: `node tools/native/tresor-nachziehen.mjs --quelle ../workflow-pdf-pro`
+(Pins in `native/tresor-herkunft.json`, nie von Hand ändern; die Prüfung läuft am Anfang von `npm run test:native-web`).
+
+## Was die App damit tut
+
+| | Wo | Wie |
+|---|---|---|
+| Einziehen | Einstellungen → Kasten **„Speicherort und Verschlüsselung“** → Abschnitt „Gemeinsamer Tresorordner“ (nur bei entsperrtem Speicherort) | **„In den Tresorordner einziehen …“** → Androids Ordnerwahl → gewählt wird die Ebene **über** „Private Brain“. Passt nur, wenn darin genau dieser Tresor liegt (gleiche Kennung in `Private Brain/tresor.json`) — eine Kopie also auch. Dann das Passwort **im Android-Fenster** (anlegen oder öffnen), `fachEinziehen("private-brain", Datenschlüssel)`. |
+| Probe | Dateien-App | Ordner „Private Brain“ in einen neuen Ordner „Tresor-Probe“ **kopieren**, dort einziehen, mit BookLedgerPro öffnen. Private Brain Pro schreibt dabei weiter in den echten Ordner. |
+| Rückweg | Dateien-App | `tresorordner.json` und `Tresorordner/` neben „Private Brain“ löschen (und ggf. `Eingang-BookLedgerPro/`) = Ausgangszustand. „Private Brain/“ wird nie angefasst. |
+| Inhaltsverzeichnis | automatisch | aus dem Katalog: Name, Art, Datum, Größe, SHA-256 (wenn der Katalog ihn als Kennung hat), Pfad, **Kurzfassung ≤ 1000 Zeichen** (nie der ganze Mailtext), `verschluesselung: "app"` — die Dateien bleiben in Private Brains eigenem Format (HMAC-Namen), andere Apps zeigen nur die Zeile. Geschrieben nach dem Einzug, auf Knopfdruck und beim Verlassen der App (höchstens alle 2 Minuten), nur bei einer Änderung. |
+| Rechnungsmails | Mail → „An BookLedgerPro teilen“ | Ist der Tresorordner offen und passt: Frage **„In den Tresorordner legen“** / „Teilen …“. Die `.eml` holt Android selbst vom Server/Speicher (`ProMail.tresorMailAblegen`) und legt sie verschlüsselt im gemeinsamen Format nach `Eingang-BookLedgerPro/Mails/`; BookLedgerPro sieht sie dort im Eingang und übernimmt sie mit Marke (die Datei bleibt). Ohne Tresorordner: wie bisher Androids Teilen-Liste. |
+
+Teile: `TresorEinzug.java` (rein, JVM-Probe), `ProTresorordner.java` (Freigabe, Android-Schlüsselspeicher, ein Exemplar für beide
+Plugins), `ProVaultPlugin` (`tresorZustand`, `tresorEinziehen`, `tresorVerzeichnis`, `tresorSperren`, Passwort-Fenster),
+`ProMailPlugin.tresorMailAblegen`, `Vault.tresorId()/tresorSchluessel()` (Kopie, nur nativ), `native/native-tresorordner.js`,
+`native-mail.js` (`shareBookLedger`), eine Zeile in `assets/live-mail.js` (Cache `private-brain-v93`). Schutzmodule (Drift-Guard) unverändert.
+
+## Proben (gemessen 2026-10-27 im Behälter)
+
+```bash
+node tools/native/tresor-nachziehen.mjs        # Paket byte-gleich mit Workflow PDF Pro 5009c95
+# JVM ohne Gradle (CI: testDebugUnitTest): TresorEinzugTest 4 grün (LANG=C.UTF-8 wegen „Anhänge“)
+CB_CHROMIUM=… node tools/native/test-tresorordner.mjs                  # 21 grün
+TRESOR_JARS=… CB_CHROMIUM=… node tools/native/gegenprobe-tresorordner.mjs   # 12 gefangen · 0 durchgerutscht · 2 Kontrollen grün
+```
+
+Erste Gegenprobe: 11 gefangen, 1 durchgerutscht („Hintergrund schreibt in fremden Ordner“ — die Browser-Probe prüfte den
+Hintergrund nicht); Probe ergänzt, danach gefangen. Unverändert grün: `drift-guard` 22 · `test-web` 126 · `test-mail-device` 81 ·
+`test-vault` 34 · `test-share` 12 · `test-design-26` 71 · `e2e-live-mail` 37.
+
+## Grenzen (benannt)
+
+- Das Android-Plugin ist hier nicht übersetzt (kein SDK) — gebaut und gelintet in GitHub, **nicht im Emulator, nicht am Tablet, nicht
+  an Klaus' SD-Karte**. `www/` entstand ohne OCR-Beschaffung (Netz gesperrt), die übrigen Dateien von Hand nachgelegt.
+- Windows: kein Einzug (die Engine übersetzt eine feste Liste ohne das Paket; Windows-Sitzung). PWA: bewusst ohne Tresorordner.
+- Das Inhaltsverzeichnis geht als eine Nachricht über die Brücke; bei sehr großem Katalog (Zehntausende Mails) ungemessen langsam.
+- Eine zweimal abgelegte Mail ist zweimal im Eingang (nie löschen); BookLedgerPro erkennt Doppel am SHA-256.
+
+## Ordnerwahl einheitlich (gemeinsamer Tresor-Plan, Klaus 2026-11-03)
+
+- **Tresor verbinden** („Zusammenarbeit mit Pro-Apps“ › „Pro-Tresor verbinden …“): gewählt wird der Ordner, in dem
+  `tresorordner.json` liegt. Wählt Klaus `Tresorordner/` (am Namen oder an `kennwort-/ersatz-/fach-*.json` erkannt) oder
+  einen Fach-Ordner („Private Brain“ mit `tresor.json`, „Workflow PDF Pro“, „Eingang-…“), lehnt Android ab
+  (`TRESOR_ORDNER_VERWALTUNG` / `TRESOR_ORDNER_IST_FACH`), gibt die Ordnerfreigabe zurück und die Seite sagt
+  „Wähle den Ordner, in dem „tresorordner.json“ liegt.“ Nichts wird angelegt.
+- **Kein neuer Tresor ohne Rückfrage:** liegt im gewählten Ordner noch kein `tresorordner.json`, zeigt das Passwort-Fenster
+  „Tresorordner anlegen“ zuerst diesen Hinweissatz und verlangt einen eigenen Haken „Ja, hier einen neuen, leeren
+  gemeinsamen Tresor anlegen.“
+- **Speicherort** (Ablage von Private Brain): richtig sind „Private Brain“ selbst **oder** der Hauptablageordner; im
+  zweiten Fall nutzt `Vault.find/create` den vorhandenen Unterordner „Private Brain“ bzw. legt genau ihn an (kein zweiter
+  daneben). Verwaltung und fremde Fächer lehnt Android ab (`VAULT_FOLDER_IM_TRESOR`).
+- Hilfe **„Wo liegt was?“** im Kasten „Tresor & Ablage“ (`native/native-wo-liegt-was.js`, app-eigen, DE/EN; RU/PL zeigen
+  Deutsch): allgemeiner Text aus dem Plan, darunter Fach „Private Brain“, Eingang „Eingang-Private-Brain“, Menüwege,
+  „Ablageordner wählen“ = UNVERSCHLÜSSELTE Kopien (kein Tresor, „Kopieren ausschalten“), „Original teilen / sichern“.
+- Reine Einordnung `OrdnerWahl.java` (JVM-Probe `OrdnerWahlTest`, nachgestellte Karte vom 3.11.). Die Android-Seite
+  (SAF, Fenster) ist hier nicht übersetzbar (kein SDK) und nur am Quelltext geprüft; nicht am Tablet.
+
+## Tresor einrichten – nur Speicher wählen (Klaus 2026-11-04, Zweig, nicht veröffentlicht)
+
+Vorbild Workflow PDF Pro `tresorEinrichten`, Familienakte #92, BookLedgerPro #454. Einstellungen › Zusammenarbeit mit Pro-Apps
+zeigt in der Android-App, solange kein Tresor verbunden ist, vorn **„Tresor einrichten – nur Speicher wählen …“**
+(`ProVault.tresorEinrichten`, Knopf in `native/native-pro-verbund.js`; ohne diese Brücke – Windows, ältere Hülle – nur der alte Weg).
+
+1. Speicher wählen (Gerät oder SD-Karte).
+2. Der Tresor wird am Inhalt gefunden (auch „Privat Brain Pro Hauptablageordner“) oder ein Hauptordner angelegt (Name frei,
+   Vorschlag „Family-Projekt“; nur gefragt, wenn im Speicher schon anderes liegt). Liegt im gewählten Ordner selbst schon eine
+   alte Ablage „Private Brain/tresor.json“, entsteht der Tresor daneben (wie bisher bei „In den Tresorordner einziehen“).
+3. Ein Passwort-Fenster für den gemeinsamen Tresor und die eigene Ablage „Private Brain“ darin (Mails, Anhänge, Originale, Katalog).
+4. Danach: eigene Ablage angelegt oder geöffnet, Tresor angelegt oder geöffnet, eingezogen, `LIES-MICH.txt`.
+
+**Erst prüfen, dann schreiben:** ein falsches Tresor-Passwort lässt das Fenster offen; passt es zum Tresor, aber nicht zur alten
+Ablage darin, wird abgebrochen (`TRESOR_ABLAGE_PASSWORT_ANDERS`). Abgewiesen, bevor etwas entsteht: Ordner im Tresor, mehrere
+Tresore, ungültiger oder belegter Name, fremder Inhalt in „Private Brain“, und **eine schon eingerichtete eigene Ablage an einem
+anderen Ort** (`VAULT_ANDERER_ORT` – sie zieht nie still um; für die Neuinstallation gedacht).
+
+Technik: `Vault.find/create/open(tree, base, …)` arbeiten ab einem Ordner innerhalb der Freigabe; `ProTresorordner.baumSetzen(baum,
+wurzel)` merkt den Hauptordner (`wurzel`), ältere Verbindungen ohne Eintrag nutzen weiter die Freigabe selbst. Entscheidung
+gerätefrei in `TresorEinrichtung` (JUnit `TresorEinrichtungTest`, 10 Fälle). Probe `tools/native/test-tresor-ein-schritt.mjs`
+(JVM, Reihenfolge im Quelltext, Browser mit gestellter Brücke) 20 grün · Gegenprobe von Hand 3/3 gefangen.
+Nicht geprüft: Android-Übersetzung (kein SDK im Behälter, das macht die CI), echte SD-Karte, Tablet. Kein Ersatzschlüssel-Angebot
+beim Anlegen.
