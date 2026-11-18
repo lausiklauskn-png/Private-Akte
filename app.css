@@ -413,3 +413,32 @@ fieldset.zuordnen .chips{margin-top:2px}fieldset.zuordnen .feld.schmal{flex:1 1 
 .eknoten.unter{padding-left:34px;font-size:13px}.eknoten.unter .ename{color:var(--muted)}.eknoten.unter.an .ename{color:inherit}
 #echt-richtung{flex:0 0 auto}
 #tipp small{word-break:break-all}
+/* 0.7.3 Deine Unterlagen wie „Finden“ im Datei-Organizer: links der Baum, rechts die Unterlagen des gewählten Ordners */
+#echt>.liste{background:none;border:0;box-shadow:none;overflow:visible;border-radius:0}
+#echt .ekopf{justify-content:flex-end;padding:0 2px 6px}
+.eexplorer{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:12px;align-items:start}
+@media (max-width:900px){.eexplorer{grid-template-columns:minmax(0,1fr)}}
+.ekarte{background:var(--glas);border:1px solid rgba(255,255,255,.9);box-shadow:var(--schatten);border-radius:16px;overflow:hidden;min-width:0}
+.ebaumkarte{padding:6px}.ebaumkarte .ebaum{border:0;padding:0}
+.ebaumliste,.ebaumliste ul{list-style:none;margin:0;padding:0}
+.ebaumliste ul{margin-left:13px;padding-left:12px;border-left:2px solid color-mix(in srgb,var(--teal) 25%,transparent)}
+.ebaumliste ul>li{position:relative;margin:1px 0}
+.ebaumliste ul>li::before{content:"";position:absolute;left:-12px;top:15px;width:10px;border-top:2px solid color-mix(in srgb,var(--teal) 25%,transparent)}
+#echt .eknoten,#echt .eknoten.unter,#echt .eknoten:not(.alle){padding-left:6px}
+.eknoten .eordner{width:16px;height:16px;flex:none;color:var(--teal)}
+.eknoten .epfeil{width:16px;flex:none;display:inline-flex}.eknoten .epfeil.leer{visibility:hidden}
+.eknoten.alle[aria-expanded=true] .epfeil .icon{transform:rotate(90deg)}.eknoten.alle[aria-expanded=false] .epfeil .icon{transform:none}
+.eknoten.an{background:#edf7f7;outline:1px solid color-mix(in srgb,var(--teal) 55%,transparent)}
+h3.egewaehlt{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0;padding:10px 12px 6px;font-size:15px;font-weight:700;color:var(--teal)}
+h3.egewaehlt b{font-size:12px;font-weight:600;background:var(--tealsoft);color:var(--teal);border-radius:99px;padding:1px 8px}
+.ebaum[data-ebaum=auf] .eknoten:not(.alle):not(.offen) .epfeil .icon{transform:none}
+/* Großer Monitor (Klaus 18.11.: „die Ansicht etwas breiter für einen großen Monitor“): Startseite und Akten breiter, Baum-Karte etwas breiter */
+@media (min-width:1500px){main{max-width:1440px}.eexplorer{grid-template-columns:minmax(0,360px) minmax(0,1fr)}}
+@media (min-width:1900px){main{max-width:1680px}}
+.akopf{justify-content:flex-start;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:14px}h3.apfad span{color:var(--muted);font-weight:400}h3.apfad b{margin-left:auto}
+.kacheln.bereichsraster{display:flex;flex-wrap:wrap;gap:10px}
+.kacheln.bereichsraster .kachel{flex:0 0 auto;min-width:176px}
+.kacheln.bereichsraster.viele{display:grid;grid-template-rows:repeat(3,auto);grid-auto-flow:column;grid-auto-columns:auto;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}
+.kacheln.bereichsraster.viele .kachel{scroll-snap-align:start;width:max-content}
+.kacheln.bereichsraster .kachel strong{white-space:nowrap}

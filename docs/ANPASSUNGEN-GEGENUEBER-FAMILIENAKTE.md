@@ -57,6 +57,8 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A41 | Übernahme aus dem Organizer hakt alles an. | 0.7.0: nur Unterlagen angehakt; Fotos, Werbung, Unklares, Gesperrtes nur auf Haken; ein Feld „Akte für alle“. | Gleich so in der Familienakte. |
 | A42 | Termin zu einer Unterlage nur aus dem Prüf-Fenster. | 0.7.0: „Termin dazu“ an jeder Unterlage (Frist/Aufgabe mit Bezug, `createLocalScheduleBundle`). | Knopf an der Unterlage. |
 | A43 | Zahlungen (`payment`) gibt es im Register, aber keine Oberfläche dafür. | 0.7.1: Portemonnaie legt Posten als `payment` ab (Richtung, Tag, wofür), Bon als Unterlage mit „Beleg“. | Die Familienakte könnte dieselben Posten zeigen. |
+| A44 | Bibliothek als lange Liste. | 0.7.3: zwei Karten wie „Finden“ im Datei-Organizer – links der Baum (Kategorie › Art), rechts der Ordner; Akten ebenso mit Pfad (Person › Akte). | Dieselbe Explorer-Ansicht in der Familienakte. |
+| A45 | Gleicher Bereich in anderer Schreibweise ergibt zwei Gruppen. | 0.7.3: in der Anzeige zusammengefasst (`kanonBereich`). | Beim Speichern schon vereinheitlichen. |
 
 ## B. Vereinfachungen der Hülle
 
