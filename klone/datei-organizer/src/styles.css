@@ -359,3 +359,23 @@ a { color: var(--teal); }
 .im-rahmen .header-actions { display: none; }
 .im-rahmen .header-actions.offen { display: flex; position: absolute; right: 8px; top: calc(100% + 4px); z-index: 70; gap: 8px; margin: 0; padding: 8px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 8px 24px rgba(9,38,63,.2); }
 .im-rahmen .header-actions .ordner-pill { max-width: 40vw; }
+
+/* ---- 0.4.17 (Klaus 18.11.2026): Leiste oben im Rahmen einklappbar; zu = nur ein kleiner Pfeil oben rechts (ohne sichtbare Fläche) ---- */
+.nav-zu-knopf { display: none; }
+.im-rahmen .nav-zu-knopf { display: grid; border-color: transparent; color: #fff; background: transparent; }
+.im-rahmen .nav-zu-knopf:hover { background: rgba(255,255,255,.16); }
+.app-shell.nav-zu .site-header { box-shadow: none; background: transparent; }
+.app-shell.nav-zu .site-header > :not(.ladeanzeige) { display: none !important; }
+.nav-auf { position: fixed; top: 4px; right: 8px; z-index: 65; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid transparent; border-radius: 50%; color: var(--navy); background: transparent; cursor: pointer; }
+.nav-auf:hover, .nav-auf:focus-visible { border-color: var(--line); background: rgba(255,255,255,.92); box-shadow: 0 2px 8px rgba(9,38,63,.15); }
+/* Verlauf in einer Zeile, Stichprobe einklappbar (0.4.17, Klaus 18.11.2026) */
+.verlauf-zeile { display: flex; flex-wrap: nowrap; align-items: center; gap: 10px; }
+.verlauf-zeile .sicht-wahl { flex: 1 1 auto; min-width: 0; }
+.verlauf-zeile .sicht-wahl select { min-width: 0; max-width: 100%; }
+.verlauf-symbole { display: flex; gap: 4px; flex: 0 0 auto; }
+.klapp-karte > summary { cursor: pointer; list-style: none; }
+.klapp-karte > summary::-webkit-details-marker { display: none; }
+.klapp-karte > summary::after { content: "▾"; margin-left: 8px; color: var(--muted); transition: transform .15s; }
+.klapp-karte:not([open]) > summary::after { transform: rotate(-90deg); }
+.klapp-karte:not([open]) > summary { margin-bottom: 0; }
+.verlauf-liste.rollt { max-height: min(55vh, 520px); overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; }

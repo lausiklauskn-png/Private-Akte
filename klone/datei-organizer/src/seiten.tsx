@@ -564,30 +564,28 @@ export function VerlaufSeite({ z }: P) {
   const loeschen = () => { if (n && confirm(`${stueck("Diesen Eintrag", "Einträge")} aus dem Verlauf löschen?\n\nNur die Liste wird kürzer. Die Dateien bleiben so sortiert, wie sie sind, und das Gelernte bleibt.`)) z.verlaufLoeschen(gewaehlt); };
   const zurueck = () => { if (n && (n === 1 || confirm(`${n} Schritte rückgängig machen?\n\nDie Dateien stehen danach wieder bei „bitte prüfen“. Wenn du nur die Liste kürzen willst: „Aus Verlauf löschen“.`))) z.rueckgaengig(gewaehlt); };
   return <>
-    <Seitentitel symbol={<History size={24}/>} titel="Verlauf" info={<Info titel="Verlauf" punkte={["Jede Bestätigung und Korrektur steht hier.", "Haken setzen, dann oben wählen:", "„Aus Verlauf löschen“ kürzt nur die Liste – die Dateien bleiben sortiert, das Gelernte bleibt.", "„Rückgängig machen“ nimmt den Schritt zurück – die Datei landet wieder bei „bitte prüfen“.", "Aus den Korrekturen lernt der Organizer Regeln je Absender."]}/>}/>
+    <Seitentitel symbol={<History size={24}/>} titel="Verlauf" info={<Info titel="Verlauf" punkte={["Jede Bestätigung und Korrektur steht hier.", "Haken setzen, dann oben wählen:", "Papierkorb: aus dem Verlauf löschen – kürzt nur die Liste – die Dateien bleiben sortiert, das Gelernte bleibt.", "Pfeil zurück: rückgängig machen – nimmt den Schritt zurück – die Datei landet wieder bei „bitte prüfen“.", "Aus den Korrekturen lernt der Organizer Regeln je Absender."]}/>}/>
     <Meldung z={z} gehe={() => {}}/>
     <div className="raster-2">
-      <section className="card" data-verlauf>
-        <div className="card-heading"><h2>Korrekturen</h2><span className="badge">{z.verlauf.length}</span></div>
+      {/* Einklappbar, die Liste rollt innen (Klaus 18.11.: „da werden Hunderte sein … der Container soll sich nicht weiter vergrößern“). */}
+      <details className="card klapp-karte" data-verlauf open>
+        <summary className="card-heading"><h2>Korrekturen</h2><span className="badge">{z.verlauf.length}</span></summary>
         {liste.length === 0 ? <p className="leise">Noch nichts korrigiert.</p> : <>
-          <div className="listen-leiste" data-verlauf-leiste>
-            <label className="alle-wahl"><input type="checkbox" checked={n === z.verlauf.length} ref={(e) => { if (e) e.indeterminate = n > 0 && n < z.verlauf.length; }} onChange={(e) => setWahl(e.target.checked ? new Set(z.verlauf.keys()) : new Set())} data-verlauf-alle/>Alle auswählen</label>
+          {/* Eine Zeile (Klaus 18.11.): Haken „Alle“, Sortieren, Papierkorb und Rückgängig nur als Symbol. Ohne Haken sind beide aus. */}
+          <div className="listen-leiste verlauf-zeile" data-verlauf-leiste data-verlauf-knoepfe>
+            <label className="alle-wahl"><input type="checkbox" checked={n === z.verlauf.length} ref={(e) => { if (e) e.indeterminate = n > 0 && n < z.verlauf.length; }} onChange={(e) => setWahl(e.target.checked ? new Set(z.verlauf.keys()) : new Set())} data-verlauf-alle/>Alle</label>
             <label className="sicht-wahl"><span className="leise">Sortieren</span><select value={ordnung} onChange={(e) => setOrdnung(e.target.value as VerlaufOrdnung)} data-verlauf-sortieren><option value="neu">Neueste zuerst</option><option value="alt">Älteste zuerst</option><option value="art">Nach Art (Geändertes zuerst)</option></select></label>
+            <span className="verlauf-symbole">
+              <button type="button" className="info-knopf nur-symbol" disabled={!n} onClick={loeschen} aria-label={n ? `${n} aus dem Verlauf löschen` : "Aus dem Verlauf löschen"} title="Aus dem Verlauf löschen – die Dateien bleiben sortiert" data-verlauf-loeschen><Trash2 size={17}/></button>
+              <button type="button" className="info-knopf nur-symbol" disabled={!n} onClick={zurueck} aria-label={n ? `${n} rückgängig machen` : "Rückgängig machen"} title="Rückgängig machen – die Datei steht wieder bei „bitte prüfen“" data-rueckgaengig><Undo2 size={17}/></button>
+            </span>
           </div>
-          <div className="listen-leiste" data-verlauf-knoepfe>
-            <span className="leise" data-verlauf-gewaehlt>{n ? `${n} gewählt` : "Erst Haken setzen"}</span>
-            <button type="button" className="button klein" disabled={!n} onClick={loeschen} title="Nur aus der Liste nehmen. Die Dateien bleiben sortiert, das Gelernte bleibt." data-verlauf-loeschen><Trash2 size={15}/>Aus Verlauf löschen</button>
-            <button type="button" className="button klein" disabled={!n} onClick={zurueck} title="Den Schritt zurücknehmen: die Datei steht wieder bei „bitte prüfen“" data-rueckgaengig><Undo2 size={15}/>Rückgängig machen</button>
-          </div>
-          <ul className="verlauf-liste">{liste.map(([i, k]) => <li key={k.zeit + i}><label className="verlauf-eintrag" data-verlauf-eintrag={i}>
+          <ul className="verlauf-liste rollt" data-verlauf-liste>{liste.map(([i, k]) => <li key={k.zeit + i}><label className="verlauf-eintrag" data-verlauf-eintrag={i}>
             <input type="checkbox" className="zeilen-wahl" checked={wahl.has(i)} onChange={(e) => setWahl((w) => { const s = new Set(w); if (e.target.checked) s.add(i); else s.delete(i); return s; })} data-verlauf-wahl/>
             <span><strong>{FELD_NAMEN[k.feld]}</strong> {k.bestaetigt ? <>bestätigt: „{k.zu}“</> : <>„{k.von || "–"}“ → „{k.zu}“</>}<span className="grund">{k.pfad.split("/").pop()} · {new Date(k.zeit).toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" })}</span></span>
           </label></li>)}</ul></>}
-      </section>
-      <section className="card" data-regeln>
-        <div className="card-heading"><h2>Gelernt</h2><span className="badge du">{z.regeln.length}</span></div>
-        {z.regeln.length === 0 ? <p className="leise">Noch keine Regel.</p> : <ul className="verlauf-liste">{z.regeln.map((r) => <li key={r.wenn.absender + r.feld + (r.wenn.sache || "")}><span>Absender „{r.wenn.absender}“{r.wenn.sache ? <> bei Vorschlag „{r.wenn.sache}“</> : null} → {FELD_NAMEN[r.feld]} „{r.dann}“</span><span className="leise">{r.anzahl}×</span></li>)}</ul>}
-      </section>
+      </details>
+      {/* „Gelernt“ steht nicht mehr auf der Seite (Klaus 18.11.: „das läuft im Hintergrund“) – die Regeln bleiben, nur die Liste ist weg. */}
       <StichprobeKarte z={z}/>
 
     </div>
@@ -599,12 +597,13 @@ function StichprobeKarte({ z }: { z: AppZustand }) {
   const sp = useMemo(() => stichprobe(z.verlauf), [z.verlauf]);
   const [kopiert, setKopiert] = useState(false);
   const felder = Object.entries(sp.felder);
-  return <section className="card" data-stichprobe>
-    <div className="card-heading"><h2>Stichprobe – nur Zahlen</h2><span className="badge">{sp.dateien}</span></div>
+  // Einklappbar (Klaus 18.11.: „zum Sehen erst einmal, aber einklappbar“), ab Werk zu.
+  return <details className="card klapp-karte" data-stichprobe>
+    <summary className="card-heading"><h2>Stichprobe – nur Zahlen</h2><span className="badge">{sp.dateien}</span></summary>
     <Info titel="Stichprobe eigener Unterlagen" punkte={["Lege 30 bis 50 eigene Unterlagen ein und bestätige oder berichtige bei jeder Datei Bereich, Art, Absender und Frist.", "Hier steht nur, wie oft der erste Vorschlag stimmte – keine Namen, keine Texte, keine Dateinamen.", "Nichts verlässt das Gerät. „Zahlen kopieren“ legt nur diese Zahlen in die Zwischenablage."]}/>
     {felder.length === 0 ? <p className="leise">Noch nichts bestätigt oder berichtigt.</p> : <ul className="verlauf-liste">{felder.map(([f, w]) => <li key={f}><span><strong>{FELD_NAMEN[f as FeldName] || f}</strong> {anteilText(w)}</span><span className="leise">{w.berichtigt} berichtigt</span></li>)}</ul>}
     {felder.length > 0 && <button type="button" className="button klein" data-stichprobe-kopieren onClick={() => { void navigator.clipboard?.writeText(JSON.stringify(sp)).then(() => setKopiert(true)); }}><Check size={15}/>{kopiert ? "Kopiert" : "Zahlen kopieren"}</button>}
-  </section>;
+  </details>;
 }
 
 // ---------------- Familienakte ----------------

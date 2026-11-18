@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.5)
+## Stand (18.11.2026, Vorschau 0.6.6)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_OFFENE-PUNKTE-UND-NAECHSTE-APPS.md` (nächste Sitzung, mit Startauftrag), Abschluss dieser
@@ -34,7 +34,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `5eb1882` (0.4.16). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `edd8987` (0.4.17). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -52,7 +52,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **0.6.5 Navi-Leiste (Klaus 18.11.: „das Flying Widget ist unsere Navigationsleiste“):** am Handy gibt es die untere Leiste
   (Start, Akten, Eingang, Baum) nicht mehr – die Seitenleiste führt, „Eingang“ trägt dort seine Zahl. Am breiten Bildschirm steht sie
   links und klappt mit dem Pfeil oben zu einer schmalen Spalte nur mit Symbolen ein (`navZu`, gemerkt `pa_nav_zu`).
-  **Im Datei-Organizer der Akte** (dort 0.4.17, PR #67): die grüne Leiste oben ist einklappbar, am Handy ab Werk zu (die Seitenleiste
+  **Im Datei-Organizer der Akte** (dort 0.4.17, PR #67; als **0.6.6** nachgezogen, Klon @ `edd8987`): die grüne Leiste oben ist einklappbar, am Handy ab Werk zu (die Seitenleiste
   des Organizers führt); der Verlauf hat eine Zeile mit „Alle“, Sortieren, Papierkorb und Rückgängig als Symbol, „Gelernt“ steht nicht
   mehr auf der Seite (läuft im Hintergrund, bleibt erhalten), „Korrekturen“ und „Stichprobe“ sind einklappbar. Die Leiste bleibt grün
   (`rahmen/organizer-thema.css`). Der Organizer ist in Akte und eigenständiger Web-App derselbe Stand, nur die Farben unterscheiden sich.
@@ -65,7 +65,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   „bitte prüfen“ mit „Alle auswählen“/„Alle übernehmen“; Verlauf mit Sortierung und „Aus Verlauf löschen“ (ohne rückgängig zu
   machen – Rückgängig ist ein eigener Knopf, das Gelernte bleibt); „Sortieren“ statt „Sicht“ in Finden; flache Zeilen; eigene
   Seitenleiste (Griff rechts); **Kopf im Rahmen nur noch eine Zeile** – zusammen mit der Leiste der Akte am Handy zwei Zeilen
-  (gemessen 43 + 47 px). Klon @ `f7ecb24`. Probe 381 grün. Am Tablet ungeprüft. Die Seitenleiste im Organizer ist dessen eigene
+  (gemessen 43 + 47 px; seit 0.6.6 am Handy nur 43 px, die Leiste des Organizers ist dort ab Werk eingeklappt). Klon @ `f7ecb24`. Probe 381 grün. Am Tablet ungeprüft. Die Seitenleiste im Organizer ist dessen eigene
   (nicht verschiebbar wie die der Akte); in Workflow PDF gibt es noch keine.
   **„Wen es betrifft“ und „Absender“ unter „Sortieren“ (Klaus 18.11.: „ein Ordner für die Familienangehörigen – dasselbe bitte in die
   Privatakte“):** der Baum über „Deine Unterlagen“ gruppiert auch danach (`echtAngabe` in `app.js`); die Angaben kommen aus der
