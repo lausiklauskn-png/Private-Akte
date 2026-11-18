@@ -43,7 +43,14 @@ klein, und man weiß, wo man suchen muss. Beide greifen auf **denselben Speicher
 Werk die letzten 5 Jahre (nach dem Datum der Unterlage), Private Brain das Ältere, und „weiter zurück suchen“ ist ein Tipp. Grund:
 ein Umzug zwischen zwei Speichern kann Unterlagen verlieren oder doppeln; eine Grenze in der Ansicht nicht.
 
-**Zu klären, bevor gebaut wird:**
+**Klaus' Antworten (18.11.):**
+- Es zählt das **Datum der Unterlage**, nicht das Datum des Ablegens.
+- **Ausweise, Urkunden, Verträge bleiben immer in der Akte**, auch wenn sie älter sind – es sind wenige, und alte Verträge muss man
+  später nachprüfen können. Man soll die Wahl haben.
+- **Verschlüsselter Speicher auf der SD-Karte ist in Ordnung.**
+- Noch offen: was gilt bei Unterlagen ohne Datum (Vorschlag: bleiben in der Akte, bis ein Datum gesetzt ist).
+
+**Damals zu klären (jetzt beantwortet, zur Nachverfolgung):**
 - Gilt das **Datum der Unterlage** (Rechnungsdatum) oder das Datum des Ablegens? Was gilt bei Unterlagen ohne Datum?
 - Was ist mit Dingen, die nicht altern dürfen (Ausweis, Urkunden, Verträge, Versicherungen) – bleiben die immer in der Akte?
 - **SD-Karte gegen „Verschlüsselung an einem Ort“:** in `CLAUDE.md` steht (Klaus 17.11.), offen gearbeitet wird nur im eigenen
@@ -54,8 +61,11 @@ ein Umzug zwischen zwei Speichern kann Unterlagen verlieren oder doppeln; eine G
 
 ## Noch offen bei Klaus (aus dem Brief)
 
-- **Welche Bank(en)?** Kann das Online-Banking CSV oder CAMT ausgeben? (Ohne Antwort baut die nächste Sitzung CAMT.053 und eine
-  CSV-Einlesung mit Spaltenzuordnung und prüft mit erfundenen Beispieldateien.)
+- **Bank: Openbank (Santander)** (Klaus 18.11.). Welches Format das Online-Banking ausgibt (CSV, CAMT, Excel, nur PDF), weiß Klaus
+  noch nicht – er sieht nach (Online-Banking › Umsätze › Herunterladen/Exportieren). In der Sitzung nichts Openbank-Eigenes gefunden.
+  Einschätzung, nicht geprüft: Openbank ist eine spanische Bank; ob sie **FinTS** anbietet, ist fraglich (FinTS ist ein Standard
+  der deutschen Kreditwirtschaft) – dann bliebe für BookLedgerPro nur PSD2 (Weg 3). Die nächste Sitzung baut CSV mit
+  Spaltenzuordnung und CAMT.053; kommt bei Openbank nur Excel heraus, auch .xlsx. Liefert sie nur PDF, gesondert besprechen.
 - **Mails je Abbuchung?** In welches Postfach? (Erst für Weg 4 nötig.)
 
 ## Nachgesehen in dieser Sitzung (Quellen: Bank- und Projektseiten, nicht fints.org selbst)
@@ -69,7 +79,8 @@ ein Umzug zwischen zwei Speichern kann Unterlagen verlieren oder doppeln; eine G
 ```
 Lies im Repo Private-Akte zuerst CLAUDE.md, dann docs/PLAN_2026-11-18_PORTEMONNAIE-BANK-BOOKLEDGER.md.
 Bau das Portemonnaie fertig, Teil „Bank“ (Private Akte 0.8.0):
-1. Kontoauszug einlesen: CAMT.053 (XML) und CSV (Spalten zuordnen, Zuordnung je Bank merken). Das Original wird Unterlage
+1. Kontoauszug einlesen: CAMT.053 (XML) und CSV (Spalten zuordnen, Zuordnung je Bank merken; Klaus hat Openbank –
+   sein Exportformat zuerst erfragen, ggf. auch .xlsx). Das Original wird Unterlage
    in der Akte (Bereich „Bank & Finanzen“ o. ä. aus den Bereichen des Klons), jede Buchung ein Posten im Fach „Bank“ im Register.
 2. Jede Buchung nur einmal (Schlüssel: Referenz der Bank, sonst Tag + Betrag + Zweck + Gegenkonto). Wiederholtes Einlesen
    bringt nur Neues; die Meldung nennt neu / schon da.
