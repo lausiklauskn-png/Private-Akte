@@ -217,7 +217,7 @@ const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a h
 
 /* ---------- Ansichten ---------- */
 function sucheFeld(){
-  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form>`;
+  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form><div id="suchvor" aria-live="polite"></div>`;
 }
 function treffer(){
   const t = suche(s.frage), es = echtSuche(s.frage), ids = es.ids, e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
@@ -594,6 +594,7 @@ async function termineLaden(){ try { const k = await T().kalender.termine(); ech
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
+  vor.heu.clear();
   await termineLaden();
   if (s.ansicht === 'start' && !sprech.an) mainZeigen();
 }
@@ -634,7 +635,7 @@ function echtAbschnitt(){
   else { const baum = echtBaum(l), alle = echtSortiert(echt.knoten === null ? l : l.filter(d => echtGruppe(d) === echt.knoten)), n = echt.zeig || ECHT_SEITE;
     innen = baum + (echt.knoten !== null ? `<p class="egewaehlt">${esc(echt.knoten)} · ${alle.length}</p>` : '') + alle.slice(0, n).map(d => echtZeile(d)).join('')
       + (alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''); }
-  return klappTeil('echt', 'Deine Unterlagen', `${l && !echt.fehler ? l.length + ' · ' : ''}auf diesem Gerät gespeichert`, innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
+  return klappTeil('echt', 'Deine Unterlagen', l && !echt.fehler ? String(l.length) : '', innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
   echt.datei = datei;
@@ -899,13 +900,30 @@ A['suche-leer'] = () => { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeige
 A['suche-mikro'] = e => {
   if (sprech.an) { sprechEnde(true); return; }
   if (!sprech.sitzung) sprech.sitzung = T().diktat.sitzung({
-    text: t => { const f = suchFeld(); if (f) { f.value = t; const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !t; } },
+    text: t => { const f = suchFeld(); if (f) { f.value = t; const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !t; vorBald(); } },
     zustand: an => { const k = document.querySelector('[data-a=suche-mikro]'); if (k) k.classList.toggle('an', an); if (!an && sprech.an && !sprech.sitzung.active) sprech.an = false; },
     hinweis: (t, fehler) => { if (t && (fehler || /bitte tippen/.test(t))) { sprech.an = false; toast(t); } }
   });
   sprech.an = true; sprech.sitzung.start(suchFeld() ? suchFeld().value : '', false);
 };
-document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; } });
+document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; vorBald(); } });
+/* Vorschläge schon beim Tippen oder Sprechen (0.6.2, Klaus 18.11.: „wie bei den E-Mails von Microsoft – die ersten Buchstaben, und er
+   zeigt schon, was es sein könnte“). Ab zwei Zeichen stehen unter dem Suchfeld bis zu sechs Unterlagen: jedes getippte Wort muss
+   ein Wortanfang im Titel, Dateinamen, Bereich, in der Notiz oder im gelesenen Text sein (Titel zählt doppelt); dazu, was die
+   Wortsuche des Klons findet. Das ist nur eine schnelle Vorschau in der Hülle – „Finden“ sucht unverändert (Wortsuche und
+   Bedeutungssuche des Kerns), am Kern ändert sich nichts. Ein Tipp auf einen Vorschlag öffnet die Unterlage. */
+const vor = { zeit:0, heu:new Map() };
+const vorNorm = t => String(t || '').toLowerCase().replace(/ß/g, 'ss').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ');
+function vorHeu(d){ let h = vor.heu.get(d.id); if (!h) { h = {titel:' ' + vorNorm(echtTitel(d) + ' ' + (d.originalName || '')), rest:' ' + vorNorm((d.category || '') + ' ' + (d.notes || '') + ' ' + (d.textAuszug || ''))}; vor.heu.set(d.id, h); } return h; }
+function suchVorschlaege(frage){
+  const w = vorNorm(frage).trim().split(' ').filter(Boolean); if (w.join('').length < 2 || !echt.liste) return [];
+  const treffer = [];
+  for (const d of echt.liste) { const h = vorHeu(d); let p = 0; for (const x of w) { if (h.titel.includes(' ' + x)) p += 2; else if (h.rest.includes(' ' + x)) p += 1; else { p = -1; break; } } if (p > 0) treffer.push([p, d]); }
+  try { for (const id of T().suchen(frage, echt.liste)) if (!treffer.some(t => t[1].id === id)) { const d = echt.liste.find(x => x.id === id); if (d) treffer.push([0.5, d]); } } catch { /* die Vorschau kommt dann nur aus den Wortanfängen */ }
+  return treffer.sort((a, b) => b[0] - a[0] || String(b[1].addedAt || '').localeCompare(String(a[1].addedAt || ''))).slice(0, 6).map(t => t[1]);
+}
+function vorZeigen(){ const f = suchFeld(), o = $('suchvor'); if (!o) return; const t = f ? f.value.trim() : ''; const l = t && t !== s.frage ? suchVorschlaege(t) : []; o.innerHTML = l.length ? `<div class="liste vorliste">${l.map(d => echtZeile(d, '')).join('')}</div>` : ''; }
+function vorBald(){ clearTimeout(vor.zeit); vor.zeit = setTimeout(vorZeigen, 120); }
 
 /* ---------- Bedeutungssuche hinter „Finden“ (Klaus 17.11.): kein eigener Knopf. Nach jedem „Finden“ fragt eine Zeile unter der
    Suchleiste „Ja / Nein“, solange das Sprachmodell nicht geladen ist; „Nein“ blendet sie bis zum nächsten „Finden“ aus.
@@ -1081,20 +1099,45 @@ const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
    Wie die Seitenleiste der Familienakte (dort app/seitenleiste.tsx, im Kalender läuft sie selbst): ein schmaler Griff am rechten Rand,
    wandert mit; ein Tipp zeigt nach oben, nach unten, Zurück, Startseite, Baum – und was sonst hinter „⋯“ liegt. Nur in der schmalen
    Ansicht; am Monitor stehen die Knöpfe ohnehin oben. Aussehen und Maße wie im Klon, hier für die Hülle ohne React geschrieben. */
-const leiste = { auf:false };
+const leiste = { auf:false, gezogen:0 };
+/* Verschieben (Klaus 18.11.: für Linkshänder – „anpacken, vier Pfeile, verschieben: nach links, nach unten, nach oben“): den Griff
+   lange drücken oder ziehen; er wird dabei rund mit vier Pfeilen, folgt dem Finger und verankert sich, wo man loslässt – am linken
+   oder rechten Rand (Höhe frei, 8–92 %) oder unten (Stelle von links frei). Gemerkt im Browser (`pa_leiste`). Ab Werk rechts,
+   unterhalb der Mitte. Ein kurzer Tipp öffnet wie bisher; aufgeklappt richten sich die Knöpfe nach der Lage. */
+const leistePos = (() => { try { const p = JSON.parse(localStorage.getItem('pa_leiste') || 'null'); if (p && ['l', 'r', 'u'].includes(p.seite) && p.oben >= 8 && p.oben <= 92) return p; } catch { /* Werkseinstellung */ } return {seite:'r', oben:64}; })();
+/* Lage: 'l'/'r' = am linken/rechten Rand, `oben` = Höhe in Prozent; 'u' = unten angedockt, `oben` ist dann die Stelle von links in
+   Prozent. Unten angedockt ersetzt die Leiste am Handy die untere Leiste der Akte (Klaus 18.11.: „dann kann ich komplett auf die
+   untere Navi-Leiste verzichten“) – die tritt dann zurück (`body.leiste-unten`). */
+function leisteLage(){ const o = $('seitenleiste'); if (!o) return; const u = leistePos.seite === 'u';
+  o.classList.toggle('links', leistePos.seite === 'l'); o.classList.toggle('unten', u); document.body.classList.toggle('leiste-unten', u);
+  o.style.top = u ? 'auto' : (leiste.auf ? Math.min(70, Math.max(30, leistePos.oben)) : leistePos.oben) + '%';
+  o.style.left = u ? (leiste.auf ? 50 : leistePos.oben) + '%' : ''; }
+let leisteZug = null;
+const leisteZieht = () => { if (!leisteZug) return; leisteZug.weit = true; const o = $('seitenleiste'); if (o) o.classList.add('zieht'); };
+document.addEventListener('pointerdown', ev => { const g = ev.target.closest && ev.target.closest('.seitenleiste-griff'); if (!g) return; leisteZug = {x:ev.clientX, y:ev.clientY, weit:false, uhr:setTimeout(leisteZieht, 450)}; try { g.setPointerCapture(ev.pointerId); } catch { /* geht auch ohne */ } });
+document.addEventListener('pointermove', ev => { if (!leisteZug) return; if (!leisteZug.weit && Math.hypot(ev.clientX - leisteZug.x, ev.clientY - leisteZug.y) < 10) return;
+  leisteZieht(); const o = $('seitenleiste');
+  /* beim Ziehen folgt der runde Knopf dem Finger; verankert wird beim Loslassen */
+  o.classList.remove('links', 'unten'); o.style.top = ev.clientY + 'px'; o.style.left = ev.clientX + 'px'; o.classList.add('frei');
+  if (ev.clientY > innerHeight * .86) { leistePos.seite = 'u'; leistePos.oben = Math.round(Math.min(92, Math.max(8, ev.clientX / innerWidth * 100))); }
+  else { leistePos.seite = ev.clientX < innerWidth / 2 ? 'l' : 'r'; leistePos.oben = Math.round(Math.min(92, Math.max(8, ev.clientY / innerHeight * 100))); } });
+const leisteLos = () => { if (!leisteZug) return; const weit = leisteZug.weit; clearTimeout(leisteZug.uhr); leisteZug = null; const o = $('seitenleiste'); if (o) o.classList.remove('zieht', 'frei');
+  if (weit) { leiste.gezogen = Date.now(); try { localStorage.setItem('pa_leiste', JSON.stringify(leistePos)); } catch { /* gilt bis zum Neuladen */ } leisteLage(); } };
+document.addEventListener('pointerup', leisteLos); document.addEventListener('pointercancel', leisteLos);
+document.addEventListener('contextmenu', ev => { if (ev.target.closest && ev.target.closest('.seitenleiste-griff')) ev.preventDefault(); }); /* langer Druck soll kein Menü des Browsers öffnen */
 function seitenleisteZeigen(){
   let o = $('seitenleiste'); if (!o) { o = document.createElement('aside'); o.id = 'seitenleiste'; o.className = 'seitenleiste'; o.setAttribute('aria-label', 'Seitenleiste'); document.body.appendChild(o); }
-  o.dataset.seitenleiste = leiste.auf ? 'offen' : 'zu';
-  if (!leiste.auf) { o.innerHTML = `<button class="seitenleiste-griff" data-a="leiste-auf" aria-label="Seitenleiste öffnen: nach oben, nach unten, zurück …"><span aria-hidden="true"></span></button>`; return; }
+  o.dataset.seitenleiste = leiste.auf ? 'offen' : 'zu'; leisteLage();
+  if (!leiste.auf) { o.innerHTML = `<button class="seitenleiste-griff" data-a="leiste-auf" aria-label="Seitenleiste öffnen: nach oben, nach unten, zurück … Ziehen verschiebt sie."><span aria-hidden="true"></span></button>`; return; }
   const k = (a, i, t, attr = '') => `<button role="menuitem" data-a="${a}" ${attr}>${i}<span>${t}</span></button>`;
   o.innerHTML = `<div class="seitenleiste-knoepfe" role="menu"><button class="seitenleiste-zu" data-a="leiste-zu" aria-label="Seitenleiste schließen">${ic('zu')}</button>`
     + k('leiste-oben', ic('hoch'), 'Nach oben') + k('leiste-unten', ic('runter'), 'Nach unten')
     + (zurTiefe() ? k('leiste-zurueck', ic('zurueck'), 'Zurück') : '')
     + (s.ansicht !== 'start' || s.frage || s.bereich ? k('geh', ic('start'), 'Startseite', 'data-zu="start"') : '')
-    + (s.ansicht !== 'baum' ? k('geh', ic('baum'), 'Baum', 'data-zu="baum"') : '') + '<hr>'
+    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t, `data-zu="${id}"`)).join('') + '<hr>'
     + MEHR.map(([a, i, t]) => k(a, a === 'farbe' ? '<span class="fleck farbknopf"></span>' : i ? ic(i) : '<b class="lfrage">?</b>', t, 'data-ort="akte"')).join('') + '</div>';
 }
-A['leiste-auf'] = () => { leiste.auf = true; seitenleisteZeigen(); };
+A['leiste-auf'] = () => { if (Date.now() - leiste.gezogen < 500) return; /* das war ein Ziehen, kein Tipp */ leiste.auf = true; seitenleisteZeigen(); };
 A['leiste-zu'] = () => { leiste.auf = false; seitenleisteZeigen(); };
 A['leiste-oben'] = () => scrollTo({top:0, behavior:'smooth'});
 A['leiste-unten'] = () => scrollTo({top:document.documentElement.scrollHeight, behavior:'smooth'});

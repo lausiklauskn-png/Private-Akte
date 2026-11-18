@@ -55,10 +55,25 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   (neu), Jahr bei „Datum der Unterlage“, sonst der Bereich. Die Liste zeigt je 30 Stück, „Weitere zeigen“ holt mehr (erledigt den
   offenen Punkt „lange Liste bei 100 Stück“). Zeilen dort höchstens 44 px hoch, die Marke „echt“ steht nicht mehr an jeder Zeile.
   Der Text unten auf der Startseite („Vorschau … Gespeichert wird nur …“) ist heraus (Klaus 18.11.).
+  Im Kopf „Deine Unterlagen“ steht nur noch die Zahl (am Handy eine Zeile statt zwei). Die Seitenleiste führt jetzt auch zu „Akten“ und
+  „Eingang“; ihr Griff sitzt unterhalb der Mitte (64 %), damit er nicht mit der Seitenleiste mancher Handys (Samsung, meist oben
+  rechts) zusammenfällt – am Gerät ungeprüft, die Randgeste von Android lässt sich von der Seite aus nicht abstellen.
+  **Verschiebbar und selbst verankert (Klaus 18.11., für Linkshänder: „wie ein Flying Widget, das ich selbst fahre“):** den Griff
+  lange drücken oder ziehen – er wird rund mit vier Pfeilen, folgt dem Finger und verankert sich beim Loslassen am linken oder rechten
+  Rand (Höhe frei) oder **unten** (`leistePos`, gemerkt `pa_leiste`). Unten angedockt liegt der Griff quer, die Knöpfe klappen nach
+  oben auf, und die untere Leiste der Akte (Start, Akten, Eingang, Baum) tritt am Handy zurück – die Seitenleiste ersetzt sie dann.
+  Die Zahl am „Eingang“ der unteren Leiste ist dann nicht zu sehen (offen).
+  **Vorschläge beim Tippen oder Sprechen (Klaus 18.11.: „wie bei den E-Mails von Microsoft – die ersten Buchstaben, und er zeigt
+  schon, was es sein könnte“; „nicht, dass wir was zerschießen im Kern“):** ab zwei Zeichen stehen unter dem Suchfeld bis zu sechs
+  Unterlagen (`suchVorschlaege`, `#suchvor` in `app.js`): jedes Wort muss ein Wortanfang im Titel, Dateinamen, Bereich, in der Notiz
+  oder im gelesenen Text sein (Titel zählt doppelt), dazu die Treffer der Wortsuche des Klons. Nur eine Vorschau der Hülle – „Finden“
+  und der Kern (Wortsuche, Bedeutungssuche) sind unverändert; die Bedeutungssuche läuft nicht je Buchstabe mit (zu langsam am Tablet).
+  Tipp auf einen Vorschlag öffnet die Unterlage. Gemessen in der Probe: wenige Millisekunden je Eingabe bei rund 35 Unterlagen; mit
+  100 und langen Texten am Tablet ungemessen. Nicht gebaut: Vorschläge aus Notizen und Terminen, Tippfehler-Nachsicht.
   **Parallel im Repo Datei-Organizer bestellt (Klaus 18.11., dort 0.4.15, eigener Zweig):** „Alle übernehmen“ bei „bitte prüfen“,
   Verlauf sortieren und Einträge löschen ohne Rückgängig, „Sortieren“ statt „Sicht“, flachere Zeilen, Seitenleiste, Kopf höchstens
   zweizeilig. Kommt über den Klon herein, sobald es dort auf `main` ist.
-  Probe 347 grün (18 neu). Am Tablet ungeprüft.
+  Probe 374 grün (Baum, Vorschläge, Seitenleiste: Akten/Eingang, verschieben, unten andocken). Am Tablet ungeprüft.
 - **0.6.1 Seitenleiste in der Akte, im Handyformat (Klaus 18.11.: „am Handy auf jeden Fall, weil da die anderen Funktionen
   reingepackt werden können – hochscrollen, runterscrollen“; am Monitor nicht nötig):** Griff am rechten Rand (`seitenleisteZeigen`
   in `app.js`, Maße und Aussehen wie `.seitenleiste` der Familienakte, für die Hülle ohne React geschrieben), nur unter 1000 px
