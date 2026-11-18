@@ -51,6 +51,11 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A35 | Der Zugang zu Google/Microsoft lebt nur im Speicher der Seite. | Im Rahmen heißt das: nach dem Schließen des Kalenders ist beim nächsten Öffnen neu anzumelden (der Klon bietet es an). | Zugang für die Sitzung auch über ein Neuladen halten (sessionStorage), sofern gewollt. |
 | A36 | Am Handy kostet alles Hohe oben Platz: Bestätigung über drei Zeilen, läutende Erinnerung als dickes Feld, Erinnerungs-Knopf in eigener Reihe. | 0.6.0: Bestätigung und Erinnerung als flache Zeile (Text seitlich schiebbar), Erinnerungs-Knopf im Kopf der Karte „Notizen“. | Die App-Glocke am Handy schlanker (eine Zeile); Klaus' Gedanke: Glocke mit Zähler in einer festen Leiste unten. |
 | A37 | Die Seitenleiste (Griff rechts) fehlte in der Akte. | 0.6.0: unverändert aus dem Klon im Kalender. | Sie ist nicht verschiebbar – Klaus hatte sie so in Erinnerung; prüfen, ob gewünscht. |
+| A38 | In der Familienakte heißen benannte Fächer „Vorgänge“ und sind nicht einer Person zugeordnet; Personen hängen nur an Unterlagen. | 0.7.0: „Akte“ = Vorgang (Art „Akte“) mit Verknüpfung zur Person; oben Reiter je Person, darunter ihre Akten. Eine Unterlage liegt in mehreren Akten. | Personen als Reiter und „Akte je Person“ übernehmen; ein Wort statt „Vorgang“. |
+| A39 | Absender steht in der Familienakte nur im Text der Notiz (aus dem Organizer) oder im Briefkopf-Vorschlag. | 0.7.0: Absender von Hand = Organisation mit Verknüpfung „Absender“. | Absender als eigenes Feld an der Unterlage. |
+| A40 | Der Klon kann eine Verknüpfung zur Person nicht lösen (nur „Vorgangsbezug lösen“). | 0.7.0: Lösen über den Weg des Abgleichs (`akteFuerAbgleich`/`akteNachAbgleichSchreiben`, mit Stand-Prüfung). | Eine Funktion „Verknüpfung lösen“ für alle Arten. |
+| A41 | Übernahme aus dem Organizer hakt alles an. | 0.7.0: nur Unterlagen angehakt; Fotos, Werbung, Unklares, Gesperrtes nur auf Haken; ein Feld „Akte für alle“. | Gleich so in der Familienakte. |
+| A42 | Termin zu einer Unterlage nur aus dem Prüf-Fenster. | 0.7.0: „Termin dazu“ an jeder Unterlage (Frist/Aufgabe mit Bezug, `createLocalScheduleBundle`). | Knopf an der Unterlage. |
 
 ## B. Vereinfachungen der Hülle
 

@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.6)
+## Stand (18.11.2026, Vorschau 0.7.0)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_OFFENE-PUNKTE-UND-NAECHSTE-APPS.md` (nächste Sitzung, mit Startauftrag), Abschluss dieser
@@ -47,6 +47,23 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.0 Akten, Unterlagen, Dateien (Klaus 18.11. abends, Antworten A–F):** A ja (Datei = Rohmaterial im Organizer, Unterlage = in
+  der Akte, Akte = Fach mit Namen, einer Person zugeordnet oder allen), B ja (Personen unter „Akten“, Register der Familienakte), C ja
+  (mehrere Akten je Unterlage), D ja, E **echt machen**, F Klaus leert selbst. Gebaut: `T().akten` in `src/tresor.ts` – Person =
+  Datensatz `person`, Akte = `case` (Art „Akte“) mit `case → person „betrifft“`; Unterlage → Akte `gehört zu` (confirmLocalContextLink),
+  → Person `betrifft` (dokumenteZuordnen), → Absender = `organisation` mit Verknüpfung „Absender“. Lösen über
+  `akteFuerAbgleich`/`akteNachAbgleichSchreiben` (der Klon hat sonst nur „Vorgangsbezug lösen“). **Akten** (`vAkten`): Reiter je Person
+  („Alle“, Namen, „+ Person“), darunter die Akten mit Zahl, „Alles zu <Person>“ bzw. „Ohne Akte“, „Neue Akte“; eine Akte zeigt ihre
+  Unterlagen, „Unterlagen hineinlegen“ (Haken). **Eingang** (`vEingang`) ist echt: Unterlagen ohne Akte und ohne Person; die Zahl steht in
+  Leiste/Seitenleiste. **Einordnen** an jeder Unterlage und beim Ablegen (`zuordnenFelder`): Personen-Haken + neue Person, Akten-Haken +
+  neue Akte (gehört der ersten gewählten Person), Absender. Person aus der Notiz des Organizers zählt weiter (`echtPersonen`), von Hand
+  gesetzt geht vor. **Übergabe aus dem Organizer:** ab Werk nur Unterlagen angehakt (nicht `Angebot/Werbung`, `Foto`, `Unklar`, Gesperrtes;
+  „Alle anhaken“), Feld „Akte für alle“. **Startseite:** Bereiche-Kacheln echt (Bereiche mit Unterlagen, Zahl; Tipp zeigt den Bereich im
+  Baum), „Zuletzt abgelegt“ (Beispiel) heraus. **Termin dazu** an jeder Unterlage (Frist/Aufgabe des Klons mit Bezug). Beispiel-Kalender
+  (`kalender()`), Beispiel-Notiz (`fNotiz`) und „Bearbeiten mit › Kalender“ sind heraus. Gelber Knopf oben: Portemonnaie-Symbol statt
+  Kamera (Klaus 18.11.: die Kamera war irreführend). `echtLaden` lässt nur den jüngsten Lauf gelten. Probe 414 grün. Am Tablet ungeprüft.
+  **Grenzen:** Akte umbenennen/auflösen und Person ändern/löschen gibt es noch nicht; die Beispiele hinter „Finden“ (Beispiel-Treffer,
+  „Bearbeiten mit“) sind noch da.
 - **Am Tablet bestätigt (Klaus 18.11. nachmittags, 0.6.2):** die verschiebbare Seitenleiste („Flying Widget“) „funktioniert wunderbar“.
   Darauf: sie bleibt jetzt bis 1400 px Breite stehen (geteilter Bildschirm, Tablet quer), erst am großen Monitor nicht (0.6.3).
 - **0.6.5 Navi-Leiste (Klaus 18.11.: „das Flying Widget ist unsere Navigationsleiste“):** am Handy gibt es die untere Leiste
