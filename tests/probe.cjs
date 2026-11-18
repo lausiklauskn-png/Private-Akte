@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.6.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.6.1 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -230,6 +230,18 @@ const { chromium } = require('playwright');
       await p.mouse.click(5, h - 5); await p.waitForFunction(() => !document.querySelector('.glockenfeld')); soll(true, 'Tipp daneben schließt das Glockenfeld');
       await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
       soll((await p.locator('#faellig').innerText()).includes('1 Eintrag'), 'Erledigtes steht nicht mehr unter Fällig');
+    }
+    // Seitenleiste am Handy (0.6.1): Griff rechts, nach oben/unten, Zurück, Startseite, Baum und was hinter „⋯“ liegt; am Monitor nicht
+    if (name === 'pc') soll(!(await p.locator('.seitenleiste-griff').isVisible()), 'Seitenleiste: am Monitor nicht zu sehen');
+    else {
+      soll(await p.locator('.seitenleiste-griff').isVisible(), 'Seitenleiste: Griff am rechten Rand im Handyformat'); await klick('.seitenleiste-griff'); await breit('seitenleiste');
+      { const t = await p.locator('.seitenleiste-knoepfe').innerText(); soll(/Nach oben/.test(t) && /Nach unten/.test(t) && /Baum/.test(t) && /Importieren/.test(t) && /Exportieren/.test(t) && /Drucken/.test(t) && /Farbpalette/.test(t) && !/Startseite/.test(t), 'Seitenleiste: hoch, runter, Baum und die Funktionen aus „⋯“; auf der Startseite keine „Startseite“ (' + t.replace(/\n/g, ' | ') + ')'); } await p.screenshot({path:`p/${name}-12c-seitenleiste.png`});
+      await klick('.seitenleiste [data-a=leiste-unten]'); await p.waitForFunction(() => scrollY > 100); soll(!(await p.locator('.seitenleiste-knoepfe').count()), 'Seitenleiste: „Nach unten“ rollt ans Ende und klappt zu');
+      await klick('.seitenleiste-griff'); await klick('.seitenleiste [data-a=leiste-oben]'); await p.waitForFunction(() => scrollY === 0); soll(true, 'Seitenleiste: „Nach oben“ rollt an den Anfang');
+      await klick('.seitenleiste-griff'); await klick('.seitenleiste [data-a=geh][data-zu=baum]'); await p.waitForSelector('.baumbild'); await klick('.seitenleiste-griff');
+      soll((await p.locator('.seitenleiste [data-a=leiste-zurueck]').count()) === 1 && (await p.locator('.seitenleiste [data-a=geh][data-zu=start]').count()) === 1, 'Seitenleiste: im Baum gibt es „Zurück“ und „Startseite“');
+      await klick('.seitenleiste [data-a=leiste-zurueck]'); await p.waitForSelector('#faellig'); soll(true, 'Seitenleiste: „Zurück“ geht einen Schritt zurück');
+      await klick('.seitenleiste-griff'); await klick('.seitenleiste [data-a=import]'); await p.waitForSelector('.fenster'); soll(!(await p.locator('.seitenleiste').isVisible()), 'Seitenleiste: „Importieren“ öffnet das Fenster, die Leiste tritt zurück'); await klick('[data-a=zu]');
     }
     // Organizer
     await p.evaluate(() => { if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); }); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());

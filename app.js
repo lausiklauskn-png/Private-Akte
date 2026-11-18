@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -27,6 +27,7 @@ const P = {
  ordner:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v6m-3-3 3 3 3-3"/>',
  importpfeil:'<path d="M12 4v11m-4-4 4 4 4-4M5 19h14"/>', exportpfeil:'<path d="M12 15V4m-4 4 4-4 4 4M5 19h14"/>',
  haken:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+ hoch:'<path d="M12 19V5M5 12l7-7 7 7"/>', runter:'<path d="M12 5v14M5 12l7 7 7-7"/>', zurueck:'<path d="M19 12H5M12 5l-7 7 7 7"/>',
  glocke:'<path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2 2 0 0 0 4 0"/>',
  notiz:'<path d="M5 3h14v14l-4 4H5Z"/><path d="M15 21v-4h4M8 8h8M8 12h6"/>',
  kalender:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4M8 14h3v3H8Z"/>',
@@ -1058,6 +1059,32 @@ document.addEventListener('submit', async ev => { const f = ev.target; if (f.dat
   } catch (err) { knopf.disabled = false; knopf.textContent = 'Endgültig leeren'; toast(fehlerText(err)); }
 });
 const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
+/* ---------- Seitenleiste am Handy (0.6.1, Klaus 18.11.: „am Handy auf jeden Fall, da können die anderen Funktionen hinein“) ----------
+   Wie die Seitenleiste der Familienakte (dort app/seitenleiste.tsx, im Kalender läuft sie selbst): ein schmaler Griff am rechten Rand,
+   wandert mit; ein Tipp zeigt nach oben, nach unten, Zurück, Startseite, Baum – und was sonst hinter „⋯“ liegt. Nur in der schmalen
+   Ansicht; am Monitor stehen die Knöpfe ohnehin oben. Aussehen und Maße wie im Klon, hier für die Hülle ohne React geschrieben. */
+const leiste = { auf:false };
+function seitenleisteZeigen(){
+  let o = $('seitenleiste'); if (!o) { o = document.createElement('aside'); o.id = 'seitenleiste'; o.className = 'seitenleiste'; o.setAttribute('aria-label', 'Seitenleiste'); document.body.appendChild(o); }
+  o.dataset.seitenleiste = leiste.auf ? 'offen' : 'zu';
+  if (!leiste.auf) { o.innerHTML = `<button class="seitenleiste-griff" data-a="leiste-auf" aria-label="Seitenleiste öffnen: nach oben, nach unten, zurück …"><span aria-hidden="true"></span></button>`; return; }
+  const k = (a, i, t, attr = '') => `<button role="menuitem" data-a="${a}" ${attr}>${i}<span>${t}</span></button>`;
+  o.innerHTML = `<div class="seitenleiste-knoepfe" role="menu"><button class="seitenleiste-zu" data-a="leiste-zu" aria-label="Seitenleiste schließen">${ic('zu')}</button>`
+    + k('leiste-oben', ic('hoch'), 'Nach oben') + k('leiste-unten', ic('runter'), 'Nach unten')
+    + (zurTiefe() ? k('leiste-zurueck', ic('zurueck'), 'Zurück') : '')
+    + (s.ansicht !== 'start' || s.frage || s.bereich ? k('geh', ic('start'), 'Startseite', 'data-zu="start"') : '')
+    + (s.ansicht !== 'baum' ? k('geh', ic('baum'), 'Baum', 'data-zu="baum"') : '') + '<hr>'
+    + MEHR.map(([a, i, t]) => k(a, a === 'farbe' ? '<span class="fleck farbknopf"></span>' : i ? ic(i) : '<b class="lfrage">?</b>', t, 'data-ort="akte"')).join('') + '</div>';
+}
+A['leiste-auf'] = () => { leiste.auf = true; seitenleisteZeigen(); };
+A['leiste-zu'] = () => { leiste.auf = false; seitenleisteZeigen(); };
+A['leiste-oben'] = () => scrollTo({top:0, behavior:'smooth'});
+A['leiste-unten'] = () => scrollTo({top:document.documentElement.scrollHeight, behavior:'smooth'});
+A['leiste-zurueck'] = () => history.back();
+/* Nach jedem Tipp (auch auf einen Knopf der Leiste, dessen Handlung oben schon gelaufen ist) klappt die Leiste wieder zu. */
+document.addEventListener('click', ev => { if (leiste.auf && !ev.target.closest('.seitenleiste-griff')) { leiste.auf = false; seitenleisteZeigen(); } });
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && leiste.auf) { leiste.auf = false; seitenleisteZeigen(); } });
+seitenleisteZeigen();
 const zurTiefe = () => ($('rahmenort').innerHTML ? 1 : 0) + ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
 function zurAbgleich(){
   if (!zur.wache) return; const t = zurTiefe();
