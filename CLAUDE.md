@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.4)
+## Stand (18.11.2026, Vorschau 0.5.5)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,15 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.5 Das Gelernte im Backup (Klaus 18.11.: „lass uns das gleich ins Backup mit übernehmen“):** „Backup erstellen“ schreibt neben
+  die Vollsicherung des Klons die Datei `Gelerntes.json` in den Ordner „Privatakte_Backup_…“: die gelernten Regeln des Datei-Organizers
+  in der Akte („Absender → Bereich“ mit Stimmen, aus `PrivateAkteOrganizer1`) und die eigenen Kategorien, mit dem Passwort des Backups
+  verschlüsselt (AES-GCM, PBKDF2 600.000 Runden; `gelerntesSchreiben`/`gelerntesEinlesen` in `src/tresor.ts`). „Backup einlesen“ fügt
+  hinzu, was hier fehlt; eine Regel, die es hier schon gibt, bleibt wie sie ist (nichts wird überschrieben, Stimmen werden nicht
+  zusammengezählt). Das Fenster nach dem Backup und die Meldung nach dem Einlesen nennen die Zahlen. **Grenzen:** mit dem
+  Notfallschlüssel statt des Passworts lässt sich das Gelernte nicht einlesen (die Akte sagt es); die Familienakte liest die Datei
+  nicht; gesichert ist nur das Gelernte des Organizers **in der Privaten Akte**, nicht das der eigenständigen Apps Datei-Organizer
+  Pro/Basic (eigener Speicher, dort gibt es kein Backup des Gelernten – offen). Probe 254 grün (4 neu). Am Tablet ungeprüft.
 - **0.5.4 Das Gelernte bleibt (Klaus 18.11.: „auf gar keinen Fall … das ist der Kern, das Eigentliche“):** „Akte leeren“ nimmt im
   Datei-Organizer nur noch die Liste der Dateien, den Verlauf, den gemerkten Ordner und ein angefangenes Einlesen weg
   (`organizerListeLeeren` in `app.js`); die gelernten Regeln werden zurückgeschrieben, eigene Kategorien und die übrigen Merker
