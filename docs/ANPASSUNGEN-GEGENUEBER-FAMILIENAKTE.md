@@ -71,6 +71,14 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | B4 | „Wo liegt was?“: ein Bild, das zeigt, dass es nur einen Speicher gibt. Überschriften „Hinzufügen“, „Tresor“, „Tools“. | 0.1.2–0.1.5 unter dem Baum. | Dort gibt es „Wo liegt was?“ hinter dem „?“ – Vergleich offen. |
 | B5 | Die Programme heißen „Tools“ („Werkzeugstätte“ nur als Erklärung zum Bild). | 0.1.5. | – |
 
+## Portemonnaie mit Bank (0.8.0)
+
+- Die Familienakte kennt Zahlungen (`payment`), aber kein Bankkonto und keinen Kontoauszug. In der Akte ist ein Konto ein `object` mit Merkmal
+  `bankkonto`, ein Umsatz ein `payment` mit Merkmal `bank`; der Auszug wird Unterlage „Finanzen & Konten“. Liest die Familienakte denselben Tresor,
+  sieht sie die Konten als Gegenstände und die Umsätze als Zahlungen – ohne eigene Ansicht dafür.
+- Lesen und Rechnen kommen aus BookLedgerPro (Klon), nicht aus der Familienakte. Für die Überarbeitung der Familienakte: dieselben Leser übernehmen.
+- Zwei Plansitzungen schrieben am 18.11. dieselbe Plandatei verschieden; zusammengeführt, die zweite Fassung liegt als eigene Datei daneben.
+
 ## C. Zusammenarbeit der Sitzungen
 
 - Zwei Sitzungen haben dieselben drei Entscheidungen gleichzeitig als 0.1.1 gebaut. Aufgefallen erst beim Anlegen des PR.

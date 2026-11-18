@@ -8,6 +8,11 @@ import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
 import { createLocalFamilyRecord, fileChecksum } from "../klone/familienakte/app/local-vault.ts";
 import { parseEuroToCents, formatEuro } from "../klone/bookledger/src/domain/money.js";
 import { kassenbericht } from "../klone/bookledger/src/domain/kassenbuch.js";
+import { parseBankauszug, pruefeBankauszug } from "../klone/bookledger/src/domain/bankimport.js";
+import { leseAuszugText } from "../klone/bookledger/src/domain/auszugText.js";
+import { errateCsv, leseBankCsv, passtEinstellung, pruefeZuordnung, textAusBytes, istCsvText, umsatzSchluessel, DATUMSFORMEN } from "../klone/bookledger/src/domain/bankCsv.js";
+import { xlsxZeilen } from "../klone/bookledger/src/domain/xlsxZeilen.js";
+import { baueMonatsdatei, monatsdateiName } from "../klone/bookledger/src/domain/portemonnaieImport.js";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
@@ -558,7 +563,7 @@ Object.assign(kalender, {
 // ein Datensatz „payment“ des Registers (Titel, Betrag in Cent, Währung; dazu Richtung, Tag, wofür), damit im Backup und für die
 // Familienakte lesbar. Der Bon ist eine Unterlage (Bereich „Einkäufe, Rechnungen & Garantien“), verknüpft payment → document „Beleg“.
 // Rechnen: Betrag lesen/zeigen und Monatsbericht aus BookLedgerPro (klone/bookledger: money.js, kassenbuch.js – unverändert).
-type Posten = { id: string; titel: string; cent: number; am: string; wofuer: string; bon: string | null };
+type Posten = { id: string; titel: string; cent: number; am: string; wofuer: string; bon: string | null; vomKonto: boolean };
 const BON_BEREICH = "Einkäufe, Rechnungen & Garantien";
 /** Betrag auf einem Bon: die Zahl hinter „Summe“, „Gesamt“, „zu zahlen“, „Total“; sonst die größte Zahl mit Komma. Nur ein Vorschlag. */
 function bonBetrag(text: string) {
@@ -573,8 +578,8 @@ const geld = {
   async posten(): Promise<Posten[]> {
     const { records, relations } = await readLocalVaultData(await browserVault());
     return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { portemonnaie?: boolean }).portemonnaie).map((r) => {
-      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; wofuer?: string };
-      return { id: r.id, titel: d.title || "", cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), am: d.am || r.createdAt.slice(0, 10), wofuer: d.wofuer || "",
+      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; wofuer?: string; vomKonto?: boolean };
+      return { id: r.id, titel: d.title || "", cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), am: d.am || r.createdAt.slice(0, 10), wofuer: d.wofuer || "", vomKonto: !!d.vomKonto,
         bon: relations.find((x) => x.fromType === "payment" && x.fromId === r.id && x.toType === "document")?.toId || null };
     }).sort((a, b) => a.am.localeCompare(b.am) || a.id.localeCompare(b.id));
   },
@@ -584,13 +589,13 @@ const geld = {
     const im = alle.filter((p) => p.am.slice(0, 7) === monat).map((p, i) => ({ datum: p.am, seq: i, beschreibung: p.titel, einnahme: p.cent > 0 ? p.cent : 0, ausgabe: p.cent < 0 ? -p.cent : 0, id: p.id }));
     return kassenbericht(im, vorher);
   },
-  async eintragen(e: { titel: string; cent: number; rein: boolean; wofuer: string; am: string; bon?: File | null; bonText?: string }) {
+  async eintragen(e: { titel: string; cent: number; rein: boolean; wofuer: string; am: string; bon?: File | null; bonText?: string; vomKonto?: boolean }) {
     if (!Number.isInteger(e.cent) || e.cent <= 0) throw new Error("Bitte einen Betrag eintragen.");
     const h = await browserVault();
     let bon: string | null = null;
     if (e.bon) bon = (await saveLocalDocument(h, e.bon, { category: BON_BEREICH, documentDate: e.am, notes: `Bon aus dem Portemonnaie – ${formatEuro(e.cent)}${e.wofuer ? " · wofür: " + e.wofuer : ""}`, titel: `Bon ${e.titel}`.slice(0, 200), textAuszug: e.bonText || null })).id;
     const r = await createLocalFamilyRecord(h, { recordType: "payment", status: "aktiv", source: "Portemonnaie", notes: null,
-      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", portemonnaie: true, richtung: e.rein ? "rein" : "raus", am: e.am, wofuer: e.wofuer.slice(0, 120) } as never });
+      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", portemonnaie: true, richtung: e.rein ? "rein" : "raus", am: e.am, wofuer: e.wofuer.slice(0, 120), vomKonto: !!e.vomKonto } as never });
     if (bon) await createLocalFamilyRelation(h, { fromType: "payment", fromId: r.id, toType: "document", toId: bon, relationType: "Beleg", source: "Portemonnaie", notes: null });
     return { id: r.id, bon };
   },
@@ -607,7 +612,144 @@ const geld = {
     const z = (t: string) => `"${String(t).replace(/"/g, '""')}"`;
     return ["Datum;Was;Wofür;Einnahme;Ausgabe", ...alle.filter((p) => p.am.slice(0, 7) === monat).map((p) => [p.am, z(p.titel), z(p.wofuer), p.cent > 0 ? formatEuro(p.cent).replace(" €", "") : "", p.cent < 0 ? formatEuro(-p.cent).replace(" €", "") : ""].join(";"))].join("\r\n");
   },
+  async vomKonto(id: string, an: boolean) { await registerAendern(id, (d) => { d.vomKonto = an; }, an ? "Posten als Barabhebung vom Konto markiert" : "Barabhebung aufgehoben"); },
   bonBetrag,
 };
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld };
+// Bank im Portemonnaie (0.8.0, Klaus 18.11.: zweites Fach neben dem Bargeld). Jedes Konto frei angelegt (Bank, Kontoname, IBAN freiwillig,
+// Anfangssaldo, Verfahren); Konto = Datensatz `object` mit Merkmal `bankkonto`, Umsatz = `payment` mit Merkmal `bank`, der eingelesene
+// Kontoauszug = Unterlage („Finanzen & Konten“) mit `payment → document „Kontoauszug“`. Lesen und Rechnen aus BookLedgerPro (Klon mit Pin):
+// MT940/CAMT `bankimport.js`, CSV/Excel `bankCsv.js` + `xlsxZeilen.js`, PDF `auszugText.js`, Monatsdatei `portemonnaieImport.js`.
+type Konto = { id: string; bank: string; name: string; iban: string; anfangCent: number; anfangAm: string; verfahren: string; csv: Record<string, unknown> | null };
+type Umsatz = { id: string; konto: string; am: string; cent: number; titel: string; gegen: string; zurKasse: boolean; auszug: string | null };
+type Gelesen = { format: string | null; konto: string; saldoStartCent: number | null; saldoEndeCent: number | null; umsaetze: Array<{ valuta: string; buchung?: string; betragCent: number; richtung: string; zweck: string; gegen: string; unsicher?: boolean }> };
+const KONTO_BEREICH = "Finanzen & Konten";
+const VERFAHREN = ["hand", "csv", "camt", "mt940", "pdf", "excel"] as const;
+const BAR = /bargeld|barauszahlung|bargeldauszahlung|geldautomat|barabhebung|auszahlung ga|^ga |\bga\b/i;
+async function registerAendern(id: string, aendern: (d: Record<string, unknown>) => void, was: string) {
+  const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+  const r = (akte as unknown as { records: Array<{ id: string; data: Record<string, unknown>; updatedAt: string }> }).records.find((x) => x.id === id);
+  if (!r) throw new Error("Nicht gefunden.");
+  aendern(r.data); r.updatedAt = new Date().toISOString();
+  await akteNachAbgleichSchreiben(h, akte, revision, was, `${id}: ${was}`);
+}
+const bank = {
+  VERFAHREN,
+  async konten(): Promise<Konto[]> {
+    const { records } = await readLocalVaultData(await browserVault());
+    return records.filter((r) => r.recordType === "object" && lebt(r) && (r.data as { bankkonto?: boolean }).bankkonto).map((r) => {
+      const d = r.data as Record<string, unknown>;
+      return { id: r.id, bank: String(d.bank || ""), name: String(d.kontoname || ""), iban: String(d.iban || ""), anfangCent: Number(d.anfangCent) || 0,
+        anfangAm: String(d.anfangAm || r.createdAt.slice(0, 10)), verfahren: String(d.verfahren || "hand"), csv: (d.csv as Record<string, unknown>) || null };
+    }).sort((a, b) => a.id.localeCompare(b.id));
+  },
+  async kontoAnlegen(e: { bank: string; name: string; iban?: string; anfangCent?: number; anfangAm?: string; verfahren?: string }) {
+    const bankName = e.bank.trim(), name = e.name.trim() || "Girokonto";
+    if (!bankName) throw new Error("Bitte den Namen der Bank eintragen.");
+    const iban = (e.iban || "").replace(/\s/g, "").toUpperCase();
+    const r = await createLocalFamilyRecord(await browserVault(), { recordType: "object", status: "aktiv", source: "Portemonnaie", notes: null,
+      data: { title: `${bankName} · ${name}`.slice(0, 200), bankkonto: true, bank: bankName.slice(0, 80), kontoname: name.slice(0, 80), iban: iban.slice(0, 34),
+        anfangCent: Number.isInteger(e.anfangCent) ? e.anfangCent : 0, anfangAm: e.anfangAm || new Date().toISOString().slice(0, 10),
+        verfahren: (VERFAHREN as readonly string[]).includes(e.verfahren || "") ? e.verfahren : "hand", csv: null } as never });
+    return r.id;
+  },
+  async kontoAendern(id: string, teil: Partial<{ bank: string; name: string; iban: string; anfangCent: number; verfahren: string; csv: Record<string, unknown> | null }>) {
+    await registerAendern(id, (d) => {
+      if (teil.bank != null) d.bank = teil.bank.trim().slice(0, 80);
+      if (teil.name != null) d.kontoname = teil.name.trim().slice(0, 80);
+      if (teil.bank != null || teil.name != null) d.title = `${d.bank} · ${d.kontoname}`;
+      if (teil.iban != null) d.iban = teil.iban.replace(/\s/g, "").toUpperCase().slice(0, 34);
+      if (teil.anfangCent != null) d.anfangCent = teil.anfangCent;
+      if (teil.verfahren != null && (VERFAHREN as readonly string[]).includes(teil.verfahren)) d.verfahren = teil.verfahren;
+      if (teil.csv !== undefined) d.csv = teil.csv;
+    }, "Bankkonto geändert");
+  },
+  async umsaetze(): Promise<Umsatz[]> {
+    const { records, relations } = await readLocalVaultData(await browserVault());
+    return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { bank?: boolean }).bank).map((r) => {
+      const d = r.data as Record<string, unknown>;
+      return { id: r.id, konto: String(d.konto || ""), am: String(d.am || r.createdAt.slice(0, 10)), cent: (d.richtung === "rein" ? 1 : -1) * (Number(d.amountCents) || 0),
+        titel: String(d.title || ""), gegen: String(d.gegen || ""), zurKasse: !!d.zurKasse,
+        auszug: relations.find((x) => x.fromType === "payment" && x.fromId === r.id && x.toType === "document")?.toId || null };
+    }).sort((a, b) => a.am.localeCompare(b.am) || a.id.localeCompare(b.id));
+  },
+  /** Monat eines Kontos: Anfang = Anfangssaldo + alles davor; Bericht aus BookLedgerPro. Saldo laut letztem Auszug zum Vergleich. */
+  bericht(konto: Konto, alle: Umsatz[], monat: string) {
+    const eigene = alle.filter((u) => u.konto === konto.id);
+    const vorher = konto.anfangCent + eigene.filter((u) => u.am.slice(0, 7) < monat).reduce((a, u) => a + u.cent, 0);
+    const im = eigene.filter((u) => u.am.slice(0, 7) === monat).map((u, i) => ({ datum: u.am, seq: i, beschreibung: u.titel, einnahme: u.cent > 0 ? u.cent : 0, ausgabe: u.cent < 0 ? -u.cent : 0, id: u.id }));
+    return kassenbericht(im, vorher);
+  },
+  async eintragen(kontoId: string, e: { titel: string; cent: number; rein: boolean; am: string; gegen?: string; zurKasse?: boolean }) {
+    if (!Number.isInteger(e.cent) || e.cent <= 0) throw new Error("Bitte einen Betrag eintragen.");
+    const r = await createLocalFamilyRecord(await browserVault(), { recordType: "payment", status: "aktiv", source: "Portemonnaie", notes: null,
+      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", bank: true, konto: kontoId, richtung: e.rein ? "rein" : "raus", am: e.am,
+        gegen: (e.gegen || "").slice(0, 120), zurKasse: !!e.zurKasse, schluessel: umsatzSchluessel({ buchung: e.am, betragCent: e.cent, richtung: e.rein ? "einnahme" : "ausgabe", zweck: e.titel }, kontoId) } as never });
+    return r.id;
+  },
+  async zurKasse(id: string, an: boolean) { await registerAendern(id, (d) => { d.zurKasse = an; }, an ? "Umsatz als Barabhebung markiert" : "Barabhebung aufgehoben"); },
+  /** Datei lesen, noch nichts übernehmen. Ergebnis: Auszug (MT940/CAMT), Tabelle (CSV/Excel, mit Zuordnung) oder PDF-Vorschlag. */
+  async lesen(datei: File, konto: Konto | null): Promise<{ art: "auszug" | "tabelle" | "pdf" | "leer"; gelesen?: Gelesen; pruef?: ReturnType<typeof pruefeBankauszug>; tabelle?: { eingabe: string | string[][]; einstellung: Record<string, unknown>; kopf: string[]; beispiele: string[][]; gemerkt: boolean } }> {
+    const bytes = new Uint8Array(await datei.arrayBuffer());
+    const tabelle = (eingabe: string | string[][]) => {
+      const g = errateCsv(eingabe) as { einstellung: Record<string, unknown>; kopf: string[]; beispiele: string[][] };
+      const gemerkt = !!konto?.csv && passtEinstellung(konto.csv, eingabe);
+      return { art: "tabelle" as const, tabelle: { eingabe, einstellung: gemerkt ? structuredClone(konto!.csv!) : g.einstellung, kopf: g.kopf, beispiele: g.beispiele, gemerkt } };
+    };
+    if (bytes[0] === 0x50 && bytes[1] === 0x4b) return tabelle((await xlsxZeilen(bytes)).zeilen);
+    if (bytes[0] === 0xd0 && bytes[1] === 0xcf) throw new Error("Alte Excel-Datei (.xls): bitte in Excel als .xlsx oder CSV speichern.");
+    if (istPdf(datei)) {
+      const t = await textLesen(datei), g = (t.text ? leseAuszugText(t.text) : null) as Gelesen | null;
+      if (!g || !g.umsaetze.length) return { art: "leer" };
+      return { art: "pdf", gelesen: g, pruef: pruefeBankauszug(g) };
+    }
+    const text = textAusBytes(bytes), g = parseBankauszug(text) as Gelesen;
+    if (g.format === "MT940" || g.format === "CAMT") return { art: "auszug", gelesen: g, pruef: pruefeBankauszug(g) };
+    if (istCsvText(text)) return tabelle(text);
+    return { art: "leer" };
+  },
+  tabelleLesen(eingabe: string | string[][], einstellung: Record<string, unknown>) {
+    const g = leseBankCsv(eingabe, einstellung) as Gelesen & { fehler: string[]; uebersprungen: unknown[] };
+    return { gelesen: g, pruef: pruefeBankauszug({ ...g, format: "CSV" }), fehler: pruefeZuordnung(einstellung) as string[] };
+  },
+  DATUMSFORMEN: DATUMSFORMEN as string[],
+  /** Übernehmen: doppelte Umsätze (Konto, Buchungstag, Betrag, Zweck) nur einmal; der Auszug wird Unterlage, wenn etwas Neues drin war. */
+  async uebernehmen(konto: Konto, datei: File | null, umsaetze: Gelesen["umsaetze"], opts: { einstellung?: Record<string, unknown> | null; saldoEndeCent?: number | null } = {}) {
+    const h = await browserVault(), { records } = await readLocalVaultData(h);
+    const da = new Set(records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { bank?: boolean; konto?: string }).bank && (r.data as { konto?: string }).konto === konto.id)
+      .map((r) => String((r.data as { schluessel?: string }).schluessel || "")));
+    const neu: Array<{ u: Gelesen["umsaetze"][number]; s: string }> = [];
+    for (const u of umsaetze) { const s = umsatzSchluessel(u, konto.id); if (da.has(s)) continue; da.add(s); neu.push({ u, s }); }
+    let auszug: string | null = null;
+    if (neu.length && datei) {
+      const tage = neu.map((x) => x.u.buchung || x.u.valuta).sort();
+      auszug = (await saveLocalDocument(h, datei, { category: KONTO_BEREICH, documentDate: tage[tage.length - 1], titel: `Kontoauszug ${konto.bank} ${konto.name} ${tage[0]} – ${tage[tage.length - 1]}`.slice(0, 200),
+        notes: `Kontoauszug, eingelesen im Portemonnaie – ${neu.length} Umsätze`, textAuszug: null })).id;
+    }
+    for (const { u, s } of neu) {
+      const am = u.buchung || u.valuta, titel = (u.zweck || u.gegen || (u.richtung === "einnahme" ? "Gutschrift" : "Lastschrift")).slice(0, 200);
+      const r = await createLocalFamilyRecord(h, { recordType: "payment", status: "aktiv", source: "Kontoauszug", notes: null,
+        data: { title: titel, amountCents: u.betragCent, currency: "EUR", bank: true, konto: konto.id, richtung: u.richtung === "einnahme" ? "rein" : "raus", am,
+          gegen: (u.gegen || "").slice(0, 120), zurKasse: u.richtung === "ausgabe" && BAR.test(`${u.zweck} ${u.gegen}`), schluessel: s } as never });
+      if (auszug) await createLocalFamilyRelation(h, { fromType: "payment", fromId: r.id, toType: "document", toId: auszug, relationType: "Kontoauszug", source: "Portemonnaie", notes: null });
+    }
+    if (opts.einstellung !== undefined || opts.saldoEndeCent != null) {
+      await registerAendern(konto.id, (d) => {
+        if (opts.einstellung) d.csv = opts.einstellung;
+        if (opts.saldoEndeCent != null) d.saldoAuszug = { cent: opts.saldoEndeCent, am: umsaetze.map((u) => u.buchung || u.valuta).sort().pop() || "" };
+      }, "Kontoauszug eingelesen");
+    }
+    return { neu: neu.length, schon: umsaetze.length - neu.length, auszug };
+  },
+  /** Die Monatsdatei für BookLedgerPro (Fassung 1, Format aus `portemonnaieImport.js`). */
+  monatsdatei(monat: string, bar: Posten[], konten: Konto[], alle: Umsatz[]) {
+    const bv = bar.filter((p) => p.am.slice(0, 7) < monat).reduce((a, p) => a + p.cent, 0);
+    return baueMonatsdatei({ monat, quelle: "private-akte", faecher: [
+      { fach: "bargeld", name: "Bargeld", anfangCent: bv, posten: bar.filter((p) => p.am.slice(0, 7) === monat).map((p) => ({ id: p.id, datum: p.am, cent: Math.abs(p.cent), richtung: p.cent > 0 ? "ein" : "aus", text: p.titel, wofuer: p.wofuer, beleg: p.bon ? "Bon in der Akte" : "", vomKonto: p.vomKonto })) },
+      ...konten.map((k) => { const b = bank.bericht(k, alle, monat); return { fach: "bank", name: k.name, bank: k.bank, iban: k.iban, anfangCent: b.anfangsbestand,
+        posten: alle.filter((u) => u.konto === k.id && u.am.slice(0, 7) === monat).map((u) => ({ id: u.id, datum: u.am, cent: Math.abs(u.cent), richtung: u.cent > 0 ? "ein" : "aus", text: u.titel, gegen: u.gegen, zurKasse: u.zurKasse })) }; }),
+    ] });
+  },
+  monatsdateiName,
+};
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

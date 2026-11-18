@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.7 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.8.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -172,8 +172,53 @@ const { chromium } = require('playwright');
       await p.setInputFiles('#pm-bon', {name:`bon-${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundener Bon ${name} SUMME 7,10`)}); await p.waitForSelector('#pm-bonzeile');
       await p.fill('[data-form=posten] [name=b]','7,10'); await klick('[data-form=posten] [value=aus]'); await p.waitForFunction(() => !document.querySelector('#pm-bonzeile') && /Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || ''));
       soll(await p.evaluate(async n => (await window.PrivateAkteTresor.liste()).some(d => d.originalName === `bon-${n}.txt` && d.category === 'Einkäufe, Rechnungen & Garantien'), name), 'Bon liegt als Unterlage in der Akte, Posten mit Bon');
-      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.csv`, 'CSV für BookLedgerPro'); soll((await text()).includes('übergeben'), 'übergeben');
+      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.json`, 'Monatsdatei für BookLedgerPro'); soll((await text()).includes('übergeben'), 'übergeben');
       await klick('#pm-liste [data-a=pm-weg]'); await p.waitForFunction(() => !/Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || '')); soll(true, 'Posten herausnehmen'); }
+    // Bank im Portemonnaie (0.8.0): Konto anlegen, Auszug einlesen (CAMT, MT940, CSV), nichts doppelt, Saldo falsch = rot, Summe, Monatsdatei. Alle Dateien erfunden.
+    { const monat = await p.evaluate(() => pm.monat), jj = monat.slice(2, 4) + monat.slice(5, 7), tag = d => `${monat}-${d}`;
+      const camt = `<?xml version="1.0"?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02"><BkToCstmrStmt><Stmt><Acct><Id><IBAN>DE00123456789012345678</IBAN></Id></Acct>
+<Bal><Tp><CdOrPrtry><Cd>OPBD</Cd></CdOrPrtry></Tp><Amt Ccy="EUR">1000.00</Amt><CdtDbtInd>CRDT</CdtDbtInd></Bal><Bal><Tp><CdOrPrtry><Cd>CLBD</Cd></CdOrPrtry></Tp><Amt Ccy="EUR">850.00</Amt><CdtDbtInd>CRDT</CdtDbtInd></Bal>
+<Ntry><Amt Ccy="EUR">200.00</Amt><CdtDbtInd>DBIT</CdtDbtInd><BookgDt><Dt>${tag('02')}</Dt></BookgDt><NtryDtls><TxDtls><RmtInf><Ustrd>Bargeldauszahlung GA Beispielstr</Ustrd></RmtInf></TxDtls></NtryDtls></Ntry>
+<Ntry><Amt Ccy="EUR">50.00</Amt><CdtDbtInd>CRDT</CdtDbtInd><BookgDt><Dt>${tag('05')}</Dt></BookgDt><NtryDtls><TxDtls><RltdPties><Dbtr><Nm>Erika Musterfrau</Nm></Dbtr></RltdPties><RmtInf><Ustrd>Konzertkarte zurueck</Ustrd></RmtInf></TxDtls></NtryDtls></Ntry>
+</Stmt></BkToCstmrStmt></Document>`;
+      await klick('[data-a=pm-fach][data-f=bank]'); await p.waitForSelector('[data-form=pm-konto]'); soll(true, 'Bank: ohne Konto steht gleich „Konto anlegen“ da');
+      await p.fill('[data-form=pm-konto] [name=bank]', 'Beispielbank'); await p.fill('[data-form=pm-konto] [name=name]', 'Girokonto'); await p.fill('[data-form=pm-konto] [name=iban]', 'DE00 1234 5678 9012 3456 78');
+      await p.fill('[data-form=pm-konto] [name=anfang]', '1.000,00'); await p.selectOption('[data-form=pm-konto] [name=verfahren]', 'camt'); await klick('[data-form=pm-konto] [type=submit]');
+      await p.waitForSelector('#pm-kontostand'); soll((await p.locator('#pm-kontostand').innerText()).includes('1.000,00') && (await text()).includes('… 5678') && !(await text()).includes('DE00'), 'Konto angelegt: Anfangssaldo, IBAN nur mit den letzten vier Stellen');
+      soll((await p.locator('label[for=pm-auszug]').innerText()).includes('CAMT'), 'Verfahren am Knopf vorgewählt');
+      const einlesen = async (n, mime, inhalt) => { await p.setInputFiles('#pm-auszug', {name:n, mimeType:mime, buffer:Buffer.from(inhalt, n.endsWith('.csv') ? 'latin1' : 'utf8')}); await p.waitForSelector('[data-pm-lesen]'); };
+      await einlesen(`auszug-${name}.xml`, 'application/xml', camt);
+      soll(await p.locator('[data-pm-saldo=ok]').count() === 1 && (await p.locator('.pm-vorschlag .zeile').count()) === 2, 'CAMT gelesen: zwei Umsätze, Saldo stimmt');
+      await klick('[data-a=pm-uebernehmen]'); await p.waitForFunction(() => /Konzertkarte/.test(document.querySelector('#pm-bankliste')?.innerText || ''));
+      soll((await p.locator('#pm-kontostand').innerText()).includes('850,00'), 'Kontostand nach dem Auszug 850,00');
+      soll((await p.locator('#pm-bankliste').innerText()).includes('zur Kasse'), 'Barauszahlung am Automaten von selbst als „zur Kasse“ markiert');
+      soll(await p.evaluate(async n => (await window.PrivateAkteTresor.liste()).some(d => d.originalName === `auszug-${n}.xml` && d.category === 'Finanzen & Konten'), name), 'Auszug liegt als Unterlage in der Akte („Finanzen & Konten“)');
+      await einlesen(`auszug-${name}.xml`, 'application/xml', camt); await klick('[data-a=pm-uebernehmen]'); await p.waitForFunction(() => !document.querySelector('[data-pm-lesen]'));
+      soll(await p.evaluate(async () => (await window.PrivateAkteTresor.bank.umsaetze()).length === 2), 'derselbe Auszug noch einmal: nichts doppelt');
+      soll(await p.evaluate(async n => (await window.PrivateAkteTresor.liste()).filter(d => d.originalName === `auszug-${n}.xml`).length === 1, name), 'und keine zweite Unterlage');
+      const mt940 = `:20:STARTUMS\n:25:12345678/0012345678\n:28C:1\n:60F:C${jj}10EUR850,00\n:61:${jj}10D10,00NMSCNONREF\n:86:105?20Zeitschrift Beispiel\n:62F:C${jj}10EUR900,00\n-`;
+      await einlesen(`mt-${name}.sta`, 'text/plain', mt940); soll(await p.locator('[data-pm-saldo=falsch]').count() === 1 && (await p.locator('[data-pm-saldo=falsch]').evaluate(e => getComputedStyle(e).color)) !== 'rgb(0, 0, 0)', 'MT940 mit falschem Saldo: rot');
+      await klick('[data-a=pm-lesen-zu]');
+      const csv = '"Buchungstag";"Verwendungszweck";"Empfänger";"Betrag"\r\n' + `"10.${monat.slice(5, 7)}.${monat.slice(0, 4)}";"Lastschrift Telefon";"Beispiel Telefon";"-19,99"\r\n` + `"12.${monat.slice(5, 7)}.${monat.slice(0, 4)}";"Erstattung";"Beispiel Kasse";"5,00"\r\n`;
+      await einlesen(`umsaetze-${name}.csv`, 'text/csv', csv); soll((await p.locator('[data-pm-lesen=tabelle]').innerText()).includes('Spalten prüfen'), 'CSV: Spalten geraten, zum Prüfen');
+      await klick('[data-a=pm-tabelle-weiter]'); await p.waitForSelector('[data-pm-lesen=tabelle] .pm-vorschlag'); await klick('[data-a=pm-uebernehmen]'); await p.waitForFunction(() => /Telefon/.test(document.querySelector('#pm-bankliste')?.innerText || ''));
+      soll(await p.evaluate(async () => !!(await window.PrivateAkteTresor.bank.konten())[0].csv), 'Spalten-Zuordnung am Konto gemerkt');
+      await einlesen(`umsaetze-${name}.csv`, 'text/csv', csv); soll((await p.locator('[data-pm-lesen=tabelle]').innerText()).includes('Spalten gemerkt'), 'zweites Mal: Spalten gemerkt'); await klick('[data-a=pm-lesen-zu]');
+      await p.fill('[data-form=bank-hand] [name=t]', 'Überweisung von Hand'); await p.fill('[data-form=bank-hand] [name=b]', '30'); await p.fill('[data-form=bank-hand] [name=am]', tag('15')); await klick('[data-form=bank-hand] [value=aus]');
+      await p.waitForFunction(() => /von Hand/.test(document.querySelector('#pm-bankliste')?.innerText || '')); soll((await p.locator('#pm-kontostand').innerText()).includes('805,01'), 'Umsatz von Hand: 850 − 19,99 + 5 − 30 = 805,01');
+      await klick('[data-a=pm-fach][data-f=bargeld]'); await p.fill('[data-form=posten] [name=t]', 'Barabhebung'); await p.fill('[data-form=posten] [name=b]', '200'); await p.fill('[data-form=posten] [name=am]', tag('02')); await p.check('[data-form=posten] [name=vk]'); await klick('[data-form=posten] [value=ein]');
+      await p.waitForFunction(() => /vom Konto/.test(document.querySelector('#pm-liste')?.innerText || ''));
+      await klick('[data-a=pm-fach][data-f=summe]'); await p.waitForSelector('#pm-abschluss');
+      const ab = await p.evaluate(() => pmAbschluss()), bar = ab.zeilen[0], bk = ab.zeilen[1];
+      soll(ab.summe.ende === bar.ende + bk.ende && ab.summe.rein === bar.rein + bk.rein - 20000 && ab.summe.raus === bar.raus + bk.raus - 20000, 'Monatsabschluss: Summe ohne die Barabhebung doppelt');
+      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.json`, 'Monatsdatei (JSON) für BookLedgerPro');
+      const datei = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));
+      soll(datei.art === 'portemonnaie-monat' && datei.fassung === 1 && datei.faecher.length === 2 && datei.faecher[1].ibanEnde === '5678' && !JSON.stringify(datei).includes('DE00'), 'Monatsdatei: Fassung 1, Bargeld und Bank, IBAN nur gekürzt');
+      soll(datei.faecher[0].posten.some(x => x.vomKonto) && datei.faecher[1].posten.some(x => x.zurKasse), 'Monatsdatei: Barabhebung auf beiden Seiten markiert');
+      const [dl2] = await Promise.all([p.waitForEvent('download'), klick('[data-a=pm-tabelle]')]); soll(dl2.suggestedFilename() === `portemonnaie-${monat}.csv`, '„Als Tabelle“ bleibt die CSV');
+      soll(await p.evaluate(() => { const k = document.querySelector('#pm-abschluss').closest('.karte'); return k.scrollWidth <= k.clientWidth + 1; }), 'Monatsabschluss passt in die Karte');
+      await breit('Portemonnaie Summe'); await p.screenshot({path:`p/${name}-3b-summe.png`}); await klick('[data-a=pm-fach][data-f=bank]'); await p.screenshot({path:`p/${name}-3c-bank.png`});
+      await klick('[data-a=pm-fach][data-f=bargeld]'); }
     // Farbe der Stadt
     await klick('.fenster [data-a=farbe]'); await p.screenshot({path:`p/${name}-4-farbe.png`}); await klick('[data-farbe=koralle]'); soll(await p.evaluate(() => document.querySelector('.fenster.ast').style.getPropertyValue('--k1'))==='#f9c9ad','Stadtfarbe Koralle');
     // Büro

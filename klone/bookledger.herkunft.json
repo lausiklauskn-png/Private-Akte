@@ -1,22 +1,36 @@
 {
  "name": "bookledger",
  "quelle": "https://github.com/lausiklauskn-png/BookLedgerPro",
- "commit": "9df9beee73f339af634d0770509a501dc7d4dd91",
- "standVom": "2026-11-16T08:40:16+00:00",
+ "commit": "5f7424c2c15cdce6065af0ee1c60b3ee84b75b9e",
+ "standVom": "2026-11-18T20:22:15+01:00",
  "auswahl": [
   "src/domain/money.js",
   "src/domain/kassenbuch.js",
+  "src/domain/bankimport.js",
+  "src/domain/bankschema.js",
+  "src/domain/auszugText.js",
+  "src/domain/vorschau.js",
+  "src/domain/bankCsv.js",
+  "src/domain/xlsxZeilen.js",
+  "src/domain/portemonnaieImport.js",
   "LICENSE"
  ],
- "anzahl": 3,
- "bytes": 8363,
+ "anzahl": 10,
+ "bytes": 108029,
  "ordner": {
   "(Dateien oben)": 1,
-  "src/": 2
+  "src/": 9
  },
  "dateien": {
   "LICENSE": "02e9581244f313572f4ad631c0ca778db8a60a1d4a5ee7cb4c0c9db1ef92db81",
+  "src/domain/auszugText.js": "0dfdc5d0b36b963f3c56b1efd012f5b2cdd14a05d77da40d6341108063d1801a",
+  "src/domain/bankCsv.js": "ac59ee7df802a1f438214ff752c5db841c396da8d5202e4b1a8211b74e8c964e",
+  "src/domain/bankimport.js": "e95848d166ee508b372595791ad0f0c38bbfecf0fe1c25e0240b3455c0bedd64",
+  "src/domain/bankschema.js": "9122f1ea41fda42cf619d866f356f7cc4488bc09f5c335bc6c308ea87559b504",
   "src/domain/kassenbuch.js": "290307d9a874d259199a34c3771609ba2c76937b6ab79429aa329968708a7554",
-  "src/domain/money.js": "44d8cd3da2a68010bec34b0c3206ef09ba871a017da7246c593594f1616483a0"
+  "src/domain/money.js": "44d8cd3da2a68010bec34b0c3206ef09ba871a017da7246c593594f1616483a0",
+  "src/domain/portemonnaieImport.js": "b56d1bda97fd49da3e7d968853e5c7839ac72be5f393430fcb83c372f356b823",
+  "src/domain/vorschau.js": "8b216f50e88cd012f9493b47d3ed3df62af80a9a054ce74ec1a2e11eb93f7baf",
+  "src/domain/xlsxZeilen.js": "be0dd883bbd3a68ff67eef75d14bde5a04ff18dbc5c59c05a87be4383f13ad24"
  }
 }
