@@ -13,6 +13,7 @@ import { NotizKnopf } from "../klone/familienakte/app/notiz-knopf.tsx";
 import { MemoryBearbeiten } from "../klone/familienakte/app/memory-bearbeiten.tsx";
 import { NotizLoeschen } from "../klone/familienakte/app/loesch-knopf.tsx";
 import { AugeKnopf, FlachText, KnopfLeiste, StiftKnopf } from "../klone/familienakte/app/flach-zeile.tsx";
+import { Seitenleiste } from "../klone/familienakte/app/seitenleiste.tsx";
 import { PageDialogHost } from "../klone/familienakte/app/page-dialogs.tsx";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import type { FamilyRecordUnion, FamilyRelation } from "../klone/familienakte/lib/family-data-model.ts";
@@ -53,17 +54,20 @@ function Seite() {
     onErledigt={async (z) => { if (stand.handle) { await updateLocalScheduleStatus(stand.handle, z.recordId, "erledigt"); await laden(); } }}/>;
   if (NUR_GLOCKE) return glocke;
   const bearbeitet = aendern ? stand.records.find((r) => r.id === aendern) || null : null;
-  // Dieselbe Umgebung wie in der Familienakte (app-shell, Kopfleiste mit dem Erinnerungs-Knopf, site-main), damit ihre Stile
+  // Dieselbe Umgebung wie in der Familienakte (app-shell, site-main), damit ihre Stile
   // unverändert greifen: Maße und Lage der Knöpfe kommen von dort, nicht von hier (Klaus 18.11.).
-  return <div className="app-shell pa-kalender"><header className="site-header"><div className="masthead"><div className="header-actions"><NotizKnopf vaultHandle={stand.handle} records={stand.records} relations={stand.relations}
-      onGespeichert={async (text) => { await laden(); setMeldung({ kind: "success", text }); }} onFehler={(text) => setMeldung({ kind: "error", text })} onKalender={(tag) => meinKalenderOeffnen(tag)}/></div></div></header>
+  // Kein eigener Kopf: der Erinnerungs-Knopf des Klons sitzt im Kopf der Karte „Notizen“ (Klaus 18.11.: oben keine ganze Reihe
+  // verschenken, am Handy zählt die Höhe). Die Seitenleiste ist die der Familienakte (Griff am rechten Rand).
+  const notizKnopf = <NotizKnopf vaultHandle={stand.handle} records={stand.records} relations={stand.relations}
+      onGespeichert={async (text) => { await laden(); setMeldung({ kind: "success", text }); }} onFehler={(text) => setMeldung({ kind: "error", text })} onKalender={(tag) => meinKalenderOeffnen(tag)}/>;
+  return <div className="app-shell pa-kalender">
     <main className="site-main">
     {fehler && <p className="form-error" role="alert">{fehler}</p>}
     <KalenderAnmeldeHinweis vaultHandle={stand.handle} records={stand.records} relations={stand.relations} onRefresh={laden} onNotice={setMeldung}/>
     {meldung && <p className={meldung.kind === "success" ? "erledigt-meldung" : "form-error"} role="status" data-pa-meldung>{meldung.text}</p>}
     <MeinKalender vaultHandle={stand.handle} records={stand.records} relations={stand.relations} onRefresh={laden} onNotice={setMeldung}/>
     <section className="card" data-pa-notizen>
-      <div className="card-heading"><div><h2>Notizen</h2></div></div>
+      <div className="card-heading"><div><h2>Notizen</h2></div>{notizKnopf}</div>
       {notizen.length ? <ul className="mk-liste">{notizen.map((r) => { const d = memoryData(r)!, offen = auf === r.id;
         return <li key={r.id} data-pa-notiz={r.id} className={offen ? "offen" : undefined}><div className="fz-kopf fz-voll">
           <span className="mk-zeit">{new Date(d.eventAt).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" })}</span>
@@ -79,7 +83,10 @@ function Seite() {
       onZu={() => setAendern(null)} onGespeichert={async (text) => { await laden(); setMeldung({ kind: "success", text: text || "Notiz gespeichert." }); }}/>}
     {glocke}
     <PageDialogHost/>
-    </main></div>;
+    </main>
+    <Seitenleiste seite="kalender" kannZurueck zurueck={() => anAkte({ typ: "pa-kalender-geh", wohin: "zurueck" })} zurStartseite={() => anAkte({ typ: "pa-kalender-geh", wohin: "start" })}
+      zurAuswahl={() => anAkte({ typ: "pa-kalender-geh", wohin: "baum" })} zurHilfe={() => anAkte({ typ: "pa-kalender-geh", wohin: "hilfe" })}/>
+    </div>;
 }
 
 // Nur die Glocke (unsichtbarer Rahmen in der Akte): der Hülle sagen, wann sie läutet, damit sie den Rahmen zeigt.

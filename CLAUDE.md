@@ -59,10 +59,30 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   tailwindcss (+ `@tailwindcss/node`, `@tailwindcss/oxide`).
   **Aussehen (Klaus 18.11. mitten in der Sitzung: Knöpfe rutschten aus der Reihe, zweiter Kreis ums Fragezeichen):** Ursache war die
   Stildatei ohne Tailwind-Grundstil und eine eigene Umgebung. Jetzt: Stildatei mit Tailwind gebaut wie in der Familienakte, die
-  Ansichten stehen in derselben Umgebung (`app-shell` › `site-header` › `header-actions`, `site-main`). **Regel:** Maße, Lage und
+  Ansichten stehen in derselben Umgebung (`app-shell` › `site-main`). **Regel:** Maße, Lage und
   Form der Knöpfe aus dem Klon nicht verändern und nichts dazubauen; `rahmen/kalender/seite.css` enthält nur Breite und Abstand der Karten.
-  **Höhe am Handy (Klaus 18.11.: „die Höhe ist entscheidend … nicht in so monströsen Buttonformen oben“):** die Bestätigung in der
-  Leiste des Rahmens ist eine flache Zeile (abgeschnitten mit …, gilt für alle Tools), die Kopfleiste über dem Kalender ist niedrig.
+  **Höhe am Handy (Klaus 18.11.: „die Höhe ist entscheidend … nicht in so monströsen Buttonformen oben“, „du verschenkst eine
+  ganze Containerreihe“):** (1) die Bestätigung in der Leiste des Rahmens ist eine flache Zeile, seitlich zu schieben (gilt für alle
+  Tools); (2) der Kalender hat **keine eigene Kopfreihe** – der Erinnerungs-Knopf des Klons sitzt im Kopf der Karte „Notizen“
+  (wie der Glocken-Schalter im Kopf von „Mein Kalender“); (3) die läutende Erinnerung im Kalender ist eine schmale Zeile, Text seitlich
+  zu schieben, Zähler im Knopf des Klons („OK (2)“); in der Hülle steht stattdessen das Glockenfeld. Das sind die einzigen Stellen, an denen
+  `rahmen/kalender/seite.css` Maße des Klons anfasst – auf Klaus' Wort. 
+  **Glocke und Glockenfeld (Klaus 18.11., zuletzt entschieden, mit Bild vom Benachrichtigungsfeld seines Tablets – ersetzt alles
+  Frühere zur Anzeige der Glocke):** in der Kopfleiste der Akte und in der Leiste jedes Rahmens steht nur das Glockensymbol, ohne
+  Text (`glockeKnopf`, Klasse `geist`: durchsichtig, die Fläche erscheint erst beim Darauf-Gehen oder Drücken – „wie die Leiste unten
+  am Galaxy Tab“). **Rot** = etwas ist fällig (heute oder überfällig; `istFaellig`), mit der **Zahl** der fälligen; **grün** =
+  Einträge gespeichert; **grau** = keine. Ein Tipp klappt das **Glockenfeld** auf (`glockenFeld`, über `menue`): alle offenen
+  Einträge untereinander, fällige rot markiert, je Zeile öffnen (Pfeil → Kalender an dem Tag) oder abhaken (✓ = erledigt,
+  `T().kalender.erledigen`, derselbe Schritt wie im Kalender); unten „Kalender öffnen“ und „Neue Notiz“. Nichts schiebt sich von
+  selbst über die Seite: läutet die App-Glocke des Klons (unsichtbarer Rahmen `#glocke`, liefert Ton und die Meldung des Geräts),
+  wackelt das Symbol kurz. Klaus: solche Spezialknöpfe (nur Symbol) sollen oben künftig auch sonst so sein – bisher nur die Glocke.
+  Nicht gebaut: nur eine Zahl ganz ohne Glocke (so am Samsung); „Zurückstellen“ je Eintrag; die Zeile der läutenden Erinnerung
+  aus dem Klon ist in der Hülle nicht mehr zu sehen (im Kalender selbst erscheint sie weiter, dort schlank gemacht).
+  **Seitenleiste (Klaus 18.11.: „übernimm die aus der Familienakte, prüf, wo die ist und was die kann“):** `app/seitenleiste.tsx` im
+  Klon – Griff am rechten Rand, wandert beim Rollen mit; ein Tipp zeigt: alle auf-/zuklappen, nach oben, nach unten, Zurück,
+  Startseite, Seite wählen, Hilfe. Läuft unverändert im Kalender; Zurück schließt den Kalender, Startseite geht zur Startseite der
+  Akte, „Seite wählen“ zum Baum, Hilfe zur Hilfe der Akte (`pa-kalender-geh`). Sie lässt sich nicht verschieben (auch im Klon nicht).
+  In der Hülle selbst und in den anderen Tools gibt es sie noch nicht (sie ist React; für die Hülle wäre sie nachzubauen – offen).
   **Farben (Klaus 18.11.: „nach demselben Muster“ wie Datei-Organizer und Workflow PDF):** `rahmen/kalender-thema.css` – nur Farben,
   der Kalender ist violett wie sein Tool. Gilt als Muster für jedes weitere Tool (eine Farbdatei je Tool, letztes Stylesheet).
   **Kalender verbinden (Klaus 18.11.: „die Technik mit übernehmen, da sind die Anmeldungen für Google, Microsoft, T-Mobile drin“):**
@@ -77,7 +97,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   (die Sitzung erreicht Google und Microsoft nicht) – geprüft ist nur, dass die Karte beide anbietet.
   **Hülle:** „Fällig“ auf der Startseite ist echt (`T().kalender.termine()` in `src/tresor.ts`, dieselbe Auswahl wie „Mein Kalender“;
   Tipp öffnet den Kalender an dem Tag), die Zahl am Baum auch. **Glocke:** dieselbe Seite läuft unsichtbar mit (`#glocke`,
-  `?nur=glocke`) und zeigt sich oben, wenn sie läutet – solange die Akte offen ist; bei geschlossener App läutet nichts (das kann nur
+  `?nur=glocke`) – solange die Akte offen ist (Anzeige: siehe „Glocke als Symbol“); bei geschlossener App läutet nichts (das kann nur
   die Android-App der Familienakte). Sie startet erst, wenn die Akte den Tresor geöffnet hat (zwei Fenster zugleich stören die
   Schreibprobe des Klons – in der Probe gesehen). **Akte leeren** hat einen vierten Haken „Termine und Notizen“
   (`kalender.leeren`: Löschen des Klons, dann sein Papierkorb). **Baum:** die Hinweistexte sind heraus (kleiner Auftrag aus dem Brief).

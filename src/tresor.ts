@@ -2,7 +2,7 @@
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
 import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, LIMITS,
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
-import { readLocalVaultData, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig } from "../klone/familienakte/app/local-vault.ts";
+import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig } from "../klone/familienakte/app/local-vault.ts";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
@@ -417,6 +417,8 @@ const kalender = {
     const frei = offen.filter((r) => r.recordType === "reminder" && TAG.test(String((r.data as { remindAt?: string }).remindAt || ""))).map((r) => { const am = String((r.data as { remindAt: string }).remindAt); return { id: r.id, titel: String((r.data as { title: string }).title), tag: am.slice(0, 10), zeit: am.slice(11, 16), art: "Erinnerung" }; });
     return { termine: [...fest, ...frei].sort((a, b) => `${a.tag}${a.zeit || "99"}`.localeCompare(`${b.tag}${b.zeit || "99"}`)), notizen: records.filter((r) => memoryData(r) && r.status !== "archiviert").length };
   },
+  /** Abhaken im Glockenfeld der Hülle: derselbe Schritt wie ✓ in „Mein Kalender“. */
+  async erledigen(id: string) { await updateLocalScheduleStatus(await browserVault(), id, "erledigt"); },
   /** Akte leeren: alle Termine, Fristen, Erinnerungen und Notizen löschen (Löschen des Klons), danach seinen Papierkorb leeren. */
   async leeren() {
     const handle = await browserVault(), { records } = await readLocalVaultData(handle); let n = 0;

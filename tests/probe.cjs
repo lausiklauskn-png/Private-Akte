@@ -183,7 +183,8 @@ const { chromium } = require('playwright');
       const heute = tagVon(new Date()), morgen = tagVon(new Date(Date.now() + 864e5));
       await p.evaluate(() => { zu(); s.frage = ''; s.bereich = null; s.ansicht = 'start'; zeigen(); }); await p.waitForSelector('#faellig');
       soll((await p.locator('#faellig').innerText()).includes('nichts offen'), 'Fällig ist am Anfang leer (keine Beispiele mehr)');
-      soll(await p.locator('#glocke').count() === 1 && !(await p.locator('#glocke').isVisible()), 'Glocke läuft unsichtbar mit');
+      soll(await p.locator('#glocke').count() === 1 && !(await p.locator('#glocke').isVisible()), 'Glocke läuft unsichtbar mit'); soll((await p.locator('#kopfknoepfe .glockenknopf').getAttribute('data-stand')) === 'grau' && await p.locator('#kopfknoepfe .glockenknopf').isVisible(), 'Glockensymbol oben ist grau: keine Erinnerung gespeichert');
+      soll(await p.locator('#kopfknoepfe .glockenknopf').evaluate(e => { const c = getComputedStyle(e); return c.backgroundColor === 'rgba(0, 0, 0, 0)' && c.boxShadow === 'none'; }), 'Glocke ist ein durchsichtiger Knopf: nur das Symbol');
       await klick('.werk[data-a=notiz]'); await p.waitForSelector('#rahmen'); const kal = p.frameLocator('#rahmen');
       await kal.locator('[data-notiz-fenster]').waitFor({timeout:30000}); await kal.locator('[data-notiz-eingabe]').fill('Erinnere mich morgen um 9 Uhr, die Hausverwaltung anzurufen');
       await kal.locator('[data-notiz-speichern]').click(); await kal.locator('[data-notiz-eintrag]').waitFor(); await p.screenshot({path:`p/${name}-11-notiz.png`});
@@ -197,16 +198,36 @@ const { chromium } = require('playwright');
       await kal.locator('[data-mk-speichern]').click(); await kal.locator('[data-mk-eintrag]').first().waitFor(); await breit('kalender');
       soll((await kal.locator('.mk-tagesliste').innerText()).includes(`Zählerablesung ${name}`), 'Eintrag steht in der Tagesliste von heute'); await p.screenshot({path:`p/${name}-12-kalender.png`});
       await kal.locator('[data-kalender-aufklapper]').first().click(); soll(/Google/.test(await kal.locator('[data-pa-verbinden]').innerText()) && /Microsoft|Outlook/.test(await kal.locator('[data-pa-verbinden]').innerText()), 'Kalender verbinden bietet Google und Microsoft an');
-      await klick('[data-a=rahmen-zu]'); await p.waitForFunction(() => /Zählerablesung/.test(document.querySelector('#faellig')?.innerText || ''));
+      soll((await kal.locator('.site-header').count()) === 0 && (await kal.locator('[data-pa-notizen] .card-heading [data-notiz-knopf]').count()) === 1, 'keine eigene Kopfreihe im Kalender, der Erinnerungs-Knopf sitzt im Kopf der Karte „Notizen“');
+      soll((await p.locator('.rahmenfenster .fkopf').evaluate(e => e.offsetHeight)) <= 48, 'Leiste des Rahmens bleibt flach (Bestätigung einzeilig)');
+      await kal.locator('.seitenleiste-griff').click(); soll((await kal.locator('[data-leiste=oben]').count()) === 1 && (await kal.locator('[data-leiste=unten]').count()) === 1 && (await kal.locator('[data-leiste=zurueck]').count()) === 1, 'Seitenleiste der Familienakte: nach oben, nach unten, zurück');
+      await kal.locator('[data-leiste=zurueck]').click(); await p.waitForFunction(() => !document.querySelector('#rahmen')); soll(true, 'Seitenleiste: „Zurück“ schließt den Kalender');
+      await p.waitForFunction(() => /Zählerablesung/.test(document.querySelector('#faellig')?.innerText || ''));
       const f = await p.locator('#faellig').innerText();
       soll(f.includes('2 Einträge') && /Zählerablesung[^\n]*\n[^\n]*\n?heute/.test(f) && /Hausverwaltung/.test(f) && f.includes('morgen'), 'Fällig zeigt die zwei echten Einträge mit heute und morgen (' + f.replace(/\n/g, ' | ') + ')');
       soll(await p.evaluate(async () => { const k = await window.PrivateAkteTresor.kalender.termine(); return k.termine.length === 2 && k.notizen === 1; }), 'Tresor: zwei offene Termine, eine Notiz');
-      if (glockeGeht) { await p.waitForFunction(() => !document.querySelector('#glocke').hidden, null, {timeout:100000}).catch(() => {}); soll(await p.locator('#glocke').isVisible() && (await p.frameLocator('#glocke').locator('[data-app-glocke]').innerText()).includes('Zählerablesung'), 'Glocke läutet in der Akte zur Erinnerung (15 Min. vorher)'); await p.screenshot({path:`p/${name}-12b-glocke.png`});
-        await p.frameLocator('#glocke').locator('[data-app-glocke-ok]').click(); await p.waitForFunction(() => document.querySelector('#glocke').hidden); soll(true, 'Glocke geht mit OK wieder weg'); }
-      await p.locator('#faellig [data-a=kal-tag]', {hasText:'Hausverwaltung'}).click(); await p.waitForSelector('#rahmen');
-      await p.frameLocator('#rahmen').locator(`[data-mk-tag="${morgen}"].gewaehlt`).waitFor({timeout:30000}); soll(true, 'Tipp auf „Fällig“ öffnet den Kalender an dem Tag');
-      { const k2 = p.frameLocator('#rahmen'), griff = k2.locator('.mk-tagesliste [data-fz-griff]').first(); if (await griff.isVisible()) await griff.click(); /* schmal: Knöpfe hinter dem Griff */ await k2.locator('.mk-tagesliste [data-mk-erledigt]').first().click(); } await p.frameLocator('#rahmen').locator('[data-mk-erledigt-meldung]').waitFor();
-      await klick('[data-a=rahmen-zu]'); await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
+      const gk = '#kopfknoepfe .glockenknopf';
+      soll((await p.locator(gk).getAttribute('data-stand')) === 'gruen' && (await p.locator(gk + ' .gzahl').count()) === 0, 'Glocke ist grün ohne Zahl: Einträge gespeichert, nichts fällig');
+      if (glockeGeht) { await p.waitForSelector(gk + '.laeutet', {timeout:100000}).catch(() => {});
+        soll((await p.locator(gk + '.laeutet').count()) === 1 && !(await p.locator('#glocke').isVisible()), 'Erinnerung läutet (15 Min. vorher): die Glocke meldet es, nichts schiebt sich über die Seite'); }
+      // Glockenfeld: alle offenen Einträge, einzeln öffnen oder abhaken
+      await klick(gk); await p.waitForSelector('.glockenfeld .gzeile'); await breit('glockenfeld');
+      { const g = await p.locator('.glockenfeld').innerText(); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && /Zählerablesung/.test(g) && /Hausverwaltung/.test(g), 'Glockenfeld zeigt beide Einträge'); } await p.screenshot({path:`p/${name}-12b-glocke.png`});
+      await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=kal-tag]').last().click(); await p.waitForSelector('#rahmen');
+      await p.frameLocator('#rahmen').locator(`[data-mk-tag="${morgen}"].gewaehlt`).waitFor({timeout:30000}); soll((await p.locator('.glockenfeld').count()) === 0, 'Pfeil im Glockenfeld öffnet den Kalender an dem Tag');
+      // Überfälliges: gestern eintragen (wenn gestern im selben Monat steht) – Glocke rot mit Zahl, im Feld abhaken
+      const gestern = tagVon(new Date(Date.now() - 864e5));
+      if (gestern.slice(0, 7) === heute.slice(0, 7)) { const k3 = p.frameLocator('#rahmen');
+        await k3.locator(`[data-mk-tag="${gestern}"]`).click(); await k3.locator('[data-mk-neu]').click(); await k3.locator('[data-mk-titel]').fill('Versäumtes Probe'); await k3.locator('[data-mk-speichern]').click(); await k3.locator('[data-mk-formular]').waitFor({state:'detached'});
+        await p.waitForSelector('.rahmenfenster .glockenknopf[data-stand=rot]'); soll((await p.locator('.rahmenfenster .glockenknopf .gzahl').innerText()) === '1', 'Glocke in der Leiste des Rahmens: rot mit der Zahl 1 (ein Eintrag überfällig)');
+        soll((await p.locator('.rahmenfenster .fkopf').evaluate(e => e.offsetHeight)) <= 48, 'Leiste des Rahmens bleibt flach, auch mit Glocke');
+        await klick('[data-a=rahmen-zu]'); await p.waitForSelector(gk + '[data-stand=rot]'); await klick(gk);
+        soll((await p.locator('.glockenfeld .gzeile.rot').count()) === 1 && /überfällig/.test(await p.locator('.glockenfeld .gzeile.rot').innerText()), 'Glockenfeld: der überfällige Eintrag ist rot markiert');
+        await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-erledigt]').click(); await p.waitForSelector(gk + '[data-stand=gruen]'); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && (await p.locator(gk + ' .gzahl').count()) === 0, 'Abhaken im Glockenfeld: Eintrag weg, Glocke wieder grün');
+      } else { await klick('[data-a=rahmen-zu]'); await klick(gk); }
+      await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=glocke-erledigt]').click(); await p.waitForFunction(() => document.querySelectorAll('.glockenfeld .gzeile').length === 1);
+      await p.mouse.click(5, h - 5); await p.waitForFunction(() => !document.querySelector('.glockenfeld')); soll(true, 'Tipp daneben schließt das Glockenfeld');
+      await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
       soll((await p.locator('#faellig').innerText()).includes('1 Eintrag'), 'Erledigtes steht nicht mehr unter Fällig');
     }
     // Organizer

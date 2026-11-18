@@ -9,9 +9,12 @@ Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, Punkt 0.6.0
   Familienakte – dieselbe Ansicht, aus dem Klon gebündelt (Weg B aus dem Brief), mit echten Einträgen im Tresor.
 - **Notizen:** Knopf „Notiz“ öffnet das Notiz-Fenster der Familienakte (schreiben, sprechen, Foto). Die Notiz liegt in der Akte
   (Liste „Notizen“ unter dem Kalender); steht ein Tag im Text („morgen um 9 Uhr“), geht sie mit „Erinnern lassen“ in den Kalender.
-- **Fällig** auf der Startseite ist echt; die **Glocke** läutet, solange die Akte offen ist.
+- **Fällig** auf der Startseite ist echt. **Glocke:** oben nur das Symbol – rot mit Zahl (fällig), grün (Einträge gespeichert), grau
+  (keine). Ein Tipp klappt das Glockenfeld auf: alle offenen Einträge, je Zeile öffnen oder abhaken.
 - **Kalender verbinden** (Google, Microsoft, Gerätekalender, Kalenderdatei) samt Anmeldung und Abgleich aus dem Klon.
 - **Farben:** `rahmen/kalender-thema.css`, Violett, nach dem Muster der anderen Tools. **Maße und Lage der Knöpfe unverändert.**
+- **Seitenleiste** der Familienakte im Kalender (Griff rechts: auf/zu, hoch, runter, zurück, Startseite, Seite wählen, Hilfe).
+- **Höhe am Handy:** keine eigene Kopfreihe im Kalender, Bestätigung und läutende Erinnerung als flache Zeile.
 - **Akte leeren:** vierter Haken „Termine und Notizen“. **Baum:** Hinweistexte heraus.
 
 ## Was Klaus tun muss, damit die Anmeldung geht
@@ -37,6 +40,8 @@ Gerätekalender der Android-App, Kalenderdatei).
 - Beispiel-Unterlagen führen über „Bearbeiten mit › Kalender“ noch zum alten Beispiel-Kalender; `kalender()` und `fNotiz` in `app.js`
   können weg, sobald die Beispiele gehen.
 - Notizen in der Suche; Papierkorb für gelöschte Termine und Notizen (im Klon vorhanden, hier ohne Oberfläche).
+- Klaus' Gedanken vom 18.11., nicht gebaut: die übrigen Knöpfe oben als Spezialknöpfe (nur Symbol, wie die Glocke); Seitenleiste auch
+  in der Hülle und den anderen Tools.
 - Glocke bei geschlossener App (nur in einer Android-App möglich).
 - Zugang zum verbundenen Kalender gilt nur, solange der Kalender offen ist.
 - Aus dem alten Brief weiter offen: „PDF ausgeben“ leuchtet nach dem Scan; „Eingang“ ist Beispiel; lange Liste bei 100 Unterlagen;

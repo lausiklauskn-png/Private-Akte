@@ -286,7 +286,30 @@ details.klapp[open]>summary{margin-bottom:8px}
 .toast{z-index:40}
 .sortzeile{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);padding:6px 10px}.sortzeile select{width:auto}
 /* Die App-Glocke (unsichtbarer Rahmen mit der Glocke der Familienakte): sichtbar nur, solange sie läutet. */
-#glocke{position:fixed;left:50%;top:0;transform:translateX(-50%);width:min(600px,100vw);height:150px;border:0;background:transparent;z-index:40;color-scheme:normal}
+#glocke{position:fixed;left:50%;top:calc(46px + env(safe-area-inset-top));transform:translateX(-50%);width:min(600px,100vw);height:54px;border:0;background:transparent;z-index:40;color-scheme:normal}
 #glocke[hidden]{display:none}
-/* Bestätigung in der Leiste des Rahmens: eine flache Zeile (Klaus 18.11.: am Handy zählt die Höhe – kein dickes Feld über drei Zeilen). */
-.rahmenmeldung{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 8px;border-radius:8px;font-size:12px;line-height:1.5}
+/* Bestätigung in der Leiste des Rahmens: eine flache Zeile, seitlich zu schieben (Klaus 18.11.: am Handy zählt die Höhe – kein dickes Feld über drei Zeilen). */
+.rahmenmeldung{white-space:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;padding:2px 8px;border-radius:8px;font-size:12px;font-weight:500;line-height:1.5}
+.rahmenmeldung::-webkit-scrollbar{display:none}
+/* Spezialknopf (Klaus 18.11.): nur das Symbol, die Fläche erscheint erst beim Darauf-Gehen oder Drücken – wie in der Leiste unten am Tablet. */
+.geist{width:38px;height:38px;border-radius:50%;border:1px solid transparent;background:transparent;display:grid;place-items:center;flex:none;color:var(--navy);transition:background-color .15s,box-shadow .15s,border-color .15s}
+.geist:hover,.geist:focus-visible,.geist:active{background:var(--glas);border-color:rgba(255,255,255,.9);box-shadow:var(--schatten)}
+.glockenknopf[data-stand=rot]{color:#c62828}.glockenknopf[data-stand=gruen]{color:#107c41}.glockenknopf[data-stand=grau]{color:#9aa5b1}
+.glockenknopf.laeutet .icon{animation:glockewackeln 1.2s ease-in-out 3}
+@keyframes glockewackeln{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}80%{transform:rotate(5deg)}}
+@media (prefers-reduced-motion:reduce){.glockenknopf.laeutet .icon{animation:none}}
+.glockenknopf{position:relative}
+.gzahl{position:absolute;right:1px;top:1px;min-width:16px;height:16px;padding:0 4px;border-radius:8px;background:#c62828;color:#fff;font-size:10px;font-weight:700;line-height:16px;text-align:center}
+.rahmenfenster .fkopf .geist{width:30px;height:30px}
+/* Glockenfeld: alle offenen Einträge untereinander, schmal; je Zeile öffnen (Pfeil) oder abhaken. */
+.menue.glockenfeld>div{width:min(340px,calc(100vw - 16px));padding:6px}
+.gzeile{display:flex;align-items:center;gap:2px;border-radius:10px;border-left:3px solid transparent}
+.gzeile.rot{border-left-color:#c62828}
+.gzeile+.gzeile{margin-top:2px}
+.menue .gzeile button{width:auto;padding:6px 8px}
+.menue .gzeile .gtext{flex:1;min-width:0;text-align:left}
+.gzeile .gtext span{min-width:0;display:grid}
+.gzeile .gtext strong{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gzeile .gtext small{font-size:11.5px;color:var(--muted)}
+.gzeile.rot .gtext small{color:#c62828}
+.menue .gzeile .geist{width:32px;height:32px;padding:0;display:grid;flex:none}

@@ -3,6 +3,15 @@
    und Abstände werden hier NICHT verändert; hier steht nur der Abstand zwischen den Karten und die Breite der Seite. */
 .pa-kalender .site-main{max-width:900px;display:grid;gap:18px;align-content:start}
 html.pa-nur-glocke,html.pa-nur-glocke body{background:transparent}
-/* Die Kopfleiste trägt hier nur den Erinnerungs-Knopf: niedrig halten, am Handy zählt die Höhe (Klaus 18.11.). Der Knopf bleibt wie er ist. */
-.pa-kalender .masthead{min-height:0;padding:5px 12px}
 .pa-kalender .site-main{padding-top:10px}
+/* Die läutende Erinnerung oben: schlank und in einer Zeile, der Text lässt sich seitlich schieben (Klaus 18.11.: nicht dick, nicht fett,
+   am Handy zählt die Höhe). Der Zähler steht im Knopf des Klons: „OK (2)“ zeigt die nächste. */
+.app-glocke{top:4px;padding:4px 8px;gap:6px;flex-wrap:nowrap;border-width:1px;border-radius:10px;max-width:calc(100vw - 8px);box-shadow:0 2px 8px rgba(16,52,83,.15)}
+.app-glocke>svg{flex:0 0 auto;width:18px;height:18px}
+.app-glocke>span{min-width:0;flex:1 1 auto;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.app-glocke>span::-webkit-scrollbar{display:none}
+.app-glocke>span strong{font-weight:600;font-size:.88rem}
+.app-glocke>span small{display:block;font-size:.72rem;line-height:1.2}
+.app-glocke .icon-button{width:30px;height:30px;min-width:30px}
+.app-glocke .button{height:30px;min-height:30px;padding:0 10px;font-size:.85rem;font-weight:600;white-space:nowrap;flex:0 0 auto}
+.app-glocke .icon-button{flex:0 0 auto}

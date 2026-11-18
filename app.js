@@ -26,6 +26,8 @@ const P = {
  stift:'<path d="M4 20h4L20 8l-4-4L4 16Z"/>', sort:'<path d="M4 6h16M7 12h10M10 18h4"/>',
  ordner:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v6m-3-3 3 3 3-3"/>',
  importpfeil:'<path d="M12 4v11m-4-4 4 4 4-4M5 19h14"/>', exportpfeil:'<path d="M12 15V4m-4 4 4-4 4 4M5 19h14"/>',
+ haken:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+ glocke:'<path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9"/><path d="M10 20a2 2 0 0 0 4 0"/>',
  notiz:'<path d="M5 3h14v14l-4 4H5Z"/><path d="M15 21v-4h4M8 8h8M8 12h6"/>',
  kalender:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4m8-4v4M8 14h3v3H8Z"/>',
  tabelle:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16M15 4v16"/>',
@@ -181,10 +183,27 @@ const WERK = [
 ];
 const WERKFARBE = {geld:['#f0b93a','#b77a0c'],pdf:['#e2596b','#9b1f38'],sort:['#2bb673','#107c41'],akte:['#1aa59d','#0b5a66'],kal:['#9a7bd6','#5b3aa6']};
 const MEHR = [['import','importpfeil','Importieren','Datei in die Akte legen oder Backup einlesen'],['export','exportpfeil','Exportieren','Backup erstellen – die ganze Akte als verschlüsselter Ordner'],['drucken','drucker','Drucken'],['farbe','','Farbpalette'],['hilfe','','Hilfe']];
+/* Die Glocke (Klaus 18.11.): nur das Symbol, ohne Text und ohne sichtbare Fläche – die erscheint erst beim Darauf-Gehen (wie die
+   Leiste unten am Galaxy Tab). Drei Farben: rot = etwas ist fällig (heute oder überfällig), nachsehen; grün = Einträge sind
+   gespeichert; grau = keine. An der roten Glocke steht die Zahl der fälligen. Ein Tipp klappt das Glockenfeld auf (wie das
+   Benachrichtigungsfeld am Tablet): alle offenen Einträge untereinander, jeder einzeln zu öffnen (Pfeil) oder abzuhaken.
+   Nichts schiebt sich von selbst über die Seite; läutet es, wackelt die Glocke kurz. */
+const glocke = { laeutet:false };
+const istFaellig = t => { const d = new Date(), z = n => String(n).padStart(2, '0'), h = tagHeute(); return t.tag < h || (t.tag === h && (!t.zeit || t.zeit <= `${z(d.getHours())}:${z(d.getMinutes())}`)); };
+const glockeStand = () => { const alle = echt.termine || [], n = alle.filter(istFaellig).length; return n ? ['rot', `${n} fällig`, n] : alle.length ? ['gruen', `${alle.length} ${alle.length === 1 ? 'Eintrag' : 'Einträge'} im Kalender`, 0] : ['grau', 'Keine Erinnerung gespeichert', 0]; };
+const glockeInnen = n => ic('glocke') + (n ? `<span class="gzahl">${n > 99 ? '99+' : n}</span>` : '');
+function glockeKnopf(){ const [st, t, n] = glockeStand(); return `<button class="geist glockenknopf${glocke.laeutet ? ' laeutet' : ''}" data-a="glocke" data-stand="${st}" aria-label="Glocke: ${t}" aria-haspopup="menu">${glockeInnen(n)}</button>`; }
+function glockeNeu(){ const [st, t, n] = glockeStand(); document.querySelectorAll('.glockenknopf').forEach(k => { if (k.dataset.stand !== st || k.dataset.zahl !== String(n)) k.innerHTML = glockeInnen(n); k.dataset.stand = st; k.dataset.zahl = n; k.classList.toggle('laeutet', glocke.laeutet); k.setAttribute('aria-label', 'Glocke: ' + t); }); }
+setInterval(() => glockeNeu(), 30000); /* „fällig“ hängt an der Uhr */
+function glockenFeld(){
+  const alle = echt.termine || [], zeile = t => { const f = istFaellig(t);
+    return `<div class="gzeile${f ? ' rot' : ''}"><button class="gtext" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}"><span><strong>${esc(t.titel)}</strong><small>${f ? (t.tag < tagHeute() ? 'überfällig · ' : 'heute · ') : ''}${tagText(t.tag)}${t.zeit ? ' · ' + t.zeit + ' Uhr' : ''}</small></span></button><button class="geist" data-a="glocke-erledigt" data-id="${esc(t.id)}" aria-label="„${esc(t.titel)}“ abhaken: erledigt" data-tipp="Erledigt">${ic('haken')}</button><button class="geist" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}" aria-label="„${esc(t.titel)}“ im Kalender öffnen" data-tipp="Im Kalender öffnen">${ic('weiter')}</button></div>`; };
+  menue(`${alle.length ? alle.map(zeile).join('') : '<p class="leer" style="padding:10px">Keine Erinnerung gespeichert.</p>'}<hr><button data-a="kalender">${ic('kalender')} Kalender öffnen</button><button data-a="notiz">${ic('notiz')} Neue Notiz</button>`, 'glockenfeld');
+}
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · Basic`;
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
-  $('kopfknoepfe').innerHTML = MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
+  $('kopfknoepfe').innerHTML = glockeKnopf() + MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
     + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Importieren, Exportieren, Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
 function navZeigen(){
@@ -488,7 +507,9 @@ const A = {
  'rahmen-zu': () => rahmenZu(),
  'sort-mehr': () => fRahmen('organizer'),
  notiz: () => { menueZu(); fRahmen('kalender', 'notiz=1'); },
- 'kal-tag': e => fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`),
+ glocke: () => { if (document.querySelector('.glockenfeld')) return menueZu(); glockenFeld(); },
+ 'glocke-erledigt': async e => { try { await T().kalender.erledigen(e.dataset.id); await termineLaden(); const g = $('glocke'); if (g) g.contentWindow.location.reload(); const k = $('rahmen'); if (k && rahmen.was === 'kalender') k.contentWindow.location.reload(); glockenFeld(); if (s.ansicht === 'start' && !$('rahmenort').innerHTML) mainZeigen(); glockenFeld(); } catch (err) { toast(fehlerText(err)); } },
+ 'kal-tag': e => { menueZu(); fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`); },
  sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
  kalender: () => { menueZu(); fRahmen('kalender'); },
  stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') return fRahmen('kalender'); fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
@@ -566,7 +587,7 @@ const fehlerText = e => (e && e.message) || 'Das hat nicht geklappt.';
 const echtBereiche = () => [...new Set([...T().bereiche, ...(echt.liste || []).map(d => d.category)])];
 const bereichKern = b => b.toLowerCase().replace(/&/g, ' und ').replace(/\s+/g, ' ').trim();
 function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = bereichKern(b); return echtBereiche().find(x => bereichKern(x) === k) || b; }
-async function termineLaden(){ try { const k = await T().kalender.termine(); echt.termine = k.termine; echt.notizen = k.notizen; } catch { echt.termine = echt.termine || []; } }
+async function termineLaden(){ try { const k = await T().kalender.termine(); echt.termine = k.termine; echt.notizen = k.notizen; } catch { echt.termine = echt.termine || []; } glockeNeu(); }
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
@@ -926,7 +947,7 @@ const rahmen = { was:null, wartet:null };
 function fRahmen(was, frage = '', dateien = null){
   const r = RAHMEN[was]; zu(); rahmen.was = was; rahmen.wartet = dateien;
   $('rahmenort').innerHTML = `<div class="rahmenfenster" style="${r.stil}" role="dialog" aria-modal="true" aria-label="${r.name}">
-   <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><span class="rahmenmeldung" id="rahmen-meldung" role="status" aria-live="polite"></span><button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
+   <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><span class="rahmenmeldung" id="rahmen-meldung" role="status" aria-live="polite"></span>${glockeKnopf()}<button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
    <iframe id="rahmen" title="${r.name}" allow="camera; microphone; clipboard-write; web-share; fullscreen"></iframe></div>`;
   /* Lädt im Rahmen je die ungepatchte Startseite des Klons (Neuladen, Link „zurück zur App“), kommt gleich wieder die Seite mit Brücke. */
   const f = $('rahmen'), adresse = `./rahmen/${r.seite}?v=${FASSUNG}${frage ? '&' + frage : ''}`;
@@ -940,8 +961,8 @@ function rahmenMelden(t, gut = true){ const o = $('rahmen-meldung'); if (!o) ret
 function rahmenZu(){ $('rahmenort').innerHTML = ''; rahmen.was = null; rahmen.wartet = null; echtLaden().then(() => { if (s.ansicht === 'start') mainZeigen(); }).catch(() => {}); }
 /* Kalender und Notizen (0.6.0): die Ansicht der Familienakte läuft im Rahmen (rahmen/kalender). Sie meldet, was gespeichert wurde
    (steht dann in der Leiste des Rahmens), und dass sich etwas geändert hat (dann stimmen „Fällig“, der Baum und die Glocke wieder).
-   Die Glocke ist dieselbe Seite noch einmal, unsichtbar, nur mit der App-Glocke des Klons: sie läutet, solange die Akte offen ist,
-   und zeigt sich oben, wenn sie läutet. */
+   Die Glocke ist dieselbe Seite noch einmal, unsichtbar, nur mit der App-Glocke des Klons: sie läutet, solange die Akte offen ist;
+   zu sehen ist sie nie – die Akte zeigt das Glockensymbol und das Glockenfeld. */
 function glockeStarten(){ if ($('glocke') || !T()) return; const f = document.createElement('iframe'); f.id = 'glocke'; f.title = 'Erinnerung'; f.hidden = true; f.src = `./rahmen/kalender/index.html?v=${FASSUNG}&nur=glocke`; document.body.appendChild(f); }
 addEventListener('message', async ev => {
   if (ev.origin !== location.origin) return; const d = ev.data || {}, k = $('rahmen'), g = $('glocke');
@@ -949,7 +970,9 @@ addEventListener('message', async ev => {
   if (!ausKalender && !ausGlocke) return;
   if (d.typ === 'pa-kalender-meldung' && ausKalender) rahmenMelden(String(d.text || ''), d.gut !== false);
   if (d.typ === 'pa-kalender-geaendert') { const vorher = JSON.stringify(echt.termine); await termineLaden(); if (ausKalender && g) g.contentWindow.location.reload(); /* neu zeichnen nur, wenn sich wirklich etwas geändert hat – sonst klappt zu, was gerade aufgeklappt wurde */ if (ausGlocke && vorher !== JSON.stringify(echt.termine) && s.ansicht === 'start' && !$('rahmenort').innerHTML && !$('fensterort').innerHTML && !s.frage && !sprech.an) mainZeigen(); }
-  if (d.typ === 'pa-glocke' && ausGlocke) g.hidden = !d.an;
+  if (d.typ === 'pa-glocke' && ausGlocke) { glocke.laeutet = !!d.an; glockeNeu(); } /* läutet es, wackelt nur die Glocke; der Rahmen der Glocke bleibt unsichtbar (Ton und Meldung des Geräts kommen von dort) */
+  /* Seitenleiste der Familienakte im Kalender: Zurück und Startseite schließen den Kalender, „Seite wählen“ zeigt den Baum, Hilfe die Hilfe der Akte. */
+  if (d.typ === 'pa-kalender-geh' && ausKalender) { rahmenZu(); if (d.wohin === 'start' || d.wohin === 'baum') { s.ansicht = d.wohin; s.bereich = null; s.frage = ''; zu(); zeigen(); scrollTo(0, 0); } if (d.wohin === 'hilfe') A.hilfe(); }
   if (d.typ === 'pa-kalender-oeffnen' && ausGlocke) fRahmen('kalender', `tag=${encodeURIComponent(String(d.tag || ''))}&id=${encodeURIComponent(String(d.id || ''))}`);
 });
 A['echt-wfpdf'] = async e => {

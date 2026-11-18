@@ -49,6 +49,8 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A33 | Notizen sah man in der Familienakte nur im Tagebuch. | Unter dem Kalender steht eine schlichte Liste „Notizen“ (Stift, Mülleimer, Auge – Bausteine des Klons). | Eine kurze Notizliste beim Kalender spart den Weg ins Tagebuch. |
 | A34 | Die Schreibprobe beim Öffnen des Browser-Tresors (`.schreibprobe`) verträgt keine zwei Fenster zugleich; schlägt sie fehl, kann der Speicherort wechseln. | Die Glocke (zweites Fenster) startet erst, wenn die Akte den Tresor geöffnet hat. | Schreibprobe mit eigenem Namen je Fenster oder über `navigator.locks` absichern. |
 | A35 | Der Zugang zu Google/Microsoft lebt nur im Speicher der Seite. | Im Rahmen heißt das: nach dem Schließen des Kalenders ist beim nächsten Öffnen neu anzumelden (der Klon bietet es an). | Zugang für die Sitzung auch über ein Neuladen halten (sessionStorage), sofern gewollt. |
+| A36 | Am Handy kostet alles Hohe oben Platz: Bestätigung über drei Zeilen, läutende Erinnerung als dickes Feld, Erinnerungs-Knopf in eigener Reihe. | 0.6.0: Bestätigung und Erinnerung als flache Zeile (Text seitlich schiebbar), Erinnerungs-Knopf im Kopf der Karte „Notizen“. | Die App-Glocke am Handy schlanker (eine Zeile); Klaus' Gedanke: Glocke mit Zähler in einer festen Leiste unten. |
+| A37 | Die Seitenleiste (Griff rechts) fehlte in der Akte. | 0.6.0: unverändert aus dem Klon im Kalender. | Sie ist nicht verschiebbar – Klaus hatte sie so in Erinnerung; prüfen, ob gewünscht. |
 
 ## B. Vereinfachungen der Hülle
 
