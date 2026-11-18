@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -998,7 +998,7 @@ function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop();
 function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
 addEventListener('resize', () => kachelRaster());
 function zeigen(){ navZeigen(); mainZeigen(); }
-farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(glockeStarten); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
+farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(() => { glockeStarten(); empfangStarten(); }); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
    Übernimmt ein neuer Worker, zeigt die Fassungsmarke „neu“; neu geladen wird erst auf Tipp, damit keine Eingabe verloren geht. */
 let swReg = null;
@@ -1167,9 +1167,17 @@ A['echt-wfpdf'] = async e => {
   try { const d = (echt.liste || []).find(x => x.id === e.dataset.id), datei = await T().datei(e.dataset.id); fRahmen('wfpdf', '', [new File([datei], (d && d.originalName) || datei.name, {type:datei.type, lastModified:datei.lastModified})]); }
   catch (err) { toast(fehlerText(err)); }
 };
+/* Übergabe aus dem eigenständigen Datei-Organizer (0.7.4, Organizer 0.4.19, Klaus 18.11.): er öffnet `?empfang=organizer` im selben
+   Browser; sobald der Tresor offen ist, meldet die Akte „pa-empfang-bereit“ an das öffnende Fenster und nimmt dasselbe Paket an wie
+   aus dem Rahmen. Nur Fenster derselben Adresse. */
+const empfang = { an:new URLSearchParams(location.search).get('empfang') === 'organizer' && !!window.opener, uhr:0 };
+function empfangStarten(){ if (!empfang.an || empfang.uhr) return; const sag = () => { try { window.opener.postMessage({typ:'pa-empfang-bereit'}, location.origin); } catch { clearInterval(empfang.uhr); } }; sag(); empfang.uhr = setInterval(sag, 500); setTimeout(() => clearInterval(empfang.uhr), 120000); }
 addEventListener('message', async ev => {
-  const f = $('rahmen'); if (!f || ev.origin !== location.origin || ev.source !== f.contentWindow) return;
-  const d = ev.data || {}, antwort = m => { try { f.contentWindow.postMessage(m, location.origin); } catch { /* Rahmen ist schon zu */ } };
+  const f = $('rahmen'), ausRahmen = !!f && ev.source === f.contentWindow, ausOpener = empfang.an && ev.source === window.opener;
+  if (ev.origin !== location.origin || (!ausRahmen && !ausOpener)) return;
+  if (ausOpener && (ev.data || {}).typ !== 'pa-organizer-uebergabe') return;
+  if (ausOpener) clearInterval(empfang.uhr);
+  const d = ev.data || {}, antwort = m => { try { ev.source.postMessage(m, location.origin); } catch { /* Fenster ist schon zu */ } };
   if (d.typ === 'pa-wfpdf-bereit' && rahmen.wartet) { const dateien = rahmen.wartet; rahmen.wartet = null; antwort({typ:'pa-wfpdf-oeffnen', id:'akte', dateien}); return; }
   if (d.typ === 'pa-organizer-uebergabe') {
     try {

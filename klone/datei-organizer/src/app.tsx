@@ -21,12 +21,12 @@ import { ArbeitSpeicher, arbeitAnzeige, arbeitFehler, arbeitFrei, arbeitGemerkt,
 import { OrdnerSeite, SortierenSeite, FindenSeite, VerlaufSeite, AkteSeite, HilfeSeite } from "./seiten.tsx";
 import { LandkarteSeite } from "./landkarte.tsx";
 import { installHoeren, installMoeglich, installieren } from "./installieren.ts";
-import { rahmen } from "./rahmen.ts";
+import { rahmen, type Rahmen } from "./rahmen.ts";
 import { verlernen } from "./verlauf.ts";
 import { Seitenleiste } from "./seitenleiste.tsx";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
-export const FASSUNG = "0.4.18";
+export const FASSUNG = "0.4.19";
 // Ladeanzeige: „suchen“ = Ordner wird durchgesehen (Zahl noch unbekannt), „lesen“ = Datei für Datei, „stand“ = gemerkter Stand beim Start.
 export type Fortschritt = { phase: "stand" | "suchen" | "lesen" | "uebergeben"; fertig: number; gesamt: number; name?: string };
 const luft = () => new Promise<void>((r) => setTimeout(r)); // dem Browser Zeit zum Zeichnen geben
@@ -428,15 +428,16 @@ function useOrganizer() {
   }, [dateien]);
 
   const indexText = useCallback((mitText: boolean) => JSON.stringify(organizerIndex(dateien, regeln, verlauf, heute(), `Datei-Organizer ${FASSUNG}`, mitText), null, 1), [dateien, regeln, verlauf]);
-  const indexSichern = useCallback(async (mitText: boolean) => {
-    const text = indexText(mitText);
+  // `dazu`: ein Satz, der nach dem Speichern angehängt wird (Knopf „An die Familienakte übergeben“, 0.4.19).
+  const indexSichern = useCallback(async (mitText: boolean, dazu = "") => {
+    const text = indexText(mitText), d = dazu ? " " + dazu : "";
     try {
-      if (quelle?.schreiben) { await quelle.schreiben(INDEX_DATEI, text); setMeldung({ text: `${INDEX_DATEI} liegt jetzt im Ordner „${quelle.name}“.` }); }
+      if (quelle?.schreiben) { await quelle.schreiben(INDEX_DATEI, text); setMeldung({ text: `${INDEX_DATEI} liegt jetzt im Ordner „${quelle.name}“.${d}` }); }
       else {
         // In der App gibt es kein Herunterladen (WebView): „Speichern unter …“ des Systems.
         const gespeichert = await nativSpeichern(INDEX_DATEI, text);
-        if (gespeichert === null) { herunterladen(INDEX_DATEI, text); setMeldung({ text: `${INDEX_DATEI} heruntergeladen. Lege sie in den Ordner neben die Dateien.` }); }
-        else setMeldung({ text: gespeichert ? `${INDEX_DATEI} gespeichert. Lege sie in den Ordner neben die Dateien.` : "Nicht gespeichert." });
+        if (gespeichert === null) { herunterladen(INDEX_DATEI, text); setMeldung({ text: `${INDEX_DATEI} heruntergeladen. Lege sie in den Ordner neben die Dateien.${d}` }); }
+        else setMeldung({ text: gespeichert ? `${INDEX_DATEI} gespeichert. Lege sie in den Ordner neben die Dateien.${d}` : "Nicht gespeichert." });
       }
     } catch (e) { setMeldung({ text: `Speichern nicht möglich: ${(e as Error).message}`, art: "fehler" }); }
   }, [indexText, quelle]);
@@ -466,8 +467,8 @@ function useOrganizer() {
 
   // Im Rahmen einer anderen App (src/rahmen.ts): der sortierte Stapel geht samt Index und Originalen direkt an die Hülle.
   // Gesperrtes und Doppeltes gibt der Organizer nicht weiter; Anhänge aus Mails reisen als eigene Dateien mit.
-  const uebergeben = useCallback(async (mitText: boolean) => {
-    const r = rahmen(); if (!r) return;
+  const uebergeben = useCallback(async (mitText: boolean, ziel?: Rahmen) => {
+    const r = ziel || rahmen(); if (!r) return;
     try {
       // Ladeanzeige (0.4.18, Klaus 18.11.: „hat lange gedauert, kein Ladebalken zu sehen“): Datei für Datei, dann das Übergeben selbst.
       const paket: Array<{ pfad: string; datei: File }> = [], fehlen: string[] = [], mit = dateien.filter((d) => !d.auffaellig && !d.doppeltVon);
