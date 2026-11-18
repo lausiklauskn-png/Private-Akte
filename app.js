@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -243,7 +243,7 @@ function treffer(){
 /* Abschnitte der Startseite als Knopf, eingeklappt (Klaus 18.11.: bei 100 Unterlagen wird die Seite sonst endlos). Offen/zu wird gemerkt. */
 const klapp = (() => { try { return JSON.parse(localStorage.getItem('pa_klapp') || '{}') || {}; } catch { return {}; } })();
 const klappTeil = (id, titel, unter, innen, attr = '') => `<details class="abschnitt klapp" ${attr} data-klapp="${id}" ${klapp[id] ? 'open' : ''}><summary><b>${titel}</b><span>${unter}</span>${ic('weiter')}</summary><div class="liste">${innen}</div></details>`;
-document.addEventListener('toggle', ev => { const d = ev.target; if (!d.dataset || !d.dataset.klapp) return; klapp[d.dataset.klapp] = d.open ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt dann bis zum Neuladen */ } }, true);
+document.addEventListener('toggle', ev => { const d = ev.target; if (!d.dataset || !d.dataset.klapp) return; kartenHoehe(); klapp[d.dataset.klapp] = d.open ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt dann bis zum Neuladen */ } }, true);
 /* Fällig, echt (0.6.0): offene Termine, Fristen und Erinnerungen aus dem Tresor – dieselben wie in „Mein Kalender“. Ein Tipp öffnet den Kalender an dem Tag. */
 const tagHeute = () => { const d = new Date(), z = n => String(n).padStart(2, '0'); return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`; };
 const tagText = t => `${t.slice(8, 10)}.${t.slice(5, 7)}.${t.slice(0, 4)}`;
@@ -297,7 +297,7 @@ function vAkten(){
    <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${l.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
     <section class="ekarte elistekarte"><h3 class="egewaehlt apfad">${pfad.map(esc).join(' <span>›</span> ')}<b>${liste.length}</b></h3>
      ${a ? `<div class="reihe" style="margin:0 12px 6px"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
-     <div id="akte-liste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
+     <div id="akte-liste" class="eliste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
 }
 /* Eingang, echt (0.7.0): was in der Akte liegt, aber noch keiner Akte und keiner Person zugeordnet ist – bis du es einordnest. */
 function vEingang(){
@@ -694,8 +694,8 @@ function echtAbschnitt(){
   else if (!l.length) innen = '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>';
   else { const alle = echtSortiert(l.filter(echtImKnoten)), n = echt.zeig || ECHT_SEITE;
     innen = `${echtSortZeile()}<div class="eexplorer"><section class="ekarte ebaumkarte">${echtBaum(l)}</section>
-     <section class="ekarte elistekarte"><h3 class="egewaehlt">${esc(echt.knoten === null ? 'Alle Unterlagen' : echt.knoten.split(SEP).pop())}<b>${alle.length}</b></h3>${alle.slice(0, n).map(d => echtZeile(d)).join('')}
-      ${alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''}</section></div>`; }
+     <section class="ekarte elistekarte"><h3 class="egewaehlt">${esc(echt.knoten === null ? 'Alle Unterlagen' : echt.knoten.split(SEP).pop())}<b>${alle.length}</b></h3><div class="eliste">${alle.slice(0, n).map(d => echtZeile(d)).join('')}
+      ${alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''}</div></section></div>`; }
   return klappTeil('echt', 'Deine Unterlagen', l && !echt.fehler ? String(l.length) : '', innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
@@ -992,7 +992,26 @@ document.addEventListener('submit', async ev => {
   }
 });
 /* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
-function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); kachelRaster(); }
+function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); kachelRaster(); kartenHoehe(); }
+/* Höhe der zwei Karten (Klaus 18.11.): keine Karte höher als der Bildschirm, die rechte höchstens so hoch wie die linke (aber nie
+   niedriger als 300 px); was nicht hineinpasst, rollt in der Karte – die Seite selbst bleibt kurz, „Fällig“ und „Bereiche“ bleiben
+   sichtbar. Untereinander (schmal) zählt nur die Bildschirmhöhe. */
+function kartenHoehe(){
+  /* Nebeneinander (Klaus 18.11.: „an die Fensterhöhe anpassen, unten ist noch zu viel Platz“): die Karten reichen genau bis zum
+     unteren Fensterrand – gemessen wird, wo sie anfangen und wie viel Platz das darunter („Fällig“, „Bereiche“) braucht; mindestens
+     300 px. Untereinander (Handy): der Baum höchstens halb so hoch wie das Fenster, die Liste so hoch wie das Fenster. */
+  for (const ex of document.querySelectorAll('.eexplorer')) {
+    const l = ex.querySelector('.ebaumkarte'), r = ex.querySelector('.elistekarte'); if (!l || !r) continue;
+    const nebeneinander = getComputedStyle(ex).gridTemplateColumns.split(' ').length > 1;
+    l.style.height = r.style.height = l.style.maxHeight = r.style.maxHeight = '';
+    if (nebeneinander) {
+      const oben = ex.getBoundingClientRect().top + scrollY, huelle = ex.closest('#echt') || ex;
+      let darunter = 0; for (let n = huelle.nextElementSibling; n && !n.matches('footer, .fuss'); n = n.nextElementSibling) { const m = getComputedStyle(n); darunter += n.offsetHeight + parseFloat(m.marginTop) + parseFloat(m.marginBottom); }
+      const h = Math.max(300, Math.floor(innerHeight - oben - darunter - 18)) + 'px'; l.style.height = r.style.height = h;
+    } else { l.style.maxHeight = Math.max(200, Math.floor(innerHeight * 0.5)) + 'px'; r.style.maxHeight = Math.max(320, innerHeight - 70) + 'px'; }
+  }
+}
+addEventListener('resize', () => kartenHoehe());
 /* Bereichs-Knöpfe (Klaus 18.11.): erst eine Reihe ganz füllen, dann die nächste – höchstens drei Reihen; sind es mehr, stehen sie in
    drei Reihen und lassen sich seitlich schieben. Die Knöpfe behalten ihre Größe (so breit wie ihr Text, Klaus: „nicht größer ziehen“). */
 function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
