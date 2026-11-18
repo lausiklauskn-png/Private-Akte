@@ -22,9 +22,11 @@ import { OrdnerSeite, SortierenSeite, FindenSeite, VerlaufSeite, AkteSeite, Hilf
 import { LandkarteSeite } from "./landkarte.tsx";
 import { installHoeren, installMoeglich, installieren } from "./installieren.ts";
 import { rahmen } from "./rahmen.ts";
+import { verlernen } from "./verlauf.ts";
+import { Seitenleiste } from "./seitenleiste.tsx";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
-export const FASSUNG = "0.4.14";
+export const FASSUNG = "0.4.15";
 // Ladeanzeige: „suchen“ = Ordner wird durchgesehen (Zahl noch unbekannt), „lesen“ = Datei für Datei, „stand“ = gemerkter Stand beim Start.
 export type Fortschritt = { phase: "stand" | "suchen" | "lesen"; fertig: number; gesamt: number; name?: string };
 const luft = () => new Promise<void>((r) => setTimeout(r)); // dem Browser Zeit zum Zeichnen geben
@@ -366,26 +368,57 @@ function useOrganizer() {
     setDateien((alle) => regelnAufAlle(alle.map((x) => x.pfad === pfad ? neu : x), neueRegeln));
   }, [dateien, regeln]);
 
-  const rueckgaengig = useCallback((i: number) => {
-    const k = verlauf[i];
-    if (!k) return;
-    const rest = verlauf.filter((_, j) => j !== i);
-    setVerlauf(rest);
-    setDateien((alle) => {
-      let neu = alle.map((d) => {
-        if (d.pfad !== k.pfad) return d;
-        const n: Datei = { ...d, felder: { ...d.felder }, bestaetigt: { ...d.bestaetigt } };
-        delete n.bestaetigt![k.feld];
-        n.felder[k.feld] = { wert: k.von, sicher: false, grund: "zurückgenommen – bitte prüfen", quelle: "regel" };
-        return n;
-      });
-      // Regeln aus dem übrigen Verlauf neu lernen
-      let r: Lernregel[] = [];
-      for (const x of rest) { const d = neu.find((y) => y.pfad === x.pfad); if (d) r = lernen(r, d, x); }
-      setRegeln(r);
-      neu = regelnAufAlle(neu, r);
-      return neu;
+  // Alles auf einmal übernehmen (Klaus 18.11.: „Was ist, wenn man keine Zeit hat zum Prüfen?“): für jede gewählte Datei wird in jedem
+  // offenen Feld der Vorschlag bestätigt – wie „Stimmt“ an der einzelnen Zeile (Verlauf, Lernen). Felder ohne Vorschlag bleiben offen.
+  const alleUebernehmen = useCallback((pfade: string[]) => {
+    const wahl = new Set(pfade), zeit = new Date().toISOString();
+    const neuV: Korrektur[] = [];
+    let r = regeln, ohne = 0, stueck = 0;
+    const alle = dateien.map((d) => {
+      if (!wahl.has(d.pfad)) return d;
+      let n = d, etwas = false;
+      for (const feld of offeneFelder(d) as FeldName[]) {
+        const wert = d.felder[feld]?.wert;
+        if (!wert) { ohne++; continue; }
+        const k: Korrektur = { zeit, pfad: d.pfad, feld, von: wert, zu: wert, bestaetigt: true };
+        n = korrigiereDatei(n, feld, wert); r = lernen(r, n, k); neuV.push(k); etwas = true;
+      }
+      if (etwas) stueck++;
+      return n;
     });
+    if (!neuV.length) { setMeldung({ text: "Nichts zu übernehmen: es gibt keinen Vorschlag.", art: "halt" }); return; }
+    setRegeln(r); setVerlauf((v) => [...v, ...neuV]); setDateien(regelnAufAlle(alle, r));
+    setMeldung({ text: `Vorschlag übernommen bei ${stueck === 1 ? "1 Datei" : `${stueck} Dateien`}${ohne ? ` · ${ohne} ohne Vorschlag ${ohne === 1 ? "bleibt" : "bleiben"} offen` : ""}. Zurücknehmen geht unter „Verlauf“.` });
+  }, [dateien, regeln]);
+
+  // Rückgängig: ein Schritt oder mehrere gewählte. Die Datei steht danach wieder bei „bitte prüfen“; von den gelernten Regeln wird nur
+  // die Stimme dieses Schritts zurückgenommen (src/verlauf.ts) – was aus anderen, auch aus gelöschten Einträgen gelernt wurde, bleibt.
+  const rueckgaengig = useCallback((welche: number | number[]) => {
+    const idx = new Set(typeof welche === "number" ? [welche] : welche);
+    const weg = verlauf.filter((_, j) => idx.has(j));
+    if (!weg.length) return;
+    let r = regeln;
+    for (const k of weg) { const d = dateien.find((y) => y.pfad === k.pfad); if (d) r = verlernen(r, d, k); }
+    // Mehrere Schritte am selben Feld: der Wert vor dem ältesten gilt.
+    const zurueckAuf = new Map<string, Korrektur>();
+    for (const k of weg) { const s = `${k.pfad}\u0000${k.feld}`; if (!zurueckAuf.has(s)) zurueckAuf.set(s, k); }
+    const neu = dateien.map((d) => {
+      const hier = [...zurueckAuf.values()].filter((k) => k.pfad === d.pfad);
+      if (!hier.length) return d;
+      const n: Datei = { ...d, felder: { ...d.felder }, bestaetigt: { ...d.bestaetigt } };
+      for (const k of hier) { delete n.bestaetigt![k.feld]; n.felder[k.feld] = { wert: k.von, sicher: false, grund: "zurückgenommen – bitte prüfen", quelle: "regel" }; }
+      return n;
+    });
+    setVerlauf(verlauf.filter((_, j) => !idx.has(j))); setRegeln(r); setDateien(regelnAufAlle(neu, r));
+    setMeldung({ text: `${weg.length === 1 ? "1 Schritt" : `${weg.length} Schritte`} rückgängig gemacht. Unter „Sortieren“ ${weg.length === 1 ? "steht die Datei" : "stehen die Dateien"} wieder bei „bitte prüfen“.` });
+  }, [verlauf, regeln, dateien]);
+
+  // Aus dem Verlauf löschen (Klaus 18.11.): nur der Eintrag verschwindet. Die Sortierung der Dateien und alles Gelernte bleiben.
+  const verlaufLoeschen = useCallback((welche: number[]) => {
+    const idx = new Set(welche), n = verlauf.filter((_, j) => idx.has(j)).length;
+    if (!n) return;
+    setVerlauf(verlauf.filter((_, j) => !idx.has(j)));
+    setMeldung({ text: `${n === 1 ? "1 Eintrag" : `${n} Einträge`} aus dem Verlauf gelöscht. Die Dateien bleiben sortiert, das Gelernte bleibt.` });
   }, [verlauf]);
 
   const nummern = useCallback(() => {
@@ -486,7 +519,7 @@ function useOrganizer() {
     setMeldung({ text: `${was || (n === 1 ? "1 Datei" : `${n} Dateien`)} aus dem Organizer genommen. ${n === 1 ? "Das Original ist" : "Die Originale sind"} unverändert. „Zurück“ auf der Seite Sortieren holt sie wieder.` });
   }, [dateien, stufe]);
 
-  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, rueckgaengig, nummern, indexSichern, indexText, uebergeben, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
+  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, alleUebernehmen, rueckgaengig, verlaufLoeschen, nummern, indexSichern, indexText, uebergeben, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
 }
 
 async function einlesenTeile(bytes: Uint8Array, pfad: string) {
@@ -571,8 +604,17 @@ export function App() {
   const neueFassung = useNeueFassung();
   const upd = useNativesUpdate();
   const [seite, setSeite] = useState<SeitenId>(seiteAusHash);
-  useEffect(() => { const f = () => setSeite(seiteAusHash()); window.addEventListener("hashchange", f); return () => window.removeEventListener("hashchange", f); }, []);
+  // Eigener Weg durch die Seiten: „Zurück“ in der Seitenleiste gibt es nur, wenn es in der App eine Seite davor gibt (verlässt die App nie).
+  // Ein Wechsel auf die Seite davor – auch über die Zurück-Taste des Geräts – nimmt den letzten Schritt wieder weg.
+  const weg = useRef<string[]>([seiteAusHash()]);
+  const [schritte, setSchritte] = useState(0);
+  useEffect(() => { const f = () => {
+    const s = seiteAusHash(), w = weg.current;
+    if (w.length > 1 && w[w.length - 2] === s) w.pop(); else if (w[w.length - 1] !== s) w.push(s);
+    setSchritte(w.length - 1); setSeite(s);
+  }; window.addEventListener("hashchange", f); return () => window.removeEventListener("hashchange", f); }, []);
   const gehe = useCallback((s: SeitenId) => { location.hash = s; setSeite(s); window.scrollTo({ top: 0 }); }, []);
+  const imRahmen = !!rahmen();
   const offen = useMemo(() => z.dateien.filter((d) => offeneFelder(d).length > 0).length, [z.dateien]);
   const [ziel, setZiel] = useState<FindenZiel>(null);
   // Handy (Klaus 17.11.): die runden Knöpfe des Kopfs stecken hinter einem Pfeil, damit der Kopf zwei Zeilen hoch bleibt.
@@ -581,7 +623,7 @@ export function App() {
   const offenZumDruck = useSyncExternalStore(druckZielHoeren, druckZiel), [drucktGerade, setDrucktGerade] = useState(false);
   const oeffne = useCallback((sicht: string, knoten?: string) => { setZiel({ sicht, knoten, nr: Date.now() }); gehe("finden"); }, [gehe]);
   const props = { z, gehe, oeffne, ziel };
-  return <div className="app-shell">
+  return <div className={`app-shell${imRahmen ? " im-rahmen" : ""}`} data-im-rahmen={imRahmen || undefined}>
     <header className="site-header">
       <div className="masthead">
         <div className="marke" data-variante={APP_VARIANTE}>
@@ -631,6 +673,7 @@ export function App() {
       {seite === "hilfe" && <HilfeSeite {...props}/>}
       {seite === "landkarte" && <LandkarteSeite {...props}/>}
     </main>
+    <Seitenleiste seite={seite} seiten={SEITEN} gehe={gehe} fassung={FASSUNG} zurueck={schritte > 0 ? () => history.back() : undefined}/>
     <footer className="site-footer">
       <div className="footer-inner">
         <div className="footer-brand-row"><div><strong>{APP_NAME.toUpperCase()}</strong><span>Ein Ordner rein, sortiert heraus – für die Familienakte.</span></div><span>Alles bleibt auf diesem Gerät.</span></div>

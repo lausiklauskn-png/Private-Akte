@@ -122,8 +122,34 @@ try {
   await page.locator("[data-nav=verlauf]").click();
   const korr = await page.locator("[data-verlauf] li").count();
   soll("Verlauf zeigt alle Korrekturen", korr === bestaetigt + geaendert, `${korr} statt ${bestaetigt + geaendert}`);
-  await page.locator("[data-rueckgaengig]").first().click();
-  soll("Rückgängig nimmt eine zurück", await page.locator("[data-verlauf] li").count() === korr - 1);
+  { // 0.4.15 (Klaus 18.11.): sortieren, auswählen, aus dem Verlauf löschen – getrennt von „Rückgängig“.
+    const erster = () => page.locator("[data-verlauf-eintrag]").first().getAttribute("data-verlauf-eintrag");
+    const neuZuerst = await erster();
+    await page.locator("[data-verlauf-sortieren]").selectOption("alt"); const altZuerst = await erster();
+    soll("Verlauf: Sortierung neueste zuerst / älteste zuerst", neuZuerst === String(korr - 1) && altZuerst === "0", `${neuZuerst} / ${altZuerst}`);
+    await page.locator("[data-verlauf-sortieren]").selectOption("art");
+    const texte = await page.locator("[data-verlauf-eintrag]").allInnerTexts(), ersteBest = texte.findIndex((t) => t.includes("bestätigt:"));
+    soll("Verlauf: Sortierung nach Art – Geändertes vor Bestätigtem", ersteBest >= geaendert - 0 && texte.slice(0, ersteBest).every((t) => t.includes("→")) && texte.slice(ersteBest).every((t) => t.includes("bestätigt:")), `erste Bestätigung an Stelle ${ersteBest}`);
+    await page.locator("[data-verlauf-sortieren]").selectOption("neu");
+    soll("Verlauf: an der Zeile steht kein Knopf, die Knöpfe oben sind ohne Haken aus", await page.locator("[data-verlauf] li button").count() === 0 && await page.locator("[data-verlauf-loeschen]").isDisabled() && await page.locator("[data-rueckgaengig]").isDisabled());
+    await page.locator("[data-verlauf-eintrag]").nth(1).locator("span").first().click();
+    soll("Verlauf: ein Tipp auf den Eintrag setzt nur den Haken – nichts wird zurücksortiert", await page.locator("[data-verlauf-eintrag]").nth(1).locator("[data-verlauf-wahl]").isChecked() && await page.locator("[data-verlauf] li").count() === korr && (await page.locator("[data-verlauf-gewaehlt]").innerText()).includes("1 gewählt"));
+    await page.locator("[data-verlauf-alle]").check();
+    soll("Verlauf: „Alle auswählen“ setzt alle Haken", await page.locator("[data-verlauf-wahl]:checked").count() === korr && (await page.locator("[data-verlauf-gewaehlt]").innerText()).includes(`${korr} gewählt`));
+    await page.locator("[data-verlauf-alle]").uncheck();
+    soll("… und nimmt sie wieder weg", await page.locator("[data-verlauf-wahl]:checked").count() === 0);
+    // Zwei Einträge löschen: die Liste wird kürzer, das Gelernte bleibt, nichts steht wieder bei „bitte prüfen“.
+    const regelnVorher = await page.locator("[data-regeln]").innerText();
+    await page.locator("[data-verlauf-eintrag]").nth(2).locator("[data-verlauf-wahl]").check(); await page.locator("[data-verlauf-eintrag]").nth(3).locator("[data-verlauf-wahl]").check();
+    await page.locator("[data-verlauf-loeschen]").click(); await page.waitForTimeout(150);
+    soll("Verlauf: „Aus Verlauf löschen“ nimmt nur die Einträge weg, das Gelernte bleibt", await page.locator("[data-verlauf] li").count() === korr - 2 && await page.locator("[data-regeln]").innerText() === regelnVorher && regelnVorher.includes("→"));
+    await page.locator("[data-nav=sortieren]").click();
+    soll("… und keine Datei ist zurücksortiert (nichts zu prüfen)", await page.locator("[data-nichts-offen]").count() === 1 && await page.locator("[data-pruef]").count() === 0);
+    await page.locator("[data-nav=verlauf]").click();
+  }
+  await page.locator("[data-verlauf-eintrag]").first().locator("[data-verlauf-wahl]").check();
+  await page.locator("[data-rueckgaengig]").click();
+  soll("Rückgängig (Haken, dann der beschriftete Knopf) nimmt eine zurück", await page.locator("[data-verlauf] li").count() === korr - 3);
   await page.locator("[data-nav=sortieren]").click();
   soll("… und die Datei ist wieder zu prüfen", await page.locator("[data-pruef]").count() >= 1);
   { // Klaus 16.11.: in der Prüfliste lässt sich jedes Feld wählen, auch der Bereich mit „Neue Kategorie“ – nicht nur das offene.
@@ -724,6 +750,137 @@ try {
     soll("Rahmen: keine Fehler in der Konsole", rf.length === 0, rf.slice(0, 2).join(" | "));
     await rctx.close();
     soll("Ohne Rahmen: kein Übergabe-Knopf", await page.evaluate(() => { location.hash = "akte"; return new Promise((ok) => setTimeout(() => ok(!document.querySelector("[data-uebergeben]")), 300)); }));
+  }
+  { // 0.4.15 (Klaus 18.11.2026, nach dem Test am Tablet): schmale Ansicht 390 px – alles übernehmen, flache Zeilen, Seitenleiste, Kopf.
+    console.log("0.4.15: schmale Ansicht (390 px)");
+    const sctx = await browser.newContext({ viewport: { width: 390, height: 800 } });
+    const sp = await sctx.newPage(); const sf = [], fragen = [];
+    sp.on("pageerror", (e) => sf.push(String(e))); sp.on("console", (m) => { if (m.type() === "error") sf.push(m.text()); });
+    sp.on("dialog", (d) => { fragen.push(d.message()); void d.accept(); });
+    await sp.goto(basis);
+    await sp.locator("[data-testordner]").click();
+    await sp.waitForFunction(() => /Dateien im Eingang/.test(document.querySelector("[data-meldung]")?.textContent || ""), null, { timeout: 120000 });
+    const kopfHoch = await sp.evaluate(() => document.querySelector(".site-header").getBoundingClientRect().height);
+    soll("Kopf schmal ohne Rahmen: höchstens zwei Zeilen", kopfHoch <= 125 && await sp.locator(".site-header .main-navigation").isVisible(), `${kopfHoch}px`);
+    const hoehen = (sel) => sp.evaluate((q) => [...document.querySelectorAll(q)].map((e) => Math.round(e.getBoundingClientRect().height)), sel);
+    const inZeile = (zeile, knopf) => sp.evaluate(([z, k]) => [...document.querySelectorAll(z)].every((e) => { const r = e.getBoundingClientRect(), b = e.querySelector(k)?.getBoundingClientRect(); return !!b && b.width > 0 && b.top >= r.top - 1 && b.bottom <= r.bottom + 1 && b.left > r.left + r.width / 2; }), [zeile, knopf]);
+    const offenZahl = async () => Number(await sp.locator("[data-pruefliste] .card-heading .badge.pruefen").innerText());
+    await sp.evaluate(() => { location.hash = "sortieren"; });
+    await sp.locator("[data-durchsieben]").click(); await sp.waitForTimeout(200);
+    const offen1 = await offenZahl();
+    soll("Prüfliste: Haken „Alle auswählen“ und Knopf „Alle übernehmen“ stehen darüber", offen1 > 1 && await sp.locator("[data-pruef-leiste] [data-pruef-alle]").isVisible() && (await sp.locator("[data-alle-uebernehmen]").innerText()).trim() === "Alle übernehmen", `offen ${offen1}`);
+    { const h = await hoehen("[data-pruef]"); soll("Prüfliste schmal: Zeilen höchstens 64 px hoch, Knöpfe rechts in der Zeile", h.length > 0 && Math.max(...h) <= 64 && await inZeile("[data-pruef]", "[data-auge]") && await inZeile("[data-pruef]", "[data-korrigieren]"), `höchste ${Math.max(...h)}px von ${h.length}`); }
+    // eine einzelne Zeile über den Haken
+    const pfad1 = await sp.locator("[data-pruef]").first().getAttribute("data-pruef"), feld1 = await sp.locator("[data-pruef]").first().locator(".grund").first().innerText();
+    await sp.locator("[data-pruef]").first().locator("[data-pruef-wahl]").check();
+    soll("Prüfliste: mit einem Haken heißt der Knopf „Auswahl übernehmen (1)“", (await sp.locator("[data-alle-uebernehmen]").innerText()).trim() === "Auswahl übernehmen (1)");
+    await sp.locator("[data-alle-uebernehmen]").click(); await sp.waitForTimeout(150);
+    const z1 = sp.locator(`[data-pruef="${pfad1}"]`);
+    soll("… und übernimmt nur diese Datei (ohne Rückfrage)", fragen.length === 0 && await offenZahl() < offen1 && await offenZahl() >= offen1 - 12 && (await z1.count() === 0 || await z1.locator(".grund").first().innerText() !== feld1), `offen ${await offenZahl()} statt ${offen1}`);
+    await sp.locator("[data-pruef-alle]").check();
+    soll("Prüfliste: „Alle auswählen“ setzt die Haken aller Zeilen", await sp.locator("[data-pruef-wahl]:not(:checked)").count() === 0 && (await sp.locator("[data-alle-uebernehmen]").innerText()).trim() === "Alle übernehmen");
+    // alles übernehmen, Sieb für Sieb, bis nichts mehr offen ist
+    let rundenA = 0, hand = 0;
+    while (rundenA++ < 30) {
+      if (await sp.locator("[data-pruef]").count()) {
+        if (await sp.locator("[data-pruef] [data-stimmt]").count()) { await sp.locator("[data-alle-uebernehmen]").click(); await sp.waitForTimeout(150); }
+        else { // ohne Vorschlag bleibt die Datei offen: von Hand
+          const z = sp.locator("[data-pruef]").first(); await z.locator("[data-korrigieren]").click(); const w = z.locator("[data-wert]");
+          if (await w.evaluate((e) => e.tagName) === "SELECT") await w.selectOption({ index: 1 }); else await w.fill("2026-11-01"); await z.locator("[data-uebernehmen]").click(); hand++; }
+        continue;
+      }
+      if (await sp.locator("[data-durchsieben]").isEnabled()) { await sp.locator("[data-durchsieben]").click(); await sp.waitForTimeout(150); } else break;
+    }
+    soll("„Alle übernehmen“ (mit Rückfrage) bringt den Ordner ganz durch die Siebe", await sp.locator("[data-nichts-offen]").count() === 1 && !(await sp.locator("[data-durchsieben]").isEnabled()) && fragen.some((f) => f.includes("den Vorschlag übernehmen")) && (await sp.locator("[data-meldung]").first().innerText()).length > 0, `Runden ${rundenA}, von Hand ${hand}, Fragen ${fragen.length}`);
+    { const h = await hoehen("[data-sicher]"); soll("Grüne Liste schmal: Zeilen höchstens 64 px hoch, Auge/Stift/Papierkorb rechts in der Zeile", h.length > 0 && Math.max(...h) <= 64 && await inZeile("[data-sicher]", "[data-auge]") && await inZeile("[data-sicher]", "[data-papierkorb]"), `höchste ${Math.max(...h)}px`); }
+
+    // Verlauf: alles Übernommene steht als Bestätigung da; löschen lässt das Gelernte stehen, auch bei einem späteren Rückgängig.
+    await sp.evaluate(() => { location.hash = "verlauf"; }); await sp.waitForSelector("[data-verlauf-eintrag]");
+    const vUeber = await sp.locator("[data-verlauf] li").count();
+    soll("Verlauf: das auf einmal Übernommene steht als Bestätigung im Verlauf", vUeber > offen1 && (await sp.locator("[data-verlauf-eintrag]").allInnerTexts()).filter((t) => t.includes("bestätigt:")).length === vUeber - hand, `${vUeber} Einträge, von Hand ${hand}`);
+    // Lernen: bei zwei Dateien mit Absender den Bereich ändern (daraus entstehen Regeln), danach bei einer dritten „Betrifft“ (keine Regel).
+    await sp.evaluate(() => { location.hash = "finden"; }); await sp.waitForSelector("[data-datei]");
+    const stiftAn = async (nr, feld, wert) => {
+      const zeile = sp.locator(".dateiliste > li").filter({ has: sp.locator("[data-datei] strong", { hasText: " · " }) }).nth(nr);
+      await zeile.locator("[data-stift]").click(); const f = zeile.locator("[data-feld-aendern]"); await f.locator("[data-feld-wahl]").selectOption(feld);
+      const w = f.locator("[data-wert]");
+      if (wert) await w.fill(wert); else { await w.selectOption({ index: 4 }); if (await f.locator("[data-uebernehmen]").isDisabled()) await w.selectOption({ index: 5 }); }
+      await f.locator("[data-uebernehmen]").click(); await sp.waitForTimeout(120);
+    };
+    await stiftAn(0, "kategorie"); await stiftAn(8, "kategorie"); await stiftAn(3, "betrifft", "Probe-Person");
+    await sp.evaluate(() => { location.hash = "verlauf"; }); await sp.waitForSelector("[data-verlauf-eintrag]");
+    const vAlle = await sp.locator("[data-verlauf] li").count(), regelZahl = await sp.locator("[data-regeln] li").count(), regelText = await sp.locator("[data-regeln]").innerText();
+    soll("Verlauf: aus den geänderten Bereichen ist gelernt", vAlle === vUeber + 3 && regelZahl >= 1, `${vAlle} Einträge, ${regelZahl} Regeln`);
+    fragen.length = 0;
+    await sp.locator("[data-verlauf-alle]").check(); await sp.locator("[data-verlauf-eintrag]").first().locator("[data-verlauf-wahl]").uncheck();
+    await sp.locator("[data-verlauf-loeschen]").click(); await sp.waitForTimeout(200);
+    soll("Verlauf: alle bis auf einen gelöscht (mit Rückfrage) – das Gelernte unverändert", await sp.locator("[data-verlauf] li").count() === 1 && await sp.locator("[data-regeln]").innerText() === regelText && fragen.length === 1 && fragen[0].includes("aus dem Verlauf löschen") && fragen[0].includes("Gelernte bleibt"), `${await sp.locator("[data-verlauf] li").count()} Einträge, ${await sp.locator("[data-regeln] li").count()} Regeln`);
+    await sp.locator("[data-verlauf-eintrag]").first().locator("[data-verlauf-wahl]").check(); await sp.locator("[data-rueckgaengig]").click(); await sp.waitForTimeout(200);
+    soll("Verlauf: Rückgängig des letzten Eintrags (ohne Rückfrage) – was aus den gelöschten Einträgen gelernt wurde, bleibt", fragen.length === 1 && await sp.locator("[data-verlauf] li").count() === 0 && await sp.locator("[data-regeln]").innerText() === regelText, `${await sp.locator("[data-regeln] li").count()} von ${regelZahl} Regeln`);
+    await sp.evaluate(() => { location.hash = "sortieren"; }); await sp.waitForTimeout(150);
+    soll("… genau eine Datei steht wieder bei „bitte prüfen“", await sp.locator("[data-pruef]").count() === 1);
+    // mehrere Schritte zurück: nur nach Rückfrage
+    await sp.locator("[data-pruef-alle]").check(); await sp.locator("[data-alle-uebernehmen]").click(); await sp.waitForTimeout(150);
+    for (let i = 0; i < 2 && await sp.locator("[data-pruef] [data-stimmt]").count(); i++) { await sp.locator("[data-pruef] [data-stimmt]").first().click(); await sp.waitForTimeout(100); }
+    await sp.evaluate(() => { location.hash = "finden"; }); await sp.waitForSelector("[data-datei]");
+    const dz = sp.locator("[data-datei]").first(); await dz.locator("xpath=..").locator("[data-stift]").click();
+    const fa = sp.locator("[data-feld-aendern]").first(); await fa.locator("[data-feld-wahl]").selectOption("betrifft"); await fa.locator("[data-wert]").fill("Zweite Person"); await fa.locator("[data-uebernehmen]").click();
+    await fa.waitFor({ state: "detached" }).catch(() => {});
+    await dz.locator("xpath=..").locator("[data-stift]").click(); const fb = sp.locator("[data-feld-aendern]").first(); await fb.locator("[data-feld-wahl]").selectOption("absender"); await fb.locator("[data-wert]").fill("Probe-Absender GmbH"); await fb.locator("[data-uebernehmen]").click();
+    await sp.evaluate(() => { location.hash = "verlauf"; }); await sp.waitForSelector("[data-verlauf-eintrag]");
+    const vVor = await sp.locator("[data-verlauf] li").count(); fragen.length = 0;
+    await sp.locator("[data-verlauf-alle]").check(); await sp.locator("[data-rueckgaengig]").click(); await sp.waitForTimeout(200);
+    soll("Verlauf: mehrere Schritte rückgängig nur nach Rückfrage, die den Unterschied zum Löschen nennt", vVor >= 2 && fragen.length === 1 && fragen[0].includes(`${vVor} Schritte rückgängig`) && fragen[0].includes("Aus Verlauf löschen") && await sp.locator("[data-verlauf] li").count() === 0, `${vVor} Einträge, Fragen: ${fragen.length}`);
+
+    // Finden: „Sortieren“ statt „Sicht“, flache Zeilen
+    await sp.evaluate(() => { location.hash = "finden"; }); await sp.waitForSelector("[data-datei]");
+    const wahlText = await sp.locator(".sicht-wahl").innerText(), opt = await sp.locator("[data-sicht] option").allInnerTexts();
+    soll("Finden: das Auswahlfeld heißt „Sortieren“, nicht mehr „Sicht“; Bereich, Absender und Nummern sind dabei", (await sp.locator("[data-sicht-wort]").innerText()).trim() === "Sortieren" && !/\bSicht\b/.test(wahlText) && opt.some((o) => o.includes("Bereich")) && opt.some((o) => o === "Absender") && opt.some((o) => o.startsWith("Nummern")), wahlText.slice(0, 40));
+    { const h = await hoehen(".dateiliste > li"), sichtbar = await sp.evaluate(() => { const l = [...document.querySelectorAll(".dateiliste > li")], t0 = l[0].getBoundingClientRect().top; return l.filter((e) => e.getBoundingClientRect().bottom <= t0 + 600).length; });
+      const eineZeile = await sp.evaluate(() => [...document.querySelectorAll("[data-datei] strong")].every((e) => e.getBoundingClientRect().height <= 24 && getComputedStyle(e).textOverflow === "ellipsis"));
+      soll("Finden schmal: Zeilen höchstens 64 px hoch, Name einzeilig, Auge/Stift/Papierkorb rechts in der Zeile", h.length > 5 && Math.max(...h) <= 64 && eineZeile && await inZeile(".datei-zeile-mit", "[data-auge]") && await inZeile(".datei-zeile-mit", "[data-stift]") && await inZeile(".datei-zeile-mit", "[data-papierkorb]"), `höchste ${Math.max(...h)}px`);
+      soll("Finden schmal: mindestens 10 Zeilen auf 600 px Höhe (vorher rund 5)", sichtbar >= 10, `${sichtbar} Zeilen`); }
+    soll("Schmal: kein seitliches Scrollen in Finden", await sp.evaluate(() => document.documentElement.scrollWidth) <= 391);
+
+    // Seitenleiste
+    const griff = sp.locator("[data-leiste-griff]");
+    const lage = async () => sp.evaluate(() => { const e = document.querySelector("[data-leiste-griff]"), r = e.getBoundingClientRect(); return { b: Math.round(r.width), h: Math.round(r.height), rechts: Math.round(innerWidth - r.right), mitte: Math.round(r.top + r.height / 2 - innerHeight / 2), fest: getComputedStyle(e.parentElement).position, links: getComputedStyle(e).borderTopLeftRadius, rr: getComputedStyle(e).borderTopRightRadius }; });
+    const l1 = await lage(); await sp.evaluate(() => window.scrollTo(0, 600)); await sp.waitForTimeout(500); const l2 = await lage();
+    soll("Seitenleiste: Griff 18 × 76 px am rechten Rand, mittig, fest (wandert nicht mit), links abgerundet", l1.b === 18 && l1.h === 76 && l1.rechts === 0 && Math.abs(l1.mitte) <= 1 && l1.fest === "fixed" && l2.mitte === l1.mitte && l1.links === "12px" && l1.rr === "0px", JSON.stringify(l1));
+    await griff.click();
+    const worte = await sp.locator(".seitenleiste-knoepfe [data-leiste]").allInnerTexts();
+    soll("Seitenleiste: Knöpfe mit Symbol und Wort – nach oben, nach unten, zurück und die sechs Seiten", ["Nach oben", "Nach unten", "Zurück", "Ordner", "Sortieren", "Finden", "Verlauf", "Familienakte", "Hilfe"].every((w) => worte.map((x) => x.trim()).includes(w)) && await sp.locator(".seitenleiste-knoepfe [data-leiste] svg").count() === worte.length, worte.join(","));
+    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.15");
+    await sp.locator("[data-leiste=oben]").click(); await sp.waitForFunction(() => scrollY === 0, null, { timeout: 6000 }).catch(() => {});
+    soll("Seitenleiste: „Nach oben“ rollt an den Anfang und klappt zu", await sp.evaluate(() => scrollY) === 0 && await sp.locator("[data-seitenleiste=zu]").count() === 1);
+    await griff.click(); await sp.locator("[data-leiste=unten]").click(); await sp.waitForFunction(() => scrollY + innerHeight >= document.documentElement.scrollHeight - 2, null, { timeout: 6000 }).catch(() => {});
+    soll("Seitenleiste: „Nach unten“ rollt ans Ende", await sp.evaluate(() => scrollY + innerHeight >= document.documentElement.scrollHeight - 2));
+    await griff.click(); await sp.locator("[data-leiste=hilfe]").click(); await sp.waitForTimeout(150);
+    soll("Seitenleiste: Seite wählen wechselt die Seite und klappt zu", await sp.evaluate(() => location.hash) === "#hilfe" && await sp.locator("[data-seitenleiste=zu]").count() === 1 && await sp.locator("[data-nav=hilfe][aria-current=page]").count() === 1);
+    await griff.click(); await sp.locator("[data-leiste=zurueck]").click(); await sp.waitForTimeout(300);
+    soll("Seitenleiste: „Zurück“ geht eine Seite zurück", await sp.evaluate(() => location.hash) === "#finden" && await sp.locator("[data-nav=finden][aria-current=page]").count() === 1);
+    await griff.click(); await sp.keyboard.press("Escape");
+    const escZu = await sp.locator("[data-seitenleiste=zu]").count() === 1;
+    await griff.click(); await sp.mouse.click(60, 400); await sp.waitForTimeout(100);
+    soll("Seitenleiste: Esc und ein Tipp daneben schließen", escZu && await sp.locator("[data-seitenleiste=zu]").count() === 1);
+    await sp.setViewportSize({ width: 1280, height: 900 }); await sp.waitForTimeout(100);
+    soll("Seitenleiste: am breiten Monitor nicht zu sehen", !(await griff.isVisible()));
+    soll("0.4.15 schmal: keine Fehler in der Konsole", sf.length === 0, sf.slice(0, 2).join(" | "));
+    await sctx.close();
+
+    // Kopf im Rahmen einer anderen App: eine Zeile (die Hülle hat schon ihre Titelzeile) – schmal und am Tablet.
+    for (const breit of [390, 820]) {
+      const kctx = await browser.newContext({ viewport: { width: breit, height: 800 } });
+      await kctx.addInitScript(() => { window.DO_RAHMEN = { name: "Private Akte", uebergeben: async () => ({ ok: true }) }; });
+      const kp = await kctx.newPage(); await kp.goto(basis); await kp.waitForSelector("[data-nav=ordner]");
+      const m = await kp.evaluate(() => { const k = document.querySelector(".site-header").getBoundingClientRect(), n = document.querySelector(".main-navigation").getBoundingClientRect(), p = document.querySelector("[data-mehr-knopf]").getBoundingClientRect(); return { hoch: Math.round(k.height), eineZeile: p.top >= n.top - 1 && p.bottom <= n.bottom + 1 && p.left >= n.right - 1, marke: !!document.querySelector(".marke")?.getClientRects().length }; });
+      await kp.locator("[data-mehr-knopf]").click();
+      const auf = await kp.locator("[data-kopf-knoepfe] [data-aktualisieren]").isVisible() && await kp.locator("[data-kopf-knoepfe] [data-drucken]").isVisible();
+      await kp.locator("[data-kopf-knoepfe] [data-landkarte-knopf]").click(); await kp.waitForTimeout(100);
+      soll(`Im Rahmen (${breit} px): Kopf eine Zeile – Leiste der Seiten, rechts der Pfeil mit den runden Knöpfen; kein Name`, m.hoch <= 52 && m.eineZeile && !m.marke && await kp.locator(".main-navigation [data-nav]").count() === 6 && auf && await kp.evaluate(() => location.hash) === "#landkarte" && !(await kp.locator("[data-kopf-knoepfe]").isVisible()), JSON.stringify(m) + ` auf=${auf}`);
+      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.15")); }
+      await kctx.close();
+    }
   }
   soll("Keine Fehler in der Konsole", fehler.length === 0, fehler.slice(0, 3).join(" | "));
 } finally {

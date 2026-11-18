@@ -1,4 +1,4 @@
-# Abschlussbrief – Kalender und Notizen echt (Private Akte 0.6.0 und 0.6.1, 18.11.2026)
+# Abschlussbrief – Kalender und Notizen echt (Private Akte 0.6.0 bis 0.6.3, 18.11.2026)
 
 Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, Punkt 0.6.0, und „Feste Regeln“). Der Auftrag dazu liegt unter
 `docs/BRIEF_SITZUNG_2026-11-18_KALENDER-UND-NOTIZEN.md`.
@@ -19,6 +19,8 @@ Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, Punkt 0.6.0
   Exportieren, Drucken, Farbpalette, Hilfe). Erkennung „am nächsten Tag“ und „um halb drei“ in der Familienakte behoben, Klon nachgezogen.
 - **0.6.2:** „Deine Unterlagen“ mit Baum („Alle Unterlagen“ mit Zahl, Gruppen nach dem gewählten „Sortieren“), flachen Zeilen und
   Blättern zu je 30; der Text unten auf der Startseite ist heraus. Im Datei-Organizer ist 0.4.15 bestellt (siehe `CLAUDE.md`).
+- **0.6.3:** Datei-Organizer 0.4.15 im Rahmen (Alle übernehmen, Verlauf löschen, flache Zeilen, Seitenleiste, Kopf einzeilig).
+  Dazu in 0.6.2: Vorschläge beim Tippen in der Suche; Seitenleiste verschiebbar und unten andockbar.
 - **Akte leeren:** vierter Haken „Termine und Notizen“. **Baum:** Hinweistexte heraus.
 
 ## Was Klaus tun muss, damit die Anmeldung geht
@@ -40,6 +42,8 @@ Gerätekalender der Android-App, Kalenderdatei).
 
 ## Offen
 
+- **Zuerst:** `docs/VORSCHLAG_2026-11-18_AKTEN-UNTERLAGEN-DATEIEN.md` mit Klaus durchgehen (Fragen A–F) und danach bauen: „Akten“
+  echt, je Person; die Beispiele der ersten Vorschau heraus; Übergabe aus dem Organizer nimmt ab Werk nur Unterlagen mit.
 - Termin zu einer echten Unterlage anlegen (der Klon kann Bezüge, die Hülle reicht sie noch nicht durch).
 - Beispiel-Unterlagen führen über „Bearbeiten mit › Kalender“ noch zum alten Beispiel-Kalender; `kalender()` und `fNotiz` in `app.js`
   können weg, sobald die Beispiele gehen.
@@ -58,7 +62,7 @@ umgestalten – nur Farben, je Tool eine Farbdatei.
 ## Startauftrag
 
 ```
-Lies im Repo Private-Akte zuerst CLAUDE.md, dann BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.1.md.
-Du hast meinen Freibrief wie zuvor. Nimm meine Befunde vom Tablet zu 0.6.0 auf (Kalender, Notiz, Glocke, Anmeldung) und arbeite
-danach die Liste „Offen“ ab, zuerst: Termin zu einer echten Unterlage. Arbeite leise, eine Ausgabe am Ende.
+Lies im Repo Private-Akte zuerst CLAUDE.md, dann BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md.
+Du hast meinen Freibrief wie zuvor. Nimm meine Befunde vom Tablet und meine Antworten auf docs/VORSCHLAG_2026-11-18_AKTEN-UNTERLAGEN-DATEIEN.md auf
+(Fragen A–F) und baue danach „Akten“ echt; dann die übrige Liste „Offen“. Arbeite leise, eine Ausgabe am Ende.
 ```
