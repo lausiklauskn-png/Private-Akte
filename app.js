@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -107,12 +107,6 @@ const docs = [
  {id:11,titel:'Personalausweis (Kopie)',art:'JPG',bereich:'ich',vorgang:'Ausweise',datum:'11.08.2023',herkunft:'Foto',text:'Kopie Personalausweis, gültig bis 08/2033.'},
  {id:12,titel:'Steuerbescheid 2025',art:'PDF',bereich:'geld',vorgang:'Steuer 2025',datum:'22.10.2026',herkunft:'Datei',text:'Finanzamt Beispiel. Einkommensteuerbescheid 2025, Steuer-ID 12 345 678 901, Erstattung 312,00 €. Einspruch bis 25.11.2026.'}
 ].map(d => ({fassung:1,bei:null,teil:null,...d}));
-const termine = [
- {titel:'Einspruch Steuerbescheid',am:new Date(2026,10,25),art:'Frist',doc:12},
- {titel:'Widerspruch Nebenkosten',am:new Date(2026,11,12),art:'Frist',doc:1},
- {titel:'Zählerablesung',am:new Date(2026,10,27),art:'Termin',doc:null}
-];
-const tage = t => Math.round((t.am - HEUTE) / 864e5);
 const eingang = { neu:[
  {id:201,titel:'Brief der Krankenkasse',art:'PDF',vorschlag:'gesund',vorgang:'Krankenkasse',quelle:'Datei-Organizer',text:'Krankenkasse Beispiel. Schreiben zum Beitrag ab Januar, Versichertennummer A123456789.'},
  {id:202,titel:'Rechnung Autowerkstatt',art:'PDF',vorschlag:'kauf',vorgang:'Auto',quelle:'Workflow PDF',text:'Autowerkstatt Beispiel. Rechnung Inspektion, 268,40 €.'}
@@ -176,7 +170,7 @@ function maske(text){
 
 /* ---------- Kopf und Navigation ---------- */
 const WERK = [
- ['bon-start','kamera','Bon fotografieren','geld','öffnet das Portemonnaie'],
+ ['bon-start','geld','Portemonnaie','geld','Geld rein, Geld raus – Bon fotografieren'],
  ['scan','scan','PDF scannen','pdf','Foto zu PDF – öffnet den Scanner von Workflow PDF'],
  ['viele','ordner','Dateien hineingeben','sort','ganze Dateien oder Ordner – öffnet den Datei-Organizer'],
  ['notiz','notiz','Notiz','akte','schreiben oder sprechen, von Hand zuordnen'],
@@ -216,7 +210,7 @@ const navZu = () => { try { return localStorage.getItem('pa_nav_zu') === '1'; } 
 function navZeigen(){
   const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
   document.body.classList.toggle('nav-zu', navZu());
-  $('nav').innerHTML = `<button class="navklapp" data-a="nav-klapp" aria-label="${navZu() ? 'Leiste aufklappen' : 'Leiste einklappen'}" data-tipp="${navZu() ? 'Aufklappen' : 'Einklappen'}">${ic(navZu() ? 'weiter' : 'zurueck')}</button>` + NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
+  $('nav').innerHTML = `<button class="navklapp" data-a="nav-klapp" aria-label="${navZu() ? 'Leiste aufklappen' : 'Leiste einklappen'}" data-tipp="${navZu() ? 'Aufklappen' : 'Einklappen'}">${ic(navZu() ? 'weiter' : 'zurueck')}</button>` + NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&einordnenZahl()?`<span class="zahl">${einordnenZahl()}</span>`:''}</button>`).join('');
 }
 const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a href="./rechtliches.html#impressum">Impressum</a><a href="./rechtliches.html#datenschutz">Datenschutz</a><a href="./rechtliches.html#haftung">Haftungsausschluss</a><a href="./rechtliches.html#lizenz">Lizenz</a></footer>`;
 
@@ -247,12 +241,10 @@ function treffer(){
    ${sinn.length ? `<div class="abschnitt" id="sinn-treffer"><h2>Passt vielleicht dem Sinn nach <span>deine Unterlagen · die Zahl ist die Nähe zur Frage, 0 heißt fremd</span></h2><div class="liste">${sinn.map(x => echtZeile(x.d, x.h.naehe === null ? 'dem Sinn nach' : 'dem Sinn nach · ' + x.h.naehe.toFixed(2).replace('.', ','), x.h)).join('')}</div></div>` : ''}
    ${stand}`;
 }
-const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
 /* Abschnitte der Startseite als Knopf, eingeklappt (Klaus 18.11.: bei 100 Unterlagen wird die Seite sonst endlos). Offen/zu wird gemerkt. */
 const klapp = (() => { try { return JSON.parse(localStorage.getItem('pa_klapp') || '{}') || {}; } catch { return {}; } })();
 const klappTeil = (id, titel, unter, innen, attr = '') => `<details class="abschnitt klapp" ${attr} data-klapp="${id}" ${klapp[id] ? 'open' : ''}><summary><b>${titel}</b><span>${unter}</span>${ic('weiter')}</summary><div class="liste">${innen}</div></details>`;
 document.addEventListener('toggle', ev => { const d = ev.target; if (!d.dataset || !d.dataset.klapp) return; klapp[d.dataset.klapp] = d.open ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt dann bis zum Neuladen */ } }, true);
-const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
 /* Fällig, echt (0.6.0): offene Termine, Fristen und Erinnerungen aus dem Tresor – dieselben wie in „Mein Kalender“. Ein Tipp öffnet den Kalender an dem Tag. */
 const tagHeute = () => { const d = new Date(), z = n => String(n).padStart(2, '0'); return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`; };
 const tagText = t => `${t.slice(8, 10)}.${t.slice(5, 7)}.${t.slice(0, 4)}`;
@@ -265,27 +257,51 @@ function faelligTeil(){
   return klappTeil('faellig', 'Fällig', t.length ? `${t.length} ${t.length === 1 ? 'Eintrag' : 'Einträge'} im Kalender` : 'nichts offen', t.length ? t.slice(0, 5).map(echtTerminZeile).join('') + (t.length > 5 ? `<button class="zeile" data-a="kalender"><span class="mitte"><strong>Alle im Kalender ansehen</strong></span></button>` : '') : `<p class="leer">Nichts offen. <button class="knopf hell klein" data-a="kalender">Kalender öffnen</button></p>`, 'id="faellig"');
 }
 function vStart(){
-  const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
   return `<h1 class="titel nurpc">Was möchtest du finden?</h1>${sucheFeld()}
   ${s.frage ? `<div id="bedort">${bedZeile()}</div><div id="trefferort">${treffer()}</div>` : `
   ${echtAbschnitt()}
   ${faelligTeil()}
-  <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln seitlich">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
-  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}${fuss()}`;
+  ${bereicheKacheln()}`}${fuss()}`;
 }
+/* Bereiche der Startseite, echt (0.7.0, Klaus 18.11. zu E: „echt machen“): die Bereiche, in denen Unterlagen liegen, mit ihrer Zahl.
+   Ein Tipp zeigt den Bereich im Baum über „Deine Unterlagen“ (Sortieren: Bereich). */
+const KFARBE = [['#61b4ef','#2c79c5'],['#77d48a','#27945c'],['#ffd75a','#d79a16'],['#ff8f7d','#d34a4a'],['#b69be6','#7550c2'],['#5fd0c6','#16867f']];
+function bereicheKacheln(){
+  const l = echt.liste || []; if (!l.length) return '';
+  const zahl = new Map(); for (const d of l) zahl.set(d.category, (zahl.get(d.category) || 0) + 1);
+  const g = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
+  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln seitlich">${g.map(([b, n], i) => `<button class="kachel" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}</small></span></button>`).join('')}</div></div>`;
+}
+/* ---------- Akten (0.7.0, Klaus 18.11., Antworten A–D ja) ----------
+   Datei = Rohmaterial (bleibt im Datei-Organizer), Unterlage = in die Akte gelegt, Akte = ein Fach mit Namen, einer Person zugeordnet
+   oder allen. Personen und Akten sind Datensätze im Register der Familienakte (`T().akten`); eine Unterlage kann in mehreren Akten liegen.
+   Oben die Personen als Reiter, darunter die Akten mit Zahl. `s.bereich` = die geöffnete Akte (oder „p:<Person>“, „ohne“). */
 function vAkten(){
-  if (!s.bereich) return `<h1 class="titel">Akten</h1><p class="unter">Dieselben sechs Bereiche wie auf der Startseite.</p>
-   <div class="abschnitt"><div class="liste">${BEREICHE.map(b => { const d = docs.filter(x => x.bereich===b.id); return `<button class="zeile" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig" style="--a:${b.a};--b:${b.b}">${ic(b.icon)}</span><span class="mitte"><strong>${b.name}</strong><small>${[...new Set(d.map(x=>x.vorgang))].join(' · ')||'noch leer'}</small></span><span class="marke2 m-grau">${d.length}</span>${ic('weiter')}</button>`; }).join('')}</div></div>${fuss()}`;
-  const b = bereich(s.bereich), d = docs.filter(x => x.bereich===b.id), vorg = [...new Set(d.map(x => x.vorgang))];
-  return `<button class="chip" data-a="bereich" data-id="">‹ Alle Bereiche</button><h1 class="titel" style="margin-top:10px">${b.name}</h1><p class="unter">${d.length} Unterlagen in ${vorg.length} ${vorg.length===1?'Vorgang':'Vorgängen'}</p>
-   ${vorg.map(v => `<div class="abschnitt"><h2>${esc(v)}</h2><div class="liste">${d.filter(x => x.vorgang===v).map(x => docZeile(x)).join('')}</div></div>`).join('')}${fuss()}`;
+  const ak = AK(), l = echt.liste || [];
+  if (s.bereich) {
+    const a = akteVon(s.bereich), p = s.bereich.startsWith('p:') ? ak.personen.find(x => x.id === s.bereich.slice(2)) : null;
+    const titel = a ? a.titel : p ? 'Alles zu ' + p.name : 'Ohne Akte';
+    const liste = echtSortiert(a ? docsInAkte(a.id) : p ? docsZuPerson(p) : l.filter(d => !echtBezug(d).akten.length));
+    return `<button class="chip" data-a="akte-auf" data-id="">‹ Alle Akten</button><h1 class="titel" style="margin-top:10px">${esc(titel)}</h1>
+     <p class="unter">${a ? esc(a.person ? personName(a.person) : 'alle') + ' · ' : ''}${liste.length} ${liste.length === 1 ? 'Unterlage' : 'Unterlagen'}</p>
+     ${a ? `<div class="reihe"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a.id)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
+     <div class="abschnitt" id="akte-liste"><div class="liste">${liste.length ? liste.map(d => echtZeile(d, '')).join('') : '<p class="leer">Noch keine Unterlage.</p>'}</div></div>${fuss()}`;
+  }
+  const reiter = [['', 'Alle'], ...ak.personen.map(x => [x.id, x.name])].map(([id, t]) => `<button class="chip${(s.person || '') === id ? ' an' : ''}" data-a="person-reiter" data-id="${esc(id)}">${esc(t)}</button>`).join('') + `<button class="chip" data-a="person-neu" aria-label="Person anlegen">${ic('plus')} Person</button>`;
+  const meine = ak.akten.filter(a => !s.person || a.person === s.person).sort((a, b) => a.titel.localeCompare(b.titel, 'de'));
+  const zeile = (a, t, u, n) => `<button class="zeile" data-a="akte-auf" data-id="${esc(a)}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">${ic('akten')}</span><span class="mitte"><strong>${esc(t)}</strong>${u ? `<small>${esc(u)}</small>` : ''}</span><span class="marke2 m-grau">${n}</span>${ic('weiter')}</button>`;
+  const p = s.person && ak.personen.find(x => x.id === s.person);
+  const ohne = l.filter(d => !echtBezug(d).akten.length).length;
+  return `<h1 class="titel">Akten</h1><div class="reiter" id="personen">${reiter}</div>
+   <div class="abschnitt" id="akten-liste"><div class="liste">${meine.map(a => zeile(a.id, a.titel, s.person ? '' : a.person ? personName(a.person) : 'alle', docsInAkte(a.id).length)).join('')}
+    ${p ? zeile('p:' + p.id, 'Alles zu ' + p.name, 'jede Unterlage, die ' + p.name + ' betrifft', docsZuPerson(p).length) : zeile('ohne', 'Ohne Akte', 'noch in keiner Akte', ohne)}
+    <button class="zeile" data-a="akte-neu"><span class="art">${ic('plus')}</span><span class="mitte"><strong>Neue Akte</strong></span></button></div></div>${fuss()}`;
 }
+/* Eingang, echt (0.7.0): was in der Akte liegt, aber noch keiner Akte und keiner Person zugeordnet ist – bis du es einordnest. */
 function vEingang(){
-  const z = eingang.zurueck, n = eingang.neu;
-  return `<h1 class="titel">Eingang</h1><p class="unter">Geprüft wird nur, was wirklich neu ist.</p>
-  <div class="abschnitt"><h2>Neu <span>Vorschlag bestätigen, ändern oder gleich weiterarbeiten</span></h2><div class="liste">${n.length ? n.map(e => `<div class="zeile" style="flex-wrap:wrap"><span class="art ${e.art}">${e.art}</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>aus: ${esc(e.quelle)}</small></span>
-    <span class="unten">${bereichWahl(e.vorschlag, `data-vorschlag="${e.id}"`)}<button class="knopf gruen klein" data-a="bestaetigen" data-id="${e.id}">Stimmt</button><button class="knopf hell klein" data-a="mit" data-neu="${e.id}">Bearbeiten mit</button></span></div>`).join('') : '<p class="leer">Nichts zu prüfen.</p>'}</div></div>
-  <div class="abschnitt"><h2>Aus den Tools <span>schon abgelegt, nur zur Kenntnis</span></h2><div class="liste">${z.length ? z.map(e => `<button class="zeile" data-a="doc" data-id="${e.doc}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">✓</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>${esc(e.text)}</small></span>${ic('weiter')}</button>`).join('') : `<p class="leer">Noch nichts zurückgekommen. Öffne eine Unterlage und tippe auf „Bearbeiten mit“.</p>`}</div></div>${fuss()}`;
+  const n = echtSortiert(offenEinordnen());
+  return `<h1 class="titel">Eingang <span class="zahlklein">${n.length}</span></h1>
+  <div class="abschnitt" id="eingang-liste"><div class="liste">${n.length ? n.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (n.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Alles eingeordnet.</p>'}</div></div>${fuss()}`;
 }
 /* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
 function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? (echt.termine || []).length : docs.filter(d => d.bei===id).length; }
@@ -296,11 +312,11 @@ function woLiegtWas(){
   const st = STAEDTE.map(w => `<button class="wostadt" style="--farbe:${w.a}" data-a="stadt" data-id="${w.id}">${w.name}</button>`).join('');
   return `<div class="abschnitt" id="wo-liegt-was"><h2>Wo liegt was? <span>ein Speicher für alles – der Tresor</span></h2>
   <div class="wo">
-   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender – und Importieren (grüner Pfeil). Dazu Mails aus Private Brain.</p><p class="wonotiz">Alles Neue kommt zuerst in den Eingang.</p></div>
+   <div class="wokasten"><h3>1 · Hinzufügen</h3><p>Leiste oben: Bon, Scan, Dateien, Notiz, Kalender – und Importieren (grüner Pfeil). Dazu Mails aus Private Brain.</p><p class="wonotiz">Was noch in keiner Akte liegt, steht im Eingang.</p></div>
    <i class="wopfeil" aria-hidden="true"></i>
    <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
-    ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
-    ${zl('geh','data-zu="eingang"','Eingang','Neues, bis du den Vorschlag bestätigst',eingang.neu.length)}
+    ${zl('geh','data-zu="akten"','Unterlagen','in Akten, je Person',(echt.liste || []).length)}
+    ${zl('geh','data-zu="eingang"','Eingang','Neues, bis es in einer Akte liegt',einordnenZahl())}
     ${zl('stadt','data-id="kal"','Termine, Fristen und Notizen','der Kalender der Akte',(echt.termine || []).length)}
     ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',geld.posten.length)}
     ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
@@ -319,7 +335,7 @@ function vBaum(){
   return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Tools. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
   <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
    <svg class="wege" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 84 C9 90 5 93 0 95" fill="none" stroke="#ffe7ad" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/></svg>
-   <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
+   <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${(echt.liste || []).length} Unterlagen</small></button>
    ${STAEDTE.map(schild).join('')}
    <button class="schild aussen" style="left:0;top:93%" data-a="hinaus-info"><b>→ BookLedgerPro</b><small>Weg nach außen</small></button>${film}</div></div>
   ${woLiegtWas()}${fuss()}`;
@@ -346,7 +362,6 @@ const MIT = [
  ['pdf','pdf','Workflow PDF','markieren, ausfüllen, zusammenfügen (im Familienbüro)',['#e2596b','#9b1f38']],
  ['geld','geld','Portemonnaie','als Ausgabe oder Einnahme eintragen',['#f0b93a','#b77a0c']],
  ['sort','sort','Datei-Organizer','neu zuordnen lassen',['#2bb673','#107c41']],
- ['kal','kalender','Kalender','einen Termin oder eine Frist dazu anlegen',['#9a7bd6','#5b3aa6']],
  ['pseudo','maske','Pseudonymisieren · An KI','Namen und Nummern verdecken, dann erst weitergeben',['#1aa59d','#0b5a66']]
 ];
 function fMit(e){
@@ -370,20 +385,6 @@ function fPseudo(d, original=false){
    <div class="reihe"><button class="knopf" data-a="pseudo-kopie">Fassung kopieren</button><button class="knopf hell" data-a="pseudo-sicht" data-original="${original?'':'1'}">${original?'KI sieht':'Original'} zeigen</button><button class="knopf hell" data-a="pseudo-zurueck">Antwort zurückführen</button></div>
    <p class="hinweis">Beispiel. In der echten App arbeitet hier die Maske aus der Familienakte; eine KI ist nicht angeschlossen.</p>`);
 }
-function fNotiz(text=''){
-  fenster(`${fk('Notiz','Schreiben oder sprechen. Du ordnest sie selbst zu.')}
-   <form class="felder" data-form="notiz">
-    <textarea class="feld" name="text" placeholder="Was möchtest du festhalten?" aria-label="Notiz" required>${esc(text)}</textarea>
-    <div class="reihe" style="margin:0"><button type="button" class="knopf hell klein" data-a="sprechen">${ic('mikro')} Sprechen</button></div>
-    <label>Was ist es? <input class="feld" name="titel" placeholder="zum Beispiel: Anruf bei der Hausverwaltung" required></label>
-    <label>Bereich ${bereichWahl('', 'name="bereich" required', false)}</label>
-    <label>Vorgang <input class="feld" name="vorgang" placeholder="zum Beispiel: Nebenkosten 2025" list="vorgaenge"></label>
-    <datalist id="vorgaenge">${[...new Set(docs.map(d => d.vorgang))].map(v => `<option value="${esc(v)}">`).join('')}</datalist>
-    <label><span><input type="checkbox" name="termin" class="haken" style="vertical-align:middle"> Gleich einen Termin dazu anlegen</span></label>
-    <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
-   </form>
-   <p class="hinweis">Kein Helfer: Die Zuordnung machst du von Hand.</p>`);
-}
 
 /* ---------- Die Städte ---------- */
 function fStadt(wid, ids=[], teilId){
@@ -392,7 +393,7 @@ function fStadt(wid, ids=[], teilId){
   if (wid === 'buero') { if (teilId) s.teil = teilId; else if (!ids.length && s.offen !== 'buero') s.teil = 'start'; }
   ids.forEach(i => { const d = docs.find(x => x.id === i); if (d) { d.bei = wid; d.teil = wid === 'buero' ? s.teil : null; } });
   s.offen = wid;
-  const inhalt = ({buero, geld:portemonnaie, sort:sortierer, mail:post, kal:kalender})[wid]();
+  const inhalt = ({buero, geld:portemonnaie, sort:sortierer, mail:post, })[wid]();
   const astnav = `<div class="astnav" aria-label="Zwischen den Programmen wechseln"><button data-a="geh" data-zu="start">‹ Akte</button><button data-a="geh" data-zu="baum">Baum</button>${STAEDTE.map(x => `<button data-a="stadt" data-id="${x.id}" ${x.id===wid?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>`;
   fenster(fk(esc(w.name), `Tool in der Privaten Akte · ${esc(w.tut)}`, `<button class="rund farbknopf" data-a="farbe" data-ort="${wid}" aria-label="Farbpalette für ${esc(w.name)}" title="Farbpalette"></button>`) + astnav + `<div id="astinhalt">${inhalt}</div>`, 'ast', farbStil(wid));
   navZeigen(); mainZeigen();
@@ -441,17 +442,6 @@ function post(){
    <div class="liste" style="margin-top:10px">${mails.length ? mails.map((m,i) => `<div class="zeile" style="flex-wrap:wrap"><span class="art PDF">PDF</span><span class="mitte"><strong>${esc(m.betreff)}</strong><small>von ${esc(m.von)} · Anlage: ${esc(m.anlage)}</small></span>
      <span class="unten">${bereichWahl(m.vorschlag, `data-mail="${i}"`)}<button class="knopf gruen klein" data-a="mail-zur-akte" data-i="${i}">Zur Akte</button><button class="knopf hell klein" data-a="mail-ki" data-i="${i}">${ic('maske')} An KI</button></span></div>`).join('') : '<p class="leer">Alle Anlagen sind in der Akte.</p>'}</div>
    <p class="hinweis">Beispiel. Es ist kein Postfach angeschlossen.</p>`;
-}
-function kalender(){
-  const zu = s.zuDoc ? docs.find(d => d.id === s.zuDoc) : null;
-  return `<p class="unter">Termine und Fristen. Eine Notiz oder Unterlage bekommt ihren Termin von hier oder über „Bearbeiten mit“.</p>
-   <div class="liste" style="margin-top:10px">${termineSortiert().map(terminZeile).join('')}</div>
-   <form class="karte felder" style="margin-top:12px" data-form="termin"><b>${zu ? 'Termin zu „'+esc(zu.titel)+'“' : 'Neuer Termin'}</b>
-    <label>Was? <input class="feld" name="titel" required value="${zu ? esc(zu.titel) : ''}"></label>
-    <div class="reihe" style="margin:0"><label style="flex:1 1 130px">Wann? <input class="feld" type="date" name="am" required min="2026-11-17" value="2026-11-24"></label><label style="flex:1 1 110px">Art <select class="feld" name="art"><option>Termin</option><option>Frist</option></select></label></div>
-    <label>Gehört zu <select class="feld" name="doc"><option value="">keiner Unterlage</option>${docs.map(d => `<option value="${d.id}" ${zu&&zu.id===d.id?'selected':''}>${esc(d.titel)}</option>`).join('')}</select></label>
-    <button class="knopf voll" type="submit">${ic('plus')} Eintragen</button></form>
-   <p class="hinweis">Erinnerung: noch offen (Glocke wie in der Familienakte oder Gerätekalender). Hier wird nichts erinnert.</p>`;
 }
 
 /* ---------- Menüs: Mehr, Farbpalette, Drucken ---------- */
@@ -518,7 +508,6 @@ const A = {
  'glocke-auf': e => { glocke.auf = glocke.auf === e.dataset.id ? null : e.dataset.id; glockenFeld(); },
  'glocke-erledigt': async e => { try { await T().kalender.erledigen(e.dataset.id); await termineLaden(); const g = $('glocke'); if (g) g.contentWindow.location.reload(); const k = $('rahmen'); if (k && rahmen.was === 'kalender') k.contentWindow.location.reload(); glockenFeld(); if (s.ansicht === 'start' && !$('rahmenort').innerHTML) mainZeigen(); glockenFeld(); } catch (err) { toast(fehlerText(err)); } },
  'kal-tag': e => { menueZu(); fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`); },
- sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
  kalender: () => { menueZu(); fRahmen('kalender'); },
  stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') return fRahmen('kalender'); fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
@@ -529,7 +518,6 @@ const A = {
    if (womit === 'text' || womit === 'pdf') fStadt('buero', [d.id], womit);
    else if (womit === 'geld') { geld.vor = d.titel; fStadt('geld'); geld.vor = ''; }
    else if (womit === 'sort') { organizer.unshift({titel:d.titel,art:d.art,vorschlag:d.bereich,vorgang:d.vorgang,sicher:false,doc:d.id}); fStadt('sort'); }
-   else if (womit === 'kal') { s.zuDoc = d.id; fStadt('kal'); }
    else fPseudo(d);
    toast(neu ? `In der Akte angekommen: ${ort(d)}. Bearbeitet wird eine Kopie.` : 'Das Original bleibt in der Akte. Bearbeitet wird eine Kopie.');
  },
@@ -574,12 +562,7 @@ document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
   if (f.dataset.form === 'suche') { if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
   if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
-  if (f.dataset.form === 'notiz') {
-    const d = neuesDoc({titel:f.titel.value.trim(),art:'NOTIZ',bereich:f.bereich.value,vorgang:f.vorgang.value.trim()||'Notizen',herkunft:'Notiz, von Hand zugeordnet',text:f.text.value.trim()});
-    if (f.termin.checked) { s.zuDoc = d.id; fStadt('kal'); } else { zu(); s.ansicht = 'akten'; s.bereich = d.bereich; zeigen(); }
-    toast(`Die Notiz liegt in ${ort(d)}.`);
-  }
-  if (f.dataset.form === 'termin') { const [j,m,t] = f.am.value.split('-').map(Number); termine.push({titel:f.titel.value.trim(),am:new Date(j,m-1,t),art:f.art.value,doc:+f.doc.value||null}); s.zuDoc = null; stadtNeu(); toast('Eingetragen. Der Termin steht auch auf der Startseite unter „Fällig“.'); }
+
 });
 
 /* ---------- Deine Unterlagen: echt, im Tresor der Familienakte (tresor.js = Brücke zum Klon) ---------- */
@@ -596,12 +579,17 @@ const echtBereiche = () => [...new Set([...T().bereiche, ...(echt.liste || []).m
 const bereichKern = b => b.toLowerCase().replace(/&/g, ' und ').replace(/\s+/g, ' ').trim();
 function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = bereichKern(b); return echtBereiche().find(x => bereichKern(x) === k) || b; }
 async function termineLaden(){ try { const k = await T().kalender.termine(); echt.termine = k.termine; echt.notizen = k.notizen; } catch { echt.termine = echt.termine || []; } glockeNeu(); }
+/* Laufen zwei Ladevorgänge zugleich (Rahmen zu, Speichern), gilt nur der jüngste – sonst zeigt ein älterer einen überholten Stand. */
+let echtLauf = 0;
 async function echtLaden(){
-  if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
-  else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
+  const lauf = ++echtLauf; let liste = [], fehler = '', ak = echt.ak;
+  if (!T()) fehler = 'Der Tresor ist in diesem Browser nicht geladen.';
+  else { try { liste = await T().liste(); } catch (e) { fehler = fehlerText(e); } try { ak = await T().akten.lesen(); } catch { /* bleibt */ } }
+  if (lauf !== echtLauf) return;
+  echt.liste = liste; echt.fehler = fehler; echt.ak = ak;
   vor.heu.clear();
   await termineLaden();
-  if (s.ansicht === 'start' && !sprech.an) mainZeigen();
+  navZeigen(); if (s.ansicht !== 'baum' && !sprech.an) mainZeigen();
 }
 /* Fundstelle am Treffer (Klaus 17.11.): der Satz, in dem es gefunden wurde, mit der Seite. */
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
@@ -623,7 +611,20 @@ const ECHT_SEITE = 30;
 /* „Wen es betrifft“ und „Absender“ (Klaus 18.11.: wie die Sicht im Finden des Datei-Organizers – ein Ordner je Familienangehörigem):
    der Organizer gibt beides bei der Übergabe mit, es steht in der Notiz der Unterlage („… · Absender: X · Person: Y · …“,
    so schreibt es `lib/organizer-uebernahme.ts` des Klons). Ohne Angabe: „ohne Angabe“. */
-const echtAngabe = (d, feld) => { const m = String(d.notes || '').match(new RegExp('(?:^|· |– )' + feld + ': ([^·]+)')); return m ? m[1].trim() : 'ohne Angabe'; };
+/* Seit 0.7.0 zuerst aus dem Register (Person über „betrifft“, Absender als Organisation, von Hand gesetzt), sonst aus der Notiz. */
+const notizAngabe = (d, feld) => { const m = String(d.notes || '').match(new RegExp('(?:^|· |– )' + feld + ': ([^·]+)')); return m ? m[1].trim() : ''; };
+const AK = () => echt.ak || {personen:[], akten:[], bezug:{}, absender:[]};
+const echtBezug = d => AK().bezug[d.id] || {akten:[], personen:[], absender:[]};
+const personName = id => (AK().personen.find(p => p.id === id) || {}).name || '';
+const akteVon = id => AK().akten.find(a => a.id === id);
+const gleichName = (a, b) => String(a).replace(/\s+/g, ' ').trim().toLocaleLowerCase('de') === String(b).replace(/\s+/g, ' ').trim().toLocaleLowerCase('de');
+const echtPersonen = d => { const b = echtBezug(d).personen.map(personName).filter(Boolean); if (b.length) return b; const n = notizAngabe(d, 'Person'); return n ? [n] : []; };
+const echtAbsender = d => echtBezug(d).absender[0] || notizAngabe(d, 'Absender');
+const echtAngabe = (d, feld) => (feld === 'Person' ? echtPersonen(d)[0] : echtAbsender(d)) || 'ohne Angabe';
+const docsInAkte = id => (echt.liste || []).filter(d => echtBezug(d).akten.includes(id));
+const docsZuPerson = p => (echt.liste || []).filter(d => echtBezug(d).personen.includes(p.id) || (!echtBezug(d).personen.length && echtPersonen(d).some(n => gleichName(n, p.name))));
+const offenEinordnen = () => (echt.liste || []).filter(d => !echtBezug(d).akten.length && !echtPersonen(d).length);
+const einordnenZahl = () => offenEinordnen().length;
 const echtGruppe = d => { const w = echtSort(); return w === 'person' ? echtAngabe(d, 'Person') : w === 'absender' ? echtAngabe(d, 'Absender') : w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
 function echtBaum(l){
   const zahl = new Map(); for (const d of l) zahl.set(echtGruppe(d), (zahl.get(echtGruppe(d)) || 0) + 1);
@@ -655,28 +656,99 @@ function fEchtNeu(datei){
     <label>Bereich – auswählen oder einen eigenen eintippen <input class="feld" name="bereich" list="echt-bereiche" required maxlength="60" autocomplete="off" placeholder="zum Beispiel: Haus &amp; Wohnung"></label>
     <datalist id="echt-bereiche">${echtBereiche().map(b => `<option value="${esc(b)}">`).join('')}</datalist>
     <label>Datum der Unterlage <input class="feld" type="date" name="datum"></label>
+    ${zuordnenFelder()}
     <button class="knopf gruen voll" type="submit">In die Akte legen ${ic('pfeil')}</button>
    </form>
-   <p class="hinweis">Die Datei kommt in die Akte: sie liegt im Speicher dieses Browsers auf diesem Gerät und verlässt es nicht. Einen Ordner dazu gibt es erst mit einem Backup (oben „Exportieren“, roter Pfeil).</p>`}`);
+   `}`);
 }
 function fEcht(id){
   const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
   fenster(`${fk(esc(echtTitel(d)), esc(d.category))}
-   <dl class="angaben"><dt>Datei</dt><dd>${esc(d.originalName)} · ${echtGroesse(d.sizeBytes)}</dd>${d.documentDate ? `<dt>Datum</dt><dd>${echtDatum(d.documentDate)}</dd>` : ''}<dt>Abgelegt</dt><dd>${echtDatum(d.addedAt)}</dd><dt>Liegt</dt><dd>in der Akte auf diesem Gerät</dd></dl>
+   <dl class="angaben"><dt>Datei</dt><dd>${esc(d.originalName)} · ${echtGroesse(d.sizeBytes)}</dd>${d.documentDate ? `<dt>Datum</dt><dd>${echtDatum(d.documentDate)}</dd>` : ''}<dt>Abgelegt</dt><dd>${echtDatum(d.addedAt)}</dd><dt>Liegt</dt><dd>in der Akte auf diesem Gerät</dd>
+    <dt>Betrifft</dt><dd>${esc(echtPersonen(d).join(', ') || 'alle')}</dd><dt>Akten</dt><dd>${esc(echtBezug(d).akten.map(a => (akteVon(a) || {}).titel).filter(Boolean).join(', ') || '–')}</dd>${echtAbsender(d) ? `<dt>Absender</dt><dd>${esc(echtAbsender(d))}</dd>` : ''}</dl>
+   <div class="reihe"><button class="knopf hell" data-a="echt-zuordnen" data-id="${esc(d.id)}">${ic('akten')} Einordnen</button><button class="knopf hell" data-a="echt-termin" data-id="${esc(d.id)}">${ic('kalender')} Termin dazu</button></div>
    ${/\.pdf$/i.test(d.originalName) ? `<button class="knopf voll" data-a="leser" data-id="${esc(d.id)}">Lesen und darin suchen</button><div class="reihe"><button class="knopf hell" data-a="echt-oeffnen" data-id="${esc(d.id)}">Im Browser öffnen</button></div>` : `<button class="knopf voll" data-a="echt-oeffnen" data-id="${esc(d.id)}">Öffnen</button>`}
    ${/\.(pdf|png|jpe?g|webp)$/i.test(d.originalName) ? `<div class="reihe"><button class="knopf hell" data-a="echt-wfpdf" data-id="${esc(d.id)}">${ic('pdf')} Mit Workflow PDF bearbeiten</button></div>` : ''}
    <div class="reihe"><button class="knopf hell" data-a="echt-raus" data-id="${esc(d.id)}">Aus der Akte nehmen</button></div>`);
 }
+/* Einordnen (0.7.0): wen es betrifft, in welche Akten, Absender – beim Ablegen und an jeder Unterlage. Neue Person oder Akte entsteht
+   mit dem Speichern (die Akte gehört dann der ersten gewählten Person, sonst allen). Leer lassen geht. */
+function zuordnenFelder(d = null){
+  const ak = AK(), b = d ? echtBezug(d) : {akten:[], personen:[]}, abs = d ? echtAbsender(d) : '';
+  const notizP = d && !b.personen.length ? echtPersonen(d)[0] : '', vor = id => b.personen.includes(id) || (notizP && gleichName(notizP, personName(id)));
+  const haken = (name, id, t, an) => `<label class="wahlchip"><input type="checkbox" name="${name}" value="${esc(id)}" ${an ? 'checked' : ''}> ${esc(t)}</label>`;
+  return `<fieldset class="zuordnen"><legend>Wen betrifft es?</legend><div class="chips">${ak.personen.map(p => haken('zp', p.id, p.name, vor(p.id))).join('')}<input class="feld schmal" name="zp_neu" placeholder="${ak.personen.length ? 'weitere Person' : 'Name, leer = alle'}" maxlength="120" autocomplete="off" ${notizP && !ak.personen.some(p => gleichName(p.name, notizP)) ? `value="${esc(notizP)}"` : ''}></div></fieldset>
+   <fieldset class="zuordnen"><legend>Akte</legend><div class="chips">${ak.akten.map(a => haken('za', a.id, a.titel + (a.person ? ' · ' + personName(a.person) : ''), b.akten.includes(a.id))).join('')}<input class="feld schmal" name="za_neu" placeholder="neue Akte, darf leer bleiben" maxlength="120" autocomplete="off"></div></fieldset>
+   <label>Absender <input class="feld" name="zabs" list="za-absender" value="${esc(abs)}" maxlength="120" autocomplete="off" placeholder="darf leer bleiben"></label><datalist id="za-absender">${ak.absender.map(x => `<option value="${esc(x)}">`).join('')}</datalist>`;
+}
+async function zuordnenSpeichern(f, docId){
+  const ak = AK(), personen = [...f.querySelectorAll('input[name=zp]:checked')].map(i => i.value), akten = [...f.querySelectorAll('input[name=za]:checked')].map(i => i.value);
+  const pNeu = (f.zp_neu && f.zp_neu.value || '').replace(/\s+/g, ' ').trim(), aNeu = (f.za_neu && f.za_neu.value || '').replace(/\s+/g, ' ').trim();
+  if (pNeu) { const da = ak.personen.find(p => gleichName(p.name, pNeu)); personen.push(da ? da.id : await T().akten.personAnlegen(pNeu)); }
+  if (aNeu) { const da = ak.akten.find(a => gleichName(a.titel, aNeu)); akten.push(da ? da.id : await T().akten.akteAnlegen(aNeu, personen[0] || null)); }
+  const abs = f.zabs ? f.zabs.value : '';
+  await T().akten.zuordnen(docId, {akten:[...new Set(akten)], personen:[...new Set(personen)], absender:abs.trim() || null});
+}
+function fZuordnen(id){
+  const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
+  fenster(`${fk('Einordnen', esc(echtTitel(d)))}<form class="felder" data-form="zuordnen" data-id="${esc(d.id)}">${zuordnenFelder(d)}<button class="knopf gruen voll" type="submit">Speichern</button></form>`);
+}
+function fPersonNeu(){ fenster(`${fk('Person anlegen')}<form class="felder" data-form="person-neu"><label>Name <input class="feld" name="name" required maxlength="120" autocomplete="off"></label><label>Rolle <input class="feld" name="rolle" maxlength="80" placeholder="z. B. ich, Partnerin, Kind" autocomplete="off"></label><button class="knopf gruen voll" type="submit">Anlegen</button></form>`); }
+function fAkteNeu(){
+  const ak = AK();
+  fenster(`${fk('Neue Akte')}<form class="felder" data-form="akte-neu"><label>Name der Akte <input class="feld" name="titel" required maxlength="120" placeholder="z. B. Auto, Nebenkosten 2025" autocomplete="off"></label>
+   <label>Wem gehört sie? <select class="feld" name="person"><option value="">allen</option>${ak.personen.map(p => `<option value="${esc(p.id)}" ${s.person === p.id ? 'selected' : ''}>${esc(p.name)}</option>`).join('')}</select></label><button class="knopf gruen voll" type="submit">Anlegen</button></form>`);
+}
+function fAkteFuellen(id){
+  const a = akteVon(id); if (!a) return; const l = echtSortiert(echt.liste || []);
+  fenster(`${fk('Unterlagen hineinlegen', esc(a.titel))}<form data-form="akte-fuellen" data-id="${esc(id)}"><div class="liste ordliste">${l.map(d => `<label class="ordzeile"><input type="checkbox" class="haken" name="d" value="${esc(d.id)}" ${echtBezug(d).akten.includes(id) ? 'checked' : ''}><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''}</small></span></label>`).join('') || '<p class="leer">Noch nichts in der Akte.</p>'}</div>
+   <div class="reihe"><button class="knopf gruen" type="submit">Speichern</button><button class="knopf hell" type="button" data-a="zu">Abbrechen</button></div></form>`, 'leser');
+}
+/* Termin zu einer echten Unterlage (0.7.0): Frist oder Aufgabe im Kalender der Familienakte, mit Bezug auf die Unterlage. */
+function fTermin(id){
+  const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
+  fenster(`${fk('Termin dazu', esc(echtTitel(d)))}<form class="felder" data-form="termin-echt" data-id="${esc(d.id)}"><label>Was? <input class="feld" name="titel" required maxlength="200" value="${esc(echtTitel(d))}"></label>
+   <div class="reihe"><label style="flex:1">Tag <input class="feld" type="date" name="tag" required value="${tagHeute()}"></label><label style="flex:1">Uhrzeit <input class="feld" type="time" name="zeit"></label></div>
+   <label>Art <select class="feld" name="art"><option value="deadline">Frist</option><option value="task">Aufgabe</option></select></label><button class="knopf gruen voll" type="submit">In den Kalender</button></form>`);
+}
+document.addEventListener('submit', async ev => {
+  const f = ev.target, art = f.dataset.form; if (!['zuordnen', 'person-neu', 'akte-neu', 'akte-fuellen', 'termin-echt'].includes(art)) return; ev.preventDefault();
+  const knopf = f.querySelector('button[type=submit]'); if (knopf.disabled) return; knopf.disabled = true;
+  try {
+    if (art === 'zuordnen') { await zuordnenSpeichern(f, f.dataset.id); toast('Eingeordnet.'); }
+    if (art === 'person-neu') { s.person = await T().akten.personAnlegen(f.name.value.trim(), f.rolle.value.trim()); toast('Person angelegt.'); }
+    if (art === 'akte-neu') { await T().akten.akteAnlegen(f.titel.value.trim(), f.person.value || null); toast('Akte angelegt.'); }
+    if (art === 'akte-fuellen') { const an = new Set([...f.querySelectorAll('input[name=d]:checked')].map(i => i.value)); let n = 0;
+      for (const d of echt.liste || []) { const b = echtBezug(d), drin = b.akten.includes(f.dataset.id); if (drin === an.has(d.id)) continue;
+        await T().akten.zuordnen(d.id, {akten: drin ? b.akten.filter(x => x !== f.dataset.id) : [...b.akten, f.dataset.id], personen:b.personen, absender:b.absender[0] || null}); n++; }
+      toast(n ? `${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'} geändert.` : 'Nichts geändert.'); }
+    if (art === 'termin-echt') { await T().kalender.anlegen({titel:f.titel.value.trim(), tag:f.tag.value, zeit:f.zeit.value || null, art:f.art.value, docId:f.dataset.id}); const g = $('glocke'); if (g) g.contentWindow.location.reload(); toast('Im Kalender eingetragen.'); }
+    zu(); await echtLaden();
+  } catch (err) { knopf.disabled = false; toast(fehlerText(err)); }
+});
+Object.assign(A, {
+ 'echt-zuordnen': e => fZuordnen(e.dataset.id), 'echt-termin': e => fTermin(e.dataset.id),
+ 'person-reiter': e => { s.person = e.dataset.id || null; mainZeigen(); }, 'person-neu': () => fPersonNeu(), 'akte-neu': () => fAkteNeu(),
+ 'akte-auf': e => { s.ansicht = 'akten'; s.bereich = e.dataset.id || null; zeigen(); scrollTo(0, 0); }, 'akte-fuellen': e => fAkteFuellen(e.dataset.id),
+ 'echt-bereich': e => { try { localStorage.setItem('pa_sort', 'bereich'); } catch { /* gilt dann nicht */ } klapp.echt = 1; echt.knoten = e.dataset.k; echt.zeig = ECHT_SEITE; mainZeigen(); const o = $('echt'); if (o) o.scrollIntoView({block:'start'}); },
+});
 /* ---------- Ordner in die Akte legen (Klaus 17.11.): ein im Datei-Organizer sortierter Ordner kommt mit seiner Einordnung herein ---------- */
 const ord = { ordner:'', index:false, grund:'', stuecke:[], laeuft:false };
+const NUR_DATEI = ['Angebot/Werbung', 'Foto', 'Unklar'];
+A['ord-alle'] = e => { e.closest('form').querySelectorAll('input[name=d]').forEach(i => { i.checked = true; }); };
 function fOrdner(){
   const holen = ord.stuecke.filter(x => !x.doppelt), doppelt = ord.stuecke.length - holen.length, wahl = echtBereiche();
-  const zeile = x => `<label class="ordzeile"><input type="checkbox" class="haken" name="d" value="${esc(x.name)}" checked aria-label="${esc(x.name)} übernehmen">
+  // Übergabe nimmt ab Werk nur Unterlagen mit (0.7.0, Klaus 18.11. zu D: ja): Fotos, Werbung, Unklares und Gesperrtes bleiben Dateien
+  // und kommen nur auf ausdrücklichen Haken mit. Ohne Einordnung aus dem Organizer ist alles angehakt (wie bisher).
+  const an = x => !ord.index || (!!x.art && !NUR_DATEI.includes(x.art) && !x.warnung), angehakt = holen.filter(an).length;
+  const zeile = x => `<label class="ordzeile"><input type="checkbox" class="haken" name="d" value="${esc(x.name)}" ${an(x) ? 'checked' : ''} aria-label="${esc(x.name)} übernehmen">
     <span class="mitte"><strong>${esc(x.name.replace(/∕/g, '/'))}</strong><small style="white-space:normal">${[x.art, x.datum ? echtDatum(x.datum) : '', echtGroesse(x.groesse), x.text ? 'Text gelesen' : ''].filter(Boolean).map(esc).join(' · ')}${x.warnung ? `<br><b class="warn">${esc(x.warnung)}</b>` : ''}</small></span>
     <select class="feld schmal" name="b" data-name="${esc(x.name)}" aria-label="Bereich für ${esc(x.name)}">${[...new Set([x.bereich || 'Sonstiges', ...wahl].filter(Boolean))].map(b => `<option ${b === (x.bereich || 'Sonstiges') ? 'selected' : ''}>${esc(b)}</option>`).join('')}</select></label>`;
   fenster(`${fk('Ordner in die Akte legen', esc(ord.ordner))}
    <p class="hinweis">${ord.index ? 'Die Einordnung kommt aus dem Datei-Organizer. Du kannst den Bereich je Datei ändern oder Dateien abwählen.' : `In diesem Ordner liegt keine Einordnung aus dem Datei-Organizer${ord.grund ? ' (' + esc(ord.grund) + ')' : ''}. Die Dateien kommen nach „Sonstiges“, wenn du nichts anderes wählst.`}${doppelt ? ` ${doppelt} doppelte ${doppelt === 1 ? 'Datei bleibt' : 'Dateien bleiben'} im Ordner.` : ''}</p>
-   ${holen.length ? `<form data-form="ordner"><div class="liste ordliste">${holen.map(zeile).join('')}</div>
+   ${holen.length ? `<form data-form="ordner">${ord.index && angehakt < holen.length ? `<p class="lesestand" id="ord-wahl">${angehakt} Unterlagen angehakt · ${holen.length - angehakt} ${holen.length - angehakt === 1 ? 'Datei bleibt' : 'Dateien bleiben'} draußen (Fotos, Werbung, Unklares) <button type="button" class="knopf hell klein" data-a="ord-alle">Alle anhaken</button></p>` : ''}
+    <label class="ordakte">Akte für alle <input class="feld schmal" name="akte" list="ord-akten" maxlength="120" placeholder="darf leer bleiben" autocomplete="off"></label><datalist id="ord-akten">${AK().akten.map(a => `<option value="${esc(a.titel)}">`).join('')}</datalist>
+    <div class="liste ordliste">${holen.map(zeile).join('')}</div>
     <p class="lesestand" id="ord-stand"></p>
     <div class="reihe"><button class="knopf gruen" type="submit">${holen.length} ${holen.length === 1 ? 'Datei' : 'Dateien'} in die Akte legen</button><button class="knopf hell" type="button" data-a="zu">Abbrechen</button></div></form>`
    : '<p class="leer">In diesem Ordner liegt nichts zum Übernehmen.</p>'}`, 'leser');
@@ -692,6 +764,9 @@ document.addEventListener('submit', async ev => { const f = ev.target; if (f.dat
   ord.laeuft = true; const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true;
   try {
     const r = await T().organizer.uebernehmen(auswahl, (fertig, gesamt, name) => { const o = $('ord-stand'); if (o) o.textContent = name ? `Datei ${fertig + 1} von ${gesamt}: ${name}` : ''; });
+    const akteName = (f.akte && f.akte.value || '').replace(/\s+/g, ' ').trim();
+    if (akteName && r.ids.length) { await echtLaden(); const da = AK().akten.find(a => gleichName(a.titel, akteName)), aid = da ? da.id : await T().akten.akteAnlegen(akteName, null);
+      for (const id of r.ids) await T().akten.zuordnen(id, {akten:[aid], personen:[], absender:null}); }
     zu(); await echtLaden();
     toast(`${r.abgelegt} ${r.abgelegt === 1 ? 'Datei liegt' : 'Dateien liegen'} in der Akte.${r.schonDa ? ` ${r.schonDa} waren schon da.` : ''}${r.fehler.length ? ` Nicht geklappt: ${r.fehler[0]}${r.fehler.length > 1 ? ' und ' + (r.fehler.length - 1) + ' weitere' : ''}.` : ''}`);
   } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { ord.laeuft = false; }
@@ -777,6 +852,7 @@ document.addEventListener('submit', async ev => {
     if (T().textLesbar(echt.datei)) { const alt = knopf.textContent; knopf.textContent = 'Text wird gelesen …'; try { gelesen = await T().textLesen(echt.datei); } catch (e) { gelesen = {text:'', art:'fehler'}; } knopf.textContent = alt; }
     const d = await T().ablegen(echt.datei, {bereich:echtBereich(f.bereich.value), datum:f.datum.value || null, titel:f.titel.value.trim(), notiz:null, text:gelesen.text});
     const lesbar = T().textLesbar(echt.datei);
+    try { await zuordnenSpeichern(f, d.id); } catch (err) { toast(fehlerText(err)); }
     echt.datei = null; zu(); await echtLaden(); toast(`„${echtTitel(d)}“ liegt in ${d.category}.${gelesen.text ? ' Text gelesen – die Suche findet auch den Inhalt.' : lesbar ? ' Kein Text erkannt.' : ''}`);
   } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { echt.laeuft = false; }
 });
@@ -1143,7 +1219,7 @@ function seitenleisteZeigen(){
     + k('leiste-oben', ic('hoch'), 'Nach oben') + k('leiste-unten', ic('runter'), 'Nach unten')
     + (zurTiefe() ? k('leiste-zurueck', ic('zurueck'), 'Zurück') : '')
     + (s.ansicht !== 'start' || s.frage || s.bereich ? k('geh', ic('start'), 'Startseite', 'data-zu="start"') : '')
-    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t + (id === 'eingang' && eingang.neu.length ? ` <span class="zahl">${eingang.neu.length}</span>` : ''), `data-zu="${id}"`)).join('') + '<hr>'
+    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t + (id === 'eingang' && einordnenZahl() ? ` <span class="zahl">${einordnenZahl()}</span>` : ''), `data-zu="${id}"`)).join('') + '<hr>'
     + MEHR.map(([a, i, t]) => k(a, a === 'farbe' ? '<span class="fleck farbknopf"></span>' : i ? ic(i) : '<b class="lfrage">?</b>', t, 'data-ort="akte"')).join('') + '</div>';
 }
 A['nav-klapp'] = () => { const zu = !navZu(); try { localStorage.setItem('pa_nav_zu', zu ? '1' : '0'); } catch { /* gilt bis zum Neuladen */ } navZeigen(); };

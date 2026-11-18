@@ -2,7 +2,9 @@
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
 import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, LIMITS,
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
-import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig } from "../klone/familienakte/app/local-vault.ts";
+import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig, createLocalScheduleBundle } from "../klone/familienakte/app/local-vault.ts";
+import { saveLocalStammRecord, createLocalFamilyRelation, confirmLocalContextLink, dokumenteZuordnen, akteFuerAbgleich, akteNachAbgleichSchreiben } from "../klone/familienakte/app/local-vault.ts";
+import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
@@ -219,15 +221,15 @@ const organizer = {
   /** Legt die genannten Dateien ab (Bereich je Datei wie übergeben). Fehlt der Text aus dem Organizer, liest die Akte selbst. */
   async uebernehmen(auswahl: Array<{ name: string; bereich: string }>, fortschritt?: (fertig: number, gesamt: number, name: string) => void) {
     if (!organizerOrdner) throw new Error("Bitte zuerst den Ordner wählen.");
-    const aus = { abgelegt: 0, schonDa: 0, fehler: [] as string[] };
+    const aus = { abgelegt: 0, schonDa: 0, fehler: [] as string[], ids: [] as string[] };
     for (const [i, w] of auswahl.entries()) {
       fortschritt?.(i, auswahl.length, w.name);
       const s = organizerOrdner.stuecke.find((x) => x.name === w.name); if (!s) continue;
       try {
         const datei = await organizerOrdner.hole(s.name);
         let text = s.text; if (!text && (istBild(datei) || istPdf(datei))) { try { text = (await textLesen(datei)).text; } catch { text = ""; } }
-        await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: s.hinweis ? `Aus dem Datei-Organizer – ${s.hinweis}`.slice(0, 1000) : null, titel: null, textAuszug: text || null });
-        aus.abgelegt++;
+        const neu = await saveLocalDocument(await browserVault(), datei, { category: w.bereich || "Sonstiges", documentDate: s.datum, notes: s.hinweis ? `Aus dem Datei-Organizer – ${s.hinweis}`.slice(0, 1000) : null, titel: null, textAuszug: text || null });
+        aus.abgelegt++; aus.ids.push(neu.id);
       } catch (e) { const m = e instanceof Error ? e.message : String(e); if (/Dublette|schon abgelegt/.test(m)) aus.schonDa++; else aus.fehler.push(`${s.name}: ${m}`); }
     }
     fortschritt?.(auswahl.length, auswahl.length, "");
@@ -428,5 +430,61 @@ const kalender = {
     return n;
   },
 };
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender };
+// Akten, Personen, Absender (0.7.0, Klaus 18.11.: „Akte = ein Fach mit Namen, einer Person zugeordnet“; Antworten A–F ja): alles im
+// Register des Klons, nichts Eigenes. Person = Datensatz „person“, Akte = Datensatz „case“ (in der Familienakte „Vorgang“; Art „Akte“),
+// ihre Person über die Verknüpfung case → person „betrifft“. Eine Unterlage gehört über document → case „gehört zu“ zu beliebig vielen
+// Akten, betrifft über document → person „betrifft“ Personen, und ihr Absender ist eine Organisation (document → organisation „Absender“).
+// Lösen einer Verknüpfung: der Klon hat dafür nur „Vorgangsbezug lösen“; für Person und Absender wird das Register über den Weg des
+// Abgleichs (akteFuerAbgleich/akteNachAbgleichSchreiben, mit Prüfung des Stands) ohne diese eine Verknüpfung zurückgeschrieben.
+const lebt = (r: { status: string }) => r.status !== "archiviert";
+const gleicherName = (a: string, b: string) => a.replace(/\s+/g, " ").trim().toLocaleLowerCase("de") === b.replace(/\s+/g, " ").trim().toLocaleLowerCase("de");
+const akten = {
+  async lesen() {
+    const { records, relations } = await readLocalVaultData(await browserVault());
+    const personen = records.filter((r) => r.recordType === "person" && lebt(r)).map((r) => ({ id: r.id, name: stammLesen(r).name, rolle: stammLesen(r).art }));
+    const faelle = records.filter((r) => r.recordType === "case" && lebt(r)).map((r) => ({ id: r.id, titel: stammLesen(r).name, person: relations.find((x) => x.fromType === "case" && x.fromId === r.id && x.toType === "person")?.toId || null }));
+    const orgs = new Map(records.filter((r) => r.recordType === "organisation" && lebt(r)).map((r) => [r.id, stammLesen(r).name]));
+    const ids = new Set([...personen.map((p) => p.id), ...faelle.map((a) => a.id)]);
+    const bezug: Record<string, { akten: string[]; personen: string[]; absender: string[] }> = {};
+    for (const x of relations) {
+      if (x.fromType !== "document") continue;
+      const b = bezug[x.fromId] ||= { akten: [], personen: [], absender: [] };
+      if (x.toType === "case" && ids.has(x.toId)) b.akten.push(x.toId);
+      else if (x.toType === "person" && ids.has(x.toId)) b.personen.push(x.toId);
+      else if (x.toType === "organisation" && x.relationType === "Absender" && orgs.has(x.toId)) b.absender.push(orgs.get(x.toId)!);
+    }
+    return { personen, akten: faelle, bezug, absender: [...new Set(orgs.values())] };
+  },
+  async personAnlegen(name: string, rolle = "") { return (await saveLocalStammRecord(await browserVault(), { recordType: "person", angaben: { name, art: rolle, notiz: "" } })).id; },
+  async akteAnlegen(titel: string, person: string | null) {
+    const h = await browserVault(), r = await saveLocalStammRecord(h, { recordType: "case", angaben: { name: titel, art: "Akte", notiz: "" } });
+    if (person) await createLocalFamilyRelation(h, { fromType: "case", fromId: r.id, toType: "person", toId: person, relationType: "betrifft", source: "Private Akte", notes: null });
+    return r.id;
+  },
+  /** Setzt die Bezüge einer Unterlage genau so: Akten (mehrere), Personen (mehrere), Absender (Name oder leer). */
+  async zuordnen(docId: string, soll: { akten: string[]; personen: string[]; absender: string | null }) {
+    const h = await browserVault(), { records, relations } = await readLocalVaultData(h);
+    let absenderId: string | null = null;
+    const name = (soll.absender || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    if (name) absenderId = records.find((r) => r.recordType === "organisation" && lebt(r) && gleicherName(stammLesen(r).name, name))?.id
+      || (await saveLocalStammRecord(h, { recordType: "organisation", angaben: { name, art: "Absender", notiz: "" } })).id;
+    const weg = relations.filter((x) => x.fromType === "document" && x.fromId === docId && (
+      (x.toType === "case" && !soll.akten.includes(x.toId)) || (x.toType === "person" && !soll.personen.includes(x.toId)) || (x.toType === "organisation" && x.relationType === "Absender" && x.toId !== absenderId)));
+    if (weg.length) {
+      const { akte, revision } = await akteFuerAbgleich(h), aus = new Set(weg.map((x) => x.id));
+      (akte as unknown as { relations: Array<{ id: string }> }).relations = (akte as unknown as { relations: Array<{ id: string }> }).relations.filter((x) => !aus.has(x.id));
+      await akteNachAbgleichSchreiben(h, akte, revision, "Zusammenhang gelöst", `${docId}: ${weg.length} Verknüpfung${weg.length === 1 ? "" : "en"} in der Privaten Akte gelöst; Datensätze blieben erhalten.`);
+    }
+    for (const a of soll.akten) await confirmLocalContextLink(h, { sourceType: "document", sourceId: docId, caseId: a, reason: "Private Akte" });
+    for (const p of soll.personen) await dokumenteZuordnen(h, [docId], { type: "person", id: p });
+    if (absenderId) await createLocalFamilyRelation(h, { fromType: "document", fromId: docId, toType: "organisation", toId: absenderId, relationType: "Absender", source: "Private Akte", notes: null });
+  },
+};
+// Termin zu einer echten Unterlage (0.7.0): Frist oder Aufgabe des Klons mit Bezug auf die Unterlage (references), wie „+ Eintrag“ im Kalender.
+Object.assign(kalender, {
+  async anlegen(e: { titel: string; tag: string; zeit: string | null; art: "deadline" | "task"; docId: string }) {
+    return createLocalScheduleBundle(await browserVault(), { recordType: e.art, title: e.titel, dueAt: e.tag, dueTime: e.zeit || null, source: "Private Akte", references: [{ recordType: "document", id: e.docId, relationType: "betrifft" }] });
+  },
+});
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

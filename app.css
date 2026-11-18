@@ -392,3 +392,13 @@ body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty))
  body.nav-zu .nav .zahl{position:absolute;top:2px;right:4px;margin:0}
 }
 .seitenleiste-knoepfe .zahl{position:static;display:inline-grid;margin-left:6px}
+/* 0.7.0 Akten je Person, Einordnen */
+.reiter{display:flex;gap:6px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none}.reiter::-webkit-scrollbar{display:none}
+.reiter .chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:4px;padding:4px 12px}.reiter .chip .icon{width:14px;height:14px}
+.chip.an{background:var(--teal);border-color:var(--teal);color:#fff}
+.zahlklein{font-size:14px;color:var(--muted);font-weight:600;margin-left:4px}
+fieldset.zuordnen{border:0;margin:0;padding:0;min-width:0}fieldset.zuordnen legend{font-size:12.5px;color:var(--muted);padding:0;margin-bottom:2px}
+fieldset.zuordnen .chips{margin-top:2px}fieldset.zuordnen .feld.schmal{flex:1 1 140px;min-width:0}
+.wahlchip{display:inline-flex !important;align-items:center;gap:4px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:12.5px;color:var(--ink) !important;background:#fff;cursor:pointer}
+.wahlchip:has(input:checked){background:var(--tealsoft);border-color:var(--teal)}.wahlchip input{margin:0}
+.ordakte{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin:4px 0 8px}.ordakte .feld{flex:1;min-width:0}
