@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.1 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.2 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -259,6 +259,14 @@ const { chromium } = require('playwright');
       soll(gr.some(g => g[0] === 'Reisen & Freizeit' && g[1] === 17) && gr.some(g => g[0] === 'Versicherungen' && g[1] === 17) && gr.reduce((a, g) => a + g[1], 0) === gesamt, 'Baum aufgeklappt: Bereiche mit ihren Zahlen, Summe = Gesamtzahl (' + JSON.stringify(gr) + ')');
       await p.locator('#echt .eknoten', {hasText:'Versicherungen'}).click(); await p.waitForSelector('#echt .egewaehlt');
       soll((await p.locator('#echt [data-a=echt-auf]').count()) === 17 && (await p.locator('#echt [data-a=echt-auf] small').allInnerTexts()).every(t => t.startsWith('Versicherungen')), 'Tipp auf einen Bereich zeigt nur dessen 17 Unterlagen');
+      // 0.7.2: Unterordner wie im Datei-Organizer, Richtung mit dem Pfeil, Pfad an der Zeile (gekürzt, ganz im Hinweis)
+      { const kinder = await p.evaluate(() => [...document.querySelectorAll('#echt .eknoten.unter')].map(e => [e.querySelector('.ename').innerText, +e.querySelector('b').innerText]));
+        soll(kinder.length >= 1 && kinder.reduce((a, k) => a + k[1], 0) === 17 && kinder.some(k => k[0] === 'TXT'), 'Baum: unter dem Bereich die Unterordner (Art) mit Zahl, Summe = 17 (' + JSON.stringify(kinder) + ')');
+        const erst = await p.locator('#echt [data-a=echt-auf] strong').first().innerText(); await klick('#echt-richtung'); await p.waitForFunction(e => document.querySelector('#echt [data-a=echt-auf] strong')?.innerText !== e, erst);
+        const dann = await p.evaluate(() => [...document.querySelectorAll('#echt [data-a=echt-auf] strong')].map(e => e.innerText)); soll(dann[dann.length - 1] === erst && await p.evaluate(() => localStorage.getItem('pa_sort_ab') === '1'), 'Pfeil neben „Sortieren“ dreht die Reihenfolge um und wird gemerkt');
+        await klick('#echt-richtung');
+        const pf = await p.locator('#echt .epfad').first(); soll(/Baumprobe-\d\d\.txt/.test(await pf.getAttribute('data-tipp2')), 'Zeile zeigt den Pfad, ganz im Hinweis');
+        soll(await p.evaluate(() => kurzPfad('Eingang/Scanner/2026/November/sehr-langer-name-der-datei-bonus.pdf') === 'Eingang/Scanne…ger-name-der-datei-bonus.pdf' || kurzPfad('a'.repeat(60)).includes('…')), 'Langer Pfad: Anfang … Ende'); }
       await p.selectOption('#echt-sort', 'datum'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === '2025'));
       soll((await p.locator('#echt .eknoten', {hasText:'2025'}).locator('b').innerText()) === '17', 'Sortieren nach Datum: der Baum zeigt Jahre mit Zahlen');
       await p.selectOption('#echt-sort', 'art'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === 'TXT')); soll(true, 'Sortieren nach Art der Datei: der Baum zeigt die Dateiarten');
@@ -370,6 +378,9 @@ const { chromium } = require('playwright');
       soll(wahl.an > 0 && wahl.an < wahl.alle && wahl.falsch === 0, 'Übergabe: ab Werk nur Unterlagen angehakt, Fotos/Werbung/Unklares nicht (' + JSON.stringify(wahl) + ')');
       const gewaehlt = await p.evaluate(() => { const h = [...document.querySelectorAll('.fenster input[name=d]')]; const pdf = h.filter(x => /\.pdf$/i.test(x.value)).slice(0, 2).map(x => x.value); h.forEach(x => { x.checked = pdf.includes(x.value); }); return pdf; });
       await klick('.fenster form[data-form=ordner] [type=submit]'); await p.waitForFunction(() => !document.querySelector('.fenster form[data-form=ordner]'), null, {timeout:120000});
+      // Zweite Übergabe derselben Dateien (Klaus' Bilder 18.11.): die vorhandenen werden neu eingeordnet statt übersprungen
+      const nach = await p.evaluate(async namen => { const t = window.PrivateAkteTresor, r = await t.organizer.uebernehmen(namen.map(name => ({name, bereich:'Reisen & Freizeit'}))); const l = await t.liste(); return { r:{schonDa:r.schonDa, aktualisiert:r.aktualisiert}, bereiche:l.filter(x => namen.some(n => n.endsWith(x.originalName))).map(x => x.category), pfad:l.filter(x => namen.some(n => n.endsWith(x.originalName))).every(x => /Pfad: /.test(x.notes || '')) }; }, gewaehlt);
+      soll(nach.r.schonDa === 2 && nach.r.aktualisiert === 2 && nach.bereiche.every(b => b === 'Reisen & Freizeit') && nach.pfad, 'Übergabe noch einmal: vorhandene Unterlagen bekommen die Einordnung aus dem Organizer (' + JSON.stringify(nach) + ')');
       const drin = await p.evaluate(async namen => { const t = window.PrivateAkteTresor, l = await t.liste(), da = l.filter(x => namen.some(n => n.endsWith(x.originalName))); const r = { n:da.length, bereich:da.map(x => x.category), text:da.some(x => (x.textAuszug || x.textHint || '').length > 20) }; for (const x of da) await t.herausnehmen(x.id); return r; }, gewaehlt);
       soll(gewaehlt.length === 2 && drin.n === 2, 'Übergabe: zwei gewählte Dateien liegen in der Akte (' + JSON.stringify(drin) + ')');
       soll(((await of.evaluate(() => document.querySelector('[data-uebergabe] [data-meldung]')?.innerText || '')).includes('bereit')), 'Übergabe: der Organizer zeigt die Antwort der Akte');

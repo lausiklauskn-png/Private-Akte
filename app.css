@@ -408,3 +408,8 @@ fieldset.zuordnen .chips{margin-top:2px}fieldset.zuordnen .feld.schmal{flex:1 1 
 .knopf.pm-knopf{background:color-mix(in srgb,var(--akz) 13%,#fff);color:var(--schrift);border:1px solid color-mix(in srgb,var(--akz) 38%,transparent);box-shadow:none;text-shadow:none}
 .knopf.pm-knopf:hover,.knopf.pm-knopf:active{background:color-mix(in srgb,var(--akz) 22%,#fff)}
 .knopf.pm-knopf .icon{color:var(--akz)}
+/* 0.7.2 Ordnerbaum mit Unterordnern wie im Datei-Organizer */
+.eknoten .epfeil .icon{transition:transform .15s}.eknoten.offen .epfeil .icon{transform:rotate(90deg)}
+.eknoten.unter{padding-left:34px;font-size:13px}.eknoten.unter .ename{color:var(--muted)}.eknoten.unter.an .ename{color:inherit}
+#echt-richtung{flex:0 0 auto}
+#tipp small{word-break:break-all}

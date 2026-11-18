@@ -26,9 +26,9 @@ import { verlernen } from "./verlauf.ts";
 import { Seitenleiste } from "./seitenleiste.tsx";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
-export const FASSUNG = "0.4.17";
+export const FASSUNG = "0.4.18";
 // Ladeanzeige: „suchen“ = Ordner wird durchgesehen (Zahl noch unbekannt), „lesen“ = Datei für Datei, „stand“ = gemerkter Stand beim Start.
-export type Fortschritt = { phase: "stand" | "suchen" | "lesen"; fertig: number; gesamt: number; name?: string };
+export type Fortschritt = { phase: "stand" | "suchen" | "lesen" | "uebergeben"; fertig: number; gesamt: number; name?: string };
 const luft = () => new Promise<void>((r) => setTimeout(r)); // dem Browser Zeit zum Zeichnen geben
 export type SeitenId = "ordner" | "sortieren" | "finden" | "verlauf" | "akte" | "hilfe" | "landkarte";
 /** Sprungziel für „Finden“: eine Sicht und darin ein Ordner (Titel im Baum). Kommt vom Dashboard. */
@@ -469,16 +469,20 @@ function useOrganizer() {
   const uebergeben = useCallback(async (mitText: boolean) => {
     const r = rahmen(); if (!r) return;
     try {
-      const paket: Array<{ pfad: string; datei: File }> = [], fehlen: string[] = [];
-      for (const d of dateien) {
-        if (d.auffaellig || d.doppeltVon) continue;
+      // Ladeanzeige (0.4.18, Klaus 18.11.: „hat lange gedauert, kein Ladebalken zu sehen“): Datei für Datei, dann das Übergeben selbst.
+      const paket: Array<{ pfad: string; datei: File }> = [], fehlen: string[] = [], mit = dateien.filter((d) => !d.auffaellig && !d.doppeltVon);
+      setFortschritt({ phase: "uebergeben", fertig: 0, gesamt: mit.length });
+      for (const [i, d] of mit.entries()) {
+        if (i % 5 === 0) { setFortschritt({ phase: "uebergeben", fertig: i, gesamt: mit.length, name: d.name }); await luft(); }
         const b = await original(d.pfad).catch(() => null);
         if (b) paket.push({ pfad: d.pfad, datei: new File([b], d.name, { lastModified: d.geaendert || Date.now() }) }); else fehlen.push(d.pfad);
       }
       if (!paket.length) { setMeldung({ text: fehlen.length ? "Die Originale sind nicht mehr erreichbar. Bitte den Ordner noch einmal wählen." : "Nichts zum Übergeben.", art: "fehler" }); return; }
+      setFortschritt({ phase: "uebergeben", fertig: 0, gesamt: 0, name: r.name }); await luft();
       const a = await r.uebergeben({ ordner: ordnerName || "Datei-Organizer", index: indexText(mitText), dateien: paket, fehlen });
+      setFortschritt(null);
       setMeldung(a.ok ? { text: a.text || `${paket.length} ${paket.length === 1 ? "Datei" : "Dateien"} an die ${r.name} übergeben.${fehlen.length ? ` ${fehlen.length} nicht erreichbar.` : ""}` } : { text: a.text || "Die Übergabe wurde nicht angenommen.", art: "fehler" });
-    } catch (e) { setMeldung({ text: `Übergabe nicht möglich: ${(e as Error).message}`, art: "fehler" }); }
+    } catch (e) { setMeldung({ text: `Übergabe nicht möglich: ${(e as Error).message}`, art: "fehler" }); } finally { setFortschritt((f) => (f?.phase === "uebergeben" ? null : f)); }
   }, [dateien, indexText, original, ordnerName]);
 
   const neuBeginnen = useCallback(async () => {
@@ -530,8 +534,8 @@ async function einlesenTeile(bytes: Uint8Array, pfad: string) {
 // Ladebalken: oben im Kopf (auf jeder Seite sichtbar) und in der Ordner-Karte. Ohne bekannte Zahl läuft ein Streifen.
 export function Ladebalken({ f, oben, anhalten }: { f: Fortschritt | null; oben?: boolean; anhalten?: () => void }) {
   if (!f) return null;
-  const offen = f.phase !== "lesen" || !f.gesamt, pz = offen ? 0 : Math.round((100 * f.fertig) / f.gesamt);
-  const text = f.phase === "stand" ? "Gemerkte Sortierung wird geladen …" : f.phase === "suchen" ? `Ordner${f.name ? ` „${f.name}“` : ""} wird durchgesehen …` : `${f.fertig} von ${f.gesamt} Dateien gelesen · ${pz} %`;
+  const offen = (f.phase !== "lesen" && f.phase !== "uebergeben") || !f.gesamt, pz = offen ? 0 : Math.round((100 * f.fertig) / f.gesamt);
+  const text = f.phase === "stand" ? "Gemerkte Sortierung wird geladen …" : f.phase === "suchen" ? `Ordner${f.name ? ` „${f.name}“` : ""} wird durchgesehen …` : f.phase === "uebergeben" ? (f.gesamt ? `${f.fertig} von ${f.gesamt} Dateien für die Übergabe vorbereitet · ${pz} %` : `Wird an die ${f.name || "App"} übergeben …`) : `${f.fertig} von ${f.gesamt} Dateien gelesen · ${pz} %`;
   return <div className={`ladeanzeige ${oben ? "oben" : ""}`} data-ladeanzeige={f.phase}>
     <div className={`fortschritt ${offen ? "offen" : ""}`} role="progressbar" aria-label="Laden" {...(offen ? {} : { "aria-valuemin": 0, "aria-valuemax": f.gesamt, "aria-valuenow": f.fertig })}><span style={offen ? undefined : { width: `${pz}%` }}/></div>
     <p className="leise" aria-live="polite"><span>{text}</span>{f.phase === "lesen" && f.name && <span className="lade-name">{f.name}</span>}</p>

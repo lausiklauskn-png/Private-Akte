@@ -46,7 +46,7 @@ try {
   await page.goto(basis);
   soll("Kopf, Navigation und Fuß stehen da", await page.locator(".site-header .main-navigation [data-nav]").count() === 6 && await page.locator(".site-footer").isVisible());
   { const f = page.locator("[data-fuss]"), t = (await f.innerText()).replace(/\s+/g, " ");
-    soll("Fuß ist eine schmale Zeile (Klaus 18.11.): Family-Projekt, Name, Fassung, Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe", /Family-Projekt/.test(t) && /0\.4\.17/.test(t) && ["Impressum", "Datenschutz", "Haftungsausschluss", "Lizenz", "Hilfe"].every((w) => t.includes(w)) && !/Arbeiten|Weitergeben/.test(t), t);
+    soll("Fuß ist eine schmale Zeile (Klaus 18.11.): Family-Projekt, Name, Fassung, Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe", /Family-Projekt/.test(t) && /0\.4\.18/.test(t) && ["Impressum", "Datenschutz", "Haftungsausschluss", "Lizenz", "Hilfe"].every((w) => t.includes(w)) && !/Arbeiten|Weitergeben/.test(t), t);
     soll("Fuß ohne dunkelblaue Fläche und flach (höchstens 60 px bei 1280 px Breite)", await f.evaluate((e) => getComputedStyle(e).backgroundColor === "rgba(0, 0, 0, 0)" && e.offsetHeight <= 60)); }
   soll("Ohne Ordner: keine Pille im Kopf, dafür der Drucker-Knopf", await page.locator("[data-ordner-pill]").count() === 0 && await page.locator(".header-actions [data-drucken]").count() === 1);
   { // Ohne offene Datei druckt der Knopf die Seite, wie sie ist (Klaus 17.11.: nicht ausgegraut).
@@ -192,6 +192,21 @@ try {
   await page.waitForTimeout(100);
   soll("Suche findet das Kennzeichen", await page.locator("[data-liste] [data-datei]").count() >= 1);
   await page.locator("[data-suche]").fill("");
+  // Reihenfolge nach Datum (0.4.18): der Pfeil neben „Sortieren“ dreht Jahre, Monate und die Liste um, die Unterordner bleiben
+  { await page.locator("[data-sicht]").selectOption("datum");
+    const jahre = async () => (await page.locator("[data-ordnerbaum] > li > ul > li > .ast").allInnerTexts()).map((t) => t.split("\n")[0].trim()).filter((t) => /^\d{4}$/.test(t));
+    const tage = async () => (await page.locator("[data-liste] [data-datei] small").allInnerTexts()).map((t) => (t.match(/(\d\d)\.(\d\d)\.(\d{4})/) || []).slice(1).reverse().join("-")).filter(Boolean);
+    const vorher = await jahre(), tv = await tage(), richtung0 = await page.locator("[data-sicht-richtung]").getAttribute("data-sicht-richtung");
+    await page.locator("[data-sicht-richtung]").click(); await page.waitForTimeout(100);
+    const nachher = await jahre(), tn = await tage();
+    soll("Pfeil dreht die Jahre um", vorher.length >= 2 && JSON.stringify([...vorher].reverse()) === JSON.stringify(nachher), `${vorher} → ${nachher}`);
+    soll("Pfeil dreht die Liste nach Datum um", tv.length >= 2 && tv[0] <= tv[tv.length - 1] && tn[0] >= tn[tn.length - 1], `${tv[0]}…${tv[tv.length - 1]} → ${tn[0]}…${tn[tn.length - 1]}`);
+    soll("Richtung wird gemerkt", richtung0 === "alt" && (await page.evaluate(() => localStorage.getItem("do-finden-neu"))) === "1");
+    await page.locator("[data-ordnerbaum] > li > ul > li > .ast").filter({ hasText: nachher[0] }).first().click();
+    const monate = (await page.locator("[data-ordnerbaum] [aria-expanded=true] + ul > li > .ast, [data-ordnerbaum] li li li > .ast").allInnerTexts()).map((t) => t.split("\n")[0].trim());
+    const M = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"], idx = monate.map((m) => M.indexOf(m)).filter((i) => i >= 0);
+    soll("Monate stehen nach dem Kalender (neueste zuerst)", idx.every((x, i) => !i || idx[i - 1] >= x), `${monate}`);
+    await page.locator("[data-sicht-richtung]").click(); }
   await page.locator("[data-sicht]").selectOption("art");
   await page.locator("[data-ordnerbaum] [data-ast='Bild']").first().click();
   await page.locator("[data-liste] [data-datei]").first().click();
@@ -861,7 +876,7 @@ try {
     await griff.click();
     const worte = await sp.locator(".seitenleiste-knoepfe [data-leiste]").allInnerTexts();
     soll("Seitenleiste: Knöpfe mit Symbol und Wort – nach oben, nach unten, zurück und die sechs Seiten", ["Nach oben", "Nach unten", "Zurück", "Ordner", "Sortieren", "Finden", "Verlauf", "Familienakte", "Hilfe"].every((w) => worte.map((x) => x.trim()).includes(w)) && await sp.locator(".seitenleiste-knoepfe [data-leiste] svg").count() === worte.length, worte.join(","));
-    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.17");
+    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.18");
     await sp.locator("[data-leiste=oben]").click(); await sp.waitForFunction(() => scrollY === 0, null, { timeout: 6000 }).catch(() => {});
     soll("Seitenleiste: „Nach oben“ rollt an den Anfang und klappt zu", await sp.evaluate(() => scrollY) === 0 && await sp.locator("[data-seitenleiste=zu]").count() === 1);
     await griff.click(); await sp.locator("[data-leiste=unten]").click(); await sp.waitForFunction(() => scrollY + innerHeight >= document.documentElement.scrollHeight - 2, null, { timeout: 6000 }).catch(() => {});
@@ -894,7 +909,7 @@ try {
       const auf = await kp.locator("[data-kopf-knoepfe] [data-aktualisieren]").isVisible() && await kp.locator("[data-kopf-knoepfe] [data-drucken]").isVisible();
       await kp.locator("[data-kopf-knoepfe] [data-landkarte-knopf]").click(); await kp.waitForTimeout(100);
       soll(`Im Rahmen (${breit} px): Kopf eine Zeile – Leiste der Seiten, rechts der Pfeil mit den runden Knöpfen; kein Name`, m.hoch <= 52 && m.eineZeile && !m.marke && await kp.locator(".main-navigation [data-nav]").count() === 6 && auf && await kp.evaluate(() => location.hash) === "#landkarte" && !(await kp.locator("[data-kopf-knoepfe]").isVisible()), JSON.stringify(m) + ` auf=${auf}`);
-      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.17")); }
+      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.18")); }
       if (breit === 820) { await kp.keyboard.press("Escape"); await kp.locator("[data-nav-klapp]").click(); soll("Im Rahmen breit: Pfeil hoch klappt die Leiste ein, die Wahl wird gemerkt", !(await kp.locator(".main-navigation").isVisible()) && await kp.evaluate(() => localStorage.getItem("do-nav-zu") === "1"));
         await kp.reload(); await kp.waitForSelector("[data-nav-auf]"); soll("Eingeklappt bleibt es nach dem Neuladen", !(await kp.locator(".main-navigation").isVisible())); }
       await kctx.close();
