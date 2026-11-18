@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -962,11 +962,29 @@ function fLeeren(){
    <form data-form="leeren"><div class="liste">
     <label class="ordzeile"><input type="checkbox" class="haken" name="akte" checked><span class="mitte"><strong>Unterlagen in der Akte</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}, auch früher Herausgenommenes</small></span></label>
     <label class="ordzeile"><input type="checkbox" class="haken" name="wfpdf" checked><span class="mitte"><strong>Bibliothek von Workflow PDF</strong><small>Scans und Arbeitskopien im Tool, samt seinen Einstellungen</small></span></label>
-    <label class="ordzeile"><input type="checkbox" class="haken" name="organizer" checked><span class="mitte"><strong>Liste im Datei-Organizer</strong><small style="white-space:normal">sortierte Liste und Verlauf; die Originale im Ordner bleiben. Was er aus deinen Korrekturen gelernt hat, geht mit weg.</small></span></label></div>
+    <label class="ordzeile"><input type="checkbox" class="haken" name="organizer" checked><span class="mitte"><strong>Liste im Datei-Organizer</strong><small style="white-space:normal">nur die sortierte Liste und der Verlauf; die Originale im Ordner bleiben. <b>Was er aus deinen Korrekturen gelernt hat und deine eigenen Kategorien bleiben.</b></small></span></label></div>
     <label style="display:block;margin:10px 0">Zur Sicherheit das Wort <b>leeren</b> eintippen <input class="feld" name="wort" autocomplete="off" autocapitalize="off"></label>
     <div class="reihe"><button class="knopf rot" type="submit">Endgültig leeren</button><button class="knopf hell" type="button" data-a="zu">Abbrechen</button></div></form>`);
 }
 A['akte-leeren'] = () => fLeeren();
+/* Der Kern bleibt (Klaus 18.11.: „das Gelernte soll niemals gelöscht werden – das ist der Kern“): im Datei-Organizer verschwinden nur die
+   Liste der Dateien, der Verlauf, der gemerkte Ordner und ein angefangenes Einlesen. Die gelernten Regeln (im gemerkten Stand unter
+   „regeln“) werden zurückgeschrieben, die Merker im Browser (eigene Kategorien u. a.) nicht angefasst. Wie „Organizer leeren“ dort. */
+function organizerListeLeeren(){
+  return new Promise((ok, nein) => {
+    const auf = indexedDB.open('PrivateAkteOrganizer1', 1);
+    auf.onupgradeneeded = () => auf.result.createObjectStore('kv');
+    auf.onerror = () => nein(auf.error);
+    auf.onsuccess = () => { const db = auf.result;
+      try {
+        const t = db.transaction('kv', 'readwrite'), kv = t.objectStore('kv'), lies = kv.get('zustand'); let regeln = [];
+        lies.onsuccess = () => { const z = lies.result; regeln = z && Array.isArray(z.regeln) ? z.regeln : [];
+          kv.clear().onsuccess = () => { if (regeln.length) kv.put({fassung:1, ordnerName:'', quelle:'', stufe:0, dateien:[], verlauf:[], regeln, zeit:new Date().toISOString()}, 'zustand'); }; };
+        t.oncomplete = () => { db.close(); ok(regeln.length); }; t.onerror = t.onabort = () => { db.close(); nein(t.error); };
+      } catch (e) { db.close(); nein(e); }
+    };
+  });
+}
 const dbWeg = name => new Promise(ok => { const q = indexedDB.deleteDatabase(name); q.onsuccess = q.onerror = q.onblocked = () => ok(); });
 document.addEventListener('submit', async ev => { const f = ev.target; if (f.dataset.form !== 'leeren') return; ev.preventDefault();
   if (f.wort.value.trim().toLowerCase() !== 'leeren') { toast('Bitte das Wort „leeren“ eintippen.'); return; }
@@ -976,7 +994,7 @@ document.addEventListener('submit', async ev => { const f = ev.target; if (f.dat
     $('rahmenort').innerHTML = ''; rahmen.was = null; const teile = [];
     if (f.akte.checked) { const r = await T().leeren(); teile.push(`${r.geloescht} ${r.geloescht === 1 ? 'Unterlage' : 'Unterlagen'} gelöscht${r.blieb ? `, ${r.blieb} Dateien blieben liegen` : ''}`); bed.treffer = []; }
     if (f.wfpdf.checked) { await dbWeg('PrivateAkteWFPDF1'); for (const k of Object.keys(localStorage)) if (k.startsWith('pa_wfpdf_')) localStorage.removeItem(k); teile.push('Workflow PDF geleert'); }
-    if (f.organizer.checked) { await dbWeg('PrivateAkteOrganizer1'); for (const k of Object.keys(localStorage)) if (/^pa_(do-|do_|datei-organizer-)/.test(k)) localStorage.removeItem(k); teile.push('Datei-Organizer geleert'); }
+    if (f.organizer.checked) { const g = await organizerListeLeeren(); teile.push(`Liste im Datei-Organizer geleert${g ? `, ${g} gelernte ${g === 1 ? 'Regel bleibt' : 'Regeln bleiben'}` : ''}`); }
     zu(); s.frage = ''; await echtLaden(); zeigen(); toast(teile.join(' · ') + '.');
   } catch (err) { knopf.disabled = false; knopf.textContent = 'Endgültig leeren'; toast(fehlerText(err)); }
 });
