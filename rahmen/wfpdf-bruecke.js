@@ -85,11 +85,34 @@
       melde({ typ: "pa-wfpdf-ablegen", id: id, quelle: quelle, dateien: fs });
     });
   };
+  // „Teilen“ fragt, wohin (Klaus 18.11.: Teilen ging nur an die Akte – E-Mail, BookLedgerPro und andere Programme waren versperrt).
+  // Der Tipp auf einen der Knöpfe ist zugleich der frische Tipp, den das Teilen-Fenster des Geräts verlangt.
+  var wohin = function (fs) {
+    return new Promise(function (fertig) {
+      var alt = document.getElementById("pa-teilen"); if (alt) alt.remove();
+      var d = document.createElement("div"); d.id = "pa-teilen";
+      d.setAttribute("style", "position:fixed;inset:0;z-index:2147483000;background:rgba(11,49,84,.45);display:flex;align-items:center;justify-content:center;padding:16px;font:15px system-ui,sans-serif");
+      var name = fs.length === 1 ? "„" + fs[0].name + "“" : fs.length + " Dateien";
+      var knopf = "display:block;width:100%;margin-top:10px;padding:12px 14px;border-radius:12px;border:1px solid #d8e2ea;font:600 15px system-ui,sans-serif;cursor:pointer;text-align:left;";
+      d.innerHTML = '<div role="dialog" aria-modal="true" aria-label="Wohin teilen?" style="background:#fff;color:#15283a;border-radius:18px;padding:18px;max-width:420px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.25)">'
+        + '<b style="font-size:17px">Wohin damit?</b><div data-pa-name style="margin-top:4px;color:#627181;font-size:13px;word-break:break-word"></div>'
+        + '<button type="button" data-pa-teilen="akte" style="' + knopf + 'background:#107c41;color:#fff;border-color:#107c41">In die Private Akte legen</button>'
+        + '<button type="button" data-pa-teilen="geraet" style="' + knopf + 'background:#fff;color:#15283a">An ein anderes Programm teilen<br><span style="font-weight:400;font-size:12.5px;color:#627181">E-Mail, BookLedgerPro, Messenger …</span></button>'
+        + '<button type="button" data-pa-teilen="nein" style="' + knopf + 'background:#f2f7fa;color:#15283a;text-align:center">Abbrechen</button></div>';
+      d.querySelector("[data-pa-name]").textContent = name;
+      d.addEventListener("click", function (e) { var k = e.target.closest ? e.target.closest("[data-pa-teilen]") : null; if (!k && e.target !== d) return; d.remove(); fertig(k ? k.getAttribute("data-pa-teilen") : "nein"); });
+      document.body.appendChild(d);
+    });
+  };
   try {
     var N = W.navigator, teilen = N.share ? N.share.bind(N) : null, kann = N.canShare ? N.canShare.bind(N) : null;
     N.share = function (daten) {
       var fs = daten && daten.files ? Array.from(daten.files) : [];
-      if (fs.length) return abgeben(fs, "teilen");
+      if (fs.length) return wohin(fs).then(function (ziel) {
+        if (ziel === "akte") return abgeben(fs, "teilen");
+        if (ziel === "geraet") { if (!teilen) throw new Error("Dieses Gerät kann hier nicht teilen. Bitte „PDF ausgeben“ nehmen."); return teilen(daten); }
+        var ab = new Error("Teilen abgebrochen."); ab.name = "AbortError"; throw ab;
+      });
       return teilen ? teilen(daten) : Promise.reject(new Error("Teilen nicht möglich."));
     };
     N.canShare = function (daten) { if (daten && daten.files && daten.files.length) return Array.from(daten.files).every(istDatei); return kann ? kann(daten) : false; };
