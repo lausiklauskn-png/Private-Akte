@@ -9,6 +9,15 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026 abends): 0.4.21 – Wurzel zählt die Ordner (nur Basic ausgegeben)
+
+- **Klaus 18.11. (Bild vom Tablet):** bei „Alle Kategorien“ (und „Alle Absender“, „Alle Jahre“ …) steht die Zahl der Ordner darunter,
+  nicht die der Dateien (`OrdnerBaum` in `src/ui.tsx`, nur die Wurzel; der Hinweis nennt beide Zahlen). Die Ordner darunter zählen
+  weiter ihre Dateien. Fassung 0.4.21 (Code 61, Vorrat v42). UI-Probe 222 grün, Native 66 grün.
+- **Ausgegeben nur als Basic (Pages).** **APK und Windows 0.4.21 noch NICHT ausgegeben** (Klaus: wegen der Tokens) – **ab Montag
+  23.11.2026 nachziehen** (`android-release.yml` mit Tag `v0.4.21` und dem main-Commit, danach `windows-release.yml`, dann Nachweis
+  `docs/VEROEFFENTLICHUNG-0.4.21.json`), es sei denn, Klaus sagt vorher etwas anderes. Die Quellen tragen schon 0.4.21.
+
 ## Stand (18.11.2026 abends): 0.4.20 – Finden wie in der Privaten Akte
 
 - **Klaus 18.11. (Bilder vom Tablet):** (1) **Auge an der Zeile** öffnet den Steckbrief direkt unter der Zeile (`[data-steckbrief-unter]`),
@@ -19,6 +28,9 @@ wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). P
   (4) **Kartenhöhe:** beide Karten höchstens bis zum unteren Fensterrand (mindestens 300 px), darin rollen; die Überschrift der Liste
   bleibt stehen; schmal der Baum höchstens halbe Fensterhöhe (`--finden-hoehe`, `--finden-baum`). Gilt in Basic, Pro und im Rahmen.
   Fassung 0.4.20 (Code 60, Vorrat v41). UI-Probe 222 grün, Native 66 grün. Am Gerät ungeprüft.
+  **Veröffentlicht 18.11.2026 (Klaus' Wort) als Android und Windows**, Nachweis `docs/VEROEFFENTLICHUNG-0.4.20.json` – nicht erneut ausgeben;
+  nächste Ausgabe 0.4.21 (Code 61). **Offen:** die Probe „Verlauf: aus den geänderten Bereichen ist gelernt“ war im PR-Lauf einmal rot
+  (47 Einträge, 0 Regeln), im Lauf davor, danach auf main und hier grün – Ursache nicht gefunden (Zeitpunkt des Speicherns?).
 
 ## Stand (18.11.2026 abends): 0.4.19 – Knöpfe „An die Private Akte“ und „An die Familienakte“ in der eigenständigen App
 

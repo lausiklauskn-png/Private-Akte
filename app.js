@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -294,7 +294,7 @@ function vAkten(){
   const zweig = x => `<li><button class="eknoten${k === x.k ? ' an' : ''}${auf(x) ? ' offen' : ''}" data-a="akte-auf" data-id="${esc(x.k)}" aria-expanded="${auf(x)}"><span class="epfeil${x.kinder.length ? '' : ' leer'}">${ic('weiter')}</span>${x.k.startsWith('p:') ? personIc : ordner}<span class="ename">${esc(x.t)}</span><b>${x.n}</b></button>${x.kinder.length && auf(x) ? `<ul>${x.kinder.map(c => `<li><button class="eknoten unter${k === c.k ? ' an' : ''}" data-a="akte-auf" data-id="${esc(c.k)}"><span class="epfeil leer"></span>${ordner}<span class="ename">${esc(c.t)}</span><b>${c.n}</b></button></li>`).join('')}</ul>` : ''}</li>`;
   return `<h1 class="titel">Akten</h1>
    <div class="ekopf akopf"><button class="chip" data-a="person-neu">${ic('plus')} Person</button><button class="chip" data-a="akte-neu">${ic('plus')} Neue Akte</button>${ak.beispiel ? `<button class="chip" data-a="beispiel-weg">Beispielfamilie entfernen</button>` : !ak.personen.length && l.length ? `<button class="chip" data-a="beispiel-an">Beispielfamilie anlegen</button>` : ''}</div>
-   <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${l.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
+   <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${AK().personen.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
     <section class="ekarte elistekarte"><h3 class="egewaehlt apfad">${pfad.map(esc).join(' <span>›</span> ')}<b>${liste.length}</b></h3>
      ${a ? `<div class="reihe" style="margin:0 12px 6px"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
      <div id="akte-liste" class="eliste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(echtReihe).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
@@ -334,7 +334,7 @@ function woLiegtWas(){
 function vBaum(){
   const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video>` : '';
   s.reisen = 0;
-  return `<h1 class="titel">Der Baum</h1><p class="unter">Eine App. In der Mitte die Akte, an den Ästen die Tools. <a href="#wo-liegt-was" data-a="wo">Wo liegt was? ↓</a></p>
+  return `<h1 class="titel">Der Baum</h1>
   <div class="abschnitt"><div class="baumbild"><img src="./bilder/baum.jpg" width="1280" height="716" alt="Ein großer Baum am Abend. In der Mitte eine leuchtende Halle, an den Ästen kleine Städte. An einem neuen Ast entsteht gerade eine weitere Stadt mit Kränen, bunte Helfer schauen zu.">
    <svg class="wege" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M13 84 C9 90 5 93 0 95" fill="none" stroke="#ffe7ad" stroke-width="2.5" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/></svg>
    <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${(echt.liste || []).length} Unterlagen</small></button>
@@ -714,7 +714,7 @@ function echtBaum(l){
   const auf = klapp.ebaum !== 0, mon = u => MONATE.indexOf(u), ast = 'data-a="echt-knoten"';
   const ordner = `<svg class="icon eordner" viewBox="0 0 24 24" aria-hidden="true">${P.akten}</svg>`;
   const kinder = g => `<ul>${[...unter.get(g)].sort((a, b) => echtSort() === 'datum' ? -ab * (mon(a[0]) - mon(b[0])) : vgl(a[0], b[0])).map(([u, n]) => `<li><button class="eknoten unter${echt.knoten === g + SEP + u ? ' an' : ''}" ${ast} data-k="${esc(g + SEP + u)}"><span class="epfeil leer"></span>${ordner}<span class="ename">${esc(u)}</span><b>${n}</b></button></li>`).join('')}</ul>`;
-  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><ul class="ebaumliste"><li><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" ${ast} data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span>${ordner}<span class="ename">${WURZEL[echtSort()] || 'Alle Kategorien'}</span><b>${l.length}</b></button>
+  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><ul class="ebaumliste"><li><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" ${ast} data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span>${ordner}<span class="ename">${WURZEL[echtSort()] || 'Alle Kategorien'}</span><b data-tipp="${gruppen.length === 1 ? 'eine Gruppe' : gruppen.length + ' Gruppen'} · ${l.length} Unterlagen">${gruppen.length}</b></button>
     ${auf ? `<ul>${gruppen.map(([g, n]) => `<li><button class="eknoten${echt.knoten === g || String(echt.knoten).startsWith(g + SEP) ? ' an' : ''}${echt.auf.has(g) ? ' offen' : ''}" ${ast} data-k="${esc(g)}" aria-expanded="${echt.auf.has(g)}"><span class="epfeil">${ic('weiter')}</span>${ordner}<span class="ename">${esc(g)}</span><b>${n}</b></button>${echt.auf.has(g) ? kinder(g) : ''}</li>`).join('')}</ul>` : ''}</li></ul></div>`;
 }
 const echtSortZeile = () => `<div class="ekopf"><label class="sortzeile">Sortieren <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>

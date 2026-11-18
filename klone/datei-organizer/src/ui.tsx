@@ -68,7 +68,7 @@ export function OrdnerBaum({ wurzel, gewaehlt, waehlen, label, wurzelTitel }: { 
     return <li key={k.id}>
       <button type="button" className={`ast ${k.ton ? `ton-${k.ton}` : ""}`} aria-current={gewaehlt === k.id} aria-expanded={hatKinder ? auf : undefined} data-ast={titel} data-wurzel={tiefe === 0 ? "" : undefined}
         onClick={() => { waehlen(k); if (hatKinder) setOffen((o) => { const n = new Set(o); if (n.has(k.id) && gewaehlt === k.id) n.delete(k.id); else n.add(k.id); return n; }); }}>
-        {hatKinder ? <ChevronRight size={16} className="pfeil"/> : <span className="pfeil"/>}<Folder size={16} className="ordner-ico"/><span className="name">{titel}</span><span className="zahl">{k.anzahl}</span>
+        {hatKinder ? <ChevronRight size={16} className="pfeil"/> : <span className="pfeil"/>}<Folder size={16} className="ordner-ico"/><span className="name">{titel}</span><span className="zahl" title={tiefe === 0 ? `${k.kinder.length} Ordner · ${k.anzahl} Dateien` : undefined}>{tiefe === 0 ? k.kinder.length : k.anzahl}</span>
       </button>
       {hatKinder && auf && <ul>{k.kinder.map((c) => zweig(c, tiefe + 1))}</ul>}
     </li>;
