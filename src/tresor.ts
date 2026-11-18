@@ -1,6 +1,6 @@
 // Brücke zwischen der Hülle (app.js) und dem unveränderten Tresor der Familienakte (klone/familienakte).
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
-import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, LIMITS,
+import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, LIMITS,
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
@@ -38,6 +38,16 @@ const tresor = {
   inhaltsWoerter: (frage: string) => teilWoerter(frage),
   async datei(id: string) { return readLocalDocumentFile(await browserVault(), id); },
   async herausnehmen(id: string) { return dokumenteAussortieren(await browserVault(), [id]); },
+  /** Akte leeren (Klaus 18.11.): alle Unterlagen endgültig löschen – erst aussortieren, dann „Papierkorb leeren“ des Klons (auch
+   *  früher Herausgenommenes). Dazu die eigenen Merker der Suche (gerechnete Abschnitte, gelesener Text). Kein Zurück ohne Backup. */
+  async leeren() {
+    const tresor = await browserVault(), alle = await listLocalDocuments(tresor);
+    const offen = alle.filter((d) => !d.aussortiert).map((d) => d.id);
+    if (offen.length) await dokumenteAussortieren(tresor, offen);
+    const r = alle.length ? await dokumenteEndgueltigLoeschen(tresor, alle.map((d) => d.id)) : { geloescht: 0, dateiBlieb: [] as string[], fehler: [] as string[] };
+    for (const db of ["PrivateAkteSuche1", "PrivateAkteText1"]) await new Promise<void>((ok) => { const q = indexedDB.deleteDatabase(db); q.onsuccess = q.onerror = q.onblocked = () => ok(); });
+    return { geloescht: r.geloescht, blieb: r.dateiBlieb.length, fehler: r.fehler };
+  },
 };
 
 // Tresor exportieren / importieren: die Vollsicherung der Familienakte, unverändert. Der Ordner auf dem Gerät, der SD-Karte oder

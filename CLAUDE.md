@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.2)
+## Stand (18.11.2026, Vorschau 0.5.3)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.3 Akte leeren (Klaus 18.11.: „Backup anlegen, beiseite räumen, Akte komplett leeren – mit den Nebenprogrammen“; am Tablet
+  bestätigt mit 0.5.1: eingeklappte Abschnitte, Sortierung, der Scan steht oben):** „Exportieren“ › „Akte leeren …“ (`fLeeren`).
+  Drei Haken, alle gesetzt: Unterlagen in der Akte (`tresor.leeren`: erst `dokumenteAussortieren`, dann `dokumenteEndgueltigLoeschen`
+  des Klons – auch früher Herausgenommenes; dazu die Merker der Suche `PrivateAkteSuche1`/`PrivateAkteText1`), Bibliothek von
+  Workflow PDF (`PrivateAkteWFPDF1`, `pa_wfpdf_*`), Liste im Datei-Organizer (`PrivateAkteOrganizer1`, `pa_do…` – **damit auch das
+  dort Gelernte und eigene Kategorien**, anders als „Organizer leeren“ im Organizer selbst). Das Fenster nennt das letzte Backup
+  oder warnt, dass es keines gibt; geleert wird erst, wenn das Wort „leeren“ eingetippt ist. Kein Zurück ohne Backup. Die Beispiele
+  der Vorschau, das Sprachmodell und der Offline-Vorrat bleiben. Probe 248 grün (3 neu). Am Tablet ungeprüft.
 - **0.5.2 „Teilen“ in Workflow PDF fragt, wohin (Klaus 18.11.: Teilen ging nur an die Akte – E-Mail, BookLedgerPro und andere
   Programme waren versperrt):** die Brücke zeigt ein kleines Fenster „Wohin damit?“ – „In die Private Akte legen“, „An ein anderes
   Programm teilen“ (das Teilen-Fenster des Geräts, der Tipp auf den Knopf ist der nötige frische Tipp), „Abbrechen“

@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.5.2 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.5.3 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -251,6 +251,14 @@ const { chromium } = require('playwright');
       await w2.evaluate(async () => { for (const d of await WFP.DB.all('docs')) { await WFP.DB.del('files', d.id); await WFP.DB.del('docs', d.id); } }).catch(() => {});
       await klick('[data-a=rahmen-zu]'); await p.evaluate(id => window.PrivateAkteTresor.herausnehmen(id), inAkte);
     }
+    // Akte leeren: Unterlagen endgültig weg, die Bibliothek von Workflow PDF und die Liste des Organizers auch
+    await klick('.nav [data-zu=start]');
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.ablegen(new File(['Leerprobe eins'], 'Leerprobe-1.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); const d = await t.ablegen(new File(['Leerprobe zwei'], 'Leerprobe-2.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); await t.herausnehmen(d.id); localStorage.setItem('pa_wfpdf_probe', '1'); localStorage.setItem('pa_do-probe', '1'); await echtLaden(); });
+    await p.evaluate(() => fLeeren()); await klick('[data-form=leeren] [type=submit]'); soll((await p.locator('[data-form=leeren]').count()) === 1, 'Akte leeren: ohne das Wort „leeren“ geschieht nichts');
+    await p.fill('[data-form=leeren] [name=wort]', 'Leeren'); await klick('[data-form=leeren] [type=submit]'); await p.waitForFunction(() => !document.querySelector('[data-form=leeren]'), null, {timeout:60000});
+    const leer = await p.evaluate(async () => { const dbs = (await indexedDB.databases()).map(d => d.name); return { n:(await window.PrivateAkteTresor.liste()).length, wf:dbs.includes('PrivateAkteWFPDF1'), org:dbs.includes('PrivateAkteOrganizer1'), merker:Object.keys(localStorage).filter(k => /^pa_(wfpdf_|do-)/.test(k)).length, text:document.body.innerText.includes('Noch nichts hineingelegt') }; });
+    soll(leer.n === 0 && !leer.wf && !leer.org && leer.merker === 0 && leer.text, 'Akte leeren: Unterlagen, Workflow PDF und Organizer sind leer (' + JSON.stringify(leer) + ')');
+    await p.evaluate(async () => { const t = window.PrivateAkteTresor; const d = await t.ablegen(new File(['Leerprobe eins'], 'Leerprobe-1.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); const ok = !!d.id; await t.herausnehmen(d.id); window.__wieder = ok; }); soll(await p.evaluate(() => window.__wieder), 'Akte leeren: dieselbe Datei lässt sich danach wieder ablegen');
     soll((await p.locator('.fuss a').count())===4,'Fuß-Links');
     await p.goto('http://localhost:8765/rechtliches.html'); soll((await text()).includes('Impressum'),'rechtliches'); await breit('rechtliches');
     await p.close();

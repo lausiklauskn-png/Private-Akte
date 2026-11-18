@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -726,7 +726,7 @@ function fSicherung(){
   fenster(`${fk('Sichern & Exportieren','Ein Backup ist die ganze Akte als verschlüsselter Ordner – dort, wo du willst.')}
    <div class="liste"><div class="zeile"><span class="mitte"><strong>In der Akte auf diesem Gerät</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'} · im Speicher des Browsers</small></span></div>
    ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Letztes Backup: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch kein Backup</strong><small>die Akte liegt nur im Speicher des Browsers</small></span></div>`)(letzterExport())}</div>
-   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Backup erstellen</button></div>
+   ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Backup erstellen</button><button class="knopf hell" data-a="akte-leeren">Akte leeren …</button></div>
    <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig ein Backup erstellen – auf das Gerät, eine SD-Karte oder einen Stick. Einlesen geht über „Importieren“.</p>`
    : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Ein Backup geht in Chrome oder Edge.</p>`}`);
 }
@@ -953,6 +953,32 @@ addEventListener('message', async ev => {
       antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:true, text:t}); toast(t); rahmenMelden(neu ? t.replace(' (Sonstiges)', '') + ' Zurück mit „‹ Akte“.' : t);
     } catch (err) { antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:false, text:fehlerText(err)}); toast(fehlerText(err)); rahmenMelden(fehlerText(err), false); }
   }
+});
+/* ---------- Akte leeren (Klaus 18.11.: Backup anlegen, beiseite legen, dann alles leeren – auch die Tools) ---------- */
+function fLeeren(){
+  const n = (echt.liste || []).length, l = letzterExport();
+  fenster(`${fk('Akte leeren', 'Endgültig – zurück geht es nur über ein Backup')}
+   <p class="hinweis">${l ? `Letztes Backup: ${uhr(l.erstellt)} in „${esc(l.ziel)}“. Was danach dazukam, ist nicht gesichert.` : '<b class="warn">Es gibt noch kein Backup.</b> Was du jetzt leerst, ist weg.'}</p>
+   <form data-form="leeren"><div class="liste">
+    <label class="ordzeile"><input type="checkbox" class="haken" name="akte" checked><span class="mitte"><strong>Unterlagen in der Akte</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}, auch früher Herausgenommenes</small></span></label>
+    <label class="ordzeile"><input type="checkbox" class="haken" name="wfpdf" checked><span class="mitte"><strong>Bibliothek von Workflow PDF</strong><small>Scans und Arbeitskopien im Tool, samt seinen Einstellungen</small></span></label>
+    <label class="ordzeile"><input type="checkbox" class="haken" name="organizer" checked><span class="mitte"><strong>Liste im Datei-Organizer</strong><small style="white-space:normal">sortierte Liste und Verlauf; die Originale im Ordner bleiben. Was er aus deinen Korrekturen gelernt hat, geht mit weg.</small></span></label></div>
+    <label style="display:block;margin:10px 0">Zur Sicherheit das Wort <b>leeren</b> eintippen <input class="feld" name="wort" autocomplete="off" autocapitalize="off"></label>
+    <div class="reihe"><button class="knopf rot" type="submit">Endgültig leeren</button><button class="knopf hell" type="button" data-a="zu">Abbrechen</button></div></form>`);
+}
+A['akte-leeren'] = () => fLeeren();
+const dbWeg = name => new Promise(ok => { const q = indexedDB.deleteDatabase(name); q.onsuccess = q.onerror = q.onblocked = () => ok(); });
+document.addEventListener('submit', async ev => { const f = ev.target; if (f.dataset.form !== 'leeren') return; ev.preventDefault();
+  if (f.wort.value.trim().toLowerCase() !== 'leeren') { toast('Bitte das Wort „leeren“ eintippen.'); return; }
+  if (!f.akte.checked && !f.wfpdf.checked && !f.organizer.checked) { toast('Nichts gewählt.'); return; }
+  const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true; knopf.textContent = 'Wird geleert …';
+  try {
+    $('rahmenort').innerHTML = ''; rahmen.was = null; const teile = [];
+    if (f.akte.checked) { const r = await T().leeren(); teile.push(`${r.geloescht} ${r.geloescht === 1 ? 'Unterlage' : 'Unterlagen'} gelöscht${r.blieb ? `, ${r.blieb} Dateien blieben liegen` : ''}`); bed.treffer = []; }
+    if (f.wfpdf.checked) { await dbWeg('PrivateAkteWFPDF1'); for (const k of Object.keys(localStorage)) if (k.startsWith('pa_wfpdf_')) localStorage.removeItem(k); teile.push('Workflow PDF geleert'); }
+    if (f.organizer.checked) { await dbWeg('PrivateAkteOrganizer1'); for (const k of Object.keys(localStorage)) if (/^pa_(do-|do_|datei-organizer-)/.test(k)) localStorage.removeItem(k); teile.push('Datei-Organizer geleert'); }
+    zu(); s.frage = ''; await echtLaden(); zeigen(); toast(teile.join(' · ') + '.');
+  } catch (err) { knopf.disabled = false; knopf.textContent = 'Endgültig leeren'; toast(fehlerText(err)); }
 });
 const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
 const zurTiefe = () => ($('rahmenort').innerHTML ? 1 : 0) + ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
