@@ -17,7 +17,7 @@ import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const wurzel = fileURLToPath(new URL("..", import.meta.url));
-const V = "2"; // bei jeder Änderung an Brücke oder Farbdatei erhöhen
+const V = "3"; // bei jeder Änderung an Brücke oder Farbdatei erhöhen
 const einmal = (s, was, womit, name) => { const teile = typeof was === "string" ? s.split(was) : s.split(was); if (teile.length !== 2) throw new Error(`${name}: Stelle nicht genau einmal gefunden – der Klon ist anders gebaut, nicht raten.`); return teile.join(womit); };
 
 const SEITEN = [

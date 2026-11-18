@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.1)
+## Stand (18.11.2026, Vorschau 0.5.2)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.2 „Teilen“ in Workflow PDF fragt, wohin (Klaus 18.11.: Teilen ging nur an die Akte – E-Mail, BookLedgerPro und andere
+  Programme waren versperrt):** die Brücke zeigt ein kleines Fenster „Wohin damit?“ – „In die Private Akte legen“, „An ein anderes
+  Programm teilen“ (das Teilen-Fenster des Geräts, der Tipp auf den Knopf ist der nötige frische Tipp), „Abbrechen“
+  (`wohin` in `rahmen/wfpdf-bruecke.js`). Der Scan über den roten Knopf geht weiter ohne Frage in die Akte. Probe 242 grün
+  (Teilen des Geräts ist dort nicht vorhanden – geprüft ist, dass Abbrechen und „anderes Programm“ nichts in die Akte legen).
+  **Am Tablet ungeprüft**, vor allem ob Android das Teilen-Fenster aus dem Rahmen heraus öffnet. Klaus' Frage nach „Modul 25“:
+  in den Repos dieser Sitzung ist Modul 25 die Maske zum Pseudonymisieren (`25_pseudonym.js`), kein Teilen-Baustein – nicht weiter nachgesehen.
 - **0.5.1 nach Klaus' erstem Test am Tablet (18.11. vormittags, 0.5.0 über Pages: Organizer im Rahmen, Übergabe von 98 Dateien und
   Scan über den roten Knopf liefen):** (1) **Fehler behoben:** bei der Übergabe standen alle Dateien auf „Familie & persönliche
   Dokumente“ und wurden so abgelegt. Zwei Ursachen: die Übernahme des Klons nimmt nur Pfade ohne Schrägstrich (der Testordner und

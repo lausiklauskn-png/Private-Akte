@@ -41,6 +41,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A25 | Nach 98 übernommenen Dateien ist die Startseite endlos; ein neuer Scan ist darin nicht zu finden. | 0.5.1: Abschnitte der Startseite als Knöpfe zum Aufklappen, Bereiche seitlich; „Deine Unterlagen“ sortierbar, ab Werk das zuletzt Abgelegte oben. |
 | A26 | Die Übernahme aus dem Organizer nimmt nur Dateien direkt im Ordner – Unterordner kommen ohne Einordnung. | 0.5.1 (nur direkte Übergabe): Pfad flach geschrieben, dann greift die unveränderte Übernahme. In der Familienakte selbst bleibt die Grenze. |
 | A27 | Nach „PDF erstellen“ im Scanner sagt nichts, dass der Scan schon in der Akte liegt; „PDF ausgeben“ leuchtet. | 0.5.1: Bestätigung in der Leiste des Rahmens. Der leuchtende Knopf ist offen. |
+| A28 | „Teilen“ im eingebetteten Workflow PDF geht nur an die Akte; E-Mail und andere Programme sind versperrt. | 0.5.2: Fenster „Wohin damit?“ – Akte oder anderes Programm. In der Familienakte geht Teilen aus dem Klon weiter nur an die Akte. |
 
 ## B. Vereinfachungen der Hülle
 

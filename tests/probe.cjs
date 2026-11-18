@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.5.1 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.5.2 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -232,7 +232,13 @@ const { chromium } = require('playwright');
     const wfLage = await wf.evaluate(async () => ({ marke:document.documentElement.dataset.paEingebettet, sw:(await navigator.serviceWorker.getRegistrations()).length, dbs:(await indexedDB.databases()).map(d => d.name), rot:getComputedStyle(document.documentElement).getPropertyValue('--rot-d').trim(), netz:!!document.querySelector('script[src*="sbkim-init"]'), inst:getComputedStyle(document.getElementById('btnInstall')).display, scanner:!!document.querySelector('.scan, #scanner, [class*=scan-]') }));
     soll(wfLage.marke === '1' && wfLage.sw === 0 && wfLage.dbs.includes('PrivateAkteWFPDF1') && !wfLage.dbs.includes('WorkflohPDF1') && !wfLage.netz && wfLage.inst === 'none' && wfLage.scanner, 'Workflow PDF im Rahmen: Brücke, eigene Bibliothek, kein Worker, kein Mycel, Scanner offen (' + JSON.stringify(wfLage) + ')');
     const PDF = '%PDF-1.4\n1 0 obj<</Type/Catalog/Pages 2 0 R>>endobj\n2 0 obj<</Type/Pages/Kids[3 0 R]/Count 1>>endobj\n3 0 obj<</Type/Page/Parent 2 0 R/MediaBox[0 0 400 200]/Contents 4 0 R/Resources<</Font<</F1 5 0 R>>>>>>endobj\n4 0 obj<</Length 44>>stream\nBT /F1 18 Tf 40 100 Td (Probe Rahmen) Tj ET\nendstream endobj\n5 0 obj<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>endobj\ntrailer<</Root 1 0 R>>\n%%EOF';
-    const geteilt = await wf.evaluate(async ([pdf, name]) => { try { await navigator.share({files:[new File([pdf], `Probe-Teilen-${name}.pdf`, {type:'application/pdf'})]}); return 'ok'; } catch (e) { return String(e.message); } }, [PDF, name]);
+    // „Teilen“ fragt, wohin: Abbrechen legt nichts ab, „anderes Programm“ ruft das Teilen des Geräts (hier gestellt), „Akte“ legt ab
+    await wf.evaluate(() => { window.__geraet = 0; const N = Object.getPrototypeOf(navigator); });
+    const teil = (ziel, datei) => wf.evaluate(async ([pdf, datei, ziel]) => { const lauf = navigator.share({files:[new File([pdf], datei, {type:'application/pdf'})]}).then(() => 'ok', e => e.name === 'AbortError' ? 'abgebrochen' : String(e.message)); await new Promise(r => setTimeout(r, 100)); const k = document.querySelector(`#pa-teilen [data-pa-teilen=${ziel}]`); if (!k) return 'kein Fenster'; k.click(); return lauf; }, [PDF, datei, ziel]);
+    const nein = await teil('nein', `Probe-Nein-${name}.pdf`), geraet = await teil('geraet', `Probe-Geraet-${name}.pdf`);
+    const nichtDa = await p.evaluate(async name => (await window.PrivateAkteTresor.liste()).filter(x => /^Probe-(Nein|Geraet)-/.test(x.originalName)).length, name);
+    soll(nein === 'abgebrochen' && nichtDa === 0 && geraet !== 'kein Fenster' && geraet !== 'ok-akte', 'Workflow PDF: Teilen fragt wohin; Abbrechen und „anderes Programm“ legen nichts in die Akte (' + nein + ' / ' + geraet + ')');
+    const geteilt = await teil('akte', `Probe-Teilen-${name}.pdf`);
     const inAkte = await p.evaluate(async name => { const t = window.PrivateAkteTresor, d = (await t.liste()).find(x => x.originalName === `Probe-Teilen-${name}.pdf`); return d ? d.id : ''; }, name);
     soll(geteilt === 'ok' && !!inAkte, 'Workflow PDF: „Teilen“ legt die Datei in die Akte (' + geteilt + ')');
     soll(/liegt jetzt in der Privaten Akte/.test(await p.locator('#rahmen-meldung').innerText()) && await p.locator('#rahmen-meldung').isVisible(), 'Workflow PDF: Bestätigung steht sichtbar in der Leiste des Rahmens');
