@@ -59,6 +59,18 @@ ein Umzug zwischen zwei Speichern kann Unterlagen verlieren oder doppeln; eine G
 - Private Brain hat heute einen anderen Speicher und kein Register wie die Familienakte – der gemeinsame Kern ist ein eigener
   größerer Schritt (Plan in einer eigenen Sitzung).
 
+## Bank und Verfahren von Hand einstellen (Klaus 18.11.)
+
+- **Die Bank und der Weg, auf dem die Daten hereinkommen, stellt der Nutzer selbst ein** – kein festes Verfahren für eine Bank.
+  Je Konto ein Eintrag: Name der Bank, Kontoname, Verfahren (CAMT, CSV, Excel; später FinTS/PSD2 in BookLedgerPro), bei CSV/Excel die
+  Spaltenzuordnung. Gemerkt und jederzeit änderbar; mehrere Konten möglich. Keine Zugangsdaten in diesem Eintrag.
+- **Foto oder Screenshot des Auszugs (Klaus: „theoretisch würde es reichen, aber nicht gut – dann gehen Daten vielleicht verloren“):**
+  Meinung der Sitzung: nicht als Weg für die Buchungen. Die Texterkennung verliest Beträge und Ziffern, ein Screenshot zeigt oft nur
+  einen Ausschnitt, und für die Steuer muss die Grundlage vollständig sein. **Nicht im ersten Bau.** Wenn überhaupt später, dann
+  nur als Notweg: jede erkannte Zeile wird einzeln bestätigt, der Kontostand muss aufgehen, die Buchungen tragen die Marke „aus Foto“
+  und werden ersetzt, sobald ein richtiger Auszug für den Zeitraum eingelesen wird. Das Foto selbst kann jederzeit als Unterlage in
+  die Akte (wie ein Bon), ohne Buchungen daraus zu machen.
+
 ## Noch offen bei Klaus (aus dem Brief)
 
 - **Bank: Openbank (Santander)** (Klaus 18.11.). Welches Format das Online-Banking ausgibt (CSV, CAMT, Excel, nur PDF), weiß Klaus
@@ -82,6 +94,8 @@ Bau das Portemonnaie fertig, Teil „Bank“ (Private Akte 0.8.0):
 1. Kontoauszug einlesen: CAMT.053 (XML) und CSV (Spalten zuordnen, Zuordnung je Bank merken; Klaus hat Openbank –
    sein Exportformat zuerst erfragen, ggf. auch .xlsx). Das Original wird Unterlage
    in der Akte (Bereich „Bank & Finanzen“ o. ä. aus den Bereichen des Klons), jede Buchung ein Posten im Fach „Bank“ im Register.
+1a. Bank und Verfahren von Hand einstellen (je Konto: Bank, Name, Verfahren, Spaltenzuordnung; änderbar, mehrere Konten).
+   Kein Einlesen aus Foto/Screenshot (siehe oben).
 2. Jede Buchung nur einmal (Schlüssel: Referenz der Bank, sonst Tag + Betrag + Zweck + Gegenkonto). Wiederholtes Einlesen
    bringt nur Neues; die Meldung nennt neu / schon da.
 3. Kontostand aus dem Auszug, nachgerechnet; „stimmt“ oder die Lücke. Monatsansicht: Bargeld, Bank, Summe.
