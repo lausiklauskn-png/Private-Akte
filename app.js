@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -219,15 +219,19 @@ function treffer(){
    ${stand}`;
 }
 const terminZeile = t => `<button class="zeile" data-a="${t.doc?'doc':'kalender'}" data-id="${t.doc||''}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${datum(t.am)}${t.doc?' · '+esc(docs.find(d => d.id===t.doc).titel):''}</small></span><span class="marke2 ${tage(t)<14?'m-rot':'m-grau'}">${tage(t)<0?'vorbei':tage(t)===0?'heute':'noch '+tage(t)+' Tage'}</span>${ic('weiter')}</button>`;
+/* Abschnitte der Startseite als Knopf, eingeklappt (Klaus 18.11.: bei 100 Unterlagen wird die Seite sonst endlos). Offen/zu wird gemerkt. */
+const klapp = (() => { try { return JSON.parse(localStorage.getItem('pa_klapp') || '{}') || {}; } catch { return {}; } })();
+const klappTeil = (id, titel, unter, innen, attr = '') => `<details class="abschnitt klapp" ${attr} data-klapp="${id}" ${klapp[id] ? 'open' : ''}><summary><b>${titel}</b><span>${unter}</span>${ic('weiter')}</summary><div class="liste">${innen}</div></details>`;
+document.addEventListener('toggle', ev => { const d = ev.target; if (!d.dataset || !d.dataset.klapp) return; klapp[d.dataset.klapp] = d.open ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt dann bis zum Neuladen */ } }, true);
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
 function vStart(){
   const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
   return `<h1 class="titel nurpc">Was möchtest du finden?</h1>${sucheFeld()}
   ${s.frage ? `<div id="bedort">${bedZeile()}</div><div id="trefferort">${treffer()}</div>` : `
   ${echtAbschnitt()}
-  <div class="abschnitt"><h2>Fällig <span>${termine.length} Termine und Fristen</span></h2><div class="liste">${termineSortiert().slice(0,3).map(terminZeile).join('')}</div></div>
-  <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln sechs">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
-  <div class="abschnitt"><h2>Zuletzt abgelegt</h2><div class="liste">${zuletzt.map(d => docZeile(d)).join('')}</div></div>`}
+  ${klappTeil('faellig', 'Fällig', `${termine.length} Termine und Fristen`, termineSortiert().slice(0,3).map(terminZeile).join(''))}
+  <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln seitlich">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
+  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}
   <p class="hinweis">Vorschau ${FASSUNG} · Gespeichert wird nur, was du unter „Deine Unterlagen“ hineinlegst – auf diesem Gerät. Alles andere ist erfunden.</p>${fuss()}`;
 }
 function vAkten(){
@@ -558,13 +562,22 @@ async function echtLaden(){
 /* Fundstelle am Treffer (Klaus 17.11.): der Satz, in dem es gefunden wurde, mit der Seite. */
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
 const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
+/* Sortierung von „Deine Unterlagen“ (Klaus 18.11.: der neue Scan war zwischen 100 Unterlagen nicht zu finden). Ab Werk: zuletzt abgelegt oben. */
+const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich']];
+const echtSort = () => { try { const w = localStorage.getItem('pa_sort'); return ECHT_SORT.some(x => x[0] === w) ? w : 'neu'; } catch { return 'neu'; } };
+function echtSortiert(l){
+  const w = echtSort(), text = (a, b) => String(a).localeCompare(String(b), 'de', {numeric:true, sensitivity:'base'}), neu = (a, b) => text(b.addedAt || '', a.addedAt || '');
+  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b)}[w];
+  return [...l].sort(f);
+}
+document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } mainZeigen(); });
 function echtAbschnitt(){
   const l = echt.liste;
   const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
     : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
     : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
-    : l.map(d => echtZeile(d)).join('');
-  return `<div class="abschnitt" id="echt" data-bereit="${l === null ? 0 : 1}"><h2>Deine Unterlagen <span>echt · auf diesem Gerät gespeichert</span></h2><div class="liste">${innen}</div></div>`;
+    : `<label class="sortzeile">Sortiert nach <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>` + echtSortiert(l).map(d => echtZeile(d)).join('');
+  return klappTeil('echt', 'Deine Unterlagen', `${l && !echt.fehler ? l.length + ' · ' : ''}echt · auf diesem Gerät gespeichert`, innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
   echt.datei = datei;
@@ -592,8 +605,8 @@ const ord = { ordner:'', index:false, grund:'', stuecke:[], laeuft:false };
 function fOrdner(){
   const holen = ord.stuecke.filter(x => !x.doppelt), doppelt = ord.stuecke.length - holen.length, wahl = echtBereiche();
   const zeile = x => `<label class="ordzeile"><input type="checkbox" class="haken" name="d" value="${esc(x.name)}" checked aria-label="${esc(x.name)} übernehmen">
-    <span class="mitte"><strong>${esc(x.name)}</strong><small style="white-space:normal">${[x.art, x.datum ? echtDatum(x.datum) : '', echtGroesse(x.groesse), x.text ? 'Text gelesen' : ''].filter(Boolean).map(esc).join(' · ')}${x.warnung ? `<br><b class="warn">${esc(x.warnung)}</b>` : ''}</small></span>
-    <select class="feld schmal" name="b" data-name="${esc(x.name)}" aria-label="Bereich für ${esc(x.name)}">${[...new Set([x.bereich, ...wahl].filter(Boolean))].map(b => `<option ${b === (x.bereich || 'Sonstiges') ? 'selected' : ''}>${esc(b)}</option>`).join('')}</select></label>`;
+    <span class="mitte"><strong>${esc(x.name.replace(/∕/g, '/'))}</strong><small style="white-space:normal">${[x.art, x.datum ? echtDatum(x.datum) : '', echtGroesse(x.groesse), x.text ? 'Text gelesen' : ''].filter(Boolean).map(esc).join(' · ')}${x.warnung ? `<br><b class="warn">${esc(x.warnung)}</b>` : ''}</small></span>
+    <select class="feld schmal" name="b" data-name="${esc(x.name)}" aria-label="Bereich für ${esc(x.name)}">${[...new Set([x.bereich || 'Sonstiges', ...wahl].filter(Boolean))].map(b => `<option ${b === (x.bereich || 'Sonstiges') ? 'selected' : ''}>${esc(b)}</option>`).join('')}</select></label>`;
   fenster(`${fk('Ordner in die Akte legen', esc(ord.ordner))}
    <p class="hinweis">${ord.index ? 'Die Einordnung kommt aus dem Datei-Organizer. Du kannst den Bereich je Datei ändern oder Dateien abwählen.' : `In diesem Ordner liegt keine Einordnung aus dem Datei-Organizer${ord.grund ? ' (' + esc(ord.grund) + ')' : ''}. Die Dateien kommen nach „Sonstiges“, wenn du nichts anderes wählst.`}${doppelt ? ` ${doppelt} doppelte ${doppelt === 1 ? 'Datei bleibt' : 'Dateien bleiben'} im Ordner.` : ''}</p>
    ${holen.length ? `<form data-form="ordner"><div class="liste ordliste">${holen.map(zeile).join('')}</div>
@@ -896,13 +909,17 @@ const rahmen = { was:null, wartet:null };
 function fRahmen(was, frage = '', dateien = null){
   const r = RAHMEN[was]; zu(); rahmen.was = was; rahmen.wartet = dateien;
   $('rahmenort').innerHTML = `<div class="rahmenfenster" style="${r.stil}" role="dialog" aria-modal="true" aria-label="${r.name}">
-   <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
+   <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><span class="rahmenmeldung" id="rahmen-meldung" role="status" aria-live="polite"></span><button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
    <iframe id="rahmen" title="${r.name}" allow="camera; microphone; clipboard-write; web-share; fullscreen"></iframe></div>`;
   /* Lädt im Rahmen je die ungepatchte Startseite des Klons (Neuladen, Link „zurück zur App“), kommt gleich wieder die Seite mit Brücke. */
   const f = $('rahmen'), adresse = `./rahmen/${r.seite}?v=${FASSUNG}${frage ? '&' + frage : ''}`;
   f.addEventListener('load', () => { try { const w = f.contentWindow; if (!w.document.documentElement.dataset.paEingebettet && /(~rahmen|\/|\/index\.html)$/.test(w.location.pathname)) f.src = `./rahmen/${r.seite}?v=${FASSUNG}`; } catch { /* fremde Seite: bleibt */ } });
   f.src = adresse;
 }
+/* Bestätigung in der Leiste des Rahmens (Klaus 18.11.: nach „PDF erstellen“ war nicht zu sehen, dass der Scan schon in der Akte liegt –
+   die Meldung der Akte lag unter dem Rahmen, die im Klon wurde von dessen eigener überschrieben). Bleibt 12 s stehen. */
+let rahmenMeldZeit = 0;
+function rahmenMelden(t, gut = true){ const o = $('rahmen-meldung'); if (!o) return; o.textContent = (gut ? '✓ ' : '') + t; o.className = 'rahmenmeldung an' + (gut ? '' : ' schlecht'); clearTimeout(rahmenMeldZeit); rahmenMeldZeit = setTimeout(() => { o.textContent = ''; o.className = 'rahmenmeldung'; }, 12000); }
 function rahmenZu(){ $('rahmenort').innerHTML = ''; rahmen.was = null; rahmen.wartet = null; echtLaden().then(() => { if (s.ansicht === 'start') mainZeigen(); }).catch(() => {}); }
 A['echt-wfpdf'] = async e => {
   try { const d = (echt.liste || []).find(x => x.id === e.dataset.id), datei = await T().datei(e.dataset.id); fRahmen('wfpdf', '', [new File([datei], (d && d.originalName) || datei.name, {type:datei.type, lastModified:datei.lastModified})]); }
@@ -933,8 +950,8 @@ addEventListener('message', async ev => {
       }
       await echtLaden();
       const t = neu ? `${neu === 1 ? '„' + dateien[0].name + '“ liegt' : neu + ' Dateien liegen'} jetzt in der Privaten Akte (Sonstiges).` : 'Lag schon in der Privaten Akte.';
-      antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:true, text:t}); toast(t);
-    } catch (err) { antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:false, text:fehlerText(err)}); toast(fehlerText(err)); }
+      antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:true, text:t}); toast(t); rahmenMelden(neu ? t.replace(' (Sonstiges)', '') + ' Zurück mit „‹ Akte“.' : t);
+    } catch (err) { antwort({typ:'pa-wfpdf-abgelegt', id:d.id, ok:false, text:fehlerText(err)}); toast(fehlerText(err)); rahmenMelden(fehlerText(err), false); }
   }
 });
 const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };

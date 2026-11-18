@@ -122,8 +122,17 @@ const organizer = {
   /** Direkte Übergabe aus dem Datei-Organizer im Rahmen (0.5.0): Index als Text und die Originale als Dateien, ohne Ordnerwahl.
    *  `pfad` ist der Name im Index (auch aus Unterordnern oder Anhang einer Mail); abgelegt wird unter dem Dateinamen. */
   ausStapel(ordner: string, indexText: string, dateien: Array<{ pfad: string; datei: File }>) {
-    const nach = new Map(dateien.filter((x) => x && typeof x.pfad === "string" && x.datei instanceof File).map((x) => [x.pfad, mitTyp(x.datei)]));
-    return organizerStapel(ordner, indexText.length <= ORGANIZER_INDEX_MAX ? indexText : null, [...nach].map(([pfad, f]) => ({ name: pfad, size: f.size })), async (name) => { const f = nach.get(name); if (!f) throw new Error("Datei fehlt in der Übergabe."); return f; });
+    // Die Übernahme des Klons nimmt nur Dateien direkt im Ordner (Pfad ohne Schrägstrich). Bei der direkten Übergabe liegen die
+    // Dateien aber vor – der Pfad wird darum für Index und Liste gleich „flach“ geschrieben (∕ statt /), dann greift die Einordnung
+    // auch für Unterordner (0.5.1; in 0.5.0 kamen sie ohne Bereich an). Angezeigt wird wieder der echte Pfad.
+    const flach = (p: string) => p.replace(/[\\/]/g, "∕");
+    let text: string | null = indexText.length <= ORGANIZER_INDEX_MAX ? indexText : null;
+    if (text) try {
+      const j = JSON.parse(text) as { dateien?: Array<Record<string, unknown>> };
+      if (Array.isArray(j.dateien)) { for (const e of j.dateien) if (e && typeof e === "object") { if (typeof e.pfad === "string") e.pfad = flach(e.pfad); if (typeof e.doppeltVon === "string") e.doppeltVon = flach(e.doppeltVon); } text = JSON.stringify(j); }
+    } catch { /* unlesbar: die Übernahme sagt es */ }
+    const nach = new Map(dateien.filter((x) => x && typeof x.pfad === "string" && x.datei instanceof File).map((x) => [flach(x.pfad), mitTyp(x.datei)]));
+    return organizerStapel(ordner, text, [...nach].map(([pfad, f]) => ({ name: pfad, size: f.size })), async (name) => { const f = nach.get(name); if (!f) throw new Error("Datei fehlt in der Übergabe."); return f; });
   },
   /** Legt die genannten Dateien ab (Bereich je Datei wie übergeben). Fehlt der Text aus dem Organizer, liest die Akte selbst. */
   async uebernehmen(auswahl: Array<{ name: string; bereich: string }>, fortschritt?: (fertig: number, gesamt: number, name: string) => void) {
