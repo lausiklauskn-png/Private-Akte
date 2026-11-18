@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -53,7 +53,7 @@ const FARBEN = {
  kraeftig:{de:'Kräftig',k:['#0b3154','#164f7d','#087f7a'],schrift:'#ffffff',akz:'#0b3154',fl:'#dfeaf3'}
 };
 const WAHL = [['auto','Wie die Kachel'],['blau','Wasserblau'],['gruen','Wassergrün'],['gelb','Helles Gelb'],['koralle','Koralle'],['kraeftig','Kräftig']];
-const KACHEL = {akte:'see',buero:'blau',geld:'gelb',sort:'gruen',mail:'koralle',kal:'flieder'};
+const KACHEL = {akte:'see',buero:'blau',geld:'gelb',sort:'gruen',mail:'koralle',kal:'flieder',pdf:'koralle'};
 const farbwahl = {};                                   // je Programm gemerkt (nur für diese Sitzung)
 const farbe = ort => FARBEN[(farbwahl[ort] && farbwahl[ort] !== 'auto') ? farbwahl[ort] : KACHEL[ort]];
 const farbStil = ort => { const f = farbe(ort); return `--k1:${f.k[0]};--k2:${f.k[1]};--k3:${f.k[2]};--schrift:${f.schrift};--akz:${f.akz};--fl:${f.fl}`; };
@@ -76,7 +76,9 @@ const STAEDTE = [
  {id:'geld',name:'Portemonnaie',tut:'Bon fotografieren, Einnahmen, Ausgaben, was bleibt übrig',icon:'geld',a:'#f0b93a',b:'#b77a0c',ort:[13,84]},
  {id:'sort',name:'Datei-Organizer',tut:'Viele Dateien auf einmal vorsortieren',icon:'sort',a:'#2bb673',b:'#107c41',ort:[16,36]},
  {id:'mail',name:'Private Brain',tut:'E-Mails mit Anlagen hereinholen',icon:'mail',a:'#f08a4b',b:'#c43e1c',ort:[80,84]},
- {id:'kal',name:'Kalender',tut:'Termine und Fristen',icon:'kalender',a:'#9a7bd6',b:'#5b3aa6',ort:[64,47]}
+ {id:'kal',name:'Kalender',tut:'Termine und Fristen',icon:'kalender',a:'#9a7bd6',b:'#5b3aa6',ort:[64,47]},
+ /* Workflow PDF ist ein eigenes Tool mit eigener Stadt (Klaus 18.11.: der Datei-Organizer hat eine, das Scannen fehlte im Baum) – echter Klon im Rahmen. */
+ {id:'pdf',name:'Workflow PDF',tut:'Scannen, PDF ausfüllen und bearbeiten',icon:'pdf',a:'#e2596b',b:'#9b1f38',ort:[60,19]}
 ];
 const stadt = id => STAEDTE.find(w => w.id === id);
 const TEILE = [
@@ -479,7 +481,7 @@ const A = {
  notiz: () => { menueZu(); fNotiz(); },
  sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
  kalender: () => { menueZu(); s.zuDoc = null; fStadt('kal'); },
- stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
+ stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
  mit: fMit,
  'mit-wahl': e => {

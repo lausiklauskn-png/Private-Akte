@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.5.5 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.5.6 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -175,8 +175,8 @@ const { chromium } = require('playwright');
     await klick('.nav [data-zu=akten]'); await klick('[data-a=bereich][data-id=wohnen]'); await klick('[data-a=doc][data-id="1"]'); await klick('.fenster [data-a=mit]'); await klick('[data-womit=pdf]'); soll((await text()).includes('Hier wurde etwas markiert'),'Kopie im PDF'); await klick('[data-a=zurueck]');
     soll((await p.locator('video.baumfilm').count())===1,'Film'); await p.waitForTimeout(600); await p.screenshot({path:`p/${name}-9-baum-film.png`});
     await p.evaluate(() => document.querySelector('video')?.remove()); await breit('baum'); await p.screenshot({path:`p/${name}-10-baum.png`});
-    soll((await p.locator('.schild').count())===7,'Schilder'); soll((await p.locator('main .karte').count())===0 && !(await text()).includes('Bunte Kugeln'),'keine Erklärkarten am Baum'); soll(!(await text()).includes('Helfer tragen'),'kein Text über dem Film');
-    soll((await p.locator('.wokasten.tresor').count())===1,'ein Tresor'); soll((await p.locator('.wozeile').count())===5,'fünf Fächer im Tresor'); soll((await p.locator('.wostadt').count())===5,'fünf Werkzeuge ohne Speicher'); soll((await text()).includes('1 · Hinzufügen') && (await text()).includes('3 · Tools') && !(await text()).includes('Städte'),'Hinzufügen und Werkzeugstätte'); soll((await text()).includes('der einzige Speicher'),'Wo liegt was'); await p.locator('#wo-liegt-was').scrollIntoViewIfNeeded(); await breit('wo liegt was'); await p.screenshot({path:`p/${name}-10b-wo.png`, fullPage:true}); 
+    soll((await p.locator('.schild').count())===8,'Schilder'); soll((await p.locator('main .karte').count())===0 && !(await text()).includes('Bunte Kugeln'),'keine Erklärkarten am Baum'); soll(!(await text()).includes('Helfer tragen'),'kein Text über dem Film');
+    soll((await p.locator('.wokasten.tresor').count())===1,'ein Tresor'); soll((await p.locator('.wozeile').count())===5,'fünf Fächer im Tresor'); soll((await p.locator('.wostadt').count())===6,'sechs Werkzeuge ohne Speicher'); soll((await text()).includes('1 · Hinzufügen') && (await text()).includes('3 · Tools') && !(await text()).includes('Städte'),'Hinzufügen und Werkzeugstätte'); soll((await text()).includes('der einzige Speicher'),'Wo liegt was'); await p.locator('#wo-liegt-was').scrollIntoViewIfNeeded(); await breit('wo liegt was'); await p.screenshot({path:`p/${name}-10b-wo.png`, fullPage:true}); 
     // Notiz mit Termin
     await klick('.werk[data-a=notiz]'); await klick('[data-a=sprechen]'); await p.fill('[name=titel]','Anruf Hausverwaltung'); await p.selectOption('[data-form=notiz] [name=bereich]','wohnen'); await p.fill('[name=vorgang]','Nebenkosten 2025'); await p.check('[name=termin]'); await p.screenshot({path:`p/${name}-11-notiz.png`}); await klick('[data-form=notiz] [type=submit]');
     soll((await text()).includes('Termin zu „Anruf Hausverwaltung“'),'Kalender zur Notiz'); await klick('[data-form=termin] [type=submit]'); soll((await p.locator('.fenster .liste .zeile').count())===4,'vier Termine'); await p.screenshot({path:`p/${name}-12-kalender.png`}); await klick('[data-a=zu]');
@@ -203,6 +203,9 @@ const { chromium } = require('playwright');
       const nach = await q.evaluate(() => ({ echt:document.querySelector('#echt').open, faellig:document.querySelector('[data-klapp=faellig]').open, zeile:getComputedStyle(document.querySelector('.kacheln.seitlich')).display }));
       soll(zu.length === 3 && zu.every(x => !x) && nach.echt && !nach.faellig && nach.zeile === 'flex', 'Startseite: drei Abschnitte eingeklappt, Aufklappen wird gemerkt, Bereiche seitlich (' + JSON.stringify([zu, nach]) + ')');
       await q.screenshot({path:`p/${name}-30-start-klapp.png`}); await q.evaluate(() => localStorage.setItem('pa_klapp', JSON.stringify({echt:1, faellig:1, zuletzt:1}))); await q.close(); }
+    // Baum: Workflow PDF hat eine eigene Stadt, ein Tipp öffnet den echten Klon
+    await klick('.nav [data-zu=baum]'); soll((await p.locator('.schild[data-id=pdf]').innerText()).includes('Workflow PDF'), 'Baum: Stadt Workflow PDF'); await breit('Baum mit Workflow PDF'); await p.screenshot({path:`p/${name}-31-baum.png`});
+    await klick('.schild[data-id=pdf]'); await p.waitForSelector('#rahmen'); soll(/workflow-pdf/.test(await p.locator('#rahmen').getAttribute('src')), 'Baum: Stadt Workflow PDF öffnet Workflow PDF im Rahmen'); await klick('[data-a=rahmen-zu]');
     // ---------- Klone im Rahmen ----------
     await klick('.nav [data-zu=start]');
     // Datei-Organizer hinter dem grünen Knopf: echter Klon, eigener Speicher, kein eigener Worker, Übergabe an die Akte
