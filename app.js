@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -266,8 +266,7 @@ function vStart(){
   ${echtAbschnitt()}
   ${faelligTeil()}
   <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln seitlich">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
-  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}
-  <p class="hinweis">Vorschau ${FASSUNG} · Gespeichert wird nur, was du unter „Deine Unterlagen“ hineinlegst – auf diesem Gerät. Alles andere ist erfunden.</p>${fuss()}`;
+  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}${fuss()}`;
 }
 function vAkten(){
   if (!s.bereich) return `<h1 class="titel">Akten</h1><p class="unter">Dieselben sechs Bereiche wie auf der Startseite.</p>
@@ -580,7 +579,7 @@ document.addEventListener('submit', ev => {
 
 /* ---------- Deine Unterlagen: echt, im Tresor der Familienakte (tresor.js = Brücke zum Klon) ---------- */
 const T = () => window.PrivateAkteTresor;
-const echt = { liste:null, fehler:'', datei:null, laeuft:false, termine:[], notizen:0 };
+const echt = { liste:null, fehler:'', datei:null, laeuft:false, termine:[], notizen:0, knoten:null, zeig:30 };
 const echtTitel = d => d.titel || d.originalName;
 const echtArt = d => { const e = (d.originalName.split('.').pop() || '').toUpperCase().slice(0,4); return e === 'JPEG' ? 'JPG' : e || 'DAT'; };
 const echtGroesse = n => n < 1024 ? n + ' B' : n < 1048576 ? Math.round(n/1024) + ' KB' : (n/1048576).toFixed(1).replace('.',',') + ' MB';
@@ -602,21 +601,40 @@ async function echtLaden(){
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
 const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
 /* Sortierung von „Deine Unterlagen“ (Klaus 18.11.: der neue Scan war zwischen 100 Unterlagen nicht zu finden). Ab Werk: zuletzt abgelegt oben. */
-const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich']];
+const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich'],['art','Art der Datei']];
 const echtSort = () => { try { const w = localStorage.getItem('pa_sort'); return ECHT_SORT.some(x => x[0] === w) ? w : 'neu'; } catch { return 'neu'; } };
 function echtSortiert(l){
   const w = echtSort(), text = (a, b) => String(a).localeCompare(String(b), 'de', {numeric:true, sensitivity:'base'}), neu = (a, b) => text(b.addedAt || '', a.addedAt || '');
-  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b)}[w];
+  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b), art:(a, b) => text(echtArt(a), echtArt(b)) || neu(a, b)}[w];
   return [...l].sort(f);
 }
-document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } mainZeigen(); });
+document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } echt.knoten = null; echt.zeig = ECHT_SEITE; mainZeigen(); });
+/* Der Baum über „Deine Unterlagen“ (0.6.2, Klaus 18.11.: „die Sicht aus dem Finden des Datei-Organizers, mit dem einklappbaren
+   Alle-Dateien-Knopf – da sehe ich, wie viele es insgesamt sind“): oben „Alle Unterlagen“ mit der Zahl, aufgeklappt darunter die
+   Gruppen mit ihren Zahlen. Ein Tipp auf eine Gruppe zeigt nur sie. Gruppiert wird nach dem, was unter „Sortieren“ gewählt ist:
+   Art der Datei, Jahr (bei „Datum der Unterlage“), sonst der Bereich. Die Liste zeigt je 30 Stück, „Weitere zeigen“ holt mehr. */
+const ECHT_SEITE = 30;
+const echtGruppe = d => { const w = echtSort(); return w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
+function echtBaum(l){
+  const zahl = new Map(); for (const d of l) zahl.set(echtGruppe(d), (zahl.get(echtGruppe(d)) || 0) + 1);
+  const gruppen = [...zahl].sort((a, b) => echtSort() === 'datum' ? String(b[0]).localeCompare(String(a[0]), 'de', {numeric:true}) : String(a[0]).localeCompare(String(b[0]), 'de', {numeric:true, sensitivity:'base'}));
+  if (echt.knoten !== null && !zahl.has(echt.knoten)) echt.knoten = null;
+  const auf = !!klapp.ebaum;
+  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><div class="ekopf"><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" data-a="echt-knoten" data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span><span class="ename">Alle Unterlagen</span><b>${l.length}</b></button>
+    <label class="sortzeile">Sortieren <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label></div>
+    ${auf ? gruppen.map(([g, n]) => `<button class="eknoten${echt.knoten === g ? ' an' : ''}" data-a="echt-knoten" data-k="${esc(g)}"><span class="ename">${esc(g)}</span><b>${n}</b></button>`).join('') : ''}</div>`;
+}
+A['echt-knoten'] = e => { const k = e.dataset.k; if (k === '') { if (echt.knoten === null) { klapp.ebaum = klapp.ebaum ? 0 : 1; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt bis zum Neuladen */ } } echt.knoten = null; } else echt.knoten = echt.knoten === k ? null : k; echt.zeig = ECHT_SEITE; mainZeigen(); };
+A['echt-mehr'] = () => { echt.zeig = (echt.zeig || ECHT_SEITE) + ECHT_SEITE; mainZeigen(); };
 function echtAbschnitt(){
-  const l = echt.liste;
-  const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
-    : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
-    : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
-    : `<label class="sortzeile">Sortiert nach <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>` + echtSortiert(l).map(d => echtZeile(d)).join('');
-  return klappTeil('echt', 'Deine Unterlagen', `${l && !echt.fehler ? l.length + ' · ' : ''}echt · auf diesem Gerät gespeichert`, innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
+  const l = echt.liste; let innen;
+  if (l === null) innen = '<p class="leer">Die Akte wird geöffnet …</p>';
+  else if (echt.fehler) innen = `<p class="leer">${esc(echt.fehler)}</p>`;
+  else if (!l.length) innen = '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>';
+  else { const baum = echtBaum(l), alle = echtSortiert(echt.knoten === null ? l : l.filter(d => echtGruppe(d) === echt.knoten)), n = echt.zeig || ECHT_SEITE;
+    innen = baum + (echt.knoten !== null ? `<p class="egewaehlt">${esc(echt.knoten)} · ${alle.length}</p>` : '') + alle.slice(0, n).map(d => echtZeile(d)).join('')
+      + (alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''); }
+  return klappTeil('echt', 'Deine Unterlagen', `${l && !echt.fehler ? l.length + ' · ' : ''}auf diesem Gerät gespeichert`, innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
   echt.datei = datei;

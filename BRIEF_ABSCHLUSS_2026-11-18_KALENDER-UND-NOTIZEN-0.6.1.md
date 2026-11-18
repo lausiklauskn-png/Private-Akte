@@ -17,6 +17,8 @@ Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, Punkt 0.6.0
 - **Höhe am Handy:** keine eigene Kopfreihe im Kalender, Bestätigung und läutende Erinnerung als flache Zeile.
 - **0.6.1:** Seitenleiste auch in der Akte selbst, im Handyformat (hoch, runter, zurück, Startseite, Baum, dazu Importieren,
   Exportieren, Drucken, Farbpalette, Hilfe). Erkennung „am nächsten Tag“ und „um halb drei“ in der Familienakte behoben, Klon nachgezogen.
+- **0.6.2:** „Deine Unterlagen“ mit Baum („Alle Unterlagen“ mit Zahl, Gruppen nach dem gewählten „Sortieren“), flachen Zeilen und
+  Blättern zu je 30; der Text unten auf der Startseite ist heraus. Im Datei-Organizer ist 0.4.15 bestellt (siehe `CLAUDE.md`).
 - **Akte leeren:** vierter Haken „Termine und Notizen“. **Baum:** Hinweistexte heraus.
 
 ## Was Klaus tun muss, damit die Anmeldung geht
@@ -45,7 +47,7 @@ Gerätekalender der Android-App, Kalenderdatei).
 - „⋯“ oben steht am Handy noch neben der Seitenleiste (doppelt) – nach Klaus' Test entscheiden.
 - Glocke bei geschlossener App (nur in einer Android-App möglich).
 - Zugang zum verbundenen Kalender gilt nur, solange der Kalender offen ist.
-- Aus dem alten Brief weiter offen: „PDF ausgeben“ leuchtet nach dem Scan; „Eingang“ ist Beispiel; lange Liste bei 100 Unterlagen;
+- Aus dem alten Brief weiter offen: „PDF ausgeben“ leuchtet nach dem Scan; „Eingang“ ist Beispiel;
   Kachel „Workflow PDF“ im Familienbüro; Gelerntes der eigenständigen Organizer-Apps in keinem Backup; Suche lernt nicht aus Tipps.
 
 ## Vollmacht und Arbeitsweise

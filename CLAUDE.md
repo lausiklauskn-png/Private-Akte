@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.1)
+## Stand (18.11.2026, Vorschau 0.6.2)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.1.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
@@ -44,6 +44,21 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **Am Tablet bestätigt (Klaus 18.11., 12:42, 0.6.0/0.6.1):** Notiz einsprechen mit Datum und Uhrzeit trägt Tag und Uhrzeit ein („funktioniert
+  astrein, genau wie ich es wollte“); die Glocke steht rot mit Zahl in der Leiste des Kalenders; „In den Kalender“ zeigt seinen
+  verbundenen Google-Kalender – die Verbindung (`familienakte-kalender-v1`) teilt sich die Akte mit der Familienakte unter derselben
+  Adresse. Ob Einträge aus der Akte dort wirklich ankommen (Anmeldung, Rückkehr-Adresse), ist damit noch nicht gezeigt.
+- **0.6.2 „Deine Unterlagen“ mit Baum, flachen Zeilen und Blättern (Klaus 18.11.: „die Sicht aus dem Finden des Datei-Organizers, mit
+  dem einklappbaren Alle-Dateien-Knopf – da sehe ich, wie viele es sind“; „Container viel kleiner, an den Text angepasst“):**
+  oben „Alle Unterlagen“ mit der Gesamtzahl (`echtBaum` in `app.js`); ein Tipp klappt die Gruppen mit ihren Zahlen auf, ein Tipp auf
+  eine Gruppe zeigt nur sie. Gruppiert wird nach dem, was unter **„Sortieren“** gewählt ist (hieß „Sortiert nach“): Art der Datei
+  (neu), Jahr bei „Datum der Unterlage“, sonst der Bereich. Die Liste zeigt je 30 Stück, „Weitere zeigen“ holt mehr (erledigt den
+  offenen Punkt „lange Liste bei 100 Stück“). Zeilen dort höchstens 44 px hoch, die Marke „echt“ steht nicht mehr an jeder Zeile.
+  Der Text unten auf der Startseite („Vorschau … Gespeichert wird nur …“) ist heraus (Klaus 18.11.).
+  **Parallel im Repo Datei-Organizer bestellt (Klaus 18.11., dort 0.4.15, eigener Zweig):** „Alle übernehmen“ bei „bitte prüfen“,
+  Verlauf sortieren und Einträge löschen ohne Rückgängig, „Sortieren“ statt „Sicht“, flachere Zeilen, Seitenleiste, Kopf höchstens
+  zweizeilig. Kommt über den Klon herein, sobald es dort auf `main` ist.
+  Probe 347 grün (18 neu). Am Tablet ungeprüft.
 - **0.6.1 Seitenleiste in der Akte, im Handyformat (Klaus 18.11.: „am Handy auf jeden Fall, weil da die anderen Funktionen
   reingepackt werden können – hochscrollen, runterscrollen“; am Monitor nicht nötig):** Griff am rechten Rand (`seitenleisteZeigen`
   in `app.js`, Maße und Aussehen wie `.seitenleiste` der Familienakte, für die Hülle ohne React geschrieben), nur unter 1000 px

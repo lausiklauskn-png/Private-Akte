@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.6.1 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.6.2 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -230,6 +230,24 @@ const { chromium } = require('playwright');
       await p.mouse.click(5, h - 5); await p.waitForFunction(() => !document.querySelector('.glockenfeld')); soll(true, 'Tipp daneben schließt das Glockenfeld');
       await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
       soll((await p.locator('#faellig').innerText()).includes('1 Eintrag'), 'Erledigtes steht nicht mehr unter Fällig');
+    }
+    // Baum über „Deine Unterlagen“ (0.6.2): „Alle Unterlagen“ mit Zahl, aufklappen zeigt Gruppen, Tipp auf eine Gruppe zeigt nur sie; je 30 Stück
+    { await p.evaluate(async () => { const t = window.PrivateAkteTresor; for (let i = 1; i <= 34; i++) await t.ablegen(new File(['Baumprobe ' + i], `Baumprobe-${String(i).padStart(2, '0')}.txt`, {type:'text/plain'}), {bereich:i % 2 ? 'Reisen & Freizeit' : 'Versicherungen', datum:i % 2 ? '2024-05-01' : '2025-06-01', titel:null, notiz:null}); klapp.ebaum = 0; echt.knoten = null; await echtLaden(); mainZeigen(); });
+      const gesamt = await p.evaluate(() => echt.liste.length);
+      soll((await p.locator('#echt .eknoten.alle b').innerText()) === String(gesamt) && (await p.locator('#echt .eknoten:not(.alle)').count()) === 0, 'Baum: „Alle Unterlagen“ zeigt die Gesamtzahl, eingeklappt keine Gruppen');
+      soll((await p.locator('#echt [data-a=echt-auf]').count()) === 30 && (await p.locator('#echt [data-a=echt-mehr]').innerText()).includes(`30 von ${gesamt}`), 'Liste zeigt 30 Stück und „Weitere zeigen“');
+      soll((await p.locator('#echt [data-a=echt-auf]').first().evaluate(e => e.offsetHeight)) <= 44, 'Zeilen in „Deine Unterlagen“ sind flach (höchstens 44 px)');
+      await klick('#echt .eknoten.alle'); await p.waitForSelector('#echt .eknoten:not(.alle)');
+      const gr = await p.evaluate(() => [...document.querySelectorAll('#echt .eknoten:not(.alle)')].map(e => [e.querySelector('.ename').innerText, +e.querySelector('b').innerText]));
+      soll(gr.some(g => g[0] === 'Reisen & Freizeit' && g[1] === 17) && gr.some(g => g[0] === 'Versicherungen' && g[1] === 17) && gr.reduce((a, g) => a + g[1], 0) === gesamt, 'Baum aufgeklappt: Bereiche mit ihren Zahlen, Summe = Gesamtzahl (' + JSON.stringify(gr) + ')');
+      await p.locator('#echt .eknoten', {hasText:'Versicherungen'}).click(); await p.waitForSelector('#echt .egewaehlt');
+      soll((await p.locator('#echt [data-a=echt-auf]').count()) === 17 && (await p.locator('#echt [data-a=echt-auf] small').allInnerTexts()).every(t => t.startsWith('Versicherungen')), 'Tipp auf einen Bereich zeigt nur dessen 17 Unterlagen');
+      await p.selectOption('#echt-sort', 'datum'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === '2025'));
+      soll((await p.locator('#echt .eknoten', {hasText:'2025'}).locator('b').innerText()) === '17', 'Sortieren nach Datum: der Baum zeigt Jahre mit Zahlen');
+      await p.selectOption('#echt-sort', 'art'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === 'TXT')); soll(true, 'Sortieren nach Art der Datei: der Baum zeigt die Dateiarten');
+      await p.selectOption('#echt-sort', 'neu'); await klick('#echt .eknoten.alle'); await p.waitForFunction(() => !document.querySelector('#echt .eknoten:not(.alle)')); await breit('baum der unterlagen'); await p.screenshot({path:`p/${name}-12d-unterlagen.png`});
+      soll(!/Gespeichert wird nur|Alles andere ist erfunden/.test(await text()), 'Startseite ohne den Text „Vorschau … gespeichert wird nur …“');
+      await p.evaluate(async () => { const t = window.PrivateAkteTresor; for (const d of await t.liste()) if (/^Baumprobe-/.test(d.originalName)) await t.herausnehmen(d.id); await echtLaden(); mainZeigen(); });
     }
     // Seitenleiste am Handy (0.6.1): Griff rechts, nach oben/unten, Zurück, Startseite, Baum und was hinter „⋯“ liegt; am Monitor nicht
     if (name === 'pc') soll(!(await p.locator('.seitenleiste-griff').isVisible()), 'Seitenleiste: am Monitor nicht zu sehen');

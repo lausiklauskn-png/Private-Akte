@@ -335,3 +335,22 @@ details.klapp[open]>summary{margin-bottom:8px}
 body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty)) .seitenleiste,body:has(#menueort:not(:empty)) .seitenleiste{display:none}
 @media(min-width:1000px){.seitenleiste{display:none}}
 @media print{.seitenleiste{display:none}}
+/* „Deine Unterlagen“ (0.6.2): Baum mit „Alle Unterlagen“ und flache Zeilen – mehr je Bildschirm (Klaus 18.11.). */
+.ebaum{padding:4px 6px;border-bottom:1px solid var(--line)}
+.ekopf{display:flex;align-items:center;gap:6px}
+.ekopf .eknoten{flex:0 0 auto;width:auto}.ekopf .eknoten .ename{flex:0 0 auto;overflow:visible}
+.ekopf .sortzeile{padding:0;flex:1 1 0;min-width:0;justify-content:flex-end}.ekopf .sortzeile select{flex:0 1 150px;min-width:0;width:auto;padding-top:3px;padding-bottom:3px}
+.eknoten{display:flex;align-items:center;gap:6px;width:100%;min-width:0;padding:4px 8px;border-radius:9px;font-size:13.5px;text-align:left;color:var(--ink)}
+.eknoten:not(.alle){padding-left:30px}
+.eknoten .ename{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eknoten.alle .ename{font-weight:700;color:var(--navy)}
+.eknoten b{font-size:12px;font-weight:600;color:var(--muted);flex:none}
+.eknoten.an{background:var(--fl)}.eknoten:hover{background:var(--blue)}
+.epfeil{display:grid;flex:none}.epfeil .icon{width:16px;height:16px;transition:transform .15s}
+.ebaum[data-ebaum=auf] .epfeil .icon{transform:rotate(90deg)}
+.egewaehlt{font-size:12px;font-weight:600;color:var(--navy);padding:5px 12px 2px}
+#echt .zeile{padding:4px 10px;gap:8px}
+#echt .zeile .art{width:26px;height:26px;border-radius:7px;font-size:8.5px}
+#echt .zeile strong{font-size:13.5px;line-height:1.25}#echt .zeile small{font-size:11.5px;line-height:1.25}
+#echt .zeile .m-ok{display:none}
+#echt .zeile>.icon{width:16px;height:16px}
