@@ -87,3 +87,8 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 - Am Handy liegen Importieren/Exportieren hinter „⋯“.
 - Klone im Rahmen (0.5.0): Farbpalette der Akte in den Klonen; Bereich-Vorschlag für Abgelegtes aus Workflow PDF; Rückgabe an
   die Quelle statt neuer Unterlage; Wörter „Familienakte“ im Organizer.
+
+- **Bank im Portemonnaie (0.8.0, 18.11.):** Konto als `object` (Merkmal `bankkonto`), Umsätze als `payment` (Merkmal `bank`), in einem Schreibgang über
+  `akteFuerAbgleich`/`akteNachAbgleichSchreiben` und `nextFamilyRecordId` – die Familienakte hat kein Massen-Anlegen für Datensätze; je Umsatz ein
+  `createLocalFamilyRecord` würde den Index hundertmal schreiben. Für die Überarbeitung der Familienakte: ein `createLocalFamilyRecords` (viele auf einmal) wäre sauberer.
+  Kontoauszug-Leser kommen aus BookLedgerPro (Klon), nicht aus der Familienakte.

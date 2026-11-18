@@ -8,6 +8,12 @@ import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
 import { createLocalFamilyRecord, fileChecksum } from "../klone/familienakte/app/local-vault.ts";
 import { parseEuroToCents, formatEuro } from "../klone/bookledger/src/domain/money.js";
 import { kassenbericht } from "../klone/bookledger/src/domain/kassenbuch.js";
+import { parseBankauszug, pruefeBankauszug } from "../klone/bookledger/src/domain/bankimport.js";
+import { leseAuszugText } from "../klone/bookledger/src/domain/auszugText.js";
+import { parseBankCsv, leseMitZuordnung, leseBankZeilen, zuordnungFehlt, umsatzSchluessel, textAusBytes, istCsvText, DATUMSFORMEN } from "../klone/bookledger/src/domain/bankCsv.js";
+import { xlsxZeilen, istXlsx, istAltesXls } from "../klone/bookledger/src/domain/xlsxZeilen.js";
+import { baueMonatsdatei, monatsdateiName } from "../klone/bookledger/src/domain/portemonnaieImport.js";
+import { nextFamilyRecordId, createFamilyRecord } from "../klone/familienakte/lib/family-data-model.ts";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
@@ -558,7 +564,7 @@ Object.assign(kalender, {
 // ein Datensatz „payment“ des Registers (Titel, Betrag in Cent, Währung; dazu Richtung, Tag, wofür), damit im Backup und für die
 // Familienakte lesbar. Der Bon ist eine Unterlage (Bereich „Einkäufe, Rechnungen & Garantien“), verknüpft payment → document „Beleg“.
 // Rechnen: Betrag lesen/zeigen und Monatsbericht aus BookLedgerPro (klone/bookledger: money.js, kassenbuch.js – unverändert).
-type Posten = { id: string; titel: string; cent: number; am: string; wofuer: string; bon: string | null };
+type Posten = { id: string; titel: string; cent: number; am: string; wofuer: string; bon: string | null; vomKonto?: boolean };
 const BON_BEREICH = "Einkäufe, Rechnungen & Garantien";
 /** Betrag auf einem Bon: die Zahl hinter „Summe“, „Gesamt“, „zu zahlen“, „Total“; sonst die größte Zahl mit Komma. Nur ein Vorschlag. */
 function bonBetrag(text: string) {
@@ -573,8 +579,8 @@ const geld = {
   async posten(): Promise<Posten[]> {
     const { records, relations } = await readLocalVaultData(await browserVault());
     return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { portemonnaie?: boolean }).portemonnaie).map((r) => {
-      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; wofuer?: string };
-      return { id: r.id, titel: d.title || "", cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), am: d.am || r.createdAt.slice(0, 10), wofuer: d.wofuer || "",
+      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; wofuer?: string; vomKonto?: boolean };
+      return { id: r.id, titel: d.title || "", cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), am: d.am || r.createdAt.slice(0, 10), wofuer: d.wofuer || "", vomKonto: !!d.vomKonto,
         bon: relations.find((x) => x.fromType === "payment" && x.fromId === r.id && x.toType === "document")?.toId || null };
     }).sort((a, b) => a.am.localeCompare(b.am) || a.id.localeCompare(b.id));
   },
@@ -584,13 +590,13 @@ const geld = {
     const im = alle.filter((p) => p.am.slice(0, 7) === monat).map((p, i) => ({ datum: p.am, seq: i, beschreibung: p.titel, einnahme: p.cent > 0 ? p.cent : 0, ausgabe: p.cent < 0 ? -p.cent : 0, id: p.id }));
     return kassenbericht(im, vorher);
   },
-  async eintragen(e: { titel: string; cent: number; rein: boolean; wofuer: string; am: string; bon?: File | null; bonText?: string }) {
+  async eintragen(e: { titel: string; cent: number; rein: boolean; wofuer: string; am: string; bon?: File | null; bonText?: string; vomKonto?: boolean }) {
     if (!Number.isInteger(e.cent) || e.cent <= 0) throw new Error("Bitte einen Betrag eintragen.");
     const h = await browserVault();
     let bon: string | null = null;
     if (e.bon) bon = (await saveLocalDocument(h, e.bon, { category: BON_BEREICH, documentDate: e.am, notes: `Bon aus dem Portemonnaie – ${formatEuro(e.cent)}${e.wofuer ? " · wofür: " + e.wofuer : ""}`, titel: `Bon ${e.titel}`.slice(0, 200), textAuszug: e.bonText || null })).id;
     const r = await createLocalFamilyRecord(h, { recordType: "payment", status: "aktiv", source: "Portemonnaie", notes: null,
-      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", portemonnaie: true, richtung: e.rein ? "rein" : "raus", am: e.am, wofuer: e.wofuer.slice(0, 120) } as never });
+      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", portemonnaie: true, richtung: e.rein ? "rein" : "raus", am: e.am, wofuer: e.wofuer.slice(0, 120), ...(e.vomKonto ? { vomKonto: true } : {}) } as never });
     if (bon) await createLocalFamilyRelation(h, { fromType: "payment", fromId: r.id, toType: "document", toId: bon, relationType: "Beleg", source: "Portemonnaie", notes: null });
     return { id: r.id, bon };
   },
@@ -609,5 +615,173 @@ const geld = {
   },
   bonBetrag,
 };
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld };
+
+// Bank (0.8.0, Klaus 18.11.: „Bank als zweites Fach im Portemonnaie; jeder legt sein Konto selbst an und wählt das Verfahren“).
+// Konto = Datensatz „object“ (Merkmal bankkonto: Bank, Kontoname, letzte vier Stellen der IBAN, Anfangssaldo, Verfahren, gemerkte Spalten-Zuordnung).
+// Umsatz = Datensatz „payment“ (Merkmal bank, Konto, Richtung, Tag, Schlüssel gegen Doppeltes). Der eingelesene Auszug wird Unterlage
+// („Finanzen & Konten“), verknüpft Konto → Unterlage „Kontoauszug“. Lesen: Bausteine aus BookLedgerPro (klone/bookledger, unverändert):
+// CAMT/MT940 `parseBankauszug`, CSV/Excel `bankCsv`/`xlsxZeilen`, PDF `leseAuszugText` (nur Vorschlag). Viele Umsätze in einem Schreibgang.
+type Konto = { id: string; bank: string; name: string; ibanEnde: string; anfangCent: number; verfahren: string; zuordnung: Record<string, unknown> | null };
+type BankUmsatz = { id: string; konto: string; am: string; cent: number; titel: string; gegen: string; zumBargeld: boolean; auszug: string | null; schluessel: string; quelle: string };
+type Gelesen = { format: string; umsaetze: Array<{ valuta: string; betragCent: number; richtung: string; zweck: string; gegen: string; schluessel: string; doppelt: boolean; unsicher?: boolean }>;
+  saldoStartCent: number | null; saldoEndeCent: number | null; pruefung: { ok: boolean; warnungen: Array<{ code: string; differenzCent?: number }> }; kontoAusDatei: string;
+  zuordnung: Record<string, unknown> | null; zeilen: string[][] | null; fehlt: string[]; fehler: Array<{ zeile: number; grund: string }>; datei: File | null };
+const AUSZUG_BEREICH = "Finanzen & Konten";
+const VERFAHREN = ["hand", "csv", "camt", "mt940", "pdf", "excel"] as const;
+async function registerLesen() { return readLocalVaultData(await browserVault()); }
+function kontoAus(r: { id: string; data: unknown }): Konto {
+  const d = r.data as { bank?: string; kontoname?: string; ibanEnde?: string; anfangCent?: number; verfahren?: string; zuordnung?: Record<string, unknown> | null };
+  return { id: r.id, bank: d.bank || "", name: d.kontoname || "", ibanEnde: d.ibanEnde || "", anfangCent: d.anfangCent || 0, verfahren: d.verfahren || "hand", zuordnung: d.zuordnung || null };
+}
+/** Schlüssel je Umsatz einer Datei: gleicher Umsatz zweimal am selben Tag zählt zweimal (#2), dieselbe Datei noch einmal ergibt dieselben Schlüssel. */
+function schluesselVergeben<T extends { valuta: string; betragCent: number; richtung: string; zweck: string; gegen: string }>(liste: T[], konto: Konto) {
+  const n = new Map<string, number>();
+  return liste.map((u) => { const k = umsatzSchluessel(u, konto.ibanEnde || konto.id); const i = (n.get(k) || 0) + 1; n.set(k, i); return { ...u, schluessel: i > 1 ? `${k}#${i}` : k }; });
+}
+async function kontoSchreiben(id: string, aendern: (d: Record<string, unknown>) => void, was: string) {
+  const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+  const r = (akte as unknown as { records: Array<{ id: string; data: Record<string, unknown>; updatedAt: string }> }).records.find((x) => x.id === id);
+  if (!r) throw new Error("Konto nicht gefunden.");
+  aendern(r.data); r.updatedAt = new Date().toISOString();
+  await akteNachAbgleichSchreiben(h, akte, revision, "Konto geändert", `${id}: ${was}`);
+}
+const bank = {
+  verfahren: [...VERFAHREN],
+  datumsformen: [...DATUMSFORMEN],
+  async konten(): Promise<Konto[]> {
+    const { records } = await registerLesen();
+    return records.filter((r) => r.recordType === "object" && lebt(r) && (r.data as { bankkonto?: boolean }).bankkonto).map(kontoAus).sort((a, b) => a.id.localeCompare(b.id));
+  },
+  async kontoAnlegen(e: { bank: string; name: string; iban: string; anfangCent: number; verfahren: string }) {
+    if (!e.bank.trim() && !e.name.trim()) throw new Error("Bitte die Bank oder einen Namen für das Konto eintragen.");
+    const ibanEnde = e.iban.replace(/\s/g, "").slice(-4);
+    const name = [e.bank.trim(), e.name.trim()].filter(Boolean).join(" · ");
+    const r = await createLocalFamilyRecord(await browserVault(), { recordType: "object", status: "aktiv", source: "Portemonnaie", notes: null,
+      data: { name, bankkonto: true, bank: e.bank.trim().slice(0, 80), kontoname: e.name.trim().slice(0, 80), ibanEnde, anfangCent: Number.isInteger(e.anfangCent) ? e.anfangCent : 0,
+        verfahren: (VERFAHREN as readonly string[]).includes(e.verfahren) ? e.verfahren : "hand", zuordnung: null } as never });
+    return r.id;
+  },
+  async kontoAendern(id: string, p: { verfahren?: string; zuordnung?: Record<string, unknown> | null; anfangCent?: number }) {
+    await kontoSchreiben(id, (d) => {
+      if (p.verfahren && (VERFAHREN as readonly string[]).includes(p.verfahren)) d.verfahren = p.verfahren;
+      if (p.zuordnung !== undefined) d.zuordnung = p.zuordnung;
+      if (Number.isInteger(p.anfangCent)) d.anfangCent = p.anfangCent;
+    }, Object.keys(p).join(", "));
+  },
+  async kontoEntfernen(id: string) { const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+    const r = (akte as unknown as { records: Array<{ id: string; status: string; updatedAt: string }> }).records.find((x) => x.id === id); if (!r) return;
+    r.status = "archiviert"; r.updatedAt = new Date().toISOString(); await akteNachAbgleichSchreiben(h, akte, revision, "Konto herausgenommen", `${id}: archiviert, Umsätze bleiben.`); },
+  async umsaetze(): Promise<BankUmsatz[]> {
+    const { records } = await registerLesen();
+    return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { bank?: boolean }).bank).map((r) => {
+      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; konto?: string; gegen?: string; zumBargeld?: boolean; auszug?: string; schluessel?: string; quelle?: string };
+      return { id: r.id, konto: d.konto || "", am: d.am || r.createdAt.slice(0, 10), cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), titel: d.title || "", gegen: d.gegen || "",
+        zumBargeld: !!d.zumBargeld, auszug: d.auszug || null, schluessel: d.schluessel || r.id, quelle: d.quelle || "hand" };
+    }).sort((a, b) => a.am.localeCompare(b.am) || a.id.localeCompare(b.id));
+  },
+  /** Datei lesen (noch nichts gespeichert): Format erkennen, Umsätze, Saldo gegenrechnen, Doppeltes markieren. */
+  async lesen(datei: File, konto: Konto): Promise<Gelesen> {
+    const bytes = new Uint8Array(await datei.arrayBuffer());
+    const leer = { saldoStartCent: null, saldoEndeCent: null, kontoAusDatei: "", zuordnung: null, zeilen: null, fehlt: [] as string[], fehler: [] as Array<{ zeile: number; grund: string }>, datei };
+    let roh: { format: string | null; konto?: string; saldoStartCent: number | null; saldoEndeCent: number | null; umsaetze: Array<{ valuta: string; betragCent: number; richtung: string; zweck: string; gegen: string; unsicher?: boolean }> };
+    let extra: Partial<Gelesen> = {};
+    if (istAltesXls(bytes)) throw new Error("Alte Excel-Datei (.xls) – bitte in Excel als CSV oder .xlsx speichern.");
+    if (istXlsx(bytes)) {
+      const x = await xlsxZeilen(bytes), r = leseMitZuordnung(x.zeilen, konto.zuordnung);
+      roh = { ...r, format: "Excel" }; extra = { zuordnung: r.zuordnung, zeilen: x.zeilen, fehlt: r.fehlt, fehler: r.fehler };
+    } else if (istPdf(datei)) {
+      const t = await textLesen(datei); roh = { ...leseAuszugText(t.text || ""), format: "PDF" };
+    } else {
+      const text = textAusBytes(bytes), p = parseBankauszug(text);
+      if (p.format === "CAMT" || p.format === "MT940") roh = p;
+      else if (istCsvText(text)) { const r = parseBankCsv(text, konto.zuordnung); roh = r; extra = { zuordnung: r.zuordnung, zeilen: r.zeilen, fehlt: r.fehlt, fehler: r.fehler }; }
+      else roh = { format: null, saldoStartCent: null, saldoEndeCent: null, umsaetze: [] };
+    }
+    return bank.fertig(roh, konto, { ...extra, datei });
+  },
+  /** CSV/Excel mit geänderter Zuordnung neu lesen (rein, nichts gespeichert). */
+  neuLesen(g: Gelesen, zuordnung: Record<string, unknown>, konto: Konto, schonDa: Set<string>) {
+    const fehlt = zuordnungFehlt(zuordnung);
+    const r = fehlt.length ? { format: "CSV", saldoStartCent: null, saldoEndeCent: null, umsaetze: [], fehler: [], konto: "" } : leseBankZeilen(g.zeilen || [], zuordnung);
+    return bank.fertig({ ...r, format: g.format }, konto, { zuordnung, zeilen: g.zeilen, fehlt, fehler: r.fehler || [], datei: g.datei }, schonDa);
+  },
+  fertig(roh: { format: string | null; konto?: string; saldoStartCent: number | null; saldoEndeCent: number | null; umsaetze: Array<{ valuta: string; betragCent: number; richtung: string; zweck: string; gegen: string; unsicher?: boolean }> },
+    konto: Konto, extra: Partial<Gelesen>, schonDa?: Set<string>): Gelesen {
+    const mit = schluesselVergeben(roh.umsaetze.filter((u) => u.valuta && Number.isInteger(u.betragCent)), konto);
+    const pruefung = pruefeBankauszug(roh);
+    return { format: roh.format || "", saldoStartCent: roh.saldoStartCent, saldoEndeCent: roh.saldoEndeCent, kontoAusDatei: roh.konto || "", pruefung,
+      umsaetze: mit.map((u) => ({ ...u, doppelt: !!schonDa?.has(u.schluessel) })), zuordnung: null, zeilen: null, fehlt: [], fehler: [], datei: null, ...extra };
+  },
+  async schonDa(kontoId: string) { return new Set((await bank.umsaetze()).filter((u) => u.konto === kontoId).map((u) => u.schluessel)); },
+  /** Übernehmen: neue Umsätze in einem Schreibgang, der Auszug als Unterlage mit Verknüpfung, die Zuordnung am Konto gemerkt. */
+  async uebernehmen(konto: Konto, g: Gelesen, nur?: Set<number>) {
+    const da = await bank.schonDa(konto.id);
+    const neu = g.umsaetze.filter((u, i) => (!nur || nur.has(i)) && !da.has(u.schluessel));
+    const h = await browserVault();
+    let auszug: string | null = null;
+    if (g.datei && neu.length) {
+      const tage = neu.map((u) => u.valuta).sort();
+      auszug = (await saveLocalDocument(h, g.datei, { category: AUSZUG_BEREICH, documentDate: tage[tage.length - 1], notes: `Kontoauszug ${konto.bank} ${konto.name}${konto.ibanEnde ? " …" + konto.ibanEnde : ""} – ${neu.length} Umsätze, ${tage[0]} bis ${tage[tage.length - 1]}`,
+        titel: `Kontoauszug ${[konto.bank, konto.name].filter(Boolean).join(" ")} ${tage[tage.length - 1].slice(0, 7)}`.slice(0, 200), textAuszug: null })).id;
+      await createLocalFamilyRelation(h, { fromType: "object", fromId: konto.id, toType: "document", toId: auszug, relationType: "Kontoauszug", source: "Portemonnaie", notes: null });
+    }
+    if (neu.length) {
+      const { akte, revision } = await akteFuerAbgleich(h);
+      const a = akte as unknown as { records: unknown[]; sequences: Record<string, number> };
+      let seq = a.sequences; const am = new Date().toISOString();
+      for (const u of neu) {
+        const n = nextFamilyRecordId("payment", seq); seq = n.sequences;
+        a.records.push(createFamilyRecord({ id: n.id, recordType: "payment", status: "aktiv", source: "Portemonnaie", now: am,
+          data: { title: (u.zweck || u.gegen || "Umsatz").slice(0, 200), amountCents: u.betragCent, currency: "EUR", bank: true, konto: konto.id, richtung: u.richtung === "einnahme" ? "rein" : "raus",
+            am: u.valuta, gegen: (u.gegen || "").slice(0, 120), schluessel: u.schluessel, quelle: g.format || "Datei", ...(auszug ? { auszug } : {}) } as never }));
+      }
+      a.sequences = seq;
+      await akteNachAbgleichSchreiben(h, akte, revision, "Kontoauszug eingelesen", `${konto.id}: ${neu.length} Umsätze (${g.format}).`);
+    }
+    if (g.zuordnung && !g.fehlt.length) await bank.kontoAendern(konto.id, { zuordnung: { ...g.zuordnung, kopfZeile: 0 } });
+    return { neu: neu.length, schonDa: g.umsaetze.length - neu.length - (nur ? g.umsaetze.filter((_, i) => !nur.has(i)).length : 0), auszug };
+  },
+  async vonHand(konto: Konto, e: { titel: string; cent: number; rein: boolean; am: string; gegen?: string }) {
+    if (!Number.isInteger(e.cent) || e.cent <= 0) throw new Error("Bitte einen Betrag eintragen.");
+    const u = { valuta: e.am, betragCent: e.cent, richtung: e.rein ? "einnahme" : "ausgabe", zweck: e.titel, gegen: e.gegen || "" };
+    const da = await bank.schonDa(konto.id);
+    let k = umsatzSchluessel(u, konto.ibanEnde || konto.id), i = 1; while (da.has(i > 1 ? `${k}#${i}` : k)) i++; if (i > 1) k = `${k}#${i}`;
+    const r = await createLocalFamilyRecord(await browserVault(), { recordType: "payment", status: "aktiv", source: "Portemonnaie", notes: null,
+      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", bank: true, konto: konto.id, richtung: e.rein ? "rein" : "raus", am: e.am, gegen: (e.gegen || "").slice(0, 120), schluessel: k, quelle: "hand" } as never });
+    return r.id;
+  },
+  /** Barabhebung: der Umsatz bleibt bei der Bank (markiert), im Bargeld kommt derselbe Betrag „vom Konto“ hinzu. */
+  async insBargeld(id: string) {
+    const u = (await bank.umsaetze()).find((x) => x.id === id); if (!u || u.zumBargeld) return null;
+    const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+    const r = (akte as unknown as { records: Array<{ id: string; data: Record<string, unknown>; updatedAt: string }> }).records.find((x) => x.id === id);
+    if (!r) return null; r.data.zumBargeld = true; r.updatedAt = new Date().toISOString();
+    await akteNachAbgleichSchreiben(h, akte, revision, "Barabhebung", `${id}: ins Bargeld übernommen.`);
+    return geld.eintragen({ titel: "Barabhebung", cent: Math.abs(u.cent), rein: u.cent < 0, wofuer: "", am: u.am, vomKonto: true });
+  },
+  async herausnehmen(id: string) { return geld.entfernen(id); },
+  /** Monatsbericht je Konto (Anfang = Anfangssaldo + alles davor) und die Summe mit dem Bargeld. */
+  bericht(konten: Konto[], alle: BankUmsatz[], monat: string, bargeldEnde: number) {
+    const je = konten.map((k) => {
+      const eigen = alle.filter((u) => u.konto === k.id);
+      const vorher = k.anfangCent + eigen.filter((u) => u.am.slice(0, 7) < monat).reduce((a, u) => a + u.cent, 0);
+      const im = eigen.filter((u) => u.am.slice(0, 7) === monat).map((u, i) => ({ datum: u.am, seq: i, beschreibung: u.titel, einnahme: u.cent > 0 ? u.cent : 0, ausgabe: u.cent < 0 ? -u.cent : 0, id: u.id }));
+      return { konto: k, ...kassenbericht(im, vorher) };
+    });
+    const bankEnde = je.reduce((a, b) => a + b.endbestand, 0);
+    return { je, bankEnde, summe: bankEnde + bargeldEnde };
+  },
+  /** Monatsdatei für BookLedgerPro (portemonnaie-monat, Fassung 1, aus dem Klon). */
+  monatsdatei(geldPosten: Posten[], konten: Konto[], alle: BankUmsatz[], monat: string) {
+    const bargeldAnfang = geldPosten.filter((p) => p.am.slice(0, 7) < monat).reduce((a, p) => a + p.cent, 0);
+    const faecher = [{ id: "bargeld", art: "bargeld", name: "Bargeld", anfangCent: bargeldAnfang,
+      posten: geldPosten.map((p) => ({ id: p.id, datum: p.am, cent: Math.abs(p.cent), richtung: p.cent > 0 ? "rein" : "raus", text: p.titel, wofuer: p.wofuer, beleg: p.bon, vomKonto: p.vomKonto })) },
+      ...konten.map((k) => { const eigen = alle.filter((u) => u.konto === k.id); return { id: k.id, art: "bank", name: [k.bank, k.name].filter(Boolean).join(" · ") || "Bank", konto: k.ibanEnde,
+        anfangCent: k.anfangCent + eigen.filter((u) => u.am.slice(0, 7) < monat).reduce((a, u) => a + u.cent, 0),
+        posten: eigen.map((u) => ({ id: u.id, datum: u.am, cent: Math.abs(u.cent), richtung: u.cent > 0 ? "rein" : "raus", text: [u.titel, u.gegen].filter(Boolean).join(" · "), beleg: u.auszug, zumBargeld: u.zumBargeld })) }; })];
+    const d = baueMonatsdatei({ monat, quelle: "private-akte", faecher: faecher as never });
+    return { name: monatsdateiName(d), text: JSON.stringify(d, null, 1) };
+  },
+};
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

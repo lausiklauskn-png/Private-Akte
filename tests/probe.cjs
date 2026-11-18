@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.7 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.8.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -163,7 +163,7 @@ const { chromium } = require('playwright');
     await p.hover('.werk[data-a=kalender]'); await p.waitForTimeout(600); soll(await p.locator('#tipp').isVisible() && (await p.locator('#tipp').innerText()).includes('Kalender'), 'Tooltip ohne Klick'); await p.screenshot({path:`p/${name}-1b-tipp.png`}); await p.mouse.move(5, 400); soll(!(await p.locator('#tipp').isVisible()), 'Tooltip geht wieder weg');
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=hilfe]' : '.kopfknoepfe [data-a=hilfe]'); await p.uncheck('[data-tippwahl]'); await klick('[data-a=zu]'); await p.hover('.werk[data-a=kalender]'); await p.waitForTimeout(600); soll(!(await p.locator('#tipp').isVisible()), 'Tooltips abschaltbar'); await p.mouse.move(5, 400);
     // Bon
-    await klick('.werk[data-a=bon-start]'); await p.waitForSelector('#pm-rest'); soll((await text()).includes('An BookLedgerPro geben'), 'Portemonnaie echt, mit Weg zu BookLedgerPro'); await p.screenshot({path:`p/${name}-3-geld.png`});
+    await klick('.werk[data-a=bon-start]'); await p.waitForSelector('#pm-rest'); soll((await text()).includes('An BookLedgerPro geben') && (await p.locator('[data-a=pm-fach]').count()) === 2, 'Portemonnaie echt, Fächer Bargeld und Bank, Weg zu BookLedgerPro'); await p.screenshot({path:`p/${name}-3-geld.png`});
     { const monat = await p.evaluate(() => pm.monat);
       await p.fill('[data-form=posten] [name=t]','Kino'); await p.fill('[data-form=posten] [name=w]','Freizeit'); await p.fill('[data-form=posten] [name=b]','12,50'); await klick('[data-form=posten] [value=aus]');
       await p.waitForFunction(() => /Kino/.test(document.querySelector('#pm-liste')?.innerText || '')); soll((await p.locator('#pm-liste').innerText()).includes('wofür: Freizeit') && (await p.locator('#pm-rest').innerText()).includes('12,50'), 'Ausgabe eingetragen, Rest gerechnet (BookLedgerPro-Bausteine)');
@@ -172,8 +172,50 @@ const { chromium } = require('playwright');
       await p.setInputFiles('#pm-bon', {name:`bon-${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundener Bon ${name} SUMME 7,10`)}); await p.waitForSelector('#pm-bonzeile');
       await p.fill('[data-form=posten] [name=b]','7,10'); await klick('[data-form=posten] [value=aus]'); await p.waitForFunction(() => !document.querySelector('#pm-bonzeile') && /Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || ''));
       soll(await p.evaluate(async n => (await window.PrivateAkteTresor.liste()).some(d => d.originalName === `bon-${n}.txt` && d.category === 'Einkäufe, Rechnungen & Garantien'), name), 'Bon liegt als Unterlage in der Akte, Posten mit Bon');
-      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.csv`, 'CSV für BookLedgerPro'); soll((await text()).includes('übergeben'), 'übergeben');
-      await klick('#pm-liste [data-a=pm-weg]'); await p.waitForFunction(() => !/Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || '')); soll(true, 'Posten herausnehmen'); }
+      const [dlt] = await Promise.all([p.waitForEvent('download'), klick('[data-a=pm-tabelle]')]); soll(dlt.suggestedFilename() === `portemonnaie-${monat}.csv`, 'Als Tabelle: CSV');
+      await klick('#pm-liste [data-a=pm-weg]'); await p.waitForFunction(() => !/Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || '')); soll(true, 'Posten herausnehmen');
+      // Bank (0.8.0): zweites Fach, Konto frei angelegt, Kontoauszug in mehreren Verfahren, Doppeltes nur einmal, Saldo gegengerechnet. Alle Dateien erfunden.
+      const jm = monat.slice(2, 4) + monat.slice(5, 7), T = s => p.evaluate(s);
+      const mt940 = ende => `:20:PROBE\n:25:DE00123456789012345678\n:28C:1/1\n:60F:C${jm}01EUR1000,00\n:61:${jm}03${jm.slice(2)}03D200,00NTRFNONREF\n:86:083?00Bargeldauszahlung?20Automat Beispiel?32Automat Beispiel\n:61:${jm}05${jm.slice(2)}05C50,00NTRFNONREF\n:86:166?00Gutschrift?20Erstattung Beispiel?32Erika Beispiel\n:62F:C${jm}05EUR${ende}\n`;
+      await klick('[data-a=pm-fach][data-f=bank]'); await p.waitForSelector('#pm-konto-neu'); soll((await text()).includes('Noch kein Konto.'), 'Bank: noch kein Konto');
+      await klick('#pm-konto-neu'); await p.fill('[data-form=konto-neu] [name=bank]', 'Beispielbank'); await p.fill('[data-form=konto-neu] [name=name]', 'Girokonto'); await p.fill('[data-form=konto-neu] [name=iban]', 'DE00 1234 5678 9012 3456 78');
+      await p.fill('[data-form=konto-neu] [name=anfang]', '1.000,00'); await p.selectOption('[data-form=konto-neu] [name=verfahren]', 'mt940'); await klick('[data-form=konto-neu] [type=submit]');
+      await p.waitForSelector('#pm-bank-karte'); soll((await p.locator('#pm-bank-karte').innerText()).includes('…5678') && (await p.locator('#pm-bank-rest').innerText()).includes('1.000,00'), 'Konto angelegt: Bank · Konto · nur vier Stellen der IBAN, Anfangssaldo');
+      soll(await T(async () => (await window.PrivateAkteTresor.bank.konten())[0].ibanEnde === '5678' && !JSON.stringify(await window.PrivateAkteTresor.bank.konten()).includes('9012')), 'IBAN nur mit den letzten vier Stellen gespeichert');
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}.sta`, mimeType:'text/plain', buffer:Buffer.from(mt940('850,00'))}); await p.waitForSelector('#pm-pruefen');
+      soll(await p.locator('#pm-saldo-ok').count() === 1 && (await p.locator('#pm-pruefen').innerText()).includes('2 Umsätze'), 'MT940 gelesen, Saldo stimmt'); await p.screenshot({path:`p/${name}-3b-bank-pruefen.png`});
+      await klick('[data-a=pm-uebernehmen]'); await p.waitForFunction(() => !document.querySelector('#pm-pruefen') && document.querySelectorAll('#pm-bankliste .zeile').length === 2);
+      soll((await p.locator('#pm-bank-rest').innerText()).includes('850,00'), 'übernommen: 2 Umsätze, Kontostand 850,00');
+      soll(await T(async () => (await window.PrivateAkteTresor.liste()).some(d => d.category === 'Finanzen & Konten' && /^Kontoauszug Beispielbank Girokonto/.test(d.titel))), 'Kontoauszug liegt als Unterlage in der Akte');
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}-2.sta`, mimeType:'text/plain', buffer:Buffer.from(mt940('850,00'))}); await p.waitForSelector('#pm-pruefen');
+      soll((await p.locator('#pm-schonda').innerText()).includes('2 schon da') && await p.locator('[data-a=pm-uebernehmen]').isDisabled(), 'derselbe Auszug noch einmal: nichts doppelt'); await klick('[data-a=pm-verwerfen]');
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}-3.sta`, mimeType:'text/plain', buffer:Buffer.from(mt940('900,00'))}); await p.waitForSelector('#pm-pruefen');
+      soll(await p.locator('#pm-saldo-falsch').count() === 1, 'Saldo geht nicht auf → rot'); await klick('[data-a=pm-verwerfen]');
+      await p.selectOption('#pm-verfahren', 'camt'); await p.waitForFunction(() => pm.konten?.[0]?.verfahren === 'camt' && !!document.querySelector('label[for=pm-auszug]'));
+      const camt = `<?xml version="1.0"?><Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02"><BkToCstmrStmt><Stmt><Acct><Id><IBAN>DE00123456789012345678</IBAN></Id></Acct><Ntry><Amt Ccy="EUR">58.40</Amt><CdtDbtInd>DBIT</CdtDbtInd><BookgDt><Dt>${monat}-07</Dt></BookgDt><NtryDtls><TxDtls><RltdPties><Cdtr><Nm>Stadtwerke Beispiel</Nm></Cdtr></RltdPties><RmtInf><Ustrd>Strom</Ustrd></RmtInf></TxDtls></NtryDtls></Ntry></Stmt></BkToCstmrStmt></Document>`;
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}.xml`, mimeType:'application/xml', buffer:Buffer.from(camt)}); await p.waitForSelector('#pm-pruefen'); await klick('[data-a=pm-uebernehmen]');
+      await p.waitForFunction(() => document.querySelectorAll('#pm-bankliste .zeile').length === 3); soll(true, 'CAMT eingelesen (Verfahren je Konto änderbar)');
+      await p.selectOption('#pm-verfahren', 'csv'); await p.waitForFunction(() => pm.konten?.[0]?.verfahren === 'csv' && !!document.querySelector('label[for=pm-auszug]'));
+      const csv = `Kontoinfo;Probe\n\nBuchungstag;Verwendungszweck;Empfänger;Betrag\n08.${monat.slice(5, 7)}.${monat.slice(0, 4)};Brötchen;Bäckerei Beispiel;-4,20\n`;
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}.csv`, mimeType:'text/csv', buffer:Buffer.from(csv)}); await p.waitForSelector('#pm-spalten');
+      soll(await p.evaluate(() => document.querySelector('#pm-spalten').open) && (await p.locator('#pm-pruefen').innerText()).includes('Brötchen'), 'CSV: Spalten zum Prüfen offen, Umsatz erkannt');
+      await p.selectOption('[data-pm-spalte=gegen]', '-1'); await p.waitForFunction(() => document.querySelector('[data-pm-spalte=gegen]')?.value === '-1' && !/Bäckerei/.test(document.querySelector('#pm-pruefen .ordliste')?.innerText || 'Bäckerei')); await p.waitForTimeout(300); await klick('[data-a=pm-uebernehmen]');
+      await p.waitForFunction(() => document.querySelectorAll('#pm-bankliste .zeile').length === 4);
+      soll(await T(async () => { const z = (await window.PrivateAkteTresor.bank.konten())[0].zuordnung; return !!z && z.gegen === -1 && z.betrag === 3; }), 'Spalten-Zuordnung am Konto gemerkt (mit der Änderung von Hand)');
+      await p.setInputFiles('#pm-auszug', {name:`auszug-${name}-b.csv`, mimeType:'text/csv', buffer:Buffer.from(csv)}); await p.waitForSelector('#pm-pruefen');
+      soll(!(await p.evaluate(() => document.querySelector('#pm-spalten').open)) && (await p.locator('#pm-schonda').innerText()).includes('1 schon da'), 'nächste CSV: gemerkte Spalten, Doppeltes erkannt'); await klick('[data-a=pm-verwerfen]');
+      await p.fill('[data-form=bank-hand] [name=t]', 'Miete'); await p.fill('[data-form=bank-hand] [name=b]', '500,00'); await klick('[data-form=bank-hand] [value=aus]');
+      await p.waitForFunction(() => /Miete/.test(document.querySelector('#pm-bankliste')?.innerText || '')); soll(true, 'Umsatz von Hand');
+      await p.locator('#pm-bankliste .zeile', { hasText: 'Bargeldauszahlung' }).locator('[data-a=pm-insbar]').click();
+      await p.waitForFunction(() => /ins Bargeld/.test(document.querySelector('#pm-bankliste')?.innerText || ''));
+      soll(await T(async () => (await window.PrivateAkteTresor.geld.posten()).some(x => x.vomKonto && x.cent === 20000)), 'Barabhebung: im Bargeld +200,00 vom Konto');
+      const bankEnde = 100000 - 20000 + 5000 - 5840 - 420 - 50000;
+      soll((await p.locator('#pm-bank-rest').innerText()).includes(new Intl.NumberFormat('de-DE', { minimumFractionDigits: 2 }).format(bankEnde / 100)) && (await p.locator('#pm-summe').innerText()).includes('Zusammen'), 'Monatsabschluss: Bank und Summe mit dem Bargeld');
+      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.json`, 'Monatsdatei für BookLedgerPro'); soll((await text()).includes('übergeben'), 'übergeben');
+      const md = JSON.parse(require('fs').readFileSync(await dl.path(), 'utf8'));
+      soll(md.format === 'portemonnaie-monat' && md.fassung === 1 && md.faecher.length === 2 && md.faecher[1].konto === '…5678' && md.faecher[1].posten.some(x => x.zumBargeld) && md.faecher[0].posten.some(x => x.vomKonto) && md.faecher[1].endeCent === bankEnde, 'Monatsdatei: Bargeld und Bank, Abhebung markiert, Endbestand');
+      await breit('bank'); await p.screenshot({path:`p/${name}-3c-bank.png`});
+      await klick('[data-a=pm-fach][data-f=bargeld]'); await p.waitForSelector('#pm-rest'); }
     // Farbe der Stadt
     await klick('.fenster [data-a=farbe]'); await p.screenshot({path:`p/${name}-4-farbe.png`}); await klick('[data-farbe=koralle]'); soll(await p.evaluate(() => document.querySelector('.fenster.ast').style.getPropertyValue('--k1'))==='#f9c9ad','Stadtfarbe Koralle');
     // Büro
