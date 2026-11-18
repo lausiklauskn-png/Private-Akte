@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.5.6 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.6.0 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -119,7 +119,7 @@ const { chromium } = require('playwright');
     await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; echtLaden(); }); await klick('[data-a=suche-leer]'); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1');
 
     // Zurück: schließt erst das Fenster, dann die Ansicht; die Seite bleibt dieselbe
-    await klick('.nav [data-zu=baum]'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('.fenster'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('.fenster')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
+    await klick('.nav [data-zu=baum]'); soll(!/Tippe ein Schild an|So ist die App gedacht|Die Zahlen sind/.test(await text()), 'Baum ohne Hinweistexte'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('#rahmen'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('#rahmen')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
     await p.goBack(); await p.waitForSelector('#echt'); soll(p.url()==='http://localhost:8765/' && (await p.locator('.baumbild').count())===0, 'Zurück geht vom Baum zum Start');
     await p.goBack(); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('Du bist am Anfang')); soll(p.url()==='http://localhost:8765/' && (await p.locator('.werk').count())===5, 'Zurück am Anfang: die App bleibt offen und sagt es');
     await klick('.nav [data-zu=akten]'); await klick('.nav [data-zu=start]'); await p.goBack(); await p.waitForTimeout(300); soll((await p.locator('.werk').count())===5 && p.url()==='http://localhost:8765/', 'von Hand zurück zum Start: kein toter Schritt im Verlauf');
@@ -177,9 +177,60 @@ const { chromium } = require('playwright');
     await p.evaluate(() => document.querySelector('video')?.remove()); await breit('baum'); await p.screenshot({path:`p/${name}-10-baum.png`});
     soll((await p.locator('.schild').count())===8,'Schilder'); soll((await p.locator('main .karte').count())===0 && !(await text()).includes('Bunte Kugeln'),'keine Erklärkarten am Baum'); soll(!(await text()).includes('Helfer tragen'),'kein Text über dem Film');
     soll((await p.locator('.wokasten.tresor').count())===1,'ein Tresor'); soll((await p.locator('.wozeile').count())===5,'fünf Fächer im Tresor'); soll((await p.locator('.wostadt').count())===6,'sechs Werkzeuge ohne Speicher'); soll((await text()).includes('1 · Hinzufügen') && (await text()).includes('3 · Tools') && !(await text()).includes('Städte'),'Hinzufügen und Werkzeugstätte'); soll((await text()).includes('der einzige Speicher'),'Wo liegt was'); await p.locator('#wo-liegt-was').scrollIntoViewIfNeeded(); await breit('wo liegt was'); await p.screenshot({path:`p/${name}-10b-wo.png`, fullPage:true}); 
-    // Notiz mit Termin
-    await klick('.werk[data-a=notiz]'); await klick('[data-a=sprechen]'); await p.fill('[name=titel]','Anruf Hausverwaltung'); await p.selectOption('[data-form=notiz] [name=bereich]','wohnen'); await p.fill('[name=vorgang]','Nebenkosten 2025'); await p.check('[name=termin]'); await p.screenshot({path:`p/${name}-11-notiz.png`}); await klick('[data-form=notiz] [type=submit]');
-    soll((await text()).includes('Termin zu „Anruf Hausverwaltung“'),'Kalender zur Notiz'); await klick('[data-form=termin] [type=submit]'); soll((await p.locator('.fenster .liste .zeile').count())===4,'vier Termine'); await p.screenshot({path:`p/${name}-12-kalender.png`}); await klick('[data-a=zu]');
+    // Kalender und Notizen, echt (0.6.0): die Ansicht der Familienakte im Rahmen, gespeichert im Tresor
+    {
+      const tagVon = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+      const heute = tagVon(new Date()), morgen = tagVon(new Date(Date.now() + 864e5));
+      await p.evaluate(() => { zu(); s.frage = ''; s.bereich = null; s.ansicht = 'start'; zeigen(); }); await p.waitForSelector('#faellig');
+      soll((await p.locator('#faellig').innerText()).includes('nichts offen'), 'Fällig ist am Anfang leer (keine Beispiele mehr)');
+      soll(await p.locator('#glocke').count() === 1 && !(await p.locator('#glocke').isVisible()), 'Glocke läuft unsichtbar mit'); soll((await p.locator('#kopfknoepfe .glockenknopf').getAttribute('data-stand')) === 'grau' && await p.locator('#kopfknoepfe .glockenknopf').isVisible(), 'Glockensymbol oben ist grau: keine Erinnerung gespeichert');
+      soll(await p.locator('#kopfknoepfe .glockenknopf').evaluate(e => { const c = getComputedStyle(e); return c.backgroundColor === 'rgba(0, 0, 0, 0)' && c.boxShadow === 'none'; }), 'Glocke ist ein durchsichtiger Knopf: nur das Symbol');
+      await klick('.werk[data-a=notiz]'); await p.waitForSelector('#rahmen'); const kal = p.frameLocator('#rahmen');
+      await kal.locator('[data-notiz-fenster]').waitFor({timeout:30000}); await kal.locator('[data-notiz-eingabe]').fill('Erinnere mich morgen um 9 Uhr, die Hausverwaltung anzurufen');
+      await kal.locator('[data-notiz-speichern]').click(); await kal.locator('[data-notiz-eintrag]').waitFor(); await p.screenshot({path:`p/${name}-11-notiz.png`});
+      await kal.locator('[data-notiz-fertig]').click(); await kal.locator('[data-pa-notiz]').waitFor();
+      soll((await kal.locator('[data-pa-notizen]').innerText()).includes('Hausverwaltung') && (await kal.locator('[data-pa-notiz]').count()) === 1, 'Notiz liegt in der Akte (Liste „Notizen“)');
+      soll((await kal.locator(`[data-mk-tag="${morgen}"] .mk-punkt`).count()) === 1, 'Notiz mit Datum steht im Kalender am Tag von morgen');
+      soll(/gespeichert/.test(await p.locator('#rahmen-meldung').innerText()), 'Bestätigung der Notiz in der Leiste des Rahmens');
+      // Eintrag von Hand, 15 Minuten vor seiner Uhrzeit läutet die Glocke: Uhrzeit so, dass sie in der nächsten Minute fällig ist
+      const um = new Date(Math.ceil((Date.now() + 5000) / 60000) * 60000 + 15 * 60000), uhr = `${String(um.getHours()).padStart(2,'0')}:${String(um.getMinutes()).padStart(2,'0')}`, glockeGeht = tagVon(um) === heute;
+      await kal.locator(`[data-mk-tag="${heute}"]`).click(); await kal.locator('[data-mk-neu]').click(); await kal.locator('[data-mk-titel]').fill(`Zählerablesung ${name}`); if (glockeGeht) await kal.locator('[data-mk-uhr]').fill(uhr);
+      await kal.locator('[data-mk-speichern]').click(); await kal.locator('[data-mk-eintrag]').first().waitFor(); await breit('kalender');
+      soll((await kal.locator('.mk-tagesliste').innerText()).includes(`Zählerablesung ${name}`), 'Eintrag steht in der Tagesliste von heute'); await p.screenshot({path:`p/${name}-12-kalender.png`});
+      await kal.locator('[data-kalender-aufklapper]').first().click(); soll(/Google/.test(await kal.locator('[data-pa-verbinden]').innerText()) && /Microsoft|Outlook/.test(await kal.locator('[data-pa-verbinden]').innerText()), 'Kalender verbinden bietet Google und Microsoft an');
+      soll((await kal.locator('.site-header').count()) === 0 && (await kal.locator('[data-pa-notizen] .card-heading [data-notiz-knopf]').count()) === 1, 'keine eigene Kopfreihe im Kalender, der Erinnerungs-Knopf sitzt im Kopf der Karte „Notizen“');
+      soll((await p.locator('.rahmenfenster .fkopf').evaluate(e => e.offsetHeight)) <= 48, 'Leiste des Rahmens bleibt flach (Bestätigung einzeilig)');
+      await kal.locator('.seitenleiste-griff').click(); soll((await kal.locator('[data-leiste=oben]').count()) === 1 && (await kal.locator('[data-leiste=unten]').count()) === 1 && (await kal.locator('[data-leiste=zurueck]').count()) === 1, 'Seitenleiste der Familienakte: nach oben, nach unten, zurück');
+      await kal.locator('[data-leiste=zurueck]').click(); await p.waitForFunction(() => !document.querySelector('#rahmen')); soll(true, 'Seitenleiste: „Zurück“ schließt den Kalender');
+      await p.waitForFunction(() => /Zählerablesung/.test(document.querySelector('#faellig')?.innerText || ''));
+      const f = await p.locator('#faellig').innerText();
+      soll(f.includes('2 Einträge') && /Zählerablesung[^\n]*\n[^\n]*\n?heute/.test(f) && /Hausverwaltung/.test(f) && f.includes('morgen'), 'Fällig zeigt die zwei echten Einträge mit heute und morgen (' + f.replace(/\n/g, ' | ') + ')');
+      soll(await p.evaluate(async () => { const k = await window.PrivateAkteTresor.kalender.termine(); return k.termine.length === 2 && k.notizen === 1; }), 'Tresor: zwei offene Termine, eine Notiz');
+      const gk = '#kopfknoepfe .glockenknopf';
+      soll((await p.locator(gk).getAttribute('data-stand')) === 'gruen' && (await p.locator(gk + ' .gzahl').count()) === 0, 'Glocke ist grün ohne Zahl: Einträge gespeichert, nichts fällig');
+      if (glockeGeht) { await p.waitForSelector(gk + '.laeutet', {timeout:100000}).catch(() => {});
+        soll((await p.locator(gk + '.laeutet').count()) === 1 && !(await p.locator('#glocke').isVisible()), 'Erinnerung läutet (15 Min. vorher): die Glocke meldet es, nichts schiebt sich über die Seite'); }
+      // Glockenfeld: alle offenen Einträge, einzeln öffnen oder abhaken
+      await klick(gk); await p.waitForSelector('.glockenfeld .gzeile'); await breit('glockenfeld');
+      { const g = await p.locator('.glockenfeld').innerText(); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && /Zählerablesung/.test(g) && /Hausverwaltung/.test(g), 'Glockenfeld zeigt beide Einträge'); } await p.screenshot({path:`p/${name}-12b-glocke.png`});
+      soll((await p.locator('.glockenfeld .gtun').count()) === 0, 'Glockenfeld: Zeilen sind zugeklappt, keine Knöpfe zu sehen'); await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=glocke-auf]').click(); soll(/Öffnen\s*Erledigt/.test(await p.locator('.glockenfeld .gzeile.auf .gtun').innerText()), 'Pfeil klappt die Zeile auf: „Öffnen“ und „Erledigt“');
+      await p.locator('.glockenfeld .gzeile.auf .gtun [data-a=kal-tag]').click(); await p.waitForSelector('#rahmen');
+      await p.frameLocator('#rahmen').locator(`[data-mk-tag="${morgen}"].gewaehlt`).waitFor({timeout:30000}); soll((await p.locator('.glockenfeld').count()) === 0, '„Öffnen“ im Glockenfeld öffnet den Kalender an dem Tag');
+      // Überfälliges: gestern eintragen (wenn gestern im selben Monat steht) – Glocke rot mit Zahl, im Feld abhaken
+      const gestern = tagVon(new Date(Date.now() - 864e5));
+      if (gestern.slice(0, 7) === heute.slice(0, 7)) { const k3 = p.frameLocator('#rahmen');
+        await k3.locator(`[data-mk-tag="${gestern}"]`).click(); await k3.locator('[data-mk-neu]').click(); await k3.locator('[data-mk-titel]').fill('Versäumtes Probe'); await k3.locator('[data-mk-speichern]').click(); await k3.locator('[data-mk-formular]').waitFor({state:'detached'});
+        await p.waitForSelector('.rahmenfenster .glockenknopf[data-stand=rot]'); soll((await p.locator('.rahmenfenster .glockenknopf .gzahl').innerText()) === '1', 'Glocke in der Leiste des Rahmens: rot mit der Zahl 1 (ein Eintrag überfällig)');
+        soll((await p.locator('.rahmenfenster .fkopf').evaluate(e => e.offsetHeight)) <= 48, 'Leiste des Rahmens bleibt flach, auch mit Glocke');
+        await klick('[data-a=rahmen-zu]'); await p.waitForSelector(gk + '[data-stand=rot]'); await klick(gk);
+        soll((await p.locator('.glockenfeld .gzeile.rot').count()) === 1 && /überfällig/.test(await p.locator('.glockenfeld .gzeile.rot').innerText()), 'Glockenfeld: der überfällige Eintrag ist rot markiert');
+        await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-auf]').click(); await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-erledigt]').click(); await p.waitForSelector(gk + '[data-stand=gruen]'); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && (await p.locator(gk + ' .gzahl').count()) === 0, 'Abhaken im Glockenfeld: Eintrag weg, Glocke wieder grün');
+      } else { await klick('[data-a=rahmen-zu]'); await klick(gk); }
+      { const z = p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}); if (!(await z.locator('[data-a=glocke-erledigt]').count())) await z.locator('[data-a=glocke-auf]').click(); await z.locator('[data-a=glocke-erledigt]').click(); } await p.waitForFunction(() => document.querySelectorAll('.glockenfeld .gzeile').length === 1);
+      await p.mouse.click(5, h - 5); await p.waitForFunction(() => !document.querySelector('.glockenfeld')); soll(true, 'Tipp daneben schließt das Glockenfeld');
+      await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
+      soll((await p.locator('#faellig').innerText()).includes('1 Eintrag'), 'Erledigtes steht nicht mehr unter Fällig');
+    }
     // Organizer
     await p.evaluate(() => { if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); }); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
     // Mail
@@ -266,11 +317,14 @@ const { chromium } = require('playwright');
     await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.ablegen(new File(['Leerprobe eins'], 'Leerprobe-1.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); const d = await t.ablegen(new File(['Leerprobe zwei'], 'Leerprobe-2.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); await t.herausnehmen(d.id); localStorage.setItem('pa_wfpdf_probe', '1'); localStorage.setItem('pa_do-eigene-kategorien', '["Motorboot"]');
       await new Promise((ok, nein) => { const q = indexedDB.open('PrivateAkteOrganizer1', 1); q.onupgradeneeded = () => q.result.createObjectStore('kv'); q.onerror = () => nein(q.error); q.onsuccess = () => { const t = q.result.transaction('kv', 'readwrite'); t.objectStore('kv').put({fassung:1, ordnerName:'Probe', quelle:'test', stufe:5, dateien:[{pfad:'a.pdf'}], verlauf:[{x:1}], regeln:[{id:'probe-regel-1'}, {id:'probe-regel-2'}], zeit:''}, 'zustand'); t.objectStore('kv').put({x:1}, 'lauf'); t.oncomplete = () => { q.result.close(); ok(); }; }; });
       await echtLaden(); });
+    soll(await p.evaluate(async () => { const k = await window.PrivateAkteTresor.kalender.termine(); return k.termine.length === 1 && k.notizen === 1; }), 'vor dem Leeren: ein offener Termin, eine Notiz');
     await p.evaluate(() => fLeeren()); await klick('[data-form=leeren] [type=submit]'); soll((await p.locator('[data-form=leeren]').count()) === 1, 'Akte leeren: ohne das Wort „leeren“ geschieht nichts');
     await p.fill('[data-form=leeren] [name=wort]', 'Leeren'); await klick('[data-form=leeren] [type=submit]'); await p.waitForFunction(() => !document.querySelector('[data-form=leeren]'), null, {timeout:60000});
     const leer = await p.evaluate(async () => { const dbs = (await indexedDB.databases()).map(d => d.name);
       const z = await new Promise(ok => { const q = indexedDB.open('PrivateAkteOrganizer1', 1); q.onsuccess = () => { const t = q.result.transaction('kv', 'readonly'), a = t.objectStore('kv').get('zustand'), k = t.objectStore('kv').getAllKeys(); t.oncomplete = () => { q.result.close(); ok({ z:a.result, keys:k.result }); }; }; });
-      return { n:(await window.PrivateAkteTresor.liste()).length, wf:dbs.includes('PrivateAkteWFPDF1'), wfMerker:Object.keys(localStorage).filter(k => /^pa_wfpdf_/.test(k)).length, regeln:z.z ? z.z.regeln.length : -1, dateien:z.z ? z.z.dateien.length + z.z.verlauf.length : -1, keys:z.keys, kat:localStorage.getItem('pa_do-eigene-kategorien'), text:document.body.innerText.includes('Noch nichts hineingelegt') }; });
+      const kal = await window.PrivateAkteTresor.kalender.termine();
+      return { termine:kal.termine.length, notizen:kal.notizen, n:(await window.PrivateAkteTresor.liste()).length, wf:dbs.includes('PrivateAkteWFPDF1'), wfMerker:Object.keys(localStorage).filter(k => /^pa_wfpdf_/.test(k)).length, regeln:z.z ? z.z.regeln.length : -1, dateien:z.z ? z.z.dateien.length + z.z.verlauf.length : -1, keys:z.keys, kat:localStorage.getItem('pa_do-eigene-kategorien'), text:document.body.innerText.includes('Noch nichts hineingelegt') }; });
+    soll(leer.termine === 0 && leer.notizen === 0, 'Akte leeren: Termine und Notizen sind weg');
     soll(leer.n === 0 && !leer.wf && leer.wfMerker === 0 && leer.text, 'Akte leeren: Unterlagen und Workflow PDF sind leer (' + JSON.stringify(leer) + ')');
     soll(leer.regeln === 2 && leer.dateien === 0 && leer.keys.length === 1 && leer.kat === '["Motorboot"]', 'Akte leeren: im Organizer sind Liste und Verlauf weg, die gelernten Regeln und eigenen Kategorien bleiben');
     await p.evaluate(() => { indexedDB.deleteDatabase('PrivateAkteOrganizer1'); localStorage.removeItem('pa_do-eigene-kategorien'); });

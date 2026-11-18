@@ -1,0 +1,12 @@
+/* rahmen/kalender-thema.css — Farben der Privaten Akte über den Ansichten der Familienakte (Kalender und Notizen), nach demselben
+   Muster wie organizer-thema.css und wfpdf-thema.css (Klaus 18.11.2026): Aufbau, Maße und Lage kommen unverändert aus dem Klon,
+   nur die Farben werden die des Tools – der Kalender ist in der Akte violett. Letztes Stylesheet der Seite. */
+:root{
+  --navy:#3b2372; --navy-2:#5b3aa6; --teal:#5b3aa6; --teal-soft:#efeaf9; --blue-soft:#f3effb;
+  --canvas:#f8fafd; --line:#ddd6ee;
+}
+.button.primary,.app-shell .button.primary{background:#5b3aa6;border-color:#5b3aa6;color:#fff}
+.app-shell :is(h1,h2,h3,h4){color:#3b2372;background:#f3effb;border-color:#ddd6ee}
+.mk-tag.heute{border-color:#5b3aa6}
+.mk-tag.gewaehlt{background:#5b3aa6;border-color:#5b3aa6;color:#fff}
+.glocken-schalter[data-glocke=an],.app-shell .glocken-schalter[data-glocke=an]{background:#5b3aa6;border-color:#5b3aa6;color:#fff}
