@@ -22,10 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.2)
+## Stand (18.11.2026, Vorschau 0.6.3)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.1.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `f9822b7` (0.4.14 mit Übergabe-Stelle). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `f7ecb24` (0.4.15). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -44,6 +44,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **Am Tablet bestätigt (Klaus 18.11. nachmittags, 0.6.2):** die verschiebbare Seitenleiste („Flying Widget“) „funktioniert wunderbar“.
+  Darauf: sie bleibt jetzt bis 1400 px Breite stehen (geteilter Bildschirm, Tablet quer), erst am großen Monitor nicht (0.6.3).
+- **0.6.3 Datei-Organizer 0.4.15 nachgezogen (Klaus 18.11., nach dem Test am Tablet bestellt, gebaut im Repo Datei-Organizer, dort PR #65):**
+  „bitte prüfen“ mit „Alle auswählen“/„Alle übernehmen“; Verlauf mit Sortierung und „Aus Verlauf löschen“ (ohne rückgängig zu
+  machen – Rückgängig ist ein eigener Knopf, das Gelernte bleibt); „Sortieren“ statt „Sicht“ in Finden; flache Zeilen; eigene
+  Seitenleiste (Griff rechts); **Kopf im Rahmen nur noch eine Zeile** – zusammen mit der Leiste der Akte am Handy zwei Zeilen
+  (gemessen 43 + 47 px). Klon @ `f7ecb24`. Probe 377 grün. Am Tablet ungeprüft. Die Seitenleiste im Organizer ist dessen eigene
+  (nicht verschiebbar wie die der Akte); in Workflow PDF gibt es noch keine.
 - **Am Tablet bestätigt (Klaus 18.11., 12:42, 0.6.0/0.6.1):** Notiz einsprechen mit Datum und Uhrzeit trägt Tag und Uhrzeit ein („funktioniert
   astrein, genau wie ich es wollte“); die Glocke steht rot mit Zahl in der Leiste des Kalenders; „In den Kalender“ zeigt seinen
   verbundenen Google-Kalender – die Verbindung (`familienakte-kalender-v1`) teilt sich die Akte mit der Familienakte unter derselben

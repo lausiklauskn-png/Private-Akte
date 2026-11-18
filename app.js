@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -1097,8 +1097,8 @@ document.addEventListener('submit', async ev => { const f = ev.target; if (f.dat
 const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
 /* ---------- Seitenleiste am Handy (0.6.1, Klaus 18.11.: „am Handy auf jeden Fall, da können die anderen Funktionen hinein“) ----------
    Wie die Seitenleiste der Familienakte (dort app/seitenleiste.tsx, im Kalender läuft sie selbst): ein schmaler Griff am rechten Rand,
-   wandert mit; ein Tipp zeigt nach oben, nach unten, Zurück, Startseite, Baum – und was sonst hinter „⋯“ liegt. Nur in der schmalen
-   Ansicht; am Monitor stehen die Knöpfe ohnehin oben. Aussehen und Maße wie im Klon, hier für die Hülle ohne React geschrieben. */
+   wandert mit; ein Tipp zeigt nach oben, nach unten, Zurück, Startseite, Baum – und was sonst hinter „⋯“ liegt. Bis 1400 px Breite
+   (Handy, geteilter Bildschirm, Tablet); am großen Monitor stehen die Knöpfe ohnehin oben. Aussehen und Maße wie im Klon, hier für die Hülle ohne React geschrieben. */
 const leiste = { auf:false, gezogen:0 };
 /* Verschieben (Klaus 18.11.: für Linkshänder – „anpacken, vier Pfeile, verschieben: nach links, nach unten, nach oben“): den Griff
    lange drücken oder ziehen; er wird dabei rund mit vier Pfeilen, folgt dem Finger und verankert sich, wo man loslässt – am linken

@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.6.2 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.6.3 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -262,7 +262,7 @@ const { chromium } = require('playwright');
       await p.evaluate(async () => { const t = window.PrivateAkteTresor; for (const d of await t.liste()) if (/^Baumprobe-/.test(d.originalName)) await t.herausnehmen(d.id); await echtLaden(); mainZeigen(); });
     }
     // Seitenleiste am Handy (0.6.1): Griff rechts, nach oben/unten, Zurück, Startseite, Baum und was hinter „⋯“ liegt; am Monitor nicht
-    if (name === 'pc') soll(!(await p.locator('.seitenleiste-griff').isVisible()), 'Seitenleiste: am Monitor nicht zu sehen');
+    if (name === 'pc') { soll(await p.locator('.seitenleiste-griff').isVisible(), 'Seitenleiste: auch bei 1280 px da (geteilter Bildschirm, Tablet quer)'); await p.setViewportSize({width:1500, height:h}); soll(!(await p.locator('.seitenleiste-griff').isVisible()), 'Seitenleiste: am großen Monitor (1500 px) nicht zu sehen'); await p.setViewportSize({width:w, height:h}); }
     else {
       soll(await p.locator('.seitenleiste-griff').isVisible(), 'Seitenleiste: Griff am rechten Rand im Handyformat'); await klick('.seitenleiste-griff'); await breit('seitenleiste');
       { const t = await p.locator('.seitenleiste-knoepfe').innerText(); soll(/Nach oben/.test(t) && /Nach unten/.test(t) && /Akten/.test(t) && /Eingang/.test(t) && /Baum/.test(t) && /Importieren/.test(t) && /Exportieren/.test(t) && /Drucken/.test(t) && /Farbpalette/.test(t) && !/Startseite/.test(t), 'Seitenleiste: hoch, runter, Baum und die Funktionen aus „⋯“; auf der Startseite keine „Startseite“ (' + t.replace(/\n/g, ' | ') + ')'); } await p.screenshot({path:`p/${name}-12c-seitenleiste.png`});
@@ -319,6 +319,8 @@ const { chromium } = require('playwright');
     // Datei-Organizer hinter dem grünen Knopf: echter Klon, eigener Speicher, kein eigener Worker, Übergabe an die Akte
     await klick('.werk[data-a=viele]'); await p.waitForSelector('#rahmen');
     const org = p.frameLocator('#rahmen'); await org.locator('[data-testordner]').waitFor({timeout:30000});
+    if (name === 'handy') { const kopf = await p.evaluate(() => { const d = document.querySelector('#rahmen').contentDocument, h = d.querySelector('header'); return document.querySelector('.rahmenfenster .fkopf').offsetHeight + (h ? h.offsetHeight : 999); });
+      soll(kopf <= 100, 'Datei-Organizer im Rahmen am Handy: Kopf zusammen höchstens zwei Zeilen (' + kopf + ' px)'); soll((await org.locator('[data-leiste-griff]').count()) === 1, 'Datei-Organizer 0.4.15 im Rahmen: Seitenleiste ist da'); }
     await breit('Organizer im Rahmen'); await p.screenshot({path:`p/${name}-20-organizer.png`});
     const of = p.frames().find(f => /rahmen\/datei-organizer|datei-organizer\/app\/~rahmen/.test(f.url()));
     const orgLage = await of.evaluate(async () => ({ marke:document.documentElement.dataset.paEingebettet, rahmen:!!window.DO_RAHMEN, navy:getComputedStyle(document.documentElement).getPropertyValue('--navy').trim(), sw:(await navigator.serviceWorker.getRegistrations()).length, basis:document.baseURI.includes('/klone/datei-organizer/app/'), titel:document.title }));

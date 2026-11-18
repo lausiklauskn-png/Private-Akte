@@ -10,6 +10,7 @@ import { SCHRIFTSTUECKE, dringlichkeit } from "../lib/erkennen.ts";
 import { offeneFuerNummer } from "../lib/archivnummer.ts";
 import { stichprobe, anteilText } from "../lib/stichprobe.ts";
 import { deutsch, kurzfassung, INDEX_DATEI } from "../lib/index-format.ts";
+import { verlaufOrdnen, type VerlaufOrdnung } from "./verlauf.ts";
 import { Ablaufbild, FesterBaum, Info, OrdnerBaum, Seitentitel, type Schritt } from "./ui.tsx";
 import { ausAuswahl, nativGemerkt, nativPlattform, nativVergessen, nativSpeichernMoeglich, nativWaehlen, nativWieder, nativerOrdner, ordnerWaehlen, ordnerWahlMoeglich, testOrdner, type GemerkterOrdner } from "./quellen.ts";
 import { heute, Ladebalken, type AppZustand, type FindenZiel, type SeitenId } from "./app.tsx";
@@ -245,7 +246,7 @@ function SicherZeile({ z, d }: { z: AppZustand; d: Datei }) {
   const [auge, setAuge] = useState(false);
   const [stift, setStift] = useState(false);
   return <div className="pruef-zeile sicher" data-sicher={d.pfad}>
-    <div><strong><Check size={15} style={{ verticalAlign: "-2px", marginRight: 6 }}/>{d.name}</strong><span className="grund">{kurzfassung(d)}</span></div>
+    <div className="zeile-text"><strong title={d.name}><Check size={15} style={{ verticalAlign: "-2px", marginRight: 6 }}/>{d.name}</strong><span className="grund">{kurzfassung(d)}</span></div>
     <DateiAktionen z={z} d={d} auge={auge} setAuge={setAuge} stift={stift} setStift={setStift}/>
     {stift && <div style={{ gridColumn: "1 / -1" }}><FeldAendern z={z} d={d} fertig={() => setStift(false)}/></div>}
     {auge && <div style={{ gridColumn: "1 / -1" }}><Steckbrief z={z} d={d}/></div>}
@@ -255,9 +256,9 @@ function SicherZeile({ z, d }: { z: AppZustand; d: Datei }) {
 /** Auge (ansehen), Stift (von Hand ändern), Papierkorb (aus dem Organizer nehmen) – an jeder Datei gleich (Klaus 13.11.). */
 export function DateiAktionen({ z, d, auge, setAuge, stift, setStift }: { z: AppZustand; d: Datei; auge: boolean; setAuge: (b: boolean) => void; stift: boolean; setStift: (b: boolean) => void }) {
   return <div className="pruef-aktionen">
-    <button type="button" className="button klein" aria-pressed={auge} aria-label={`${d.name} ansehen`} title="Ansehen" onClick={() => setAuge(!auge)} data-auge><Eye size={15}/></button>
-    <button type="button" className="button klein" aria-pressed={stift} aria-label={`${d.name} ändern`} title="Von Hand ändern: Art, Bereich, Absender, Betrifft, Datum, Frist" onClick={() => setStift(!stift)} data-stift><Pencil size={15}/></button>
-    <button type="button" className="button klein" aria-label={`${d.name} entfernen`} title="Aus dem Organizer nehmen (Original bleibt)" onClick={() => { if (confirm(`„${d.name}“ aus dem Organizer nehmen? Das Original bleibt unverändert.`)) z.entfernen([d.pfad]); }} data-papierkorb><Trash2 size={15}/></button>
+    <button type="button" className="button klein nur-symbol" aria-pressed={auge} aria-label={`${d.name} ansehen`} title="Ansehen" onClick={() => setAuge(!auge)} data-auge><Eye size={15}/></button>
+    <button type="button" className="button klein nur-symbol" aria-pressed={stift} aria-label={`${d.name} ändern`} title="Von Hand ändern: Art, Bereich, Absender, Betrifft, Datum, Frist" onClick={() => setStift(!stift)} data-stift><Pencil size={15}/></button>
+    <button type="button" className="button klein nur-symbol" aria-label={`${d.name} entfernen`} title="Aus dem Organizer nehmen (Original bleibt)" onClick={() => { if (confirm(`„${d.name}“ aus dem Organizer nehmen? Das Original bleibt unverändert.`)) z.entfernen([d.pfad]); }} data-papierkorb><Trash2 size={15}/></button>
   </div>;
 }
 
@@ -276,7 +277,7 @@ export function FeldAendern({ z, d, fertig }: { z: AppZustand; d: Datei; fertig:
   </div>;
 }
 
-function PruefZeile({ z, d, neu }: { z: AppZustand; d: Datei; neu?: number }) {
+function PruefZeile({ z, d, neu, gewaehlt, waehlen }: { z: AppZustand; d: Datei; neu?: number; gewaehlt: boolean; waehlen: (an: boolean) => void }) {
   const felder = offeneFelder(d) as FeldName[];
   const [feld, setFeld] = useState<FeldName>(felder[0]);
   const [aendern, setAendern] = useState(false);
@@ -287,16 +288,17 @@ function PruefZeile({ z, d, neu }: { z: AppZustand; d: Datei; neu?: number }) {
   const [auge, setAuge] = useState(false);
   if (!feld) return null;
   const w = d.felder[feld];
-  return <div className="pruef-zeile" data-pruef={d.pfad}>
-    <div><strong>{d.name}{neu ? <span className="badge pruefen" style={{ marginLeft: 8 }} data-neu-marke>neu in Sieb {neu}</span> : null}</strong>
-      <span className="grund">{FELD_NAMEN[feld]}: <b>{w?.wert || "–"}</b> · {w?.grund || "nicht erkannt"}</span>
-      {felder.length > 1 && <span className="grund">Noch offen: {felder.map((f) => FELD_NAMEN[f as FeldName]).join(", ")}</span>}
+  return <div className={`pruef-zeile mit-wahl${aendern ? " aendert" : ""}`} data-pruef={d.pfad}>
+    <input type="checkbox" className="zeilen-wahl" checked={gewaehlt} onChange={(e) => waehlen(e.target.checked)} aria-label={`${d.name} auswählen`} data-pruef-wahl/>
+    <div className="zeile-text"><strong title={d.name}><span className="name">{d.name}</span>{neu ? <span className="badge pruefen" data-neu-marke>neu in Sieb {neu}</span> : null}</strong>
+      <span className="grund" title={w?.grund}>{FELD_NAMEN[feld]}: <b>{w?.wert || "–"}</b> · {w?.grund || "nicht erkannt"}</span>
+      {felder.length > 1 && <span className="grund noch-offen">Noch offen: {felder.map((f) => FELD_NAMEN[f as FeldName]).join(", ")}</span>}
     </div>
     <div className="pruef-aktionen">
-      <button type="button" className="button klein" aria-pressed={auge} aria-label={`${d.name} ansehen`} title="Ansehen, teilen oder entfernen" onClick={() => setAuge(!auge)} data-auge><Eye size={15}/></button>
+      <button type="button" className="button klein nur-symbol" aria-pressed={auge} aria-label={`${d.name} ansehen`} title="Ansehen, teilen oder entfernen" onClick={() => setAuge(!auge)} data-auge><Eye size={15}/></button>
       {!aendern ? <>
         {w?.wert && <button type="button" className="button klein" onClick={() => z.aendern(d.pfad, feld, w.wert)} data-stimmt><Check size={15}/>Stimmt</button>}
-        <button type="button" className="button klein" onClick={() => { setWas(feld); setWert(w?.wert || ""); setAendern(true); }} aria-label="Ändern" title="Von Hand ändern: Art, Bereich, Absender, Betrifft, Datum, Frist" data-korrigieren><Pencil size={15}/></button>
+        <button type="button" className="button klein nur-symbol" onClick={() => { setWas(feld); setWert(w?.wert || ""); setAendern(true); }} aria-label="Ändern" title="Von Hand ändern: Art, Bereich, Absender, Betrifft, Datum, Frist" data-korrigieren><Pencil size={15}/></button>
       </> : <>
         <select value={was} onChange={(e) => { const f = e.target.value as FeldName; setWas(f); setWert(d.felder[f]?.wert || ""); }} aria-label="Welches Feld" data-feld-wahl>{ALLE_FELDER.map((f) => <option key={f} value={f}>{FELD_NAMEN[f]}</option>)}</select>
         <WertWahl feld={was} wert={wert} setWert={setWert}/>
@@ -364,6 +366,15 @@ export function SortierenSeite({ z, gehe }: P) {
   const liegen = z.dateien.length - offen.length - sicher.length;
   const [alle, setAlle] = useState(false);
   const [alleSicher, setAlleSicher] = useState(false);
+  // Alles auf einmal (Klaus 18.11.): Haken je Zeile, „Alle auswählen“, ein Knopf übernimmt die Vorschläge – ohne Haken für alle offenen.
+  const [wahl, setWahl] = useState<Set<string>>(() => new Set());
+  const gewaehlt = useMemo(() => offen.filter((d) => wahl.has(d.pfad)).map((d) => d.pfad), [offen, wahl]);
+  const zuNehmen = gewaehlt.length ? gewaehlt : offen.map((d) => d.pfad);
+  const alleNehmen = () => {
+    const n = zuNehmen.length;
+    if (n > 1 && !confirm(`Bei ${n} Dateien den Vorschlag übernehmen, ohne einzeln zu prüfen? Zurücknehmen geht unter „Verlauf“.`)) return;
+    z.alleUebernehmen(zuNehmen); setWahl(new Set());
+  };
   if (!z.dateien.length) return <><Seitentitel symbol={<ListChecks size={24}/>} titel="Sortieren"/><section className="card"><p>Noch kein Ordner gelesen.</p><button type="button" className="button primary" onClick={() => gehe("ordner")}><FolderOpen size={18}/>Ordner wählen</button></section></>;
   const sichtbar = alle ? offen : offen.slice(0, 15);
   return <>
@@ -385,9 +396,13 @@ export function SortierenSeite({ z, gehe }: P) {
     </section>
     <section className="card" data-pruefliste>
       <div className="card-heading"><h2>Bitte prüfen <span className="badge pruefen">{offen.length}</span>{neuZahl > 0 && neuZahl < offen.length && <span className="leise" style={{ marginLeft: 8, fontWeight: 400 }} data-neu-zahl>davon {neuZahl} neu aus Sieb {z.stufe}</span>}</h2>
-        <Info titel="Prüfen" punkte={["„Stimmt“ bestätigt den Vorschlag.", "„Ändern“ setzt einen eigenen Wert.", "Beides merkt sich der Organizer und lernt daraus.", "Rückgängig unter „Verlauf“."]}/></div>
+        <Info titel="Prüfen" punkte={["„Stimmt“ bestätigt den Vorschlag.", "Der Stift setzt einen eigenen Wert.", "Keine Zeit zum Prüfen? „Alle übernehmen“ bestätigt alle Vorschläge auf einmal – mit Haken nur die gewählten.", "Beides merkt sich der Organizer und lernt daraus.", "Rückgängig unter „Verlauf“."]}/></div>
       {offen.length === 0 ? <p className="leise" data-nichts-offen>Nichts zu prüfen{z.stufe >= 5 ? " – alles sortiert." : "."}</p>
-        : <>{sichtbar.map((d) => <PruefZeile key={d.pfad} z={z} d={d} neu={neuOffen(d) && neuZahl < offen.length ? z.stufe : 0}/>)}
+        : <><div className="listen-leiste" data-pruef-leiste>
+            <label className="alle-wahl"><input type="checkbox" checked={gewaehlt.length === offen.length} ref={(e) => { if (e) e.indeterminate = gewaehlt.length > 0 && gewaehlt.length < offen.length; }} onChange={(e) => setWahl(e.target.checked ? new Set(offen.map((d) => d.pfad)) : new Set())} data-pruef-alle/>Alle auswählen</label>
+            <button type="button" className="button klein primary" onClick={alleNehmen} title="Die Vorschläge übernehmen, ohne einzeln zu prüfen" data-alle-uebernehmen><Check size={15}/>{gewaehlt.length && gewaehlt.length < offen.length ? `Auswahl übernehmen (${gewaehlt.length})` : "Alle übernehmen"}</button>
+          </div>
+          {sichtbar.map((d) => <PruefZeile key={d.pfad} z={z} d={d} neu={neuOffen(d) && neuZahl < offen.length ? z.stufe : 0} gewaehlt={wahl.has(d.pfad)} waehlen={(an) => setWahl((w) => { const n = new Set(w); if (an) n.add(d.pfad); else n.delete(d.pfad); return n; })}/>)}
           {offen.length > sichtbar.length && <button type="button" className="text-link" style={{ marginTop: 10 }} onClick={() => setAlle(true)}>Alle {offen.length} zeigen</button>}</>}
     </section>
     <section className="card" data-sicherliste>
@@ -513,10 +528,10 @@ export function FindenSeite({ z, gehe, ziel }: P) {
   }, [ziel, sicht.id, wurzel]);
   if (!z.dateien.length) return <><Seitentitel symbol={<FolderTree size={24}/>} titel="Finden"/><section className="card"><p>Noch kein Ordner gelesen.</p><button type="button" className="button primary" onClick={() => gehe("ordner")}><FolderOpen size={18}/>Ordner wählen</button></section></>;
   return <>
-    <Seitentitel symbol={<FolderTree size={24}/>} titel="Finden" info={<Info titel="Sichten" punkte={["Ein Ordner, viele Bäume: nach Bereich, Absender, Person, Datum, Frist, Nummer …", "Die Dateien liegen dabei nicht doppelt – der Baum ist nur eine Ansicht.", "Weitere Sichten erscheinen, sobald das passende Sieb gelaufen ist."]}/>}/>
+    <Seitentitel symbol={<FolderTree size={24}/>} titel="Finden" info={<Info titel="Sortieren" punkte={["Ein Ordner, viele Bäume: sortiert nach Bereich, Absender, Person, Datum, Frist, Nummer …", "Die Dateien liegen dabei nicht doppelt – der Baum ist nur eine Ansicht.", "Weitere Arten zu sortieren erscheinen, sobald das passende Sieb gelaufen ist."]}/>}/>
     <div className="werkzeug-leiste">
       <label className="suchfeld"><Search size={17}/><input type="search" placeholder="Suchen: Name, Absender, Nummer, Text …" value={frage} onChange={(e) => setFrage(e.target.value)} aria-label="Suchen" data-suche/></label>
-      <label className="sicht-wahl"><span className="leise">Sicht</span><select value={sicht.id} onChange={(e) => setSichtId(e.target.value)} data-sicht>{moeglich.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}</select></label>
+      <label className="sicht-wahl"><span className="leise" data-sicht-wort>Sortieren</span><select value={sicht.id} onChange={(e) => setSichtId(e.target.value)} data-sicht>{moeglich.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}</select></label>
     </div>
     <div className="explorer" style={{ marginTop: 14 }}>
       <section className="card"><OrdnerBaum wurzel={wurzel} gewaehlt={knoten?.id || "alle"} waehlen={(k) => { setKnoten(k); setFrage(""); }} label={`Baum: ${sicht.name}`}/></section>
@@ -524,7 +539,7 @@ export function FindenSeite({ z, gehe, ziel }: P) {
         <section className="card" data-liste>
           <div className="card-heading"><h2>{frage.trim() ? `Treffer für „${frage.trim()}“` : (knoten?.titel || "Alle Dateien")}</h2><span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}>{liste.length > 0 && <button type="button" className="text-link" onClick={() => { const was = frage.trim() ? `${liste.length} Treffer` : knoten ? `„${knoten.titel}“ (${liste.length})` : `Alle ${liste.length} Dateien`; if (confirm(`${was} aus dem Organizer nehmen? Die Originale bleiben unverändert.`)) z.entfernen(liste.map((d) => d.pfad), was); }} aria-label="Alle in dieser Liste entfernen" title="Alle in dieser Liste aus dem Organizer nehmen (Originale bleiben)" data-entfernen-liste><Trash2 size={15}/></button>}<span className="badge">{liste.length}</span></span></div>
           <ul className="dateiliste">{liste.slice(0, 200).map((d) => <li key={d.pfad} className="datei-eintrag"><div className="datei-zeile-mit"><button type="button" className="datei-zeile" aria-current={gewaehlt === d.pfad} onClick={() => setGewaehlt(d.pfad)} data-datei={d.pfad}>
-            <DateiSymbol d={d}/><span><strong>{d.felder.absender?.wert && d.felder.schriftstueck?.wert ? `${d.felder.schriftstueck.wert} · ${d.felder.absender.wert}` : d.name}</strong><small>{d.pfad}{d.felder.datum ? ` · ${deutsch(d.felder.datum.wert)}` : ""}</small></span><Zustand d={d}/>
+            <DateiSymbol d={d}/><span className="zeile-text"><strong>{d.felder.absender?.wert && d.felder.schriftstueck?.wert ? `${d.felder.schriftstueck.wert} · ${d.felder.absender.wert}` : d.name}</strong><small title={d.pfad}>{d.pfad}{d.felder.datum ? ` · ${deutsch(d.felder.datum.wert)}` : ""}</small></span><Zustand d={d}/>
           </button><DateiAktionen z={z} d={d} auge={gewaehlt === d.pfad} setAuge={(b) => setGewaehlt(b ? d.pfad : "")} stift={stiftBei === d.pfad} setStift={(b) => setStiftBei(b ? d.pfad : "")}/></div>
             {stiftBei === d.pfad && <FeldAendern z={z} d={d} fertig={() => setStiftBei("")}/>}</li>)}</ul>
           {liste.length > 200 && <p className="leise">Erste 200 von {liste.length}. Suche genauer.</p>}
@@ -538,16 +553,36 @@ export function FindenSeite({ z, gehe, ziel }: P) {
 
 // ---------------- Verlauf ----------------
 export function VerlaufSeite({ z }: P) {
-  const liste = [...z.verlauf.entries()].reverse();
+  // Klaus 18.11.: sortieren, auswählen, aus dem Verlauf löschen – getrennt von „Rückgängig“. An der Zeile selbst steht kein Knopf mehr:
+  // ein Tipp setzt nur den Haken, erst die beschrifteten Knöpfe oben tun etwas (mehrere Schritte zurück nur nach Rückfrage).
+  const [ordnung, setOrdnung] = useState<VerlaufOrdnung>("neu");
+  const [wahl, setWahl] = useState<Set<number>>(() => new Set());
+  useEffect(() => { setWahl(new Set()); }, [z.verlauf.length]);
+  const liste = useMemo(() => verlaufOrdnen(z.verlauf, ordnung), [z.verlauf, ordnung]);
+  const gewaehlt = [...wahl].filter((i) => i < z.verlauf.length), n = gewaehlt.length;
+  const stueck = (eins: string, viele: string) => (n === 1 ? eins : `${n} ${viele}`);
+  const loeschen = () => { if (n && confirm(`${stueck("Diesen Eintrag", "Einträge")} aus dem Verlauf löschen?\n\nNur die Liste wird kürzer. Die Dateien bleiben so sortiert, wie sie sind, und das Gelernte bleibt.`)) z.verlaufLoeschen(gewaehlt); };
+  const zurueck = () => { if (n && (n === 1 || confirm(`${n} Schritte rückgängig machen?\n\nDie Dateien stehen danach wieder bei „bitte prüfen“. Wenn du nur die Liste kürzen willst: „Aus Verlauf löschen“.`))) z.rueckgaengig(gewaehlt); };
   return <>
-    <Seitentitel symbol={<History size={24}/>} titel="Verlauf" info={<Info titel="Verlauf" punkte={["Jede Bestätigung und Korrektur steht hier.", "„Rückgängig“ nimmt sie zurück – die Datei landet wieder bei „bitte prüfen“.", "Aus den Korrekturen lernt der Organizer Regeln je Absender."]}/>}/>
+    <Seitentitel symbol={<History size={24}/>} titel="Verlauf" info={<Info titel="Verlauf" punkte={["Jede Bestätigung und Korrektur steht hier.", "Haken setzen, dann oben wählen:", "„Aus Verlauf löschen“ kürzt nur die Liste – die Dateien bleiben sortiert, das Gelernte bleibt.", "„Rückgängig machen“ nimmt den Schritt zurück – die Datei landet wieder bei „bitte prüfen“.", "Aus den Korrekturen lernt der Organizer Regeln je Absender."]}/>}/>
+    <Meldung z={z} gehe={() => {}}/>
     <div className="raster-2">
       <section className="card" data-verlauf>
         <div className="card-heading"><h2>Korrekturen</h2><span className="badge">{z.verlauf.length}</span></div>
-        {liste.length === 0 ? <p className="leise">Noch nichts korrigiert.</p> : <ul className="verlauf-liste">{liste.map(([i, k]) => <li key={k.zeit + i}>
-          <span><strong>{FELD_NAMEN[k.feld]}</strong> {k.bestaetigt ? <>bestätigt: „{k.zu}“</> : <>„{k.von || "–"}“ → „{k.zu}“</>}<span className="grund">{k.pfad.split("/").pop()} · {new Date(k.zeit).toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" })}</span></span>
-          <button type="button" className="button klein" onClick={() => z.rueckgaengig(i)} data-rueckgaengig><Undo2 size={15}/>Rückgängig</button>
-        </li>)}</ul>}
+        {liste.length === 0 ? <p className="leise">Noch nichts korrigiert.</p> : <>
+          <div className="listen-leiste" data-verlauf-leiste>
+            <label className="alle-wahl"><input type="checkbox" checked={n === z.verlauf.length} ref={(e) => { if (e) e.indeterminate = n > 0 && n < z.verlauf.length; }} onChange={(e) => setWahl(e.target.checked ? new Set(z.verlauf.keys()) : new Set())} data-verlauf-alle/>Alle auswählen</label>
+            <label className="sicht-wahl"><span className="leise">Sortieren</span><select value={ordnung} onChange={(e) => setOrdnung(e.target.value as VerlaufOrdnung)} data-verlauf-sortieren><option value="neu">Neueste zuerst</option><option value="alt">Älteste zuerst</option><option value="art">Nach Art (Geändertes zuerst)</option></select></label>
+          </div>
+          <div className="listen-leiste" data-verlauf-knoepfe>
+            <span className="leise" data-verlauf-gewaehlt>{n ? `${n} gewählt` : "Erst Haken setzen"}</span>
+            <button type="button" className="button klein" disabled={!n} onClick={loeschen} title="Nur aus der Liste nehmen. Die Dateien bleiben sortiert, das Gelernte bleibt." data-verlauf-loeschen><Trash2 size={15}/>Aus Verlauf löschen</button>
+            <button type="button" className="button klein" disabled={!n} onClick={zurueck} title="Den Schritt zurücknehmen: die Datei steht wieder bei „bitte prüfen“" data-rueckgaengig><Undo2 size={15}/>Rückgängig machen</button>
+          </div>
+          <ul className="verlauf-liste">{liste.map(([i, k]) => <li key={k.zeit + i}><label className="verlauf-eintrag" data-verlauf-eintrag={i}>
+            <input type="checkbox" className="zeilen-wahl" checked={wahl.has(i)} onChange={(e) => setWahl((w) => { const s = new Set(w); if (e.target.checked) s.add(i); else s.delete(i); return s; })} data-verlauf-wahl/>
+            <span><strong>{FELD_NAMEN[k.feld]}</strong> {k.bestaetigt ? <>bestätigt: „{k.zu}“</> : <>„{k.von || "–"}“ → „{k.zu}“</>}<span className="grund">{k.pfad.split("/").pop()} · {new Date(k.zeit).toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" })}</span></span>
+          </label></li>)}</ul></>}
       </section>
       <section className="card" data-regeln>
         <div className="card-heading"><h2>Gelernt</h2><span className="badge du">{z.regeln.length}</span></div>

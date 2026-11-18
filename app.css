@@ -334,7 +334,8 @@ details.klapp[open]>summary{margin-bottom:8px}
 .seitenleiste-knoepfe .fleck{width:22px;height:22px;border-radius:50%;flex:none}
 .seitenleiste-knoepfe .lfrage{width:24px;text-align:center}
 body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty)) .seitenleiste,body:has(#menueort:not(:empty)) .seitenleiste{display:none}
-@media(min-width:1000px){.seitenleiste{display:none}}
+/* bis 1400 px Breite (Handy, geteilter Bildschirm, Tablet quer) – am großen Monitor nicht (Klaus 18.11.) */
+@media(min-width:1400px){.seitenleiste{display:none}}
 @media print{.seitenleiste{display:none}}
 /* „Deine Unterlagen“ (0.6.2): Baum mit „Alle Unterlagen“ und flache Zeilen – mehr je Bildschirm (Klaus 18.11.). */
 .ebaum{padding:4px 6px;border-bottom:1px solid var(--line)}

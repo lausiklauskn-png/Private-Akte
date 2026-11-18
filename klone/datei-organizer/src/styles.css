@@ -199,7 +199,6 @@ a { color: var(--teal); }
 .pruef-zeile strong { overflow-wrap: anywhere; }
 .pruef-aktionen { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; justify-content: flex-end; }
 .pruef-aktionen select { padding: 6px 8px; border-radius: 9px; border: 1px solid var(--line); background: white; max-width: 220px; }
-@media (max-width: 640px) { .pruef-zeile { grid-template-columns: minmax(0,1fr); } .pruef-aktionen { justify-content: flex-start; } }
 
 /* Verlauf */
 .verlauf-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
@@ -229,7 +228,6 @@ a { color: var(--teal); }
 .feld-aendern { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 8px; border: 1px dashed var(--line); border-radius: 10px; background: #f8fafc; }
 .feld-aendern select, .feld-aendern input { padding: 6px 8px; border-radius: 9px; border: 1px solid var(--line); background: white; max-width: 240px; min-width: 0; }
 .info-knopf.aktiv { background: rgba(42,127,134,.15); }
-@media (max-width: 520px) { .datei-zeile-mit { grid-template-columns: minmax(0,1fr); } .datei-zeile-mit .pruef-aktionen { justify-content: flex-start; } }
 /* Landkarte und Dashboard */
 .reiter-leiste { display: flex; flex-wrap: wrap; gap: 6px; }
 .reiter-leiste button { border: 1px solid var(--line); background: white; color: var(--ink); border-radius: 999px; padding: 6px 12px; font-weight: 600; cursor: pointer; }
@@ -288,3 +286,84 @@ a { color: var(--teal); }
 }
 /* Basic (Klaus 17.11.): das Zeichen im Kopf umgedreht wie das App-Symbol – blaues Zeichen, Verlauf von Blau (außen) nach Weiß (Mitte). */
 .brand-symbol.basic { color: #1c5f98; background: radial-gradient(circle at 50% 50%, #fff 0, #fff 34%, #bcd8ef 60%, #5a9bd4 80%, #1c5f98 100%); background-size: 128% 128%; background-position: center; }
+
+/* ---- 0.4.15 (Klaus 18.11.2026, nach dem Test am Tablet) ---- */
+/* Flache Zeilen: Name einzeilig mit …, Pfad bzw. Grund klein darunter, Auge/Stift/Papierkorb als Symbole rechts in der Zeile. */
+.dateiliste { gap: 4px; }
+.datei-zeile { padding: 5px 9px; gap: 8px; min-width: 0; }
+.zeile-text { min-width: 0; }
+.datei-zeile strong, .datei-zeile small, .pruef-zeile .zeile-text .grund, .pruef-zeile.sicher .zeile-text strong, .pruef-zeile .zeile-text .name { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; overflow-wrap: normal; }
+.pruef-zeile { padding: 5px 9px; gap: 2px 8px; }
+.pruef-zeile + .pruef-zeile { margin-top: 4px; }
+.pruef-zeile.mit-wahl { grid-template-columns: auto minmax(0,1fr) auto; }
+.pruef-zeile .zeile-text strong { display: flex; align-items: center; gap: 8px; min-width: 0; font-size: .93rem; }
+.pruef-zeile.sicher .zeile-text strong { display: block; }
+.pruef-zeile .zeile-text .name { flex: 0 1 auto; min-width: 0; }
+.pruef-zeile .zeile-text .badge { flex: 0 0 auto; padding: 1px 7px; font-size: .68rem; }
+.pruef-aktionen { gap: 4px; }
+.pruef-aktionen .button.klein { min-height: 30px; padding: 3px 9px; }
+.button.klein.nur-symbol { width: 30px; min-height: 30px; padding: 0; border-color: transparent; background: transparent; flex: 0 0 auto; }
+.button.klein.nur-symbol:hover, .button.klein.nur-symbol:focus-visible { border-color: var(--line); background: var(--blue-soft); }
+.button.klein.nur-symbol[aria-pressed="true"] { border-color: #2a7f86; background: var(--teal-soft); color: var(--teal); }
+.datei-zeile-mit { gap: 2px; }
+.datei-zeile-mit .pruef-aktionen { gap: 0; }
+.zeilen-wahl, .alle-wahl input { width: 18px; height: 18px; margin: 0; flex: 0 0 auto; accent-color: var(--teal); }
+.listen-leiste { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.alle-wahl { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: .9rem; cursor: pointer; }
+.listen-leiste .sicht-wahl select { padding: 5px 8px; }
+@media (max-width: 640px) {
+  /* Prüfliste schmal: Name über die ganze Breite, darunter der Grund und rechts daneben die Knöpfe – zwei kurze Zeilen. */
+  .pruef-zeile.mit-wahl { grid-template-areas: "wahl name name" "wahl grund akt"; }
+  .pruef-zeile.mit-wahl > .zeilen-wahl { grid-area: wahl; }
+  .pruef-zeile.mit-wahl > .zeile-text { display: contents; }
+  .pruef-zeile.mit-wahl .zeile-text > strong { grid-area: name; }
+  .pruef-zeile.mit-wahl .zeile-text > .grund { grid-area: grund; align-self: center; }
+  .pruef-zeile.mit-wahl .zeile-text > .noch-offen { display: none; }
+  .pruef-zeile.mit-wahl > .pruef-aktionen { grid-area: akt; flex-wrap: nowrap; }
+  .pruef-zeile { padding: 3px 8px; gap: 0 8px; }
+  .pruef-zeile .pruef-aktionen .button.klein { min-height: 28px; }
+  .pruef-zeile .zeile-text strong { line-height: 1.35; }
+  .pruef-zeile.mit-wahl.aendert { grid-template-areas: "wahl name name" "wahl grund grund" "akt akt akt"; }
+  .pruef-zeile.mit-wahl.aendert > .pruef-aktionen { flex-wrap: wrap; justify-content: flex-start; padding-top: 4px; }
+  .pruef-zeile.sicher .pruef-aktionen { flex-wrap: nowrap; gap: 0; }
+  /* Finden schmal: Name oben, darunter der Pfad und klein der Zustand. */
+  .datei-zeile { grid-template-columns: auto minmax(0,1fr) auto; grid-template-areas: "ico name name" "ico pfad marke"; gap: 0 8px; padding: 4px 8px; }
+  .datei-zeile > .ico { grid-area: ico; }
+  .datei-zeile > .zeile-text { display: contents; }
+  .datei-zeile > .zeile-text > strong { grid-area: name; }
+  .datei-zeile > .zeile-text > small { grid-area: pfad; align-self: center; }
+  .datei-zeile > .badge { grid-area: marke; padding: 1px 6px; font-size: .64rem; }
+  .card { padding: 12px; }
+}
+/* Verlauf: Haken je Eintrag; gelöscht oder zurückgenommen wird nur über die beschrifteten Knöpfe darüber. */
+.verlauf-liste li { padding: 4px 0; }
+.verlauf-eintrag { display: flex; align-items: center; gap: 10px; width: 100%; min-width: 0; cursor: pointer; }
+
+/* Seitenleiste in der schmalen Ansicht (Maße wie in der Familienakte): Griff am rechten Rand, mittig, fest. */
+.seitenleiste { position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 65; padding-right: env(safe-area-inset-right, 0px); }
+.seitenleiste-griff { display: grid; place-items: center; width: 18px; height: 76px; padding: 0; border: 1px solid var(--navy-2); border-right: 0; border-radius: 12px 0 0 12px; background: color-mix(in srgb, var(--navy) 72%, transparent); cursor: pointer; box-shadow: -2px 3px 10px rgba(11, 49, 84, .18); }
+.seitenleiste-griff span { width: 4px; height: 32px; border-radius: 4px; background: rgba(255, 255, 255, .85); }
+.seitenleiste-griff:hover, .seitenleiste-griff:focus-visible { background: var(--navy); }
+.seitenleiste-knoepfe { display: grid; gap: 2px; padding: 8px; background: var(--paper); border: 1px solid var(--line); border-right: 0; border-radius: 14px 0 0 14px; box-shadow: -6px 8px 26px rgba(11, 49, 84, .22); max-height: 86vh; overflow-y: auto; }
+.seitenleiste-knoepfe button { display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 4px 12px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: var(--navy); font-weight: 700; text-align: left; cursor: pointer; white-space: nowrap; }
+.seitenleiste-knoepfe button:hover, .seitenleiste-knoepfe button:focus-visible { background: var(--teal-soft); border-color: var(--line); }
+.seitenleiste-knoepfe button[aria-current="page"] { background: var(--blue-soft); }
+.seitenleiste-knoepfe .seitenleiste-zu { justify-self: end; min-height: 32px; padding: 4px 8px; color: var(--muted); }
+.seitenleiste-knoepfe hr { width: 100%; margin: 2px 0; border: 0; border-top: 1px solid var(--line); }
+.seitenleiste-fassung { padding: 2px 12px 0; color: var(--muted); font-size: .72rem; text-align: right; }
+@media (min-width: 1000px) { .seitenleiste { display: none; } }
+@media print { .seitenleiste { display: none; } }
+
+/* Im Rahmen einer anderen App: die Hülle zeigt schon eine Titelzeile. Darum hier nur EINE Zeile – die Leiste der Seiten, rechts der Pfeil
+   für die runden Knöpfe. Name und Fassung entfallen (Fassung: Seitenleiste und Fuß). So stehen zusammen höchstens zwei Zeilen. */
+.im-rahmen .site-header { display: grid; grid-template-columns: minmax(0,1fr) auto; background: var(--navy); }
+.im-rahmen .main-navigation { order: 1; min-width: 0; justify-content: flex-start; }
+.im-rahmen .masthead { order: 2; position: relative; min-height: 0; padding: 0 8px 0 2px; }
+.im-rahmen .marke { display: none; }
+.im-rahmen .ladeanzeige.oben { order: 3; grid-column: 1 / -1; padding-top: 6px; background: #fff; }
+.im-rahmen .info-knopf.mehr-knopf { display: grid; margin-left: auto; border-color: transparent; color: #fff; background: transparent; }
+.im-rahmen .info-knopf.mehr-knopf:hover, .im-rahmen .info-knopf.mehr-knopf.aktiv { background: rgba(255,255,255,.16); }
+.im-rahmen .mehr-knopf.aktiv svg { transform: rotate(180deg); }
+.im-rahmen .header-actions { display: none; }
+.im-rahmen .header-actions.offen { display: flex; position: absolute; right: 8px; top: calc(100% + 4px); z-index: 70; gap: 8px; margin: 0; padding: 8px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: 0 8px 24px rgba(9,38,63,.2); }
+.im-rahmen .header-actions .ordner-pill { max-width: 40vw; }

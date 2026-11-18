@@ -9,6 +9,38 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026): 0.4.15 – nach Klaus' Test am Tablet (nicht ausgegeben, am Gerät ungeprüft)
+
+Klaus 18.11. (sein Wort gilt als Ja zu diesen sichtbaren Änderungen): „man scrollt sich zu Tode“, „was ist, wenn man keine Zeit hat zum
+Prüfen?“, im Verlauf versehentlich 25 Dateien zurücksortiert. Nur Oberfläche (`src/`), Kern (`lib/`) unverändert. Vorrat v36, Code 55.
+
+- **Sortieren – alles auf einmal:** über der Prüfliste (`[data-pruef-leiste]`) Haken „Alle auswählen“ (`[data-pruef-alle]`), Haken je Zeile
+  (`[data-pruef-wahl]`) und Knopf „Alle übernehmen“ / „Auswahl übernehmen (n)“ (`[data-alle-uebernehmen]`; ohne Haken = alle offenen, bei
+  mehr als einer Datei mit Rückfrage). `alleUebernehmen` in `src/app.tsx` bestätigt je Datei jedes offene Feld mit dem Vorschlag – wie
+  „Stimmt“ (Verlauf, Lernen); Felder ohne Vorschlag bleiben offen. Zurücknehmen über den Verlauf.
+- **Verlauf:** Sortierung (`[data-verlauf-sortieren]`: neueste / älteste zuerst / nach Art = Geändertes vor Bestätigtem), Haken je Eintrag
+  (`[data-verlauf-wahl]`, `[data-verlauf-alle]`). An der Zeile steht **kein Knopf mehr** – ein Tipp setzt nur den Haken. Darüber zwei
+  beschriftete Knöpfe: „Aus Verlauf löschen“ (`[data-verlauf-loeschen]`, `verlaufLoeschen`: nur die Liste wird kürzer, Dateien und
+  Gelerntes bleiben; immer mit Rückfrage) und „Rückgängig machen“ (`[data-rueckgaengig]`; ein Schritt sofort, mehrere nur nach Rückfrage).
+  **Gelerntes:** `rueckgaengig` baute die Regeln bisher aus dem übrigen Verlauf neu auf – nach einem Löschen wäre dabei Gelerntes
+  verloren gegangen. Jetzt nimmt es nur die eine Stimme dieses Schritts zurück (`verlernen` in `src/verlauf.ts`, Gegenstück zu `lernen`).
+- **Finden:** das Auswahlfeld heißt „Sortieren“ statt „Sicht“ (`[data-sicht-wort]`; `[data-sicht]` und die Sichten unverändert – Bereich ›
+  Art, Absender, Nummern … sind dabei, nichts Neues).
+- **Flache Zeilen** (Finden, Prüfliste, grüne Liste): weniger Innenabstand, Name einzeilig mit …, Pfad bzw. Grund klein darunter,
+  Auge/Stift/Papierkorb nur als Symbol (`.nur-symbol`) rechts in der Zeile – auch schmal (bis 640 px; Prüfliste dort: Name oben, darunter
+  Grund und Knöpfe; „Noch offen: …“ entfällt schmal). Gemessen bei 390 px: jede Zeile höchstens 64 px, in Finden mindestens 10 Zeilen
+  auf 600 px. Der ganze Grund steht im Hinweis der Zeile (title) und hinter dem Auge.
+- **Seitenleiste** (`src/seitenleiste.tsx`, unter 1000 px Breite; Vorbild und Maße: Familienakte): Griff 18 × 76 px am rechten Rand,
+  mittig, fest (`[data-leiste-griff]`); ein Tipp öffnet „Nach oben“, „Nach unten“, „Zurück“ (nur wenn es in der App eine Seite davor
+  gibt) und die sechs Seiten (`[data-leiste=…]`), unten klein die Fassung (`[data-leiste-fassung]`). Klappt nach jedem Tipp zu; Tipp
+  daneben oder Esc schließt.
+- **Kopf im Rahmen einer anderen App** (`DO_RAHMEN`, Klasse `.im-rahmen` an `.app-shell`): nur **eine** Zeile – die Leiste der Seiten,
+  rechts der Pfeil (`[data-mehr-knopf]`) mit den runden Knöpfen; Name, Fassung und Fähnchen entfallen dort (die Hülle hat ihre eigene
+  Titelzeile; Fassung in Seitenleiste und Fuß). Gilt in jeder Breite, also auch am Tablet. Ohne Rahmen wie bisher höchstens zwei Zeilen.
+- UI-Probe 195 (39 neu, alle sechs Punkte am Ergebnis geprüft, schmal bei 390 px und im Rahmen bei 390 und 820 px). **Am Gerät ungeprüft**,
+  auch im echten Rahmen der Privaten Akte (die muss den Klon erst nachziehen). Nicht gebaut: Seitenleiste in APK/Windows eigens geprüft
+  (gleiche Oberfläche, kommt mit der nächsten Ausgabe mit); „Zurück“ der Seitenleiste zählt nur Seitenwechsel in der App.
+
 ## Stand (17.11.2026 nachts): Betrieb im Rahmen der Privaten Akte (Übergabe-Stelle)
 
 - **Im Rahmen einer anderen App** (Klaus 17.11.: der Organizer läuft als Klon in der Privaten Akte; Generalvollmacht für die Sitzung
@@ -80,7 +112,7 @@ wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). P
 
 - **Android** `Datei-Organizer-Pro-0.4.13.apk` (Code 53, 72.127.288 B, SHA-256 `ec7a5e0b…7eec`, Lauf 43933651627), **Windows**
   `Datei-Organizer-Pro-Windows-0.4.13-x64-setup.exe` (87.293.242 B, SHA-256 `2b413a7c…5b07`, Lauf 43934877194), **Basic** über Pages. Stand `79e546c`.
-  Inhalt: der folgende Abschnitt. Nachweis `docs/VEROEFFENTLICHUNG-0.4.13.json`. Nächste Ausgabe: **0.4.14** (Code 54, steht in den Quellen).
+  Inhalt: der folgende Abschnitt. Nachweis `docs/VEROEFFENTLICHUNG-0.4.13.json`. Nächste Ausgabe: **0.4.15** (Code 55, steht in den Quellen; 0.4.14 wurde nie ausgegeben).
   **Lehre:** die Android-Ausgabe erst starten, wenn der Prüflauf `android` auf dem main-Stand grün ist – sonst hält sie sich selbst an.
   Familienakte: Gegenstück zur neuen Kategorie auf main (#214), dort nicht ausgegeben (Klaus: noch nicht); Kern, Discovery, Landkarte dort auf dem Stand.
 
