@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -217,7 +217,7 @@ const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a h
 
 /* ---------- Ansichten ---------- */
 function sucheFeld(){
-  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form>`;
+  return `<form class="suche" data-form="suche">${ic('lupe')}<input name="q" value="${esc(s.frage)}" placeholder="Welche Unterlage brauchst du?" aria-label="Suchen" autocomplete="off"><button type="button" class="suchknopf" data-a="suche-leer" aria-label="Eingabe löschen" data-tipp="Eingabe löschen" ${s.frage ? '' : 'hidden'}>${ic('zu')}</button>${T() && T().diktat.moeglich() ? `<button type="button" class="suchknopf" data-a="suche-mikro" aria-label="Sprechen" data-tipp="Sprechen" data-tipp2="Sag, was du suchst. Noch einmal tippen beendet und sucht.">${ic('mikro')}</button>` : ''}<button class="knopf" type="submit">Finden</button></form><div id="suchvor" aria-live="polite"></div>`;
 }
 function treffer(){
   const t = suche(s.frage), es = echtSuche(s.frage), ids = es.ids, e = ids.map(id => echt.liste.find(d => d.id === id)).filter(Boolean);
@@ -266,8 +266,7 @@ function vStart(){
   ${echtAbschnitt()}
   ${faelligTeil()}
   <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln seitlich">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
-  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}
-  <p class="hinweis">Vorschau ${FASSUNG} · Gespeichert wird nur, was du unter „Deine Unterlagen“ hineinlegst – auf diesem Gerät. Alles andere ist erfunden.</p>${fuss()}`;
+  ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}${fuss()}`;
 }
 function vAkten(){
   if (!s.bereich) return `<h1 class="titel">Akten</h1><p class="unter">Dieselben sechs Bereiche wie auf der Startseite.</p>
@@ -580,7 +579,7 @@ document.addEventListener('submit', ev => {
 
 /* ---------- Deine Unterlagen: echt, im Tresor der Familienakte (tresor.js = Brücke zum Klon) ---------- */
 const T = () => window.PrivateAkteTresor;
-const echt = { liste:null, fehler:'', datei:null, laeuft:false, termine:[], notizen:0 };
+const echt = { liste:null, fehler:'', datei:null, laeuft:false, termine:[], notizen:0, knoten:null, zeig:30 };
 const echtTitel = d => d.titel || d.originalName;
 const echtArt = d => { const e = (d.originalName.split('.').pop() || '').toUpperCase().slice(0,4); return e === 'JPEG' ? 'JPG' : e || 'DAT'; };
 const echtGroesse = n => n < 1024 ? n + ' B' : n < 1048576 ? Math.round(n/1024) + ' KB' : (n/1048576).toFixed(1).replace('.',',') + ' MB';
@@ -595,6 +594,7 @@ async function termineLaden(){ try { const k = await T().kalender.termine(); ech
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
+  vor.heu.clear();
   await termineLaden();
   if (s.ansicht === 'start' && !sprech.an) mainZeigen();
 }
@@ -602,21 +602,40 @@ async function echtLaden(){
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
 const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
 /* Sortierung von „Deine Unterlagen“ (Klaus 18.11.: der neue Scan war zwischen 100 Unterlagen nicht zu finden). Ab Werk: zuletzt abgelegt oben. */
-const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich']];
+const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich'],['art','Art der Datei']];
 const echtSort = () => { try { const w = localStorage.getItem('pa_sort'); return ECHT_SORT.some(x => x[0] === w) ? w : 'neu'; } catch { return 'neu'; } };
 function echtSortiert(l){
   const w = echtSort(), text = (a, b) => String(a).localeCompare(String(b), 'de', {numeric:true, sensitivity:'base'}), neu = (a, b) => text(b.addedAt || '', a.addedAt || '');
-  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b)}[w];
+  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b), art:(a, b) => text(echtArt(a), echtArt(b)) || neu(a, b)}[w];
   return [...l].sort(f);
 }
-document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } mainZeigen(); });
+document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } echt.knoten = null; echt.zeig = ECHT_SEITE; mainZeigen(); });
+/* Der Baum über „Deine Unterlagen“ (0.6.2, Klaus 18.11.: „die Sicht aus dem Finden des Datei-Organizers, mit dem einklappbaren
+   Alle-Dateien-Knopf – da sehe ich, wie viele es insgesamt sind“): oben „Alle Unterlagen“ mit der Zahl, aufgeklappt darunter die
+   Gruppen mit ihren Zahlen. Ein Tipp auf eine Gruppe zeigt nur sie. Gruppiert wird nach dem, was unter „Sortieren“ gewählt ist:
+   Art der Datei, Jahr (bei „Datum der Unterlage“), sonst der Bereich. Die Liste zeigt je 30 Stück, „Weitere zeigen“ holt mehr. */
+const ECHT_SEITE = 30;
+const echtGruppe = d => { const w = echtSort(); return w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
+function echtBaum(l){
+  const zahl = new Map(); for (const d of l) zahl.set(echtGruppe(d), (zahl.get(echtGruppe(d)) || 0) + 1);
+  const gruppen = [...zahl].sort((a, b) => echtSort() === 'datum' ? String(b[0]).localeCompare(String(a[0]), 'de', {numeric:true}) : String(a[0]).localeCompare(String(b[0]), 'de', {numeric:true, sensitivity:'base'}));
+  if (echt.knoten !== null && !zahl.has(echt.knoten)) echt.knoten = null;
+  const auf = !!klapp.ebaum;
+  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><div class="ekopf"><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" data-a="echt-knoten" data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span><span class="ename">Alle Unterlagen</span><b>${l.length}</b></button>
+    <label class="sortzeile">Sortieren <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label></div>
+    ${auf ? gruppen.map(([g, n]) => `<button class="eknoten${echt.knoten === g ? ' an' : ''}" data-a="echt-knoten" data-k="${esc(g)}"><span class="ename">${esc(g)}</span><b>${n}</b></button>`).join('') : ''}</div>`;
+}
+A['echt-knoten'] = e => { const k = e.dataset.k; if (k === '') { if (echt.knoten === null) { klapp.ebaum = klapp.ebaum ? 0 : 1; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt bis zum Neuladen */ } } echt.knoten = null; } else echt.knoten = echt.knoten === k ? null : k; echt.zeig = ECHT_SEITE; mainZeigen(); };
+A['echt-mehr'] = () => { echt.zeig = (echt.zeig || ECHT_SEITE) + ECHT_SEITE; mainZeigen(); };
 function echtAbschnitt(){
-  const l = echt.liste;
-  const innen = l === null ? '<p class="leer">Die Akte wird geöffnet …</p>'
-    : echt.fehler ? `<p class="leer">${esc(echt.fehler)}</p>`
-    : !l.length ? '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>'
-    : `<label class="sortzeile">Sortiert nach <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>` + echtSortiert(l).map(d => echtZeile(d)).join('');
-  return klappTeil('echt', 'Deine Unterlagen', `${l && !echt.fehler ? l.length + ' · ' : ''}echt · auf diesem Gerät gespeichert`, innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
+  const l = echt.liste; let innen;
+  if (l === null) innen = '<p class="leer">Die Akte wird geöffnet …</p>';
+  else if (echt.fehler) innen = `<p class="leer">${esc(echt.fehler)}</p>`;
+  else if (!l.length) innen = '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>';
+  else { const baum = echtBaum(l), alle = echtSortiert(echt.knoten === null ? l : l.filter(d => echtGruppe(d) === echt.knoten)), n = echt.zeig || ECHT_SEITE;
+    innen = baum + (echt.knoten !== null ? `<p class="egewaehlt">${esc(echt.knoten)} · ${alle.length}</p>` : '') + alle.slice(0, n).map(d => echtZeile(d)).join('')
+      + (alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''); }
+  return klappTeil('echt', 'Deine Unterlagen', l && !echt.fehler ? String(l.length) : '', innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
   echt.datei = datei;
@@ -881,13 +900,30 @@ A['suche-leer'] = () => { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeige
 A['suche-mikro'] = e => {
   if (sprech.an) { sprechEnde(true); return; }
   if (!sprech.sitzung) sprech.sitzung = T().diktat.sitzung({
-    text: t => { const f = suchFeld(); if (f) { f.value = t; const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !t; } },
+    text: t => { const f = suchFeld(); if (f) { f.value = t; const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !t; vorBald(); } },
     zustand: an => { const k = document.querySelector('[data-a=suche-mikro]'); if (k) k.classList.toggle('an', an); if (!an && sprech.an && !sprech.sitzung.active) sprech.an = false; },
     hinweis: (t, fehler) => { if (t && (fehler || /bitte tippen/.test(t))) { sprech.an = false; toast(t); } }
   });
   sprech.an = true; sprech.sitzung.start(suchFeld() ? suchFeld().value : '', false);
 };
-document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; } });
+document.addEventListener('input', ev => { if (ev.target.matches('.suche input[name=q]')) { const x = document.querySelector('[data-a=suche-leer]'); if (x) x.hidden = !ev.target.value; vorBald(); } });
+/* Vorschläge schon beim Tippen oder Sprechen (0.6.2, Klaus 18.11.: „wie bei den E-Mails von Microsoft – die ersten Buchstaben, und er
+   zeigt schon, was es sein könnte“). Ab zwei Zeichen stehen unter dem Suchfeld bis zu sechs Unterlagen: jedes getippte Wort muss
+   ein Wortanfang im Titel, Dateinamen, Bereich, in der Notiz oder im gelesenen Text sein (Titel zählt doppelt); dazu, was die
+   Wortsuche des Klons findet. Das ist nur eine schnelle Vorschau in der Hülle – „Finden“ sucht unverändert (Wortsuche und
+   Bedeutungssuche des Kerns), am Kern ändert sich nichts. Ein Tipp auf einen Vorschlag öffnet die Unterlage. */
+const vor = { zeit:0, heu:new Map() };
+const vorNorm = t => String(t || '').toLowerCase().replace(/ß/g, 'ss').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ');
+function vorHeu(d){ let h = vor.heu.get(d.id); if (!h) { h = {titel:' ' + vorNorm(echtTitel(d) + ' ' + (d.originalName || '')), rest:' ' + vorNorm((d.category || '') + ' ' + (d.notes || '') + ' ' + (d.textAuszug || ''))}; vor.heu.set(d.id, h); } return h; }
+function suchVorschlaege(frage){
+  const w = vorNorm(frage).trim().split(' ').filter(Boolean); if (w.join('').length < 2 || !echt.liste) return [];
+  const treffer = [];
+  for (const d of echt.liste) { const h = vorHeu(d); let p = 0; for (const x of w) { if (h.titel.includes(' ' + x)) p += 2; else if (h.rest.includes(' ' + x)) p += 1; else { p = -1; break; } } if (p > 0) treffer.push([p, d]); }
+  try { for (const id of T().suchen(frage, echt.liste)) if (!treffer.some(t => t[1].id === id)) { const d = echt.liste.find(x => x.id === id); if (d) treffer.push([0.5, d]); } } catch { /* die Vorschau kommt dann nur aus den Wortanfängen */ }
+  return treffer.sort((a, b) => b[0] - a[0] || String(b[1].addedAt || '').localeCompare(String(a[1].addedAt || ''))).slice(0, 6).map(t => t[1]);
+}
+function vorZeigen(){ const f = suchFeld(), o = $('suchvor'); if (!o) return; const t = f ? f.value.trim() : ''; const l = t && t !== s.frage ? suchVorschlaege(t) : []; o.innerHTML = l.length ? `<div class="liste vorliste">${l.map(d => echtZeile(d, '')).join('')}</div>` : ''; }
+function vorBald(){ clearTimeout(vor.zeit); vor.zeit = setTimeout(vorZeigen, 120); }
 
 /* ---------- Bedeutungssuche hinter „Finden“ (Klaus 17.11.): kein eigener Knopf. Nach jedem „Finden“ fragt eine Zeile unter der
    Suchleiste „Ja / Nein“, solange das Sprachmodell nicht geladen ist; „Nein“ blendet sie bis zum nächsten „Finden“ aus.
@@ -1063,20 +1099,45 @@ const zur = { tiefe:0, still:0, wache:false, zuletzt:0 };
    Wie die Seitenleiste der Familienakte (dort app/seitenleiste.tsx, im Kalender läuft sie selbst): ein schmaler Griff am rechten Rand,
    wandert mit; ein Tipp zeigt nach oben, nach unten, Zurück, Startseite, Baum – und was sonst hinter „⋯“ liegt. Nur in der schmalen
    Ansicht; am Monitor stehen die Knöpfe ohnehin oben. Aussehen und Maße wie im Klon, hier für die Hülle ohne React geschrieben. */
-const leiste = { auf:false };
+const leiste = { auf:false, gezogen:0 };
+/* Verschieben (Klaus 18.11.: für Linkshänder – „anpacken, vier Pfeile, verschieben: nach links, nach unten, nach oben“): den Griff
+   lange drücken oder ziehen; er wird dabei rund mit vier Pfeilen, folgt dem Finger und verankert sich, wo man loslässt – am linken
+   oder rechten Rand (Höhe frei, 8–92 %) oder unten (Stelle von links frei). Gemerkt im Browser (`pa_leiste`). Ab Werk rechts,
+   unterhalb der Mitte. Ein kurzer Tipp öffnet wie bisher; aufgeklappt richten sich die Knöpfe nach der Lage. */
+const leistePos = (() => { try { const p = JSON.parse(localStorage.getItem('pa_leiste') || 'null'); if (p && ['l', 'r', 'u'].includes(p.seite) && p.oben >= 8 && p.oben <= 92) return p; } catch { /* Werkseinstellung */ } return {seite:'r', oben:64}; })();
+/* Lage: 'l'/'r' = am linken/rechten Rand, `oben` = Höhe in Prozent; 'u' = unten angedockt, `oben` ist dann die Stelle von links in
+   Prozent. Unten angedockt ersetzt die Leiste am Handy die untere Leiste der Akte (Klaus 18.11.: „dann kann ich komplett auf die
+   untere Navi-Leiste verzichten“) – die tritt dann zurück (`body.leiste-unten`). */
+function leisteLage(){ const o = $('seitenleiste'); if (!o) return; const u = leistePos.seite === 'u';
+  o.classList.toggle('links', leistePos.seite === 'l'); o.classList.toggle('unten', u); document.body.classList.toggle('leiste-unten', u);
+  o.style.top = u ? 'auto' : (leiste.auf ? Math.min(70, Math.max(30, leistePos.oben)) : leistePos.oben) + '%';
+  o.style.left = u ? (leiste.auf ? 50 : leistePos.oben) + '%' : ''; }
+let leisteZug = null;
+const leisteZieht = () => { if (!leisteZug) return; leisteZug.weit = true; const o = $('seitenleiste'); if (o) o.classList.add('zieht'); };
+document.addEventListener('pointerdown', ev => { const g = ev.target.closest && ev.target.closest('.seitenleiste-griff'); if (!g) return; leisteZug = {x:ev.clientX, y:ev.clientY, weit:false, uhr:setTimeout(leisteZieht, 450)}; try { g.setPointerCapture(ev.pointerId); } catch { /* geht auch ohne */ } });
+document.addEventListener('pointermove', ev => { if (!leisteZug) return; if (!leisteZug.weit && Math.hypot(ev.clientX - leisteZug.x, ev.clientY - leisteZug.y) < 10) return;
+  leisteZieht(); const o = $('seitenleiste');
+  /* beim Ziehen folgt der runde Knopf dem Finger; verankert wird beim Loslassen */
+  o.classList.remove('links', 'unten'); o.style.top = ev.clientY + 'px'; o.style.left = ev.clientX + 'px'; o.classList.add('frei');
+  if (ev.clientY > innerHeight * .86) { leistePos.seite = 'u'; leistePos.oben = Math.round(Math.min(92, Math.max(8, ev.clientX / innerWidth * 100))); }
+  else { leistePos.seite = ev.clientX < innerWidth / 2 ? 'l' : 'r'; leistePos.oben = Math.round(Math.min(92, Math.max(8, ev.clientY / innerHeight * 100))); } });
+const leisteLos = () => { if (!leisteZug) return; const weit = leisteZug.weit; clearTimeout(leisteZug.uhr); leisteZug = null; const o = $('seitenleiste'); if (o) o.classList.remove('zieht', 'frei');
+  if (weit) { leiste.gezogen = Date.now(); try { localStorage.setItem('pa_leiste', JSON.stringify(leistePos)); } catch { /* gilt bis zum Neuladen */ } leisteLage(); } };
+document.addEventListener('pointerup', leisteLos); document.addEventListener('pointercancel', leisteLos);
+document.addEventListener('contextmenu', ev => { if (ev.target.closest && ev.target.closest('.seitenleiste-griff')) ev.preventDefault(); }); /* langer Druck soll kein Menü des Browsers öffnen */
 function seitenleisteZeigen(){
   let o = $('seitenleiste'); if (!o) { o = document.createElement('aside'); o.id = 'seitenleiste'; o.className = 'seitenleiste'; o.setAttribute('aria-label', 'Seitenleiste'); document.body.appendChild(o); }
-  o.dataset.seitenleiste = leiste.auf ? 'offen' : 'zu';
-  if (!leiste.auf) { o.innerHTML = `<button class="seitenleiste-griff" data-a="leiste-auf" aria-label="Seitenleiste öffnen: nach oben, nach unten, zurück …"><span aria-hidden="true"></span></button>`; return; }
+  o.dataset.seitenleiste = leiste.auf ? 'offen' : 'zu'; leisteLage();
+  if (!leiste.auf) { o.innerHTML = `<button class="seitenleiste-griff" data-a="leiste-auf" aria-label="Seitenleiste öffnen: nach oben, nach unten, zurück … Ziehen verschiebt sie."><span aria-hidden="true"></span></button>`; return; }
   const k = (a, i, t, attr = '') => `<button role="menuitem" data-a="${a}" ${attr}>${i}<span>${t}</span></button>`;
   o.innerHTML = `<div class="seitenleiste-knoepfe" role="menu"><button class="seitenleiste-zu" data-a="leiste-zu" aria-label="Seitenleiste schließen">${ic('zu')}</button>`
     + k('leiste-oben', ic('hoch'), 'Nach oben') + k('leiste-unten', ic('runter'), 'Nach unten')
     + (zurTiefe() ? k('leiste-zurueck', ic('zurueck'), 'Zurück') : '')
     + (s.ansicht !== 'start' || s.frage || s.bereich ? k('geh', ic('start'), 'Startseite', 'data-zu="start"') : '')
-    + (s.ansicht !== 'baum' ? k('geh', ic('baum'), 'Baum', 'data-zu="baum"') : '') + '<hr>'
+    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t, `data-zu="${id}"`)).join('') + '<hr>'
     + MEHR.map(([a, i, t]) => k(a, a === 'farbe' ? '<span class="fleck farbknopf"></span>' : i ? ic(i) : '<b class="lfrage">?</b>', t, 'data-ort="akte"')).join('') + '</div>';
 }
-A['leiste-auf'] = () => { leiste.auf = true; seitenleisteZeigen(); };
+A['leiste-auf'] = () => { if (Date.now() - leiste.gezogen < 500) return; /* das war ein Ziehen, kein Tipp */ leiste.auf = true; seitenleisteZeigen(); };
 A['leiste-zu'] = () => { leiste.auf = false; seitenleisteZeigen(); };
 A['leiste-oben'] = () => scrollTo({top:0, behavior:'smooth'});
 A['leiste-unten'] = () => scrollTo({top:document.documentElement.scrollHeight, behavior:'smooth'});

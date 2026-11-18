@@ -321,7 +321,8 @@ details.klapp[open]>summary{margin-bottom:8px}
 .menue .gtun button{font-size:13px;font-weight:600;color:var(--navy);padding:4px 10px}
 .menue .gtun button+button{border-left:1px solid var(--line);border-radius:0 12px 12px 0}
 /* Seitenleiste am Handy: Griff am rechten Rand, Maße wie in der Familienakte (dort globals.css, .seitenleiste). Nur schmal. */
-.seitenleiste{position:fixed;top:50%;right:0;transform:translateY(-50%);z-index:45;padding-right:env(safe-area-inset-right,0px)}
+/* Der Griff sitzt unterhalb der Mitte: manche Handys haben oben rechts ihre eigene Seitenleiste (Samsung), die soll nicht mit dieser zusammenfallen. */
+.seitenleiste{position:fixed;top:64%;right:0;transform:translateY(-50%);z-index:45;padding-right:env(safe-area-inset-right,0px)}
 .seitenleiste-griff{display:grid;place-items:center;width:18px;height:76px;padding:0;border:1px solid var(--navy2);border-right:0;border-radius:12px 0 0 12px;background:color-mix(in srgb,var(--navy) 72%,transparent);box-shadow:-2px 3px 10px rgba(11,49,84,.18)}
 .seitenleiste-griff span{width:4px;height:32px;border-radius:4px;background:rgba(255,255,255,.85)}
 .seitenleiste-griff:hover,.seitenleiste-griff:focus-visible{background:var(--navy)}
@@ -335,3 +336,47 @@ details.klapp[open]>summary{margin-bottom:8px}
 body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty)) .seitenleiste,body:has(#menueort:not(:empty)) .seitenleiste{display:none}
 @media(min-width:1000px){.seitenleiste{display:none}}
 @media print{.seitenleiste{display:none}}
+/* „Deine Unterlagen“ (0.6.2): Baum mit „Alle Unterlagen“ und flache Zeilen – mehr je Bildschirm (Klaus 18.11.). */
+.ebaum{padding:4px 6px;border-bottom:1px solid var(--line)}
+.ekopf{display:flex;align-items:center;gap:6px}
+.ekopf .eknoten{flex:0 0 auto;width:auto}.ekopf .eknoten .ename{flex:0 0 auto;overflow:visible}
+.ekopf .sortzeile{padding:0;flex:1 1 0;min-width:0;justify-content:flex-end}.ekopf .sortzeile select{flex:0 1 150px;min-width:0;width:auto;padding-top:3px;padding-bottom:3px}
+.eknoten{display:flex;align-items:center;gap:6px;width:100%;min-width:0;padding:4px 8px;border-radius:9px;font-size:13.5px;text-align:left;color:var(--ink)}
+.eknoten:not(.alle){padding-left:30px}
+.eknoten .ename{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.eknoten.alle .ename{font-weight:700;color:var(--navy)}
+.eknoten b{font-size:12px;font-weight:600;color:var(--muted);flex:none}
+.eknoten.an{background:var(--fl)}.eknoten:hover{background:var(--blue)}
+.epfeil{display:grid;flex:none}.epfeil .icon{width:16px;height:16px;transition:transform .15s}
+.ebaum[data-ebaum=auf] .epfeil .icon{transform:rotate(90deg)}
+.egewaehlt{font-size:12px;font-weight:600;color:var(--navy);padding:5px 12px 2px}
+#echt .zeile{padding:4px 10px;gap:8px}
+#echt .zeile .art{width:26px;height:26px;border-radius:7px;font-size:8.5px}
+#echt .zeile strong{font-size:13.5px;line-height:1.25}#echt .zeile small{font-size:11.5px;line-height:1.25}
+#echt .zeile .m-ok{display:none}
+#echt .zeile>.icon{width:16px;height:16px}
+/* Vorschläge unter dem Suchfeld: flache Zeilen wie in „Deine Unterlagen“. */
+#suchvor:not(:empty){margin:6px 0 10px}
+.vorliste .zeile{padding:4px 10px;gap:8px}.vorliste .zeile:first-child{border-top:0}
+.vorliste .zeile .art{width:26px;height:26px;border-radius:7px;font-size:8.5px}
+.vorliste .zeile strong{font-size:13.5px;line-height:1.25}.vorliste .zeile small{font-size:11.5px;line-height:1.25}
+.vorliste .marke2{display:none}
+
+.seitenleiste-griff{touch-action:none}
+.seitenleiste.links{right:auto;left:0;padding-right:0;padding-left:env(safe-area-inset-left,0px)}
+.seitenleiste.links .seitenleiste-griff{border:1px solid var(--navy2);border-left:0;border-radius:0 12px 12px 0;box-shadow:2px 3px 10px rgba(11,49,84,.18)}
+.seitenleiste.links .seitenleiste-knoepfe{border:1px solid var(--line);border-left:0;border-radius:0 14px 14px 0;box-shadow:6px 8px 26px rgba(11,49,84,.22)}
+/* beim Ziehen: rund, mit vier Pfeilen */
+.seitenleiste.zieht .seitenleiste-griff,.seitenleiste.links.zieht .seitenleiste-griff{width:44px;height:44px;border-radius:50%;border:1px solid var(--navy2);background:var(--navy)}
+.seitenleiste.zieht .seitenleiste-griff span{width:22px;height:22px;border-radius:0;background:none;position:relative}
+.seitenleiste.zieht .seitenleiste-griff span::before{content:"✥";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:20px;line-height:1}
+/* unten angedockt: Griff quer am unteren Rand, die Knöpfe klappen nach oben auf (zweispaltig), die untere Leiste der Akte tritt zurück */
+.seitenleiste.unten{top:auto;bottom:0;right:auto;transform:translateX(-50%);padding:0 0 env(safe-area-inset-bottom,0px)}
+.seitenleiste.unten .seitenleiste-griff{width:76px;height:18px;border:1px solid var(--navy2);border-bottom:0;border-radius:12px 12px 0 0;box-shadow:0 -2px 10px rgba(11,49,84,.18)}
+.seitenleiste.unten .seitenleiste-griff span{width:32px;height:4px}
+.seitenleiste.unten .seitenleiste-knoepfe{grid-template-columns:1fr 1fr;width:min(360px,100vw);border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -8px 26px rgba(11,49,84,.22);max-height:80vh}
+.seitenleiste.unten .seitenleiste-knoepfe .seitenleiste-zu,.seitenleiste.unten .seitenleiste-knoepfe hr{grid-column:1/-1}
+.seitenleiste.unten .seitenleiste-knoepfe button{min-height:40px}
+@media(max-width:999px){body.leiste-unten .nav{display:none}}
+/* frei am Finger, solange gezogen wird */
+.seitenleiste.frei{right:auto;bottom:auto;transform:translate(-50%,-50%);padding:0}
