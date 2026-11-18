@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.8.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.8.1 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -218,6 +218,12 @@ const { chromium } = require('playwright');
       const [dl2] = await Promise.all([p.waitForEvent('download'), klick('[data-a=pm-tabelle]')]); soll(dl2.suggestedFilename() === `portemonnaie-${monat}.csv`, '„Als Tabelle“ bleibt die CSV');
       soll(await p.evaluate(() => { const k = document.querySelector('#pm-abschluss').closest('.karte'); return k.scrollWidth <= k.clientWidth + 1; }), 'Monatsabschluss passt in die Karte');
       await breit('Portemonnaie Summe'); await p.screenshot({path:`p/${name}-3b-summe.png`}); await klick('[data-a=pm-fach][data-f=bank]'); await p.screenshot({path:`p/${name}-3c-bank.png`});
+      // Konto herausnehmen (0.8.1): archiviert, Umsätze bleiben im Register, ohne Konto steht wieder „Konto anlegen“ da.
+      const umsVorher = await p.evaluate(async () => (await window.PrivateAkteTresor.bank.umsaetze()).length);
+      await klick('[data-a=pm-konto-aendern]'); await p.waitForSelector('[data-a=pm-konto-weg]');
+      p.once('dialog', d => d.accept()); await klick('[data-a=pm-konto-weg]'); await p.waitForSelector('[data-form=pm-konto]:not([data-id])');
+      soll(await p.evaluate(async () => (await window.PrivateAkteTresor.bank.konten()).length === 0), 'Konto herausgenommen: keine Konten mehr');
+      soll(await p.evaluate(async (n) => (await window.PrivateAkteTresor.bank.umsaetze()).length === n, umsVorher) && umsVorher > 0, 'Konto herausgenommen: die Umsätze bleiben');
       await klick('[data-a=pm-fach][data-f=bargeld]'); }
     // Farbe der Stadt
     await klick('.fenster [data-a=farbe]'); await p.screenshot({path:`p/${name}-4-farbe.png`}); await klick('[data-farbe=koralle]'); soll(await p.evaluate(() => document.querySelector('.fenster.ast').style.getPropertyValue('--k1'))==='#f9c9ad','Stadtfarbe Koralle');

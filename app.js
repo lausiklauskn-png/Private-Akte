@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.8.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.8.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -460,7 +460,7 @@ function pmKontoForm(k){
     <div class="reihe" style="margin:0"><input class="feld" name="bank" placeholder="Bank" aria-label="Name der Bank" required maxlength="80" value="${esc(k?.bank || '')}" style="flex:1 1 140px"><input class="feld" name="name" placeholder="Girokonto" aria-label="Name des Kontos" maxlength="80" value="${esc(k?.name || '')}" style="flex:1 1 120px"></div>
     <div class="reihe" style="margin:0"><input class="feld" name="iban" placeholder="IBAN (freiwillig)" aria-label="IBAN, freiwillig" maxlength="42" value="${esc(k?.iban || '')}" autocomplete="off" style="flex:2 1 180px"><input class="feld" name="anfang" inputmode="decimal" placeholder="Anfangssaldo" aria-label="Anfangssaldo" value="${k ? esc(T().geld.euro(k.anfangCent).replace(' €', '')) : ''}" style="flex:1 1 100px"></div>
     <div class="reihe" style="margin:0"><select class="feld" name="verfahren" aria-label="Verfahren" style="flex:1 1 120px">${T().bank.VERFAHREN.map(x => `<option value="${x}" ${x === v ? 'selected' : ''}>${VERFAHREN_NAME[x]}</option>`).join('')}</select>
-    <button class="knopf pm-knopf" type="submit" style="flex:1">${k ? 'Speichern' : 'Konto anlegen'}</button>${pm.konten.length ? `<button class="knopf hell" type="button" data-a="pm-konto-zu">Abbrechen</button>` : ''}</div></form>`;
+    <button class="knopf pm-knopf" type="submit" style="flex:1">${k ? 'Speichern' : 'Konto anlegen'}</button>${pm.konten.length ? `<button class="knopf hell" type="button" data-a="pm-konto-zu">Abbrechen</button>` : ''}${k ? `<button class="rund klein geist" type="button" data-a="pm-konto-weg" data-id="${esc(k.id)}" aria-label="Konto herausnehmen" title="Konto herausnehmen">${ic('muell')}</button>` : ''}</div></form>`;
 }
 function pmLesenAnsicht(k){
   const l = pm.lesen, g = T().geld;
@@ -682,6 +682,8 @@ const A = {
  'pm-konto-neu': () => { pm.kontoNeu = true; pm.lesen = null; stadtNeu(); },
  'pm-konto-aendern': () => { pm.kontoNeu = 'aendern'; stadtNeu(); },
  'pm-konto-zu': () => { pm.kontoNeu = false; stadtNeu(); },
+ 'pm-konto-weg': async e => { const k = pm.konten.find(x => x.id === e.dataset.id); if (!k || !confirm(`„${k.bank} · ${k.name}“ herausnehmen? Umsätze und Kontoauszüge bleiben in der Akte.`)) return;
+   try { await T().bank.kontoEntfernen(k.id); pm.konto = null; pm.kontoNeu = false; pm.lesen = null; await pmLaden(); toast('Konto herausgenommen.'); } catch (err) { toast(fehlerText(err)); } },
  'pm-lesen-zu': () => { pm.lesen = null; stadtNeu(); },
  'pm-tabelle-weiter': () => { const l = pm.lesen, r = T().bank.tabelleLesen(l.tabelle.eingabe, l.tabelle.einstellung); l.gelesen = r.gelesen; l.pruef = r.pruef; l.zeilen = r.gelesen.umsaetze.map(u => ({ ...u, an:true })); stadtNeu(); },
  'pm-uebernehmen': () => pmUebernehmen(),
