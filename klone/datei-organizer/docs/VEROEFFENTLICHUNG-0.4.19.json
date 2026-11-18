@@ -1,0 +1,33 @@
+{
+  "fassung": "0.4.19",
+  "datum": "2026-11-18",
+  "freigabe": "Klaus 18.11.2026: „Da kannst du bitte gleich die APK und die Windows-Variante nachziehen“; auf Rückfrage „Ja, ausgeben“",
+  "inhalt": "Knopf „An die Familienakte übergeben“ in APK/Windows (Sortierung in den Ordner, Hinweis auf den Eingangsordner der Familienakte), „An die Private Akte übergeben“ in der Web-App, Reihenfolge nach Datum umkehrbar in Finden, Monate nach dem Kalender, Ladeanzeige bei der Übergabe (#68, #69, #70)",
+  "android": {
+    "commit": "eac6cb9a75feec0a95052bc25d4444dac23b6b2e",
+    "lauf": 44341812846,
+    "datei": "Datei-Organizer-Pro-0.4.19.apk",
+    "versionCode": 59,
+    "groesse": 72102788,
+    "sha256": "271038ab9b0c8474517007654a76e0d0f50c8360599014486f881ea6f36c8c35",
+    "signierzertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.19",
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.19.apk",
+    "geprueft": "Erster Versuch rot an der Installationsprobe im Emulator („Pixel Launcher isn't responding“, Systemdialog vor der App), Bau und Signatur grün; zweiter Versuch grün. Release-Datei aus der Sitzung geladen: Größe und SHA-256 gleich .apk.json und .apk.sha256"
+  },
+  "windows": {
+    "commit": "eac6cb9a75feec0a95052bc25d4444dac23b6b2e",
+    "lauf": 44344322454,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.19-x64-setup.exe",
+    "groesse": 87268770,
+    "download": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.19-x64-setup.exe",
+    "geprueft": "Release-Lauf grün im ersten Versuch (nach dem Android-Lauf gestartet): SHA256SUMS geprüft, Feed signiert und gegen den Schlüssel der App geprüft, Datei vom Server nachgeladen und Prüfsumme verglichen; SHA-256 nicht selbst nachgerechnet (Server aus der Sitzung nicht erreichbar)",
+    "hinweis": "Installer unsigniert (wie bisher)"
+  },
+  "basic": {
+    "commit": "eac6cb9a75feec0a95052bc25d4444dac23b6b2e",
+    "adresse": "https://lausiklauskn-png.github.io/Datei-Organizer/",
+    "geprueft": "Pages-Lauf auf dem Stand grün; aus der Sitzung nicht abrufbar (Proxy)"
+  },
+  "nicht_geprueft": "Nicht am Gerät: Knopf „An die Familienakte übergeben“ in APK und Windows, Übernahme in der Familienakte über den Eingangsordner, „An die Private Akte“ über Pages, Richtung in Finden am Tablet."
+}

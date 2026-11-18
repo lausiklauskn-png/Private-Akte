@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -23,7 +23,7 @@ const P = {
  datei:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/>',
  pdf:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 17v-4h1.2a1.2 1.2 0 0 1 0 2.400H8m4.500 1.600v-4h.8a2 2 0 0 1 0 4Zm4 0v-4h2m-2 2h1.500"/>',
  scan:'<path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M3 12h18"/>',
- stift:'<path d="M4 20h4L20 8l-4-4L4 16Z"/>', sort:'<path d="M4 6h16M7 12h10M10 18h4"/>',
+ stift:'<path d="M4 20h4L20 8l-4-4L4 16Z"/>', auge:'<path d="M2 12s3.600-7 10-7 10 7 10 7-3.600 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>', muell:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/>', teilen:'<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.600 13.500 6.800 4M15.400 6.500l-6.800 4"/>', sort:'<path d="M4 6h16M7 12h10M10 18h4"/>',
  ordner:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M12 11v6m-3-3 3 3 3-3"/>',
  importpfeil:'<path d="M12 4v11m-4-4 4 4 4-4M5 19h14"/>', exportpfeil:'<path d="M12 15V4m-4 4 4-4 4 4M5 19h14"/>',
  haken:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
@@ -297,13 +297,13 @@ function vAkten(){
    <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${l.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
     <section class="ekarte elistekarte"><h3 class="egewaehlt apfad">${pfad.map(esc).join(' <span>›</span> ')}<b>${liste.length}</b></h3>
      ${a ? `<div class="reihe" style="margin:0 12px 6px"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
-     <div id="akte-liste" class="eliste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
+     <div id="akte-liste" class="eliste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(echtReihe).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
 }
 /* Eingang, echt (0.7.0): was in der Akte liegt, aber noch keiner Akte und keiner Person zugeordnet ist – bis du es einordnest. */
 function vEingang(){
   const n = echtSortiert(offenEinordnen());
   return `<h1 class="titel">Eingang <span class="zahlklein">${n.length}</span></h1>
-  <div class="abschnitt" id="eingang-liste"><div class="liste">${n.length ? n.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (n.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Alles eingeordnet.</p>'}</div></div>${fuss()}`;
+  <div class="abschnitt" id="eingang-liste"><div class="liste">${n.length ? n.slice(0, echt.zeig || ECHT_SEITE).map(echtReihe).join('') + (n.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Alles eingeordnet.</p>'}</div></div>${fuss()}`;
 }
 /* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
 function blaetter(id){ return id==='mail' ? 0 : id==='geld' ? (pm.liste || []).length : id==='sort' ? organizer.length : id==='kal' ? (echt.termine || []).length : docs.filter(d => d.bei===id).length; }
@@ -615,6 +615,44 @@ async function echtLaden(){
 /* Fundstelle am Treffer (Klaus 17.11.): der Satz, in dem es gefunden wurde, mit der Seite. */
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
 const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''}${echtSort() === 'groesse' ? ' · ' + echtGroesse(d.sizeBytes) : ''} · <span class="epfad" data-tipp="Pfad" data-tipp2="${esc(echtPfad(d))}" data-immer="1">${esc(kurzPfad(echtPfad(d)))}</span></small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
+/* Zeilen wie „Finden“ im Datei-Organizer (0.7.6, Klaus 18.11., Bilder vom Tablet): an jeder Unterlage Auge, Stift, Papierkorb. Auge (oder
+   Tipp auf die Zeile) klappt den Steckbrief direkt unter der Zeile auf, ein zweiter Tipp schließt ihn; der Stift klappt darunter das
+   Einordnen auf (Bereich samt neuer Kategorie, Person, Akten, Absender). Kein eigenes Fenster mehr; in den Suchtreffern bleibt das Fenster. */
+const echtArchiv = d => notizAngabe(d, 'Archivnummer');
+const echtReihe = d => { const id = esc(d.id), sb = echt.sb === d.id, st = echt.stift === d.id, nr = echtArchiv(d);
+  return `<div class="ereihe${sb || st ? ' offen' : ''}" data-reihe="${id}"><div class="ezeilemit"><button class="zeile ezeile" data-a="echt-auf" data-id="${id}" aria-expanded="${sb}"><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''}${echtSort() === 'groesse' ? ' · ' + echtGroesse(d.sizeBytes) : ''} · <span class="epfad" data-tipp="Pfad" data-tipp2="${esc(echtPfad(d))}" data-immer="1">${esc(kurzPfad(echtPfad(d)))}</span></small></span>${nr ? `<span class="marke2 m-ok enr">${esc(nr)}</span>` : ''}</button>
+   <button class="rund klein geist" data-a="echt-auge" data-id="${id}" aria-pressed="${sb}" aria-label="Ansehen" data-tipp="Ansehen">${ic('auge')}</button><button class="rund klein geist" data-a="echt-stift" data-id="${id}" aria-pressed="${st}" aria-label="Einordnen" data-tipp="Einordnen">${ic('stift')}</button><button class="rund klein geist" data-a="echt-muell" data-id="${id}" aria-label="Aus der Akte nehmen" data-tipp="Aus der Akte nehmen">${ic('muell')}</button></div>
+   ${st ? echtStift(d) : ''}${sb ? echtSteckbrief(d) : ''}</div>`; };
+function echtKurzsatz(d){ const art = notizAngabe(d, 'Art'), abs = echtAbsender(d), p = echtPersonen(d), betrag = notizAngabe(d, 'Betrag'), frist = notizAngabe(d, 'Frist');
+  const t = [art || 'Unterlage', abs && 'von ' + abs, d.documentDate && 'vom ' + echtDatum(d.documentDate), p.length && 'für ' + p.join(', '), betrag && 'über ' + betrag, frist && 'Frist ' + frist].filter(Boolean);
+  return t.length > 1 ? t.join(', ') + '.' : ''; }
+const fristVorbei = f => { const m = String(f).match(/(\d{1,2})\.(\d{1,2})\.(\d{4})/); return m ? new Date(+m[3], +m[2] - 1, +m[1], 23, 59) < new Date() : false; };
+function echtSteckbrief(d){
+  const id = esc(d.id), nr = echtArchiv(d), art = notizAngabe(d, 'Art'), frist = notizAngabe(d, 'Frist'), betrag = notizAngabe(d, 'Betrag'), satz = echtKurzsatz(d);
+  const pdf = /\.pdf$/i.test(d.originalName), bild = /\.(png|jpe?g|webp)$/i.test(d.originalName), akten = echtBezug(d).akten.map(a => (akteVon(a) || {}).titel).filter(Boolean);
+  const z = (dt, dd) => dd ? `<dt>${dt}</dt><dd>${dd}</dd>` : '';
+  return `<section class="esteckbrief" data-steckbrief="${id}"><h4>${esc(echtTitel(d))}${nr ? `<span class="marke2 m-ok enr">${esc(nr)}</span>` : ''}</h4>${satz ? `<p class="ekurz">${esc(satz)}</p>` : ''}
+   <dl class="angaben">${z('Liegt in', esc(echtPfad(d)))}${z('Datei', esc(echtArt(d)) + ' · ' + echtGroesse(d.sizeBytes))}${z('Art', esc(art))}${z('Bereich', esc(d.category))}${z('Absender', esc(echtAbsender(d)))}${z('Betrifft', esc(echtPersonen(d).join(', ') || 'alle'))}${z('Akten', esc(akten.join(', ')))}${z('Datum', d.documentDate ? echtDatum(d.documentDate) : '')}${z('Frist', frist ? esc(frist) + (fristVorbei(frist) ? ' · <span class="rot">Frist überschritten</span>' : '') : '')}${z('Betrag', esc(betrag))}${z('Abgelegt', echtDatum(d.addedAt))}${z('Gespeichert', 'in der Akte auf diesem Gerät')}</dl>
+   <div class="reihe esbknoepfe">${pdf || bild ? `<button class="rund klein" data-a="echt-vorschau" data-id="${id}" aria-pressed="${echt.vor === d.id}" aria-label="Vorschau" data-tipp="Vorschau">${ic('auge')}</button>` : ''}<button class="knopf hell" data-a="echt-teilen" data-id="${id}">${ic('teilen')} Teilen</button><button class="rund klein" data-a="echt-stift" data-id="${id}" aria-label="Einordnen" data-tipp="Einordnen">${ic('stift')}</button><button class="knopf hell" data-a="echt-termin" data-id="${id}">${ic('kalender')} Termin dazu</button>
+    ${pdf ? `<button class="knopf hell" data-a="leser" data-id="${id}">Lesen und darin suchen</button>` : ''}<button class="knopf hell" data-a="echt-oeffnen" data-id="${id}">${pdf ? 'Im Browser öffnen' : 'Öffnen'}</button>${pdf || bild ? `<button class="knopf hell" data-a="echt-wfpdf" data-id="${id}">${ic('pdf')} Mit Workflow PDF bearbeiten</button>` : ''}<button class="rund klein" data-a="echt-raus" data-id="${id}" aria-label="Aus der Akte nehmen" data-tipp="Aus der Akte nehmen">${ic('muell')}</button></div>
+   ${echt.vor === d.id ? `<div class="evorschau" id="evorschau"><p class="leer">Vorschau wird geladen …</p></div>` : ''}
+   ${d.textAuszug ? `<details class="etext"><summary>Erkannter Text</summary><pre>${esc(d.textAuszug)}</pre></details>` : ''}</section>`;
+}
+function echtStift(d){
+  return `<form class="felder estift" data-form="zuordnen" data-id="${esc(d.id)}"><label>Bereich – auswählen oder neue Kategorie eintippen <input class="feld" name="bereich" list="estift-bereiche" value="${esc(d.category)}" required maxlength="60" autocomplete="off"></label><datalist id="estift-bereiche">${echtBereiche().map(b => `<option value="${esc(b)}">`).join('')}</datalist>
+   ${zuordnenFelder(d)}<div class="reihe"><button class="knopf gruen" type="submit">Übernehmen</button><button class="knopf hell" type="button" data-a="echt-stift" data-id="${esc(d.id)}">Abbrechen</button></div></form>`;
+}
+/* Vorschau im Steckbrief (wie das Auge im Steckbrief des Organizers): bei PDFs die ersten drei Seiten, bei Fotos das Bild. */
+async function echtVorschau(id){
+  const o = $('evorschau'); if (!o) return; const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
+  try {
+    if (/\.pdf$/i.test(d.originalName)) { const pdf = await T().pdf(id); if (!pdf || !$('evorschau')) return; const breit = Math.max(240, o.clientWidth - 8), punkt = Math.min(2, devicePixelRatio || 1); o.innerHTML = '';
+      for (let n = 1; n <= Math.min(3, pdf.numPages); n++) { const seite = await pdf.getPage(n), grund = seite.getViewport({scale:1}), sicht = seite.getViewport({scale:breit / grund.width * punkt}), c = document.createElement('canvas');
+        c.width = Math.round(sicht.width); c.height = Math.round(sicht.height); await seite.render({canvasContext:c.getContext('2d'), viewport:sicht}).promise; if (echt.vor !== id) return; o.append(c); }
+      if (pdf.numPages > 3) o.insertAdjacentHTML('beforeend', `<p class="leer">Seite 1–3 von ${pdf.numPages} · ganz über „Lesen und darin suchen“</p>`);
+    } else { const f = await T().datei(id), url = URL.createObjectURL(f); o.innerHTML = `<img alt="" src="${url}">`; setTimeout(() => URL.revokeObjectURL(url), 60000); }
+  } catch (err) { if ($('evorschau')) $('evorschau').innerHTML = `<p class="leer">${esc(fehlerText(err))}</p>`; }
+}
 /* Sortierung von „Deine Unterlagen“ (Klaus 18.11.: der neue Scan war zwischen 100 Unterlagen nicht zu finden). Ab Werk: zuletzt abgelegt oben. */
 const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich'],['art','Art der Datei'],['person','Wen es betrifft'],['absender','Absender']];
 const echtSort = () => { try { const w = localStorage.getItem('pa_sort'); return ECHT_SORT.some(x => x[0] === w) ? w : 'neu'; } catch { return 'neu'; } };
@@ -687,6 +725,9 @@ A['echt-knoten'] = e => { const k = e.dataset.k;
   else { if (echt.knoten === k) { echt.auf.delete(k); echt.knoten = null; } else { echt.knoten = k; echt.auf.add(k); } }
   echt.zeig = ECHT_SEITE; mainZeigen(); };
 A['echt-mehr'] = () => { echt.zeig = (echt.zeig || ECHT_SEITE) + ECHT_SEITE; mainZeigen(); };
+/* „Alle Unterlagen“ als Knopf zum Einklappen wie „Alle Kategorien“ links (Klaus 18.11.: „beide Container als Button“); gemerkt in pa_klapp. */
+const listeKopf = (t, n) => `<h3 class="egewaehlt"><button class="elistekopf" data-a="echt-liste-klapp" aria-expanded="${klapp.eliste !== 0}"><span class="epfeil">${ic('weiter')}</span><span>${esc(t)}</span></button><b>${n}</b></h3>`;
+A['echt-liste-klapp'] = () => { klapp.eliste = klapp.eliste === 0 ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt bis zum Neuladen */ } mainZeigen(); };
 function echtAbschnitt(){
   const l = echt.liste; let innen;
   if (l === null) innen = '<p class="leer">Die Akte wird geöffnet …</p>';
@@ -694,8 +735,8 @@ function echtAbschnitt(){
   else if (!l.length) innen = '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>';
   else { const alle = echtSortiert(l.filter(echtImKnoten)), n = echt.zeig || ECHT_SEITE;
     innen = `${echtSortZeile()}<div class="eexplorer"><section class="ekarte ebaumkarte">${echtBaum(l)}</section>
-     <section class="ekarte elistekarte"><h3 class="egewaehlt">${esc(echt.knoten === null ? 'Alle Unterlagen' : echt.knoten.split(SEP).pop())}<b>${alle.length}</b></h3><div class="eliste">${alle.slice(0, n).map(d => echtZeile(d)).join('')}
-      ${alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''}</div></section></div>`; }
+     <section class="ekarte elistekarte">${listeKopf(echt.knoten === null ? 'Alle Unterlagen' : echt.knoten.split(SEP).pop(), alle.length)}${klapp.eliste === 0 ? '' : `<div class="eliste">${alle.slice(0, n).map(echtReihe).join('')}
+      ${alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''}</div>`}</section></div>`; }
   return klappTeil('echt', 'Deine Unterlagen', l && !echt.fehler ? String(l.length) : '', innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
@@ -766,7 +807,7 @@ document.addEventListener('submit', async ev => {
   const f = ev.target, art = f.dataset.form; if (!['zuordnen', 'person-neu', 'akte-neu', 'akte-fuellen', 'termin-echt'].includes(art)) return; ev.preventDefault();
   const knopf = f.querySelector('button[type=submit]'); if (knopf.disabled) return; knopf.disabled = true;
   try {
-    if (art === 'zuordnen') { await zuordnenSpeichern(f, f.dataset.id); toast('Eingeordnet.'); }
+    if (art === 'zuordnen') { if (f.bereich && f.bereich.value.trim()) { const b = echtBereich(f.bereich.value), d = (echt.liste || []).find(x => x.id === f.dataset.id); if (d && b !== d.category) await T().bereichSetzen(f.dataset.id, b); } await zuordnenSpeichern(f, f.dataset.id); if (echt.stift === f.dataset.id) { echt.stift = null; echt.sb = f.dataset.id; } toast('Eingeordnet.'); }
     if (art === 'person-neu') { s.person = await T().akten.personAnlegen(f.name.value.trim(), f.rolle.value.trim()); toast('Person angelegt.'); }
     if (art === 'akte-neu') { await T().akten.akteAnlegen(f.titel.value.trim(), f.person.value || null); toast('Akte angelegt.'); }
     if (art === 'akte-fuellen') { const an = new Set([...f.querySelectorAll('input[name=d]:checked')].map(i => i.value)); let n = 0;
@@ -882,7 +923,15 @@ Object.assign(A, {
 });
 Object.assign(A, {
  'echt-neu': () => { zu(); $('echt-datei').click(); },
- 'echt-auf': e => fEcht(e.dataset.id),
+ 'echt-auf': e => { if (!e.closest('.ereihe')) return fEcht(e.dataset.id); A['echt-auge'](e); },
+ 'echt-auge': e => { const id = e.dataset.id; echt.sb = echt.sb === id ? null : id; echt.vor = null; echt.stift = null; mainZeigen(); },
+ 'echt-stift': e => { const id = e.dataset.id; echt.stift = echt.stift === id ? null : id; if (echt.stift) echt.sb = null; mainZeigen(); },
+ 'echt-vorschau': e => { const id = e.dataset.id; echt.vor = echt.vor === id ? null : id; mainZeigen(); if (echt.vor) echtVorschau(id); },
+ 'echt-muell': e => { const d = (echt.liste || []).find(x => x.id === e.dataset.id); if (d && confirm(`„${echtTitel(d)}“ aus der Akte nehmen?`)) A['echt-raus'](e); },
+ 'echt-teilen': async e => {
+   try { const f = await T().datei(e.dataset.id); if (navigator.canShare && navigator.canShare({files:[f]})) { await navigator.share({files:[f], title:f.name}); return; }
+     const url = URL.createObjectURL(f), a = document.createElement('a'); a.href = url; a.download = f.name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
+   } catch (err) { if (err && err.name !== 'AbortError') toast(fehlerText(err)); } },
  'echt-oeffnen': async e => {
    try { const f = await T().datei(e.dataset.id), url = URL.createObjectURL(f), a = document.createElement('a');
      a.href = url; a.target = '_blank'; a.rel = 'noopener'; if (!/^(application\/pdf|image\/|text\/plain)/.test(f.type)) a.download = f.name;
@@ -992,7 +1041,12 @@ document.addEventListener('submit', async ev => {
   }
 });
 /* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
-function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); kachelRaster(); kartenHoehe(); }
+/* Neu zeichnen ohne Sprung: Rollstand der Listen in den Karten bleibt (Auge, Stift unter der Zeile). */
+function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; }
+  const roll = [...document.querySelectorAll('main .eliste, main .ebaumkarte')].map(e => [e.id || e.className, e.scrollTop]);
+  $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); kachelRaster(); kartenHoehe();
+  for (const [k, t] of roll) { const e = [...document.querySelectorAll('main .eliste, main .ebaumkarte')].find(x => (x.id || x.className) === k); if (e) e.scrollTop = t; }
+  if (echt.vor && $('evorschau')) echtVorschau(echt.vor); }
 /* Höhe der zwei Karten (Klaus 18.11.): keine Karte höher als der Bildschirm, die rechte höchstens so hoch wie die linke (aber nie
    niedriger als 300 px); was nicht hineinpasst, rollt in der Karte – die Seite selbst bleibt kurz, „Fällig“ und „Bereiche“ bleiben
    sichtbar. Untereinander (schmal) zählt nur die Bildschirmhöhe. */
@@ -1002,13 +1056,20 @@ function kartenHoehe(){
      300 px. Untereinander (Handy): der Baum höchstens halb so hoch wie das Fenster, die Liste so hoch wie das Fenster. */
   for (const ex of document.querySelectorAll('.eexplorer')) {
     const l = ex.querySelector('.ebaumkarte'), r = ex.querySelector('.elistekarte'); if (!l || !r) continue;
+    /* Rollstand merken: ohne Höhe wäre er sonst weg (der Browser kürzt ihn beim Messen auf 0). */
+    const li = r.querySelector('.eliste'), stand = [l.scrollTop, li ? li.scrollTop : 0];
+    const zurueck = () => { l.scrollTop = stand[0]; if (li) li.scrollTop = stand[1]; };
     const nebeneinander = getComputedStyle(ex).gridTemplateColumns.split(' ').length > 1;
     l.style.height = r.style.height = l.style.maxHeight = r.style.maxHeight = '';
+    /* Beide zugeklappt (Klaus 18.11.): die Karten so niedrig wie ihr Inhalt – alles darunter rutscht hoch. */
+    const listeZu = !r.querySelector('.eliste'), baumZu = !!l.querySelector('[data-ebaum=zu]');
+    if (listeZu && baumZu) { ex.classList.add('beidezu'); continue; } ex.classList.remove('beidezu');
     if (nebeneinander) {
       const oben = ex.getBoundingClientRect().top + scrollY, huelle = ex.closest('#echt') || ex;
       let darunter = 0; for (let n = huelle.nextElementSibling; n && !n.matches('footer, .fuss'); n = n.nextElementSibling) { const m = getComputedStyle(n); darunter += n.offsetHeight + parseFloat(m.marginTop) + parseFloat(m.marginBottom); }
       const h = Math.max(300, Math.floor(innerHeight - oben - darunter - 18)) + 'px'; l.style.height = r.style.height = h;
     } else { l.style.maxHeight = Math.max(200, Math.floor(innerHeight * 0.5)) + 'px'; r.style.maxHeight = Math.max(320, innerHeight - 70) + 'px'; }
+    zurueck();
   }
 }
 addEventListener('resize', () => kartenHoehe());

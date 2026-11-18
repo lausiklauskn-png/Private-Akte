@@ -1,6 +1,6 @@
 // Brücke zwischen der Hülle (app.js) und dem unveränderten Tresor der Familienakte (klone/familienakte).
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
-import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, LIMITS,
+import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, dokumenteBereichSetzen, LIMITS,
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
 import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig, createLocalScheduleBundle } from "../klone/familienakte/app/local-vault.ts";
 import { saveLocalStammRecord, createLocalFamilyRelation, confirmLocalContextLink, dokumenteZuordnen, akteFuerAbgleich, akteNachAbgleichSchreiben } from "../klone/familienakte/app/local-vault.ts";
@@ -46,6 +46,8 @@ const tresor = {
   inhaltsWoerter: (frage: string) => teilWoerter(frage),
   async datei(id: string) { return readLocalDocumentFile(await browserVault(), id); },
   async herausnehmen(id: string) { return dokumenteAussortieren(await browserVault(), [id]); },
+  /** Bereich einer Unterlage ändern (0.7.6, Stift an der Zeile): der Schritt des Klons, mit Eintrag im Protokoll. */
+  async bereichSetzen(id: string, bereich: string) { return dokumenteBereichSetzen(await browserVault(), [id], bereich); },
   /** Akte leeren (Klaus 18.11.): alle Unterlagen endgültig löschen – erst aussortieren, dann „Papierkorb leeren“ des Klons (auch
    *  früher Herausgenommenes). Dazu die eigenen Merker der Suche (gerechnete Abschnitte, gelesener Text). Kein Zurück ohne Backup. */
   async leeren() {

@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.5)
+## Stand (18.11.2026, Vorschau 0.7.6)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `eac6cb9` (0.4.19). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `ef33e0c` (0.4.20). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -46,6 +46,19 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.6 Unterlagen wie „Finden“ im Datei-Organizer (Klaus 18.11., Bilder vom Tablet):** an jeder Zeile in „Deine Unterlagen“, „Akten“
+  und „Eingang“ Auge, Stift, Papierkorb (`echtReihe` in `app.js`), rechts die Archivnummer aus dem Organizer. **Auge** oder Tipp auf die
+  Zeile klappt den **Steckbrief** direkt darunter auf (`echtSteckbrief`, `echt.sb`), ein zweiter Tipp schließt ihn: Kurzsatz („Rechnung,
+  von …, vom …, für …, über …, Frist …“ aus der Notiz des Organizers), Liegt in, Datei, Art, Bereich, Absender, Betrifft, Akten, Datum,
+  Frist (überschritten rot), Betrag, Abgelegt; Knöpfe Vorschau (Auge: PDF Seite 1–3 bzw. das Foto, `echtVorschau`), Teilen (Teilen des
+  Geräts, sonst Herunterladen), Stift, Termin dazu, Lesen und darin suchen, Öffnen, Mit Workflow PDF bearbeiten, Aus der Akte nehmen;
+  darunter „Erkannter Text“ (`textAuszug`). **Einordnen (Vorschlag umgesetzt):** kein Fenster mehr – der Stift klappt unter der Zeile
+  Bereich (auswählen oder neue Kategorie eintippen; `T().bereichSetzen` = `dokumenteBereichSetzen` des Klons), Person, Akten, Absender
+  mit Übernehmen/Abbrechen auf. In den Suchtreffern öffnet eine Unterlage weiter das Fenster (`fEcht`). **„Alle Unterlagen“** ist ein
+  Knopf zum Einklappen wie „Alle Kategorien“ (`listeKopf`, gemerkt `pa_klapp.eliste`); sind beide zu, werden die Karten niedrig und
+  „Fällig“/„Bereiche“ rutschen hoch (`beidezu` in `kartenHoehe`). Der Rollstand der Liste bleibt beim Auf- und Zuklappen (vorher sprang
+  sie nach oben). **Datei-Organizer 0.4.20 nachgezogen** (@ `ef33e0c`, dort PR #72): in „Finden“ öffnet das Auge den Steckbrief unter der Zeile
+  (zweiter Tipp schließt), die Wurzel heißt „Alle Kategorien“ usw., die Liste rechts klappt ein, beide Karten höchstens fensterhoch. Probe 460 grün. Am Tablet ungeprüft.
 - **0.7.5 Kartenhöhe an das Fenster angepasst (Klaus 18.11.: „die rechte Karte höchstens so groß wie die linke, beide höchstens so
   hoch wie der Bildschirm, darin rollen“; dann: „an die Fensterhöhe anpassen, unten ist noch zu viel Platz“):** `kartenHoehe` in `app.js`
   misst nebeneinander, wo die Karten anfangen und was darunter steht („Fällig“, „Bereiche“), und gibt beiden Karten genau die Höhe bis

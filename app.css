@@ -447,3 +447,21 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .elistekarte{display:flex;flex-direction:column}.elistekarte>h3,.elistekarte>.reihe{flex:none}
 .elistekarte>.eliste{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}
 @media (min-width:901px){.eexplorer{align-items:stretch}}
+/* 0.7.6 Zeilen wie im Datei-Organizer: Auge, Stift, Papierkorb; Steckbrief und Einordnen unter der Zeile */
+.ereihe{border-bottom:1px solid var(--linie,#e6ecef)}.ereihe:last-child{border-bottom:0}
+.ezeilemit{display:flex;align-items:center;gap:2px;padding-right:6px}.ezeilemit>.ezeile{flex:1 1 auto;min-width:0;border:0}
+.ezeilemit>.rund{flex:none;width:30px;height:30px}.ezeilemit>.rund .icon{width:16px;height:16px}
+.ezeilemit>.rund[aria-pressed=true]{background:var(--tealsoft);color:var(--teal)}
+.enr{flex:none;font-size:11px}
+.ereihe.offen{background:color-mix(in srgb,var(--teal) 4%,transparent)}
+.esteckbrief,.estift{margin:2px 10px 10px;padding:10px 12px;border:1px solid color-mix(in srgb,var(--teal) 22%,transparent);border-radius:12px;background:#fff}
+.esteckbrief h4{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 4px;font-size:15px;color:var(--teal)}
+.esteckbrief .ekurz{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.esteckbrief .angaben{margin:0 0 8px}
+.esbknoepfe{flex-wrap:wrap;gap:6px;align-items:center}.esbknoepfe .rund[aria-pressed=true]{background:var(--tealsoft);color:var(--teal)}
+.evorschau{display:grid;gap:8px;margin-top:8px}.evorschau canvas,.evorschau img{width:100%;height:auto;border:1px solid #e3e8ea;border-radius:8px}
+.etext{margin-top:8px;font-size:13px}.etext summary{cursor:pointer;color:var(--muted)}.etext pre{white-space:pre-wrap;max-height:260px;overflow:auto;font:inherit;margin:6px 0 0}
+.rot{color:#c0392b}
+.elistekopf{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;min-width:0}
+.elistekopf .epfeil{width:16px;display:inline-flex}.elistekopf .epfeil .icon{transition:transform .15s}.elistekopf[aria-expanded=true] .epfeil .icon{transform:rotate(90deg)}
+@media (min-width:901px){.eexplorer.beidezu{align-items:start}}

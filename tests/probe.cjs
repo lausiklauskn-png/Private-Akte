@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.5 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.6 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -270,6 +270,25 @@ const { chromium } = require('playwright');
         await klick('#echt-richtung');
         const pf = await p.locator('#echt .epfad').first(); soll(/Baumprobe-\d\d\.txt/.test(await pf.getAttribute('data-tipp2')), 'Zeile zeigt den Pfad, ganz im Hinweis');
         soll(await p.evaluate(() => kurzPfad('Eingang/Scanner/2026/November/sehr-langer-name-der-datei-bonus.pdf') === 'Eingang/Scanne…ger-name-der-datei-bonus.pdf' || kurzPfad('a'.repeat(60)).includes('…')), 'Langer Pfad: Anfang … Ende'); }
+      { // 0.7.6: Zeilen wie im Datei-Organizer – Auge, Stift, Papierkorb; Steckbrief und Einordnen unter der Zeile; „Alle Unterlagen“ einklappbar
+        soll((await p.locator('#echt .ereihe').first().locator('[data-a=echt-auge]').count()) === 1 && (await p.locator('#echt .ereihe').first().locator('[data-a=echt-stift]').count()) === 1 && (await p.locator('#echt .ereihe').first().locator('[data-a=echt-muell]').count()) === 1, '0.7.6: Zeile hat Auge, Stift, Papierkorb');
+        const vorher = await p.locator('#echt .eliste').evaluate(e => { e.scrollTop = 120; return [e.scrollTop, e.scrollHeight, e.clientHeight]; });
+        await p.locator('#echt .ereihe').nth(4).locator('[data-a=echt-auge]').click(); await p.waitForTimeout(200);
+        soll((await p.locator('#echt .ereihe').nth(4).locator('[data-steckbrief]').count()) === 1 && (await p.locator('[data-steckbrief]').count()) === 1, '0.7.6: Auge öffnet den Steckbrief direkt unter der Zeile');
+        soll((await p.locator('#echt .eliste').evaluate(e => e.scrollTop)) > 0 || vorher[0] === 0, '0.7.6: die Liste springt beim Öffnen nicht nach oben', JSON.stringify(vorher));
+        const sb = await p.locator('[data-steckbrief]').innerText(); soll(['Datei', 'Bereich', 'Betrifft', 'Abgelegt', 'Teilen', 'Termin dazu', 'Öffnen'].every(w => sb.includes(w)), '0.7.6: Steckbrief mit Angaben, Teilen, Termin dazu, Öffnen');
+        await p.locator('#echt .ereihe').nth(4).locator('[data-a=echt-auf]').click(); soll((await p.locator('[data-steckbrief]').count()) === 0, '0.7.6: zweiter Tipp schließt den Steckbrief');
+        const id = await p.locator('#echt .ereihe').nth(4).getAttribute('data-reihe');
+        await p.locator('#echt .ereihe').nth(4).locator('[data-a=echt-stift]').click();
+        soll((await p.locator('#echt .ereihe').nth(4).locator('form[data-form=zuordnen] [name=bereich]').count()) === 1, '0.7.6: Stift klappt das Einordnen unter der Zeile auf (mit Bereich)');
+        await p.locator('form.estift [name=bereich]').fill('Probe-Kategorie Neu'); await p.locator('form.estift button[type=submit]').click();
+        await p.waitForFunction(id => (window.PrivateAkteTresor.liste().then(l => { window.__k = (l.find(d => d.id === id) || {}).category; }), window.__k === 'Probe-Kategorie Neu'), id, {timeout:15000});
+        soll(true, '0.7.6: neue Kategorie über den Stift gesetzt');
+        await p.evaluate(async id => { await window.PrivateAkteTresor.bereichSetzen(id, 'Versicherungen'); }, id); await p.evaluate(() => echtLaden());
+        await klick('#echt [data-a=echt-liste-klapp]'); soll((await p.locator('#echt .elistekarte .eliste').count()) === 0, '0.7.6: „Alle Unterlagen“ klappt ein');
+        await klick('#echt .eknoten.alle'); if (await p.locator('#echt [data-ebaum=auf]').count()) await klick('#echt .eknoten.alle');
+        const hz = await p.evaluate(() => document.querySelector('#echt .elistekarte').offsetHeight); soll(hz < 120, '0.7.6: beide zugeklappt – die Karten sind niedrig', String(hz));
+        await klick('#echt .eknoten.alle'); await klick('#echt [data-a=echt-liste-klapp]'); soll((await p.locator('#echt .elistekarte .eliste').count()) === 1, '0.7.6: „Alle Unterlagen“ klappt wieder auf'); }
       await p.selectOption('#echt-sort', 'datum'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === '2025'));
       soll((await p.locator('#echt .eknoten', {hasText:'2025'}).locator('b').innerText()) === '17', 'Sortieren nach Datum: der Baum zeigt Jahre mit Zahlen');
       await p.selectOption('#echt-sort', 'art'); await p.waitForFunction(() => [...document.querySelectorAll('#echt .eknoten:not(.alle) .ename')].some(e => e.innerText === 'TXT')); soll(true, 'Sortieren nach Art der Datei: der Baum zeigt die Dateiarten');

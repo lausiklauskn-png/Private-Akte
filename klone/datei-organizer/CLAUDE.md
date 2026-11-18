@@ -9,6 +9,17 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026 abends): 0.4.20 – Finden wie in der Privaten Akte
+
+- **Klaus 18.11. (Bilder vom Tablet):** (1) **Auge an der Zeile** öffnet den Steckbrief direkt unter der Zeile (`[data-steckbrief-unter]`),
+  ein zweiter Tipp (Zeile oder Auge) schließt ihn – vorher stand er unter der ganzen Liste. Der Stift klappt wie bisher unter der Zeile auf.
+  (2) **Wurzel des Baums** heißt nach der Sortierung wie in der Akte: „Alle Kategorien“, „Alle Absender“, „Alle Personen“, „Alle Jahre“ …
+  (`WURZEL_TITEL` in `src/seiten.tsx`, `wurzelTitel` an `OrdnerBaum`, `[data-wurzel]`); rechts bleibt „Alle Dateien“. Kern (`lib/sichten.ts`) unverändert.
+  (3) **Rechte Karte einklappbar:** die Überschrift ist ein Knopf (`[data-liste-klapp]`, gemerkt `do-finden-liste-zu`).
+  (4) **Kartenhöhe:** beide Karten höchstens bis zum unteren Fensterrand (mindestens 300 px), darin rollen; die Überschrift der Liste
+  bleibt stehen; schmal der Baum höchstens halbe Fensterhöhe (`--finden-hoehe`, `--finden-baum`). Gilt in Basic, Pro und im Rahmen.
+  Fassung 0.4.20 (Code 60, Vorrat v41). UI-Probe 222 grün, Native 66 grün. Am Gerät ungeprüft.
+
 ## Stand (18.11.2026 abends): 0.4.19 – Knöpfe „An die Private Akte“ und „An die Familienakte“ in der eigenständigen App
 
 - **Klaus 18.11.: „im blauen Organizer fehlt oben der Knopf an die Familienakte übergeben“; der Organizer in der Privaten Akte bleibt,
@@ -21,7 +32,7 @@ wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). P
     `organizer-index.json` in den Ordner (bzw. „Speichern unter …“/Herunterladen) und sagt: „In der Familienakte diesen Ordner als
     Eingangsordner wählen – sie übernimmt die Sortierung“ (Weg wie bisher in der Familienakte, `lib/organizer-uebernahme.ts` dort).
   - Im Rahmen der Privaten Akte unverändert nur „An die Private Akte übergeben“.
-  Fassung 0.4.19 (Code 59, Vorrat v40). UI-Probe 218 grün, Native 66 grün. Klaus' Wort 18.11.: als APK und Windows ausgeben.
+  Fassung 0.4.19 (Code 59, Vorrat v40). UI-Probe 218 grün, Native 66 grün. **Veröffentlicht 18.11.2026 (Klaus' Wort) als Android und Windows**, Nachweis `docs/VEROEFFENTLICHUNG-0.4.19.json` – nicht erneut ausgeben; nächste Ausgabe 0.4.20 (Code 60).
 
 ## Stand (18.11.2026 abends): 0.4.18 – Reihenfolge nach Datum, Ladeanzeige bei der Übergabe
 

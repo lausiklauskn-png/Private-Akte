@@ -164,6 +164,8 @@ a { color: var(--teal); }
 .chips { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; }
 .chip { font-size: .74rem; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); background: var(--canvas); white-space: nowrap; }
 .steckbrief { position: sticky; top: 130px; }
+.steckbrief-unter { margin: 6px 0 10px; }
+.steckbrief-unter .steckbrief { position: static; }
 .steckbrief dl { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 6px 12px; margin: 10px 0 0; }
 .steckbrief dt { color: var(--muted); font-size: .84rem; }
 .steckbrief dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
@@ -379,3 +381,10 @@ a { color: var(--teal); }
 .klapp-karte:not([open]) > summary::after { transform: rotate(-90deg); }
 .klapp-karte:not([open]) > summary { margin-bottom: 0; }
 .verlauf-liste.rollt { max-height: min(55vh, 520px); overflow-y: auto; overscroll-behavior: contain; padding-right: 4px; }
+
+/* Kopf der Liste in „Finden“ als Knopf zum Einklappen (0.4.20) */
+.liste-kopf { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; padding: 0; font: inherit; color: inherit; cursor: pointer; text-align: left; }
+/* Karten in „Finden“ höchstens so hoch wie das Fenster, darin rollen (0.4.20); die Überschrift der Liste bleibt stehen. */
+.explorer .baum-karte { max-height: var(--finden-baum, none); overflow: auto; }
+.explorer [data-liste] { max-height: var(--finden-hoehe, none); display: flex; flex-direction: column; min-height: 0; }
+.explorer [data-liste] > .dateiliste { overflow: auto; min-height: 0; flex: 1 1 auto; }

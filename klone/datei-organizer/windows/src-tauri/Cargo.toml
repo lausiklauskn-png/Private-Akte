@@ -1,6 +1,6 @@
 [package]
 name = "datei-organizer-pro"
-version = "0.4.19"
+version = "0.4.20"
 description = "Datei-Organizer Pro für Windows"
 edition = "2021"
 publish = false
