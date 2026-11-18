@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.2', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -267,34 +267,37 @@ function vStart(){
 const KFARBE = [['#61b4ef','#2c79c5'],['#77d48a','#27945c'],['#ffd75a','#d79a16'],['#ff8f7d','#d34a4a'],['#b69be6','#7550c2'],['#5fd0c6','#16867f']];
 function bereicheKacheln(){
   const l = echt.liste || []; if (!l.length) return '';
-  const zahl = new Map(); for (const d of l) zahl.set(d.category, (zahl.get(d.category) || 0) + 1);
+  const zahl = new Map(); for (const d of l) { const k = kanonBereich(d.category); zahl.set(k, (zahl.get(k) || 0) + 1); }
   const g = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
-  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln seitlich">${g.map(([b, n], i) => `<button class="kachel" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}</small></span></button>`).join('')}</div></div>`;
+  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}</small></span></button>`).join('')}</div></div>`;
 }
 /* ---------- Akten (0.7.0, Klaus 18.11., Antworten A–D ja) ----------
    Datei = Rohmaterial (bleibt im Datei-Organizer), Unterlage = in die Akte gelegt, Akte = ein Fach mit Namen, einer Person zugeordnet
    oder allen. Personen und Akten sind Datensätze im Register der Familienakte (`T().akten`); eine Unterlage kann in mehreren Akten liegen.
    Oben die Personen als Reiter, darunter die Akten mit Zahl. `s.bereich` = die geöffnete Akte (oder „p:<Person>“, „ohne“). */
 function vAkten(){
-  const ak = AK(), l = echt.liste || [];
-  if (s.bereich) {
-    const a = akteVon(s.bereich), p = s.bereich.startsWith('p:') ? ak.personen.find(x => x.id === s.bereich.slice(2)) : null;
-    const titel = a ? a.titel : p ? 'Alles zu ' + p.name : 'Ohne Akte';
-    const liste = echtSortiert(a ? docsInAkte(a.id) : p ? docsZuPerson(p) : l.filter(d => !echtBezug(d).akten.length));
-    return `<button class="chip" data-a="akte-auf" data-id="">‹ Alle Akten</button><h1 class="titel" style="margin-top:10px">${esc(titel)}</h1>
-     <p class="unter">${a ? esc(a.person ? personName(a.person) : 'alle') + ' · ' : ''}${liste.length} ${liste.length === 1 ? 'Unterlage' : 'Unterlagen'}</p>
-     ${a ? `<div class="reihe"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a.id)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
-     <div class="abschnitt" id="akte-liste"><div class="liste">${liste.length ? liste.map(d => echtZeile(d, '')).join('') : '<p class="leer">Noch keine Unterlage.</p>'}</div></div>${fuss()}`;
-  }
-  const reiter = [['', 'Alle'], ...ak.personen.map(x => [x.id, x.name])].map(([id, t]) => `<button class="chip${(s.person || '') === id ? ' an' : ''}" data-a="person-reiter" data-id="${esc(id)}">${esc(t)}</button>`).join('') + `<button class="chip" data-a="person-neu" aria-label="Person anlegen">${ic('plus')} Person</button>`;
-  const meine = ak.akten.filter(a => !s.person || a.person === s.person).sort((a, b) => a.titel.localeCompare(b.titel, 'de'));
-  const zeile = (a, t, u, n) => `<button class="zeile" data-a="akte-auf" data-id="${esc(a)}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">${ic('akten')}</span><span class="mitte"><strong>${esc(t)}</strong>${u ? `<small>${esc(u)}</small>` : ''}</span><span class="marke2 m-grau">${n}</span>${ic('weiter')}</button>`;
-  const p = s.person && ak.personen.find(x => x.id === s.person);
-  const ohne = l.filter(d => !echtBezug(d).akten.length).length;
-  return `<h1 class="titel">Akten</h1><div class="reiter" id="personen">${reiter}</div>
-   <div class="abschnitt" id="akten-liste"><div class="liste">${meine.map(a => zeile(a.id, a.titel, s.person ? '' : a.person ? personName(a.person) : 'alle', docsInAkte(a.id).length)).join('')}
-    ${p ? zeile('p:' + p.id, 'Alles zu ' + p.name, 'jede Unterlage, die ' + p.name + ' betrifft', docsZuPerson(p).length) : zeile('ohne', 'Ohne Akte', 'noch in keiner Akte', ohne)}
-    <button class="zeile" data-a="akte-neu"><span class="art">${ic('plus')}</span><span class="mitte"><strong>Neue Akte</strong></span></button></div></div>${fuss()}`;
+  /* 0.7.3 (Klaus 18.11.): dieselbe Ansicht wie „Deine Unterlagen“ – links der Baum wie im Explorer (Alle Personen › Person › ihre Akten,
+     dazu „Gemeinsam“ und „Ohne Akte“), rechts die Unterlagen mit dem Pfad darüber. `s.bereich` ist der gewählte Knoten. */
+  const ak = AK(), l = echt.liste || [], k = s.bereich || '';
+  const ohneAkte = l.filter(d => !echtBezug(d).akten.length), gemeinsam = ak.akten.filter(a => !a.person);
+  const knoten = [];
+  for (const p of ak.personen) { const meine = ak.akten.filter(a => a.person === p.id), lose = docsZuPerson(p).filter(d => !echtBezug(d).akten.length);
+    knoten.push({k:'p:' + p.id, t:p.name, n:new Set([...docsZuPerson(p).map(d => d.id), ...meine.flatMap(a => docsInAkte(a.id).map(d => d.id))]).size, kinder:[...meine.map(a => ({k:'p:' + p.id + '|a:' + a.id, t:a.titel, n:docsInAkte(a.id).length})), ...(lose.length ? [{k:'p:' + p.id + '|ohne', t:'ohne Akte', n:lose.length}] : [])]}); }
+  if (gemeinsam.length) knoten.push({k:'g', t:'Gemeinsam', n:new Set(gemeinsam.flatMap(a => docsInAkte(a.id).map(d => d.id))).size, kinder:gemeinsam.map(a => ({k:'g|a:' + a.id, t:a.titel, n:docsInAkte(a.id).length}))});
+  knoten.push({k:'ohne', t:'Ohne Akte', n:ohneAkte.length, kinder:[]});
+  // Was rechts steht und der Pfad dazu
+  const teile = k.split('|'), p = teile[0].startsWith('p:') ? ak.personen.find(x => x.id === teile[0].slice(2)) : null, a = (teile.find(x => x.startsWith('a:')) || '').slice(2);
+  const pfad = ['Alle Personen', p ? p.name : teile[0] === 'g' ? 'Gemeinsam' : teile[0] === 'ohne' ? 'Ohne Akte' : null, a ? (akteVon(a) || {}).titel : teile[1] === 'ohne' ? 'ohne Akte' : null].filter(Boolean);
+  const liste = echtSortiert(a ? docsInAkte(a) : k === 'ohne' ? ohneAkte : p && teile[1] === 'ohne' ? docsZuPerson(p).filter(d => !echtBezug(d).akten.length) : p ? l.filter(d => docsZuPerson(p).includes(d) || ak.akten.some(x => x.person === p.id && echtBezug(d).akten.includes(x.id))) : k === 'g' ? l.filter(d => gemeinsam.some(x => echtBezug(d).akten.includes(x.id))) : l);
+  const ordner = `<svg class="icon eordner" viewBox="0 0 24 24" aria-hidden="true">${P.akten}</svg>`, personIc = `<svg class="icon eordner" viewBox="0 0 24 24" aria-hidden="true">${P.person}</svg>`;
+  const auf = x => k === x.k || k.startsWith(x.k + '|');
+  const zweig = x => `<li><button class="eknoten${k === x.k ? ' an' : ''}${auf(x) ? ' offen' : ''}" data-a="akte-auf" data-id="${esc(x.k)}" aria-expanded="${auf(x)}"><span class="epfeil${x.kinder.length ? '' : ' leer'}">${ic('weiter')}</span>${x.k.startsWith('p:') ? personIc : ordner}<span class="ename">${esc(x.t)}</span><b>${x.n}</b></button>${x.kinder.length && auf(x) ? `<ul>${x.kinder.map(c => `<li><button class="eknoten unter${k === c.k ? ' an' : ''}" data-a="akte-auf" data-id="${esc(c.k)}"><span class="epfeil leer"></span>${ordner}<span class="ename">${esc(c.t)}</span><b>${c.n}</b></button></li>`).join('')}</ul>` : ''}</li>`;
+  return `<h1 class="titel">Akten</h1>
+   <div class="ekopf akopf"><button class="chip" data-a="person-neu">${ic('plus')} Person</button><button class="chip" data-a="akte-neu">${ic('plus')} Neue Akte</button>${ak.beispiel ? `<button class="chip" data-a="beispiel-weg">Beispielfamilie entfernen</button>` : !ak.personen.length && l.length ? `<button class="chip" data-a="beispiel-an">Beispielfamilie anlegen</button>` : ''}</div>
+   <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${l.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
+    <section class="ekarte elistekarte"><h3 class="egewaehlt apfad">${pfad.map(esc).join(' <span>›</span> ')}<b>${liste.length}</b></h3>
+     ${a ? `<div class="reihe" style="margin:0 12px 6px"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
+     <div id="akte-liste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
 }
 /* Eingang, echt (0.7.0): was in der Akte liegt, aber noch keiner Akte und keiner Person zugeordnet ist – bis du es einordnest. */
 function vEingang(){
@@ -653,26 +656,33 @@ const einordnenZahl = () => offenEinordnen().length;
 const echtPfad = d => notizAngabe(d, 'Pfad') || d.originalName;
 /* Langer Pfad (Klaus 18.11.: „abgekürzt – Anfang, Punkt, Punkt, Punkt und Ende“): Anfang … Ende, der ganze Pfad steht im Hinweis. */
 const kurzPfad = (t, max = 38) => t.length <= max ? t : t.slice(0, Math.ceil(max * 0.4)) + '…' + t.slice(-Math.floor(max * 0.6));
-const echtGruppe = d => { const w = echtSort(); return w === 'person' ? echtAngabe(d, 'Person') : w === 'absender' ? echtAngabe(d, 'Absender') : w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
-const echtUnter = d => { const w = echtSort(); return w === 'datum' ? (d.documentDate ? MONATE[+String(d.documentDate).slice(5, 7) - 1] || 'ohne Monat' : 'ohne Datum') : ['person', 'absender', 'art'].includes(w) ? d.category : notizAngabe(d, 'Art') || echtArt(d); };
+/* Ein Bereich, auch in anderer Schreibweise („Haus und Wohnung“ = „Haus & Wohnung“, Klaus' Bild 18.11.: zwei Ordner im Baum). */
+const kanonBereich = b => echtBereiche().find(x => bereichKern(x) === bereichKern(String(b || ''))) || b;
+const echtGruppe = d => { const w = echtSort(); return w === 'person' ? echtAngabe(d, 'Person') : w === 'absender' ? echtAngabe(d, 'Absender') : w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : kanonBereich(d.category); };
+const echtUnter = d => { const w = echtSort(); return w === 'datum' ? (d.documentDate ? MONATE[+String(d.documentDate).slice(5, 7) - 1] || 'ohne Monat' : 'ohne Datum') : ['person', 'absender', 'art'].includes(w) ? kanonBereich(d.category) : notizAngabe(d, 'Art') || echtArt(d); };
+const WURZEL = {person:'Alle Personen', absender:'Alle Absender', art:'Alle Dateiarten', datum:'Alle Jahre'};
 const SEP = '\u0001';
 const echtImKnoten = d => echt.knoten === null || (echt.knoten.includes(SEP) ? echtGruppe(d) + SEP + echtUnter(d) === echt.knoten : echtGruppe(d) === echt.knoten);
 echt.auf = new Set();
+/* Zwei Karten nebeneinander wie „Finden“ im Datei-Organizer (0.7.3, Klaus 18.11., Bilder vom Tablet: „links der Baum, rechts die
+   dazugehörigen Dateien – nicht alles untereinander, sonst wird die Liste ewig lang“). Links „Alle Kategorien“ (beim Sortieren nach
+   Datum „Alle Jahre“ usw.) mit Baumlinien, zusammenklappbar; rechts der gewählte Ordner mit Überschrift und Zahl. Schmal untereinander. */
 function echtBaum(l){
   const zahl = new Map(), unter = new Map();
   for (const d of l) { const g = echtGruppe(d), u = echtUnter(d); zahl.set(g, (zahl.get(g) || 0) + 1); if (!unter.has(g)) unter.set(g, new Map()); unter.get(g).set(u, (unter.get(g).get(u) || 0) + 1); }
   const vgl = (a, b) => String(a).localeCompare(String(b), 'de', {numeric:true, sensitivity:'base'}), ab = echtUmgekehrt() ? -1 : 1;
   const gruppen = [...zahl].sort((a, b) => echtSort() === 'datum' ? -ab * vgl(a[0], b[0]) : vgl(a[0], b[0]));
   if (echt.knoten !== null && !l.some(echtImKnoten)) echt.knoten = null;
-  const auf = !!klapp.ebaum, mon = u => MONATE.indexOf(u);
-  const kinder = g => [...unter.get(g)].sort((a, b) => echtSort() === 'datum' ? -ab * (mon(a[0]) - mon(b[0])) : vgl(a[0], b[0])).map(([u, n]) => `<button class="eknoten unter${echt.knoten === g + SEP + u ? ' an' : ''}" data-a="echt-knoten" data-k="${esc(g + SEP + u)}"><span class="ename">${esc(u)}</span><b>${n}</b></button>`).join('');
-  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><div class="ekopf"><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" data-a="echt-knoten" data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span><span class="ename">Alle Unterlagen</span><b>${l.length}</b></button>
-    <label class="sortzeile">Sortieren <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
-    <button class="rund klein geist" id="echt-richtung" data-a="echt-richtung" aria-label="Reihenfolge umkehren" data-tipp="Reihenfolge umkehren">${ic(echtUmgekehrt() ? 'hoch' : 'runter')}</button></div>
-    ${auf ? gruppen.map(([g, n]) => `<button class="eknoten${echt.knoten === g ? ' an' : ''}${echt.auf.has(g) ? ' offen' : ''}" data-a="echt-knoten" data-k="${esc(g)}" aria-expanded="${echt.auf.has(g)}"><span class="epfeil">${ic('weiter')}</span><span class="ename">${esc(g)}</span><b>${n}</b></button>${echt.auf.has(g) ? kinder(g) : ''}`).join('') : ''}</div>`;
+  const auf = klapp.ebaum !== 0, mon = u => MONATE.indexOf(u), ast = 'data-a="echt-knoten"';
+  const ordner = `<svg class="icon eordner" viewBox="0 0 24 24" aria-hidden="true">${P.akten}</svg>`;
+  const kinder = g => `<ul>${[...unter.get(g)].sort((a, b) => echtSort() === 'datum' ? -ab * (mon(a[0]) - mon(b[0])) : vgl(a[0], b[0])).map(([u, n]) => `<li><button class="eknoten unter${echt.knoten === g + SEP + u ? ' an' : ''}" ${ast} data-k="${esc(g + SEP + u)}"><span class="epfeil leer"></span>${ordner}<span class="ename">${esc(u)}</span><b>${n}</b></button></li>`).join('')}</ul>`;
+  return `<div class="ebaum" data-ebaum="${auf ? 'auf' : 'zu'}"><ul class="ebaumliste"><li><button class="eknoten alle${echt.knoten === null ? ' an' : ''}" ${ast} data-k="" aria-expanded="${auf}"><span class="epfeil">${ic('weiter')}</span>${ordner}<span class="ename">${WURZEL[echtSort()] || 'Alle Kategorien'}</span><b>${l.length}</b></button>
+    ${auf ? `<ul>${gruppen.map(([g, n]) => `<li><button class="eknoten${echt.knoten === g || String(echt.knoten).startsWith(g + SEP) ? ' an' : ''}${echt.auf.has(g) ? ' offen' : ''}" ${ast} data-k="${esc(g)}" aria-expanded="${echt.auf.has(g)}"><span class="epfeil">${ic('weiter')}</span>${ordner}<span class="ename">${esc(g)}</span><b>${n}</b></button>${echt.auf.has(g) ? kinder(g) : ''}</li>`).join('')}</ul>` : ''}</li></ul></div>`;
 }
+const echtSortZeile = () => `<div class="ekopf"><label class="sortzeile">Sortieren <select class="feld schmal" id="echt-sort" aria-label="Deine Unterlagen sortieren">${ECHT_SORT.map(([id, t]) => `<option value="${id}" ${id === echtSort() ? 'selected' : ''}>${t}</option>`).join('')}</select></label>
+    <button class="rund klein geist" id="echt-richtung" data-a="echt-richtung" aria-label="Reihenfolge umkehren" data-tipp="Reihenfolge umkehren">${ic(echtUmgekehrt() ? 'hoch' : 'runter')}</button></div>`;
 A['echt-knoten'] = e => { const k = e.dataset.k;
-  if (k === '') { if (echt.knoten === null) { klapp.ebaum = klapp.ebaum ? 0 : 1; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt bis zum Neuladen */ } } echt.knoten = null; }
+  if (k === '') { if (echt.knoten === null) { klapp.ebaum = klapp.ebaum !== 0 ? 0 : 1; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt bis zum Neuladen */ } } echt.knoten = null; }
   else if (k.includes(SEP)) echt.knoten = echt.knoten === k ? k.split(SEP)[0] : k;
   else { if (echt.knoten === k) { echt.auf.delete(k); echt.knoten = null; } else { echt.knoten = k; echt.auf.add(k); } }
   echt.zeig = ECHT_SEITE; mainZeigen(); };
@@ -682,9 +692,10 @@ function echtAbschnitt(){
   if (l === null) innen = '<p class="leer">Die Akte wird geöffnet …</p>';
   else if (echt.fehler) innen = `<p class="leer">${esc(echt.fehler)}</p>`;
   else if (!l.length) innen = '<p class="leer">Noch nichts hineingelegt. Oben „Importieren“ (grüner Pfeil) legt eine Datei in die Akte – sie bleibt auf diesem Gerät.</p>';
-  else { const baum = echtBaum(l), alle = echtSortiert(l.filter(echtImKnoten)), n = echt.zeig || ECHT_SEITE;
-    innen = baum + (echt.knoten !== null ? `<p class="egewaehlt">${esc(echt.knoten.replace(SEP, ' › '))} · ${alle.length}</p>` : '') + alle.slice(0, n).map(d => echtZeile(d)).join('')
-      + (alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''); }
+  else { const alle = echtSortiert(l.filter(echtImKnoten)), n = echt.zeig || ECHT_SEITE;
+    innen = `${echtSortZeile()}<div class="eexplorer"><section class="ekarte ebaumkarte">${echtBaum(l)}</section>
+     <section class="ekarte elistekarte"><h3 class="egewaehlt">${esc(echt.knoten === null ? 'Alle Unterlagen' : echt.knoten.split(SEP).pop())}<b>${alle.length}</b></h3>${alle.slice(0, n).map(d => echtZeile(d)).join('')}
+      ${alle.length > n ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong><small>${n} von ${alle.length}</small></span></button>` : ''}</section></div>`; }
   return klappTeil('echt', 'Deine Unterlagen', l && !echt.fehler ? String(l.length) : '', innen, `id="echt" data-bereit="${l === null ? 0 : 1}"`);
 }
 function fEchtNeu(datei){
@@ -769,8 +780,10 @@ document.addEventListener('submit', async ev => {
 Object.assign(A, {
  'echt-zuordnen': e => fZuordnen(e.dataset.id), 'echt-termin': e => fTermin(e.dataset.id),
  'person-reiter': e => { s.person = e.dataset.id || null; mainZeigen(); }, 'person-neu': () => fPersonNeu(), 'akte-neu': () => fAkteNeu(),
- 'akte-auf': e => { s.ansicht = 'akten'; s.bereich = e.dataset.id || null; zeigen(); scrollTo(0, 0); }, 'akte-fuellen': e => fAkteFuellen(e.dataset.id),
- 'echt-bereich': e => { try { localStorage.setItem('pa_sort', 'bereich'); } catch { /* gilt dann nicht */ } klapp.echt = 1; echt.knoten = e.dataset.k; echt.zeig = ECHT_SEITE; mainZeigen(); const o = $('echt'); if (o) o.scrollIntoView({block:'start'}); },
+ 'akte-auf': e => { s.ansicht = 'akten'; const k = e.dataset.id || null; s.bereich = s.bereich === k && k && !k.includes('|') ? null : k; echt.zeig = ECHT_SEITE; zeigen(); },
+ 'beispiel-an': async e => { e.disabled = true; try { const r = await T().akten.beispielAnlegen(); await echtLaden(); toast(`Beispielfamilie angelegt: ${r.personen} erfundene Personen, ${r.unterlagen} Unterlagen zugeordnet.`); } catch (err) { toast(fehlerText(err)); } },
+ 'beispiel-weg': async e => { if (!confirm('Die erfundene Beispielfamilie und ihre Akten herausnehmen? Die Unterlagen bleiben.')) return; e.disabled = true; try { await T().akten.beispielEntfernen(); s.bereich = null; await echtLaden(); toast('Beispielfamilie entfernt. Die Unterlagen sind unverändert.'); } catch (err) { toast(fehlerText(err)); } }, 'akte-fuellen': e => fAkteFuellen(e.dataset.id),
+ 'echt-bereich': e => { try { localStorage.setItem('pa_sort', 'bereich'); } catch { /* gilt dann nicht */ } klapp.echt = 1; klapp.ebaum = 1; echt.knoten = e.dataset.k; echt.auf.add(e.dataset.k); echt.zeig = ECHT_SEITE; mainZeigen(); const o = $('echt'); if (o) o.scrollIntoView({block:'start'}); },
 });
 /* ---------- Ordner in die Akte legen (Klaus 17.11.): ein im Datei-Organizer sortierter Ordner kommt mit seiner Einordnung herein ---------- */
 const ord = { ordner:'', index:false, grund:'', stuecke:[], laeuft:false };
@@ -979,7 +992,11 @@ document.addEventListener('submit', async ev => {
   }
 });
 /* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
-function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
+function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); kachelRaster(); }
+/* Bereichs-Knöpfe (Klaus 18.11.): erst eine Reihe ganz füllen, dann die nächste – höchstens drei Reihen; sind es mehr, stehen sie in
+   drei Reihen und lassen sich seitlich schieben. Die Knöpfe behalten ihre Größe (so breit wie ihr Text, Klaus: „nicht größer ziehen“). */
+function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
+addEventListener('resize', () => kachelRaster());
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(glockeStarten); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.

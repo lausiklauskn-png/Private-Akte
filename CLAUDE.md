@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.2)
+## Stand (18.11.2026, Vorschau 0.7.3)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
@@ -46,6 +46,21 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.3 Zwei Karten wie „Finden“ im Organizer, Akten als Baum mit Pfad, Schnellauswahl, Beispielfamilie (Klaus 18.11., Bilder vom Tablet):**
+  (1) **„Deine Unterlagen“** (`echtAbschnitt`, `echtBaum`): links die Karte mit dem Baum (Wurzel „Alle Kategorien“, beim Sortieren nach
+  Datum „Alle Jahre“ usw., zusammenklappbar, Baumlinien und Ordnerzeichen wie im Organizer), rechts die Karte mit dem gewählten Ordner
+  (Überschrift und Zahl, die Unterlagen) – nicht mehr alles untereinander. Schmal (unter 900 px) untereinander; am großen Monitor breiter
+  (`main` 1440 px ab 1500 px, 1680 px ab 1900 px). „Sortieren“ und der Richtungs-Pfeil stehen darüber. (2) **Gleiche Bereiche in
+  anderer Schreibweise sind ein Ordner** (`kanonBereich`; Klaus hatte „Haus und Wohnung“ von Hand eingetragen). (3) **Akten**
+  (`vAkten`): ebenso zwei Karten – links „Alle Personen“ › Person › ihre Akten (und „ohne Akte“), „Gemeinsam“ (Akten ohne Person),
+  „Ohne Akte“; rechts die Unterlagen, darüber der **Pfad** wie im Explorer („Alle Personen › Anna Beispiel › Auto“). Die Reiter je
+  Person sind dafür weg; „+ Person“, „+ Neue Akte“ stehen oben. (4) **Beispielfamilie** (Klaus: „erfinde erst einmal Familienmitglieder“):
+  Knopf „Beispielfamilie anlegen“ (nur ohne Personen): vier erfundene Personen (Anna, Bernd, Clara, Paul Beispiel) mit Akten, drei
+  gemeinsame Akten, die vorhandenen Unterlagen nach Bereich verteilt (nur Verknüpfungen, Quelle „Beispielfamilie“); „Beispielfamilie
+  entfernen“ archiviert sie und löst ihre Verknüpfungen, die Unterlagen bleiben (`akten.beispielAnlegen`/`beispielEntfernen`).
+  (5) **Bereiche = Schnellauswahl** (Klaus: „ich brauche was vom Arzt, klicke gleich da rein“): ein Tipp öffnet den Ordner im Baum samt
+  Unterordnern; die Knöpfe füllen erst eine Reihe, dann die nächste, höchstens drei Reihen, danach seitlich zu schieben
+  (`kachelRaster`); Größe der Knöpfe unverändert (Klaus: „nicht größer ziehen“). Probe 437 grün. Am Tablet ungeprüft.
 - **0.7.2 Ordnerbaum wie im Datei-Organizer, Richtung, Pfad, Einordnung nachtragen (Klaus 18.11., Bilder vom Tablet):**
   (1) **Ordnerbaum** über „Deine Unterlagen“ jetzt zweistufig wie im Finden des Organizers (`echtBaum`, `echtUnter`): unter einem Bereich
   die Art der Unterlage (Rechnung, Brief, Befund … – kommt seit 0.7.2 als „Art: …“ mit der Übergabe, sonst die Art der Datei), unter einem

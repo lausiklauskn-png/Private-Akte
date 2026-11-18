@@ -481,7 +481,7 @@ const akten = {
       else if (x.toType === "person" && ids.has(x.toId)) b.personen.push(x.toId);
       else if (x.toType === "organisation" && x.relationType === "Absender" && orgs.has(x.toId)) b.absender.push(orgs.get(x.toId)!);
     }
-    return { personen, akten: faelle, bezug, absender: [...new Set(orgs.values())] };
+    return { personen, akten: faelle, bezug, absender: [...new Set(orgs.values())], beispiel: records.some((r) => r.source === "Beispielfamilie" && lebt(r)) };
   },
   async personAnlegen(name: string, rolle = "") { return (await saveLocalStammRecord(await browserVault(), { recordType: "person", angaben: { name, art: rolle, notiz: "" } })).id; },
   async akteAnlegen(titel: string, person: string | null) {
@@ -508,6 +508,44 @@ const akten = {
     if (absenderId) await createLocalFamilyRelation(h, { fromType: "document", fromId: docId, toType: "organisation", toId: absenderId, relationType: "Absender", source: "Private Akte", notes: null });
   },
 };
+// Beispielfamilie (0.7.3, Klaus 18.11.: „erfinde erst einmal Familienmitglieder, sodass ich die Unterteilung sehe“): nur auf ausdrücklichen
+// Tipp. Vier erfundene Personen, je Person Akten, dazu gemeinsame Akten; die vorhandenen Unterlagen werden nach Bereich verteilt (Verknüpfungen,
+// keine Kopien). Alles trägt die Quelle „Beispielfamilie“ und lässt sich mit „Beispielfamilie entfernen“ wieder herausnehmen (archiviert,
+// Verknüpfungen gelöst) – die Unterlagen selbst bleiben unberührt.
+const BEISPIEL = "Beispielfamilie";
+const BEISPIEL_PERSONEN: Array<[string, string, string[]]> = [["Anna Beispiel", "ich", ["Persönliche Dokumente", "Arbeit"]], ["Bernd Beispiel", "Partner", ["Persönliche Dokumente", "Auto"]], ["Clara Beispiel", "Tochter", ["Schule"]], ["Paul Beispiel", "Sohn", ["Gesundheit"]]];
+const BEISPIEL_GEMEINSAM = ["Haus & Wohnung", "Finanzen", "Versicherungen"];
+Object.assign(akten, {
+  async beispielDa() { const { records } = await readLocalVaultData(await browserVault()); return records.some((r) => r.source === BEISPIEL && lebt(r)); },
+  async beispielAnlegen() {
+    const h = await browserVault(), neu = async (recordType: "person" | "case", data: Record<string, string>) => (await createLocalFamilyRecord(h, { recordType, data: data as never, status: recordType === "case" ? "offen" : "aktiv", source: BEISPIEL, notes: "erfunden" })).id;
+    const personen: Array<{ id: string; akten: Record<string, string> }> = [], rel: Array<[string, string, string, string, string]> = [];
+    for (const [name, rolle, fach] of BEISPIEL_PERSONEN) { const id = await neu("person", { displayName: name, rolle }); const a: Record<string, string> = {}; for (const f of fach) { a[f] = await neu("case", { title: `${f} · ${name.split(" ")[0]}`, caseType: "Akte" }); rel.push(["case", a[f], "person", id, "betrifft"]); } personen.push({ id, akten: a }); }
+    const gem: Record<string, string> = {}; for (const f of BEISPIEL_GEMEINSAM) gem[f] = await neu("case", { title: f, caseType: "Akte" });
+    const docs = (await listLocalDocuments(h)).filter((d) => !d.aussortiert);
+    docs.forEach((d, i) => {
+      const b = d.category.toLocaleLowerCase("de"), p = personen[i % personen.length];
+      const ziel = /haus|wohnung|energie|garten/.test(b) ? gem["Haus & Wohnung"] : /finanz|steuer|rente|einkäufe/.test(b) ? gem["Finanzen"] : /versicher/.test(b) ? gem["Versicherungen"] : /auto|motorrad/.test(b) ? personen[1].akten["Auto"]
+        : /gesundheit/.test(b) ? personen[3].akten["Gesundheit"] : /arbeit/.test(b) ? personen[0].akten["Arbeit"] : p.akten["Persönliche Dokumente"] || p.akten["Schule"] || p.akten["Gesundheit"];
+      rel.push(["document", d.id, "case", ziel, "gehört zu"]);
+      const wem = /gesundheit/.test(b) ? personen[3] : /auto|motorrad/.test(b) ? personen[1] : /arbeit/.test(b) ? personen[0] : /haus|wohnung|finanz|versicher|energie|garten|steuer|rente|einkäufe/.test(b) ? null : p;
+      if (wem) rel.push(["document", d.id, "person", wem.id, "betrifft"]);
+    });
+    const { akte, revision } = await akteFuerAbgleich(h), am = new Date().toISOString();
+    (akte as unknown as { relations: unknown[] }).relations.push(...rel.map(([fromType, fromId, toType, toId, relationType]) => ({ id: crypto.randomUUID(), fromType, fromId, toType, toId, relationType, createdAt: am, source: BEISPIEL, notes: null })));
+    await akteNachAbgleichSchreiben(h, akte, revision, "Beispielfamilie angelegt", `${BEISPIEL_PERSONEN.length} erfundene Personen, Akten und ${docs.length} Zuordnungen (nur Verknüpfungen).`);
+    return { personen: BEISPIEL_PERSONEN.length, unterlagen: docs.length };
+  },
+  async beispielEntfernen() {
+    const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h), am = new Date().toISOString();
+    const a = akte as unknown as { records: Array<{ id: string; source: string | null; status: string; updatedAt: string }>; relations: Array<{ source: string | null; fromId: string; toId: string }> };
+    const weg = new Set(a.records.filter((r) => r.source === BEISPIEL).map((r) => r.id));
+    for (const r of a.records) if (weg.has(r.id)) { r.status = "archiviert"; r.updatedAt = am; }
+    a.relations = a.relations.filter((x) => x.source !== BEISPIEL && !weg.has(x.fromId) && !weg.has(x.toId));
+    await akteNachAbgleichSchreiben(h, akte, revision, "Beispielfamilie entfernt", `${weg.size} erfundene Einträge archiviert, ihre Verknüpfungen gelöst; Unterlagen unverändert.`);
+    return weg.size;
+  },
+});
 // Termin zu einer echten Unterlage (0.7.0): Frist oder Aufgabe des Klons mit Bezug auf die Unterlage (references), wie „+ Eintrag“ im Kalender.
 Object.assign(kalender, {
   async anlegen(e: { titel: string; tag: string; zeit: string | null; art: "deadline" | "task"; docId: string }) {
