@@ -72,8 +72,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Text (`glockeKnopf`, Klasse `geist`: durchsichtig, die Fläche erscheint erst beim Darauf-Gehen oder Drücken – „wie die Leiste unten
   am Galaxy Tab“). **Rot** = etwas ist fällig (heute oder überfällig; `istFaellig`), mit der **Zahl** der fälligen; **grün** =
   Einträge gespeichert; **grau** = keine. Ein Tipp klappt das **Glockenfeld** auf (`glockenFeld`, über `menue`): alle offenen
-  Einträge untereinander, fällige rot markiert, je Zeile öffnen (Pfeil → Kalender an dem Tag) oder abhaken (✓ = erledigt,
-  `T().kalender.erledigen`, derselbe Schritt wie im Kalender); unten „Kalender öffnen“ und „Neue Notiz“. Nichts schiebt sich von
+  Einträge untereinander, fällige rot markiert; ein Tipp auf die Zeile öffnet den Kalender an dem Tag, der kleine Pfeil klappt sie
+  auf (ganzer Text, darunter „Öffnen“ und „Erledigt“ als Wörter – `T().kalender.erledigen`, derselbe Schritt wie ✓ im Kalender); unten „Kalender öffnen“ und „Neue Notiz“. Nichts schiebt sich von
   selbst über die Seite: läutet die App-Glocke des Klons (unsichtbarer Rahmen `#glocke`, liefert Ton und die Meldung des Geräts),
   wackelt das Symbol kurz. Klaus: solche Spezialknöpfe (nur Symbol) sollen oben künftig auch sonst so sein – bisher nur die Glocke.
   Nicht gebaut: nur eine Zahl ganz ohne Glocke (so am Samsung); „Zurückstellen“ je Eintrag; die Zeile der läutenden Erinnerung
@@ -106,8 +106,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   mit (eigener Haken). **Grenzen:** die Beispiel-Unterlagen führen über „Bearbeiten mit › Kalender“ noch zum alten Beispiel-Kalender
   (`kalender()`, `fNotiz` in `app.js` sind sonst nicht mehr erreichbar); Termin zu einer **echten** Unterlage anlegen geht noch nicht
   (der Klon kann es: `references`); Notizen stehen nicht in der Suche; Papierkorb für Gelöschtes hat keine Oberfläche.
-  Probe 290 grün (Notiz mit „morgen um 9 Uhr“ → Liste „Notizen“ und Punkt am Tag im Kalender; Eintrag von Hand; „Fällig“ mit
-  heute/morgen; Glocke läutet 15 Min. vorher; Tipp öffnet den Tag; erledigt verschwindet; Leeren). **Am Tablet ungeprüft**, ebenso
+  Probe 320 grün (Notiz mit „morgen um 9 Uhr“ → Liste „Notizen“ und Punkt am Tag im Kalender; Eintrag von Hand; „Fällig“ mit
+  heute/morgen; Glocke grau/grün/rot mit Zahl, läutet 15 Min. vorher; Glockenfeld: aufklappen, öffnen, abhaken; Seitenleiste;
+  flache Leisten; Leeren). **Am Tablet ungeprüft**, ebenso
   Sprechen (kein Mikrofon in der Probe), Foto zur Notiz und die Anmeldung bei Google/Microsoft.
 - **0.5.6 Workflow PDF hat eine eigene Stadt im Baum (Klaus 18.11.: der Datei-Organizer hat eine, das Scannen war im Baum nicht zu
   finden; „der Baum erklärt, wo die Apps sind und wie ich sie direkt ansteuere“):** Schild „Workflow PDF“ bei den Kränen oben

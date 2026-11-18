@@ -188,7 +188,7 @@ const MEHR = [['import','importpfeil','Importieren','Datei in die Akte legen ode
    gespeichert; grau = keine. An der roten Glocke steht die Zahl der fälligen. Ein Tipp klappt das Glockenfeld auf (wie das
    Benachrichtigungsfeld am Tablet): alle offenen Einträge untereinander, jeder einzeln zu öffnen (Pfeil) oder abzuhaken.
    Nichts schiebt sich von selbst über die Seite; läutet es, wackelt die Glocke kurz. */
-const glocke = { laeutet:false };
+const glocke = { laeutet:false, auf:null };
 const istFaellig = t => { const d = new Date(), z = n => String(n).padStart(2, '0'), h = tagHeute(); return t.tag < h || (t.tag === h && (!t.zeit || t.zeit <= `${z(d.getHours())}:${z(d.getMinutes())}`)); };
 const glockeStand = () => { const alle = echt.termine || [], n = alle.filter(istFaellig).length; return n ? ['rot', `${n} fällig`, n] : alle.length ? ['gruen', `${alle.length} ${alle.length === 1 ? 'Eintrag' : 'Einträge'} im Kalender`, 0] : ['grau', 'Keine Erinnerung gespeichert', 0]; };
 const glockeInnen = n => ic('glocke') + (n ? `<span class="gzahl">${n > 99 ? '99+' : n}</span>` : '');
@@ -196,8 +196,10 @@ function glockeKnopf(){ const [st, t, n] = glockeStand(); return `<button class=
 function glockeNeu(){ const [st, t, n] = glockeStand(); document.querySelectorAll('.glockenknopf').forEach(k => { if (k.dataset.stand !== st || k.dataset.zahl !== String(n)) k.innerHTML = glockeInnen(n); k.dataset.stand = st; k.dataset.zahl = n; k.classList.toggle('laeutet', glocke.laeutet); k.setAttribute('aria-label', 'Glocke: ' + t); }); }
 setInterval(() => glockeNeu(), 30000); /* „fällig“ hängt an der Uhr */
 function glockenFeld(){
-  const alle = echt.termine || [], zeile = t => { const f = istFaellig(t);
-    return `<div class="gzeile${f ? ' rot' : ''}"><button class="gtext" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}"><span><strong>${esc(t.titel)}</strong><small>${f ? (t.tag < tagHeute() ? 'überfällig · ' : 'heute · ') : ''}${tagText(t.tag)}${t.zeit ? ' · ' + t.zeit + ' Uhr' : ''}</small></span></button><button class="geist" data-a="glocke-erledigt" data-id="${esc(t.id)}" aria-label="„${esc(t.titel)}“ abhaken: erledigt" data-tipp="Erledigt">${ic('haken')}</button><button class="geist" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}" aria-label="„${esc(t.titel)}“ im Kalender öffnen" data-tipp="Im Kalender öffnen">${ic('weiter')}</button></div>`; };
+  /* Wie das Benachrichtigungsfeld am Tablet (Klaus' Bilder 18.11.): eine Zeile je Eintrag, ein Tipp darauf öffnet ihn im Kalender;
+     der kleine Pfeil klappt die Zeile auf – ganzer Text, darunter die Handlungen als Wörter. */
+  const alle = echt.termine || [], zeile = t => { const f = istFaellig(t), auf = glocke.auf === t.id, wann = `${f ? (t.tag < tagHeute() ? 'überfällig · ' : 'heute · ') : ''}${tagText(t.tag)}${t.zeit ? ' · ' + t.zeit + ' Uhr' : ''}`;
+    return `<div class="gzeile${f ? ' rot' : ''}${auf ? ' auf' : ''}"><div class="gkopf"><button class="gtext" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}"><span><strong>${esc(t.titel)}</strong><small>${t.art} · ${wann}</small></span></button><button class="geist gpfeil" data-a="glocke-auf" data-id="${esc(t.id)}" aria-expanded="${auf}" aria-label="„${esc(t.titel)}“ ${auf ? 'zuklappen' : 'aufklappen'}">${ic('weiter')}</button></div>${auf ? `<div class="gtun"><button data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}">Öffnen</button><button data-a="glocke-erledigt" data-id="${esc(t.id)}">Erledigt</button></div>` : ''}</div>`; };
   menue(`${alle.length ? alle.map(zeile).join('') : '<p class="leer" style="padding:10px">Keine Erinnerung gespeichert.</p>'}<hr><button data-a="kalender">${ic('kalender')} Kalender öffnen</button><button data-a="notiz">${ic('notiz')} Neue Notiz</button>`, 'glockenfeld');
 }
 function kopfZeigen(){
@@ -508,6 +510,7 @@ const A = {
  'sort-mehr': () => fRahmen('organizer'),
  notiz: () => { menueZu(); fRahmen('kalender', 'notiz=1'); },
  glocke: () => { if (document.querySelector('.glockenfeld')) return menueZu(); glockenFeld(); },
+ 'glocke-auf': e => { glocke.auf = glocke.auf === e.dataset.id ? null : e.dataset.id; glockenFeld(); },
  'glocke-erledigt': async e => { try { await T().kalender.erledigen(e.dataset.id); await termineLaden(); const g = $('glocke'); if (g) g.contentWindow.location.reload(); const k = $('rahmen'); if (k && rahmen.was === 'kalender') k.contentWindow.location.reload(); glockenFeld(); if (s.ansicht === 'start' && !$('rahmenort').innerHTML) mainZeigen(); glockenFeld(); } catch (err) { toast(fehlerText(err)); } },
  'kal-tag': e => { menueZu(); fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`); },
  sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },

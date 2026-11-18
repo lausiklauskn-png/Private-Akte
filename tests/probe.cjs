@@ -213,8 +213,9 @@ const { chromium } = require('playwright');
       // Glockenfeld: alle offenen Einträge, einzeln öffnen oder abhaken
       await klick(gk); await p.waitForSelector('.glockenfeld .gzeile'); await breit('glockenfeld');
       { const g = await p.locator('.glockenfeld').innerText(); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && /Zählerablesung/.test(g) && /Hausverwaltung/.test(g), 'Glockenfeld zeigt beide Einträge'); } await p.screenshot({path:`p/${name}-12b-glocke.png`});
-      await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=kal-tag]').last().click(); await p.waitForSelector('#rahmen');
-      await p.frameLocator('#rahmen').locator(`[data-mk-tag="${morgen}"].gewaehlt`).waitFor({timeout:30000}); soll((await p.locator('.glockenfeld').count()) === 0, 'Pfeil im Glockenfeld öffnet den Kalender an dem Tag');
+      soll((await p.locator('.glockenfeld .gtun').count()) === 0, 'Glockenfeld: Zeilen sind zugeklappt, keine Knöpfe zu sehen'); await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=glocke-auf]').click(); soll(/Öffnen\s*Erledigt/.test(await p.locator('.glockenfeld .gzeile.auf .gtun').innerText()), 'Pfeil klappt die Zeile auf: „Öffnen“ und „Erledigt“');
+      await p.locator('.glockenfeld .gzeile.auf .gtun [data-a=kal-tag]').click(); await p.waitForSelector('#rahmen');
+      await p.frameLocator('#rahmen').locator(`[data-mk-tag="${morgen}"].gewaehlt`).waitFor({timeout:30000}); soll((await p.locator('.glockenfeld').count()) === 0, '„Öffnen“ im Glockenfeld öffnet den Kalender an dem Tag');
       // Überfälliges: gestern eintragen (wenn gestern im selben Monat steht) – Glocke rot mit Zahl, im Feld abhaken
       const gestern = tagVon(new Date(Date.now() - 864e5));
       if (gestern.slice(0, 7) === heute.slice(0, 7)) { const k3 = p.frameLocator('#rahmen');
@@ -223,9 +224,9 @@ const { chromium } = require('playwright');
         soll((await p.locator('.rahmenfenster .fkopf').evaluate(e => e.offsetHeight)) <= 48, 'Leiste des Rahmens bleibt flach, auch mit Glocke');
         await klick('[data-a=rahmen-zu]'); await p.waitForSelector(gk + '[data-stand=rot]'); await klick(gk);
         soll((await p.locator('.glockenfeld .gzeile.rot').count()) === 1 && /überfällig/.test(await p.locator('.glockenfeld .gzeile.rot').innerText()), 'Glockenfeld: der überfällige Eintrag ist rot markiert');
-        await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-erledigt]').click(); await p.waitForSelector(gk + '[data-stand=gruen]'); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && (await p.locator(gk + ' .gzahl').count()) === 0, 'Abhaken im Glockenfeld: Eintrag weg, Glocke wieder grün');
+        await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-auf]').click(); await p.locator('.glockenfeld .gzeile.rot [data-a=glocke-erledigt]').click(); await p.waitForSelector(gk + '[data-stand=gruen]'); soll((await p.locator('.glockenfeld .gzeile').count()) === 2 && (await p.locator(gk + ' .gzahl').count()) === 0, 'Abhaken im Glockenfeld: Eintrag weg, Glocke wieder grün');
       } else { await klick('[data-a=rahmen-zu]'); await klick(gk); }
-      await p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}).locator('[data-a=glocke-erledigt]').click(); await p.waitForFunction(() => document.querySelectorAll('.glockenfeld .gzeile').length === 1);
+      { const z = p.locator('.glockenfeld .gzeile', {hasText:'Hausverwaltung'}); if (!(await z.locator('[data-a=glocke-erledigt]').count())) await z.locator('[data-a=glocke-auf]').click(); await z.locator('[data-a=glocke-erledigt]').click(); } await p.waitForFunction(() => document.querySelectorAll('.glockenfeld .gzeile').length === 1);
       await p.mouse.click(5, h - 5); await p.waitForFunction(() => !document.querySelector('.glockenfeld')); soll(true, 'Tipp daneben schließt das Glockenfeld');
       await p.waitForFunction(() => !/Hausverwaltung/.test(document.querySelector('#faellig')?.innerText || 'Hausverwaltung'));
       soll((await p.locator('#faellig').innerText()).includes('1 Eintrag'), 'Erledigtes steht nicht mehr unter Fällig');

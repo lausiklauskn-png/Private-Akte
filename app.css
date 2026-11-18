@@ -303,13 +303,20 @@ details.klapp[open]>summary{margin-bottom:8px}
 .rahmenfenster .fkopf .geist{width:30px;height:30px}
 /* Glockenfeld: alle offenen Einträge untereinander, schmal; je Zeile öffnen (Pfeil) oder abhaken. */
 .menue.glockenfeld>div{width:min(340px,calc(100vw - 16px));padding:6px}
-.gzeile{display:flex;align-items:center;gap:2px;border-radius:10px;border-left:3px solid transparent}
+.gzeile{border-radius:10px;border-left:3px solid transparent}
 .gzeile.rot{border-left-color:#c62828}
 .gzeile+.gzeile{margin-top:2px}
+.gkopf{display:flex;align-items:center;gap:2px}
 .menue .gzeile button{width:auto;padding:6px 8px}
 .menue .gzeile .gtext{flex:1;min-width:0;text-align:left}
 .gzeile .gtext span{min-width:0;display:grid}
 .gzeile .gtext strong{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gzeile.auf .gtext strong{white-space:normal;overflow-wrap:anywhere}
 .gzeile .gtext small{font-size:11.5px;color:var(--muted)}
 .gzeile.rot .gtext small{color:#c62828}
-.menue .gzeile .geist{width:32px;height:32px;padding:0;display:grid;flex:none}
+.menue .gzeile .gpfeil{width:30px;height:30px;padding:0;display:grid;flex:none;color:var(--muted)}
+.gpfeil .icon{width:16px;height:16px;transform:rotate(90deg);transition:transform .15s}
+.gzeile.auf .gpfeil .icon{transform:rotate(-90deg)}
+.gtun{display:flex;gap:4px;padding:0 4px 6px 8px}
+.menue .gtun button{font-size:13px;font-weight:600;color:var(--navy);padding:4px 10px}
+.menue .gtun button+button{border-left:1px solid var(--line);border-radius:0 12px 12px 0}
