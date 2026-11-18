@@ -1,0 +1,20 @@
+{
+  "fassung": "0.4.20",
+  "datum": "2026-11-18",
+  "freigabe": "Klaus 18.11.2026: „Und das Ganze übernimmst du dann bitte für die Dateiorganizer in Blau, die für die Familienakte APK Windows existiert“",
+  "inhalt": "Finden wie in der Privaten Akte: Steckbrief unter der Zeile (zweiter Tipp schließt), Wurzel „Alle Kategorien“ usw., Liste rechts einklappbar, Karten höchstens fensterhoch (#72)",
+  "android": {
+    "commit": "ef33e0c9240eedcb97e33279e4a15a67b3055d5c",
+    "lauf": 44358549977,
+    "datei": "Datei-Organizer-Pro-0.4.20.apk",
+    "code": 60,
+    "bytes": 72106884,
+    "update_server": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.20.apk",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.20"
+  },
+  "windows": {
+    "commit": "ef33e0c9240eedcb97e33279e4a15a67b3055d5c",
+    "lauf": 44359866290
+  },
+  "basic": "über GitHub Pages (main ef33e0c)"
+}

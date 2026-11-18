@@ -22,10 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.6)
+## Stand (18.11.2026, Vorschau 0.7.7)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); Plansitzung Bank/Portemonnaie/BookLedgerPro: `docs/BRIEF_PLANSITZUNG_2026-11-19_BANK-PORTEMONNAIE-BOOKLEDGER.md`; ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `ef33e0c` (0.4.20). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `c5a27f3` (0.4.21). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -46,6 +46,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.7 (Klaus 18.11., Bild vom Tablet):** neben „Alle Kategorien“ (und „Alle Jahre“, „Alle Absender“ …) steht die **Zahl der
+  Kategorien**, nicht der Unterlagen (der Hinweis nennt beide); bei „Alle Personen“ in „Akten“ die Zahl der Personen. Die Ordner
+  darunter zählen weiter ihre Unterlagen. **Baum:** der Satz „Eine App. In der Mitte die Akte, an den Ästen die Tools.“ und der Link
+  „Wo liegt was? ↓“ sind heraus (Klaus: das Bild erklärt sich selbst; „Wo liegt was?“ steht darunter). **Regel:** keine Erklärsätze unter
+  Bildern oder Überschriften. Klon Datei-Organizer 0.4.21 nachgezogen (@ `c5a27f3`, dort PR #74, dieselbe Zählung im Baum von „Finden“;
+  APK/Windows 0.4.21 erst ab Montag 23.11. – siehe `CLAUDE.md` dort). Probe 460 grün.
 - **0.7.6 Unterlagen wie „Finden“ im Datei-Organizer (Klaus 18.11., Bilder vom Tablet):** an jeder Zeile in „Deine Unterlagen“, „Akten“
   und „Eingang“ Auge, Stift, Papierkorb (`echtReihe` in `app.js`), rechts die Archivnummer aus dem Organizer. **Auge** oder Tipp auf die
   Zeile klappt den **Steckbrief** direkt darunter auf (`echtSteckbrief`, `echt.sb`), ein zweiter Tipp schließt ihn: Kurzsatz („Rechnung,
@@ -550,7 +556,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   eigene Kategorien, künftig Entsprechendes in der Akte und den anderen Tools), ist fester Bestand. Kein „Leeren“, kein Aufräumen
   und kein Umbau darf es entfernen – geleert werden nur Dateien, Listen und Verläufe. Der Kern wächst; er wird nicht wegrationiert.
 
-- **Einfach halten (Klaus 18.11.2026):** wenig Text auf der Oberfläche. Erklärungen nur hinter einem Fragezeichen oder Knopf, und
+- **Einfach halten (Klaus 18.11.2026):** wenig Text auf der Oberfläche. Keine Erklärsätze unter Bildern, Überschriften oder dem Baum (Klaus 18.11.: „als wenn ich zu blöd wäre, das selber zu verstehen“). Erklärungen nur hinter einem Fragezeichen oder Knopf, und
   dann so, dass ein normaler Nutzer sie versteht. Was nur Technik ist (Regeln des Kerns, Speicher, Fassungen der Klone), bleibt im
   Hintergrund – in `CLAUDE.md`, nicht in der App. Der Baum ist das Vorbild: wenige Punkte, antippbar, erklärt die App.
 

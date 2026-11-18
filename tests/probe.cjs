@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.6 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.7 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -250,7 +250,7 @@ const { chromium } = require('playwright');
     // Baum über „Deine Unterlagen“ (0.6.2): „Alle Unterlagen“ mit Zahl, aufklappen zeigt Gruppen, Tipp auf eine Gruppe zeigt nur sie; je 30 Stück
     { await p.evaluate(async () => { const t = window.PrivateAkteTresor; for (let i = 1; i <= 34; i++) await t.ablegen(new File(['Baumprobe ' + i], `Baumprobe-${String(i).padStart(2, '0')}.txt`, {type:'text/plain'}), {bereich:i % 2 ? 'Reisen & Freizeit' : 'Versicherungen', datum:i % 2 ? '2024-05-01' : '2025-06-01', titel:null, notiz:null}); klapp.ebaum = 0; echt.knoten = null; await echtLaden(); mainZeigen(); });
       const gesamt = await p.evaluate(() => echt.liste.length);
-      soll((await p.locator('#echt .eknoten.alle b').innerText()) === String(gesamt) && (await p.locator('#echt .eknoten:not(.alle)').count()) === 0, 'Baum: „Alle Unterlagen“ zeigt die Gesamtzahl, eingeklappt keine Gruppen');
+      soll((await p.locator('#echt .eknoten.alle b').innerText()) === String(await p.evaluate(() => new Set(echt.liste.map(echtGruppe)).size)) && (await p.locator('#echt .eknoten:not(.alle)').count()) === 0, 'Baum: „Alle Kategorien“ zählt die Kategorien (0.7.7), eingeklappt keine Gruppen');
       soll((await p.locator('#echt > summary').evaluate(e => e.offsetHeight)) <= 44 && !/gespeichert/.test(await p.locator('#echt > summary').innerText()), 'Kopf „Deine Unterlagen“ ist eine Zeile, nur mit der Zahl');
       soll((await p.locator('#echt [data-a=echt-auf]').count()) === 30 && (await p.locator('#echt [data-a=echt-mehr]').innerText()).includes(`30 von ${gesamt}`), 'Liste zeigt 30 Stück und „Weitere zeigen“');
       soll((await p.locator('#echt [data-a=echt-auf]').first().evaluate(e => e.offsetHeight)) <= 44, 'Zeilen in „Deine Unterlagen“ sind flach (höchstens 44 px)');
