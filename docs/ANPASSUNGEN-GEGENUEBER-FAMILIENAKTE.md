@@ -59,6 +59,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A43 | Zahlungen (`payment`) gibt es im Register, aber keine Oberfläche dafür. | 0.7.1: Portemonnaie legt Posten als `payment` ab (Richtung, Tag, wofür), Bon als Unterlage mit „Beleg“. | Die Familienakte könnte dieselben Posten zeigen. |
 | A44 | Bibliothek als lange Liste. | 0.7.3: zwei Karten wie „Finden“ im Datei-Organizer – links der Baum (Kategorie › Art), rechts der Ordner; Akten ebenso mit Pfad (Person › Akte). | Dieselbe Explorer-Ansicht in der Familienakte. |
 | A45 | Gleicher Bereich in anderer Schreibweise ergibt zwei Gruppen. | 0.7.3: in der Anzeige zusammengefasst (`kanonBereich`). | Beim Speichern schon vereinheitlichen. |
+| A46 | Eine Unterlage öffnet sich als Fenster in der Mitte; Einordnen ist ein weiteres Fenster. | 0.7.6: wie „Finden“ im Datei-Organizer – Auge, Stift, Papierkorb an der Zeile; Steckbrief (Kurzsatz, Angaben, Vorschau der ersten Seiten, erkannter Text) und Einordnen (Bereich samt neuer Kategorie, Person, Akten, Absender) klappen unter der Zeile auf, ein zweiter Tipp schließt; „Alle Unterlagen“ klappt ein wie der Baum. |
 
 ## B. Vereinfachungen der Hülle
 
