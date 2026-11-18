@@ -320,3 +320,18 @@ details.klapp[open]>summary{margin-bottom:8px}
 .gtun{display:flex;gap:4px;padding:0 4px 6px 8px}
 .menue .gtun button{font-size:13px;font-weight:600;color:var(--navy);padding:4px 10px}
 .menue .gtun button+button{border-left:1px solid var(--line);border-radius:0 12px 12px 0}
+/* Seitenleiste am Handy: Griff am rechten Rand, Maße wie in der Familienakte (dort globals.css, .seitenleiste). Nur schmal. */
+.seitenleiste{position:fixed;top:50%;right:0;transform:translateY(-50%);z-index:45;padding-right:env(safe-area-inset-right,0px)}
+.seitenleiste-griff{display:grid;place-items:center;width:18px;height:76px;padding:0;border:1px solid var(--navy2);border-right:0;border-radius:12px 0 0 12px;background:color-mix(in srgb,var(--navy) 72%,transparent);box-shadow:-2px 3px 10px rgba(11,49,84,.18)}
+.seitenleiste-griff span{width:4px;height:32px;border-radius:4px;background:rgba(255,255,255,.85)}
+.seitenleiste-griff:hover,.seitenleiste-griff:focus-visible{background:var(--navy)}
+.seitenleiste-knoepfe{display:grid;gap:4px;padding:8px;background:var(--paper);border:1px solid var(--line);border-right:0;border-radius:14px 0 0 14px;box-shadow:-6px 8px 26px rgba(11,49,84,.22);max-height:86vh;overflow-y:auto}
+.seitenleiste-knoepfe button{display:flex;align-items:center;gap:10px;min-height:44px;padding:6px 12px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--navy);font-weight:700;text-align:left;white-space:nowrap}
+.seitenleiste-knoepfe button:hover,.seitenleiste-knoepfe button:focus-visible{background:var(--tealsoft);border-color:var(--line)}
+.seitenleiste-knoepfe .seitenleiste-zu{justify-self:end;min-height:36px;padding:4px 8px;color:var(--muted)}
+.seitenleiste-knoepfe hr{border:0;border-top:1px solid var(--line);margin:2px 4px;width:auto}
+.seitenleiste-knoepfe .fleck{width:22px;height:22px;border-radius:50%;flex:none}
+.seitenleiste-knoepfe .lfrage{width:24px;text-align:center}
+body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty)) .seitenleiste,body:has(#menueort:not(:empty)) .seitenleiste{display:none}
+@media(min-width:1000px){.seitenleiste{display:none}}
+@media print{.seitenleiste{display:none}}

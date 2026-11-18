@@ -22,10 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.0)
+## Stand (18.11.2026, Vorschau 0.6.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.1.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -44,6 +44,20 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.6.1 Seitenleiste in der Akte, im Handyformat (Klaus 18.11.: „am Handy auf jeden Fall, weil da die anderen Funktionen
+  reingepackt werden können – hochscrollen, runterscrollen“; am Monitor nicht nötig):** Griff am rechten Rand (`seitenleisteZeigen`
+  in `app.js`, Maße und Aussehen wie `.seitenleiste` der Familienakte, für die Hülle ohne React geschrieben), nur unter 1000 px
+  Breite. Ein Tipp zeigt: nach oben, nach unten, Zurück (wenn es einen Schritt zurück gibt), Startseite, Baum – und darunter, was
+  sonst hinter „⋯“ liegt (Importieren, Exportieren, Drucken, Farbpalette, Hilfe). Jeder Tipp klappt sie wieder zu; bei offenem
+  Fenster, Menü oder Rahmen tritt sie zurück (im Kalender läuft die Leiste des Klons selbst). „⋯“ oben bleibt vorerst daneben stehen
+  (doppelt; ob es weg kann, entscheidet Klaus nach dem Test).
+  **Erkennung von Tag und Uhrzeit in der Notiz (Klaus 18.11.: „am nächsten Tag“, „um so und so viel Uhr“):** das Notiz-Fenster des
+  Klons füllt Tag und Uhrzeit aus dem Text und klappt bei „erinnere“ den Erinnerungs-Teil auf. Nachgemessen: morgen, übermorgen,
+  Wochentag, „24. Dezember“, „3.12.“, „um 9 Uhr“, „8:30 Uhr“, „in 2 Stunden“ stimmen; **„am nächsten Tag“ stand auf heute, „um halb
+  drei“ ergab keine Uhrzeit** – behoben in der Familienakte selbst (Repo `meine-familienakte` hereingeholt, PR #221 dort,
+  `erinnerungAusText`); **der Klon hier wird nachgezogen, sobald #221 dort zusammengeführt ist** (bis dahin gilt in der Akte noch der alte Stand). Ein Satz nur mit Uhrzeit ohne das Wort „erinnere“ ergibt
+  weiter keinen Vorschlag (so in der Familienakte entschieden) – dann „Erinnern lassen“ von Hand anhaken.
+  Probe 329 grün (9 neu zur Seitenleiste). Am Tablet ungeprüft.
 - **0.6.0 Kalender und Notizen echt (Klaus 18.11., Freibrief; „die richtige Kalenderansicht wie in der Familienakte“):** der violette
   Knopf „Kalender“, die Stadt „Kalender“ im Baum und „Notiz“ öffnen im Rahmen die **Ansichten der Familienakte selbst** – „Mein
   Kalender“ (Monat, Tagesliste, „+ Eintrag“, erledigt, Stift), das Notiz-Fenster (schreiben, sprechen, Foto; Tag und Uhrzeit werden
@@ -75,14 +89,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Einträge untereinander, fällige rot markiert; ein Tipp auf die Zeile öffnet den Kalender an dem Tag, der kleine Pfeil klappt sie
   auf (ganzer Text, darunter „Öffnen“ und „Erledigt“ als Wörter – `T().kalender.erledigen`, derselbe Schritt wie ✓ im Kalender); unten „Kalender öffnen“ und „Neue Notiz“. Nichts schiebt sich von
   selbst über die Seite: läutet die App-Glocke des Klons (unsichtbarer Rahmen `#glocke`, liefert Ton und die Meldung des Geräts),
-  wackelt das Symbol kurz. Klaus: solche Spezialknöpfe (nur Symbol) sollen oben künftig auch sonst so sein – bisher nur die Glocke.
-  Nicht gebaut: nur eine Zahl ganz ohne Glocke (so am Samsung); „Zurückstellen“ je Eintrag; die Zeile der läutenden Erinnerung
+  wackelt das Symbol kurz. **Klaus 18.11. abends: so bleibt es** – keine Zahl ohne Glocke, keine feste Leiste unten, die übrigen
+  Knöpfe oben bleiben wie sie sind (aus den Notizen gestrichen). Nicht gebaut: „Zurückstellen“ je Eintrag; die Zeile der läutenden Erinnerung
   aus dem Klon ist in der Hülle nicht mehr zu sehen (im Kalender selbst erscheint sie weiter, dort schlank gemacht).
   **Seitenleiste (Klaus 18.11.: „übernimm die aus der Familienakte, prüf, wo die ist und was die kann“):** `app/seitenleiste.tsx` im
   Klon – Griff am rechten Rand, wandert beim Rollen mit; ein Tipp zeigt: alle auf-/zuklappen, nach oben, nach unten, Zurück,
   Startseite, Seite wählen, Hilfe. Läuft unverändert im Kalender; Zurück schließt den Kalender, Startseite geht zur Startseite der
   Akte, „Seite wählen“ zum Baum, Hilfe zur Hilfe der Akte (`pa-kalender-geh`). Sie lässt sich nicht verschieben (auch im Klon nicht).
-  In der Hülle selbst und in den anderen Tools gibt es sie noch nicht (sie ist React; für die Hülle wäre sie nachzubauen – offen).
+  In der Hülle selbst seit 0.6.1 (siehe dort); in Datei-Organizer und Workflow PDF im Rahmen nicht.
   **Farben (Klaus 18.11.: „nach demselben Muster“ wie Datei-Organizer und Workflow PDF):** `rahmen/kalender-thema.css` – nur Farben,
   der Kalender ist violett wie sein Tool. Gilt als Muster für jedes weitere Tool (eine Farbdatei je Tool, letztes Stylesheet).
   **Kalender verbinden (Klaus 18.11.: „die Technik mit übernehmen, da sind die Anmeldungen für Google, Microsoft, T-Mobile drin“):**
