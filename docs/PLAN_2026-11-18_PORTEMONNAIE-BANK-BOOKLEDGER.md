@@ -1,7 +1,7 @@
 # Plan – Portemonnaie, Bank, BookLedgerPro (18.11.2026, Private Akte 0.7.7)
 
-Grundlage: `docs/BRIEF_PLANSITZUNG_2026-11-19_BANK-PORTEMONNAIE-BOOKLEDGER.md`. **Plan, nichts gebaut.** Wo Klaus' Antwort noch
-fehlt, steht ein Vorschlag mit „wartet auf Klaus“.
+Grundlage: `docs/BRIEF_PLANSITZUNG_2026-11-19_BANK-PORTEMONNAIE-BOOKLEDGER.md`. **Plan, nichts gebaut.** Klaus hat am 18.11. abends
+entschieden (Abschnitt 5); der Bauauftrag (Abschnitt 6) gilt.
 
 ## 1. Befund: was in BookLedgerPro schon fertig ist
 
@@ -82,16 +82,16 @@ Markt erhältlich sein. Jeder legt sein Konto selbst an und wählt selbst, wie d
   erst auf Tipp; ein Saldo, der nicht aufgeht, steht rot dabei.
 - Für alle Verfahren gleich: doppelte Umsätze nur einmal, Saldo gegenrechnen wo möglich, der eingelesene Auszug wird Unterlage.
 
-**Noch offen:**
+**Ebenfalls entschieden (Klaus 18.11.):**
 
-1. ~~Welche Bank?~~ entschieden, siehe oben. Bietet eine Bank FinTS, bleibt für später.
-2. Reicht zuerst „Kontoauszug einlesen“ nach Bedarf?
-3. Bank als zweites Fach im Portemonnaie (Vorschlag) oder nur in BookLedgerPro?
-4. Schickt die Bank Mails je Abbuchung, und in welches Postfach von Private Brain?
-5. Übergabe an BookLedgerPro als JSON mit Entwürfen (Vorschlag), Bank dort direkt aus dem Auszug?
-6. Wohin am Ende: Portemonnaie der Akte (Vorschlag für privat), BookLedgerPro für den Betrieb?
+- **Bank als zweites Fach im Portemonnaie** (neben Bargeld), wie in Abschnitt 3.
+- **Übergabe an BookLedgerPro einmal im Monat**, als Monatsdatei (JSON Fassung 1, Abschnitt 4); BookLedgerPro macht daraus
+  Entwürfe, festgeschrieben erst auf Tipp. Die CSV bleibt als „Als Tabelle“.
 
-## 6. Bauauftrag für die nächste Sitzung (wartet auf Klaus' Ja zu 3 und 5)
+**Noch offen (nicht dringend):** FinTS für Banken, die es anbieten; Mails der Bank als Hinweis (braucht die Übergabe-Stelle in
+Private Brain); ob das Portemonnaie später eine eigene App wird.
+
+## 6. Bauauftrag für die nächste Sitzung (von Klaus freigegeben 18.11.)
 
 **Schritt A – Private-Akte, „Bank“ im Portemonnaie (0.8.0):**
 1. `klone/bookledger` erweitern: `node tools/klon-nachziehen.mjs bookledger --quelle ../BookLedgerPro --stand <main> --nur
@@ -115,6 +115,24 @@ Markt erhältlich sein. Jeder legt sein Konto selbst an und wählt selbst, wie d
 **Danach Akte:** „An BookLedgerPro geben“ schreibt das JSON (CSV bleibt als „Als Tabelle“).
 
 **Nicht in dieser Runde:** FinTS, PSD2, Mails der Bank, alte .xls-Dateien.
+
+**Reihenfolge:** erst Schritt B1–B3 in BookLedgerPro (Leser für Monatsdatei, CSV, Excel; PR dort, danach Basic nachziehen), dann
+Schritt A in der Akte mit allen Verfahren, zuletzt „An BookLedgerPro geben“ als Monatsdatei. Wird nicht alles fertig: Brief schreiben.
+
+## Startauftrag zum Einfügen
+
+```
+Repos: Private-Akte, BookLedgerPro, BookLedger-Basic (Zweig laut Sitzung).
+Lies zuerst Private-Akte/CLAUDE.md, dann Private-Akte/docs/PLAN_2026-11-18_PORTEMONNAIE-BANK-BOOKLEDGER.md (Abschnitte 5 und 6).
+Klaus hat entschieden: Bank als zweites Fach im Portemonnaie; jedes Konto frei angelegt (Bankname, Kontoname, IBAN freiwillig,
+Anfangssaldo, Verfahren: von Hand, CSV, CAMT, MT940, PDF, Excel); Übergabe an BookLedgerPro einmal im Monat als Monatsdatei.
+Erst BookLedgerPro: src/domain/portemonnaieImport.js, bankCsv.js (Spalten zuordnen, am Konto gemerkt), xlsxZeilen.js – rein,
+build-frei, Proben in tests/run.mjs mit erfundenen Dateien; PR, dann Basic nachziehen (tools/pro-nachziehen.mjs).
+Dann Akte 0.8.0: klone/bookledger per tools/klon-nachziehen.mjs --nur erweitern (nie von Hand), T().bank in src/tresor.ts,
+Fach „Bank“ in app.js, Probe in tests/probe.cjs.
+Nicht: FinTS, PSD2, Mails der Bank, echte Kontodaten im Repo, Erklärsätze auf der Oberfläche, Klone von Hand ändern.
+Was nicht fertig wird: Brief schreiben.
+```
 
 ## Grenzen
 
