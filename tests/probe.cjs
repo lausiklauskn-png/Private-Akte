@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.4 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.5 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -262,6 +262,7 @@ const { chromium } = require('playwright');
       // 0.7.2: Unterordner wie im Datei-Organizer, Richtung mit dem Pfeil, Pfad an der Zeile (gekürzt, ganz im Hinweis)
       { const kinder = await p.evaluate(() => [...document.querySelectorAll('#echt .eknoten.unter')].map(e => [e.querySelector('.ename').innerText, +e.querySelector('b').innerText]));
         soll(await p.evaluate(() => { const l = document.querySelector('#echt .ebaumkarte')?.getBoundingClientRect(), r = document.querySelector('#echt .elistekarte')?.getBoundingClientRect(); return !!l && !!r && (innerWidth > 900 ? r.left >= l.right - 1 && Math.abs(r.top - l.top) < 4 : r.top >= l.bottom - 1); }) && (await p.locator('#echt .eknoten.alle .ename').innerText()) === 'Alle Kategorien' && (await p.locator('#echt h3.egewaehlt').innerText()).includes('Versicherungen'), 'Zwei Karten wie im Organizer: links „Alle Kategorien“, rechts der gewählte Ordner (schmal untereinander)');
+        soll(await p.evaluate(() => { const l = document.querySelector('#echt .ebaumkarte').getBoundingClientRect().height, r = document.querySelector('#echt .elistekarte').getBoundingClientRect().height, e = document.querySelector('#echt .elistekarte .eliste'); return r <= innerHeight + 1 && (innerWidth <= 900 || Math.abs(l - r) < 2) && getComputedStyle(e).overflowY === 'auto'; }), 'Karten passen ins Fenster, nebeneinander gleich hoch; die Liste rollt in der Karte');
         soll(await p.evaluate(() => kanonBereich('Haus und Wohnung') === 'Haus & Wohnung'), '„Haus und Wohnung“ und „Haus & Wohnung“ sind ein Ordner');
         soll(kinder.length >= 1 && kinder.reduce((a, k) => a + k[1], 0) === 17 && kinder.some(k => k[0] === 'TXT'), 'Baum: unter dem Bereich die Unterordner (Art) mit Zahl, Summe = 17 (' + JSON.stringify(kinder) + ')');
         const erst = await p.locator('#echt [data-a=echt-auf] strong').first().innerText(); await klick('#echt-richtung'); await p.waitForFunction(e => document.querySelector('#echt [data-a=echt-auf] strong')?.innerText !== e, erst);

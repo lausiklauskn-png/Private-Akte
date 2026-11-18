@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.4)
+## Stand (18.11.2026, Vorschau 0.7.5)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
@@ -46,6 +46,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.5 Kartenhöhe an das Fenster angepasst (Klaus 18.11.: „die rechte Karte höchstens so groß wie die linke, beide höchstens so
+  hoch wie der Bildschirm, darin rollen“; dann: „an die Fensterhöhe anpassen, unten ist noch zu viel Platz“):** `kartenHoehe` in `app.js`
+  misst nebeneinander, wo die Karten anfangen und was darunter steht („Fällig“, „Bereiche“), und gibt beiden Karten genau die Höhe bis
+  zum unteren Fensterrand (mindestens 300 px); der Baum rollt in seiner Karte, rechts rollt nur die Liste, die Überschrift bleibt
+  stehen. Untereinander (Handy): Baum höchstens halbe, Liste ganze Fensterhöhe. Neu gerechnet bei jedem Zeichnen, beim Aufklappen und
+  bei Größenänderung des Fensters; gilt auch für „Akten“. Probe 440 grün.
 - **0.7.4 Empfang aus dem eigenständigen Datei-Organizer (Klaus 18.11.: „Basic soll an die Private Akte übergeben“):** der Organizer
   0.4.19 (Web-App) öffnet `/Private-Akte/?empfang=organizer` im selben Browser; sobald der Tresor offen ist, meldet die Akte dem
   öffnenden Fenster „pa-empfang-bereit“ (alle 0,5 s, höchstens 2 Minuten) und nimmt dasselbe Paket wie aus dem Rahmen an
