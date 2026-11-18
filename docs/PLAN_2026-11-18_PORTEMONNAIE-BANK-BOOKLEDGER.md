@@ -59,16 +59,39 @@ gebunden). Nichts davon neu schreiben (Regel „Klone nie von Hand ändern“).
   (Bauplan BLP 09.11., Abschnitt 5).
 - CSV bleibt als Ausgabe für Tabellen (Excel), nicht als Übergabe.
 
-## 5. Fragen an Klaus (offen)
+## 5. Entschieden und offen
 
-1. Welche Bank(en)? Gibt das Online-Banking **CAMT.053, MT940 oder nur CSV** aus? Bietet sie FinTS?
+**Entschieden (Klaus 18.11., zu Frage 1):** keine feste Bank, niemand wird festgebunden – die App soll einmal frei oder auf dem
+Markt erhältlich sein. Jeder legt sein Konto selbst an und wählt selbst, wie die Umsätze hineinkommen:
+
+- **Konto anlegen:** Name der Bank frei eingetippt, Name des Kontos (z. B. „Girokonto“), IBAN freiwillig (gezeigt nur die letzten
+  vier Stellen), Anfangssaldo, **Verfahren** zur Auswahl: von Hand · CSV · CAMT · MT940 · PDF · Excel. Mehrere Konten möglich, das
+  Verfahren lässt sich je Konto jederzeit ändern; beim Einlesen wird es vorgewählt, aber nichts sperrt eine andere Datei.
+- **Von Hand:** Umsatz eintragen wie beim Bargeld (Tag, Betrag, rein/raus, Text). Geht immer, auch neben einem Import.
+- **CAMT / MT940:** fertig in BookLedgerPro (`bankimport.js`), nur anschließen.
+- **CSV:** jede Bank schreibt andere Spalten. Darum keine Liste von Banken, sondern **Spalten zuordnen**: beim ersten Einlesen zeigt
+  die App die ersten Zeilen, der Nutzer tippt an, welche Spalte Datum, Betrag (oder Soll/Haben), Text und Gegenseite ist;
+  Trennzeichen, Dezimalkomma und Datumsform werden erraten und lassen sich ändern. Die Zuordnung wird **am Konto gemerkt** – das
+  nächste Mal geht es ohne Fragen. Rein gebaut in BookLedgerPro (`src/domain/bankCsv.js`), damit Akte, Basic und Pro denselben
+  Leser haben.
+- **Excel (.xlsx):** wird zuerst in Zeilen gelesen, dann dieselbe Spalten-Zuordnung wie CSV. Kein fremdes Paket (BookLedgerPro ist
+  build-frei): .xlsx ist ein ZIP mit XML, der Browser entpackt es selbst (`DecompressionStream`). Alte .xls nicht – dort „als CSV
+  speichern“ empfehlen.
+- **PDF:** `auszugText.js` aus BookLedgerPro liest Auszüge als Text; dort hinter dem Vorschau-Schalter (89 % ganz richtig,
+  Grenze 90 %). In der Akte darum als **Vorschlag**: die gelesenen Umsätze stehen zum Prüfen da, jede Zeile änderbar, übernommen
+  erst auf Tipp; ein Saldo, der nicht aufgeht, steht rot dabei.
+- Für alle Verfahren gleich: doppelte Umsätze nur einmal, Saldo gegenrechnen wo möglich, der eingelesene Auszug wird Unterlage.
+
+**Noch offen:**
+
+1. ~~Welche Bank?~~ entschieden, siehe oben. Bietet eine Bank FinTS, bleibt für später.
 2. Reicht zuerst „Kontoauszug einlesen“ nach Bedarf?
 3. Bank als zweites Fach im Portemonnaie (Vorschlag) oder nur in BookLedgerPro?
 4. Schickt die Bank Mails je Abbuchung, und in welches Postfach von Private Brain?
 5. Übergabe an BookLedgerPro als JSON mit Entwürfen (Vorschlag), Bank dort direkt aus dem Auszug?
 6. Wohin am Ende: Portemonnaie der Akte (Vorschlag für privat), BookLedgerPro für den Betrieb?
 
-## 6. Bauauftrag für die nächste Sitzung (wartet auf Klaus' Ja zu 2, 3, 5)
+## 6. Bauauftrag für die nächste Sitzung (wartet auf Klaus' Ja zu 3 und 5)
 
 **Schritt A – Private-Akte, „Bank“ im Portemonnaie (0.8.0):**
 1. `klone/bookledger` erweitern: `node tools/klon-nachziehen.mjs bookledger --quelle ../BookLedgerPro --stand <main> --nur
@@ -76,18 +99,22 @@ gebunden). Nichts davon neu schreiben (Regel „Klone nie von Hand ändern“).
    dann `--pruefen`.
 2. `src/tresor.ts`: `T().bank` – `einlesen(datei)` (parse + prüfen + doppelte), `liste(monat)`, `herausnehmen(id)`; Auszug als
    Unterlage mit Verknüpfung. `npm run bau`, `bau:pruefen`.
-3. `app.js`: Fach „Bank“ im Portemonnaie, Knopf „Kontoauszug einlesen“, Monatsabschluss mit Summe; Barabhebung „vom Konto“.
+3. `app.js`: Fach „Bank“ im Portemonnaie; „+ Konto“ (Bank, Kontoname, IBAN freiwillig, Anfangssaldo, Verfahren); Umsatz von
+   Hand; „Kontoauszug einlesen“ (CAMT/MT940 sofort, CSV/Excel/PDF sobald Schritt B sie liefert); Monatsabschluss mit Summe;
+   Barabhebung „vom Konto“.
 4. Probe: gestellte MT940- und CAMT-Datei (erfunden, keine echten Daten), doppelt eingelesen → nichts doppelt, Saldo falsch → rot,
    Monatsabschluss rechnet.
 
 **Schritt B – BookLedgerPro (eigener PR dort, danach Basic nachziehen):**
 1. `src/domain/portemonnaieImport.js` (rein): JSON Fassung 1 lesen → Buchungsentwürfe; Probe in `tests/run.mjs`.
 2. Einstieg unter Belege/Import („Portemonnaie-Monat einlesen“), Entwürfe wie beim Bankimport.
-3. Optional: CSV-Leser für Bank-CSV, sobald Klaus' Bank und ihr Format bekannt sind (eine Beispieldatei mit erfundenen Werten).
+3. `src/domain/bankCsv.js` (rein): Trennzeichen/Dezimal/Datum erraten, Spalten-Zuordnung anwenden → dasselbe Umsatz-Modell wie
+   `parseBankauszug`; `src/domain/xlsxZeilen.js` (rein, ZIP über `DecompressionStream`) → Zeilen für denselben Leser. Proben mit
+   erfundenen Dateien im Aufbau mehrerer Banken. Danach Akte: beide über den Klon hereinholen.
 
 **Danach Akte:** „An BookLedgerPro geben“ schreibt das JSON (CSV bleibt als „Als Tabelle“).
 
-**Nicht in dieser Runde:** FinTS, PSD2, Mails der Bank, Auszug als PDF (bleibt hinter dem Schalter, bis BookLedgerPro ihn freigibt).
+**Nicht in dieser Runde:** FinTS, PSD2, Mails der Bank, alte .xls-Dateien.
 
 ## Grenzen
 
