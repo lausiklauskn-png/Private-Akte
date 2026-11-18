@@ -1,4 +1,4 @@
-# Brief für die nächste Sitzung – offene Punkte, dann Private Brain, Portemonnaie, Familienbüro (Stand: Private Akte 0.6.4, 18.11.2026)
+# Brief für die nächste Sitzung – offene Punkte, dann Private Brain, Portemonnaie, Familienbüro (Stand: Private Akte 0.6.5, 18.11.2026)
 
 Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, 0.6.0 bis 0.6.4, und „Feste Regeln“). Der Abschlussbrief der letzten
 Sitzung ist `docs/BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md`.
@@ -35,12 +35,11 @@ Unterlagen mit. Die Personen gibt es im Tresor der Familienakte schon – nutzen
 - Termin zu einer **echten** Unterlage anlegen („Bearbeiten mit › Kalender“ führt noch zum alten Beispiel-Kalender; der Klon kann
   Bezüge über `references`). Danach `kalender()` und `fNotiz` in `app.js` entfernen.
 - Person und Absender an einer Unterlage von Hand setzen (heute nur aus der Übergabe des Organizers).
-- „⋯“ oben am Handy neben der Seitenleiste ist doppelt – mit Klaus' Test entscheiden; wenn die Seitenleiste unten angedockt ist,
-  fehlt die Zahl am „Eingang“.
+- „⋯“ oben am Handy neben der Seitenleiste ist doppelt – mit Klaus' Test entscheiden.
+- Falls am Ende der Sitzung vom 18.11. nicht mehr geschehen: Datei-Organizer 0.4.17 (PR #67 dort) zusammenführen und
+  `node tools/klon-nachziehen.mjs datei-organizer --quelle ../Datei-Organizer`, dann Fassung erhöhen.
 - Im Editor von Workflow PDF leuchtet nach dem Scan „PDF ausgeben“ (führt weg von der Akte).
 - Kachel „Workflow PDF“ im Familienbüro-Fenster: bleibt sie, seit es die eigene Stadt gibt?
-- Datei-Organizer 0.4.16 (schmaler Fuß, PR #66 dort) ist auf `main`, falls die letzte Sitzung es nicht mehr geschafft hat:
-  dann zusammenführen und `node tools/klon-nachziehen.mjs datei-organizer --quelle ../Datei-Organizer`.
 
 ### 3. Private Brain hereinholen (Klaus 18.11.: „wichtig, als nächstes“)
 
@@ -74,8 +73,8 @@ Design, Aufbau, sinnvolle Gestaltung – am Tablet, am Handy, im geteilten Bilds
 ## Was Klaus am Tablet zuletzt bestätigt hat (18.11.)
 
 Notiz einsprechen mit Datum und Uhrzeit („funktioniert astrein“), die verschiebbare Seitenleiste („funktioniert wunderbar“),
-Glocke rot mit Zahl in der Leiste des Kalenders. Noch nicht gesehen: 0.6.2–0.6.4 (Baum über „Deine Unterlagen“, Vorschläge beim
-Tippen, „Wen es betrifft“, Organizer 0.4.15/0.4.16 im Rahmen, „am nächsten Tag um halb drei“), Anmeldung bei Google/Microsoft.
+Glocke rot mit Zahl in der Leiste des Kalenders. Noch nicht gesehen: 0.6.2–0.6.5 (Baum über „Deine Unterlagen“, Vorschläge beim
+Tippen, „Wen es betrifft“, Organizer 0.4.15/0.4.16 im Rahmen (mit schmalem Fuß), „am nächsten Tag um halb drei“), Anmeldung bei Google/Microsoft.
 
 ## Startauftrag
 

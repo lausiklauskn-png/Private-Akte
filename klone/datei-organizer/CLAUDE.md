@@ -9,6 +9,14 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026 nachmittags): 0.4.16 – Fuß als schmale Zeile
+
+- **Fuß (Klaus 18.11., Bild vom Tablet: „den blauen Container komplett rausnehmen“):** statt des großen dunkelblauen Fußes mit
+  „Arbeiten / Weitergeben / Rechtliches“ steht unten nur noch eine Zeile (`[data-fuss]` in `src/app.tsx`): „Family-Projekt ·
+  Datei-Organizer <Fassung>“ und die Verweise Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe. Die Rechtsseite
+  (`src/public/datenschutz.html`) hat dafür Anker und neu die Abschnitte **Haftungsausschluss** und **Lizenz & Copyright** (mit den
+  fremden Bausteinen pdf.js, Tesseract.js, three.js). Fassung 0.4.16 (Code 56, Vorrat v37), keine Ausgabe. UI-Probe 201 grün.
+
 ## Stand (18.11.2026): 0.4.15 – nach Klaus' Test am Tablet (nicht ausgegeben, am Gerät ungeprüft)
 
 Klaus 18.11. (sein Wort gilt als Ja zu diesen sichtbaren Änderungen): „man scrollt sich zu Tode“, „was ist, wenn man keine Zeit hat zum

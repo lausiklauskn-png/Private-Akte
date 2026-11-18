@@ -26,7 +26,7 @@ import { verlernen } from "./verlauf.ts";
 import { Seitenleiste } from "./seitenleiste.tsx";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
-export const FASSUNG = "0.4.15";
+export const FASSUNG = "0.4.16";
 // Ladeanzeige: „suchen“ = Ordner wird durchgesehen (Zahl noch unbekannt), „lesen“ = Datei für Datei, „stand“ = gemerkter Stand beim Start.
 export type Fortschritt = { phase: "stand" | "suchen" | "lesen"; fertig: number; gesamt: number; name?: string };
 const luft = () => new Promise<void>((r) => setTimeout(r)); // dem Browser Zeit zum Zeichnen geben
@@ -674,16 +674,17 @@ export function App() {
       {seite === "landkarte" && <LandkarteSeite {...props}/>}
     </main>
     <Seitenleiste seite={seite} seiten={SEITEN} gehe={gehe} fassung={FASSUNG} zurueck={schritte > 0 ? () => history.back() : undefined}/>
-    <footer className="site-footer">
-      <div className="footer-inner">
-        <div className="footer-brand-row"><div><strong>{APP_NAME.toUpperCase()}</strong><span>Ein Ordner rein, sortiert heraus – für die Familienakte.</span></div><span>Alles bleibt auf diesem Gerät.</span></div>
-        <div className="footer-directory">
-          <section><h2>Arbeiten</h2><ul>{SEITEN.slice(0, 3).map((s) => <li key={s.id}><button type="button" onClick={() => gehe(s.id)}>{s.name}</button></li>)}</ul></section>
-          <section><h2>Weitergeben</h2><ul><li><button type="button" onClick={() => gehe("akte")}>An die Familienakte</button></li><li><button type="button" onClick={() => gehe("verlauf")}>Verlauf und Gelerntes</button></li></ul></section>
-          <section><h2>Rechtliches</h2><ul><li><a href="./datenschutz.html">Impressum &amp; Datenschutz</a></li><li><button type="button" onClick={() => gehe("hilfe")}>Hilfe</button></li></ul></section>
-        </div>
-        <div className="footer-meta"><span>Family-Projekt · {APP_NAME} {FASSUNG}</span><span>Originale werden nie verändert.</span></div>
-      </div>
+    {/* Fuß (Klaus 18.11.2026): nur eine schmale Zeile – Family-Projekt, Name und Fassung, die rechtlichen Seiten und die Hilfe.
+        Der große Fuß mit „Arbeiten / Weitergeben“ ist heraus; dieselben Wege stehen oben in der Leiste und in der Seitenleiste. */}
+    <footer className="site-footer" data-fuss>
+      <span>Family-Projekt · {APP_NAME} {FASSUNG}</span>
+      <nav aria-label="Rechtliches">
+        <a href="./datenschutz.html#impressum">Impressum</a>
+        <a href="./datenschutz.html#datenschutz">Datenschutz</a>
+        <a href="./datenschutz.html#haftung">Haftungsausschluss</a>
+        <a href="./datenschutz.html#lizenz">Lizenz</a>
+        <button type="button" onClick={() => gehe("hilfe")}>Hilfe</button>
+      </nav>
     </footer>
   </div>;
 }
