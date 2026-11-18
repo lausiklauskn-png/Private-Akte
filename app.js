@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.6.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -209,9 +209,14 @@ function kopfZeigen(){
   $('kopfknoepfe').innerHTML = glockeKnopf() + MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
     + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Importieren, Exportieren, Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
 }
+/* Navi-Leiste (0.6.5, Klaus 18.11.: „das Flying Widget ist unsere Navigationsleiste“): am Handy gibt es die untere Leiste nicht mehr –
+   Start, Akten, Eingang, Baum stehen in der Seitenleiste. Am breiten Bildschirm steht sie links und lässt sich mit dem Pfeil zu einer
+   schmalen Spalte nur mit Symbolen einklappen (gemerkt `pa_nav_zu`). */
+const navZu = () => { try { return localStorage.getItem('pa_nav_zu') === '1'; } catch { return false; } };
 function navZeigen(){
   const NAV = [['start','Start'],['akten','Akten'],['eingang','Eingang'],['baum','Baum']];
-  $('nav').innerHTML = NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
+  document.body.classList.toggle('nav-zu', navZu());
+  $('nav').innerHTML = `<button class="navklapp" data-a="nav-klapp" aria-label="${navZu() ? 'Leiste aufklappen' : 'Leiste einklappen'}" data-tipp="${navZu() ? 'Aufklappen' : 'Einklappen'}">${ic(navZu() ? 'weiter' : 'zurueck')}</button>` + NAV.map(([id,t]) => `<button data-a="geh" data-zu="${id}" ${s.ansicht===id?'aria-current="page"':''}>${ic(id)}<span>${t}</span>${id==='eingang'&&eingang.neu.length?`<span class="zahl">${eingang.neu.length}</span>`:''}</button>`).join('');
 }
 const fuss = () => `<footer class="fuss"><span>© 2026 Family-Projekt</span><a href="./rechtliches.html#impressum">Impressum</a><a href="./rechtliches.html#datenschutz">Datenschutz</a><a href="./rechtliches.html#haftung">Haftungsausschluss</a><a href="./rechtliches.html#lizenz">Lizenz</a></footer>`;
 
@@ -1138,9 +1143,10 @@ function seitenleisteZeigen(){
     + k('leiste-oben', ic('hoch'), 'Nach oben') + k('leiste-unten', ic('runter'), 'Nach unten')
     + (zurTiefe() ? k('leiste-zurueck', ic('zurueck'), 'Zurück') : '')
     + (s.ansicht !== 'start' || s.frage || s.bereich ? k('geh', ic('start'), 'Startseite', 'data-zu="start"') : '')
-    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t, `data-zu="${id}"`)).join('') + '<hr>'
+    + [['akten', 'Akten'], ['eingang', 'Eingang'], ['baum', 'Baum']].filter(([id]) => s.ansicht !== id).map(([id, t]) => k('geh', ic(id), t + (id === 'eingang' && eingang.neu.length ? ` <span class="zahl">${eingang.neu.length}</span>` : ''), `data-zu="${id}"`)).join('') + '<hr>'
     + MEHR.map(([a, i, t]) => k(a, a === 'farbe' ? '<span class="fleck farbknopf"></span>' : i ? ic(i) : '<b class="lfrage">?</b>', t, 'data-ort="akte"')).join('') + '</div>';
 }
+A['nav-klapp'] = () => { const zu = !navZu(); try { localStorage.setItem('pa_nav_zu', zu ? '1' : '0'); } catch { /* gilt bis zum Neuladen */ } navZeigen(); };
 A['leiste-auf'] = () => { if (Date.now() - leiste.gezogen < 500) return; /* das war ein Ziehen, kein Tipp */ leiste.auf = true; seitenleisteZeigen(); };
 A['leiste-zu'] = () => { leiste.auf = false; seitenleisteZeigen(); };
 A['leiste-oben'] = () => scrollTo({top:0, behavior:'smooth'});

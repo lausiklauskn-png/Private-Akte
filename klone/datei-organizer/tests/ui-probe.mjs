@@ -42,6 +42,9 @@ try {
   console.log("Start");
   await page.goto(basis);
   soll("Kopf, Navigation und Fuß stehen da", await page.locator(".site-header .main-navigation [data-nav]").count() === 6 && await page.locator(".site-footer").isVisible());
+  { const f = page.locator("[data-fuss]"), t = (await f.innerText()).replace(/\s+/g, " ");
+    soll("Fuß ist eine schmale Zeile (Klaus 18.11.): Family-Projekt, Name, Fassung, Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe", /Family-Projekt/.test(t) && /0\.4\.16/.test(t) && ["Impressum", "Datenschutz", "Haftungsausschluss", "Lizenz", "Hilfe"].every((w) => t.includes(w)) && !/Arbeiten|Weitergeben/.test(t), t);
+    soll("Fuß ohne dunkelblaue Fläche und flach (höchstens 60 px bei 1280 px Breite)", await f.evaluate((e) => getComputedStyle(e).backgroundColor === "rgba(0, 0, 0, 0)" && e.offsetHeight <= 60)); }
   soll("Ohne Ordner: keine Pille im Kopf, dafür der Drucker-Knopf", await page.locator("[data-ordner-pill]").count() === 0 && await page.locator(".header-actions [data-drucken]").count() === 1);
   { // Ohne offene Datei druckt der Knopf die Seite, wie sie ist (Klaus 17.11.: nicht ausgegraut).
     await page.evaluate(() => { window.__seite = 0; window.print = () => { window.__seite += document.querySelector("#druck-blatt") ? 100 : 1; }; });
@@ -270,6 +273,7 @@ try {
   }
   await page.goto(basis + "datenschutz.html");
   soll("Impressum & Datenschutz erreichbar", (await page.locator("h1").innerText()).includes("Impressum"));
+  for (const anker of ["impressum", "datenschutz", "haftung", "lizenz"]) soll(`Rechtsseite: Abschnitt #${anker} da`, await page.locator(`#${anker}`).count() === 1);
 
   await page.setViewportSize({ width: 1280, height: 900 }); await page.goto(basis + "#sortieren"); await page.waitForTimeout(400);
   soll("Sortieren: grüne Liste der sicheren Dateien mit Zahl", await page.locator("[data-sicherliste] [data-sicher]").count() > 0 && /\d+/.test(await page.locator("[data-sicherliste] .badge.gut").innerText()));
@@ -409,7 +413,7 @@ try {
     const np = await nctx.newPage();
     const nfehler = []; np.on("pageerror", (e) => nfehler.push(String(e)));
     await np.goto(basis + "#hilfe");
-    soll("App heißt „Datei-Organizer Pro“ (Kopf, Seitentitel, Fuß)", (await np.locator("[data-app-name]").innerText()).replace(/\s+/g, " ") === "Datei-Organizer Pro" && (await np.title()) === "Datei-Organizer Pro" && (await np.locator(".footer-meta").innerText()).includes("Datei-Organizer Pro"));
+    soll("App heißt „Datei-Organizer Pro“ (Kopf, Seitentitel, Fuß)", (await np.locator("[data-app-name]").innerText()).replace(/\s+/g, " ") === "Datei-Organizer Pro" && (await np.title()) === "Datei-Organizer Pro" && (await np.locator("[data-fuss]").innerText()).includes("Datei-Organizer Pro"));
     soll("App: kein Service Worker angemeldet", await np.evaluate(async () => !(await navigator.serviceWorker?.getRegistration())));
     await np.waitForSelector("[data-update-fahne][data-nativ]", { timeout: 6000 }).catch(() => {});
     soll("App: still geprüft, Fähnchen „Update 9.9.9“ erscheint von selbst", ((await np.locator("[data-update-fahne]").innerText().catch(() => "")) || "").includes("9.9.9"));
@@ -850,7 +854,7 @@ try {
     await griff.click();
     const worte = await sp.locator(".seitenleiste-knoepfe [data-leiste]").allInnerTexts();
     soll("Seitenleiste: Knöpfe mit Symbol und Wort – nach oben, nach unten, zurück und die sechs Seiten", ["Nach oben", "Nach unten", "Zurück", "Ordner", "Sortieren", "Finden", "Verlauf", "Familienakte", "Hilfe"].every((w) => worte.map((x) => x.trim()).includes(w)) && await sp.locator(".seitenleiste-knoepfe [data-leiste] svg").count() === worte.length, worte.join(","));
-    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.15");
+    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.16");
     await sp.locator("[data-leiste=oben]").click(); await sp.waitForFunction(() => scrollY === 0, null, { timeout: 6000 }).catch(() => {});
     soll("Seitenleiste: „Nach oben“ rollt an den Anfang und klappt zu", await sp.evaluate(() => scrollY) === 0 && await sp.locator("[data-seitenleiste=zu]").count() === 1);
     await griff.click(); await sp.locator("[data-leiste=unten]").click(); await sp.waitForFunction(() => scrollY + innerHeight >= document.documentElement.scrollHeight - 2, null, { timeout: 6000 }).catch(() => {});
@@ -878,7 +882,7 @@ try {
       const auf = await kp.locator("[data-kopf-knoepfe] [data-aktualisieren]").isVisible() && await kp.locator("[data-kopf-knoepfe] [data-drucken]").isVisible();
       await kp.locator("[data-kopf-knoepfe] [data-landkarte-knopf]").click(); await kp.waitForTimeout(100);
       soll(`Im Rahmen (${breit} px): Kopf eine Zeile – Leiste der Seiten, rechts der Pfeil mit den runden Knöpfen; kein Name`, m.hoch <= 52 && m.eineZeile && !m.marke && await kp.locator(".main-navigation [data-nav]").count() === 6 && auf && await kp.evaluate(() => location.hash) === "#landkarte" && !(await kp.locator("[data-kopf-knoepfe]").isVisible()), JSON.stringify(m) + ` auf=${auf}`);
-      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.15")); }
+      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.16")); }
       await kctx.close();
     }
   }

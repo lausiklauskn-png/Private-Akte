@@ -14,10 +14,12 @@ const { chromium } = require('playwright');
     await p.goto('http://localhost:8765/'); await p.waitForSelector('.werk');
     const breit = async wo => soll(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), name+' quer scrollbar bei '+wo);
     const klick = async sel => { await p.locator(sel).first().click(); };
+    /* Am Handy gibt es die untere Leiste nicht mehr (0.6.5): dort führt die Seitenleiste; „.nav [data-zu=x]“ geht über sie. */
+    const geh = async id => { if (await p.locator('.nav').isVisible()) await klick(`.nav [data-zu=${id}]`); else { await klick('.seitenleiste-griff'); if (await p.locator(`.seitenleiste [data-a=geh][data-zu=${id}]`).count()) await klick(`.seitenleiste [data-a=geh][data-zu=${id}]`); else await klick('.seitenleiste [data-a=leiste-zu]'); } };
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
-    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.6.4 · Basic'), 'Fassung beim Namen');
+    soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
+    soll((await text()).includes('0.6.5 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -119,10 +121,10 @@ const { chromium } = require('playwright');
     await p.evaluate(() => { bed.geladen = false; bed.treffer = []; bed.zu = ''; echtLaden(); }); await klick('[data-a=suche-leer]'); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1');
 
     // Zurück: schließt erst das Fenster, dann die Ansicht; die Seite bleibt dieselbe
-    await klick('.nav [data-zu=baum]'); soll(!/Tippe ein Schild an|So ist die App gedacht|Die Zahlen sind/.test(await text()), 'Baum ohne Hinweistexte'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('#rahmen'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('#rahmen')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
+    await geh('baum'); soll(!/Tippe ein Schild an|So ist die App gedacht|Die Zahlen sind/.test(await text()), 'Baum ohne Hinweistexte'); await klick('.werk[data-a=kalender]'); await p.waitForSelector('#rahmen'); await p.goBack(); await p.waitForFunction(() => !document.querySelector('#rahmen')); soll((await p.locator('.baumbild').count())===1, 'Zurück schließt das Fenster, der Baum bleibt');
     await p.goBack(); await p.waitForSelector('#echt'); soll(p.url()==='http://localhost:8765/' && (await p.locator('.baumbild').count())===0, 'Zurück geht vom Baum zum Start');
     await p.goBack(); await p.waitForFunction(() => document.getElementById('toast').textContent.includes('Du bist am Anfang')); soll(p.url()==='http://localhost:8765/' && (await p.locator('.werk').count())===5, 'Zurück am Anfang: die App bleibt offen und sagt es');
-    await klick('.nav [data-zu=akten]'); await klick('.nav [data-zu=start]'); await p.goBack(); await p.waitForTimeout(300); soll((await p.locator('.werk').count())===5 && p.url()==='http://localhost:8765/', 'von Hand zurück zum Start: kein toter Schritt im Verlauf');
+    await geh('akten'); await geh('start'); await p.goBack(); await p.waitForTimeout(300); soll((await p.locator('.werk').count())===5 && p.url()==='http://localhost:8765/', 'von Hand zurück zum Start: kein toter Schritt im Verlauf');
     // Mikrofon (gestellt): läuft das Diktat und man drückt „Finden“, endet es
     await p.evaluate(() => { window.__stopps = 0; sprech.sitzung = { stop(){ window.__stopps++; }, start(){}, active:true }; sprech.an = true; });
     await p.fill('.suche input','Probe'); await p.keyboard.press('Enter'); soll(await p.evaluate(() => window.__stopps >= 1 && sprech.an === false), 'Finden beendet ein laufendes Diktat'); await p.evaluate(() => { sprech.sitzung = null; }); await klick('[data-a=suche-leer]');
@@ -172,7 +174,7 @@ const { chromium } = require('playwright');
     await klick('[data-a=mit][data-neu="201"]'); soll((await p.locator('[data-a=mit-wahl]').count())===6,'sechs Wege'); await p.screenshot({path:`p/${name}-7-mit.png`});
     await klick('[data-womit=pseudo]'); soll((await text()).includes('⟦STELLE-1⟧') && (await text()).includes('⟦NUMMER-1⟧'),'Pseudo'); await p.screenshot({path:`p/${name}-8-pseudo.png`}); await klick('[data-a=pseudo-sicht]'); soll((await text()).includes('A123456789'),'Original'); await klick('[data-a=zu]');
     // Unterlage -> Workflow PDF -> Zur Akte (Film)
-    await klick('.nav [data-zu=akten]'); await klick('[data-a=bereich][data-id=wohnen]'); await klick('[data-a=doc][data-id="1"]'); await klick('.fenster [data-a=mit]'); await klick('[data-womit=pdf]'); soll((await text()).includes('Hier wurde etwas markiert'),'Kopie im PDF'); await klick('[data-a=zurueck]');
+    await geh('akten'); await klick('[data-a=bereich][data-id=wohnen]'); await klick('[data-a=doc][data-id="1"]'); await klick('.fenster [data-a=mit]'); await klick('[data-womit=pdf]'); soll((await text()).includes('Hier wurde etwas markiert'),'Kopie im PDF'); await klick('[data-a=zurueck]');
     soll((await p.locator('video.baumfilm').count())===1,'Film'); await p.waitForTimeout(600); await p.screenshot({path:`p/${name}-9-baum-film.png`});
     await p.evaluate(() => document.querySelector('video')?.remove()); await breit('baum'); await p.screenshot({path:`p/${name}-10-baum.png`});
     soll((await p.locator('.schild').count())===8,'Schilder'); soll((await p.locator('main .karte').count())===0 && !(await text()).includes('Bunte Kugeln'),'keine Erklärkarten am Baum'); soll(!(await text()).includes('Helfer tragen'),'kein Text über dem Film');
@@ -269,6 +271,12 @@ const { chromium } = require('playwright');
       await p.fill(q, ''); await p.waitForFunction(() => !document.querySelector('#suchvor .zeile'));
       await p.evaluate(async () => { const t = window.PrivateAkteTresor; for (const d of await t.liste()) if (/^Baumprobe-/.test(d.originalName)) await t.herausnehmen(d.id); await echtLaden(); mainZeigen(); });
     }
+    // Navi-Leiste (0.6.5): am Handy keine untere Leiste; am breiten Bildschirm links, mit dem Pfeil einklappbar
+    if (name === 'handy') soll(!(await p.locator('.nav').isVisible()) && (await p.evaluate(() => getComputedStyle(document.querySelector('.app')).paddingBottom)) === '0px', 'Handy: keine untere Leiste mehr, kein Platz dafür unten');
+    else { const breit1 = await p.locator('.nav').evaluate(e => e.offsetWidth); await klick('.nav [data-a=nav-klapp]'); const breit2 = await p.locator('.nav').evaluate(e => e.offsetWidth);
+      soll(breit1 > 150 && breit2 < 80 && (await p.locator('.nav [data-zu=akten]').isVisible()) && !(await p.locator('.nav [data-zu=akten] span').first().isVisible()), 'Breit: Pfeil klappt die Leiste zu einer Spalte nur mit Symbolen (' + breit1 + ' → ' + breit2 + ' px)');
+      await klick('.nav [data-zu=akten]'); soll(await p.evaluate(() => s.ansicht === 'akten'), 'Eingeklappt: Symbol führt weiter zur Ansicht'); await p.reload(); await p.waitForSelector('.nav'); soll(await p.evaluate(() => document.body.classList.contains('nav-zu')), 'Eingeklappt bleibt gemerkt');
+      await klick('.nav [data-a=nav-klapp]'); soll((await p.locator('.nav').evaluate(e => e.offsetWidth)) > 150, 'Pfeil klappt wieder auf'); await geh('start'); await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); }
     // Seitenleiste am Handy (0.6.1): Griff rechts, nach oben/unten, Zurück, Startseite, Baum und was hinter „⋯“ liegt; am Monitor nicht
     if (name === 'pc') { soll(await p.locator('.seitenleiste-griff').isVisible(), 'Seitenleiste: auch bei 1280 px da (geteilter Bildschirm, Tablet quer)'); await p.setViewportSize({width:1500, height:h}); soll(!(await p.locator('.seitenleiste-griff').isVisible()), 'Seitenleiste: am großen Monitor (1500 px) nicht zu sehen'); await p.setViewportSize({width:w, height:h}); }
     else {
@@ -289,7 +297,7 @@ const { chromium } = require('playwright');
         { const g2 = await p.locator('.seitenleiste-griff').boundingBox(); await p.mouse.move(g2.x + g2.width / 2, g2.y + g2.height / 2); await p.mouse.down(); await p.waitForSelector('.seitenleiste.zieht', {timeout:3000}).catch(() => {}); soll((await p.locator('.seitenleiste.zieht').count()) === 1, 'Seitenleiste: langer Druck macht den Griff zum Verschiebe-Knopf');
           await p.mouse.move(w / 2, h - 12, {steps:5}); await p.mouse.up(); const u = await p.locator('.seitenleiste-griff').boundingBox();
           soll((await p.locator('.seitenleiste.unten').count()) === 1 && u.y + u.height >= h - 2 && u.width > u.height && Math.abs(u.x + u.width / 2 - w / 2) < 20, 'Seitenleiste: unten losgelassen liegt der Griff quer am unteren Rand');
-          soll(!(await p.locator('.nav').isVisible()), 'Seitenleiste unten: die untere Leiste der Akte tritt zurück'); await p.waitForTimeout(550);
+ await p.waitForTimeout(550);
           await klick('.seitenleiste-griff'); const k = await p.locator('.seitenleiste-knoepfe').boundingBox(); const t2 = await p.locator('.seitenleiste-knoepfe').innerText();
           soll(k.y + k.height <= h + 1 && k.x >= -1 && k.x + k.width <= w + 1 && /Akten/.test(t2) && /Eingang/.test(t2) && /Baum/.test(t2), 'Seitenleiste unten: klappt nach oben auf, ganz im Bild, mit Akten, Eingang, Baum'); await breit('seitenleiste unten'); await p.screenshot({path:`p/${name}-12g-leiste-unten.png`});
           await klick('.seitenleiste [data-a=geh][data-zu=akten]'); await p.waitForFunction(() => s.ansicht === 'akten'); soll(true, 'Seitenleiste unten: „Akten“ wechselt die Ansicht'); await p.evaluate(() => { s.ansicht = 'start'; zeigen(); }); }
@@ -301,9 +309,9 @@ const { chromium } = require('playwright');
     // Mail
     await klick('.schild[data-id=mail]'); await klick('[data-a=mail-ki]'); soll((await text()).includes('⟦STELLE-1⟧'),'Mail an KI'); await klick('[data-a=zu]');
     // Suche + Mappe
-    await klick('.nav [data-zu=start]'); soll((await p.locator('.chip, .unter').count())===0 && (await p.locator('h1.titel').isVisible())===(name==='pc'), 'Start ohne Beispiele und Erklärsatz, Überschrift nur am PC'); await p.fill('.suche input','Nebenkostenabrechnung'); await p.keyboard.press('Enter'); await p.locator('.haken').first().check(); await klick('[data-a=mappe]'); soll((await text()).includes('Zur Akte'),'Mappe'); await klick('[data-a=zu]');
+    await geh('start'); soll((await p.locator('.chip, .unter').count())===0 && (await p.locator('h1.titel').isVisible())===(name==='pc'), 'Start ohne Beispiele und Erklärsatz, Überschrift nur am PC'); await p.fill('.suche input','Nebenkostenabrechnung'); await p.keyboard.press('Enter'); await p.locator('.haken').first().check(); await klick('[data-a=mappe]'); soll((await text()).includes('Zur Akte'),'Mappe'); await klick('[data-a=zu]');
     // Farbe der Akte kräftig
-    if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=farbe]' : '.kopfknoepfe [data-a=farbe]'); await klick('[data-farbe=kraeftig]'); await klick('.nav [data-zu=start]'); await p.screenshot({path:`p/${name}-13-kraeftig.png`});
+    if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=farbe]' : '.kopfknoepfe [data-a=farbe]'); await klick('[data-farbe=kraeftig]'); await geh('start'); await p.screenshot({path:`p/${name}-13-kraeftig.png`});
     // Drucken-Fenster, Hilfe, Fuß
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=drucken]' : '.kopfknoepfe [data-a=drucken]'); soll((await text()).includes('Einzelne Unterlage'),'Drucken'); await klick('[data-a=zu]');
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=hilfe]' : '.kopfknoepfe [data-a=hilfe]'); await p.screenshot({path:`p/${name}-14-hilfe.png`}); soll((await p.locator('.fenster a[href="./rechtliches.html"]').count())===1,'Hilfe-Link'); await klick('[data-a=zu]');
@@ -320,10 +328,10 @@ const { chromium } = require('playwright');
       soll(zu.length === 3 && zu.every(x => !x) && nach.echt && !nach.faellig && nach.zeile === 'flex', 'Startseite: drei Abschnitte eingeklappt, Aufklappen wird gemerkt, Bereiche seitlich (' + JSON.stringify([zu, nach]) + ')');
       await q.screenshot({path:`p/${name}-30-start-klapp.png`}); await q.evaluate(() => localStorage.setItem('pa_klapp', JSON.stringify({echt:1, faellig:1, zuletzt:1}))); await q.close(); }
     // Baum: Workflow PDF hat eine eigene Stadt, ein Tipp öffnet den echten Klon
-    await klick('.nav [data-zu=baum]'); soll((await p.locator('.schild[data-id=pdf]').innerText()).includes('Workflow PDF'), 'Baum: Stadt Workflow PDF'); await breit('Baum mit Workflow PDF'); await p.screenshot({path:`p/${name}-31-baum.png`});
+    await geh('baum'); soll((await p.locator('.schild[data-id=pdf]').innerText()).includes('Workflow PDF'), 'Baum: Stadt Workflow PDF'); await breit('Baum mit Workflow PDF'); await p.screenshot({path:`p/${name}-31-baum.png`});
     await klick('.schild[data-id=pdf]'); await p.waitForSelector('#rahmen'); soll(/workflow-pdf/.test(await p.locator('#rahmen').getAttribute('src')), 'Baum: Stadt Workflow PDF öffnet Workflow PDF im Rahmen'); await klick('[data-a=rahmen-zu]');
     // ---------- Klone im Rahmen ----------
-    await klick('.nav [data-zu=start]');
+    await geh('start');
     // Datei-Organizer hinter dem grünen Knopf: echter Klon, eigener Speicher, kein eigener Worker, Übergabe an die Akte
     await klick('.werk[data-a=viele]'); await p.waitForSelector('#rahmen');
     const org = p.frameLocator('#rahmen'); await org.locator('[data-testordner]').waitFor({timeout:30000});
@@ -380,7 +388,7 @@ const { chromium } = require('playwright');
       await klick('[data-a=rahmen-zu]'); await p.evaluate(id => window.PrivateAkteTresor.herausnehmen(id), inAkte);
     }
     // Akte leeren: Unterlagen endgültig weg, die Bibliothek von Workflow PDF und die Liste des Organizers auch
-    await klick('.nav [data-zu=start]');
+    await geh('start');
     await p.evaluate(async () => { const t = window.PrivateAkteTresor; await t.ablegen(new File(['Leerprobe eins'], 'Leerprobe-1.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); const d = await t.ablegen(new File(['Leerprobe zwei'], 'Leerprobe-2.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); await t.herausnehmen(d.id); localStorage.setItem('pa_wfpdf_probe', '1'); localStorage.setItem('pa_do-eigene-kategorien', '["Motorboot"]');
       await new Promise((ok, nein) => { const q = indexedDB.open('PrivateAkteOrganizer1', 1); q.onupgradeneeded = () => q.result.createObjectStore('kv'); q.onerror = () => nein(q.error); q.onsuccess = () => { const t = q.result.transaction('kv', 'readwrite'); t.objectStore('kv').put({fassung:1, ordnerName:'Probe', quelle:'test', stufe:5, dateien:[{pfad:'a.pdf'}], verlauf:[{x:1}], regeln:[{id:'probe-regel-1'}, {id:'probe-regel-2'}], zeit:''}, 'zustand'); t.objectStore('kv').put({x:1}, 'lauf'); t.oncomplete = () => { q.result.close(); ok(); }; }; });
       await echtLaden(); });

@@ -378,6 +378,17 @@ body:has(#rahmenort:not(:empty)) .seitenleiste,body:has(#fensterort:not(:empty))
 .seitenleiste.unten .seitenleiste-knoepfe{grid-template-columns:1fr 1fr;width:min(360px,100vw);border:1px solid var(--line);border-bottom:0;border-radius:14px 14px 0 0;box-shadow:0 -8px 26px rgba(11,49,84,.22);max-height:80vh}
 .seitenleiste.unten .seitenleiste-knoepfe .seitenleiste-zu,.seitenleiste.unten .seitenleiste-knoepfe hr{grid-column:1/-1}
 .seitenleiste.unten .seitenleiste-knoepfe button{min-height:40px}
-@media(max-width:999px){body.leiste-unten .nav{display:none}}
 /* frei am Finger, solange gezogen wird */
 .seitenleiste.frei{right:auto;bottom:auto;transform:translate(-50%,-50%);padding:0}
+/* Navi-Leiste (0.6.5): am Handy keine untere Leiste mehr – das Flying Widget (Seitenleiste) ist die Navigation. */
+@media(max-width:999px){.nav{display:none}.app{padding-bottom:0}}
+.navklapp{display:none}
+@media(min-width:1000px){
+ .nav .navklapp{display:flex;justify-content:flex-end;padding:4px 8px;color:var(--muted)}
+ body.nav-zu .app{grid-template-columns:64px minmax(0,1fr)}
+ body.nav-zu .nav{padding:12px 8px}
+ body.nav-zu .nav button{justify-content:center;padding:11px 0}
+ body.nav-zu .nav button span:not(.zahl){display:none}
+ body.nav-zu .nav .zahl{position:absolute;top:2px;right:4px;margin:0}
+}
+.seitenleiste-knoepfe .zahl{position:static;display:inline-grid;margin-left:6px}
