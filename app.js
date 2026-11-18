@@ -602,11 +602,11 @@ async function echtLaden(){
 const fundstelle = h => h && h.stelle ? `<small class="stelle">${h.seite ? 'Seite ' + h.seite + ' · ' : ''}${esc(h.stelle)}</small>` : '';
 const echtZeile = (d, marke = 'echt', h = null) => `<button class="zeile" data-a="${h && h.seite ? 'leser' : 'echt-auf'}" data-id="${esc(d.id)}" ${h && h.seite ? `data-seite="${h.seite}"` : ''}><span class="art ${echtArt(d)}">${esc(echtArt(d))}</span><span class="mitte"><strong>${esc(echtTitel(d))}</strong><small>${esc(d.category)}${d.documentDate ? ' · ' + echtDatum(d.documentDate) : ''} · ${echtGroesse(d.sizeBytes)}</small>${fundstelle(h)}</span><span class="marke2 ${marke === 'echt' ? 'm-ok' : 'm-arbeit'}">${marke}</span>${ic('weiter')}</button>`;
 /* Sortierung von „Deine Unterlagen“ (Klaus 18.11.: der neue Scan war zwischen 100 Unterlagen nicht zu finden). Ab Werk: zuletzt abgelegt oben. */
-const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich'],['art','Art der Datei']];
+const ECHT_SORT = [['neu','zuletzt abgelegt'],['datum','Datum der Unterlage'],['name','Name'],['groesse','Größe'],['bereich','Bereich'],['art','Art der Datei'],['person','Wen es betrifft'],['absender','Absender']];
 const echtSort = () => { try { const w = localStorage.getItem('pa_sort'); return ECHT_SORT.some(x => x[0] === w) ? w : 'neu'; } catch { return 'neu'; } };
 function echtSortiert(l){
   const w = echtSort(), text = (a, b) => String(a).localeCompare(String(b), 'de', {numeric:true, sensitivity:'base'}), neu = (a, b) => text(b.addedAt || '', a.addedAt || '');
-  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b), art:(a, b) => text(echtArt(a), echtArt(b)) || neu(a, b)}[w];
+  const f = {neu, datum:(a, b) => text(b.documentDate || '', a.documentDate || '') || neu(a, b), name:(a, b) => text(echtTitel(a), echtTitel(b)), groesse:(a, b) => (b.sizeBytes || 0) - (a.sizeBytes || 0), bereich:(a, b) => text(a.category, b.category) || neu(a, b), art:(a, b) => text(echtArt(a), echtArt(b)) || neu(a, b), person:(a, b) => text(echtAngabe(a, 'Person'), echtAngabe(b, 'Person')) || neu(a, b), absender:(a, b) => text(echtAngabe(a, 'Absender'), echtAngabe(b, 'Absender')) || neu(a, b)}[w];
   return [...l].sort(f);
 }
 document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') return; try { localStorage.setItem('pa_sort', ev.target.value); } catch { /* gilt dann nicht */ } echt.knoten = null; echt.zeig = ECHT_SEITE; mainZeigen(); });
@@ -615,7 +615,11 @@ document.addEventListener('change', ev => { if (ev.target.id !== 'echt-sort') re
    Gruppen mit ihren Zahlen. Ein Tipp auf eine Gruppe zeigt nur sie. Gruppiert wird nach dem, was unter „Sortieren“ gewählt ist:
    Art der Datei, Jahr (bei „Datum der Unterlage“), sonst der Bereich. Die Liste zeigt je 30 Stück, „Weitere zeigen“ holt mehr. */
 const ECHT_SEITE = 30;
-const echtGruppe = d => { const w = echtSort(); return w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
+/* „Wen es betrifft“ und „Absender“ (Klaus 18.11.: wie die Sicht im Finden des Datei-Organizers – ein Ordner je Familienangehörigem):
+   der Organizer gibt beides bei der Übergabe mit, es steht in der Notiz der Unterlage („… · Absender: X · Person: Y · …“,
+   so schreibt es `lib/organizer-uebernahme.ts` des Klons). Ohne Angabe: „ohne Angabe“. */
+const echtAngabe = (d, feld) => { const m = String(d.notes || '').match(new RegExp('(?:^|· |– )' + feld + ': ([^·]+)')); return m ? m[1].trim() : 'ohne Angabe'; };
+const echtGruppe = d => { const w = echtSort(); return w === 'person' ? echtAngabe(d, 'Person') : w === 'absender' ? echtAngabe(d, 'Absender') : w === 'art' ? echtArt(d) : w === 'datum' ? (d.documentDate ? String(d.documentDate).slice(0, 4) : 'ohne Datum') : d.category; };
 function echtBaum(l){
   const zahl = new Map(); for (const d of l) zahl.set(echtGruppe(d), (zahl.get(echtGruppe(d)) || 0) + 1);
   const gruppen = [...zahl].sort((a, b) => echtSort() === 'datum' ? String(b[0]).localeCompare(String(a[0]), 'de', {numeric:true}) : String(a[0]).localeCompare(String(b[0]), 'de', {numeric:true, sensitivity:'base'}));
