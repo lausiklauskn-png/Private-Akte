@@ -50,8 +50,16 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   „bitte prüfen“ mit „Alle auswählen“/„Alle übernehmen“; Verlauf mit Sortierung und „Aus Verlauf löschen“ (ohne rückgängig zu
   machen – Rückgängig ist ein eigener Knopf, das Gelernte bleibt); „Sortieren“ statt „Sicht“ in Finden; flache Zeilen; eigene
   Seitenleiste (Griff rechts); **Kopf im Rahmen nur noch eine Zeile** – zusammen mit der Leiste der Akte am Handy zwei Zeilen
-  (gemessen 43 + 47 px). Klon @ `f7ecb24`. Probe 377 grün. Am Tablet ungeprüft. Die Seitenleiste im Organizer ist dessen eigene
+  (gemessen 43 + 47 px). Klon @ `f7ecb24`. Probe 381 grün. Am Tablet ungeprüft. Die Seitenleiste im Organizer ist dessen eigene
   (nicht verschiebbar wie die der Akte); in Workflow PDF gibt es noch keine.
+  **„Wen es betrifft“ und „Absender“ unter „Sortieren“ (Klaus 18.11.: „ein Ordner für die Familienangehörigen – dasselbe bitte in die
+  Privatakte“):** der Baum über „Deine Unterlagen“ gruppiert auch danach (`echtAngabe` in `app.js`); die Angaben kommen aus der
+  Notiz, die der Organizer bei der Übergabe schreibt („Absender: … · Person: …“). Unterlagen ohne Übergabe aus dem Organizer stehen
+  unter „ohne Angabe“ – von Hand setzen lässt sich die Person in der Akte noch nicht.
+  **Klaus' Frage „Akten“ gegen „Deine Unterlagen“ (18.11.):** „Deine Unterlagen“ ist echt (Tresor); „Akten“, die sechs „Bereiche“ der
+  Startseite, „Eingang“ und „Zuletzt abgelegt“ sind noch die Beispiele der ersten Vorschau. **Vorschlag dazu, nicht gebaut, wartet auf
+  Klaus' Ja je Punkt:** `docs/VORSCHLAG_2026-11-18_AKTEN-UNTERLAGEN-DATEIEN.md` (Datei = Rohmaterial, bleibt draußen; Unterlage = in
+  die Akte gelegt; Akte = benanntes Fach, einer Person zugeordnet). Klaus: erst gemeinsam durchgehen, nichts überladen.
 - **Am Tablet bestätigt (Klaus 18.11., 12:42, 0.6.0/0.6.1):** Notiz einsprechen mit Datum und Uhrzeit trägt Tag und Uhrzeit ein („funktioniert
   astrein, genau wie ich es wollte“); die Glocke steht rot mit Zahl in der Leiste des Kalenders; „In den Kalender“ zeigt seinen
   verbundenen Google-Kalender – die Verbindung (`familienakte-kalender-v1`) teilt sich die Akte mit der Familienakte unter derselben

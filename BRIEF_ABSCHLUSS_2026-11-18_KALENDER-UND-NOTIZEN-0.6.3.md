@@ -42,6 +42,8 @@ Gerätekalender der Android-App, Kalenderdatei).
 
 ## Offen
 
+- **Zuerst:** `docs/VORSCHLAG_2026-11-18_AKTEN-UNTERLAGEN-DATEIEN.md` mit Klaus durchgehen (Fragen A–F) und danach bauen: „Akten“
+  echt, je Person; die Beispiele der ersten Vorschau heraus; Übergabe aus dem Organizer nimmt ab Werk nur Unterlagen mit.
 - Termin zu einer echten Unterlage anlegen (der Klon kann Bezüge, die Hülle reicht sie noch nicht durch).
 - Beispiel-Unterlagen führen über „Bearbeiten mit › Kalender“ noch zum alten Beispiel-Kalender; `kalender()` und `fNotiz` in `app.js`
   können weg, sobald die Beispiele gehen.
@@ -61,6 +63,6 @@ umgestalten – nur Farben, je Tool eine Farbdatei.
 
 ```
 Lies im Repo Private-Akte zuerst CLAUDE.md, dann BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md.
-Du hast meinen Freibrief wie zuvor. Nimm meine Befunde vom Tablet zu 0.6.0 auf (Kalender, Notiz, Glocke, Anmeldung) und arbeite
-danach die Liste „Offen“ ab, zuerst: Termin zu einer echten Unterlage. Arbeite leise, eine Ausgabe am Ende.
+Du hast meinen Freibrief wie zuvor. Nimm meine Befunde vom Tablet und meine Antworten auf docs/VORSCHLAG_2026-11-18_AKTEN-UNTERLAGEN-DATEIEN.md auf
+(Fragen A–F) und baue danach „Akten“ echt; dann die übrige Liste „Offen“. Arbeite leise, eine Ausgabe am Ende.
 ```
