@@ -20,7 +20,7 @@ veröffentlicht** – `main` geht in allen drei Repos über GitHub Pages hinaus,
 
 **Private Akte 0.8.0** (dieser Zweig): Klon `klone/bookledger` erweitert (`--nur`, 10 Dateien, @ `3c01ddb`, `--pruefen` grün), `T().bank` in
 `src/tresor.ts`, Fach „Bank“ im Portemonnaie, „An BookLedgerPro geben“ = Monatsdatei, „Als Tabelle“ = CSV. Einzelheiten in `CLAUDE.md` (0.8.0).
-Probe `tests/probe.cjs` mit erfundenen MT940-, CAMT- und CSV-Dateien.
+Probe `tests/probe.cjs` 496 grün (Handy und PC) mit erfundenen MT940-, CAMT- und CSV-Dateien.
 
 ## Offen / nicht gebaut
 

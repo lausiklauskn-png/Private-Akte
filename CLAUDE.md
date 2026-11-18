@@ -61,7 +61,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   „ins Bargeld“ (`zumBargeld`). **Monatsabschluss:** je Konto Anfang (Anfangssaldo + alles davor), rein, raus, Ende; oben Bargeld · Bank · Zusammen.
   **„An BookLedgerPro geben“ schreibt jetzt die Monatsdatei** (`portemonnaie-<Monat>.json`, Format `portemonnaie-monat` Fassung 1 aus dem Klon:
   `baueMonatsdatei`); die CSV gibt es weiter unter „Als Tabelle“. BookLedgerPro (Pro #480, Basic #57) liest die Datei unter Belege → „Bankauszug einlesen“
-  und macht Entwürfe (Abhebung nur einmal). Probe: Konto anlegen, MT940 (Saldo stimmt / falsch), dieselbe Datei noch einmal (nichts doppelt), CAMT, CSV mit
+  und macht Entwürfe (Abhebung nur einmal). Probe 496 grün (Handy und PC): Konto anlegen, MT940 (Saldo stimmt / falsch), dieselbe Datei noch einmal (nichts doppelt), CAMT, CSV mit
   Spaltenänderung (gemerkt, zweite Datei ohne Fragen), von Hand, Barabhebung, Summe, Monatsdatei. **Grenzen:** Konto umbenennen fehlt (nur Verfahren
   änderbar; `kontoEntfernen` ist gebaut, ohne Knopf); PDF-Auszüge nur an erfundenen Texten geprüft; kein echter Bankexport, am Tablet ungeprüft;
   ein Umsatz derselben Buchung aus zwei verschiedenen Verfahren (z. B. CSV und MT940) wird nicht als doppelt erkannt (Text weicht ab).
