@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.3)
+## Stand (18.11.2026, Vorschau 0.5.4)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.4 Das Gelernte bleibt (Klaus 18.11.: „auf gar keinen Fall … das ist der Kern, das Eigentliche“):** „Akte leeren“ nimmt im
+  Datei-Organizer nur noch die Liste der Dateien, den Verlauf, den gemerkten Ordner und ein angefangenes Einlesen weg
+  (`organizerListeLeeren` in `app.js`); die gelernten Regeln werden zurückgeschrieben, eigene Kategorien und die übrigen Merker
+  nicht angefasst – wie „Organizer leeren“ im Organizer selbst. 0.5.3 löschte dort die ganze Datenbank samt Gelerntem; die Angabe
+  dazu unten ist überholt. Probe 249 grün. Siehe „Feste Regeln“.
 - **0.5.3 Akte leeren (Klaus 18.11.: „Backup anlegen, beiseite räumen, Akte komplett leeren – mit den Nebenprogrammen“; am Tablet
   bestätigt mit 0.5.1: eingeklappte Abschnitte, Sortierung, der Scan steht oben):** „Exportieren“ › „Akte leeren …“ (`fLeeren`).
   Drei Haken, alle gesetzt: Unterlagen in der Akte (`tresor.leeren`: erst `dokumenteAussortieren`, dann `dokumenteEndgueltigLoeschen`
@@ -298,6 +303,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **`docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` still mitführen** (Klaus 17.11.): eine Arbeitsdatei im Hintergrund wie diese hier. Bei jedem
   Schritt von selbst ergänzen, was beim Ausprobieren auffällt und was hier anders gemacht wird als in der Familienakte – ohne Klaus
   jedes Mal darauf hinzuweisen. Vorlage für die spätere Überarbeitung der Familienakte. Klaus geht die App Schritt für Schritt durch.
+
+- **Das Gelernte wird nie gelöscht (Klaus 18.11.2026):** was ein Sortier- oder Suchkern aus Korrekturen gelernt hat (gelernte Regeln,
+  eigene Kategorien, künftig Entsprechendes in der Akte und den anderen Tools), ist fester Bestand. Kein „Leeren“, kein Aufräumen
+  und kein Umbau darf es entfernen – geleert werden nur Dateien, Listen und Verläufe. Der Kern wächst; er wird nicht wegrationiert.
 
 - **Klone nie von Hand ändern.** Verbesserungen entstehen im Quell-Repo und kommen nur über
   `node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]` herein. Beim Hinzufügen `git add -f klone/` nehmen
