@@ -5,7 +5,10 @@
   "scripts": {
     "bau": "node tools/bau.mjs && node tools/rahmen-bauen.mjs",
     "bau:pruefen": "node tools/bau.mjs --pruefen && node tools/rahmen-bauen.mjs --pruefen",
-    "probe": "node tests/probe.cjs"
+    "probe": "node tests/probe.cjs",
+    "web:paket": "node tools/native/web-paket.mjs",
+    "sync:android": "node tools/native/web-paket.mjs && node tools/native/klon-quellen.mjs android && cap sync android",
+    "test:native": "node tools/native/test-native.mjs"
   },
   "devDependencies": {
     "@tailwindcss/node": "4.2.1",
@@ -15,5 +18,10 @@
     "react": "19.2.6",
     "react-dom": "19.2.6",
     "tailwindcss": "4.2.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.5.3",
+    "@capacitor/cli": "8.5.3",
+    "@capacitor/core": "8.5.3"
   }
 }

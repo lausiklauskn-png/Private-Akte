@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Private Akte Pro</string>
+    <string name="title_activity_main">Private Akte Pro</string>
+    <string name="package_name">de.familyprojekt.privateakte</string>
+    <string name="custom_url_scheme">de.familyprojekt.privateakte</string>
+</resources>

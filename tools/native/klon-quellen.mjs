@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+// Gerätezugriffe aus den Klonen für die Pro-Akte: legt die genannten Java-Dateien byte-gleich (gegen den Pin des Klons geprüft)
+// in einen erzeugten Ordner, den Gradle (android/) bzw. die Windows-Engine mit übersetzt. Nichts wird abgeschrieben oder geändert;
+// eine Verbesserung entsteht im Quell-Repo und kommt über tools/klon-nachziehen.mjs herein.
+//   node tools/native/klon-quellen.mjs android|windows
+import { createHash } from 'node:crypto';
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const WURZEL = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+export const QUELLEN = {
+  android: {
+    ziel: 'android/app/src/klon/java',
+    dateien: {
+      'datei-organizer': ['DoOrdnerPlugin', 'DoEingangPlugin', 'EingangStapel', 'DoDateienPlugin', 'PluginWorker', 'NativeUtil', 'OrdnerMerkliste']
+        .map((n) => `android/app/src/main/java/de/familyprojekt/dateiorganizer/${n}.java`),
+      familienakte: ['FamilienakteKalenderPlugin'].map((n) => `android/app/src/main/java/de/familyprojekt/familienakte/${n}.java`),
+    },
+    abschneiden: /^android\/app\/src\/main\/java\//,
+  },
+  windows: {
+    ziel: 'windows/engine/build/klon-src',
+    dateien: {
+      // Die ganze Windows-Engine des Organizers (Ordner, Eingang, Speichern unter); DesktopBuild erzeugt windows/engine/build.mjs.
+      'datei-organizer': ['EngineMain', 'DesktopService', 'DesktopOrdner', 'DesktopEingang', 'DesktopFiles', 'DesktopUpdates'].map((n) => `windows/engine/src/${n}.java`),
+    },
+    abschneiden: /^windows\/engine\/src\//,
+  },
+};
+const sha = (b) => createHash('sha256').update(b).digest('hex');
+
+export function legen(art) {
+  const q = QUELLEN[art]; if (!q) throw new Error('android oder windows');
+  const ziel = join(WURZEL, q.ziel); rmSync(ziel, { recursive: true, force: true });
+  let n = 0;
+  for (const [klon, liste] of Object.entries(q.dateien)) {
+    const pin = JSON.parse(readFileSync(join(WURZEL, 'klone', `${klon}.herkunft.json`), 'utf8'));
+    for (const pfad of liste) {
+      const b = readFileSync(join(WURZEL, 'klone', klon, pfad));
+      if (pin.dateien[pfad] !== sha(b)) throw new Error(`Klon ${klon}: ${pfad} weicht vom Pin ab`);
+      const aus = join(ziel, art === 'android' ? pfad.replace(q.abschneiden, '') : `${klon}/${pfad.replace(q.abschneiden, '')}`);
+      mkdirSync(dirname(aus), { recursive: true }); writeFileSync(aus, b); n++;
+    }
+  }
+  console.log(`Klon-Quellen (${art}): ${n} Dateien gleich mit ihrem Pin nach ${q.ziel}`);
+  return ziel;
+}
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) legen(process.argv[2]);

@@ -1,0 +1,5 @@
+/build/*
+!/build/.npmkeep
+
+# Erzeugt aus den Klonen (tools/native/klon-quellen.mjs)
+src/klon/
