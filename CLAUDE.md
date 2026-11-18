@@ -61,6 +61,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Stildatei ohne Tailwind-Grundstil und eine eigene Umgebung. Jetzt: Stildatei mit Tailwind gebaut wie in der Familienakte, die
   Ansichten stehen in derselben Umgebung (`app-shell` › `site-header` › `header-actions`, `site-main`). **Regel:** Maße, Lage und
   Form der Knöpfe aus dem Klon nicht verändern und nichts dazubauen; `rahmen/kalender/seite.css` enthält nur Breite und Abstand der Karten.
+  **Höhe am Handy (Klaus 18.11.: „die Höhe ist entscheidend … nicht in so monströsen Buttonformen oben“):** die Bestätigung in der
+  Leiste des Rahmens ist eine flache Zeile (abgeschnitten mit …, gilt für alle Tools), die Kopfleiste über dem Kalender ist niedrig.
   **Farben (Klaus 18.11.: „nach demselben Muster“ wie Datei-Organizer und Workflow PDF):** `rahmen/kalender-thema.css` – nur Farben,
   der Kalender ist violett wie sein Tool. Gilt als Muster für jedes weitere Tool (eine Farbdatei je Tool, letztes Stylesheet).
   **Kalender verbinden (Klaus 18.11.: „die Technik mit übernehmen, da sind die Anmeldungen für Google, Microsoft, T-Mobile drin“):**

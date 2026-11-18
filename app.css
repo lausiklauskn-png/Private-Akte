@@ -288,3 +288,5 @@ details.klapp[open]>summary{margin-bottom:8px}
 /* Die App-Glocke (unsichtbarer Rahmen mit der Glocke der Familienakte): sichtbar nur, solange sie läutet. */
 #glocke{position:fixed;left:50%;top:0;transform:translateX(-50%);width:min(600px,100vw);height:150px;border:0;background:transparent;z-index:40;color-scheme:normal}
 #glocke[hidden]{display:none}
+/* Bestätigung in der Leiste des Rahmens: eine flache Zeile (Klaus 18.11.: am Handy zählt die Höhe – kein dickes Feld über drei Zeilen). */
+.rahmenmeldung{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:2px 8px;border-radius:8px;font-size:12px;line-height:1.5}
