@@ -22,7 +22,7 @@ In Private-Akte, BookLedgerPro und BookLedger-Basic ist kein PR mehr offen.
    - **Portemonnaie** (gehört zur Hülle).
    - **Workflow PDF als Pro:** die Pro-Teile aus dem Repo `Workflow-PDF-Pro` (Scanner, Kamera, Tresor) kommen als Kopie mit Pin in die
      Pro-Akte. Die eigenständige App Workflow PDF Pro läuft getrennt weiter; ändern oder löschen dort berührt die Akte nicht.
-   - **Private Brain Pro gleich eingebaut** (Klaus: „nicht vorerst auslagern“), samt **E-Mail** und Kalender. Grund: Klaus will jetzt mit
+   - **Private Brain Pro gleich eingebaut** (Klaus: „nicht vorerst auslagern“), samt **E-Mail** und Kalender. **Erst als 1:1-Klon** (Klaus 18.11.: „nichts verlieren oder verpassen, was jetzt schon drin ist“ – Suchkern, Sortier-Kern, Doppelte, die Kategorien): der ganze Stand von Private Brain Pro unverändert mit Pin, nichts weggelassen, nichts umgebaut; verbessert wird erst danach, und dann im Repo Privat-Brain-Pro selbst, nachgezogen per Befehl. Grund: Klaus will jetzt mit
      seinen Daten arbeiten, die Mail-Postfächer und den Kalender brauchen. Die Familienakte ist ihm zu komplex; er arbeitet mit der Privaten
      Akte und verbessert die Familienakte nebenbei weiter.
 6. **Ausgelagert (eigene App, wird nur aufgerufen; fehlt sie, sagt die Akte „nicht installiert“):** BookLedgerPro (die Akte gibt die
@@ -59,7 +59,7 @@ In Private-Akte, BookLedgerPro und BookLedger-Basic ist kein PR mehr offen.
 1. `android/` und `windows/` nach dem Muster des Klons der Familienakte anlegen (eigene Kennung, Paket aus den Laufzeit-Dateien), CI-Läufe
    `android.yml` und `windows.yml` grün. Noch nicht signieren, nicht ausgeben.
 2. Speicher-Orte (Hauptort und Kopien, verschlüsselt, einlesen) – das ist der Kern für Klaus' Datensicherheit.
-3. Private Brain Pro als Klon mit Pin: erst die Web-Seite im Rahmen der PWA, dann Mail nativ in der App.
+3. Private Brain Pro als **1:1-Klon** mit Pin (ganzer Stand, nichts weggelassen): erst die Web-Seite im Rahmen der PWA, dann Mail nativ in der App. Verbesserungen erst danach, im Repo Privat-Brain-Pro.
 4. Pro-Teile von Workflow PDF Pro, Gerätezugriffe von Datei-Organizer und Kalender anschließen.
 5. Signatur mit Klaus, dann Android und Windows zugleich ausgeben (auf sein Wort).
 
@@ -74,7 +74,7 @@ Keine Klone von Hand ändern. Keine Testfassungen. Nichts veröffentlichen ohne 
 Repo: lausiklauskn-png/Private-Akte (dazu lesen: Privat-Brain-Pro, Workflow-PDF-Pro, meine-familienakte, Datei-Organizer – alle öffentlich).
 Lies zuerst CLAUDE.md, dann docs/BRIEF_SITZUNG_2026-11-19_PRO-AKTE-ANDROID-WINDOWS.md.
 Auftrag (Klaus 18.11.): aus der Privaten Akte im selben Repo eine Pro-App für Android und Windows machen, PWA bleibt; eingebaut: Datei-Organizer,
-Kalender/Notizen, Portemonnaie, Workflow PDF als Pro, Private Brain Pro mit Mail; ausgelagert nur BookLedgerPro und Familienbüro.
+Kalender/Notizen, Portemonnaie, Workflow PDF als Pro, Private Brain Pro mit Mail (erst 1:1-Klon, nichts weglassen, später verbessern); ausgelagert nur BookLedgerPro und Familienbüro.
 Speicher wählbar (Gerät, SD-Karte, externe Festplatte), Kopien verschlüsselt, jeder Ort einlesbar.
 Reihenfolge laut Brief: android/ + windows/ mit CI grün, dann Speicher-Orte, dann Private Brain, dann Workflow PDF Pro.
 Signatur nur mit Klaus, keine Testfassungen, veröffentlichen nur auf sein Wort.
