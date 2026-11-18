@@ -46,7 +46,7 @@ try {
   await page.goto(basis);
   soll("Kopf, Navigation und Fuß stehen da", await page.locator(".site-header .main-navigation [data-nav]").count() === 6 && await page.locator(".site-footer").isVisible());
   { const f = page.locator("[data-fuss]"), t = (await f.innerText()).replace(/\s+/g, " ");
-    soll("Fuß ist eine schmale Zeile (Klaus 18.11.): Family-Projekt, Name, Fassung, Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe", /Family-Projekt/.test(t) && /0\.4\.18/.test(t) && ["Impressum", "Datenschutz", "Haftungsausschluss", "Lizenz", "Hilfe"].every((w) => t.includes(w)) && !/Arbeiten|Weitergeben/.test(t), t);
+    soll("Fuß ist eine schmale Zeile (Klaus 18.11.): Family-Projekt, Name, Fassung, Impressum, Datenschutz, Haftungsausschluss, Lizenz, Hilfe", /Family-Projekt/.test(t) && /0\.4\.19/.test(t) && ["Impressum", "Datenschutz", "Haftungsausschluss", "Lizenz", "Hilfe"].every((w) => t.includes(w)) && !/Arbeiten|Weitergeben/.test(t), t);
     soll("Fuß ohne dunkelblaue Fläche und flach (höchstens 60 px bei 1280 px Breite)", await f.evaluate((e) => getComputedStyle(e).backgroundColor === "rgba(0, 0, 0, 0)" && e.offsetHeight <= 60)); }
   soll("Ohne Ordner: keine Pille im Kopf, dafür der Drucker-Knopf", await page.locator("[data-ordner-pill]").count() === 0 && await page.locator(".header-actions [data-drucken]").count() === 1);
   { // Ohne offene Datei druckt der Knopf die Seite, wie sie ist (Klaus 17.11.: nicht ausgegraut).
@@ -194,6 +194,8 @@ try {
   await page.locator("[data-suche]").fill("");
   // Reihenfolge nach Datum (0.4.18): der Pfeil neben „Sortieren“ dreht Jahre, Monate und die Liste um, die Unterordner bleiben
   { await page.locator("[data-sicht]").selectOption("datum");
+    // erst wenn nach dem Leeren der Suche wieder die ganze Liste dasteht (in der CI langsamer als hier – dort las die Probe noch die Treffer)
+    await page.waitForFunction(() => !document.querySelector("[data-suche]").value && document.querySelectorAll("[data-liste] [data-datei]").length > 20);
     const jahre = async () => (await page.locator("[data-ordnerbaum] > li > ul > li > .ast").allInnerTexts()).map((t) => t.split("\n")[0].trim()).filter((t) => /^\d{4}$/.test(t));
     const tage = async () => (await page.locator("[data-liste] [data-datei] small").allInnerTexts()).map((t) => (t.match(/(\d\d)\.(\d\d)\.(\d{4})/) || []).slice(1).reverse().join("-")).filter(Boolean);
     const vorher = await jahre(), tv = await tage(), richtung0 = await page.locator("[data-sicht-richtung]").getAttribute("data-sicht-richtung");
@@ -539,6 +541,11 @@ try {
     await ap.waitForTimeout(500);
     const g = await ap.evaluate(() => window.__gespeichert);
     soll("„Speichern unter …“: organizer-index.json als JSON an die App, kein Download", g.length === 1 && g[0].name === "organizer-index.json" && g[0].mime === "application/json" && atob(g[0].data).includes("Geteilt.txt") && !download);
+    // 0.4.19: in der App oben „An die Familienakte übergeben“ (kein „An die Private Akte“ – die ist eine Web-App)
+    soll("Android-App: oben „An die Familienakte übergeben“, kein „An die Private Akte“", (await ap.locator("[data-uebergeben-familienakte]").count()) === 1 && (await ap.locator("[data-uebergeben-akte]").count()) === 0);
+    await ap.locator("[data-uebergeben-familienakte]").click().catch(() => {}); await ap.waitForTimeout(500);
+    const g2 = await ap.evaluate(() => window.__gespeichert), mt = await ap.locator("[data-uebergabe-familienakte] [data-meldung]").innerText().catch(() => "");
+    soll("„An die Familienakte“: Sortierung über „Speichern unter …“ an die App, Meldung nennt den Eingangsordner", g2.length === 2 && g2[1].name === "organizer-index.json" && /Eingangsordner/.test(mt), mt);
     soll("Android-App: keine Fehler in der Seite", afehler.length === 0, afehler.slice(0, 3).join(" | "));
     await actx.close();
   }
@@ -777,6 +784,23 @@ try {
     await rctx.close();
     soll("Ohne Rahmen: kein Übergabe-Knopf", await page.evaluate(() => { location.hash = "akte"; return new Promise((ok) => setTimeout(() => ok(!document.querySelector("[data-uebergeben]")), 300)); }));
   }
+  { // 0.4.19 (Klaus 18.11.2026): eigenständige Web-App – „An die Private Akte“ (öffnet sie, Übergabe als Nachricht) und „An die Familienakte“ (Sortierung in den Ordner)
+    console.log("Eigenständig: an die Private Akte, an die Familienakte");
+    const ectx = await browser.newContext({ viewport: { width: 1100, height: 800 } });
+    // Die Private Akte ist hier gestellt: sie meldet sich bereit und bestätigt, was ankommt (dieselben Nachrichten wie die echte).
+    await ectx.route(/\/Private-Akte\//, (r) => r.fulfill({ contentType: "text/html", body: `<!doctype html><script>let n=0;const t=setInterval(()=>{opener&&opener.postMessage({typ:"pa-empfang-bereit"},location.origin)},300);addEventListener("message",e=>{if(e.source!==opener||e.data.typ!=="pa-organizer-uebergabe")return;clearInterval(t);n=e.data.dateien.filter(x=>x.datei instanceof File).length;document.title="erhalten "+n;opener.postMessage({typ:"pa-organizer-angenommen",id:e.data.id,ok:n>0,text:n+" Dateien liegen zur Auswahl in der Privaten Akte bereit."},location.origin)})</script>` }));
+    const ep = await ectx.newPage(); const ef = []; ep.on("pageerror", (e) => ef.push(String(e)));
+    await ep.goto(basis); await ep.locator("[data-testordner]").click();
+    await ep.waitForFunction(() => /\d+ (Dateien|sortiert)/.test(document.body.innerText) && !document.querySelector("[data-ladebalken]"), null, { timeout: 60000 }).catch(() => {});
+    await ep.waitForTimeout(800); await ep.evaluate(() => { location.hash = "akte"; }); await ep.waitForSelector("[data-uebergeben-akte]", { timeout: 5000 }).catch(() => {});
+    soll("Web-App eigenständig: oben „An die Private Akte“, kein „An die Familienakte“ (gibt es nur in APK/Windows)", (await ep.locator("[data-uebergeben-akte]").count()) === 1 && (await ep.locator("[data-uebergeben-familienakte]").count()) === 0 && (await ep.locator("[data-uebergeben]").count()) === 0);
+    const [akte] = await Promise.all([ectx.waitForEvent("page"), ep.locator("[data-uebergeben-akte]").click()]);
+    await ep.waitForFunction(() => /bereit/.test(document.querySelector("[data-uebergabe-web] [data-meldung]")?.innerText || ""), null, { timeout: 60000 }).catch(() => {});
+    soll("„An die Private Akte“ öffnet sie und übergibt die Dateien (Nachricht zwischen den Fenstern)", /\/Private-Akte\/\?empfang=organizer/.test(akte.url()) && /erhalten [1-9]\d+/.test(await akte.title()), `${akte.url()} · ${await akte.title()}`);
+    await akte.close();
+    soll("Eigenständig: keine Fehler in der Seite", ef.length === 0, ef.slice(0, 2).join(" | "));
+    await ectx.close();
+  }
   { // 0.4.15 (Klaus 18.11.2026, nach dem Test am Tablet): schmale Ansicht 390 px – alles übernehmen, flache Zeilen, Seitenleiste, Kopf.
     console.log("0.4.15: schmale Ansicht (390 px)");
     const sctx = await browser.newContext({ viewport: { width: 390, height: 800 } });
@@ -876,7 +900,7 @@ try {
     await griff.click();
     const worte = await sp.locator(".seitenleiste-knoepfe [data-leiste]").allInnerTexts();
     soll("Seitenleiste: Knöpfe mit Symbol und Wort – nach oben, nach unten, zurück und die sechs Seiten", ["Nach oben", "Nach unten", "Zurück", "Ordner", "Sortieren", "Finden", "Verlauf", "Familienakte", "Hilfe"].every((w) => worte.map((x) => x.trim()).includes(w)) && await sp.locator(".seitenleiste-knoepfe [data-leiste] svg").count() === worte.length, worte.join(","));
-    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.18");
+    soll("Seitenleiste: nennt die Fassung", (await sp.locator("[data-leiste-fassung]").innerText()).trim() === "V 0.4.19");
     await sp.locator("[data-leiste=oben]").click(); await sp.waitForFunction(() => scrollY === 0, null, { timeout: 6000 }).catch(() => {});
     soll("Seitenleiste: „Nach oben“ rollt an den Anfang und klappt zu", await sp.evaluate(() => scrollY) === 0 && await sp.locator("[data-seitenleiste=zu]").count() === 1);
     await griff.click(); await sp.locator("[data-leiste=unten]").click(); await sp.waitForFunction(() => scrollY + innerHeight >= document.documentElement.scrollHeight - 2, null, { timeout: 6000 }).catch(() => {});
@@ -909,7 +933,7 @@ try {
       const auf = await kp.locator("[data-kopf-knoepfe] [data-aktualisieren]").isVisible() && await kp.locator("[data-kopf-knoepfe] [data-drucken]").isVisible();
       await kp.locator("[data-kopf-knoepfe] [data-landkarte-knopf]").click(); await kp.waitForTimeout(100);
       soll(`Im Rahmen (${breit} px): Kopf eine Zeile – Leiste der Seiten, rechts der Pfeil mit den runden Knöpfen; kein Name`, m.hoch <= 52 && m.eineZeile && !m.marke && await kp.locator(".main-navigation [data-nav]").count() === 6 && auf && await kp.evaluate(() => location.hash) === "#landkarte" && !(await kp.locator("[data-kopf-knoepfe]").isVisible()), JSON.stringify(m) + ` auf=${auf}`);
-      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.18")); }
+      if (breit === 390) { await kp.locator("[data-leiste-griff]").click(); soll("Im Rahmen schmal: die Fassung steht in der Seitenleiste", (await kp.locator("[data-leiste-fassung]").innerText()).includes("0.4.19")); }
       if (breit === 820) { await kp.keyboard.press("Escape"); await kp.locator("[data-nav-klapp]").click(); soll("Im Rahmen breit: Pfeil hoch klappt die Leiste ein, die Wahl wird gemerkt", !(await kp.locator(".main-navigation").isVisible()) && await kp.evaluate(() => localStorage.getItem("do-nav-zu") === "1"));
         await kp.reload(); await kp.waitForSelector("[data-nav-auf]"); soll("Eingeklappt bleibt es nach dem Neuladen", !(await kp.locator(".main-navigation").isVisible())); }
       await kctx.close();

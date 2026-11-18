@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.3 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.4 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -450,6 +450,13 @@ const { chromium } = require('playwright');
       await geh('start'); await p.waitForSelector('#bereiche'); soll((await p.locator('#bereiche').innerText()).includes('Auto & Mobilität'), 'Startseite: Bereiche echt, mit Zahl');
       await klick('#bereiche [data-a=echt-bereich][data-k="Auto & Mobilität"]'); soll(await p.evaluate(() => echt.knoten === 'Auto & Mobilität' && echtSort() === 'bereich' && echt.auf.has('Auto & Mobilität') && /Auto & Mobilität/.test(document.querySelector('#echt h3.egewaehlt')?.innerText || '')), 'Bereich antippen (Schnellauswahl) öffnet den Ordner im Baum, rechts seine Unterlagen');
       await p.evaluate(() => { localStorage.setItem('pa_sort', 'neu'); echt.knoten = null; mainZeigen(); }); }
+    // Empfang aus dem eigenständigen Datei-Organizer (0.7.4): ein Fenster derselben Adresse öffnet ?empfang=organizer und schickt das Paket
+    if (name === 'pc') { const ec = await b.newContext({viewport:{width:w, height:h}}); const q = await ec.newPage(); await q.goto('http://localhost:8765/rechtliches.html');
+      const [akte] = await Promise.all([ec.waitForEvent('page'), q.evaluate(() => { window.__antwort = null; addEventListener('message', e => { if (e.data.typ === 'pa-empfang-bereit' && !window.__gesendet) { window.__gesendet = 1; e.source.postMessage({typ:'pa-organizer-uebergabe', id:'x1', ordner:'Eingang', index:JSON.stringify({format:'datei-organizer-index', dateien:[]}), dateien:[{pfad:'Brief-Probe.txt', datei:new File(['Erfundener Brief'], 'Brief-Probe.txt', {type:'text/plain'})}], fehlen:[]}, location.origin); } if (e.data.typ === 'pa-organizer-angenommen') window.__antwort = e.data; }); window.open('/?empfang=organizer', 'private-akte'); })]);
+      await akte.waitForSelector('.fenster form[data-form=ordner]', {timeout:30000}).catch(() => {});
+      const antw = await q.waitForFunction(() => window.__antwort, null, {timeout:30000}).then(h => h.jsonValue()).catch(() => null);
+      soll(!!antw && antw.ok && (await akte.locator('.fenster form[data-form=ordner]').count()) === 1, 'Empfang aus dem eigenständigen Organizer: Fenster „Ordner in die Akte legen“, Antwort ans öffnende Fenster (' + JSON.stringify(antw) + ')');
+      await ec.close(); }
     // Beispielfamilie: erfundene Personen und Akten auf Tipp, wieder herausnehmbar; Unterlagen bleiben
     { const r = await p.evaluate(async () => { const t = window.PrivateAkteTresor, vor = (await t.liste()).length; const a = await t.akten.beispielAnlegen(); await echtLaden(); const x = AK(), anna = x.personen.find(q => q.name === 'Anna Beispiel'); const n1 = x.personen.filter(q => /Beispiel$/.test(q.name)).length, zu = Object.values(x.bezug).filter(b => b.akten.length).length, annaAkten = x.akten.filter(q => q.person === anna?.id).length;
         await t.akten.beispielEntfernen(); await echtLaden(); const y = AK(); return { a, n1, zu, annaAkten, danach:y.personen.filter(q => ['Anna Beispiel','Bernd Beispiel','Clara Beispiel','Paul Beispiel'].includes(q.name)).length, beispiel:y.beispiel, docs:(await t.liste()).length === vor }; });

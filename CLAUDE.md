@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.3)
+## Stand (18.11.2026, Vorschau 0.7.4)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `e11a1a3` (0.4.18). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `eac6cb9` (0.4.19). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -46,6 +46,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.4 Empfang aus dem eigenständigen Datei-Organizer (Klaus 18.11.: „Basic soll an die Private Akte übergeben“):** der Organizer
+  0.4.19 (Web-App) öffnet `/Private-Akte/?empfang=organizer` im selben Browser; sobald der Tresor offen ist, meldet die Akte dem
+  öffnenden Fenster „pa-empfang-bereit“ (alle 0,5 s, höchstens 2 Minuten) und nimmt dasselbe Paket wie aus dem Rahmen an
+  („pa-organizer-uebergabe“ → Fenster „Ordner in die Akte legen“, Antwort „pa-organizer-angenommen“; `empfang`, `empfangStarten` in
+  `app.js`). Nur Fenster derselben Adresse. Der Organizer im Rahmen der Akte ist unverändert. Klon Datei-Organizer @ `eac6cb9` (0.4.19:
+  dazu in APK/Windows „An die Familienakte übergeben“ – Sortierung in den Ordner, Familienakte wählt ihn als Eingangsordner).
+  Probe 438 grün (Empfang mit gestelltem Fenster). Über Pages und am Tablet ungeprüft.
 - **0.7.3 Zwei Karten wie „Finden“ im Organizer, Akten als Baum mit Pfad, Schnellauswahl, Beispielfamilie (Klaus 18.11., Bilder vom Tablet):**
   (1) **„Deine Unterlagen“** (`echtAbschnitt`, `echtBaum`): links die Karte mit dem Baum (Wurzel „Alle Kategorien“, beim Sortieren nach
   Datum „Alle Jahre“ usw., zusammenklappbar, Baumlinien und Ordnerzeichen wie im Organizer), rechts die Karte mit dem gewählten Ordner

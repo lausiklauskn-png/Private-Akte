@@ -14,7 +14,7 @@ import { verlaufOrdnen, type VerlaufOrdnung } from "./verlauf.ts";
 import { Ablaufbild, FesterBaum, Info, OrdnerBaum, Seitentitel, type Schritt } from "./ui.tsx";
 import { ausAuswahl, nativGemerkt, nativPlattform, nativVergessen, nativSpeichernMoeglich, nativWaehlen, nativWieder, nativerOrdner, ordnerWaehlen, ordnerWahlMoeglich, testOrdner, type GemerkterOrdner } from "./quellen.ts";
 import { heute, Ladebalken, type AppZustand, type FindenZiel, type SeitenId } from "./app.tsx";
-import { rahmen } from "./rahmen.ts";
+import { rahmen, aktePartner, AKTE_ADRESSE } from "./rahmen.ts";
 import { druckZielSetzen, druckZielWeg } from "./drucken.ts";
 import { fotoAufbereiten, scanDatei, scanFreigeben, scanSpeichern, type ScanSeite } from "./scan.ts";
 import { ARBEIT, arbeitAnzeige, arbeitFrei, arbeitMoeglich, leistungText, mbText, TEXT_IM_SPEICHER } from "./arbeit.ts";
@@ -648,6 +648,29 @@ export function AkteSeite({ z, gehe }: P) {
         <button type="button" className="button primary" disabled={!z.dateien.some((d) => !gesperrt(d)) || z.fortschritt?.phase === "uebergeben"} onClick={() => z.uebergeben(mitText)} data-uebergeben><Share2 size={18}/>An die {rahmen()!.name} übergeben</button>
       </div>
       {z.fortschritt?.phase === "uebergeben" && <Ladebalken f={z.fortschritt}/>}
+      <Meldung z={z} gehe={gehe}/>
+    </section>}
+    {!rahmen() && (!nativPlattform() || nativPlattform() === "web") && <section className="card" data-uebergabe-web>
+      <div className="card-heading"><h2>An die Private Akte übergeben</h2><Info titel="Direkte Übergabe" punkte={[
+        "Öffnet die Private Akte in diesem Browser und gibt ihr den sortierten Stapel mit seiner Einordnung.",
+        "Dort wählst du noch einmal, was hineinkommt.",
+        "Gesperrte und doppelte Dateien gibt der Organizer nicht weiter. Die Originale bleiben, wo sie sind.",
+      ]}/></div>
+      <div className="button-row" style={{ marginTop: 12 }}>
+        <button type="button" className="button primary" disabled={!z.dateien.some((d) => !gesperrt(d)) || z.fortschritt?.phase === "uebergeben"} onClick={() => { const w = window.open(AKTE_ADRESSE, "private-akte"); void z.uebergeben(mitText, aktePartner(w)); }} data-uebergeben-akte><Share2 size={18}/>An die Private Akte übergeben</button>
+      </div>
+      {z.fortschritt?.phase === "uebergeben" && <Ladebalken f={z.fortschritt}/>}
+      <Meldung z={z} gehe={gehe}/>
+    </section>}
+    {!rahmen() && !!nativPlattform() && nativPlattform() !== "web" && <section className="card" data-uebergabe-familienakte>
+      <div className="card-heading"><h2>An die Familienakte übergeben</h2><Info titel="So kommt es in die Familienakte" punkte={[
+        `Der Knopf legt die Sortierung (${INDEX_DATEI}) in den Ordner zu den Dateien.`,
+        "In der Familienakte diesen Ordner als Eingangsordner wählen – sie übernimmt Bereich, Art, Absender und Datum als Vorschlag.",
+        "Gesperrte und doppelte Dateien bleiben im Ordner. Die Originale werden nicht verändert.",
+      ]}/></div>
+      <div className="button-row" style={{ marginTop: 12 }}>
+        <button type="button" className="button primary" disabled={!z.dateien.length} onClick={() => z.indexSichern(mitText, "In der Familienakte diesen Ordner als Eingangsordner wählen – sie übernimmt die Sortierung.")} data-uebergeben-familienakte><Share2 size={18}/>An die Familienakte übergeben</button>
+      </div>
       <Meldung z={z} gehe={gehe}/>
     </section>}
     <section className="card" data-archivnummern>
