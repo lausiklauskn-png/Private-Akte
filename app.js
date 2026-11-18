@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.5.5', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -776,6 +776,7 @@ document.addEventListener('submit', async ev => {
       const r = await T().sicherung.exportieren(p, `Private Akte ${FASSUNG}`); sich.notfallblatt = r.notfallblatt || ''; sich.ordner = r.ordner;
       try { localStorage.setItem(EXPORT_MERKER, JSON.stringify({ziel:r.ziel, ordner:r.ordner, erstellt:r.erstellt, dateien:r.dateien})); } catch { /* nur eine Merkhilfe */ }
       fenster(`${fk('Backup erstellt','verschlüsselt · ' + r.dateien + (r.dateien===1?' Datei':' Dateien'))}
+       <p class="hinweis" id="backup-gelernt">${r.gelernt ? `Mit dabei: das Gelernte des Datei-Organizers (${r.gelernt.regeln} ${r.gelernt.regeln===1?'Regel':'Regeln'}, ${r.gelernt.kategorien} eigene ${r.gelernt.kategorien===1?'Kategorie':'Kategorien'}).` : '<b class="warn">Das Gelernte des Datei-Organizers konnte nicht mitgesichert werden.</b>'}</p>
        <dl class="angaben"><dt>Gewählt</dt><dd>${esc(r.ziel)}</dd><dt>Darin neu</dt><dd style="overflow-wrap:anywhere">${esc(r.ordner)}</dd><dt>Stand</dt><dd>${echtDatum(r.erstellt)}</dd></dl>
        <div class="blatt"><small>Notfallschlüssel · öffnet diese Sicherung auch ohne Passwort</small><b id="notfall">${esc(r.notfall || '')}</b></div>
        <div class="reihe"><button class="knopf" data-a="sich-blatt">Notfallblatt speichern</button><button class="knopf hell" data-a="zu">Fertig</button></div>
@@ -789,7 +790,8 @@ document.addEventListener('submit', async ev => {
       if (!probe.ok) { knopf.disabled = false; toast('Die Sicherung ist nicht in Ordnung: ' + probe.fehler.slice(0,2).join(' · ')); return; }
       const r = await T().sicherung.importieren(zugang, probe.zusammen ? probe.zusammen.revision : undefined);
       zu(); await echtLaden();
-      toast(r.zusammengefuehrt ? `Zusammengeführt: ${r.zusammengefuehrt.neu} neu, ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'} hereingeholt.` : `Hereingeholt: ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'}.`);
+      const g = r.gelernt || {}, gText = g.grund === 'notfall' ? ' Das Gelernte des Datei-Organizers lässt sich nur mit dem Passwort einlesen, nicht mit dem Notfallschlüssel.' : g.grund === 'unlesbar' ? ' Das Gelernte im Backup war nicht lesbar.' : (g.regeln || g.kategorien) ? ` Gelerntes dazu: ${g.regeln} ${g.regeln===1?'Regel':'Regeln'}${g.kategorien ? `, ${g.kategorien} eigene ${g.kategorien===1?'Kategorie':'Kategorien'}` : ''}.` : '';
+      toast((r.zusammengefuehrt ? `Zusammengeführt: ${r.zusammengefuehrt.neu} neu, ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'} hereingeholt.` : `Hereingeholt: ${r.kopiert} ${r.kopiert===1?'Datei':'Dateien'}.`) + gText);
     } catch (err) { knopf.disabled = false; const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; }
   }
 });

@@ -43,6 +43,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A27 | Nach „PDF erstellen“ im Scanner sagt nichts, dass der Scan schon in der Akte liegt; „PDF ausgeben“ leuchtet. | 0.5.1: Bestätigung in der Leiste des Rahmens. Der leuchtende Knopf ist offen. |
 | A28 | „Teilen“ im eingebetteten Workflow PDF geht nur an die Akte; E-Mail und andere Programme sind versperrt. | 0.5.2: Fenster „Wohin damit?“ – Akte oder anderes Programm. In der Familienakte geht Teilen aus dem Klon weiter nur an die Akte. |
 | A29 | Nach einem Probelauf mit 100 Dateien lässt sich die Akte nur Stück für Stück leeren. | 0.5.3: „Akte leeren“ unter „Exportieren“ – Unterlagen, Workflow PDF und Organizer, mit Hinweis auf das letzte Backup und Tippwort. Die Familienakte kennt nur Aussortieren und „Papierkorb leeren“ je Auswahl. |
+| A30 | Was der Sortier-Kern aus Korrekturen lernt, liegt nur im Browser und ist in keinem Backup. | 0.5.4: „Akte leeren“ lässt es stehen (feste Regel: das Gelernte wird nie gelöscht). 0.5.5: es reist als `Gelerntes.json` verschlüsselt im Backup mit und wird beim Einlesen hinzugefügt. In der Familienakte und in den eigenständigen Organizer-Apps fehlt das. |
 
 ## B. Vereinfachungen der Hülle
 

@@ -64,6 +64,67 @@ async function backupOrdnerAnlegen(ziel: FileSystemDirectoryHandle) {
   }
 }
 let importOrdner: FileSystemDirectoryHandle | null = null;
+// ---- Das Gelernte im Backup (Klaus 18.11.2026: „das Gelernte soll niemals gelöscht werden – das ist der Kern“) ----
+// Was der Datei-Organizer in der Akte aus Korrekturen gelernt hat (Regeln „Absender → Bereich“ mit Stimmen) und die eigenen Kategorien
+// liegen nur im Speicher des Browsers. Sie reisen als eigene Datei im Backup-Ordner mit: Gelerntes.json, mit dem Passwort des
+// Backups verschlüsselt (AES-GCM, Schlüssel aus PBKDF2 mit 600.000 Runden). Einlesen fügt hinzu und überschreibt nie.
+const GELERNT_DATEI = "Gelerntes.json", ORGANIZER_DB = "PrivateAkteOrganizer1", KAT_MERKER = "pa_do-eigene-kategorien";
+type Regel = { wenn: { absender: string; sache?: string }; feld: string; dann: string; anzahl: number; stimmen?: Record<string, number> };
+type Gelerntes = { regeln: Regel[]; kategorien: string[] };
+const kv = <T,>(modus: IDBTransactionMode, f: (s: IDBObjectStore) => IDBRequest<T>) => new Promise<T>((ok, nein) => {
+  const auf = indexedDB.open(ORGANIZER_DB, 1);
+  auf.onupgradeneeded = () => auf.result.createObjectStore("kv");
+  auf.onerror = () => nein(auf.error);
+  auf.onsuccess = () => { const db = auf.result; try { const t = db.transaction("kv", modus), r = f(t.objectStore("kv")); t.oncomplete = () => { db.close(); ok(r.result); }; t.onerror = t.onabort = () => { db.close(); nein(t.error); }; } catch (e) { db.close(); nein(e); } };
+});
+async function gelerntesLesen(): Promise<Gelerntes> {
+  const z = await kv("readonly", (s) => s.get("zustand")) as { regeln?: Regel[] } | undefined;
+  let kategorien: string[] = []; try { const l = JSON.parse(localStorage.getItem(KAT_MERKER) || "[]"); if (Array.isArray(l)) kategorien = l.filter((x) => typeof x === "string"); } catch { /* keine */ }
+  return { regeln: Array.isArray(z?.regeln) ? z!.regeln! : [], kategorien };
+}
+const regelSchluessel = (r: Regel) => `${String(r.wenn?.absender || "").toLowerCase().replace(/\s+/g, " ").trim()}|${r.feld}|${r.wenn?.sache || ""}`;
+const regelGut = (r: unknown): r is Regel => { const x = r as Regel; return !!x && typeof x === "object" && !!x.wenn && typeof x.wenn.absender === "string" && typeof x.feld === "string" && typeof x.dann === "string" && typeof x.anzahl === "number"; };
+/** Fügt hinzu, was hier noch fehlt. Eine Regel, die es hier schon gibt (gleicher Absender, gleiches Feld, gleiche Sache), bleibt wie sie ist. */
+async function gelerntesDazu(neu: Gelerntes) {
+  const hier = await gelerntesLesen(), da = new Set(hier.regeln.map(regelSchluessel));
+  const dazu = neu.regeln.filter(regelGut).filter((r) => !da.has(regelSchluessel(r)));
+  if (dazu.length) {
+    const z = (await kv("readonly", (s) => s.get("zustand")) as Record<string, unknown> | undefined) || { fassung: 1, ordnerName: "", quelle: "", stufe: 0, dateien: [], verlauf: [], zeit: new Date().toISOString() };
+    await kv("readwrite", (s) => s.put({ ...z, regeln: [...hier.regeln, ...dazu] }, "zustand"));
+  }
+  const kat = [...new Set([...hier.kategorien, ...neu.kategorien.filter((x) => typeof x === "string" && x.length <= 60)])].slice(-50);
+  if (kat.length !== hier.kategorien.length) localStorage.setItem(KAT_MERKER, JSON.stringify(kat));
+  return { regeln: dazu.length, kategorien: kat.length - hier.kategorien.length };
+}
+const b64 = (b: ArrayBuffer | Uint8Array) => btoa(String.fromCharCode(...new Uint8Array(b as ArrayBuffer)));
+const ab64 = (t: string) => Uint8Array.from(atob(t), (c) => c.charCodeAt(0));
+async function passwortSchluessel(passwort: string, salz: Uint8Array) {
+  const roh = await crypto.subtle.importKey("raw", new TextEncoder().encode(passwort), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({ name: "PBKDF2", salt: salz, iterations: 600000, hash: "SHA-256" }, roh, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+}
+async function gelerntesSchreiben(ordner: FileSystemDirectoryHandle, passwort: string | null, fassung: string) {
+  const g = await gelerntesLesen(), klar = new TextEncoder().encode(JSON.stringify(g));
+  const kopf = { format: "private-akte-gelerntes", fassung: 1, app: fassung, erstellt: new Date().toISOString(), hinweis: "Was der Datei-Organizer in der Privaten Akte aus Korrekturen gelernt hat. Wird beim Einlesen des Backups hinzugefügt, nie überschrieben." };
+  let inhalt: Record<string, unknown>;
+  if (passwort) { const salz = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12)); inhalt = { ...kopf, verschluesselt: true, salz: b64(salz), iv: b64(iv), daten: b64(await crypto.subtle.encrypt({ name: "AES-GCM", iv }, await passwortSchluessel(passwort, salz), klar)) }; }
+  else inhalt = { ...kopf, verschluesselt: false, gelerntes: g };
+  const w = await (await ordner.getFileHandle(GELERNT_DATEI, { create: true })).createWritable(); await w.write(JSON.stringify(inhalt)); await w.close();
+  return { regeln: g.regeln.length, kategorien: g.kategorien.length };
+}
+/** Liest Gelerntes.json aus dem Backup-Ordner. `grund` sagt, warum nichts kam (fehlt = älteres Backup; notfall = nur mit dem Passwort lesbar). */
+async function gelerntesEinlesen(ordner: FileSystemDirectoryHandle, zugang?: Zugang): Promise<{ regeln: number; kategorien: number; grund?: string }> {
+  let text: string; try { text = await (await (await ordner.getFileHandle(GELERNT_DATEI)).getFile()).text(); } catch { return { regeln: 0, kategorien: 0, grund: "fehlt" }; }
+  try {
+    const j = JSON.parse(text) as { format?: string; verschluesselt?: boolean; salz?: string; iv?: string; daten?: string; gelerntes?: Gelerntes };
+    if (j.format !== "private-akte-gelerntes") return { regeln: 0, kategorien: 0, grund: "fremd" };
+    let g: Gelerntes;
+    if (j.verschluesselt) {
+      if (!zugang?.passwort) return { regeln: 0, kategorien: 0, grund: "notfall" };
+      g = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: "AES-GCM", iv: ab64(j.iv || "") }, await passwortSchluessel(zugang.passwort, ab64(j.salz || "")), ab64(j.daten || ""))));
+    } else g = j.gelerntes as Gelerntes;
+    return await gelerntesDazu({ regeln: Array.isArray(g?.regeln) ? g.regeln : [], kategorien: Array.isArray(g?.kategorien) ? g.kategorien : [] });
+  } catch { return { regeln: 0, kategorien: 0, grund: "unlesbar" }; }
+}
 const sicherung = {
   ordnerWaehlbar: () => sicherungsOrdnerWaehlbar(),
   passwortMindestens: PASSWORT_MINDESTLAENGE,
@@ -75,7 +136,9 @@ const sicherung = {
     // unveränderte Vollsicherung des Klons unter ihrem eigenen Namen – so kann auch die Familienakte sie einlesen.
     const aussen = await backupOrdnerAnlegen(ziel);
     const r = await writeFullFamilyBackup({ destination: aussen, source: await browserVault(), appVersion: fassung, passwort });
-    return { ziel: ziel.name, ordner: aussen.name, dateien: r.manifest.files.length, erstellt: r.manifest.createdAt, notfall: r.notfall ?? null,
+    // Das Gelernte reist mit (eigene Datei neben der Vollsicherung des Klons); klappt das nicht, bleibt das Backup der Akte gültig.
+    let gelernt: { regeln: number; kategorien: number } | null = null; try { gelernt = await gelerntesSchreiben(aussen, passwort, fassung); } catch { gelernt = null; }
+    return { gelernt, ziel: ziel.name, ordner: aussen.name, dateien: r.manifest.files.length, erstellt: r.manifest.createdAt, notfall: r.notfall ?? null,
       notfallblatt: r.notfall ? notfallblattText({ notfall: r.notfall, createdAt: r.manifest.createdAt, ordner: aussen.name, appVersion: fassung }) : null };
   },
   /** Fragt nach dem Ordner mit der Sicherung und sagt, was dort liegt. Geschrieben wird nichts. */
@@ -92,7 +155,13 @@ const sicherung = {
   /** Probe ohne Schreiben: jede Datei wird gelesen und mit ihrer Prüfsumme verglichen. */
   async importPruefen(zugang?: Zugang) { if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen."); return sicherungProben(importOrdner, await browserVault(), zugang); },
   /** Liest die geprüfte Sicherung ein. Leere Akte: alles kommt herein. Volle Akte: zusammenführen, bei Widerspruch bleibt die Fassung hier. */
-  async importieren(zugang?: Zugang, revision?: number) { if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen."); return sicherungEinlesen(importOrdner, await browserVault(), {}, revision, zugang); },
+  async importieren(zugang?: Zugang, revision?: number) {
+    if (!importOrdner) throw new Error("Bitte zuerst den Ordner wählen.");
+    const r = await sicherungEinlesen(importOrdner, await browserVault(), {}, revision, zugang);
+    return { ...r, gelernt: await gelerntesEinlesen(importOrdner, zugang) };
+  },
+  /** Was hier gelernt ist (Zahlen für die Anzeige). */
+  async gelernt() { try { const g = await gelerntesLesen(); return { regeln: g.regeln.length, kategorien: g.kategorien.length }; } catch { return { regeln: 0, kategorien: 0 }; } },
 };
 // Ordner aus dem Datei-Organizer (Klaus 17.11.: große Mengen werden dort gelesen, sortiert und angelernt, die Akte übernimmt den
 // fertigen Ordner). Die Einordnung liest die Familienakte unverändert (lib/organizer-uebernahme.ts: Bereich, Art, Hinweis, Doppelte,
