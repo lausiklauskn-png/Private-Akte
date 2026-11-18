@@ -22,11 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.7.0)
+## Stand (18.11.2026, Vorschau 0.7.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_OFFENE-PUNKTE-UND-NAECHSTE-APPS.md` (nächste Sitzung, mit Startauftrag), Abschluss dieser
-  Sitzung `docs/BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md`; ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -47,6 +46,22 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.7.1 Private Brain, Portemonnaie, Familienbüro (Klaus 18.11., Freibrief; Portemonnaie „gleich im Tresor“, Familienbüro „nur aufrufen“):**
+  **Private Brain:** die Stadt öffnet im Rahmen die echte, veröffentlichte Web-App unter ihrer eigenen Adresse (`RAHMEN.brain`,
+  `../Privat-Brain-Pro/`), unverändert. Kein Klon: die Web-Seite entsteht dort erst durch `build:web`, ein Klon Datei für Datei liefe
+  nicht (und brächte 98 MB). Die Browserfassung holt Mails nur über einen eigenen Mail-Dienst; echte Geräte-Mail gibt es nur in der
+  Android-/Windows-App. Dieselbe Adresse (github.io) heißt: derselbe Speicher wie die eigenständige Private-Brain-Web-App.
+  **Nicht gebaut:** Mail mit Anlagen → Unterlage (braucht eine Übergabe-Stelle im Repo Privat-Brain-Pro wie `DO_RAHMEN` im Organizer).
+  **Portemonnaie** (`T().geld`, `portemonnaie()` in `app.js`): Posten = Datensatz `payment` im Register (Titel, Cent, Richtung, Tag,
+  wofür; Merkmal `portemonnaie`), Bon = Unterlage („Einkäufe, Rechnungen & Garantien“) mit `payment → document „Beleg“`; Betrag vom
+  Bon gelesen und nur vorgeschlagen (`bonBetrag`). Rechnen: `klone/bookledger` (BookLedgerPro @ `9df9bee`, nur `money.js`,
+  `kassenbuch.js`, `LICENSE`; `kassenbericht` mit Anfangsbestand = alles vor dem Monat). `tagesabschluss.js` **nicht** übernommen – es
+  hängt an `journal.js` (doppelte Buchführung, Umsatzsteuer) und braucht das Portemonnaie nicht. Monat blättern, „An BookLedgerPro
+  geben“ = CSV des Monats, Posten herausnehmen = archiviert. Gelber Knopf oben öffnet das Portemonnaie. Knöpfe im Portemonnaie dezent, hell getönt in seiner Farbe (`.pm-knopf`, Klaus 18.11.: „nicht in Vollton, dem Portemonnaie angepasst“).
+  **Familienbüro:** Stadt und Leiste öffnen die eigene App (`../Familienbuero-Pro/`, neues Fenster); das Beispiel-Fenster „Familienbüro“
+  ist nur noch über die Beispiele hinter „Finden“ erreichbar. **Workflow PDF:** „PDF ausgeben“ trägt in der Akte die Farben eines
+  gewöhnlichen Knopfs (`rahmen/wfpdf-thema.css`, nur Farben). Probe 420 grün. Am Tablet ungeprüft, Private Brain und Familienbüro
+  über Pages ungeprüft (die Sitzung erreicht Pages nicht; in der Probe gestellt).
 - **0.7.0 Akten, Unterlagen, Dateien (Klaus 18.11. abends, Antworten A–F):** A ja (Datei = Rohmaterial im Organizer, Unterlage = in
   der Akte, Akte = Fach mit Namen, einer Person zugeordnet oder allen), B ja (Personen unter „Akten“, Register der Familienakte), C ja
   (mehrere Akten je Unterlage), D ja, E **echt machen**, F Klaus leert selbst. Gebaut: `T().akten` in `src/tresor.ts` – Person =

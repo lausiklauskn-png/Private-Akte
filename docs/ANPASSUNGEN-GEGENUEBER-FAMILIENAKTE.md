@@ -56,6 +56,7 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 | A40 | Der Klon kann eine Verknüpfung zur Person nicht lösen (nur „Vorgangsbezug lösen“). | 0.7.0: Lösen über den Weg des Abgleichs (`akteFuerAbgleich`/`akteNachAbgleichSchreiben`, mit Stand-Prüfung). | Eine Funktion „Verknüpfung lösen“ für alle Arten. |
 | A41 | Übernahme aus dem Organizer hakt alles an. | 0.7.0: nur Unterlagen angehakt; Fotos, Werbung, Unklares, Gesperrtes nur auf Haken; ein Feld „Akte für alle“. | Gleich so in der Familienakte. |
 | A42 | Termin zu einer Unterlage nur aus dem Prüf-Fenster. | 0.7.0: „Termin dazu“ an jeder Unterlage (Frist/Aufgabe mit Bezug, `createLocalScheduleBundle`). | Knopf an der Unterlage. |
+| A43 | Zahlungen (`payment`) gibt es im Register, aber keine Oberfläche dafür. | 0.7.1: Portemonnaie legt Posten als `payment` ab (Richtung, Tag, wofür), Bon als Unterlage mit „Beleg“. | Die Familienakte könnte dieselben Posten zeigen. |
 
 ## B. Vereinfachungen der Hülle
 
