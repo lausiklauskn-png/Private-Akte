@@ -17,7 +17,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav button').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.6.3 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.6.4 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -187,6 +187,9 @@ const { chromium } = require('playwright');
       soll(await p.locator('#kopfknoepfe .glockenknopf').evaluate(e => { const c = getComputedStyle(e); return c.backgroundColor === 'rgba(0, 0, 0, 0)' && c.boxShadow === 'none'; }), 'Glocke ist ein durchsichtiger Knopf: nur das Symbol');
       await klick('.werk[data-a=notiz]'); await p.waitForSelector('#rahmen'); const kal = p.frameLocator('#rahmen');
       await kal.locator('[data-notiz-fenster]').waitFor({timeout:30000}); await kal.locator('[data-notiz-eingabe]').fill('Erinnere mich morgen um 9 Uhr, die Hausverwaltung anzurufen');
+      await kal.locator('[data-notiz-eingabe]').fill('Erinnere mich am nächsten Tag um halb drei an die Hausverwaltung'); await p.waitForTimeout(400);
+      soll((await kal.locator('[data-notiz-fenster] input[type=time]').first().inputValue()) === '14:30' && (await kal.locator('[data-notiz-fenster] input[type=date]').first().inputValue()) === morgen, 'Notiz: „am nächsten Tag um halb drei“ ergibt morgen, 14:30 (Klon der Familienakte nachgezogen)');
+      await kal.locator('[data-notiz-eingabe]').fill('Erinnere mich morgen um 9 Uhr, die Hausverwaltung anzurufen'); await p.waitForTimeout(300);
       await kal.locator('[data-notiz-speichern]').click(); await kal.locator('[data-notiz-eintrag]').waitFor(); await p.screenshot({path:`p/${name}-11-notiz.png`});
       await kal.locator('[data-notiz-fertig]').click(); await kal.locator('[data-pa-notiz]').waitFor();
       soll((await kal.locator('[data-pa-notizen]').innerText()).includes('Hausverwaltung') && (await kal.locator('[data-pa-notiz]').count()) === 1, 'Notiz liegt in der Akte (Liste „Notizen“)');

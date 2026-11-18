@@ -22,10 +22,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.6.3)
+## Stand (18.11.2026, Vorschau 0.6.4)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_OFFENE-PUNKTE-UND-NAECHSTE-APPS.md` (nächste Sitzung, mit Startauftrag), Abschluss dieser
+  Sitzung `docs/BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md`; ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -34,10 +35,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
 - `klone/datei-organizer/` – Datei-Organizer @ `f7ecb24` (0.4.15). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
-  `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
+  `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
-- **Als Nächstes:** Klaus' Test von 0.6.0 am Tablet (siehe Abschlussbrief); Anmeldung Google/Microsoft freischalten (Rückkehr-Adresse, unten). Familienbüro später.
+- **Als Nächstes (Klaus 18.11.):** die offenen Punkte der Reihe nach (Brief vom 19.11.), dann **Private Brain**, **Portemonnaie**,
+  **Familienbüro** (nur aufrufen, eigene App); BookLedgerPro später. Danach Tests mit Klaus (Design, Aufbau, Sinn). Keine zusätzlichen
+  Gegenproben, keine Schleifen; was nicht fertig wird, mit einem Brief weitergeben.
 - **Offen bei Klaus:** Familienbüro in der App (Vorschau) oder nur aufrufen (unten „Entschieden“); Portemonnaie offen oder gleich im Tresor.
 - **Tresor exportieren / importieren (0.3.0, Klaus 17.11.):** Schild-Knopf „Sicherung“. Export = `writeFullFamilyBackup` des Klons mit
   Passwort (mindestens 10 Zeichen, PBKDF2 600.000 Runden) in einen gewählten Ordner, Notfallschlüssel und Notfallblatt; Import =
@@ -46,6 +49,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
 - **Am Tablet bestätigt (Klaus 18.11. nachmittags, 0.6.2):** die verschiebbare Seitenleiste („Flying Widget“) „funktioniert wunderbar“.
   Darauf: sie bleibt jetzt bis 1400 px Breite stehen (geteilter Bildschirm, Tablet quer), erst am großen Monitor nicht (0.6.3).
+- **0.6.4 Klon der Familienakte nachgezogen** (@ `ec258cc`, dort PR #221): die Notiz erkennt „am nächsten Tag“ (der Tag nach heute)
+  und „um halb drei“ (14:30). Probe prüft genau diesen Satz im echten Notiz-Fenster (383 grün).
 - **0.6.3 Datei-Organizer 0.4.15 nachgezogen (Klaus 18.11., nach dem Test am Tablet bestellt, gebaut im Repo Datei-Organizer, dort PR #65):**
   „bitte prüfen“ mit „Alle auswählen“/„Alle übernehmen“; Verlauf mit Sortierung und „Aus Verlauf löschen“ (ohne rückgängig zu
   machen – Rückgängig ist ein eigener Knopf, das Gelernte bleibt); „Sortieren“ statt „Sicht“ in Finden; flache Zeilen; eigene
