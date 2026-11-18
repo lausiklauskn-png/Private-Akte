@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.5)
+## Stand (18.11.2026, Vorschau 0.5.6)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-17_KLONE-IM-RAHMEN-0.5.0.md` (aktuell); ältere unter `docs/`.
@@ -43,6 +43,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.5.6 Workflow PDF hat eine eigene Stadt im Baum (Klaus 18.11.: der Datei-Organizer hat eine, das Scannen war im Baum nicht zu
+  finden; „der Baum erklärt, wo die Apps sind und wie ich sie direkt ansteuere“):** Schild „Workflow PDF“ bei den Kränen oben
+  (`STAEDTE`, `id:'pdf'`); ein Tipp öffnet die **Hauptseite** von Workflow PDF im Rahmen, nicht die Kamera (die bleibt der rote Knopf).
+  Steht auch in „Wo liegt was?“ und in der Leiste der Tools. Probe 260 grün. Am Tablet ungeprüft.
+  **Entschieden (Klaus 18.11.):** die gelernten Regeln kommen **nicht** an die Oberfläche (keine Liste, kein „vergessen“) – das ist
+  Sache des Kerns; ein Nutzer versteht „Regeln“ nicht. Wie der Kern Korrekturen gegen das Training abwägt, entscheidet Claude.
 - **0.5.5 Das Gelernte im Backup (Klaus 18.11.: „lass uns das gleich ins Backup mit übernehmen“):** „Backup erstellen“ schreibt neben
   die Vollsicherung des Klons die Datei `Gelerntes.json` in den Ordner „Privatakte_Backup_…“: die gelernten Regeln des Datei-Organizers
   in der Akte („Absender → Bereich“ mit Stimmen, aus `PrivateAkteOrganizer1`) und die eigenen Kategorien, mit dem Passwort des Backups
@@ -316,6 +322,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Das Gelernte wird nie gelöscht (Klaus 18.11.2026):** was ein Sortier- oder Suchkern aus Korrekturen gelernt hat (gelernte Regeln,
   eigene Kategorien, künftig Entsprechendes in der Akte und den anderen Tools), ist fester Bestand. Kein „Leeren“, kein Aufräumen
   und kein Umbau darf es entfernen – geleert werden nur Dateien, Listen und Verläufe. Der Kern wächst; er wird nicht wegrationiert.
+
+- **Einfach halten (Klaus 18.11.2026):** wenig Text auf der Oberfläche. Erklärungen nur hinter einem Fragezeichen oder Knopf, und
+  dann so, dass ein normaler Nutzer sie versteht. Was nur Technik ist (Regeln des Kerns, Speicher, Fassungen der Klone), bleibt im
+  Hintergrund – in `CLAUDE.md`, nicht in der App. Der Baum ist das Vorbild: wenige Punkte, antippbar, erklärt die App.
 
 - **Klone nie von Hand ändern.** Verbesserungen entstehen im Quell-Repo und kommen nur über
   `node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]` herein. Beim Hinzufügen `git add -f klone/` nehmen
