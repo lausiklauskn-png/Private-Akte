@@ -60,15 +60,15 @@ export function FesterBaum({ wurzel, label }: { wurzel: FesterKnoten; label: str
 }
 
 /** Aufklappbarer Ordnerbaum wie in einem Explorer. */
-export function OrdnerBaum({ wurzel, gewaehlt, waehlen, label }: { wurzel: BaumKnoten; gewaehlt: string; waehlen: (k: BaumKnoten) => void; label: string }) {
+export function OrdnerBaum({ wurzel, gewaehlt, waehlen, label, wurzelTitel }: { wurzel: BaumKnoten; gewaehlt: string; waehlen: (k: BaumKnoten) => void; label: string; wurzelTitel?: string }) {
   const [offen, setOffen] = useState<Set<string>>(() => new Set(["alle"]));
   useEffect(() => { setOffen((o) => { const n = new Set(o); n.add("alle"); return n; }); }, [wurzel]);
   const zweig = (k: BaumKnoten, tiefe: number): ReactNode => {
-    const auf = offen.has(k.id), hatKinder = k.kinder.length > 0;
+    const auf = offen.has(k.id), hatKinder = k.kinder.length > 0, titel = tiefe === 0 && wurzelTitel ? wurzelTitel : k.titel;
     return <li key={k.id}>
-      <button type="button" className={`ast ${k.ton ? `ton-${k.ton}` : ""}`} aria-current={gewaehlt === k.id} aria-expanded={hatKinder ? auf : undefined} data-ast={k.titel}
+      <button type="button" className={`ast ${k.ton ? `ton-${k.ton}` : ""}`} aria-current={gewaehlt === k.id} aria-expanded={hatKinder ? auf : undefined} data-ast={titel} data-wurzel={tiefe === 0 ? "" : undefined}
         onClick={() => { waehlen(k); if (hatKinder) setOffen((o) => { const n = new Set(o); if (n.has(k.id) && gewaehlt === k.id) n.delete(k.id); else n.add(k.id); return n; }); }}>
-        {hatKinder ? <ChevronRight size={16} className="pfeil"/> : <span className="pfeil"/>}<Folder size={16} className="ordner-ico"/><span className="name">{k.titel}</span><span className="zahl">{k.anzahl}</span>
+        {hatKinder ? <ChevronRight size={16} className="pfeil"/> : <span className="pfeil"/>}<Folder size={16} className="ordner-ico"/><span className="name">{titel}</span><span className="zahl">{k.anzahl}</span>
       </button>
       {hatKinder && auf && <ul>{k.kinder.map((c) => zweig(c, tiefe + 1))}</ul>}
     </li>;

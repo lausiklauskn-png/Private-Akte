@@ -33,7 +33,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Klaus 17.11.:** die Vorschau allein erfüllt den Zweck nicht; einfach aussehen darf sie, darunter arbeitet die Mechanik der
   Familienakte – nichts davon neu schreiben. Claude entscheidet, wann zusammengeführt wird (kleine geprüfte Stücke gleich auf `main`).
 - `tools/klon-nachziehen.mjs` – Klon anlegen/nachziehen und prüfen (`--pruefen`, läuft in der CI `pruefung`).
-- `klone/datei-organizer/` – Datei-Organizer @ `eac6cb9` (0.4.19). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
+- `klone/datei-organizer/` – Datei-Organizer @ `ef33e0c` (0.4.20). `klone/workflow-pdf/` – Workflow PDF @ `fe2e20d` (1.1.10).
   `klone/familienakte/` – Familienakte @ `ec258cc` (Fassung 2.28.74 mit der Erkennung „am nächsten Tag“/„um halb drei“).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
@@ -57,7 +57,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   mit Übernehmen/Abbrechen auf. In den Suchtreffern öffnet eine Unterlage weiter das Fenster (`fEcht`). **„Alle Unterlagen“** ist ein
   Knopf zum Einklappen wie „Alle Kategorien“ (`listeKopf`, gemerkt `pa_klapp.eliste`); sind beide zu, werden die Karten niedrig und
   „Fällig“/„Bereiche“ rutschen hoch (`beidezu` in `kartenHoehe`). Der Rollstand der Liste bleibt beim Auf- und Zuklappen (vorher sprang
-  sie nach oben). Probe 460 grün. Am Tablet ungeprüft.
+  sie nach oben). **Datei-Organizer 0.4.20 nachgezogen** (@ `ef33e0c`, dort PR #72): in „Finden“ öffnet das Auge den Steckbrief unter der Zeile
+  (zweiter Tipp schließt), die Wurzel heißt „Alle Kategorien“ usw., die Liste rechts klappt ein, beide Karten höchstens fensterhoch. Probe 460 grün. Am Tablet ungeprüft.
 - **0.7.5 Kartenhöhe an das Fenster angepasst (Klaus 18.11.: „die rechte Karte höchstens so groß wie die linke, beide höchstens so
   hoch wie der Bildschirm, darin rollen“; dann: „an die Fensterhöhe anpassen, unten ist noch zu viel Platz“):** `kartenHoehe` in `app.js`
   misst nebeneinander, wo die Karten anfangen und was darunter steht („Fällig“, „Bereiche“), und gibt beiden Karten genau die Höhe bis

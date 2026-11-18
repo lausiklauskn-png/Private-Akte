@@ -1,7 +1,7 @@
 import { innenKurz } from "../lib/innen.ts";
 import { ausZiehen } from "./quellen.ts";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Archive, Camera, Check, Download, File, FileImage, FileText, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Mail, Pencil, Plus, Eye, RotateCcw, Search, Settings, Share2, Trash2, Upload, ShieldAlert, Smartphone, Monitor, Undo2, X, ArrowDown, ArrowUp } from "lucide-react";
+import { Archive, Camera, Check, Download, File, FileImage, FileText, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Mail, Pencil, Plus, Eye, RotateCcw, Search, Settings, Share2, Trash2, Upload, ShieldAlert, Smartphone, Monitor, Undo2, X, ArrowDown, ArrowUp, ChevronDown, ChevronUp } from "lucide-react";
 import type { Datei, FeldName } from "../lib/typen.ts";
 import { STUFEN, offeneFelder, gesperrt, istUnsicher } from "../lib/siebe.ts";
 import { SICHTEN, baum, dateienUnter, suche, type BaumKnoten } from "../lib/sichten.ts";
@@ -494,6 +494,8 @@ function Steckbrief({ z, d }: { z: AppZustand; d: Datei }) {
 }
 
 const MONATE_NR = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
+// Wurzel des Baums wie in der Privaten Akte (Klaus 18.11.2026: links nicht „Alle Dateien“ wie rechts, sondern „Alle Kategorien“ usw.).
+const WURZEL_TITEL: Record<string, string> = { ordnung: "Alle Kategorien", absender: "Alle Absender", betrifft: "Alle Personen", datum: "Alle Jahre", dringlich: "Alle Fristen", nummern: "Alle Nummern", art: "Alle Dateiarten", pruefen: "Alle Dateien", ordner: "Alle Ordner" };
 export function FindenSeite({ z, gehe, ziel }: P) {
   const moeglich = SICHTEN.filter((s) => s.ab <= Math.max(z.stufe, 0));
   const [sichtId, setSichtId] = useState("ordnung");
@@ -531,8 +533,20 @@ export function FindenSeite({ z, gehe, ziel }: P) {
     const tag = (d: Datei) => d.felder.datum?.wert || "";
     return [...l].sort((a, b) => !tag(a) === !tag(b) ? (neuZuerst ? tag(b).localeCompare(tag(a)) : tag(a).localeCompare(tag(b))) : tag(a) ? -1 : 1);
   }, [frage, aktuell, wurzel, z.dateien, nachPfad, neuZuerst]);
-  const datei = gewaehlt ? nachPfad.get(gewaehlt) : undefined;
   const [stiftBei, setStiftBei] = useState("");
+  // Rechte Karte einklappbar wie der Baum links (Klaus 18.11.2026), gemerkt.
+  const [listeZu, setListeZu] = useState(() => { try { return localStorage.getItem("do-finden-liste-zu") === "1"; } catch { return false; } });
+  const listeKlappen = () => setListeZu((z) => { try { localStorage.setItem("do-finden-liste-zu", z ? "0" : "1"); } catch { /* gilt bis zum Neuladen */ } return !z; });
+  // Höhe der Karten (Klaus 18.11.2026): höchstens so hoch wie das Fenster, darin rollen. Gemessen, wo die Karten anfangen
+  // (Seite ganz oben), bis zum unteren Fensterrand, mindestens 300 px; untereinander (schmal) der Baum höchstens die halbe Höhe.
+  const explorer = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const messen = () => { const e = explorer.current; if (!e) return;
+      const oben = e.getBoundingClientRect().top + window.scrollY, kopf = (document.querySelector(".site-header") as HTMLElement | null)?.offsetHeight || 0;
+      const h = Math.max(300, Math.round(window.innerHeight - Math.min(oben, kopf + 16) - 16));
+      e.style.setProperty("--finden-hoehe", `${h}px`); e.style.setProperty("--finden-baum", `${window.innerWidth <= 900 ? Math.round(window.innerHeight / 2) : h}px`); };
+    messen(); window.addEventListener("resize", messen); return () => window.removeEventListener("resize", messen);
+  }, [z.dateien.length > 0]);
   // Sprung vom Dashboard: Sicht wählen, dann den Ordner im Baum (Titel, erste passende Ebene).
   const angewandt = useRef(0);
   useEffect(() => { if (ziel && ziel.nr !== angewandt.current && moeglich.some((s) => s.id === ziel.sicht)) setSichtId(ziel.sicht); }, [ziel]);
@@ -551,19 +565,19 @@ export function FindenSeite({ z, gehe, ziel }: P) {
       <label className="sicht-wahl"><span className="leise" data-sicht-wort>Sortieren</span><select value={sicht.id} onChange={(e) => setSichtId(e.target.value)} data-sicht>{moeglich.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}</select></label>
       <button type="button" className="text-link nur-symbol" onClick={richtung} aria-label={neuZuerst ? "Neueste zuerst – antippen: älteste zuerst" : "Älteste zuerst – antippen: neueste zuerst"} title={neuZuerst ? "Neueste zuerst" : "Älteste zuerst"} data-sicht-richtung={neuZuerst ? "neu" : "alt"}>{neuZuerst ? <ArrowDown size={18}/> : <ArrowUp size={18}/>}</button>
     </div>
-    <div className="explorer" style={{ marginTop: 14 }}>
-      <section className="card"><OrdnerBaum wurzel={wurzel} gewaehlt={knoten?.id || "alle"} waehlen={(k) => { setKnoten(k); setFrage(""); }} label={`Baum: ${sicht.name}`}/></section>
+    <div className="explorer" ref={explorer} style={{ marginTop: 14 }} data-explorer>
+      <section className="card baum-karte" data-baum-karte><OrdnerBaum wurzel={wurzel} gewaehlt={knoten?.id || "alle"} waehlen={(k) => { setKnoten(k); setFrage(""); }} label={`Baum: ${sicht.name}`} wurzelTitel={WURZEL_TITEL[sicht.id] || "Alle Dateien"}/></section>
       <div style={{ display: "grid", gap: 16, minWidth: 0 }}>
         <section className="card" data-liste>
-          <div className="card-heading"><h2>{frage.trim() ? `Treffer für „${frage.trim()}“` : (knoten?.titel || "Alle Dateien")}</h2><span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}>{liste.length > 0 && <button type="button" className="text-link" onClick={() => { const was = frage.trim() ? `${liste.length} Treffer` : knoten ? `„${knoten.titel}“ (${liste.length})` : `Alle ${liste.length} Dateien`; if (confirm(`${was} aus dem Organizer nehmen? Die Originale bleiben unverändert.`)) z.entfernen(liste.map((d) => d.pfad), was); }} aria-label="Alle in dieser Liste entfernen" title="Alle in dieser Liste aus dem Organizer nehmen (Originale bleiben)" data-entfernen-liste><Trash2 size={15}/></button>}<span className="badge">{liste.length}</span></span></div>
-          <ul className="dateiliste">{liste.slice(0, 200).map((d) => <li key={d.pfad} className="datei-eintrag"><div className="datei-zeile-mit"><button type="button" className="datei-zeile" aria-current={gewaehlt === d.pfad} onClick={() => setGewaehlt(d.pfad)} data-datei={d.pfad}>
+          <div className="card-heading"><h2><button type="button" className="liste-kopf" onClick={listeKlappen} aria-expanded={!listeZu} title={listeZu ? "Aufklappen" : "Einklappen"} data-liste-klapp>{listeZu ? <ChevronDown size={18}/> : <ChevronUp size={18}/>}{frage.trim() ? `Treffer für „${frage.trim()}“` : (knoten?.titel || "Alle Dateien")}</button></h2><span style={{ display: "inline-flex", gap: 10, alignItems: "center" }}>{liste.length > 0 && <button type="button" className="text-link" onClick={() => { const was = frage.trim() ? `${liste.length} Treffer` : knoten ? `„${knoten.titel}“ (${liste.length})` : `Alle ${liste.length} Dateien`; if (confirm(`${was} aus dem Organizer nehmen? Die Originale bleiben unverändert.`)) z.entfernen(liste.map((d) => d.pfad), was); }} aria-label="Alle in dieser Liste entfernen" title="Alle in dieser Liste aus dem Organizer nehmen (Originale bleiben)" data-entfernen-liste><Trash2 size={15}/></button>}<span className="badge">{liste.length}</span></span></div>
+          {!listeZu && <><ul className="dateiliste" data-liste-rollen>{liste.slice(0, 200).map((d) => <li key={d.pfad} className="datei-eintrag"><div className="datei-zeile-mit"><button type="button" className="datei-zeile" aria-current={gewaehlt === d.pfad} onClick={() => setGewaehlt(gewaehlt === d.pfad ? "" : d.pfad)} data-datei={d.pfad}>
             <DateiSymbol d={d}/><span className="zeile-text"><strong>{d.felder.absender?.wert && d.felder.schriftstueck?.wert ? `${d.felder.schriftstueck.wert} · ${d.felder.absender.wert}` : d.name}</strong><small title={d.pfad}>{d.pfad}{d.felder.datum ? ` · ${deutsch(d.felder.datum.wert)}` : ""}</small></span><Zustand d={d}/>
           </button><DateiAktionen z={z} d={d} auge={gewaehlt === d.pfad} setAuge={(b) => setGewaehlt(b ? d.pfad : "")} stift={stiftBei === d.pfad} setStift={(b) => setStiftBei(b ? d.pfad : "")}/></div>
-            {stiftBei === d.pfad && <FeldAendern z={z} d={d} fertig={() => setStiftBei("")}/>}</li>)}</ul>
+            {stiftBei === d.pfad && <FeldAendern z={z} d={d} fertig={() => setStiftBei("")}/>}
+            {gewaehlt === d.pfad && <div className="steckbrief-unter" data-steckbrief-unter><Steckbrief z={z} d={d}/></div>}</li>)}</ul>
           {liste.length > 200 && <p className="leise">Erste 200 von {liste.length}. Suche genauer.</p>}
-          {liste.length === 0 && <p className="leise">Nichts gefunden.</p>}
+          {liste.length === 0 && <p className="leise">Nichts gefunden.</p>}</>}
         </section>
-        {datei && <Steckbrief z={z} d={datei}/>}
       </div>
     </div>
   </>;
