@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.7.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.7.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -75,7 +75,7 @@ const bereich = id => BEREICHE.find(b => b.id === id);
 const bereichWahl = (wert, attr, vorschlag=true) => `<select class="feld" ${attr} aria-label="Bereich" style="flex:1 1 120px">${wert?'':'<option value="">Bereich wählen …</option>'}${BEREICHE.map(b => `<option value="${b.id}" ${b.id===wert?'selected':''}>${b.name}${vorschlag&&b.id===wert?' (Vorschlag)':''}</option>`).join('')}</select>`;
 /* Städte am Baum = Programme in derselben App */
 const STAEDTE = [
- {id:'buero',name:'Familienbüro',tut:'Schreiben, Tabellen, Folien und Workflow PDF',icon:'stift',a:'#3f8fe0',b:'#185abd',ort:[84,23]},
+ {id:'buero',name:'Familienbüro',tut:'Schreiben, Tabellen, Folien – eigene App',icon:'stift',a:'#3f8fe0',b:'#185abd',ort:[84,23]},
  {id:'geld',name:'Portemonnaie',tut:'Bon fotografieren, Einnahmen, Ausgaben, was bleibt übrig',icon:'geld',a:'#f0b93a',b:'#b77a0c',ort:[13,84]},
  {id:'sort',name:'Datei-Organizer',tut:'Viele Dateien auf einmal vorsortieren',icon:'sort',a:'#2bb673',b:'#107c41',ort:[16,36]},
  {id:'mail',name:'Private Brain',tut:'E-Mails mit Anlagen hereinholen',icon:'mail',a:'#f08a4b',b:'#c43e1c',ort:[80,84]},
@@ -123,7 +123,6 @@ const mails = [
  {von:'Krankenkasse Beispiel',betreff:'Ihr Beitrag ab Januar',anlage:'Beitragsbescheid.pdf',vorschlag:'gesund',vorgang:'Krankenkasse'},
  {von:'Autowerkstatt Beispiel',betreff:'Kostenvoranschlag',anlage:'Kostenvoranschlag.pdf',vorschlag:'kauf',vorgang:'Auto'}
 ];
-const bons = [['Bäckerei',-4.80],['Supermarkt',-37.25],['Tankstelle',-52.10],['Drogerie',-12.95],['Baumarkt',-23.40]];
 const geld = { start:600, posten:[{t:'Monatsgeld November',b:600,w:'Haushalt'},{t:'Wochenmarkt',b:-18.50,w:'Lebensmittel'}], bonNr:0, docId:null, gegeben:false, vor:'' };
 const s = { tipps:true, ansicht:'start', bereich:null, frage:'', wahl:new Set(), reisen:0, offen:null, teil:'start', scan:false, zuDoc:null };
 const sprech = { sitzung:null, an:false };
@@ -304,7 +303,7 @@ function vEingang(){
   <div class="abschnitt" id="eingang-liste"><div class="liste">${n.length ? n.slice(0, echt.zeig || ECHT_SEITE).map(d => echtZeile(d, '')).join('') + (n.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Alles eingeordnet.</p>'}</div></div>${fuss()}`;
 }
 /* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
-function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? (echt.termine || []).length : docs.filter(d => d.bei===id).length; }
+function blaetter(id){ return id==='mail' ? 0 : id==='geld' ? (pm.liste || []).length : id==='sort' ? organizer.length : id==='kal' ? (echt.termine || []).length : docs.filter(d => d.bei===id).length; }
 function schild(w){ const [x,y] = w.ort, n = blaetter(w.id), was = w.id==='kal' ? (n===1?' Termin':' Termine') : w.id==='geld' ? ' Posten' : w.id==='mail' ? (n===1?' Mail':' Mails') : (n===1?' Datei':' Dateien');
   return `<button class="schild" style="left:${x}%;top:${y}%;--farbe:${w.a}" data-a="stadt" data-id="${w.id}"><b>${w.name}</b><small>${n ? n+was : 'bereit'}</small></button>`; }
 function woLiegtWas(){
@@ -318,8 +317,8 @@ function woLiegtWas(){
     ${zl('geh','data-zu="akten"','Unterlagen','in Akten, je Person',(echt.liste || []).length)}
     ${zl('geh','data-zu="eingang"','Eingang','Neues, bis es in einer Akte liegt',einordnenZahl())}
     ${zl('stadt','data-id="kal"','Termine, Fristen und Notizen','der Kalender der Akte',(echt.termine || []).length)}
-    ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',geld.posten.length)}
-    ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
+    ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',(pm.liste || []).length)}
+    ${zl('stadt','data-id="mail"','E-Mails','in Private Brain, eigene App','›')}
     <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
    <i class="wopfeil beide" aria-hidden="true"></i>
    <div class="wokasten"><h3>3 · Tools <small>die Werkzeugstätten im Bild · kein eigener Speicher</small></h3><div class="wostaedte">${st}</div><p class="wonotiz">Ein Werkzeug holt eine Kopie, du arbeitest, „Zur Akte“ legt das Ergebnis als neue Fassung in den Tresor. Die Helfer lesen und schlagen vor, sie behalten nichts.</p></div>
@@ -392,6 +391,7 @@ function fStadt(wid, ids=[], teilId){
   ids = ids.map(Number).filter(Boolean);
   if (wid === 'buero') { if (teilId) s.teil = teilId; else if (!ids.length && s.offen !== 'buero') s.teil = 'start'; }
   ids.forEach(i => { const d = docs.find(x => x.id === i); if (d) { d.bei = wid; d.teil = wid === 'buero' ? s.teil : null; } });
+  if (wid === 'geld' && s.offen !== 'geld') pm.liste = null;
   s.offen = wid;
   const inhalt = ({buero, geld:portemonnaie, sort:sortierer, mail:post, })[wid]();
   const astnav = `<div class="astnav" aria-label="Zwischen den Programmen wechseln"><button data-a="geh" data-zu="start">‹ Akte</button><button data-a="geh" data-zu="baum">Baum</button>${STAEDTE.map(x => `<button data-a="stadt" data-id="${x.id}" ${x.id===wid?'aria-current="true"':''}>${x.name}</button>`).join('')}</div>`;
@@ -415,22 +415,37 @@ function buero(){
   else eigen = `<div class="folie"><div><b style="font-size:18px">Unser Umzug</b><br><small>Folie 1 von 3 · Beispiel</small></div></div><div class="reihe"><button class="knopf" data-a="neu-buero" data-titel="Folien Umzug" data-art="PPTX">Zur Akte ${ic('pfeil')}</button></div>`;
   return leiste + `<div class="reihe" style="margin:0 0 10px"><span class="tupfer eckig" style="--a:${x.a};--b:${x.b}">${ic(x.icon)}</span><b>${x.name}</b><small style="color:var(--muted)">${x.tut}</small></div>${eigen}<p class="hinweis">Nur eine Beispielansicht. Hier wird nichts wirklich bearbeitet.</p>`;
 }
+/* Portemonnaie, echt (0.7.0): Geld rein / Geld raus, im Tresor (`T().geld`). Rechnen mit den Bausteinen aus BookLedgerPro (Klon mit Pin).
+   Bon fotografieren: das Foto wird eine Unterlage, der Betrag wird vom Bon gelesen und nur vorgeschlagen. */
+const pm = { liste:null, monat:new Date().toISOString().slice(0, 7), bon:null, bonText:'', vorschlag:null, liest:false, gegeben:{} };
+const MONATE = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+const monatName = m => `${MONATE[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}`;
+const monatPlus = (m, n) => { const d = new Date(+m.slice(0, 4), +m.slice(5, 7) - 1 + n, 1); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`; };
+async function pmLaden(){ try { pm.liste = await T().geld.posten(); } catch (e) { pm.liste = []; toast(fehlerText(e)); } stadtNeu(); }
 function portemonnaie(){
-  const rest = geld.posten.reduce((a,p) => a + p.b, 0), aus = geld.posten.filter(p => p.b < 0).reduce((a,p) => a - p.b, 0), ein = geld.posten.filter(p => p.b > 0).reduce((a,p) => a + p.b, 0);
-  return `<p class="unter">Kein Buchhaltungsprogramm. Nur: was kam herein, was ging hinaus, wofür, was bleibt.</p>
-   <div class="karte" style="margin:10px 0"><small style="color:var(--muted)">Übrig im November</small><div class="geld">${euro(rest)}</div><small style="color:var(--muted)">Einnahmen ${euro(ein)} · Ausgaben ${euro(aus)}</small></div>
-   <button class="knopf gruen voll" data-a="bon">${ic('kamera')} Bon fotografieren</button>
-   <form class="reihe" data-form="posten"><input class="feld" name="t" value="${esc(geld.vor)}" placeholder="Was?" aria-label="Was" style="flex:2 1 110px"><input class="feld" name="w" placeholder="Wofür?" aria-label="Wofür" style="flex:2 1 110px"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 80px"><button class="knopf hell klein" name="art" value="ein">+ Einnahme</button><button class="knopf hell klein" name="art" value="aus">− Ausgabe</button></form>
-   <div class="liste" style="margin-top:12px">${[...geld.posten].reverse().map(p => `<div class="zeile"><span class="mitte"><strong>${esc(p.t)}</strong><small>wofür: ${esc(p.w||'–')}${p.bon?' · Bon liegt in der Akte':''}</small></span><span class="${p.b<0?'minus':'plus'}">${p.b<0?'−':'+'} ${euro(Math.abs(p.b))}</span></div>`).join('')}</div>
-   <div class="karte" style="margin-top:12px"><b>Weg nach außen</b><p style="font-size:13px;color:var(--muted);margin:4px 0 10px">Der Monat geht als Datei an BookLedgerPro. Die Buchhaltung selbst bleibt draußen.${geld.gegeben?' <span class="marke2 m-ok">November übergeben</span>':''}</p>
-    <button class="knopf hell voll" data-a="an-bookledger">${ic('hinaus')} An BookLedgerPro geben</button></div>
-   <p class="hinweis">Die Monatsübersicht liegt immer als Kopie in der Akte (Geld &amp; Belege / Ausgaben 2026).</p>`;
+  if (!T()) return '<p class="leer">Der Tresor ist in diesem Browser nicht geladen.</p>';
+  if (pm.liste === null) { pmLaden(); return '<p class="leer">Wird geöffnet …</p>'; }
+  const g = T().geld, b = g.bericht(pm.liste, pm.monat), heute = new Date().toISOString().slice(0, 10);
+  return `<div class="pm-monat"><button class="rund klein" data-a="pm-monat" data-n="-1" aria-label="Monat davor">‹</button><b>${monatName(pm.monat)}</b><button class="rund klein" data-a="pm-monat" data-n="1" aria-label="Nächster Monat">›</button></div>
+   <div class="karte" style="margin:8px 0"><small style="color:var(--muted)">Übrig</small><div class="geld" id="pm-rest">${g.euro(b.endbestand)}</div><small style="color:var(--muted)">im Monat: rein ${g.euro(b.summeEinnahmen)} · raus ${g.euro(b.summeAusgaben)}</small></div>
+   <label class="knopf pm-knopf voll" for="pm-bon">${ic('kamera')} ${pm.liest ? 'Bon wird gelesen …' : 'Bon fotografieren'}</label><input type="file" id="pm-bon" accept="image/*,application/pdf" capture="environment" hidden>
+   ${pm.bon ? `<p class="lesestand" id="pm-bonzeile">Bon: ${esc(pm.bon.name)}${pm.vorschlag ? ' · erkannt ' + g.euro(pm.vorschlag) : ' · kein Betrag erkannt'} <button type="button" class="knopf hell klein" data-a="pm-bon-weg">Bon weg</button></p>` : ''}
+   <form class="felder pm-form" data-form="posten"><div class="reihe" style="margin:0"><input class="feld" name="t" placeholder="Was?" aria-label="Was" style="flex:2 1 110px" value="${pm.bon ? 'Einkauf' : ''}"><input class="feld" name="w" placeholder="Wofür?" aria-label="Wofür" style="flex:2 1 110px"></div>
+    <div class="reihe" style="margin:0"><input class="feld" name="b" inputmode="decimal" placeholder="Betrag" aria-label="Betrag" style="flex:1 1 90px" value="${pm.vorschlag ? esc(g.euro(pm.vorschlag).replace(' €', '')) : ''}"><input class="feld" type="date" name="am" value="${pm.monat === heute.slice(0, 7) ? heute : pm.monat + '-01'}" aria-label="Tag" style="flex:1 1 120px"></div>
+    <div class="reihe" style="margin:0"><button class="knopf pm-knopf" name="art" value="aus" style="flex:1">− Ausgabe</button><button class="knopf pm-knopf" name="art" value="ein" style="flex:1">+ Einnahme</button></div></form>
+   <div class="liste" id="pm-liste" style="margin-top:12px">${b.zeilen.length ? [...b.zeilen].reverse().map(z => { const p = pm.liste.find(x => x.id === z.id) || {}; return `<div class="zeile"><span class="mitte"><strong>${esc(z.beschreibung)}</strong><small>${tagText(z.datum)}${p.wofuer ? ' · wofür: ' + esc(p.wofuer) : ''}${p.bon ? ' · Bon in der Akte' : ''}</small></span><span class="${z.ausgabe ? 'minus' : 'plus'}">${z.ausgabe ? '− ' + g.euro(z.ausgabe) : '+ ' + g.euro(z.einnahme)}</span>${p.bon ? `<button class="rund klein geist" data-a="echt-auf" data-id="${esc(p.bon)}" aria-label="Bon ansehen">${ic('datei')}</button>` : ''}<button class="rund klein geist" data-a="pm-weg" data-id="${esc(z.id)}" aria-label="Posten herausnehmen">${ic('zu')}</button></div>`; }).join('') : '<p class="leer">Noch nichts in diesem Monat.</p>'}</div>
+   <div class="karte" style="margin-top:12px"><b>Weg nach außen</b><p style="font-size:13px;color:var(--muted);margin:4px 0 10px">Der Monat geht als Datei an BookLedgerPro.${pm.gegeben[pm.monat] ? ` <span class="marke2 m-ok">${MONATE[+pm.monat.slice(5, 7) - 1]} übergeben</span>` : ''}</p>
+    <button class="knopf pm-knopf voll" data-a="an-bookledger">${ic('hinaus')} An BookLedgerPro geben</button></div>`;
 }
-function geldInAkte(){
-  const rest = geld.posten.reduce((a,p) => a + p.b, 0), text = `Monatsübersicht aus dem Portemonnaie. ${geld.posten.length} Posten. Übrig: ${euro(rest)}.`;
-  const d = docs.find(x => x.id === geld.docId);
-  if (d) d.text = text; else geld.docId = neuesDoc({titel:'Portemonnaie November 2026',art:'BELEG',bereich:'geld',vorgang:'Ausgaben 2026',herkunft:'Portemonnaie',text}).id;
+async function pmPosten(f, art){
+  const g = T().geld, cent = g.cent(f.b.value);
+  if (!(cent > 0)) return toast('Bitte einen Betrag eintragen.');
+  try { await g.eintragen({titel:f.t.value.trim() || (art === 'ein' ? 'Einnahme' : 'Ausgabe'), cent, rein:art === 'ein', wofuer:f.w.value.trim(), am:f.am.value || new Date().toISOString().slice(0, 10), bon:pm.bon, bonText:pm.bonText});
+    const mitBon = !!pm.bon; pm.bon = null; pm.bonText = ''; pm.vorschlag = null; pm.monat = (f.am.value || pm.monat).slice(0, 7); await pmLaden(); if (mitBon) echtLaden();
+    toast(`${art === 'ein' ? 'Eingetragen' : 'Abgezogen'}: ${g.euro(cent)}.${mitBon ? ' Der Bon liegt in der Akte.' : ''}`); } catch (e) { toast(fehlerText(e)); }
 }
+document.addEventListener('change', async ev => { if (ev.target.id !== 'pm-bon' || !ev.target.files[0]) return; pm.bon = ev.target.files[0]; pm.vorschlag = null; pm.bonText = ''; pm.liest = true; stadtNeu();
+  try { const r = await T().geld.bonLesen(pm.bon); pm.bonText = r.text || ''; pm.vorschlag = r.cent; } catch { /* dann ohne Vorschlag */ } pm.liest = false; stadtNeu(); });
 function sortierer(){
   return `<p class="unter">Du gibst Dateien oder ganze Ordner hinein. Die Zuordnung passiert hier: ein Helfer rät, du berichtigst, er lernt daraus. In die Akte kommt nur das Ergebnis.</p>
    <div class="schritte"><span>raten</span><span>berichtigen</span><span>lernen</span></div>
@@ -509,7 +524,9 @@ const A = {
  'glocke-erledigt': async e => { try { await T().kalender.erledigen(e.dataset.id); await termineLaden(); const g = $('glocke'); if (g) g.contentWindow.location.reload(); const k = $('rahmen'); if (k && rahmen.was === 'kalender') k.contentWindow.location.reload(); glockenFeld(); if (s.ansicht === 'start' && !$('rahmenort').innerHTML) mainZeigen(); glockenFeld(); } catch (err) { toast(fehlerText(err)); } },
  'kal-tag': e => { menueZu(); fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`); },
  kalender: () => { menueZu(); fRahmen('kalender'); },
- stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') return fRahmen('kalender'); fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
+ /* Familienbüro (0.7.0, Klaus 18.11.: „nur aufrufen“): eigene App (AGPL-3.0 wegen ONLYOFFICE), öffnet sich unter ihrer Adresse daneben. */
+ 'buero-auf': () => { const w = window.open(FAMILIENBUERO, 'familienbuero'); if (!w) location.href = FAMILIENBUERO; },
+ stadt: e => { if (e.dataset.id === 'buero') return A['buero-auf'](); if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') return fRahmen('kalender'); if (e.dataset.id === 'mail') return fRahmen('brain'); fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
  mit: fMit,
  'mit-wahl': e => {
@@ -536,12 +553,13 @@ const A = {
    organizer = []; zurAkteFilm(n); toast(`${n} Dateien sind in der Akte, jede an ihrem Platz.`); },
  'mail-zur-akte': e => { const m = mails.splice(+e.dataset.i,1)[0]; neuesDoc({titel:m.anlage.replace('.pdf',''),art:'PDF',bereich:m.vorschlag,vorgang:m.vorgang,herkunft:'Private Brain',text:`Anlage aus der E-Mail „${m.betreff}“ von ${m.von}.`}); stadtNeu(); toast(`Liegt in ${bereich(m.vorschlag).name} / ${m.vorgang}.`); },
  osort: e => { organizer[+e.dataset.i].sicher = true; stadtNeu(); toast('Gemerkt. Der Helfer lernt aus deiner Berichtigung.'); },
- bon: () => { const [t,b] = bons[geld.bonNr++ % bons.length]; geld.posten.push({t,b,w:'Einkauf',bon:true}); neuesDoc({titel:'Bon '+t,art:'BELEG',bereich:'geld',vorgang:'Ausgaben 2026',herkunft:'Portemonnaie',text:`Kassenbon ${t}, ${euro(-b)}.`}); geldInAkte(); stadtNeu(); toast(`${euro(-b)} abgezogen. Der Bon liegt in der Akte.`); },
- 'bon-start': () => { menueZu(); fStadt('geld'); A.bon(); },
+ 'pm-monat': e => { pm.monat = monatPlus(pm.monat, +e.dataset.n); stadtNeu(); },
+ 'pm-bon-weg': () => { pm.bon = null; pm.vorschlag = null; pm.bonText = ''; stadtNeu(); },
+ 'pm-weg': async e => { try { await T().geld.entfernen(e.dataset.id); await pmLaden(); toast('Posten herausgenommen.'); } catch (err) { toast(fehlerText(err)); } },
+ 'bon-start': () => { menueZu(); fStadt('geld'); },
  'an-bookledger': () => {
-   const zeilen = ['Datum;Was;Wofuer;Betrag', ...geld.posten.map(p => `${datum(HEUTE)};${p.t};${p.w||''};${p.b.toFixed(2).replace('.',',')}`)].join('\r\n');
-   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿'+zeilen], {type:'text/csv'})); a.download = 'portemonnaie-2026-11.csv'; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-   geld.gegeben = true; stadtNeu(); toast('Der November liegt als Datei für BookLedgerPro bereit (Beispieldaten). Die Buchhaltung bleibt draußen.'); },
+   const zeilen = T().geld.csv(pm.liste || [], pm.monat), a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + zeilen], {type:'text/csv'})); a.download = `portemonnaie-${pm.monat}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+   pm.gegeben[pm.monat] = true; stadtNeu(); toast(`${monatName(pm.monat)} liegt als Datei für BookLedgerPro bereit.`); },
  'hinaus-info': () => { fStadt('geld'); toast('Der Weg nach außen: „An BookLedgerPro geben“ unten im Portemonnaie.'); },
  scan: () => { menueZu(); fRahmen('wfpdf', 'scan=1&von=PrivateAkte'); },
  'scan-zur-akte': () => { s.scan = false; neuInEingang('Scan vom '+datum(HEUTE),'PDF','ich','Sonstiges','Workflow PDF'); },
@@ -561,7 +579,7 @@ document.addEventListener('change', ev => {
 document.addEventListener('submit', ev => {
   ev.preventDefault(); const f = ev.target, art = ev.submitter?.value;
   if (f.dataset.form === 'suche') { if (sprech.sitzung) sprech.sitzung.stop(); sprech.an = false; s.frage = f.q.value.trim(); s.wahl.clear(); bed.frage = true; bed.fehler = ''; zeigen(); bedSuchen(); }
-  if (f.dataset.form === 'posten') { const b = parseFloat(f.b.value.replace(',','.')); if (!(b > 0)) return toast('Bitte einen Betrag eintragen.'); geld.posten.push({t:f.t.value.trim() || (art==='ein'?'Einnahme':'Ausgabe'), w:f.w.value.trim(), b: art==='ein' ? b : -b}); geldInAkte(); stadtNeu(); }
+  if (f.dataset.form === 'posten') { pmPosten(f, art); }
 
 });
 
@@ -1065,17 +1083,23 @@ A['bed-ja'] = async () => {
 const RAHMEN = {
  organizer:{name:'Datei-Organizer', unter:'Dateien sortieren, dann an die Akte übergeben', seite:'datei-organizer/app/index.html', stil:farbStilFest(['#aee2cc','#cdeede','#e4f3d6'],'#0f4a43','#107c41','#e4f1eb')},
  kalender:{name:'Kalender', unter:'Termine, Fristen und Notizen', seite:'kalender/index.html', stil:farbStilFest(['#d9cdf3','#e8e0f8','#f3effb'],'#3b2372','#5b3aa6','#efeaf9')},
+ /* Private Brain (0.7.0): die echte, veröffentlichte Web-App unter ihrer eigenen Adresse (dieselbe Seite wie Pages von Privat-Brain-Pro),
+    unverändert und mit eigenem Speicher. Ein Klon Datei für Datei liefe nicht: die Web-Seite entsteht dort erst beim Bauen (`build:web`). */
+ brain:{name:'Private Brain', unter:'Mails und Dateien – die eigene App', url:'../Privat-Brain-Pro/', stil:farbStilFest(['#f9c9ad','#fcdcc8','#fdeee4'],'#6b2a12','#c2552c','#fbece4')},
  wfpdf:{name:'Workflow PDF', unter:'Scannen, ausfüllen, bearbeiten – „Teilen“: in die Akte oder an ein anderes Programm', seite:'workflow-pdf/index.html', stil:farbStilFest(['#f6c3cb','#fbdde1','#fdeef0'],'#6b1226','#9b1f38','#f8e6e9')}
 };
 function farbStilFest(k, schrift, akz, fl){ return `--k1:${k[0]};--k2:${k[1]};--k3:${k[2]};--schrift:${schrift};--akz:${akz};--fl:${fl}`; }
 const rahmen = { was:null, wartet:null };
+const FAMILIENBUERO = '../Familienbuero-Pro/';
 function fRahmen(was, frage = '', dateien = null){
   const r = RAHMEN[was]; zu(); rahmen.was = was; rahmen.wartet = dateien;
   $('rahmenort').innerHTML = `<div class="rahmenfenster" style="${r.stil}" role="dialog" aria-modal="true" aria-label="${r.name}">
    <div class="fkopf"><h2>${r.name}<small>${r.unter}</small></h2><span class="rahmenmeldung" id="rahmen-meldung" role="status" aria-live="polite"></span>${glockeKnopf()}<button class="knopf hell klein" data-a="rahmen-zu">‹ Akte</button></div>
    <iframe id="rahmen" title="${r.name}" allow="camera; microphone; clipboard-write; web-share; fullscreen"></iframe></div>`;
   /* Lädt im Rahmen je die ungepatchte Startseite des Klons (Neuladen, Link „zurück zur App“), kommt gleich wieder die Seite mit Brücke. */
-  const f = $('rahmen'), adresse = `./rahmen/${r.seite}?v=${FASSUNG}${frage ? '&' + frage : ''}`;
+  const f = $('rahmen');
+  if (r.url) { f.src = r.url; return; }
+  const adresse = `./rahmen/${r.seite}?v=${FASSUNG}${frage ? '&' + frage : ''}`;
   f.addEventListener('load', () => { try { const w = f.contentWindow; if (!w.document.documentElement.dataset.paEingebettet && /(~rahmen|\/|\/index\.html)$/.test(w.location.pathname)) f.src = `./rahmen/${r.seite}?v=${FASSUNG}`; } catch { /* fremde Seite: bleibt */ } });
   f.src = adresse;
 }

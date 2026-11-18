@@ -1,0 +1,22 @@
+{
+ "name": "bookledger",
+ "quelle": "https://github.com/lausiklauskn-png/BookLedgerPro",
+ "commit": "9df9beee73f339af634d0770509a501dc7d4dd91",
+ "standVom": "2026-11-16T08:40:16+00:00",
+ "auswahl": [
+  "src/domain/money.js",
+  "src/domain/kassenbuch.js",
+  "LICENSE"
+ ],
+ "anzahl": 3,
+ "bytes": 8363,
+ "ordner": {
+  "(Dateien oben)": 1,
+  "src/": 2
+ },
+ "dateien": {
+  "LICENSE": "02e9581244f313572f4ad631c0ca778db8a60a1d4a5ee7cb4c0c9db1ef92db81",
+  "src/domain/kassenbuch.js": "290307d9a874d259199a34c3771609ba2c76937b6ab79429aa329968708a7554",
+  "src/domain/money.js": "44d8cd3da2a68010bec34b0c3206ef09ba871a017da7246c593594f1616483a0"
+ }
+}

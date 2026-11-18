@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.7.0 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.7.1 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -163,14 +163,24 @@ const { chromium } = require('playwright');
     await p.hover('.werk[data-a=kalender]'); await p.waitForTimeout(600); soll(await p.locator('#tipp').isVisible() && (await p.locator('#tipp').innerText()).includes('Kalender'), 'Tooltip ohne Klick'); await p.screenshot({path:`p/${name}-1b-tipp.png`}); await p.mouse.move(5, 400); soll(!(await p.locator('#tipp').isVisible()), 'Tooltip geht wieder weg');
     if (name==='handy') await klick('[data-a=mehr]'); await klick(name==='handy' ? '.menue [data-a=hilfe]' : '.kopfknoepfe [data-a=hilfe]'); await p.uncheck('[data-tippwahl]'); await klick('[data-a=zu]'); await p.hover('.werk[data-a=kalender]'); await p.waitForTimeout(600); soll(!(await p.locator('#tipp').isVisible()), 'Tooltips abschaltbar'); await p.mouse.move(5, 400);
     // Bon
-    await klick('.werk[data-a=bon-start]'); soll((await text()).includes('An BookLedgerPro geben'), 'Portemonnaie mit BookLedger'); await p.screenshot({path:`p/${name}-3-geld.png`});
-    const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename()==='portemonnaie-2026-11.csv','CSV'); soll((await text()).includes('November übergeben'),'übergeben');
-    await p.fill('[data-form=posten] [name=t]','Kino'); await p.fill('[data-form=posten] [name=w]','Freizeit'); await p.fill('[data-form=posten] [name=b]','12,50'); await klick('[data-form=posten] [value=aus]'); soll((await text()).includes('wofür: Freizeit'),'wofür');
+    await klick('.werk[data-a=bon-start]'); await p.waitForSelector('#pm-rest'); soll((await text()).includes('An BookLedgerPro geben'), 'Portemonnaie echt, mit Weg zu BookLedgerPro'); await p.screenshot({path:`p/${name}-3-geld.png`});
+    { const monat = await p.evaluate(() => pm.monat);
+      await p.fill('[data-form=posten] [name=t]','Kino'); await p.fill('[data-form=posten] [name=w]','Freizeit'); await p.fill('[data-form=posten] [name=b]','12,50'); await klick('[data-form=posten] [value=aus]');
+      await p.waitForFunction(() => /Kino/.test(document.querySelector('#pm-liste')?.innerText || '')); soll((await p.locator('#pm-liste').innerText()).includes('wofür: Freizeit') && (await p.locator('#pm-rest').innerText()).includes('12,50'), 'Ausgabe eingetragen, Rest gerechnet (BookLedgerPro-Bausteine)');
+      soll(await p.evaluate(async () => (await window.PrivateAkteTresor.geld.posten()).some(x => x.titel === 'Kino' && x.cent === -1250)), 'Posten liegt im Tresor (Register der Familienakte)');
+      soll(await p.evaluate(() => window.PrivateAkteTresor.geld.bonBetrag('Bäckerei Beispiel\nBrot 3,20\nSUMME EUR 23,40\nBar 50,00') === 2340), 'Bon: Betrag hinter „Summe“ wird vorgeschlagen');
+      await p.setInputFiles('#pm-bon', {name:`bon-${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundener Bon ${name} SUMME 7,10`)}); await p.waitForSelector('#pm-bonzeile');
+      await p.fill('[data-form=posten] [name=b]','7,10'); await klick('[data-form=posten] [value=aus]'); await p.waitForFunction(() => !document.querySelector('#pm-bonzeile') && /Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || ''));
+      soll(await p.evaluate(async n => (await window.PrivateAkteTresor.liste()).some(d => d.originalName === `bon-${n}.txt` && d.category === 'Einkäufe, Rechnungen & Garantien'), name), 'Bon liegt als Unterlage in der Akte, Posten mit Bon');
+      const [dl] = await Promise.all([p.waitForEvent('download'), klick('[data-a=an-bookledger]')]); soll(dl.suggestedFilename() === `portemonnaie-${monat}.csv`, 'CSV für BookLedgerPro'); soll((await text()).includes('übergeben'), 'übergeben');
+      await klick('#pm-liste [data-a=pm-weg]'); await p.waitForFunction(() => !/Bon in der Akte/.test(document.querySelector('#pm-liste')?.innerText || '')); soll(true, 'Posten herausnehmen'); }
     // Farbe der Stadt
     await klick('.fenster [data-a=farbe]'); await p.screenshot({path:`p/${name}-4-farbe.png`}); await klick('[data-farbe=koralle]'); soll(await p.evaluate(() => document.querySelector('.fenster.ast').style.getPropertyValue('--k1'))==='#f9c9ad','Stadtfarbe Koralle');
     // Büro
-    await klick('.astnav [data-id=buero]'); soll((await p.locator('.kachel.gross').count())===4,'vier Kacheln'); soll((await text()).includes('Workflow PDF'),'Kachel Workflow PDF'); await p.screenshot({path:`p/${name}-5-buero.png`});
-    await klick('.astnav.teil [data-teil=pdf]'); await p.evaluate(() => { s.scan = true; fStadt('buero', [], 'pdf'); }); soll((await text()).includes('Neuer Scan') && (await p.locator('.fenster [data-a=wfpdf]').count())===1,'Scan (Beispiel) und Knopf Workflow PDF öffnen'); await klick('[data-a=scan-zur-akte]'); soll(await p.evaluate(() => eingang.neu.some(x => x.id === 201)),'Scan (Beispiel) angekommen'); await zu0();
+    // Familienbüro (0.7.0): nur aufrufen – die eigene App öffnet sich unter ihrer Adresse daneben
+    await p.context().route(/\/Familienbuero-Pro\//, r => r.fulfill({contentType:'text/html', body:'<!doctype html><title>Familienbüro</title>'}));
+    { const [neu] = await Promise.all([p.context().waitForEvent('page'), klick('.astnav [data-id=buero]')]); await neu.waitForLoadState(); soll(/\/Familienbuero-Pro\/$/.test(neu.url()), 'Familienbüro: öffnet die eigene App (' + neu.url() + ')'); await neu.close(); }
+    await p.evaluate(() => { s.scan = true; fStadt('buero', [], 'pdf'); }); soll((await text()).includes('Neuer Scan') && (await p.locator('.fenster [data-a=wfpdf]').count())===1,'Scan (Beispiel) und Knopf Workflow PDF öffnen'); await klick('[data-a=scan-zur-akte]'); soll(await p.evaluate(() => eingang.neu.some(x => x.id === 201)),'Scan (Beispiel) angekommen'); await zu0();
     // Bearbeiten mit aus dem Eingang -> Pseudo
     await p.evaluate(() => fMit({dataset:{neu:'201'}})); soll((await p.locator('[data-a=mit-wahl]').count())===5,'fünf Wege (ohne Beispiel-Kalender)'); await p.screenshot({path:`p/${name}-7-mit.png`});
     await klick('[data-womit=pseudo]'); soll((await text()).includes('⟦STELLE-1⟧') && (await text()).includes('⟦NUMMER-1⟧'),'Pseudo'); await p.screenshot({path:`p/${name}-8-pseudo.png`}); await klick('[data-a=pseudo-sicht]'); soll((await text()).includes('A123456789'),'Original'); await klick('[data-a=zu]');
@@ -308,7 +318,9 @@ const { chromium } = require('playwright');
     // Organizer
     await p.evaluate(() => { if (!organizer.length) organizer = ORGANIZER_NEU(); fStadt('sort'); }); await klick('[data-a=osort]'); await klick('[data-a=sort-zur-akte]'); await p.evaluate(() => document.querySelector('video')?.remove());
     // Mail
-    await klick('.schild[data-id=mail]'); await klick('[data-a=mail-ki]'); soll((await text()).includes('⟦STELLE-1⟧'),'Mail an KI'); await klick('[data-a=zu]');
+    // Private Brain (0.7.0): die echte Web-App unter ihrer eigenen Adresse im Rahmen (in der Probe gestellt – die Sitzung erreicht Pages nicht)
+    await p.route(/\/Privat-Brain-Pro\//, r => r.fulfill({contentType:'text/html', body:'<!doctype html><title>Private Brain</title><p>gestellt</p>'}));
+    await klick('.schild[data-id=mail]'); await p.waitForSelector('#rahmen'); soll(/\/Privat-Brain-Pro\/$/.test(await p.locator('#rahmen').evaluate(f => f.src)) && (await p.locator('.rahmenfenster h2').innerText()).includes('Private Brain'), 'Baum: Stadt Private Brain öffnet die echte App im Rahmen'); await klick('[data-a=rahmen-zu]');
     // Suche + Mappe
     await geh('start'); soll((await p.locator('.chip, .unter').count())===0 && (await p.locator('h1.titel').isVisible())===(name==='pc'), 'Start ohne Beispiele und Erklärsatz, Überschrift nur am PC'); await p.fill('.suche input','Nebenkostenabrechnung'); await p.keyboard.press('Enter'); await p.locator('.haken').first().check(); await klick('[data-a=mappe]'); soll((await text()).includes('Zur Akte'),'Mappe'); await klick('[data-a=zu]');
     // Farbe der Akte kräftig

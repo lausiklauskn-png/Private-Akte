@@ -5,6 +5,9 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig, createLocalScheduleBundle } from "../klone/familienakte/app/local-vault.ts";
 import { saveLocalStammRecord, createLocalFamilyRelation, confirmLocalContextLink, dokumenteZuordnen, akteFuerAbgleich, akteNachAbgleichSchreiben } from "../klone/familienakte/app/local-vault.ts";
 import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
+import { createLocalFamilyRecord } from "../klone/familienakte/app/local-vault.ts";
+import { parseEuroToCents, formatEuro } from "../klone/bookledger/src/domain/money.js";
+import { kassenbericht } from "../klone/bookledger/src/domain/kassenbuch.js";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
@@ -486,5 +489,60 @@ Object.assign(kalender, {
     return createLocalScheduleBundle(await browserVault(), { recordType: e.art, title: e.titel, dueAt: e.tag, dueTime: e.zeit || null, source: "Private Akte", references: [{ recordType: "document", id: e.docId, relationType: "betrifft" }] });
   },
 });
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten };
+// Portemonnaie (0.7.0, Klaus 17.11.: „neu, schlank“, 18.11.: „gleich im Tresor“): Geld rein / Geld raus, ohne Buchhaltung. Ein Posten ist
+// ein Datensatz „payment“ des Registers (Titel, Betrag in Cent, Währung; dazu Richtung, Tag, wofür), damit im Backup und für die
+// Familienakte lesbar. Der Bon ist eine Unterlage (Bereich „Einkäufe, Rechnungen & Garantien“), verknüpft payment → document „Beleg“.
+// Rechnen: Betrag lesen/zeigen und Monatsbericht aus BookLedgerPro (klone/bookledger: money.js, kassenbuch.js – unverändert).
+type Posten = { id: string; titel: string; cent: number; am: string; wofuer: string; bon: string | null };
+const BON_BEREICH = "Einkäufe, Rechnungen & Garantien";
+/** Betrag auf einem Bon: die Zahl hinter „Summe“, „Gesamt“, „zu zahlen“, „Total“; sonst die größte Zahl mit Komma. Nur ein Vorschlag. */
+function bonBetrag(text: string) {
+  const zahl = (t: string) => parseEuroToCents(t), alle = [...text.matchAll(/(\d{1,4}(?:\.\d{3})*,\d{2})/g)].map((m) => ({ cent: zahl(m[1]), i: m.index || 0 }));
+  const wort = [...text.toLowerCase().matchAll(/summe|gesamt|zu zahlen|total|betrag/g)].map((m) => m.index || 0);
+  for (const w of wort) { const z = alle.find((x) => x.i > w && x.i - w < 60); if (z && z.cent > 0) return z.cent; }
+  return alle.reduce((m, x) => (x.cent > m ? x.cent : m), 0) || null;
+}
+const geld = {
+  euro: (cent: number) => formatEuro(cent),
+  cent: (eingabe: string) => parseEuroToCents(eingabe),
+  async posten(): Promise<Posten[]> {
+    const { records, relations } = await readLocalVaultData(await browserVault());
+    return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { portemonnaie?: boolean }).portemonnaie).map((r) => {
+      const d = r.data as { title?: string; amountCents?: number; richtung?: string; am?: string; wofuer?: string };
+      return { id: r.id, titel: d.title || "", cent: (d.richtung === "rein" ? 1 : -1) * (d.amountCents || 0), am: d.am || r.createdAt.slice(0, 10), wofuer: d.wofuer || "",
+        bon: relations.find((x) => x.fromType === "payment" && x.fromId === r.id && x.toType === "document")?.toId || null };
+    }).sort((a, b) => a.am.localeCompare(b.am) || a.id.localeCompare(b.id));
+  },
+  /** Monat „JJJJ-MM“: Anfangsbestand = alles davor, dann der Bericht aus BookLedgerPro (Einnahmen, Ausgaben, Endbestand). */
+  bericht(alle: Posten[], monat: string) {
+    const vorher = alle.filter((p) => p.am.slice(0, 7) < monat).reduce((a, p) => a + p.cent, 0);
+    const im = alle.filter((p) => p.am.slice(0, 7) === monat).map((p, i) => ({ datum: p.am, seq: i, beschreibung: p.titel, einnahme: p.cent > 0 ? p.cent : 0, ausgabe: p.cent < 0 ? -p.cent : 0, id: p.id }));
+    return kassenbericht(im, vorher);
+  },
+  async eintragen(e: { titel: string; cent: number; rein: boolean; wofuer: string; am: string; bon?: File | null; bonText?: string }) {
+    if (!Number.isInteger(e.cent) || e.cent <= 0) throw new Error("Bitte einen Betrag eintragen.");
+    const h = await browserVault();
+    let bon: string | null = null;
+    if (e.bon) bon = (await saveLocalDocument(h, e.bon, { category: BON_BEREICH, documentDate: e.am, notes: `Bon aus dem Portemonnaie – ${formatEuro(e.cent)}${e.wofuer ? " · wofür: " + e.wofuer : ""}`, titel: `Bon ${e.titel}`.slice(0, 200), textAuszug: e.bonText || null })).id;
+    const r = await createLocalFamilyRecord(h, { recordType: "payment", status: "aktiv", source: "Portemonnaie", notes: null,
+      data: { title: e.titel.slice(0, 200), amountCents: e.cent, currency: "EUR", portemonnaie: true, richtung: e.rein ? "rein" : "raus", am: e.am, wofuer: e.wofuer.slice(0, 120) } as never });
+    if (bon) await createLocalFamilyRelation(h, { fromType: "payment", fromId: r.id, toType: "document", toId: bon, relationType: "Beleg", source: "Portemonnaie", notes: null });
+    return { id: r.id, bon };
+  },
+  /** Posten herausnehmen: im Register „archiviert“ (nicht gelöscht); der Bon bleibt als Unterlage. */
+  async entfernen(id: string) {
+    const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+    const r = (akte as unknown as { records: Array<{ id: string; status: string; updatedAt: string }> }).records.find((x) => x.id === id); if (!r) return;
+    r.status = "archiviert"; r.updatedAt = new Date().toISOString();
+    await akteNachAbgleichSchreiben(h, akte, revision, "Posten herausgenommen", `${id}: im Portemonnaie herausgenommen (archiviert).`);
+  },
+  async bonLesen(datei: File) { const t = await textLesen(datei); return { text: t.text, cent: bonBetrag(t.text || "") }; },
+  /** Der Monat als Datei für BookLedgerPro (CSV, Semikolon, Beträge mit Komma). */
+  csv(alle: Posten[], monat: string) {
+    const z = (t: string) => `"${String(t).replace(/"/g, '""')}"`;
+    return ["Datum;Was;Wofür;Einnahme;Ausgabe", ...alle.filter((p) => p.am.slice(0, 7) === monat).map((p) => [p.am, z(p.titel), z(p.wofuer), p.cent > 0 ? formatEuro(p.cent).replace(" €", "") : "", p.cent < 0 ? formatEuro(-p.cent).replace(" €", "") : ""].join(";"))].join("\r\n");
+  },
+  bonBetrag,
+};
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

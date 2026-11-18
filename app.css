@@ -402,3 +402,9 @@ fieldset.zuordnen .chips{margin-top:2px}fieldset.zuordnen .feld.schmal{flex:1 1 
 .wahlchip{display:inline-flex !important;align-items:center;gap:4px;border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:12.5px;color:var(--ink) !important;background:#fff;cursor:pointer}
 .wahlchip:has(input:checked){background:var(--tealsoft);border-color:var(--teal)}.wahlchip input{margin:0}
 .ordakte{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin:4px 0 8px}.ordakte .feld{flex:1;min-width:0}
+.pm-monat{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:4px}.pm-monat b{min-width:130px;text-align:center}
+.pm-form{margin-top:8px}label.knopf{display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer}
+/* Portemonnaie (Klaus 18.11.: „dezenter, nicht in Vollton, dem Portemonnaie angepasst“): hell getönt in der Farbe der Stadt */
+.knopf.pm-knopf{background:color-mix(in srgb,var(--akz) 13%,#fff);color:var(--schrift);border:1px solid color-mix(in srgb,var(--akz) 38%,transparent);box-shadow:none;text-shadow:none}
+.knopf.pm-knopf:hover,.knopf.pm-knopf:active{background:color-mix(in srgb,var(--akz) 22%,#fff)}
+.knopf.pm-knopf .icon{color:var(--akz)}

@@ -3,3 +3,6 @@
    Ausgeblendet wie in der Familienakte: Mycel-Leiste, Installieren, ⟳ (die Fassung kommt mit der Privaten Akte), „Im Netz antworten“. */
 :root{ --rot:var(--pa-a,#d2475b); --rot-d:var(--pa-b,#9b1f38); --rot-h:#fbe9ec; --grund:#f8fafd; }
 .netzleiste,#btnInstall,#stInstall,#btnNeu,[data-netz-antworten]{display:none!important}
+/* 0.7.0 (Klaus' Test 18.11.: nach dem Scan leuchtete „PDF ausgeben“ – das führt weg von der Akte, der Scan liegt dort schon):
+   in der Akte trägt der Knopf die Farben eines gewöhnlichen Knopfs statt des vollen Rots. Nur Farben, Lage und Größe bleiben. */
+#edExport{background:var(--flaeche,#fff)!important;color:var(--rot-d)!important;border-color:var(--linie,#d6dde6)!important}
