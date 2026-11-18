@@ -2,6 +2,9 @@
 // Hier steht keine eigene Speicherlogik: jede Funktion reicht nur an den Klon weiter.
 import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument, readLocalDocumentFile, dokumenteAussortieren, dokumenteEndgueltigLoeschen, LIMITS,
   getVaultSummary, sicherungsOrdnerWaehlbar, chooseExportDestination, writeFullFamilyBackup, sicherungArt, sicherungProben, sicherungEinlesen } from "../klone/familienakte/app/local-vault.ts";
+import { readLocalVaultData, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig } from "../klone/familienakte/app/local-vault.ts";
+import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
+import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
 import { passwortPruefen, notfallblattText, PASSWORT_MINDESTLAENGE } from "../klone/familienakte/lib/sicherung-krypto.ts";
 import { FAMILY_CATEGORIES } from "../klone/familienakte/lib/family-categories.ts";
 import { interpretFamilySearchQuery, hasFamilySearchContent, scoreFamilySearchText, normalizeFamilySearch } from "../klone/familienakte/lib/family-search.ts";
@@ -401,5 +404,27 @@ const bedeutung = {
   /** Nur für die Klick-Probe: ein gestellter Rechner statt des Sprachmodells (das die Probe nicht laden kann). */
   zurProbe(rechner: Rechner | null) { ersatz = rechner; korpus = null; },
 };
-const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung };
+
+// Kalender und Notizen: die Ansicht ist die der Familienakte (src/kalender-seite.tsx, im Rahmen). Die Hülle braucht hier nur, was
+// offen ist – für „Fällig“ auf der Startseite und die Zahl am Baum. Dieselbe Auswahl wie „Mein Kalender“ im Klon: offene Aufgaben
+// und Fristen mit Tag, dazu freie Erinnerungen.
+const NICHT_OFFEN = ["erledigt", "zurückgestellt", "archiviert"], TAG = /^\d{4}-\d{2}-\d{2}/;
+const kalender = {
+  async termine() {
+    const { records } = await readLocalVaultData(await browserVault());
+    const offen = records.filter((r) => !NICHT_OFFEN.includes(r.status));
+    const fest = offen.filter((r) => istTermin(r) && TAG.test(String((r.data as { dueAt?: string }).dueAt || ""))).map((r) => ({ id: r.id, titel: String((r.data as { title: string }).title), tag: String((r.data as { dueAt: string }).dueAt).slice(0, 10), zeit: kalenderFelder(r).dueTime || "", art: r.recordType === "deadline" ? "Frist" : "Aufgabe" }));
+    const frei = offen.filter((r) => r.recordType === "reminder" && TAG.test(String((r.data as { remindAt?: string }).remindAt || ""))).map((r) => { const am = String((r.data as { remindAt: string }).remindAt); return { id: r.id, titel: String((r.data as { title: string }).title), tag: am.slice(0, 10), zeit: am.slice(11, 16), art: "Erinnerung" }; });
+    return { termine: [...fest, ...frei].sort((a, b) => `${a.tag}${a.zeit || "99"}`.localeCompare(`${b.tag}${b.zeit || "99"}`)), notizen: records.filter((r) => memoryData(r) && r.status !== "archiviert").length };
+  },
+  /** Akte leeren: alle Termine, Fristen, Erinnerungen und Notizen löschen (Löschen des Klons), danach seinen Papierkorb leeren. */
+  async leeren() {
+    const handle = await browserVault(), { records } = await readLocalVaultData(handle); let n = 0;
+    for (const r of records) { if (!memoryData(r) || r.status === "archiviert") continue; try { await deleteLocalMemoryRecord(handle, r.id, { keepLinkedSchedules: false }); n++; } catch { /* schon weg */ } }
+    for (const r of (await readLocalVaultData(handle)).records) { if (!["deadline", "task", "reminder"].includes(r.recordType) || r.status === "archiviert") continue; try { await deleteLocalScheduleRecord(handle, r.id); n++; } catch { /* schon weg */ } }
+    const korb = await papierkorbLesen(handle); if (korb.length) await papierkorbEndgueltig(handle, korb.map((x) => x.id));
+    return n;
+  },
+};
+const alles = { ...tresor, sicherung, organizer, suchen, teilWoerter, diktat, bedeutung, kalender };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

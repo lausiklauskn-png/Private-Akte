@@ -22,10 +22,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.5.6)
+## Stand (18.11.2026, Vorschau 0.6.0)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
-  heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-18_KALENDER-UND-NOTIZEN.md` (aktuell, Auftrag und Startauftrag für die nächste Sitzung); ältere unter `docs/`.
+  heißen „Tools“. Briefe: `BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.0.md` (aktuell, mit Startauftrag); ältere unter `docs/`.
 - **Erstes echtes Stück (0.2.0):** Abschnitt „Deine Unterlagen“ auf der Startseite. `src/tresor.ts` reicht an den unveränderten Tresor
   der Familienakte weiter (`klone/familienakte/app/local-vault.ts`: `browserVault`, `saveLocalDocument`, `listLocalDocuments`,
   `readLocalDocumentFile`, `dokumenteAussortieren`); `npm run bau` schreibt daraus `tresor.js` (eingecheckt; `npm run bau:pruefen` in der CI).
@@ -37,13 +37,56 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `klone/familienakte/` – Familienakte @ `de4571e` (Fassung 2.28.74).
 - **GitHub Pages** veröffentlicht `main` ab der Wurzel, also auch `klone/` (rund 340 MB, seit 0.5.0 mit Workflow PDF). Besser: Pages auf „GitHub Actions“ umstellen
   und nur die App-Dateien ausliefern – braucht einen Klick von Klaus in den Einstellungen des Repos.
-- **Als Nächstes (Klaus 18.11.):** Kalender und Notizen echt, wie in der Familienakte – eigene Sitzung mit Freibrief, siehe Brief. Familienbüro später.
+- **Als Nächstes:** Klaus' Test von 0.6.0 am Tablet (siehe Abschlussbrief); Anmeldung Google/Microsoft freischalten (Rückkehr-Adresse, unten). Familienbüro später.
 - **Offen bei Klaus:** Familienbüro in der App (Vorschau) oder nur aufrufen (unten „Entschieden“); Portemonnaie offen oder gleich im Tresor.
 - **Tresor exportieren / importieren (0.3.0, Klaus 17.11.):** Schild-Knopf „Sicherung“. Export = `writeFullFamilyBackup` des Klons mit
   Passwort (mindestens 10 Zeichen, PBKDF2 600.000 Runden) in einen gewählten Ordner, Notfallschlüssel und Notfallblatt; Import =
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.6.0 Kalender und Notizen echt (Klaus 18.11., Freibrief; „die richtige Kalenderansicht wie in der Familienakte“):** der violette
+  Knopf „Kalender“, die Stadt „Kalender“ im Baum und „Notiz“ öffnen im Rahmen die **Ansichten der Familienakte selbst** – „Mein
+  Kalender“ (Monat, Tagesliste, „+ Eintrag“, erledigt, Stift), das Notiz-Fenster (schreiben, sprechen, Foto; Tag und Uhrzeit werden
+  aus dem Text erkannt, „Erinnern lassen“ trägt in den Kalender ein), „Notiz bearbeiten“, Löschen, die App-Glocke, „Kalender
+  verbinden“. Gespeichert im selben Tresor wie die Unterlagen (Register des Klons: Aufgaben, Fristen, Erinnerungen, Notizen) – also
+  auch im Backup und für die Familienakte lesbar.
+  **Entschieden – die offene Frage aus dem Brief: Weg B.** Die React-Ansichten des Klons werden gebündelt, nicht nachgebaut
+  (nachgesehen: sie hängen nur an `vaultHandle`, `records`, `relations` und an Bausteinen, die esbuild mitnimmt; kein Next, kein
+  globaler Zustand). `src/kalender-seite.tsx` ist nur das Gestell (Tresor öffnen, Register lesen, Ansichten hinstellen, Liste
+  „Notizen“ aus Bausteinen des Klons); `npm run bau` schreibt `rahmen/kalender/kalender.js` und `kalender.css` (eingecheckt,
+  `bau:pruefen` vergleicht). Die Seite `rahmen/kalender/index.html` läuft im Rahmen, damit die Stile der Familienakte gelten, ohne
+  die der Hülle zu berühren. Neue Bau-Abhängigkeiten in denselben Fassungen wie im Klon: react, react-dom, lucide-react,
+  tailwindcss (+ `@tailwindcss/node`, `@tailwindcss/oxide`).
+  **Aussehen (Klaus 18.11. mitten in der Sitzung: Knöpfe rutschten aus der Reihe, zweiter Kreis ums Fragezeichen):** Ursache war die
+  Stildatei ohne Tailwind-Grundstil und eine eigene Umgebung. Jetzt: Stildatei mit Tailwind gebaut wie in der Familienakte, die
+  Ansichten stehen in derselben Umgebung (`app-shell` › `site-header` › `header-actions`, `site-main`). **Regel:** Maße, Lage und
+  Form der Knöpfe aus dem Klon nicht verändern und nichts dazubauen; `rahmen/kalender/seite.css` enthält nur Breite und Abstand der Karten.
+  **Farben (Klaus 18.11.: „nach demselben Muster“ wie Datei-Organizer und Workflow PDF):** `rahmen/kalender-thema.css` – nur Farben,
+  der Kalender ist violett wie sein Tool. Gilt als Muster für jedes weitere Tool (eine Farbdatei je Tool, letztes Stylesheet).
+  **Kalender verbinden (Klaus 18.11.: „die Technik mit übernehmen, da sind die Anmeldungen für Google, Microsoft, T-Mobile drin“):**
+  Karte „Kalender verbinden“, Anmeldung und Abgleich unverändert aus dem Klon (`kalender-karte.tsx`, `kalender-anbieter.ts`,
+  `kalender-abgleich.ts`; dieselben öffentlichen Client-Kennungen `lib/kalender-konten.ts`). Im Klon gibt es Google, Microsoft,
+  Gerätekalender (nur Android-App) und Kalenderdatei (.ics) – **einen eigenen Anbieter Telekom/T-Mobile gibt es dort nicht**.
+  **Braucht Klaus:** die Anmeldung kehrt auf `https://lausiklauskn-png.github.io/Private-Akte/rahmen/kalender/` zurück; diese
+  Adresse muss bei Google (OAuth-Client „Webanwendung“ › autorisierte Weiterleitungs-URIs) und Microsoft (Entra › App „Familienakte“ ›
+  Authentifizierung › Single-Page-Anwendung) eingetragen sein, sonst lehnen beide ab (Anleitung im Klon: `docs/KALENDER-EINRICHTUNG.md`).
+  Der Zugang lebt nur im Speicher der Seite: nach dem Schließen des Kalenders neu anmelden. Die gewählte Verbindung
+  (`familienakte-kalender-v1` im Browser) teilt sich die Akte mit einer Familienakte unter derselben Adresse. **Nicht geprüft**
+  (die Sitzung erreicht Google und Microsoft nicht) – geprüft ist nur, dass die Karte beide anbietet.
+  **Hülle:** „Fällig“ auf der Startseite ist echt (`T().kalender.termine()` in `src/tresor.ts`, dieselbe Auswahl wie „Mein Kalender“;
+  Tipp öffnet den Kalender an dem Tag), die Zahl am Baum auch. **Glocke:** dieselbe Seite läuft unsichtbar mit (`#glocke`,
+  `?nur=glocke`) und zeigt sich oben, wenn sie läutet – solange die Akte offen ist; bei geschlossener App läutet nichts (das kann nur
+  die Android-App der Familienakte). Sie startet erst, wenn die Akte den Tresor geöffnet hat (zwei Fenster zugleich stören die
+  Schreibprobe des Klons – in der Probe gesehen). **Akte leeren** hat einen vierten Haken „Termine und Notizen“
+  (`kalender.leeren`: Löschen des Klons, dann sein Papierkorb). **Baum:** die Hinweistexte sind heraus (kleiner Auftrag aus dem Brief).
+  **Eigene Entscheidungen (Freibrief):** Weg B; Notizen als schlichte Liste unter dem Kalender statt eines Tagebuchs; der Knopf heißt
+  in der Akte „Notiz“, Fenster und Knopf des Klons „Erinnerung“ (Text des Klons); gleich 0.6.0; Akte leeren nimmt Termine und Notizen
+  mit (eigener Haken). **Grenzen:** die Beispiel-Unterlagen führen über „Bearbeiten mit › Kalender“ noch zum alten Beispiel-Kalender
+  (`kalender()`, `fNotiz` in `app.js` sind sonst nicht mehr erreichbar); Termin zu einer **echten** Unterlage anlegen geht noch nicht
+  (der Klon kann es: `references`); Notizen stehen nicht in der Suche; Papierkorb für Gelöschtes hat keine Oberfläche.
+  Probe 290 grün (Notiz mit „morgen um 9 Uhr“ → Liste „Notizen“ und Punkt am Tag im Kalender; Eintrag von Hand; „Fällig“ mit
+  heute/morgen; Glocke läutet 15 Min. vorher; Tipp öffnet den Tag; erledigt verschwindet; Leeren). **Am Tablet ungeprüft**, ebenso
+  Sprechen (kein Mikrofon in der Probe), Foto zur Notiz und die Anmeldung bei Google/Microsoft.
 - **0.5.6 Workflow PDF hat eine eigene Stadt im Baum (Klaus 18.11.: der Datei-Organizer hat eine, das Scannen war im Baum nicht zu
   finden; „der Baum erklärt, wo die Apps sind und wie ich sie direkt ansteuere“):** Schild „Workflow PDF“ bei den Kränen oben
   (`STAEDTE`, `id:'pdf'`); ein Tipp öffnet die **Hauptseite** von Workflow PDF im Rahmen, nicht die Kamera (die bleibt der rote Knopf).
@@ -327,6 +370,11 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Einfach halten (Klaus 18.11.2026):** wenig Text auf der Oberfläche. Erklärungen nur hinter einem Fragezeichen oder Knopf, und
   dann so, dass ein normaler Nutzer sie versteht. Was nur Technik ist (Regeln des Kerns, Speicher, Fassungen der Klone), bleibt im
   Hintergrund – in `CLAUDE.md`, nicht in der App. Der Baum ist das Vorbild: wenige Punkte, antippbar, erklärt die App.
+
+- **Ansichten aus einem Klon: nichts umgestalten (Klaus 18.11.2026):** Maße, Lage und Form von Knöpfen und Feldern bleiben wie im
+  Original, nichts kommt dazu (kein zweiter Rahmen, kein verschobener Knopf). Dafür die Stile so bauen wie das Original und dieselbe
+  Umgebung geben. Angepasst werden **nur die Farben**, je Tool in einer eigenen Farbdatei (`rahmen/<tool>-thema.css`), alle nach
+  demselben Muster.
 
 - **Klone nie von Hand ändern.** Verbesserungen entstehen im Quell-Repo und kommen nur über
   `node tools/klon-nachziehen.mjs <name> --quelle <pfad> [--stand <ref>]` herein. Beim Hinzufügen `git add -f klone/` nehmen

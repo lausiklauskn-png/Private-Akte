@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.5.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.6.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -226,12 +226,23 @@ const klapp = (() => { try { return JSON.parse(localStorage.getItem('pa_klapp') 
 const klappTeil = (id, titel, unter, innen, attr = '') => `<details class="abschnitt klapp" ${attr} data-klapp="${id}" ${klapp[id] ? 'open' : ''}><summary><b>${titel}</b><span>${unter}</span>${ic('weiter')}</summary><div class="liste">${innen}</div></details>`;
 document.addEventListener('toggle', ev => { const d = ev.target; if (!d.dataset || !d.dataset.klapp) return; klapp[d.dataset.klapp] = d.open ? 1 : 0; try { localStorage.setItem('pa_klapp', JSON.stringify(klapp)); } catch { /* gilt dann bis zum Neuladen */ } }, true);
 const termineSortiert = () => [...termine].sort((a,b) => a.am - b.am);
+/* Fällig, echt (0.6.0): offene Termine, Fristen und Erinnerungen aus dem Tresor – dieselben wie in „Mein Kalender“. Ein Tipp öffnet den Kalender an dem Tag. */
+const tagHeute = () => { const d = new Date(), z = n => String(n).padStart(2, '0'); return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())}`; };
+const tagText = t => `${t.slice(8, 10)}.${t.slice(5, 7)}.${t.slice(0, 4)}`;
+function echtTerminZeile(t){
+  const n = Math.round((new Date(t.tag + 'T00:00') - new Date(tagHeute() + 'T00:00')) / 864e5);
+  return `<button class="zeile" data-a="kal-tag" data-tag="${t.tag}" data-id="${esc(t.id)}"><span class="art" style="background:#ece7f8;color:#5b3aa6">${ic('kalender')}</span><span class="mitte"><strong>${esc(t.titel)}</strong><small>${t.art} · ${tagText(t.tag)}${t.zeit ? ' · ' + t.zeit + ' Uhr' : ''}</small></span><span class="marke2 ${n < 14 ? 'm-rot' : 'm-grau'}">${n < 0 ? 'überfällig' : n === 0 ? 'heute' : n === 1 ? 'morgen' : 'in ' + n + ' Tagen'}</span></button>`;
+}
+function faelligTeil(){
+  const t = echt.termine || [];
+  return klappTeil('faellig', 'Fällig', t.length ? `${t.length} ${t.length === 1 ? 'Eintrag' : 'Einträge'} im Kalender` : 'nichts offen', t.length ? t.slice(0, 5).map(echtTerminZeile).join('') + (t.length > 5 ? `<button class="zeile" data-a="kalender"><span class="mitte"><strong>Alle im Kalender ansehen</strong></span></button>` : '') : `<p class="leer">Nichts offen. <button class="knopf hell klein" data-a="kalender">Kalender öffnen</button></p>`, 'id="faellig"');
+}
 function vStart(){
   const zuletzt = [...docs].sort((a,b) => b.id - a.id).slice(0,4);
   return `<h1 class="titel nurpc">Was möchtest du finden?</h1>${sucheFeld()}
   ${s.frage ? `<div id="bedort">${bedZeile()}</div><div id="trefferort">${treffer()}</div>` : `
   ${echtAbschnitt()}
-  ${klappTeil('faellig', 'Fällig', `${termine.length} Termine und Fristen`, termineSortiert().slice(0,3).map(terminZeile).join(''))}
+  ${faelligTeil()}
   <div class="abschnitt"><h2>Bereiche</h2><div class="kacheln seitlich">${BEREICHE.map(b => { const n = docs.filter(d => d.bereich===b.id).length; return `<button class="kachel" style="--a:${b.a};--b:${b.b}" data-a="bereich" data-id="${b.id}"><span class="tupfer eckig">${ic(b.icon)}</span><span><strong>${b.name}</strong><small>${n} ${n===1?'Unterlage':'Unterlagen'}</small></span></button>`; }).join('')}</div></div>
   ${klappTeil('zuletzt', 'Zuletzt abgelegt', `${zuletzt.length} Beispiele`, zuletzt.map(d => docZeile(d)).join(''))}`}
   <p class="hinweis">Vorschau ${FASSUNG} · Gespeichert wird nur, was du unter „Deine Unterlagen“ hineinlegst – auf diesem Gerät. Alles andere ist erfunden.</p>${fuss()}`;
@@ -251,7 +262,7 @@ function vEingang(){
   <div class="abschnitt"><h2>Aus den Tools <span>schon abgelegt, nur zur Kenntnis</span></h2><div class="liste">${z.length ? z.map(e => `<button class="zeile" data-a="doc" data-id="${e.doc}"><span class="art" style="background:var(--tealsoft);color:var(--teal)">✓</span><span class="mitte"><strong>${esc(e.titel)}</strong><small>${esc(e.text)}</small></span>${ic('weiter')}</button>`).join('') : `<p class="leer">Noch nichts zurückgekommen. Öffne eine Unterlage und tippe auf „Bearbeiten mit“.</p>`}</div></div>${fuss()}`;
 }
 /* Der Baum (Bild und Film aus der Discovery-Seite des Datei-Organizers) */
-function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? termine.length : docs.filter(d => d.bei===id).length; }
+function blaetter(id){ return id==='mail' ? mails.length : id==='geld' ? geld.posten.length : id==='sort' ? organizer.length : id==='kal' ? (echt.termine || []).length : docs.filter(d => d.bei===id).length; }
 function schild(w){ const [x,y] = w.ort, n = blaetter(w.id), was = w.id==='kal' ? (n===1?' Termin':' Termine') : w.id==='geld' ? ' Posten' : w.id==='mail' ? (n===1?' Mail':' Mails') : (n===1?' Datei':' Dateien');
   return `<button class="schild" style="left:${x}%;top:${y}%;--farbe:${w.a}" data-a="stadt" data-id="${w.id}"><b>${w.name}</b><small>${n ? n+was : 'bereit'}</small></button>`; }
 function woLiegtWas(){
@@ -264,7 +275,7 @@ function woLiegtWas(){
    <div class="wokasten tresor"><h3>2 · Der Tresor <small>der einzige Speicher</small></h3>
     ${zl('geh','data-zu="akten"','Unterlagen','Original und jede neue Fassung, in sechs Bereichen',docs.length)}
     ${zl('geh','data-zu="eingang"','Eingang','Neues, bis du den Vorschlag bestätigst',eingang.neu.length)}
-    ${zl('stadt','data-id="kal"','Termine und Fristen','gehören zur Unterlage oder Notiz',termine.length)}
+    ${zl('stadt','data-id="kal"','Termine, Fristen und Notizen','der Kalender der Akte',(echt.termine || []).length)}
     ${zl('stadt','data-id="geld"','Portemonnaie','Posten und die Bons dazu',geld.posten.length)}
     ${zl('stadt','data-id="mail"','E-Mails','mit ihren Anlagen',mails.length)}
     <p class="wonotiz">Dazu das Register: was wo liegt, Vorgänge, Herkunft. Die Suche liest nur hier.</p></div>
@@ -274,8 +285,7 @@ function woLiegtWas(){
   <div class="wo unten">
    <button class="wokasten klein" data-a="sicherung"><h3>Sicherung</h3><p>Eine Kopie des ganzen Tresors an einem zweiten Ort. Ein Speicher heißt: eine Sicherung reicht.</p></button>
    <button class="wokasten klein aussen" data-a="hinaus-info"><h3>Nach außen</h3><p>Nur ein Weg: das Portemonnaie gibt den Monat als Datei an BookLedgerPro. Sonst verlässt nichts den Tresor.</p></button>
-  </div>
-  <p class="hinweis">So ist die App gedacht. In dieser Vorschau ist der Tresor nur gezeigt – gespeichert wird nichts. Die Zahlen sind die Beispiele von eben.</p></div>`;
+  </div></div>`;
 }
 function vBaum(){
   const film = s.reisen ? `<video class="baumfilm" src="./bilder/zur-akte.mp4" autoplay muted playsinline onended="this.remove()" onerror="this.remove()"></video>` : '';
@@ -286,8 +296,7 @@ function vBaum(){
    <button class="schild akte" style="left:37%;top:58%" data-a="geh" data-zu="start"><b>${NAME}</b><small>die Akte · ${docs.length} Unterlagen</small></button>
    ${STAEDTE.map(schild).join('')}
    <button class="schild aussen" style="left:0;top:93%" data-a="hinaus-info"><b>→ BookLedgerPro</b><small>Weg nach außen</small></button>${film}</div></div>
-  ${woLiegtWas()}
-  <p class="hinweis">Tippe ein Schild an. Das Bild stammt aus der Discovery-Seite des Datei-Organizers.</p>${fuss()}`;
+  ${woLiegtWas()}${fuss()}`;
 }
 
 /* ---------- Fenster ---------- */
@@ -478,10 +487,11 @@ const A = {
  wfpdf: () => { menueZu(); fRahmen('wfpdf'); },
  'rahmen-zu': () => rahmenZu(),
  'sort-mehr': () => fRahmen('organizer'),
- notiz: () => { menueZu(); fNotiz(); },
+ notiz: () => { menueZu(); fRahmen('kalender', 'notiz=1'); },
+ 'kal-tag': e => fRahmen('kalender', `tag=${encodeURIComponent(e.dataset.tag)}&id=${encodeURIComponent(e.dataset.id)}`),
  sprechen: e => { const f = e.closest('form').text; f.value = (f.value ? f.value+' ' : '') + 'Hausverwaltung angerufen, Belegeinsicht ist am 27.11. um 10 Uhr möglich.'; feldWachsen(f); toast('Gesprochenes steht im Feld (Beispiel, kein Mikrofon benutzt).'); },
- kalender: () => { menueZu(); s.zuDoc = null; fStadt('kal'); },
- stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') s.zuDoc = null; fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
+ kalender: () => { menueZu(); fRahmen('kalender'); },
+ stadt: e => { if (e.dataset.id === 'sort') return fRahmen('organizer'); if (e.dataset.id === 'pdf') return fRahmen('wfpdf'); if (e.dataset.id === 'kal') return fRahmen('kalender'); fStadt(e.dataset.id, [], e.dataset.teil || undefined); },
  teil: e => { s.teil = e.dataset.teil; if (s.teil !== 'pdf') s.scan = false; stadtNeu(); },
  mit: fMit,
  'mit-wahl': e => {
@@ -545,7 +555,7 @@ document.addEventListener('submit', ev => {
 
 /* ---------- Deine Unterlagen: echt, im Tresor der Familienakte (tresor.js = Brücke zum Klon) ---------- */
 const T = () => window.PrivateAkteTresor;
-const echt = { liste:null, fehler:'', datei:null, laeuft:false };
+const echt = { liste:null, fehler:'', datei:null, laeuft:false, termine:[], notizen:0 };
 const echtTitel = d => d.titel || d.originalName;
 const echtArt = d => { const e = (d.originalName.split('.').pop() || '').toUpperCase().slice(0,4); return e === 'JPEG' ? 'JPG' : e || 'DAT'; };
 const echtGroesse = n => n < 1024 ? n + ' B' : n < 1048576 ? Math.round(n/1024) + ' KB' : (n/1048576).toFixed(1).replace('.',',') + ' MB';
@@ -556,9 +566,11 @@ const fehlerText = e => (e && e.message) || 'Das hat nicht geklappt.';
 const echtBereiche = () => [...new Set([...T().bereiche, ...(echt.liste || []).map(d => d.category)])];
 const bereichKern = b => b.toLowerCase().replace(/&/g, ' und ').replace(/\s+/g, ' ').trim();
 function echtBereich(eingabe){ const b = eingabe.replace(/\s+/g, ' ').trim().slice(0, 60), k = bereichKern(b); return echtBereiche().find(x => bereichKern(x) === k) || b; }
+async function termineLaden(){ try { const k = await T().kalender.termine(); echt.termine = k.termine; echt.notizen = k.notizen; } catch { echt.termine = echt.termine || []; } }
 async function echtLaden(){
   if (!T()) { echt.fehler = 'Der Tresor ist in diesem Browser nicht geladen.'; echt.liste = []; }
   else try { echt.liste = await T().liste(); echt.fehler = ''; } catch (e) { echt.liste = []; echt.fehler = fehlerText(e); }
+  await termineLaden();
   if (s.ansicht === 'start' && !sprech.an) mainZeigen();
 }
 /* Fundstelle am Treffer (Klaus 17.11.): der Satz, in dem es gefunden wurde, mit der Seite. */
@@ -800,7 +812,7 @@ document.addEventListener('submit', async ev => {
 /* Wird die Ansicht neu gezeichnet (Finden, Wechsel, Zurück), endet ein laufendes Diktat – sonst hört das Mikrofon unsichtbar weiter. */
 function mainZeigen(){ if (sprech.an && sprech.sitzung) { sprech.sitzung.stop(); sprech.an = false; } $('main').innerHTML = ({start:vStart, akten:vAkten, eingang:vEingang, baum:vBaum})[s.ansicht](); }
 function zeigen(){ navZeigen(); mainZeigen(); }
-farbeAkte(); kopfZeigen(); zeigen(); echtLaden(); bedPruefen();
+farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(glockeStarten); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
    Übernimmt ein neuer Worker, zeigt die Fassungsmarke „neu“; neu geladen wird erst auf Tipp, damit keine Eingabe verloren geht. */
 let swReg = null;
@@ -906,6 +918,7 @@ A['bed-ja'] = async () => {
    kann, ohne dass der Klon neu lädt. Nachrichten nur vom eigenen Ursprung und nur aus dem offenen Rahmen. */
 const RAHMEN = {
  organizer:{name:'Datei-Organizer', unter:'Dateien sortieren, dann an die Akte übergeben', seite:'datei-organizer/app/index.html', stil:farbStilFest(['#aee2cc','#cdeede','#e4f3d6'],'#0f4a43','#107c41','#e4f1eb')},
+ kalender:{name:'Kalender', unter:'Termine, Fristen und Notizen', seite:'kalender/index.html', stil:farbStilFest(['#d9cdf3','#e8e0f8','#f3effb'],'#3b2372','#5b3aa6','#efeaf9')},
  wfpdf:{name:'Workflow PDF', unter:'Scannen, ausfüllen, bearbeiten – „Teilen“: in die Akte oder an ein anderes Programm', seite:'workflow-pdf/index.html', stil:farbStilFest(['#f6c3cb','#fbdde1','#fdeef0'],'#6b1226','#9b1f38','#f8e6e9')}
 };
 function farbStilFest(k, schrift, akz, fl){ return `--k1:${k[0]};--k2:${k[1]};--k3:${k[2]};--schrift:${schrift};--akz:${akz};--fl:${fl}`; }
@@ -925,6 +938,20 @@ function fRahmen(was, frage = '', dateien = null){
 let rahmenMeldZeit = 0;
 function rahmenMelden(t, gut = true){ const o = $('rahmen-meldung'); if (!o) return; o.textContent = (gut ? '✓ ' : '') + t; o.className = 'rahmenmeldung an' + (gut ? '' : ' schlecht'); clearTimeout(rahmenMeldZeit); rahmenMeldZeit = setTimeout(() => { o.textContent = ''; o.className = 'rahmenmeldung'; }, 12000); }
 function rahmenZu(){ $('rahmenort').innerHTML = ''; rahmen.was = null; rahmen.wartet = null; echtLaden().then(() => { if (s.ansicht === 'start') mainZeigen(); }).catch(() => {}); }
+/* Kalender und Notizen (0.6.0): die Ansicht der Familienakte läuft im Rahmen (rahmen/kalender). Sie meldet, was gespeichert wurde
+   (steht dann in der Leiste des Rahmens), und dass sich etwas geändert hat (dann stimmen „Fällig“, der Baum und die Glocke wieder).
+   Die Glocke ist dieselbe Seite noch einmal, unsichtbar, nur mit der App-Glocke des Klons: sie läutet, solange die Akte offen ist,
+   und zeigt sich oben, wenn sie läutet. */
+function glockeStarten(){ if ($('glocke') || !T()) return; const f = document.createElement('iframe'); f.id = 'glocke'; f.title = 'Erinnerung'; f.hidden = true; f.src = `./rahmen/kalender/index.html?v=${FASSUNG}&nur=glocke`; document.body.appendChild(f); }
+addEventListener('message', async ev => {
+  if (ev.origin !== location.origin) return; const d = ev.data || {}, k = $('rahmen'), g = $('glocke');
+  const ausKalender = k && rahmen.was === 'kalender' && ev.source === k.contentWindow, ausGlocke = g && ev.source === g.contentWindow;
+  if (!ausKalender && !ausGlocke) return;
+  if (d.typ === 'pa-kalender-meldung' && ausKalender) rahmenMelden(String(d.text || ''), d.gut !== false);
+  if (d.typ === 'pa-kalender-geaendert') { const vorher = JSON.stringify(echt.termine); await termineLaden(); if (ausKalender && g) g.contentWindow.location.reload(); /* neu zeichnen nur, wenn sich wirklich etwas geändert hat – sonst klappt zu, was gerade aufgeklappt wurde */ if (ausGlocke && vorher !== JSON.stringify(echt.termine) && s.ansicht === 'start' && !$('rahmenort').innerHTML && !$('fensterort').innerHTML && !s.frage && !sprech.an) mainZeigen(); }
+  if (d.typ === 'pa-glocke' && ausGlocke) g.hidden = !d.an;
+  if (d.typ === 'pa-kalender-oeffnen' && ausGlocke) fRahmen('kalender', `tag=${encodeURIComponent(String(d.tag || ''))}&id=${encodeURIComponent(String(d.id || ''))}`);
+});
 A['echt-wfpdf'] = async e => {
   try { const d = (echt.liste || []).find(x => x.id === e.dataset.id), datei = await T().datei(e.dataset.id); fRahmen('wfpdf', '', [new File([datei], (d && d.originalName) || datei.name, {type:datei.type, lastModified:datei.lastModified})]); }
   catch (err) { toast(fehlerText(err)); }
@@ -965,6 +992,7 @@ function fLeeren(){
    <p class="hinweis">${l ? `Letztes Backup: ${uhr(l.erstellt)} in „${esc(l.ziel)}“. Was danach dazukam, ist nicht gesichert.` : '<b class="warn">Es gibt noch kein Backup.</b> Was du jetzt leerst, ist weg.'}</p>
    <form data-form="leeren"><div class="liste">
     <label class="ordzeile"><input type="checkbox" class="haken" name="akte" checked><span class="mitte"><strong>Unterlagen in der Akte</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}, auch früher Herausgenommenes</small></span></label>
+    <label class="ordzeile"><input type="checkbox" class="haken" name="kalender" checked><span class="mitte"><strong>Termine und Notizen</strong><small>${(echt.termine || []).length} offene Einträge im Kalender, ${echt.notizen || 0} ${echt.notizen === 1 ? 'Notiz' : 'Notizen'}</small></span></label>
     <label class="ordzeile"><input type="checkbox" class="haken" name="wfpdf" checked><span class="mitte"><strong>Bibliothek von Workflow PDF</strong><small>Scans und Arbeitskopien im Tool, samt seinen Einstellungen</small></span></label>
     <label class="ordzeile"><input type="checkbox" class="haken" name="organizer" checked><span class="mitte"><strong>Liste im Datei-Organizer</strong><small style="white-space:normal">nur die sortierte Liste und der Verlauf; die Originale im Ordner bleiben. <b>Was er aus deinen Korrekturen gelernt hat und deine eigenen Kategorien bleiben.</b></small></span></label></div>
     <label style="display:block;margin:10px 0">Zur Sicherheit das Wort <b>leeren</b> eintippen <input class="feld" name="wort" autocomplete="off" autocapitalize="off"></label>
@@ -992,11 +1020,12 @@ function organizerListeLeeren(){
 const dbWeg = name => new Promise(ok => { const q = indexedDB.deleteDatabase(name); q.onsuccess = q.onerror = q.onblocked = () => ok(); });
 document.addEventListener('submit', async ev => { const f = ev.target; if (f.dataset.form !== 'leeren') return; ev.preventDefault();
   if (f.wort.value.trim().toLowerCase() !== 'leeren') { toast('Bitte das Wort „leeren“ eintippen.'); return; }
-  if (!f.akte.checked && !f.wfpdf.checked && !f.organizer.checked) { toast('Nichts gewählt.'); return; }
+  if (!f.akte.checked && !f.kalender.checked && !f.wfpdf.checked && !f.organizer.checked) { toast('Nichts gewählt.'); return; }
   const knopf = f.querySelector('button[type=submit]'); knopf.disabled = true; knopf.textContent = 'Wird geleert …';
   try {
     $('rahmenort').innerHTML = ''; rahmen.was = null; const teile = [];
     if (f.akte.checked) { const r = await T().leeren(); teile.push(`${r.geloescht} ${r.geloescht === 1 ? 'Unterlage' : 'Unterlagen'} gelöscht${r.blieb ? `, ${r.blieb} Dateien blieben liegen` : ''}`); bed.treffer = []; }
+    if (f.kalender.checked) { const n = await T().kalender.leeren(); teile.push(`${n} ${n === 1 ? 'Termin oder Notiz' : 'Termine und Notizen'} gelöscht`); const g = $('glocke'); if (g) g.contentWindow.location.reload(); }
     if (f.wfpdf.checked) { await dbWeg('PrivateAkteWFPDF1'); for (const k of Object.keys(localStorage)) if (k.startsWith('pa_wfpdf_')) localStorage.removeItem(k); teile.push('Workflow PDF geleert'); }
     if (f.organizer.checked) { const g = await organizerListeLeeren(); teile.push(`Liste im Datei-Organizer geleert${g ? `, ${g} gelernte ${g === 1 ? 'Regel bleibt' : 'Regeln bleiben'}` : ''}`); }
     zu(); s.frage = ''; await echtLaden(); zeigen(); toast(teile.join(' · ') + '.');

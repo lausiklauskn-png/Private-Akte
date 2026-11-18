@@ -1,0 +1,5 @@
+/* Gestell der Seite „Kalender und Notizen“ im Rahmen der Privaten Akte. Die Ansichten tragen die Stile der Familienakte
+   (kalender.css, gebaut aus dem Klon) und stehen in derselben Umgebung wie dort (app-shell, Kopfleiste, site-main). Knöpfe, Maße
+   und Abstände werden hier NICHT verändert; hier steht nur der Abstand zwischen den Karten und die Breite der Seite. */
+.pa-kalender .site-main{max-width:900px;display:grid;gap:18px;align-content:start}
+html.pa-nur-glocke,html.pa-nur-glocke body{background:transparent}

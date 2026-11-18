@@ -285,3 +285,6 @@ details.klapp[open]>summary{margin-bottom:8px}
 .rahmenmeldung.an{display:block}.rahmenmeldung.schlecht{background:#fde8e8;color:#8f252b;border-color:#f0b4b4}
 .toast{z-index:40}
 .sortzeile{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);padding:6px 10px}.sortzeile select{width:auto}
+/* Die App-Glocke (unsichtbarer Rahmen mit der Glocke der Familienakte): sichtbar nur, solange sie läutet. */
+#glocke{position:fixed;left:50%;top:0;transform:translateX(-50%);width:min(600px,100vw);height:150px;border:0;background:transparent;z-index:40;color-scheme:normal}
+#glocke[hidden]{display:none}

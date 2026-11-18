@@ -1,11 +1,11 @@
 'use strict';
 /* Offline-Vorrat der Privaten Akte. Bei jeder neuen Fassung VERSION erhöhen. */
-const VERSION = '0.5.6';
+const VERSION = '0.6.0';
 const PREFIX = 'private-akte-';
 const CACHE = PREFIX + VERSION;
 const ROOT = new URL('./', self.location.href);
 const DATEIEN = [
-  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'rahmen/datei-organizer/app/index.html', 'rahmen/organizer-bruecke.js', 'rahmen/organizer-thema.css', 'rahmen/workflow-pdf/index.html', 'rahmen/wfpdf-bruecke.js', 'rahmen/wfpdf-thema.css', 'native/familienakte-meaning-worker.js', 'klone/familienakte/public/vendor/pdfjs/pdf.min.js', 'klone/familienakte/public/vendor/pdfjs/pdf.worker.min.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
+  './', 'index.html', 'app.css', 'app.js', 'tresor.js', 'rahmen/datei-organizer/app/index.html', 'rahmen/organizer-bruecke.js', 'rahmen/organizer-thema.css', 'rahmen/workflow-pdf/index.html', 'rahmen/wfpdf-bruecke.js', 'rahmen/wfpdf-thema.css', 'rahmen/kalender/index.html', 'rahmen/kalender/kalender.js', 'rahmen/kalender/kalender.css', 'rahmen/kalender/seite.css', 'rahmen/kalender-thema.css', 'native/familienakte-meaning-worker.js', 'klone/familienakte/public/vendor/pdfjs/pdf.min.js', 'klone/familienakte/public/vendor/pdfjs/pdf.worker.min.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico',
   'icons/favicon-32.png', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png',
   'bilder/baum.jpg', 'bilder/zur-akte.mp4', 'bilder/logo-basic-rund.png', 'bilder/logo-pro-rund.png'
 ].map(pfad => new URL(pfad, ROOT).href);
