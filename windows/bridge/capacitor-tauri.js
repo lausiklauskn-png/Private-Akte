@@ -1,5 +1,6 @@
 /* Private Akte Pro für Windows (Muster Datei-Organizer Pro windows/bridge): stellt dieselben Capacitor-Plugins bereit wie die
-   Android-Hülle (Gerätezugriffe aus den Klonen). Jeder Aufruf geht mit dem Sitzungsschlüssel an die Hülle (do_call); welche Methoden es
+   Android-Hülle (Gerätezugriffe aus den Klonen). Ordner wählt unter Windows die Seite selbst (WebView2: showDirectoryPicker),
+   darum hier kein FamilyFolders – der Ordnerweg des Organizers kann keine Unterordner schreiben, das Backup braucht sie. Jeder Aufruf geht mit dem Sitzungsschlüssel an die Hülle (do_call); welche Methoden es
    gibt, legt bridge/contracts.json fest (dort geprüft, nicht hier). Die Tools im Rahmen (Datei-Organizer, Kalender …) laufen in einem
    Fenster derselben Adresse und bekommen dieselbe Brücke vom Hauptfenster – nie eine eigene, nie auf fremden Seiten. */
 (() => {
@@ -19,7 +20,7 @@
     for (const listener of listeners.get(event.detail?.name) || []) { try { listener(event.detail.data); } catch { /* Hörer der Seite */ } }
   });
   const plugins = {};
-  for (const name of ['FamilyFolders', 'DoEingang', 'DoDateien']) {
+  for (const name of ['DoEingang', 'DoDateien']) {
     plugins[name] = new Proxy(Object.freeze({}), { get(_, method) {
       if (method === 'then') return undefined;
       if (method === 'addListener') return async (event, listener) => {

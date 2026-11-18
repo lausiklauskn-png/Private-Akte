@@ -13,9 +13,15 @@ export const QUELLEN = {
   android: {
     ziel: 'android/app/src/klon/java',
     dateien: {
-      'datei-organizer': ['DoOrdnerPlugin', 'DoEingangPlugin', 'EingangStapel', 'DoDateienPlugin', 'PluginWorker', 'NativeUtil', 'OrdnerMerkliste']
+      // Organizer: Teilen/Öffnen mit (Eingang) und „Speichern unter“. Seinen Ordnerweg ersetzt der größere der Familienakte (gleicher Name
+      // „FamilyFolders“, dieselben Grundaufrufe; dazu Ordner anlegen und Unterordner schreiben – das braucht das Backup auf SD-Karte/USB).
+      'datei-organizer': ['DoEingangPlugin', 'EingangStapel', 'DoDateienPlugin', 'PluginWorker', 'NativeUtil']
         .map((n) => `android/app/src/main/java/de/familyprojekt/dateiorganizer/${n}.java`),
-      familienakte: ['FamilienakteKalenderPlugin'].map((n) => `android/app/src/main/java/de/familyprojekt/familienakte/${n}.java`),
+      familienakte: [
+        ...['FamilienakteKalenderPlugin', 'FamilienakteOrdnerPlugin'].map((n) => `android/app/src/main/java/de/familyprojekt/familienakte/${n}.java`),
+        ...['Ablage', 'DateiAblage', 'Eintrag', 'Ersatzschluessel', 'Fach', 'Hauptordner', 'Json', 'Profile', 'SafAblage', 'TresorOrdner', 'Uebergaben', 'Umzug', 'UnterAblage', 'VaultCrypto']
+          .map((n) => `android/app/src/main/java/de/familyprojekt/tresor/${n}.java`),
+      ],
     },
     abschneiden: /^android\/app\/src\/main\/java\//,
   },

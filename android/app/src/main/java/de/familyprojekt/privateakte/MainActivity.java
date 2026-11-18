@@ -11,11 +11,11 @@ import com.getcapacitor.BridgeWebViewClient;
 import java.util.Arrays;
 
 /** Hülle „Private Akte Pro“ (Klaus 18.11.2026) um dieselbe Seite wie die PWA. Gerätezugriffe kommen unverändert aus den Klonen
- *  (Datei-Organizer: Ordner, Eingang, Speichern unter; Familienakte: Gerätekalender). Eigene Seiten nur von https://localhost;
+ *  (Familienakte: Ordner auf Gerät/SD-Karte/USB für Backup und Organizer, Gerätekalender; Datei-Organizer: Eingang, Speichern unter). Eigene Seiten nur von https://localhost;
  *  jede andere Adresse geht an den Browser bzw. die zuständige App. Zurück geht an die Seite (sie kennt ihre Schritte). */
 public class MainActivity extends BridgeActivity {
     @Override public void onCreate(Bundle state) {
-        registerPlugin(de.familyprojekt.dateiorganizer.DoOrdnerPlugin.class);
+        registerPlugin(de.familyprojekt.familienakte.FamilienakteOrdnerPlugin.class);
         registerPlugin(de.familyprojekt.dateiorganizer.DoEingangPlugin.class);
         registerPlugin(de.familyprojekt.dateiorganizer.DoDateienPlugin.class);
         registerPlugin(de.familyprojekt.familienakte.FamilienakteKalenderPlugin.class);
