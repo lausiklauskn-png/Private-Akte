@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (18.11.2026, Vorschau 0.8.0)
+## Stand (18.11.2026, 0.8.1)
 
 - **Hülle:** `index.html`, `app.css`, `app.js` – die Vorschau aus PR #3 (0.1.5), von Hand geschrieben, ohne Bauschritt. Die Programme
   heißen „Tools“. Briefe: `BRIEF_SITZUNG_2026-11-19_UEBERGABEN-UND-AUFRAEUMEN.md` (nächste Sitzung, mit Startauftrag); Plansitzung Bank/Portemonnaie/BookLedgerPro: `docs/BRIEF_PLANSITZUNG_2026-11-19_BANK-PORTEMONNAIE-BOOKLEDGER.md`. **Zwei Pläne vom 18.11. abends** (zwei Sitzungen): `docs/PLAN_2026-11-18_PORTEMONNAIE-BANK-BOOKLEDGER.md` – Bank als Fach im Portemonnaie, Konto frei anlegen, Verfahren, Monatsdatei, **Bauauftrag (gilt)**; `docs/PLAN_2026-11-18_PORTEMONNAIE-PRIVATE-BRAIN-ABLAGE.md` – Akte = letzte 5 Jahre nach Datum der Unterlage, Ausweise/Urkunden/Verträge immer in der Akte, Private Brain = älter, gemeinsamer Kern verschlüsselt auf SD-Karte erlaubt (noch nicht gebaut); Klaus' eigene Bank: Openbank (die App bindet an keine Bank); ältere unter `docs/`.
@@ -46,6 +46,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `sicherungArt`/`sicherungProben`/`sicherungEinlesen` (Passwort oder Notfallschlüssel; volle Akte wird zusammengeführt, nichts
   überschrieben). Ordnername und Notfallblatt tragen den Namen „Familienakte“ – sie kommen unverändert aus dem Klon, damit die
   Familienakte dieselbe Sicherung lesen kann. Braucht die Ordnerwahl des Browsers (Chrome/Edge); am Handy ungeprüft.
+- **0.8.1 Konto herausnehmen; Aufräumen der PRs (Klaus 18.11., Freibrief):** im Stift eines Kontos ein Papierkorb (`pm-konto-weg`, mit Rückfrage) → `T().bank.kontoEntfernen` (archiviert wie `geld.entfernen`; Umsätze und Kontoauszüge bleiben). Umbenennen geht schon über den Stift. **Zwei Sitzungen hatten 0.8.0 gleichzeitig gebaut:** weitergeführt ist Weg A (#56 hier, BookLedgerPro #481, Basic #58); Weg B (#55, BLP #480, Basic #57) geschlossen, sein Format der Monatsdatei (`format:`) liest BookLedgerPro nicht. Aus B nachgetragen: Fächerwahl beim Einlesen der Monatsdatei in BookLedgerPro (#482, Basic #59) und dieses Herausnehmen. Klon `klone/bookledger` bleibt @ `5f7424c` (die zehn Dateien sind in `c597c11` unverändert). Alte Doku-PRs BLP #393/#417, Basic #37 geschlossen (überholt). Probe 506 grün. Am Tablet ungeprüft.
 - **0.8.0 Bank im Portemonnaie (Klaus 18.11., Plan `docs/PLAN_2026-11-18_PORTEMONNAIE-BANK-BOOKLEDGER.md` Abschnitte 5/6):** das Portemonnaie hat
   drei Reiter **Bargeld · Bank · Summe** (`pm.fach`, gemerkt `pa_pm_fach`). **Konto** frei angelegt (Bank, Kontoname, IBAN freiwillig – gezeigt und
   weitergegeben nur die letzten vier Stellen, Anfangssaldo, Verfahren von Hand/CSV/CAMT/MT940/PDF/Excel; mehrere Konten, Stift ändert) = Datensatz
@@ -60,8 +61,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   aus dem Klon – dasselbe Format, das BookLedgerPro liest), **„Als Tabelle“** = die CSV wie bisher. Klon `klone/bookledger` @ `5f7424c` (BookLedgerPro
   #481: `bankCsv.js`, `xlsxZeilen.js`, `portemonnaieImport.js` dort neu gebaut, Basic #58 nachgezogen) mit `bankimport.js`, `bankschema.js`,
   `auszugText.js`, `vorschau.js`. PDF-Lesen ist in BookLedgerPro hinter dem Vorschau-Schalter (89 % ganz richtig) – hier darum nur Vorschlag.
-  Keine Erklärsätze dazugekommen. **Nicht gebaut:** FinTS, PSD2, Mails der Bank, alte .xls; Umsatz ändern (nur herausnehmen und neu); ein Konto
-  löschen. Probe 502 grün (40 neu: Bank in Handy- und PC-Breite). Am Tablet und mit echten Bankdateien ungeprüft.
+  Keine Erklärsätze dazugekommen. **Nicht gebaut:** FinTS, PSD2, Mails der Bank, alte .xls; Umsatz ändern (nur herausnehmen und neu). Probe 502 grün (40 neu: Bank in Handy- und PC-Breite). Am Tablet und mit echten Bankdateien ungeprüft.
 - **0.7.7 (Klaus 18.11., Bild vom Tablet):** neben „Alle Kategorien“ (und „Alle Jahre“, „Alle Absender“ …) steht die **Zahl der
   Kategorien**, nicht der Unterlagen (der Hinweis nennt beide); bei „Alle Personen“ in „Akten“ die Zahl der Personen. Die Ordner
   darunter zählen weiter ihre Unterlagen. **Baum:** der Satz „Eine App. In der Mitte die Akte, an den Ästen die Tools.“ und der Link

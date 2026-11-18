@@ -95,3 +95,4 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 - Am Handy liegen Importieren/Exportieren hinter „⋯“.
 - Klone im Rahmen (0.5.0): Farbpalette der Akte in den Klonen; Bereich-Vorschlag für Abgelegtes aus Workflow PDF; Rückgabe an
   die Quelle statt neuer Unterlage; Wörter „Familienakte“ im Organizer.
+- **Konto herausnehmen (0.8.1):** Familienakte hat kein Bankkonto im Register; hier archiviert, Umsätze bleiben – wie Posten im Portemonnaie.

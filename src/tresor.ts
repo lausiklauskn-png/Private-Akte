@@ -663,6 +663,14 @@ const bank = {
       if (teil.csv !== undefined) d.csv = teil.csv;
     }, "Bankkonto geändert");
   },
+  /** Konto herausnehmen: im Register „archiviert“ (nicht gelöscht); seine Umsätze und Kontoauszüge bleiben, wie sie sind. */
+  async kontoEntfernen(id: string) {
+    const h = await browserVault(), { akte, revision } = await akteFuerAbgleich(h);
+    const r = (akte as unknown as { records: Array<{ id: string; status: string; updatedAt: string; data: { bankkonto?: boolean } }> }).records.find((x) => x.id === id);
+    if (!r || !r.data?.bankkonto) throw new Error("Konto nicht gefunden.");
+    r.status = "archiviert"; r.updatedAt = new Date().toISOString();
+    await akteNachAbgleichSchreiben(h, akte, revision, "Bankkonto herausgenommen", `${id}: im Portemonnaie herausgenommen (archiviert), Umsätze bleiben.`);
+  },
   async umsaetze(): Promise<Umsatz[]> {
     const { records, relations } = await readLocalVaultData(await browserVault());
     return records.filter((r) => r.recordType === "payment" && lebt(r) && (r.data as { bank?: boolean }).bank).map((r) => {
