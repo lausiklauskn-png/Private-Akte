@@ -9,6 +9,21 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (18.11.2026 abends): 0.4.17 – Leiste oben im Rahmen einklappbar, Verlauf aufgeräumt
+
+- **Klaus 18.11. (Organizer in der Privaten Akte): „die Navi-Leiste mit einem Klick einklappbar; im Handyformat nur das Flying Widget“.**
+  Nur im Rahmen einer anderen App (`DO_RAHMEN`): Pfeil hoch rechts in der Leiste (`[data-nav-klapp]`) klappt die grüne Leiste samt runden
+  Knöpfen weg; dann steht oben nur ein kleiner Pfeil ohne sichtbare Fläche (`[data-nav-auf]`, Fläche erst beim Darauf-Gehen), der sie
+  zurückholt. Ab Werk ist sie am Handy (unter 700 px) zu – die Seiten stehen in der Seitenleiste –, sonst offen; die eigene Wahl wird
+  gemerkt (`do-nav-zu`). Die Leiste bleibt grün (Farbe der Privaten Akte, `rahmen/organizer-thema.css` dort). Ohne Rahmen ändert sich
+  nichts.
+- **Verlauf aufgeräumt (Klaus 18.11.):** über der Liste eine Zeile – Haken „Alle“, Sortieren, Papierkorb und Rückgängig nur als Symbol
+  (`[data-verlauf-loeschen]`, `[data-rueckgaengig]`, mit Hinweis und Vorlese-Text); der Text „n gewählt / Erst Haken setzen“ ist weg.
+  Die Liste „Gelernt“ steht nicht mehr auf der Seite (Klaus: „das läuft im Hintergrund“ – die Regeln bleiben unverändert, die Probe liest
+  sie aus dem gemerkten Zustand). „Korrekturen“ ist einklappbar (ab Werk offen), die Liste rollt innen mit fester Höhe (`[data-verlauf-liste]`);
+  „Stichprobe“ ist einklappbar und ab Werk zu.
+  Fassung 0.4.17 (Code 57, Vorrat v38), keine Ausgabe. UI-Probe 209 grün. Am Gerät ungeprüft.
+
 ## Stand (18.11.2026 nachmittags): 0.4.16 – Fuß als schmale Zeile
 
 - **Fuß (Klaus 18.11., Bild vom Tablet: „den blauen Container komplett rausnehmen“):** statt des großen dunkelblauen Fußes mit

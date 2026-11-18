@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { drucken, druckZiel, druckZielHoeren } from "./drucken.ts";
-import { Archive, ChevronDown, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Download, Map as KarteSymbol, Printer, RefreshCw, Search, Telescope } from "lucide-react";
+import { Archive, ChevronDown, ChevronUp, FolderOpen, FolderTree, HelpCircle, History, ListChecks, Download, Map as KarteSymbol, Printer, RefreshCw, Search, Telescope } from "lucide-react";
 import type { Datei, FeldName, Korrektur, Lernregel } from "../lib/typen.ts";
 import { einlesen, doppelteMarkieren } from "../lib/einlesen.ts";
 import { aehnlicheFinden } from "../lib/aehnlich.ts";
@@ -26,7 +26,7 @@ import { verlernen } from "./verlauf.ts";
 import { Seitenleiste } from "./seitenleiste.tsx";
 import { APP_NAME, APP_VARIANTE, direktLaden, istNativ, nativeUpdates, stillPruefen } from "./nativ.ts";
 
-export const FASSUNG = "0.4.16";
+export const FASSUNG = "0.4.17";
 // Ladeanzeige: „suchen“ = Ordner wird durchgesehen (Zahl noch unbekannt), „lesen“ = Datei für Datei, „stand“ = gemerkter Stand beim Start.
 export type Fortschritt = { phase: "stand" | "suchen" | "lesen"; fertig: number; gesamt: number; name?: string };
 const luft = () => new Promise<void>((r) => setTimeout(r)); // dem Browser Zeit zum Zeichnen geben
@@ -623,7 +623,13 @@ export function App() {
   const offenZumDruck = useSyncExternalStore(druckZielHoeren, druckZiel), [drucktGerade, setDrucktGerade] = useState(false);
   const oeffne = useCallback((sicht: string, knoten?: string) => { setZiel({ sicht, knoten, nr: Date.now() }); gehe("finden"); }, [gehe]);
   const props = { z, gehe, oeffne, ziel };
-  return <div className={`app-shell${imRahmen ? " im-rahmen" : ""}`} data-im-rahmen={imRahmen || undefined}>
+  // Leiste oben einklappbar (Klaus 18.11.2026, Organizer in der Privaten Akte: „die Navi-Leiste mit einem Klick einklappbar; im Handyformat
+  // nur das Flying Widget“). Nur im Rahmen einer anderen App: ab Werk am Handy (unter 700 px) zu – die Seiten stehen in der Seitenleiste –,
+  // am breiten Bildschirm offen; die eigene Wahl wird gemerkt (`do-nav-zu`). Zu: nur ein kleiner Pfeil oben rechts holt die Leiste zurück.
+  const [navZu, setNavZuRoh] = useState(() => { if (!imRahmen) return false; try { const w = localStorage.getItem("do-nav-zu"); if (w === "1" || w === "0") return w === "1"; } catch { /* Werkseinstellung */ } return window.innerWidth < 700; });
+  const setNavZu = (zu: boolean) => { setNavZuRoh(zu); setMehr(false); try { localStorage.setItem("do-nav-zu", zu ? "1" : "0"); } catch { /* gilt bis zum Neuladen */ } };
+  return <div className={`app-shell${imRahmen ? " im-rahmen" : ""}${navZu ? " nav-zu" : ""}`} data-im-rahmen={imRahmen || undefined}>
+    {navZu && <button type="button" className="nav-auf" aria-label="Leiste oben zeigen" title="Leiste oben zeigen" data-nav-auf onClick={() => setNavZu(false)}><ChevronDown size={18}/></button>}
     <header className="site-header">
       <div className="masthead">
         <div className="marke" data-variante={APP_VARIANTE}>
@@ -655,6 +661,7 @@ export function App() {
           <button type="button" className="info-knopf" aria-label="Suchen" onClick={() => gehe("finden")}><Search size={18}/></button>
         </div>
         <button type="button" className={`info-knopf mehr-knopf ${mehr ? "aktiv" : ""}`} aria-label="Weitere Knöpfe" aria-expanded={mehr} title="Weitere Knöpfe" data-mehr-knopf onClick={() => setMehr(!mehr)}><ChevronDown size={18}/></button>
+        {imRahmen && <button type="button" className="info-knopf nav-zu-knopf" aria-label="Leiste einklappen" title="Leiste einklappen" data-nav-klapp onClick={() => setNavZu(true)}><ChevronUp size={18}/></button>}
       </div>
       <nav className="main-navigation" aria-label="Bereiche">
         {SEITEN.map((s) => <button key={s.id} type="button" className={seite === s.id ? "active" : ""} aria-current={seite === s.id ? "page" : undefined} onClick={() => gehe(s.id)} data-nav={s.id}>

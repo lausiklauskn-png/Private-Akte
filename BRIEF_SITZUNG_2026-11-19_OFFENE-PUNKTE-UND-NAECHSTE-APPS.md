@@ -1,4 +1,4 @@
-# Brief für die nächste Sitzung – offene Punkte, dann Private Brain, Portemonnaie, Familienbüro (Stand: Private Akte 0.6.5, 18.11.2026)
+# Brief für die nächste Sitzung – offene Punkte, dann Private Brain, Portemonnaie, Familienbüro (Stand: Private Akte 0.6.6, 18.11.2026)
 
 Der ausführliche Stand steht in `CLAUDE.md` (Abschnitt „Stand“, 0.6.0 bis 0.6.4, und „Feste Regeln“). Der Abschlussbrief der letzten
 Sitzung ist `docs/BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md`.
@@ -18,6 +18,9 @@ Sitzung ist `docs/BRIEF_ABSCHLUSS_2026-11-18_KALENDER-UND-NOTIZEN-0.6.3.md`.
 - Je Schritt: Fassung erhöhen (`FASSUNG` in `app.js`, `VERSION` in `sw.js`, `?v=` dreimal in `index.html`, Fassung in
   `tests/probe.cjs`), `npm run bau`, Probe, `npm run bau:pruefen`, PR, zusammenführen; `CLAUDE.md` und
   `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` (zuletzt A37) mitführen.
+- **Organizer gleich halten** (Klaus 18.11.): der Datei-Organizer in der Akte und die eigenständige Web-App sind derselbe Stand –
+  Änderungen immer im Repo Datei-Organizer bauen und gleich nachziehen; nur die Farben unterscheiden sich (Akte: grün). Codex-Prüfungen
+  auslassen; auf die Windows-Prüfung des Organizers muss nicht gewartet werden (Klaus hat noch keine Windows-Fassung im Einsatz).
 - **Aussehen** (feste Regel seit 18.11.): Ansichten aus einem Klon nicht umgestalten – nur Farben, je Tool eine Farbdatei
   (`rahmen/<tool>-thema.css`). Am Handy zählt die Höhe: Köpfe höchstens zwei Zeilen, Zeilen flach, nur Symbol statt dicker Knöpfe.
 
@@ -36,8 +39,6 @@ Unterlagen mit. Die Personen gibt es im Tresor der Familienakte schon – nutzen
   Bezüge über `references`). Danach `kalender()` und `fNotiz` in `app.js` entfernen.
 - Person und Absender an einer Unterlage von Hand setzen (heute nur aus der Übergabe des Organizers).
 - „⋯“ oben am Handy neben der Seitenleiste ist doppelt – mit Klaus' Test entscheiden.
-- Falls am Ende der Sitzung vom 18.11. nicht mehr geschehen: Datei-Organizer 0.4.17 (PR #67 dort) zusammenführen und
-  `node tools/klon-nachziehen.mjs datei-organizer --quelle ../Datei-Organizer`, dann Fassung erhöhen.
 - Im Editor von Workflow PDF leuchtet nach dem Scan „PDF ausgeben“ (führt weg von der Akte).
 - Kachel „Workflow PDF“ im Familienbüro-Fenster: bleibt sie, seit es die eigene Stadt gibt?
 
@@ -73,8 +74,8 @@ Design, Aufbau, sinnvolle Gestaltung – am Tablet, am Handy, im geteilten Bilds
 ## Was Klaus am Tablet zuletzt bestätigt hat (18.11.)
 
 Notiz einsprechen mit Datum und Uhrzeit („funktioniert astrein“), die verschiebbare Seitenleiste („funktioniert wunderbar“),
-Glocke rot mit Zahl in der Leiste des Kalenders. Noch nicht gesehen: 0.6.2–0.6.5 (Baum über „Deine Unterlagen“, Vorschläge beim
-Tippen, „Wen es betrifft“, Organizer 0.4.15/0.4.16 im Rahmen (mit schmalem Fuß), „am nächsten Tag um halb drei“), Anmeldung bei Google/Microsoft.
+Glocke rot mit Zahl in der Leiste des Kalenders. Noch nicht gesehen: 0.6.2–0.6.6 (Baum über „Deine Unterlagen“, Vorschläge beim
+Tippen, „Wen es betrifft“, Organizer 0.4.15–0.4.17 im Rahmen (schmaler Fuß, einklappbare Leiste, Verlauf in einer Zeile), keine untere Leiste am Handy, „am nächsten Tag um halb drei“), Anmeldung bei Google/Microsoft.
 
 ## Startauftrag
 
