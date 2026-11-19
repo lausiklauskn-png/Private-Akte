@@ -30,7 +30,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `tools/native/klon-quellen.mjs` (nie abschreiben); Probe `node tools/native/test-native.mjs`. **Kopie an einem zweiten Ort** (Zweiter Ort der
   Familienakte, verschlüsselt, von selbst aktuell; „Exportieren“ › „Kopie einrichten“), Downloads in der App über „Speichern unter“,
   **Private Brain Pro als 1:1-Klon** `klone/privat-brain-pro` im Rahmen der App. Prüf-APK und Windows-Setup als CI-Downloads, nicht signiert,
-  nicht veröffentlicht. Offen: Signatur, Mail nativ, Workflow PDF Pro, mehrere Kopien (Brief). Fassung 0.9.0 gilt auch für die PWA.
+  nicht veröffentlicht. Offen: Mail nativ, Workflow PDF Pro, mehrere Kopien (Brief). Fassung 0.9.0 gilt auch für die PWA.
+- **Signatur vorbereitet (19.11., Brief 0.9.0 Punkt 1; Anleitung `docs/SIGNIERUNG.md`):** `tools/signing/` aus dem Organizer-Klon (Namen
+  und Kennung geändert, Freigabe `PA_SIGNING_UNLOCK`, Umgebung `android-production`; „check“ nennt zusätzlich den SHA-1 für Google),
+  `signing-identity.yml` (initialize/check, nur von Hand von `main`), `android-signiert.yml` (Release-APK mit der eigenen Signatur als Download,
+  nichts veröffentlicht; bei PRs Probe mit Wegwerf-Identität). **Wartet auf Klaus:** Freigabe erzeugen und hinterlegen, „initialize“ laufen
+  lassen. Windows bleibt unsigniert (bräuchte ein gekauftes Zertifikat).
 
 ## Stand davor (18.11.2026, 0.8.1)
 

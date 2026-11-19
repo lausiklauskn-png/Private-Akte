@@ -1,0 +1,131 @@
+name: Android-App signiert
+
+# Private Akte Pro mit der dauerhaften eigenen Signatur (Klaus 18.11.2026, Brief 0.9.0 Punkt 1). Kein Veröffentlichen:
+# das Ergebnis liegt nur als Download unter dem Lauf. Vorteil gegenüber dem Prüf-Bau (android.yml, Wegwerf-Schlüssel):
+# jede neue signierte APK installiert sich über die vorige, der App-Speicher bleibt.
+#  - von Hand, nur von main, Umgebung android-production, Freigabe PA_SIGNING_UNLOCK: signiert mit signing/ (erst nach
+#    „initialize“ in signing-identity.yml vorhanden);
+#  - bei PRs, die das Signieren berühren: derselbe Weg mit einer Wegwerf-Identität, nur als Probe, kein Download.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tools/signing/**'
+      - 'android/**'
+      - '.github/workflows/android-signiert.yml'
+permissions:
+  contents: read
+concurrency:
+  group: android-signiert-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Proben
+        run: |
+          set -euo pipefail
+          npm ci
+          node tools/klon-nachziehen.mjs --pruefen
+          node tools/native/test-native.mjs
+          node --test tools/signing/test-identity.mjs tools/signing/test-unlock-file.mjs
+          npm run sync:android
+      - name: Unsignierte Release-APK bauen
+        working-directory: android
+        run: ./gradlew --no-daemon --max-workers=2 assembleRelease
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: unsigned-release-apk
+          path: android/app/build/outputs/apk/release/app-release-unsigned.apk
+          if-no-files-found: error
+          retention-days: 1
+
+  probe:
+    if: github.event_name == 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: unsigned-release-apk
+          path: unsigned-apk
+      - name: Mit einer Wegwerf-Identität signieren und prüfen (nur Probe)
+        env:
+          TMPDIR: ${{ runner.temp }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'build-tools;36.0.0' > /dev/null
+          export PA_APKSIGNER="$ANDROID_HOME/build-tools/36.0.0/apksigner" PA_AAPT="$ANDROID_HOME/build-tools/36.0.0/aapt"
+          test ! -e signing/android-release.enc.json || { echo 'Probe nur ohne echte Identität'; exit 1; }
+          export PA_SIGNING_UNLOCK=$(openssl rand -hex 32)
+          node tools/signing/cli.mjs init
+          node tools/signing/cli.mjs check
+          v=$(sed -n 's/^ *versionName "\(.*\)"$/\1/p' android/app/build.gradle)
+          mkdir ausgabe
+          PA_RELEASE_TAG="v$v" PA_RELEASE_COMMIT="$GITHUB_SHA" \
+            node tools/signing/cli.mjs sign-apk unsigned-apk/app-release-unsigned.apk "ausgabe/Private-Akte-Pro-$v.apk"
+          cat "ausgabe/Private-Akte-Pro-$v.apk.json"
+
+  signieren:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment: android-production
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00 # v4.7.1
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: unsigned-release-apk
+          path: unsigned-apk
+      - name: Mit der dauerhaften Identität signieren und prüfen
+        env:
+          PA_SIGNING_UNLOCK: ${{ secrets.PA_SIGNING_UNLOCK }}
+          TMPDIR: ${{ runner.temp }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in signing/android-release.enc.json signing/android-certificate.json; do
+            test -f "$file" || { echo "Fehlt: $file – erst „Dauerhafte Private-Akte-Pro-Signieridentität“ › initialize, dann deren PR zusammenführen"; exit 1; }
+          done
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'build-tools;36.0.0' > /dev/null
+          export PA_APKSIGNER="$ANDROID_HOME/build-tools/36.0.0/apksigner" PA_AAPT="$ANDROID_HOME/build-tools/36.0.0/aapt"
+          node tools/signing/cli.mjs check
+          v=$(sed -n 's/^ *versionName "\(.*\)"$/\1/p' android/app/build.gradle)
+          mkdir ausgabe
+          PA_RELEASE_TAG="v$v" PA_RELEASE_COMMIT="$GITHUB_SHA" \
+            node tools/signing/cli.mjs sign-apk unsigned-apk/app-release-unsigned.apk "ausgabe/Private-Akte-Pro-$v.apk"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: private-akte-pro-android-signiert
+          path: ausgabe/
+          if-no-files-found: error
+          retention-days: 30
