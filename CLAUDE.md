@@ -22,7 +22,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster)
+## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster; veröffentlicht, Nachweis `docs/VEROEFFENTLICHUNG-0.9.3.md`, nicht erneut ausgeben; nächste 0.9.4)
 
 - **Klon `privat-brain-pro` @ `33775c1`** (Private Brain Pro 1.0.57, PR #155 dort): im Fenster „Mailkonto verbinden“ standen bei Telekom
   (oben, schon gewählt) keine Server – jede Anmeldung scheiterte, ohne die Telekom zu fragen. Klaus' Konto mit dem Umweg (anderer Anbieter,
