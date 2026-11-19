@@ -37,7 +37,13 @@ console.log('Rechte');
 const manifest = lies('android/app/src/main/AndroidManifest.xml');
 const rechte = [...manifest.matchAll(/uses-permission android:name="([^"]+)"/g)].map((m) => m[1]).sort();
 const PB_RECHTE = ['android.permission.ACCESS_NETWORK_STATE', 'android.permission.FOREGROUND_SERVICE', 'android.permission.FOREGROUND_SERVICE_DATA_SYNC', 'android.permission.MODIFY_AUDIO_SETTINGS', 'android.permission.POST_NOTIFICATIONS'];
-soll('nur Internet, Kamera, Kalender und die von Private Brain Pro (ohne Paket-Installation)', JSON.stringify(rechte) === JSON.stringify(['android.permission.CAMERA', 'android.permission.INTERNET', 'android.permission.READ_CALENDAR', 'android.permission.WRITE_CALENDAR', ...PB_RECHTE].sort()), rechte.join());
+soll('nur Internet, Kamera, Kalender, Updates und die von Private Brain Pro', JSON.stringify(rechte) === JSON.stringify(['android.permission.CAMERA', 'android.permission.INTERNET', 'android.permission.READ_CALENDAR', 'android.permission.REQUEST_INSTALL_PACKAGES', 'android.permission.WRITE_CALENDAR', ...PB_RECHTE].sort()), rechte.join());
+{ const meta = (n) => (new RegExp(`android:name="de\\.familyprojekt\\.update\\.${n}" android:value="([^"]*)"`).exec(manifest) || [])[1];
+  const k = Buffer.from(meta('schluessel') || '', 'base64');
+  soll('Update-Ziel der Akte im Manifest (eigener Ordner, eigener Name, gültiger Ed25519-Schlüssel)', meta('basis') === 'https://family-projekt.de/updates/private-akte/'
+    && meta('app') === 'private-akte' && meta('datei') === 'Private-Akte-Pro' && k.length === 44 && k.subarray(0, 12).toString('hex') === '302a300506032b6570032100');
+  soll('Update-Schlüssel der Akte ist nicht der des Organizers', !lies('klone/datei-organizer/android/app/src/main/java/de/familyprojekt/dateiorganizer/UpdateFeed.java').includes(meta('schluessel')));
+  soll('Update-APK liegt im Cache-Ordner update/ (FileProvider)', lies('android/app/src/main/res/xml/file_paths.xml').includes('<cache-path name="update" path="update/" />')); }
 { const pbm = readFileSync(join(WURZEL, 'klone/privat-brain-pro/android/app/src/main/AndroidManifest.xml'), 'utf8');
   const pbr = [...pbm.matchAll(/uses-permission android:name="([^"]+)"/g)].map((m) => m[1]).filter((r) => r !== 'android.permission.REQUEST_INSTALL_PACKAGES');
   soll('Rechte von Private Brain Pro stehen in dessen Manifest (keins erfunden)', JSON.stringify(PB_RECHTE) === JSON.stringify(pbr.filter((r) => r !== 'android.permission.INTERNET').sort()), pbr.join());

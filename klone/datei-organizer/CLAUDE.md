@@ -9,6 +9,15 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (19.11.2026): Update-Teil für andere Apps einstellbar (für die Private Akte Pro)
+
+- **Klaus 19.11. (Weg 1: „dann kannst du es gleich direkt machen“):** `UpdateFeed.Ziel` (Server-Ordner, Schlüssel, App-Name, Dateiname vor
+  „-X.Y.Z.apk“). Ohne Angabe gilt `UpdateFeed.ORGANIZER` – für den Organizer ändert sich nichts. Eine andere App, die `DoUpdatesPlugin`/`UpdateFeed`
+  byte-gleich als Klon nutzt (Private Akte Pro), trägt im Manifest ihrer Anwendung die Meta-Daten `de.familyprojekt.update.basis`, `.schluessel`,
+  `.app`, `.datei` ein. Erlaubt sind nur `https://family-projekt.de/updates/<name>/` und einfache Namen; ungültig = „nicht eingerichtet“. Feed einer
+  anderen App wird abgelehnt (App-Name und Dateiname müssen zum Ziel passen). JVM-Probe `UpdateFeedTest` 18 grün (5 neu, eigener Wegwerf-Schlüssel),
+  Native 66 grün. Gradle hier nicht gelaufen (kein Android-SDK). Windows (`DesktopUpdates`) unverändert. Keine neue Fassung (keine sichtbare Änderung).
+
 ## Stand (18.11.2026 abends): 0.4.21 – Wurzel zählt die Ordner (nur Basic ausgegeben)
 
 - **Klaus 18.11. (Bild vom Tablet):** bei „Alle Kategorien“ (und „Alle Absender“, „Alle Jahre“ …) steht die Zahl der Ordner darunter,

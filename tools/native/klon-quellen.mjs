@@ -18,7 +18,8 @@ export const QUELLEN = {
     dateien: {
       // Organizer: Teilen/Öffnen mit (Eingang) und „Speichern unter“. Seinen Ordnerweg ersetzt der größere der Familienakte (gleicher Name
       // „FamilyFolders“, dieselben Grundaufrufe; dazu Ordner anlegen und Unterordner schreiben – das braucht das Backup auf SD-Karte/USB).
-      'datei-organizer': ['DoEingangPlugin', 'EingangStapel', 'DoDateienPlugin', 'PluginWorker', 'NativeUtil']
+      // Dazu die Updates vom eigenen Server (Klaus 19.11.2026): DoUpdatesPlugin, UpdateFeed, Json – das Ziel der Akte steht im Manifest.
+      'datei-organizer': ['DoEingangPlugin', 'EingangStapel', 'DoDateienPlugin', 'PluginWorker', 'NativeUtil', 'DoUpdatesPlugin', 'UpdateFeed', 'Json']
         .map((n) => `android/app/src/main/java/de/familyprojekt/dateiorganizer/${n}.java`),
       familienakte: [
         ...['FamilienakteKalenderPlugin', 'FamilienakteOrdnerPlugin'].map((n) => `android/app/src/main/java/de/familyprojekt/familienakte/${n}.java`),

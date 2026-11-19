@@ -33,6 +33,7 @@ import java.security.MessageDigest;
 public final class DoUpdatesPlugin extends Plugin {
     private final PluginWorker worker = new PluginWorker("updates");
     private UpdateFeed.Angebot geprueft;
+    private String basis;
 
     private static String code(Exception e) {
         String m = e.getMessage();
@@ -65,15 +66,27 @@ public final class DoUpdatesPlugin extends Plugin {
         return NativeUtil.hex(MessageDigest.getInstance("SHA-256").digest(s[0].toByteArray()));
     }
 
+    /** Ziel aus den Meta-Daten der Anwendung; ohne Meta-Daten der Datei-Organizer (siehe UpdateFeed.Ziel). */
+    private UpdateFeed.Ziel ziel() {
+        try {
+            android.os.Bundle m = getContext().getPackageManager().getApplicationInfo(getContext().getPackageName(), PackageManager.GET_META_DATA).metaData;
+            if (m == null || !m.containsKey("de.familyprojekt.update.basis")) return UpdateFeed.ORGANIZER;
+            return new UpdateFeed.Ziel(m.getString("de.familyprojekt.update.basis"), m.getString("de.familyprojekt.update.schluessel"),
+                m.getString("de.familyprojekt.update.app"), m.getString("de.familyprojekt.update.datei"));
+        } catch (Exception e) { return null; }
+    }
+
     @PluginMethod public void pruefen(PluginCall call) {
         worker.submit(call, () -> {
             try {
                 geprueft = null;
-                if (!UpdateFeed.eingerichtet(UpdateFeed.SCHLUESSEL)) throw new IOException("UPDATE_NICHT_EINGERICHTET");
+                UpdateFeed.Ziel z = ziel();
+                if (z == null || !z.gueltig() || !UpdateFeed.eingerichtet(z.schluessel)) throw new IOException("UPDATE_NICHT_EINGERICHTET");
                 PackageInfo ich = installiert();
-                byte[] feed = holen(UpdateFeed.BASIS + UpdateFeed.FEED, 65536), sig = holen(UpdateFeed.BASIS + UpdateFeed.FEED + ".sig", 1024);
+                byte[] feed = holen(z.basis + UpdateFeed.FEED, 65536), sig = holen(z.basis + UpdateFeed.FEED + ".sig", 1024);
                 String version = UpdateFeed.ohneZusatz(ich.versionName);
-                UpdateFeed.Angebot a = UpdateFeed.auswerten(feed, sig, version, code(ich), UpdateFeed.SCHLUESSEL);
+                UpdateFeed.Angebot a = UpdateFeed.auswerten(feed, sig, version, code(ich), z);
+                basis = z.basis;
                 if (a == null) { call.resolve(new JSObject().put("aktuell", true).put("version", version).put("installiert", version)); return; }
                 geprueft = a;
                 call.resolve(new JSObject().put("neu", a.version).put("installiert", version).put("groesse", a.groesse));
@@ -98,7 +111,7 @@ public final class DoUpdatesPlugin extends Plugin {
                 File apk = new File(ordner, a.datei), teil = new File(ordner, a.datei + ".teil");
                 MessageDigest h = MessageDigest.getInstance("SHA-256");
                 long n = 0, gemeldet = 0;
-                HttpURLConnection c = oeffnen(UpdateFeed.BASIS + a.datei);
+                HttpURLConnection c = oeffnen(basis + a.datei);
                 try (InputStream in = c.getInputStream(); OutputStream out = new FileOutputStream(teil)) {
                     byte[] b = new byte[1 << 16]; int r;
                     while ((r = in.read(b)) != -1) {

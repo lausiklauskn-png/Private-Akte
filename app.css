@@ -232,6 +232,7 @@ textarea.feld{min-height:58px;max-height:60vh;field-sizing:content}
 .titel.nurpc{display:none}
 @media(min-width:1000px){.titel.nurpc{display:block}}
 .fassung{cursor:pointer}.fassung.neu{background:#087f7a;color:#fff;border-color:#087f7a;font-weight:700}
+.fassung.fahne{margin-left:4px;background:#c62828;color:#fff;border-color:#c62828;font-weight:700}.fassung.fahne[hidden]{display:none}
 .rund.hinein{color:#107c41}.rund.hinaus{color:#c0262d}
 .suchknopf{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;color:var(--muted)}
 .suchknopf:hover{background:var(--fl);color:var(--akz)}.suchknopf[hidden]{display:none}.suchknopf .icon{width:18px;height:18px}
