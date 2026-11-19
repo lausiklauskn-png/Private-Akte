@@ -26,6 +26,9 @@ export const KLONE = {
     'models', 'modules', 'pb-caption.js', 'sbkim', 'sicherheit.html', 'sw.js', 'vendor', 'LICENSE', 'RECHTE.md'],
 };
 export const NAME = 'Private Akte Pro';
+/** Seiten, die in der App im Rahmen der Akte laufen und Plugins rufen. */
+export const RAHMEN_SEITEN = ['klone/privat-brain-pro/index.html', 'rahmen/datei-organizer/app/index.html', 'rahmen/workflow-pdf/index.html', 'rahmen/kalender/index.html'];
+export const RAHMEN_ZEILE = '<script src="/rahmen/capacitor-rahmen.js"></script>';
 /** Was die App-Seite von Private Brain Pro an der Wurzel erwartet (Java: getAssets() „public/…“; Seite: „/models/“, „/vendor/pdfjs/“). */
 export const BRAIN_WURZEL = ['semantic-model.json', 'meaning-models.json', 'caption-model.json', 'translation-models.json', 'models', 'vendor/pdfjs'];
 
@@ -43,6 +46,13 @@ export function bauen(ziel = join(WURZEL, 'www'), { android = false, brain = nul
     for (const t of BRAIN_WURZEL) {
       if (existsSync(join(ziel, t))) throw new Error('Wurzel der Akte hat schon ' + t);
       cpSync(join(pb, t), join(ziel, t), { recursive: true });
+    }
+    // Capacitor 8 nimmt Plugin-Aufrufe nur aus dem Hauptfenster an: jede Seite im Rahmen nimmt die Brücke des Hauptfensters
+    // (rahmen/capacitor-rahmen.js). Nur im Paket, als erstes Skript nach <head> (nach Capacitors eigenem); Klon und rahmen/ im Repo bleiben.
+    for (const seite of RAHMEN_SEITEN) {
+      const datei = join(ziel, seite), h = readFileSync(datei, 'utf8');
+      if (h.split('<head>').length !== 2) throw new Error(seite + ': <head> nicht genau einmal');
+      writeFileSync(datei, h.replace('<head>', '<head>\n' + RAHMEN_ZEILE));
     }
   }
   // Pro-Zeichen: Kopf, Favicon, Symbole der Seite. Nur die Hülle wird angepasst, nie ein Klon.
