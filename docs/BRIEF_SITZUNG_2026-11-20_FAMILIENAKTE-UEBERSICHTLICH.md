@@ -15,6 +15,24 @@ einmal verarbeiten, und wenn ich dann zumache, kann ich mir maximal 2 oder 3 mer
 Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man klickt zweimal auf Personen und hat trotzdem keinen
 Überblick), die Startseite mit vielen Eingabefeldern.
 
+## Zuerst die Logik verstehen – nicht zu sehr vereinfachen (Klaus 19.11. nachts, ausdrücklich)
+
+> „Die Bereiche in der Familienakte sind schon wichtig … Das hat schon alles einen Sinn, wie das so eingegeben wurde. Deswegen darf
+> das gerne im Aufbau etwas anders sein als meine private für eine Person. Die Familienakte ist wirklich im Aufbau für eine ganze
+> Familie gedacht. Deswegen bitte die Logik und die Vorgehensweise noch einmal überdenken. Nicht zu sehr vereinfachen, sondern
+> einfach nur die Logik dahinter verstehen und den Aufbau so machen, dass man alles leicht nachvollziehen kann.“
+
+- Die Private Akte ist für **eine** Person; die Familienakte für die **ganze Familie**. Sie wird **nicht** auf die Private Akte
+  zurückgeschnitten – übernommen wird nur die Art der Darstellung (einklappen, Suche, weniger auf einmal, Erklärung hinter „?“).
+- Die **Bereiche bleiben** mit ihren Unterteilungen, z. B. **Gesundheit & Arbeit**: Diagnose, Krankenkasse, Leistungen, Arbeitgeber;
+  ebenso Wohnen, Fahrzeuge, Käufe & Garantien, Dokumente, Termine & Aufgaben.
+- Alles darin bekommt **eigene Akten**, und jede Akte gehört **einer Person** (oder der Familie gemeinsam).
+- **Weg über die Person:** Personen öffnen → Person wählen → **alle ihre Akten** aus allen Bereichen auf einen Blick.
+- **Gemeinsame Vorgänge und Familienunterlagen** haben ihren eigenen Platz; dort findet man die dazugehörigen Daten.
+- **Vorgehen:** vor dem Umbau die bestehende Logik aufschreiben (Bereich → Akte → Person / gemeinsam → Unterlagen, Fristen,
+  Tagebuch) und Klaus als kurze Übersicht zeigen; danach so umbauen, dass genau diese Logik sichtbar und nachvollziehbar wird.
+  Die Navigation darf bleiben, wo sie diese Ordnung trägt – sie soll nur nicht alles auf einmal ausbreiten.
+
 ## Was gebaut werden soll
 
 1. **Container einklappbar, ab Werk zu.** Jede Karte der Startseite ist ein Knopf mit Überschrift (und ggf. Zahl), ein Tipp klappt
@@ -81,7 +99,7 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 > Lies `CLAUDE.md` der Familienakte und `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` im Repo Private-Akte,
 > dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–9 um: Container einklappbar,
 > Lebensbereiche klein, Suche als Hauptweg (auch nach Personen), Personen übersichtlich, Kopfleiste entschlacken, gelbe Hinweise
-> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
+> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern. Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
 > (Handy- und Tablet-Breite) zum Ansehen bereitlegen; veröffentlichen erst auf mein Wort.
 
 Hinweis: Klaus wollte ein Bild der Familienakte (Akten-Kacheln) mitschicken; es ist in dieser Sitzung nicht angekommen – am
