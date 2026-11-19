@@ -75,6 +75,11 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
    - Nur im verschlüsselten Tresor und im Backup, nirgends sonst; keine Nummern in Protokollzeilen oder Meldungen.
    - Übersichtlich nach Punkt 1: Abschnitte „Kontakt“, „Ausweise“, „Weitere Einträge“ einklappbar, ab Werk zu, Zahl daneben.
 
+10. **Netz und Mycel in den Hintergrund (Klaus 19.11. nachts):** „Das Netz und Mycel kannst du erst einmal verstecken im
+    Hintergrund. Das ist erstmal nicht so wichtig.“ Nicht ausbauen, nur aus der sichtbaren Oberfläche nehmen (z. B. hinter ein Menü
+    oder die Einstellungen); Funktion und gespeicherte Verbindung bleiben. **Modul 25 (Pseudonymisieren)** bleibt, wo es ist –
+    unter **Dokumente** – und tritt erst in Erscheinung, wenn Apps verbunden sind bzw. es angefragt wird; nicht auf der Startseite.
+
 ## Grenzen
 
 - **Nichts am Kern ändern**, was gelernt oder gespeichert ist (Sortier-Kern, gelernte Regeln, Register, Tresor, Sicherungsformat
@@ -97,9 +102,9 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 ## Startauftrag (zum Einfügen)
 
 > Lies `CLAUDE.md` der Familienakte und `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` im Repo Private-Akte,
-> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–9 um: Container einklappbar,
+> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–10 um: Container einklappbar,
 > Lebensbereiche klein, Suche als Hauptweg (auch nach Personen), Personen übersichtlich, Kopfleiste entschlacken, gelbe Hinweise
-> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern. Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
+> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern, Netz/Mycel in den Hintergrund (Punkt 10). Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
 > (Handy- und Tablet-Breite) zum Ansehen bereitlegen; veröffentlichen erst auf mein Wort.
 
 Hinweis: Klaus wollte ein Bild der Familienakte (Akten-Kacheln) mitschicken; es ist in dieser Sitzung nicht angekommen – am
