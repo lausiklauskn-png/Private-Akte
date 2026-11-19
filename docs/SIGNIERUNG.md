@@ -19,6 +19,11 @@ kann ihn nur die Freigabe `PA_SIGNING_UNLOCK`, die Klaus selbst erzeugt und in G
 
 **Erledigt am 19.11.2026** (Lauf 44516877917, PR #63): Zertifikat SHA-256 `836dea0684cc055b5fa2f78d4b02db6085cf9a8dee0c733dad31caa7b4b0bf30`,
 SHA-1 `3C:17:EA:F6:A1:42:90:B0:30:FA:A3:D7:81:7A:3F:B9:02:B8:0D:3E` (öffentlich; für den Android-Client bei Google).
+Freigabe bei Klaus: mit `age -p` verschlüsselt (Termux und Ordner Download), Gegenprobe „GLEICH“, offene Datei gelöscht.
+**Google (19.11.):** im Projekt „Privat Brain Pro“ (`privat-brain-pro`) Android-Client „Private Akte Pro Android“ für
+`de.familyprojekt.privateakte` mit diesem SHA-1. Die App braucht keine Client-ID (Google erkennt Paket und Signatur); App im Status
+„Test“ – anmelden dürfen nur die Testnutzer, die Gmail-Freigabe läuft dann nach 7 Tagen ab. Wirkt erst mit einer **signierten** APK
+(„Android-App signiert“), nicht mit der Prüf-APK (`.debug`, Wegwerf-Schlüssel).
    ⚠ Der Lauf bricht ab, wenn es im Repo schon GitHub-Releases gibt (Schutz vor einem zweiten Schlüssel).
    ⚠ Wer die Freigabe verliert, kann der App keine Updates mehr geben – Nutzer müssten neu installieren und verlören den App-Speicher.
 

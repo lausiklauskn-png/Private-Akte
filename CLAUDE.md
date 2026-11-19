@@ -36,6 +36,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `signing-identity.yml` (initialize/check, nur von Hand von `main`), `android-signiert.yml` (Release-APK mit der eigenen Signatur als Download,
   nichts veröffentlicht; bei PRs Probe mit Wegwerf-Identität). **Wartet auf Klaus:** Freigabe erzeugen und hinterlegen, „initialize“ laufen
   lassen. Windows bleibt unsigniert (Klaus 19.11.: „erst mal unsigniert lassen“).
+  **Erledigt mit Klaus am 19.11.:** Umgebung `android-production` mit `PA_SIGNING_UNLOCK`, Identität angelegt (PR #62 Werkzeug auf `main`,
+  PR #63 Identität; Actions darf hier keine PRs anlegen – der Lauf endet darum rot, den PR von Hand anlegen), Freigabe bei Klaus mit `age`
+  gesichert, Google-Client „Private Akte Pro Android“ im Projekt `privat-brain-pro` (SHA-1 in `docs/SIGNIERUNG.md`). **Als Nächstes:** PR #60
+  und #61 nach `main`, dann „Android-App signiert“ laufen lassen, APK am Tablet: Gmail anmelden, IMAP, Mail im Rahmen.
 - **Mail nativ in der Android-App (19.11., Brief 0.9.0 Punkt 2; Klaus: „weiter mit Mail nativ“):** in der APK läuft Private Brain Pro als
   **App-Seite** statt als Web-Seite: `tools/native/brain-web.mjs` lässt dessen `prepare-web.mjs` unverändert auf einer Kopie des Klons laufen
   (native/*.js, CSP, Texterkennung, Anleitungsfilm; Vorrat `.cache/privat-brain-pro/`), `web-paket.mjs --android` legt das Ergebnis nach
