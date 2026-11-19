@@ -94,7 +94,7 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 
 12. **Oben „Neu“ heraus (Klaus):** der Knopf „Neu“ in der Kopfleiste kommt **komplett weg** – „das ist irgendwann nicht mehr
     nachzuvollziehen“; die Neuigkeiten stehen in der Hilfe.
-13. **„Pseudo“ verdecken (Klaus):** den Knopf „Pseudo“ oben ausblenden, nicht löschen. **Merken:** er kommt später in den
+13. **„Pseudo“ verdecken (Klaus):** den Knopf „Pseudo“ oben ausblenden, nicht löschen. Grund (Klaus): „Pseudo geht schon an, wenn ich den Briefumschlag anklicke … da steht doch dann schon pseudonymisieren“ – der Schalter oben ist doppelt; die Funktion beim Briefumschlag bleibt unverändert. **Merken:** er kommt später in den
     E-Mail-Bereich („die E-Mail-Geschichte“) – dafür jetzt nichts bauen, nur in der `CLAUDE.md` vermerken.
 
 ## Grenzen
