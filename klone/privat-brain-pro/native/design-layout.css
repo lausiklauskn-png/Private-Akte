@@ -1,0 +1,326 @@
+/* Private Brain Pro: quiet native layout. Loaded after the legacy native rules. */
+html[data-pb-theme] { --pb-control-size:44px; }
+@media(any-pointer:fine) { html[data-pb-theme] { --pb-control-size:32px; } }
+html[data-pb-theme] body { background:var(--bg); background-image:none; color:var(--ink); font-family:var(--sans); }
+html[data-pb-theme] h1,html[data-pb-theme] h2,html[data-pb-theme] h3,html[data-pb-theme] h4 { font-family:var(--sans); letter-spacing:-.025em; }
+html[data-pb-theme] .wrap { max-width:none; padding:8px 16px max(12px,env(safe-area-inset-bottom)); }
+html[data-pb-theme] header.top { gap:10px; min-height:38px; padding-bottom:7px; }
+html[data-pb-theme] header .brand h1 { font-size:1.08rem; font-weight:650; white-space:nowrap; }
+html[data-pb-theme] header .brand h1 .pb-version { font-size:.65rem; background:var(--card); border:1px solid var(--line); }
+html[data-pb-theme] button,html[data-pb-theme] .btn,html[data-pb-theme] .mail-app .mail-button { background:var(--card); border:1px solid var(--line); color:var(--ink); box-shadow:none; border-radius:6px; }
+html[data-pb-theme] button.primary,html[data-pb-theme] .mail-app .mail-primary { background:var(--acc); border-color:var(--acc); color:var(--pb-on-accent,#fff); box-shadow:none; }
+html[data-pb-theme] button:not(:disabled):hover,html[data-pb-theme] .btn:hover { transform:none; background:var(--pb-hover,var(--card2)); }
+html[data-pb-theme] button.primary:not(:disabled):hover,html[data-pb-theme] .mail-app .mail-primary:not(:disabled):hover { background:var(--acc); filter:brightness(.94); }
+html[data-pb-theme] button:focus-visible,html[data-pb-theme] input:focus-visible,html[data-pb-theme] select:focus-visible,html[data-pb-theme] textarea:focus-visible,html[data-pb-theme] summary:focus-visible { outline:2px solid var(--acc); outline-offset:2px; }
+html[data-pb-theme] .tab.on { color:var(--acc); background:var(--pb-selected,var(--card2)); border-color:var(--line); box-shadow:none; }
+html[data-pb-theme] .tab.on::after { background:var(--acc); inset:auto 8px 0; height:2px; border-radius:2px; z-index:0; }
+html[data-pb-theme] .native-toolbar-row { margin:0 0 6px; padding:2px 0 4px; border-bottom:1px solid var(--line); }
+html[data-pb-theme] .native-toolbar-row .main-pages { flex-wrap:nowrap!important; gap:5px!important; }
+html[data-pb-theme] .native-toolbar-row .tab { background:transparent; border-color:transparent; }
+html[data-pb-theme] .native-toolbar-row .tab.on { background:var(--pb-selected,var(--card2)); color:var(--acc); }
+html[data-pb-theme] .native-options-panel { border-radius:9px; box-shadow:0 8px 24px #0002; }
+html[data-pb-theme] .native-options-panel .workspace-tools { display:flex!important; flex-direction:column; flex-wrap:nowrap; width:100%; gap:3px; margin:0; padding:0 0 8px; border-bottom:1px solid var(--line); }
+html[data-pb-theme] .native-options-panel .workspace-tools .tab { display:flex; align-items:center; justify-content:flex-start; gap:8px; width:100%; min-height:32px; padding:5px 8px!important; text-align:left; }
+html[data-pb-theme] .native-options-panel .workspace-tools .compact-label,
+html[data-pb-theme] .compact-tool-has-caption .compact-label,
+html[data-pb-theme] .compact-text-only .compact-label { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip-path:inset(50%)!important; white-space:nowrap!important; }
+html[data-pb-theme] .native-options-panel .workspace-tools .compact-caption { font-size:.85rem; }
+html[data-pb-theme] .compact-tool-has-caption,html[data-pb-theme] .compact-text-only { width:auto!important; min-width:30px; gap:5px; padding:3px 8px!important; }
+html[data-pb-theme] .compact-tool-has-caption .compact-caption,html[data-pb-theme] .compact-text-only .compact-caption { position:static!important; width:auto!important; height:auto!important; overflow:visible!important; clip-path:none; font-size:.8rem; white-space:nowrap; }
+html[data-pb-theme] .panel>h2 { margin:8px 0 14px; font-size:1.35rem; font-weight:650; }
+html[data-pb-theme] .search-welcome { padding:7px 0 3px; }
+html[data-pb-theme] .search-welcome[hidden] { display:none; }
+html[data-pb-theme] .search-welcome h2 { margin:0 0 4px; font-size:1.2rem; line-height:1.3; font-weight:650; }
+html[data-pb-theme] .search-welcome p { margin:4px 0; font-size:.82rem; line-height:1.4; }
+html[data-pb-theme] .search-totals { gap:8px; margin:6px 0 8px; }
+html[data-pb-theme] .search-totals span { padding:5px 9px; border-radius:5px; font-size:.8rem; background:var(--card); }
+html[data-pb-theme] .searchbox,html[data-pb-theme] .note,html[data-pb-theme] .card,html[data-pb-theme] .tile,html[data-pb-theme] .library-setup { background:var(--card); background-image:none; border-color:var(--line); border-radius:9px; box-shadow:none; }
+html[data-pb-theme] .searchbar,html[data-pb-theme] .search-shell { box-shadow:none; background:var(--card); }
+html[data-pb-theme] input,html[data-pb-theme] select,html[data-pb-theme] textarea { background:var(--field); color:var(--ink); border-color:var(--line); border-radius:6px; }
+html[data-pb-theme] #mode { background:var(--card); border-color:var(--line); }
+html[data-pb-theme] #mode button.on { background:var(--acc); color:var(--pb-on-accent,#fff); }
+/* The query is the main control. Keep the optional meaning-search switch on
+   one line; a narrow window gives it another row instead of splitting words. */
+html[data-pb-theme] #panel-search .searchbox { display:flex; flex-wrap:wrap; align-items:center; gap:4px; padding:2px; }
+html[data-pb-theme] #panel-search .searchbox input[type=search] { flex:1 1 18rem; width:0; min-width:0; max-width:100%; min-height:44px; padding:4px 8px; font-size:.95rem; line-height:1.25; box-sizing:border-box; }
+html[data-pb-theme] #panel-search #mic { flex:none; display:inline-flex; align-items:center; justify-content:center; width:44px; min-width:44px; height:44px; padding:8px!important; box-sizing:border-box; }
+html[data-pb-theme] #panel-search #mode { flex:0 0 auto; display:flex; flex-wrap:wrap; width:auto; min-width:0; max-width:100%; gap:0; padding:0; border:0; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); }
+html[data-pb-theme] #panel-search #mode button { flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; gap:5px; min-width:max-content; min-height:44px; padding:4px 8px; border:0; font-size:.78rem; font-weight:600; line-height:1.25; white-space:nowrap; overflow-wrap:normal; word-break:normal; }
+html[data-pb-theme] #panel-search #mode .pb-search-mode-icon { flex:none; display:block; width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+html[data-pb-theme] .native-file-head .native-file-share { flex:none; width:44px; min-width:44px; min-height:44px!important; height:44px; padding:8px!important; }
+html[data-pb-theme] .native-file-head .native-file-share>.compact-icon { width:20px; height:20px; }
+html[data-pb-theme] .native-file-head>[data-native-action=open] { display:inline-flex; align-items:center; gap:6px; min-height:44px; }
+html[data-pb-theme] .native-file-head>[data-native-action][hidden] { display:none!important; }
+html[data-pb-theme] .explorer-layout { gap:16px; }
+html[data-pb-theme] #explorerTree { padding-right:12px; }
+html[data-pb-theme] #explorerTree button { border-color:transparent; background:transparent; white-space:normal; overflow-wrap:normal; }
+html[data-pb-theme] #explorerTree button[aria-current=location] { background:var(--pb-selected,var(--card2)); color:var(--acc); }
+html[data-pb-theme] .explorer-row,html[data-pb-theme] .explorer-dir { border-radius:5px; margin-bottom:2px; padding:9px 12px; background:var(--card); border-width:0 0 1px; }
+html[data-pb-theme] .explorer-row strong,html[data-pb-theme] .explorer-dir strong { font-size:.9rem; font-weight:600; }
+html[data-pb-theme] .explorer-meta { margin-top:3px; color:var(--mut); line-height:1.45; }
+:root[data-pb-theme] .mail-app { --mail-accent:var(--acc); --mail-soft:var(--pb-selected,var(--card2)); --mail-h1:var(--acc); --mail-h2:var(--acc); border-radius:9px; background:var(--card); margin-top:0; }
+:root[data-pb-theme] #mailWorkspace .mail-primary { background:var(--acc); border-color:var(--acc); color:var(--pb-on-accent,#fff); box-shadow:none; }
+html[data-pb-theme] .mail-folders { background:var(--bg2); }
+html[data-pb-theme] .mail-folder { align-items:center; gap:7px; border-radius:5px; border:0; padding:6px 8px; overflow-wrap:normal; word-break:normal; }
+html[data-pb-theme] .mail-folder small { flex:none; min-width:1.5em; text-align:right; }
+html[data-pb-theme] .mail-folder[aria-current=true] { color:var(--acc); background:var(--pb-selected,var(--card2)); }
+html[data-pb-theme] .mail-notice { background:var(--bg2); color:var(--mut); }
+html[data-pb-theme] .mail-avatar { background:var(--bg); color:var(--mut); border:1px solid var(--line); font-weight:600; }
+html[data-pb-theme] .mail-item button { border:0; background:transparent; border-radius:0; }
+html[data-pb-theme] .mail-item button[aria-current=true] { background:var(--pb-selected,var(--card2)); }
+html[data-pb-theme] .mail-reader h3 { font-size:1.2rem; font-weight:650; }
+html[data-pb-theme] .mail-reader-actions { gap:5px; }
+html[data-pb-theme] .mail-message-menu,html[data-pb-theme] .mail-account-menu { background:var(--card); border-radius:8px; }
+html[data-pb-theme] .mail-compose-actions { padding:6px 0 9px; }
+html[data-pb-theme] .mail-compose-actions .mail-primary { padding:4px 12px!important; }
+html[data-pb-theme] .mail-copy-fields { border-bottom:1px solid var(--line); }
+html[data-pb-theme] .native-heading-icon { vertical-align:-.15em; margin-right:5px; }
+html[data-pb-theme] .native-folder-icon { width:17px; height:17px; flex:none; }
+html[data-pb-theme] .mail-copy-fields>summary { font-weight:600; padding:7px 0; }
+html[data-pb-theme] .mail-report { border-radius:7px; }
+html[data-pb-theme] .mail-all-head,html[data-pb-theme] .mail-all-switch { background:var(--card); }
+html[data-pb-theme] .topic-suggest { background:var(--card); border-radius:6px; }
+/* Availability describes the original; the neighbouring button describes its saved check. */
+html[data-pb-theme] .pb-record-availability { display:inline-block; max-width:100%; margin:4px 8px 0 0; color:var(--mut); font-size:.78rem; line-height:1.5; overflow-wrap:anywhere; vertical-align:middle; }
+html[data-pb-theme] .pb-record-availability[data-original=missing],
+html[data-pb-theme] .pb-record-availability[data-original=unavailable] { color:var(--warn); }
+html[data-pb-theme] .pb-check-badge { max-width:100%; border-radius:5px; border-color:var(--line); color:var(--mut); white-space:normal; text-align:left; overflow-wrap:anywhere; line-height:1.4; }
+html[data-pb-theme] .pb-check-badge[data-check=clean] { color:var(--good); border-color:var(--line); }
+html[data-pb-theme] .pb-check-badge[data-check=found],
+html[data-pb-theme] .pb-check-report .pb-check-found li { color:var(--bad); border-color:var(--line); }
+html[data-pb-theme] .pb-check-badge[data-check=partly] { color:var(--warn); border-color:var(--line); }
+html[data-pb-theme] .pb-mail-index-status { padding:5px 0 8px; margin:5px 0 9px; border-bottom:1px solid var(--line); }
+html[data-pb-theme] .pb-mail-index-scope { margin:5px 0 0; color:var(--mut); font-size:.78rem; line-height:1.5; }
+@media(min-width:1051px) {
+  html[data-pb-theme] .mail-layout { grid-template-columns:180px minmax(230px,300px) minmax(0,1fr); }
+}
+@media(min-width:651px) {
+  /* Keep the canon seal's saved header position clear of the action group. */
+  html[data-pb-theme] header.top .tools { margin-right:-8px; }
+}
+@media(max-width:1000px) {
+  html[data-pb-theme] .native-toolbar-row { flex-wrap:nowrap; }
+  html[data-pb-theme] .native-toolbar-row .main-pages { flex:0 1 auto!important; }
+}
+@media(max-width:650px) {
+  html[data-pb-theme] .wrap { padding:5px 8px max(8px,env(safe-area-inset-bottom)); }
+  html[data-pb-theme] header.top { gap:5px; min-height:34px; }
+  html[data-pb-theme] header .brand h1 { font-size:.95rem; }
+  html[data-pb-theme] .native-toolbar-row { margin-bottom:8px; padding:4px 0 7px; }
+  html[data-pb-theme] .native-toolbar-row .main-pages { gap:3px!important; }
+  html[data-pb-theme] .native-toolbar-row .main-pages .tab { padding:3px 6px!important; }
+  html[data-pb-theme] .native-toolbar-row .compact-caption { font-size:.75rem; }
+  html[data-pb-theme] .mail-layout { min-height:420px; }
+  html[data-pb-theme] .mail-folder { white-space:nowrap; }
+  html[data-pb-theme] #mailWorkspace .mail-list { padding:7px; }
+  html[data-pb-theme] #mailWorkspace .mail-reader { padding:9px; }
+  html[data-pb-theme] .mail-compose-actions { gap:4px; }
+  /* A long filename keeps one readable line instead of collapsing between
+     toolbar actions. The two handoff actions share their own second row. */
+  html[data-pb-theme] .native-file-head { display:grid; grid-template-columns:auto minmax(0,1fr) 44px; gap:6px 8px; padding:6px 8px; }
+  html[data-pb-theme] .native-file-head>button:first-child { grid-column:1; grid-row:1; justify-self:start; min-width:0; padding:6px 8px; font-size:.85rem; white-space:nowrap; }
+  html[data-pb-theme] .native-file-head>.native-file-title { grid-column:2/-1; grid-row:1; min-width:0; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; overflow-wrap:normal; font-size:.9rem; }
+  html[data-pb-theme] .native-file-head>[data-native-action=open] { grid-column:1/3; grid-row:2; justify-self:end; min-width:0; max-width:100%; font-size:.85rem; line-height:1.3; }
+  html[data-pb-theme] .native-file-head>.native-file-share { grid-column:3; grid-row:2; align-self:center; justify-self:end; }
+  html[data-pb-theme] .native-file-head>.pb-activity { grid-column:1/-1; grid-row:3; min-width:0; }
+  html[data-pb-theme] #panel-search .searchbox { display:grid; grid-template-columns:minmax(0,1fr) 44px; }
+  html[data-pb-theme] #panel-search .searchbox input[type=search] { width:100%; }
+  html[data-pb-theme] #panel-search #mode { grid-column:1/-1; justify-self:end; width:auto; }
+  html[data-pb-theme] .filterbar select { width:100%; max-width:100%; font-size:.78rem; padding:4px 6px; }
+}
+@media(max-width:360px) { html[data-pb-theme] #panel-dash .tiles { grid-template-columns:minmax(0,1fr); } }
+@media(max-width:380px) {
+  html[data-pb-theme] header .brand h1 { font-size:.78rem; }
+  html[data-pb-theme] header .brand h1 .pb-version { margin-left:2px; padding:0 3px; font-size:.52rem; }
+  html[data-pb-theme] header .logo,html[data-pb-theme] header .logo img { width:20px; height:20px; }
+}
+@media(max-width:340px) {
+  html[data-pb-theme] header .logo { display:none; }
+  html[data-pb-theme] header .brand h1 { font-size:.72rem; }
+}
+@media(prefers-reduced-motion:reduce) { html[data-pb-theme] button { transition:none; } }
+
+/* Phone and tablet portrait, including a tall DeX window, use one working pane.
+   This changes layout only; active folder, reader and draft nodes stay mounted. */
+@media(orientation:portrait) {
+  html[data-pb-theme] #mailWorkspace .mail-layout { display:flex; flex-direction:column; }
+  html[data-pb-theme] #mailWorkspace .mail-folders { flex:none; display:flex; align-items:center; gap:4px; max-height:48px; min-height:40px; padding:2px; border-right:0; overflow:auto; }
+  html[data-pb-theme] #mailWorkspace .mail-folder { flex:none; width:auto; white-space:nowrap; }
+  html[data-pb-theme] #mailWorkspace .mail-list { flex:1; border-right:0; }
+  html[data-pb-theme] #mailWorkspace .mail-app[data-view=list] .mail-reader { display:none; }
+  html[data-pb-theme] #mailWorkspace .mail-app[data-view=reader] .mail-layout { display:block; }
+  html[data-pb-theme] #mailWorkspace .mail-app[data-view=reader] .mail-reader { height:100%; width:100%; }
+  html[data-pb-theme] #mailWorkspace .mail-app[data-view=reader] .mail-folders,
+  html[data-pb-theme] #mailWorkspace .mail-app[data-view=reader] .mail-list { display:none; }
+  html[data-pb-theme] #mailWorkspace .mail-back { display:inline-flex!important; }
+  html[data-pb-theme] .explorer-layout { display:flex; flex-direction:column; }
+  html[data-pb-theme] #explorerTree,html[data-pb-theme] #explorerTreeToggle { display:none!important; }
+  html[data-pb-theme] #explorerFiles { flex:1; width:100%; }
+}
+
+/* A microphone belongs to its field; it is not another column in the form. */
+html[data-pb-theme] .pb-dictate-wrap { display:flex; align-items:flex-start; gap:5px; width:100%; min-width:0; }
+html[data-pb-theme] .pb-dictate-wrap>input,html[data-pb-theme] .pb-dictate-wrap>textarea,html[data-pb-theme] .pb-dictate-wrap>[contenteditable] { flex:1; width:0; min-width:0; max-width:100%; }
+html[data-pb-theme] .pb-dictate-wrap>.pb-dictate { flex:none; align-self:flex-start; width:28px; min-width:28px; height:28px; margin:3px 0 0; padding:4px; border:1px solid var(--line); border-radius:5px; background:var(--card); color:var(--mut); }
+html[data-pb-theme] .pb-dictate-wrap>.pb-dictate svg { display:block; width:18px; height:18px; }
+html[data-pb-theme] .pb-dictate-wrap>.pb-dictate[aria-pressed=true] { color:var(--acc); border-color:var(--acc); }
+html[data-pb-theme] .explorer-toolbar>.pb-dictate-wrap { flex:1 1 160px; width:auto; }
+html[data-pb-theme] .pb-input-language-quick { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:7px 0 12px; color:var(--mut); font-size:.8rem; }
+html[data-pb-theme] .pb-input-language-select { width:auto; max-width:100%; min-height:30px; padding:4px 7px; font:inherit; }
+html[data-pb-theme] .pb-input-language-settings h3 { margin:0 0 6px; font-size:1rem; }
+html[data-pb-theme] .pb-input-language-settings .hint { line-height:1.5; }
+html[data-pb-theme] .pb-input-language-settings>label { display:block; margin:7px 0 4px; font-size:.8rem; }
+html[data-pb-theme] .pb-text-input-dialog { width:min(480px,calc(100vw - 32px)); max-width:calc(100vw - 32px); border:1px solid var(--line); border-radius:9px; background:var(--card); color:var(--ink); }
+html[data-pb-theme] .pb-text-input-dialog input { min-height:32px; }
+html[data-pb-theme] .pb-text-input-dialog .btnrow { flex-wrap:wrap; justify-content:flex-end; }
+html[data-pb-theme] .pb-mail-translate-action { display:inline-flex; align-items:center; gap:5px; }
+html[data-pb-theme] .pb-mail-translate-icon { width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex:none; }
+html[data-pb-theme] .pb-mail-translation { margin:14px 0; padding:12px; border:1px solid var(--line); border-radius:7px; background:var(--bg2); overflow-wrap:anywhere; }
+html[data-pb-theme] .pb-mail-translation h4 { margin:0 0 8px; font-size:.95rem; }
+html[data-pb-theme] .pb-mail-translation label { display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin:6px 0; }
+
+/* The main destinations remain in one strip. Small windows scroll the strip
+   instead of hiding Overview/Categories or cutting their names into fragments. */
+html[data-pb-theme] .native-toolbar-row { display:flex!important; flex-wrap:nowrap!important; align-items:center; gap:6px; min-width:0; max-width:100%; }
+html[data-pb-theme] .native-toolbar-row .main-pages { display:flex; order:0; flex:1 1 auto!important; width:100%; min-width:0; max-width:100%; flex-wrap:nowrap!important; justify-content:flex-start; overflow-x:auto; overflow-y:hidden; overscroll-behavior-x:contain; scrollbar-width:thin; padding:2px 0 5px; }
+html[data-pb-theme] .native-toolbar-row .main-pages .tab { flex:none!important; width:max-content; min-width:44px!important; max-width:100%; height:auto!important; min-height:44px!important; padding:4px 7px!important; flex-direction:row; gap:5px; white-space:nowrap; }
+html[data-pb-theme] .native-toolbar-row .main-pages .compact-caption { flex:none; max-width:none; overflow:visible; text-overflow:clip; white-space:nowrap; }
+html[data-pb-theme] .native-toolbar-quick { display:flex; order:1; flex:0 0 auto; align-items:center; gap:4px; }
+html[data-pb-theme] .native-toolbar-quick>.tab,
+html[data-pb-theme] .native-toolbar-quick>#pb-palette-button { display:inline-flex; flex:none; align-items:center; justify-content:center; width:44px!important; min-width:44px!important; height:44px!important; min-height:44px!important; padding:0!important; }
+html[data-pb-theme] .native-toolbar-quick>.tab>.compact-icon,
+html[data-pb-theme] .native-toolbar-quick>#pb-palette-button>svg { width:20px; height:20px; flex:none; }
+html[data-pb-theme] .native-menu-views[hidden] { display:none!important; }
+html[data-pb-theme] .pb-overview { position:relative; margin:14px 0; }
+html[data-pb-theme] .pb-overview>h2 { margin:0 42px 8px 0; font-size:1.1rem; }
+html[data-pb-theme] .pb-overview-summary { display:flex; flex-wrap:wrap; gap:6px 18px; margin-bottom:6px; }
+html[data-pb-theme] .pb-overview-summary p { margin:0; font-size:.82rem; }
+html[data-pb-theme] .pb-overview-help { margin:0; color:var(--mut); font-size:.8rem; }
+html[data-pb-theme] .pb-overview-help>summary { position:absolute; right:0; top:0; display:inline-flex; align-items:center; justify-content:center; width:32px; min-height:32px; border:1px solid var(--line); border-radius:50%; list-style:none; cursor:pointer; font-weight:600; }
+html[data-pb-theme] .pb-overview-help>summary::-webkit-details-marker { display:none; }
+html[data-pb-theme] .pb-overview-help>summary::marker { content:""; }
+html[data-pb-theme] .pb-overview-help p { max-width:70ch; margin:6px 0; line-height:1.45; }
+html[data-pb-theme] .pb-overview-folder-head,html[data-pb-theme] .pb-overview-folder { display:grid; grid-template-columns:minmax(0,1fr) 60px 150px; align-items:center; gap:10px; }
+html[data-pb-theme] .pb-overview-folder-head { padding:6px 10px; color:var(--mut); font-size:.76rem; }
+html[data-pb-theme] .pb-overview-folder { width:100%; min-height:44px; margin:0; padding:8px 10px; border-radius:0; border-width:0 0 1px; text-align:left; }
+html[data-pb-theme] .pb-overview-folder-label { display:flex; align-items:center; gap:7px; min-width:0; }
+html[data-pb-theme] .pb-overview-folder .pb-overview-folder-label { padding-left:calc(var(--folder-depth,0)*10px); }
+html[data-pb-theme] .pb-overview-folder-label>span { min-width:0; overflow-wrap:anywhere; }
+html[data-pb-theme] .pb-overview-folder .pb-overview-folder-label>span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; overflow-wrap:normal; }
+html[data-pb-theme] .pb-overview-folder-icon { flex:none; width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+html[data-pb-theme] .pb-overview-count,html[data-pb-theme] .pb-overview-size { text-align:right; font-variant-numeric:tabular-nums; }
+html[data-pb-theme] .pb-overview-size { color:var(--mut); font-size:.8rem; }
+html[data-pb-theme] .pb-overview-more { margin-top:8px; min-height:44px; }
+html[data-pb-theme] .pb-overview-more[hidden],html[data-pb-theme] .pb-overview-topics[hidden] { display:none; }
+html[data-pb-theme] #groups,.pb-overview-topics>.groups { grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr)); }
+html[data-pb-theme] .pb-overview-category { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:6px 10px; min-height:64px; padding:12px; text-align:left; }
+html[data-pb-theme] .pb-overview-category .pb-overview-size { grid-column:1/-1; }
+html[data-pb-theme] .pb-mail-translation select { width:auto; max-width:100%; min-height:30px; padding:4px 6px; }
+html[data-pb-theme] .pb-mail-translation textarea { min-height:64px; }
+html[data-pb-theme] .pb-mail-translation-text { font:inherit; white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.65; margin:16px 0; }
+html[data-pb-theme] .pb-mail-translation .mail-reader-actions { flex-wrap:wrap; }
+
+@media(max-width:650px) { html[data-pb-theme] .pb-overview-folder-head,html[data-pb-theme] .pb-overview-folder { grid-template-columns:minmax(0,1fr) 60px 85px; } }
+
+/* One familiar info line icon for disclosures across the app. */
+html[data-pb-theme] .pb-overview-help>summary { width:44px; min-height:44px; border:0; }
+html[data-pb-theme] .pb-overview-help>summary>svg { width:20px; height:20px; }
+
+/* Mouse controls keep the same compact height when a DeX window is narrowed
+   or turned upright. Touch-only controls retain their larger hit area. */
+html[data-pb-theme] :is(.native-navigation,.explorer-toolbar,.cardbtns,.filterbar,.mail-head,.mail-compose-actions,.mail-reader-actions,.pb-dup-actions,.native-options-panel,.panel .btnrow)>button { min-height:44px!important; }
+html[data-pb-theme] :is(.filterbar,.explorer-toolbar,.mail-head,.pb-input-language-quick) :is(select,input[type=search],input[type=text]) { min-height:44px; }
+@media(any-pointer:fine) {
+  html[data-pb-theme] .native-toolbar-row .main-pages .tab { min-width:32px!important; min-height:32px!important; padding:3px 7px!important; }
+  html[data-pb-theme] .native-toolbar-row .main-pages .tab.compact-icon-only { width:32px!important; min-width:32px!important; }
+  html[data-pb-theme] .native-toolbar-quick>.tab,
+  html[data-pb-theme] .native-toolbar-quick>#pb-palette-button { width:32px!important; min-width:32px!important; height:32px!important; min-height:32px!important; }
+  html[data-pb-theme] :is(.native-navigation,.explorer-toolbar,.cardbtns,.filterbar,.mail-head,.mail-compose-actions,.mail-reader-actions,.pb-dup-actions,.native-options-panel,.panel .btnrow)>button,
+  html[data-pb-theme] .native-file-head>button,
+  html[data-pb-theme] .pb-explorer-sort-popup button { display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; min-height:32px!important; height:auto; padding-block:2px!important; line-height:1.2; }
+  html[data-pb-theme] :is(.filterbar,.explorer-toolbar,.mail-head,.pb-input-language-quick) :is(select,input[type=search],input[type=text]) { min-height:32px; height:32px; box-sizing:border-box; padding-block:2px; line-height:1.2; }
+  html[data-pb-theme] #pb-explorer-sort>summary { min-height:32px; padding-block:2px; line-height:1.2; }
+  html[data-pb-theme] #panel-search .searchbox input[type=search] { min-height:32px; height:32px; padding-block:2px; line-height:1.1; }
+  html[data-pb-theme] #panel-search #mode button { min-height:32px; padding-block:2px; }
+  html[data-pb-theme] #panel-search #mic,
+  html[data-pb-theme] .native-file-head .native-file-share { width:32px; min-width:32px; height:32px; min-height:32px!important; padding:4px!important; }
+  html[data-pb-theme] .pb-overview-help>summary,
+  html[data-pb-theme] .pb-dup-help>summary { width:32px; height:32px; min-height:32px; }
+}
+
+/* Dynamic setting actions obey their actual locked/available state. */
+html[data-pb-theme] #panel-settings [hidden] { display:none!important; }
+
+/* Input language belongs next to the query. Only the current code stays in
+   the search row; the complete existing language list opens on demand. */
+html[data-pb-theme] #panel-search #pb-input-language-quick { display:block; flex:none; width:max-content; max-width:100%; margin:0; padding:0; }
+html[data-pb-theme] #pb-search-language { display:inline-flex; align-items:center; justify-content:center; width:44px; min-width:44px; height:44px; min-height:44px!important; margin:0; padding:2px!important; box-sizing:border-box; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--ink); font-size:.78rem; font-weight:600; line-height:1.2!important; white-space:nowrap; list-style:none; cursor:pointer; }
+html[data-pb-theme] #pb-search-language::-webkit-details-marker { display:none; }
+html[data-pb-theme] #pb-search-language::marker { content:""; }
+html[data-pb-theme] #pb-input-language-quick[open]>summary { color:var(--acc); border-color:var(--acc); background:var(--pb-selected,var(--card2)); }
+html[data-pb-theme] #pb-search-language-menu { position:fixed; z-index:64; width:min(16rem,calc(100vw - 16px)); box-sizing:border-box; padding:6px; border:1px solid var(--line); border-radius:8px; background:var(--card); box-shadow:0 8px 24px #0002; overflow:auto; overscroll-behavior:contain; }
+html[data-pb-theme] #pb-search-language-menu>button { display:block; width:100%; min-height:44px; margin:0; padding:5px 8px; border-color:transparent; font-size:.85rem; line-height:1.2; text-align:start; white-space:normal; overflow-wrap:normal; word-break:normal; }
+html[data-pb-theme] #pb-search-language-menu>button[aria-pressed=true] { border-color:var(--acc); color:var(--acc); background:var(--pb-selected,var(--card2)); font-weight:600; }
+html[data-pb-theme] #pb-search-language-menu>button:active { transform:none!important; }
+@media(any-pointer:fine) {
+  html[data-pb-theme] #pb-search-language { width:32px; min-width:32px; height:32px; min-height:32px!important; }
+  html[data-pb-theme] #pb-search-language-menu>button { min-height:32px; padding-block:2px; }
+}
+@media(max-width:650px) {
+  html[data-pb-theme] #panel-search .searchbox { grid-template-columns:minmax(0,1fr) var(--pb-control-size) var(--pb-control-size); }
+  html[data-pb-theme] #panel-search .searchbox input[type=search] { grid-column:1; grid-row:1; }
+  html[data-pb-theme] #panel-search #mic { grid-column:2; grid-row:1; }
+  html[data-pb-theme] #panel-search #pb-input-language-quick { grid-column:3; grid-row:1; }
+  html[data-pb-theme] #panel-search #mode { grid-column:1/-1; grid-row:2; }
+}
+
+/* Help follows the same mouse/touch target profile as the nearby settings. */
+html[data-pb-theme].pb-help-ready .pb-help-toggle { width:44px; height:44px; min-width:44px; min-height:44px; padding:10px; }
+@media(any-pointer:fine) {
+  html[data-pb-theme].pb-help-ready .pb-help-toggle { width:32px; height:32px; min-width:32px; min-height:32px; padding:6px; }
+}
+
+/* Page navigation follows the same compact profile as file and mail actions. */
+html[data-pb-theme] .native-pdf-toolbar { display:flex; flex-wrap:wrap; align-items:center; gap:4px; }
+html[data-pb-theme] .native-pdf-toolbar>select { flex:0 1 15rem; width:auto; max-width:100%; min-width:0; }
+@media(any-pointer:fine) {
+  html[data-pb-theme] :is(.native-pdf-toolbar,.native-file-menu,.library-setup .btnrow)>:is(button,select),
+  html[data-pb-theme] #pb-search-language-menu>button {
+    min-height:32px!important; height:32px; box-sizing:border-box; padding-block:2px!important; line-height:1.2;
+  }
+}
+
+/* The status chip's legacy top margin stretched its sibling actions by 4px. */
+html[data-pb-theme] #results .pb-result-compact>.cardbtns { align-items:center; }
+html[data-pb-theme] #results .pb-result-compact>.cardbtns>.pb-check-badge { margin:0; padding-block:2px!important; line-height:1.2; }
+
+/* Klaus 2026-10-26, Sitzung 1, Punkt 1: E-Mails · Dateien · lokal · Katalog · Prüfstand in einer Zeile, schlichte Schrift. */
+#panel-search .searchmeta { flex-wrap:nowrap; justify-content:flex-start; align-items:center; gap:0; margin:4px 0 6px; font-size:.8rem; color:var(--mut); }
+#panel-search .searchmeta #searchInfo:empty, #panel-search .searchmeta .pb-meta-count:empty { display:none; }
+#panel-search .searchmeta .pb-meta-count { white-space:nowrap; }
+/* Auch nach der Trefferzeile steht der Trennpunkt (vorher „Bedeutungssuche0 E-Mails“, Generalprüfung 16.11.2026). */
+#panel-search .searchmeta #searchInfo:not(:empty) ~ .pb-meta-count:not(:empty)::before,
+#panel-search .searchmeta .pb-meta-count:not(:empty) ~ .pb-meta-count:not(:empty)::before { content:"·"; margin:0 7px; opacity:.7; }
+#panel-search .searchmeta .pb-check-all-button { flex:0 0 auto; margin-left:auto; font-size:.8rem; }
+@media (max-width:520px) { #panel-search .searchmeta { flex-wrap:wrap; row-gap:4px; font-size:.75rem; } }
+
+/* Klaus 2026-10-26, Sitzung 1, Punkt 9c: „Zustand“ mit Speicher-Füllbalken. */
+.pb-state .pb-state-lead { margin:2px 0 8px; font-size:.82rem; color:var(--mut); }
+.pb-state .pb-state-storage { display:flex; flex-direction:column; gap:4px; min-width:0; }
+.pb-state .pb-state-meter { display:block; width:100%; max-width:260px; height:8px; border-radius:999px; background:var(--line); overflow:hidden; }
+.pb-state .pb-state-meter[hidden] { display:none; }
+.pb-state .pb-state-meter > span { display:block; height:100%; width:0; border-radius:inherit; background:var(--acc); transition:width .4s ease; }
+.pb-state .pb-state-detail { font-family:var(--sans,inherit); font-size:.8rem; color:var(--mut); overflow-wrap:anywhere; }
+.pb-state .pb-state-catalog { display:none; }
+@media (prefers-reduced-motion:reduce) { .pb-state .pb-state-meter > span { transition:none; } }
+
+/* Klaus 2026-10-26, Sitzung 1, Punkt 4: Ordnerleiste im schmalen/hohen Fenster – nichts überlappt, nichts abgeschnitten.
+   Jeder Knopf behält seine Breite (auch „Weitere Ordner“ und „Neuer Ordner“); ab 600 px brechen die Ordner in eine
+   zweite Zeile um, statt seitlich zu verschwinden. Nur am Handy bleibt die Leiste waagerecht verschiebbar. */
+@media(max-width:900px), (orientation:portrait) {
+  html[data-pb-theme] #mailWorkspace .mail-layout > .mail-folders > * { flex:none; white-space:nowrap; }
+  html[data-pb-theme] #mailWorkspace .mail-folders .mail-button { width:auto; }
+}
+@media(min-width:600px) and (max-width:900px), (min-width:600px) and (orientation:portrait) {
+  html[data-pb-theme] #mailWorkspace .mail-layout > .mail-folders { flex-wrap:wrap; max-height:none; overflow:visible; row-gap:2px; }
+}

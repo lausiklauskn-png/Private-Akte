@@ -1,0 +1,310 @@
+// Runs against the NSIS-installed WebView2 app. This is an initial acceptance
+// subset; mail protocol/model/OS adapters receive additional cases as completed.
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright-core';
+import {writeFile,mkdir,readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {resolve,delimiter} from 'node:path';
+import {spawn,execFileSync} from 'node:child_process';
+const phase=process.argv[2]||'first',out=resolve(process.argv[3]||'windows-report.json');
+const report={phase,source:process.env.PB_SOURCE_COMMIT||'',checks:[],errors:[]};
+const expectedVersion=JSON.parse(await readFile(new URL('../src-tauri/tauri.conf.json',import.meta.url),'utf8')).version;
+const modelPins=JSON.parse(await readFile(new URL('../../tools/native/semantic-model.json',import.meta.url),'utf8'));
+const ok=(name,value)=>{assert.ok(value,name);report.checks.push(name);console.log('PASS '+name);};
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+const PASSWORD='CI-Tresor-ä-Probe-2026';
+let browser,page;
+async function connect(){
+  for(let i=0;i<80;i++){
+    try{browser=await chromium.connectOverCDP('http://127.0.0.1:9223');return;}catch{await pause(500);}
+  }throw Error('Installed app did not open the local test endpoint');
+}
+async function call(plugin,method,args={}){return page.evaluate(async({plugin,method,args})=>Capacitor.Plugins[plugin][method](args),{plugin,method,args});}
+// Failure evidence only: do not navigate, reload or accept another recovery URL.
+async function recoveryDiagnostics(previousPage){
+  const bounded=async(promise)=>{
+    let timer;
+    try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Recovery diagnostic timed out')),2000);})]);}
+    finally{clearTimeout(timer);}
+  };
+  const pages=browser.contexts().flatMap((context,index)=>context.pages().map(target=>({context:index,target})));
+  const evidence={expectedURL:'https://tauri.localhost/index.html',connected:browser.isConnected(),
+    previousPage:{url:previousPage.url(),closed:previousPage.isClosed()},pageCount:pages.length,
+    pages:pages.map(({context,target})=>({context,url:target.url(),closed:target.isClosed()}))};
+  const appPages=pages.filter(({target})=>{try{const url=new URL(target.url());return url.origin==='https://tauri.localhost'&&['/','/index.html'].includes(url.pathname);}catch{return false;}}).slice(0,2);
+  const tasks=appPages.map(async({target})=>{
+    try{return{url:target.url(),state:await bounded(target.evaluate(()=>({readyState:document.readyState,
+      workspace:Boolean(window.PBWorkspace),semantic:Boolean(window.PBSemantic),bridge:Boolean(window.Capacitor),
+      catalogReady:typeof CATALOG!=='undefined'&&Array.isArray(CATALOG),
+      importedFixturePresent:typeof CATALOG!=='undefined'&&Array.isArray(CATALOG)&&CATALOG.some(record=>record.name==='windows-proof.txt')})))};}
+    catch(error){return{url:target.url(),error:error.message};}
+  });
+  const targets=(async()=>{
+    let session;
+    try{session=await bounded(browser.newBrowserCDPSession());const value=await bounded(session.send('Target.getTargets'));return value.targetInfos.map(target=>({id:target.targetId,type:target.type,url:target.url,attached:target.attached}));}
+    catch(error){return{error:error.message};}
+    finally{if(session)void session.detach().catch(()=>{});}
+  })();
+  [evidence.appPages,evidence.targets]=await Promise.all([Promise.all(tasks),targets]);
+  return evidence;
+}
+async function toolImportDiagnostics(){
+  const bounded=async(promise)=>{
+    let timer;
+    try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Tool import diagnostic timed out')),2000);})]);}
+    finally{clearTimeout(timer);}
+  };
+  const evidence={pages:browser.contexts().flatMap(context=>context.pages().map(target=>({url:target.url(),closed:target.isClosed()})))};
+  try{evidence.app=await bounded(page.evaluate(()=>{
+    const rect=node=>{if(!node)return null;const r=node.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height};};
+    const identify=node=>node?{tag:node.tagName,id:node.id,class:String(node.className||'')}:null;
+    const offers=[...document.querySelectorAll('.pb-tool-file')];
+    const take=offers[0]?.querySelector('button'),box=take?.getBoundingClientRect();
+    return{url:location.href,panel:document.querySelector('.panel.on')?.id,
+      signing:typeof signing==='undefined'?null:signing,cancelRequested:typeof cancelReq==='undefined'?null:cancelReq,
+      active:identify(document.activeElement),devicePixelRatio,viewport:{width:innerWidth,height:innerHeight},
+      toolFrame:rect(document.querySelector('.pb-tool-frame iframe')),offerCount:offers.length,
+      offers:offers.map(dialog=>({open:dialog.open,file:dialog.querySelector('.pb-tool-file-name')?.textContent,buttons:[...dialog.querySelectorAll('button')].map(button=>({text:button.textContent,disabled:button.disabled,rect:rect(button)}))})),
+      takeCenterHit:box?identify(document.elementFromPoint(box.x+box.width/2,box.y+box.height/2)):null,
+      progress:{visible:Boolean(document.getElementById('prog')?.classList.contains('on')),current:document.getElementById('progCur')?.textContent,count:document.getElementById('progCount')?.textContent},
+      catalog:typeof CATALOG==='undefined'?null:CATALOG.slice(0,12).map(record=>({name:record.name,hash:record.hash})),
+      diagnosticLog:document.getElementById('diagLog')?.textContent.slice(0,3000),toast:document.getElementById('toast')?.textContent};
+  }));}catch(error){evidence.app={error:error.message};}
+  const tool=page.frames().find(frame=>frame.url().startsWith('https://pbtool.localhost/kimboard/'));
+  if(tool)try{evidence.tool=await bounded(tool.evaluate(()=>({url:location.href,active:document.activeElement?{tag:document.activeElement.tagName,id:document.activeElement.id}:null,
+    openSelects:CSS.supports('selector(:open)')?[...document.querySelectorAll('select:open')].map(select=>select.id):null})));}catch(error){evidence.tool={error:error.message};}
+  return evidence;
+}
+function commonFixture(mode){
+ const classpath=[resolve('windows/engine/build/classes'),resolve('windows/engine/build/lib/*')].join(delimiter);
+ return JSON.parse(execFileSync('java',['--class-path',classpath,'windows/pruefung/CommonVaultFixture.java',mode,process.env.PB_WINDOWS_TEST_FOLDER],{encoding:'utf8'}));
+}
+async function commonFirst(){
+ const fixture=commonFixture('seed');
+ await page.evaluate(()=>{window.commonResult=null;Capacitor.Plugins.ProVault.tresorEinziehen({nurVerbinden:true}).then(v=>window.commonResult=v,e=>window.commonResult={error:e.code});});
+ const prompt=await dialog();await prompt.locator('#password').fill(PASSWORD);await prompt.locator('#remember').check();await prompt.locator('#submit').click();
+ await page.waitForFunction(()=>window.commonResult,null,{timeout:90000});
+ ok('Installed Windows connects the optional common vault through its native password dialog',await page.evaluate(id=>commonResult.offen&&commonResult.kennung===id&&!commonResult.eingezogen,fixture.vaultId));
+ const received=await page.evaluate(()=>PBProVerbund.receive());
+ ok('Installed Windows imports Family input through the normal catalog before acknowledging',received.imported===1&&received.failed===0&&await page.evaluate(()=>CATALOG.some(r=>r.name==='Windows-Pro-Verbund.txt')));
+ await page.evaluate(async()=>{const r=CATALOG.find(r=>r.name==='Windows-Pro-Verbund.txt');await PBProVerbund.send(new File(['Erfundener Windows-Brief aus Familienakte – bearbeitet'],'Windows-Pro-Verbund-Antwort.txt',{type:'text/plain'}),r.hash,'familienakte');await PBProVerbund.confirm();});
+ const returns=await page.evaluate(async()=>(await PBProVerbund.receipts()).filter(r=>r.kind==='ausgang'));
+ const checked=commonFixture('check');ok('Installed Windows returns exact edited bytes and source relation while acceptance remains open',checked.sourceAccepted&&returns.length===1&&returns[0].stand==='weitergegeben');
+ commonFixture('ack');await page.evaluate(()=>PBProVerbund.confirm());
+ ok('Installed Windows reports only the canonical Family receiver mark as acceptance',await page.evaluate(async()=>(await PBProVerbund.receipts()).some(r=>r.kind==='ausgang'&&r.stand==='im-eingang')));
+ await page.evaluate(()=>PBVault.backup());
+}
+async function commonRestart(){
+ const z=await call('ProVault','tresorZustand');
+ ok('Common-vault connection survives process restart and reinstallation with DPAPI',z.offen&&z.gemerkt&&z.uebergaben);
+ ok('Common-vault incoming and outgoing receipts survive process restart and reinstallation',await page.evaluate(async()=>{const rows=await PBProVerbund.receipts();return rows.some(r=>r.kind==='eingang'&&r.vertrag.id==='windows-family-17'&&r.stand==='gespeichert')&&rows.some(r=>r.kind==='ausgang'&&r.stand==='im-eingang');}));
+ await call('ProVault','tresorSperren');ok('Explicit common-vault lock stays locked in the installed app',!(await call('ProVault','tresorZustand')).offen);
+ await page.evaluate(()=>{window.commonResult=null;Capacitor.Plugins.ProVault.tresorEinziehen({nurVerbinden:true}).then(v=>window.commonResult=v,e=>window.commonResult={error:e.code});});
+ await page.waitForFunction(()=>window.commonResult,null,{timeout:90000});ok('Explicit unlock restores the same remembered common vault',await page.evaluate(()=>commonResult.offen));
+}
+async function dialog(){
+  for(let i=0;i<80;i++){
+    const target=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('/windows/dialog/index.html'));
+    if(target){await target.locator('#submit').waitFor({state:'visible'});return target;}await pause(250);
+  }throw Error('Native password dialog did not open');
+}
+function pdf(){
+  const stream='0 0 1 rg\n20 20 100 100 re f\n',objects=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>','<< /Type /Page /Parent 2 0 R /MediaBox [0 0 200 200] /Resources << >> /Contents 4 0 R >>',`<< /Length ${Buffer.byteLength(stream)} >>\nstream\n${stream}endstream`];
+  let body='%PDF-1.4\n',offsets=[0];
+  for(let i=0;i<objects.length;i++){offsets.push(Buffer.byteLength(body));body+=`${i+1} 0 obj\n${objects[i]}\nendobj\n`;}
+  const xref=Buffer.byteLength(body);body+=`xref\n0 5\n0000000000 65535 f \n`+offsets.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF\n`;return Buffer.from(body);
+}
+try{
+  await connect();
+  for(let i=0;i<80;i++){page=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url()==='https://tauri.localhost/'||p.url()==='https://tauri.localhost/index.html');if(page)break;await pause(250);}
+  if(!page)console.error('Observed app pages',browser.contexts().flatMap(c=>c.pages()).map(p=>p.url()));
+  assert.ok(page,'Installed main page exists');
+  page.on('pageerror',error=>report.errors.push(error.stack||error.message));
+  report.modelRequests=[];
+  report.modelConsole=[];
+  page.on('console',message=>{const value=message.text();if(/embedding|MODUL 03|wasm|onnx|model.*load/i.test(value)&&report.modelConsole.length<30)report.modelConsole.push(value.slice(0,1500));});
+  page.on('response',response=>{const url=response.url();if(url.startsWith('https://pbmodel.localhost/models/')||url.startsWith('https://tauri.localhost/models/')||url.startsWith('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2'))report.modelRequests.push({url:url.split('?')[0],status:response.status()});});
+  // The workspace is registered before the remaining adapter scripts load.
+  // A freshly reinstalled WebView can reach it while ProVerbund is still loading.
+  // Require the modules used below; an absent/broken module still fails this wait.
+  await page.waitForFunction(()=>window.PBWorkspace&&window.PBProVerbund&&window.PBVault&&typeof db!=='undefined'&&db&&window.Capacitor,null,{timeout:90000});
+  const info=await call('ProDevice','getInfo');ok('installed app reports Windows and the actual native version',info.platform==='windows'&&info.versionName===expectedVersion);
+  ok('raw calls without the private app capability are denied',await page.evaluate(async()=>{try{await __TAURI_INTERNALS__.invoke('pb_call',{plugin:'ProFiles',method:'listOriginals',options:{}});return false;}catch(error){return String(error).includes('NOT_ALLOWED');}}));
+  if(phase==='first'){
+    await page.evaluate(()=>{window.accountProbe=null;Capacitor.Plugins.ProMail.addAccount().then(v=>window.accountProbe=v,e=>window.accountProbe={error:e.code});});
+    const account=await dialog();ok('native account dialog uses all eight shared provider templates',await account.locator('#provider option').count()===8);
+    await account.locator('#provider').selectOption('gmail');ok('Gmail uses browser authorization without a password field',!await account.locator('#password-label').isVisible());
+    await account.locator('#provider').selectOption('microsoft');ok('unconfigured Microsoft integration shows a plan and accepts no password',await account.locator('#submit').isDisabled()&&!await account.locator('#password-label').isVisible()&&(await account.locator('#help').textContent()).includes('Microsoft Entra'));
+    await account.locator('#cancel').click();await page.waitForFunction(()=>window.accountProbe,null,{timeout:10000});ok('account dialog cancellation connects no account',await page.evaluate(()=>accountProbe.error==='CANCELLED')&&(await call('ProMail','accounts')).items.length===0);
+    const bytes=Buffer.from('Windows-Probe: Fahrzeug Radstand 2820 Millimeter');
+    await page.setInputFiles('#fileInput',{name:'windows-proof.txt',mimeType:'text/plain',buffer:bytes});
+    await page.waitForFunction(()=>!signing&&CATALOG.some(r=>r.name==='windows-proof.txt'),{},{timeout:90000});
+    const hash=createHash('sha256').update(bytes).digest('hex');
+    const original=await call('ProFiles','originalInfo',{hash});ok('real imported original is persisted and fingerprinted',original.hash===hash&&original.size===bytes.length);
+    const read=await call('ProFiles','readOriginal',{hash,offset:0});ok('original reads back through the native bridge',Buffer.from(read.data,'base64').equals(bytes));
+    const sharedName='Übergabe-Ж-😀.txt',sharedPath=resolve(process.env.RUNNER_TEMP,sharedName),sharedBytes=Buffer.from('Actual Windows second instance file');
+    await writeFile(sharedPath,sharedBytes);
+    const second=spawn(process.env.PB_WINDOWS_TEST_EXE,[sharedPath],{windowsHide:true,stdio:'ignore'});
+    const secondCode=await new Promise((resolve,reject)=>{second.once('error',reject);second.once('exit',resolve);});assert.equal(secondCode,0);
+    await page.waitForFunction(name=>!signing&&CATALOG.some(r=>r.name===name),sharedName,{timeout:90000});
+    const sharedHash=createHash('sha256').update(sharedBytes).digest('hex');
+    ok('Windows second instance imports a Unicode-named file into the existing app',(await call('ProFiles','originalInfo',{hash:sharedHash})).hash===sharedHash&&Buffer.from(await readFile(sharedPath)).equals(sharedBytes));
+    const exported=await call('ProFiles','share',{hash});ok('native save selection commits a verified export without changing the original',exported.saved&&Buffer.from(await readFile(resolve(process.env.PB_WINDOWS_TEST_SAVE_FOLDER,'windows-proof.txt'))).equals(bytes));
+    const shares=Array.from({length:5},(_,i)=>`JT3v5-${i+1}-CI_fixture_only_not_a_real_share`);
+    const saved=await call('ProFiles','saveRecoveryKeys',{shares,name:'CI-RECOVERY-KEYS.txt',heading:'Test fixture only'});
+    const recovery=await readFile(resolve(process.env.PB_WINDOWS_TEST_SAVE_FOLDER,'CI-RECOVERY-KEYS.txt'),'utf8');
+    ok('recovery export commits exactly the requested five parts before confirming success',saved.saved&&recovery===['Test fixture only','',...shares,''].join('\n'));
+    await page.evaluate(()=>{window.vaultResult=null;Capacitor.Plugins.ProVault.choose().then(v=>window.vaultResult=v,e=>window.vaultResult={error:e.code});});
+    const password=await dialog();await password.locator('#password').fill(PASSWORD);await password.locator('#repeat').fill(PASSWORD);await password.locator('#notice').check();await password.locator('#remember').check();await password.locator('#submit').click();
+    await page.waitForFunction(()=>window.vaultResult,{},{timeout:90000});
+    ok('own password dialog creates a real password-encrypted folder',await page.evaluate(()=>vaultResult.created&&vaultResult.state.unlocked));
+    await call('ProVault','migrate');await call('ProVault','backupMail');
+    const ticket=(await call('ProVault','catalogBegin')).ticket;
+    const catalogData=await page.evaluate(()=>JSON.stringify({app:'private-brain-pro',catalog:CATALOG}));
+    await call('ProVault','catalogAppend',{ticket,offset:0,data:Buffer.from(catalogData).toString('base64')});await call('ProVault','catalogFinish',{ticket});
+    const backup=await call('ProVault','catalogInfo');ok('catalog is committed and read back before success',backup.exists&&backup.size>0);
+    await commonFirst();
+    await page.evaluate(()=>{window.keyProbe=null;Capacitor.Plugins.ProProtect.setKey({service:'virustotal'}).then(v=>window.keyProbe=v,e=>window.keyProbe={error:e.code});});
+    const key=await dialog();await key.locator('#password').fill('CI-fixture-only-never-a-real-key');await key.locator('#submit').click();
+    await page.waitForFunction(()=>window.keyProbe,null,{timeout:10000});ok('native provider key dialog confirms the committed encrypted key',await page.evaluate(()=>keyProbe.saved&&keyProbe.state.keys.virustotal));
+    await page.evaluate(()=>{window.keyProbe=null;Capacitor.Plugins.ProProtect.setKey({service:'virustotal'}).then(v=>window.keyProbe=v,e=>window.keyProbe={error:e.code});});
+    const remove=await dialog();await remove.locator('#remove').click();await page.waitForFunction(()=>window.keyProbe,null,{timeout:10000});ok('native provider key can be explicitly removed',await page.evaluate(()=>keyProbe.removed&&!keyProbe.state.keys.virustotal));
+    const preview=await call('ProFiles','openPdf',{name:'preview.pdf',data:pdf().toString('base64')});
+    const png=await call('ProFiles','pdfPage',{id:preview.id,page:0,width:600});ok('installed app renders a real PDF in its isolated worker',preview.pages===1&&png.width>0&&Buffer.from(png.data,'base64').subarray(1,4).toString()==='PNG');
+    // Leave the worker open: the process-lifetime test must also terminate it.
+    await call('ProNetwork','setOffline',{offline:true});ok('native offline switch confirms persisted state',(await call('ProNetwork','getState')).offline===true);
+    await call('ProNetwork','setOffline',{offline:false});
+    await page.evaluate(()=>{const f=document.createElement('iframe');f.id='tool-origin-probe';f.src='https://pbtool.localhost/kimboard/index.html#pb-tool=unlicensed-probe';document.body.append(f);});
+    let tool;for(let i=0;i<40;i++){tool=page.frames().find(f=>f.url().startsWith('https://pbtool.localhost/kimboard/'));if(tool)break;await pause(250);}assert.ok(tool,'Tool origin loads');
+    ok('tool origin cannot access app storage or native account/vault functions',await tool.evaluate(()=>{try{void parent.Capacitor.Plugins.ProVault;return false;}catch{return true;}}));
+    await page.locator('#tool-origin-probe').evaluate(f=>f.remove());
+    // Test-only studio identity is generated inside the disposable CI profile.
+    // It is never bundled into the installer or used as Klaus' publisher key.
+    // Seit Klaus' Herausgeber-Schlüssel fest in der App steht, öffnet ein selbst erzeugtes Studio nichts (so gewollt, test-tools).
+    // Diese Abnahme prüft die Werkzeug-Trennung, nicht den Schlüssel: nur hier wird die Schlüsselliste leer gestellt und neu gelesen.
+    ok('installed app carries Klaus\' fixed publisher key',await page.evaluate(()=>PBLicense.ready.then(()=>fetch('license-keys.json',{cache:'no-store'}).then(r=>r.json())).then(d=>d.publishers.some(p=>p.key==='fb6cd374a3c42786b7260387c4b73b5796ba7c5328949adaf6a724883709ee2f'))));
+    await page.route('**/license-keys.json',route=>route.fulfill({contentType:'application/json',body:'{"publishers":[]}'}));
+    ok('test-only empty publisher list is read',await page.evaluate(()=>PBLicense.reloadKeys())===0);
+    await page.evaluate(async()=>{await PBLicense.createKey('CI-studio-fixture-only-2026');PBTools.open('pinnwand');});
+    const licensed=page.frameLocator('.pb-tool-frame iframe');await licensed.locator('body').waitFor({state:'visible',timeout:15000});
+    ok('licensed tool is authorized on its own origin',await licensed.locator('html').evaluate(()=>PBToolAuthorized));
+    ok('isolated tool cannot invoke native functions without the private capability',await licensed.locator('html').evaluate(async()=>{
+      if(!window.__TAURI_INTERNALS__?.invoke)return true;
+      try{await __TAURI_INTERNALS__.invoke('pb_call',{plugin:'ProVault',method:'state',options:{}});return false;}catch(error){return String(error).includes('NOT_ALLOWED');}
+    }));
+    await licensed.locator('html').evaluate(()=>{parent.postMessage({kind:'pb-tool-file',nonce:'wrong',name:'forged-tool.txt',type:'text/plain',bytes:new ArrayBuffer(4)},'https://tauri.localhost');});
+    await pause(100);ok('tool file with the wrong handoff nonce is ignored',await page.locator('.pb-tool-file').count()===0);
+    await licensed.locator('html').evaluate(()=>{const a=document.createElement('a');a.download='windows-tool-proof.txt';a.href=URL.createObjectURL(new Blob(['Actual isolated tool handoff'],{type:'text/plain'}));a.click();});
+    try{
+      // The failed Windows capture retained a native tool-select popup over
+      // this modal. Exercise the same actual Take button with one keyboard
+      // activation, without retrying the handoff or invoking its handler.
+      const take=page.locator('.pb-tool-file button').first();await take.focus();
+      assert.ok(await take.evaluate(button=>document.activeElement===button),'Tool Take button receives keyboard focus');
+      await page.keyboard.press('Enter');
+      await page.waitForFunction(()=>!document.querySelector('dialog.pb-tool-file[open]')&&!document.querySelector('.pb-tool-frame'),null,{timeout:10000});
+      await page.waitForFunction(()=>!signing&&CATALOG.some(r=>r.name==='windows-tool-proof.txt'),null,{timeout:90000});
+    }catch(error){
+      try{report.toolImport=await toolImportDiagnostics();}catch(diagnosticError){report.toolImport={diagnosticError:diagnosticError.message};}
+      console.error('TOOL IMPORT diagnostics '+JSON.stringify(report.toolImport));throw error;
+    }
+    const toolHash=createHash('sha256').update('Actual isolated tool handoff').digest('hex');
+    ok('actual tool download enters the same checked native import',!(await call('ProFiles','originalInfo',{hash:toolHash})).missing&&Buffer.from((await call('ProFiles','readOriginal',{hash:toolHash,offset:0})).data,'base64').equals(Buffer.from('Actual isolated tool handoff')));
+    await page.evaluate(()=>PBTools.open('pinnwand'));await page.locator('.pb-tool-frame iframe').waitFor();
+    await page.evaluate(async()=>{for(const key of ['pb_studio_v1','pb_studio_probe','pb_studio_visible'])localStorage.removeItem(key);await PBLicense.refresh();});
+    ok('revoking the tool permission closes its active isolated frame',await page.locator('.pb-tool-frame').count()===0);
+    await page.unroute('**/license-keys.json');ok('fixed publisher key is read again after the tool checks',await page.evaluate(()=>PBLicense.reloadKeys())===1);
+    await page.evaluate(()=>{window.speechProbe=null;Capacitor.Plugins.ProSpeech.listen({language:'de-DE'}).then(v=>window.speechProbe=v,e=>window.speechProbe={error:e.code});});
+    for(let i=0;i<60;i++){
+      if(await page.evaluate(()=>Boolean(window.speechProbe)))break;
+      const speech=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url().includes('/windows/dialog/index.html'));
+      if(speech){
+        try{await speech.locator('#cancel').click({timeout:1500});}
+        catch(error){await page.waitForFunction(()=>window.speechProbe,null,{timeout:3000}).catch(()=>{throw error;});}
+        break;
+      }await pause(100);
+    }
+    await page.waitForFunction(()=>window.speechProbe,null,{timeout:10000});
+    ok('Windows speech adapter returns cancellation or explicit missing system recognition',await page.evaluate(()=>speechProbe.cancelled===true||speechProbe.error==='SPEECH_UNAVAILABLE'));
+    report.speech='API/cancellation only; no spoken-audio or microphone acceptance on the CI runner';
+    const scan=await call('ProFiles','scan',{hash});
+    ok('Defender adapter reports a bounded named result without claiming a clean file',scan.provider==='Microsoft Defender'&&['completed','attention','unavailable'].includes(scan.status));
+    report.modelDownloadProbe={networkBefore:await call('ProNetwork','getState'),stateBefore:await call('ProSemantic','getState'),cancelRequested:false};
+    assert.equal(report.modelDownloadProbe.networkBefore.offline,false,'Model download requires the already restored online state');
+    try{
+      await page.evaluate(async()=>{window.modelDownload=null;window.modelProgress=0;await Capacitor.Plugins.ProSemantic.addListener('progress',p=>window.modelProgress=p.done);Capacitor.Plugins.ProSemantic.install().then(v=>window.modelDownload=v,e=>window.modelDownload={error:e.code||'UNKNOWN'});});
+      // A rejected installation is a download failure, not evidence that this
+      // driver cancelled a running transfer. Wait for real written bytes first.
+      await page.waitForFunction(()=>window.modelProgress>0||window.modelDownload,null,{timeout:180000});
+      const result=await page.evaluate(()=>window.modelDownload);
+      assert.ok(!result?.error,'Model installation failed before cancellation: '+result?.error);
+      if(!result){
+        report.modelDownloadProbe.cancelRequested=true;
+        await call('ProSemantic','cancel');
+        await page.waitForFunction(()=>window.modelDownload,null,{timeout:30000});
+      }
+    }finally{
+      report.modelDownloadProbe.stateAfter=await call('ProSemantic','getState');
+      report.modelDownloadProbe.networkAfter=await call('ProNetwork','getState');
+      report.modelDownloadProbe.transfer=await page.evaluate(()=>({progress:window.modelProgress,result:window.modelDownload}));
+      console.log('MODEL download probe '+JSON.stringify(report.modelDownloadProbe));
+    }
+    const outcome=report.modelDownloadProbe.transfer.result;
+    assert.ok(!outcome?.error||(report.modelDownloadProbe.cancelRequested&&outcome.error==='CANCELLED'),'Model download returned an unrelated failure: '+outcome?.error);
+    const partial=report.modelDownloadProbe.stateAfter;ok('cancelled model download leaves a truthful resumable state',!partial.running&&(partial.installed||partial.present>0));
+    const model=await call('ProSemantic','install');ok('complete real model download matches the pinned fingerprints',model.installed===true);
+    await page.evaluate(()=>PBNetwork.setOffline(true));
+    ok('native local files remain readable through normal IPC after the app internet switch turns off',Buffer.from((await call('ProFiles','readOriginal',{hash,offset:0})).data,'base64').equals(bytes));
+    report.modelEndpoints=await page.evaluate(async()=>{
+      const base='https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2';
+      const urls=[base,base+'/dist/ort-wasm-simd.wasm',window.SBKIM_MODEL_ROOT+'Xenova/multilingual-e5-small/config.json'];const results=[];
+      for(const url of urls){const response=await fetch(url),bytes=await response.arrayBuffer();const sha=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('');results.push({url,status:response.status,type:response.headers.get('content-type'),size:bytes.byteLength,sha256:sha});}return results;
+    });
+    console.log('MODEL endpoints '+JSON.stringify(report.modelEndpoints));
+    ok('offline native endpoints stream the exact pinned library, WASM and model configuration',report.modelEndpoints.every(r=>r.status===200)&&report.modelEndpoints[0].sha256===modelPins.library.files['transformers.min.js']&&report.modelEndpoints[1].sha256===modelPins.library.files['ort-wasm-simd.wasm']&&report.modelEndpoints[2].sha256===modelPins.model.files['config.json']);
+    const meaning=await page.evaluate(async()=>{
+      await SbkimEmbedding.init();const q=await SbkimEmbedding.embedQuery('Rechnung vom Zahnarzt'),near=await SbkimEmbedding.embedPassage('Zahnarztrechnung über 120 Euro für eine Füllung'),far=await SbkimEmbedding.embedPassage('Wetterbericht: morgen Regen in Hamburg');
+      const dot=(a,b)=>a.reduce((sum,value,i)=>sum+value*b[i],0);return{dim:q.length,near:dot(q,near),far:dot(q,far),source:SbkimEmbedding.getModelSource(),root:SbkimEmbedding.getModelRoot(),offline:PBNetwork.offline,fallback:SbkimEmbedding.getModelFallback()};
+    });
+    ok('installed WebView2 understands meaning from the local e5 model while offline',meaning.dim===384&&meaning.near>meaning.far+0.02&&meaning.source==='local'&&meaning.root==='https://pbmodel.localhost/models/'&&meaning.offline&&!meaning.fallback);
+    report.model=meaning;await page.evaluate(()=>PBNetwork.setOffline(false));
+    await call('ProSemantic','markLoading');
+    const crashPage=page,renderer=await browser.contexts()[0].newCDPSession(page);void renderer.send('Page.crash').catch(()=>{});
+    await pause(2000);await browser.close();browser=null;page=null;await connect();
+    for(let i=0;i<80;i++){page=browser.contexts().flatMap(c=>c.pages()).find(p=>p.url()==='https://tauri.localhost/index.html');if(page)break;await pause(250);}
+    if(!page){
+      try{report.rendererRecovery=await recoveryDiagnostics(crashPage);}
+      catch(error){report.rendererRecovery={diagnosticError:error.message};}
+      const nativeRoot=report.rendererRecovery.connected===true&&Array.isArray(report.rendererRecovery.targets)&&report.rendererRecovery.targets.some(target=>target.type==='page'&&target.url==='https://tauri.localhost/index.html');
+      if(nativeRoot){
+        // WebView2 has recovered its real root target, but the CDP client can
+        // miss the replacement Page. Reattach this driver once; closing a
+        // connectOverCDP browser disconnects its transport, not the native app.
+        report.rendererRecovery.driverReconnect={attempts:1,reason:'native-root-present-without-mapped-page'};
+        await browser.close();browser=null;await connect();
+        for(let i=0;i<80;i++){page=browser.contexts().flatMap(context=>context.pages()).find(target=>target.url()==='https://tauri.localhost/index.html');if(page)break;await pause(250);}
+        report.rendererRecovery.driverReconnect.mappedURL=page?.url()||null;
+        if(!page)try{report.rendererRecovery.afterDriverReconnect=await recoveryDiagnostics(crashPage);}catch(error){report.rendererRecovery.afterDriverReconnect={diagnosticError:error.message};}
+      }
+      console.log('RECOVERY diagnostics '+JSON.stringify(report.rendererRecovery));
+    }
+    assert.ok(page,'App recovers its main page after a renderer crash');
+    page.on('pageerror',error=>report.errors.push(error.stack||error.message));
+    await page.waitForFunction(()=>window.Capacitor&&window.PBSemantic&&window.PBWorkspace&&typeof db!=='undefined'&&db&&CATALOG.some(r=>r.name==='windows-proof.txt'),null,{timeout:90000});
+    const guarded=await call('ProSemantic','getState');ok('real renderer crash recovers the app and prevents automatic model restart',guarded.installed&&guarded.crashes>0);
+    await call('ProSemantic','clearCrash');
+  }else{
+    await commonRestart();
+    const hash=createHash('sha256').update('Windows-Probe: Fahrzeug Radstand 2820 Millimeter').digest('hex');
+    ok('catalog persists across process restart and reinstallation',await page.evaluate(()=>CATALOG.some(r=>r.name==='windows-proof.txt')));
+    ok('native original persists across process restart and reinstallation',(await call('ProFiles','originalInfo',{hash})).hash===hash);
+    const state=await call('ProVault','state');ok('Windows DPAPI restores remembered folder key on this user account',state.configured&&state.unlocked&&state.remembered);
+    const backup=await call('ProVault','catalogInfo');ok('portable catalog remains readable after restart',backup.exists);
+    await call('ProVault','lock');
+    await page.evaluate(()=>{window.vaultResult=null;Capacitor.Plugins.ProVault.unlock().then(v=>window.vaultResult=v,e=>window.vaultResult={error:e.code});});
+    const password=await dialog();await password.locator('#password').fill(PASSWORD);await password.locator('#remember').check();await password.locator('#submit').click();
+    await page.waitForFunction(()=>window.vaultResult,{},{timeout:90000});ok('separate native dialog unlocks the same folder',await page.evaluate(()=>vaultResult.unlocked&&vaultResult.state.unlocked));
+  }
+  ok('no uncaught app runtime error during native acceptance',report.errors.length===0);
+}catch(error){report.failure=error.message;console.error(error.message);console.error('APP runtime errors '+JSON.stringify(report.errors));if(report.modelRequests)console.error('MODEL diagnostics '+JSON.stringify({requests:report.modelRequests,console:report.modelConsole}));process.exitCode=1;try{await page?.screenshot({path:out+'.png'});}catch{}}
+finally{await mkdir(resolve(out,'..'),{recursive:true});await writeFile(out,JSON.stringify(report,null,2));await browser?.close().catch(()=>{});}

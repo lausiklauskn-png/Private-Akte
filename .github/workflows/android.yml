@@ -1,0 +1,58 @@
+name: Android-App
+
+# Private Akte Pro (Android) aus derselben Seite wie die PWA (Klaus 18.11.2026; Muster Datei-Organizer Pro android.yml).
+# Prüf-Bau (debug, mit dem Wegwerf-Schlüssel des Rechners): zum Herunterladen und Ausprobieren. Keine Veröffentlichung.
+on:
+  push:
+    branches: ['main']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  android:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: npm ci
+      - name: Klone gegen ihre Pins prüfen
+        run: node tools/klon-nachziehen.mjs --pruefen
+      - name: Vorrat für Private Brain Pro (Texterkennung, Film; gegen die Pins im Klon geprüft)
+        uses: actions/cache@v4
+        with:
+          path: .cache/privat-brain-pro
+          key: pb-vorrat-${{ hashFiles('klone/privat-brain-pro/tools/native/*.json') }}
+      - name: Web-Paket bauen und in die Hülle legen (Private Brain Pro als App-Seite, Mail nativ)
+        run: npm run sync:android
+      - name: Hülle ohne Android prüfen (Paket, Kennung, Fassung, Rechte, Gerätezugriffe, App-Seite Private Brain Pro)
+        run: node tools/native/test-native.mjs
+      - name: Bauen
+        working-directory: android
+        run: ./gradlew --no-daemon --max-workers=2 assembleDebug
+      - name: APK benennen
+        run: |
+          set -euo pipefail
+          v=$(node -p "require('./windows/package.json').version")
+          mkdir -p ausgabe && cp android/app/build/outputs/apk/debug/app-debug.apk "ausgabe/Private-Akte-Pro-$v.apk"
+          (cd ausgabe && sha256sum *.apk > SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: private-akte-pro-android
+          path: ausgabe/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.8.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.9.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -197,7 +197,7 @@ function glockenFeld(){
   menue(`${alle.length ? alle.map(zeile).join('') : '<p class="leer" style="padding:10px">Keine Erinnerung gespeichert.</p>'}<hr><button data-a="kalender">${ic('kalender')} Kalender öffnen</button><button data-a="notiz">${ic('notiz')} Neue Notiz</button>`, 'glockenfeld');
 }
 function kopfZeigen(){
-  $('fassung').textContent = `${FASSUNG} · Basic`;
+  $('fassung').textContent = `${FASSUNG} · ${window.PA_PRO ? 'Pro' : 'Basic'}`;
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
   $('kopfknoepfe').innerHTML = glockeKnopf() + MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
     + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Importieren, Exportieren, Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
@@ -689,11 +689,11 @@ const A = {
  'pm-uebernehmen': () => pmUebernehmen(),
  'pm-zurkasse': async e => { try { await T().bank.zurKasse(e.dataset.id, e.dataset.an === '1'); await pmLaden(); } catch (err) { toast(fehlerText(err)); } },
  'pm-tabelle': () => {
-   const zeilen = T().geld.csv(pm.liste || [], pm.monat), a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['\ufeff' + zeilen], {type:'text/csv'})); a.download = `portemonnaie-${pm.monat}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000); },
+   const zeilen = T().geld.csv(pm.liste || [], pm.monat); geben(new Blob(['\ufeff' + zeilen], {type:'text/csv'}), `portemonnaie-${pm.monat}.csv`).catch(err => toast(fehlerText(err))); },
  'bon-start': () => { menueZu(); fStadt('geld'); },
  'an-bookledger': () => {
-   const b = T().bank, datei = b.monatsdatei(pm.monat, pm.liste || [], pm.konten || [], pm.umsaetze || []), a = document.createElement('a');
-   a.href = URL.createObjectURL(new Blob([JSON.stringify(datei, null, 1)], {type:'application/json'})); a.download = b.monatsdateiName(pm.monat); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+   const b = T().bank, datei = b.monatsdatei(pm.monat, pm.liste || [], pm.konten || [], pm.umsaetze || []);
+   geben(new Blob([JSON.stringify(datei, null, 1)], {type:'application/json'}), b.monatsdateiName(pm.monat)).catch(err => toast(fehlerText(err)));
    pm.gegeben[pm.monat] = true; stadtNeu(); toast(`${monatName(pm.monat)} liegt als Datei für BookLedgerPro bereit.`); },
  'hinaus-info': () => { fStadt('geld'); toast('Der Weg nach außen: „An BookLedgerPro geben“ unten im Portemonnaie.'); },
  scan: () => { menueZu(); fRahmen('wfpdf', 'scan=1&von=PrivateAkte'); },
@@ -1064,10 +1064,10 @@ Object.assign(A, {
  'echt-muell': e => { const d = (echt.liste || []).find(x => x.id === e.dataset.id); if (d && confirm(`„${echtTitel(d)}“ aus der Akte nehmen?`)) A['echt-raus'](e); },
  'echt-teilen': async e => {
    try { const f = await T().datei(e.dataset.id); if (navigator.canShare && navigator.canShare({files:[f]})) { await navigator.share({files:[f], title:f.name}); return; }
-     const url = URL.createObjectURL(f), a = document.createElement('a'); a.href = url; a.download = f.name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
+     await geben(f, f.name);
    } catch (err) { if (err && err.name !== 'AbortError') toast(fehlerText(err)); } },
  'echt-oeffnen': async e => {
-   try { const f = await T().datei(e.dataset.id), url = URL.createObjectURL(f), a = document.createElement('a');
+   try { const f = await T().datei(e.dataset.id); if (nativSpeichern()) { await geben(f, f.name); return; } const url = URL.createObjectURL(f), a = document.createElement('a');
      a.href = url; a.target = '_blank'; a.rel = 'noopener'; if (!/^(application\/pdf|image\/|text\/plain)/.test(f.type)) a.download = f.name;
      document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
    } catch (err) { toast(fehlerText(err)); } },
@@ -1093,6 +1093,17 @@ document.addEventListener('submit', async ev => {
   } catch (err) { knopf.disabled = false; toast(fehlerText(err)); } finally { echt.laeuft = false; }
 });
 
+/* Datei hinausgeben: im Browser als Download; in der Pro-App (Android/Windows) über „Speichern unter …“ des Geräts (DoDateien aus dem
+   Klon des Datei-Organizers) – die WebView der App kennt keinen Download. */
+const nativSpeichern = () => { const c = window.Capacitor; return c && c.isNativePlatform && c.isNativePlatform() && c.Plugins && c.Plugins.DoDateien && c.Plugins.DoDateien.speichern ? c.Plugins.DoDateien : null; };
+async function geben(blob, name){
+  const n = nativSpeichern();
+  if (n) {
+    const b = new Uint8Array(await blob.arrayBuffer()); let t = ''; for (let i = 0; i < b.length; i += 8192) t += String.fromCharCode.apply(null, b.subarray(i, i + 8192));
+    const r = await n.speichern({ name, mime: blob.type || 'application/octet-stream', data: btoa(t) }); return !!(r && r.gespeichert);
+  }
+  const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = name; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); return true;
+}
 /* ---------- Tresor exportieren / importieren: die Vollsicherung der Familienakte (verschlüsselter Ordner an einem gewählten Ort) ---------- */
 const sich = { art:null, notfallblatt:'', ordner:'' };
 /* Wohin zuletzt exportiert wurde – nur zum Wiederfinden gemerkt (der Browser nennt den Namen des gewählten Ordners, nicht den ganzen Pfad). */
@@ -1107,8 +1118,30 @@ function fSicherung(){
    ${(l => l ? `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Letztes Backup: ${uhr(l.erstellt)}</strong><small style="white-space:normal;overflow-wrap:anywhere">in den Ordner „${esc(l.ziel)}“, dort als „${esc(l.ordner)}“</small></span><span class="marke2 m-ok">${l.dateien} ${l.dateien===1?'Datei':'Dateien'}</span></div>` : `<div class="zeile" id="letzter-export"><span class="mitte"><strong>Noch kein Backup</strong><small>die Akte liegt nur im Speicher des Browsers</small></span></div>`)(letzterExport())}</div>
    ${kann ? `<div class="reihe"><button class="knopf gruen" data-a="sich-export">Backup erstellen</button><button class="knopf hell" data-a="akte-leeren">Akte leeren …</button></div>
    <p class="hinweis">Der Browser kann seinen Speicher leeren. Darum regelmäßig ein Backup erstellen – auf das Gerät, eine SD-Karte oder einen Stick. Einlesen geht über „Importieren“.</p>`
-   : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Ein Backup geht in Chrome oder Edge.</p>`}`);
+   : `<p class="hinweis">Dieser Browser kann keinen Ordner wählen. Ein Backup geht in Chrome oder Edge.</p>`}
+   ${kann ? kopieTeil() : ''}`);
 }
+/* Kopie an einem zweiten Ort (Pro-Akte, Klaus 18.11.): der „Zweite Ort“ der Familienakte – verschlüsselt, von selbst aktuell. */
+function kopieTeil(){
+  const k = sich.kopie, l = k && (k.letzte || null), g = k && k.letzteGelungen;
+  if (!k) return `<div class="liste" id="kopie"><div class="zeile"><span class="mitte"><strong>Kopie</strong><small>noch keine – z. B. SD-Karte oder Festplatte</small></span></div></div>
+   <div class="reihe"><button class="knopf hell" data-a="kopie-neu">Kopie einrichten</button></div>`;
+  const stand = l && !l.ok ? `<b class="warn">${esc(l.grund || 'nicht gelungen')}</b>` : g ? 'zuletzt ' + uhr(g.zeit) : 'noch keine Kopie dort';
+  return `<div class="liste" id="kopie"><div class="zeile"><span class="mitte"><strong>Kopie: ${esc(k.name)}</strong><small style="white-space:normal">verschlüsselt · ${stand}</small></span></div></div>
+   <div class="reihe"><button class="knopf hell" data-a="kopie-jetzt">Jetzt kopieren</button><button class="knopf hell" data-a="kopie-weg">Kopie beenden</button></div>`;
+}
+function fKopie(){
+  const m = T().sicherung.passwortMindestens;
+  fenster(`${fk('Kopie einrichten','Ein Ort für eine zweite Akte, verschlüsselt.')}
+   <form class="felder" data-form="kopie">
+    <label>Passwort (mindestens ${m} Zeichen) <input class="feld" type="password" name="p1" required minlength="${m}" autocomplete="new-password"></label>
+    <label>Passwort wiederholen <input class="feld" type="password" name="p2" required minlength="${m}" autocomplete="new-password"></label>
+    <button class="knopf gruen voll" type="submit">Ort wählen ${ic('pfeil')}</button>
+   </form>`);
+}
+async function kopieLaden(){ try { sich.kopie = T() && T().kopie ? await T().kopie.lesen() : null; } catch { sich.kopie = null; } }
+/* Beim Öffnen: ist eine Kopie eingerichtet, kommt sie von selbst auf den neuesten Stand (nur bei Änderung, höchstens einmal am Tag). */
+function kopieAuto(){ if (T() && T().kopie) T().kopie.sichern(`Private Akte ${FASSUNG}`, true).catch(() => {}); }
 function fImportWahl(){
   const kann = T() && T().sicherung.ordnerWaehlbar(), bereit = echt.liste !== null && !echt.fehler;
   const z = (a, i, t, u, aus) => `<button class="zeile" data-a="${a}" ${aus ? 'disabled' : ''}><span class="art">${ic(i)}</span><span class="mitte"><strong>${t}</strong><small style="white-space:normal">${u}</small></span>${ic('weiter')}</button>`;
@@ -1139,14 +1172,32 @@ function fImport(){
    <p class="hinweis">Erst wird jede Datei geprüft, dann hereingeholt. Was schon in der Akte liegt, wird nicht überschrieben.</p>`);
 }
 Object.assign(A, {
- 'sich-export': fExport, import: () => { menueZu(); fImportWahl(); }, export: () => { menueZu(); fSicherung(); },
+ 'sich-export': fExport, import: () => { menueZu(); fImportWahl(); }, export: async () => { menueZu(); await kopieLaden(); fSicherung(); },
+ 'kopie-neu': fKopie,
+ 'kopie-jetzt': async () => { if (echt.laeuft) return; echt.laeuft = true; toast('Kopie läuft …');
+   try { const r = await T().kopie.sichern(`Private Akte ${FASSUNG}`, false); toast(r && r.zweit.ok ? 'Kopie ist auf dem neuesten Stand.' : (r && r.zweit.grund) || 'Kopie nicht gelungen.'); }
+   catch (err) { toast(fehlerText(err)); } finally { echt.laeuft = false; await kopieLaden(); fSicherung(); } },
+ 'kopie-weg': async () => { if (!confirm('Kopie beenden? Die Kopie dort bleibt liegen.')) return; await T().kopie.beenden(); await kopieLaden(); fSicherung(); },
  'sich-import': async () => { try { sich.art = await T().sicherung.importWaehlen(); fImport(); } catch (err) { const m = zugangFehler(err); if (m) toast(m); } },
- 'sich-blatt': () => { const a = document.createElement('a'), url = URL.createObjectURL(new Blob([sich.notfallblatt], {type:'text/plain'}));
-   a.href = url; a.download = `Notfallblatt_${sich.ordner}.txt`; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); }
+ 'sich-blatt': () => geben(new Blob([sich.notfallblatt], {type:'text/plain'}), `Notfallblatt_${sich.ordner}.txt`).catch(err => toast(fehlerText(err)))
 });
 document.addEventListener('submit', async ev => {
-  const f = ev.target, art = f.dataset.form; if (art !== 'export' && art !== 'import') return; ev.preventDefault();
+  const f = ev.target, art = f.dataset.form; if (art !== 'export' && art !== 'import' && art !== 'kopie') return; ev.preventDefault();
   if (echt.laeuft) return; const knopf = f.querySelector('button[type=submit]');
+  if (art === 'kopie') {
+    const p = f.p1.value, falsch = p !== f.p2.value ? 'Die beiden Passwörter sind nicht gleich.' : T().sicherung.passwortPruefen(p);
+    if (falsch) { toast(falsch); return; }
+    echt.laeuft = true; knopf.disabled = true;
+    try {
+      const r = await T().kopie.einrichten(p, `Private Akte ${FASSUNG}`); sich.notfallblatt = r.notfallblatt || ''; sich.ordner = r.name;
+      await kopieLaden();
+      fenster(`${fk('Kopie eingerichtet', esc(r.name))}
+       <p class="hinweis">${r.lauf && r.lauf.zweit.ok ? 'Die erste Kopie liegt dort.' : '<b class="warn">' + esc((r.lauf && r.lauf.zweit.grund) || 'Die erste Kopie ist nicht gelungen.') + '</b>'}</p>
+       ${r.notfall ? `<div class="blatt"><small>Notfallschlüssel · öffnet die Kopie auch ohne Passwort</small><b id="notfall">${esc(r.notfall)}</b></div>
+       <div class="reihe"><button class="knopf hell" data-a="sich-blatt">Notfallblatt speichern</button></div>` : ''}`);
+    } catch (err) { const m = zugangFehler(err); if (m) toast(m); } finally { echt.laeuft = false; knopf.disabled = false; }
+    return;
+  }
   if (art === 'export') {
     const p = f.p1.value, falsch = p !== f.p2.value ? 'Die beiden Passwörter sind nicht gleich.' : T().sicherung.passwortPruefen(p);
     if (falsch) { toast(falsch); return; }
@@ -1212,7 +1263,7 @@ addEventListener('resize', () => kartenHoehe());
 function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
 addEventListener('resize', () => kachelRaster());
 function zeigen(){ navZeigen(); mainZeigen(); }
-farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(() => { glockeStarten(); empfangStarten(); }); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
+farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(() => { glockeStarten(); empfangStarten(); kopieAuto(); }); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
 /* Neue Fassung: der Browser fragt sw.js immer beim Server (updateViaCache none), beim Start und beim Zurückkommen.
    Übernimmt ein neuer Worker, zeigt die Fassungsmarke „neu“; neu geladen wird erst auf Tipp, damit keine Eingabe verloren geht. */
 let swReg = null;
@@ -1338,12 +1389,13 @@ const RAHMEN = {
  kalender:{name:'Kalender', unter:'Termine, Fristen und Notizen', seite:'kalender/index.html', stil:farbStilFest(['#d9cdf3','#e8e0f8','#f3effb'],'#3b2372','#5b3aa6','#efeaf9')},
  /* Private Brain (0.7.0): die echte, veröffentlichte Web-App unter ihrer eigenen Adresse (dieselbe Seite wie Pages von Privat-Brain-Pro),
     unverändert und mit eigenem Speicher. Ein Klon Datei für Datei liefe nicht: die Web-Seite entsteht dort erst beim Bauen (`build:web`). */
- brain:{name:'Private Brain', unter:'Mails und Dateien – die eigene App', url:'../Privat-Brain-Pro/', stil:farbStilFest(['#f9c9ad','#fcdcc8','#fdeee4'],'#6b2a12','#c2552c','#fbece4')},
+ brain:{name:'Private Brain', unter:'Mails und Dateien – die eigene App', url:window.PA_PRO ? './klone/privat-brain-pro/index.html' : '../Privat-Brain-Pro/', stil:farbStilFest(['#f9c9ad','#fcdcc8','#fdeee4'],'#6b2a12','#c2552c','#fbece4')},
  wfpdf:{name:'Workflow PDF', unter:'Scannen, ausfüllen, bearbeiten – „Teilen“: in die Akte oder an ein anderes Programm', seite:'workflow-pdf/index.html', stil:farbStilFest(['#f6c3cb','#fbdde1','#fdeef0'],'#6b1226','#9b1f38','#f8e6e9')}
 };
 function farbStilFest(k, schrift, akz, fl){ return `--k1:${k[0]};--k2:${k[1]};--k3:${k[2]};--schrift:${schrift};--akz:${akz};--fl:${fl}`; }
 const rahmen = { was:null, wartet:null };
-const FAMILIENBUERO = '../Familienbuero-Pro/';
+/* In der Pro-App gibt es kein ../ neben der Akte: dort die veröffentlichte Adresse (Android/Windows öffnen sie im Browser bzw. der installierten App). */
+const FAMILIENBUERO = window.PA_PRO ? 'https://lausiklauskn-png.github.io/Familienbuero-Pro/' : '../Familienbuero-Pro/';
 function fRahmen(was, frage = '', dateien = null){
   const r = RAHMEN[was]; zu(); rahmen.was = was; rahmen.wartet = dateien;
   $('rahmenort').innerHTML = `<div class="rahmenfenster" style="${r.stil}" role="dialog" aria-modal="true" aria-label="${r.name}">

@@ -1,0 +1,305 @@
+/* Switch for the meaning model (Klaus 2026-10-21: "Schalter … Laden des Modells direkt aus der App …
+   von meinem Server"). Android loads the files (Klaus' server first, then Hugging Face; every file
+   checked against its fixed fingerprint) into app storage; Modul 03 then reads them as local
+   addresses. The model starts only when it is complete, and not again by itself when the view
+   ended while it was starting (for example out of memory). Loaded in <head>, before Modul 03. */
+(() => {
+  'use strict';
+  const plugin = window.Capacitor?.Plugins?.ProSemantic;
+  if (!plugin) return;
+  // Modul 03 reads the model from the app's own address; the files there come from the switch.
+  // Full address, not "/models/": Modul 03 loads the model in a worker started from a blob: address,
+  // and there a path without host cannot be resolved (it fell back to Hugging Face).
+  // WebView2 streams the Windows model on its own local origin, so Tauri's
+  // asynchronous app-asset responder cannot replace it with index.html.
+  window.SBKIM_MODEL_ROOT = window.Capacitor?.getPlatform?.()==='windows'?'https://pbmodel.localhost/models/':location.origin + '/models/';
+  const W = {
+    de: { title: 'Modell für die Bedeutungssuche', load: 'Modell laden', cancel: 'Abbrechen', remove: 'Modell entfernen', retry: 'Erneut starten',
+      none: 'Noch nicht geladen. Einmal etwa {mb} MB, am besten im WLAN. Danach ohne Internet.',
+      partial: 'Teilweise geladen ({done} von {mb} MB). „Modell laden“ macht dort weiter.',
+      loading: 'Wird geladen: {done} von {mb} MB · {source}', checking: 'Wird geprüft …',
+      ready: 'Geladen und geprüft ({mb} MB). Startet, sobald du mit „Bedeutung“ suchst.', active: 'Aktiv: die Suche versteht Bedeutung.',
+      starting: 'Modell startet …', startFailed: 'Das Modell ist da, startete aber nicht. Die Suche nutzt Stichworte.',
+      crashed: 'Beim letzten Start des Modells wurde die Ansicht beendet (vermutlich zu wenig Speicher). Es startet deshalb nicht von selbst.',
+      offline: 'Die App ist vom Internet getrennt. Zum Laden die Lampe oben auf Grün stellen.',
+      space: 'Zu wenig freier Speicher auf dem Gerät.', failed: 'Laden hat nicht geklappt: {why}. Nochmal „Modell laden“ tippen, es geht dort weiter.',
+      confirmRemove: 'Modell vom Gerät entfernen? Die Suche nutzt dann wieder Stichworte. Es kann jederzeit neu geladen werden.',
+      goLoad: 'Das Modell für die Bedeutungssuche ist noch nicht geladen. In den Einstellungen lässt es sich laden.',
+      loadLine: 'Modell wird geladen, etwa {mb} MB', startLine: 'Modell wird gestartet …',
+      bgTitle: 'Einordnen läuft',
+      bgText: 'Bedeutung wird berechnet – du kannst weiterarbeiten',
+      need: 'Für diesen Schritt (SBKIM, Siegel-Identität oder Bedeutungssuche) braucht die App einmal das Modell für die Bedeutungssuche, etwa {mb} MB. Jetzt laden?',
+      missing: 'Das Modell für SBKIM, Siegel und Bedeutungssuche ist auf diesem Gerät noch nicht geladen. In den Einstellungen unter „Modell für die Bedeutungssuche“ laden.' },
+    en: { title: 'Model for meaning search', load: 'Load model', cancel: 'Cancel', remove: 'Remove model', retry: 'Start again',
+      none: 'Not loaded yet. About {mb} MB once, ideally on Wi-Fi. Works without internet afterwards.',
+      partial: 'Partly loaded ({done} of {mb} MB). “Load model” continues there.',
+      loading: 'Loading: {done} of {mb} MB · {source}', checking: 'Checking …',
+      ready: 'Loaded and checked ({mb} MB). Starts as soon as you search with “Meaning”.', active: 'Active: search understands meaning.',
+      starting: 'Model is starting …', startFailed: 'The model is there but did not start. Search uses keywords.',
+      crashed: 'The view ended while the model was starting last time (probably not enough memory). It will not start by itself.',
+      offline: 'The app is cut off from the internet. Turn the lamp at the top green to load.',
+      space: 'Not enough free storage on the device.', failed: 'Loading failed: {why}. Tap “Load model” again, it continues there.',
+      confirmRemove: 'Remove the model from the device? Search goes back to keywords. It can be loaded again any time.',
+      goLoad: 'The meaning-search model is not loaded yet. Load it in Settings.',
+      loadLine: 'Loading the model, about {mb} MB', startLine: 'Starting the model …',
+      bgTitle: 'Indexing',
+      bgText: 'Computing meaning – you can keep working',
+      need: 'This step (SBKIM, seal identity or meaning search) needs the meaning-search model once, about {mb} MB. Load it now?',
+      missing: 'The model for SBKIM, seal and meaning search is not loaded on this device yet. Load it in Settings under “Model for meaning search”.' },
+    ru: { title: 'Модель для поиска по смыслу', load: 'Загрузить модель', cancel: 'Отмена', remove: 'Удалить модель', retry: 'Запустить снова',
+      none: 'Ещё не загружена. Один раз около {mb} МБ, лучше по Wi-Fi. Потом работает без интернета.',
+      partial: 'Загружено частично ({done} из {mb} МБ). «Загрузить модель» продолжит.',
+      loading: 'Загрузка: {done} из {mb} МБ · {source}', checking: 'Проверка …',
+      ready: 'Загружена и проверена ({mb} МБ). Запускается, как только вы ищете по смыслу.', active: 'Активна: поиск понимает смысл.',
+      starting: 'Модель запускается …', startFailed: 'Модель есть, но не запустилась. Поиск по ключевым словам.',
+      crashed: 'При последнем запуске модели окно закрылось (вероятно, мало памяти). Сама она больше не запускается.',
+      offline: 'Приложение отключено от интернета. Для загрузки переключите лампу вверху на зелёный.',
+      space: 'Недостаточно свободной памяти.', failed: 'Загрузка не удалась: {why}. Нажмите «Загрузить модель» ещё раз.',
+      confirmRemove: 'Удалить модель с устройства? Поиск снова будет по ключевым словам.',
+      goLoad: 'Модель для поиска по смыслу ещё не загружена. Загрузите её в настройках.',
+      loadLine: 'Модель загружается, около {mb} МБ', startLine: 'Модель запускается …',
+      bgTitle: 'Идёт индексирование',
+      bgText: 'Вычисление смысла – можно продолжать работу',
+      need: 'Для этого шага (SBKIM, личность печати или поиск по смыслу) приложению один раз нужна модель поиска по смыслу, около {mb} МБ. Загрузить сейчас?',
+      missing: 'Модель для SBKIM, печати и поиска по смыслу на этом устройстве ещё не загружена. Загрузите её в настройках: «Модель для поиска по смыслу».' },
+    pl: { title: 'Model do wyszukiwania znaczeniowego', load: 'Pobierz model', cancel: 'Anuluj', remove: 'Usuń model', retry: 'Uruchom ponownie',
+      none: 'Jeszcze nie pobrany. Jednorazowo około {mb} MB, najlepiej przez Wi-Fi. Potem działa bez internetu.',
+      partial: 'Pobrano częściowo ({done} z {mb} MB). „Pobierz model” kontynuuje.',
+      loading: 'Pobieranie: {done} z {mb} MB · {source}', checking: 'Sprawdzanie …',
+      ready: 'Pobrany i sprawdzony ({mb} MB). Uruchamia się, gdy szukasz według znaczenia.', active: 'Aktywny: wyszukiwanie rozumie znaczenie.',
+      starting: 'Model się uruchamia …', startFailed: 'Model jest, ale się nie uruchomił. Wyszukiwanie po słowach.',
+      crashed: 'Przy ostatnim uruchomieniu modelu widok został zamknięty (prawdopodobnie za mało pamięci). Nie uruchomi się sam.',
+      offline: 'Aplikacja jest odłączona od internetu. Aby pobrać, przełącz lampkę u góry na zielono.',
+      space: 'Za mało wolnego miejsca.', failed: 'Pobieranie nie powiodło się: {why}. Stuknij „Pobierz model” ponownie.',
+      confirmRemove: 'Usunąć model z urządzenia? Wyszukiwanie wróci do słów kluczowych.',
+      goLoad: 'Model do wyszukiwania znaczeniowego nie jest jeszcze pobrany. Pobierz go w ustawieniach.',
+      loadLine: 'Model jest pobierany, około {mb} MB', startLine: 'Model się uruchamia …',
+      bgTitle: 'Trwa indeksowanie',
+      bgText: 'Obliczanie znaczenia – możesz dalej pracować',
+      need: 'Ten krok (SBKIM, tożsamość pieczęci lub wyszukiwanie znaczeniowe) wymaga jednorazowo modelu wyszukiwania znaczeniowego, około {mb} MB. Pobrać teraz?',
+      missing: 'Model dla SBKIM, pieczęci i wyszukiwania znaczeniowego nie jest jeszcze pobrany na tym urządzeniu. Pobierz go w ustawieniach: „Model do wyszukiwania znaczeniowego”.' }
+  };
+  const t = (k, v = {}) => ((W[document.documentElement.lang] || W.de)[k] || W.de[k]).replace(/\{(\w+)\}/g, (_, n) => v[n] ?? '');
+  const mb = n => String(Math.round((n || 0) / 1048576));
+  let state = { installed: false, running: false, present: 0, total: 0, crashes: 0 };
+  let live = null, message = '', phase = '', geraetSatz = '';   // phase: '' | 'starting' | 'active' | 'startFailed'
+
+  function panel() {
+    let box = document.getElementById('pb-semantic');
+    if (box) return box;
+    const anchor = document.getElementById('embFlag')?.closest('p');
+    if (!anchor) return null;
+    box = document.createElement('div');
+    box.id = 'pb-semantic'; box.className = 'pb-semantic';
+    box.innerHTML = '<b data-s="title"></b><div class="pb-semantic-bar" hidden><span></span></div><p data-s="text" role="status"></p>'
+      + '<p data-s="geraet" class="pb-semantic-geraet" hidden></p><div class="pb-semantic-actions"><button type="button" data-semantic="load"></button><button type="button" data-semantic="cancel" hidden></button>'
+      + '<button type="button" data-semantic="retry" hidden></button><button type="button" data-semantic="remove" hidden></button></div>';
+    anchor.after(box);
+    box.addEventListener('click', event => {
+      const action = event.target.closest('[data-semantic]')?.dataset.semantic;
+      if (action === 'load') load();
+      else if (action === 'cancel') plugin.cancel().catch(() => {});
+      else if (action === 'retry') retry();
+      else if (action === 'remove') remove();
+    });
+    return box;
+  }
+
+  function render() {
+    const box = panel(); if (!box) return;
+    const q = s => box.querySelector(s), btn = n => q(`[data-semantic="${n}"]`);
+    q('[data-s="title"]').textContent = t('title');
+    btn('load').textContent = t('load'); btn('cancel').textContent = t('cancel');
+    btn('retry').textContent = t('retry'); btn('remove').textContent = t('remove');
+    const total = state.total || 0, running = state.running || !!live;
+    let text;
+    if (message) text = message;
+    else if (running && live) text = live.done >= total ? t('checking') : t('loading', { done: mb(live.done), mb: mb(total), source: live.source || '' });
+    else if (state.installed && state.crashes > 0) text = t('crashed');
+    else if (state.installed && phase) text = t(phase);
+    else if (state.installed) text = t('ready', { mb: mb(total) });
+    else if (state.present > 0) text = t('partial', { done: mb(state.present), mb: mb(total) });
+    else text = t('none', { mb: mb(total) });
+    q('[data-s="text"]').textContent = text;
+    const geraet = q('[data-s="geraet"]'); if (geraet) { geraet.textContent = geraetSatz; geraet.hidden = !geraetSatz; }
+    const bar = q('.pb-semantic-bar'), done = running && live ? live.done : state.present;
+    bar.hidden = state.installed || !(running || state.present > 0);
+    bar.firstElementChild.style.width = total ? `${Math.min(100, done / total * 100).toFixed(1)}%` : '0';
+    btn('load').hidden = state.installed || running;
+    btn('cancel').hidden = !running;
+    btn('retry').hidden = !(state.installed && (state.crashes > 0 || phase === 'startFailed'));
+    btn('remove').hidden = running || !(state.installed || state.present > 0);
+    const meaning = document.querySelector('#mode [data-m="mean"]');
+    if (meaning) { if (state.installed) { meaning.removeAttribute('data-semantic-missing'); meaning.title = meaning.getAttribute('aria-label') || meaning.textContent.trim(); } else { meaning.dataset.semanticMissing = '1'; meaning.title = t('goLoad'); } }
+    box.dataset.state = running ? 'loading' : state.installed ? (state.crashes > 0 ? 'crashed' : phase || 'ready') : state.present > 0 ? 'partial' : 'none';
+    flag();
+  }
+  // Das Schild über dem Kasten (index.html renderEmbFlag) nennt denselben Zustand wie der Kasten: nicht geladen · bereit ·
+  // startet · aktiv. Vorher stand dort dauerhaft „lädt / Rückfall aktiv“, obwohl nichts lud (Generalprüfung 16.11.2026).
+  function flag() { try { if (typeof renderEmbFlag === 'function') renderEmbFlag(); } catch { /* nur Anzeige */ } }
+
+  async function refresh() { try { state = await plugin.getState(); } catch {} render(); flag(); }
+
+  let loadJob = null;   // Klaus 2026-11-16 (V2, V8): ein Satz mit Größe, schmaler Balken mit Prozent, in der gemeinsamen Ladezeile
+  plugin.addListener?.('progress', p => { live = p; render(); forwardProgress(p); loadJob?.update({}); });
+
+  // The meaning button is an inline on/off switch. Model installation remains
+  // an explicit action in Settings; changing search mode never leaves Search.
+  function showSwitch() {
+    if (window.PBWorkspace?.navigate) window.PBWorkspace.navigate('settings');
+    else document.querySelector('[data-tab="settings"]')?.click();
+    const box = panel(); if (!box) return;
+    box.scrollIntoView({ block:'center', behavior:'smooth' });
+    box.querySelector('[data-semantic="load"]:not([hidden])')?.focus({ preventScroll:true });
+  }
+
+  async function load() {
+    message = '';
+    // Gerätecheck (Klaus 2026-10-28): erst messen, dann laden; bei „nicht empfohlen“ fragt ProGeraet ausdrücklich nach.
+    if (window.ProGeraet) {
+      try { const v = await window.ProGeraet.vorDemLaden('bedeutung'); geraetSatz = v.satz; render(); if (!v.weiter) return; }
+      catch { /* ohne Messung wie bisher */ }
+    }
+    live = { done: state.present, total: state.total, source: '' }; render();
+    loadJob = window.PBActivity?.start({ label: () => t('loadLine', { mb: mb(state.total) }), percent: () => (live && state.total ? live.done / state.total * 100 : null) }) || null;
+    try {
+      state = await plugin.install(); live = null; loadJob?.finish(); loadJob = null; render();
+      if (state.installed) startModel();
+    } catch (error) {
+      live = null; loadJob?.finish(); loadJob = null;
+      const code = error?.code || '';
+      message = code === 'CANCELLED' ? '' : code === 'APP_OFFLINE' ? t('offline') : code === 'NO_SPACE' ? t('space') : t('failed', { why: error?.message || code || '?' });
+      await refresh();
+    }
+  }
+
+  async function remove() {
+    if (!confirm(t('confirmRemove'))) return;
+    message = ''; phase = '';
+    try { state = await plugin.remove(); } catch {}
+    render();
+  }
+
+  async function retry() { message = ''; try { state = await plugin.clearCrash(); } catch {} startModel(); }
+
+  // The app's own start function (index.html initEmbedding), handed over by start().
+  let starter = null;
+  async function startModel() {
+    if (!starter || !state.installed || state.crashes > 0) return render();
+    phase = 'starting'; render();
+    const job = window.PBActivity?.start({ label: () => t('startLine') });
+    try { await plugin.markLoading(); } catch {}
+    try { await starter(); } catch {}
+    job?.finish();
+    const ready = !!window.SbkimEmbedding?.isReady?.();
+    phase = ready ? 'active' : 'startFailed';
+    try { state = await plugin.markLoaded(); } catch {}
+    render();
+  }
+
+  // Start on demand: only from the user's own action, once per app run. A model that is not on the device is never
+  // downloaded from here (that stays the explicit switch in Settings); a crashed start is not repeated by itself.
+  let wantedOnce = false, wired = false;
+  const meaningOn = () => { try { return typeof MODE === 'string' ? MODE === 'mean' : true; } catch { return true; } };
+  let askedOnce = false;
+  function wanted(tapped = false) {
+    if (!starter || state.crashes > 0) return false;
+    if (state.installed) { if (wantedOnce) return false; wantedOnce = true; void startModel(); return true; }
+    // Not on the device yet: only a tap on „Bedeutung“ offers the download, once per app run, with the size in the question.
+    if (!tapped || askedOnce || state.running || live) return false;
+    askedOnce = true;
+    if (!confirm(t('need', { mb: mb(state.total) }))) return false;
+    wantedOnce = true; void load(); return true;
+  }
+  function wire() {
+    if (wired) return; wired = true;
+    document.addEventListener('click', event => {
+      if (event.isTrusted && event.target.closest?.('#mode [data-m="mean"]')) setTimeout(() => { if (meaningOn()) wanted(true); }, 0);
+    }, true);
+    const field = document.getElementById('q');
+    field?.addEventListener('input', () => { if (field.value.trim() && meaningOn()) wanted(); });
+  }
+
+  // Klaus 2026-10-27 (Windows test): connecting to the Mycel and creating the seal identity (andock wizard)
+  // call Modul 03 directly. Without the downloaded model they failed with "Modell … konnte nicht geladen
+  // werden" and a yellow lamp, although another app (with its own storage) had the model. Now a step the user
+  // started asks once and loads the model with progress, then continues; background calls (e.g. a question
+  // from the network) get a clear message instead of a dialog. Modul 03 itself stays byte-for-byte.
+  let asking = null, forwarding = false;
+  // Called from the one progress listener above (one listener per event: some bridges keep only the last).
+  function forwardProgress(p) {
+    if (!forwarding) return;
+    const progress = p?.total ? Math.min(100, p.done / p.total * 100) : 0;
+    try { window.dispatchEvent(new CustomEvent('sbkim:embedding-progress', { detail: { status: 'progress', progress } })); } catch {}
+  }
+  const missingError = () => Object.assign(new Error(t('missing')), { name: 'ModelLoadError', code: 'MODEL_NOT_LOADED' });
+  async function ensureModel() {
+    if (state.installed) return;
+    try { state = await plugin.getState(); } catch {}
+    if (state.installed) return;
+    if (asking) return asking;
+    const userStarted = !!navigator.userActivation?.isActive;
+    if (!userStarted || !confirm(t('need', { mb: mb(state.total) }))) { render(); throw missingError(); }
+    asking = (async () => {
+      forwarding = true;
+      try { await load(); } finally { forwarding = false; asking = null; }
+      if (!state.installed) throw missingError();
+    })();
+    return asking;
+  }
+  const GUARDED = ['init', 'embedQuery', 'embedPassage', 'embedQueryBatch', 'embedPassageBatch', 'embedContentVector', 'embedSnippets'];
+  // Pro-Umbau 4: Einordnen (Bedeutung für Dateien und Mails, nicht die Suchfrage) meldet sich beim gemeinsamen
+  // Hintergrund-Dienst an (pro-hintergrund.js), solange gerechnet wird, und 3 s nach der letzten Rechnung wieder ab.
+  // „Abbrechen“ in der Mitteilung nimmt nur den Schutz weg (die App rechnet weiter, solange sie offen ist) und meldet
+  // sich für 60 s nicht neu an — die Einlese-Schleifen der App lassen sich von hier nicht sicher anhalten.
+  const PASSAGE = ['embedPassage', 'embedPassageBatch', 'embedContentVector', 'embedSnippets'];
+  const bg = { busy: 0, task: null, starting: null, idle: null, quietUntil: 0 };
+  function bgBegin() {
+    clearTimeout(bg.idle);
+    if (bg.task || bg.starting || Date.now() < bg.quietUntil || !window.ProHintergrund) { return; }
+    bg.starting = window.ProHintergrund.beginnen({ art: 'einordnen', titel: t('bgTitle'), text: t('bgText') }).then(task => {
+      bg.starting = null; bg.task = task;
+      task.signal.addEventListener('abort', () => { bg.quietUntil = Date.now() + 60000; bgEnd(); }, { once: true });
+      if (!bg.busy) bg.idle = setTimeout(bgEnd, 3000);
+    }).catch(() => { bg.starting = null; });
+  }
+  function bgEnd() { clearTimeout(bg.idle); if (bg.task) bg.task.ende(); bg.task = null; }
+  function guard(api) {
+    if (!api || typeof api !== 'object' || api.pbModelGuard) return api;
+    for (const name of GUARDED) {
+      const original = api[name];
+      if (typeof original !== 'function') continue;
+      const passage = PASSAGE.includes(name);
+      api[name] = async function (...args) {
+        await ensureModel();
+        if (!passage) return original.apply(this, args);
+        bg.busy++; bgBegin();
+        try { return await original.apply(this, args); }
+        finally { bg.busy--; if (!bg.busy) { clearTimeout(bg.idle); bg.idle = setTimeout(bgEnd, 3000); } }
+      };
+    }
+    try { Object.defineProperty(api, 'pbModelGuard', { value: true }); } catch {}
+    return api;
+  }
+  // This file runs before Modul 03 (in <head>); catch its global as it is assigned.
+  let embedding = guard(window.SbkimEmbedding);
+  try {
+    Object.defineProperty(window, 'SbkimEmbedding', { configurable: true, enumerable: true, get: () => embedding, set: api => { embedding = guard(api); } });
+  } catch { window.SbkimEmbedding = guard(window.SbkimEmbedding); }
+
+  window.PBSemantic = {
+    /** Called by the app instead of starting the model directly. */
+    async start(initEmbedding) {
+      starter = initEmbedding;
+      await refresh();
+      // Klaus 2026-11-16 (Gerätetest 1.0.52, Punkte 1 und 2): the model no longer starts by itself when the app opens.
+      // It starts when the user switches „Bedeutung“ on or searches with it on (wanted()). Until then: keywords, no waiting.
+      try { if (typeof EMBED === 'object') { EMBED.tried = true; renderEmbFlag(); } } catch {}
+      wire();
+    },
+    wanted, refresh, showSwitch, ensureModel, get state() { return state; }
+  };
+  const boot = () => refresh();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, { once: true }); else boot();
+  new MutationObserver(render).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+})();
