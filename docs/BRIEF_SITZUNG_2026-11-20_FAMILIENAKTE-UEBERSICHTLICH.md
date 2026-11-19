@@ -3,6 +3,15 @@
 **Repo:** die richtige Familienakte (`meine-familienakte`, Fassung 2.28.74 – nicht die Private Akte). Zuerst die `CLAUDE.md`
 dort lesen. **Klaus schaut es sich am 20.11. morgens an** – bis dahin soll die Neugestaltung gebaut und ansehbar sein.
 
+## Freibrief für diese Sitzung (Klaus 19.11.2026 nachts, ausdrücklich)
+
+- **Tokensparend hintereinander wegarbeiten**, ohne Schleifen und ohne zusätzliche Gegenproben.
+- **Fragen selbst beantworten** – nach Logik und Nutzerfreundlichkeit; nicht auf Klaus warten. Entscheidungen kurz im Abschlussbrief
+  nennen.
+- **Ergebnis am 20.11. gegen 7–8 Uhr:** Klaus will dann **eine neue Version der Familienakte haben** – also geprüft auf `main`
+  zusammenführen und als neue Fassung ausgeben (Web und App-Update wie in der `CLAUDE.md` der Familienakte beschrieben). Das ist
+  Klaus' Wort für diese Ausgabe. Zum Schluss ein kurzer Abschlussbrief mit Links und dem, was offen blieb.
+
 ## Auftrag in Klaus' Worten (zusammengefasst)
 
 Die Private Akte ist auf dem Kern der Familienakte gebaut, aber viel einfacher in Darstellung und Aufbau, ohne Doppelungen.
@@ -83,6 +92,11 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 11. **Versionshistorie (Klaus 19.11. nachts):** „können wir erstmal lassen, wird später weggeklickt, ist nicht so wichtig.“ –
     Jetzt nicht umbauen und nicht entfernen; höchstens einklappbar und nicht im Weg. Später kommt sie weg (eigener Auftrag).
 
+12. **Oben „Neu“ heraus (Klaus):** der Knopf „Neu“ in der Kopfleiste kommt **komplett weg** – „das ist irgendwann nicht mehr
+    nachzuvollziehen“; die Neuigkeiten stehen in der Hilfe.
+13. **„Pseudo“ verdecken (Klaus):** den Knopf „Pseudo“ oben ausblenden, nicht löschen. **Merken:** er kommt später in den
+    E-Mail-Bereich („die E-Mail-Geschichte“) – dafür jetzt nichts bauen, nur in der `CLAUDE.md` vermerken.
+
 ## Grenzen
 
 - **Nichts am Kern ändern**, was gelernt oder gespeichert ist (Sortier-Kern, gelernte Regeln, Register, Tresor, Sicherungsformat
@@ -91,8 +105,7 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 - Die Private Akte nutzt die Familienakte als **Klon** (`klone/familienakte` @ `ec258cc`). Was dort in `app/` (Kalender, Notiz,
   Seitenleiste, Tresor) liegt, wird in der Akte gebündelt – nach dem Umbau dort nur nachziehen, wenn die gebündelten Teile
   unverändert laufen (Probe der Akte `tests/probe.cjs`).
-- **Veröffentlichen erst nach Klaus' Ansicht am Morgen** und seinem Wort (Android, Windows, Web). Gebaut, geprüft und als
-  Vorschau ansehbar soll es sein.
+- **Ausgeben:** mit dem Freibrief oben – neue Fassung bis zum Morgen, geprüft.
 
 ## Vorlagen in der Privaten Akte (öffentliches Repo `Private-Akte`)
 
@@ -105,10 +118,10 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 ## Startauftrag (zum Einfügen)
 
 > Lies `CLAUDE.md` der Familienakte und `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` im Repo Private-Akte,
-> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–10 um: Container einklappbar,
+> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–13 um: Container einklappbar,
 > Lebensbereiche klein, Suche als Hauptweg (auch nach Personen), Personen übersichtlich, Kopfleiste entschlacken, gelbe Hinweise
-> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern, Netz/Mycel in den Hintergrund (Punkt 10). Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
-> (Handy- und Tablet-Breite) zum Ansehen bereitlegen; veröffentlichen erst auf mein Wort.
+> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern, Netz/Mycel in den Hintergrund (Punkt 10). Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. „Neu“ oben weg, „Pseudo“ verdecken. Freibrief: tokensparend durcharbeiten, Fragen selbst nach Logik und
+> Nutzerfreundlichkeit beantworten, bis morgen 7–8 Uhr eine neue, geprüfte Version der Familienakte ausgeben.
 
 Hinweis: Klaus wollte ein Bild der Familienakte (Akten-Kacheln) mitschicken; es ist in dieser Sitzung nicht angekommen – am
 Morgen danach fragen, falls die Stelle unklar ist.
