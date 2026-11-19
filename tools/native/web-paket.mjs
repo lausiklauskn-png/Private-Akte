@@ -2,11 +2,15 @@
 // Web-Paket der Pro-Akte (Android und Windows): dieselbe Seite wie die PWA, nur was die Seite lädt. Klone byte-gleich, aber nur
 // ihre Laufzeit-Teile (keine Prüfstapel, Testdaten zum Lernen, docs, android/ und windows/ der Klone). Kein sw.js der Akte (in der
 // App liegt alles im Paket). In index.html und manifest der App: Name „Private Akte Pro“, Pro-Zeichen als Symbol und Favicon.
-//   node tools/native/web-paket.mjs [ziel]   (Standard: www/)
+// Android (--android): Private Brain Pro als App-Seite (deren prepare-web über tools/native/brain-web.mjs, Mail nativ) statt der
+// Web-Seite; dazu an die Wurzel, was deren Java und Seite dort erwarten (public/*-model(s).json, /models/, /vendor/pdfjs/).
+// Windows nimmt weiter die Web-Seite (dort gibt es die Plugins von Private Brain Pro nicht).
+//   node tools/native/web-paket.mjs [--android] [ziel]   (Standard: www/)
 import { cpSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
+import { brainWeb } from './brain-web.mjs';
 
 export const WURZEL = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const OBEN = ['index.html', 'app.css', 'app.js', 'tresor.js', 'rechtliches.html', 'manifest.webmanifest', 'favicon.ico', 'icons', 'bilder', 'native', 'rahmen'];
@@ -22,13 +26,24 @@ export const KLONE = {
     'models', 'modules', 'pb-caption.js', 'sbkim', 'sicherheit.html', 'sw.js', 'vendor', 'LICENSE', 'RECHTE.md'],
 };
 export const NAME = 'Private Akte Pro';
+/** Was die App-Seite von Private Brain Pro an der Wurzel erwartet (Java: getAssets() „public/…“; Seite: „/models/“, „/vendor/pdfjs/“). */
+export const BRAIN_WURZEL = ['semantic-model.json', 'meaning-models.json', 'caption-model.json', 'translation-models.json', 'models', 'vendor/pdfjs'];
 
-export function bauen(ziel = join(WURZEL, 'www')) {
+export function bauen(ziel = join(WURZEL, 'www'), { android = false, brain = null } = {}) {
   rmSync(ziel, { recursive: true, force: true }); mkdirSync(ziel, { recursive: true });
   for (const t of OBEN) { if (!existsSync(join(WURZEL, t))) throw new Error('fehlt: ' + t); cpSync(join(WURZEL, t), join(ziel, t), { recursive: true }); }
   for (const [k, teile] of Object.entries(KLONE)) for (const t of teile) {
     const q = join(WURZEL, 'klone', k, t); if (!existsSync(q)) throw new Error(`Klon ${k}: fehlt ${t}`);
     cpSync(q, join(ziel, 'klone', k, t), { recursive: true });
+  }
+  if (android) {
+    const pb = brain || brainWeb();
+    rmSync(join(ziel, 'klone/privat-brain-pro'), { recursive: true, force: true });
+    cpSync(pb, join(ziel, 'klone/privat-brain-pro'), { recursive: true });
+    for (const t of BRAIN_WURZEL) {
+      if (existsSync(join(ziel, t))) throw new Error('Wurzel der Akte hat schon ' + t);
+      cpSync(join(pb, t), join(ziel, t), { recursive: true });
+    }
   }
   // Pro-Zeichen: Kopf, Favicon, Symbole der Seite. Nur die Hülle wird angepasst, nie ein Klon.
   let html = readFileSync(join(ziel, 'index.html'), 'utf8');
@@ -47,7 +62,7 @@ export function bauen(ziel = join(WURZEL, 'www')) {
   writeFileSync(join(ziel, 'favicon.ico'), ico(readFileSync(join(WURZEL, 'bilder/logo-pro-rund.png'))));
   let commit = ''; try { commit = execFileSync('git', ['-C', WURZEL, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(); } catch { /* ohne Git */ }
   const fassung = (/app\.js\?v=([\d.]+)/.exec(html) || [])[1] || '';
-  writeFileSync(join(ziel, 'native-bundle.json'), JSON.stringify({ app: NAME, fassung, commit, klone: KLONE }, null, 2) + '\n');
+  writeFileSync(join(ziel, 'native-bundle.json'), JSON.stringify({ app: NAME, fassung, commit, klone: KLONE, privatBrain: android ? 'App-Seite (prepare-web)' : 'Web-Seite' }, null, 2) + '\n');
   const groesse = (p) => statSync(p).isDirectory() ? readdirSync(p).reduce((s, n) => s + groesse(join(p, n)), 0) : statSync(p).size;
   console.log(`Web-Paket ${NAME} ${fassung}: ${(groesse(ziel) / 1048576).toFixed(0)} MB nach ${ziel}`);
   return ziel;
@@ -59,4 +74,7 @@ export function ico(png) {
   k.writeUInt16LE(1, 10); k.writeUInt16LE(32, 12); k.writeUInt32LE(png.length, 14); k.writeUInt32LE(22, 18);
   return Buffer.concat([k, png]);
 }
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) bauen(process.argv[2] ? resolve(process.argv[2]) : undefined);
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const a = process.argv.slice(2), android = a.includes('--android'), z = a.find((x) => !x.startsWith('--'));
+  bauen(z ? resolve(z) : undefined, { android });
+}

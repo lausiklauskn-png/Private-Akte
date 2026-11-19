@@ -33,14 +33,19 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: Vorrat für Private Brain Pro (Texterkennung, Film; gegen die Pins im Klon geprüft)
+        uses: actions/cache@v4
+        with:
+          path: .cache/privat-brain-pro
+          key: pb-vorrat-${{ hashFiles('klone/privat-brain-pro/tools/native/*.json') }}
       - name: Proben
         run: |
           set -euo pipefail
           npm ci
           node tools/klon-nachziehen.mjs --pruefen
-          node tools/native/test-native.mjs
           node --test tools/signing/test-identity.mjs tools/signing/test-unlock-file.mjs
           npm run sync:android
+          node tools/native/test-native.mjs
       - name: Unsignierte Release-APK bauen
         working-directory: android
         run: ./gradlew --no-daemon --max-workers=2 assembleRelease

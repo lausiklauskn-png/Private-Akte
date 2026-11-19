@@ -6,7 +6,7 @@ import { createServer } from 'node:http';
 import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
 import { extname, join } from 'node:path';
-import { bauen, WURZEL, NAME } from './web-paket.mjs';
+import { bauen, WURZEL, NAME, BRAIN_WURZEL } from './web-paket.mjs';
 import { QUELLEN } from './klon-quellen.mjs';
 
 let gruen = 0, rot = 0;
@@ -36,7 +36,12 @@ soll('webDir www, keine Fehlersuche in der WebView', cap.webDir === 'www' && cap
 console.log('Rechte');
 const manifest = lies('android/app/src/main/AndroidManifest.xml');
 const rechte = [...manifest.matchAll(/uses-permission android:name="([^"]+)"/g)].map((m) => m[1]).sort();
-soll('nur Internet, Kamera, Kalender', JSON.stringify(rechte) === JSON.stringify(['android.permission.CAMERA', 'android.permission.INTERNET', 'android.permission.READ_CALENDAR', 'android.permission.WRITE_CALENDAR']), rechte.join());
+const PB_RECHTE = ['android.permission.ACCESS_NETWORK_STATE', 'android.permission.FOREGROUND_SERVICE', 'android.permission.FOREGROUND_SERVICE_DATA_SYNC', 'android.permission.MODIFY_AUDIO_SETTINGS', 'android.permission.POST_NOTIFICATIONS'];
+soll('nur Internet, Kamera, Kalender und die von Private Brain Pro (ohne Paket-Installation)', JSON.stringify(rechte) === JSON.stringify(['android.permission.CAMERA', 'android.permission.INTERNET', 'android.permission.READ_CALENDAR', 'android.permission.WRITE_CALENDAR', ...PB_RECHTE].sort()), rechte.join());
+{ const pbm = readFileSync(join(WURZEL, 'klone/privat-brain-pro/android/app/src/main/AndroidManifest.xml'), 'utf8');
+  const pbr = [...pbm.matchAll(/uses-permission android:name="([^"]+)"/g)].map((m) => m[1]).filter((r) => r !== 'android.permission.REQUEST_INSTALL_PACKAGES');
+  soll('Rechte von Private Brain Pro stehen in dessen Manifest (keins erfunden)', JSON.stringify(PB_RECHTE) === JSON.stringify(pbr.filter((r) => r !== 'android.permission.INTERNET').sort()), pbr.join());
+  soll('Hintergrunddienst von Private Brain Pro angemeldet', manifest.includes('android:name="de.familyprojekt.hintergrund.ProHintergrundDienst"')); }
 soll('keine Android-Sicherung des App-Speichers, kein Klartext-Netz', manifest.includes('android:allowBackup="false"') && manifest.includes('android:usesCleartextTraffic="false"'));
 
 console.log('Gerätezugriffe aus den Klonen');
@@ -47,6 +52,20 @@ for (const kl of angemeldet) {
   const datei = liste.find(({ p }) => p.endsWith(kl.replace(/\./g, '/') + '.java'));
   soll(`${kl.split('.').pop()} kommt aus dem Klon ${datei?.k || '?'}`, !!datei);
 }
+soll('Hülle erbt von der MainActivity aus dem Klon Private Brain Pro', /class MainActivity extends de\.familyprojekt\.privatebrain\.pro\.MainActivity/.test(main)
+  && liste.some(({ k, p }) => k === 'privat-brain-pro' && p.endsWith('privatebrain/pro/MainActivity.java')));
+{ const pbMain = readFileSync(join(WURZEL, 'klone/privat-brain-pro/android/app/src/main/java/de/familyprojekt/privatebrain/pro/MainActivity.java'), 'utf8');
+  const pbPlugins = [...pbMain.matchAll(/registerPlugin\(([\w.]+)\.class\)/g)].map((m) => m[1].split('.').pop());
+  soll(`Alle ${pbPlugins.length} Plugins von Private Brain Pro (auch ProMail) kommen aus dem Klon`, pbPlugins.includes('ProMailPlugin')
+    && pbPlugins.every((n) => liste.some(({ p }) => p.endsWith('/' + n + '.java')))); }
+for (const n of ['Ablage', 'DateiAblage', 'Eintrag', 'Ersatzschluessel']) {
+  const a = readFileSync(join(WURZEL, `klone/privat-brain-pro/android/app/src/main/java/de/familyprojekt/tresor/${n}.java`));
+  const b = readFileSync(join(WURZEL, `klone/familienakte/android/app/src/main/java/de/familyprojekt/tresor/${n}.java`));
+  soll(`tresor/${n}.java in Private Brain Pro und Familienakte byte-gleich (einmal übersetzt)`, a.equals(b));
+}
+{ const g = lies('android/app/build.gradle'), pg = readFileSync(join(WURZEL, 'klone/privat-brain-pro/android/app/build.gradle'), 'utf8');
+  const dep = [...pg.matchAll(/implementation '([^']+)'/g)].map((m) => m[1]);
+  soll('Mail-Bibliotheken in derselben Fassung wie Private Brain Pro', dep.length === 3 && dep.every((d) => g.includes(`implementation '${d}'`)), dep.join()); }
 const java = Object.fromEntries(liste.map(({ k, p }) => { const t = readFileSync(join(WURZEL, 'klone', k, p), 'utf8'); return [(/@CapacitorPlugin\(name = "(\w+)"/.exec(t) || [])[1], t]; }).filter(([n]) => n));
 const vertr = JSON.parse(lies('windows/bridge/contracts.json'));
 for (const [plugin, methoden] of Object.entries(vertr)) for (const m of methoden)
@@ -81,5 +100,19 @@ console.log('Start aus dem Paket (Wurzel wie https://localhost/, Capacitor geste
   }
 }
 rmSync(www, { recursive: true, force: true });
+
+console.log('Android: Private Brain Pro als App-Seite (Mail nativ)');
+{
+  const pb = process.env.PA_BRAIN_WEB || join(WURZEL, '.cache/privat-brain-pro-www');
+  if (!existsSync(join(pb, 'index.html'))) console.log('  · übersprungen: erst node tools/native/brain-web.mjs (lädt Texterkennung und Film)');
+  else {
+    const a = bauen(mkdtempSync(join(tmpdir(), 'pa-www-a-')), { android: true, brain: pb });
+    const pi = readFileSync(join(a, 'klone/privat-brain-pro/index.html'), 'utf8');
+    soll('App-Seite mit der nativen Mail (native-mail.js) statt der Web-Seite', pi.includes('<script src="native-mail.js"></script>') && existsSync(join(a, 'klone/privat-brain-pro/native-mail.js')) && !existsSync(join(a, 'klone/privat-brain-pro/sw.js')));
+    soll('an der Wurzel, was Java und Seite dort erwarten', BRAIN_WURZEL.every((t) => existsSync(join(a, t))), BRAIN_WURZEL.filter((t) => !existsSync(join(a, t))).join());
+    soll('Hülle der Akte unverändert im Paket', ['index.html', 'app.js', 'rahmen/kalender/index.html'].every((p) => readFileSync(join(a, p)).equals(readFileSync(join(WURZEL, p))) || p === 'index.html'));
+    rmSync(a, { recursive: true, force: true });
+  }
+}
 console.log(`Native: ${gruen} grün · ${rot} ROT`);
 process.exit(rot ? 1 : 0);

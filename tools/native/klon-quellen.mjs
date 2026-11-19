@@ -9,6 +9,9 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const WURZEL = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+/** Alle Java-Dateien eines Klons unter den genannten Ordnern, wie sie im Pin stehen (nichts ausgelassen, nichts dazu). */
+const ausPin = (klon, ...ordner) => Object.keys(JSON.parse(readFileSync(join(WURZEL, 'klone', `${klon}.herkunft.json`), 'utf8')).dateien)
+  .filter((p) => p.endsWith('.java') && ordner.some((o) => p.startsWith(o))).sort();
 export const QUELLEN = {
   android: {
     ziel: 'android/app/src/klon/java',
@@ -22,6 +25,11 @@ export const QUELLEN = {
         ...['Ablage', 'DateiAblage', 'Eintrag', 'Ersatzschluessel', 'Fach', 'Hauptordner', 'Json', 'Profile', 'SafAblage', 'TresorOrdner', 'Uebergaben', 'Umzug', 'UnterAblage', 'VaultCrypto']
           .map((n) => `android/app/src/main/java/de/familyprojekt/tresor/${n}.java`),
       ],
+      // Private Brain Pro (Brief 0.9.0 Punkt 2, Mail nativ): das ganze Paket samt seiner MainActivity, von der die der Akte erbt
+      // (ProMailPlugin holt Gmail über sie). Sein Ordner tresor/ fehlt hier mit Absicht: dieselben vier Dateien sind byte-gleich mit
+      // denen der Familienakte oben (Probe in test-native.mjs).
+      'privat-brain-pro': ausPin('privat-brain-pro', 'android/app/src/main/java/de/familyprojekt/privatebrain/pro/',
+        'android/app/src/main/java/de/familyprojekt/hintergrund/'),
     },
     abschneiden: /^android\/app\/src\/main\/java\//,
   },

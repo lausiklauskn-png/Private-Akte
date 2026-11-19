@@ -40,8 +40,8 @@ App-Speicher verloren, vorher „Backup erstellen“ oder eine Kopie einrichten.
 
 ## Nicht gebaut / offen (nächste Sitzung, Reihenfolge)
 
-1. **Signatur mit Klaus** (`signing/`, eigener Schlüssel, Kennung `de.familyprojekt.privateakte`), danach Ausgabe Android+Windows zugleich auf sein Wort.
-2. **Mail nativ (Private Brain Pro):** im Rahmen läuft Private Brain als Web-App (Mail dort nur über einen Mail-Dienst). Die Pro-Mail hängt
+1. **Signatur mit Klaus** – vorbereitet (19.11., `docs/SIGNIERUNG.md`, PR #61); Windows bleibt unsigniert (Klaus 19.11.). (`signing/`, eigener Schlüssel, Kennung `de.familyprojekt.privateakte`), danach Ausgabe Android+Windows zugleich auf sein Wort.
+2. **Mail nativ (Private Brain Pro)** – Android gebaut (19.11., PR #61, siehe `CLAUDE.md`); offen: Windows, Gerätetest, Gmail-Client bei Google. im Rahmen läuft Private Brain als Web-App (Mail dort nur über einen Mail-Dienst). Die Pro-Mail hängt
    an 17 Java-Plugins, `GmailAuthorization` in der MainActivity, Modell-Abfangen (`interceptAppRequest`), `prepare-web.mjs` (native/*.js,
    gebündelte Modelle) und Abhängigkeiten (`com.sun.mail:android-mail/activation 1.6.8`, `play-services-auth 22.0.0`). Plan: Java aus
    `klone/privat-brain-pro/android/…` über `klon-quellen.mjs` (ohne deren MainActivity), Plugins in unserer MainActivity anmelden, deren

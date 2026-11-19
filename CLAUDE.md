@@ -35,7 +35,24 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   und Kennung geändert, Freigabe `PA_SIGNING_UNLOCK`, Umgebung `android-production`; „check“ nennt zusätzlich den SHA-1 für Google),
   `signing-identity.yml` (initialize/check, nur von Hand von `main`), `android-signiert.yml` (Release-APK mit der eigenen Signatur als Download,
   nichts veröffentlicht; bei PRs Probe mit Wegwerf-Identität). **Wartet auf Klaus:** Freigabe erzeugen und hinterlegen, „initialize“ laufen
-  lassen. Windows bleibt unsigniert (bräuchte ein gekauftes Zertifikat).
+  lassen. Windows bleibt unsigniert (Klaus 19.11.: „erst mal unsigniert lassen“).
+- **Mail nativ in der Android-App (19.11., Brief 0.9.0 Punkt 2; Klaus: „weiter mit Mail nativ“):** in der APK läuft Private Brain Pro als
+  **App-Seite** statt als Web-Seite: `tools/native/brain-web.mjs` lässt dessen `prepare-web.mjs` unverändert auf einer Kopie des Klons laufen
+  (native/*.js, CSP, Texterkennung, Anleitungsfilm; Vorrat `.cache/privat-brain-pro/`), `web-paket.mjs --android` legt das Ergebnis nach
+  `klone/privat-brain-pro/` und an die Wurzel, was dessen Java und Seite dort erwarten (`BRAIN_WURZEL`: `*-model(s).json`, `models/`,
+  `vendor/pdfjs/`). Java: `klon-quellen.mjs` nimmt das ganze Paket `privatebrain/pro` und `hintergrund` aus dem Pin (78 Dateien gesamt;
+  `tresor/` von dort ist byte-gleich mit dem der Familienakte und wird einmal übersetzt). **Die MainActivity der Akte erbt von der
+  unveränderten MainActivity des Klons** (ProMailPlugin holt Gmail über genau diese Klasse; sie meldet die 17 Plugins an, beantwortet
+  Modell-Adressen, regelt Links, Zurück und Neuaufbau) – die Akte meldet davor nur ihre vier Plugins an. Manifest: die Rechte aus dem
+  Manifest von Private Brain Pro außer REQUEST_INSTALL_PACKAGES, sein Hintergrunddienst; Gradle: android-mail/activation 1.6.8,
+  play-services-auth 22.0.0. Windows nimmt weiter die Web-Seite. Probe `test-native` 36 grün (lokal mit Node 24 und
+  `NODE_USE_ENV_PROXY=1`; der Film kam über `PB_FILM_SOURCE` aus raw.githubusercontent, Pages ist hier gesperrt). Die App-Seite geht im
+  Rahmen mit gestelltem Capacitor ohne Fehler auf. **Ungeprüft:** Gradle (kein Android-SDK in der Sitzung, erst die CI), alles am Gerät –
+  vor allem, ob Capacitor-Aufrufe aus dem Rahmen ihre Antwort bekommen (Capacitor 8 antwortet über den Rahmen, der fragt). **Gmail** braucht bei
+  Google einen OAuth-Client „Android“ für `de.familyprojekt.privateakte` mit dem SHA-1 aus `signing-identity.yml` › check; IMAP mit
+  App-Passwort geht ohne. **Grenzen:** Updates von Private Brain Pro sind in der Akte aus (dessen Plugin lehnt fremde Kennungen ab);
+  heruntergeladene Modelle (Bildbeschreibung, große Bedeutungssuche) und die Übersetzung hängen an Wurzel-Adressen und sind am Gerät
+  ungeprüft; Mail unter Windows (Java-Engine von Private Brain Pro) nicht gebaut.
 
 ## Stand davor (18.11.2026, 0.8.1)
 

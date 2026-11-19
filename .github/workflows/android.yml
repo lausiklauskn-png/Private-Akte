@@ -32,10 +32,15 @@ jobs:
       - run: npm ci
       - name: Klone gegen ihre Pins prüfen
         run: node tools/klon-nachziehen.mjs --pruefen
-      - name: Hülle ohne Android prüfen (Paket, Kennung, Fassung, Rechte, Gerätezugriffe)
-        run: node tools/native/test-native.mjs
-      - name: Web-Paket bauen und in die Hülle legen
+      - name: Vorrat für Private Brain Pro (Texterkennung, Film; gegen die Pins im Klon geprüft)
+        uses: actions/cache@v4
+        with:
+          path: .cache/privat-brain-pro
+          key: pb-vorrat-${{ hashFiles('klone/privat-brain-pro/tools/native/*.json') }}
+      - name: Web-Paket bauen und in die Hülle legen (Private Brain Pro als App-Seite, Mail nativ)
         run: npm run sync:android
+      - name: Hülle ohne Android prüfen (Paket, Kennung, Fassung, Rechte, Gerätezugriffe, App-Seite Private Brain Pro)
+        run: node tools/native/test-native.mjs
       - name: Bauen
         working-directory: android
         run: ./gradlew --no-daemon --max-workers=2 assembleDebug
