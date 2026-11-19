@@ -40,6 +40,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   gegen den Schlüssel im Manifest geprüft, von außen nachgeladen). Eine Fassung nur einmal. Windows ohne Updates.
 - Proben: `test-native` 42 grün, Web-Probe 506 grün, Fähnchen im Browser mit gestellter Brücke. **Am Tablet ungeprüft.** 0.9.1 muss Klaus
   einmal von Hand über die vorhandene App installieren; erst ab der nächsten Fassung meldet sich das Fähnchen.
+- **Veröffentlicht 19.11.2026 (Klaus' Wort):** Android 0.9.1 (Release `v0.9.1`, Update-Server), Nachweis `docs/VEROEFFENTLICHUNG-0.9.1.md` –
+  nicht erneut ausgeben; nächste Fassung 0.9.2 (Code 92). Klaus hat sie am Tablet installiert. **Abschlussbrief:**
+  `docs/BRIEF_ABSCHLUSS_2026-11-19_SYMBOL-MAIL-UPDATES-0.9.1.md`.
 
 ## Stand (18./19.11.2026, 0.9.0 – Pro-Akte)
 
