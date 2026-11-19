@@ -61,7 +61,8 @@ weiter mit Mail nativ“; Signatur gemeinsam Schritt für Schritt; „Ja, auf ma
 Repo: lausiklauskn-png/Privat-Brain-Pro (dazu lausiklauskn-png/Private-Akte mit add_repo holen).
 Lies zuerst CLAUDE.md in beiden Repos, dann in Private-Akte docs/BRIEF_ABSCHLUSS_2026-11-19_SIGNATUR-MAIL-NATIV.md (Punkt 2).
 
-Auftrag: Fehler in der Mail-Anzeige von Private Brain Pro beheben; danach in Private-Akte Punkte 5 (Symbol) und 6 (Updates mit Fähnchen) – er steckt gleich in der eigenständigen App 1.0.54 und in der
+Auftrag: (a) Fehler in der Mail-Anzeige von Private Brain Pro beheben (Punkte 1–4 unten), (b) danach in Private-Akte Punkte 5 (Symbol)
+und 6 (Updates mit Fähnchen). Der Mail-Fehler steckt gleich in der eigenständigen App 1.0.54 und in der
 Privaten Akte 0.9.0 (die Akte nutzt Private Brain Pro als 1:1-Klon).
 
 Befund (Klaus am Tablet, 19.11.):
