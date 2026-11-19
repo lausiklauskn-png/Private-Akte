@@ -88,6 +88,12 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 - Ein Bildschirmfoto im Chat zeigte einen Notfallschlüssel. Feste Regel: keine Schlüssel im Chat. Das betroffene Backup
   (Probe-Unterlagen) nicht weiterverwenden, ein neues erstellen.
 
+## Pro-App: Tools im Rahmen (19.11.)
+
+- Capacitor 8 nimmt Plugin-Aufrufe nur aus dem Hauptfenster an; Tools im Rahmen bekamen am Tablet keine Antwort (Private Brain:
+  „Mail wird geladen …“ endlos). Hier nimmt jede Rahmen-Seite die Brücke des Hauptfensters (`rahmen/capacitor-rahmen.js`). Prüfen, ob
+  die Familienakte mit Workflow PDF im Rahmen dieselbe Lücke hat.
+
 ## Noch offen aus dem Test
 
 - Der Tresor als wirklich gewählter Ordner (kann der Klon, „Ordner wählen“) – dann gäbe es „Tresor anlegen“ wirklich.
