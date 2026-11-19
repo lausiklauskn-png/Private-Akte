@@ -63,4 +63,35 @@ public class UpdateFeedTest {
         assertTrue(UpdateFeed.neuer("0.10.0", "0.9.9")); assertFalse(UpdateFeed.neuer("0.4.0", "0.4.0")); assertFalse(UpdateFeed.neuer("1.0.0-x", "0.1.0"));
         assertEquals("Datei-Organizer-Pro-0.4.0.apk", UpdateFeed.dateiName("0.4.0"));
     }
+
+    // Ziel einer anderen App (Klaus 19.11.2026: Private Akte Pro nutzt diesen Update-Teil als Klon). Eigener Wegwerf-Schlüssel.
+    static final String PUB2 = "MCowBQYDK2VwAyEAOfr9pT97VyckVuvL+dtN09BFnSQZMyFR/xW1Km9rdFc=";
+    static final byte[] AKTE = feed("private-akte", "Private-Akte-Pro-0.4.1.apk", 41), ORG2 = feed("datei-organizer", "Datei-Organizer-Pro-0.4.1.apk", 41);
+    static final byte[] AKTE_SIG = "VX9vwOOHhDfDCNPjNbkYN0E7jBbnu9dNvCLgSqVwoEh1W9fnchd7VpFSZ5XeuH1sNtG34uuABf5GrGgy11eZCA==".getBytes(StandardCharsets.US_ASCII);
+    static final byte[] ORG2_SIG = "wYOaqn7Y4eY8zQqB32pAqiyLtUHAOhPeHxPri2BwqBUASplS1xsxF/JRiiei6IN7ICyPvSpQNhwYTNqsdcLjCA==".getBytes(StandardCharsets.US_ASCII);
+    static final UpdateFeed.Ziel AKTE_ZIEL = new UpdateFeed.Ziel("https://family-projekt.de/updates/private-akte/", PUB2, "private-akte", "Private-Akte-Pro");
+    static String fehler(byte[] f, byte[] s, UpdateFeed.Ziel z) {
+        try { UpdateFeed.auswerten(f, s, "0.4.0", 40, z); return ""; } catch (IOException e) { return e.getMessage(); }
+    }
+    @Test public void zielEinerAnderenApp() throws Exception {
+        UpdateFeed.Angebot a = UpdateFeed.auswerten(AKTE, AKTE_SIG, "0.4.0", 40, AKTE_ZIEL);
+        assertNotNull(a); assertEquals("Private-Akte-Pro-0.4.1.apk", a.datei);
+        assertEquals("Private-Akte-Pro-0.4.1.apk", AKTE_ZIEL.dateiName("0.4.1"));
+    }
+    @Test public void organizerFeedPasstNichtZumZielDerAnderenApp() { assertEquals("UPDATE_UNGUELTIG", fehler(ORG2, ORG2_SIG, AKTE_ZIEL)); }
+    @Test public void organizerZielNimmtFeedDerAnderenAppNicht() {
+        assertEquals("UPDATE_UNGUELTIG", fehler(AKTE, AKTE_SIG, new UpdateFeed.Ziel(UpdateFeed.BASIS, PUB2, "datei-organizer", "Datei-Organizer-Pro")));
+    }
+    @Test public void ungueltigesZielIstNichtEingerichtet() {
+        assertEquals("UPDATE_NICHT_EINGERICHTET", fehler(AKTE, AKTE_SIG, new UpdateFeed.Ziel("http://family-projekt.de/updates/private-akte/", PUB2, "private-akte", "Private-Akte-Pro")));
+        assertEquals("UPDATE_NICHT_EINGERICHTET", fehler(AKTE, AKTE_SIG, new UpdateFeed.Ziel("https://example.org/updates/private-akte/", PUB2, "private-akte", "Private-Akte-Pro")));
+        assertEquals("UPDATE_NICHT_EINGERICHTET", fehler(AKTE, AKTE_SIG, new UpdateFeed.Ziel("https://family-projekt.de/updates/private-akte/", PUB2, "private-akte", "../x")));
+        assertEquals("UPDATE_NICHT_EINGERICHTET", fehler(AKTE, AKTE_SIG, null));
+        assertEquals("UPDATE_NICHT_EINGERICHTET", fehler(AKTE, AKTE_SIG, new UpdateFeed.Ziel("https://family-projekt.de/updates/private-akte/", "", "private-akte", "Private-Akte-Pro")));
+    }
+    @Test public void organizerZielUnveraendert() {
+        assertTrue(UpdateFeed.ORGANIZER.gueltig());
+        assertEquals("https://family-projekt.de/updates/datei-organizer/", UpdateFeed.ORGANIZER.basis);
+        assertEquals("Datei-Organizer-Pro-0.4.1.apk", UpdateFeed.dateiName("0.4.1"));
+    }
 }

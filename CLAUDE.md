@@ -22,6 +22,25 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (19.11.2026 abends, 0.9.1 – Symbol, Mail-Anzeige, Updates mit Fähnchen)
+
+- **Klaus 19.11.: „Du kannst alles veröffentlichen, sobald es grün ist“; Symbol: Ja; Updates: Weg 1.**
+- **App-Symbol ohne weißen Rand:** Hintergrund setzt die Ringfarben des Pro-Zeichens nach außen fort, Zeichen etwas größer; alle
+  `mipmap-*` aus `tools/native/symbol-pro.py` (Vorschau `docs/vorschau-symbol-2026-11-19.png`).
+- **Mail-Anzeige:** Klon `privat-brain-pro` @ `5164a4b` (Private Brain Pro 1.0.55: `<style>`-Inhalt nicht mehr als Mailtext, gespeicherte
+  Texte beim Anzeigen bereinigt).
+- **Updates mit Fähnchen (nur Android):** `DoUpdatesPlugin`, `UpdateFeed`, `Json` byte-gleich aus dem Klon `datei-organizer` @ `b3cd3a0`
+  (dort PR #75: Ziel über Meta-Daten einstellbar). Ziel der Akte im Manifest: `https://family-projekt.de/updates/private-akte/`, App
+  `private-akte`, Datei `Private-Akte-Pro-X.Y.Z.apk`, eigener Ed25519-Schlüssel (von Klaus in Termux erzeugt, geheimer Teil bei ihm mit `age`
+  gesichert, Gegenprobe GLEICH; Geheimnisse `UPDATE_SIGNING_KEY`, `UPDATE_UPLOAD_KEY` in der Umgebung `android-production`; Server-Ordner
+  angelegt). Recht `REQUEST_INSTALL_PACKAGES`, Cache-Ordner `update/`. In `app.js`: still geprüft nach dem Start, beim Zurückholen, höchstens
+  alle 15 Minuten (Fehler: 2 Minuten); rotes Fähnchen „Update X.Y.Z“ neben der Fassung, Tipp lädt (Prozent), prüft (Größe, SHA-256, Paket,
+  Zertifikat, versionCode) und öffnet Androids Installieren-Fenster; Tipp auf die Fassung prüft sofort. **Veröffentlichen:** Lauf „Android-App
+  signiert“ mit `veroeffentlichen = ja` – GitHub-Release `v<Fassung>` und Update-Server (`tools/native/update-feed-android.mjs`, Feed
+  gegen den Schlüssel im Manifest geprüft, von außen nachgeladen). Eine Fassung nur einmal. Windows ohne Updates.
+- Proben: `test-native` 42 grün, Web-Probe 506 grün, Fähnchen im Browser mit gestellter Brücke. **Am Tablet ungeprüft.** 0.9.1 muss Klaus
+  einmal von Hand über die vorhandene App installieren; erst ab der nächsten Fassung meldet sich das Fähnchen.
+
 ## Stand (18./19.11.2026, 0.9.0 – Pro-Akte)
 
 - **0.9.0 Private Akte Pro für Android und Windows (Klaus 18.11., Freibrief; PR #60; Brief `docs/BRIEF_ABSCHLUSS_2026-11-18_PRO-AKTE-0.9.0.md`):**

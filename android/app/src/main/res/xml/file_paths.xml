@@ -2,8 +2,9 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <cache-path name="teilen" path="teilen/" />
     <!-- Private Brain Pro (Klon, Mail nativ), wie in dessen file_paths.xml: Kamerabilder, bereitgestellte Ausgaben, Originale.
-         Nicht übernommen: „update“ (dessen Updates gelten nur für Private Brain Pro selbst). -->
+         „update“: die geladene Update-APK der Akte (DoUpdatesPlugin aus dem Klon Datei-Organizer, Klaus 19.11.2026). -->
     <external-files-path name="camera_images" path="Pictures/" />
     <cache-path name="exports" path="exports/" />
     <files-path name="originals" path="originals-v1/" />
+    <cache-path name="update" path="update/" />
 </paths>

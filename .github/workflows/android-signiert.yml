@@ -6,8 +6,18 @@ name: Android-App signiert
 #  - von Hand, nur von main, Umgebung android-production, Freigabe PA_SIGNING_UNLOCK: signiert mit signing/ (erst nach
 #    „initialize“ in signing-identity.yml vorhanden);
 #  - bei PRs, die das Signieren berühren: derselbe Weg mit einer Wegwerf-Identität, nur als Probe, kein Download.
+#  - Veröffentlichen (Klaus 19.11.2026, Updates mit Fähnchen; nur auf sein Wort): von Hand mit veroeffentlichen = ja. Dann zusätzlich
+#    GitHub-Release v<Fassung> mit der APK und dieselbe APK auf family-projekt.de/updates/private-akte/ mit unterschriebenem Feed
+#    (UPDATE_SIGNING_KEY, gegen den Schlüssel im Manifest geprüft; UPDATE_UPLOAD_KEY zum Hochladen). Eine Fassung nur einmal.
 on:
   workflow_dispatch:
+    inputs:
+      veroeffentlichen:
+        description: 'Veröffentlichen (Release + Update-Server)? Nur auf Klaus Wort: ja'
+        required: true
+        default: nein
+        type: choice
+        options: [nein, ja]
   pull_request:
     paths:
       - 'tools/signing/**'
@@ -97,8 +107,10 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 25
     environment: android-production
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
@@ -135,3 +147,55 @@ jobs:
           path: ausgabe/
           if-no-files-found: error
           retention-days: 30
+      - name: Veröffentlichen – GitHub-Release
+        if: inputs.veroeffentlichen == 'ja'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          v=$(sed -n 's/^ *versionName "\(.*\)"$/\1/p' android/app/build.gradle)
+          if gh release view "v$v" -R "$GITHUB_REPOSITORY" > /dev/null 2>&1; then echo "::error::v$v ist schon veröffentlicht – erst die Fassung erhöhen"; exit 1; fi
+          (cd ausgabe && sha256sum "Private-Akte-Pro-$v.apk" > SHA256SUMS)
+          gh release create "v$v" "ausgabe/Private-Akte-Pro-$v.apk" ausgabe/SHA256SUMS -R "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "Private Akte Pro $v" --notes "Android-App, signiert. Über die vorhandene App installieren (der App-Speicher bleibt)."
+          curl -fsSL "https://github.com/$GITHUB_REPOSITORY/releases/download/v$v/Private-Akte-Pro-$v.apk" | cmp - "ausgabe/Private-Akte-Pro-$v.apk"
+          echo "Download: https://github.com/$GITHUB_REPOSITORY/releases/download/v$v/Private-Akte-Pro-$v.apk"
+      - name: Veröffentlichen – Update-Datei bauen, unterschreiben, gegen den Schlüssel im Manifest prüfen
+        if: inputs.veroeffentlichen == 'ja'
+        env:
+          SIGNIERSCHLUESSEL: ${{ secrets.UPDATE_SIGNING_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$SIGNIERSCHLUESSEL" || { echo "::error::Geheimnis UPDATE_SIGNING_KEY fehlt (Umgebung android-production)"; exit 1; }
+          v=$(sed -n 's/^ *versionName "\(.*\)"$/\1/p' android/app/build.gradle)
+          mkdir -p hoch && cp "ausgabe/Private-Akte-Pro-$v.apk" hoch/
+          node tools/native/update-feed-android.mjs "hoch/Private-Akte-Pro-$v.apk" hoch/aktuell-android.json
+          umask 077; printf '%s\n' "$SIGNIERSCHLUESSEL" > "$RUNNER_TEMP/sig.pem"
+          openssl pkeyutl -sign -rawin -inkey "$RUNNER_TEMP/sig.pem" -in hoch/aktuell-android.json -out "$RUNNER_TEMP/sig.bin"
+          base64 -w0 "$RUNNER_TEMP/sig.bin" > hoch/aktuell-android.json.sig; echo >> hoch/aktuell-android.json.sig
+          rm -f "$RUNNER_TEMP/sig.pem"
+          PUB=$(grep -o 'de.familyprojekt.update.schluessel" android:value="[^"]*"' android/app/src/main/AndroidManifest.xml | cut -d'"' -f3)
+          test -n "$PUB" || { echo "::error::Öffentlicher Update-Schlüssel fehlt im Manifest"; exit 1; }
+          { echo '-----BEGIN PUBLIC KEY-----'; echo "$PUB"; echo '-----END PUBLIC KEY-----'; } > "$RUNNER_TEMP/pub.pem"
+          openssl pkeyutl -verify -rawin -pubin -inkey "$RUNNER_TEMP/pub.pem" -in hoch/aktuell-android.json -sigfile "$RUNNER_TEMP/sig.bin"
+      - name: Veröffentlichen – auf family-projekt.de hochladen und von außen prüfen
+        if: inputs.veroeffentlichen == 'ja'
+        env:
+          HOCHLADESCHLUESSEL: ${{ secrets.UPDATE_UPLOAD_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$HOCHLADESCHLUESSEL" || { echo "::error::Geheimnis UPDATE_UPLOAD_KEY fehlt (Umgebung android-production)"; exit 1; }
+          umask 077; mkdir -p ~/.ssh; printf '%s\n' "$HOCHLADESCHLUESSEL" > ~/.ssh/upload
+          echo '167.233.204.72 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIhzSmN0kY2Vk2oem2u6dH8rq04A8UXVZyay2WWRjOmR' > ~/.ssh/known_hosts
+          rsync -rt --delete-after --delay-updates --include='aktuell-android.json' --include='aktuell-android.json.sig' --include='Private-Akte-Pro-*.apk' --exclude='*' \
+            -e "ssh -i ~/.ssh/upload -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" hoch/ root@167.233.204.72:private-akte/
+          rm -f ~/.ssh/upload
+          B=https://family-projekt.de/updates/private-akte
+          curl -fsS "$B/aktuell-android.json" | cmp - hoch/aktuell-android.json
+          curl -fsS "$B/aktuell-android.json.sig" | cmp - hoch/aktuell-android.json.sig
+          D=$(ls hoch/*.apk | xargs -n1 basename)
+          curl -fsS "$B/$D" | sha256sum | grep -q "$(sha256sum "hoch/$D" | cut -d' ' -f1)"
+          echo "Auch auf dem Update-Server: $B/$D"

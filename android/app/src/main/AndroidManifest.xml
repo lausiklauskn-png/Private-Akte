@@ -36,6 +36,14 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
         </provider>
+
+        <!-- Updates mit Fähnchen (Klaus 19.11.2026): DoUpdatesPlugin aus dem Klon Datei-Organizer fragt hier statt beim Organizer.
+             Öffentlicher Teil des Update-Schlüssels (Ed25519), von Klaus in Termux erzeugt; der geheime Teil liegt nur bei ihm und als
+             Geheimnis UPDATE_SIGNING_KEY in der Umgebung android-production. -->
+        <meta-data android:name="de.familyprojekt.update.basis" android:value="https://family-projekt.de/updates/private-akte/" />
+        <meta-data android:name="de.familyprojekt.update.schluessel" android:value="MCowBQYDK2VwAyEAfVl5/iQKBEE6yq4+TJ01wwbuVvMpP74cJF4LF0DN2MY=" />
+        <meta-data android:name="de.familyprojekt.update.app" android:value="private-akte" />
+        <meta-data android:name="de.familyprojekt.update.datei" android:value="Private-Akte-Pro" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -45,12 +53,15 @@
     <uses-permission android:name="android.permission.READ_CALENDAR" />
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <!-- Private Brain Pro (Klon, Mail nativ; wie in dessen Manifest): Netzstand (große Abrufe warten auf WLAN), Mikrofonwahl fürs Diktat,
-         Hintergrundaufgabe mit Mitteilung. Nicht übernommen: REQUEST_INSTALL_PACKAGES (dessen Updates gelten nur für Private Brain Pro selbst). -->
+         Hintergrundaufgabe mit Mitteilung. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Updates mit Fähnchen (Klaus 19.11.2026): die geprüfte APK der Akte selbst installieren; Android fragt einmal nach der Erlaubnis.
+         Updates von Private Brain Pro bleiben in der Akte aus (dessen Plugin lehnt fremde Kennungen ab). -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <queries>
         <intent><action android:name="android.intent.action.VIEW" /><data android:scheme="https" /></intent>

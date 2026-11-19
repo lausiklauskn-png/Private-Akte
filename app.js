@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.9.0', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.9.1', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -1273,7 +1273,37 @@ if ('serviceWorker' in navigator && location.protocol === 'https:') {
   navigator.serviceWorker.addEventListener('controllerchange', () => { if (hatte) { const f = $('fassung'); f.classList.add('neu'); f.textContent = 'Neue Fassung · antippen'; } });
   document.addEventListener('visibilitychange', () => { if (!document.hidden && swReg) swReg.update().catch(() => {}); });
 }
+/* Updates mit Fähnchen (Klaus 19.11.2026, nur in der Android-App): DoUpdates aus dem Klon Datei-Organizer fragt beim Server der Akte
+   (Ziel im Manifest), prüft Unterschrift, Größe, SHA-256, Paket, Zertifikat und versionCode und öffnet Androids Installieren-Fenster.
+   Still geprüft beim Start, beim Zurückholen der App und höchstens alle 15 Minuten (nach einem Fehler 2 Minuten). */
+const nativUpdates = () => { const c = window.Capacitor; return c && c.isNativePlatform && c.isNativePlatform() && c.Plugins && c.Plugins.DoUpdates || null; };
+const upd = { neu: '', ruhe: 0, laeuft: false };
+async function updatePruefen(laut){
+  const u = nativUpdates(); if (!u || upd.laeuft || (!laut && Date.now() < upd.ruhe)) return null;
+  upd.laeuft = true;
+  try {
+    const r = await u.pruefen(); upd.ruhe = Date.now() + 15 * 60000; upd.neu = r && r.neu || '';
+    const f = $('update-fahne'); f.hidden = !upd.neu; f.textContent = upd.neu ? 'Update ' + upd.neu : '';
+    if (laut && !upd.neu) toast(`${FASSUNG} ist aktuell.`);
+    return r;
+  } catch (e) { upd.ruhe = Date.now() + 2 * 60000; if (laut) toast(String(e && (e.code || e.message) || e) === 'UPDATE_NICHT_EINGERICHTET' ? 'Updates sind noch nicht eingerichtet.' : 'Update-Server gerade nicht erreichbar.'); return null; }
+  finally { upd.laeuft = false; }
+}
+A['update-laden'] = async () => {
+  const u = nativUpdates(); if (!u) return;
+  if (!upd.neu) { await updatePruefen(true); if (!upd.neu) return; }
+  const f = $('update-fahne'); f.textContent = 'Lädt …';
+  const h = u.addListener ? await u.addListener('stand', s => { if (s && s.groesse) f.textContent = Math.round(s.geladen * 100 / s.groesse) + ' %'; }) : null;
+  try { const r = await u.installieren(); if (r && r.erlaubnis) toast('Bitte „Apps installieren“ erlauben, dann noch einmal auf das Fähnchen tippen.', 8000); }
+  catch (e) { upd.neu = ''; upd.ruhe = 0; toast('Update nicht geladen – die Datei bestand die Prüfung nicht oder der Server war nicht erreichbar.', 8000); }
+  finally { if (h && h.remove) h.remove(); f.textContent = upd.neu ? 'Update ' + upd.neu : ''; f.hidden = !upd.neu; }
+};
+if (nativUpdates()) {
+  setTimeout(() => updatePruefen(false), 4000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) updatePruefen(false); });
+}
 A['neu-laden'] = async () => {
+  if (nativUpdates()) { await updatePruefen(true); if (upd.neu) A['update-laden'](); return; }
   toast('Sehe nach einer neuen Fassung …');
   try { if (swReg) await swReg.update(); await fetch('./index.html', {cache:'reload'}); } catch (e) {}
   location.reload();

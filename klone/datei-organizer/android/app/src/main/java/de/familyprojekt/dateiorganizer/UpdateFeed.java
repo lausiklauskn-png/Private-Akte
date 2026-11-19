@@ -26,6 +26,26 @@ final class UpdateFeed {
      */
     static final String SCHLUESSEL = "MCowBQYDK2VwAyEAfdutRiXMBL+fOEgDuf4y7oaGaOFhP9NAjSa760JUQYw=";
     static final long MAX_APK = 512L * 1024 * 1024;
+
+    /**
+     * Wohin eine App nach Updates fragt (Klaus 19.11.2026: die Private Akte Pro nutzt diesen Update-Teil unverändert als Klon).
+     * Ohne Angabe gilt der Datei-Organizer. Eine andere App setzt im Manifest ihrer Anwendung die vier Meta-Daten
+     * de.familyprojekt.update.basis / .schluessel / .app / .datei (Dateiname vor „-X.Y.Z.apk“); fehlt eine oder ist sie
+     * ungültig, gilt der Datei-Organizer nicht – die App meldet dann UPDATE_NICHT_EINGERICHTET.
+     */
+    static final class Ziel {
+        final String basis, schluessel, app, praefix;
+        Ziel(String basis, String schluessel, String app, String praefix) {
+            this.basis = basis; this.schluessel = schluessel; this.app = app; this.praefix = praefix;
+        }
+        /** Nur https auf family-projekt.de/updates/<name>/, App-Name und Dateiname aus festen Zeichen. */
+        boolean gueltig() {
+            return basis != null && basis.matches("https://family-projekt\\.de/updates/[a-z0-9-]{1,40}/")
+                && app != null && app.matches("[a-z0-9-]{1,40}") && praefix != null && praefix.matches("[A-Za-z0-9-]{1,60}");
+        }
+        String dateiName(String version) { return praefix + "-" + version + ".apk"; }
+    }
+    static final Ziel ORGANIZER = new Ziel(BASIS, SCHLUESSEL, "datei-organizer", "Datei-Organizer-Pro");
     private static final byte[] SPKI_KOPF = { 0x30, 0x2a, 0x30, 0x05, 0x06, 0x03, 0x2b, 0x65, 0x70, 0x03, 0x21, 0x00 };
     private UpdateFeed() { }
 
@@ -59,7 +79,7 @@ final class UpdateFeed {
         int i = name.indexOf('-');
         return i < 0 ? name : name.substring(0, i);
     }
-    static String dateiName(String version) { return "Datei-Organizer-Pro-" + version + ".apk"; }
+    static String dateiName(String version) { return ORGANIZER.dateiName(version); }
 
     /** Base64 (Standard, mit oder ohne Auffüllung); eigene kleine Fassung wie in BookLedgerPro. */
     static byte[] b64(String s) {
@@ -92,13 +112,17 @@ final class UpdateFeed {
 
     /** null = installierte Fassung ist aktuell. Wirft UPDATE_NICHT_EINGERICHTET / UPDATE_UNTERSCHRIFT_FALSCH / UPDATE_UNGUELTIG. */
     static Angebot auswerten(byte[] feed, byte[] sigText, String installiert, long installiertCode, String schluessel) throws IOException {
-        if (!eingerichtet(schluessel)) throw new IOException("UPDATE_NICHT_EINGERICHTET");
+        return auswerten(feed, sigText, installiert, installiertCode, new Ziel(BASIS, schluessel, ORGANIZER.app, ORGANIZER.praefix));
+    }
+    static Angebot auswerten(byte[] feed, byte[] sigText, String installiert, long installiertCode, Ziel ziel) throws IOException {
+        if (ziel == null || !ziel.gueltig() || !eingerichtet(ziel.schluessel)) throw new IOException("UPDATE_NICHT_EINGERICHTET");
+        String schluessel = ziel.schluessel;
         byte[] sig;
         try { sig = b64(new String(sigText, StandardCharsets.US_ASCII).trim()); }
         catch (IllegalArgumentException x) { throw new IOException("UPDATE_UNTERSCHRIFT_FALSCH"); }
         if (!echt(feed, sig, schluessel)) throw new IOException("UPDATE_UNTERSCHRIFT_FALSCH");
         Map<String, Object> f = Json.objekt(new String(feed, StandardCharsets.UTF_8));
-        if (Json.zahlOder(f, "format", 0) != 1 || !"datei-organizer".equals(Json.textOder(f, "app", ""))) throw new IOException("UPDATE_UNGUELTIG");
+        if (Json.zahlOder(f, "format", 0) != 1 || !ziel.app.equals(Json.textOder(f, "app", ""))) throw new IOException("UPDATE_UNGUELTIG");
         String v = Json.textOder(f, "version", "");
         Object a = f.get("android");
         if (teile(v) == null || !(a instanceof Map)) throw new IOException("UPDATE_UNGUELTIG");
@@ -107,7 +131,7 @@ final class UpdateFeed {
         if (!neuer(v, ohneZusatz(installiert)) || code <= installiertCode) return null;
         String datei = Json.textOder(an, "datei", ""), sha = Json.textOder(an, "sha256", "");
         long groesse = Json.zahlOder(an, "groesse", -1);
-        if (!datei.equals(dateiName(v)) || !sha.matches("[0-9a-f]{64}") || groesse <= 0 || groesse > MAX_APK) throw new IOException("UPDATE_UNGUELTIG");
+        if (!datei.equals(ziel.dateiName(v)) || !sha.matches("[0-9a-f]{64}") || groesse <= 0 || groesse > MAX_APK) throw new IOException("UPDATE_UNGUELTIG");
         return new Angebot(v, datei, sha, groesse, code);
     }
 }
