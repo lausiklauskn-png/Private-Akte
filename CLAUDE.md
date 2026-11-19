@@ -26,7 +26,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 - **Klon `privat-brain-pro` @ `801ae1c`** (Private Brain Pro 1.0.56, PR #153 dort): Mail › „Weitere Aktionen“ › „Passwort erneuern“ für Konten
   mit Passwort (Klaus 19.11.: Telekom-Passwort geändert, beide Apps ohne Zugang). Fassung 0.9.2 (Code 92) – die erste, die sich über das
-  Fähnchen meldet. Proben `test-native` 42, Web-Probe 506 grün. Am Tablet ungeprüft.
+  Fähnchen meldet. Proben `test-native` 42, Web-Probe 506 grün. **Veröffentlicht 19.11.** (Nachweis `docs/VEROEFFENTLICHUNG-0.9.2.md`, nicht erneut ausgeben; nächste 0.9.3). Am Tablet ungeprüft.
 
 ## Stand (19.11.2026 abends, 0.9.1 – Symbol, Mail-Anzeige, Updates mit Fähnchen)
 
