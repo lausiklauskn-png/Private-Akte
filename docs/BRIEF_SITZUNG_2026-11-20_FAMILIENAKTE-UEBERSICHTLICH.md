@@ -97,6 +97,12 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 13. **„Pseudo“ verdecken (Klaus):** den Knopf „Pseudo“ oben ausblenden, nicht löschen. Grund (Klaus): „Pseudo geht schon an, wenn ich den Briefumschlag anklicke … da steht doch dann schon pseudonymisieren“ – der Schalter oben ist doppelt; die Funktion beim Briefumschlag bleibt unverändert. **Merken:** er kommt später in den
     E-Mail-Bereich („die E-Mail-Geschichte“) – dafür jetzt nichts bauen, nur in der `CLAUDE.md` vermerken.
 
+14. **Doppelungen heraus (Klaus 19.11. nachts):** „es geht hin und her“ – derselbe Weg steht an mehreren Stellen, z. B. die
+    **Assistenzzentrale** bietet „in den Akten nachsehen“, „Briefe oder E-Mails beantworten“ und „im Pseudo-Fenster schreiben“
+    an, und dasselbe taucht oben in der Kopfleiste noch einmal auf. Jeden Weg **an einer Stelle** lassen (dort, wo man ihn
+    sucht), die Doppelung entfernen bzw. verstecken. Vor dem Umbau eine kurze Liste der Doppelungen anlegen und im Abschlussbrief
+    nennen, welche Stelle geblieben ist.
+
 ## Grenzen
 
 - **Nichts am Kern ändern**, was gelernt oder gespeichert ist (Sortier-Kern, gelernte Regeln, Register, Tresor, Sicherungsformat
@@ -118,9 +124,9 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 ## Startauftrag (zum Einfügen)
 
 > Lies `CLAUDE.md` der Familienakte und `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` im Repo Private-Akte,
-> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–13 um: Container einklappbar,
+> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–14 um: Container einklappbar,
 > Lebensbereiche klein, Suche als Hauptweg (auch nach Personen), Personen übersichtlich, Kopfleiste entschlacken, gelbe Hinweise
-> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern, Netz/Mycel in den Hintergrund (Punkt 10). Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. „Neu“ oben weg, „Pseudo“ verdecken. Freibrief: tokensparend durcharbeiten, Fragen selbst nach Logik und
+> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern, Netz/Mycel in den Hintergrund (Punkt 10). Zuerst die Logik (Bereiche → Akten → Person/Familie) verstehen und kurz darstellen, nicht zu sehr vereinfachen. Kern und gespeicherte Daten nicht anfassen. „Neu“ oben weg, „Pseudo“ verdecken, Doppelungen heraus (jeder Weg an einer Stelle). Freibrief: tokensparend durcharbeiten, Fragen selbst nach Logik und
 > Nutzerfreundlichkeit beantworten, bis morgen 7–8 Uhr eine neue, geprüfte Version der Familienakte ausgeben.
 
 Hinweis: Klaus wollte ein Bild der Familienakte (Akten-Kacheln) mitschicken; es ist in dieser Sitzung nicht angekommen – am
