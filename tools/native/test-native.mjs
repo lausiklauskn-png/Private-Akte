@@ -6,7 +6,7 @@ import { createServer } from 'node:http';
 import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
 import { extname, join } from 'node:path';
-import { bauen, WURZEL, NAME, BRAIN_WURZEL } from './web-paket.mjs';
+import { bauen, WURZEL, NAME, BRAIN_WURZEL, RAHMEN_SEITEN } from './web-paket.mjs';
 import { QUELLEN } from './klon-quellen.mjs';
 
 let gruen = 0, rot = 0;
@@ -109,8 +109,32 @@ console.log('Android: Private Brain Pro als App-Seite (Mail nativ)');
     const a = bauen(mkdtempSync(join(tmpdir(), 'pa-www-a-')), { android: true, brain: pb });
     const pi = readFileSync(join(a, 'klone/privat-brain-pro/index.html'), 'utf8');
     soll('App-Seite mit der nativen Mail (native-mail.js) statt der Web-Seite', pi.includes('<script src="native-mail.js"></script>') && existsSync(join(a, 'klone/privat-brain-pro/native-mail.js')) && !existsSync(join(a, 'klone/privat-brain-pro/sw.js')));
+    soll('jede Seite im Rahmen nimmt als erstes Skript die Brücke des Hauptfensters', RAHMEN_SEITEN.every((p) => /<head>\s*<script src="\/rahmen\/capacitor-rahmen\.js"><\/script>/.test(readFileSync(join(a, p), 'utf8'))) && existsSync(join(a, 'rahmen/capacitor-rahmen.js')));
     soll('an der Wurzel, was Java und Seite dort erwarten', BRAIN_WURZEL.every((t) => existsSync(join(a, t))), BRAIN_WURZEL.filter((t) => !existsSync(join(a, t))).join());
-    soll('Hülle der Akte unverändert im Paket', ['index.html', 'app.js', 'rahmen/kalender/index.html'].every((p) => readFileSync(join(a, p)).equals(readFileSync(join(WURZEL, p))) || p === 'index.html'));
+    soll('Hülle der Akte unverändert im Paket', ['app.js', 'tresor.js', 'rahmen/kalender/kalender.js'].every((p) => readFileSync(join(a, p)).equals(readFileSync(join(WURZEL, p)))));
+    // Wie Capacitor 8 am Gerät: im Rahmen gibt es eine eigene Brücke, die nie antwortet; nur das Hauptfenster antwortet.
+    let chromium = null; try { chromium = createRequire(import.meta.url)('playwright').chromium; } catch { /* oben schon gemeldet */ }
+    if (chromium) {
+      const srv = createServer((q, r) => { try { let p = decodeURIComponent(new URL(q.url, 'http://x').pathname); if (p.endsWith('/')) p += 'index.html'; if (p.includes('..')) throw 0;
+        const b = readFileSync(join(a, p)); r.writeHead(200, { 'content-type': ({ '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.wasm': 'application/wasm' })[extname(p)] || 'application/octet-stream' }); r.end(b); } catch { r.writeHead(404); r.end(); } });
+      await new Promise((ok) => srv.listen(0, '127.0.0.1', ok));
+      const browser = await chromium.launch();
+      try {
+        const ctx = await browser.newContext({ viewport: { width: 1200, height: 800 } });
+        await ctx.addInitScript(() => {
+          const oben = window === window.top, calls = oben ? (window.__aufrufe = []) : null;
+          const plugin = (n) => new Proxy({}, { get: (_, m) => m === 'then' ? undefined : (m === 'addListener' ? async () => ({ remove() {} })
+            : (...x) => oben ? (calls.push(n + '.' + String(m)), Promise.resolve({})) : new Promise(() => {})) });
+          window.Capacitor = { isNativePlatform: () => true, getPlatform: () => 'android', isPluginAvailable: () => true, Plugins: new Proxy({}, { get: (_, n) => plugin(String(n)) }), registerPlugin: (n) => plugin(n) };
+        });
+        const page = await ctx.newPage(); const port = srv.address().port;
+        await page.goto(`http://127.0.0.1:${port}/rechtliches.html`);
+        await page.evaluate(() => { const f = document.createElement('iframe'); f.src = '/klone/privat-brain-pro/index.html'; document.body.append(f); });
+        await page.waitForTimeout(5000);
+        const aufrufe = await page.evaluate(() => [...new Set(window.__aufrufe)]);
+        soll('Private Brain im Rahmen ruft die Plugins über das Hauptfenster (ProVault, ProMail …)', aufrufe.some((x) => x.startsWith('ProVault.')) && aufrufe.some((x) => x.startsWith('ProMail') || x.startsWith('ProFiles.')), aufrufe.slice(0, 8).join(' '));
+      } finally { await browser.close(); srv.close(); }
+    }
     rmSync(a, { recursive: true, force: true });
   }
 }

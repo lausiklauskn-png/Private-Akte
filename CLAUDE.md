@@ -57,6 +57,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   App-Passwort geht ohne. **Grenzen:** Updates von Private Brain Pro sind in der Akte aus (dessen Plugin lehnt fremde Kennungen ab);
   heruntergeladene Modelle (Bildbeschreibung, große Bedeutungssuche) und die Übersetzung hängen an Wurzel-Adressen und sind am Gerät
   ungeprüft; Mail unter Windows (Java-Engine von Private Brain Pro) nicht gebaut.
+- **Am Tablet 19.11. (signierte APK 0.9.0, Lauf „Android-App signiert“ #6):** installiert, startet („0.9.0 · Pro“), Private Brain Pro
+  läuft als App-Seite im Rahmen – aber „Mail wird geladen …“ blieb stehen, der Briefumschlag öffnete nichts. **Ursache:** Capacitor 8 nimmt
+  Plugin-Aufrufe nur aus dem Hauptfenster an (`MessageHandler`: „Plugin execution is allowed in Main Frame only“); aus dem Rahmen gingen sie
+  verloren – das gilt für jedes Tool im Rahmen (auch Organizer, Workflow PDF, Kalender). **Abhilfe:** `rahmen/capacitor-rahmen.js` (wie
+  `windows/bridge/capacitor-tauri.js`): im Rahmen derselben Adresse nimmt die Seite `window.top.Capacitor`; `web-paket.mjs --android` setzt
+  die Zeile als erstes Skript nach `<head>` in `RAHMEN_SEITEN` (nur im Paket; Klon und `rahmen/` im Repo bleiben). Probe stellt Capacitor 8
+  nach (Rahmen antwortet nie): ohne Abhilfe rot, mit grün (38).
 
 ## Stand davor (18.11.2026, 0.8.1)
 
