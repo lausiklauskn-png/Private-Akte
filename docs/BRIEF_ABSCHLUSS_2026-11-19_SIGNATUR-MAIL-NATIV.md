@@ -18,7 +18,8 @@ weiter mit Mail nativ“; Signatur gemeinsam Schritt für Schritt; „Ja, auf ma
 - **Abhilfe für den Rahmen** (PR #64): Capacitor 8 nimmt Plugin-Aufrufe nur aus dem Hauptfenster an. `rahmen/capacitor-rahmen.js` gibt
   den Seiten im Rahmen die Brücke des Hauptfensters (gilt auch für Organizer, Workflow PDF, Kalender).
 - **Am Tablet (Klaus 19.11., 14:12):** Die Mail-Seite lädt ohne Hängen, der Netz-Schalter zeigt den richtigen Stand, das Fenster
-  „Mailkonto verbinden“ von Android öffnet. **Gmail angemeldet, Mails abgerufen** (Posteingang 45, Gesendet 40).
+  „Mailkonto verbinden“ von Android öffnet. **Gmail angemeldet, Mails abgerufen** (Posteingang 45, Gesendet 40). **Hetzner-Konto
+  (IMAP) eingerichtet** (14:58, Postfach leer, Ordner da).
 - Fassung 0.9.0 ist mit #60/#61 auf `main` und damit auch als Web-App über Pages veröffentlicht (Klaus' Wort).
 
 ## Offen (nächste Sitzung, Reihenfolge)
@@ -31,12 +32,16 @@ weiter mit Mail nativ“; Signatur gemeinsam Schritt für Schritt; „Ja, auf ma
    und in der Akte einmal einrichten. IMAP/SMTP-Zugang ist bei der Telekom aktiviert, die Server stimmen mit der Vorlage der App überein.
    Hängt es danach weiter, ist es ein Befund für das Repo Privat-Brain-Pro: keine Zeitgrenze beim Prüfen, und der Knopf gibt keine
    Rückmeldung.
-2. **Am Tablet weiter prüfen:** Organizer im Rahmen mit „Ordner wählen“ (FamilyFolders), Workflow PDF und Kalender im Rahmen. Alle drei
+2. **Mail im Explorer nur als Rohtext** (Klaus 14:52): „Dateien“ › Mail › „Öffnen“ zeigt Kopf und Text samt CSS der Mail, nicht die
+   gestaltete Ansicht. Noch nicht geklärt, ob das Original Private Brain Pro im Explorer genauso zeigt (dann Befund für dessen Repo,
+   die gestaltete Ansicht gibt es unter „Mail“) oder ob es am Rahmen der Akte liegt. Klaus vergleicht: dieselbe Mail unter „Mail“ in
+   der Akte, eine Mail im Explorer des Originals.
+3. **Am Tablet weiter prüfen:** Organizer im Rahmen mit „Ordner wählen“ (FamilyFolders), Workflow PDF und Kalender im Rahmen. Alle drei
    gehen jetzt über die Brücke des Hauptfensters und sind am Gerät noch nicht probiert. Dazu „Exportieren“ › „Kopie einrichten“ auf
    die SD-Karte (Klaus will die Daten dort gesichert haben).
-3. **Kleinigkeit:** Private Brain zeigt in der Akte „v0.9.0“ statt seiner eigenen Fassung (ProDevice liefert die Fassung der Akte).
+4. **Kleinigkeit:** Private Brain zeigt in der Akte „v0.9.0“ statt seiner eigenen Fassung (ProDevice liefert die Fassung der Akte).
    Updates von Private Brain sind in der Akte aus.
-4. Danach aus dem Brief 0.9.0: Workflow PDF Pro (Punkt 3), mehrere Kopien (4), Glocke/Diktat/Teilen (5), Kalender-Anmeldung in der App (6).
+5. Danach aus dem Brief 0.9.0: Workflow PDF Pro (Punkt 3), mehrere Kopien (4), Glocke/Diktat/Teilen (5), Kalender-Anmeldung in der App (6).
    Mail unter Windows (Java-Engine von Private Brain Pro) ist nicht gebaut.
 
 ## Lehren
