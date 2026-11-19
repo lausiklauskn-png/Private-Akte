@@ -38,8 +38,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   lassen. Windows bleibt unsigniert (Klaus 19.11.: „erst mal unsigniert lassen“).
   **Erledigt mit Klaus am 19.11.:** Umgebung `android-production` mit `PA_SIGNING_UNLOCK`, Identität angelegt (PR #62 Werkzeug auf `main`,
   PR #63 Identität; Actions darf hier keine PRs anlegen – der Lauf endet darum rot, den PR von Hand anlegen), Freigabe bei Klaus mit `age`
-  gesichert, Google-Client „Private Akte Pro Android“ im Projekt `privat-brain-pro` (SHA-1 in `docs/SIGNIERUNG.md`). **Als Nächstes:** PR #60
-  und #61 nach `main`, dann „Android-App signiert“ laufen lassen, APK am Tablet: Gmail anmelden, IMAP, Mail im Rahmen.
+  gesichert, Google-Client „Private Akte Pro Android“ im Projekt `privat-brain-pro` (SHA-1 in `docs/SIGNIERUNG.md`). Erledigt: #60/#61 auf
+  `main`, signierte APK gebaut und am Tablet installiert (unten).
 - **Mail nativ in der Android-App (19.11., Brief 0.9.0 Punkt 2; Klaus: „weiter mit Mail nativ“):** in der APK läuft Private Brain Pro als
   **App-Seite** statt als Web-Seite: `tools/native/brain-web.mjs` lässt dessen `prepare-web.mjs` unverändert auf einer Kopie des Klons laufen
   (native/*.js, CSP, Texterkennung, Anleitungsfilm; Vorrat `.cache/privat-brain-pro/`), `web-paket.mjs --android` legt das Ergebnis nach
@@ -64,6 +64,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `windows/bridge/capacitor-tauri.js`): im Rahmen derselben Adresse nimmt die Seite `window.top.Capacitor`; `web-paket.mjs --android` setzt
   die Zeile als erstes Skript nach `<head>` in `RAHMEN_SEITEN` (nur im Paket; Klon und `rahmen/` im Repo bleiben). Probe stellt Capacitor 8
   nach (Rahmen antwortet nie): ohne Abhilfe rot, mit grün (38).
+- **Am Tablet bestätigt (Klaus 19.11., 14:12, APK aus Lauf 44527171833):** Mail-Seite lädt ohne Hängen, Netz-Schalter richtig, Fenster
+  „Mailkonto verbinden“ von Android öffnet, **Gmail angemeldet und Mails abgerufen**. **Offen:** Telekom (Passwort für E-Mail-Programme
+  unbekannt, Telekom drosselt nach Fehlversuchen; Weg im Brief). **Abschlussbrief und Startauftrag:**
+  `docs/BRIEF_ABSCHLUSS_2026-11-19_SIGNATUR-MAIL-NATIV.md`. 0.9.0 ist auf `main` (PR #60–#64) und damit auch als Web-App veröffentlicht.
 
 ## Stand davor (18.11.2026, 0.8.1)
 
