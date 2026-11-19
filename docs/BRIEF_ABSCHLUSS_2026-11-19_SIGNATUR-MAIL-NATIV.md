@@ -55,11 +55,38 @@ weiter mit Mail nativ“; Signatur gemeinsam Schritt für Schritt; „Ja, auf ma
   Zweig fertig ist. Den PR dann von Hand anlegen.
 - Bei Anleitungen für Klaus immer dazuschreiben, wohin etwas gehört (Browser, Termux, App). Eine Adresse landete sonst in Termux.
 
-## Startauftrag
+## Startauftrag (Klaus 19.11. abends: nächste Sitzung behebt die Mail-Anzeige in Private Brain Pro 1.0.54 und Akte 0.9.0)
 
 ```
-Repo: lausiklauskn-png/Private-Akte. Lies CLAUDE.md, dann docs/BRIEF_ABSCHLUSS_2026-11-19_SIGNATUR-MAIL-NATIV.md.
-Auftrag: Klaus' Stand zum Telekom-Postfach aufnehmen (Punkt 1); dann am Tablet Organizer, Workflow PDF, Kalender und „Kopie einrichten“
-im Rahmen mit ihm prüfen (Punkt 2); danach Workflow PDF Pro. Neue signierte APK: Actions › „Android-App signiert“ auf main.
-Nichts veröffentlichen ohne Klaus' Wort, Klone nie von Hand ändern.
+Repo: lausiklauskn-png/Privat-Brain-Pro (dazu lausiklauskn-png/Private-Akte mit add_repo holen).
+Lies zuerst CLAUDE.md in beiden Repos, dann in Private-Akte docs/BRIEF_ABSCHLUSS_2026-11-19_SIGNATUR-MAIL-NATIV.md (Punkt 2).
+
+Auftrag: Fehler in der Mail-Anzeige von Private Brain Pro beheben – er steckt gleich in der eigenständigen App 1.0.54 und in der
+Privaten Akte 0.9.0 (die Akte nutzt Private Brain Pro als 1:1-Klon).
+
+Befund (Klaus am Tablet, 19.11.):
+- Explorer („Dateien“) › Mail › „Öffnen“ zeigt den gespeicherten Mailtext. Bei reinen HTML-Mails (Newsletter, z. B. Kleinanzeigen,
+  OpenAI „Mehr Nutzungskontingent“) stehen darin die Gestaltungsregeln aus dem <style>-Block als Text – unlesbar. Mails mit eigenem
+  Textteil (Link-Code, ChatGPT „Plan wird nicht verlängert“) sind gut.
+- Unter „Mail“ wird dieselbe Mail richtig gestaltet angezeigt.
+- Kein Datenverlust: Einträge mit „Original fehlt · nicht prüfbar“ sind alte Katalog-Einträge ohne Datei (Testvorlagen) – so gewollt,
+  nicht Teil dieses Auftrags.
+
+Was zu tun ist:
+1. Im Repo Privat-Brain-Pro die Ursache finden (Umwandlung HTML → Mailtext; <style>, <head>, Kommentare werden nicht entfernt) und
+   beheben. Besser zusätzlich: „Öffnen“ einer Mail im Explorer zeigt die gestaltete Ansicht wie unter „Mail“. Schon gespeicherte
+   Mailtexte sollen beim Anzeigen ebenfalls lesbar werden (nicht nur neu abgerufene).
+2. Proben dort grün, dann zusammenführen. Fassung 1.0.55 für Android/Windows nur auf Klaus' Wort veröffentlichen.
+3. In Private-Akte den Klon nachziehen: node tools/klon-nachziehen.mjs privat-brain-pro --quelle <Pfad> (nie von Hand ändern),
+   --pruefen, node tools/native/test-native.mjs, PR, zusammenführen.
+4. Signierte APK neu bauen: Actions › „Android-App signiert“ auf main (Private-Akte). Klaus installiert sie über die vorhandene App
+   (Speicher bleibt) und prüft die Mails im Explorer.
+
+Nebenbei, klein: In der Akte zeigt Private Brain „v0.9.0“ statt seiner eigenen Fassung – ansehen, wenn es sich ohne Änderung am Klon
+lösen lässt, sonst im Brief lassen.
+
+Klaus' eigene Aufgabe, nicht in dieser Sitzung: Telekom-Postfach (neues „Passwort für E-Mail-Programme“, Weg steht im Brief Punkt 1).
+
+Regeln: Anleitungen für Klaus Schritt für Schritt auf Deutsch, immer dazuschreiben wohin (Browser, Termux, App). Nichts
+veröffentlichen ohne Klaus' Wort. Klone nie von Hand ändern.
 ```
