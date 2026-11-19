@@ -32,10 +32,13 @@ weiter mit Mail nativ“; Signatur gemeinsam Schritt für Schritt; „Ja, auf ma
    und in der Akte einmal einrichten. IMAP/SMTP-Zugang ist bei der Telekom aktiviert, die Server stimmen mit der Vorlage der App überein.
    Hängt es danach weiter, ist es ein Befund für das Repo Privat-Brain-Pro: keine Zeitgrenze beim Prüfen, und der Knopf gibt keine
    Rückmeldung.
-2. **Mail im Explorer nur als Rohtext** (Klaus 14:52): „Dateien“ › Mail › „Öffnen“ zeigt Kopf und Text samt CSS der Mail, nicht die
-   gestaltete Ansicht. Noch nicht geklärt, ob das Original Private Brain Pro im Explorer genauso zeigt (dann Befund für dessen Repo,
-   die gestaltete Ansicht gibt es unter „Mail“) oder ob es am Rahmen der Akte liegt. Klaus vergleicht: dieselbe Mail unter „Mail“ in
-   der Akte, eine Mail im Explorer des Originals.
+2. **Mail im Explorer als Rohtext – geklärt (Klaus 15:19–15:27, Bilder aus Akte 0.9.0 und Original 1.0.54): kein Fehler der Akte.**
+   Beide Fassungen verhalten sich gleich. „Dateien“ › „Öffnen“ zeigt bei einer Mail den gespeicherten Mailtext, nicht die gestaltete
+   Ansicht (die gibt es unter „Mail“). Mails mit eigenem Textteil sehen gut aus (Link-Code, ChatGPT „Plan wird nicht verlängert“,
+   Anthropic-Beleg im Original). Reine HTML-Mails (Newsletter wie Kleinanzeigen, OpenAI „Mehr Nutzungskontingent“) zeigen die
+   Gestaltungsregeln (`<style>`-Inhalt) als Text, weil beim Umwandeln in Text der Stil-Block nicht entfernt wird. Nichts ist verloren
+   oder verschlüsselt, das Original liegt beim Anbieter. **Befund für das Repo Privat-Brain-Pro** (dort beheben, dann den Klon
+   nachziehen): im Mailtext `<style>`/`<head>` weglassen, oder im Explorer bei Mails die gestaltete Ansicht wie unter „Mail“ öffnen.
 3. **Am Tablet weiter prüfen:** Organizer im Rahmen mit „Ordner wählen“ (FamilyFolders), Workflow PDF und Kalender im Rahmen. Alle drei
    gehen jetzt über die Brücke des Hauptfensters und sind am Gerät noch nicht probiert. Dazu „Exportieren“ › „Kopie einrichten“ auf
    die SD-Karte (Klaus will die Daten dort gesichert haben).
