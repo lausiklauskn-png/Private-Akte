@@ -82,7 +82,8 @@ jobs:
           set -euo pipefail
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install 'build-tools;36.0.0' > /dev/null
           export PA_APKSIGNER="$ANDROID_HOME/build-tools/36.0.0/apksigner" PA_AAPT="$ANDROID_HOME/build-tools/36.0.0/aapt"
-          test ! -e signing/android-release.enc.json || { echo 'Probe nur ohne echte Identität'; exit 1; }
+          # Die echte Identität (seit 19.11. auf main) nur in dieser Arbeitskopie des Rechners beiseitelegen: die Probe nimmt nie die echte Freigabe.
+          rm -f signing/android-release.enc.json signing/android-certificate.json
           export PA_SIGNING_UNLOCK=$(openssl rand -hex 32)
           node tools/signing/cli.mjs init
           node tools/signing/cli.mjs check
