@@ -39,7 +39,7 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 - **Weg über die Person:** Personen öffnen → Person wählen → **alle ihre Akten** aus allen Bereichen auf einen Blick.
 - **Gemeinsame Vorgänge und Familienunterlagen** haben ihren eigenen Platz; dort findet man die dazugehörigen Daten.
 - **Vorgehen:** vor dem Umbau die bestehende Logik aufschreiben (Bereich → Akte → Person / gemeinsam → Unterlagen, Fristen,
-  Tagebuch) und Klaus als kurze Übersicht zeigen; danach so umbauen, dass genau diese Logik sichtbar und nachvollziehbar wird.
+  Tagebuch) und als kurze Übersicht in den Abschlussbrief schreiben (nicht auf Antwort warten); danach so umbauen, dass genau diese Logik sichtbar und nachvollziehbar wird.
   Die Navigation darf bleiben, wo sie diese Ordnung trägt – sie soll nur nicht alles auf einmal ausbreiten.
 
 ## Was gebaut werden soll
