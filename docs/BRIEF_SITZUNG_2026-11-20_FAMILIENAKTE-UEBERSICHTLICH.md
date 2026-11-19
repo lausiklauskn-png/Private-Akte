@@ -80,6 +80,9 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
     oder die Einstellungen); Funktion und gespeicherte Verbindung bleiben. **Modul 25 (Pseudonymisieren)** bleibt, wo es ist –
     unter **Dokumente** – und tritt erst in Erscheinung, wenn Apps verbunden sind bzw. es angefragt wird; nicht auf der Startseite.
 
+11. **Versionshistorie (Klaus 19.11. nachts):** „können wir erstmal lassen, wird später weggeklickt, ist nicht so wichtig.“ –
+    Jetzt nicht umbauen und nicht entfernen; höchstens einklappbar und nicht im Weg. Später kommt sie weg (eigener Auftrag).
+
 ## Grenzen
 
 - **Nichts am Kern ändern**, was gelernt oder gespeichert ist (Sortier-Kern, gelernte Regeln, Register, Tresor, Sicherungsformat
