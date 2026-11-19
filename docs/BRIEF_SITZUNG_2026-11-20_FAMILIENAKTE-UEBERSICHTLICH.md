@@ -42,6 +42,21 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 8. **Erklärungen nur hinter einem Fragezeichen** an dem Knopf, der eine braucht. Selbsterklärende Knöpfe („Neue Unterlagen“)
    bekommen keins. Keine Erklärsätze unter Überschriften oder Bildern (feste Regel der Akte, `CLAUDE.md` dort „Einfach halten“).
 
+9. **Steckbrief einer Person (Klaus 19.11. abends, mit Bild „Person ändern“ aus der Familienakte; sein Ja: „Das ist ja alles
+   verschlüsselt, kommt so keiner ran.“)** – zuerst **im Kern der Familienakte**, dann über den Klon in der Privaten Akte unter
+   „Akten“ › Person:
+   - Name, Rolle, **Notiz (optional)**, Anschrift und Kontakt (Straße, PLZ, Ort, E-Mail, **Telefon**) – gibt es schon
+     (`lib/person-kontakt.ts`, `updateLocalPersonContact`), weiterverwenden.
+   - **Ausweise und Nummern:** Personalausweis, Führerschein, Sozialversicherungsausweis, Steuer-ID, Reisepass, Krankenkasse –
+     je Nummer, gültig bis; **„alles, was man auch in einer Akte erkennen könnte“**.
+   - **Fotos der Ausweise** (Vorder-/Rückseite) als Kopie, z. B. zum Vorzeigen im Internet: als Unterlage im Tresor mit Verknüpfung
+     zur Person (Bereich „Familie & persönliche Dokumente“), im Steckbrief als Vorschaubild.
+   - **Erweiterbar:** „+ Eintrag“ mit eigenem Namen und Wert (z. B. „Handy 2“, „Mitgliedsnummer ADAC“).
+   - **Spracheingabe an jedem Feld** (Mikrofon wie im Bild – für alle, denen Schreiben mit den Händen schwerfällt; Diktat des Kerns
+     `lib/browser-dictation.ts`, in den Apps die Spracheingabe des Geräts).
+   - Nur im verschlüsselten Tresor und im Backup, nirgends sonst; keine Nummern in Protokollzeilen oder Meldungen.
+   - Übersichtlich nach Punkt 1: Abschnitte „Kontakt“, „Ausweise“, „Weitere Einträge“ einklappbar, ab Werk zu, Zahl daneben.
+
 ## Grenzen
 
 - **Nichts am Kern ändern**, was gelernt oder gespeichert ist (Sortier-Kern, gelernte Regeln, Register, Tresor, Sicherungsformat
@@ -64,9 +79,9 @@ Sicherung“, zu viele Knöpfe in der Kopfleiste, „Familie & Personen“ (man 
 ## Startauftrag (zum Einfügen)
 
 > Lies `CLAUDE.md` der Familienakte und `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` im Repo Private-Akte,
-> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–8 um: Container einklappbar,
+> dazu `docs/ANPASSUNGEN-GEGENUEBER-FAMILIENAKTE.md` dort. Gestalte die Familienakte nach Punkt 1–9 um: Container einklappbar,
 > Lebensbereiche klein, Suche als Hauptweg (auch nach Personen), Personen übersichtlich, Kopfleiste entschlacken, gelbe Hinweise
-> und Systemprüfung weg, Erklärungen hinter Fragezeichen. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
+> und Systemprüfung weg, Erklärungen hinter Fragezeichen, Steckbrief der Person (Punkt 9) im Kern. Kern und gespeicherte Daten nicht anfassen. Bauen, prüfen, Bilder
 > (Handy- und Tablet-Breite) zum Ansehen bereitlegen; veröffentlichen erst auf mein Wort.
 
 Hinweis: Klaus wollte ein Bild der Familienakte (Akten-Kacheln) mitschicken; es ist in dieser Sitzung nicht angekommen – am

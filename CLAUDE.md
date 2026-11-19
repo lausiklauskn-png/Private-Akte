@@ -22,6 +22,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster)
+
+- **Klon `privat-brain-pro` @ `33775c1`** (Private Brain Pro 1.0.57, PR #155 dort): im Fenster „Mailkonto verbinden“ standen bei Telekom
+  (oben, schon gewählt) keine Server – jede Anmeldung scheiterte, ohne die Telekom zu fragen. Klaus' Konto mit dem Umweg (anderer Anbieter,
+  zurück zu Telekom) in beiden Apps verbunden. Fassung 0.9.3 (Code 93). Proben `test-native` 42, Web-Probe 506 grün.
+- **Am Tablet bestätigt (Klaus 19.11.):** das Fähnchen meldete 0.9.2 und installierte sie über die App.
+- **Nächste Sitzung:** `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` (Familienakte übersichtlich, Steckbrief einer Person).
+
 ## Stand (19.11.2026 abends, 0.9.2 – Passwort erneuern)
 
 - **Klon `privat-brain-pro` @ `801ae1c`** (Private Brain Pro 1.0.56, PR #153 dort): Mail › „Weitere Aktionen“ › „Passwort erneuern“ für Konten
