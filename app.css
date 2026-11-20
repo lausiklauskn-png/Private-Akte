@@ -477,3 +477,17 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .rund.geist.an{color:var(--akz);background:color-mix(in srgb,var(--akz) 14%,transparent)}
 @media (max-width:420px){.pm-tabelle{font-size:12px}.pm-tabelle th,.pm-tabelle td{padding:4px 3px}}
 .kachel.leer small{font-style:italic}
+/* Steckbrief der Person (0.9.4) */
+.stb{margin:0 12px 8px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.stb>summary{display:flex;align-items:center;gap:8px;padding:7px 10px;cursor:pointer;list-style:none}
+.stb>summary::-webkit-details-marker{display:none}
+.stb>summary .icon{margin-left:auto;width:16px;height:16px;transition:transform .15s}.stb[open]>summary .icon{transform:rotate(90deg)}
+.stbzahl{font-weight:600;color:var(--muted);font-size:13px}
+.stbinnen{padding:0 10px 8px}.stbinnen h4{margin:8px 0 3px;font-size:12.5px;color:var(--muted);font-weight:600}
+.stbwert{font-size:14px;padding:2px 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.stbnr{border:0;background:none;font:inherit;font-variant-numeric:tabular-nums;color:inherit;cursor:pointer;padding:0;letter-spacing:.02em}
+.stbbis{font-size:12.5px;color:var(--muted)}.stbbis.abgelaufen{color:#c62828;font-weight:600}.stbbis.bald{color:#a06b00;font-weight:600}
+.stbkontakt{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.stbzeile{display:flex;gap:6px;align-items:center;margin:0 0 6px;flex-wrap:wrap}.stbzeile .feld{flex:1 1 110px;min-width:0}
+.stbzeile .rund b{font-size:10px;margin-left:2px}
+.stbform .chip{margin:0 0 4px}

@@ -102,3 +102,11 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
 - Klone im Rahmen (0.5.0): Farbpalette der Akte in den Klonen; Bereich-Vorschlag für Abgelegtes aus Workflow PDF; Rückgabe an
   die Quelle statt neuer Unterlage; Wörter „Familienakte“ im Organizer.
 - **Konto herausnehmen (0.8.1):** Familienakte hat kein Bankkonto im Register; hier archiviert, Umsätze bleiben – wie Posten im Portemonnaie.
+- **Familienakte 2.28.75 übernommen (0.9.4, Klon @ `ef1bb80`):** die Familienakte hat jetzt, was die Akte vorgemacht hat – Klappkarten
+  ab Werk zu und gemerkt (`fa_klapp` ↔ hier `pa_klapp`), Lebensbereiche als kleine Knöpfe (hier Schnellauswahl), kein Erklärsatz,
+  Kopf entschlackt, Personen links / Steckbrief rechts (hier „Akten“ › Person). Den **Steckbrief** nimmt die Akte aus dem Kern des Klons
+  (`lib/person-steckbrief.ts`, `updateLocalPersonContact`, `updateLocalPersonSteckbrief`); die Oberfläche ist hier eigene Hülle:
+  eine einklappbare Karte über den Unterlagen der Person mit Zahl (Kontakt + Ausweise + Einträge), ein Stift für alles statt
+  getrennter Bearbeiten-Knöpfe, Nummer verdeckt bis zum Tipp darauf, „gültig bis“ rot (abgelaufen) / gelb (90 Tage), Foto des
+  Ausweises = Unterlage bei der Person (wie dort). Unterschied: in der Familienakte wird das Foto sofort in den Steckbrief geschrieben,
+  hier erst mit „Übernehmen“ (die Unterlage liegt sofort bei der Person, auch bei „Abbrechen“). Kein Diktat in den Feldern (dort `VoiceInput`).

@@ -22,13 +22,16 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
-## Stand (20.11.2026 – Familienakte übersichtlich umgesetzt)
+## Stand (20.11.2026, 0.9.4 – Klon 2.28.75, Steckbrief der Person)
 
-- **Familienakte 2.28.75** (Repo `meine-familienakte`, PR #222, Brief dort `BRIEF_ABSCHLUSS_2026-11-20_UEBERSICHTLICH-2.28.75.md`): der Auftrag aus
-  `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` (Punkt 1–14) ist dort gebaut und ausgegeben – Klappkarten, Lebensbereiche als
-  Knöpfe, Kopf ohne Neu/Pseudo/Buch, Personen mit **Steckbrief im Kern** (`lib/person-steckbrief.ts`, `updateLocalPersonSteckbrief`; Person-Daten
-  `ausweise[]`, `eintraege[]`), Suche nach Personen. **Hier noch nicht nachgezogen:** Klon `klone/familienakte` steht weiter @ `ec258cc`.
-  Nächster Schritt: Klon nachziehen, Probe `tests/probe.cjs`, dann den Steckbrief unter „Akten › Person“ zeigen (Brief Punkt 9).
+- **Klon `familienakte` @ `ef1bb80`** (Familienakte 2.28.75, PR #222/#223 dort: übersichtlich, Steckbrief im Kern). `npm run bau` neu,
+  gebündelte Teile (Kalender, Notiz, Seitenleiste, Tresor) laufen unverändert.
+- **Steckbrief der Person** unter „Akten“ › Person (`steckbriefTeil`, `stb`, `stb-*` in `app.js`; `T().akten.steckbrief`, `kontaktSpeichern`,
+  `steckbriefSpeichern`, `ausweisFoto` in `src/tresor.ts`): Karte über den Unterlagen, ab Werk zu (`pa_klapp.stb`), Zahl daneben; Kontakt,
+  Ausweise & Nummern (verdeckt bis Tipp, „gültig bis“ rot/gelb, Foto = Unterlage „betrifft“ die Person), weitere Einträge; ein Stift für alles,
+  Speichern nur über den Kern des Klons. Keine Erklärsätze.
+- **Sechs Grundbereiche** immer auf der Startseite (PR #74, `GRUNDBEREICHE`).
+- Fassung 0.9.4 (Code 94). Probe 518 grün, `test-native` 37 grün (lokal ohne Brain-Web). Am Tablet ungeprüft.
 
 ## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster; veröffentlicht, Nachweis `docs/VEROEFFENTLICHUNG-0.9.3.md`, nicht erneut ausgeben; nächste 0.9.4)
 

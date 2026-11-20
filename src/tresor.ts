@@ -5,6 +5,9 @@ import { browserVault, browserStorageKind, listLocalDocuments, saveLocalDocument
 import { readLocalVaultData, updateLocalScheduleStatus, deleteLocalScheduleRecord, deleteLocalMemoryRecord, papierkorbLesen, papierkorbEndgueltig, createLocalScheduleBundle } from "../klone/familienakte/app/local-vault.ts";
 import { saveLocalStammRecord, createLocalFamilyRelation, confirmLocalContextLink, dokumenteZuordnen, akteFuerAbgleich, akteNachAbgleichSchreiben } from "../klone/familienakte/app/local-vault.ts";
 import { stammLesen } from "../klone/familienakte/lib/familie-stamm.ts";
+import { updateLocalPersonSteckbrief, updateLocalPersonContact } from "../klone/familienakte/app/local-vault.ts";
+import { AUSWEIS_ARTEN, steckbriefLesen, ausweisStand, nummerVerdeckt, type Steckbrief } from "../klone/familienakte/lib/person-steckbrief.ts";
+import { KONTAKT_FELDER, KONTAKT_BESCHRIFTUNG, type PersonKontakt } from "../klone/familienakte/lib/person-kontakt.ts";
 import { createLocalFamilyRecord, fileChecksum } from "../klone/familienakte/app/local-vault.ts";
 import { parseEuroToCents, formatEuro } from "../klone/bookledger/src/domain/money.js";
 import { kassenbericht } from "../klone/bookledger/src/domain/kassenbuch.js";
@@ -516,6 +519,26 @@ const akten = {
     if (absenderId) await createLocalFamilyRelation(h, { fromType: "document", fromId: docId, toType: "organisation", toId: absenderId, relationType: "Absender", source: "Private Akte", notes: null });
   },
 };
+// Steckbrief einer Person (0.9.4, Familienakte 2.28.75): Kontakt, Ausweise & Nummern, weitere Einträge. Lesen aus den Daten der Person,
+// Speichern nur über den Kern des Klons (updateLocalPersonContact, updateLocalPersonSteckbrief – prüfen, säubern, Protokoll ohne Nummern).
+// Foto eines Ausweises = Unterlage bei der Person (wie in der Familienakte: „Familie & persönliche Dokumente“, Verknüpfung „betrifft“).
+Object.assign(akten, {
+  steckbriefArten: AUSWEIS_ARTEN, kontaktFelder: KONTAKT_FELDER, kontaktBeschriftung: KONTAKT_BESCHRIFTUNG, ausweisStand, nummerVerdeckt,
+  async steckbrief(id: string) {
+    const { records } = await readLocalVaultData(await browserVault());
+    const r = records.find((x) => x.id === id && x.recordType === "person");
+    if (!r) return null;
+    const d = (r.data || {}) as Record<string, unknown>, kontakt: PersonKontakt = {};
+    for (const k of KONTAKT_FELDER) if (d[k]) kontakt[k] = String(d[k]);
+    return { kontakt, steckbrief: steckbriefLesen(d) };
+  },
+  async kontaktSpeichern(id: string, kontakt: PersonKontakt) { await updateLocalPersonContact(await browserVault(), id, kontakt); },
+  async steckbriefSpeichern(id: string, sb: Steckbrief) { await updateLocalPersonSteckbrief(await browserVault(), id, sb); },
+  async ausweisFoto(id: string, name: string, art: string, file: File) {
+    const doc = await saveLocalDocument(await browserVault(), file, { category: "Familie & persönliche Dokumente", documentDate: null, notes: null, titel: `${art || "Ausweis"} – ${name}`, allowDuplicate: true, assignmentLinks: [{ toType: "person", toId: id, relationType: "betrifft" }] });
+    return doc.id as string;
+  },
+});
 // Beispielfamilie (0.7.3, Klaus 18.11.: „erfinde erst einmal Familienmitglieder, sodass ich die Unterteilung sehe“): nur auf ausdrücklichen
 // Tipp. Vier erfundene Personen, je Person Akten, dazu gemeinsame Akten; die vorhandenen Unterlagen werden nach Bereich verteilt (Verknüpfungen,
 // keine Kopien). Alles trägt die Quelle „Beispielfamilie“ und lässt sich mit „Beispielfamilie entfernen“ wieder herausnehmen (archiviert,
