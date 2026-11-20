@@ -303,7 +303,7 @@ function PruefZeile({ z, d, neu, gewaehlt, waehlen }: { z: AppZustand; d: Datei;
       </> : <>
         <select value={was} onChange={(e) => { const f = e.target.value as FeldName; setWas(f); setWert(d.felder[f]?.wert || ""); }} aria-label="Welches Feld" data-feld-wahl>{ALLE_FELDER.map((f) => <option key={f} value={f}>{FELD_NAMEN[f]}</option>)}</select>
         <WertWahl feld={was} wert={wert} setWert={setWert}/>
-        <button type="button" className="button klein primary" disabled={!wert.trim()} onClick={() => { uebernimm(z, d.pfad, was, wert); setAendern(false); }} data-uebernehmen>Übernehmen</button>
+        <button type="button" className="button klein primary" disabled={!wert.trim()} onClick={() => { uebernimm(z, d.pfad, was, wert); setAendern(false); /* Klaus 20.11.: „Betrifft: Forschung“ übernommen, aber die Zeile blieb – offen war der Absender. Sagen, was gespeichert ist und was noch fehlt. */ if (was !== feld) z.setMeldung({ text: `${d.name}: ${FELD_NAMEN[was]} „${wert.trim()}“ übernommen. Noch offen: ${FELD_NAMEN[feld]} – „Stimmt“ oder Stift.` }); }} data-uebernehmen>Übernehmen</button>
         <button type="button" className="button klein" onClick={() => setAendern(false)}>Abbrechen</button>
       </>}
     </div>

@@ -9,6 +9,14 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (20.11.2026): 0.4.23 – Rückmeldung beim Ändern eines anderen Felds
+
+- **Klaus 20.11. (Bilder vom Tablet: „sieht aus, als wenn er Forschung nicht übernimmt“):** in der Prüfliste hatte er „Betrifft“ gewählt und
+  „Forschung“ übernommen – gespeichert war es, die Zeile blieb aber stehen, weil der **Absender** offen war. Jetzt meldet die App nach dem
+  Übernehmen eines anderen Felds: „<Datei>: Betrifft „Forschung“ übernommen. Noch offen: Absender – „Stimmt“ oder Stift.“ (`PruefZeile`,
+  `src/seiten.tsx`). Kern unverändert. Fassung 0.4.23 (Code 63, Vorrat v44). UI-Probe 224 grün (1 neu). Nur Basic (Pages); APK/Windows ab
+  Montag gleich mit 0.4.23 statt 0.4.22.
+
 ## Stand (20.11.2026): 0.4.22 – Papierkorb an jeder Zeile von „Bitte prüfen“
 
 - **Klaus 20.11. (Bild vom Tablet, Organizer im Rahmen der Privaten Akte): „Da sollte noch eine Löschfunktion einzelner Dateien möglich sein.
@@ -47,8 +55,8 @@ wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). P
   bleibt stehen; schmal der Baum höchstens halbe Fensterhöhe (`--finden-hoehe`, `--finden-baum`). Gilt in Basic, Pro und im Rahmen.
   Fassung 0.4.20 (Code 60, Vorrat v41). UI-Probe 222 grün, Native 66 grün. Am Gerät ungeprüft.
   **Veröffentlicht 18.11.2026 (Klaus' Wort) als Android und Windows**, Nachweis `docs/VEROEFFENTLICHUNG-0.4.20.json` – nicht erneut ausgeben;
-  nächste Ausgabe 0.4.21 (Code 61). **Offen:** die Probe „Verlauf: aus den geänderten Bereichen ist gelernt“ war im PR-Lauf einmal rot
-  (47 Einträge, 0 Regeln), im Lauf davor, danach auf main und hier grün – Ursache nicht gefunden (Zeitpunkt des Speicherns?).
+  nächste Ausgabe 0.4.21 (Code 61). Die Probe „Verlauf: aus den geänderten Bereichen ist gelernt“ war manchmal rot (47 Einträge, 0 Regeln):
+  Ursache (20.11.): die App speichert 400 ms nach der letzten Änderung, `regelnText` las schon nach 250 ms – jetzt 700 ms.
 
 ## Stand (18.11.2026 abends): 0.4.19 – Knöpfe „An die Private Akte“ und „An die Familienakte“ in der eigenständigen App
 

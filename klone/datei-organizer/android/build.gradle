@@ -5,6 +5,8 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        // Zweiter Spiegel: Maven Central meldete in der CI zeitweise 404 für vorhandene Dateien (20.11.2026, kotlin-stdlib 2.2.0)
+        maven { url "https://repo1.maven.org/maven2/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.13.0'
@@ -21,6 +23,8 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Zweiter Spiegel: Maven Central meldete in der CI zeitweise 404 für vorhandene Dateien (20.11.2026, kotlin-stdlib 2.2.0)
+        maven { url "https://repo1.maven.org/maven2/" }
     }
 }
 
