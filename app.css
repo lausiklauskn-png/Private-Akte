@@ -491,3 +491,4 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .stbzeile{display:flex;gap:6px;align-items:center;margin:0 0 6px;flex-wrap:wrap}.stbzeile .feld{flex:1 1 110px;min-width:0}
 .stbzeile .rund b{font-size:10px;margin-left:2px}
 .stbform .chip{margin:0 0 4px}
+.fassung.pwa-neu{margin-left:4px;padding:2px 7px;font-size:13px;line-height:1}.fassung.pwa-neu[hidden]{display:none}

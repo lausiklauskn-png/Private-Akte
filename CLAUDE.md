@@ -24,6 +24,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 ## Stand (20.11.2026, 0.9.5 – Klon 2.28.76, Kalender je Person)
 
+- **Knopf „Aktualisieren“ (⟳) in der Web-App** (Klaus 20.11.: „Aktualisierungsbutton, da ich nicht immer Hard Reload machen kann“ – „in den
+  PWAs, die wir hier bearbeitet haben“): neben der Fassungsmarke (`#pwa-neu` in `index.html`, `data-a="neu-laden"` wie der Tipp auf die
+  Fassung), in der App (`PA_PRO`) ausgeblendet. Fassung nicht erhöht (der Worker holt App-Dateien ohnehin frisch). Probe 520 grün.
+
 - **Klon `familienakte` @ `706711b`** (Familienakte 2.28.76, PR #224 dort: Kalender je Person, flacher Fuß). Der Kalender im Rahmen
   bündelt „Mein Kalender“ des Klons und hat damit dieselben Neuerungen: „Wem gehört dieses Handy?“ (je Gerät, `familienakte-ich-v1` –
   dieselbe Adresse teilt ihn mit der Familienakte), „Kalender von …“, fest/vorläufig, „Für wen noch“, privat, Hinweis bei Überschneidung.
