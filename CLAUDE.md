@@ -29,6 +29,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   dieselbe Adresse teilt ihn mit der Familienakte), „Kalender von …“, fest/vorläufig, „Für wen noch“, privat, Hinweis bei Überschneidung.
   Die Familienliste („Fristen und Aufgaben“ mit Filter je Person, „passt/passt nicht“) gibt es nur in der Familienakte selbst – die Akte hat
   keine eigene Fristenliste. Fassung 0.9.5 (Code 95). Probe 518 grün. Klaus 20.11.: „selbstständig mergen und online stellen“.
+- **Veröffentlicht 20.11.:** Android 0.9.5 (Release `v0.9.5`, Update-Server), Windows als CI-Download; Nachweis `docs/VEROEFFENTLICHUNG-0.9.5.md` –
+  nicht erneut ausgeben; nächste 0.9.6 (Code 96). Abschlussbrief `docs/BRIEF_ABSCHLUSS_2026-11-20_KALENDER-JE-PERSON-0.9.5.md`.
+  Zweiter Maven-Spiegel (`repo1.maven.org`) in `android/build.gradle` (Maven Central meldete 404 für vorhandene Dateien).
 
 ## Stand (20.11.2026, 0.9.4 – Klon 2.28.75, Steckbrief der Person)
 
@@ -42,7 +45,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - Fassung 0.9.4 (Code 94). Probe 518 grün, `test-native` 37 grün (lokal ohne Brain-Web). Am Tablet ungeprüft.
 - **Veröffentlicht 20.11. (Klaus' Wort):** Android 0.9.4 (Release `v0.9.4`, Update-Server), Windows als CI-Download; Nachweis
   `docs/VEROEFFENTLICHUNG-0.9.4.md` – nicht erneut ausgeben; nächste 0.9.5 (Code 95). Abschlussbrief `docs/BRIEF_ABSCHLUSS_2026-11-20_KLON-STECKBRIEF-0.9.4.md`.
-- **Familienakte, Fuß flach** (Klaus 20.11.): Repo `meine-familienakte` PR #224, Entwurf, nicht ausgegeben.
+- **Familienakte, Fuß flach** (Klaus 20.11.): mit 2.28.76 ausgegeben (PR #224 dort).
 
 ## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster; veröffentlicht, Nachweis `docs/VEROEFFENTLICHUNG-0.9.3.md`, nicht erneut ausgeben; nächste 0.9.4)
 
