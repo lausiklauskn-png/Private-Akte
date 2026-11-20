@@ -22,6 +22,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (20.11.2026 – Familienakte übersichtlich umgesetzt)
+
+- **Familienakte 2.28.75** (Repo `meine-familienakte`, PR #222, Brief dort `BRIEF_ABSCHLUSS_2026-11-20_UEBERSICHTLICH-2.28.75.md`): der Auftrag aus
+  `docs/BRIEF_SITZUNG_2026-11-20_FAMILIENAKTE-UEBERSICHTLICH.md` (Punkt 1–14) ist dort gebaut und ausgegeben – Klappkarten, Lebensbereiche als
+  Knöpfe, Kopf ohne Neu/Pseudo/Buch, Personen mit **Steckbrief im Kern** (`lib/person-steckbrief.ts`, `updateLocalPersonSteckbrief`; Person-Daten
+  `ausweise[]`, `eintraege[]`), Suche nach Personen. **Hier noch nicht nachgezogen:** Klon `klone/familienakte` steht weiter @ `ec258cc`.
+  Nächster Schritt: Klon nachziehen, Probe `tests/probe.cjs`, dann den Steckbrief unter „Akten › Person“ zeigen (Brief Punkt 9).
+
 ## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster; veröffentlicht, Nachweis `docs/VEROEFFENTLICHUNG-0.9.3.md`, nicht erneut ausgeben; nächste 0.9.4)
 
 - **Klon `privat-brain-pro` @ `33775c1`** (Private Brain Pro 1.0.57, PR #155 dort): im Fenster „Mailkonto verbinden“ standen bei Telekom
