@@ -22,6 +22,18 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (20.11.2026, 0.9.6 – Datei-Organizer 0.4.23, Windows zum Download)
+
+- **Klon `datei-organizer` @ `b2621a1`** (Datei-Organizer 0.4.23, PR #76/#77 dort; Klaus 20.11., Bilder vom Tablet): in „Bitte prüfen“ an jeder
+  Zeile der Papierkorb (nimmt die Datei nach Rückfrage aus dem Organizer, das Original bleibt); nach dem Übernehmen eines anderen Felds sagt
+  die Meldung, was gespeichert ist und was noch offen ist („Betrifft „Forschung“ übernommen. Noch offen: Absender“).
+- **Windows zum Download** (Klaus 20.11.: Apps für Jens als PWA, APK und Windows): `windows.yml` hat den Eingang `veroeffentlichen` – Lauf von
+  `main` mit „ja“ legt den Installer (unsigniert) zum GitHub-Release `v<Fassung>`, das vorher „Android-App signiert“ mit `veroeffentlichen = ja`
+  anlegt; der Download wird von außen nachgeprüft. Reihenfolge: erst Android, dann Windows.
+- **Geschenkbox für Jens:** `docs/geschenk/Geschenkbox-Familienakte-Private-Akte.html` – Familienakte und Private Akte je als Web-App, APK und
+  Windows, dazu beide Repos als ZIP (von GitHub, immer der neueste Stand). Als HTML-Datei weitergeben, nicht als ZIP.
+- Fassung 0.9.6 (Code 96). Probe 520 grün, `test-native` 37 grün.
+
 ## Stand (20.11.2026, 0.9.5 – Klon 2.28.76, Kalender je Person)
 
 - **Knopf „Aktualisieren“ (⟳) in der Web-App** (Klaus 20.11.: „Aktualisierungsbutton, da ich nicht immer Hard Reload machen kann“ – „in den

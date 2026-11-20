@@ -313,7 +313,10 @@ a { color: var(--teal); }
   .pruef-zeile.mit-wahl .zeile-text > strong { grid-area: name; }
   .pruef-zeile.mit-wahl .zeile-text > .grund { grid-area: grund; align-self: center; }
   .pruef-zeile.mit-wahl .zeile-text > .noch-offen { display: none; }
-  .pruef-zeile.mit-wahl > .pruef-aktionen { grid-area: akt; flex-wrap: nowrap; }
+  .pruef-zeile.mit-wahl > .pruef-aktionen { grid-area: akt; flex-wrap: nowrap; gap: 0; }
+  /* Papierkorb an der Zeile (20.11.): schmal steht „Stimmt“ nur als Haken, damit die vier Knöpfe in die Zeile passen. */
+  .pruef-zeile.mit-wahl > .pruef-aktionen [data-stimmt] { width: 30px; padding: 0; justify-content: center; }
+  .pruef-zeile.mit-wahl > .pruef-aktionen .stimmt-wort { display: none; }
   .pruef-zeile { padding: 3px 8px; gap: 0 8px; }
   .pruef-zeile .pruef-aktionen .button.klein { min-height: 28px; }
   .pruef-zeile .zeile-text strong { line-height: 1.35; }
