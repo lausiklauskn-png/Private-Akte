@@ -9,6 +9,15 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (20.11.2026): 0.4.22 – Papierkorb an jeder Zeile von „Bitte prüfen“
+
+- **Klaus 20.11. (Bild vom Tablet, Organizer im Rahmen der Privaten Akte): „Da sollte noch eine Löschfunktion einzelner Dateien möglich sein.
+  Papierkorb“.** In der Prüfliste steht neben Auge, „Stimmt“ und Stift der Papierkorb (`[data-pruef-papierkorb]` in `PruefZeile`, `src/seiten.tsx`):
+  nach Rückfrage `z.entfernen([pfad])` – wie der Papierkorb in „Finden“: nur aus dem Organizer, das Original bleibt, „Zurück“ holt es wieder.
+  Schmal (bis 640 px) steht „Stimmt“ nur als Haken (Wort hinter `aria-label`), damit die vier Knöpfe rechts in der Zeile bleiben.
+  Fassung 0.4.22 (Code 62, Vorrat v43). UI-Probe 223 grün (1 neu), Native 66 grün. **Ausgegeben nur als Basic (Pages).** APK/Windows: statt
+  0.4.21 ab Montag 23.11. gleich **0.4.22** ausgeben (0.4.21 wurde nie als App ausgegeben), es sei denn, Klaus sagt vorher etwas anderes.
+
 ## Stand (19.11.2026): Update-Teil für andere Apps einstellbar (für die Private Akte Pro)
 
 - **Klaus 19.11. (Weg 1: „dann kannst du es gleich direkt machen“):** `UpdateFeed.Ziel` (Server-Ordner, Schlüssel, App-Name, Dateiname vor

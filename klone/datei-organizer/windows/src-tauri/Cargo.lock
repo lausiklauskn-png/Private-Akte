@@ -294,7 +294,7 @@ dependencies = [
 
 [[package]]
 name = "datei-organizer-pro"
-version = "0.4.21"
+version = "0.4.22"
 dependencies = [
  "base64 0.22.1",
  "getrandom 0.3.4",

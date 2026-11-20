@@ -297,8 +297,9 @@ function PruefZeile({ z, d, neu, gewaehlt, waehlen }: { z: AppZustand; d: Datei;
     <div className="pruef-aktionen">
       <button type="button" className="button klein nur-symbol" aria-pressed={auge} aria-label={`${d.name} ansehen`} title="Ansehen, teilen oder entfernen" onClick={() => setAuge(!auge)} data-auge><Eye size={15}/></button>
       {!aendern ? <>
-        {w?.wert && <button type="button" className="button klein" onClick={() => z.aendern(d.pfad, feld, w.wert)} data-stimmt><Check size={15}/>Stimmt</button>}
+        {w?.wert && <button type="button" className="button klein" onClick={() => z.aendern(d.pfad, feld, w.wert)} aria-label="Stimmt" title="Stimmt – Vorschlag übernehmen" data-stimmt><Check size={15}/><span className="stimmt-wort">Stimmt</span></button>}
         <button type="button" className="button klein nur-symbol" onClick={() => { setWas(feld); setWert(w?.wert || ""); setAendern(true); }} aria-label="Ändern" title="Von Hand ändern: Art, Bereich, Absender, Betrifft, Datum, Frist" data-korrigieren><Pencil size={15}/></button>
+        <button type="button" className="button klein nur-symbol" aria-label={`${d.name} entfernen`} title="Aus dem Organizer nehmen (Original bleibt)" onClick={() => { if (confirm(`„${d.name}“ aus dem Organizer nehmen? Das Original bleibt unverändert.`)) z.entfernen([d.pfad]); }} data-pruef-papierkorb><Trash2 size={15}/></button>
       </> : <>
         <select value={was} onChange={(e) => { const f = e.target.value as FeldName; setWas(f); setWert(d.felder[f]?.wert || ""); }} aria-label="Welches Feld" data-feld-wahl>{ALLE_FELDER.map((f) => <option key={f} value={f}>{FELD_NAMEN[f]}</option>)}</select>
         <WertWahl feld={was} wert={wert} setWert={setWert}/>
