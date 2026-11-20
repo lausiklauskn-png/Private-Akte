@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.9.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.9.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -265,11 +265,16 @@ function vStart(){
 /* Bereiche der Startseite, echt (0.7.0, Klaus 18.11. zu E: „echt machen“): die Bereiche, in denen Unterlagen liegen, mit ihrer Zahl.
    Ein Tipp zeigt den Bereich im Baum über „Deine Unterlagen“ (Sortieren: Bereich). */
 const KFARBE = [['#61b4ef','#2c79c5'],['#77d48a','#27945c'],['#ffd75a','#d79a16'],['#ff8f7d','#d34a4a'],['#b69be6','#7550c2'],['#5fd0c6','#16867f']];
+/* 0.9.4 (Klaus 20.11., Bild der Pro-App mit leerer Akte: „nur leere Container sieht hässlich aus, ich will was fürs Auge“): sechs
+   Grundbereiche stehen immer da, auch bei leerer Akte („noch leer“); dazu jeder weitere Bereich, in dem Unterlagen liegen. */
+const GRUNDBEREICHE = ['Familie & persönliche Dokumente', 'Finanzen & Konten', 'Gesundheit & Pflege', 'Haus & Wohnung', 'Versicherungen', 'Auto & Mobilität'];
 function bereicheKacheln(){
-  const l = echt.liste || []; if (!l.length) return '';
+  const l = echt.liste || [];
   const zahl = new Map(); for (const d of l) { const k = kanonBereich(d.category); zahl.set(k, (zahl.get(k) || 0) + 1); }
-  const g = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
-  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}</small></span></button>`).join('')}</div></div>`;
+  const voll = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
+  const leer = GRUNDBEREICHE.filter(b => ![...zahl.keys()].some(k => bereichKern(k) === bereichKern(b))).map(b => [b, 0]);
+  const g = [...voll, ...leer];
+  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel${n ? '' : ' leer'}" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n ? `${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}` : 'noch leer'}</small></span></button>`).join('')}</div></div>`;
 }
 /* ---------- Akten (0.7.0, Klaus 18.11., Antworten A–D ja) ----------
    Datei = Rohmaterial (bleibt im Datei-Organizer), Unterlage = in die Akte gelegt, Akte = ein Fach mit Namen, einer Person zugeordnet
@@ -296,9 +301,50 @@ function vAkten(){
    <div class="ekopf akopf"><button class="chip" data-a="person-neu">${ic('plus')} Person</button><button class="chip" data-a="akte-neu">${ic('plus')} Neue Akte</button>${ak.beispiel ? `<button class="chip" data-a="beispiel-weg">Beispielfamilie entfernen</button>` : !ak.personen.length && l.length ? `<button class="chip" data-a="beispiel-an">Beispielfamilie anlegen</button>` : ''}</div>
    <div class="eexplorer" id="akten-ansicht"><section class="ekarte ebaumkarte"><div class="ebaum"><ul class="ebaumliste"><li><button class="eknoten alle${k ? '' : ' an'}" data-a="akte-auf" data-id="" aria-expanded="true"><span class="epfeil">${ic('weiter')}</span>${personIc}<span class="ename">Alle Personen</span><b>${AK().personen.length}</b></button><ul id="akten-liste">${knoten.map(zweig).join('')}</ul></li></ul></div></section>
     <section class="ekarte elistekarte"><h3 class="egewaehlt apfad">${pfad.map(esc).join(' <span>›</span> ')}<b>${liste.length}</b></h3>
+     ${p && !a && teile[1] !== 'ohne' ? steckbriefTeil(p) : ''}
      ${a ? `<div class="reihe" style="margin:0 12px 6px"><button class="knopf hell klein" data-a="akte-fuellen" data-id="${esc(a)}">${ic('plus')} Unterlagen hineinlegen</button></div>` : ''}
      <div id="akte-liste" class="eliste">${liste.length ? liste.slice(0, echt.zeig || ECHT_SEITE).map(echtReihe).join('') + (liste.length > (echt.zeig || ECHT_SEITE) ? `<button class="zeile emehr" data-a="echt-mehr"><span class="mitte"><strong>Weitere zeigen</strong></span></button>` : '') : '<p class="leer">Noch keine Unterlage.</p>'}</div></section></div>${fuss()}`;
 }
+/* Steckbrief der Person (0.9.4, Familienakte 2.28.75): Kontakt, Ausweise & Nummern (Nummer verdeckt, gültig bis, Foto), weitere Einträge.
+   Rechts über den Unterlagen der Person, einklappbar (pa_klapp.stb, ab Werk zu), Zahl daneben. Lesen und Speichern über T().akten –
+   gespeichert wird nur über den Kern des Klons (updateLocalPersonContact, updateLocalPersonSteckbrief). */
+const stb = { daten:{}, laedt:{}, bearb:null, entwurf:null, offen:new Set() };
+async function stbLaden(id){ stb.laedt[id] = 1; try { stb.daten[id] = await T().akten.steckbrief(id) || {kontakt:{}, steckbrief:{ausweise:[], eintraege:[]}}; } catch (err) { toast(fehlerText(err)); } stb.laedt[id] = 0; if (s.ansicht === 'akten') mainZeigen(); }
+const stbZahl = x => Object.values(x.kontakt).filter(Boolean).length + x.steckbrief.ausweise.length + x.steckbrief.eintraege.length;
+const datumDe = t => /^\d{4}-\d{2}-\d{2}$/.test(t || '') ? tagText(t) : '';
+function steckbriefTeil(p){
+  const x = stb.daten[p.id];
+  if (!x) { if (!stb.laedt[p.id] && T()) stbLaden(p.id); return ''; }
+  const ak = T().akten, k = x.kontakt, sb = x.steckbrief, bearb = stb.bearb === p.id;
+  let innen;
+  if (bearb) {
+    const e = stb.entwurf, arten = [...ak.steckbriefArten];
+    const kf = ak.kontaktFelder.map(f => `<label>${esc(ak.kontaktBeschriftung[f])}<input class="feld" name="k_${f}" value="${esc(e.kontakt[f] || '')}" autocomplete="off"></label>`).join('');
+    const aw = e.ausweise.map((w, i) => `<div class="stbzeile" data-i="${i}"><select class="feld" name="a_art">${[...(w.art && !arten.includes(w.art) ? [w.art] : []), ...arten].map(o => `<option${o === w.art ? ' selected' : ''}>${esc(o)}</option>`).join('')}</select><input class="feld" name="a_nr" value="${esc(w.nummer)}" placeholder="Nummer" autocomplete="off" spellcheck="false"><input class="feld" type="date" name="a_bis" value="${esc(w.gueltigBis)}" aria-label="gültig bis"><button class="rund klein" type="button" data-a="stb-foto" data-i="${i}" aria-label="Foto" data-tipp="Foto">${ic('kamera')}${(w.dokumentIds || []).length ? `<b>${w.dokumentIds.length}</b>` : ''}</button><button class="rund klein" type="button" data-a="stb-weg" data-art="a" data-i="${i}" aria-label="Entfernen">${ic('muell')}</button></div>`).join('');
+    const ew = e.eintraege.map((w, i) => `<div class="stbzeile" data-i="${i}"><input class="feld" name="e_name" value="${esc(w.name)}" placeholder="Name" autocomplete="off"><input class="feld" name="e_wert" value="${esc(w.wert)}" placeholder="Wert" autocomplete="off"><button class="rund klein" type="button" data-a="stb-weg" data-art="e" data-i="${i}" aria-label="Entfernen">${ic('muell')}</button></div>`).join('');
+    innen = `<form class="stbform" data-form="steckbrief" data-id="${esc(p.id)}"><h4>Kontakt</h4><div class="felder stbkontakt">${kf}</div>
+      <h4>Ausweise &amp; Nummern</h4><div id="stb-ausweise">${aw}</div><button class="chip" type="button" data-a="stb-plus" data-art="a">${ic('plus')} Ausweis</button>
+      <h4>Weitere Einträge</h4><div id="stb-eintraege">${ew}</div><button class="chip" type="button" data-a="stb-plus" data-art="e">${ic('plus')} Eintrag</button>
+      <div class="reihe"><button class="knopf gruen" type="submit">Übernehmen</button><button class="knopf hell" type="button" data-a="stb-stift" data-id="${esc(p.id)}">Abbrechen</button></div></form>`;
+  } else {
+    const ort = [k.street, [k.postalCode, k.city].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+    const kz = [ort, k.phone, k.email].filter(Boolean).map(t => `<div class="stbwert">${esc(t)}</div>`).join('');
+    const az = sb.ausweise.map(w => { const st = ak.ausweisStand(w.gueltigBis), auf = stb.offen.has(w.id);
+      return `<div class="stbwert stbausweis"><b>${esc(w.art)}</b>${w.nummer ? `<button class="stbnr" data-a="stb-nr" data-id="${esc(w.id)}" aria-label="${auf ? 'Nummer verdecken' : 'Nummer zeigen'}">${esc(auf ? w.nummer : ak.nummerVerdeckt(w.nummer))}</button>` : ''}${w.gueltigBis ? `<span class="stbbis ${st}">bis ${datumDe(w.gueltigBis)}</span>` : ''}${(w.dokumentIds || []).map(d => `<button class="chip klein" data-a="echt-oeffnen" data-id="${esc(d)}">${ic('kamera')} Foto</button>`).join('')}</div>`; }).join('');
+    const ez = sb.eintraege.map(w => `<div class="stbwert"><b>${esc(w.name)}</b> ${esc(w.wert)}</div>`).join('');
+    innen = `${kz ? `<h4>Kontakt</h4>${kz}` : ''}${az ? `<h4>Ausweise &amp; Nummern</h4>${az}` : ''}${ez ? `<h4>Weitere Einträge</h4>${ez}` : ''}<div class="reihe"><button class="knopf hell klein" data-a="stb-stift" data-id="${esc(p.id)}">${ic('stift')} Ändern</button></div>`;
+  }
+  return `<details class="stb" id="steckbrief" data-klapp="stb" ${klapp.stb || bearb ? 'open' : ''}><summary><b>Steckbrief</b><b class="stbzahl">${stbZahl(x)}</b>${ic('weiter')}</summary><div class="stbinnen">${innen}</div></details>`;
+}
+function stbAusForm(){ const f = document.querySelector('form.stbform'), e = stb.entwurf; if (!f || !e) return;
+  for (const k of T().akten.kontaktFelder) e.kontakt[k] = f.elements['k_' + k].value;
+  f.querySelectorAll('#stb-ausweise .stbzeile').forEach(z => { const w = e.ausweise[+z.dataset.i]; w.art = z.querySelector('[name=a_art]').value; w.nummer = z.querySelector('[name=a_nr]').value; w.gueltigBis = z.querySelector('[name=a_bis]').value; });
+  f.querySelectorAll('#stb-eintraege .stbzeile').forEach(z => { const w = e.eintraege[+z.dataset.i]; w.name = z.querySelector('[name=e_name]').value; w.wert = z.querySelector('[name=e_wert]').value; }); }
+const stbNeuId = () => (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(36).slice(2));
+document.addEventListener('submit', async ev => { const f = ev.target; if (f.dataset.form !== 'steckbrief') return; ev.preventDefault(); stbAusForm();
+  const id = f.dataset.id, e = stb.entwurf, knopf = f.querySelector('[type=submit]'); knopf.disabled = true;
+  try { await T().akten.kontaktSpeichern(id, e.kontakt); await T().akten.steckbriefSpeichern(id, {ausweise:e.ausweise, eintraege:e.eintraege}); stb.bearb = null; stb.entwurf = null; await stbLaden(id); toast('Steckbrief gespeichert.'); }
+  catch (err) { knopf.disabled = false; toast(fehlerText(err)); } });
 /* Eingang, echt (0.7.0): was in der Akte liegt, aber noch keiner Akte und keiner Person zugeordnet ist – bis du es einordnest. */
 function vEingang(){
   const n = echtSortiert(offenEinordnen());
@@ -1625,3 +1671,14 @@ addEventListener('popstate', () => {
 });
 new MutationObserver(() => queueMicrotask(zurAbgleich)).observe(document.body, {childList:true, subtree:true});
 document.addEventListener('visibilitychange', () => { if (document.hidden && sprech.an) sprechEnde(false); });
+/* Steckbrief der Person: Knöpfe (0.9.4) */
+Object.assign(A, {
+  'stb-stift': e => { const id = e.dataset.id; if (stb.bearb === id) { stb.bearb = null; stb.entwurf = null; } else { const x = stb.daten[id]; stb.bearb = id; stb.entwurf = JSON.parse(JSON.stringify({kontakt:x.kontakt, ausweise:x.steckbrief.ausweise, eintraege:x.steckbrief.eintraege})); } mainZeigen(); },
+  'stb-nr': e => { const id = e.dataset.id; stb.offen.has(id) ? stb.offen.delete(id) : stb.offen.add(id); mainZeigen(); },
+  'stb-plus': e => { stbAusForm(); if (e.dataset.art === 'a') stb.entwurf.ausweise.push({id:stbNeuId(), art:T().akten.steckbriefArten[0], nummer:'', gueltigBis:''}); else stb.entwurf.eintraege.push({id:stbNeuId(), name:'', wert:''}); mainZeigen(); },
+  'stb-weg': e => { stbAusForm(); (e.dataset.art === 'a' ? stb.entwurf.ausweise : stb.entwurf.eintraege).splice(+e.dataset.i, 1); mainZeigen(); },
+  'stb-foto': e => { stbAusForm(); const i = +e.dataset.i, inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/*,application/pdf';
+    inp.onchange = async () => { const f = inp.files && inp.files[0]; if (!f) return; const id = stb.bearb, w = stb.entwurf.ausweise[i], p = AK().personen.find(x => x.id === id);
+      try { const doc = await T().akten.ausweisFoto(id, p ? p.name : '', w.art, f); w.dokumentIds = [...(w.dokumentIds || []), doc]; toast('Foto liegt bei der Person.'); await echtLaden(); } catch (err) { toast(fehlerText(err)); } };
+    inp.click(); },
+});
