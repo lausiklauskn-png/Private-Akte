@@ -32,7 +32,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   anlegt; der Download wird von außen nachgeprüft. Reihenfolge: erst Android, dann Windows.
 - **Geschenkbox für Jens:** `docs/geschenk/Geschenkbox-Familienakte-Private-Akte.html` – Familienakte und Private Akte je als Web-App, APK und
   Windows, dazu beide Repos als ZIP (von GitHub, immer der neueste Stand). Als HTML-Datei weitergeben, nicht als ZIP.
-- Fassung 0.9.6 (Code 96). Probe 520 grün, `test-native` 37 grün.
+- Fassung 0.9.6 (Code 96). Probe 520 grün, `test-native` 37 grün. **Veröffentlicht 20.11.:** Android und Windows am Release `v0.9.6`,
+  Nachweis `docs/VEROEFFENTLICHUNG-0.9.6.md` – nicht erneut ausgeben; nächste 0.9.7 (Code 97).
 
 ## Stand (20.11.2026, 0.9.5 – Klon 2.28.76, Kalender je Person)
 
