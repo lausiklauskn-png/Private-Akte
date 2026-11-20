@@ -1,12 +1,19 @@
 name: Windows-App
 
 # Private Akte Pro für Windows: Tauri 2 / WebView2 + Java-Engine aus dem Klon des Datei-Organizers (Muster Datei-Organizer Pro).
-# Baut den Installer, installiert ihn, startet ihn, entfernt ihn wieder. Unsigniert, keine Veröffentlichung.
+# Baut den Installer, installiert ihn, startet ihn, entfernt ihn wieder. Unsigniert.
+# Veröffentlichen nur von Hand (Klaus 20.11.2026: Windows zum Download für Jens): Lauf von main mit `veroeffentlichen = ja` legt den Installer
+# zum GitHub-Release v<Fassung> – das Release legt vorher „Android-App signiert“ mit `veroeffentlichen = ja` an.
 on:
   push:
     branches: ['main']
   pull_request:
   workflow_dispatch:
+    inputs:
+      veroeffentlichen:
+        description: 'Installer zum GitHub-Release v<Fassung> legen (nur von main; „ja“ eintippen)'
+        required: false
+        default: 'nein'
 
 permissions:
   contents: read
@@ -71,3 +78,31 @@ jobs:
           path: windows/distribution/
           if-no-files-found: error
           retention-days: 30
+
+  veroeffentlichen:
+    needs: windows
+    if: github.event_name == 'workflow_dispatch' && inputs.veroeffentlichen == 'ja' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: private-akte-pro-windows
+          path: verteilen
+      - name: Installer zum Release legen und von außen nachprüfen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          v=$(node -p "require('./windows/package.json').version")
+          f="Private-Akte-Pro-Windows-$v-x64-setup.exe"
+          test -f "verteilen/$f" || { echo "::error::$f fehlt im Artefakt"; exit 1; }
+          gh release view "v$v" -R "$GITHUB_REPOSITORY" > /dev/null || { echo "::error::Release v$v fehlt – erst „Android-App signiert“ mit veroeffentlichen = ja"; exit 1; }
+          if gh release view "v$v" -R "$GITHUB_REPOSITORY" --json assets -q '.assets[].name' | grep -qx "$f"; then echo "::error::$f liegt schon am Release v$v"; exit 1; fi
+          cp verteilen/SHA256SUMS "verteilen/SHA256SUMS-windows"
+          gh release upload "v$v" "verteilen/$f" "verteilen/SHA256SUMS-windows" -R "$GITHUB_REPOSITORY"
+          curl -fsSL "https://github.com/$GITHUB_REPOSITORY/releases/download/v$v/$f" | cmp - "verteilen/$f"
+          echo "Download: https://github.com/$GITHUB_REPOSITORY/releases/download/v$v/$f"

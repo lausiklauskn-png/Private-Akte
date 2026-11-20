@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Geschenkbox Familienakte</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: ein Kopf, darunter je App eine Karte mit drei Wegen (Web-App, Android, Windows), unten die Quellen als ZIP. */
+:root {
+  --bg: #f3f6f8; --card: #ffffff; --fg: #10283d; --muted: #566b7c; --line: #d6e0e8;
+  --fa: #155a8a; --fa-soft: #e3eef7;   /* Familienakte: Blau */
+  --pa: #1d7a4f; --pa-soft: #e2f3ea;   /* Private Akte: Grün */
+  --warn-bg: #fff6e0; --warn-fg: #7a5200;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --text: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1923; --card: #152634; --fg: #e3edf5; --muted: #9bb0c1; --line: #27405a;
+  --fa: #74b3e4; --fa-soft: #1a3550; --pa: #6fd0a0; --pa-soft: #173b2c; --warn-bg: #3a2f12; --warn-fg: #f2d38a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1923; --card: #152634; --fg: #e3edf5; --muted: #9bb0c1; --line: #27405a;
+  --fa: #74b3e4; --fa-soft: #1a3550; --pa: #6fd0a0; --pa-soft: #173b2c; --warn-bg: #3a2f12; --warn-fg: #f2d38a; color-scheme: dark }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.55 var(--text);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 48px }
+main { max-width: 980px; margin: 0 auto; display: grid; gap: 22px }
+h1, h2 { font-family: var(--display); text-wrap: balance; margin: 0 }
+h1 { font-size: 1.9rem; letter-spacing: -.01em }
+.lead { color: var(--muted); margin: 6px 0 0; max-width: 62ch }
+.apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px }
+.app { background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; min-width: 0 }
+.app-kopf { padding: 16px 18px; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap }
+.fa .app-kopf { background: var(--fa-soft) } .pa .app-kopf { background: var(--pa-soft) }
+.fa h2 { color: var(--fa) } .pa h2 { color: var(--pa) }
+.fassung { font: 600 .82rem var(--text); color: var(--muted); font-variant-numeric: tabular-nums }
+.wege { list-style: none; margin: 0; padding: 6px 18px 16px; display: grid }
+.weg { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line) }
+.weg:first-child { border-top: 0 }
+.weg b { font-weight: 600 }
+.weg small { grid-column: 1 / -1; color: var(--muted); font-size: .84rem }
+.knopf { display: inline-block; text-decoration: none; font-weight: 600; font-size: .9rem; padding: 7px 14px; border-radius: 10px; white-space: nowrap; color: #fff }
+.fa .knopf { background: var(--fa) } .pa .knopf { background: var(--pa) }
+:root[data-theme="dark"] .knopf { color: #0e1923 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .knopf { color: #0e1923 } }
+.knopf:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px }
+.quellen { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; display: grid; gap: 10px }
+.quellen .zeile { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between }
+.knopf.neutral { background: transparent; color: var(--fg); border: 1px solid var(--line) }
+.hinweis { background: var(--warn-bg); color: var(--warn-fg); border-radius: 12px; padding: 12px 14px; font-size: .9rem }
+.hinweis ul { margin: 6px 0 0; padding-left: 18px }
+footer { color: var(--muted); font-size: .82rem }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Geschenkbox Familienakte</h1>
+    <p class="lead">Familienakte und Private Akte zum Herunterladen – je als Web-App, für Android und für Windows. Dazu der vollständige Quellcode beider Apps als ZIP. Stand 20.11.2026.</p>
+  </header>
+
+  <section class="apps">
+    <article class="app fa">
+      <div class="app-kopf"><h2>Familienakte</h2><span class="fassung">Fassung 2.28.76</span></div>
+      <ul class="wege">
+        <li class="weg"><b>Web-App (PWA)</b><a class="knopf" href="https://lausiklauskn-png.github.io/Meine-Familienakte/">Öffnen</a>
+          <small>Im Browser (Chrome oder Edge) öffnen, dann „Installieren“ bzw. „Zum Startbildschirm“.</small></li>
+        <li class="weg"><b>Android (APK)</b><a class="knopf" href="https://github.com/lausiklauskn-png/Meine-Familienakte/releases/download/android-v2.28.76/Familienakte-android-v2.28.76.apk">Herunterladen</a>
+          <small>82 MB · Familienakte Pro · Installation aus dieser Quelle einmal erlauben.</small></li>
+        <li class="weg"><b>Windows</b><a class="knopf" href="https://github.com/lausiklauskn-png/Meine-Familienakte/releases/download/windows-v2.28.76/Familienakte-Windows-2.28.76-x64-setup.exe">Herunterladen</a>
+          <small>97 MB · Installer für Windows 10/11 (64 Bit).</small></li>
+      </ul>
+    </article>
+
+    <article class="app pa">
+      <div class="app-kopf"><h2>Private Akte</h2><span class="fassung">Fassung 0.9.6</span></div>
+      <ul class="wege">
+        <li class="weg"><b>Web-App (PWA)</b><a class="knopf" href="https://lausiklauskn-png.github.io/Private-Akte/">Öffnen</a>
+          <small>Im Browser (Chrome oder Edge) öffnen, dann „Installieren“ bzw. „Zum Startbildschirm“.</small></li>
+        <li class="weg"><b>Android (APK)</b><a class="knopf" href="https://github.com/lausiklauskn-png/Private-Akte/releases/download/v0.9.6/Private-Akte-Pro-0.9.6.apk">Herunterladen</a>
+          <small>Rund 225 MB (mit Private Brain Pro und den Sprachmodellen) · Private Akte Pro.</small></li>
+        <li class="weg"><b>Windows</b><a class="knopf" href="https://github.com/lausiklauskn-png/Private-Akte/releases/download/v0.9.6/Private-Akte-Pro-Windows-0.9.6-x64-setup.exe">Herunterladen</a>
+          <small>Installer für Windows 10/11 (64 Bit), nicht signiert.</small></li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="quellen">
+    <h2 style="font-size:1.15rem">Quellcode als ZIP</h2>
+    <div class="zeile"><span>Familienakte – ganzes Repository, aktueller Stand</span><a class="knopf neutral" href="https://github.com/lausiklauskn-png/Meine-Familienakte/archive/refs/heads/main.zip">ZIP herunterladen</a></div>
+    <div class="zeile"><span>Private Akte – ganzes Repository mit den Klonen der übrigen Apps</span><a class="knopf neutral" href="https://github.com/lausiklauskn-png/Private-Akte/archive/refs/heads/main.zip">ZIP herunterladen</a></div>
+    <small style="color:var(--muted)">Beide ZIPs sind groß (mehrere hundert MB) und zeigen immer den neuesten Stand.</small>
+  </section>
+
+  <div class="hinweis"><b>Gut zu wissen</b>
+    <ul>
+      <li>Windows warnt bei der Private Akte, weil der Installer nicht signiert ist: „Weitere Informationen“ › „Trotzdem ausführen“.</li>
+      <li>Android fragt beim ersten Mal, ob Apps aus dem Browser installiert werden dürfen.</li>
+      <li>Web-App und App speichern getrennt: was in der einen liegt, ist nicht von selbst in der anderen.</li>
+    </ul>
+  </div>
+
+  <footer>Family-Projekt · alle Beispieldaten in den Apps sind erfunden.</footer>
+</main>
+</body>
+</html>
