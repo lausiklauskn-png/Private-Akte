@@ -1,6 +1,6 @@
 [package]
 name = "private-akte-pro"
-version = "0.9.4"
+version = "0.9.5"
 description = "Private Akte Pro für Windows"
 edition = "2021"
 publish = false

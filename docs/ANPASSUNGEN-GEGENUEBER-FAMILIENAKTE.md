@@ -110,3 +110,6 @@ Spalte „Für die Familienakte“: was dort zu prüfen wäre. Das sind Hinweise
   getrennter Bearbeiten-Knöpfe, Nummer verdeckt bis zum Tipp darauf, „gültig bis“ rot (abgelaufen) / gelb (90 Tage), Foto des
   Ausweises = Unterlage bei der Person (wie dort). Unterschied: in der Familienakte wird das Foto sofort in den Steckbrief geschrieben,
   hier erst mit „Übernehmen“ (die Unterlage liegt sofort bei der Person, auch bei „Abbrechen“). Kein Diktat in den Feldern (dort `VoiceInput`).
+- **Kalender je Person (0.9.5, Klon @ `706711b`, Familienakte 2.28.76):** kommt über den gebündelten Kalender unverändert herein. Die
+  Familienansicht (alle Termine je Person, „passt/passt nicht“) steht in der Familienakte unter „Fristen und Aufgaben“; die Akte hat
+  dafür noch keinen Platz – Vorschlag für später: die Glocke/„Fällig“ der Startseite mit Personen-Filter.

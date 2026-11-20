@@ -22,6 +22,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (20.11.2026, 0.9.5 – Klon 2.28.76, Kalender je Person)
+
+- **Klon `familienakte` @ `706711b`** (Familienakte 2.28.76, PR #224 dort: Kalender je Person, flacher Fuß). Der Kalender im Rahmen
+  bündelt „Mein Kalender“ des Klons und hat damit dieselben Neuerungen: „Wem gehört dieses Handy?“ (je Gerät, `familienakte-ich-v1` –
+  dieselbe Adresse teilt ihn mit der Familienakte), „Kalender von …“, fest/vorläufig, „Für wen noch“, privat, Hinweis bei Überschneidung.
+  Die Familienliste („Fristen und Aufgaben“ mit Filter je Person, „passt/passt nicht“) gibt es nur in der Familienakte selbst – die Akte hat
+  keine eigene Fristenliste. Fassung 0.9.5 (Code 95). Probe 518 grün. Klaus 20.11.: „selbstständig mergen und online stellen“.
+
 ## Stand (20.11.2026, 0.9.4 – Klon 2.28.75, Steckbrief der Person)
 
 - **Klon `familienakte` @ `ef1bb80`** (Familienakte 2.28.75, PR #222/#223 dort: übersichtlich, Steckbrief im Kern). `npm run bau` neu,
