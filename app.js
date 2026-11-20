@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.9.3', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.9.4', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -265,11 +265,16 @@ function vStart(){
 /* Bereiche der Startseite, echt (0.7.0, Klaus 18.11. zu E: „echt machen“): die Bereiche, in denen Unterlagen liegen, mit ihrer Zahl.
    Ein Tipp zeigt den Bereich im Baum über „Deine Unterlagen“ (Sortieren: Bereich). */
 const KFARBE = [['#61b4ef','#2c79c5'],['#77d48a','#27945c'],['#ffd75a','#d79a16'],['#ff8f7d','#d34a4a'],['#b69be6','#7550c2'],['#5fd0c6','#16867f']];
+/* 0.9.4 (Klaus 20.11., Bild der Pro-App mit leerer Akte: „nur leere Container sieht hässlich aus, ich will was fürs Auge“): sechs
+   Grundbereiche stehen immer da, auch bei leerer Akte („noch leer“); dazu jeder weitere Bereich, in dem Unterlagen liegen. */
+const GRUNDBEREICHE = ['Familie & persönliche Dokumente', 'Finanzen & Konten', 'Gesundheit & Pflege', 'Haus & Wohnung', 'Versicherungen', 'Auto & Mobilität'];
 function bereicheKacheln(){
-  const l = echt.liste || []; if (!l.length) return '';
+  const l = echt.liste || [];
   const zahl = new Map(); for (const d of l) { const k = kanonBereich(d.category); zahl.set(k, (zahl.get(k) || 0) + 1); }
-  const g = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
-  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}</small></span></button>`).join('')}</div></div>`;
+  const voll = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
+  const leer = GRUNDBEREICHE.filter(b => ![...zahl.keys()].some(k => bereichKern(k) === bereichKern(b))).map(b => [b, 0]);
+  const g = [...voll, ...leer];
+  return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel${n ? '' : ' leer'}" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n ? `${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}` : 'noch leer'}</small></span></button>`).join('')}</div></div>`;
 }
 /* ---------- Akten (0.7.0, Klaus 18.11., Antworten A–D ja) ----------
    Datei = Rohmaterial (bleibt im Datei-Organizer), Unterlage = in die Akte gelegt, Akte = ein Fach mit Namen, einer Person zugeordnet

@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.9.3 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.9.4 · Basic'), 'Fassung beim Namen');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
     await p.setInputFiles('#echt-datei', {name:`Probe ${name}.txt`, mimeType:'text/plain', buffer:Buffer.from(`Erfundene Probe-Unterlage ${name}`)});
@@ -519,6 +519,7 @@ const { chromium } = require('playwright');
       soll(await p.evaluate(async () => { const t = window.PrivateAkteTresor, a = await t.akten.lesen(), d = (await t.liste()).find(x => /^Zeugnis/.test(x.originalName)), k = a.personen.find(x => x.name === 'Kind Beispiel'), sch = a.akten.find(x => x.titel === 'Schule'); return d && k && sch && sch.person === k.id && a.bezug[d.id].akten[0] === sch.id && a.bezug[d.id].personen[0] === k.id; }), 'Ablegen: neue Person und neue Akte entstehen mit der Unterlage');
       // Bereiche der Startseite, echt
       await geh('start'); await p.waitForSelector('#bereiche'); soll((await p.locator('#bereiche').innerText()).includes('Auto & Mobilität'), 'Startseite: Bereiche echt, mit Zahl');
+      soll(await p.evaluate(() => GRUNDBEREICHE.every(b => [...document.querySelectorAll('#bereiche [data-a=echt-bereich]')].some(k => k.dataset.k === b))), 'Startseite: die sechs Grundbereiche stehen immer da (0.9.4), leere mit „noch leer“');
       await klick('#bereiche [data-a=echt-bereich][data-k="Auto & Mobilität"]'); soll(await p.evaluate(() => echt.knoten === 'Auto & Mobilität' && echtSort() === 'bereich' && echt.auf.has('Auto & Mobilität') && /Auto & Mobilität/.test(document.querySelector('#echt h3.egewaehlt')?.innerText || '')), 'Bereich antippen (Schnellauswahl) öffnet den Ordner im Baum, rechts seine Unterlagen');
       await p.evaluate(() => { localStorage.setItem('pa_sort', 'neu'); echt.knoten = null; mainZeigen(); }); }
     // Empfang aus dem eigenständigen Datei-Organizer (0.7.4): ein Fenster derselben Adresse öffnet ?empfang=organizer und schickt das Paket

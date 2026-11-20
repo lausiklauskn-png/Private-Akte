@@ -476,3 +476,4 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .pm-tabelle tbody tr{border-top:1px solid var(--linie,#e3e7ea)}.pm-tabelle .pm-summe{font-weight:600;border-top:2px solid var(--akz)}
 .rund.geist.an{color:var(--akz);background:color-mix(in srgb,var(--akz) 14%,transparent)}
 @media (max-width:420px){.pm-tabelle{font-size:12px}.pm-tabelle th,.pm-tabelle td{padding:4px 3px}}
+.kachel.leer small{font-style:italic}
