@@ -198,6 +198,8 @@ function glockenFeld(){
 }
 function kopfZeigen(){
   $('fassung').textContent = `${FASSUNG} · ${window.PA_PRO ? 'Pro' : 'Basic'}`;
+  /* ⟳ nur in der Web-App (Klaus 20.11.: „Aktualisierungsbutton, da ich nicht immer Hard Reload machen kann“); in der App prüft die Fassung/das Fähnchen. */
+  { const k = $('pwa-neu'); if (k) k.hidden = !!window.PA_PRO; }
   $('werkleiste').innerHTML = WERK.map(([a,i,t,f,u]) => `<button class="werk" data-a="${a}" aria-label="${t}" data-tipp="${t}" data-tipp2="${u}" style="--a:${WERKFARBE[f][0]};--b:${WERKFARBE[f][1]}">${ic(i)}</button>`).join('');
   $('kopfknoepfe').innerHTML = glockeKnopf() + MEHR.map(([a,i,t,u]) => `<button class="rund nurbreit ${a==='farbe'?'farbknopf':''} ${a==='import'?'hinein':a==='export'?'hinaus':''}" data-a="${a}" data-ort="akte" aria-label="${t}" data-tipp="${t}" ${u?`data-tipp2="${u}"`:''}>${a==='farbe'?'':i?ic(i):'?'}</button>`).join('')
     + `<button class="rund nurschmal" data-a="mehr" aria-label="Mehr: Importieren, Exportieren, Drucken, Farbpalette, Hilfe" aria-haspopup="menu">${ic('mehr')}</button>`;
