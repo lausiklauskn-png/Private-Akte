@@ -32,6 +32,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Speichern nur über den Kern des Klons. Keine Erklärsätze.
 - **Sechs Grundbereiche** immer auf der Startseite (PR #74, `GRUNDBEREICHE`).
 - Fassung 0.9.4 (Code 94). Probe 518 grün, `test-native` 37 grün (lokal ohne Brain-Web). Am Tablet ungeprüft.
+- **Veröffentlicht 20.11. (Klaus' Wort):** Android 0.9.4 (Release `v0.9.4`, Update-Server), Windows als CI-Download; Nachweis
+  `docs/VEROEFFENTLICHUNG-0.9.4.md` – nicht erneut ausgeben; nächste 0.9.5 (Code 95). Abschlussbrief `docs/BRIEF_ABSCHLUSS_2026-11-20_KLON-STECKBRIEF-0.9.4.md`.
+- **Familienakte, Fuß flach** (Klaus 20.11.): Repo `meine-familienakte` PR #224, Entwurf, nicht ausgegeben.
 
 ## Stand (19.11.2026 nachts, 0.9.3 – Telekom-Fenster; veröffentlicht, Nachweis `docs/VEROEFFENTLICHUNG-0.9.3.md`, nicht erneut ausgeben; nächste 0.9.4)
 
