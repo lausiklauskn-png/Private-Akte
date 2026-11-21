@@ -22,6 +22,15 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (21.11.2026, 0.9.8 – Baum dichter)
+
+- **Klaus 21.11. (Bild vom Tablet, 0.9.7: „der Abstand zwischen Bescheinigung und Brief im Baum ist viel zu groß … ein Muster, überall gesehen“):**
+  Ursache: das leere Pfeil-Feld der Unterordner (`<span class="epfeil leer">` in `echtBaum` und im Baum unter „Akten“) bekam die allgemeine
+  Regel `.leer{padding:22px}` der Hinweistexte – jede Zeile ohne Unterordner war 52 statt 28 px hoch. Jetzt `.eknoten .epfeil.leer{…;padding:0}`
+  (`app.css`). Probe 530 grün (2 neu: Unterordner nicht höher als die übrigen Äste; Gegenprobe ohne die Zeile rot). Organizer dazu dichter
+  (dort 0.4.25, Äste 34 statt 40 px; Klon folgt), Familienakte: Ordnerbäume der Hilfe 2 statt 6 px (PR #230 dort). Fassung 0.9.8 (Code 98).
+  Nicht als App ausgegeben.
+
 ## Stand (21.11.2026, 0.9.7 – HTML-Dateien, „Öffnen mit“ in der App)
 
 - **Klaus 21.11. (Bilder vom Tablet, 0.9.6):** bei einer HTML-Unterlage stand unter „Erkannter Text“ Code (Stil, Tags), als Absender „doctype html>“;
