@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     const text = async () => await p.evaluate(() => document.body.innerText);
     await breit('start'); await p.screenshot({path:`p/${name}-1-start.png`});
     soll((await p.locator('.werk').count())===5, 'fünf Werkzeugknöpfe'); soll((await p.locator('#echt [data-a=echt-neu]').count())===0, 'kein zweiter Knopf „Datei hineinlegen“'); soll((await p.locator('[data-a=sicherung].rund').count())===0, 'kein Schild-Knopf'); soll((await p.locator('.ablegen, [data-a=landkarte]').count())===0, 'kein Ablegen, keine Landkarte'); soll((await p.locator('.nav [data-a=geh]').count())===4, 'vier Bereiche');
-    soll((await text()).includes('0.9.6 · Basic'), 'Fassung beim Namen');
+    soll((await text()).includes('0.9.7 · Basic'), 'Fassung beim Namen');
     soll(await p.locator('#pwa-neu').isVisible(), 'Knopf „Aktualisieren“ (⟳) in der Web-App sichtbar');
     // Deine Unterlagen: echt, im Tresor der Familienakte (Browser-Speicher) – hineinlegen, neu laden, öffnen, herausnehmen
     await p.waitForFunction(() => document.querySelector('#echt')?.dataset.bereit === '1'); soll((await text()).includes('Noch nichts hineingelegt'), 'Tresor ist am Anfang leer');
@@ -559,6 +559,22 @@ const { chromium } = require('playwright');
     soll(leer.regeln === 2 && leer.dateien === 0 && leer.keys.length === 1 && leer.kat === '["Motorboot"]', 'Akte leeren: im Organizer sind Liste und Verlauf weg, die gelernten Regeln und eigenen Kategorien bleiben');
     await p.evaluate(() => { indexedDB.deleteDatabase('PrivateAkteOrganizer1'); localStorage.removeItem('pa_do-eigene-kategorien'); });
     await p.evaluate(async () => { const t = window.PrivateAkteTresor; const d = await t.ablegen(new File(['Leerprobe eins'], 'Leerprobe-1.txt', {type:'text/plain'}), {bereich:'Archiv', datum:null, titel:null, notiz:null}); const ok = !!d.id; await t.herausnehmen(d.id); window.__wieder = ok; }); soll(await p.evaluate(() => window.__wieder), 'Akte leeren: dieselbe Datei lässt sich danach wieder ablegen');
+    // HTML-Dateien (Klaus 21.11., Bilder vom Tablet): lesbarer Text statt Code, kein Absender „doctype html>“, Öffnen/Teilen über Android
+    { const r = await p.evaluate(async () => {
+        const t = window.PrivateAkteTresor;
+        const lesbar = t.lesbarerText('frageblatt.html', '<!DOCTYPE html><html><head><style>h2{font-size:1.2rem}</style></head><body><h2>Frageblatt</h2><p>Bitte ausf&uuml;llen &amp; zur&uuml;ck.</p></body></html>');
+        const roh = t.lesbarerText('notiz.txt', 'a <b> c');
+        const auf = [], teil = []; window.Capacitor = { isNativePlatform: () => true, Plugins: { ProFiles: { open: async x => { auf.push(x); return {ok:true}; }, share: async x => { teil.push(x); return {ok:true}; } } } };
+        const f = new File(['<!doctype html><p>Hallo</p>'], 'frageblatt.html', {type:'text/html'});
+        const o = await nativUebergeben(f, false), s2 = await nativUebergeben(f, true);
+        window.Capacitor.Plugins.ProFiles.open = async () => { throw new Error('FILE_UNAVAILABLE'); }; const fehl = await nativUebergeben(f, false);
+        delete window.Capacitor;
+        return { lesbar, roh, o, s2, fehl, aufName: auf[0] && auf[0].name, aufDaten: auf[0] && atob(auf[0].data), teilName: teil[0] && teil[0].name, markup: keinMarkup('doctype html>'), echt: keinMarkup('Steuerbüro Muster') };
+      });
+      soll(r.lesbar === 'Frageblatt\nBitte ausfüllen & zurück.' && r.roh === 'a <b> c', 'HTML: „Erkannter Text“ zeigt nur den lesbaren Text (' + JSON.stringify(r.lesbar) + ')');
+      soll(r.markup === '' && r.echt === 'Steuerbüro Muster', 'HTML: Reste wie „doctype html>“ stehen nicht als Absender da');
+      soll(r.o && r.s2 && r.aufName === 'frageblatt.html' && r.aufDaten === '<!doctype html><p>Hallo</p>' && r.teilName === 'frageblatt.html', 'Android: „Öffnen“ und „Teilen“ geben die Datei an „Öffnen mit“ bzw. das Teilen-Fenster');
+      soll(r.fehl === false, 'Android: klappt „Öffnen mit“ nicht, bleibt der bisherige Weg (Speichern)'); }
     soll((await p.locator('.fuss a').count())===4,'Fuß-Links');
     await p.goto('http://localhost:8765/rechtliches.html'); soll((await text()).includes('Impressum'),'rechtliches'); await breit('rechtliches');
     await p.close();

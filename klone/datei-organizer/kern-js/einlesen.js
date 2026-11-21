@@ -6,6 +6,7 @@ import { erkenneArt, sha256Hex } from "./dateiart.js";
 import { leseExif } from "./exif.js";
 import { leseEml } from "./eml.js";
 import { officeText } from "./zip.js";
+import { htmlText, istHtml } from "./htmltext.js";
 const MAX_TEXT_BYTES = 30 * 1024 * 1024;
 const ueberspringen = (name) => /^(organizer-index\.json|desktop\.ini|thumbs\.db|\.ds_store|icon\r?)$/i.test(name) || name.startsWith(".") || name.startsWith("~$");
 async function einlesen(e, pdfLesen, tiefe = 0, bildLesen, kern) {
@@ -68,7 +69,8 @@ ${m.text}`.trim();
       d.kopfText = t.slice(0, 1500);
       d.textQuelle = "office";
     } else if (art.art === "text") {
-      const t = new TextDecoder("utf-8").decode(e.bytes.slice(0, 2e6));
+      const roh = new TextDecoder("utf-8").decode(e.bytes.slice(0, 2e6));
+      const t = istHtml(e.name, roh) ? htmlText(roh) : roh;
       d.volltext = t;
       d.kopfText = t.slice(0, 1500);
       d.textQuelle = "text";
