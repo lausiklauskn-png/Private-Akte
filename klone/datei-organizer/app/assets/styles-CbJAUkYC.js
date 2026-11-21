@@ -159,7 +159,7 @@ Error generating stack: `+a.message+`
 
 `).trim():""}const Oh={amp:"&",lt:"<",gt:">",quot:'"',apos:"'",nbsp:" ",shy:"",euro:"€",sect:"§",copy:"©",reg:"®",auml:"ä",ouml:"ö",uuml:"ü",Auml:"Ä",Ouml:"Ö",Uuml:"Ü",szlig:"ß",eacute:"é",egrave:"è",agrave:"à",ndash:"–",mdash:"—",hellip:"…",bdquo:"„",ldquo:"“",rdquo:"”",lsquo:"‘",rsquo:"’",laquo:"«",raquo:"»",middot:"·",bull:"•"},$0=c=>c.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,(d,m)=>{if(m[0]==="#"){const s=m[1]==="x"||m[1]==="X"?parseInt(m.slice(2),16):parseInt(m.slice(1),10);return Number.isFinite(s)&&s>0&&s<1114112?String.fromCodePoint(s):d}return Oh[m]??d});function Dh(c,d){return/\.(html?|xhtml)$/i.test(c)||/^\s*(<!doctype html|<html[\s>])/i.test(d.slice(0,500))}function Uh(c){var p,g;const d=((g=(p=/<title[^>]*>([\s\S]*?)<\/title>/i.exec(c))==null?void 0:p[1])==null?void 0:g.replace(/<[^>]+>/g," ").trim())||"",m=c.replace(/<!--[\s\S]*?-->/g," ").replace(/<(script|style|head|noscript|template|svg)\b[\s\S]*?<\/\1\s*>/gi," ").replace(/<!doctype[^>]*>/gi," ").replace(/<(br|hr)\b[^>]*>/gi,`
 `).replace(/<\/(p|div|h[1-6]|li|tr|table|section|article|header|footer|blockquote|pre|ul|ol|dl|dt|dd|address)\s*>/gi,`
-`).replace(/<\/(td|th)\s*>/gi,"	").replace(/<[^>]*>/g," "),s=$0(m).replace(/[ \t ]+/g," ").replace(/ *\n */g,`
+`).replace(/<\/(td|th)\s*>/gi,"	").replace(/<[^>]*>/g," "),s=$0(m).replace(/[ \t\u00a0]+/g," ").replace(/ *\n */g,`
 `).replace(/\n{3,}/g,`
 
 `).trim(),E=$0(d).replace(/\s+/g," ");return E&&!s.startsWith(E)?`${E}
