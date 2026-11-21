@@ -129,9 +129,9 @@ a { color: var(--teal); }
 /* Ordnerbaum (wie Hilfe „Wo liegt was?“), hier aufklappbar */
 .ordnerbaum, .ordnerbaum ul { list-style: none; margin: 4px 0; padding: 0; }
 .ordnerbaum ul { margin-left: 12px; padding-left: 14px; border-left: 2px solid var(--baum); }
-.ordnerbaum ul > li { position: relative; margin: 3px 0; }
-.ordnerbaum ul > li::before { content: ""; position: absolute; left: -14px; top: 18px; width: 12px; border-top: 2px solid var(--baum); }
-.ast { width: 100%; display: flex; align-items: center; gap: 7px; text-align: left; padding: 7px 8px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink); }
+.ordnerbaum ul > li { position: relative; margin: 1px 0; }
+.ordnerbaum ul > li::before { content: ""; position: absolute; left: -14px; top: 15px; width: 12px; border-top: 2px solid var(--baum); }
+.ast { width: 100%; display: flex; align-items: center; gap: 7px; text-align: left; padding: 4px 8px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--ink); }
 .ast:hover { background: var(--blue-soft); }
 .ast[aria-current="true"] { border-color: #2a7f86; background: #edf7f7; color: var(--navy); font-weight: 800; }
 .ast .pfeil { width: 16px; flex: 0 0 auto; color: var(--navy-2); transition: transform .15s; }

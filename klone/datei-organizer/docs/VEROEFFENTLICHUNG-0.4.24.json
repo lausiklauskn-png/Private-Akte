@@ -1,0 +1,27 @@
+{
+  "fassung": "0.4.24",
+  "datum": "2026-11-21",
+  "freigabe": "Klaus 21.11.2026: „bei Dateiorganizer … die Pro-Variante draußen … APK, PWA … und so weiter“",
+  "inhalt": "HTML-Dateien als lesbarer Text (lib/htmltext.ts, #78/#79); enthält 0.4.22 (Papierkorb in „Bitte prüfen“, #76) und 0.4.23 (Rückmeldung beim Ändern eines anderen Felds, #77) – 0.4.21 bis 0.4.23 wurden nie als App ausgegeben",
+  "android": {
+    "commit": "4fab2212bea237cd61c2657b1f569bc2427fdb18",
+    "lauf": 44891057647,
+    "datei": "Datei-Organizer-Pro-0.4.24.apk",
+    "code": 64,
+    "bytes": 72106884,
+    "sha256": "13c6e6d98a463b079f193219e704c560842be2021dd8d7389611ceaf68e15866",
+    "zertifikat_sha256": "594e44df462ebcc73fc03be486eb43364c14a2633e06b4fe9421228de468365d",
+    "update_server": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.24.apk",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.24",
+    "nachgeprueft": "GitHub-Release ohne Anmeldung geladen, SHA-256 gleich mit .sha256 und .apk.json"
+  },
+  "windows": {
+    "commit": "4fab2212bea237cd61c2657b1f569bc2427fdb18",
+    "lauf": 44891610167,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.24-x64-setup.exe",
+    "bytes": 87307843,
+    "update_server": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.24-x64-setup.exe",
+    "nachgeprueft": "im Lauf von außen geladen, SHA-256 gleich (die Sitzung erreicht family-projekt.de nicht)"
+  },
+  "basic": "über GitHub Pages (main 4fab221)"
+}

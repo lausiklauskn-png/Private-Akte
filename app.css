@@ -427,7 +427,7 @@ fieldset.zuordnen .chips{margin-top:2px}fieldset.zuordnen .feld.schmal{flex:1 1 
 .ebaumliste ul>li::before{content:"";position:absolute;left:-12px;top:15px;width:10px;border-top:2px solid color-mix(in srgb,var(--teal) 25%,transparent)}
 #echt .eknoten,#echt .eknoten.unter,#echt .eknoten:not(.alle){padding-left:6px}
 .eknoten .eordner{width:16px;height:16px;flex:none;color:var(--teal)}
-.eknoten .epfeil{width:16px;flex:none;display:inline-flex}.eknoten .epfeil.leer{visibility:hidden}
+.eknoten .epfeil{width:16px;flex:none;display:inline-flex}.eknoten .epfeil.leer{visibility:hidden;padding:0}
 .eknoten.alle[aria-expanded=true] .epfeil .icon{transform:rotate(90deg)}.eknoten.alle[aria-expanded=false] .epfeil .icon{transform:none}
 .eknoten.an{background:#edf7f7;outline:1px solid color-mix(in srgb,var(--teal) 55%,transparent)}
 h3.egewaehlt{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0;padding:10px 12px 6px;font-size:15px;font-weight:700;color:var(--teal)}
