@@ -9,13 +9,21 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (21.11.2026): 0.4.25 – Baum dichter
+
+- **Klaus 21.11. (Bild vom Tablet, Private Akte 0.9.7: „der Abstand zwischen Bescheinigung und Brief im Baum ist viel zu groß … in allen Apps
+  nachziehen“):** im Organizer war der Fehler der Akte (leerer Pfeil mit 22 px Innenabstand) nicht da, die Äste waren aber 40 px hoch mit 3 px
+  dazwischen. Jetzt `.ast` 4 px statt 7 px oben/unten, `li` 1 px statt 3 px Abstand, Querstrich auf die neue Mitte (`src/styles.css`) – rund
+  34 px je Zeile. UI-Probe 225 (1 neu: „Baum dicht“, höchstens 36 px, Lücke höchstens 4 px). Fassung 0.4.25 (Code 65, Vorrat v46).
+  Nicht als App ausgegeben (Basic über Pages mit dem Zusammenführen).
+
 ## Stand (21.11.2026): 0.4.24 – HTML-Dateien als lesbarer Text
 
 - **Klaus 21.11. (Bilder vom Tablet, Private Akte 0.9.6):** unter „Erkannter Text“ einer übergebenen HTML-Datei standen Stilangaben und Tags,
   als Absender „doctype html>“. Ursache: `lib/einlesen.ts` las HTML wie eine Textdatei. Jetzt `lib/htmltext.ts` (`istHtml`, `htmlText`): Stil,
   Skripte, Kommentare, Kopf und Tags fallen weg, Absätze werden Zeilen, Zeichen-Verweise werden Zeichen, der Seitentitel steht vorne. Kein DOM
   (läuft im Browser und in Node). `kern-js/` neu erzeugt. `einlesen.ts` gehört nicht zum Kern der Familienakte. Kern-Probe 162 grün (4 neu),
-  UI 224, Native 66 grün. Fassung 0.4.24 (Code 64, Vorrat v45). Nur Basic (Pages); APK/Windows ab Montag gleich mit 0.4.24.
+  UI 224, Native 66 grün. Fassung 0.4.24 (Code 64, Vorrat v45). **Veröffentlicht 21.11.2026 (Klaus' Wort) als Android, Windows und Basic**, Nachweis `docs/VEROEFFENTLICHUNG-0.4.24.json` – nicht erneut ausgeben; nächste Ausgabe 0.4.25 (Code 65). Damit ist der Auftrag „APK/Windows ab Montag 23.11.“ (0.4.21–0.4.23) erledigt.
 
 ## Stand (20.11.2026): 0.4.23 – Rückmeldung beim Ändern eines anderen Felds
 
