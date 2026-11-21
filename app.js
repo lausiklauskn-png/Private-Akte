@@ -1,7 +1,7 @@
 'use strict';
 /* Private Akte – Vorschau. Die Beispiele sind erfunden und werden nicht gespeichert, kein echtes Programm wird geöffnet.
    Echt ist nur der Abschnitt „Deine Unterlagen“: er speichert über tresor.js im unveränderten Tresor der Familienakte. */
-const FASSUNG = '0.9.6', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
+const FASSUNG = '0.9.7', NAME = 'Private Akte', HEUTE = new Date(2026, 10, 17);
 const $ = id => document.getElementById(id);
 const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
@@ -818,7 +818,7 @@ function echtSteckbrief(d){
    <div class="reihe esbknoepfe">${pdf || bild ? `<button class="rund klein" data-a="echt-vorschau" data-id="${id}" aria-pressed="${echt.vor === d.id}" aria-label="Vorschau" data-tipp="Vorschau">${ic('auge')}</button>` : ''}<button class="knopf hell" data-a="echt-teilen" data-id="${id}">${ic('teilen')} Teilen</button><button class="rund klein" data-a="echt-stift" data-id="${id}" aria-label="Einordnen" data-tipp="Einordnen">${ic('stift')}</button><button class="knopf hell" data-a="echt-termin" data-id="${id}">${ic('kalender')} Termin dazu</button>
     ${pdf ? `<button class="knopf hell" data-a="leser" data-id="${id}">Lesen und darin suchen</button>` : ''}<button class="knopf hell" data-a="echt-oeffnen" data-id="${id}">${pdf ? 'Im Browser öffnen' : 'Öffnen'}</button>${pdf || bild ? `<button class="knopf hell" data-a="echt-wfpdf" data-id="${id}">${ic('pdf')} Mit Workflow PDF bearbeiten</button>` : ''}<button class="rund klein" data-a="echt-raus" data-id="${id}" aria-label="Aus der Akte nehmen" data-tipp="Aus der Akte nehmen">${ic('muell')}</button></div>
    ${echt.vor === d.id ? `<div class="evorschau" id="evorschau"><p class="leer">Vorschau wird geladen …</p></div>` : ''}
-   ${d.textAuszug ? `<details class="etext"><summary>Erkannter Text</summary><pre>${esc(d.textAuszug)}</pre></details>` : ''}</section>`;
+   ${d.textAuszug ? `<details class="etext"><summary>Erkannter Text</summary><pre>${esc(T().lesbarerText(d.originalName || '', d.textAuszug))}</pre></details>` : ''}</section>`;
 }
 function echtStift(d){
   return `<form class="felder estift" data-form="zuordnen" data-id="${esc(d.id)}"><label>Bereich – auswählen oder neue Kategorie eintippen <input class="feld" name="bereich" list="estift-bereiche" value="${esc(d.category)}" required maxlength="60" autocomplete="off"></label><datalist id="estift-bereiche">${echtBereiche().map(b => `<option value="${esc(b)}">`).join('')}</datalist>
@@ -864,7 +864,9 @@ const personName = id => (AK().personen.find(p => p.id === id) || {}).name || ''
 const akteVon = id => AK().akten.find(a => a.id === id);
 const gleichName = (a, b) => String(a).replace(/\s+/g, ' ').trim().toLocaleLowerCase('de') === String(b).replace(/\s+/g, ' ').trim().toLocaleLowerCase('de');
 const echtPersonen = d => { const b = echtBezug(d).personen.map(personName).filter(Boolean); if (b.length) return b; const n = notizAngabe(d, 'Person'); return n ? [n] : []; };
-const echtAbsender = d => echtBezug(d).absender[0] || notizAngabe(d, 'Absender');
+/* Absender, die nur Reste einer HTML-Datei sind („doctype html>“ – so las der Organizer vor 0.4.24 HTML-Dateien), nicht zeigen (Klaus 21.11.). */
+const keinMarkup = v => v && !/doctype|[<>]/i.test(v) ? v : '';
+const echtAbsender = d => keinMarkup(echtBezug(d).absender[0]) || keinMarkup(notizAngabe(d, 'Absender'));
 const echtAngabe = (d, feld) => (feld === 'Person' ? echtPersonen(d)[0] : echtAbsender(d)) || 'ohne Angabe';
 const docsInAkte = id => (echt.liste || []).filter(d => echtBezug(d).akten.includes(id));
 const docsZuPerson = p => (echt.liste || []).filter(d => echtBezug(d).personen.includes(p.id) || (!echtBezug(d).personen.length && echtPersonen(d).some(n => gleichName(n, p.name))));
@@ -1111,11 +1113,12 @@ Object.assign(A, {
  'echt-vorschau': e => { const id = e.dataset.id; echt.vor = echt.vor === id ? null : id; mainZeigen(); if (echt.vor) echtVorschau(id); },
  'echt-muell': e => { const d = (echt.liste || []).find(x => x.id === e.dataset.id); if (d && confirm(`„${echtTitel(d)}“ aus der Akte nehmen?`)) A['echt-raus'](e); },
  'echt-teilen': async e => {
-   try { const f = await T().datei(e.dataset.id); if (navigator.canShare && navigator.canShare({files:[f]})) { await navigator.share({files:[f], title:f.name}); return; }
+   try { const f = await T().datei(e.dataset.id); if (await nativUebergeben(f, true)) return;
+     if (navigator.canShare && navigator.canShare({files:[f]})) { await navigator.share({files:[f], title:f.name}); return; }
      await geben(f, f.name);
    } catch (err) { if (err && err.name !== 'AbortError') toast(fehlerText(err)); } },
  'echt-oeffnen': async e => {
-   try { const f = await T().datei(e.dataset.id); if (nativSpeichern()) { await geben(f, f.name); return; } const url = URL.createObjectURL(f), a = document.createElement('a');
+   try { const f = await T().datei(e.dataset.id); if (await nativUebergeben(f, false)) return; if (nativSpeichern()) { await geben(f, f.name); return; } const url = URL.createObjectURL(f), a = document.createElement('a');
      a.href = url; a.target = '_blank'; a.rel = 'noopener'; if (!/^(application\/pdf|image\/|text\/plain)/.test(f.type)) a.download = f.name;
      document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000);
    } catch (err) { toast(fehlerText(err)); } },
@@ -1143,6 +1146,15 @@ document.addEventListener('submit', async ev => {
 
 /* Datei hinausgeben: im Browser als Download; in der Pro-App (Android/Windows) über „Speichern unter …“ des Geräts (DoDateien aus dem
    Klon des Datei-Organizers) – die WebView der App kennt keinen Download. */
+/* Öffnen und Teilen in der Android-App (Klaus 21.11., Bilder vom Tablet: bei einer HTML-Datei boten „Öffnen“ und „Teilen“ nur „Speichern“ an):
+   über ProFiles aus dem Klon Private Brain Pro – „Öffnen“ = Androids „Öffnen mit“ (z. B. Chrome), „Teilen“ = Teilen-Fenster des Geräts.
+   Bis 16 MB (Grenze des Klons); größer oder ohne die App: wie bisher. */
+const nativDateien = () => { const c = window.Capacitor; return c && c.isNativePlatform && c.isNativePlatform() && c.Plugins && c.Plugins.ProFiles && c.Plugins.ProFiles.open ? c.Plugins.ProFiles : null; };
+async function nativUebergeben(f, teilen){
+  const p = nativDateien(); if (!p || f.size > 16 * 1024 * 1024) return false;
+  const data = await new Promise((ok, nein) => { const r = new FileReader(); r.onload = () => ok(String(r.result).split(',')[1] || ''); r.onerror = () => nein(r.error); r.readAsDataURL(f); });
+  try { await p[teilen ? 'share' : 'open']({data, name:f.name}); return true; } catch { return false; }
+}
 const nativSpeichern = () => { const c = window.Capacitor; return c && c.isNativePlatform && c.isNativePlatform() && c.Plugins && c.Plugins.DoDateien && c.Plugins.DoDateien.speichern ? c.Plugins.DoDateien : null; };
 async function geben(blob, name){
   const n = nativSpeichern();

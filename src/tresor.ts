@@ -15,6 +15,7 @@ import { parseBankauszug, pruefeBankauszug } from "../klone/bookledger/src/domai
 import { leseAuszugText } from "../klone/bookledger/src/domain/auszugText.js";
 import { errateCsv, leseBankCsv, passtEinstellung, pruefeZuordnung, textAusBytes, istCsvText, umsatzSchluessel, DATUMSFORMEN } from "../klone/bookledger/src/domain/bankCsv.js";
 import { xlsxZeilen } from "../klone/bookledger/src/domain/xlsxZeilen.js";
+import { htmlText, istHtml } from "../klone/datei-organizer/lib/htmltext.ts";
 import { baueMonatsdatei, monatsdateiName } from "../klone/bookledger/src/domain/portemonnaieImport.js";
 import { istTermin, kalenderFelder } from "../klone/familienakte/lib/kalender.ts";
 import { memoryData } from "../klone/familienakte/lib/family-memory.ts";
@@ -799,5 +800,7 @@ const kopie = {
   async sichern(fassung: string, auto: boolean) { return zweiterOrtSichern(await browserVault(), fassung, { auto }); },
   beenden: () => zweiterOrtBeenden(),
 };
-const alles = { ...tresor, sicherung, kopie, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank };
+/** „Erkannter Text“ zum Anzeigen: bei HTML nur der lesbare Text (Baustein aus dem Datei-Organizer, Klaus 21.11.: vorher stand dort Code). */
+const lesbarerText = (name: string, text: string) => (istHtml(name, text) ? htmlText(text) : text);
+const alles = { ...tresor, sicherung, kopie, organizer, suchen, teilWoerter, diktat, bedeutung, kalender, akten, geld, bank, lesbarerText };
 (window as unknown as { PrivateAkteTresor: typeof alles }).PrivateAkteTresor = alles;

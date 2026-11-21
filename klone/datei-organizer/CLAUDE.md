@@ -9,6 +9,14 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+## Stand (21.11.2026): 0.4.24 – HTML-Dateien als lesbarer Text
+
+- **Klaus 21.11. (Bilder vom Tablet, Private Akte 0.9.6):** unter „Erkannter Text“ einer übergebenen HTML-Datei standen Stilangaben und Tags,
+  als Absender „doctype html>“. Ursache: `lib/einlesen.ts` las HTML wie eine Textdatei. Jetzt `lib/htmltext.ts` (`istHtml`, `htmlText`): Stil,
+  Skripte, Kommentare, Kopf und Tags fallen weg, Absätze werden Zeilen, Zeichen-Verweise werden Zeichen, der Seitentitel steht vorne. Kein DOM
+  (läuft im Browser und in Node). `kern-js/` neu erzeugt. `einlesen.ts` gehört nicht zum Kern der Familienakte. Kern-Probe 162 grün (4 neu),
+  UI 224, Native 66 grün. Fassung 0.4.24 (Code 64, Vorrat v45). Nur Basic (Pages); APK/Windows ab Montag gleich mit 0.4.24.
+
 ## Stand (20.11.2026): 0.4.23 – Rückmeldung beim Ändern eines anderen Felds
 
 - **Klaus 20.11. (Bilder vom Tablet: „sieht aus, als wenn er Forschung nicht übernimmt“):** in der Prüfliste hatte er „Betrifft“ gewählt und

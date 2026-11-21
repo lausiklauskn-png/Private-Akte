@@ -233,6 +233,19 @@ soll("höchstens 3 Fehler, die als „sicher“ gelten (Art)", quote.schriftstue
   soll("Ohne Prüfkern bleibt Excel ohne Text (wie bisher)", x0.textQuelle === "keiner" && !x0.innen);
 }
 
+// ---------- HTML-Dateien (Klaus 20.11.2026: unter „Erkannter Text“ standen Stilangaben und Tags, Absender „doctype html>“) ----------
+{
+  const roh = `<!DOCTYPE html><html><head><title>Antragsmappe Steuerberater</title><style>h2{font-size:1.2rem;margin:0}</style><script>var x=1</script></head>
+<body><h2>Frageblatt f&uuml;r die Steuererkl&auml;rung</h2><p>Sehr geehrte Frau Beispiel,<br>bitte f&#252;llen Sie den Bogen aus &amp; senden Sie ihn zur&uuml;ck.</p><!-- intern --></body></html>`;
+  const [h] = await einlesen({ pfad: "antragsmappe.html", name: "antragsmappe.html", geaendert: 1, bytes: new TextEncoder().encode(roh) }, async () => "");
+  const t = h.volltext || "";
+  soll("HTML: lesbarer Text ohne Stil, Skript, Tags und Kommentare", h.textQuelle === "text" && /Frageblatt für die Steuererklärung/.test(t) && /füllen Sie den Bogen aus & senden/.test(t) && !/font-size|var x|<|doctype|intern/i.test(t), JSON.stringify(t.slice(0, 160)));
+  soll("HTML: der Seitentitel steht vorne", t.startsWith("Antragsmappe Steuerberater"), JSON.stringify(t.slice(0, 40)));
+  soll("HTML: kein Absender „doctype html>“", !/doctype/i.test(h.felder.absender?.wert || ""), h.felder.absender?.wert);
+  const [txt] = await einlesen({ pfad: "notiz.txt", name: "notiz.txt", geaendert: 1, bytes: new TextEncoder().encode("a <b> c") }, async () => "");
+  soll("Gewöhnlicher Text bleibt unverändert (auch mit spitzen Klammern)", txt.volltext === "a <b> c", JSON.stringify(txt.volltext));
+}
+
 // ---------- Lernen ----------
 const schule = dateien.find((d) => d.name === "Dokument(4).pdf");
 soll("Schul-Brief: Absender erkannt", /Schule am Beispielpark/.test(schule?.felder.absender?.wert || ""), schule?.felder.absender?.wert);

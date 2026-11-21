@@ -22,6 +22,16 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (21.11.2026, 0.9.7 – HTML-Dateien, „Öffnen mit“ in der App)
+
+- **Klaus 21.11. (Bilder vom Tablet, 0.9.6):** bei einer HTML-Unterlage stand unter „Erkannter Text“ Code (Stil, Tags), als Absender „doctype html>“;
+  „Öffnen“ und „Teilen“ boten in der App nur „Speichern“. (1) **Klon `datei-organizer` @ `4fab221`** (0.4.24, PR #78/#79 dort: `lib/htmltext.ts`, HTML wird
+  beim Einlesen lesbarer Text). (2) **Anzeige** schon abgelegter Unterlagen: `T().lesbarerText` (Baustein des Klons) für „Erkannter Text“,
+  `keinMarkup` blendet Absender wie „doctype html>“ aus (`app.js`). (3) **Öffnen/Teilen in der Android-App** über `ProFiles.open`/`share` aus dem Klon
+  Private Brain Pro (`nativUebergeben` in `app.js`): „Öffnen“ = Androids „Öffnen mit“ (z. B. Chrome), „Teilen“ = Teilen-Fenster; bis 16 MB, sonst und
+  bei Fehler wie bisher. Familienakte: dasselbe Problem, dort 2.28.77. Fassung 0.9.7 (Code 97). Probe 528 grün (4 neu), `test-native` 37 grün.
+  Am Tablet ungeprüft.
+
 ## Stand (20.11.2026, 0.9.6 – Datei-Organizer 0.4.23, Windows zum Download)
 
 - **Klon `datei-organizer` @ `b2621a1`** (Datei-Organizer 0.4.23, PR #76/#77 dort; Klaus 20.11., Bilder vom Tablet): in „Bitte prüfen“ an jeder

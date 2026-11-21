@@ -6,6 +6,7 @@ import { erkenneArt, sha256Hex } from "./dateiart.ts";
 import { leseExif } from "./exif.ts";
 import { leseEml } from "./eml.ts";
 import { officeText } from "./zip.ts";
+import { htmlText, istHtml } from "./htmltext.ts";
 
 /**
  * Sieb 1 und das Lesen des Textes. Die App reicht die Bytes jeder Datei herein; PDF-Text liefert eine
@@ -64,7 +65,9 @@ export async function einlesen(e: Eingabe, pdfLesen: PdfLeser, tiefe = 0, bildLe
       const t = k.text.trim();
       d.volltext = t; d.kopfText = t.slice(0, 1500); d.textQuelle = "office";
     } else if (art.art === "text") {
-      const t = new TextDecoder("utf-8").decode(e.bytes.slice(0, 2_000_000));
+      const roh = new TextDecoder("utf-8").decode(e.bytes.slice(0, 2_000_000));
+      // HTML: nur den lesbaren Text, nicht Stil und Tags (Klaus 20.11.2026, siehe lib/htmltext.ts)
+      const t = istHtml(e.name, roh) ? htmlText(roh) : roh;
       d.volltext = t; d.kopfText = t.slice(0, 1500); d.textQuelle = "text";
     } else d.textQuelle = "keiner";
   } catch (fehler) {
