@@ -30,7 +30,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `keinMarkup` blendet Absender wie „doctype html>“ aus (`app.js`). (3) **Öffnen/Teilen in der Android-App** über `ProFiles.open`/`share` aus dem Klon
   Private Brain Pro (`nativUebergeben` in `app.js`): „Öffnen“ = Androids „Öffnen mit“ (z. B. Chrome), „Teilen“ = Teilen-Fenster; bis 16 MB, sonst und
   bei Fehler wie bisher. Familienakte: dasselbe Problem, dort 2.28.77. Fassung 0.9.7 (Code 97). Probe 528 grün (4 neu), `test-native` 37 grün.
-  Am Tablet ungeprüft.
+  Am Tablet ungeprüft. **Veröffentlicht 21.11.:** Android und Windows am Release `v0.9.7`, Nachweis `docs/VEROEFFENTLICHUNG-0.9.7.md` – nicht
+  erneut ausgeben; nächste 0.9.8 (Code 98).
 
 ## Stand (20.11.2026, 0.9.6 – Datei-Organizer 0.4.23, Windows zum Download)
 
