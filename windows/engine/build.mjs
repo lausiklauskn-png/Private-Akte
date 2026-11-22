@@ -16,7 +16,7 @@ for(const dep of deps){
   if(!bytes||sha(bytes)!==dep.sha256){
     // Maven Central meldete am 20.–22.11.2026 zeitweise 404/429 für vorhandene Dateien: zweiter Spiegel derselben Datei, je drei Versuche.
     // Der Fingerabdruck unten bleibt die Prüfung – ein anderer Spiegel kann keine andere Datei unterschieben.
-    const quellen=[dep.url,dep.url.replace('://repo.maven.apache.org/','://repo1.maven.org/')].filter((u,i,a)=>a.indexOf(u)===i);
+    const quellen=[dep.url,dep.url.replace('://repo.maven.apache.org/','://repo1.maven.org/'),dep.url.replace('://repo.maven.apache.org/','://maven-central.storage-download.googleapis.com/')].filter((u,i,a)=>a.indexOf(u)===i);
     bytes=null;
     for(let versuch=0;versuch<3&&!bytes;versuch++)for(const url of quellen){
       const response=await fetch(url).catch(()=>null);
