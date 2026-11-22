@@ -24,7 +24,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
-- **Klon `privat-brain-pro` @ `0213641`** (Private Brain Pro 1.0.58, PR #158 dort): „Alle Konten“ als drittes Postfach-Konto (Ordner,
+- **Klon `privat-brain-pro` @ `8e082ae`** (Private Brain Pro 1.0.58, PR #158 und #159 dort: dazu vier Themen aus V3): „Alle Konten“ als drittes Postfach-Konto (Ordner,
   Liste, Leseansicht wie ein einzelnes Konto; Index aller Ordner mit Anhang-Angaben; Listen in Seiten zu 15 mit „Weitere laden“;
   Mails der gezeigten Seite samt Anhängen vorausgeladen). Fassung 0.9.9 (Code 99). Probe 536 grün, `test-native` 37 grün (lokal ohne
   Brain-Web). Nicht zusammengeführt und nicht veröffentlicht – wartet auf Klaus' Wort. Am Tablet ungeprüft.
