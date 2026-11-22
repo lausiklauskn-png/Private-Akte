@@ -7,6 +7,8 @@ buildscript {
         mavenCentral()
         // Maven Central meldet zeitweise 404 für vorhandene Dateien (20.11.2026 mehrfach in der CI): zweiter Spiegel derselben Dateien.
         maven { url "https://repo1.maven.org/maven2/" }
+        // 21./22.11.2026: Maven Central drosselte die CI mit 429 auf beiden Adressen – Googles Spiegel von Maven Central als dritte Quelle.
+        maven { url "https://maven-central.storage-download.googleapis.com/maven2/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.13.0'
@@ -25,6 +27,8 @@ allprojects {
         mavenCentral()
         // Maven Central meldet zeitweise 404 für vorhandene Dateien (20.11.2026 mehrfach in der CI): zweiter Spiegel derselben Dateien.
         maven { url "https://repo1.maven.org/maven2/" }
+        // 21./22.11.2026: Maven Central drosselte die CI mit 429 auf beiden Adressen – Googles Spiegel von Maven Central als dritte Quelle.
+        maven { url "https://maven-central.storage-download.googleapis.com/maven2/" }
     }
 }
 

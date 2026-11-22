@@ -29,7 +29,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Regel `.leer{padding:22px}` der Hinweistexte – jede Zeile ohne Unterordner war 52 statt 28 px hoch. Jetzt `.eknoten .epfeil.leer{…;padding:0}`
   (`app.css`). Probe 530 grün (2 neu: Unterordner nicht höher als die übrigen Äste; Gegenprobe ohne die Zeile rot). Klon `datei-organizer` @ `ae56da7`
   (0.4.25, PR #81 dort: Äste 34 statt 40 px), Familienakte: Ordnerbäume der Hilfe 2 statt 6 px (PR #230 dort). Fassung 0.9.8 (Code 98).
-  Nicht als App ausgegeben.
+- **Vorschau im Vollbild (Klaus 22.11., Bild vom Tablet: „Möglichkeit machen, den Vollbildschirm anzugucken in der Vorschau“; geht mit in 0.9.8):**
+  oben rechts an der Vorschau im Steckbrief der Knopf ⤢ (`echt-vollbild`) – Fläche über allem (`#vollbild`, `vollbildAuf`/`vollbildZu` in `app.js`),
+  Foto ganz eingepasst, PDF alle Seiten in voller Breite (höchstens 40) zum Rollen; wo der Browser es erlaubt, ganzer Bildschirm. Zurück, Esc oder ×
+  schließt (nur das Vollbild, der Steckbrief bleibt). Probe 536 grün (4 neu, mit einem erfundenen Foto). Am Tablet ungeprüft.
 
 ## Stand (21.11.2026, 0.9.7 – HTML-Dateien, „Öffnen mit“ in der App)
 

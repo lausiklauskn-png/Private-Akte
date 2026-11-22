@@ -14,8 +14,16 @@ for(const dep of deps){
   const path=join(build,'lib',`${dep.name}-${dep.version}.jar`);
   let bytes=await readFile(path).catch(()=>null);
   if(!bytes||sha(bytes)!==dep.sha256){
-    const response=await fetch(dep.url);if(!response.ok)throw Error('Abhängigkeit nicht ladbar: '+dep.name);
-    bytes=Buffer.from(await response.arrayBuffer());
+    // Maven Central meldete am 20.–22.11.2026 zeitweise 404/429 für vorhandene Dateien: zweiter Spiegel derselben Datei, je drei Versuche.
+    // Der Fingerabdruck unten bleibt die Prüfung – ein anderer Spiegel kann keine andere Datei unterschieben.
+    const quellen=[dep.url,dep.url.replace('://repo.maven.apache.org/','://repo1.maven.org/'),dep.url.replace('://repo.maven.apache.org/','://maven-central.storage-download.googleapis.com/')].filter((u,i,a)=>a.indexOf(u)===i);
+    bytes=null;
+    for(let versuch=0;versuch<3&&!bytes;versuch++)for(const url of quellen){
+      const response=await fetch(url).catch(()=>null);
+      if(response?.ok){bytes=Buffer.from(await response.arrayBuffer());break;}
+      await new Promise(r=>setTimeout(r,1500*(versuch+1)));
+    }
+    if(!bytes)throw Error('Abhängigkeit nicht ladbar: '+dep.name);
     if(sha(bytes)!==dep.sha256)throw Error('Abhängigkeit mit falschem Fingerabdruck: '+dep.name);
     await writeFile(path,bytes);
   }

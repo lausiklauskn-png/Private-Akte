@@ -7,6 +7,7 @@ const esc = v => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 const euro = n => new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
 const datum = d => d.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
 const P = {
+ vollbild:'<path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/>',
  start:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
  akten:'<path d="M3 7a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>',
  eingang:'<path d="M4 4h16l2 11v5H2v-5ZM2 15h6l2 3h4l2-3h6M12 5v7m-3-3 3 3 3-3"/>',
@@ -817,13 +818,32 @@ function echtSteckbrief(d){
    <dl class="angaben">${z('Liegt in', esc(echtPfad(d)))}${z('Datei', esc(echtArt(d)) + ' · ' + echtGroesse(d.sizeBytes))}${z('Art', esc(art))}${z('Bereich', esc(d.category))}${z('Absender', esc(echtAbsender(d)))}${z('Betrifft', esc(echtPersonen(d).join(', ') || 'alle'))}${z('Akten', esc(akten.join(', ')))}${z('Datum', d.documentDate ? echtDatum(d.documentDate) : '')}${z('Frist', frist ? esc(frist) + (fristVorbei(frist) ? ' · <span class="rot">Frist überschritten</span>' : '') : '')}${z('Betrag', esc(betrag))}${z('Abgelegt', echtDatum(d.addedAt))}${z('Gespeichert', 'in der Akte auf diesem Gerät')}</dl>
    <div class="reihe esbknoepfe">${pdf || bild ? `<button class="rund klein" data-a="echt-vorschau" data-id="${id}" aria-pressed="${echt.vor === d.id}" aria-label="Vorschau" data-tipp="Vorschau">${ic('auge')}</button>` : ''}<button class="knopf hell" data-a="echt-teilen" data-id="${id}">${ic('teilen')} Teilen</button><button class="rund klein" data-a="echt-stift" data-id="${id}" aria-label="Einordnen" data-tipp="Einordnen">${ic('stift')}</button><button class="knopf hell" data-a="echt-termin" data-id="${id}">${ic('kalender')} Termin dazu</button>
     ${pdf ? `<button class="knopf hell" data-a="leser" data-id="${id}">Lesen und darin suchen</button>` : ''}<button class="knopf hell" data-a="echt-oeffnen" data-id="${id}">${pdf ? 'Im Browser öffnen' : 'Öffnen'}</button>${pdf || bild ? `<button class="knopf hell" data-a="echt-wfpdf" data-id="${id}">${ic('pdf')} Mit Workflow PDF bearbeiten</button>` : ''}<button class="rund klein" data-a="echt-raus" data-id="${id}" aria-label="Aus der Akte nehmen" data-tipp="Aus der Akte nehmen">${ic('muell')}</button></div>
-   ${echt.vor === d.id ? `<div class="evorschau" id="evorschau"><p class="leer">Vorschau wird geladen …</p></div>` : ''}
+   ${echt.vor === d.id ? `<div class="evorschau-rahmen"><button class="rund klein evoll" data-a="echt-vollbild" data-id="${id}" aria-label="Vollbild" data-tipp="Vollbild">${ic('vollbild')}</button><div class="evorschau" id="evorschau"><p class="leer">Vorschau wird geladen …</p></div></div>` : ''}
    ${d.textAuszug ? `<details class="etext"><summary>Erkannter Text</summary><pre>${esc(T().lesbarerText(d.originalName || '', d.textAuszug))}</pre></details>` : ''}</section>`;
 }
 function echtStift(d){
   return `<form class="felder estift" data-form="zuordnen" data-id="${esc(d.id)}"><label>Bereich – auswählen oder neue Kategorie eintippen <input class="feld" name="bereich" list="estift-bereiche" value="${esc(d.category)}" required maxlength="60" autocomplete="off"></label><datalist id="estift-bereiche">${echtBereiche().map(b => `<option value="${esc(b)}">`).join('')}</datalist>
    ${zuordnenFelder(d)}<div class="reihe"><button class="knopf gruen" type="submit">Übernehmen</button><button class="knopf hell" type="button" data-a="echt-stift" data-id="${esc(d.id)}">Abbrechen</button></div></form>`;
 }
+/* Vollbild der Vorschau (Klaus 22.11., Bild vom Tablet: „Möglichkeit machen, den Vollbildschirm anzugucken“): eigene Fläche über allem,
+   Foto ganz eingepasst, PDF alle Seiten in voller Breite (höchstens 40) zum Rollen; Zurück, Esc oder × schließt. Der Bildschirm wird – wo der
+   Browser es erlaubt – ganz belegt; sonst füllt die Fläche das Fenster. */
+async function vollbildAuf(id){
+  const d = (echt.liste || []).find(x => x.id === id); if (!d) return; vollbildZu();
+  document.body.insertAdjacentHTML('beforeend', `<div id="vollbild" class="vollbild" role="dialog" aria-label="${esc(echtTitel(d))}"><button class="rund vbzu" data-a="vollbild-zu" aria-label="Schließen" data-tipp="Schließen">${ic('zu')}</button><div class="vbinhalt"><p class="leer">Wird geladen …</p></div></div>`);
+  const v = $('vollbild'), o = v.querySelector('.vbinhalt'); try { v.requestFullscreen?.().catch(() => {}); } catch { /* nur Fläche */ }
+  try {
+    if (/\.pdf$/i.test(d.originalName)) { const pdf = await T().pdf(id); if (!pdf || !$('vollbild')) return; o.innerHTML = ''; o.classList.add('seiten');
+      const breit = Math.min(o.clientWidth - 16, 1400), punkt = Math.min(2, devicePixelRatio || 1);
+      for (let n = 1; n <= Math.min(40, pdf.numPages); n++) { const seite = await pdf.getPage(n), grund = seite.getViewport({scale:1}), sicht = seite.getViewport({scale:breit / grund.width * punkt}), c = document.createElement('canvas');
+        c.width = Math.round(sicht.width); c.height = Math.round(sicht.height); c.style.width = breit + 'px'; await seite.render({canvasContext:c.getContext('2d'), viewport:sicht}).promise; if (!$('vollbild')) return; o.append(c); }
+      if (pdf.numPages > 40) o.insertAdjacentHTML('beforeend', `<p class="leer">Seite 1–40 von ${pdf.numPages} · ganz über „Lesen und darin suchen“</p>`);
+    } else { const f = await T().datei(id), url = URL.createObjectURL(f); o.innerHTML = `<img alt="" src="${url}">`; setTimeout(() => URL.revokeObjectURL(url), 120000); }
+  } catch (err) { if ($('vollbild')) o.innerHTML = `<p class="leer">${esc(fehlerText(err))}</p>`; }
+}
+function vollbildZu(){ const v = $('vollbild'); if (!v) return; v.remove(); try { if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); } catch { /* schon zu */ } }
+document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && $('vollbild')) vollbildZu(); });
+document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && $('vollbild')) vollbildZu(); });
 /* Vorschau im Steckbrief (wie das Auge im Steckbrief des Organizers): bei PDFs die ersten drei Seiten, bei Fotos das Bild. */
 async function echtVorschau(id){
   const o = $('evorschau'); if (!o) return; const d = (echt.liste || []).find(x => x.id === id); if (!d) return;
@@ -1110,6 +1130,8 @@ Object.assign(A, {
  'echt-auf': e => { if (!e.closest('.ereihe')) return fEcht(e.dataset.id); A['echt-auge'](e); },
  'echt-auge': e => { const id = e.dataset.id; echt.sb = echt.sb === id ? null : id; echt.vor = null; echt.stift = null; mainZeigen(); },
  'echt-stift': e => { const id = e.dataset.id; echt.stift = echt.stift === id ? null : id; if (echt.stift) echt.sb = null; mainZeigen(); },
+ 'echt-vollbild': e => vollbildAuf(e.dataset.id),
+ 'vollbild-zu': () => vollbildZu(),
  'echt-vorschau': e => { const id = e.dataset.id; echt.vor = echt.vor === id ? null : id; mainZeigen(); if (echt.vor) echtVorschau(id); },
  'echt-muell': e => { const d = (echt.liste || []).find(x => x.id === e.dataset.id); if (d && confirm(`„${echtTitel(d)}“ aus der Akte nehmen?`)) A['echt-raus'](e); },
  'echt-teilen': async e => {
@@ -1659,7 +1681,7 @@ A['leiste-zurueck'] = () => history.back();
 document.addEventListener('click', ev => { if (leiste.auf && !ev.target.closest('.seitenleiste-griff')) { leiste.auf = false; seitenleisteZeigen(); } });
 document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && leiste.auf) { leiste.auf = false; seitenleisteZeigen(); } });
 seitenleisteZeigen();
-const zurTiefe = () => ($('rahmenort').innerHTML ? 1 : 0) + ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
+const zurTiefe = () => ($('vollbild') ? 1 : 0) + ($('rahmenort').innerHTML ? 1 : 0) + ($('fensterort').innerHTML ? 1 : 0) + ($('menueort').innerHTML ? 1 : 0) + (s.frage ? 1 : 0) + (s.bereich ? 1 : 0) + (s.ansicht !== 'start' ? 1 : 0);
 function zurAbgleich(){
   if (!zur.wache) return; const t = zurTiefe();
   if (t > zur.tiefe) { for (; zur.tiefe < t; zur.tiefe++) history.pushState({pa:zur.tiefe + 1}, ''); }
@@ -1676,7 +1698,8 @@ addEventListener('popstate', () => {
     zur.zuletzt = Date.now(); history.pushState({pa:0}, ''); toast('Du bist am Anfang. Noch einmal zurück verlässt die App.'); return;
   }
   zur.tiefe--;
-  if ($('fensterort').innerHTML) zu();
+  if ($('vollbild')) vollbildZu();
+  else if ($('fensterort').innerHTML) zu();
   else if ($('menueort').innerHTML) menueZu();
   else if ($('rahmenort').innerHTML) rahmenZu();
   else if (s.frage) { sprechEnde(false); s.frage = ''; s.wahl.clear(); zeigen(); }
