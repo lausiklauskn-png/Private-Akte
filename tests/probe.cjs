@@ -333,6 +333,20 @@ const { chromium } = require('playwright');
         soll((await p.locator('#echt .eliste').evaluate(e => e.scrollTop)) > 0 || vorher[0] === 0, '0.7.6: die Liste springt beim Öffnen nicht nach oben', JSON.stringify(vorher));
         const sb = await p.locator('[data-steckbrief]').innerText(); soll(['Datei', 'Bereich', 'Betrifft', 'Abgelegt', 'Teilen', 'Termin dazu', 'Öffnen'].every(w => sb.includes(w)), '0.7.6: Steckbrief mit Angaben, Teilen, Termin dazu, Öffnen');
         await p.locator('#echt .ereihe').nth(4).locator('[data-a=echt-auf]').click(); soll((await p.locator('[data-steckbrief]').count()) === 0, '0.7.6: zweiter Tipp schließt den Steckbrief');
+        { // 0.9.8 (Klaus 22.11.): Vorschau im Vollbild – Knopf an der Vorschau, Fläche über allem, Esc und Zurück schließen
+          const vb = await p.evaluate(async () => { const c = document.createElement('canvas'); c.width = 600; c.height = 400; const g = c.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, 600, 400); g.fillStyle = '#000'; g.font = '40px sans-serif'; g.fillText('Vollbild-Probe', 40, 200);
+            const blob = await new Promise(r => c.toBlob(r, 'image/png')), d = await window.PrivateAkteTresor.ablegen(new File([blob], 'Vollbild-Probe.png', {type:'image/png'}), {bereich:'Sonstiges', datum:null, titel:null, notiz:null});
+            await echtLaden(); echt.knoten = null; echt.zeig = 999; echt.sb = d.id; echt.vor = null; mainZeigen(); return {id:d.id, knoten:null}; });
+          await p.waitForSelector('[data-steckbrief] [data-a=echt-vorschau]');
+          await klick('[data-steckbrief] [data-a=echt-vorschau]'); await p.waitForSelector('#evorschau img', {timeout:15000});
+          await klick('[data-a=echt-vollbild]'); await p.waitForSelector('#vollbild img', {timeout:15000}); await p.waitForTimeout(300);
+          const m = await p.evaluate(() => { const r = document.querySelector('#vollbild').getBoundingClientRect(), b = document.querySelector('#vollbild img').getBoundingClientRect(); return { deckt: r.width >= innerWidth - 1 && r.height >= innerHeight - 1, breit: Math.round(b.width), vor: Math.round(document.querySelector('#evorschau img').getBoundingClientRect().width) }; });
+          soll(m.deckt && m.breit >= m.vor, 'Vollbild: Fläche deckt das Fenster, Bild mindestens so groß wie in der Vorschau (' + JSON.stringify(m) + ')');
+          await p.keyboard.press('Escape'); soll((await p.locator('#vollbild').count()) === 0, 'Vollbild: Esc schließt');
+          await klick('[data-a=echt-vollbild]'); await p.waitForSelector('#vollbild'); await p.waitForTimeout(300); await p.goBack().catch(() => {}); await p.waitForTimeout(500);
+          soll((await p.locator('#vollbild').count()) === 0 && (await p.locator('[data-steckbrief]').count()) === 1, 'Vollbild: Zurück schließt nur das Vollbild, der Steckbrief bleibt');
+          await p.evaluate(async id => { echt.sb = null; echt.vor = null; await window.PrivateAkteTresor.herausnehmen(id); await echtLaden(); echt.zeig = 30; mainZeigen(); }, vb.id); await p.waitForTimeout(200);
+        }
         const id = await p.locator('#echt .ereihe').nth(4).getAttribute('data-reihe');
         await p.locator('#echt .ereihe').nth(4).locator('[data-a=echt-stift]').click();
         soll((await p.locator('#echt .ereihe').nth(4).locator('form[data-form=zuordnen] [name=bereich]').count()) === 1, '0.7.6: Stift klappt das Einordnen unter der Zeile auf (mit Bereich)');

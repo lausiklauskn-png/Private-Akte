@@ -460,6 +460,13 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .esteckbrief .ekurz{margin:0 0 8px;font-size:13px;color:var(--muted)}
 .esteckbrief .angaben{margin:0 0 8px}
 .esbknoepfe{flex-wrap:wrap;gap:6px;align-items:center}.esbknoepfe .rund[aria-pressed=true]{background:var(--tealsoft);color:var(--teal)}
+.evorschau-rahmen{position:relative}.evoll{position:absolute;top:14px;right:6px;z-index:2;background:rgba(255,255,255,.92)}
+.vollbild{position:fixed;inset:0;z-index:9000;background:#111;display:flex;flex-direction:column;touch-action:pan-x pan-y pinch-zoom}
+.vollbild .vbzu{position:absolute;top:10px;right:10px;z-index:2;background:rgba(255,255,255,.92)}
+.vbinhalt{flex:1;min-height:0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:8px}
+.vbinhalt.seiten{flex-direction:column;justify-content:flex-start;gap:10px}
+.vbinhalt img{width:100%;height:100%;object-fit:contain}.vbinhalt canvas{max-width:100%;height:auto;background:#fff}
+.vbinhalt .leer{color:#ddd}
 .evorschau{display:grid;gap:8px;margin-top:8px}.evorschau canvas,.evorschau img{width:100%;height:auto;border:1px solid #e3e8ea;border-radius:8px}
 .etext{margin-top:8px;font-size:13px}.etext summary{cursor:pointer;color:var(--muted)}.etext pre{white-space:pre-wrap;max-height:260px;overflow:auto;font:inherit;margin:6px 0 0}
 .rot{color:#c0392b}
