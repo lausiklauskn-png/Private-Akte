@@ -22,6 +22,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
+
+- **Klon `privat-brain-pro` @ `0213641`** (Private Brain Pro 1.0.58, PR #158 dort): „Alle Konten“ als drittes Postfach-Konto (Ordner,
+  Liste, Leseansicht wie ein einzelnes Konto; Index aller Ordner mit Anhang-Angaben; Listen in Seiten zu 15 mit „Weitere laden“;
+  Mails der gezeigten Seite samt Anhängen vorausgeladen). Fassung 0.9.9 (Code 99). Probe 536 grün, `test-native` 37 grün (lokal ohne
+  Brain-Web). Nicht zusammengeführt und nicht veröffentlicht – wartet auf Klaus' Wort. Am Tablet ungeprüft.
+
 ## Stand (21.11.2026, 0.9.8 – Baum dichter)
 
 - **Klaus 21.11. (Bild vom Tablet, 0.9.7: „der Abstand zwischen Bescheinigung und Brief im Baum ist viel zu groß … ein Muster, überall gesehen“):**
