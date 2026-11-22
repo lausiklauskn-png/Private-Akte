@@ -33,6 +33,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   oben rechts an der Vorschau im Steckbrief der Knopf ⤢ (`echt-vollbild`) – Fläche über allem (`#vollbild`, `vollbildAuf`/`vollbildZu` in `app.js`),
   Foto ganz eingepasst, PDF alle Seiten in voller Breite (höchstens 40) zum Rollen; wo der Browser es erlaubt, ganzer Bildschirm. Zurück, Esc oder ×
   schließt (nur das Vollbild, der Steckbrief bleibt). Probe 536 grün (4 neu, mit einem erfundenen Foto). Am Tablet ungeprüft.
+- **Veröffentlicht 22.11.:** Android und Windows am Release `v0.9.8`, Nachweis `docs/VEROEFFENTLICHUNG-0.9.8.md` – nicht erneut ausgeben;
+  nächste 0.9.9 (Code 99).
 
 ## Stand (21.11.2026, 0.9.7 – HTML-Dateien, „Öffnen mit“ in der App)
 
