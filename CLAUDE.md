@@ -34,7 +34,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Foto ganz eingepasst, PDF alle Seiten in voller Breite (höchstens 40) zum Rollen; wo der Browser es erlaubt, ganzer Bildschirm. Zurück, Esc oder ×
   schließt (nur das Vollbild, der Steckbrief bleibt). Probe 536 grün (4 neu, mit einem erfundenen Foto). Am Tablet ungeprüft.
 - **Veröffentlicht 22.11.:** Android und Windows am Release `v0.9.8`, Nachweis `docs/VEROEFFENTLICHUNG-0.9.8.md` – nicht erneut ausgeben;
-  nächste 0.9.9 (Code 99).
+  nächste 0.9.9 (Code 99). Abschlussbrief `docs/BRIEF_ABSCHLUSS_2026-11-22_BAUM-VOLLBILD-0.9.8.md` (nächste Sitzung: Private Brain Pro/V3, Brief im Repo Privat-Brain-Pro).
 
 ## Stand (21.11.2026, 0.9.7 – HTML-Dateien, „Öffnen mit“ in der App)
 
