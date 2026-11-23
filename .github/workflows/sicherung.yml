@@ -63,6 +63,14 @@ jobs:
             unzip -l "$z" | grep -q '/index.html$'
           done
           grep -F 'WebApp-' INHALT.md
+      - name: Alles in wenige große ZIPs packen (zum Laden auf einmal)
+        run: |
+          # bei Pull Requests kleine Teile, damit das Aufteilen wirklich geprüft wird
+          if [ "${{ github.event_name }}" = pull_request ]; then export TEIL_MB=10; fi
+          bash tools/sicherung/teile.sh "$PWD/paket" "$(date -u +%Y-%m-%d)"
+          d=$(mktemp -d); for z in paket/Sicherung-*-Teil-*.zip; do unzip -oq "$z" -d "$d"; done
+          ( cd "$d"/Sicherung-* && sha256sum -c SHA256SUMS )
+          rm -rf "$d"
       - name: Als Release ablegen
         if: github.event_name == 'workflow_dispatch' && inputs.veroeffentlichen == 'ja' && github.ref == 'refs/heads/main'
         env:
@@ -73,12 +81,13 @@ jobs:
             gh release delete "$tag" -R "$GITHUB_REPOSITORY" --yes --cleanup-tag
           fi
           if gh release view "$tag" -R "$GITHUB_REPOSITORY" > /dev/null 2>&1; then tag="$tag-$(date -u +%H%M)"; fi
+          { echo "**Alles auf einmal:** die Dateien \`Sicherung-…-Teil-N-von-M.zip\` laden (je höchstens 1,9 GB) und alle in denselben Ordner entpacken. Darin liegen dieselben Dateien wie hier einzeln."; echo; cat paket/INHALT.md; } > notizen.md
           gh release create "$tag" -R "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false \
-            --title "Geschenkbox und Sicherung $(date -u +%d.%m.%Y)" --notes-file paket/INHALT.md paket/*
+            --title "Geschenkbox und Sicherung $(date -u +%d.%m.%Y)" --notes-file notizen.md paket/*
           # von außen nachladen und vergleichen
           mkdir nachgeladen
           gh release download "$tag" -R "$GITHUB_REPOSITORY" -D nachgeladen
-          cd nachgeladen && sha256sum -c SHA256SUMS
+          cd nachgeladen && sha256sum -c SHA256SUMS && sha256sum -c TEILE-SHA256SUMS
           echo "Release: https://github.com/$GITHUB_REPOSITORY/releases/tag/$tag" >> "$GITHUB_STEP_SUMMARY"
       - name: Bei Probe als Download behalten
         if: github.event_name == 'pull_request'
