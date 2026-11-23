@@ -7,7 +7,7 @@ import { join } from 'node:path';
 const PAKET = process.env.PAKET;
 const STAND = process.env.STAND;
 const spalten = ['repo', 'name', 'rolle', 'zip', 'commits', 'zweige', 'tags', 'kopf', 'erster', 'zuletzt',
-  'apk', 'apktag', 'exe', 'exetag', 'web'];
+  'apk', 'apktag', 'exe', 'exetag', 'web', 'webart'];
 const apps = readFileSync(process.argv[2], 'utf8').split('\n').filter(Boolean)
   .map((z) => Object.fromEntries(z.split('\t').map((w, i) => [spalten[i], w])));
 
@@ -26,7 +26,7 @@ for (const a of apps) {
   md += `| **${a.name}** (\`${a.repo}\`) | ${a.rolle} | \`${a.zip}\` (${mb(a.zip)}) · ${a.commits} · ${a.zweige} · ${a.tags} · ${a.erster} bis ${a.zuletzt} · \`${a.kopf}\` | `;
   md += `${a.apk ? `\`${a.apk}\` (${fassung(a.apktag)}, ${mb(a.apk)})` : '–'} | `;
   md += `${a.exe ? `\`${a.exe}\` (${fassung(a.exetag)}, ${mb(a.exe)})` : '–'} | `;
-  md += `${a.web ? `\`${a.web}\` (${mb(a.web)})` : '–'} |\n`;
+  md += `${a.web ? `\`${a.web}\` (${mb(a.web)}; ${a.webart})` : '–'} |\n`;
 }
 md += '\nPrüfsummen aller Dateien: `SHA256SUMS` (prüfen mit `sha256sum -c SHA256SUMS`).\n';
 writeFileSync(join(PAKET, 'INHALT.md'), md);
@@ -42,7 +42,7 @@ const karten = apps.map((a) => `
       <ul class="wege">
         ${weg('Android (APK)', a.apk, `${mb(a.apk)} · Installation aus dieser Quelle einmal erlauben.`)}
         ${weg('Windows', a.exe, `${mb(a.exe)} · Installer für Windows 10/11 (64 Bit).`)}
-        ${weg('Web-App (PWA)', a.web, `${mb(a.web)} · entpacken und mit einem Webserver ausliefern (siehe WIEDERHERSTELLEN.md); online: https://lausiklauskn-png.github.io/${a.repo}/`)}
+        ${weg('Web-App (PWA)', a.web, `${mb(a.web)} · ${a.webart}. Entpacken und mit einem Webserver ausliefern (siehe WIEDERHERSTELLEN.md); online: https://lausiklauskn-png.github.io/${a.repo}/`)}
         ${weg('Quellcode mit Verlauf', a.zip, `${mb(a.zip)} · ${a.commits} Commits, ${a.zweige} Zweige, ${a.tags} Tags, ${a.erster} bis ${a.zuletzt}.`)}
       </ul>
     </article>`).join('');
