@@ -1342,7 +1342,7 @@ function kartenHoehe(){
 addEventListener('resize', () => kartenHoehe());
 /* Bereichs-Knöpfe (Klaus 18.11.): erst eine Reihe ganz füllen, dann die nächste – höchstens drei Reihen; sind es mehr, stehen sie in
    drei Reihen und lassen sich seitlich schieben. Die Knöpfe behalten ihre Größe (so breit wie ihr Text, Klaus: „nicht größer ziehen“). */
-function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
+function kachelRaster(){ const o = document.querySelector('.bereichsraster'); if (!o) return; o.classList.remove('viele'); if (matchMedia('(max-width:699px)').matches) return; const reihen = new Set([...o.children].map(k => k.offsetTop)).size; o.classList.toggle('viele', reihen > 3); }
 addEventListener('resize', () => kachelRaster());
 function zeigen(){ navZeigen(); mainZeigen(); }
 farbeAkte(); kopfZeigen(); zeigen(); echtLaden().finally(() => { glockeStarten(); empfangStarten(); kopieAuto(); }); bedPruefen(); /* die Glocke erst, wenn die Akte den Tresor geöffnet hat – nie zwei zugleich beim ersten Anlegen */
