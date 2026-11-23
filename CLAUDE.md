@@ -31,6 +31,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   dazu `Geschenkbox.html` (relative Links, geht offline im selben Ordner), `INHALT.md`, `WIEDERHERSTELLEN.md` (auch für eine KI),
   `SHA256SUMS`. Von Hand von `main` mit `veroeffentlichen = ja` → Release `sicherung-<Datum>` (nicht „neueste“). Nicht enthalten:
   Geheimnisse (Signier-Freigaben bei Klaus) und das private Kimhub. Neue App dazu: eine Zeile in `apps.tsv`.
+- **Alles auf einmal laden (Klaus 23.11.: „alle selektieren geht ja nicht“):** `tools/sicherung/teile.sh` packt zusätzlich alles in
+  `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
+  Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
