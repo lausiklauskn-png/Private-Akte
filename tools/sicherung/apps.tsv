@@ -1,0 +1,13 @@
+# repo	name	rolle	pwa (ja/nein)
+Private-Akte	Private Akte	Hauptapp: Hülle um alle Tools (Akte, Unterlagen, Portemonnaie, Kalender, Mail über Private Brain Pro)	ja
+Meine-Familienakte	Familienakte	Kern der Akte: Tresor, Register, Kalender, Notizen, Suche (in der Private Akte als Klon klone/familienakte)	ja
+Privat-Brain-Pro	Private Brain Pro	Mail, Bedeutungssuche, Explorer (in der Private Akte als Klon klone/privat-brain-pro)	ja
+Datei-Organizer	Datei-Organizer	Einlesen und Sortieren großer Mengen, Sortier-Kern (Klon klone/datei-organizer)	ja
+Workflow-PDF	Workflow PDF	Scannen und PDF bearbeiten (Klon klone/workflow-pdf)	ja
+Workflow-PDF-Pro	Workflow PDF Pro	Workflow PDF als Android- und Windows-App	nein
+BookLedgerPro	BookLedger Pro	Buchhaltung; Rechenteile des Portemonnaies und Bank-Einlesen (Klon klone/bookledger)	ja
+BookLedger-Basic	BookLedger Basic	Schlanke Fassung von BookLedger Pro	ja
+Workflow-Calculate	Workflow Calculate	Angebote kalkulieren (Zuschlagskalkulation), im BookLedger-Verbund	ja
+Workflow-Needs	Workflow Needs	Bedarfsanalyse, Schätzung, Angebot, im BookLedger-Verbund	ja
+Familienbuero-Pro	Familienbüro Pro	Eigene App (ONLYOFFICE, AGPL-3.0); die Private Akte ruft sie nur auf	ja
+Sage-Protokol	Sage-Protokol	Kanon der gemeinsamen Bausteine (Suche 04_match.js, Regeln, Lehren; Klon klone/sage-protokol)	nein

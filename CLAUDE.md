@@ -22,6 +22,16 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - **Farben** (Klaus' Richtung): Stil des Familienbüros (Knöpfe mit Verlauf, Kopfleiste, Palette). Portemonnaie startet im Grün des
   Familienbüros, Workflow PDF rötlich; jede App startet in ihrer Farbe, bis der Nutzer umstellt.
 
+## Geschenkbox und Sicherung (23.11.2026, Klaus: „Folgesicherung … bei Serverausfall von GitHub nachstellen“)
+
+- Ablauf „Geschenkbox und Sicherung“ (`.github/workflows/sicherung.yml`, Skripte `tools/sicherung/`): für jede App in
+  `tools/sicherung/apps.tsv` (Private Akte, Familienakte, Private Brain Pro, Datei-Organizer, Workflow PDF, Workflow PDF Pro,
+  BookLedger Pro, BookLedger Basic, Workflow Calculate, Workflow Needs, Familienbüro Pro, Sage-Protokol; **nicht** V3) Quellcode als
+  ZIP mit vollem Git-Verlauf (alle Zweige und Tags), neueste APK und Windows-Installer aus den Releases, Abzug der Web-App von Pages,
+  dazu `Geschenkbox.html` (relative Links, geht offline im selben Ordner), `INHALT.md`, `WIEDERHERSTELLEN.md` (auch für eine KI),
+  `SHA256SUMS`. Von Hand von `main` mit `veroeffentlichen = ja` → Release `sicherung-<Datum>` (nicht „neueste“). Nicht enthalten:
+  Geheimnisse (Signier-Freigaben bei Klaus) und das private Kimhub. Neue App dazu: eine Zeile in `apps.tsv`.
+
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
 - **Klon `privat-brain-pro` @ `8e082ae`** (Private Brain Pro 1.0.58, PR #158 und #159 dort: dazu vier Themen aus V3): „Alle Konten“ als drittes Postfach-Konto (Ordner,
