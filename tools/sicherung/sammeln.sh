@@ -26,24 +26,53 @@ neueste() {
     | first // empty | "\(.t)\t\(.n)\t\(.u)"'
 }
 
+# Web-App: so, wie GitHub Pages sie ausliefert.
+#  - Pages aus dem Zweig (kein upload-pages-artifact): die Dateien des Hauptzweigs sind die Web-App.
+#  - Pages aus einem Bau: das letzte noch vorhandene Paket "github-pages" eines erfolgreichen Laufs.
+#  - Sonst ein Abzug der Seite (mehrere Runden: alles, was HTML, CSS, JS und JSON nennen).
+# Ergebnis in $ARBEIT/pwa/<repo>; Rückgabe der Art in $webart.
 pwa_holen() {
-  local repo="$1" basis="https://$BESITZER.github.io/$1/" ziel="$ARBEIT/pwa/$1"
-  curl -fsSIL "$basis" > /dev/null 2>&1 || return 1
-  mkdir -p "$ziel"
-  # ganze Seite samt eingebundener Dateien
-  wget -q -e robots=off --mirror --no-parent --page-requisites -nH --cut-dirs=1 \
-       --reject-regex '\?' -P "$ziel" "$basis" || true
-  # Dateien, die nur der Service Worker oder das Manifest nennen (Offline-Vorrat)
-  local d
-  for d in $(find "$ziel" -maxdepth 2 \( -name 'sw.js' -o -name 'service-worker.js' -o -name '*.webmanifest' -o -name 'manifest.json' \) 2>/dev/null); do
-    grep -oE "[\"'](\./)?[A-Za-z0-9_][A-Za-z0-9_./-]*\.(js|mjs|css|html|json|png|svg|ico|jpg|jpeg|webp|webmanifest|woff2?|wasm|txt|gz|onnx)[\"']" "$d" \
-      | tr -d "\"'" | sed 's#^\./##' | sort -u | while read -r p; do
-        [ -f "$ziel/$p" ] && continue
-        mkdir -p "$ziel/$(dirname "$p")"
-        curl -fsSL "$basis$p" -o "$ziel/$p" 2>/dev/null || rm -f "$ziel/$p"
-      done
+  local repo="$1" q="$2" ziel="$ARBEIT/pwa/$1" basis="https://$BESITZER.github.io/$1/"
+  rm -rf "$ziel"; mkdir -p "$ziel"; webart=""
+  local bau
+  bau=$(grep -l 'upload-pages-artifact' "$q"/.github/workflows/*.y*ml 2>/dev/null | head -n 1 || true)
+  if [ -z "$bau" ]; then
+    [ -f "$q/index.html" ] || return 1
+    git -C "$q" archive --format=tar HEAD | tar -x -C "$ziel"
+    webart="Dateien des Hauptzweigs (so liefert GitHub Pages sie aus)"
+    return 0
+  fi
+  local wf lauf art
+  wf=$(basename "$bau")
+  for lauf in $(gh api "repos/$BESITZER/$repo/actions/workflows/$wf/runs?status=success&per_page=20" -q '.workflow_runs[].id' 2>/dev/null); do
+    art=$(gh api "repos/$BESITZER/$repo/actions/runs/$lauf/artifacts" -q '.artifacts[] | select(.name=="github-pages" and (.expired|not)) | .id' 2>/dev/null | head -n 1)
+    [ -n "$art" ] || continue
+    if gh api "repos/$BESITZER/$repo/actions/artifacts/$art/zip" > "$ARBEIT/pages.zip" 2>/dev/null; then
+      rm -rf "$ARBEIT/pages"; mkdir -p "$ARBEIT/pages"
+      unzip -q -o "$ARBEIT/pages.zip" -d "$ARBEIT/pages" && tar -xf "$ARBEIT/pages/artifact.tar" -C "$ziel"
+      rm -rf "$ARBEIT/pages" "$ARBEIT/pages.zip"
+      [ -f "$ziel/index.html" ] && { webart="Bau aus Lauf $lauf ($wf), wie auf GitHub Pages veröffentlicht"; return 0; }
+    fi
   done
-  [ -n "$(ls -A "$ziel" 2>/dev/null)" ]
+  # Rückfall: Abzug der veröffentlichten Seite
+  curl -fsSIL "$basis" > /dev/null 2>&1 || return 1
+  wget -q -e robots=off --mirror --no-parent --page-requisites -nH --cut-dirs=1 --reject-regex '\?' -P "$ziel" "$basis" || true
+  local runde d p
+  for runde in 1 2 3 4; do
+    : > "$ARBEIT/neu.txt"
+    find "$ziel" -type f \( -name '*.html' -o -name '*.js' -o -name '*.mjs' -o -name '*.css' -o -name '*.json' -o -name '*.webmanifest' \) -size -8M -print0 \
+      | xargs -0 grep -ohE "[\"'(](\./|/$repo/)?[A-Za-z0-9_][A-Za-z0-9_./@-]*\.(js|mjs|css|html|json|png|svg|ico|jpg|jpeg|webp|webmanifest|woff2?|wasm|txt|gz|onnx|traineddata|mp4|webm)[\"')]" 2>/dev/null \
+      | sed -E "s#^[\"'(]##; s#[\"')]\$##; s#^\./##; s#^/$repo/##" | grep -v '^\.\.' | sort -u > "$ARBEIT/kandidaten.txt" || true
+    while read -r p; do
+      [ -f "$ziel/$p" ] && continue
+      mkdir -p "$ziel/$(dirname "$p")"
+      if curl -fsSL "$basis$p" -o "$ziel/$p" 2>/dev/null; then echo "$p" >> "$ARBEIT/neu.txt"; else rm -f "$ziel/$p"; fi
+    done < "$ARBEIT/kandidaten.txt"
+    [ -s "$ARBEIT/neu.txt" ] || break
+  done
+  find "$ziel" -type d -empty -delete
+  [ -f "$ziel/index.html" ] && webart="Abzug der veröffentlichten Seite (das Bau-Paket war abgelaufen; vollständig neu bauen aus dem Quellcode)"
+  [ -n "$webart" ]
 }
 
 while IFS=$'\t' read -r repo name rolle pwa; do
@@ -67,6 +96,13 @@ while IFS=$'\t' read -r repo name rolle pwa; do
   zuletzt=$(git -C "$q" log -1 --format=%cs HEAD)
   erster=$(git -C "$q" log --all --max-parents=0 --format=%cs | sort | sed -n 1p)
   git -C "$q" fsck --no-progress --connectivity-only > /dev/null
+  # Web-App (PWA), solange die Quelle noch da ist
+  web="" webart=""
+  if [ "$pwa" = "ja" ] && pwa_holen "$repo" "$q"; then
+    web="WebApp-$repo.zip"
+    ( cd "$ARBEIT/pwa" && zip -qry "$PAKET/$web" "$repo" )
+  fi
+  rm -rf "$ARBEIT/pwa/$repo"
   zipq="Quellcode-$repo-mit-Verlauf.zip"
   ( cd "$ARBEIT/quelle" && zip -qry "$PAKET/$zipq" "$repo" )
   rm -rf "$q"
@@ -80,18 +116,10 @@ while IFS=$'\t' read -r repo name rolle pwa; do
     IFS=$'\t' read -r t n u <<< "$z"; exe="$repo--$n"; curl -fsSL "$u" -o "$PAKET/$exe"; exetag="$t"
   fi
 
-  # 3. Web-App (PWA)
-  web=""
-  if [ "$pwa" = "ja" ] && pwa_holen "$repo"; then
-    web="WebApp-$repo.zip"
-    ( cd "$ARBEIT/pwa" && zip -qry "$PAKET/$web" "$repo" )
-    rm -rf "$ARBEIT/pwa/$repo"
-  fi
-
   printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
     "$repo" "$name" "$rolle" "$zipq" "$commits" "$zweige" "$tags" "$kopf" "$erster" "$zuletzt" \
     "$apk" "${apktag:-}" "$exe" "${exetag:-}" >> "$ARBEIT/zeilen.tsv"
-  printf '%s\n' "$web" >> "$ARBEIT/web.txt"
+  printf '%s\t%s\n' "$web" "$webart" >> "$ARBEIT/web.txt"
   unset apktag exetag
   echo "::endgroup::"
 done < "$HIER/apps.tsv"
