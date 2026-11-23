@@ -276,7 +276,7 @@ function bereicheKacheln(){
   const zahl = new Map(); for (const d of l) { const k = kanonBereich(d.category); zahl.set(k, (zahl.get(k) || 0) + 1); }
   const voll = [...zahl].sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0]), 'de'));
   const leer = GRUNDBEREICHE.filter(b => ![...zahl.keys()].some(k => bereichKern(k) === bereichKern(b))).map(b => [b, 0]);
-  const g = [...voll, ...leer];
+  const g = [...voll, ...leer].sort((a, b) => String(a[0]).localeCompare(String(b[0]), 'de')); // Klaus 23.11.: nach dem Alphabet, dann findet man sie leichter
   return `<div class="abschnitt" id="bereiche"><h2>Bereiche <span>${g.length}</span></h2><div class="kacheln bereichsraster">${g.map(([b, n], i) => `<button class="kachel${n ? '' : ' leer'}" style="--a:${KFARBE[i % 6][0]};--b:${KFARBE[i % 6][1]}" data-a="echt-bereich" data-k="${esc(b)}"><span class="tupfer eckig">${ic('akten')}</span><span><strong>${esc(b)}</strong><small>${n ? `${n} ${n === 1 ? 'Unterlage' : 'Unterlagen'}` : 'noch leer'}</small></span></button>`).join('')}</div></div>`;
 }
 /* ---------- Akten (0.7.0, Klaus 18.11., Antworten A–D ja) ----------
