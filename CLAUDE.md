@@ -35,7 +35,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
   Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
-## Stand (24.11.2026, Diktat in der Android-App – nicht ausgegeben, Fassung nicht erhöht)
+## Stand (24.11.2026, 0.9.10 – Diktat in der Android-App)
 
 - **Klaus 24.11. (Bild vom Galaxy Z Fold 7, Android 17, 0.9.9): in den App-Berechtigungen steht Kamera, aber kein Mikrofon; das Mikrofon
   „wird nicht erkannt“.** Kein Mikrofon-Recht ist Absicht (wie Familienakte und Private Brain Pro: Androids Sprachfenster hört zu, die App
@@ -49,6 +49,7 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Dazu Workflow PDF im Rahmen: `rahmen/wfpdf-bruecke.js` übernimmt das Sprachfenster der Akte (Marke `FamilienakteDiktat`), wie
   `fa-wfpdf-bruecke.js` der Familienakte (dort PR #232). Private Brain Pro im Rahmen hat sein eigenes (`native-speech.js`), der Datei-Organizer
   kein Mikrofon. Probe `test-native` 41 grün (Gegenprobe rot), Web-Probe 536 grün.
+- Fassung 0.9.10 (Code 100), Klaus 24.11.: „Ja, bitte ausgeben“.
 
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
