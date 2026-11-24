@@ -49,7 +49,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Dazu Workflow PDF im Rahmen: `rahmen/wfpdf-bruecke.js` übernimmt das Sprachfenster der Akte (Marke `FamilienakteDiktat`), wie
   `fa-wfpdf-bruecke.js` der Familienakte (dort PR #232). Private Brain Pro im Rahmen hat sein eigenes (`native-speech.js`), der Datei-Organizer
   kein Mikrofon. Probe `test-native` 41 grün (Gegenprobe rot), Web-Probe 536 grün.
-- Fassung 0.9.10 (Code 100), Klaus 24.11.: „Ja, bitte ausgeben“.
+- **Veröffentlicht 24.11.** (Klaus: „Ja, bitte ausgeben“): Android 0.9.10 (Code 100, Release `v0.9.10`, Update-Server) und Windows,
+  Nachweis `docs/VEROEFFENTLICHUNG-0.9.10.md` – nicht erneut ausgeben; nächste 0.9.11 (Code 101). Am Fold 7 ungeprüft.
 
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
