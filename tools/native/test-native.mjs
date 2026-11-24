@@ -109,7 +109,14 @@ console.log('Start aus dem Paket (Wurzel wie https://localhost/, Capacitor geste
         if (knopf) { await knopf.click(); await sp.waitForTimeout(600); }
         const wert = await sp.evaluate(() => document.querySelector('form.suche input[name=q]')?.value || '');
         soll('Tipp aufs Mikrofon öffnet Androids Sprachfenster, das Gehörte steht im Suchfeld', wert.includes('Rechnung Zahnarzt') && (await sp.evaluate(() => window.__gehoert.join())) === 'de-DE', wert);
-        soll('keine Fehler beim Diktat', spFehler.length === 0, spFehler.slice(0, 2).join(' | ')); }
+        soll('keine Fehler beim Diktat', spFehler.length === 0, spFehler.slice(0, 2).join(' | '));
+        // Workflow PDF im Rahmen: sein Mikrofon (sprechen.js, byte-gleich) hört über das Sprachfenster der Akte.
+        await sp.evaluate(() => { window.__gehoert.length = 0; const f = document.createElement('iframe'); f.id = 'probe-wfpdf'; f.src = './rahmen/workflow-pdf/index.html'; document.body.append(f); });
+        const wf = await (await sp.waitForSelector('#probe-wfpdf')).contentFrame();
+        let wfWert = '';
+        try { await wf.waitForSelector('#bibMic', { timeout: 30000 }); await wf.click('#bibMic', { force: true });
+          await wf.waitForFunction(() => document.getElementById('bibSuche')?.value, null, { timeout: 5000 }); wfWert = await wf.evaluate(() => document.getElementById('bibSuche').value); } catch { /* unten rot */ }
+        soll('Workflow PDF im Rahmen: Mikrofon hört über Androids Sprachfenster', wfWert === 'Rechnung Zahnarzt' && (await sp.evaluate(() => window.__gehoert.length)) === 1, wfWert); }
       const pb = await ctx.newPage(); const pbFehler = []; pb.on('pageerror', (e) => pbFehler.push(String(e)));
       await pb.goto(`http://127.0.0.1:${srv.address().port}/klone/privat-brain-pro/index.html`); await pb.waitForTimeout(3000);
       soll('Private Brain Pro (Klon 1:1) startet aus dem Paket', (await pb.evaluate(() => document.body.innerText)).includes('Private Brain') && !pbFehler.length, pbFehler.slice(0, 2).join(' | '));

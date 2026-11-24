@@ -46,6 +46,9 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   Ohne ProSpeech (Windows, Browser) tut er nichts; seine Teile Teilen/Updates bleiben aus (Plugins `FamilienakteShare`/`-Updates` gibt es
   hier nicht). Probe `test-native` 40 grün (3 neu, Gegenprobe rot). Am Gerät ungeprüft. Braucht am Gerät das Sprachfenster von Google
   (Google-App mit Mikrofon-Recht); fehlt es, meldet die App „Kein Mikrofon verfügbar“ (Text des Klons).
+  Dazu Workflow PDF im Rahmen: `rahmen/wfpdf-bruecke.js` übernimmt das Sprachfenster der Akte (Marke `FamilienakteDiktat`), wie
+  `fa-wfpdf-bruecke.js` der Familienakte (dort PR #232). Private Brain Pro im Rahmen hat sein eigenes (`native-speech.js`), der Datei-Organizer
+  kein Mikrofon. Probe `test-native` 41 grün (Gegenprobe rot), Web-Probe 536 grün.
 
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 

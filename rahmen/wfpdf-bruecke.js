@@ -13,6 +13,13 @@
   // Adresse auf den Ordner des Klons umstellen (ohne neu zu laden): der Klon sucht seine Dateien neben seiner Adresse. „~rahmen“
   // gibt es dort nicht – ein Neuladen landet also nie auf der ungepatchten Startseite des Klons; die Akte lädt dann den Rahmen neu.
   try { if (/\/rahmen\//.test(location.pathname)) history.replaceState(null, "", location.pathname.replace(/\/rahmen\/(.*?)(index\.html)?$/, "/klone/$1~rahmen") + location.search + location.hash); } catch (e) { /* dann fehlen dem Klon Dateien */ }
+  // Diktat (Klaus 24.11.2026, Galaxy Z Fold 7): die WebView der App hat keine eigene Spracherkennung. Die Akte setzt dafür
+  // Androids Sprachfenster ein (Klebstoff der Familienakte, Marke FamilienakteDiktat); im Rahmen nimmt der Klon dasselbe, damit
+  // sein Mikrofon (sprechen.js, byte-gleich) über die Akte hört. Wie fa-wfpdf-bruecke.js der Familienakte. Im Browser unverändert.
+  try {
+    var oben = eingebettet && W.parent.FamilienakteDiktat && (W.parent.SpeechRecognition || W.parent.webkitSpeechRecognition);
+    if (oben) { W.SpeechRecognition = oben; W.webkitSpeechRecognition = oben; }
+  } catch (e) { /* fremder Rahmen: Diktat wie vorher */ }
   var DB_ALT = "WorkflohPDF1", DB_NEU = "PrivateAkteWFPDF1", VORRAT = "pa-wfpdf-";
   try {
     var SP = W.Storage && W.Storage.prototype;
