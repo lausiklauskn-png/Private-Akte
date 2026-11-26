@@ -99,6 +99,24 @@ console.log('Start aus dem Paket (Wurzel wie https://localhost/, Capacitor geste
       await page.waitForTimeout(2500);
       soll('Startseite steht, Pro-Zeichen im Kopf', await page.evaluate(() => !!document.querySelector('img.logo[src*="logo-pro-rund"]') && document.body.innerText.length > 50));
       soll('keine Fehler in der Seite', fehler.length === 0, fehler.slice(0, 2).join(' | '));
+      // Diktat (Fold 7, 24.11.): die WebView hat keine eigene Spracherkennung – in der App hört Androids Sprachfenster (ProSpeech) zu.
+      { const sp = await ctx.newPage(); const spFehler = []; sp.on('pageerror', (e) => spFehler.push(String(e)));
+        await sp.addInitScript(() => { window.__gehoert = []; delete window.webkitSpeechRecognition; delete window.SpeechRecognition;
+          window.Capacitor = { isNativePlatform: () => true, getPlatform: () => 'android', Plugins: { ProSpeech: { listen: async (o) => { window.__gehoert.push(o.language); return { cancelled: false, text: 'Rechnung Zahnarzt' }; } } } }; });
+        await sp.goto(`http://127.0.0.1:${srv.address().port}/`); await sp.waitForTimeout(2500);
+        const knopf = await sp.$('[data-a=suche-mikro]');
+        soll('Mikrofon am Suchfeld auch ohne Spracherkennung der WebView', !!knopf);
+        if (knopf) { await knopf.click(); await sp.waitForTimeout(600); }
+        const wert = await sp.evaluate(() => document.querySelector('form.suche input[name=q]')?.value || '');
+        soll('Tipp aufs Mikrofon öffnet Androids Sprachfenster, das Gehörte steht im Suchfeld', wert.includes('Rechnung Zahnarzt') && (await sp.evaluate(() => window.__gehoert.join())) === 'de-DE', wert);
+        soll('keine Fehler beim Diktat', spFehler.length === 0, spFehler.slice(0, 2).join(' | '));
+        // Workflow PDF im Rahmen: sein Mikrofon (sprechen.js, byte-gleich) hört über das Sprachfenster der Akte.
+        await sp.evaluate(() => { window.__gehoert.length = 0; const f = document.createElement('iframe'); f.id = 'probe-wfpdf'; f.src = './rahmen/workflow-pdf/index.html'; document.body.append(f); });
+        const wf = await (await sp.waitForSelector('#probe-wfpdf')).contentFrame();
+        let wfWert = '';
+        try { await wf.waitForSelector('#bibMic', { timeout: 30000 }); await wf.click('#bibMic', { force: true });
+          await wf.waitForFunction(() => document.getElementById('bibSuche')?.value, null, { timeout: 5000 }); wfWert = await wf.evaluate(() => document.getElementById('bibSuche').value); } catch { /* unten rot */ }
+        soll('Workflow PDF im Rahmen: Mikrofon hört über Androids Sprachfenster', wfWert === 'Rechnung Zahnarzt' && (await sp.evaluate(() => window.__gehoert.length)) === 1, wfWert); }
       const pb = await ctx.newPage(); const pbFehler = []; pb.on('pageerror', (e) => pbFehler.push(String(e)));
       await pb.goto(`http://127.0.0.1:${srv.address().port}/klone/privat-brain-pro/index.html`); await pb.waitForTimeout(3000);
       soll('Private Brain Pro (Klon 1:1) startet aus dem Paket', (await pb.evaluate(() => document.body.innerText)).includes('Private Brain') && !pbFehler.length, pbFehler.slice(0, 2).join(' | '));
@@ -115,7 +133,8 @@ console.log('Android: Private Brain Pro als App-Seite (Mail nativ)');
     const a = bauen(mkdtempSync(join(tmpdir(), 'pa-www-a-')), { android: true, brain: pb });
     const pi = readFileSync(join(a, 'klone/privat-brain-pro/index.html'), 'utf8');
     soll('App-Seite mit der nativen Mail (native-mail.js) statt der Web-Seite', pi.includes('<script src="native-mail.js"></script>') && existsSync(join(a, 'klone/privat-brain-pro/native-mail.js')) && !existsSync(join(a, 'klone/privat-brain-pro/sw.js')));
-    soll('jede Seite im Rahmen nimmt als erstes Skript die Brücke des Hauptfensters', RAHMEN_SEITEN.every((p) => /<head>\s*<script src="\/rahmen\/capacitor-rahmen\.js"><\/script>/.test(readFileSync(join(a, p), 'utf8'))) && existsSync(join(a, 'rahmen/capacitor-rahmen.js')));
+    soll('Kalender im Rahmen: Diktat über Androids Sprachfenster nach der Brücke', readFileSync(join(a, 'rahmen/kalender/index.html'), 'utf8').includes('<script src="/rahmen/capacitor-rahmen.js"></script>\n<script src="/klone/familienakte/public/native/familienakte-android.js"></script>') && existsSync(join(a, 'klone/familienakte/public/native/familienakte-android.js')));
+    soll('jede Seite im Rahmen nimmt als erstes Skript die Brücke des Hauptfensters',RAHMEN_SEITEN.every((p) => /<head>\s*<script src="\/rahmen\/capacitor-rahmen\.js"><\/script>/.test(readFileSync(join(a, p), 'utf8'))) && existsSync(join(a, 'rahmen/capacitor-rahmen.js')));
     soll('an der Wurzel, was Java und Seite dort erwarten', BRAIN_WURZEL.every((t) => existsSync(join(a, t))), BRAIN_WURZEL.filter((t) => !existsSync(join(a, t))).join());
     soll('Hülle der Akte unverändert im Paket', ['app.js', 'tresor.js', 'rahmen/kalender/kalender.js'].every((p) => readFileSync(join(a, p)).equals(readFileSync(join(WURZEL, p)))));
     // Wie Capacitor 8 am Gerät: im Rahmen gibt es eine eigene Brücke, die nie antwortet; nur das Hauptfenster antwortet.

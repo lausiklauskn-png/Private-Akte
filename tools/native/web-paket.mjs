@@ -29,6 +29,13 @@ export const NAME = 'Private Akte Pro';
 /** Seiten, die in der App im Rahmen der Akte laufen und Plugins rufen. */
 export const RAHMEN_SEITEN = ['klone/privat-brain-pro/index.html', 'rahmen/datei-organizer/app/index.html', 'rahmen/workflow-pdf/index.html', 'rahmen/kalender/index.html'];
 export const RAHMEN_ZEILE = '<script src="/rahmen/capacitor-rahmen.js"></script>';
+/** Diktat in der App (Klaus 24.11.2026, Galaxy Z Fold 7: Mikrofon „nicht erkannt“): die WebView hat keine eigene Spracherkennung.
+ *  Der Klebstoff der Familienakte (unverändert aus dem Klon) setzt dafür Androids Sprachfenster (Plugin ProSpeech aus Private Brain
+ *  Pro, schon angemeldet) an die Stelle von webkitSpeechRecognition – wie in Familienakte und Private Brain Pro. Die App nimmt nichts
+ *  selbst auf und braucht kein Mikrofon-Recht. Ohne ProSpeech (Windows, Browser) tut die Datei nichts. Nur im Paket. */
+export const DIKTAT = 'klone/familienakte/public/native/familienakte-android.js';
+/** Seiten mit Diktat, die im Rahmen laufen (nach der Brücke des Hauptfensters). */
+export const DIKTAT_RAHMEN = ['rahmen/kalender/index.html'];
 /** Was die App-Seite von Private Brain Pro an der Wurzel erwartet (Java: getAssets() „public/…“; Seite: „/models/“, „/vendor/pdfjs/“). */
 export const BRAIN_WURZEL = ['semantic-model.json', 'meaning-models.json', 'caption-model.json', 'translation-models.json', 'models', 'vendor/pdfjs'];
 
@@ -52,7 +59,7 @@ export function bauen(ziel = join(WURZEL, 'www'), { android = false, brain = nul
     for (const seite of RAHMEN_SEITEN) {
       const datei = join(ziel, seite), h = readFileSync(datei, 'utf8');
       if (h.split('<head>').length !== 2) throw new Error(seite + ': <head> nicht genau einmal');
-      writeFileSync(datei, h.replace('<head>', '<head>\n' + RAHMEN_ZEILE));
+      writeFileSync(datei, h.replace('<head>', '<head>\n' + RAHMEN_ZEILE + (DIKTAT_RAHMEN.includes(seite) ? `\n<script src="/${DIKTAT}"></script>` : '')));
     }
   }
   // Pro-Zeichen: Kopf, Favicon, Symbole der Seite. Nur die Hülle wird angepasst, nie ein Klon.
@@ -63,7 +70,7 @@ export function bauen(ziel = join(WURZEL, 'www'), { android = false, brain = nul
     .replace('href="./icons/favicon-32.png"', 'href="./bilder/logo-pro-rund.png"')
     .replace('href="./icons/apple-touch-icon.png"', 'href="./bilder/logo-pro-rund.png"')
     .replace(/<title>[^<]*<\/title>/, `<title>${NAME}</title>`)
-    .replace('<head>', '<head>\n<script>window.PA_PRO=true</script>');
+    .replace('<head>', `<head>\n<script>window.PA_PRO=true</script>\n<script src="./${DIKTAT}"></script>`);
   if (html === vorher || !html.includes('logo-pro-rund.png') || !html.includes('PA_PRO')) throw new Error('index.html: Pro-Zeichen nicht gesetzt');
   writeFileSync(join(ziel, 'index.html'), html);
   const m = JSON.parse(readFileSync(join(ziel, 'manifest.webmanifest'), 'utf8'));

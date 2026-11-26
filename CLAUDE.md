@@ -35,6 +35,23 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
   Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
+## Stand (24.11.2026, 0.9.10 – Diktat in der Android-App)
+
+- **Klaus 24.11. (Bild vom Galaxy Z Fold 7, Android 17, 0.9.9): in den App-Berechtigungen steht Kamera, aber kein Mikrofon; das Mikrofon
+  „wird nicht erkannt“.** Kein Mikrofon-Recht ist Absicht (wie Familienakte und Private Brain Pro: Androids Sprachfenster hört zu, die App
+  nimmt nichts auf). Fehler: die Hülle nahm in der App die Spracherkennung der WebView (`T().diktat` → `webkitSpeechRecognition`), die es
+  dort nicht (oder nicht lauffähig) gibt. Jetzt setzt `tools/native/web-paket.mjs` den Klebstoff der Familienakte
+  (`klone/familienakte/public/native/familienakte-android.js`, unverändert) als Skript in `index.html` und in den Kalender im Rahmen
+  (nach `capacitor-rahmen.js`): er stellt `ProSpeech` (Private Brain Pro, schon angemeldet) an die Stelle von `webkitSpeechRecognition`.
+  Ohne ProSpeech (Windows, Browser) tut er nichts; seine Teile Teilen/Updates bleiben aus (Plugins `FamilienakteShare`/`-Updates` gibt es
+  hier nicht). Probe `test-native` 40 grün (3 neu, Gegenprobe rot). Am Gerät ungeprüft. Braucht am Gerät das Sprachfenster von Google
+  (Google-App mit Mikrofon-Recht); fehlt es, meldet die App „Kein Mikrofon verfügbar“ (Text des Klons).
+  Dazu Workflow PDF im Rahmen: `rahmen/wfpdf-bruecke.js` übernimmt das Sprachfenster der Akte (Marke `FamilienakteDiktat`), wie
+  `fa-wfpdf-bruecke.js` der Familienakte (dort PR #232). Private Brain Pro im Rahmen hat sein eigenes (`native-speech.js`), der Datei-Organizer
+  kein Mikrofon. Probe `test-native` 41 grün (Gegenprobe rot), Web-Probe 536 grün.
+- **Veröffentlicht 24.11.** (Klaus: „Ja, bitte ausgeben“): Android 0.9.10 (Code 100, Release `v0.9.10`, Update-Server) und Windows,
+  Nachweis `docs/VEROEFFENTLICHUNG-0.9.10.md` – nicht erneut ausgeben; nächste 0.9.11 (Code 101). Am Fold 7 ungeprüft.
+
 ## Stand (22.11.2026, 0.9.9 – Klon Private Brain Pro 1.0.58, nicht veröffentlicht)
 
 - **Klon `privat-brain-pro` @ `8e082ae`** (Private Brain Pro 1.0.58, PR #158 und #159 dort: dazu vier Themen aus V3): „Alle Konten“ als drittes Postfach-Konto (Ordner,
