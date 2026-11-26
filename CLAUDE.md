@@ -43,7 +43,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   (`bereicheKacheln`). Probe 536 grün. Am Tablet ungeprüft.
 - **Fassung 0.9.11 (Code 101)** (Klaus 26.11.: „bitte 0.9.11 bauen und ausgeben“, Diktat/Mikrofon von 0.9.10 vorher prüfen): bringt die
   Bereiche in APK und Windows. Diktat unverändert: `test-native` 41 grün (Mikrofon über Androids Sprachfenster, auch Workflow PDF im Rahmen),
-  Web-Probe 536 grün.
+  Web-Probe 536 grün. **Veröffentlicht 26.11.:** Android (Release `v0.9.11`, Update-Server) und Windows, Nachweis
+  `docs/VEROEFFENTLICHUNG-0.9.11.md` – nicht erneut ausgeben; nächste 0.9.12 (Code 102).
 
 ## Stand (24.11.2026, 0.9.10 – Diktat in der Android-App)
 
