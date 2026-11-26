@@ -1,5 +1,8 @@
 # Brief für die Nachfolgesitzung: „Marktplatz Spezial“ mit Passkey für die Pro-Apps
 
+> **Überholt (26.11.2026):** umgesetzt in der Sitzung „Marktplatz-Spezial“ (family-project #381, #383). Stand dort nachsehen;
+> siehe `docs/BRIEF_ABSCHLUSS_2026-11-26_BEREICHE-0.9.11-MAERKTE.md`.
+
 Geschrieben am 26.11.2026 in der Sitzung der Privaten Akte (0.9.11). Klaus' Auftrag im Wortlaut (gekürzt):
 
 > „Alle Pro-Apps, die jetzt Android und Windows sind, sollen mit einem Passwort geöffnet werden können. Eine separate

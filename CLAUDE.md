@@ -37,6 +37,10 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 
 ## Stand (26.11.2026, 0.9.11 – Bereiche der Startseite)
 
+- **Abschluss 26.11.:** `docs/BRIEF_ABSCHLUSS_2026-11-26_BEREICHE-0.9.11-MAERKTE.md`. Private Akte und Familienakte als PWA in beiden
+  Märkten (PWA Toolpoint #188, family-project #380). Marktplatz Spezial läuft in eigener Sitzung (family-project #381/#383); der Brief
+  dazu hier ist überholt.
+
 - **Bereiche (Klaus 23.11., Bilder vom Tablet; PR #94):** unter 700 px Breite (Handy, geteilter Bildschirm) so viele gleich breite Spalten,
   wie in die Breite passen (`repeat(auto-fill,minmax(160px,1fr))`), flache Kacheln, nach unten zu rollen statt seitlich; `kachelRaster`
   schaltet dort `viele` nicht ein. Ab 700 px wie bisher (gleiche Größe, ab vier Reihen seitlich). Alle Bereiche nach dem Alphabet
