@@ -35,6 +35,14 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
   Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
+## Stand (26.11.2026, Bereiche der Startseite – nach 0.9.10, ohne neue Fassung)
+
+- **Bereiche (Klaus 23.11., Bilder vom Tablet; PR #94):** unter 700 px Breite (Handy, geteilter Bildschirm) so viele gleich breite Spalten,
+  wie in die Breite passen (`repeat(auto-fill,minmax(160px,1fr))`), flache Kacheln, nach unten zu rollen statt seitlich; `kachelRaster`
+  schaltet dort `viele` nicht ein. Ab 700 px wie bisher (gleiche Größe, ab vier Reihen seitlich). Alle Bereiche nach dem Alphabet
+  (`bereicheKacheln`). Nur Web-Teil (`app.css`, `app.js`); in der Android-/Windows-App erst mit der nächsten Fassung 0.9.11 (Code 101).
+  Probe 536 grün. Am Tablet ungeprüft.
+
 ## Stand (24.11.2026, 0.9.10 – Diktat in der Android-App)
 
 - **Klaus 24.11. (Bild vom Galaxy Z Fold 7, Android 17, 0.9.9): in den App-Berechtigungen steht Kamera, aber kein Mikrofon; das Mikrofon
