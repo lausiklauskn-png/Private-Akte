@@ -57,7 +57,30 @@ den Link versteckt, schützt nichts – wer die Release-Adresse kennt, lädt ohn
 - **Zusätzlich möglich:** der Passkey schaltet **in der App** Funktionen frei (wie die Werkzeuge in Private Brain Pro).
   Das schützt am besten, ist aber Arbeit in jeder einzelnen App.
 
-Diese Wahl muss Klaus treffen, bevor gebaut wird.
+**Entschieden (Klaus 26.11.2026): Weg B** – „so zügig wie möglich umsetzen“. Die Dateien liegen auf Klaus' Server und
+werden nur gegen einen gültigen Passkey ausgegeben.
+
+### Vorschlag zum Bauablauf (Weg B)
+
+1. **Bestand:** welche Pro-App hat welche Dateien (APK, AAB, Windows) in welchem Release; wohin Klaus' Server sie legen kann
+   (Hetzner-Webhosting mit PHP wie `freigabe.php`, oder der Update-Server `family-projekt.de/updates/`). Wo die Dateien
+   liegen dürfen, ohne öffentlich abrufbar zu sein (außerhalb des Web-Ordners, nur über PHP ausgegeben).
+2. **Schlüssel:** Passkey = signierter Code wie in Private Brain (`PBK1.…`), aber mit eigenem Präfix je Seite (z. B.
+   `FPK1.` für family-projekt.de, `TPK1.` für PWA Toolpoint), Inhalt: Pseudonym, Liste der Apps, Ausstellungsdatum,
+   optional Ablauf. Je Seite ein eigener Herausgeber-Schlüssel; der öffentliche Teil liegt auf dem Server.
+3. **Studio:** im vorhandenen Studio der Seite ein Bereich „Marktplatz Spezial“: Passkey erstellen (Pseudonym, Apps
+   ankreuzen), Liste der vergebenen Passkeys, Passkey sperren (geht hier, weil der Server prüft).
+4. **Server-Endpunkt** (PHP): prüft Unterschrift, Seite, App und Sperrliste, gibt die Datei aus (oder einen kurzlebigen
+   Link, z. B. 10 Minuten). Zähler je Passkey (Missbrauch erkennen). Keine Geheimnisse im Repo.
+5. **Seite `markt-spezial.html`** auf beiden Seiten, Knopf „Marktplatz Spezial“, Passkey-Feld; nach Prüfung die Karten mit
+   Download-Knöpfen. Gleiche Gestalt wie der Marktplatz.
+6. **Releases auf GitHub:** solange die Pro-Dateien dort öffentlich liegen, bleibt ein Schlupfloch. Mit Klaus klären, ob
+   die Release-Läufe der Pro-Apps künftig auf den Server laden statt (oder zusätzlich zu) GitHub, und ob alte öffentliche
+   Releases weg sollen. Achtung: Update-Fähnchen und Geschenkbox/Sicherung (`tools/sicherung/`) lesen heute die Releases.
+7. **Einspielen am Server** braucht Klaus' Handgriffe (Hetzner); genaue Befehle mit Ort („Webhosting“, „Cloud-Server“) nennen.
+
+Noch offen (Fragen 2–6 unten) mit Klaus zu Beginn kurz klären; sinnvolle Vorgaben: Passkey je App wählbar, je Seite eigener
+Schlüssel, Knopf sichtbar mit Passkey-Feld.
 
 ## Offene Fragen an Klaus (vor dem Bau)
 
