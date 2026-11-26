@@ -443,6 +443,8 @@ h3.apfad{justify-content:flex-start;flex-wrap:wrap;color:var(--navy);font-size:1
 .kacheln.bereichsraster.viele{display:grid;grid-template-rows:repeat(3,auto);grid-auto-flow:column;grid-auto-columns:auto;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}
 .kacheln.bereichsraster.viele .kachel{scroll-snap-align:start;width:max-content}
 .kacheln.bereichsraster .kachel strong{white-space:nowrap}
+/* Handyformat und geteilter Bildschirm (Klaus 23.11.: „hoch und runter scrollbar, nicht seitlich“; „immer die gesamte Breite, auch eine Dreierreihe“): so viele gleich breite Spalten, wie hineinpassen (schmal eine), Namen brechen um, Kacheln flach, kein seitliches Schieben */
+@media (max-width:699px){.kacheln.bereichsraster,.kacheln.bereichsraster.viele{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));grid-template-rows:none;grid-auto-flow:row;overflow-x:visible;padding-bottom:0}.kacheln.bereichsraster .kachel{min-width:0;width:auto;text-align:left;padding:6px 8px;gap:8px}.kacheln.bereichsraster .tupfer.eckig{width:28px;height:28px;border-radius:9px}.kacheln.bereichsraster .kachel strong{font-size:12.5px;line-height:1.15}.kacheln.bereichsraster .kachel small{font-size:11px}.kacheln.bereichsraster .kachel>span:last-child{flex:1;min-width:0}.kacheln.bereichsraster .kachel strong{white-space:normal;overflow-wrap:anywhere}}
 /* Karten mit fester Höchsthöhe: der Baum rollt in sich, rechts rollt nur die Liste, die Überschrift bleibt stehen */
 .ebaumkarte{overflow-y:auto;overscroll-behavior:contain}
 .elistekarte{display:flex;flex-direction:column}.elistekarte>h3,.elistekarte>.reihe{flex:none}
