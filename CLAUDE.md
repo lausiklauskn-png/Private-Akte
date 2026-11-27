@@ -35,6 +35,12 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
   Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
+## Stand (27.11.2026, 0.9.12 – Kopf nicht unter der Fensterleiste)
+
+- Klaus 27.11. (Bild am DeX-Monitor): Kopf und Seitenleiste lagen unter der Fensterleiste des Systems; `app.css` gibt oben den Abstand
+  `env(safe-area-inset-top)` (PR #103). **Veröffentlicht 27.11.** Android und Windows, Nachweis `docs/VEROEFFENTLICHUNG-0.9.12.md` – nicht erneut
+  ausgeben; nächste 0.9.13 (Code 103). Am Gerät ungeprüft.
+
 ## Stand (26.11.2026, 0.9.11 – Bereiche der Startseite)
 
 - **Abschluss 26.11.:** `docs/BRIEF_ABSCHLUSS_2026-11-26_BEREICHE-0.9.11-MAERKTE.md`. Private Akte und Familienakte als PWA in beiden
