@@ -6,6 +6,7 @@ import { Bot, Check, Copy, Download, Sparkles, X } from "lucide-react";
 import type { Datei } from "../lib/typen.ts";
 import { gesperrt } from "../lib/siebe.ts";
 import { KATEGORIEN } from "../lib/kategorien.ts";
+import { lehrModell, type LehrModell } from "../lib/lehrmodell.ts";
 import { sortierAuftrag, planPruefen, lehrfall, firmenBleiben, firmenSchuetzen, type PlanEintrag, type Lehrfall } from "../lib/ki-sortieren.ts";
 import { auftragMaskieren, antwortenZurueck, kennung as kennungAus, type Stueck } from "../lib/pseudo/auftrag.ts";
 import { rueckwegPruefen } from "../lib/pseudo/rueckweg.ts";
@@ -42,6 +43,15 @@ async function kopieren(text: string): Promise<boolean> {
 /** Lehrfälle nur auf diesem Gerät (Speicher der App), höchstens 2000, nie in ein Repo und nie hinaus. */
 export function lehrfaelleMerken(neu: Lehrfall[]) {
   try { const alt = JSON.parse(localStorage.getItem(LEHR) || "[]") as Lehrfall[]; localStorage.setItem(LEHR, JSON.stringify([...alt, ...neu].slice(-2000))); } catch { /* ohne Speicher: nur nicht gemerkt */ }
+}
+/** Das Wortmodell aus den Lehrfällen dieses Geräts (neu gerechnet, wenn Lehrfälle dazukommen). Wirkt still im Hintergrund. */
+let lehrStand: { n: number; m: LehrModell | null } = { n: -1, m: null };
+export function lehrModellGeraet(): LehrModell | null {
+  try {
+    const roh = localStorage.getItem(LEHR) || "[]";
+    if (roh.length !== lehrStand.n) lehrStand = { n: roh.length, m: lehrModell(JSON.parse(roh) as Lehrfall[]) };
+  } catch { lehrStand = { n: -1, m: null }; }
+  return lehrStand.m;
 }
 export function lehrfaelleZahl(): number { try { return (JSON.parse(localStorage.getItem(LEHR) || "[]") as unknown[]).length; } catch { return 0; } }
 

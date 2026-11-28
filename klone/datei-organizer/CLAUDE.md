@@ -11,6 +11,9 @@ wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). P
 
 **Nächste Sitzung (Klaus 28.11.2026): „Mit großer KI sortieren“, mit PseudoDoc verschmolzen.** Zuerst den Pseudo-Kern aus PseudoDoc byte-gleich mit Pin übernehmen (die Fassung hier ist älter), dann Ordner pseudonymisiert mit der Fachregel an eine große KI, Sortierplan zurück, bestätigen, lernen. Lehrfälle nur auf dem Gerät. [Bauplan S0a–S4](docs/BRIEF_SITZUNG_2026-11-29_SORTIEREN-MIT-GROSSER-KI.md).
 
+**Codex ist raus (Klaus 28.11.2026):** keine Codex-Prüfungen, Codex-Kommentare an PRs nicht abwarten, der Briefkasten
+`docs/fremdpruefung/` ruht. Ersetzt die Codex-Regeln weiter unten. **Nächste Sitzung:** `docs/BRIEF_SITZUNG_2026-11-30_NACH-DER-KETTE.md`.
+
 ## Stand (28.11.2026): „Mit großer KI sortieren“ (nicht ausgegeben, Fassung nicht erhöht)
 
 - **Kette über alle Apps:** `docs/BRIEF_SITZUNG_2026-11-29_KETTE-PSEUDO-KI-SORTIEREN.md` (Schritte 1–7, Stand dort).

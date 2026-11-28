@@ -3,7 +3,7 @@
 // Geburtsdatum, ICD-Code mit Gruppe, Marke gegen doppeltes Pseudonymisieren, Stellen dürfen bleiben), geht später als
 // Modul 25 Gen. 3 nach Sage zurück. Reine Rechnung: KEIN Netz, kein DOM, kein Speicher – die Probe prüft das am Quelltext.
 
-import { FAMILIEN_MUSTER, type Pseudonymisierer } from "./ki-auftrag.ts";
+import { FAMILIEN_MUSTER, bekannteEinsetzen, type Pseudonymisierer } from "./ki-auftrag.ts";
 import { namenImText } from "./namensmuster.ts";
 
 export const MARKE = "⟦PSEUDONYMISIERT v1⟧";
@@ -79,6 +79,8 @@ export function maskeFunde(text: string): Fund[] {
   nimm(/(?:Ausweis|Personalausweis|Reisepass|Pass|Dokumentennummer)[^\n\dA-Z]{0,25}([CFGHJKLMNPRTVWXYZ0-9]{9}\d)\b/g, "AUSWEIS", istAusweisNr, 1);
   nimm(/\bDE\s?\d{3}\s?\d{3}\s?\d{3}\b/g, "USTID");
   nimm(/(?:geb\.|geboren(?: am)?|Geburtsdatum|Geb\.-Datum)\s*:?\s*(\d{1,2}\.\s?\d{1,2}\.\s?\d{2,4})/gi, "GEBURTSDATUM", undefined, 1);
+  // Telefonnummer nach Stichwort, auch am Satzende („Telefon 0170 1234567.“ – Lücke vom 14.11.2026, Modul 25 übersah sie vor dem Punkt).
+  nimm(/(?:Telefon(?:nummer)?|Tel\.|Mobil(?:nummer)?|Handy(?:nummer)?|Fax|Rufnummer)\s*:?\s*(\+?\d[\d ()/-]{5,18}\d)/gi, "TELEFON", (v) => v.replace(/\D/g, "").length >= 7, 1);
   nimm(/(?:Kunden|Vertrags|Versicherungs|Mitglieds|Policen|Zähler|Personal|Akten|Steuer)[-\s]?(?:nummer|nr\.?|schein-?nr\.?)\s*:?\s*([A-Z0-9][A-Z0-9 ./-]{3,24}[A-Z0-9])/gi, "NUMMER", (v) => /\d/.test(v), 1);
   for (const m of text.matchAll(/(?:ICD(?:-10)?(?:-GM)?|Diagnosen?|Dg\.)\s*:?\s*((?:[A-TV-Z]\d{2}(?:\.\d{1,2})?[GVAZRLB]?\s*[,;]?\s*)+)/g)) {
     for (const c of m[1].match(/[A-TV-Z]\d{2}(?:\.\d{1,2})?[GVAZRLB]?/g) || []) out.push({ type: "ICD", value: c });
@@ -93,7 +95,23 @@ export type MaskeProfil = {
   stellen: string[];      // dürfen stehen bleiben (Organisationen der Akte)
   nieVerdecken?: string[];
   zusatz?: string[];
+  /** Feste Platzhalter aus den Profilen (Stufe C): alle Werte → derselbe Platzhalter, ohne Rücksicht auf Groß-/Kleinschreibung;
+   *  Zurückführen setzt den ersten Wert (den Namen) ein. */
+  feste?: Array<{ token: string; werte: string[] }>;
 };
+
+const esc = (w: string) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+/** Feste Platzhalter einsetzen (längster Wert zuerst, nur ganze Wörter). */
+export function festeEinsetzen(text: string, feste: Array<{ token: string; werte: string[] }>, map: Record<string, string>): { text: string; map: Record<string, string> } {
+  const paare = feste.flatMap((f) => f.werte.filter((w) => w.trim().length >= 2).map((w) => ({ token: f.token, wert: w.trim(), name: f.werte[0].trim() })))
+    .sort((a, b) => b.wert.length - a.wert.length);
+  let t = text; const m = { ...map };
+  for (const { token, wert, name } of paare) {
+    const re = new RegExp(`(?<![\\p{L}\\p{N}])${esc(wert)}(?![\\p{L}\\p{N}])(?![^⟦⟧]*⟧)`, "giu");
+    if (re.test(t)) { t = t.replace(re, token); m[token] = m[token] || name; }
+  }
+  return { text: t, map: m };
+}
 
 export type MaskeErgebnis = { text: string; map: Record<string, string>; funde: Fund[]; leck: string | null; unsicher: string[]; schonPseudonymisiert: boolean };
 
@@ -103,12 +121,16 @@ export type MaskeErgebnis = { text: string; map: Record<string, string>; funde: 
 export function maskieren(p: Pseudonymisierer, text: string, profil: MaskeProfil, map: Record<string, string> = {}): MaskeErgebnis {
   if (istPseudonymisiert(text)) return { text, map, funde: [], leck: null, unsicher: [], schonPseudonymisiert: true };
   const nie = new Set([...(profil.nieVerdecken || []), ...profil.stellen].map((w) => w.trim().toLowerCase()).filter(Boolean));
+  // Teil einer „darf bleiben“-Wendung („Frau Sonnig“ → auch „Sonnig“ allein, wie das Namensmuster es findet).
+  const nieWoerter = new Set([...nie].filter((n) => n.includes(" ")).flatMap((n) => n.split(/\s+/)).filter((x) => x.length >= 3));
+  const fest = festeEinsetzen(text, profil.feste || [], map);
+  text = fest.text; map = fest.map;
   const muster = namenImText(text);
   const unsicher: string[] = [];
   const namen: Array<{ value: string; type: string }> = [];
   for (const t of muster) {
     const w = t.wert.trim();
-    if (w.length < 3 || /^⟦/.test(w) || nie.has(w.toLowerCase()) || w.split(/\s+/).some((x) => nie.has(x.toLowerCase()))) continue;
+    if (w.length < 3 || /^⟦/.test(w) || nie.has(w.toLowerCase()) || w.split(/\s+/).some((x) => nie.has(x.toLowerCase())) || nieWoerter.has(w.toLowerCase())) continue;
     if (t.grund === "firma" && STELLE_BLEIBT.test(w)) continue;
     if (t.grund === "zweiWoerter") unsicher.push(w);
     namen.push({ value: w, type: t.grund === "firma" ? "FIRMA" : "NAME" });
@@ -122,8 +144,8 @@ export function maskieren(p: Pseudonymisierer, text: string, profil: MaskeProfil
   }
   const funde = maskeFunde(text);
   const werte = [...funde, ...namen].sort((a, b) => b.value.length - a.value.length);
-  let vorher = text;
-  for (const [tok, wert] of Object.entries(map).sort((a, b) => b[1].length - a[1].length)) vorher = vorher.split(wert).join(tok);
+  // Werte früherer Texte gleich ersetzen (nur ganze Wörter) – außer was inzwischen bleiben darf.
+  const vorher = bekannteEinsetzen(text, map, (wert) => nie.has(wert.trim().toLowerCase()));
   const r = p.pseudonymize(vorher, {
     values: werte, map,
     types: ["SCHLUESSEL", "MAIL", "IBAN", "RECHNUNG", "TELEFON"],
@@ -184,5 +206,10 @@ export function runMaskeSelfTests(p: Pseudonymisierer) {
   t("Stelle aus der Akte bleibt", stelle.text.includes("Wolkenpost") && !stelle.text.includes("Brandt"), stelle.text);
   const klein = maskieren(p, "Rechnung von Heike Sommer e.K., Inhaberin Heike Sommer.", { personen: [], stellen: [] });
   t("Kleinunternehmen verdeckt", !klein.text.includes("Sommer"), klein.text);
+  const satz = maskieren(p, "Bei Fragen erreichen Sie uns unter Telefon 0170 1234567. Fax: 030 / 123 456 78.", { personen: [], stellen: [] });
+  t("Telefon am Satzende", !satz.text.includes("1234567") && !satz.text.includes("123 456 78") && satz.leck === null, satz.text);
+  // Ein gelernter Name gilt nur als ganzes Wort (Klaus 28.11.2026: „Stadtwerke ⟦NAME-2⟧stadt“).
+  const gelernt = maskieren(p, "Stadtwerke Beispielstadt, Frau Beispiel ruft an.", { personen: [], stellen: ["Stadtwerke Beispielstadt"] }, { "⟦NAME-2⟧": "Beispiel" });
+  t("Gelernter Name nur als ganzes Wort", gelernt.text.includes("Stadtwerke Beispielstadt") && gelernt.text.includes("Frau ⟦NAME-2⟧"), gelernt.text);
   return tests;
 }

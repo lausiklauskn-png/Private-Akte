@@ -49,6 +49,18 @@ export const FAMILIEN_MUSTER: Array<{ type: string; regex: RegExp }> = [
   { type: "NUMMER", regex: /\b(?=[A-Z0-9-]*\d)(?=[A-Z0-9-]*[A-Z])[A-Z0-9][A-Z0-9-]{7,}\b/g },
 ];
 
+/** Bekannte Klartexte früherer Texte durch ihre Platzhalter ersetzen – nur ganze Wörter, nie in einem Platzhalter
+ *  (Klaus 28.11.2026: „Beispiel“ als Name gelernt machte aus „Beispielstadt“ „⟦NAME-2⟧stadt“). `behalten` = darf stehen bleiben. */
+export function bekannteEinsetzen(text: string, map: Record<string, string>, behalten: (wert: string) => boolean = () => false): string {
+  const esc = (w: string) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  let t = text;
+  for (const [tok, wert] of Object.entries(map).sort((a, b) => b[1].length - a[1].length)) {
+    if (!wert || behalten(wert)) continue;
+    t = t.replace(new RegExp(`(?<![\\p{L}\\p{N}])${esc(wert)}(?![\\p{L}\\p{N}])(?![^⟦⟧]*⟧)`, "gu"), () => tok);
+  }
+  return t;
+}
+
 export type Anonymisiert = { text: string; map: Record<string, string>; funde: Array<{ type: string; value: string }>; leck: string | null };
 
 /** Macht einen Text unkenntlich: eingebaute Sorten von Modul 25 (Mail, Telefon, IBAN, Datum, Beträge …), Namen aus der
@@ -59,8 +71,7 @@ export function anonymisieren(p: Pseudonymisierer, text: string, namen: string[]
   const gefunden = namenImText(text).filter((t) => streng || t.grund !== "zweiWoerter").map((t) => t.wert);
   const werte = [...new Set([...namen, ...gefunden].map((n) => n.trim()).filter((n) => n.length >= 3 && !/^⟦/.test(n)))].sort((a, b) => b.length - a.length);
   // Bekannte Klartexte zuerst durch ihre alten Platzhalter ersetzen, damit Mehrfach-Texte dieselben Platzhalter tragen.
-  let vorher = text;
-  for (const [tok, wert] of Object.entries(map).sort((a, b) => b[1].length - a[1].length)) vorher = vorher.split(wert).join(tok);
+  const vorher = bekannteEinsetzen(text, map);
   const r = p.pseudonymize(vorher, { values: werte, customPatterns: FAMILIEN_MUSTER, map });
   const ganz = { ...map, ...r.map };
   return { text: r.text, map: ganz, funde: r.findings.map((f) => ({ type: f.type, value: f.value })), leck: p.findLeak(r.text, ganz) };
