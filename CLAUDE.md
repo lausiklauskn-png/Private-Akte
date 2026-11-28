@@ -35,6 +35,13 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
   `Sicherung-<Datum>-Teil-N-von-M.zip` (je höchstens 1,9 GB, GitHub erlaubt 2 GB je Datei; ohne Kompression), jedes Teil mit den
   Begleitdateien; alle Teile in denselben Ordner entpackt = die ganze Sicherung. Prüfsummen `TEILE-SHA256SUMS`.
 
+## Stand (28.11.2026, „Mit großer KI sortieren“ – nicht veröffentlicht)
+
+- **Codex ist raus (Klaus 28.11.2026):** keine Codex-Prüfungen, Codex-Kommentare an PRs nicht beachten; gilt für jede Sitzung.
+- Klon `datei-organizer` @ `c5f885c` (PR #105): der Organizer im Rahmen hat auf „Sortieren“ den Weg „Mit großer KI sortieren“ (Auftrag
+  pseudonymisiert, Plan zurück, bestätigen). Kette und offene Punkte: Datei-Organizer `docs/BRIEF_SITZUNG_2026-11-29_KETTE-PSEUDO-KI-SORTIEREN.md`.
+  Probe 536 grün. Am Gerät ungeprüft; nächste Fassung 0.9.13 (Code 103).
+
 ## Stand (27.11.2026, 0.9.12 – Kopf nicht unter der Fensterleiste)
 
 - Klaus 27.11. (Bild am DeX-Monitor): Kopf und Seitenleiste lagen unter der Fensterleiste des Systems; `app.css` gibt oben den Abstand
