@@ -10,6 +10,8 @@ import { siebe, istUnsicher, offeneFelder } from "../lib/siebe.ts";
 import { absenderVereinheitlichen } from "../lib/abgleich.ts";
 const DOPPELT_SCHLUESSEL = "datei-organizer-doppelt-wahl";
 import { korrigieren as korrigiereDatei, lernen, regelnAufAlle } from "../lib/lernen.ts";
+import { lehrAnwenden } from "../lib/lehrmodell.ts";
+import { lehrModellGeraet } from "./ki-sortieren.tsx";
 import { archivnummernVergeben } from "../lib/archivnummer.ts";
 import { indexLesen, organizerIndex, INDEX_DATEI } from "../lib/index-format.ts";
 import { pdfLeser } from "./pdf.ts";
@@ -207,7 +209,7 @@ function useOrganizer() {
       // Hinzufügen (Drag and Drop): Vorhandenes bleibt; gleiche Pfade werden ersetzt, gleiche Inhalte als doppelt markiert.
       // Neue Stücke laufen durch dieselben Siebe wie der Bestand.
       let frisch = neu;
-      for (let s = 2; s <= stufe; s++) frisch = frisch.map((x) => siebe(x, s, regeln));
+      for (let s = 2; s <= stufe; s++) frisch = frisch.map((x) => lehrAnwenden(siebe(x, s, regeln), lehrModellGeraet()));
       const pfade = new Set(frisch.map((d) => d.pfad));
       let alle = doppelteMarkieren([...dateien.filter((d) => !pfade.has(d.pfad)).map((d) => ({ ...d, doppeltVon: undefined })), ...frisch], doppeltWahl.current);
       if (stufe >= 4) alle = absenderVereinheitlichen(alle);
@@ -337,7 +339,7 @@ function useOrganizer() {
     while (s < ziel) {
       stapel.current.push(Object.assign([...d], { stufe: s }));
       s++;
-      d = d.map((x) => siebe(x, s, regeln));
+      d = d.map((x) => lehrAnwenden(siebe(x, s, regeln), lehrModellGeraet()));
       if (s >= 4) d = absenderVereinheitlichen(d);
       // Nach jedem Sieb neu: gleicher Beleg wird erst mit Absender und Nummer sichtbar.
       d = aehnlicheFinden(d);
@@ -533,7 +535,7 @@ function useOrganizer() {
     stapel.current.push(Object.assign([...dateien], { stufe }));
     let d = doppelteMarkieren(dateien.map((x) => ({ ...x, doppeltVon: undefined })), doppeltWahl.current);
     // die jetzt behaltene Datei war gesperrt und hat die Siebe noch nicht gesehen: bis zum heutigen Stand nachholen
-    d = d.map((x) => !x.doppeltVon && x.stufe < stufe ? siebe(x, stufe, regeln) : x);
+    d = d.map((x) => !x.doppeltVon && x.stufe < stufe ? lehrAnwenden(siebe(x, stufe, regeln), lehrModellGeraet()) : x);
     if (stufe >= 4) d = absenderVereinheitlichen(d);
     setDateien(d);
     setMeldung({ text: was || "Gemerkt: diese Datei wird behalten, die andere gilt als Kopie. „Zurück“ auf der Seite Sortieren macht es rückgängig." });

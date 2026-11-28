@@ -41,6 +41,8 @@ Die Private-Akte fasst die fertigen Apps unter einer neuen Hülle zusammen. Ange
 - Klon `datei-organizer` @ `c5f885c` (PR #105): der Organizer im Rahmen hat auf „Sortieren“ den Weg „Mit großer KI sortieren“ (Auftrag
   pseudonymisiert, Plan zurück, bestätigen). Kette und offene Punkte: Datei-Organizer `docs/BRIEF_SITZUNG_2026-11-29_KETTE-PSEUDO-KI-SORTIEREN.md`.
   Probe 536 grün. Am Gerät ungeprüft; nächste Fassung 0.9.13 (Code 103).
+- Klon `datei-organizer` @ `73696ad` (PR #89 dort): Lernen aus Lehrfällen auf dem Gerät, KI-Sortieren Fassung 2 (Art, Absender, Vorgang,
+  betrifft, Betrag, Richtung), Maske mit ganzen Wörtern. Probe 536 grün. Vorschau für den Eingang der Akte (Punkt 7) wartet auf Klaus.
 
 ## Stand (27.11.2026, 0.9.12 – Kopf nicht unter der Fensterleiste)
 

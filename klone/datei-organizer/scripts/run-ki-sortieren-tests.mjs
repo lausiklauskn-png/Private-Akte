@@ -2,8 +2,9 @@
 // (pseudonymisiert über den Pseudo-Kern), gestellte KI-Antwort aus testdaten/ERWARTUNG.json, Plan-Prüfung mit Sabotage.
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { sortierAuftrag, planPruefen, lehrfall, vergleich, firmenBleiben, firmenSchuetzen, FACHREGEL } from "../lib/ki-sortieren.ts";
+import { KI_ARTEN, sortierAuftrag, planPruefen, lehrfall, vergleich, firmenBleiben, firmenSchuetzen, FACHREGEL } from "../lib/ki-sortieren.ts";
 import { KATEGORIEN } from "../lib/kategorien.ts";
+import { lehrModell, lehrAnwenden, merkmaleAus } from "../lib/lehrmodell.ts";
 import { auftragMaskieren, kennung } from "../lib/pseudo/auftrag.ts";
 
 let n = 0;
@@ -60,4 +61,25 @@ ok("Firmen bleiben, Personen nicht", JSON.stringify(firmenBleiben(["Stadtwerke B
   ok("Firma dreimal im Text: Maske läuft trotzdem, Person weg, Firma bleibt", !aus.includes("Mara") && !aus.includes("Lindenweg") && aus.includes("Stadtwerke Beispielstadt GmbH"), aus); }
 const q = readFileSync("lib/ki-sortieren.ts", "utf8").replace(/\/\/.*$/gm, "");
 ok("Kein Netzaufruf und keine Oberfläche im Kern", !/\bfetch\s*\(|XMLHttpRequest|WebSocket|document\.|window\./.test(q));
+// Fassung 2: Art, Absender, Vorgang, betrifft, Betrag, Richtung.
+{ const a = JSON.stringify({ plan: [
+    { kennung: "D01", fach: "Versicherungen", art: "Bedingungen (AGB)", absender: "Beispiel Versicherung AG", vorgang: "Hausrat · Beispiel Versicherung · ⟦NUMMER-3⟧", betrifft: ["⟦NAME-1⟧", "Anna Klartext"], betrag: "1.234,5", richtung: "raus" },
+    { kennung: "D02", fach: "Versicherungen", art: "Gedicht", vorgang: "rm -rf /", betrag: "viel", richtung: "seitwärts" }] });
+  const r = planPruefen(a, ["D01", "D02"]), [e1, e2] = r.eintraege;
+  ok("Plan 2: feine Art auf Art des Kerns abgebildet", e1.art === "Bedingungen (AGB)" && e1.artKern === "Vertrag");
+  ok("Plan 2: Vorgang, Absender, Betrag, Richtung", e1.vorgang?.includes("⟦NUMMER-3⟧") && e1.absender === "Beispiel Versicherung AG" && e1.betrag === "1234,50" && e1.richtung === "raus", JSON.stringify(e1));
+  ok("Plan 2: betrifft nur Platzhalter", JSON.stringify(e1.betrifft) === JSON.stringify(["⟦NAME-1⟧"]));
+  ok("Plan 2: Unbrauchbares weggelassen, Eintrag bleibt", e2 && !e2.art && !e2.vorgang && !e2.betrag && !e2.richtung && r.meldungen.length >= 5, r.meldungen.join(" | "));
+  ok("Auftrag 2: Arten und neue Felder stehen drin", KI_ARTEN.every((x) => sortierAuftrag([{ kennung: "D01", text: "x" }]).includes(`- ${x}`)) && sortierAuftrag([{ kennung: "D01", text: "x" }]).includes('"vorgang"')); }
+// Lernen aus Lehrfällen (lib/lehrmodell.ts): 30 erfundene Fälle, Arztwörter → Gesundheit, Stromwörter → Haus & Wohnung.
+{ const arzt = ["praxis", "behandlung", "diagnose", "patient", "rezept"], strom = ["abschlag", "zaehlerstand", "verbrauch", "stromtarif", "netzbetreiber"];
+  const faelle = Array.from({ length: 30 }, (_, i) => i % 2 ? { bestaetigt: "Gesundheit", merkmale: arzt } : { bestaetigt: "Haus & Wohnung", merkmale: strom });
+  const m = lehrModell(faelle), d = (k) => ({ volltext: "Ihre Behandlung in der Praxis, Diagnose und Rezept für den Patient", felder: { kategorie: k } });
+  const unsicher = lehrAnwenden(d({ wert: "Finanzen", sicher: false, grund: "", quelle: "regel" }), m);
+  ok("Lehrfälle: unsicherer Bereich wird zum gelernten Vorschlag, bleibt zu prüfen", unsicher.felder.kategorie.wert === "Gesundheit" && unsicher.felder.kategorie.sicher === false && unsicher.felder.kategorie.vorher === "Finanzen");
+  ok("Lehrfälle: sichere Erkennung und eigene Wahl bleiben", lehrAnwenden(d({ wert: "Finanzen", sicher: true, grund: "", quelle: "regel" }), m).felder.kategorie.wert === "Finanzen" && lehrAnwenden(d({ wert: "Finanzen", sicher: false, grund: "", quelle: "du" }), m).felder.kategorie.wert === "Finanzen");
+  ok("Lehrfälle: unter 20 Fällen wirkt nichts", lehrAnwenden(d({ wert: "Finanzen", sicher: false, grund: "", quelle: "regel" }), lehrModell(faelle.slice(0, 10))).felder.kategorie.wert === "Finanzen");
+  ok("Lehrfälle: Stichwörter wie im Lehrfall, ohne Platzhalter", JSON.stringify(merkmaleAus("Rechnung an ⟦NAME-1⟧ Zahnarztpraxis Rechnung")) === JSON.stringify(["rechnung", "zahnarztpraxis"])); }
+const ql = readFileSync("lib/lehrmodell.ts", "utf8").replace(/\/\/.*$/gm, "");
+ok("Kein Netzaufruf und keine Oberfläche im Lehrmodell", !/\bfetch\s*\(|XMLHttpRequest|WebSocket|document\.|window\.|localStorage/.test(ql));
 console.log(`KI-Sortieren: ${n} grün`);
