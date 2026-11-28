@@ -1,0 +1,13 @@
+{
+ "quelle": "PseudoDoc (lib/pseudo/)",
+ "commit": "adc1565",
+ "gezogen": "2026-11-28",
+ "dateien": {
+  "lib/pseudo/auftrag.ts": "717a317e96c20beee9b25a2c7c404c7013ace31d485a07a1fee16d143499db43",
+  "lib/pseudo/flaechen.ts": "f0632e100975796c0b3ba5bcaccd88c4a4540b4b25aafa8e60098444621f5e34",
+  "lib/pseudo/pakete.ts": "2b675ee1b0fd63c49623715368c19e5d1a0ba2b452b975a9c8d1c7d2ae3b0436",
+  "lib/pseudo/rueckweg.ts": "43712eb5032e43e88217c1351beb406154c46616db68f3283c7238e753d5a415",
+  "lib/pseudo/bereinigen.ts": "97faf1ca7ee460997565e42f2cd278b634cebb2155d7fd7443a52ebecca7a5ab",
+  "lib/pseudo/zeichen.ts": "21044ebe1ae136be66f1c9a42af8967d0f6e9d149920d23ea91fe15a873e5dd2"
+ }
+}

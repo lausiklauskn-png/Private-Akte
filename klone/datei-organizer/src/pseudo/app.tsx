@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArchiveRestore, Copy, Download, Eye, FileDown, FileText, FolderOpen, KeyRound, Pencil, RotateCcw, Trash2, Upload, Undo2, VenetianMask, X } from "lucide-react";
 import { Info, Ablaufbild, FesterBaum } from "../ui.tsx";
 import { auftragMaskieren, kiDateien, allesInEinerDatei, antwortenZurueck, stellenImBild, kennzeichenImBild, kennung as kennungAus, artName, korrekturAusText, auftragAusText, STILE, ZIELE, ORDNER, type Stueck, type AuftragWahl, type Wort, type Zurueck } from "../../lib/pseudo/auftrag.ts";
+import { rueckwegPruefen, type Punkt } from "../../lib/pseudo/rueckweg.ts";
 import { ausPixeln, type Flaeche } from "../../lib/pseudo/flaechen.ts";
 import { zipBauen, docxBauen } from "../../lib/pseudo/pakete.ts";
 import { officeText } from "../../lib/zip.ts";
@@ -335,7 +336,7 @@ function Ansicht({ s, e, map, url, darfBleiben, verdecken, meldung, abdecken }: 
 }
 
 // ── Seite 2: Zurückführen ────────────────────────────────────────────────────────────────────────────────────────────
-type Ergebnis = (Zurueck & { art: "text" }) | { art: "bild"; name: string; url: string; blob: Blob; hinweis: string };
+type Ergebnis = (Zurueck & { art: "text"; bericht: Punkt[] }) | { art: "bild"; name: string; url: string; blob: Blob; hinweis: string };
 
 function ZurueckSeite({ start }: { start: string }) {
   const [liste, setListe] = useState<speicher.Auftrag[]>([]);
@@ -355,7 +356,9 @@ function ZurueckSeite({ start }: { start: string }) {
     const erkannt = antworten.map((a) => a.text && auftragAusText(a.text)).find(Boolean);
     if (erkannt && erkannt !== id && liste.some((x) => x.id === erkannt)) { setId(erkannt); g = await speicher.laden(erkannt); setMeldung({ text: "Auftrag an der Kennung in der Antwort erkannt." }); }
     if (!g) { setMeldung({ text: "Bitte zuerst den Auftrag wählen.", art: "halt" }); return; }
-    const neu: Ergebnis[] = antwortenZurueck(p, antworten.filter((a) => a.text != null).map((a) => ({ name: a.name, text: a.text! })), g.map).map((z) => ({ ...z, art: "text" as const }));
+    const texte = antworten.filter((a) => a.text != null).map((a) => ({ name: a.name, text: a.text! }));
+    const gesendet = g.auftrag.stuecke.map((s) => s.fassung || "").join("\n");
+    const neu: Ergebnis[] = antwortenZurueck(p, texte, g.map).map((z, k) => ({ ...z, art: "text" as const, bericht: rueckwegPruefen(texte[k]?.text || "", z.text, g.map, gesendet).filter((b) => b.stufe !== "ok") }));
     for (const a of antworten.filter((x) => x.bild)) {
       const k = a.name.match(/D\d{2,}/)?.[0];
       const st = g.auftrag.stuecke.find((s) => s.kennung === k);
@@ -418,6 +421,7 @@ function ZurueckSeite({ start }: { start: string }) {
           {e.art === "text" ? <>{e.ersetzt > 0 && <span className="badge gut">{e.ersetzt} Angaben eingesetzt</span>}{e.offen.length > 0 && <span className="badge pruefen" data-offen>unbekannt: {e.offen.join(", ")}</span>}</> : <span className="leise">{e.hinweis}</span>}
         </div>
         {e.art === "text" ? <>
+          {e.bericht.length > 0 && <ul className="rueckweg-bericht" data-rueckweg-bericht>{e.bericht.map((b) => <li key={b.kennung} className={`badge ${b.stufe === "achtung" ? "pruefen" : ""}`} data-rueckweg={b.kennung}>{b.satz}</li>)}</ul>}
           <textarea className="ergebnis-text" rows={Math.min(18, Math.max(5, e.text.split("\n").length + 1))} value={e.text} onChange={(x) => aendern(i, x.target.value)} data-ergebnis-text/>
           <div className="button-row">
             <button type="button" className="button klein primary" onClick={async () => setMeldung((await kopieren(e.text)) ? { text: "Kopiert." } : { text: "Kopieren ging nicht.", art: "halt" })} data-ergebnis-kopieren><Doppelblatt/> Kopieren</button>

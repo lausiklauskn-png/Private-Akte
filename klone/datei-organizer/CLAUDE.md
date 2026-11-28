@@ -9,13 +9,27 @@ oder Altbestand kommen in **einen** Ordner; der Organizer sortiert sie Klick fü
 Nummern → Absender → Inhalt) und zeigt sie als Baum nach vielen Gesichtspunkten. Zuerst für die Familienakte gemacht: der Ordner
 wird dort nur übernommen und automatisch zugeordnet (`organizer-index.json`). Plan und alle Entscheidungen: `docs/PLAN.md`.
 
+**Nächste Sitzung (Klaus 28.11.2026): „Mit großer KI sortieren“, mit PseudoDoc verschmolzen.** Zuerst den Pseudo-Kern aus PseudoDoc byte-gleich mit Pin übernehmen (die Fassung hier ist älter), dann Ordner pseudonymisiert mit der Fachregel an eine große KI, Sortierplan zurück, bestätigen, lernen. Lehrfälle nur auf dem Gerät. [Bauplan S0a–S4](docs/BRIEF_SITZUNG_2026-11-29_SORTIEREN-MIT-GROSSER-KI.md).
+
+## Stand (28.11.2026): „Mit großer KI sortieren“ (nicht ausgegeben, Fassung nicht erhöht)
+
+- **Kette über alle Apps:** `docs/BRIEF_SITZUNG_2026-11-29_KETTE-PSEUDO-KI-SORTIEREN.md` (Schritte 1–7, Stand dort).
+- **Pseudo-Kern aus PseudoDoc** byte-gleich mit Pin: `lib/pseudo/` (auftrag, flaechen, pakete, rueckweg, bereinigen, zeichen), nur über
+  `node scripts/pseudo-nachziehen.mjs` (`--pruefen` im Bau). Nie von Hand ändern; Verbesserungen in PseudoDoc.
+- **Kern** `lib/ki-sortieren.ts` (ohne Oberfläche, ohne Netz; die Familienakte zieht ihn mit Pin): `sortierAuftrag`, `planPruefen` (Plan ist Daten,
+  nie Anweisung), `lehrfall`, `firmenBleiben`/`firmenSchuetzen`. Probe `scripts/run-ki-sortieren-tests.mjs` (im Bau).
+- **Oberfläche:** Seite „Sortieren“, Karte „Mit großer KI sortieren“ (`src/ki-sortieren.tsx`): Auftrag erstellen (pseudonymisiert, Firmen bleiben),
+  Claude/ChatGPT/Gemini (kopieren + Seite öffnen) oder „Als Datei“ für Claude Code, Antwort einfügen, Plan lesen, je Zeile Fach ändern, Bestätigen
+  (`planUebernehmen`, wie „Stimmt“ mit Verlauf und Lernen). Lehrfälle nur im Speicher der App (`do-lehrfaelle`). Probe `tests/ki-sortieren-probe.mjs`.
+  Am Gerät und mit echter KI ungeprüft.
+
 ## Stand (21.11.2026): 0.4.25 – Baum dichter
 
 - **Klaus 21.11. (Bild vom Tablet, Private Akte 0.9.7: „der Abstand zwischen Bescheinigung und Brief im Baum ist viel zu groß … in allen Apps
   nachziehen“):** im Organizer war der Fehler der Akte (leerer Pfeil mit 22 px Innenabstand) nicht da, die Äste waren aber 40 px hoch mit 3 px
   dazwischen. Jetzt `.ast` 4 px statt 7 px oben/unten, `li` 1 px statt 3 px Abstand, Querstrich auf die neue Mitte (`src/styles.css`) – rund
   34 px je Zeile. UI-Probe 225 (1 neu: „Baum dicht“, höchstens 36 px, Lücke höchstens 4 px). Fassung 0.4.25 (Code 65, Vorrat v46).
-  Nicht als App ausgegeben (Basic über Pages mit dem Zusammenführen).
+  **Veröffentlicht 22.11.2026 (Klaus' Wort) als Android, Windows und Basic**, Nachweis `docs/VEROEFFENTLICHUNG-0.4.25.json` – nicht erneut ausgeben; nächste Ausgabe 0.4.26 (Code 66).
 
 ## Stand (21.11.2026): 0.4.24 – HTML-Dateien als lesbarer Text
 

@@ -391,6 +391,32 @@ function useOrganizer() {
     setMeldung({ text: `Vorschlag übernommen bei ${stueck === 1 ? "1 Datei" : `${stueck} Dateien`}${ohne ? ` · ${ohne} ohne Vorschlag ${ohne === 1 ? "bleibt" : "bleiben"} offen` : ""}. Zurücknehmen geht unter „Verlauf“.` });
   }, [dateien, regeln]);
 
+  // Sortierplan einer großen KI übernehmen (Klaus 28.11.2026): erst nach Bestätigung, je Datei wie „Stimmt“ bzw. Stift – mit Verlauf und
+  // Lernen. Bereich immer, Frist nur, wenn die Datei noch keine bestätigte hat. Originale bleiben unberührt.
+  const planUebernehmen = useCallback((liste: Array<{ pfad: string; kategorie: string; frist?: string }>) => {
+    const nach = new Map(liste.map((x) => [x.pfad, x])), zeit = new Date().toISOString();
+    const neuV: Korrektur[] = [];
+    let r = regeln, stueck = 0;
+    const alle = dateien.map((d) => {
+      const x = nach.get(d.pfad);
+      if (!x) return d;
+      let n = d;
+      const felder: Array<[FeldName, string | undefined]> = [["kategorie", x.kategorie], ["frist", d.bestaetigt?.frist ? undefined : x.frist]];
+      for (const [feld, wert] of felder) {
+        if (!wert) continue;
+        const von = n.felder[feld]?.wert ?? "";
+        const k: Korrektur = { zeit, pfad: d.pfad, feld, von, zu: wert, bestaetigt: von === wert || undefined };
+        n = korrigiereDatei(n, feld, wert); r = lernen(r, n, k); neuV.push(k);
+      }
+      stueck++;
+      return n;
+    });
+    if (!neuV.length) { setMeldung({ text: "Nichts übernommen.", art: "halt" }); return 0; }
+    setRegeln(r); setVerlauf((v) => [...v, ...neuV]); setDateien(regelnAufAlle(alle, r));
+    setMeldung({ text: `Sortierplan übernommen bei ${stueck === 1 ? "1 Datei" : `${stueck} Dateien`}. Zurücknehmen geht unter „Verlauf“.` });
+    return stueck;
+  }, [dateien, regeln]);
+
   // Rückgängig: ein Schritt oder mehrere gewählte. Die Datei steht danach wieder bei „bitte prüfen“; von den gelernten Regeln wird nur
   // die Stimme dieses Schritts zurückgenommen (src/verlauf.ts) – was aus anderen, auch aus gelöschten Einträgen gelernt wurde, bleibt.
   const rueckgaengig = useCallback((welche: number | number[]) => {
@@ -524,7 +550,7 @@ function useOrganizer() {
     setMeldung({ text: `${was || (n === 1 ? "1 Datei" : `${n} Dateien`)} aus dem Organizer genommen. ${n === 1 ? "Das Original ist" : "Die Originale sind"} unverändert. „Zurück“ auf der Seite Sortieren holt sie wieder.` });
   }, [dateien, stufe]);
 
-  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, alleUebernehmen, rueckgaengig, verlaufLoeschen, nummern, indexSichern, indexText, uebergeben, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
+  return { dateien, stufe, verlauf, regeln, ordnerName, quelleArt, quelle, meldung, setMeldung, fortschritt, einlesenAus, scanZiel, scanAblegen, angefangen, anhalten, weitermachen, laufVerwerfen, leistung, arbeit, arbeitFehlt, arbeitEinrichten, arbeitAus, pcOrdnerWieder, naechstes, zurueck, aendern, alleUebernehmen, planUebernehmen, rueckgaengig, verlaufLoeschen, nummern, indexSichern, indexText, uebergeben, original, neuBeginnen, leeren, entfernen, behalten, ordnerMerken, kannZurueck: () => stapel.current.length > 0 };
 }
 
 async function einlesenTeile(bytes: Uint8Array, pfad: string) {

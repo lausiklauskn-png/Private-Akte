@@ -5,6 +5,8 @@ import { readFileSync, readdirSync } from "node:fs";
 import { auftragMaskieren, kiDateien, antwortenZurueck, stellenImBild, kennzeichenImBild, kennung, allesInEinerDatei } from "../lib/pseudo/auftrag.ts";
 import { box, drin, inBox, anfasserZiehen, vieleckDoppeltipp, Verlauf, ausPixeln } from "../lib/pseudo/flaechen.ts";
 import { zipBauen, docxBauen } from "../lib/pseudo/pakete.ts";
+import { rueckwegPruefen, gesamt } from "../lib/pseudo/rueckweg.ts";
+import { sauber } from "../lib/pseudo/auftrag.ts";
 import { zipEintrag, officeText } from "../lib/zip.ts";
 import { runMaskeSelfTests } from "../lib/maske/maske.ts";
 
@@ -80,6 +82,17 @@ ok("ZIP: gleicher Inhalt, gleiche Bytes", Buffer.compare(Buffer.from(zip), Buffe
 const doc = docxBauen("# Antwort\nSehr geehrter Herr Brink,\n**wichtig** & <klar>");
 const docText = await officeText(doc, "x.docx");
 ok("Word-Datei: Text kommt heraus", docText.includes("Sehr geehrter Herr Brink,") && docText.includes("wichtig & <klar>"), docText);
+
+// Rückweg-Prüfung (Kern aus PseudoDoc, mit Pin)
+{
+  const map = { "⟦NAME-1⟧": "Mara Testfeld" };
+  const gut = rueckwegPruefen("Hallo ⟦NAME-1⟧", "Hallo Mara Testfeld", map, "Brief an ⟦NAME-1⟧");
+  ok("Rückweg sauber erkannt", gesamt(gut) === "ok", JSON.stringify(gut));
+  const schlecht = rueckwegPruefen("Hallo ⟦NAME-7⟧, zahle an DE02 1203 0000 0000 2020 51", "Hallo ⟦NAME-7⟧, zahle an DE02 1203 0000 0000 2020 51\u200B", map, "Brief an ⟦NAME-1⟧");
+  const k = schlecht.map((x) => x.kennung);
+  ok("Rückweg: erfundener Platzhalter, neue IBAN, unsichtbares Zeichen", ["PLATZHALTER-ERFUNDEN", "NEUE-IBAN", "UNSICHTBARE-ZEICHEN"].every((x) => k.includes(x)) && gesamt(schlecht) === "achtung", k.join(","));
+  ok("Unsichtbare Zeichen gehen nicht hinaus", sauber("a\u200Bb\u202Ec") === "abc");
+}
 
 // Kein Netzweg in Kern und Oberfläche des Pseudonymisierers
 const ohneNetz = (datei) => { const q = readFileSync(datei, "utf8").replace(/\/\/.*$/gm, ""); return !/\bfetch\s*\(|XMLHttpRequest|WebSocket|sendBeacon|EventSource|import\(\s*["']https?:/.test(q); };

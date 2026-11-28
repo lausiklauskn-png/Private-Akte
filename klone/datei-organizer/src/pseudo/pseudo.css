@@ -55,3 +55,5 @@ button.chip { font-size: .86rem; padding: 6px 12px; cursor: pointer; }
   .abdecken, .fenster { border-radius: 10px; }
   .abdecken-leiste .button.klein { min-width: 38px; }
 }
+.rueckweg-bericht { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 4px; }
+.rueckweg-bericht li { display: block; white-space: normal; text-align: left; }

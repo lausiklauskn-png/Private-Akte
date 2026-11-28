@@ -1,0 +1,25 @@
+{
+  "fassung": "0.4.25",
+  "datum": "2026-11-22",
+  "freigabe": "Klaus 22.11.2026: „Ja, mach das. Und dann als App ausgeben.“",
+  "inhalt": "Baum dichter: Äste rund 34 statt 40 px, 1 px Abstand (src/styles.css, #81)",
+  "android": {
+    "commit": "ae56da78e4d2401f88df7b5f407984c8ec87fc06",
+    "lauf": 44998520449,
+    "datei": "Datei-Organizer-Pro-0.4.25.apk",
+    "code": 65,
+    "bytes": 72106884,
+    "sha256": "bcce0de5e38fd359e0b337a7d545e157141e3a2e725871eda916cb96c1002df2",
+    "update_server": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-0.4.25.apk",
+    "github_release": "https://github.com/lausiklauskn-png/Datei-Organizer/releases/tag/v0.4.25",
+    "nachgeprueft": "GitHub-Release ohne Anmeldung geladen, SHA-256 gleich mit .sha256; Emulator-Probe im zweiten Versuch grün (erster: Dialog „Pixel Launcher isn't responding“)"
+  },
+  "windows": {
+    "commit": "ae56da78e4d2401f88df7b5f407984c8ec87fc06",
+    "lauf": 45001290311,
+    "datei": "Datei-Organizer-Pro-Windows-0.4.25-x64-setup.exe",
+    "update_server": "https://family-projekt.de/updates/datei-organizer/Datei-Organizer-Pro-Windows-0.4.25-x64-setup.exe",
+    "nachgeprueft": "im Lauf von außen geladen, SHA-256 gleich (die Sitzung erreicht family-projekt.de nicht)"
+  },
+  "basic": "über GitHub Pages (main ae56da7)"
+}

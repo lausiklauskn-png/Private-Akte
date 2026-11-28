@@ -23,5 +23,7 @@ jobs:
         run: npm i --no-save playwright@1.63.0 && npx playwright install --with-deps chromium
       - name: Oberfläche
         run: node tests/ui-probe.mjs
+      - name: Oberfläche Mit großer KI sortieren
+        run: node tests/ki-sortieren-probe.mjs
       - name: Oberfläche Pseudonymisierer
         run: node tests/pseudo-probe.mjs
