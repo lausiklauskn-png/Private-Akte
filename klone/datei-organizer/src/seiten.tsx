@@ -16,6 +16,7 @@ import { ausAuswahl, nativGemerkt, nativPlattform, nativVergessen, nativSpeicher
 import { heute, Ladebalken, type AppZustand, type FindenZiel, type SeitenId } from "./app.tsx";
 import { rahmen, aktePartner, AKTE_ADRESSE } from "./rahmen.ts";
 import { druckZielSetzen, druckZielWeg } from "./drucken.ts";
+import { KiSortierenKarte } from "./ki-sortieren.tsx";
 import { fotoAufbereiten, scanDatei, scanFreigeben, scanSpeichern, type ScanSeite } from "./scan.ts";
 import { ARBEIT, arbeitAnzeige, arbeitFrei, arbeitMoeglich, leistungText, mbText, TEXT_IM_SPEICHER } from "./arbeit.ts";
 
@@ -414,6 +415,7 @@ export function SortierenSeite({ z, gehe }: P) {
           {sicher.length > 8 && !alleSicher && <button type="button" className="text-link" style={{ marginTop: 10 }} onClick={() => setAlleSicher(true)}>Alle {sicher.length} zeigen</button>}</>}
       {liegen > 0 && <p className="leise" style={{ marginTop: 10 }}>{liegen} gesperrt oder doppelt – sie bleiben liegen und werden nicht weitergegeben.</p>}
     </section>
+    <KiSortierenKarte z={z}/>
     <DoppelteKarte z={z}/>
     <FotosOhneTextKarte z={z}/>
     {z.stufe >= 5 && offen.length === 0 && <section className="card"><div className="button-row"><button type="button" className="button primary" onClick={() => gehe("akte")}><Archive size={18}/>Weiter zur Familienakte</button><button type="button" className="button" onClick={() => gehe("finden")}><FolderTree size={18}/>Ansehen</button></div></section>}
